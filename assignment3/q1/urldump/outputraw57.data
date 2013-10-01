@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<!--[if gte IE 7 ]> <html class="ie"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]> ><! <![endif]-->
+<html>
+<!-- <![endif] -->
+<head>
+<title>
+Python meetup | dev.by
+
+</title>
+<link href="/assets/application-2d63d0b8ba203e34270ef67a210fa827.css" media="all" rel="stylesheet" type="text/css" />
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="OgQYsI0Kn6/P7kzaoUhyPmiUIh4IueZVQ+xl1xvGDYo=" name="csrf-token" />
+<link href='/system/style.css' media='all' rel='stylesheet' type='text/css'>
+<meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
+<meta content='9c93b656c01e1a8959317dce' name='verify-reformal'>
+<meta content='4_7nDd9QVwkpSJme1SVBmiWx4nrajm9t3aRqOgyeOEc' name='google-site-verification'>
+<script src="/assets/application-46e3f50c09d7f4444372880ec5730828.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script>
+<script src='http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0016_russian.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div> 
+
+<![endif]-->
+
+</head>
+<body>
+<div class='wrapper dev all'>
+<div class='dev-container header-nav'>
+<div class='dev-all'>
+<div class='dev-main'>
+<div class='navigation clearfix'>
+<ul class='menu'>
+<li>
+<a href="http://dev.by/blogs" title="Блог">Блоги</a>
+</li>
+<li>
+<a href="http://companies.dev.by/" title="Компании">Компании</a>
+</li>
+<li>
+<a href="http://salaries.dev.by/" title="Зарплаты">Зарплаты</a>
+</li>
+<li>
+<a href="http://jobs.dev.by/" title="Работа">Работа</a>
+</li>
+<li class='active'>
+<a href="http://events.dev.by/" title="События">События</a>
+</li>
+<li>
+<a href="http://forum.dev.by/">Форум</a>
+</li>
+</ul>
+<div class='top-advt'>
+<!--/* OpenX Javascript Tag v2.8.8 */-->
+
+<script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://r.dev.by/www/delivery/ajs.php':'http://r.dev.by/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=13");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://r.dev.by/www/delivery/ck.php?n=a89e56a3&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://r.dev.by/www/delivery/avw.php?zoneid=13&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a89e56a3' border='0' alt='' /></a></noscript>
+
+</div>
+<div class='user-panel right'>
+<ul class='user-panel-out'>
+<li>
+<a href="/login" class="a-sign-link">Войти</a>
+</li>
+<li>
+<a href="http://dev.by/registration" class="a-reg-link">Создать аккаунт</a>
+</li>
+</ul>
+<div class='user-for-enter login'>
+<form accept-charset="UTF-8" action="/login" autocomplete="off" class="new_user" data-remote="true" id="new_user" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="OgQYsI0Kn6/P7kzaoUhyPmiUIh4IueZVQ+xl1xvGDYo=" /></div><div class='alert-msg'></div>
+<div class='data-info-block'>
+Если вы входите на новую версию сайта в первый раз, вам необходимо
+<a href="http://events.dev.by/password/new" class="bld">восстановить пароль</a>.
+<a href="http://dev.by/faq">Почему?</a>
+</div>
+
+<div class='input'>
+<label for="user_login">Имя пользователя или емейл</label>
+<input id="user_login" name="user[login]" size="30" type="text" />
+</div>
+<div class='input password'>
+<label for="user_password">Пароль</label>
+<input id="user_password" name="user[password]" size="30" type="password" />
+</div>
+<div class='input remember'>
+<input name="user[remember_me]" type="hidden" value="0" /><input class="s-checkbox" id="user_remember_me" name="user[remember_me]" type="checkbox" value="1" />
+<label class="s-label" for="user_remember_me">Запомнить меня</label>
+</div>
+<div class='btn-actions'>
+<input class="btn blue" name="commit" type="submit" value="Войти" />
+<a href="http://dev.by/password/new" class="forgot">Забыли пароль?</a>
+<div class='alt'>
+<span>Войти через:</span>
+<ul>
+<li>
+<a href="http://dev.by/auth/google" class="social-google">Sign in with Google</a>
+</li>
+<li>
+<a href="http://dev.by/auth/facebook" class="social-facebook">Sign in with Facebook</a>
+</li>
+<li>
+<a href="http://dev.by/auth/github" class="social-github">Sign in with Github</a>
+</li>
+</ul>
+</div>
+<div class='a-receive'>
+<a href="http://dev.by/confirmation/new">Didn&#x27;t receive confirmation instructions?</a>
+<br>
+<a href="http://dev.by/unlock/new">Didn&#x27;t receive unlock instructions?</a>
+</div>
+
+</div>
+</form>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class='sidebar-panel'>
+<div class='dev-social'>
+<ul class='social-ico-big'>
+<li class='fb'>
+<a href="http://dev.by/facebook" title="Dev.by | Facebook">Facebook</a>
+</li>
+<li class='tw'>
+<a href="http://dev.by/twitter" title="Dev.by | Twitter">Twitter</a>
+</li>
+<li class='rss'>
+<a href="http://dev.by/rss" title="Dev.by | Rss">Rss</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class='dev-container down-line header'>
+<div class='dev-all clearfix'>
+<div class='dev-main'>
+<div class='header-panel clearfix'>
+<a href="http://dev.by/" class="header-logo" title="Dev.by">Dev.by</a>
+<div class='header-info'>
+<h4>Все о работе в ИТ</h4>
+<a href="http://companies.dev.by/" title="Dev.by | Компании"><strong>772</strong> компаний</a>,
+<a href="http://dev.by/users" title="Dev.by | Пользователи"><strong>22237</strong> специалистов</a>,
+<a href="http://jobs.dev.by/" title="Dev.by | Работа"><strong>317</strong> вакансий</a>
+<div class='advr-link'>
+
+</div>
+</div>
+<form action='http://www.google.com/cse' class='form-search' method='GET'>
+<div class='data-open-search'>
+<a href="#" class="a-dotted a-open-search">Поиск</a>
+</div>
+<input class='input-large' name='q' placeholder='e.g. Матрица компетентности программиста' type='text'>
+<input name='cx' type='hidden' value='017818143311378779828:hkz7dyja5dc'>
+<input name='ie' type='hidden' value='UTF-8'>
+<input type='submit' value=''>
+</form>
+<div class='header-advr'>
+<!--/* OpenX Javascript Tag v2.8.8 */-->
+
+<script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://r.dev.by/www/delivery/ajs.php':'http://r.dev.by/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=14");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://r.dev.by/www/delivery/ck.php?n=a8a20ceb&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://r.dev.by/www/delivery/avw.php?zoneid=14&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a8a20ceb' border='0' alt='' /></a></noscript>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class='dev-container'>
+<div class='dev-all'>
+<div class='dev-main'>
+<div class='dev-body'>
+
+
+<div class='dev-center nopd' id='dev-events'>
+<script src='http://api-maps.yandex.ru/2.0/?load=package.full&amp;mode=debug&amp;lang=ru-RU' type='text/javascript'></script>
+<div class='show-events'>
+<div class='block data-topic-events'>
+<div class='left item-body body-events'>
+<div class='back-link'>
+<a href="http://events.dev.by/archives" title="Dev.by | Вернуться к архиву событий">Вернуться к архиву событий</a>
+</div>
+<h1>
+Python meetup
+
+</h1>
+<div class='time'>
+Минск,
+  27 Сентября 
+19:00 - 22:00
+</div>
+<ul class='list-style-tags'>
+<li>
+<span>Python</span>
+</li>
+<li>
+<span>Minsk</span>
+</li>
+<li>
+<span>meetup</span>
+</li>
+<li>
+<span>Wargaming</span>
+</li>
+</ul>
+</div>
+<div class='clear'></div>
+
+</div>
+<div class='block data-topic-share clearfix'>
+<div class='left body-events'>
+<div class="left">
+   <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+</div>
+
+
+<div class="left">
+  <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+</div>
+
+
+<div class="left">
+  <div id="vk_like"></div>
+</div>
+
+
+<div class="left data-plus">
+  <div class="g-plusone" data-size="medium"></div>
+</div>
+
+
+</div>
+
+</div>
+<div class='dev-center'>
+<div class="dev-advr-926-48">
+<!--/* OpenX Javascript Tag v2.8.8 */-->
+
+<script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://r.dev.by/www/delivery/ajs.php':'http://r.dev.by/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=12");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://r.dev.by/www/delivery/ck.php?n=afb2153f&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://r.dev.by/www/delivery/avw.php?zoneid=12&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=afb2153f' border='0' alt='' /></a></noscript>
+</div>
+</div>
+<div class='block data-desc-events clearfix'>
+<div class='left body-events'>
+<div class='bl'>
+<div class='input blog-node-content'>
+<p>
+    С приходом осени, похоже, только одна вещь осталась неизменной &ndash;&nbsp; ежемесячная встреча Python Meetup! В последнюю пятницу месяца (в любую погоду!) мы снова соберемся, чтобы пройтись по необъятной около-python-овской теме: послушаем выступающих и позадаем каверзные вопросы им и самим себе.</p>
+
+<p>
+    В этот раз на Python Meetup будут зачитаны два доклада:<br />
+    1. <strong>Systemd глазами web-разработчика</strong>, <em>Стас Рудаков, Wargaming</em><br />
+    Systemd - это современный демон управления системой для Linux, который никого не оставляет равнодушным. Забыв про холивары, попытаемся разобраться, чем он может быть полезен в web-разработке. Примеры кода, естественно, будут на Python :)</p>
+
+<p>
+    2. <strong>GC, </strong><em>Кирилл Лашкевич, Viber</em><br />
+    Доклад о том, что такое garbage collector, зачем он нужен, как обойтись без него, как он работает и&hellip; когда не работает.</p>
+
+<p>
+    Зарегистрироваться в качестве участника Python Meetup можно прислав письмо на адрес <em>meetup@wargaming.net</em> со следующей информацией о вас:<br />
+    &bull; ФИО<br />
+    &bull; Места работы/учебы<br />
+    &bull; Какой раз вы посещаете Python Meetup<br />
+    В ответ на ваше письмо вы получите приглашение на meetup. Количество мест, как всегда, ограничено, так что лучше поторопиться!</p>
+
+<p>
+    Python Meetup пройдет 27 сентября в галерее Newday рестората Newman по адресу Минск, ул.Немига, 36. Слушать презентации и есть бургеры начнем как всегда ровно в 19:00. Не забывайте, что доклады всех предыдущих митапов можно найти в нашем блоге <a href="http://habrahabr.ru/company/wargaming/blog/">вот здесь</a>. А любителям FB можно подписаться на <a href="https://www.facebook.com/MinskPythonMeetup">нашу страницу</a>, чтобы всегда быть в курсе встреч. До скорого!</p>
+
+</div>
+</div>
+<div class='bl'>
+<h4>Стоимость участия</h4>
+<div class='input'>
+Бесплатно
+</div>
+</div>
+<div class='bl'>
+<h4>Место проведения</h4>
+<div class='input adress-events-map' data-address='Минск, улица Немига, 36' data-latitude='27.5451' data-longitude='53.9002'>
+Минск,
+улица Немига, 36
+<div class='events-map'>
+<a href="#" class="a-brd a-map-event">Карта проезда</a>
+<div id='YMapsEvent'></div>
+</div>
+</div>
+</div>
+<div class='bl'>
+<h4 class='status-event' id='event-78236'>
+Идут
+<span class='u-e-c'>
+0
+</span>
+</h4>
+<div class='input'>
+<ul class='events-user'>
+
+</ul>
+</div>
+</div>
+<div class='through-advr'>
+<!--/* OpenX Javascript Tag v2.8.8 */-->
+
+<script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://r.dev.by/www/delivery/ajs.php':'http://r.dev.by/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=17");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://r.dev.by/www/delivery/ck.php?n=a547ba86&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://r.dev.by/www/delivery/avw.php?zoneid=17&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a547ba86' border='0' alt='' /></a></noscript>
+
+</div>
+
+<div class='widget-node-comments events'>
+<div class='block-comments'>
+<div class='comments-list list-more'>
+
+</div>
+<div class='loading-panel' style='display: none;'>
+<div class='loading'></div>
+<span>
+Загружено
+<span class='object-count-inside'>1</span>
+из
+<span class='object-count'>0</span>
+комментариев
+</span>
+</div>
+
+<p>
+<h3>
+<br>
+<a href="/login">Авторизуйтесь</a>,
+чтобы оставлять комментарии
+</h3>
+</p>
+</div>
+
+</div>
+</div>
+<div class='right sidebar-show-events'>
+<div class='bl data-company'>
+<div class='info'>
+<strong>
+Эл. почта:
+</strong>
+<a href="mailto:meetup@wargaming.net">meetup@wargaming.net</a>
+<br>
+<strong>
+Сайт:
+</strong>
+<a href="http://wargaming.com">http://wargaming.com</a>
+<br>
+</div>
+</div>
+<div class='bl data-also'>
+<h4>Смотрите также</h4>
+<div class='list-item'>
+<div class='item'>
+<span>
+  1 Октября 
+/
+Минск
+</span>
+<a href="/seminar-icewarp-server-moschnaya-sistema-korporativnoy-pochty-i-kollektivnoy-raboty" title="Dev.by | Семинар «IceWarp Server –мощная система корпоративной почты и коллективной работы»">Семинар «IceWarp Server –мощная система корпоративной почты и коллективной работы»</a>
+</div>
+<div class='item'>
+<span>
+  1 Октября 
+/
+Минск
+</span>
+<a href="/besplatnye-kursy-s-sraft-proekt-datavita" title="Dev.by | Бесплатные курсы &quot;С++Сraft&quot; (проект DataVita)">Бесплатные курсы &quot;С++Сraft&quot; (проект DataVita)</a>
+</div>
+<div class='item'>
+<span>
+  2 Октября 
+/
+Минск
+</span>
+<a href="/mitap-frontend-javascript-razrabotchikov-the-rolling-scopes-5" title="Dev.by | Митап фронтенд/javascript разработчиков: The Rolling Scopes #5">Митап фронтенд/javascript разработчиков: The Rolling Scopes #5</a>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class='dev-center advr-horizont'>
+<!--/* OpenX Javascript Tag v2.8.8 */-->
+
+<script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://r.dev.by/www/delivery/ajs.php':'http://r.dev.by/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=16");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://r.dev.by/www/delivery/ck.php?n=a4769910&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://r.dev.by/www/delivery/avw.php?zoneid=16&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a4769910' border='0' alt='' /></a></noscript>
+
+</div>
+
+
+</div>
+</div>
+<div class='sidebar-panel s-panel'>
+<div class='sidebar-block'>
+<div class='sidebar-supported'>
+<h4>При поддержке:</h4>
+<ul class='lists-supported'>
+<li>
+<img alt="4bdf3133844cd29aa82dce111968cad0?1370424140" src="/system/companies/logos/1368/medium/4bdf3133844cd29aa82dce111968cad0?1370424140" />
+<div class='absolute'>
+<strong>
+<a href="http://dev.by/epamsystems" target="_blank">Сайт компании</a>
+</strong>
+<span>
+<a href="http://jobs.dev.by/?search-jobs%5Bcompany%5D=1368#jobs" target="_blank">59 вакансий</a>
+</span>
+</div>
+</li>
+<li>
+<img alt="5886d52b29a30f81bf347a7a1d348b67?1356436560" src="/system/companies/logos/1436/medium/5886d52b29a30f81bf347a7a1d348b67?1356436560" />
+<div class='absolute'>
+<strong>
+<a href="http://companies.dev.by/invention-machine" target="_blank">Сайт компании</a>
+</strong>
+<span>
+<a href="http://jobs.dev.by/?search-jobs%5Bcompany%5D=1436#jobs" target="_blank">15 вакансий</a>
+</span>
+</div>
+</li>
+<li>
+<img alt="C118adb5ea2bb1c2f4f7f52aa36ae379?1356437936" src="/system/companies/logos/1415/medium/c118adb5ea2bb1c2f4f7f52aa36ae379?1356437936" />
+<div class='absolute'>
+<strong>
+<a href="http://companies.dev.by/viaden" target="_blank">Сайт компании</a>
+</strong>
+<span>
+<a href="http://jobs.dev.by/?search-jobs%5Bcompany%5D=1415#jobs" target="_blank">2 вакансии</a>
+</span>
+</div>
+</li>
+<li>
+<img alt="03b15ad30be6a77ee9fd9513f72be30e?1359379608" src="/system/companies/logos/1437/medium/03b15ad30be6a77ee9fd9513f72be30e?1359379608" />
+<div class='absolute'>
+<strong>
+<a href="http://dev.by/page/itransition" target="_blank">Сайт компании</a>
+</strong>
+<span>
+<a href="http://jobs.dev.by/?search-jobs%5Bcompany%5D=1437#jobs" target="_blank">5 вакансий</a>
+</span>
+</div>
+</li>
+<li>
+<img alt="0baafd8c2d3f0cad4be1ea5d71bd0694?1372337965" src="/system/companies/logos/75451/medium/0baafd8c2d3f0cad4be1ea5d71bd0694?1372337965" />
+<div class='absolute'>
+<strong>
+<a href="http://companies.dev.by/bp-mobile" target="_blank">Сайт компании</a>
+</strong>
+<span>
+<a href="http://jobs.dev.by/?search-jobs%5Bcompany%5D=75451#jobs" target="_blank">4 вакансии</a>
+</span>
+</div>
+</li>
+<li>
+<img alt="2f2567f4cb95bde6cbbef7051c5da30b?1370598882" src="/system/companies/logos/9080/medium/2f2567f4cb95bde6cbbef7051c5da30b?1370598882" />
+<div class='absolute'>
+<strong>
+<a href="http://www.softeq.by/" target="_blank">Сайт компании</a>
+</strong>
+<span>
+<a href="http://jobs.dev.by/?search-jobs%5Bcompany%5D=9080#jobs" target="_blank">2 вакансии</a>
+</span>
+</div>
+</li>
+<li>
+<img alt="91677ec673cd3079394d9322900a411f?1356437052" src="/system/companies/logos/3954/medium/91677ec673cd3079394d9322900a411f?1356437052" />
+<div class='absolute'>
+<strong>
+<a href="http://www.richbrains.net/" target="_blank">Сайт компании</a>
+</strong>
+<span>
+<a href="http://jobs.dev.by/?search-jobs%5Bcompany%5D=3954#jobs" target="_blank">0 вакансий</a>
+</span>
+</div>
+</li>
+<li>
+<img alt="E79818762f7d592d3f7d416cc7cab762?1361894245" src="/system/companies/logos/1372/medium/e79818762f7d592d3f7d416cc7cab762?1361894245" />
+<div class='absolute'>
+<strong>
+<a href="http://www.software.travel/" target="_blank">Сайт компании</a>
+</strong>
+<span>
+<a href="http://jobs.dev.by/?search-jobs%5Bcompany%5D=1372#jobs" target="_blank">2 вакансии</a>
+</span>
+</div>
+</li>
+<li>
+<img alt="5894af26cbe962cc8611561de0f58a6f?1359898525" src="/system/companies/logos/6364/medium/5894af26cbe962cc8611561de0f58a6f?1359898525" />
+<div class='absolute'>
+<strong>
+<a href="http://companies.dev.by/wargaming-net-geym-strim" target="_blank">Сайт компании</a>
+</strong>
+<span>
+<a href="http://jobs.dev.by/?search-jobs%5Bcompany%5D=6364#jobs" target="_blank">12 вакансий</a>
+</span>
+</div>
+</li>
+</ul>
+</div>
+
+</div>
+<div class='sidebar-block'>
+<div class='widget-companies'>
+<h3>
+<a href="http://companies.dev.by/" class="a-link" title="Компании">Компании</a>
+</h3>
+<div class='list-companies'>
+<table>
+<colgroup>
+<col width='40%'>
+<col width='20%'>
+<col width='20%'>
+</colgroup>
+<thead>
+<tr>
+<th>Название</th>
+<th class='bg'>Рейтинг</th>
+<th>Отзывы</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<div>
+<a href="http://companies.dev.by/r-style-lab">R-Style Lab</a>
+</div>
+</td>
+<td class='bg'>
+<strong>
+4.8
+</strong>
+<em class='plus'>
+0.0
+</em>
+<i class='icon-dev-arw-plus'></i>
+</td>
+<td>
+<a href="http://companies.dev.by/r-style-lab/reviews">18</a>
+<!-- - if current_user -->
+<!-- %span -->
+<!-- = LoggedView.unread_count_review company.id, current_user.id -->
+</td>
+</tr>
+<tr>
+<td>
+<div>
+<a href="http://companies.dev.by/wargaming-net-geym-strim">Wargaming.net / Гейм Стрим</a>
+</div>
+</td>
+<td class='bg'>
+<strong>
+0.0
+</strong>
+<em class='plus'>
+0.0
+</em>
+<i class='icon-dev-arw-plus'></i>
+</td>
+<td>
+<a href="http://companies.dev.by/wargaming-net-geym-strim/reviews">14</a>
+<!-- - if current_user -->
+<!-- %span -->
+<!-- = LoggedView.unread_count_review company.id, current_user.id -->
+</td>
+</tr>
+<tr>
+<td>
+<div>
+<a href="http://companies.dev.by/a1qa">A1QA</a>
+</div>
+</td>
+<td class='bg'>
+<strong>
+0.0
+</strong>
+<em class='plus'>
+0.0
+</em>
+<i class='icon-dev-arw-plus'></i>
+</td>
+<td>
+<a href="http://companies.dev.by/a1qa/reviews">6</a>
+<!-- - if current_user -->
+<!-- %span -->
+<!-- = LoggedView.unread_count_review company.id, current_user.id -->
+</td>
+</tr>
+<tr>
+<td>
+<div>
+<a href="http://companies.dev.by/yamiks-itech">Yamiks iTech</a>
+</div>
+</td>
+<td class='bg'>
+<strong>
+0.0
+</strong>
+<em class='plus'>
+0.0
+</em>
+<i class='icon-dev-arw-plus'></i>
+</td>
+<td>
+<a href="http://companies.dev.by/yamiks-itech/reviews">6</a>
+<!-- - if current_user -->
+<!-- %span -->
+<!-- = LoggedView.unread_count_review company.id, current_user.id -->
+</td>
+</tr>
+<tr>
+<td>
+<div>
+<a href="http://companies.dev.by/itransition">Itransition</a>
+</div>
+</td>
+<td class='bg'>
+<strong>
+0.0
+</strong>
+<em class='plus'>
+0.0
+</em>
+<i class='icon-dev-arw-plus'></i>
+</td>
+<td>
+<a href="http://companies.dev.by/itransition/reviews">5</a>
+<!-- - if current_user -->
+<!-- %span -->
+<!-- = LoggedView.unread_count_review company.id, current_user.id -->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<a href="http://companies.dev.by/" class="all">Все компании</a>
+</div>
+</div>
+
+<div class='sidebar-block'>
+<!--/* OpenX Javascript Tag v2.8.8 */-->
+
+<script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://r.dev.by/www/delivery/ajs.php':'http://r.dev.by/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=11");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://r.dev.by/www/delivery/ck.php?n=ac5246a5&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://r.dev.by/www/delivery/avw.php?zoneid=11&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=ac5246a5' border='0' alt='' /></a></noscript>
+
+
+</div>
+<div class='sidebar-block'>
+<div class='widget-epam-jobs' id='ep_block'>
+<dl id='ep_list'>
+<dd class='first' id='ep_title'>
+<h2>
+<a class='ext' href='http://www.epam.by/career/vacancies/belarus/minsk.html' target='_blank'>Вакансии EPAM Systems</a>
+</h2>
+</dd>
+<dd class='ep_item'>
+<a href="http://www.epam.by/career/vacancies/belarus/minsk/jo/6888.html?blockdev" data-pos="1">Sustaining Engineer</a>
+</dd>
+<dd class='ep_item'>
+<a href="http://www.epam.by/career/vacancies/belarus/minsk/jo/6795.html?blockdev" data-pos="2">Senior Java Developer/Tech Lead</a>
+</dd>
+<dd class='ep_item'>
+<a href="http://www.epam.by/career/vacancies/belarus/minsk/jo/6839.html?blockdev" data-pos="3">Python Solutions Architect</a>
+</dd>
+<dd class='ep_item'>
+<a href="http://www.epam.by/career/vacancies/belarus/minsk/jo/3535.html?blockdev" data-pos="4">Database Developer</a>
+</dd>
+<dd class='ep_item'>
+<a href="http://www.epam.by/career/vacancies/belarus/minsk/jo/3449.html?blockdev" data-pos="5">Mobile Web Developer</a>
+</dd>
+<dd class='ep_item'>
+<a href="http://www.epam.by/career/vacancies/belarus/minsk/jo/3589.html?blockdev" data-pos="6">PHP Developer</a>
+</dd>
+</dl>
+<dl id='ep_full'>
+<div id='ep_arrows'>
+<div>
+<a id='ep_prev'></a>
+<a id='ep_next'></a>
+</div>
+</div>
+<div class='item' data-pos='1'>
+<dd id='ep_descr'>
+<h3>
+<a href='http://www.epam.by/career/vacancies/belarus/minsk/jo/6888.html?blockdev' id='e_title'>Sustaining Engineer</a>
+</h3>
+<div id='e_descr'>
+<p>Requirements: Some experience in network administration (configuring routers, switches, vlans, etc) and knowledge network protocols (SNMP, tcp, udp); Good knowledge of Linux environment (working in command line, ability to write/modify scripts, vi, ssh, packet managers like rpm); Good SQL (queries and scripts, MySQL preferable); English level: at least Upper Intermediate.</p>
+
+</div>
+</dd>
+<dd id='ep_leader'>
+<h4>От руководителя проекта:</h4>
+<div id='e_manager'>
+<p>We are looking for a motivated, proactive, hard-working Sustaining Engineer to work on one of our high-profile projects. Our customer is one of the world leading providers of enterprise network infrastructure automation products.<br>
+Apart from the daily work on product maintenance, the successful candidate is expected to participate in weekly calls/meetings and occasional troubleshooting on the customer’s side. Annual business trips are highly probable.</p>
+
+</div>
+<div id='ep_contact'>
+<b>Контактное лицо:</b>
+<span id='e_contact'>Ольга Муштукова, Olga_Mushtukova@epam.com, +375 44 7950477,  Skype mushtukova.olga
+</span>
+</div>
+<div id='ep_more'>
+<a href='http://www.epam.by/career/vacancies/belarus/minsk/jo/6888.html?blockdev' id='e_more'>Подробнее о вакансии</a>
+</div>
+</dd>
+</div>
+<div class='item' data-pos='2'>
+<dd id='ep_descr'>
+<h3>
+<a href='http://www.epam.by/career/vacancies/belarus/minsk/jo/6795.html?blockdev' id='e_title'>Senior Java Developer/Tech Lead</a>
+</h3>
+<div id='e_descr'>
+<p>Requirements: 5+ years of Java programming experience; Experience in building highly-loaded and highly-available systems; Strong J2EE, OOP and design skills; Strong Spring and Hibernate knowledge; Experience in software development lifecycle (SDLC); Experience with Agile/Scrum methodology; Good spoken and written English; Good communication skills; Banking knowledge (preferably for back-office applications) would be perfect to have; Readiness for business trips to USA or Switzerland is expected.</p>
+
+</div>
+</dd>
+<dd id='ep_leader'>
+<h4>От руководителя проекта:</h4>
+<div id='e_manager'>
+<p>EPAM Systems is looking for a mature Java professional who is ready to relocate to Kiev to work on an interesting project within our Banking and Financial Services Business Unit </p>
+
+</div>
+<div id='ep_contact'>
+<b>Контактное лицо:</b>
+<span id='e_contact'>Наталья Полякова, Natallia_Paliakova@epam.com, +375 44 7600852, Skype Natallia_Paliakova </span>
+</div>
+<div id='ep_more'>
+<a href='http://www.epam.by/career/vacancies/belarus/minsk/jo/6795.html?blockdev' id='e_more'>Подробнее о вакансии</a>
+</div>
+</dd>
+</div>
+<div class='item' data-pos='3'>
+<dd id='ep_descr'>
+<h3>
+<a href='http://www.epam.by/career/vacancies/belarus/minsk/jo/6839.html?blockdev' id='e_title'>Python Solutions Architect</a>
+</h3>
+<div id='e_descr'>
+<p>Requirements: 10+ years of working experience in IT; Experience of architecture design; Python/turbogears/SQLobjects; ExtJS; Postgress; English level: at least Upper-Intermediate.</p>
+
+</div>
+</dd>
+<dd id='ep_leader'>
+<h4>От руководителя проекта:</h4>
+<div id='e_manager'>
+<p>We welcome Python Solutions Architects to join one of our projects. The product that you will work on is a system that helps to quickly find and understand necessary information within a set of legal documents in interactive manner. A good understanding of algorithms and heuristic methods is highly expected from your behalf. Relocation to the UK is possible within this position. </p>
+
+</div>
+<div id='ep_contact'>
+<b>Контактное лицо:</b>
+<span id='e_contact'>Наталья Полякова, Natallia_Paliakova@epam.com, +375 44 7600852, Skype Natallia_Paliakova</span>
+</div>
+<div id='ep_more'>
+<a href='http://www.epam.by/career/vacancies/belarus/minsk/jo/6839.html?blockdev' id='e_more'>Подробнее о вакансии</a>
+</div>
+</dd>
+</div>
+<div class='item' data-pos='4'>
+<dd id='ep_descr'>
+<h3>
+<a href='http://www.epam.by/career/vacancies/belarus/minsk/jo/3535.html?blockdev' id='e_title'>Database Developer</a>
+</h3>
+<div id='e_descr'>
+<p>Requirements: Experience with Oracle, MS SQL or any other DB; Knowledge of ANSI SQL, T-SQL, PL/SQL; Understanding of database server architecture; Understanding of RDBMS concepts; Experience in designing and developing database structure; Experience with SQL query tuning; Good problem solving skills; English level: Pre-Intermediate (ability to communicate with foreign customers in oral and written form); Good communication skills; Ability to work successfully both individually and as a team member.</p>
+
+</div>
+</dd>
+<dd id='ep_leader'>
+<h4>От руководителя проекта:</h4>
+<div id='e_manager'>
+<p>We are looking for an experienced database developer to enhance our team and join one of our high profile projects. The successful candidates would be responsible for database design, programming and performance tuning. We expect our employees to possess strong technical and team-working skills and self-motivated approach.</p>
+
+</div>
+<div id='ep_contact'>
+<b>Контактное лицо:</b>
+<span id='e_contact'>Анна Асмоловская, Anna_Asmolovskaya@epam.com, +375 29 1073762, Skype anna.asmolovskaya </span>
+</div>
+<div id='ep_more'>
+<a href='http://www.epam.by/career/vacancies/belarus/minsk/jo/3535.html?blockdev' id='e_more'>Подробнее о вакансии</a>
+</div>
+</dd>
+</div>
+<div class='item' data-pos='5'>
+<dd id='ep_descr'>
+<h3>
+<a href='http://www.epam.by/career/vacancies/belarus/minsk/jo/3449.html?blockdev' id='e_title'>Mobile Web Developer</a>
+</h3>
+<div id='e_descr'>
+<p>Требования: опыт разработки на HTML5/CSS3; знание особенностей мобильных браузеров; опыт использования JavaScript Mobile фрэймворков: Sencha Touch, Backbone.js, Knockout.js или другое; навыки работы с REST/JSON; английский язык. Дополнительные: опыт использования PhoneGap или других врапперов; знание нескольких JavaScript Mobile фрэймворков.</p>
+
+</div>
+</dd>
+<dd id='ep_leader'>
+<h4>От руководителя проекта:</h4>
+<div id='e_manager'>
+<p>Команда EPAM принимает участие в разработке огромного количества веб- и мобильных приложений для корпораций с мировым именем. Работа на проекте предполагает активное изучение принципиально новых технологий, так как мы работаем с использованием уникальных схем и моделей разработки приложений. Для решения задач часто требуется нестандартный подход и креативное мышление, а также постоянное совершенствование навыков.</p>
+
+</div>
+<div id='ep_contact'>
+<b>Контактное лицо:</b>
+<span id='e_contact'>Ольга Волович, Volha_Valovich@epam.com, +375 44 7480057, Skype olga_volovich</span>
+</div>
+<div id='ep_more'>
+<a href='http://www.epam.by/career/vacancies/belarus/minsk/jo/3449.html?blockdev' id='e_more'>Подробнее о вакансии</a>
+</div>
+</dd>
+</div>
+<div class='item' data-pos='6'>
+<dd id='ep_descr'>
+<h3>
+<a href='http://www.epam.by/career/vacancies/belarus/minsk/jo/3589.html?blockdev' id='e_title'>PHP Developer</a>
+</h3>
+<div id='e_descr'>
+<p>Требования: Опыт разработки на PHP от 2-х лет; Опыт работы с MySQL, умение составлять SQL-запросы; Опыт работы в среде Linux; Опыт работы с системами контроля версий (subversion, git или mercurial); Умение следовать поставленным процессам разработки; Разговорный английский язык не ниже pre-intermediate; Уверенные знания парадигмы ООП; PHP 5 (включая работа с XML и файлами, сессии, cookies, исключения и обработка ошибок); Знание PHP инфраструктуры и устройства веб-приложений; MySQL (движки, индексы); SQL (синтаксис, объединение таблиц, группировка, агрегация, подзапросы, др.).</p>
+
+</div>
+</dd>
+<dd id='ep_leader'>
+<h4>От руководителя проекта:</h4>
+<div id='e_manager'>
+<p>Отдел PHP решений компании EPAM Systems приглашает на работу PHP программистов для работы над проектами для всемирно известных компаний в областях бизнес информации и медиа, электронной коммерции, финансов, безопасности и образования. На сегодняшний день в нашем отделе работает более 25 PHP-разработчиков. В нашей работе мы используем гибкие методологии, самые передовые технологии, практики непрерывной интеграции и постоянно учимся с помощью исследовательских (R&amp;D) проектов. </p>
+
+</div>
+<div id='ep_contact'>
+<b>Контактное лицо:</b>
+<span id='e_contact'>Юлия Сергиеня, Yuliya_Serhiyenia@epam.com, +375 44 5888276, Skype yuliya.serhiyenia</span>
+</div>
+<div id='ep_more'>
+<a href='http://www.epam.by/career/vacancies/belarus/minsk/jo/3589.html?blockdev' id='e_more'>Подробнее о вакансии</a>
+</div>
+</dd>
+</div>
+<dd class='last' id='ep_backtolist'>
+<a href='#'>Вернуться к списку вакансий EPAM</a>
+</dd>
+</dl>
+</div>
+
+</div>
+<div class='sidebar-block'>
+
+</div>
+<div class='sidebar-block'>
+<div class='widget-salary-info'>
+<h3>
+<a href="http://salaries.dev.by/" class="a-link">Зарплаты</a>
+</h3>
+<div class='data'>
+<div class='count'>
+<strong>
+1300
+</strong>
+</div>
+<div class='info'>
+Медиана зарплаты в ИТ за 3 месяца
+</div>
+</div>
+<table>
+<tr>
+<th>
+<div>
+МАР
+</div>
+</th>
+<th>
+<div>
+АПР
+</div>
+</th>
+<th>
+<div>
+МАЙ
+</div>
+</th>
+<th>
+<div>
+ИЮН
+</div>
+</th>
+<th>
+<div>
+ИЮЛ
+</div>
+</th>
+<th>
+<div>
+АВГ
+</div>
+</th>
+</tr>
+<tr>
+<td>
+<div class='line' style='top:5px'>
+<em>
+1325
+</em>
+</div>
+</td>
+<td>
+<div class='line' style='top:5px'>
+<em>
+1300
+</em>
+</div>
+</td>
+<td>
+<div class='line' style='top:6px'>
+<em>
+1275
+</em>
+</div>
+</td>
+<td>
+<div class='line' style='top:5px'>
+<em>
+1300
+</em>
+</div>
+</td>
+<td>
+<div class='line' style='top:8px'>
+<em>
+1200
+</em>
+</div>
+</td>
+<td>
+<div class='line' style='top:3px'>
+<em>
+1400
+</em>
+</div>
+</td>
+</tr>
+</table>
+<div class='block-links clearfix'>
+<a href="http://salaries.dev.by/" title="Dev.by | Полный отчёт">Полный отчёт</a>
+<a href="http://salaries.dev.by/new" class="a-add" title="Dev.by | Добавить свою зарплату">Добавить свою зарплату</a>
+</div>
+</div>
+
+</div>
+<div class='sidebar-block'>
+<div class='sidebar-advt'>
+<!--/* OpenX Javascript Tag v2.8.8 */-->
+
+<script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://r.dev.by/www/delivery/ajs.php':'http://r.dev.by/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=15");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://r.dev.by/www/delivery/ck.php?n=adebbddb&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://r.dev.by/www/delivery/avw.php?zoneid=15&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=adebbddb' border='0' alt='' /></a></noscript>
+</div>
+
+</div>
+<div class='sidebar-block'>
+<div class='sidebar-blog-popular'>
+<h3>Популярные материалы</h3>
+<ul>
+<li>
+<div class='item'>
+<div class='data-img'>
+<img alt="Content_sydhavnen_20070412_tw_056" src="/ckeditor_assets/pictures/2873/content_sydhavnen_20070412_tw_056.jpg" />
+</div>
+<div class='data-info'>
+<a href="http://dev.by/blogs/main/sluchaetsya" class="a-title">Случается...</a>
+<div class='info'>
+<i class='icon-dev-user2'></i>
+<a href="/users/helsinki" class="a-poster">Helsinki</a>
+<span class='label-for-user'>
+
+</span>
+</div>
+<a class='a-comment' href='http://dev.by/blogs/main/sluchaetsya'>
+34 комментария
+</a>
+</div>
+</div>
+</li>
+<li>
+<div class='item'>
+<div class='data-img'>
+<img alt="Content_dev_skvsk" src="/ckeditor_assets/pictures/2789/content_dev_skvsk.jpg" />
+</div>
+<div class='data-info'>
+<a href="http://dev.by/blogs/main/fruktovaya-pochta-ili-istoriya-odnogo-servisa" class="a-title">Фруктовая почта, или История одного сервиса</a>
+<div class='info'>
+<i class='icon-dev-user2'></i>
+<a href="/users/ads" class="a-poster">ads</a>
+<span class='label-for-user'>
+Реклама в <a href="http://companies.dev.by/dev-by">dev.by</a>
+</span>
+</div>
+<a class='a-comment' href='http://dev.by/blogs/main/fruktovaya-pochta-ili-istoriya-odnogo-servisa'>
+37 комментариев
+</a>
+</div>
+</div>
+</li>
+<li>
+<div class='item'>
+<div class='data-img'>
+<img alt="Content_pirate1" src="/ckeditor_assets/pictures/2833/content_pirate1.jpg" />
+</div>
+<div class='data-info'>
+<a href="http://dev.by/blogs/main/intervyu-s-piratom-govorim-o-vlasti-kopirayte-i-znaniyah-dlya-vseh-i-kazhdogo" class="a-title">Интервью с пиратом: говорим о власти, копирайте и знаниях для всех и каждого</a>
+<div class='info'>
+<i class='icon-dev-user2'></i>
+<a href="/users/johnsons" class="a-poster">Johnsons</a>
+<span class='label-for-user'>
+журналист в <a href="http://companies.dev.by/dev-by">dev.by</a>
+</span>
+</div>
+<a class='a-comment' href='http://dev.by/blogs/main/intervyu-s-piratom-govorim-o-vlasti-kopirayte-i-znaniyah-dlya-vseh-i-kazhdogo'>
+28 комментариев
+</a>
+</div>
+</div>
+</li>
+</ul>
+</div>
+
+</div>
+<div class='sidebar-resize-float'>
+<div class='sidebar-block fixed-block'>
+<a href="http://jobs.dev.by/" class="all" title="Dev.by | Все вакансии">Все вакансии</a>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class='push'></div>
+</div>
+<div class='jump-top'>&uarr;</div>
+<div class='dev-container'>
+<footer class='clearfix'>
+<div class='dev-all'>
+<div class='dev-main'>
+<div class='footer-top clearfix'>
+<div class='col'>
+<ul>
+<li>
+<strong>
+<a href="http://jobs.dev.by/" title="Dev.by | Вакансии">Вакансии</a>
+</strong>
+<form action='http://jobs.dev.by/' class='clearfix' id='footer-search' method='get'>
+<input class='input-xlarge' name='search-jobs[token]' placeholder='Поиск по вакансиям' type='text'>
+<input type='submit' value=''>
+</form>
+</li>
+<li>
+<strong>
+<a href="http://salaries.dev.by/" title="Dev.by | Зарплаты">Зарплаты</a>
+</strong>
+</li>
+<li>
+<strong>
+<a href="http://companies.dev.by/" title="Dev.by | Компании">Компании</a>
+</strong>
+</li>
+</ul>
+</div>
+<div class='col'>
+<ul>
+<li>
+<strong>
+<a href="http://dev.by/" title="Dev.by | Блог">Блог</a>
+</strong>
+</li>
+<li>
+<a href="http://dev.by/news" title="Dev.by | Новости">Новости</a>
+</li>
+</ul>
+</div>
+<div class='col'>
+<ul>
+<li>
+<strong>
+<a href="http://events.dev.by/" title="Dev.by | События">События</a>
+</strong>
+</li>
+</ul>
+</div>
+</div>
+<div class='footer-middle clearfix'>
+<div class='col'>
+<span class='copyright'>
+<!-- = raw t(:copyright) -->
+2008-2013 &laquo;Дев Бай&raquo
+</span>
+<p>
+Это сайт про работу в IT, мы знаем,
+<a href="http://salaries.dev.by/" title="Dev.by | Зарплаты">сколько вы должны получать</a>
+и
+<a href="http://companies.dev.by/" title="Dev.by | Компании">где лучше работать</a>
+</p>
+</div>
+<div class='col'>
+<ul class='ul-big'>
+<li>
+<span>
+<a href="/login" title="Dev.by | Войти">Войти</a>
+</span>
+</li>
+<li>
+<span>
+<a href="/registration" title="Dev.by | Зарегистрироваться">Зарегистрироваться</a>
+</span>
+</li>
+<li>
+<a href="http://salaries.dev.by/new" title="Dev.by | Добавить свою зарплату">Добавить свою зарплату</a>
+</li>
+</ul>
+</div>
+<div class='col'>
+<ul class='ul-big'>
+<li>
+<span>
+<a href="http://dev.by/registration?hr=true" title="Dev.by | Зарегистрироваться как HR">Зарегистрироваться как HR</a>
+</span>
+</li>
+<li>
+<a href="http://companies.dev.by/new" title="Dev.by | Добавить компанию">Добавить компанию</a>
+</li>
+</ul>
+</div>
+<div class='col col-small'>
+<ul>
+<li>
+<span>
+<a href="http://dev.by/pages/contacts" title="Dev.by | Контактная информация">Контактная информация</a>
+</span>
+</li>
+<li>
+<a href="http://dev.by/pages/about" title="Dev.by | О проекте">О проекте</a>
+</li>
+<li>
+<a href="http://dev.by/hr" title="Dev.by | Рекламодателям">Рекламодателям</a>
+</li>
+</ul>
+</div>
+<div class='col'>
+<ul>
+<li>
+<a href="http://dev.by/pages/agreement" title="Dev.by | Пользовательское соглашение">Пользовательское соглашение</a>
+</li>
+<li>
+<a href="http://dev.by/blogs/devby" title="Dev.by | Блог проекта">Блог проекта</a>
+</li>
+</ul>
+</div>
+</div>
+<div class='footer-bottom clearfix'>
+<div class='col'>
+<ul class='social-ico'>
+<li class='tw'>
+<a href="http://dev.by/twitter" title="Dev.by | Twitter">Twitter</a>
+</li>
+<li class='fb'>
+<a href="http://dev.by/facebook" title="Dev.by | Facebook">Facebook</a>
+</li>
+<li class='rss'>
+<a href="http://dev.by/rss" title="Dev.by | Rss">Rss</a>
+</li>
+</ul>
+</div>
+<div class='col'>
+<span>При использовании информации с сайта обязательно ставьте на нас ссылку. Спасибо!</span>
+</div>
+<div class='col'>
+<i class='icon-dev-hata'></i>
+<span>
+<a href="https://www.datahata.by/" title="Dev.by | Хостинг в Беларуси">datahata</a>
+– Хостинг в Беларуси
+</span>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+var reformalOptions = {
+project_id: 85245,
+project_host: "devby.reformal.ru",
+tab_orientation: "left",
+tab_indent: "165px",
+tab_image_url: "/assets/newdev/devpng.png",
+tab_is_custom: true
+};
+
+(function() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript'; script.async = true;
+        script.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'media.reformal.ru/widgets/v3/reformal.js';
+        document.getElementsByTagName('head')[0].appendChild(script);
+    })();
+</script><noscript><a href="http://reformal.ru"><img src="http://media.reformal.ru/reformal.png" /></a><a href="http://devby.reformal.ru">Oтзывы и предложения для dev.by</a></noscript>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+<!-- Put this script tag to the <head> of your page -->
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?74"></script>
+
+
+<script type="text/javascript">
+  VK.init({apiId: 3319847, onlyWidgets: true});
+</script>
+
+<script type="text/javascript">
+  VK.Widgets.Like("vk_like", {type: "mini", height: 20});
+</script>
+
+
+<script type="text/javascript">
+  window.___gcfg = {lang: 'ru'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7594980-1']);
+  _gaq.push(['_setDomainName', 'dev.by']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+(w[c] = w[c] || []).push(function() {
+try {
+w.yaCounter20162473 = new Ya.Metrika({id:20162473,
+webvisor:true,
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true});
+} catch(e) { }
+});
+ 
+var n = d.getElementsByTagName("script")[0],
+s = d.createElement("script"),
+f = function () { n.parentNode.insertBefore(s, n); };
+s.type = "text/javascript";
+s.async = true;
+s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+ 
+if (w.opera == "[object Opera]") {
+d.addEventListener("DOMContentLoaded", f, false);
+} else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/20162473" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</footer>
+</div>
+</body>
+</html>

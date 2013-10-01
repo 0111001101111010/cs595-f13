@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<script>var __pbpa = true;</script><script>var translated_warning_string = 'Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?';</script><script type="text/javascript" language="javascript" src="http://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=90496f22ffd4b193ff4f3aa39d43d2af"></script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
+        <title>Scaling Django to 8 Billion Page Views | Disqus: The Official Blog</title>
+        <link rel="shortcut icon" href="http://mediacdn.disqus.com/1366744527/img/favicon16-32.ico" type="image/vnd.microsoft.icon" />
+        <link rel="alternate" type="application/rss+xml" href="http://blog.disqus.com/rss">
+        <link href="http://mediacdn.disqus.com/1361595726/css/base.css" type="text/css" rel="stylesheet"/>
+        
+        <style type="text/css">
+        @import "http://static.tumblr.com/mhakwey/hdQlsnv4o/tiptip.css";
+        .cta-button {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            background-color: rgb(255,115,0);
+            background-image: linear-gradient(bottom, rgb(255,100,43) 19%, rgb(255,115,0) 60%);
+            background-image: -o-linear-gradient(bottom, rgb(255,100,43) 19%, rgb(255,115,0) 60%);
+            background-image: -moz-linear-gradient(bottom, rgb(255,100,43) 19%, rgb(255,115,0) 60%);
+            background-image: -webkit-linear-gradient(bottom, rgb(255,100,43) 19%, rgb(255,115,0) 60%);
+            background-image: -ms-linear-gradient(bottom, rgb(255,100,43) 19%, rgb(255,115,0) 60%);
+
+            background-image: -webkit-gradient(
+                linear,
+                left bottom,
+                left top,
+            	color-stop(0.19, rgb(255,100,43)),
+            	color-stop(0.6, rgb(255,115,0))
+            );
+            border: 1px solid #d03500;
+            border-radius:3px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ie-border-radius: 3px;
+            }
+
+            .cta-spacer {
+                margin: 40px 0;
+            }
+
+            .caption {
+                display: block;
+                text-align:center;
+                font-size: 12px;
+                font-weight:bold;
+                margin-top: -14px;
+            }
+            
+            .caption-left {
+                display: block;
+                font-size: 12px;
+                font-weight:bold;
+                margin-top: -14px;
+            }
+
+            .post img.no-decoration {
+                padding: 0;
+            	border: none;
+            	-webkit-border-radius: 0;
+            	-moz-border-radius: 0;
+            	border-radius: 0;
+            	-webkit-box-shadow: none;
+            	-moz-box-shadow: none;
+            	box-shadow: none;
+            }
+
+            hr {
+                display: block;
+                height: 1px;
+                overflow: hidden;
+                border: none;
+                visibility: visible;
+                width: 100%;
+                background: #EEE;
+                margin: 30px 0;
+            }
+            .post h3 {
+                font-weight: 600;
+                margin-top: 2em;
+            }
+            
+        </style>
+        
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+        <script type="text/javascript" src="http://static.tumblr.com/mhakwey/MlDlsnv67/tiptip.js"></script>
+        <script type="text/javascript">       
+              $(function(){
+            $(".avatars").tipTip({defaultPosition: "top", delay: 0, maxWidth: 300});
+            });
+        </script>
+        
+
+        
+            <meta name="description" content="Scaling Django to 8 Billion Page Views As we&rsquo;re approaching 8 billion page views per month and 45k requests per second, we&rsquo;ve learned a couple things about delivering comments to a lot of different..." />
+        
+        
+        <link href="http://content.disqus.com/tumblr/blog-2013-08-28.css" type="text/css" rel="stylesheet" />
+        
+        <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1410476-11']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+    </script>
+    <script type="text/javascript">
+    (function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");
+    b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+
+    '//cdn.mxpnl.com/libs/mixpanel-2.1.min.js';d=c.getElementsByTagName("script")[0];
+    d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){
+    var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);a[b]=function(){a.push([b].concat(
+    Array.prototype.slice.call(arguments,0)))}}var g=a;"undefined"!==typeof f?g=a[f]=[]:
+    f="mixpanel";g.people=g.people||[];h=['disable','track','track_pageview','track_links',
+    'track_forms','register','register_once','unregister','identify','name_tag',
+    'set_config','people.identify','people.set','people.increment'];for(e=0;e<h.length;e++)d(g,h[e]);
+    a._i.push([b,c,f])};a.__SV=1.1;})(document,window.mixpanel||[]);
+    mixpanel.init("f6fcda8710871be3efb6da4e46ec68e2", { track_pageview: false });
+    
+    mixpanel.track("Pageview /blog");
+</script>
+
+<script type="application/javascript">var _prum={id:"50b319405d010c4a41000006"};var PRUM_EPISODES=PRUM_EPISODES||{};PRUM_EPISODES.q=[];PRUM_EPISODES.mark=function(b,a){PRUM_EPISODES.q.push(["mark",b,a||new Date().getTime()])};PRUM_EPISODES.measure=function(b,a,b){PRUM_EPISODES.q.push(["measure",b,a,b||new Date().getTime()])};PRUM_EPISODES.done=function(a){PRUM_EPISODES.q.push(["done",a])};PRUM_EPISODES.mark("firstbyte");(function(){var b=document.getElementsByTagName("script")[0];var a=document.createElement("script");a.type="text/javascript";a.async=true;a.charset="UTF-8";a.src="//rum-static.pingdom.net/prum.min.js";b.parentNode.insertBefore(a,b)})();</script>
+
+    
+<!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS -->
+<!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. -->
+<!-- Read more: http://ogp.me/ -->
+<meta property="fb:app_id" content="48119224995" />
+<meta property="og:site_name" content="Disqus: The Official Blog" />
+<meta property="og:title" content="Scaling Django to 8 Billion Page Views" />
+<meta property="og:url" content="http://blog.disqus.com/post/62187806135/scaling-django-to-8-billion-page-views" />
+<meta property="og:description" content="As we&rsquo;re approaching 8 billion page views per month and 45k requests per second, we&rsquo;ve learned a couple things about delivering comments to a lot of different people. Disqus is very well known for..." />
+<meta property="og:determiner" content="a" />
+<meta property="og:type" content="tumblr-feed:entry" />
+<meta property="og:image" content="http://assets.tumblr.com/images/og/text_200.png" />
+<!-- END TUMBLR FACEBOOK OPENGRAPH TAGS -->
+
+
+<!-- TWITTER TAGS -->
+<meta charset="utf-8">
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:description" content="As we&rsquo;re approaching 8 billion page views per month and 45k requests per second, we&rsquo;ve learned a couple things about delivering comments to a lot of different people. Disqus is very well known for using Django for almost all of our web traffic, and that continues to be a thing today. As with any web framework, there are inherent trade-offs: rapid development vs performance, familiarity for new developers vs something custom, etc. Disqus likes to lean towards rapid development and familiarity over performance, and something fine tuned for our exact needs.
+
+So, why is a web framework slow?
+
+ On the surface, the first impression is that a web framework is slow because there is a lot of boiler plate and unnecessary code that is not needed for your application, and that is a valid impression. In practice, slowness is usually not a product of your framework&rsquo;s bloat or the language choice. Slowness is likely a result of the fact that your request is communicating with other services across your network. In our case, these other services are PostgreSQL, Redis, Cassandra, and Memcached, just to name a few. Slow database queries and network latency generally outweigh the performance overhead of a robust framework such as Django.
+
+ To get around these latencies, people use various forms of caching. The most tangible approach would be to use the built-in Django cache library.
+
+ The common pattern for application level caching is such:
+
+data = cache.get(&#039;stuff&#039;)
+if data is None:
+    data = list(Stuff.objects.all())
+    cache.set(&#039;stuff&#039;, data)
+return data
+
+ If you are familiar with Django, this should be a pretty familiar pattern. This form of caching is simple and straightforward, and works really well for most things. Paired with Memcached, things are fast enough, but there is still a lot of work still being done to serve a request.
+
+Dealing with 45k requests per second
+
+ We&rsquo;ve cached our &ldquo;slow&rdquo; things. There is still a lot of unnecessary work that needs to be done at rate of 45 thousand times per second. We&rsquo;re probably rendering some JSON, or rendering an HTML template, or simply parsing HTML and executing our Django middleware. The point is, we want to be able to short-circuit all of this work, and leave Django to do what it does best: serve unique data only.
+
+ Out of 45k requests per second, how many are truly unique? How many of those responses are actually different from one response to the next? Do we really need to keep doing the same work over and over again when the result is always the same? We really want to cache whole responses and skip all of the other work.
+
+Introducing Varnish
+
+ What even is Varnish? Varnish is a piece of software that sits between our load balancers and our Django backends and acts as an HTTP caching layer. What this means is that it can cache the entire HTTP response without even hitting a Django server, if we know that request won&rsquo;t be unique.
+
+ Previously, Varnish was a bit of a black box to us. We installed it and configuration was very minimal, and honestly, this worked very well. But I thought we could do more.
+
+ I spent some time learning more about Varnish and some tricks that we could use. Over time, we were able to shave off several thousands of requests per second from ever hitting our Django servers. Today, out of the 45k inbound requests every second, only about 15k or so actually hit our app servers. The rest are absorbed by Varnish and served to the user very quickly and efficiently.
+
+ Since this has been very useful for us and a good learning experience, this topic has been the subject of a few recent talks of mine.
+
+ Most recently, I spoke at DjangoCon US in Chicago. This talk was aimed toward people who weren&rsquo;t familiar with Varnish, with the hopes of inspiring and motivating them to learn more. For me, I was excited to give this talk because it&rsquo;s a topic that isn&rsquo;t explained very often to application developers. It&rsquo;s a talk that I&rsquo;d really liked to have heard a few years ago, and hopefully bridges the gap in understanding how HTTP really works and how you can manipulate it to interact with tools such as Varnish.
+
+ Prior to that, I presented at VUG7 (Varnish User Group) in New York, and went into details about some of the exact tricks that we use to help overcome some of our problems. This talk goes into a lot of detail about the specific VCLs that we use for each endpoint needed to deliver our embed.
+
+tl;dr
+
+ Check out Varnish. It won&rsquo;t solve all of your problems, but it&rsquo;s something worth investing the time into learning about and evaluating.
+
+ If this kind of stuff is interesting to you, and you&rsquo;d like to yell at computers with me at least 5 days a week, we are hiring!" />
+            <meta name="twitter:title" content="Scaling Django to 8 Billion Page Views" />
+            <meta name="twitter:url" content="http://blog.disqus.com/post/62187806135/scaling-django-to-8-billion-page-views" />
+            <meta name="twitter:site" content="tumblr" />
+            <meta name="twitter:creator" content="disqus" />
+            <meta name="twitter:app:name:iphone" content="Tumblr" />
+            <meta name="twitter:app:name:ipad" content="Tumblr" />
+            <meta name="twitter:app:name:googleplay" content="Tumblr" />
+            <meta name="twitter:app:id:iphone" content="305343404" />
+            <meta name="twitter:app:id:ipad" content="305343404" />
+            <meta name="twitter:app:id:googleplay" content="com.tumblr" />
+            <meta name="twitter:app:url:iphone" content="tumblr://x-callback-url/blog?blogName=disqus&amp;postID=62187806135&amp;referrer=twitter-cards" />
+            <meta name="twitter:app:url:ipad" content="tumblr://x-callback-url/blog?blogName=disqus&amp;postID=62187806135&amp;referrer=twitter-cards" />
+            <meta name="twitter:app:url:googleplay" content="tumblr://x-callback-url/blog?blogName=disqus&amp;postID=62187806135&amp;referrer=twitter-cards" />
+    
+
+<script type="text/javascript" src="http://assets.tumblr.com/assets/scripts/tumblelog.js?_v=cf7aeb03e820314a6cb2890dfa192802"></script>
+<meta http-equiv="x-dns-prefetch-control" content="off"/>
+
+<meta name="keywords" content="webscale,djangocon,python,scaling,varnish" />
+
+</head>
+    <body>
+        <div id="header">
+            <div id="global-nav">
+                <div class="container">
+                    
+                </div>
+            </div>
+            <div id="local-nav">
+                <div class="container">
+                    <a href="http://disqus.com" id="logo"><img src="http://disqus-cloudfront.s3.amazonaws.com/tumblr/disqus-logo.png" width="102" height="20" alt="DISQUS" title="Disqus - Discover your community"></a>
+                    <ul id="account-nav">
+                        <li><a href="http://disqus.com/websites">For Websites</a></li>
+                        <li><a href="http://disqus.com/community">Using Disqus</a></li>
+                    </ul>
+                    <a id="log-in-link"href="http://disqus.com/profile/login/?next=http://disqus.com/">Log in</a>
+                </div>
+            </div>
+        </div>
+        <div id="page-header">
+            <div class="container">
+                <h1><a href="/">Company Blog</a></h1>
+                <!--<div id="search">
+                    <form action="/search" method="get" id="search-form">
+                        <input type="hidden" name="t" value="disqus" />
+                        <input type="hidden" name="scope" value="my_blog" />
+                        <input type="text" name="q" class="query" value="" />
+                    </form>
+                </div>-->
+            </div>
+        </div>
+        <div id="content">
+            <div class="container">
+                <div class="primary">
+                    <ol id="posts">
+                            
+
+                            
+
+                        
+                            <li class="post 
+                                text 
+                                  
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                django varnish scaling python webscale djangocon main">
+
+                            
+                                <div class="author">
+                                    <img src="http://31.media.tumblr.com/avatar_7b187e1b509b_64.png" class="avatars" alt="mattrobenolt" title="mattrobenolt">
+                                </div>
+                                
+                                    <h2><a href="http://blog.disqus.com/post/62187806135/scaling-django-to-8-billion-page-views">Scaling Django to 8 Billion Page Views</a></h2>
+                                    <div class="info">Posted on September 24, 2013 by mattrobenolt</div>
+                                
+                                    <p>As we’re approaching 8 billion page views per month and 45k requests per second, we’ve learned a couple things about delivering comments to a lot of different people. Disqus is very well known for using <a href="https://www.djangoproject.com/" target="_blank">Django</a> for almost all of our web traffic, and that continues to be a thing today. As with any web framework, there are inherent trade-offs: rapid development vs performance, familiarity for new developers vs something custom, etc. Disqus likes to lean towards rapid development and familiarity over performance, and something fine tuned for our exact needs.</p>
+
+<h2>So, why is a web framework slow?</h2>
+
+<p>On the surface, the first impression is that a web framework is slow because there is a lot of boiler plate and unnecessary code that is not needed for your application, and that is a valid impression. In practice, slowness is usually not a product of your framework’s bloat or the language choice. Slowness is likely a result of the fact that your request is communicating with other services across your network. In our case, these other services are <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a>, <a href="http://redis.io/" target="_blank">Redis</a>, <a href="http://cassandra.apache.org/" target="_blank">Cassandra</a>, and <a href="http://memcached.org/" target="_blank">Memcached</a>, just to name a few. Slow database queries and network latency generally outweigh the performance overhead of a robust framework such as Django.</p>
+
+<p>To get around these latencies, people use various forms of caching. The most tangible approach would be to use the built-in <a href="https://docs.djangoproject.com/en/dev/topics/cache/" target="_blank">Django cache library</a>.</p>
+
+<p>The common pattern for application level caching is such:</p>
+
+<pre>data = cache.get('stuff')
+if data is None:
+    data = list(Stuff.objects.all())
+    cache.set('stuff', data)
+return data</pre>
+
+<p>If you are familiar with Django, this should be a pretty familiar pattern. This form of caching is simple and straightforward, and works really well for most things. Paired with Memcached, things are fast enough, but there is still a lot of work still being done to serve a request.</p>
+
+<h2>Dealing with 45k requests per second</h2>
+
+<p>We’ve cached our “slow” things. There is still a lot of unnecessary work that needs to be done at rate of 45 thousand times per second. We’re probably rendering some JSON, or rendering an HTML template, or simply parsing HTML and executing our Django middleware. The point is, we want to be able to short-circuit all of this work, and leave Django to do what it does best: serve unique data only.</p>
+
+<p>Out of 45k requests per second, how many are truly unique? How many of those responses are actually different from one response to the next? Do we really need to keep doing the same work over and over again when the result is always the same? We really want to cache whole responses and skip all of the other work.</p>
+
+<h3>Introducing Varnish</h3>
+
+<p>What even is <a href="https://www.varnish-cache.org/" target="_blank">Varnish</a>? Varnish is a piece of software that sits between our load balancers and our Django backends and acts as an HTTP caching layer. What this means is that it can cache the entire HTTP response without even hitting a Django server, if we know that request won’t be unique.</p>
+
+<p>Previously, Varnish was a bit of a black box to us. We installed it and configuration was very minimal, and honestly, this worked very well. But I thought we could do more.</p>
+
+<p>I spent some time learning more about Varnish and some tricks that we could use. Over time, we were able to shave off several thousands of requests per second from ever hitting our Django servers. Today, out of the 45k inbound requests every second, only about 15k or so actually hit our app servers. The rest are absorbed by Varnish and served to the user very quickly and efficiently.</p>
+
+<p>Since this has been very useful for us and a good learning experience, this topic has been the subject of a few recent talks of mine.</p>
+
+<p>Most recently, I spoke at <a href="http://www.djangocon.us/" target="_blank">DjangoCon US</a> in Chicago. This talk was aimed toward people who weren’t familiar with Varnish, with the hopes of inspiring and motivating them to learn more. For me, I was excited to give this talk because it’s a topic that isn’t explained very often to application developers. It’s a talk that I’d really liked to have heard a few years ago, and hopefully bridges the gap in understanding how HTTP really works and how you can manipulate it to interact with tools such as Varnish.</p>
+
+<script async class="speakerdeck-embed" data-id="d8fa46d0f569013035d14afa8daffd2f" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script><p>Prior to that, I presented at <a href="https://www.varnish-cache.org/vug7/" target="_blank">VUG7 (Varnish User Group)</a> in New York, and went into details about some of the exact tricks that we use to help overcome some of our problems. This talk goes into a lot of detail about the specific <a href="https://www.varnish-cache.org/docs/3.0/reference/vcl.html" target="_blank">VCLs</a> that we use for each endpoint needed to deliver our embed.</p>
+
+<script async class="speakerdeck-embed" data-id="43c1a180ac5a0130829856f160bede9f" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script><h2>tl;dr</h2>
+
+<p>Check out <a href="https://www.varnish-cache.org/" target="_blank">Varnish</a>. It won’t solve all of your problems, but it’s something worth investing the time into learning about and evaluating.</p>
+
+<p>If this kind of stuff is interesting to you, and you’d like to yell at computers with me at least 5 days a week, <a href="http://disqus.com/jobs/" target="_blank">we are hiring</a>!</p>
+                                    <div class="clear"></div>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+            
+                        
+                        </li>
+                        
+                    
+                    <p style="font-size: .9em; margin-bottom: 1em;">We welcome relevant, respectful comments. Please read our <a href="http://help.disqus.com/customer/portal/articles/748668-community-guidelines">Community Guidelines</a>.</p>
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                    var disqus_url = "http://blog.disqus.com/post/62187806135/scaling-django-to-8-billion-page-views";
+                    var disqus_title = "Scaling Django to 8 Billion Page Views";
+
+                    function disqus_config() {
+                        this.strings = {
+                            'MOD': 'DISQUS TEAM',
+                            'MODERATOR': 'DISQUS TEAM'
+                        };
+                    }
+
+                      /* * * DON'T EDIT BELOW THIS LINE * * */
+                      (function() {
+                       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                       dsq.src = 'http://disqus.disqus.com/embed.js';
+                       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                      })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=disqus">comments powered by Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+                    
+                    </ol>
+
+                    
+
+                </div>
+                <div class="secondary">
+                    <ul id="sidebar">
+                        <li class="module module-divider">
+                            <h3>What is Disqus?</h3>
+                            <p><strong>Disqus</strong> (<a href="https://vine.co/v/b50Wx0OmTIz" target="new">dis&middot;cuss &bull; d&iuml;-sk&uuml;s'</a>) is all about changing the way people think about discussion on the web. We're big believers in the conversations and communities that form on blogs and other sites.</p>
+                        <br/>
+                            <h4><a href="http://disqus.com/about/#our-team" target="new">Meet the Team</a></h4>
+                            
+                        <li class="module module-divider">
+                        
+                            <h3>Follow &amp; Subscribe</h3>
+                            
+                            <a href="https://twitter.com/disqus"><img class="follow-twitter" src="http://disqus-cloudfront.s3.amazonaws.com/tumblr/icon-follow-twitter.png"></a>
+                            
+                            <a href="http://www.facebook.com/disqus"><img class="follow-facebook" src="http://disqus-cloudfront.s3.amazonaws.com/tumblr/icon-follow-facebook.png" alt="Facebook" /></a>
+                            
+                            <a href="http://feedburner.google.com/fb/a/mailverify?uri=BigHeadLabs&loc=en_US"><img class="follow-mail" src="http://disqus-cloudfront.s3.amazonaws.com/tumblr/icon-follow-mail.png" alt="email" /></a>
+                            
+                            <a href="http://feeds.feedburner.com/BigHeadLabs/"><img class="follow-rss" src="http://disqus-cloudfront.s3.amazonaws.com/tumblr/icon-follow-rss.png" alt="RSS" /></a>
+                            
+                        </li>
+                        
+                        <li class="module module-divider">
+                            <h3>Our Blogs</h3>
+                            <ul>
+                                <li><a href="http://blog.disqus.com">Company Blog</a></li>
+                                <li><a href="http://community.disqus.com">Community Blog</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="module">
+                            <h3>Links</h3>
+                            <ul>
+                                <li><a href="http://blog.disqus.com/archive">Blog Archive</a></li>
+                                <li><a href="http://disqus.com/help">Help</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>    
+        </div>
+        <div id="footer">
+            <div class="container">
+                <p class="copyright">&copy; 2007-2013 &middot; <a href="/"class="disqus">DISQUS</a></p>
+                <ul>
+                    <li><a href="http://disqus.com/websites/">For Websites</a></li>
+                    <li><a href="http://disqus.com/community/">Using Disqus</a></li>
+                    <li><a href="http://disqus.com/about/">About</a></li>
+                    <li><a href="http://help.disqus.com">Help</a></li>
+                    <li><a href="http://blog.disqus.com">Blog</a></li>
+                    <li><a href="http://disqus.com/api/">API</a></li>
+                    <li><a href="http://disqus.com/jobs/">Jobs</a></li>
+                    <li><a href="http://docs.disqus.com/kb/terms-and-policies/">Terms and Policies</a></li>
+                </ul>
+            </div>
+        </div>
+    <!-- BEGIN TUMBLR CODE -->
+        
+    
+        <iframe id="tumblr_controls" width="1" height="1" frameborder="0" scrolling="no" style="position:absolute; z-index:2147483647; top:0; right:0; border:0; background-color:transparent; overflow:hidden; " src="http://assets.tumblr.com/assets/html/iframe/o.html?_v=03e46de2c31f616e91612be5ae062acd#src=http%3A%2F%2Fblog.disqus.com%2Fpost%2F62187806135%2Fscaling-django-to-8-billion-page-views&amp;pid=62187806135&amp;rk=HAGGmcaX&amp;lang=en_US&amp;name=disqus&amp;brag=false&amp;avatar=http%3A%2F%2F25.media.tumblr.com%2Favatar_7da8d8f28b8a_64.png&amp;title=Disqus%3A+The+Official+Blog&amp;url=http%3A%2F%2Fblog.disqus.com%2F&amp;page_slide=slide"></iframe>    <div id="teaser_iframe_container" style="display:none;"><iframe scrolling="no" frameborder="0" src="http://www.tumblr.com/assets/html/iframe/teaser.html#src=http%3A%2F%2Fblog.disqus.com%2Fpost%2F62187806135%2Fscaling-django-to-8-billion-page-views&amp;pid=62187806135&amp;rk=HAGGmcaX&amp;lang=en_US&amp;name=disqus&amp;brag=false&amp;avatar=http%3A%2F%2F25.media.tumblr.com%2Favatar_7da8d8f28b8a_64.png&amp;title=Disqus%3A+The+Official+Blog&amp;url=http%3A%2F%2Fblog.disqus.com%2F&amp;page_slide=slide" id="teaser_iframe" width="1" height="1"></iframe></div>
+
+<script type="text/javascript">
+    (function(Tumblr){
+        var follow_iframe_initialized = false;
+        if (Tumblr.FollowTeaser && Tumblr.PostMessageListener) {
+            // Don't do anything until the first initialize event
+            Tumblr.PostMessageListener.initialize(function(message, origin) {
+                if (follow_iframe_initialized || message.length < 2) return;
+
+                if (message[0] === 'follow_iframe' && message[1] === 'enable') {
+                    Tumblr.FollowTeaser.current_page = 1;
+                    Tumblr.FollowTeaser.infer_infinite_scroll = true;
+                    Tumblr.FollowTeaser.create_from_tumblr_controls('http://assets.tumblr.com/assets/html/iframe/follow.html?_v=1c38ddb221b64d02021cc5cc3fb77b98');
+                    Tumblr.FollowTeaser.scroll_listener(true);
+                    follow_iframe_initialized = true;
+                }
+            });
+        }
+    })(this.Tumblr || (this.Tumblr = {}));
+</script>
+    
+    <!--[if IE]><script type="text/javascript">document.getElementById('tumblr_controls').allowTransparency=true;</script><![endif]-->
+    
+        
+<iframe src="http://assets.tumblr.com/analytics.html?63fae489732da54993e4a941e42dcf5e" scrolling="no" width="1" height="1" frameborder="0" style="background-color:transparent; overflow:hidden; position:absolute; top:0; left:0 z-index:9999;" id="ga_target"></iframe>
+
+    <script>
+        var COMSCORE = true;
+        window.setTimeout(function() {
+            var analytics_frame = document.getElementById('ga_target');
+            analytics_frame.contentWindow.postMessage('enable_comscore;' + window.location, analytics_frame.src.split('/analytics.html')[0]);
+        }, 1000);
+    </script>
+
+
+
+    <script type="text/javascript">
+      var _qevents = _qevents || [];
+
+      (function() {
+       var elem = document.createElement('script');
+
+       elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+       elem.async = true;
+       elem.type = "text/javascript";
+       var scpt = document.getElementsByTagName('script')[0];
+       scpt.parentNode.insertBefore(elem, scpt);
+      })();
+    </script>
+    <script type="text/javascript">
+        _qevents.push( { qacct: 'p-19UtqE8ngoZbM' } );
+    </script>
+    <noscript>
+        <div style="display: none;"><img src="//pixel.quantserve.com/pixel/'p-19UtqE8ngoZbM'.gif" height="1" width="1" alt="Quantcast"/></div>
+    </noscript>
+
+
+    <script type="text/javascript">!function(s){s.src='http://www.tumblr.com/impixu?T=1380468941&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvYmxvZy5kaXNxdXMuY29tXC9wb3N0XC82MjE4NzgwNjEzNVwvc2NhbGluZy1kamFuZ28tdG8tOC1iaWxsaW9uLXBhZ2Utdmlld3MiLCJyZXF0eXBlIjowLCJyb3V0ZSI6IlwvcG9zdFwvOmlkXC86c3VtbWFyeSJ9&U=IKEPIDMNOG&K=bc68447b227e899a15912d52e006d15136e7641ac567bdf635dd1938e1f617ae&R='.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="http://www.tumblr.com/impixu?T=1380468941&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvYmxvZy5kaXNxdXMuY29tXC9wb3N0XC82MjE4NzgwNjEzNVwvc2NhbGluZy1kamFuZ28tdG8tOC1iaWxsaW9uLXBhZ2Utdmlld3MiLCJyZXF0eXBlIjowLCJyb3V0ZSI6IlwvcG9zdFwvOmlkXC86c3VtbWFyeSIsIm5vc2NyaXB0IjoxfQ==&U=IKEPIDMNOG&K=08df89c5c888c0ab417fa04c00d8728c2d4e866e3c826badcfb233334c2ee035&R="></noscript><script type="text/javascript">!function(s){s.src='http://www.tumblr.com/impixu?T=1380468941&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Jsb2cuZGlzcXVzLmNvbVwvcG9zdFwvNjIxODc4MDYxMzVcL3NjYWxpbmctZGphbmdvLXRvLTgtYmlsbGlvbi1wYWdlLXZpZXdzIiwicmVxdHlwZSI6MCwicm91dGUiOiJcL3Bvc3RcLzppZFwvOnN1bW1hcnkiLCJwb3N0cyI6W3sicG9zdGlkIjoiNjIxODc4MDYxMzUiLCJibG9naWQiOiIxNDcwNzUzIiwic291cmNlIjozM31dfQ==&U=LDPPNAEOCO&K=6c7f6a79a906b503dcce1b4ea8ead21eab82ad51a494bbb36f307e60a5d94a80&R='.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="http://www.tumblr.com/impixu?T=1380468941&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Jsb2cuZGlzcXVzLmNvbVwvcG9zdFwvNjIxODc4MDYxMzVcL3NjYWxpbmctZGphbmdvLXRvLTgtYmlsbGlvbi1wYWdlLXZpZXdzIiwicmVxdHlwZSI6MCwicm91dGUiOiJcL3Bvc3RcLzppZFwvOnN1bW1hcnkiLCJwb3N0cyI6W3sicG9zdGlkIjoiNjIxODc4MDYxMzUiLCJibG9naWQiOiIxNDcwNzUzIiwic291cmNlIjozM31dLCJub3NjcmlwdCI6MX0=&U=LDPPNAEOCO&K=83d684a6edb3d9d2b227542f06bfab8fe4385d26019cd7dcda118bf9e104135b&R="></noscript><!-- END TUMBLR CODE -->
+</body>
+</html>
