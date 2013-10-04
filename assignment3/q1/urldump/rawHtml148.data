@@ -1,0 +1,1821 @@
+<!doctype html>
+<!--[if IE 9]><html lang="en" class="ie ie9"><![endif]-->
+<!--[if IE 10]><html lang="en" class="ie ie10"><![endif]-->
+<html lang="en">
+<head>
+<link rel="stylesheet" media="all" type="text/css" href="https://static2.udemy.com/static/css/udemy.css?v=03392c178bf86975acb81bf895b406279cd74b0f"/>
+<meta name="apple-itunes-app" content="app-id=562413829">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>C# Training - C# Tutorial for Beginners | Udemy</title>
+<meta name="title" content="C# Training - C# Tutorial for Beginners | Udemy"/>
+<meta name="keywords" content="C, Training, C, Tutorial, for, Beginners, Udemy, c, c sharp, programing, net, microsoft, asp net, windows programming, technology and internet, programming language, technology"/>
+<meta name="description" content="Learn C# and Microsoft .Net Platform Programming. Hosted by LearnToProgram.tv expert Desirea Herrera."/>
+<link rel="icon" href="https://www.udemy.com/favicon.ico" type="image/x-icon"/>
+<link rel="image_src" href="https://www.udemy.com/static/images/v3/logo.png"/>
+<meta property="fb:app_id" content="313137469260"/>
+<meta name="medium" content="mult"/>
+<meta property="og:type" content="udemy_com:course"/>
+<meta property="og:url" content="https://www.udemy.com/c-for-beginners/"/>
+<meta property="og:title" content="C# Training - C# Tutorial for Beginners | Udemy"/>
+<meta property="og:description" content="Learn C# and Microsoft .Net Platform Programming. Hosted by LearnToProgram.tv expert Desirea Herrera."/>
+<meta property="og:image" content="https://udemyimages-a.akamaihd.net/course/200_H/13755_d256_3.jpg"/>
+<meta property="og:site_name" content="Udemy"/>
+<meta property="og:locale" content="en_US"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:url" content="https://www.udemy.com/c-for-beginners/"/>
+<meta name="twitter:title" content="C# Training - C# Tutorial for Beginners | Udemy"/>
+<meta name="twitter:description" content="Learn C# and Microsoft .Net Platform Programming. Hosted by LearnToProgram.tv expert Desirea Herrera."/>
+<meta name="twitter:image" content="https://udemyimages-a.akamaihd.net/course/200_H/13755_d256_3.jpg"/>
+<meta name="twitter:site" content="@udemy"/>
+<meta property="udemy_com:price" content="$79"/>
+<meta property="udemy_com:instructor" content="https://www.udemy.com/u/marklassoff/"/>
+<meta property="udemy_com:category" content="Technology"/>
+<meta property="udemy_com:available" content="1"/>
+<meta property="udemy_com:tag" content="c"/>
+<meta property="udemy_com:tag" content="c sharp"/>
+<meta property="udemy_com:tag" content="programing"/>
+<meta property="udemy_com:tag" content="net"/>
+<meta property="udemy_com:tag" content="microsoft"/>
+<meta property="udemy_com:tag" content="asp net"/>
+<meta property="udemy_com:tag" content="windows programming"/>
+<meta property="udemy_com:tag" content="technology and internet"/>
+<meta property="udemy_com:tag" content="programming language"/>
+<meta property="udemy_com:tag" content="technology"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="canonical" href="https://www.udemy.com/c-for-beginners/"/>
+<link rel="video_src" href="https://static2.udemy.com/static/flash/player5.9.swf?config=https://www.udemy.com/asset/export.html%3Fuaid%3DE0QYd15UVw%3D%3D%26displayType%3Dxml%26uaidh%3D80945c97d502ac2139e27426f92ca167%26embedParams[pluginTypes][0]%3Dfacebook-promo-plugin%26embedParams[embed]%3D1"/>
+<meta name="video_type" content="application/x-shockwave-flash"/>
+<meta name="video_width" content="420"/>
+<meta name="video_height" content="280"/>
+<meta property="og:video" content="https://static2.udemy.com/static/flash/player5.9.swf?config=https://www.udemy.com/asset/export.html%3Fuaid%3DE0QYd15UVw%3D%3D%26displayType%3Dxml%26uaidh%3D80945c97d502ac2139e27426f92ca167%26embedParams[pluginTypes][0]%3Dfacebook-promo-plugin%26embedParams[embed]%3D1"/>
+<meta property="og:video:type" content="application/x-shockwave-flash"/>
+<link href='https://fonts.googleapis.com/css?family=Short+Stack|Arvo:400,700,400italic,700italic|Montserrat:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body id="udemy" class="udemy controller-course action-c-for-beginners landing-page white-bg">
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+	  FB.init({
+	  	appId : "313137469260",
+	    status : true,
+	    cookie : true,
+	    xfbml : true,
+	    oauth : true
+	  });
+  };
+</script> <style>body header .container #logo,.organization-homepage #logo{background:url('https://www.udemy.com/static/images/v3/logo.png') no-repeat center!important;}@media (-webkit-min-device-pixel-ratio: 2) {body header .container #logo,.organization-homepage #logo{background:url("https://www.udemy.com/static/images/v3/logo_2x.png") no-repeat center!important;}}</style>
+<div id="old-browser" style="display: none">
+<div class="copy">
+<img src="https://static2.udemy.com/static/images/v3/chrome-logo.png">
+We highly recommend using the free <a class='download' href='http://www.google.com/chrome'>Google Chrome Browser</a> on our site! <a id='hide-browser-message' href='javascript:void(0)'>Hide</a> </div>
+<div class="overlay"></div>
+</div>
+<header class="udemy-header" id="header-v2">
+<div class="container strict not-loggedin">
+<a id='logo' href='https://www.udemy.com/'>Udemy Logo</a> <div class="left-items">
+<div class="btn-group header-mega-dropdown">
+<div class="btn btn-success btn-toggle dropdown-toggle" data-toggle="dropdown">
+<i class="icon-reorder"></i>
+<b class="discover-btn-text">Discover</b>
+</div>
+<div class="dropdown-menu">
+<div class="header">
+<h3>Discover Courses</h3>
+<a class="create" href="https://www.udemy.com/teach/">Create a Course</a>
+</div>
+<div class="main">
+<ul>
+<li><a href="https://www.udemy.com/courses/featured/" style="padding: 0px;"><h5>Featured Courses</h5></a></li>
+<li>
+<a href="https://www.udemy.com/courses/Lifestyle">Lifestyle</a>
+</li>
+<li>
+<a href="https://www.udemy.com/courses/Music">Music</a>
+</li>
+<li>
+<a href="https://www.udemy.com/courses/Technology">Technology</a>
+</li>
+<li>
+<a href="https://www.udemy.com/courses/Math-and-Science">Math and Science</a>
+</li>
+<li>
+<a href="https://www.udemy.com/courses/Crafts-and-Hobbies">Crafts and Hobbies</a>
+</li>
+<li>
+<a href="https://www.udemy.com/courses/Business">Business</a>
+</li>
+<li>
+<a href="https://www.udemy.com/courses/Education">Education</a>
+</li>
+<li>
+<a href="https://www.udemy.com/courses/Sports">Sports</a>
+</li>
+<li>
+<a href="https://www.udemy.com/courses/Design">Design</a>
+</li>
+<li>
+<a href="https://www.udemy.com/courses/Languages">Languages</a>
+</li>
+<li>
+<a href="https://www.udemy.com/courses/Games">Games</a>
+</li>
+<li>
+<a href="https://www.udemy.com/courses/Arts-and-Photography">Arts and Photography</a>
+</li>
+<li>
+<a href="https://www.udemy.com/courses/Humanities">Humanities</a>
+</li>
+<li>
+<a href="https://www.udemy.com/courses/Other">Other</a>
+</li>
+<li>
+<a href="https://www.udemy.com/courses/Health-and-Fitness">Health and Fitness</a>
+</li>
+<li>
+<a href="https://www.udemy.com/courses/Social-Sciences">Social Sciences</a>
+</li>
+</ul>
+</div>
+<div class="footer">
+<ul>
+<li>
+<a href="https://www.udemy.com/static/about/">About</a>
+</li>
+<li>
+<a href="https://www.udemy.com/static/legal/">Legal</a>
+</li>
+</ul>
+<a href="https://www.udemy.com/mobile/" class="go">
+<i class="icon-tablet"></i>
+iPhone & iPad </a>
+<a href="https://www.udemy.com/organizations/?ref=dropdown" target="_blank" class="go" style="margin-right: 10px;">
+<i class="icon-hospital"></i>
+Udemy for Organizations </a>
+</div>
+</div>
+</div>
+<script id="search-menu-header" type="text/x-handlebars-template">
+    <li class="header">
+        <h3>{{&title}}</h3>
+    </li>
+</script>
+<script id="search-menu-item" type="text/x-handlebars-template">
+    {{#if item.isHeader}}
+    <li class="more">
+        <a data-id="{{item.id}}"
+           data-cat="{{item.category}}"
+           href="{{item.url}}"
+           class="search-more-link ui-corner-all"
+           tabindex="-1">{{{item.title}}}</a>
+    </li>
+    {{else}}
+    <li>
+        <a data-id="{{item.id}}" data-cat="{{item.category}}" href="{{item.url}}" class="ui-corner-all" tabindex="-1">
+            <span class=" thumb">
+                <img src="{{item.imgUrl}}">
+            </span>
+            <span class="text">
+                <b class="title">{{&item.title}}</b>
+                {{#if item.subtitle}}
+				<i class="subtitle">{{&item.subtitle}}</i>
+				{{/if}}
+                {{#if item.extraContentExists}}
+                <i class="extra">
+                    <span class="small-rating">
+                        <span style="width:{{item.avgRatingRatio}}%"></span>
+                    </span>
+                    <span class="subscribers spb">
+                        <b>{{&item.numSubscribers}}</b>
+                    </span>
+                    <span class="price">
+                        <span>{{&item.priceText}}</span>
+                    </span>
+                </i>
+                {{/if}}
+            </span>
+        </a>
+    </li>
+    {{/if}}
+</script><div class="ud-search search-v2 left-bordered">
+<form id="searchbox" action="https://www.udemy.com/courses/search/">
+<input type="text" placeholder="Search" autocomplete="off" name="q" id="quick-search"/>
+<button type="submit" class="icon-search search-btn"></button>
+</form>
+</div>
+</div>
+<div class="right-items">
+<a class="top-link-my-courses clear" href="https://www.udemy.com/teach/">Teach Online</a>
+<a href="/join/login-popup/" class="ud-popup header-link login-btn left-bordered" data-requirelogin='true' data-showloginpopup='true' data-padding='0'>
+<i class="icon-lock"></i>
+Login </a>
+<a href="/join/" class="ud-popup header-link signup-btn" data-requirelogin='true' data-padding='0'>Sign Up</a>
+<div class="btn-group lang-dropdown header-dropdown">
+<div data-toggle="dropdown" class="dropdown-toggle dropdown-toggle-hover-helper left-bordered ">
+<a class="header-dropdown-text" href="#">English (US)</a>
+<span class="caret"></span>
+</div>
+<div class="dropdown-menu header-lang-items pull-right">
+<ul>
+<li>
+<a href="http://www.udemy.com/c-for-beginners/?locale=de_DE&affcode=E0YYcVhTT34CRQk%3D&couponCode=flash21">
+Deutsch </a>
+</li>
+<li>
+<a href="http://www.udemy.com/c-for-beginners/?locale=en_US&affcode=E0YYcVhTT34CRQk%3D&couponCode=flash21">
+English (US) </a>
+</li>
+<li>
+<a href="http://www.udemy.com/c-for-beginners/?locale=es_ES&affcode=E0YYcVhTT34CRQk%3D&couponCode=flash21">
+Español (España) </a>
+</li>
+<li>
+<a href="http://www.udemy.com/c-for-beginners/?locale=fr_FR&affcode=E0YYcVhTT34CRQk%3D&couponCode=flash21">
+Français (France) </a>
+</li>
+<li>
+<a href="http://www.udemy.com/c-for-beginners/?locale=it_IT&affcode=E0YYcVhTT34CRQk%3D&couponCode=flash21">
+Italiano </a>
+</li>
+<li>
+<a href="http://www.udemy.com/c-for-beginners/?locale=ja_JP&affcode=E0YYcVhTT34CRQk%3D&couponCode=flash21">
+日本語 </a>
+</li>
+<li>
+<a href="http://www.udemy.com/c-for-beginners/?locale=ko_KR&affcode=E0YYcVhTT34CRQk%3D&couponCode=flash21">
+한국어 </a>
+</li>
+<li>
+<a href="http://www.udemy.com/c-for-beginners/?locale=pt_BR&affcode=E0YYcVhTT34CRQk%3D&couponCode=flash21">
+Português (Brasil) </a>
+</li>
+<li>
+<a href="http://www.udemy.com/c-for-beginners/?locale=ru_RU&affcode=E0YYcVhTT34CRQk%3D&couponCode=flash21">
+Русский </a>
+</li>
+<li>
+<a href="http://www.udemy.com/c-for-beginners/?locale=tr_TR&affcode=E0YYcVhTT34CRQk%3D&couponCode=flash21">
+Türkçe </a>
+</li>
+<li>
+<a href="http://www.udemy.com/c-for-beginners/?locale=zh_CN&affcode=E0YYcVhTT34CRQk%3D&couponCode=flash21">
+中文(简体) </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="feedbacks-bar ud-page" data-page-name="feedbacks-bar">
+<div class="feedback-bar feedback-type-error">
+<div class="feedback-container">
+<p class="message">Coupon code <b><i>flash21</i></b> has expired.</p>
+</div>
+</div>
+</div>
+</header><script id="noMoreNotificationsFoundTemplate" type="text/x-handlebars-template">
+    <li class="null">
+		<div class="notification-zero-case">
+			<p>No more notifications to show at this time</p>
+    	</div>
+    </li>
+</script><script id="notificationActivityCommentActivityTemplate" type="text/x-handlebars-template">
+
+    <li>
+		<a href="{{target_url}}">
+    		<span style="background-image: url({{activities.0.user.images.img_50x50}});" class="bordered-thumb thumb"></span>
+    		<div class="details">
+    			<p>
+                {{#with reason_object}}
+                    {{#if_cond relation '==' 'owner'}}
+                        {{{notificationSourceUsersHtml ../../activities}}} also commented on your {{{root.object.readable_type}}}: 
+                    {{else}} {{#if_cond relation '==' 'comment'}}
+                        {{{notificationSourceUsersHtml ../../../activities}}} also commented on <b>{{{root.owner.title}}}</b>'s {{{root.object.readable_type}}}: 
+                    {{else}} {{#if_cond relation '==' 'follower'}}
+                        {{{notificationSourceUsersHtml ../../../../activities}}} commented on <b>{{{root.owner.title}}}</b>'s {{{root.object.readable_type}}} you follow: 
+                    {{else}}
+                        {{{notificationSourceUsersHtml ../../../../activities}}} commented on <b>{{{root.owner.title}}}</b>'s {{{root.object.readable_type}}}: 
+                    {{/if_cond}}
+                    {{/if_cond}}
+                    {{/if_cond}}
+
+                    {{#if root.object.readable_title}}
+                        &ldquo;{{#ellipsis root.object.readable_title 20}}{{/ellipsis}}&rdquo;
+                    {{/if}}
+                {{/with}}
+                </p>
+    			<time data-redistimestamp="{{activities.0.micro_timestamp}}"></time>
+    		</div>
+		</a>
+    </li>
+
+</script><script id="notificationActivityLikeActivityTemplate" type="text/x-handlebars-template">
+
+    <li>
+		<a href="{{target_url}}">
+            <span style="background-image: url({{activities.0.user.images.img_50x50}});" class="bordered-thumb thumb"></span>
+            <div class="details">
+                <p>
+                {{#with reason_object}}
+                    {{#if_cond relation '==' 'owner'}}
+                        {{{notificationSourceUsersHtml ../../activities}}} liked your {{{root.object.readable_type}}}:
+                    {{else}} {{#if_cond relation '==' 'follower'}}
+                        {{{notificationSourceUsersHtml ../../../activities}}} liked a {{{root.object.readable_type}}} you are following:
+                    {{else}}
+                        {{{notificationSourceUsersHtml ../../../activities}}} liked a {{{root.object.readable_type}}}:
+                    {{/if_cond}}
+                    {{/if_cond}}
+
+                    {{#if root.object.readable_title}}
+                        &ldquo;{{#ellipsis root.object.readable_title 20}}{{/ellipsis}}&rdquo;
+                    {{/if}}
+                {{/with}}
+                </p>
+                <time data-redistimestamp="{{activities.0.micro_timestamp}}"></time>
+            </div>
+		</a>
+    </li>
+
+</script><script id="notificationUserFollowsUserActivityTemplate" type="text/x-handlebars-template">
+
+    <li>
+		<a href="{{target_url}}">
+            <span style="background-image: url({{activities.0.follower_user.images.img_50x50}});" class="bordered-thumb thumb"></span>
+            <div class="details">
+                <p>
+                    <b>{{&activities.0.follower_user.title}}</b> started following you.
+                </p>
+                <time data-redistimestamp="{{max_redis_timestamp}}"></time>
+            </div>
+		</a>
+    </li>
+
+</script><script id="notificationSubscribedToCourseActivityTemplate" type="text/x-handlebars-template">
+
+    <li>
+		<a href="{{target_url}}">
+            <span style="background-image: url({{activities.0.subscribed_user.images.img_50x50}});" class="bordered-thumb thumb"></span>
+            <div class="details">
+                <p>
+                    {{#if activities.2.subscribed_user.title}}
+                        <b>{{&activities.0.subscribed_user.title}}</b> and <b>{{&more_story_count}} others</b> subscribed to your course <b>{{{subscribed_course.title}}}</b>
+                    {{else}}
+                        {{#if activities.1.subscribed_user.title}}
+                            <b>{{&activities.0.subscribed_user.title}}</b> and <b>{{&activities.1.subscribed_user.title}}</b> subscribed to your course <b>{{{subscribed_course.title}}}</b>
+                        {{else}}
+                            <b>{{&activities.0.subscribed_user.title}}</b> subscribed to your course <b>{{{subscribed_course.title}}}</b>
+                        {{/if}}
+                    {{/if}}
+                </p>
+                <time data-redistimestamp="{{max_redis_timestamp}}"></time>
+            </div>
+		</a>
+    </li>
+
+</script><script id="notificationAnswerUpvotedActivityTemplate" type="text/x-handlebars-template">
+
+    <li>
+		<a href="{{target_url}}">
+    		<span style="background-image: url({{activities.0.user.images.img_50x50}});" class="bordered-thumb thumb"></span>
+    		<div class="details">
+    			<p>
+                    {{#with reason_object}}
+                        {{{notificationSourceUsersHtml ../activities}}} upvoted your answer to the question:
+                        {{#if root.object.readable_title}}
+                            &ldquo;{{#ellipsis root.object.readable_title 20}}{{/ellipsis}}&rdquo;
+                        {{/if}}
+                    {{/with}}
+    			</p>
+    			<time data-redistimestamp="{{activities.0.micro_timestamp}}"></time>
+    		</div>
+		</a>
+    </li>
+
+</script><script id="notificationUserFollowsActivityActivityTemplate" type="text/x-handlebars-template">
+
+    <li>
+		<a href="{{target_url}}">
+    		<span style="background-image: url({{activities.0.user.images.img_50x50}});" class="bordered-thumb thumb"></span>
+    		<div class="details">
+    			<p>
+                    {{#with reason_object}}
+                        {{{notificationSourceUsersHtml ../activities}}} started following your {{{root.object.readable_type}}}:
+                        {{#if root.object.readable_title}}
+                            &ldquo;{{#ellipsis root.object.readable_title 20}}{{/ellipsis}}&rdquo;
+                        {{/if}}
+                    {{/with}}
+    			</p>
+    			<time data-redistimestamp="{{activities.0.micro_timestamp}}"></time>
+    		</div>
+		</a>
+    </li>
+
+</script><script id="notificationAnswerCommentActivityTemplate" type="text/x-handlebars-template">
+
+    <li>
+		<a href="{{target_url}}">
+    		<span style="background-image: url({{activities.0.user.images.img_50x50}});" class="bordered-thumb thumb"></span>
+    		<div class="details">
+    			<p>
+                    {{#with reason_object}}
+                        {{#if_cond relation '==' 'answer_owner'}}
+                            {{{notificationSourceUsersHtml ../../activities}}} commented on your answer to the question: 
+                        {{else}} {{#if_cond relation '==' 'answer_comment'}}
+                            {{{notificationSourceUsersHtml ../../../activities}}} also commented on an answer to the question: 
+                        {{else}} {{#if_cond relation '==' 'owner'}}
+                            {{{notificationSourceUsersHtml ../../../../activities}}} commented on an answer of your question: 
+                        {{else}}
+                            {{{notificationSourceUsersHtml ../../../../activities}}} commented on an answer to the question: 
+                        {{/if_cond}}
+                        {{/if_cond}}
+                        {{/if_cond}}
+
+                        {{#if root.object.readable_title}}
+                            &ldquo;{{#ellipsis root.object.readable_title 20}}{{/ellipsis}}&rdquo;
+                        {{/if}}
+                    {{/with}}
+    			</p>
+    			<time data-redistimestamp="{{activities.0.micro_timestamp}}"></time>
+    		</div>
+		</a>
+    </li>
+
+</script><script id="notificationAnswerGivenActivityTemplate" type="text/x-handlebars-template">
+
+    <li>
+        <a href="{{target_url}}">
+            <span style="background-image: url({{activities.0.user.images.img_50x50}});" class="bordered-thumb thumb"></span>
+            <div class="details">
+                <p>
+                    {{#with reason_object}}
+                        {{#if_cond relation '==' 'owner'}}
+                            {{{notificationSourceUsersHtml ../../activities}}} answered your question
+                        {{else}} {{#if_cond relation '==' 'question_answer'}}
+                            {{{notificationSourceUsersHtml ../../../activities}}} also answered <b>{{{root.owner.title}}}</b>'s question
+                        {{else}} {{#if_cond relation '==' 'follower'}}
+                            {{{notificationSourceUsersHtml ../../../../activities}}} answered <b>{{{root.owner.title}}}</b>'s question you are following
+                        {{else}}
+                            {{{notificationSourceUsersHtml ../../../../activities}}} answered <b>{{{root.owner.title}}}</b>'s question
+                        {{/if_cond}}
+                        {{/if_cond}}
+                        {{/if_cond}}
+
+                        {{#if root.object.readable_title}}
+                            &ldquo;{{#ellipsis root.object.readable_title 20}}{{/ellipsis}}&rdquo;
+                        {{/if}}
+                    {{/with}}
+                </p>
+                <time data-redistimestamp="{{activities.0.micro_timestamp}}"></time>
+            </div>
+        </a>
+    </li>
+
+</script><script id="notificationAnnouncementMadeActivityTemplate" type="text/x-handlebars-template">
+
+    <li>
+        <a href="{{target_url}}">
+            <span style="background-image: url({{activities.0.user.images.img_50x50}});" class="bordered-thumb thumb"></span>
+            <div class="details">
+                <p>
+                    {{#with reason_object}}
+                        {{#if_cond relation '==' 'course_subscriber'}}
+                            {{{notificationSourceUsersHtml ../../activities}}} made an announcement in a course you are enrolled in: 
+                        {{else}}
+                            {{{notificationSourceUsersHtml ../../activities}}} made an announcement                        {{/if_cond}}
+
+                        {{#if root.object.readable_title}}
+                            &ldquo;{{#ellipsis root.object.readable_title 20}}{{/ellipsis}}&rdquo;
+                        {{/if}}
+                    {{/with}}
+                </p>
+                <time data-redistimestamp="{{activities.0.micro_timestamp}}"></time>
+            </div>
+        </a>
+    </li>
+
+</script><script id="notificationQuestionAskedActivityTemplate" type="text/x-handlebars-template">
+
+    <li>
+        <a href="{{target_url}}">
+            <span style="background-image: url({{reason_object.root.object.images.img_50x50}});" class="bordered-thumb thumb"></span>
+            <div class="details">
+                <p>
+                {{#with reason_object}}
+                    {{#if_eq target.object.question_count compare=1}}
+                        A new question in <b>{{{root.object.title}}}</b>                    {{/if_eq}}
+                    {{#if_gt target.object.question_count compare=1}}
+                        {{{target.object.question_count}}} new questions in <b>{{{root.object.title}}}</b>                    {{/if_gt}}
+                {{/with}}
+                </p>
+                <time data-redistimestamp="{{activities.0.micro_timestamp}}"></time>
+            </div>
+        </a>
+    </li>
+
+</script> <script type="text/javascript">
+					var _gaq = _gaq || [];
+					_gaq.push(
+						["t2._setAccount", "UA-27317089"],
+						["t2._setDomainName", "none"],
+						["t2._setAllowLinker", true],
+						["t2._trackPageview", "/c-for-beginners/landing-page/?couponCode=flash21&affcode=E0YYcVhTT34CRQk%3D"]
+					);
+				</script>
+<div id="sticky-footer-wrapper">
+<div id="slp-wrap" class="clearfix ud-page" data-page-name="course-landing-page">
+<style></style><div id="simple-1col-2col-slp" class="udemy-green-page-theme">
+<div id="top">
+<div class="container">
+<div class="table">
+<div id="simple-1col-2col-slp-section-1" class="slp-section cell">
+<div class="slp-promo-asset">
+<div class="promo-asset-content stretchy-wrapper">
+<div class="ud-jwplayer" id=73606 style="width:480px;height:270px;" data-mode="video">
+<script type="text/json" class="jwplayer-params">
+                    {"plugins":[],"isLandingPage":true,"analytics":{"enabled":false},"playlist":[{"sources":[{"file":"https:\/\/knowbucket-a.akamaihd.net\/2012-05-03_09-48-17-ed5e4bae7b59bf82fbe98155f3fc0d83\/WebHD_720p.mp4?AWSAccessKeyId=AKIAI2IO2M4ZTATFBSTA&Expires=1380783600&Signature=ZoyEHgV%2FDTQdISg%2BNJwZBuww87Y%3D","label":"720p","type":"mp4"},{"file":"https:\/\/knowbucket-a.akamaihd.net\/2012-05-03_09-48-17-ed5e4bae7b59bf82fbe98155f3fc0d83\/WebHD.mp4?AWSAccessKeyId=AKIAI2IO2M4ZTATFBSTA&Expires=1380783600&Signature=f5EApcU83BEsA6VwqBpsVj5LY44%3D","label":"360p","type":"mp4","default":true}],"image":"https:\/\/udemyimages-a.akamaihd.net\/course\/480x270\/13755_d256_3.jpg","tracks":[]}]}                </script>
+</div>
+</div>
+<div style="display:none;">
+<h2 class="try-free"><span>Try one lecture for free</span></h2>
+</div>
+</div>
+</div>
+<div id="simple-1col-2col-slp-section-0" class="slp-section cell">
+<div>
+<div class="ud-page slp-course-title">
+<h1>C# Tutorial For Beginners</h1>
+<h2>Learn C# and Microsoft .Net Platform Programming. Hosted by LearnToProgram.tv expert Desirea Herrera.</h2>
+</div>
+<div class="slp-buy-button">
+<div>
+<a class="buy-button-link ud-popup" data-requireLogin="true" href="https://www.udemy.com/payment/checkout/?boId=13755&boType=course" data-padding="0">
+Take This Course <span>$79</span>
+</a>
+</div>
+<div class="slp-coupon">
+<a href="https://www.udemy.com/payment/checkout/?boId=13755&boType=course" class="slp-action redeem" data-course-id="13755" data-price="79">
+<i class="icon-tags"></i>
+Redeem a Coupon </a>
+<div class="form">
+<form>
+<div class="r1">
+<h4>Enter Your Redemption Code</h4>
+<a href="" class="close">close</a>
+</div>
+<div class="r2">
+<input type="text" name="couponCode"/>
+<input type="hidden" name="ccManual"/>
+<input type="submit" value="Apply"/>
+</div>
+</form>
+</div>
+</div>
+<a class="slp-action ud-popup" data-requireLogin="true" href="https://www.udemy.com/course/preview-subscribe/?courseId=13755">
+<i class="icon-zoom-in"></i>
+Free Preview </a>
+<a class="slp-action ud-wishlist ud-popup" data-requireLogin="true" href="https://www.udemy.com/wishlist/add/?courseId=13755" data-courseid="13755">
+<i class="icon-heart"></i>
+<span class="in-wishlist none">Wishlisted</span>
+<span class="not-in-wishlist">Wishlist</span>
+</a>
+<a class="slp-action ud-popup gift-this" data-requireLogin="true" href="https://www.udemy.com/gift/c-for-beginners">
+<i class="icon-gift"></i>
+Gift </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="main">
+<div class="container clearfix" style="position: relative;">
+<div class="share-page-elements">
+<div class='slp-share curly-shadow ud-floatingmenu' data-bottom_item="#footer-37" data-extra_bottom_space="40">
+<div class="slp-container">
+<div class="twitter">
+<a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="udemy" data-counturl="https://www.udemy.com/c-for-beginners/" data-text="C# Tutorial For Beginners by Desirea Herrera" data-url="http://ude.my/bxp6w" data-size="medium"></a>
+</div>
+<div class="facebook">
+<div class="fb-like" data-send="true" data-layout="box_count" data-width="55" data-font="arial" data-href="https://www.udemy.com/c-for-beginners/" data-show-faces="false" data-action="like" data-colorscheme="light"></div> </div>
+<div class="pinterest">
+<a href=//pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.udemy.com%2Fc-for-beginners%2F&media=https%3A%2F%2Fudemyimages-a.akamaihd.net%2Fcourse%2F480x270%2F13755_d256_3.jpg&description=C%23+Tutorial+For+Beginners+-+Learn+C%23+and+Microsoft+.Net+Platform+Programming.+Hosted+by+LearnToProgram.tv+expert+Desirea+Herrera.+-+%2479 class="pin-it-button" count-layout="vertical">
+<img border="0" src="//assets.pinterest.com/images/pidgets/pin_it_button.png" title="Pin It"/>
+</a>
+</div>
+<div class="gplus">
+<div class="g-plusone" data-size="tall" data-href="https://www.udemy.com/c-for-beginners/"></div>
+</div>
+</div>
+</div> </div>
+<div id="simple-1col-2col-slp-section-2" class="slp-section">
+<div class="slp-by-who">by <b>Desirea Herrera</b></div>
+<div class="slp-custom-html">
+<div class="w3c-default"><p>Microsoft isn't going away and the need for .Net applications is only going to grow.</p>
+<p>The powerful .Net platform lets developers create Windows based, or, web applications using a unifrom syntax and object model.  With an extensive library of features and easy integration into Windows based systems, learning a .net language is important for any programmer.  Whether you are learning your first programming language, or, you are working with Microsoft .net technologies for the first time, you'll find LearnToProgram's C# Tutorial for Beginners course helpful to you.</p>
+<p>Desirea Herrea authored and hosts this course.  She has years of experience as a classroom instructor.  As a course author she created courses for the largest corporate technical training company in the world.</p>
+<p>So what are you waiting for?  Learn Microsoft .Net programming with C# for Beginners and you'll be creating Windows based and Web based applications in no time!</p>
+</div>
+<div>
+<strong>
+Category: <a href='https://www.udemy.com/courses/Technology'>Technology</a> </strong>
+</div>
+</div>
+<div class="clear"></div>
+<div class="slp-info-creative">
+<span class="s1">30 Day Money Back Guarantee</span>
+<span class="s2">Lifetime Access - No Limits</span>
+</div>
+<div class="slp-curriculum">
+<h3 style='border-top: none;'>SECTION 1: <b>Getting Started with Visual Studio</b></h3>
+<ul>
+<li class="single-lecture section-element
+                       type-video                       free">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/welcome-to-visual-studio-78722" data-href="https://www.udemy.com/lecture/view/?lectureId=78722&paymentPlanId=1603033">
+<b>05:03</b>
+</a>
+<div class="details">
+<h4>Lecture 1:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/welcome-to-visual-studio-78722" data-href="https://www.udemy.com/lecture/view/?lectureId=78722&paymentPlanId=1603033">
+Welcome to Visual Studio </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/project-types-78723" data-href="https://www.udemy.com/lecture/view/?lectureId=78723&paymentPlanId=1603033">
+<b>04:08</b>
+</a>
+<div class="details">
+<h4>Lecture 2:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/project-types-78723" data-href="https://www.udemy.com/lecture/view/?lectureId=78723&paymentPlanId=1603033">
+Project Types </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/net-framework-78725" data-href="https://www.udemy.com/lecture/view/?lectureId=78725&paymentPlanId=1603033">
+<b>07:50</b>
+</a>
+<div class="details">
+<h4>Lecture 3:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/net-framework-78725" data-href="https://www.udemy.com/lecture/view/?lectureId=78725&paymentPlanId=1603033">
+.Net Framework </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/creating-a-windows-application-78727" data-href="https://www.udemy.com/lecture/view/?lectureId=78727&paymentPlanId=1603033">
+<b>09:19</b>
+</a>
+<div class="details">
+<h4>Lecture 4:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/creating-a-windows-application-78727" data-href="https://www.udemy.com/lecture/view/?lectureId=78727&paymentPlanId=1603033">
+Creating a Windows Application </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-file                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/code-example-78895" data-href="https://www.udemy.com/lecture/view/?lectureId=78895&paymentPlanId=1603033">
+<b>40.96 KB</b>
+</a>
+<div class="details">
+<h4>Lecture 5:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/code-example-78895" data-href="https://www.udemy.com/lecture/view/?lectureId=78895&paymentPlanId=1603033">
+Code Example </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/getting-started-summary-78729" data-href="https://www.udemy.com/lecture/view/?lectureId=78729&paymentPlanId=1603033">
+<b>10:53</b>
+</a>
+<div class="details">
+<h4>Lecture 6:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/getting-started-summary-78729" data-href="https://www.udemy.com/lecture/view/?lectureId=78729&paymentPlanId=1603033">
+Getting Started Summary </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-article                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/chapter-1-exercise-88763" data-href="https://www.udemy.com/lecture/view/?lectureId=88763&paymentPlanId=1603033">
+<b>1 page</b>
+</a>
+<div class="details">
+<h4>Lecture 7:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/chapter-1-exercise-88763" data-href="https://www.udemy.com/lecture/view/?lectureId=88763&paymentPlanId=1603033">
+Chapter 1 Exercise </a>
+</div>
+</li>
+</ul> <h3>SECTION 2: <b>C# Variables</b></h3>
+<ul>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/built-in-variable-types-78731" data-href="https://www.udemy.com/lecture/view/?lectureId=78731&paymentPlanId=1603033">
+<b>09:20</b>
+</a>
+<div class="details">
+<h4>Lecture 8:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/built-in-variable-types-78731" data-href="https://www.udemy.com/lecture/view/?lectureId=78731&paymentPlanId=1603033">
+Built in Variable Types </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/creating-variables-78732" data-href="https://www.udemy.com/lecture/view/?lectureId=78732&paymentPlanId=1603033">
+<b>12:17</b>
+</a>
+<div class="details">
+<h4>Lecture 9:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/creating-variables-78732" data-href="https://www.udemy.com/lecture/view/?lectureId=78732&paymentPlanId=1603033">
+Creating Variables </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/converting-data-78735" data-href="https://www.udemy.com/lecture/view/?lectureId=78735&paymentPlanId=1603033">
+<b>10:25</b>
+</a>
+<div class="details">
+<h4>Lecture 10:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/converting-data-78735" data-href="https://www.udemy.com/lecture/view/?lectureId=78735&paymentPlanId=1603033">
+Converting Data </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-file                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/get-start-78896" data-href="https://www.udemy.com/lecture/view/?lectureId=78896&paymentPlanId=1603033">
+<b>48.08 KB</b>
+</a>
+<div class="details">
+<h4>Lecture 11:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/get-start-78896" data-href="https://www.udemy.com/lecture/view/?lectureId=78896&paymentPlanId=1603033">
+Get Start </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/using-a-variable-78738" data-href="https://www.udemy.com/lecture/view/?lectureId=78738&paymentPlanId=1603033">
+<b>15:09</b>
+</a>
+<div class="details">
+<h4>Lecture 12:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/using-a-variable-78738" data-href="https://www.udemy.com/lecture/view/?lectureId=78738&paymentPlanId=1603033">
+Using a Variable </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-file                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/calculator-78897" data-href="https://www.udemy.com/lecture/view/?lectureId=78897&paymentPlanId=1603033">
+<b>54.68 KB</b>
+</a>
+<div class="details">
+<h4>Lecture 13:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/calculator-78897" data-href="https://www.udemy.com/lecture/view/?lectureId=78897&paymentPlanId=1603033">
+Calculator </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/c-variable-summary-87961" data-href="https://www.udemy.com/lecture/view/?lectureId=87961&paymentPlanId=1603033">
+<b>08:31</b>
+</a>
+<div class="details">
+<h4>Lecture 14:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/c-variable-summary-87961" data-href="https://www.udemy.com/lecture/view/?lectureId=87961&paymentPlanId=1603033">
+C# Variable Summary </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-article                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/chapter-2-exercise-89003" data-href="https://www.udemy.com/lecture/view/?lectureId=89003&paymentPlanId=1603033">
+<b>1 page</b>
+</a>
+<div class="details">
+<h4>Lecture 15:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/chapter-2-exercise-89003" data-href="https://www.udemy.com/lecture/view/?lectureId=89003&paymentPlanId=1603033">
+Chapter 2 Exercise </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-file                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/lab-starter-calculator-89013" data-href="https://www.udemy.com/lecture/view/?lectureId=89013&paymentPlanId=1603033">
+<b>54.58 KB</b>
+</a>
+<div class="details">
+<h4>Lecture 16:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/lab-starter-calculator-89013" data-href="https://www.udemy.com/lecture/view/?lectureId=89013&paymentPlanId=1603033">
+Lab Starter: Calculator </a>
+</div>
+</li>
+</ul> <h3>SECTION 3: <b>Creating C# Classes</b></h3>
+<ul>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/creating-a-class-78741" data-href="https://www.udemy.com/lecture/view/?lectureId=78741&paymentPlanId=1603033">
+<b>09:25</b>
+</a>
+<div class="details">
+<h4>Lecture 17:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/creating-a-class-78741" data-href="https://www.udemy.com/lecture/view/?lectureId=78741&paymentPlanId=1603033">
+Creating a Class </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/storing-class-data-78742" data-href="https://www.udemy.com/lecture/view/?lectureId=78742&paymentPlanId=1603033">
+<b>08:01</b>
+</a>
+<div class="details">
+<h4>Lecture 18:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/storing-class-data-78742" data-href="https://www.udemy.com/lecture/view/?lectureId=78742&paymentPlanId=1603033">
+Storing Class Data </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/creating-a-method-78744" data-href="https://www.udemy.com/lecture/view/?lectureId=78744&paymentPlanId=1603033">
+<b>10:42</b>
+</a>
+<div class="details">
+<h4>Lecture 19:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/creating-a-method-78744" data-href="https://www.udemy.com/lecture/view/?lectureId=78744&paymentPlanId=1603033">
+Creating a Method </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/using-classes-78751" data-href="https://www.udemy.com/lecture/view/?lectureId=78751&paymentPlanId=1603033">
+<b>27:55</b>
+</a>
+<div class="details">
+<h4>Lecture 20:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/using-classes-78751" data-href="https://www.udemy.com/lecture/view/?lectureId=78751&paymentPlanId=1603033">
+Using Classes </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-file                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/employee-78898" data-href="https://www.udemy.com/lecture/view/?lectureId=78898&paymentPlanId=1603033">
+<b>89.54 KB</b>
+</a>
+<div class="details">
+<h4>Lecture 21:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/employee-78898" data-href="https://www.udemy.com/lecture/view/?lectureId=78898&paymentPlanId=1603033">
+Employee </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/c-class-summary-87968" data-href="https://www.udemy.com/lecture/view/?lectureId=87968&paymentPlanId=1603033">
+<b>07:27</b>
+</a>
+<div class="details">
+<h4>Lecture 22:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/c-class-summary-87968" data-href="https://www.udemy.com/lecture/view/?lectureId=87968&paymentPlanId=1603033">
+C# Class Summary </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-article                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/chapter-3-exercise-89004" data-href="https://www.udemy.com/lecture/view/?lectureId=89004&paymentPlanId=1603033">
+<b>1 page</b>
+</a>
+<div class="details">
+<h4>Lecture 23:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/chapter-3-exercise-89004" data-href="https://www.udemy.com/lecture/view/?lectureId=89004&paymentPlanId=1603033">
+Chapter 3 Exercise </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-file                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/lab-starter-employee-89016" data-href="https://www.udemy.com/lecture/view/?lectureId=89016&paymentPlanId=1603033">
+<b>89.54 KB</b>
+</a>
+<div class="details">
+<h4>Lecture 24:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/lab-starter-employee-89016" data-href="https://www.udemy.com/lecture/view/?lectureId=89016&paymentPlanId=1603033">
+Lab Starter: Employee </a>
+</div>
+</li>
+</ul> <h3>SECTION 4: <b>Abstract Classes, Interfaces and Nested Types</b></h3>
+<ul>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/abstract-classes-78757" data-href="https://www.udemy.com/lecture/view/?lectureId=78757&paymentPlanId=1603033">
+<b>06:45</b>
+</a>
+<div class="details">
+<h4>Lecture 25:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/abstract-classes-78757" data-href="https://www.udemy.com/lecture/view/?lectureId=78757&paymentPlanId=1603033">
+Abstract Classes </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/interfaces-78758" data-href="https://www.udemy.com/lecture/view/?lectureId=78758&paymentPlanId=1603033">
+<b>08:01</b>
+</a>
+<div class="details">
+<h4>Lecture 26:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/interfaces-78758" data-href="https://www.udemy.com/lecture/view/?lectureId=78758&paymentPlanId=1603033">
+Interfaces </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/nested-types-78761" data-href="https://www.udemy.com/lecture/view/?lectureId=78761&paymentPlanId=1603033">
+<b>06:00</b>
+</a>
+<div class="details">
+<h4>Lecture 27:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/nested-types-78761" data-href="https://www.udemy.com/lecture/view/?lectureId=78761&paymentPlanId=1603033">
+Nested Types </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-file                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/code-example-78899" data-href="https://www.udemy.com/lecture/view/?lectureId=78899&paymentPlanId=1603033">
+<b>103.42 KB</b>
+</a>
+<div class="details">
+<h4>Lecture 28:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/code-example-78899" data-href="https://www.udemy.com/lecture/view/?lectureId=78899&paymentPlanId=1603033">
+Code Example </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/using-abstract-classes-interfaces-and-nested-types-78765" data-href="https://www.udemy.com/lecture/view/?lectureId=78765&paymentPlanId=1603033">
+<b>09:59</b>
+</a>
+<div class="details">
+<h4>Lecture 29:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/using-abstract-classes-interfaces-and-nested-types-78765" data-href="https://www.udemy.com/lecture/view/?lectureId=78765&paymentPlanId=1603033">
+Using Abstract Classes, Interfaces and Nested Types </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-file                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/code-example-78900" data-href="https://www.udemy.com/lecture/view/?lectureId=78900&paymentPlanId=1603033">
+<b>105.73 KB</b>
+</a>
+<div class="details">
+<h4>Lecture 30:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/code-example-78900" data-href="https://www.udemy.com/lecture/view/?lectureId=78900&paymentPlanId=1603033">
+Code Example </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/abstract-classes-interfaces-and-nested-types-summary-88338" data-href="https://www.udemy.com/lecture/view/?lectureId=88338&paymentPlanId=1603033">
+<b>05:31</b>
+</a>
+<div class="details">
+<h4>Lecture 31:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/abstract-classes-interfaces-and-nested-types-summary-88338" data-href="https://www.udemy.com/lecture/view/?lectureId=88338&paymentPlanId=1603033">
+Abstract Classes, Interfaces and Nested Types Summary </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-article                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/chapter-4-exercise-89005" data-href="https://www.udemy.com/lecture/view/?lectureId=89005&paymentPlanId=1603033">
+<b>1 page</b>
+</a>
+<div class="details">
+<h4>Lecture 32:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/chapter-4-exercise-89005" data-href="https://www.udemy.com/lecture/view/?lectureId=89005&paymentPlanId=1603033">
+Chapter 4 Exercise </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-file                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/lab-starter-monster-builder-89017" data-href="https://www.udemy.com/lecture/view/?lectureId=89017&paymentPlanId=1603033">
+<b>63.21 KB</b>
+</a>
+<div class="details">
+<h4>Lecture 33:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/lab-starter-monster-builder-89017" data-href="https://www.udemy.com/lecture/view/?lectureId=89017&paymentPlanId=1603033">
+Lab Starter: Monster Builder </a>
+</div>
+</li>
+</ul> <h3>SECTION 5: <b>Handling Files</b></h3>
+<ul>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/create-a-file-or-folder-78867" data-href="https://www.udemy.com/lecture/view/?lectureId=78867&paymentPlanId=1603033">
+<b>07:59</b>
+</a>
+<div class="details">
+<h4>Lecture 34:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/create-a-file-or-folder-78867" data-href="https://www.udemy.com/lecture/view/?lectureId=78867&paymentPlanId=1603033">
+Create a File or Folder </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/reading-a-file-78869" data-href="https://www.udemy.com/lecture/view/?lectureId=78869&paymentPlanId=1603033">
+<b>04:58</b>
+</a>
+<div class="details">
+<h4>Lecture 35:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/reading-a-file-78869" data-href="https://www.udemy.com/lecture/view/?lectureId=78869&paymentPlanId=1603033">
+Reading a File </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/copy-delete-and-move-a-file-78872" data-href="https://www.udemy.com/lecture/view/?lectureId=78872&paymentPlanId=1603033">
+<b>07:35</b>
+</a>
+<div class="details">
+<h4>Lecture 36:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/copy-delete-and-move-a-file-78872" data-href="https://www.udemy.com/lecture/view/?lectureId=78872&paymentPlanId=1603033">
+Copy, Delete and Move a File </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/writing-to-a-file-78874" data-href="https://www.udemy.com/lecture/view/?lectureId=78874&paymentPlanId=1603033">
+<b>04:02</b>
+</a>
+<div class="details">
+<h4>Lecture 37:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/writing-to-a-file-78874" data-href="https://www.udemy.com/lecture/view/?lectureId=78874&paymentPlanId=1603033">
+Writing to a File </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-file                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/code-example-78903" data-href="https://www.udemy.com/lecture/view/?lectureId=78903&paymentPlanId=1603033">
+<b>80.84 KB</b>
+</a>
+<div class="details">
+<h4>Lecture 38:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/code-example-78903" data-href="https://www.udemy.com/lecture/view/?lectureId=78903&paymentPlanId=1603033">
+Code Example </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/handling-files-summary-88340" data-href="https://www.udemy.com/lecture/view/?lectureId=88340&paymentPlanId=1603033">
+<b>03:17</b>
+</a>
+<div class="details">
+<h4>Lecture 39:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/handling-files-summary-88340" data-href="https://www.udemy.com/lecture/view/?lectureId=88340&paymentPlanId=1603033">
+Handling Files Summary </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-article                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/chapter-5-exercise-89006" data-href="https://www.udemy.com/lecture/view/?lectureId=89006&paymentPlanId=1603033">
+<b>1 page</b>
+</a>
+<div class="details">
+<h4>Lecture 40:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/chapter-5-exercise-89006" data-href="https://www.udemy.com/lecture/view/?lectureId=89006&paymentPlanId=1603033">
+Chapter 5 Exercise </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-file                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/lab-starter-file-cabinet-89019" data-href="https://www.udemy.com/lecture/view/?lectureId=89019&paymentPlanId=1603033">
+<b>65.17 KB</b>
+</a>
+<div class="details">
+<h4>Lecture 41:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/lab-starter-file-cabinet-89019" data-href="https://www.udemy.com/lecture/view/?lectureId=89019&paymentPlanId=1603033">
+Lab Starter: File Cabinet </a>
+</div>
+</li>
+</ul> <h3>SECTION 6: <b>Creating a Text Editor</b></h3>
+<ul>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/setting-up-an-interface-78881" data-href="https://www.udemy.com/lecture/view/?lectureId=78881&paymentPlanId=1603033">
+<b>02:41</b>
+</a>
+<div class="details">
+<h4>Lecture 42:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/setting-up-an-interface-78881" data-href="https://www.udemy.com/lecture/view/?lectureId=78881&paymentPlanId=1603033">
+Setting Up An Interface </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/setting-up-a-menu-78882" data-href="https://www.udemy.com/lecture/view/?lectureId=78882&paymentPlanId=1603033">
+<b>02:31</b>
+</a>
+<div class="details">
+<h4>Lecture 43:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/setting-up-a-menu-78882" data-href="https://www.udemy.com/lecture/view/?lectureId=78882&paymentPlanId=1603033">
+Setting up a Menu </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/creating-a-new-file-78886" data-href="https://www.udemy.com/lecture/view/?lectureId=78886&paymentPlanId=1603033">
+<b>03:30</b>
+</a>
+<div class="details">
+<h4>Lecture 44:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/creating-a-new-file-78886" data-href="https://www.udemy.com/lecture/view/?lectureId=78886&paymentPlanId=1603033">
+Creating a New File </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/save-a-file-78890" data-href="https://www.udemy.com/lecture/view/?lectureId=78890&paymentPlanId=1603033">
+<b>09:17</b>
+</a>
+<div class="details">
+<h4>Lecture 45:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/save-a-file-78890" data-href="https://www.udemy.com/lecture/view/?lectureId=78890&paymentPlanId=1603033">
+Save a File </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/open-a-file-78892" data-href="https://www.udemy.com/lecture/view/?lectureId=78892&paymentPlanId=1603033">
+<b>09:30</b>
+</a>
+<div class="details">
+<h4>Lecture 46:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/open-a-file-78892" data-href="https://www.udemy.com/lecture/view/?lectureId=78892&paymentPlanId=1603033">
+Open a File </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-video                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/copy-and-paste-selections-85004" data-href="https://www.udemy.com/lecture/view/?lectureId=85004&paymentPlanId=1603033">
+<b>07:07</b>
+</a>
+<div class="details">
+<h4>Lecture 47:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/copy-and-paste-selections-85004" data-href="https://www.udemy.com/lecture/view/?lectureId=85004&paymentPlanId=1603033">
+Copy and Paste Selections </a>
+</div>
+</li>
+<li class="single-lecture section-element
+                       type-article                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/chapter-6-exercise-89007" data-href="https://www.udemy.com/lecture/view/?lectureId=89007&paymentPlanId=1603033">
+<b>1 page</b>
+</a>
+<div class="details">
+<h4>Lecture 48:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/chapter-6-exercise-89007" data-href="https://www.udemy.com/lecture/view/?lectureId=89007&paymentPlanId=1603033">
+Chapter 6 Exercise </a>
+</div>
+</li>
+</ul> <h3>SECTION 7: <b>Exercise Solutions</b></h3>
+<ul>
+<li class="single-lecture section-element
+                       type-file                       ">
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="thumb ud-popup" href="https://www.udemy.com/lectures/c-exercise-solutions-89021" data-href="https://www.udemy.com/lecture/view/?lectureId=89021&paymentPlanId=1603033">
+<b>402.39 KB</b>
+</a>
+<div class="details">
+<h4>Lecture 49:</h4>
+<a data-wrapcss="static-content-wrapper" data-width="600" data-autosize="false" class="ud-popup" href="https://www.udemy.com/lectures/c-exercise-solutions-89021" data-href="https://www.udemy.com/lecture/view/?lectureId=89021&paymentPlanId=1603033">
+C# Exercise Solutions </a>
+</div>
+</li>
+</div>
+<div class="slp-recommendation slp-rounded-box">
+<div class="landing-other-courses">
+<h3>
+Users Who Viewed This Course Also Viewed <a data-href="https://www.udemy.com/course/view-similar-courses/?courseId=13755" data-width="600" data-autosize="false" data-wrapcss="static-content-wrapper" class="ud-popup btn btn-small">View All</a>
+</h3>
+<ul class="landing-other-courses-list">
+<li>
+<div class="lc">
+<a href="https://www.udemy.com/become-a-certified-web-developer/">
+<img class="bordered-thumb" src="https://udemyimages-a.akamaihd.net/course/96x54/11475_9dac_5.jpg"/>
+</a>
+<span>
+<b>6359</b> students </span>
+</div>
+<div class="rc">
+<h4><a href="https://www.udemy.com/become-a-certified-web-developer/">Become a Certified Web Developer</a></h4>
+<h5>Complete coverage of HTML, CSS, Javascript and PHP for the Certified Web Developer Exam.</h5>
+<div class="rating">
+<div class="small-rating">
+<span style="width: 93.19%;"></span>
+</div>
+<span>$199</span>
+</div>
+</div>
+</li>
+<li>
+<div class="lc">
+<a href="https://www.udemy.com/sql-database-for-beginners/">
+<img class="bordered-thumb" src="https://udemyimages-a.akamaihd.net/course/96x54/63202_53d4.jpg"/>
+</a>
+<span>
+<b>545</b> students </span>
+</div>
+<div class="rc">
+<h4><a href="https://www.udemy.com/sql-database-for-beginners/">SQL Database for Beginners</a></h4>
+<h5>Master SQL Database Creation and Development with Guru Martin Holzke. Use Your DB Skills to Create Mobile or Web Apps</h5>
+<div class="rating">
+<div class="small-rating">
+<span style="width: 84.762%;"></span>
+</div>
+<span>$99</span>
+</div>
+</div>
+</li>
+<li>
+<div class="lc">
+<a href="https://www.udemy.com/ios-development-code-camp/">
+<img class="bordered-thumb" src="https://udemyimages-a.akamaihd.net/course/96x54/11562_9fe8_6.jpg"/>
+</a>
+<span>
+<b>1849</b> students </span>
+</div>
+<div class="rc">
+<h4><a href="https://www.udemy.com/ios-development-code-camp/">iOS Development Code Camp</a></h4>
+<h5>A complete iPad and iPhone development course. From Beginner to pro!</h5>
+<div class="rating">
+<div class="small-rating">
+<span style="width: 90%;"></span>
+</div>
+<span>$199</span>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="simple-1col-2col-slp-section-3" class="slp-section">
+<div class="slp-num-of-subscribers curly-shadow">
+<div class="slp-container">
+<h3>
+<b>254</b> users are already taking this course </h3>
+<div class="rand-user-imgs clearfix">
+<a data-href="https://www.udemy.com/user/view-popup/?userId=57643" class="ud-popup simple-tooltip" data-tooltip="Aaron Paul Piotrowski" style="background-image:url(https://udemyimages-a.akamaihd.net/user/50x50/57643_c3c8_5.jpg)">
+Aaron Paul Piotrowski </a>
+<a data-href="https://www.udemy.com/user/view-popup/?userId=61708" class="ud-popup simple-tooltip" data-tooltip="Kelly Eugene Hayes" style="background-image:url(https://udemyimages-a.akamaihd.net/user/50x50/61708_f675_2.jpg)">
+Kelly Eugene Hayes </a>
+<a data-href="https://www.udemy.com/user/view-popup/?userId=82487" class="ud-popup simple-tooltip" data-tooltip="Jordan Hudgens" style="background-image:url(https://udemyimages-a.akamaihd.net/user/50x50/82487_ca08.jpg)">
+Jordan Hudgens </a>
+<a data-href="https://www.udemy.com/user/view-popup/?userId=158865" class="ud-popup simple-tooltip" data-tooltip="William Morgan" style="background-image:url(https://udemyimages-a.akamaihd.net/user/50x50/158865_26d0.jpg)">
+William Morgan </a>
+<a data-href="https://www.udemy.com/user/view-popup/?userId=174931" class="ud-popup simple-tooltip" data-tooltip="Manish Sonkar" style="background-image:url(https://udemyimages-a.akamaihd.net/user/50x50/174931_52c4.jpg)">
+Manish Sonkar </a>
+<a data-href="https://www.udemy.com/user/view-popup/?userId=213165" class="ud-popup simple-tooltip" data-tooltip="Thanasis Dritsas" style="background-image:url(https://udemyimages-a.akamaihd.net/user/50x50/213165_0578.jpg)">
+Thanasis Dritsas </a>
+<a data-href="https://www.udemy.com/user/view-popup/?userId=231780" class="ud-popup simple-tooltip" data-tooltip="Ashton Alexander" style="background-image:url(https://udemyimages-a.akamaihd.net/user/50x50/231780_76a4.jpg)">
+Ashton Alexander </a>
+<a data-href="https://www.udemy.com/user/view-popup/?userId=327368" class="ud-popup simple-tooltip" data-tooltip="Kathy Miller" style="background-image:url(https://udemyimages-a.akamaihd.net/user/50x50/327368_3bfd.jpg)">
+Kathy Miller </a>
+<a data-href="https://www.udemy.com/user/view-popup/?userId=390426" class="ud-popup simple-tooltip" data-tooltip="Mr. Michael Peters" style="background-image:url(https://udemyimages-a.akamaihd.net/user/50x50/390426_cd56.jpg)">
+Mr. Michael Peters </a>
+<a data-href="https://www.udemy.com/user/view-popup/?userId=542892" class="ud-popup simple-tooltip" data-tooltip="Rick Lister" style="background-image:url(https://udemyimages-a.akamaihd.net/user/50x50/542892_98e6.jpg)">
+Rick Lister </a>
+<a data-href="https://www.udemy.com/user/view-popup/?userId=665433" class="ud-popup simple-tooltip" data-tooltip="Thuy Hoang" style="background-image:url(https://udemyimages-a.akamaihd.net/user/50x50/665433_4d35.jpg)">
+Thuy Hoang </a>
+<a data-href="https://www.udemy.com/user/view-popup/?userId=678787" class="ud-popup simple-tooltip" data-tooltip="Elvis Lunga" style="background-image:url(https://udemyimages-a.akamaihd.net/user/50x50/678787_8ed1.jpg)">
+Elvis Lunga </a>
+<a data-href="https://www.udemy.com/user/view-popup/?userId=842136" class="ud-popup simple-tooltip" data-tooltip="Nick Pham" style="background-image:url(https://udemyimages-a.akamaihd.net/user/50x50/842136_fb3f.jpg)">
+Nick Pham </a>
+<a data-href="https://www.udemy.com/user/view-popup/?userId=1257900" class="ud-popup simple-tooltip" data-tooltip="Bhairav Sharad" style="background-image:url(https://udemyimages-a.akamaihd.net/user/50x50/1257900_48b8.jpg)">
+Bhairav Sharad </a>
+</div>
+<div class="rating-reviews clearfix" itemscope itemtype="http://schema.org/AggregateRating">
+<meta itemprop="bestRating" content="5">
+<meta itemprop="worstRating" content="1">
+<meta itemprop="ratingValue" content="4.3">
+<meta itemprop="reviewCount" content="4">
+<h4>Average Rating:</h4>
+<div class="rating-big-stars">
+<span style="width:85%"></span>
+</div>
+<a href="https://www.udemy.com/course/reviews-popup/?courseId=13755" data-href="https://www.udemy.com/course/reviews-popup/?courseId=13755" class="review-count ud-popup">
+4 Reviews </a>
+</div>
+</div>
+</div>
+<div class="slp-list-box curly-shadow">
+<div class="slp-container">
+<div class="tabs-container course-contents-tab">
+<ul class="clearfix">
+<li><a href="#table-of-contents">Content and Goals</a></li>
+</ul>
+<div>
+<div id="table-of-contents">
+<p>Over 49 lectures and 4.5 hours of content!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="slp-list-box curly-shadow">
+<div class="slp-container" style="padding:10px; position: relative; height: 100px;">
+<div style="width:250px;">When you finish this course, you will get a "Certificate of Completion"!</div>
+<div style="position:absolute; bottom:0px; left:0px;"><img src="/static/images/course-certificate/certificate_landing.png" alt=""></div>
+<div style="position:absolute; bottom:5px;"><a href="https://static2.udemy.com/static/images/course-certificate/certificate_sample.png" target="_blank">click to see a sample</a></div>
+</div>
+</div> <div class="slp-instructor-info curly-shadow ins_count_1">
+<h3>
+Instructors </h3>
+<div class="slp-container">
+<div class="ins-slider">
+<div class="mask">
+<ul>
+<li style="background-image: url(https://udemyimages-a.akamaihd.net/user/200_H/89326_6f7a_2.jpg)"></li>
+</ul>
+</div>
+</div>
+<div class="ins-details">
+<ul class="ins-details-mask">
+<li>
+<h4>
+<a href="" data-href="https://www.udemy.com/user/view-popup/?userId=89326" class="ud-popup">
+Desirea Herrera </a>
+</h4>
+<h5>
+Microsoft Trainer, Software Developer </h5>
+</li>
+</ul>
+</div>
+<div class="ins-bio tabs-container">
+<ul class="clearfix">
+</ul>
+<div>
+<div id="inst0">
+<div class="w3c-default"><p>Desirea Herrera first learned to program while in high school on an Apple IIe&nbsp; in BASIC. She took a few&nbsp; courses in programming while in college but pursued a career in horse racing which she left in 1998. While pursuing a teaching credential Desirea stumbled upon a red box at a computer show. It was a program that created animations.&nbsp; She quickly picked up the basics of Flash 3 Actionscript programming.&nbsp; Her knowledge of Macromedia Flash landed her a demanding job as a software trainer in 2001 where she combined her teaching credential and fascination of all things web related.&nbsp;&nbsp;</p>
+<p>Desirea continued to meet the demands of training applications while pursuing multiple credentials through &nbsp;the CIW and Microsoft programs. During this time she taught multiple web scripting languages and programs.&nbsp; Desirea reviewed online testing exams for Brainbench.com.&nbsp; In 2003, she &nbsp;took a job at the corporate headquarters of the training franchise. She began teaching the CIW development and server courses including Java and Object Oriented Programming.&nbsp; In 2005 she became a Microsoft Certified Trainer to teach C#, VB.Net and SQL Server courses through an online live program with one of the world's largest technology training companies. In 2008, Desirea was tasked to redevelop Microsoft course labs for a cutting edge Lab On Demand system.&nbsp;</p>
+<p>Desirea now works as a freelance programmer, trainer and writer.&nbsp; She lives in Tehachapi, California where she spends free time riding and training her horses.</p></div> <p>
+<a href="http://twitter.com/desirea" target="_blank">
+<img src="https://static2.udemy.com/static/images/twitter_logo_16.png" width="16" height="16">
+</a>
+<a rel="author" href="https://www.facebook.com/desirea.herrera" target="_blank">
+<img src="https://static2.udemy.com/static/images/icons/social/facebook_16.png" width="16" height="16">
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="course-reviews curly-shadow">
+<div class="clearfix">
+<h3>Reviews</h3>
+<div class="rating"><h4>Average Rating:</h4>
+<div class="rating-big-stars">
+<span style="width:85%"></span>
+</div>
+</div>
+</div>
+<div class="slp-container">
+<ul>
+<li>
+<div class="user-details clearfix">
+<div class="left-col"><img src="https://udemyimages-a.akamaihd.net/user/50x50/anonymous.jpg"/></div>
+<div class="right-col">by <a class="ud-popup" data-href="https://www.udemy.com/user/view-popup/?userId=958226">Victor Omar Benavides Arenas</a>, <time>2 months ago</time> <div class="rating-big-stars"><span style="width:60%"></span></div></div>
+</div>
+<article class="collapsable-text" data-collapsable-text-height="105" data-more-btn-text="+ More" data-less-btn-text="- Less">
+<p><strong>Not much for real beginners</strong></p> <p><p>I gotta be honest, the last time i programmed was on VB6, and I was hoping a small introduction on oriented programming and more directives on stuff like a bit more pointing in the right direction.</p><p>Other than that, things started to take shape a bit, I got a couple of books to start teaching myself but this gave me a couple directives.</p></p>
+</article>
+</li>
+<li>
+<div class="user-details clearfix">
+<div class="left-col"><img src="https://udemyimages-a.akamaihd.net/user/50x50/363018_02f3_2.jpg"/></div>
+<div class="right-col">by <a class="ud-popup" data-href="https://www.udemy.com/user/view-popup/?userId=363018">Amir Shahzad</a>, <time>3 months ago</time> <div class="rating-big-stars"><span style="width:100%"></span></div></div>
+</div>
+<article class="collapsable-text" data-collapsable-text-height="105" data-more-btn-text="+ More" data-less-btn-text="- Less">
+<p><p></p></p>
+</article>
+</li>
+<li>
+<div class="user-details clearfix">
+<div class="left-col"><img src="https://udemyimages-a.akamaihd.net/user/50x50/anonymous.jpg"/></div>
+<div class="right-col">by <a class="ud-popup" data-href="https://www.udemy.com/user/view-popup/?userId=51491">Jake Jones</a>, <time>5 months ago</time> <div class="rating-big-stars"><span style="width:80%"></span></div></div>
+</div>
+<article class="collapsable-text" data-collapsable-text-height="105" data-more-btn-text="+ More" data-less-btn-text="- Less">
+<p><p></p></p>
+</article>
+</li>
+</ul>
+<div class="see-all"><a class="ud-popup" data-href="https://www.udemy.com/course/reviews-popup/?courseId=13755" href="https://www.udemy.com/course/reviews-popup/?courseId=13755">See all <b>4</b> user reviews</a></div>
+</div>
+</div>
+<div class="slp-faq curly-shadow">
+<div class="slp-container">
+<h3>Frequently Asked Questions</h3>
+<ul>
+<li>
+<h4>How long do I have access to the course materials?</h4>
+<div>You can view and review the lecture materials indefinitely, like an on-demand channel.</div>
+</li>
+<li>
+<h4>What is the refund policy on the course?</h4>
+<div>We like to keep our users happy, so we have a 30-day no questions asked refund policy. Send an email to <a href="mailto:support@udemy.com">support@udemy.com</a> for refund requests.</div>
+</li>
+<li>
+<h4>Can I take my courses with me wherever I go?</h4>
+<div>Definitely! If you have an internet connection, courses on Udemy are available on any device at any time. If you don't have an internet connection, some instructors also let their students download course lectures. That's up to the instructor though, so make sure you get on their good side!</div>
+</li>
+</ul>
+</div>
+</div> </div>
+</div>
+</div>
+</div> </div>
+</div>
+<script type="text/javascript">
+            adroll_segments = "product";
+        </script>
+<script type="text/javascript">
+    var __mixpanel_calls = __mixpanel_calls || [];
+    __mixpanel_calls.push(function() {
+        var properties = {
+            "courseId": 13755,
+            "price": 21        };
+        UD.mixpanel.logger.log(UD.mixpanel.actions.LandingPage, properties);
+    });
+</script> <div id="footer-37">
+<div class="top">
+<div class="container">
+<div class="table-cell footer-table">
+<div class="mob footer-i">
+<h3 class="mob-h">Udemy Mobile</h3>
+<div class="mob-body">
+<div class="sp mob-l"></div>
+<div class="mob-r">
+<p class="mob-txt">We’ve built the app from the ground up to make your learning experience as simple and intuitive as possible. </p>
+<a href="http://ude.my/ios" class="sp mob-app"></a>
+</div>
+</div>
+</div>
+<div class="teach footer-i">
+<h3 class="tea-h">Teach at udemy</h3>
+<p class="tea-tt">Join thousands of passionate instructors who are building their brand, and making money, by teaching on Udemy. </p>
+<a class="btn" href="https://www.udemy.com/teach/">Learn More</a>
+</div>
+<div class="ufo footer-i">
+<h3 class="ufo-h">Udemy for organizations</h3>
+<div class="ufo-body">
+<div class="ufo-l sp"></div>
+<div class="ufo-r">
+<p class="ufo-txt">Create your company’s own branded training library with Udemy’s collection of 6,000 premium &amp; free courses or create your own! </p>
+<a class="btn" href="https://www.udemy.com/organizations/?ref=footer">Learn More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<ul class="clearfix">
+<li><a href="https://www.udemy.com/about/">About Us</a></li>
+<li><a href="https://www.udemy.com/blog/">Blog</a></li>
+<li><a href="https://www.udemy.com/organizations/?ref=footer" target="_blank">Udemy for Organizations</a></li>
+<li><a href="https://www.udemy.com/categories/">Categories</a></li>
+<li><a href="https://www.udemy.com/bundles/">Bundles</a></li>
+<li><a href="https://www.udemy.com/collections/">Collections</a></li>
+<li><a href="https://www.udemy.com/teach/">Instructors</a></li>
+<li><a href="https://www.udemy.com/affiliate/" class='ud-popup' data-requirelogin='true' data-padding='0'">Affiliates</a></li>
+                                        <li><a data-uv-show="instant_answers" href="http://support.udemy.com/knowledgebase/articles/157201-common-technical-problems">Support</a></li>
+                    <li><a href="https://www.udemy.com/static/terms/" rel="nofollow">Terms of Use</a></li>
+                    <li><a href="https://www.udemy.com/static/privacy/" rel="nofollow">Privacy Policy</a></li>
+                </ul>
+                <div id="copyright">&copy; 2013 Udemy.com</div>
+            </div>
+        </div>
+    </div>        <script type="text/javascript">
+    UD = {};
+    UD.Tmp = { jwPlayerLoaded: false, transcripts: [] };
+    UD.Config={
+        http:'https://www.udemy.com/',
+        apiHttp:'https://www.udemy.com/',     // Added to be access to the API in the admin panel, too
+        urlToStatic:'https://static2.udemy.com/static/',
+        link: function(controller,action,params){
+            var baseUrl = controller ? (action ? UD.Config.http+controller+'/'+action : UD.Config.http+controller+'/') : UD.Config.http;
+            return !params ? baseUrl : baseUrl+'?'+$.param(params);
+        },
+        ENV: "PROD",
+        APP: "base",
+        Brand: {
+            identifier: "udemy",
+            type: "udemy"
+        },
+        mixpanelToken: null,
+        mixpanelHost: "http://api.mixpanel.com",
+        quantcastAccount: "p-UJegsEwvrTF01",
+        marketoAccount: "273-CKQ-053",
+        facebookAppId: "313137469260",
+        zoneList: {"Kwajalein":"(GMT-12:00) International Date Line West","Pacific\/Midway":"(GMT-11:00) Midway Island","Pacific\/Samoa":"(GMT-11:00) Samoa","Pacific\/Honolulu":"(GMT-10:00) Hawaii","America\/Anchorage":"(GMT-09:00) Alaska","America\/Los_Angeles":"(GMT-08:00) Pacific Time (US &amp; Canada)","America\/Tijuana":"(GMT-08:00) Tijuana, Baja California","America\/Denver":"(GMT-07:00) Mountain Time (US &amp; Canada)","America\/Chihuahua":"(GMT-07:00) Chihuahua","America\/Mazatlan":"(GMT-07:00) Mazatlan","America\/Phoenix":"(GMT-07:00) Arizona","America\/Regina":"(GMT-06:00) Saskatchewan","America\/Tegucigalpa":"(GMT-06:00) Central America","America\/Chicago":"(GMT-06:00) Central Time (US &amp; Canada)","America\/Mexico_City":"(GMT-06:00) Mexico City","America\/Monterrey":"(GMT-06:00) Monterrey","America\/New_York":"(GMT-05:00) Eastern Time (US &amp; Canada)","America\/Bogota":"(GMT-05:00) Bogota","America\/Lima":"(GMT-05:00) Lima","America\/Rio_Branco":"(GMT-05:00) Rio Branco","America\/Indiana\/Indianapolis":"(GMT-05:00) Indiana (East)","America\/Caracas":"(GMT-04:30) Caracas","America\/Halifax":"(GMT-04:00) Atlantic Time (Canada)","America\/Manaus":"(GMT-04:00) Manaus","America\/Santiago":"(GMT-04:00) Santiago","America\/La_Paz":"(GMT-04:00) La Paz","America\/St_Johns":"(GMT-03:30) Newfoundland","America\/Argentina\/Buenos_Aires":"(GMT-03:00) Georgetown","America\/Sao_Paulo":"(GMT-03:00) Brasilia","America\/Godthab":"(GMT-03:00) Greenland","America\/Montevideo":"(GMT-03:00) Montevideo","Atlantic\/South_Georgia":"(GMT-02:00) Mid-Atlantic","Atlantic\/Azores":"(GMT-01:00) Azores","Atlantic\/Cape_Verde":"(GMT-01:00) Cape Verde Is.","Europe\/Dublin":"(GMT) Dublin","Europe\/Lisbon":"(GMT) Lisbon","Europe\/London":"(GMT) London","Africa\/Monrovia":"(GMT) Monrovia","Atlantic\/Reykjavik":"(GMT) Reykjavik","Africa\/Casablanca":"(GMT) Casablanca","Europe\/Belgrade":"(GMT+01:00) Belgrade","Europe\/Bratislava":"(GMT+01:00) Bratislava","Europe\/Budapest":"(GMT+01:00) Budapest","Europe\/Ljubljana":"(GMT+01:00) Ljubljana","Europe\/Prague":"(GMT+01:00) Prague","Europe\/Sarajevo":"(GMT+01:00) Sarajevo","Europe\/Skopje":"(GMT+01:00) Skopje","Europe\/Warsaw":"(GMT+01:00) Warsaw","Europe\/Zagreb":"(GMT+01:00) Zagreb","Europe\/Brussels":"(GMT+01:00) Brussels","Europe\/Copenhagen":"(GMT+01:00) Copenhagen","Europe\/Madrid":"(GMT+01:00) Madrid","Europe\/Paris":"(GMT+01:00) Paris","Africa\/Algiers":"(GMT+01:00) West Central Africa","Europe\/Amsterdam":"(GMT+01:00) Amsterdam","Europe\/Berlin":"(GMT+01:00) Berlin","Europe\/Rome":"(GMT+01:00) Rome","Europe\/Stockholm":"(GMT+01:00) Stockholm","Europe\/Vienna":"(GMT+01:00) Vienna","Europe\/Minsk":"(GMT+02:00) Minsk","Africa\/Cairo":"(GMT+02:00) Cairo","Europe\/Helsinki":"(GMT+02:00) Helsinki","Europe\/Riga":"(GMT+02:00) Riga","Europe\/Sofia":"(GMT+02:00) Sofia","Europe\/Tallinn":"(GMT+02:00) Tallinn","Europe\/Vilnius":"(GMT+02:00) Vilnius","Europe\/Athens":"(GMT+02:00) Athens","Europe\/Bucharest":"(GMT+02:00) Bucharest","Europe\/Istanbul":"(GMT+02:00) Istanbul","Asia\/Jerusalem":"(GMT+02:00) Jerusalem","Asia\/Amman":"(GMT+02:00) Amman","Asia\/Beirut":"(GMT+02:00) Beirut","Africa\/Windhoek":"(GMT+02:00) Windhoek","Africa\/Harare":"(GMT+02:00) Harare","Asia\/Kuwait":"(GMT+03:00) Kuwait","Asia\/Riyadh":"(GMT+03:00) Riyadh","Asia\/Baghdad":"(GMT+03:00) Baghdad","Africa\/Nairobi":"(GMT+03:00) Nairobi","Asia\/Tbilisi":"(GMT+03:00) Tbilisi","Europe\/Moscow":"(GMT+03:00) Moscow","Europe\/Volgograd":"(GMT+03:00) Volgograd","Asia\/Tehran":"(GMT+03:30) Tehran","Asia\/Muscat":"(GMT+04:00) Muscat","Asia\/Baku":"(GMT+04:00) Baku","Asia\/Yerevan":"(GMT+04:00) Yerevan","Asia\/Yekaterinburg":"(GMT+05:00) Ekaterinburg","Asia\/Karachi":"(GMT+05:00) Karachi","Asia\/Tashkent":"(GMT+05:00) Tashkent","Asia\/Kolkata":"(GMT+05:30) Calcutta","Asia\/Colombo":"(GMT+05:30) Sri Jayawardenepura","Asia\/Katmandu":"(GMT+05:45) Kathmandu","Asia\/Dhaka":"(GMT+06:00) Dhaka","Asia\/Almaty":"(GMT+06:00) Almaty","Asia\/Novosibirsk":"(GMT+06:00) Novosibirsk","Asia\/Rangoon":"(GMT+06:30) Yangon (Rangoon)","Asia\/Krasnoyarsk":"(GMT+07:00) Krasnoyarsk","Asia\/Bangkok":"(GMT+07:00) Bangkok","Asia\/Jakarta":"(GMT+07:00) Jakarta","Asia\/Brunei":"(GMT+08:00) Beijing","Asia\/Chongqing":"(GMT+08:00) Chongqing","Asia\/Hong_Kong":"(GMT+08:00) Hong Kong","Asia\/Urumqi":"(GMT+08:00) Urumqi","Asia\/Irkutsk":"(GMT+08:00) Irkutsk","Asia\/Ulaanbaatar":"(GMT+08:00) Ulaan Bataar","Asia\/Kuala_Lumpur":"(GMT+08:00) Kuala Lumpur","Asia\/Singapore":"(GMT+08:00) Singapore","Asia\/Taipei":"(GMT+08:00) Taipei","Australia\/Perth":"(GMT+08:00) Perth","Asia\/Seoul":"(GMT+09:00) Seoul","Asia\/Tokyo":"(GMT+09:00) Tokyo","Asia\/Yakutsk":"(GMT+09:00) Yakutsk","Australia\/Darwin":"(GMT+09:30) Darwin","Australia\/Adelaide":"(GMT+09:30) Adelaide","Australia\/Canberra":"(GMT+10:00) Canberra","Australia\/Melbourne":"(GMT+10:00) Melbourne","Australia\/Sydney":"(GMT+10:00) Sydney","Australia\/Brisbane":"(GMT+10:00) Brisbane","Australia\/Hobart":"(GMT+10:00) Hobart","Asia\/Vladivostok":"(GMT+10:00) Vladivostok","Pacific\/Guam":"(GMT+10:00) Guam","Pacific\/Port_Moresby":"(GMT+10:00) Port Moresby","Asia\/Magadan":"(GMT+11:00) Magadan","Pacific\/Fiji":"(GMT+12:00) Fiji","Asia\/Kamchatka":"(GMT+12:00) Kamchatka","Pacific\/Auckland":"(GMT+12:00) Auckland","Pacific\/Tongatapu":"(GMT+13:00) Nukualofa"}    };
+
+            UD.Config.jsPath = "/static/compiled-js-03392c178bf86975acb81bf895b406279cd74b0f/";
+    
+    UD.me = {};
+        
+    KB=UD;
+
+    var _oldWindowLoad;
+	if(typeof window.onload == 'function') {
+		_oldWindowLoad = window.onload;
+	}
+
+</script>
+    
+<script src="/static/js/jsrepl/build/jsrepl.js" id="jsrepl-script"></script>
+
+	<script data-main="https://static2.udemy.com/static/compiled-js-03392c178bf86975acb81bf895b406279cd74b0f/ud.package.all" src="https://static2.udemy.com/static/js/require.js"></script>
+	<script>
+		require.config({waitSeconds: 0});
+	</script>
+
+<script>
+        UD.wishlistedCourseIds = [];
+</script>
+        
+    <script>
+        UserVoice = window.UserVoice || [];
+
+        
+        UserVoice.push(['set',
+            {
+                'forum_id'  : 148334,
+                'position'  : "bottom-right",
+                'locale'    : "en"
+            }
+        ]);
+
+
+                    UserVoice.push(['pin', 'instant_answers']);
+        
+        // Autoprompt users for Satisfaction and SmartVote (only displayed when certain conditions are met)
+        // disabled now
+        // UserVoice.push(['autoprompt']);
+    </script>
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12366301-1']);
+  _gaq.push(["_setDomainName", "none"]);
+  _gaq.push(["_setAllowLinker", true]);
+  _gaq.push(['_trackPageview']);
+
+  </script>        <!-- Compete XL Code for udemy.com -->
+<script type="text/javascript">
+__compete_code = 'd7c98646df36de38186f8c8bbd16900c';
+/* Set control variables below this line. */ 
+</script>
+<!-- End of Compete XL Code for udemy.com -->        <div class="ud-actionlogger" data-item1="https://www.udemy.com/action/log/?refCode=SlFHLgkmFDhQURFjOVEGJWgkZXEPNUw5YEESKjQxPHp4HmUyDzU7Pn0eeTENDyMmVTBiMicPJyRVNG4oIQs8JVcgU3YnDzMmVTRHNwwJOzprNH4oIQs/Jl" data-item2="NAfTgNUCA4UzRtNDQlGTlrCho2NzURIH0daTg0NUQ8VSQbKCIhP35oJFNwNDE8engZSHQnCwIlaEEScA0MOyBiJHooIQs8NHwJSHAgMTw/eB19OzQ6PwZrMGJ3DAwjP1MwXCg0JTN8aCBidwwMIz9TOxolTB8=" />
+            <script type="text/javascript">
+    if (typeof mixpanel != "undefined") {
+mixpanel.register_once({'tc_initial': 'direct'});
+mixpanel.register({'tc_current': 'direct'});
+}
+    /**
+     * This function looks for __mixpanel_calls array in global scope,
+     * if it finds, iterates on each function item in the array and calls them
+     */
+    (function() {
+        if(typeof mixpanel == "undefined") {
+            return;
+        }
+        if(typeof __mixpanel_calls != "undefined") {
+            __mixpanel_calls.forEach(function(fn) {
+                fn.call();
+            });
+        }
+    })();
+</script>
+
+    
+    <script id="homepageQuestionAskedActivityTemplate" type="text/x-handlebars-template">
+<li class="aggregated-story-container">
+    {{#each activities}}
+    <div class="aggregated-story {{#if hidden}}hideItem{{/if}}" data-activityid="{{activity_id}}" mixpanel-feed-story-type="question_asked">
+        <a mixpanel-target-page-type="profile_page" href="{{../user.url}}" style="position: absolute;" target="_blank"><span style="background-image: url({{../user.images.img_50x50}});" class="user-img bordered-thumb"></span></a>
+        {{#if show_follow_button}}
+            <a href="#" class="follow-user none" data-userid="{{user.id}}">Follow</a>
+        {{/if}}
+        <div class="news">
+            <h4 class="header">
+                <b><a mixpanel-target-page-type="profile_page" class="user-name" href="{{../user.url}}">{{&../user.title}}</a></b>
+                <span> asked a question in </span><a mixpanel-target-page-type="course_page" href="{{course_url}}">{{{course_title}}}</a>
+            </h4>
+            <div class="main">
+                <div class="left-col">
+                    <a mixpanel-target-page-type="course_page" style="background-image: url({{course_image_url}})" href="{{course_url}}" class="thumb"></a>
+                </div>
+                <div class="right-col" style="color: #222;">
+                    <p>{{&question_title}}</p>
+                </div>
+            </div>
+            <div class="footer clearfix">
+                <a href="#" class="comment social">Comment</a>
+                <a href="#" class="like social {{#if liked_by_user}}liked{{/if}}">Like{{#if liked_by_user}}d{{/if}}</a>
+                {{#if total_like_count}}
+                    <a href="/newsfeed/show-users-that-liked-activity?activity_id={{activity_id}}" class="like_count ud-popup" style="margin-left: 10px;"><i class="icon-thumbs-up" style="margin-top: 3px;"></i><span style="margin-left: 1px;color:black;">{{&total_like_count}}</span></a>
+                {{/if}}
+                {{#if comments_count}}
+                    <a href="#" class="comment_count none" style="margin-left: 10px;">{{&comments_count}} comments</a>
+                {{/if}}
+                <a mixpanel-target-page-type="single_activity_page" href="{{story_url}}" target="_blank" class="timestamp"><time data-redistimestamp="{{redis_timestamp}}"></time></a>
+            </div>
+
+            <div class="comments">
+                <ul></ul>
+
+                <form class="flex-wrapper">
+                    <div class="flex input-wrapper">
+                        <textarea tabindex="1" placeholder="Add your comment"></textarea>
+                    </div>
+					<input type="submit" tabindex="1" value="Send" class="btn btn-small btn-inverse send">
+                </form>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    {{#if view_more_button_is_visible}}
+        <a href="#" class="show-more" >Show {{&more_story_count}} more questions by {{&user.title}}</a>
+    {{/if}}
+</li>
+
+</script>    <script id="homepageSubscribedToCourseActivityTemplate" type="text/x-handlebars-template">
+<li class="aggregated-story-container">
+    {{#each activities}}
+    <div class="aggregated-story {{#if hidden}}hideItem{{/if}}" data-activityid="{{activity_id}}" mixpanel-feed-story-type="subscribed_to_course">
+        <a mixpanel-target-page-type="profile_page" href="{{../user.url}}" target="_blank"><span style="background-image: url({{../user.images.img_50x50}});" class="user-img bordered-thumb"></span></a>
+        <div class="news">
+            <h4 class="header">
+                <b><a mixpanel-target-page-type="profile_page" class="user-name" href="{{../user.url}}">{{../user.title}}</a></b>
+                <span> enrolled in a new course.</span>
+            </h4>
+            <div class="main">
+                <div class="left-col">
+                    <a mixpanel-target-page-type="course_page" style="background-image: url({{course_image_url}})" href="{{course_url}}" class="thumb"></a>
+                </div>
+                <div class="right-col">
+                    <p>
+                        <a mixpanel-target-page-type="course_page" href="{{course_url}}" class="title">
+                            <b>{{{course_title}}}</b>
+                        </a>
+                        by 
+                        <a mixpanel-target-page-type="instructor_page" style="color: #777;" href="{{instructor_url}}" class="title">
+                            <b>{{{course_instructor_full_name}}}</b>
+                        </a>
+                    </p>
+                    <p>{{{course_headline}}}</p>
+                    <div class="reviews clearfix">
+                        <div class="small-rating">
+                            <span style="width: {{average_review_percentage}}%"></span>
+                        </div>
+                        <span class="review-count">({{&total_review_count}} reviews)</span>
+                        <span class="students-count">
+                            <b>{{&enrolled_student_count}}</b> students
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer clearfix">
+                <a href="#" class="comment social">Comment</a>
+                <a href="#" class="like social {{#if liked_by_user}}liked{{/if}}">Like{{#if liked_by_user}}d{{/if}}</a>
+                {{#if total_like_count}}
+                    <a href="/newsfeed/show-users-that-liked-activity?activity_id={{activity_id}}" class="like_count ud-popup" style="margin-left: 10px;"><i class="icon-thumbs-up" style="margin-top: 3px;"></i><span style="margin-left: 1px;color:black;">{{&total_like_count}}</span></a>
+                {{/if}}
+                {{#if comments_count}}
+                    <a href="#" class="comment_count none" style="margin-left: 10px;">{{&comments_count}} comments</a>
+                {{/if}}
+                <a mixpanel-target-page-type="single_activity_page" href="{{story_url}}" target="_blank" class="timestamp"><time data-redistimestamp="{{redis_timestamp}}"></time></a>
+            </div>
+
+            <div class="comments">
+                <ul></ul>
+
+                <form class="flex-wrapper">
+                    <div class="flex input-wrapper">
+                        <textarea tabindex="1" placeholder="Add your comment"></textarea>
+                    </div>
+					<input type="submit" tabindex="1" value="Send" class="btn btn-small btn-inverse send">
+                </form>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    {{#if view_more_button_is_visible}}
+        <a href="#" class="show-more" >Show {{&more_story_count}} more courses {{&user.title}} enrolled in</a>
+    {{/if}}
+</li>
+
+</script>
+    <script id="homepageStatusUpdateLoadingTemplate" type="text/x-handlebars-template">
+
+    <li class="aggregated-story-container empty-status-update">
+        <div class="aggregated-story " data-activityid="250">
+            <div class="news">
+                <div class="main">
+                    <div class="ajax-loader-stick" style="position: relative;left: 45%;top: 14px;"></div><div class="right-col" style="margin-left: 0px;">
+                        <p style="color: #222;"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+
+</script>    <script id="homepageUserFollowsUserActivityTemplate" type="text/x-handlebars-template">
+<li class="aggregated-story-container">
+    {{#each activities}}
+    <div class="aggregated-story {{#if hidden}}hideItem{{/if}}" data-activityid="{{activity_id}}" mixpanel-feed-story-type="user_followed_user">
+        <a mixpanel-target-page-type="profile_page" href="{{../follower_user.url}}" target="_blank"><span style="background-image: url({{../follower_user.images.img_50x50}});" class="user-img bordered-thumb"></span></a>
+        <div class="news">
+            <h4 class="header">
+                <b><a mixpanel-target-page-type="profile_page" class="user-name" href="{{../follower_user.url}}">{{&../follower_user.title}}</a></b>
+                <span> started following </span><a mixpanel-target-page-type="profile_page" href="{{followed_user.url}}">{{&followed_user.title}}</a>
+                <!--
+                {{#if show_follow_button_for_followed_user}}
+                    <span style=" color: #999; ">&middot;</span>
+                    <a href="#" class="follow-user" data-userid="{{followed_user.id}}" style=" color: #999; ">Follow {{&followed_user.name}}</a>
+                {{/if}}
+                -->
+            </h4>
+            <div class="main">
+            </div>
+            <div class="footer clearfix">
+                <a href="#" class="comment social">Comment</a>
+                <a href="#" class="like social {{#if liked_by_user}}liked{{/if}}">Like{{#if liked_by_user}}d{{/if}}</a>
+                {{#if total_like_count}}
+                    <a href="/newsfeed/show-users-that-liked-activity?activity_id={{activity_id}}" class="like_count ud-popup" style="margin-left: 10px;"><i class="icon-thumbs-up" style="margin-top: 3px;"></i><span style="margin-left: 1px;color:black;">{{&total_like_count}}</span></a>
+                {{/if}}
+                {{#if comments_count}}
+                    <a href="#" class="comment_count none" style="margin-left: 10px;">{{&comments_count}} comments</a>
+                {{/if}}
+                <a mixpanel-target-page-type="single_activity_page" href="{{story_url}}" target="_blank" class="timestamp"><time data-redistimestamp="{{redis_timestamp}}"></time></a>
+            </div>
+
+            <div class="comments">
+                <ul></ul>
+
+                <form class="flex-wrapper">
+                    <div class="flex input-wrapper">
+                        <textarea tabindex="1" placeholder="Add your comment"></textarea>
+                    </div>
+					<input type="submit" tabindex="1" value="Send" class="btn btn-small btn-inverse send">
+                </form>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    {{#if view_more_button_is_visible}}
+        <a href="#" class="show-more" >Show {{&more_story_count}} more users followed by {{&follower_user.title}}</a>
+    {{/if}}
+</li>
+
+</script>    <script id="homepageReachedEndOfFeedTemplate" type="text/x-handlebars-template">
+
+    <div class="feed-last-news" mixpanel-feed-story-type="reached_end_of_feed">
+        <h4 class="header">
+            <b>Hi there! You have reached the end of your feed and found this secret button:            <a href="/discover" class="btn btn-success" style="margin: 10px;">Discover Amazing Courses</a></b>
+        </h4>
+        <div class="main">
+        </div>
+    </div>
+
+</script>    <script id="homepageLoadingMoreFeedItemsTemplate" type="text/x-handlebars-template">
+
+    <li class="aggregated-story-container loading-more-items">
+        <div class="aggregated-story">
+            <div class="news">
+                <h4 class="header">
+                    <div class="ajax-loader-stick" style="position: relative;"></div>
+                </h4>
+                <div class="main"></div>
+            </div>
+        </div>
+    </li>
+
+</script>    
+    <script id="activityCommentTemplate" type="text/x-handlebars-template">
+
+    {{#if view_more_comments_button_is_visible}}
+        <a href="#" class="view-previous-comments">view previous comments ({{more_comments_count}})</a>
+    {{/if}}
+    {{#each comments}}
+        <li class="clearfix {{#if hidden}}none{{/if}}">
+            <a mixpanel-target-page-type="profile_page" href="{{user.url}}"><span class="user-img bordered-thumb" style="background-image: url({{user.images.img_50x50}});"></span>
+            <p>
+                <a mixpanel-target-page-type="profile_page" href="{{user.url}}">{{&user.title}}</a>
+                {{{body}}}
+            </p>
+        </li>
+    {{/each}}
+
+</script>
+                        <script type="text/javascript">
+        adroll_adv_id = "554CPNW4XBAX5EYKBL4HVU";
+        adroll_pix_id = "OKLCQMMNANCRNGGEOKKR5M";
+
+            </script>
+                    <script id="_webengage_script_tag" type="text/javascript">
+            var _weq = _weq || {};
+            _weq['webengage.licenseCode'] = '~47b66305';
+            _weq['webengage.widgetVersion'] = "4.0";
+                    </script>
+        </body>
+</html>

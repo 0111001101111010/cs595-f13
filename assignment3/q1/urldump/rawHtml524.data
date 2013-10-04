@@ -1,0 +1,1017 @@
+			<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<meta name="generator" content="WordPress 3.6" />
+	
+	<title>Josh Earl &raquo; How to Add SASS Support in Sublime Text</title>
+	
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds.feedburner.com/joshearl" />
+	<link rel="pingback" href="http://aspirecode.com/xmlrpc.php" />
+	<link rel="shortcut icon" href="http://aspirecode.com/wp-content/themes/structure/images/favicon.png" />
+	
+	<link rel="stylesheet" href="http://aspirecode.com/wp-content/themes/structure/style.css" type="text/css" media="screen" />
+	
+	<script type="text/javascript" src="http://aspirecode.com/wp-content/themes/structure/includes/js/html5-ie.js"></script>
+	
+	<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="http://aspirecode.com/wp-content/themes/structure/includes/ie/ie.css" media="screen"/><![endif]-->
+	
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css' />
+
+	<link rel="alternate" type="application/rss+xml" title="Josh Earl &raquo; Feed" href="http://feeds.feedburner.com/joshearl" />
+<link rel="alternate" type="application/rss+xml" title="Josh Earl &raquo; Comments Feed" href="http://aspirecode.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Josh Earl &raquo; How to Add SASS Support in Sublime Text Comments Feed" href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/feed/" />
+<link rel='stylesheet' id='ois_bootstrap-css'  href='http://aspirecode.com/wp-content/plugins/OptinSkin/includes/ois_bootstrap/css/bootstrap.min.css?ver=3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://aspirecode.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='digg-digg-css'  href='http://aspirecode.com/wp-content/plugins/digg-digg/css/diggdigg-style.css?ver=5.3.6' type='text/css' media='screen' />
+<link rel='stylesheet' id='amazon-link-style-css'  href='http://aspirecode.com/wp-content/plugins/amazon-link/Amazon.css?ver=3.0.4' type='text/css' media='all' />
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js?ver=3.6'></script>
+<script type='text/javascript' src='http://aspirecode.com/wp-includes/js/comment-reply.min.js?ver=3.6'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ois = {"ajaxurl":"http:\/\/aspirecode.com\/wp-admin\/admin-ajax.php","ois_submission_nonce":"1bb2689269","disable_submissions_stats":"no","disable_impressions_stats":"no"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://aspirecode.com/wp-content/plugins/OptinSkin/front/js/optin.js?ver=3.6'></script>
+<script type='text/javascript' src='http://aspirecode.com/wp-content/plugins/OptinSkin/front/includes/waypoints.min.js?ver=3.6'></script>
+<script type='text/javascript' src='http://aspirecode.com/wp-content/plugins/OptinSkin/front/js/jquery.simplemodal.js?ver=3.6'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ois_fade = {"ois_2":"3","ois_3":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://aspirecode.com/wp-content/plugins/OptinSkin/front/js/fade_load.js?ver=3.6'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ois_stick = {"ois_4":"sticker"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://aspirecode.com/wp-content/plugins/OptinSkin/front/js/sticky.js?ver=3.6'></script>
+<script type='text/javascript' src='http://aspirecode.com/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.5'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://aspirecode.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://aspirecode.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Flatland: The best minimal theme for Sublime Text' href='http://aspirecode.com/flatland-the-best-minimal-theme-for-sublime-text/' />
+<link rel='next' title='Starting a New WordPress Plugin with Sublime Text' href='http://aspirecode.com/starting-a-new-wordpress-plugin-with-sublime-text/' />
+<meta name="generator" content="WordPress 3.6" />
+<link rel='canonical' href='http://aspirecode.com/how-to-add-sass-support-in-sublime-text/' />
+<link rel='shortlink' href='http://aspirecode.com/?p=725' />
+<!-- All in One Webmaster plugin by Crunchify.com --><!-- /All in One Webmaster plugin --><link rel='stylesheet' type='text/css' media='all' href='http://aspirecode.com?action=display_custom_css_code' ><link rel="stylesheet" type="text/css" href="http://aspirecode.com/wp-content/plugins/wp-code-highlight/css/wp-code-highlight.css" media="screen" />
+<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script><div id="fb-root"></div><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><script type="text/javascript">
+			  (function() {
+			    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			    po.src = 'https://apis.google.com/js/plusone.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			</script><script type="text/javascript">
+			(function() {
+		     var li = document.createElement('script'); li.type = 'text/javascript'; li.async = true;
+		      li.src = 'https://platform.stumbleupon.com/1/widgets.js';
+		      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(li, s);
+	 		})();
+		</script><script src="http://platform.linkedin.com/in.js" type="text/javascript"></script><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = ['pdf'];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-28514093-2']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+	
+	<!-- conditional css -->
+	<style type="text/css">
+		a {
+			color:#F86E43;
+		}
+	</style>
+</head>
+
+<body class="single single-post postid-725 single-format-standard">
+	<div id="wrapper">
+		<div class="w1">
+			<section class="section-top">
+				<div class="holder clearfix">
+					<header id="header" class="clearfix">
+						<div class="header-holder">
+							<!-- grab the logo if uploaded -->
+														    <h1 class="logo-text">
+							    	<a href="http://aspirecode.com/" title="Josh Earl">Josh Earl</a>
+							    </h1>
+														
+							<div class="menu-header-container"><ul id="nav" class="nav"><li id="menu-item-627" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-627"><a href="#">Sublime Productivity</a>
+<ul class="sub-menu">
+	<li id="menu-item-626" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-626"><a href="http://samples.leanpub.com/sublime-productivity-sample.pdf">Sample</a></li>
+	<li id="menu-item-623" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-623"><a target="_blank" href="https://leanpub.com/sublime-productivity">Buy</a></li>
+</ul>
+</li>
+<li id="menu-item-624" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-624"><a href="#">Newsletters</a>
+<ul class="sub-menu">
+	<li id="menu-item-625" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-625"><a target="_blank" href="http://sublimetexttips.com/newsletter/">Sublime Text Tips</a></li>
+</ul>
+</li>
+<li id="menu-item-549" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-549"><a href="http://aspirecode.com/blog/">Blog</a></li>
+<li id="menu-item-636" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-636"><a href="http://aspirecode.com/resources/">Resources</a></li>
+<li id="menu-item-572" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-572"><a href="http://aspirecode.com/about/">About</a></li>
+<li id="menu-item-550" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-550"><a href="http://aspirecode.com/contact/">Contact</a></li>
+</ul></div>						</div>
+
+						<form class="form-search" method="get" action="http://aspirecode.com/">
+							<fieldset>
+								<div class="text">
+									<input type="text" onfocus="if (this.value == 'Search Site') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search Site';}" value="Search Site" name="s" id="s">
+								</div>
+								<input type="submit" class="btn-search" value="search site">
+							</fieldset>
+						</form>	
+					</header>
+					
+					<!-- header slider -->
+									</div>
+			</section>			
+			<section id="main">
+				<div class="main-holder">
+					<section id="content">
+						<!-- conditional subtitles -->
+												
+						<!-- post loop -->
+													<article class="post-725 post type-post status-publish format-standard hentry category-blog category-featured category-header-slider tag-sass tag-sublime-text post clearfix">
+								<!-- date block -->
+																	<em class="date">Apr<span>30</span></em>
+																
+								<header>
+									<h2><a href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/">How to Add SASS Support in Sublime Text</a></h2>
+								</header>
+								
+								<!-- featured image or video -->
+																											<div class="img-holder">
+											<a href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/" title="How to Add SASS Support in Sublime Text"><img width="577" height="346" src="http://aspirecode.com/wp-content/uploads/2013/04/scss-with-highlighting-577x346.png" class="attachment-post-image wp-post-image" alt="Sublime Handles SASS" /></a>
+										</div>
+										<div style="clear:both;"></div>
+																																
+																	<a id="dd_start"></a><p><a href="http://sass-lang.com/">SASS</a>, short for Syntactically Awesome Style Sheets, is a massively popular tool for web developers that takes a lot of the pain out of writing CSS. Unfortunately, Sublime doesn&#8217;t provide a lot of help if you want to use SASS in your project. </p>
+<p>Package Control lists a number of seemingly useful plugins, but each provides just one or two SASS features&#8211;none of them gives you everything you need to use SASS effectively. Then there&#8217;s the whole compiling thing&#8211;messing with a separate command line tool every time you want to make a CSS tweak is a royal pain. </p>
+<p>Here&#8217;s the setup I use that makes working with SASS as seamless as using plain old CSS.</p>
+<h2>Install SASS</h2>
+<p>Since this isn&#8217;t a SASS 101 tutorial, I&#8217;m going to assume that you&#8217;ve already installed SASS and know how to use the command line compiler. If not, here&#8217;s a <a href="http://www.metropoliscreative.com/web-development/how-to-install-sass-an-easy-guide-for-developers/">good walkthrough</a>.</p>
+<p>I&#8217;m also assuming that you have Package Control set up in Sublime. If you haven&#8217;t encountered it yet, Package Control lets you install hundreds of plugins with just a few keystrokes—without leaving Sublime. The <a href="http://wbond.net/sublime_packages/package_control/installation">Package Control site</a> includes setup instructions. </p>
+<h2>Configure Syntax Highlighting</h2>
+<p>The first time you open a <code>sass</code> or <code>scss</code> file, Sublime just shrugs its shoulders and treats it like plain text, rendering your meticulously formatted style rules in monotonous black and white. </p>
+<p><img src="http://aspirecode.com/wp-content/uploads/2013/04/scss-as-plain-text.png" alt="" width="550"/></p>
+<p>Package Control lists a handful of plugins that add syntax highlighting for SASS. The runaway favorite is the <a href="https://github.com/nathos/sass-textmate-bundle">sass-textmate-bundle plugin</a>, called simply <code>Sass</code> in Package Control.</p>
+<p>After you install the Sass plugin, when you open a <code>scss</code> file you&#8217;re greeted with beautifully highlighted code:</p>
+<p><img src="http://aspirecode.com/wp-content/uploads/2013/04/scss-with-highlighting.png" alt="" width="550"/></p>
+<p>But don&#8217;t celebrate yet&#8211;if you open a <code>sass</code> file, you&#8217;ll find it&#8217;s still devoid of color. What gives?</p>
+<p>If you look in the lower right-hand corner of the screen, you&#8217;ll see a clue:</p>
+<p><img src="http://aspirecode.com/wp-content/uploads/2013/04/sass-as-haml.png" alt="" width="550"/></p>
+<p>As it turns out, a line in the <code>Data/Packages/Rails/Ruby Haml.tmLanguage</code> file is hijacking the <code>sass</code> extension and incorrectly setting the syntax to <code>Ruby Haml</code> instead of <code>Sass</code>.</p>
+<p>I&#8217;ve seen &#8220;fixes&#8221; for this problem that involve editing the <code>Ruby Haml.tmLanguage</code> file itself, or one of the files in the SASS plugin. That&#8217;s a bad idea because future updates to either of those packages will overwrite your customization, and you&#8217;ll be back where you started.</p>
+<p>Fortunately, the simplest fix is also the best: Sublime allows you to specify what syntax to use for a given file extension. </p>
+<p>To force Sublime to correctly highlight <code>sass</code> files:<br />
+  1. Open a <code>sass</code> file.<br />
+  2. Click <strong>View | Syntax | Open all with current extension as &#8230; | Sass</strong>. </p>
+<h2>Compiling from Sublime</h2>
+<p>Messing with the command line SASS compiler is a bit of a hassle&#8211;and it&#8217;s unnecessary. With help from a couple of plugins, you can configure Sublime to automatically compile your SASS stylesheets every time you save a change. </p>
+<p>Sublime&#8217;s build system feature allows you to create custom build tasks and associate them with specific file types. You can do this by hand in your <code>sublime-project</code> file, or you can let the <a href="https://github.com/jaumefontal/SASS-Build-SublimeText2">SASS Build plugin</a> handle the heavy lifting for you.</p>
+<p>Installing the SASS Build plugin creates two new entries under <strong>Tools | Build</strong>: <strong>Sass</strong> and <strong>Sass &#8211; Compressed</strong>. </p>
+<p>Compiling your SASS files with this plugin is simple. While editing a <code>sass</code> or <code>scss</code> file, just hit <strong>Ctrl+B</strong> on Windows or Linux or <strong>Command+B</strong> on OS X. </p>
+<p>By default, Sublime will use the regular <strong>Sass</strong> build option, which compiles your SASS and formats the CSS output for easy readability. </p>
+<p>To create minified CSS files for production, change the build option by clicking <strong>Tools | Build | Sass &#8211; Compressed</strong>. </p>
+<h2>Automating Builds</h2>
+<p>Building your SASS files straight from Sublime is convenient, but at some point you&#8217;re going to spend 30 minutes debugging a crazy stubborn CSS issue only to realize that you actually fixed it 25 minutes ago and just forgot to recompile the <code>scss</code> file. Not that I&#8217;m bitter or anything.</p>
+<p>You can avoid this by installing the <a href="https://github.com/alexnj/SublimeOnSaveBuild">SublimeOnSaveBuild plugin</a>, which will automatically execute the default build action whenever you save changes to a file. (It&#8217;s also handy when you&#8217;re working with CoffeeScript.)</p>
+<p>SublimeOnSaveBuild supports a filename filter, and by default it&#8217;s only configured to run for <code>css</code>, <code>js</code>, <code>sass</code>, <code>less</code> and <code>scss</code> files.</p>
+<p>P.S. Do you love using Sublime to get more done? Drop your email address in the box below to get more free tips every week. As a bonus, I&#8217;ll send you a 12-page guide to Sublime&#8217;s advanced editing features so you can start using Sublime more effectively—today.</p>
+<!-- OptinSkin -->
+	<div align="center" class="ois_wrapper " data="5" data-popup-scroll="100px" style="margin-top:5px;margin-bottom:5px;" id="ois_5" rel="725"><section class="optinForm clearfix">
+    <form action="http://joshearl.us6.list-manage.com/subscribe/post?u=5246107b90655bf9815848797&id=a677527fca" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate clearfix" novalidate>
+        <h2>Send me 12 FREE pages of advanced Sublime tips!</h2>
+        <div class="mc-field-group">
+            <label for="MERGE1">First Name (optional, but I won't have to say, "Hey you!")</label>
+            <input value=""  type="text" name="MERGE1" id="mce-FIRSTNAME" placeholder="First Name">
+            
+            <label for="EMAIL">Email Address</label>
+            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Your Email">
+            <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+            <input type="submit" value="Send Me My Guide!" name="subscribe" id="mc-embedded-subscribe" class="button">
+        </div>
+        <img class="featuredImage" src="http://aspirecode.com/wp-content/uploads/2013/01/title_page.png" alt="sublime productivity ebook">
+    </form>
+</section><style type="text/css">.optinForm.clearfix:before,
+    .optinForm.clearfix:after {
+        content: " ";
+        display: table;
+    }
+
+    .optinForm.clearfix:after {
+        clear: both;
+    }
+
+    .optinForm {
+        width: 600px;
+        color: #53585f;
+        background-color: #f8f8f8;
+        box-shadow: 0 0 3px #bebec0;
+        -webkit-box-shadow: 0 0 3px #bebec0;
+        -moz-box-shadow: 0 0 3px #bebec0;
+        -ms-box-shadow: 0 0 3px #bebec0;
+        -o-box-shadow: 0 0 3px #bebec0;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .optinForm h2 {
+        margin: 15px 0 !important;
+        text-align: center;
+        font: 24px 'Rokkitt', Georgia, Times, serif;
+    }
+
+    .optinForm label {
+        display: block;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .optinForm input[type="text"], .optinForm input[type="email"] {
+        height: 20px;
+        line-height: normal;
+        padding: 8px;
+        box-shadow: 0 0 3px #bebec0;
+        -webkit-box-shadow: 0 0 3px #bebec0;
+        -moz-box-shadow: 0 0 3px #bebec0;
+        -ms-box-shadow: 0 0 3px #bebec0;
+        -o-box-shadow: 0 0 3px #bebec0;
+        font-family: 'Droid Serif', Georgia, serif;
+        color: #60636b;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+        outline: none;
+        border: none;
+        width: 388px;
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    #mce-EMAIL {
+        background-color: #ffffcc;
+    }
+
+    .optinForm label.error {
+        color: red;
+    }
+
+    .optinForm .button {
+        cursor: pointer;
+        width: 200px;
+        height: 30px;
+        font: 14px/14px Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        color: #fff;
+        background-color: #f8976f;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+    }
+
+    .optinForm .button:hover {
+        opacity: 0.9;
+    }
+
+    .optinForm .mc-field-group {
+        float: left;
+        margin-left: 25px;
+    }
+
+    .optinForm .featuredImage {
+        margin-right: 25px;
+        float: right;
+        width: 130px;
+        background-color: green;
+    }</style><div style="clear:both;"></div>
+		</div><!-- End OptinSkin -->
+<a id="dd_end"></a><div class='dd_outer'><div class='dd_inner'><div id='dd_ajax_float'><div class='dd_button_v'><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/" data-count="vertical" data-text="How to Add SASS Support in Sublime Text" data-via="josh_earl" ></a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div><div style='clear:left'></div><div class='dd_button_v'><a href="http://bufferapp.com/add" class="buffer-add-button" data-count="vertical" data-url="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/" data-via="josh_earl"></a><script type="text/javascript" src="http://static.bufferapp.com/js/button.js"></script></div><div style='clear:left'></div><div class='dd_button_v'><iframe src="http://www.reddit.com/static/button/button2.html?width=51&url=http%3A%2F%2Faspirecode.com%2Fhow-to-add-sass-support-in-sublime-text%2F&title=How%20to%20Add%20SASS%20Support%20in%20Sublime%20Text&newwindow='1'" height="69" width="51" scrolling='no' frameborder='0'></iframe></div><div style='clear:left'></div><div class='dd_button_v'><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/" send="false" show_faces="false"  layout="box_count" width="50"  ></fb:like></div><div style='clear:left'></div><div class='dd_button_v'><script type='text/javascript' src='https://apis.google.com/js/plusone.js'></script><g:plusone size='tall' href='http://aspirecode.com/how-to-add-sass-support-in-sublime-text/'></g:plusone></div><div style='clear:left'></div><div class='dd_button_v'><script type='text/javascript' src='http://platform.linkedin.com/in.js'></script><div class='dd-linkedin-share'><div data-url='http://aspirecode.com/how-to-add-sass-support-in-sublime-text/' data-counter='top'></div></div></div><div style='clear:left'></div><div class='dd_button_v'><a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Faspirecode.com%2Fhow-to-add-sass-support-in-sublime-text%2F&description=How%20to%20Add%20SASS%20Support%20in%20Sublime%20Text&media=http://aspirecode.com/wp-content/uploads/2013/04/scss-with-highlighting.png" class="pin-it-button" count-layout="vertical"></a><script type="text/javascript" src="http://assets.pinterest.com/js/pinit.js"></script></div><div style='clear:left'></div></div></div></div><script type="text/javascript">var dd_offset_from_content = 60;var dd_top_offset_from_content = 40;var dd_override_start_anchor_id = "";var dd_override_top_offset = "";</script><script type="text/javascript" src="http://aspirecode.com/wp-content/plugins/digg-digg//js/diggdigg-floating-bar.js?ver=5.3.6"></script>																
+								<div style="clear:both;"></div>
+								
+								<!-- meta info -->
+																<ul class="tools">
+									<li><img src="http://aspirecode.com/wp-content/themes/structure/images/ico05.png" alt="autho" width="14" height="15" ><span>josh</span></li>
+									<li><img src="http://aspirecode.com/wp-content/themes/structure/images/ico01.png" alt="date" width="16" height="16" ><span>April 30, 2013</span></li>
+									<li><a href="#"><img src="http://aspirecode.com/wp-content/themes/structure/images/ico02.png" alt="categories" width="16" height="16" ><span><a href="http://aspirecode.com/category/blog/" title="View all posts in Blog" >Blog</a>, <a href="http://aspirecode.com/category/featured/" title="View all posts in Featured" >Featured</a>, <a href="http://aspirecode.com/category/header-slider/" title="View all posts in Header Slider" >Header Slider</a></span></a></li>
+									<li><img src="http://aspirecode.com/wp-content/themes/structure/images/ico03.png" alt="tags" width="16" height="16" ><span><a href="http://aspirecode.com/tag/sass/" rel="tag">SASS</a>, <a href="http://aspirecode.com/tag/sublime-text/" rel="tag">sublime text</a></span></li>									<li><a href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text//#comments"><img src="http://aspirecode.com/wp-content/themes/structure/images/ico04.png" alt="comments" width="16" height="16" ><span>19 Comments</span></a></li>
+								</ul>
+																
+								<!-- comments -->
+																	
+<div id="comments">
+
+<!-- You can start editing here. -->
+
+	<h3 id="comments">19 Responses to &#8220;How to Add SASS Support in Sublime Text&#8221;</h3>
+
+	<ol class="commentlist">
+			<li class="comment even thread-even depth-1 clearfix" id="li-comment-49">
+		
+		<div class="comment-text" id="comment-49">
+			<div class="comment-info">
+				<p class="reply">
+				<a class='comment-reply-link' href='/how-to-add-sass-support-in-sublime-text/?replytocom=49#respond' onclick='return addComment.moveForm("comment-49", "49", "respond", "725")'>Reply</a>				</p>
+				
+				<div class="comment-author vcard clearfix">
+					<img alt='' src='http://1.gravatar.com/avatar/3575018741e0d4a2214747708456797f?s=35&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D35&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />					
+					<div class="comment-meta commentmetadata">
+						<cite class="fn"><a href='http://www.korytegman.com/' rel='external nofollow' class='url'>Kory Tegman</a></cite>						<div style="clear:both;"></div>
+						<a class="comment-time" href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-49">April 30, 2013 at 11:42 am</a>					</div>
+				</div>
+			<div style="clear:both;"></div>
+			</div>
+	
+			<p>hey Josh!<br />
+Thanks for this post! I have been looking for a better way to develop with sass locally. In rails all this is setup for you automatically, but I havent seemed to find a ton of help out there for using sass on other projects, like wordpress, or just a quick static page.<br />
+thanks for the share!</p>
+		
+			    
+		</div>
+				
+		<div style="clear:both;"></div>
+<ul class="children">
+	<li class="comment odd alt depth-2 clearfix" id="li-comment-50">
+		
+		<div class="comment-text" id="comment-50">
+			<div class="comment-info">
+				<p class="reply">
+				<a class='comment-reply-link' href='/how-to-add-sass-support-in-sublime-text/?replytocom=50#respond' onclick='return addComment.moveForm("comment-50", "50", "respond", "725")'>Reply</a>				</p>
+				
+				<div class="comment-author vcard clearfix">
+					<img alt='' src='http://1.gravatar.com/avatar/d0fc4f1cd10cb3499dc55cb9a23d11cc?s=35&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D35&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />					
+					<div class="comment-meta commentmetadata">
+						<cite class="fn">joshearl</cite>						<div style="clear:both;"></div>
+						<a class="comment-time" href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-50">April 30, 2013 at 11:48 am</a>					</div>
+				</div>
+			<div style="clear:both;"></div>
+			</div>
+	
+			<p>You&#8217;re welcome, Kory! Glad it was helpful.</p>
+		
+			    
+		</div>
+				
+		<div style="clear:both;"></div>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1 clearfix" id="li-comment-51">
+		
+		<div class="comment-text" id="comment-51">
+			<div class="comment-info">
+				<p class="reply">
+				<a class='comment-reply-link' href='/how-to-add-sass-support-in-sublime-text/?replytocom=51#respond' onclick='return addComment.moveForm("comment-51", "51", "respond", "725")'>Reply</a>				</p>
+				
+				<div class="comment-author vcard clearfix">
+					<img alt='' src='http://1.gravatar.com/avatar/19ff6672bc23b7c5b63d876d64ee9733?s=35&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D35&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />					
+					<div class="comment-meta commentmetadata">
+						<cite class="fn">Volvox</cite>						<div style="clear:both;"></div>
+						<a class="comment-time" href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-51">April 30, 2013 at 11:56 am</a>					</div>
+				</div>
+			<div style="clear:both;"></div>
+			</div>
+	
+			<p>Great post, thanks a ton. On Sublime Text 3, just git clone the  SASS Build plugin repo and you will need to clone the sublime tree from  sass-textmate-bundle plugin dump them into (Mac OSX) ~/Library/Application Support/Sublime Text 3/Packages/</p>
+		
+			    
+		</div>
+				
+		<div style="clear:both;"></div>
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1 clearfix" id="li-comment-59">
+		
+		<div class="comment-text" id="comment-59">
+			<div class="comment-info">
+				<p class="reply">
+				<a class='comment-reply-link' href='/how-to-add-sass-support-in-sublime-text/?replytocom=59#respond' onclick='return addComment.moveForm("comment-59", "59", "respond", "725")'>Reply</a>				</p>
+				
+				<div class="comment-author vcard clearfix">
+					<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=35' class='avatar avatar-35 photo avatar-default' height='35' width='35' />					
+					<div class="comment-meta commentmetadata">
+						<cite class="fn"><a href='http://twitter.com/enlifer' rel='external nofollow' class='url'>Alexander Kazachkov</a></cite>						<div style="clear:both;"></div>
+						<a class="comment-time" href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-59">May 12, 2013 at 6:42 am</a>					</div>
+				</div>
+			<div style="clear:both;"></div>
+			</div>
+	
+			<p>I have a problem when compiling the code:</p>
+<p>The console of Sublime Text says:</p>
+<p>[Errno 2] No such file or directory</p>
+<p>[cmd:  [u'sass', u'--update', u'/Users/alex/Desktop/Project/assets/styles/builtins.scss<br />
+:/Users/alex/Desktop/Project/assets/styles/builtins.css', u'--stop-on-error', u'--no-cache', u'--style', u'compressed']]</p>
+<p>[dir:  /Users/alex/Desktop/Project/assets/styles]</p>
+<p>[path: /usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin]</p>
+<p>[Finished]</p>
+<p>And no file is being compiled to css. What can I do to solve this problem?</p>
+		
+			    
+		</div>
+				
+		<div style="clear:both;"></div>
+</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1 clearfix" id="li-comment-76">
+		
+		<div class="comment-text" id="comment-76">
+			<div class="comment-info">
+				<p class="reply">
+				<a class='comment-reply-link' href='/how-to-add-sass-support-in-sublime-text/?replytocom=76#respond' onclick='return addComment.moveForm("comment-76", "76", "respond", "725")'>Reply</a>				</p>
+				
+				<div class="comment-author vcard clearfix">
+					<img alt='' src='http://1.gravatar.com/avatar/f6481e637c4a7f6722f37f9a0c0d5700?s=35&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D35&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />					
+					<div class="comment-meta commentmetadata">
+						<cite class="fn"><a href='http://altvisions.com/' rel='external nofollow' class='url'>Patrick Hill</a></cite>						<div style="clear:both;"></div>
+						<a class="comment-time" href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-76">June 13, 2013 at 8:40 pm</a>					</div>
+				</div>
+			<div style="clear:both;"></div>
+			</div>
+	
+			<p>Thanks for the tips, this got me up and running in about a minute!</p>
+		
+			    
+		</div>
+				
+		<div style="clear:both;"></div>
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1 clearfix" id="li-comment-86">
+		
+		<div class="comment-text" id="comment-86">
+			<div class="comment-info">
+				<p class="reply">
+				<a class='comment-reply-link' href='/how-to-add-sass-support-in-sublime-text/?replytocom=86#respond' onclick='return addComment.moveForm("comment-86", "86", "respond", "725")'>Reply</a>				</p>
+				
+				<div class="comment-author vcard clearfix">
+					<img alt='' src='http://0.gravatar.com/avatar/0c4ffffc0b55b0cb37aef9595f3de261?s=35&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D35&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />					
+					<div class="comment-meta commentmetadata">
+						<cite class="fn">eric socolofsky</cite>						<div style="clear:both;"></div>
+						<a class="comment-time" href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-86">June 21, 2013 at 6:33 pm</a>					</div>
+				</div>
+			<div style="clear:both;"></div>
+			</div>
+	
+			<p>I&#8217;m newish to the webdev game (tho an old hand in coding), and recently was introduced to Codekit.  I&#8217;ve used and loved Sublime for a while.  Does this workflow largely obviate Codekit, in terms of its benefits for working with SASS?  Codekit looks great but I feel like Sublime should be able to do most of what Codekit does, via plugins.</p>
+		
+			    
+		</div>
+				
+		<div style="clear:both;"></div>
+</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1 clearfix" id="li-comment-87">
+		
+		<div class="comment-text" id="comment-87">
+			<div class="comment-info">
+				<p class="reply">
+				<a class='comment-reply-link' href='/how-to-add-sass-support-in-sublime-text/?replytocom=87#respond' onclick='return addComment.moveForm("comment-87", "87", "respond", "725")'>Reply</a>				</p>
+				
+				<div class="comment-author vcard clearfix">
+					<img alt='' src='http://1.gravatar.com/avatar/51ac8ca0bfc70f0bca64c3bec0cb473c?s=35&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D35&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />					
+					<div class="comment-meta commentmetadata">
+						<cite class="fn"><a href='http://www.levityisland.com/' rel='external nofollow' class='url'>Lawrence Wang</a></cite>						<div style="clear:both;"></div>
+						<a class="comment-time" href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-87">June 23, 2013 at 6:50 pm</a>					</div>
+				</div>
+			<div style="clear:both;"></div>
+			</div>
+	
+			<p>Thanks for the fix for Ruby Haml getting in the way of Sass highlighting. I never knew that Sublime Text feature existed. If this were on Stack Overflow you&#8217;d have my upvote.</p>
+		
+			    
+		</div>
+				
+		<div style="clear:both;"></div>
+<ul class="children">
+	<li class="comment odd alt depth-2 clearfix" id="li-comment-88">
+		
+		<div class="comment-text" id="comment-88">
+			<div class="comment-info">
+				<p class="reply">
+				<a class='comment-reply-link' href='/how-to-add-sass-support-in-sublime-text/?replytocom=88#respond' onclick='return addComment.moveForm("comment-88", "88", "respond", "725")'>Reply</a>				</p>
+				
+				<div class="comment-author vcard clearfix">
+					<img alt='' src='http://1.gravatar.com/avatar/d0fc4f1cd10cb3499dc55cb9a23d11cc?s=35&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D35&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />					
+					<div class="comment-meta commentmetadata">
+						<cite class="fn">joshearl</cite>						<div style="clear:both;"></div>
+						<a class="comment-time" href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-88">June 23, 2013 at 7:47 pm</a>					</div>
+				</div>
+			<div style="clear:both;"></div>
+			</div>
+	
+			<p>Glad it helped, Lawrence!</p>
+		
+			    
+		</div>
+				
+		<div style="clear:both;"></div>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1 clearfix" id="li-comment-89">
+		
+		<div class="comment-text" id="comment-89">
+			<div class="comment-info">
+				<p class="reply">
+				<a class='comment-reply-link' href='/how-to-add-sass-support-in-sublime-text/?replytocom=89#respond' onclick='return addComment.moveForm("comment-89", "89", "respond", "725")'>Reply</a>				</p>
+				
+				<div class="comment-author vcard clearfix">
+					<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=35' class='avatar avatar-35 photo avatar-default' height='35' width='35' />					
+					<div class="comment-meta commentmetadata">
+						<cite class="fn"><a href='http://thedavidplatt.wordpress.com/2013/06/24/sass/' rel='external nofollow' class='url'>Sass? | David Platt</a></cite>						<div style="clear:both;"></div>
+						<a class="comment-time" href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-89">June 24, 2013 at 12:38 am</a>					</div>
+				</div>
+			<div style="clear:both;"></div>
+			</div>
+	
+			<p>[...] like I’d seen used by the people evangelizing it at frontendconf. Luckily, I found Josh Earl’s site that walked me through every step. Seriously. Follow the links on his site and it’s really easy to set [...]</p>
+		
+			    
+		</div>
+				
+		<div style="clear:both;"></div>
+</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-odd thread-alt depth-1 clearfix" id="li-comment-92">
+		
+		<div class="comment-text" id="comment-92">
+			<div class="comment-info">
+				<p class="reply">
+				<a class='comment-reply-link' href='/how-to-add-sass-support-in-sublime-text/?replytocom=92#respond' onclick='return addComment.moveForm("comment-92", "92", "respond", "725")'>Reply</a>				</p>
+				
+				<div class="comment-author vcard clearfix">
+					<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=35' class='avatar avatar-35 photo avatar-default' height='35' width='35' />					
+					<div class="comment-meta commentmetadata">
+						<cite class="fn"><a href='http://lednor.com/blog/bookmarks-for-26th-june-2013' rel='external nofollow' class='url'>Bookmarks for 26th June 2013 | Lednor.Com</a></cite>						<div style="clear:both;"></div>
+						<a class="comment-time" href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-92">June 26, 2013 at 3:08 am</a>					</div>
+				</div>
+			<div style="clear:both;"></div>
+			</div>
+	
+			<p>[...] Josh Earl &raquo; How to Add SASS Support in Sublime Text &#8211; SASS, short for Syntactically Awesome Style Sheets, is a massively popular tool for web developers that takes a lot of the pain out of writing CSS. Unfortunately, Sublime doesn&rsquo;t provide a lot of help if you want to use SASS in your project. [...]</p>
+		
+			    
+		</div>
+				
+		<div style="clear:both;"></div>
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1 clearfix" id="li-comment-93">
+		
+		<div class="comment-text" id="comment-93">
+			<div class="comment-info">
+				<p class="reply">
+				<a class='comment-reply-link' href='/how-to-add-sass-support-in-sublime-text/?replytocom=93#respond' onclick='return addComment.moveForm("comment-93", "93", "respond", "725")'>Reply</a>				</p>
+				
+				<div class="comment-author vcard clearfix">
+					<img alt='' src='http://0.gravatar.com/avatar/c5755252b61fc614d57044cd4967016c?s=35&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D35&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />					
+					<div class="comment-meta commentmetadata">
+						<cite class="fn">sinled</cite>						<div style="clear:both;"></div>
+						<a class="comment-time" href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-93">June 26, 2013 at 5:38 am</a>					</div>
+				</div>
+			<div style="clear:both;"></div>
+			</div>
+	
+			<p>Thanks for the article.<br />
+Any ideas how to make work sass with Sublime text 3 &#8220;goto definition&#8221; function, it works fine with LESS, but not working with SASS(SCSS)</p>
+		
+			    
+		</div>
+				
+		<div style="clear:both;"></div>
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 clearfix" id="li-comment-96">
+		
+		<div class="comment-text" id="comment-96">
+			<div class="comment-info">
+				<p class="reply">
+				<a class='comment-reply-link' href='/how-to-add-sass-support-in-sublime-text/?replytocom=96#respond' onclick='return addComment.moveForm("comment-96", "96", "respond", "725")'>Reply</a>				</p>
+				
+				<div class="comment-author vcard clearfix">
+					<img alt='' src='http://1.gravatar.com/avatar/b76d29417a251a9cc14c260eee2c2c39?s=35&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D35&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />					
+					<div class="comment-meta commentmetadata">
+						<cite class="fn">BeryJu</cite>						<div style="clear:both;"></div>
+						<a class="comment-time" href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-96">July 5, 2013 at 1:38 pm</a>					</div>
+				</div>
+			<div style="clear:both;"></div>
+			</div>
+	
+			<p>How did you remove the Menu Bar in your Sublime Text?</p>
+		
+			    
+		</div>
+				
+		<div style="clear:both;"></div>
+<ul class="children">
+	<li class="comment even depth-2 clearfix" id="li-comment-97">
+		
+		<div class="comment-text" id="comment-97">
+			<div class="comment-info">
+				<p class="reply">
+				<a class='comment-reply-link' href='/how-to-add-sass-support-in-sublime-text/?replytocom=97#respond' onclick='return addComment.moveForm("comment-97", "97", "respond", "725")'>Reply</a>				</p>
+				
+				<div class="comment-author vcard clearfix">
+					<img alt='' src='http://1.gravatar.com/avatar/b76d29417a251a9cc14c260eee2c2c39?s=35&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D35&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />					
+					<div class="comment-meta commentmetadata">
+						<cite class="fn">BeryJu</cite>						<div style="clear:both;"></div>
+						<a class="comment-time" href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-97">July 5, 2013 at 1:40 pm</a>					</div>
+				</div>
+			<div style="clear:both;"></div>
+			</div>
+	
+			<p>View -&gt; Hide Menu, never mind.</p>
+		
+			    
+		</div>
+				
+		<div style="clear:both;"></div>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1 clearfix" id="li-comment-98">
+		
+		<div class="comment-text" id="comment-98">
+			<div class="comment-info">
+				<p class="reply">
+				<a class='comment-reply-link' href='/how-to-add-sass-support-in-sublime-text/?replytocom=98#respond' onclick='return addComment.moveForm("comment-98", "98", "respond", "725")'>Reply</a>				</p>
+				
+				<div class="comment-author vcard clearfix">
+					<img alt='' src='http://0.gravatar.com/avatar/8d7b143c649569d77567513f1ba8c7b3?s=35&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D35&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />					
+					<div class="comment-meta commentmetadata">
+						<cite class="fn">s1nga</cite>						<div style="clear:both;"></div>
+						<a class="comment-time" href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-98">July 8, 2013 at 6:13 pm</a>					</div>
+				</div>
+			<div style="clear:both;"></div>
+			</div>
+	
+			<p>Thanks a bunch. With your instructions I&#8217;ve got my first attempt at a sass tutorial up and running.</p>
+<p>Have run into a major snag, however, and I&#8217;m inexperieinced enough not to be able to figure out the source of my problem. Perhaps you could provide a solution&#8230;</p>
+<p>The tutorial requests that &#8220;@import &#8220;compass&#8221;; be placed at the top of the other import statements. Sublime returns the following error&#8230; &#8220;Sass::SyntaxError: File to import not found or unreadable: compass.&#8221;</p>
+<p>Obviously, Sublime is not finding compass. How to remedy this?<br />
+When I comment-out this import statement the rest of the imports load and the project compiles as expected.<br />
+I&#8217;m totally confused. Any insights?</p>
+		
+			    
+		</div>
+				
+		<div style="clear:both;"></div>
+<ul class="children">
+	<li class="comment even depth-2 clearfix" id="li-comment-126">
+		
+		<div class="comment-text" id="comment-126">
+			<div class="comment-info">
+				<p class="reply">
+				<a class='comment-reply-link' href='/how-to-add-sass-support-in-sublime-text/?replytocom=126#respond' onclick='return addComment.moveForm("comment-126", "126", "respond", "725")'>Reply</a>				</p>
+				
+				<div class="comment-author vcard clearfix">
+					<img alt='' src='http://0.gravatar.com/avatar/429500a5a54600958c9c7ac032a37f66?s=35&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D35&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />					
+					<div class="comment-meta commentmetadata">
+						<cite class="fn"><a href='http://Website' rel='external nofollow' class='url'>joe</a></cite>						<div style="clear:both;"></div>
+						<a class="comment-time" href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-126">August 15, 2013 at 4:20 pm</a>					</div>
+				</div>
+			<div style="clear:both;"></div>
+			</div>
+	
+			<p>Did you find a solution for this?</p>
+		
+			    
+		</div>
+				
+		<div style="clear:both;"></div>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 clearfix" id="li-comment-120">
+		
+		<div class="comment-text" id="comment-120">
+			<div class="comment-info">
+				<p class="reply">
+				<a class='comment-reply-link' href='/how-to-add-sass-support-in-sublime-text/?replytocom=120#respond' onclick='return addComment.moveForm("comment-120", "120", "respond", "725")'>Reply</a>				</p>
+				
+				<div class="comment-author vcard clearfix">
+					<img alt='' src='http://1.gravatar.com/avatar/d1f42ca88417d532a1b8563fbed61885?s=35&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D35&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />					
+					<div class="comment-meta commentmetadata">
+						<cite class="fn"><a href='http://www.zachjohnstondesign.com' rel='external nofollow' class='url'>Zach J</a></cite>						<div style="clear:both;"></div>
+						<a class="comment-time" href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-120">August 9, 2013 at 1:03 pm</a>					</div>
+				</div>
+			<div style="clear:both;"></div>
+			</div>
+	
+			<p>SASS package isn&#8217;t showing up in package control. Maybe it&#8217;s because I already installed a package with that exact name or it changed?</p>
+<p>I am also not seeing an additional option to colour as scss. </p>
+<p>So what&#8217;s the deal?</p>
+		
+			    
+		</div>
+				
+		<div style="clear:both;"></div>
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1 clearfix" id="li-comment-121">
+		
+		<div class="comment-text" id="comment-121">
+			<div class="comment-info">
+				<p class="reply">
+				<a class='comment-reply-link' href='/how-to-add-sass-support-in-sublime-text/?replytocom=121#respond' onclick='return addComment.moveForm("comment-121", "121", "respond", "725")'>Reply</a>				</p>
+				
+				<div class="comment-author vcard clearfix">
+					<img alt='' src='http://1.gravatar.com/avatar/d1f42ca88417d532a1b8563fbed61885?s=35&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D35&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />					
+					<div class="comment-meta commentmetadata">
+						<cite class="fn"><a href='http://www.zachjohnstondesign.com' rel='external nofollow' class='url'>Zach J</a></cite>						<div style="clear:both;"></div>
+						<a class="comment-time" href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-121">August 9, 2013 at 1:05 pm</a>					</div>
+				</div>
+			<div style="clear:both;"></div>
+			</div>
+	
+			<p>Nevermind, I had a config issue. Sorry about that.</p>
+		
+			    
+		</div>
+				
+		<div style="clear:both;"></div>
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 clearfix" id="li-comment-124">
+		
+		<div class="comment-text" id="comment-124">
+			<div class="comment-info">
+				<p class="reply">
+				<a class='comment-reply-link' href='/how-to-add-sass-support-in-sublime-text/?replytocom=124#respond' onclick='return addComment.moveForm("comment-124", "124", "respond", "725")'>Reply</a>				</p>
+				
+				<div class="comment-author vcard clearfix">
+					<img alt='' src='http://1.gravatar.com/avatar/faf2d64943cca673a5de3a565966e8bf?s=35&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D35&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />					
+					<div class="comment-meta commentmetadata">
+						<cite class="fn"><a href='http://benfrain.com' rel='external nofollow' class='url'>Ben Frain</a></cite>						<div style="clear:both;"></div>
+						<a class="comment-time" href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-124">August 13, 2013 at 6:47 am</a>					</div>
+				</div>
+			<div style="clear:both;"></div>
+			</div>
+	
+			<p>Switching to ST3 and couldn&#8217;t remember the name of the syntax package so thanks for writing this up.</p>
+<p>However, Josh, a minor point; it&#8217;s actually &#8216;Sass&#8217; and not &#8216;SASS&#8217;.</p>
+		
+			    
+		</div>
+				
+		<div style="clear:both;"></div>
+<ul class="children">
+	<li class="comment byuser comment-author-josh bypostauthor even depth-2 clearfix" id="li-comment-125">
+		
+		<div class="comment-text" id="comment-125">
+			<div class="comment-info">
+				<p class="reply">
+				<a class='comment-reply-link' href='/how-to-add-sass-support-in-sublime-text/?replytocom=125#respond' onclick='return addComment.moveForm("comment-125", "125", "respond", "725")'>Reply</a>				</p>
+				
+				<div class="comment-author vcard clearfix">
+					<img alt='' src='http://1.gravatar.com/avatar/3e076426f4fa3ef9681abd31c1a348eb?s=35&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D35&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />					
+					<div class="comment-meta commentmetadata">
+						<cite class="fn">josh</cite>						<div style="clear:both;"></div>
+						<a class="comment-time" href="http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-125">August 13, 2013 at 10:15 am</a>					</div>
+				</div>
+			<div style="clear:both;"></div>
+			</div>
+	
+			<p>Whoa, didn&#8217;t realize that. Thanks!</p>
+		
+			    
+		</div>
+				
+		<div style="clear:both;"></div>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	</ol>
+
+
+
+<div id="respond">
+	<h3>Leave a Reply</h3>
+	
+	<div id="cancel-comment-reply">
+		<small><a rel="nofollow" id="cancel-comment-reply-link" href="/how-to-add-sass-support-in-sublime-text/#respond" style="display:none;">Click here to cancel reply.</a></small>
+	</div>
+	
+		
+	<form action="http://aspirecode.com/wp-comments-post.php" method="post" id="commentform">
+	
+	<!-- If user is logged in -->
+		
+	<!-- Comment inputs -->
+	<p><input type="text" name="author" id="author" onfocus="if (this.value == 'Name (required)') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Name (required)';}" value="Name (required)" size="22" tabindex="1" aria-required='true' /></p>
+	
+	<p><input type="text" name="email" id="email" onfocus="if (this.value == 'Email (required)') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Email (required)';}" value="Email (required)" size="22" tabindex="2" aria-required='true' /></p>
+	
+	<p><input type="text" name="url" id="url" onfocus="if (this.value == 'Website') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Website';}" value="Website" size="22" tabindex="3" /></p>
+	
+		
+	<p><textarea name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea></p>
+	
+	<p><small class="allowed"><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>
+	
+	<p style="margin-bottom:0px;"><input name="submit" type="submit" class="button orange" id="submit" tabindex="5" value="Submit Comment" />
+	<input type='hidden' name='comment_post_ID' value='725' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+	</p>
+	<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="07a9453140" /></p>	
+	</form>
+	
+	
+</div>
+</div>
+
+															</article>
+																		
+						<!-- post navigation -->
+						<div class="post-nav post-nav-page">
+							<div class="postnav-left"></div>
+							<div class="postnav-right"></div>
+							<div style="clear:both;"></div>
+						</div>
+					</section>
+					
+					<!-- sidebar -->
+					<aside>
+	<div class="widget"><div class="holder">			<div class="textwidget"><h2>Sublime Productivity</h2>
+        <a href="http://www.sublimeproductivity.com" target="_blank">
+          <p>
+            My Sublime Text 2 ebook is available in beta. Get it today!
+          </p>
+        </a>
+        <a href="http://www.sublimeproductivity.com" target="_blank">
+          <img style="width:205px" src="http://aspirecode.com/wp-content/uploads/2013/01/title_page.png" alt="sublime productivity ebook">
+        </a></div>
+		</div></div><div class="widget"><div class="holder"><form role="search" method="get" id="searchform" class="searchform" action="http://aspirecode.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></div></div>		<div class="widget"><div class="holder">		<h2>Recent Posts</h2>		<ul>
+					<li>
+				<a href="http://aspirecode.com/sublime-text-jump-back-jump-forward/" title="Get unlost with Sublime&#8217;s new Jump Back and Jump Forward commands">Get unlost with Sublime&#8217;s new Jump Back and Jump Forward commands</a>
+						</li>
+					<li>
+				<a href="http://aspirecode.com/format-data-with-sublime-invert-selection/" title="Quick text cleanup with Sublime&#8217;s new Invert Selection command">Quick text cleanup with Sublime&#8217;s new Invert Selection command</a>
+						</li>
+					<li>
+				<a href="http://aspirecode.com/sublime-text-3-worth-the-upgrade/" title="Sublime Text 3: Worth the upgrade?">Sublime Text 3: Worth the upgrade?</a>
+						</li>
+					<li>
+				<a href="http://aspirecode.com/fix-sublime-text-selection-php-sass-variables/" title="Fix Sublime Text&#8217;s quirky PHP, SASS variable selection">Fix Sublime Text&#8217;s quirky PHP, SASS variable selection</a>
+						</li>
+					<li>
+				<a href="http://aspirecode.com/win-a-free-sublime-text-license/" title="Win a free Sublime Text license">Win a free Sublime Text license</a>
+						</li>
+				</ul>
+		</div></div><div class="widget"><div class="holder"><h2>Tags</h2><div class="tagcloud"><a href='http://aspirecode.com/tag/ebooks/' class='tag-link-20' title='1 topic' style='font-size: 8pt;'>ebooks</a>
+<a href='http://aspirecode.com/tag/habits/' class='tag-link-17' title='1 topic' style='font-size: 8pt;'>habits</a>
+<a href='http://aspirecode.com/tag/productivity/' class='tag-link-16' title='1 topic' style='font-size: 8pt;'>productivity</a>
+<a href='http://aspirecode.com/tag/sass/' class='tag-link-21' title='1 topic' style='font-size: 8pt;'>SASS</a>
+<a href='http://aspirecode.com/tag/self-improvement/' class='tag-link-18' title='1 topic' style='font-size: 8pt;'>self improvement</a>
+<a href='http://aspirecode.com/tag/self-publishing/' class='tag-link-19' title='1 topic' style='font-size: 8pt;'>self publishing</a>
+<a href='http://aspirecode.com/tag/sublime-plugins/' class='tag-link-22' title='2 topics' style='font-size: 12.2pt;'>sublime-plugins</a>
+<a href='http://aspirecode.com/tag/sublime-productivity/' class='tag-link-15' title='2 topics' style='font-size: 12.2pt;'>sublime productivity</a>
+<a href='http://aspirecode.com/tag/sublime-text/' class='tag-link-14' title='7 topics' style='font-size: 22pt;'>sublime text</a>
+<a href='http://aspirecode.com/tag/sublime-text-3/' class='tag-link-23' title='2 topics' style='font-size: 12.2pt;'>sublime text 3</a></div>
+</div></div><div class="widget"><div class="holder"><h2>Archives</h2>		<ul>
+			<li><a href='http://aspirecode.com/2013/08/' title='August 2013'>August 2013</a></li>
+	<li><a href='http://aspirecode.com/2013/07/' title='July 2013'>July 2013</a></li>
+	<li><a href='http://aspirecode.com/2013/06/' title='June 2013'>June 2013</a></li>
+	<li><a href='http://aspirecode.com/2013/05/' title='May 2013'>May 2013</a></li>
+	<li><a href='http://aspirecode.com/2013/04/' title='April 2013'>April 2013</a></li>
+	<li><a href='http://aspirecode.com/2013/01/' title='January 2013'>January 2013</a></li>
+		</ul>
+</div></div><div class="widget"><div class="holder"><h2>Meta</h2>			<ul>
+						<li><a href="http://aspirecode.com/wp-login.php">Log in</a></li>
+			<li><a href="http://feeds.feedburner.com/joshearl" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://aspirecode.com/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>						</ul>
+</div></div></aside>				</div>
+			</section>
+			
+	<!--WP Code Highlight_start-->
+	<script type="text/javascript">
+		window.onload = function(){prettyPrint();};
+	</script>
+	<script type="text/javascript" src="http://aspirecode.com/wp-content/plugins/wp-code-highlight/js/wp-code-highlight.js"></script>
+	<!--WP Code Highlight_end-->
+			<footer id="footer">
+				<div class="footer-holder">
+					<nav>	
+						<div class="menu-footer-container"><ul id="nav-footer" class="footer-nav"><li id="menu-item-628" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-628"><a href="https://leanpub.com/sublime-productivity">Sublime Productivity</a></li>
+<li id="menu-item-555" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-555"><a href="http://aspirecode.com/blog/">Blog</a></li>
+<li id="menu-item-635" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-635"><a href="http://aspirecode.com/resources/">Resources</a></li>
+<li id="menu-item-574" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-574"><a href="http://aspirecode.com/about/">About</a></li>
+<li id="menu-item-551" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-551"><a href="http://aspirecode.com/contact/">Contact</a></li>
+</ul></div>					</nav>
+					
+					<p>&copy; 2013 <a href="http://aspirecode.com">Josh Earl</a> | All Rights Reserved</p>
+				</div>
+				<div class="footer-frame">
+					<em></em>
+					<div style="clear:both;"></div>
+					<small><a target="blank" href="http://twitter.com/@josh_earl" title="follow @josh_earl">Follow me &rarr;</a></small>
+				</div>
+			</footer>
+		</div>
+	</div>
+	
+	<!-- social media icons -->
+	<div class="social-networks">		
+		<ul>
+						
+					
+					
+					
+					
+					
+					
+				
+		</ul>
+		
+	</div>
+	
+	<!-- google analytics code -->
+		
+		<script type="text/javascript">
+	 /* <![CDATA[  */   
+	 
+	var J = jQuery.noConflict();
+
+	J(document).ready(function(){
+	
+		// Drop Menu
+		function mainmenu(){
+		J('#nav ul').css({display: "none"}); // Opera Fix
+		
+		J('#nav li').hover(function(){
+			J(this).find('ul:first').css({visibility: "visible",display: "none"}).fadeIn(200);
+			},function(){
+			J(this).find('ul:first').css({visibility: "hidden"});
+			});
+		}
+		
+		mainmenu();
+		
+		J('.portfolio-block .list li:nth-child(2n)').addClass('last');
+		
+		J('.slide').cycle({ 
+		    fx:     'fade', 
+		    speed:  'fast', 
+		    timeout: 0, 
+		    next:   '#next', 
+		    prev:   '#prev',
+		    after: onAfter 
+		});
+		
+		J('.header-slider').cycle({ 
+		    fx:     'fade', 
+		    speed:  'fast', 
+		    timeout: 0, 
+		    next:   '#next2', 
+		    prev:   '#prev2',
+		    after: onAfter
+		});
+		
+		function onAfter(curr, next, opts, fwd) {
+		  var $ht = J(this).height();
+		
+		  //set the container's height to that of the current slide
+		  J(this).parent().animate({height: $ht});
+		}
+		
+		J(".tooltip").tipTip({
+			defaultPosition: "top",
+			fadeIn: 100
+		});
+		
+		J(".wpcf7-submit").removeClass("wpcf7-submit").addClass("button orange");
+		
+				
+	});
+	/* ]]> */  
+</script>
+<script type='text/javascript' src='http://aspirecode.com/wp-content/themes/structure/includes/js/jquery.cycle.all.js?ver=3.6'></script>
+<script type='text/javascript' src='http://aspirecode.com/wp-content/themes/structure/includes/js/jquery.tipTip.minified.js?ver=3.6'></script>
+</body>
+</html>			

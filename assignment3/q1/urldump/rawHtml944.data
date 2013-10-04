@@ -1,0 +1,961 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>EE Journal :: X doesn't mark the spot: real shape of chromosomes revealed</title>
+<meta name="description" content="" />
+<meta name="generator" content="concrete5 - 5.5.2" />
+
+<script type="text/javascript">
+var CCM_DISPATCHER_FILENAME = '/index.php';var CCM_CID = 27225;var CCM_EDIT_MODE = false;var CCM_ARRANGE_MODE = false;var CCM_IMAGE_PATH = "/updates/concrete5.5.2/concrete/images";
+var CCM_TOOLS_PATH = "/index.php/tools/required";
+var CCM_BASE_URL = "http://www.eejournal.com";
+var CCM_REL = "";
+
+</script>
+
+	<link rel="shortcut icon" href="/files/4212/9563/3768/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="/files/4212/9563/3768/favicon.ico" type="image/x-icon" />
+
+<link rel="stylesheet" type="text/css" href="/updates/concrete5.5.2/concrete/css/ccm.base.css?v=ba025992a2323bbebe53bab7478bcaba" />
+<script type="text/javascript" src="/updates/concrete5.5.2/concrete/js/jquery.js?v=ba025992a2323bbebe53bab7478bcaba"></script>
+<script type="text/javascript" src="/updates/concrete5.5.2/concrete/js/ccm.base.js?v=ba025992a2323bbebe53bab7478bcaba"></script>
+<link rel="stylesheet" type="text/css" href="/updates/concrete5.5.2/concrete/css/ccm.app.css?v=ba025992a2323bbebe53bab7478bcaba" />
+<script type="text/javascript" src="/updates/concrete5.5.2/concrete/js/jquery.ui.js?v=ba025992a2323bbebe53bab7478bcaba"></script>
+<script type="text/javascript" src="/updates/concrete5.5.2/concrete/js/ccm.app.js?v=ba025992a2323bbebe53bab7478bcaba"></script>
+<link rel="stylesheet" type="text/css" href="/updates/concrete5.5.2/concrete/css/jquery.ui.css?v=ba025992a2323bbebe53bab7478bcaba" />
+<link rel="stylesheet" type="text/css" href="/packages/problog/css/page_types/pb_post.css?v=ba025992a2323bbebe53bab7478bcaba" />
+<link rel="stylesheet" type="text/css" href="/packages/problog/css/google-code-prettify/sunburst.css?v=ba025992a2323bbebe53bab7478bcaba" />
+<script type="text/javascript" src="/packages/problog/js/google-code-prettify/prettify.js?v=ba025992a2323bbebe53bab7478bcaba"></script>
+<script type="text/javascript" src="/index.php/tools/required/i18n_js"></script>
+<script type="text/javascript" src="/updates/concrete5.5.2/concrete/js/tiny_mce/tiny_mce.js?v=ba025992a2323bbebe53bab7478bcaba"></script>
+<link rel="stylesheet" type="text/css" href="/blocks/next_previous/view.css?v=ba025992a2323bbebe53bab7478bcaba" />
+<script type="text/javascript" src="/packages/discussion/js/discussion.js?v=ba025992a2323bbebe53bab7478bcaba"></script>
+<link rel="stylesheet" type="text/css" href="/themes/eejournal/discussion.css?v=ba025992a2323bbebe53bab7478bcaba" />
+<link rel="stylesheet" type="text/css" href="/packages/problog/blocks/content/templates/blog_post/view.css?v=ba025992a2323bbebe53bab7478bcaba" />
+
+<!-- Site Header Content //-->
+
+<!-- BLUEPRINT framework CSS source files-->
+<link rel="stylesheet" href="/index.php/tools/css/themes/eejournal/blueprint/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/index.php/tools/css/themes/eejournal/blueprint/print.css" type="text/css" media="print" />
+<link rel="stylesheet" href="/index.php/tools/css/themes/eejournal/main.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/index.php/tools/css/themes/eejournal/typography.css" type="text/css" />
+
+<!--[if IE]><link rel="stylesheet" href="blueprint/ie.css" type="text/css" media="screen, projection" /><![endif]-->
+
+<!-- TYPEKIT FONTS -->
+<script type="text/javascript" src="http://use.typekit.com/nsz5mja.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<!-- TOOLTIPS -->
+<script src="/themes/eejournal/tooltips/jquery.dimensions.js" type="text/javascript"></script>
+<script src="/themes/eejournal/tooltips/jquery.tooltip.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/index.php/tools/css/themes/eejournal/tooltips/jquery.tooltip.css" />
+<script type="text/javascript">
+	$(function() {
+		$('.tooltip').tooltip();	
+	});
+
+</script>
+
+
+<!-- FANCYBOX -->
+<script type="text/javascript" src="/themes/eejournal/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" href="/index.php/tools/css/themes/eejournal/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+<script type="text/javascript">
+$(document).ready(function() {
+	$("a.modal").fancybox({
+		'showCloseButton': true
+	});	
+});
+</script>
+
+
+<!--SUPERFISH -->
+<link rel="stylesheet" type="text/css" href="/themes/eejournal/superfish/superfish.css" />
+<!-- <link rel="stylesheet" type="text/css" href="/index.php/tools/css/themes/eejournal/superfish/superfish.css" />  -->
+<script type="text/javascript" src="/themes/eejournal/superfish/superfish.js"></script>
+
+<script type="text/javascript">
+// initialise plugins
+$(function(){
+	jQuery('ul.sf-menu').superfish({delay:800});
+});
+</script>
+
+<meta property="og:url" content="http://www.eejournal.com/archives/fresh-bytes/x-doesnt-mark-the-spot-real-shape-of-chromosomes-revealed" />
+</head>
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div class="container">
+
+	<div id="header" class="span-24">
+		<div class="span-12"><h1><a href="http://www.eejournal.com/index.php/" onclick="pageTracker._link(this.href); return false;">Electronic Engineering Journal</a></h1></div>
+		<div class="span-12 last">
+		<div class="span-7">
+			<!-- <ul id="otherpubs" class="nav">
+				<li><a href="http://www.techfocusmedia.net/index.php/embeddedtechnologyjournal/" onclick="pageTracker._link(this.href); return false;">Embedded Technology Journal</a></li>
+				<li><a href="http://www.techfocusmedia.net/index.php/icjournal/" onclick="pageTracker._link(this.href); return false;">IC Journal</a></li>
+			</ul>  -->
+		</div>
+		<div class="span-5 last">
+			<h2><a href="http://www.eejournal.com/media-kit" onclick="pageTracker._link(this.href); return false;">techfocus media</a></h2>
+		</div>
+
+				
+			
+<!--/* OpenX Javascript Tag v2.8.1 */-->
+
+<script type='text/javascript'><!--//<![CDATA[
+   document.MAX_ct0 ='INSERT_CLICKURL_HERE';
+
+   var m3_u = (location.protocol=='https:'?'https://techfocusmedia.net/adserver/www/delivery/ajs.php':'http://techfocusmedia.net/adserver/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=112&amp;channel=Analog,Board,Career,Communications,Computer,Consumer,EDA,Electromechanical,Embedded,FPGA,Green,Industrial,Manufacturing,Medical,MilAero,Mobile,Power,Products,Robotics,Semiconductor,Software,Test&amp;block=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+       document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+   }
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://techfocusmedia.net/adserver/www/delivery/ck.php?n=aa30a6cb&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://techfocusmedia.net/adserver/www/delivery/avw.php?zoneid=112&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=aa30a6cb&amp;ct0=INSERT_CLICKURL_HERE' border='0' alt='' /></a></noscript>
+
+		
+		</div>
+	</div>
+
+	<div id="navigation" class="span-24">
+
+		
+ 	 	<div class="span-15">
+			
+<div id="sf-menu">
+	<ul id="mainnav" class="sf-menu sf-js-enabled sf-shadow">
+		<li class="first"><a href="/">Home</a></li>
+		<li>
+			<a href="#">Design</a>
+			<ul>
+ 				<li><a href="/design/analog">Analog/Mixed Signal</a></li>
+				<li><a href="/design/board">Board</a></li>
+				<li><a href="/design/career">Career</a></li>
+				<li><a href="/design/eda">EDA</a></li>
+				<li><a href="/design/electromechanical">MEMS/Smart Systems</a></li>
+				<li><a href="/design/embedded">Embedded Systems</a></li>
+				<li><a href="/design/fpga">FPGA</a></li>
+				<!-- <li><a href="/design/manufacturing">Mfg./Supply Chain</a></li>  -->
+				<li><a href="/design/power">Power, Energy, Lighting</a></li>
+				<li><a href="/design/semiconductor">Semiconductor/IC</a></li>
+				<li><a href="/design/software">Software</a></li>
+				<li><a href="/design/test">Test/Measurement</a></li>
+
+			</ul>
+		</li>
+		<li>
+			<a href="#">Markets/Industries</a>
+			<ul>
+				<li><a href="/markets-industries/communications">Communications</a></li>
+				<li><a href="/markets-industries/computer">Computers</a></li>
+				<li><a href="/markets-industries/consumer">Consumer Electronics</a></li>
+				<li><a href="/markets-industries/green">Green Tech</a></li>
+				<li><a href="/markets-industries/industrial">Industrial</a></li>
+				<li><a href="/markets-industries/medical">Medical</a></li>
+				<li><a href="/markets-industries/milaero">Military/Aerospace</a></li>				
+				<li><a href="/markets-industries/mobile">Mobile</a></li>
+				<li><a href="/markets-industries/robotics">Robotics</a></li>
+			</ul>			
+		</li>
+		<li><a href="/archives/on-demand">On Demand</a></li>
+		<!-- <li><a href="/products">Products</a>  -->
+		<li>
+			<a href="#">Archives</a>
+			<ul>
+				<li><a href="/archives/articles">Articles</a></li>
+				<li><a href="/blog">Editors' Blog</a></li>
+				<li><a href="/archives/fish-fry">Fish Fry</a></li>
+				<li><a href="/archives/fresh-bytes">Fresh Bytes</a></li>
+				<li><a href="/archives/news">News</a></li>
+				<li><a href="/archives/on-demand">On Demand</a>
+				
+			</ul>
+		</li>
+		<li>
+			<a href="#">Community</a>
+			<ul>
+				<li><a href="/forums">Forum</a></li>
+				<li><a href="/profile">My Profile</a></li>
+				<li><a href="/login">Log In</a></li>
+				<li><a href="/subscribe">Subscribe</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+			<div class='channeltab' style='padding-bottom: 0;'><img src='/index.php/download_file/view_inline/1494/' height='30'></div>	
+
+				
+		</div>
+
+		<div class="span-9 last">
+		
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+		  google.load('search', '1');
+		  google.setOnLoadCallback(function() {
+		    google.search.CustomSearchControl.attachAutoCompletion(
+		      '014894703709456875410:cfxn9r1y1qg',
+		      document.getElementById('q'),
+		      'cse-search-box');
+		  });
+		</script>
+		<form action="http://www.eejournal.com/site_search" id="cse-search-box">
+		  <div>
+		    <input type="hidden" name="cx" value="017934796871588591070:snpzhxj_71u" />
+		    <input type="hidden" name="cof" value="FORID:9" />
+		    <input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" id="q" autocomplete="on" size="31" />	<button type="submit" name="sa" value="Search" id="hdrsearchbtn">Search</button>
+		  </div>
+		</form>
+		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+		
+		<p>
+		
+				<p><strong><a href='/login?rcID=27225'>Login</a></strong>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span class='small'>Don't have an account?</span> <strong><a href='/register?rcID=27225'>Register now &raquo;</a></strong></p>		
+		</p>
+		
+		</div>
+			</div>
+
+
+<div id="content">
+
+	<div id="primary" class="span-24">
+
+	    <div id="pb_body" class="span-14 append-1">
+  
+  					
+		<p><a href="/archives/fresh-bytes">Back to Fresh Bytes Main</a></p>
+	
+	  
+        	<h1>X doesn't mark the spot: real shape of chromosomes revealed </h1>
+	<p><strong>by Larra Morris</strong>		
+
+	<h4>September 26, 2013 at 7:04 AM</h4>
+	
+	<p><img src="/files/cache/d4a710711f6f64e6436e3b1e76ba5695.png" alt="Screen_Shot_2013-09-25_at_9.03.54_PM.png" width="550" height="421" /></p>
+<blockquote>
+<p><span>Time to revise the high school biology textbooks: contrary to their typical portrayal as being precisely X-shaped, chromosomes are in fact much more complex &mdash; and much messier looking. That's the finding of a new project that relied on DNA sequencing to produce accurate 3D images of chromosomes.</span><br />via <strong><a href="http://www.theverge.com/2013/9/25/4770712/true-shape-of-chromosomes-isnt-an-x" target="_blank">The Verge</a></strong></p>
+</blockquote>
+<p><iframe src="//www.youtube.com/embed/gMYaMQxWMwU" width="500" height="375"></iframe></p>
+<p><strong><a href="http://www.theverge.com/2013/9/25/4770712/true-shape-of-chromosomes-isnt-an-x" target="_blank">Continue reading</a></strong></p>	
+	<h3 style='margin-top: 20px;'>Channels</h3><p><a href='/design/analog'>Analog/Mixed Signal</a>. <a href='/design/board'>Board and Module Design</a>. <a href='/design/career'>Career</a>. <a href='/markets-industries/communications'>Communications and Networking</a>. <a href='/markets-industries/computer'>Computers</a>. <a href='/markets-industries/consumer'>Consumer Electronics</a>. <a href='/design/eda'>EDA</a>. <a href='/design/electromechanical'>MEMS and Smart Systems</a>. <a href='/design/embedded'>Embedded</a>. <a href='/design/FPGA'>FPGA</a>. <a href='/markets-industries/green'>Green</a>. <a href='/markets-industries/industrial'>Industrial</a>. <a href='/design/manufacturing'>Manufacturing</a>. <a href='/markets-industries/medical'>Medical</a>. <a href='/markets-industries/milaero'>MilAero</a>. <a href='/markets-industries/mobile'>Mobile</a>. <a href='/design/power'>Power</a>. <a href='/products'>Products</a>. <a href='/markets-industries/robotics'>Robotics</a>. <a href='/design/semiconductor'>Semiconductor</a>. <a href='/design/software'>Software</a>. <a href='/design/test'>Test</a>. 		
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var fbjs, fbfjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  fbjs = d.createElement(s); fbjs.id = id;
+  fbjs.src = "https://connect.facebook.net/en_US/all.js#xfbml=1";
+  fbfjs.parentNode.insertBefore(fbjs, fbfjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script src="https://platform.linkedin.com/in.js" type="text/javascript"></script>
+	  <script type="IN/Share" data-counter="right"></script> &nbsp;
+<div class="fb-like" style="vertical-align:top" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div> &nbsp;
+<su:badge layout="2" style="vertical-align:top"></su:badge>
+<script type="text/javascript">
+  (function() {
+    var li = document.createElement('script'); li.type = 'text/javascript'; li.async = true;
+    li.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//platform.stumbleupon.com/1/widgets.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(li, s);
+  })();
+</script> &nbsp;
+<a target="_blank" href="http://www.reddit.com/submit?url="><img src="http://www.reddit.com/static/spreddit7.gif" alt="submit to reddit" border="0" /></a> &nbsp;
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<div class="g-plusone" data-size="medium"></div>
+<span style="margin-left:-23px;"><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a><script>(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs"));</script></span>
+
+	<div id="twee">
+		<br/>
+					<script type="text/javascript">var switchTo5x=true;</script>
+			<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+				</div>
+	<br/>
+	<!-- <div class="taglist">
+		: <i></i>
+	</div>
+	<div class="taglist">
+		: <i></i>
+	</div> -->
+	 <br style="clear: both;"/>
+<script type="text/javascript">
+/*<![CDATA[*/
+$(document).ready(function(){
+	prettyPrint();
+});
+/*]]>*/
+</script>
+<!-- 
+<div id="ccm-next-previous-14008" class="ccm-next-previous-wrapper">
+
+
+
+    
+    
+    
+    <div class="spacer"></div>
+</div>
+ -->                
+<h4 class="ccm-discussion-guestbook-title">
+				Comments:	</h4>
+
+
+
+
+			<div>You must be logged in to leave a reply. <a href="/index.php/login/forward/27225/">Login &raquo;</a></div>
+	        
+<!-- 
+<div id="ccm-next-previous-38341" class="ccm-next-previous-wrapper">
+
+
+
+    
+    
+    
+    <div class="spacer"></div>
+</div>
+ -->    </div>
+
+	<div id="pb_sidebar" class="span-9 last">
+	
+<div align="center" style="background: white; border: 1px solid #cccccc; margin: 15px;"><div class="fb-like-box" data-href="http://www.facebook.com/freshbytes" data-width="292" data-show-faces="false" data-stream="false" data-header="true"></div></div>
+<div align="center" style="min-height: 33px; padding-top: 5px; background: white; border: 1px solid #cccccc; margin: 15px;"><div class="twitter-box">
+<a href="https://twitter.com/freshbytesEEJ" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @freshbytesEEJ</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div></div>
+
+		
+		<div class="ccm-page-list" style="padding-left: 5px;padding-right:5px;">
+	
+	<h2 class="blog_listing">Recent Posts</h2>
+	
+		  			
+	  			
+	  			
+	  			<div id='content-sbBlog-contain'>
+	  				<div id='content-sbBlog-title'>
+			    		<p class="ccm-page-list-title"><a href="/archives/fresh-bytes/any-animal-that-touches-this-lethal-lake-turns-to-stone1/">Any animal that touches this lethal lake turns to stone</a>
+			
+							
+			
+			    		<span style="font-weight: normal;" class="rssItemDate"> (Today) </span>
+								
+				</p>
+					</div>
+										
+					<div id='content-sbBlog-post'>
+								  					  		</div>
+			  	</div>
+
+		  			
+	  			
+	  			
+	  			<div id='content-sbBlog-contain'>
+	  				<div id='content-sbBlog-title'>
+			    		<p class="ccm-page-list-title"><a href="/archives/fresh-bytes/the-bear-who-fought-in-world-war-ii/">The bear who fought in World War II</a>
+			
+							
+			
+			    		<span style="font-weight: normal;" class="rssItemDate"> (Today) </span>
+								
+				</p>
+					</div>
+										
+					<div id='content-sbBlog-post'>
+								  					  		</div>
+			  	</div>
+
+		  			
+	  			
+	  			
+	  			<div id='content-sbBlog-contain'>
+	  				<div id='content-sbBlog-title'>
+			    		<p class="ccm-page-list-title"><a href="/archives/fresh-bytes/man-sets-world-record-by-running-a-26-mile-marathon-backwards-wh/">Man sets world record by running a 26-mile marathon backwards while juggling three balls</a>
+			
+							
+			
+			    		<span style="font-weight: normal;" class="rssItemDate"> (Today) </span>
+								
+				</p>
+					</div>
+										
+					<div id='content-sbBlog-post'>
+								  					  		</div>
+			  	</div>
+
+		  			
+	  			
+	  			
+	  			<div id='content-sbBlog-contain'>
+	  				<div id='content-sbBlog-title'>
+			    		<p class="ccm-page-list-title"><a href="/archives/fresh-bytes/tide-infused-inks-makes-these-shirts-self-cleaning/">Tide-infused inks makes these shirts self-cleaning</a>
+			
+							
+			
+			    		<span style="font-weight: normal;" class="rssItemDate"> (Today) </span>
+								
+				</p>
+					</div>
+										
+					<div id='content-sbBlog-post'>
+								  					  		</div>
+			  	</div>
+
+		  			
+	  			
+	  			
+	  			<div id='content-sbBlog-contain'>
+	  				<div id='content-sbBlog-title'>
+			    		<p class="ccm-page-list-title"><a href="/archives/fresh-bytes/patients-own-heartbeat-could-work-as-anti-hacking-password-for-i/">Patients' own heartbeat could work as anti-hacking password for implants</a>
+			
+							
+			
+			    		<span style="font-weight: normal;" class="rssItemDate"> (Today) </span>
+								
+				</p>
+					</div>
+										
+					<div id='content-sbBlog-post'>
+								  					  		</div>
+			  	</div>
+
+		  			
+	  			
+	  			
+	  			<div id='content-sbBlog-contain'>
+	  				<div id='content-sbBlog-title'>
+			    		<p class="ccm-page-list-title"><a href="/archives/fresh-bytes/ikea-starts-selling-solar-panels-for-homes/">Ikea starts selling solar panels for homes</a>
+			
+							
+			
+			    		<span style="font-weight: normal;" class="rssItemDate"> (Yesterday) </span>
+								
+				</p>
+					</div>
+										
+					<div id='content-sbBlog-post'>
+								  					  		</div>
+			  	</div>
+
+		  			
+	  			
+	  			
+	  			<div id='content-sbBlog-contain'>
+	  				<div id='content-sbBlog-title'>
+			    		<p class="ccm-page-list-title"><a href="/archives/fresh-bytes/researchers-demonstrate-accelerator-on-a-chip/">Researchers demonstrate ‘accelerator on a chip’</a>
+			
+							
+			
+			    		<span style="font-weight: normal;" class="rssItemDate"> (Yesterday) </span>
+								
+				</p>
+					</div>
+										
+					<div id='content-sbBlog-post'>
+								  					  		</div>
+			  	</div>
+
+		  			
+	  			
+	  			
+	  			<div id='content-sbBlog-contain'>
+	  				<div id='content-sbBlog-title'>
+			    		<p class="ccm-page-list-title"><a href="/archives/fresh-bytes/dutch-police-recruit-rat-detectives-to-sniff-out-crime/">Dutch police recruit rat detectives to sniff out crime</a>
+			
+							
+			
+			    		<span style="font-weight: normal;" class="rssItemDate"> (Yesterday) </span>
+								
+				</p>
+					</div>
+										
+					<div id='content-sbBlog-post'>
+								  					  		</div>
+			  	</div>
+
+		  			
+	  			
+	  			
+	  			<div id='content-sbBlog-contain'>
+	  				<div id='content-sbBlog-title'>
+			    		<p class="ccm-page-list-title"><a href="/archives/fresh-bytes/rawwr-astronaut-creates-a-toy-dinosaur-from-space-station-scraps/">Rawwr! Astronaut creates a toy dinosaur from space station scraps</a>
+			
+							
+			
+			    		<span style="font-weight: normal;" class="rssItemDate"> (Yesterday) </span>
+								
+				</p>
+					</div>
+										
+					<div id='content-sbBlog-post'>
+								  					  		</div>
+			  	</div>
+
+		  			
+	  			
+	  			
+	  			<div id='content-sbBlog-contain'>
+	  				<div id='content-sbBlog-title'>
+			    		<p class="ccm-page-list-title"><a href="/archives/fresh-bytes/heres-how-sagrada-familia-will-look-when-its-finally-done-in-202/">Here's how Sagrada Familia will look when it's finally done in 2026</a>
+			
+							
+			
+			    		<span style="font-weight: normal;" class="rssItemDate"> (Yesterday) </span>
+								
+				</p>
+					</div>
+										
+					<div id='content-sbBlog-post'>
+								  					  		</div>
+			  	</div>
+
+		  			
+	  			
+	  			
+	  			<div id='content-sbBlog-contain'>
+	  				<div id='content-sbBlog-title'>
+			    		<p class="ccm-page-list-title"><a href="/archives/fresh-bytes/need-a-kidney-please-rt-how-social-media-is-changing-organ-donat/">Need a kidney, please RT: how social media is changing organ donation</a>
+			
+							
+			
+			    		<span style="font-weight: normal;" class="rssItemDate"> (Yesterday) </span>
+								
+				</p>
+					</div>
+										
+					<div id='content-sbBlog-post'>
+								  					  		</div>
+			  	</div>
+
+		  			
+	  			
+	  			
+	  			<div id='content-sbBlog-contain'>
+	  				<div id='content-sbBlog-title'>
+			    		<p class="ccm-page-list-title"><a href="/archives/fresh-bytes/the-nsa-reveals-how-many-analysts-abused-its-database-to-spy-on-/">The NSA reveals how many analysts abused its database to spy on their lovers</a>
+			
+							
+			
+			    		<span style="font-weight: normal;" class="rssItemDate"> (27-Sep) </span>
+								
+				</p>
+					</div>
+										
+					<div id='content-sbBlog-post'>
+								  					  		</div>
+			  	</div>
+
+		  			
+	  			
+	  			
+	  			<div id='content-sbBlog-contain'>
+	  				<div id='content-sbBlog-title'>
+			    		<p class="ccm-page-list-title"><a href="/archives/fresh-bytes/this-photobooth-is-triggered-by-skin-to-skin-contact/">This photobooth is triggered by skin-to-skin contact</a>
+			
+							
+			
+			    		<span style="font-weight: normal;" class="rssItemDate"> (27-Sep) </span>
+								
+				</p>
+					</div>
+										
+					<div id='content-sbBlog-post'>
+								  					  		</div>
+			  	</div>
+
+		  			
+	  			
+	  			
+	  			<div id='content-sbBlog-contain'>
+	  				<div id='content-sbBlog-title'>
+			    		<p class="ccm-page-list-title"><a href="/archives/fresh-bytes/see-the-worlds-first-mind-controlled-prosthetic-leg-in-action/">See the world's first mind-controlled prosthetic leg in action</a>
+			
+							
+			
+			    		<span style="font-weight: normal;" class="rssItemDate"> (27-Sep) </span>
+								
+				</p>
+					</div>
+										
+					<div id='content-sbBlog-post'>
+								  					  		</div>
+			  	</div>
+
+		  			
+	  			
+	  			
+	  			<div id='content-sbBlog-contain'>
+	  				<div id='content-sbBlog-title'>
+			    		<p class="ccm-page-list-title"><a href="/archives/fresh-bytes/large-earthquake-causes-mud-island-to-rise-from-the-sea/">Large earthquake causes mud island to rise from the sea</a>
+			
+							
+			
+			    		<span style="font-weight: normal;" class="rssItemDate"> (27-Sep) </span>
+								
+				</p>
+					</div>
+										
+					<div id='content-sbBlog-post'>
+								  					  		</div>
+			  	</div>
+
+	</div>
+	
+	
+	
+
+<div class="ads">
+<!--/* OpenX Javascript Tag v2.8.1 */-->
+
+<script type='text/javascript'><!--//<![CDATA[
+   document.MAX_ct0 ='INSERT_CLICKURL_HERE';
+
+   var m3_u = (location.protocol=='https:'?'https://techfocusmedia.net/adserver/www/delivery/ajs.php':'http://techfocusmedia.net/adserver/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=113&amp;target=_top;&amp;channel=Analog,Board,Career,Communications,Computer,Consumer,EDA,Electromechanical,Embedded,FPGA,Green,Industrial,Manufacturing,Medical,MilAero,Mobile,Power,Products,Robotics,Semiconductor,Software,Test&amp;block=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+       document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+   }
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://techfocusmedia.net/adserver/www/delivery/ck.php?n=ad5fa029&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_top'><img src='http://techfocusmedia.net/adserver/www/delivery/avw.php?zoneid=113&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=ad5fa029&amp;ct0=INSERT_CLICKURL_HERE' border='0' alt='' /></a></noscript>
+
+</div>
+
+<div class="ads">
+<!--/* OpenX Javascript Tag v2.8.1 */-->
+
+<script type='text/javascript'><!--//<![CDATA[
+   document.MAX_ct0 ='INSERT_CLICKURL_HERE';
+
+   var m3_u = (location.protocol=='https:'?'https://techfocusmedia.net/adserver/www/delivery/ajs.php':'http://techfocusmedia.net/adserver/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=121&amp;target=_top;&amp;channel=Analog,Board,Career,Communications,Computer,Consumer,EDA,Electromechanical,Embedded,FPGA,Green,Industrial,Manufacturing,Medical,MilAero,Mobile,Power,Products,Robotics,Semiconductor,Software,Test&amp;block=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+       document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+   }
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script>
+</div>
+		
+	
+	
+
+<div class="ads">
+<!--/* OpenX Javascript Tag v2.8.1 */-->
+
+<script type='text/javascript'><!--//<![CDATA[
+   document.MAX_ct0 ='INSERT_CLICKURL_HERE';
+
+   var m3_u = (location.protocol=='https:'?'https://techfocusmedia.net/adserver/www/delivery/ajs.php':'http://techfocusmedia.net/adserver/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=113&amp;target=_top;&amp;channel=Analog,Board,Career,Communications,Computer,Consumer,EDA,Electromechanical,Embedded,FPGA,Green,Industrial,Manufacturing,Medical,MilAero,Mobile,Power,Products,Robotics,Semiconductor,Software,Test&amp;block=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+       document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+   }
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://techfocusmedia.net/adserver/www/delivery/ck.php?n=ad5fa029&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_top'><img src='http://techfocusmedia.net/adserver/www/delivery/avw.php?zoneid=113&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=ad5fa029&amp;ct0=INSERT_CLICKURL_HERE' border='0' alt='' /></a></noscript>
+
+</div>
+
+<div class="ads">
+<!--/* OpenX Javascript Tag v2.8.1 */-->
+
+<script type='text/javascript'><!--//<![CDATA[
+   document.MAX_ct0 ='INSERT_CLICKURL_HERE';
+
+   var m3_u = (location.protocol=='https:'?'https://techfocusmedia.net/adserver/www/delivery/ajs.php':'http://techfocusmedia.net/adserver/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=121&amp;target=_top;&amp;channel=Analog,Board,Career,Communications,Computer,Consumer,EDA,Electromechanical,Embedded,FPGA,Green,Industrial,Manufacturing,Medical,MilAero,Mobile,Power,Products,Robotics,Semiconductor,Software,Test&amp;block=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+       document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+   }
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script>
+</div>
+			
+				
+	
+
+<div class="ads">
+<!--/* OpenX Javascript Tag v2.8.1 */-->
+
+<script type='text/javascript'><!--//<![CDATA[
+   document.MAX_ct0 ='INSERT_CLICKURL_HERE';
+
+   var m3_u = (location.protocol=='https:'?'https://techfocusmedia.net/adserver/www/delivery/ajs.php':'http://techfocusmedia.net/adserver/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=113&amp;target=_top;&amp;channel=Analog,Board,Career,Communications,Computer,Consumer,EDA,Electromechanical,Embedded,FPGA,Green,Industrial,Manufacturing,Medical,MilAero,Mobile,Power,Products,Robotics,Semiconductor,Software,Test&amp;block=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+       document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+   }
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://techfocusmedia.net/adserver/www/delivery/ck.php?n=ad5fa029&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_top'><img src='http://techfocusmedia.net/adserver/www/delivery/avw.php?zoneid=113&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=ad5fa029&amp;ct0=INSERT_CLICKURL_HERE' border='0' alt='' /></a></noscript>
+
+</div>
+
+<div class="ads">
+<!--/* OpenX Javascript Tag v2.8.1 */-->
+
+<script type='text/javascript'><!--//<![CDATA[
+   document.MAX_ct0 ='INSERT_CLICKURL_HERE';
+
+   var m3_u = (location.protocol=='https:'?'https://techfocusmedia.net/adserver/www/delivery/ajs.php':'http://techfocusmedia.net/adserver/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=121&amp;target=_top;&amp;channel=Analog,Board,Career,Communications,Computer,Consumer,EDA,Electromechanical,Embedded,FPGA,Green,Industrial,Manufacturing,Medical,MilAero,Mobile,Power,Products,Robotics,Semiconductor,Software,Test&amp;block=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+       document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+   }
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script>
+</div>
+			
+
+	
+
+<div class="ads">
+<!--/* OpenX Javascript Tag v2.8.1 */-->
+
+<script type='text/javascript'><!--//<![CDATA[
+   document.MAX_ct0 ='INSERT_CLICKURL_HERE';
+
+   var m3_u = (location.protocol=='https:'?'https://techfocusmedia.net/adserver/www/delivery/ajs.php':'http://techfocusmedia.net/adserver/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=113&amp;target=_top;&amp;channel=Analog,Board,Career,Communications,Computer,Consumer,EDA,Electromechanical,Embedded,FPGA,Green,Industrial,Manufacturing,Medical,MilAero,Mobile,Power,Products,Robotics,Semiconductor,Software,Test&amp;block=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+       document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+   }
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://techfocusmedia.net/adserver/www/delivery/ck.php?n=ad5fa029&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_top'><img src='http://techfocusmedia.net/adserver/www/delivery/avw.php?zoneid=113&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=ad5fa029&amp;ct0=INSERT_CLICKURL_HERE' border='0' alt='' /></a></noscript>
+
+</div>
+
+<div class="ads">
+<!--/* OpenX Javascript Tag v2.8.1 */-->
+
+<script type='text/javascript'><!--//<![CDATA[
+   document.MAX_ct0 ='INSERT_CLICKURL_HERE';
+
+   var m3_u = (location.protocol=='https:'?'https://techfocusmedia.net/adserver/www/delivery/ajs.php':'http://techfocusmedia.net/adserver/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=121&amp;target=_top;&amp;channel=Analog,Board,Career,Communications,Computer,Consumer,EDA,Electromechanical,Embedded,FPGA,Green,Industrial,Manufacturing,Medical,MilAero,Mobile,Power,Products,Robotics,Semiconductor,Software,Test&amp;block=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+       document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+   }
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script>
+</div>
+			
+
+	</div>
+		</div><!-- /primary -->
+</div><!-- /content -->
+
+
+
+
+	<div class="span-24" style="margin-top: 10px;">
+
+	<div class="span-20">
+
+				
+			<!--/* OpenX Javascript Tag v2.8.1 */-->
+
+<script type='text/javascript'><!--//<![CDATA[
+   document.MAX_ct0 ='INSERT_CLICKURL_HERE';
+
+   var m3_u = (location.protocol=='https:'?'https://techfocusmedia.net/adserver/www/delivery/ajs.php':'http://techfocusmedia.net/adserver/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=111&amp;channel=Analog,Board,Career,Communications,Computer,Consumer,EDA,Electromechanical,Embedded,FPGA,Green,Industrial,Manufacturing,Medical,MilAero,Mobile,Power,Products,Robotics,Semiconductor,Software,Test&amp;block=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+       document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+   }
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://techfocusmedia.net/adserver/www/delivery/ck.php?n=a8648a73&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://techfocusmedia.net/adserver/www/delivery/avw.php?zoneid=111&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a8648a73&amp;ct0=INSERT_CLICKURL_HERE' border='0' alt='' /></a></noscript>
+
+		
+	</div>
+
+	<div class="span-4 last" align="right">
+
+		
+<!--/* OpenX Javascript Tag v2.8.1 */-->
+
+<script type='text/javascript'><!--//<![CDATA[
+   document.MAX_ct0 ='INSERT_CLICKURL_HERE';
+
+   var m3_u = (location.protocol=='https:'?'https://techfocusmedia.net/adserver/www/delivery/ajs.php':'http://techfocusmedia.net/adserver/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=110&amp;channel=Analog,Board,Career,Communications,Computer,Consumer,EDA,Electromechanical,Embedded,FPGA,Green,Industrial,Manufacturing,Medical,MilAero,Mobile,Power,Products,Robotics,Semiconductor,Software,Test&amp;block=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+       document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+   }
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://techfocusmedia.net/adserver/www/delivery/ck.php?n=ad1a4f09&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://techfocusmedia.net/adserver/www/delivery/avw.php?zoneid=110&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=ad1a4f09&amp;ct0=INSERT_CLICKURL_HERE' border='0' alt='' /></a></noscript>
+
+		
+	</div>
+
+	</div>
+
+	<hr>
+
+	<div id="footer" class="span-23 box">
+	<p>All material on this site copyright &#169; 2003 - 2013 techfocus media, inc. All rights reserved. EEJournal </p>
+
+	<ul class="nav">
+		<li class="first"><a href="/index.php/privacy">Privacy Policy</a></li>
+		<li><a href="/index.php/subscribe">Subscribe/Unsubscribe</a></li>
+ 		<li><a href="/index.php/media-kit">Media Kit</a><li>
+		<li><a href="/index.php/media-kit/about-us/contact/">Contact Us</a></li>
+		<li><a href="/index.php/login">Log In</a></li>
+
+		<!-- <li><a href="/index.php/report_problem">Report An Issue</a></li>-->
+	</ul>
+	</div>
+
+</div>
+
+<div style="display:none"><div class="box" id="loginrequired">
+<h3>Login Required</h3>
+  <p>In order to view this resource, you must log in to our site. Please <a href="/login/-/forward/27225"><strong>sign in now</strong></a>.</p>
+  <p>If you don't already have an acount with us, registering is free and quick. <a href="/register/-/forward/27225"><strong>Register now</strong></a>.</p>
+  <a class="button" href="/login/-/forward/27225">Sign In</a> &nbsp;&nbsp; <a style="width:150px;" class="button" href="/register/-/forward/27225">Register</a>
+</div>
+
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10887064-1");
+pageTracker._setDomainName("none");
+pageTracker._setAllowLinker(true);
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

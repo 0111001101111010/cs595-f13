@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html xmlns:og="http://ogp.me/ns#">
+    <head><script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+    <meta charset="UTF-8">
+    <title>
+      CSS - sass-globbingでSassファイルをお手軽管理 - Qiita [キータ]
+    </title>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1"/>
+      <meta name="description" content="皆さんは、1ヶ月間用コンタクトレンズを2週間用だと勘違いして使ってた経験ありませんか？ぼくは、あります(´Д⊂ヽ
+さて、今日はSassのファイル構成について考えてみたいと思います。Sassを使えば@importを使ってお手軽にファイルをモジュール管理できますね。ということで、私が作ったCSSフレームワークMapleでも下記のようなファイル構成で管理しています。
+
+
+t32k/maple
+
+├── css
+│   ├── maple.css
+│   └── sass
+│ ..." />
+    <!-- twitter card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@Qiita">
+      <meta name="twitter:creator" content="t32k">
+    <!-- twitter card end -->
+
+    <!-- Google+ author (only in item page) -->
+    <!-- Google+ author end -->
+
+    <!-- OGP -->
+    <meta property="og:title" content="CSS - sass-globbingでSassファイルをお手軽管理 - Qiita [キータ]" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://qiita.com/t32k/items/229745617da41f308f20" />
+    <meta property="og:image" content="https://secure.gravatar.com/avatar/4cf842e43a782a585d8707f2ba7f9a5c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png" />
+    <meta property="og:description" content="皆さんは、1ヶ月間用コンタクトレンズを2週間用だと勘違いして使ってた経験ありませんか？ぼくは、あります(´Д⊂ヽ
+
+さて、今日はSassのファイル構成について考えてみたいと思います。Sassを使えば`@import`を使ってお手軽にフ..." />
+    <meta property="og:site_name" content="Qiita" />
+    <meta property="fb:admins" content="564524038" />
+    <!-- OGP end -->
+
+    <link rel="shortcut icon" type="image/x-icon"
+          href="/favicon.ico?v=4">
+    <link rel="icon" type="image/png"
+          href="/favicon.ico?v=4">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link href="/assets/bootstrap-public-application-bc45127b4bcc1482a1ffb55e7a501368.css" media="screen" rel="stylesheet" />
+    <link href="/assets/bootstrap-responsive-layout-17a4f5df0d75ce0d63d14668f5a7d78a.css" media="screen" rel="stylesheet" />
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="LX1KutXmK1Wzxj1vErj1yRv85AbPLbRD3TdzWfyxB/w=" name="csrf-token" />
+    <script>
+  var Qiita;
+  Qiita || (Qiita = {});
+  Qiita.controller_path = 'items';
+  Qiita.controller = 'items';
+  Qiita.action = 'show';
+</script>
+
+<script>
+  (function () {
+    var script = document.getElementsByTagName('script')[0];
+    var load = function (src, id) {
+      var el = document.createElement('script');
+      el.async = true;
+      el.src = src;
+      el.id = id;
+      script.parentNode.insertBefore(el, script);
+    };
+
+      // Optimizely
+      load('//cdn.optimizely.com/js/52738645.js', 'optimizely-jssdk');
+
+      // Google Analytics
+      window._gaq = window._gaq || [];
+      var isCareer = location.hostname.split('.')[0] == 'career';
+      if (isCareer) {
+        window._gaq.push(['_setAccount', 'UA-24675221-11']);
+        window._gaq.push(['_setDomainName', 'qiita.com']);
+      } else {
+        window._gaq.push(['_setAccount', 'UA-24675221-1']);
+      }
+      window._gaq.push(['_setCustomVar', 1, 'logged_in', 'false', 2]);
+      window._gaq.push(['_trackPageview']);
+      var src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      load(src, 'google-analytics-jssdk');
+
+      // Google Analytics - Universal Analytics
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-24675221-12', {
+          
+        });
+        ga('set', 'dimension1', 'false');
+        ga('set', 'dimension3', 'false');
+      ga('set', 'forceSSL', true);
+      Qiita.isAnalyticsAvailable = false;
+      ga('send', 'pageview', {
+        hitCallback: function () {
+          Qiita.isAnalyticsAvailable = true;
+        }
+      });
+  })();
+
+  // Mixpanel
+  (function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.1.min.js';d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}var g=a;"undefined"!==typeof f?
+  g=a[f]=[]:f="mixpanel";g.people=g.people||[];h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.identify people.set people.increment".split(" ");for(e=0;e<h.length;e++)d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1})(document,window.mixpanel||[]);
+    mixpanel.init("be87616606b0e26a87689099aab2c4e5", {upgrade: true});
+</script>
+
+  </head>
+
+  <body id="">
+    <div id="fb-root"></div>
+
+<!--[if lt IE 9]>
+  <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script src="/assets/application-41b6d7620bddf4263d9fce02f0482113.js"></script>
+
+<script>
+  (function () {
+    var script = document.getElementsByTagName('script')[0];
+    var load = function (src, id) {
+      var el = document.createElement('script');
+      el.async = true;
+      el.src = src;
+      el.id = id;
+      script.parentNode.insertBefore(el, script);
+    };
+
+    // Facebook
+    load('//connect.facebook.net/en_US/all.js#xfbml=1&appId=222621691108322', 'facebook-jssdk');
+
+    // Twitter
+    load('//platform.twitter.com/widgets.js', 'twitter-jssdk');
+    var _e = [];
+    window.twttr = { _e: _e, ready: function(f){ _e.push(f) } }
+
+  })();
+
+  (function (I18n) {
+    var match, orig;
+    I18n.defaultLocale = "ja";
+    I18n.fallbacks = true;
+    if (match = location.search.match(/(?:\?|&)locale=([^&]+)/)) {
+      I18n.locale = match[1];
+      orig = $.ajax;
+      $.ajax = function (params) {
+        params.data || (params.data = {});
+        params.data.locale = match[1];
+        return orig.call($, params);
+      };
+    } else {
+      I18n.locale = "ja";
+    }
+  })(I18n);
+
+
+  $(function() {
+    Qiita.Mixpanel.pageAccess(Qiita.Mixpanel.properties.pageAccess);
+  });
+</script>
+
+    
+
+      <header id="global-header-nav" class="navbar navbar-inverse navbar-fixed-top fixed-header">
+  <div class="navbar-inner">
+    <div class="container">
+      <h1>
+          <a class="brand" href="/">Qiita [キータ] - プログラマの技術情報共有サービス</a>
+      </h1>
+      <div class="hidden-phone">
+        <form accept-charset="UTF-8" action="/search" class="navbar-form pull-left" id="search-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+          <input id="sort" name="sort" type="hidden" />
+          <div class="query-wrapper">
+            <input class="query span2" id="q" name="q" placeholder="投稿/ユーザー検索" type="text" />
+            <div id="stock-item-search-check">
+              <input id="stock-item-search" name="stocked" type="checkbox" value="1" />
+              <label for="stock-item-search">
+                <img alt="ストックした投稿を検索" src="/assets/icon-stocked-ad6d32c18d8a916c6821b9acda41a92d.png" />
+                ストックした投稿を検索
+              </label>
+            </div>
+          </div>
+          <input class="btn" id="search-button" name="commit" type="submit" value="検索" />
+</form>            <div class="visible-desktop">
+              <div id="headline-news">
+                <span id="news-content">
+                  Qiita [キータ] - プログラマの技術情報共有サービス
+                </span>
+              </div>
+            </div>
+      </div>
+      <ul id="nav-right" class="nav pull-right">
+          <li class="signup">
+            <a class="js-signup-button" href="/signup">新規登録</a>
+          </li>
+          <li class="hoverable login">
+            <a href="#" class="login-link">ログイン<span class="triangle">&#9662;</span></a>
+            <ul class="login-nav unstyled">
+              <li>
+                <a class="js-login-button" data-provider="GitHub" href="https://qiita.com/auth/github">GitHubログイン</a>
+              </li>
+              <li>
+                <a class="js-login-button" data-provider="Twitter" href="https://qiita.com/auth/twitter">Twitterログイン</a>
+              </li>
+            </ul>
+          </li>
+      </ul>
+    </div>
+  </div>
+  <div id="response-bar">
+  <div>
+    <span class="message"></span>
+    <span id="close-response-bar">x 閉じる</span>
+  </div>
+</div>
+<script type="text/javascript">
+    $(function() {
+        var alertMessage = "";
+        var noticeMessage = "";
+        if (alertMessage !== '') {
+            Qiita.Util.showNotificationBar({ type: "alert", message: alertMessage });
+        } else if (noticeMessage !== '') {
+            Qiita.Util.showNotificationBar({ type: "notice", message: noticeMessage });
+        }
+    });
+</script>
+
+</header>
+<script>
+  $(function() {
+    $('#global-nav-mypage').hover(
+      function() {
+        $('#sub-navigation').stop().fadeIn(100);
+      }, function() {
+        $('#sub-navigation').delay(500).fadeOut(100);
+      }
+    );
+    $('.switcher').click(function() {
+      $(this).find('ul').toggle();
+    });
+    var $form = $('#search-form'),
+        $query = $form.find('.query');
+    $form.submit(function(ev) {
+      var self = this;
+      ev.preventDefault();
+      var stocked = !!$('#stock-item-search').attr('checked');
+      var keyword = $query.val();
+      Qiita.Mixpanel.search({
+        stocked: stocked,
+        keyword: keyword
+      }, function() {
+          self.submit();
+      });
+    });
+    $form.find('.query').focus(function() {
+      $(this).animate({ width:"250px" }, 300);
+      $('#search-button').fadeIn('300');
+      $('#stock-item-search-check').fadeIn('300');
+      $('#headline-news').fadeOut('300');
+    });
+    $('#main').click(function() {
+      $('#stock-item-search-check').fadeOut(200);
+      $('.nav.switcher > ul').fadeOut(200);
+      $('.login-nav').hide();
+    });
+    $('.login-link').mouseover(function() {
+      $('.login-nav').fadeIn(100);
+    });
+    $('.js-signup-button').click(function(ev) {
+      ev.preventDefault();
+      Qiita.Mixpanel.signupButtonClick({}, function() {
+        window.location = ev.target.href;
+      });
+    });
+    $('.js-login-button').click(function(ev) {
+      ev.preventDefault();
+      var target = $(ev.target);
+      Qiita.analysis.login({
+        loginType: target.data('provider'),
+        place: 'navbar'
+      }).always(function () {
+        location.href = target.attr('href');
+      });
+    });
+  });
+</script>
+
+
+      <div id="main">
+
+
+<!-- Breadcrumb for search engines -->
+<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+  <link itemprop="url" href="/t32k" />
+  <meta itemprop="title" content="t32k" />
+</span>
+<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+  <link itemprop="url" href="/t32k/items" />
+  <meta itemprop="title" content="items" />
+</span>
+
+<article id="item-page" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    <div class="container">
+
+      <div class="row">
+        <a alt="t32k" class="span1 hidden-phone" href="/t32k"><img alt="Assets.github.com%2fimages%2fgravatars%2fgravatar 140" class="author-icon" src="https://secure.gravatar.com/avatar/4cf842e43a782a585d8707f2ba7f9a5c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png" /></a>
+        <div class="span8">
+          <h1 class="item-title">
+            <span itemprop="name">sass-globbingでSassファイルをお手軽管理</span>
+          </h1>
+          <ul class="tag-list unstyled">
+              <li>
+                <div class="tooltip-container">
+                  <a href="/tags/sass">
+                    <img alt="Sass" src="https://s3-ap-northeast-1.amazonaws.com/qiita-tag-image/43465026e1d0be7a864b0f56c16d9381018d8f60/large.jpg?1364838969" />
+                    Sass(52)
+</a>                </div>
+              </li>
+              <li>
+                <div class="tooltip-container">
+                  <a href="/tags/css">
+                    <img alt="CSS" src="https://s3-ap-northeast-1.amazonaws.com/qiita-tag-image/044718e5ead41a35e6e7e8a9c3e476f218fd596e/large.jpg?1364837864" />
+                    CSS(274)
+</a>                </div>
+              </li>
+          </ul>
+          <ul class="unstyled item-status">
+            <li>
+              <img alt="Assets.github.com%2fimages%2fgravatars%2fgravatar 140" class="visible-phone author-icon small" src="https://secure.gravatar.com/avatar/4cf842e43a782a585d8707f2ba7f9a5c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png" />
+              <a href="/t32k">t32k</a>が<time datetime="2013-09-25T10:57:10+09:00" itemprop="datePublished">7日前</time>に投稿
+            </li>
+              <li class="hidden-phone">
+                <a href="/items/229745617da41f308f20/edit">編集リクエストを作成する</a>
+              </li>
+          </ul>
+        </div>
+        <section class="span3">
+          <div>
+            <ul id="item-stats-list" class="unstyled">
+                <li>
+                  <div class="count stock" id="stock-user-count">16</div>
+                  <div class="text">ストック</div>
+                </li>
+              <li>
+                <a href="#comments">
+                <div class="count comment" itemprop="interactionCount"
+                      content="UserComments">0</div>
+                <div class="text">コメント</div>
+</a>              </li>
+            </ul>
+          </div>
+              <a class="btn btn-primary stock-button btn-block js-stock-btn" data-position="top" href="javascript:void(0)" title="Stock">
+                この投稿をストックする
+</a>          <div class="row">
+            <div class="span3">
+              <ul class="unstyled user-icon-list">
+                    <li class="">
+                      <a href="/purprin" title="purprin"><img alt="purprin" src="https://0.gravatar.com/avatar/9a80d0f0ee6beaaa27c9058c98f92c10?d=https%3A%2F%2Fidenticons.github.com%2F0cb15d2da6aeb47c10fee170ae37ec89.png" /></a>
+                    </li>
+                    <li class="">
+                      <a href="/sanata_o_o" title="sanata_o_o"><img alt="sanata_o_o" src="https://twimg0-a.akamaihd.net/profile_images/1463940078/_____normal.gif" /></a>
+                    </li>
+                    <li class="">
+                      <a href="/fushimik" title="fushimik"><img alt="fushimik" src="https://twimg0-a.akamaihd.net/profile_images/1311365856/icon13027913797163_normal.jpg" /></a>
+                    </li>
+                    <li class="">
+                      <a href="/habu0104" title="habu0104"><img alt="habu0104" src="https://si0.twimg.com/profile_images/2800516970/8ea26f0fd76fad10840fc92fa738db75_normal.jpeg" /></a>
+                    </li>
+                    <li class="">
+                      <a href="/mersy@github" title="mersy@github"><img alt="mersy@github" src="https://secure.gravatar.com/avatar/0f67c950acf0f1e50f078284d015d4a5?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" /></a>
+                    </li>
+                    <li class="">
+                      <a href="/hazy_moon" title="hazy_moon"><img alt="hazy_moon" src="https://si0.twimg.com/profile_images/1572292890/______2_normal.jpg" /></a>
+                    </li>
+                    <li class="">
+                      <a href="/yshrsmz@github" title="yshrsmz@github"><img alt="yshrsmz@github" src="https://secure.gravatar.com/avatar/bdebe1c3d0f51e715606a0d0257c6a1c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" /></a>
+                    </li>
+                    <li class="">
+                      <a href="/kazu69" title="kazu69"><img alt="kazu69" src="https://secure.gravatar.com/avatar/81666755d089dc9a1bbb8c32edd7afb9?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" /></a>
+                    </li>
+                    <li class="">
+                      <a href="/tanamako@github" title="tanamako@github"><img alt="tanamako@github" src="https://secure.gravatar.com/avatar/2026418e5482a957f94d8ca65db9025c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" /></a>
+                    </li>
+                    <li class="">
+                      <a href="/roatnek" title="roatnek"><img alt="roatnek" src="https://si0.twimg.com/profile_images/1198815664/twitter_icon4_normal.jpg" /></a>
+                    </li>
+
+                    <a class="show-all-stockers" data-toggle="modal" href="#show-all-stockers">(もっと見る)</a>
+
+                    <div id="show-all-stockers" class="modal hide">
+                      <div class="modal-header">
+                        <button type="button" class="close"
+                                data-dismiss="modal" aria-hidden="true">
+                          <i class="icon-remove"></i>
+                        </button>
+                        <div class="text-center">
+                          ストックしているユーザー
+                        </div>
+                      </div>
+                      <div class="user-list-view modal-body">
+                      </div>
+                    </div>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="row scroll-chaser-wrapper">
+      <div class="span9">
+        <section class="markdown-content heading-anchor bordered">
+          <section id="item-229745617da41f308f20" class="position-relative" itemprop="articleBody">
+            <p>皆さんは、1ヶ月間用コンタクトレンズを2週間用だと勘違いして使ってた経験ありませんか？ぼくは、あります(´Д⊂ヽ</p>
+<p>さて、今日はSassのファイル構成について考えてみたいと思います。Sassを使えば<code>@import</code>を使ってお手軽にファイルをモジュール管理できますね。ということで、私が作ったCSSフレームワークMapleでも下記のようなファイル構成で管理しています。</p>
+
+<ul>
+<li><a href="https://github.com/t32k/maple" title="https://github.com/t32k/maple" target="_blank">t32k/maple</a></li>
+</ul>
+<div class="code-frame"><div class="highlight"><pre>├── css
+│   ├── maple.css
+│   └── sass
+│       ├── maple.scss
+│       ├── _core.scss
+│       ├── _modules.scss
+│       ├── core
+│       │   ├── _base.scss
+│       │   ├── _helper.scss
+│       │   ├── _layout.scss
+│       │   ├── _reset.scss
+│       │   └── _settings.scss
+│       ├── modules
+│       │   ├── _bars.scss
+│       │   ├── _boxes.scss
+│       │   ├── _buttons.scss
+│       │   ├── _forms.scss
+│       │   ├── _headlines.scss
+│       │   ├── _listviews.scss
+│       │   └── _misc.scss
+│       └── vendors
+│           └── _myfont.scss
+</pre></div></div><p>大枠としては全体に共通する設定を<code>core</code>に、各コンポーネント部品は<code>modules</code>に分けていることです。あとは、<code>vendiors</code>に外部CSSライブラリとか必要であればぶち込んでおきましょう。</p>
+<p>ディレクトリ分け自体はお好きな様にやってくれればよいのですが、問題はそれらを読み込む処理ですYO!</p>
+<div class="code-frame"><div class="code-lang"><span class="bold">maple.scss</span></div><div class="highlight"><pre><span class="c1">//-------------------------------------//</span>
+<span class="c1">//  Final output CSS file</span>
+<span class="c1">//-------------------------------------//</span>
+
+<span class="c1">//  Compass settings</span>
+<span class="c1">//-------------------------------------</span>
+<span class="nv">$experimental-support-for-opera</span><span class="o">:</span> <span class="n-Pseudo">false</span><span class="p">;</span>
+<span class="nv">$experimental-support-for-mozilla</span><span class="o">:</span> <span class="n-Pseudo">false</span><span class="p">;</span>
+<span class="nv">$experimental-support-for-microsoft</span><span class="o">:</span> <span class="n-Pseudo">false</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&quot;compass&quot;</span><span class="p">;</span>
+
+
+<span class="c1">//  @import files</span>
+<span class="c1">//-------------------------------------</span>
+<span class="k">@import</span> <span class="s2">&quot;core&quot;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&quot;modules&quot;</span><span class="p">;</span>
+</pre></div></div><p>大元の<code>maple.scss</code>でまず、<code>_core.scss</code>と<code>_modules.scss</code>ファイルを読み込んでいます。</p>
+<div class="code-frame"><div class="code-lang"><span class="bold">_core.scss</span></div><div class="highlight"><pre><span class="c1">//-------------------------------------//</span>
+<span class="c1">//  Core files</span>
+<span class="c1">//-------------------------------------//</span>
+
+<span class="k">@import</span> <span class="s2">&quot;core/settings&quot;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&quot;core/reset&quot;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&quot;core/base&quot;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&quot;core/helper&quot;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&quot;core/layout&quot;</span><span class="p">;</span>
+</pre></div></div><div class="code-frame"><div class="code-lang"><span class="bold">_modules.scss</span></div><div class="highlight"><pre><span class="c1">//-------------------------------------//</span>
+<span class="c1">//  Module files</span>
+<span class="c1">//-------------------------------------//</span>
+
+<span class="k">@import</span> <span class="s2">&quot;modules/headings&quot;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&quot;modules/listviews&quot;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&quot;modules/buttons&quot;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&quot;modules/bars&quot;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&quot;modules/boxes&quot;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&quot;modules/forms&quot;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&quot;modules/misc&quot;</span><span class="p">;</span>
+</pre></div></div><p><code>_core.scss</code>と<code>_modules.scss</code>ファイルでは各ディレクトリ配下のファイルをそれぞれ読み込んでいます。</p>
+<p>これ、すっごく (&#39;A&#39;)ﾏﾝﾄﾞｸｾ くないですかね？例えば<code>modules</code>のファイルが増えるたびに追加の記述をしなければならないし、これが何十ファイルとかあるとだいぶしんどいです。また、必要でなくなった<code>modules</code>ファイルを削除するには、ファイルを削除して<code>@import</code>の記述も削除しなければなりません。じゃないと、『ファイルが見つかりませんよー』ってコンパイルエラーになる (&#39;A&#39;)ﾏﾝﾄﾞｸｾ</p>
+<p>そもそも、なぜわざわざ読みこむだけのパーシャルファイル作んなきゃいけないのか、どうせなら、最初の段階で以下のように読み込ませたいですよね？</p>
+<div class="code-frame"><div class="code-lang"><span class="bold">maple.scss</span></div><div class="highlight"><pre><span class="c1">//  @import files</span>
+<span class="c1">//-------------------------------------</span>
+<span class="k">@import</span> <span class="s2">&quot;core/*&quot;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&quot;modules/*&quot;</span><span class="p">;</span>
+</pre></div></div><p>いわゆる<a href="http://en.wikipedia.org/wiki/Glob_(programming)" title="http://en.wikipedia.org/wiki/Glob_(programming)" target="_blank">Glob</a>っていうの？Sassでも使ってみたいわけですよ。</p>
+
+<blockquote>
+<p>Import all files from a folder<br>
+Same idea, pushing things further would be to be able to import all files from a folder at once. This is also called &quot;Sass globbing&quot; and currently exists as a Sass plugin by Chris Eppstein himself (I think this will be merged with Sass in 4.0).</p>
+</blockquote>
+
+<ul>
+<li><a href="http://davidwalsh.name/future-sass" title="http://davidwalsh.name/future-sass" target="_blank">Looking Into the Future of Sass</a></li>
+</ul>
+<p>どうやら、Sass v4.0で採用する予定みたいだけど、待てない。</p>
+
+<ul>
+<li><a href="https://github.com/chriseppstein/sass-globbing" title="https://github.com/chriseppstein/sass-globbing" target="_blank">chriseppstein/sass-globbing</a></li>
+</ul>
+<p>ということで、sass-globbingを使ってみる。どうやらこれが4.0でマージされる予定みたい。</p>
+<p>使い方は簡単。</p>
+<div class="code-frame"><div class="highlight"><pre><span class="go">$ gem install sass-globbing</span>
+</pre></div></div><p>gemをインストールして、<code>config.rb</code>に下記のように記述すればSassでGlobが使えるようになるよ。</p>
+<div class="code-frame"><div class="code-lang"><span class="bold">config.rb</span></div><div class="highlight"><pre><span class="nb">require</span> <span class="s1">&#39;sass-globbing&#39;</span>
+</pre></div></div><p>そうゆうことでめでたくSassでGlobを使えたわけですけど、ファイルに依存関係のあるもの（例えば<code>core</code>の<code>_setting.scss</code>などは設定変数が記述されているため、このファイルが一番最初に読み込まなければならない）をGlobで読み込んじゃうとエラーになっちゃうので気をつけてくださいまし。</p>
+
+          </section>
+        </section>
+        <section>
+            <div id="item-footer-action-box">
+                <a class="btn btn-primary stock-button js-stock-btn" data-position="bottom" href="javascript:void(0)">この投稿をストックする</a>
+                &nbsp;<a class="hidden-phone" href="/items/229745617da41f308f20/edit">編集リクエストを作成する</a>
+            </div>
+                <section class="remarkable-items">
+      <h5>関連する投稿</h5>
+      <div class="items">
+          <article itemscope itemtype="http://schema.org/Article">
+            <img alt="6c7a05dfd8bcf752edf3ee67cdefe961 normal" class="user-icon" src="https://si0.twimg.com/profile_images/3034055869/6c7a05dfd8bcf752edf3ee67cdefe961_normal.jpeg" />
+            <div class="right">
+              <h6 itemprop="title">
+                <a href="/yukimis/items/a1b76ec9f48360a3247d">手書きのベンダープレフィックスをある程度自動化したい</a>
+              </h6>
+              <img alt="Icon stocked" class="icon" src="/assets/icon-stocked-ad6d32c18d8a916c6821b9acda41a92d.png" />
+              1
+              <span class="divider">|</span>
+              <ul class="unstyled tag-list">
+                  <li>
+                    <a href="/tags/Compass">Compass</a>
+                  </li>
+                  <li>
+                    <a href="/tags/Sass">Sass</a>
+                  </li>
+                  <li>
+                    <a href="/tags/scss">scss</a>
+                  </li>
+              </ul>
+            </div>
+          </article>
+          <article itemscope itemtype="http://schema.org/Article">
+            <img alt="Zeruerubantyou normal" class="user-icon" src="https://si0.twimg.com/profile_images/1176051056/zeruerubantyou_normal.jpg" />
+            <div class="right">
+              <h6 itemprop="title">
+                <a href="/shikataka/items/0f07491815fa50f151a0">compassとscss(sass)でスタイルシートの軽量化と保守性アップ【半分失敗】</a>
+              </h6>
+              <img alt="Icon stocked" class="icon" src="/assets/icon-stocked-ad6d32c18d8a916c6821b9acda41a92d.png" />
+              2
+              <span class="divider">|</span>
+              <ul class="unstyled tag-list">
+                  <li>
+                    <a href="/tags/mvc">mvc</a>
+                  </li>
+                  <li>
+                    <a href="/tags/CSS">CSS</a>
+                  </li>
+                  <li>
+                    <a href="/tags/Compass">Compass</a>
+                  </li>
+                  <li>
+                    <a href="/tags/Sass">Sass</a>
+                  </li>
+                  <li>
+                    <a href="/tags/scss">scss</a>
+                  </li>
+              </ul>
+            </div>
+          </article>
+          <article itemscope itemtype="http://schema.org/Article">
+            <img alt="Assets.github.com%2fimages%2fgravatars%2fgravatar user 420" class="user-icon" src="https://secure.gravatar.com/avatar/3d5f8e742def56f5193be22d929f53f8?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" />
+            <div class="right">
+              <h6 itemprop="title">
+                <a href="/jnst@github/items/369e2e6204a99726d00f">WindowsでSass環境を構築</a>
+              </h6>
+              <img alt="Icon stocked" class="icon" src="/assets/icon-stocked-ad6d32c18d8a916c6821b9acda41a92d.png" />
+              3
+              <span class="divider">|</span>
+              <ul class="unstyled tag-list">
+                  <li>
+                    <a href="/tags/Sass">Sass</a>
+                  </li>
+                  <li>
+                    <a href="/tags/Ruby">Ruby</a>
+                  </li>
+                  <li>
+                    <a href="/tags/nginx">nginx</a>
+                  </li>
+              </ul>
+            </div>
+          </article>
+          <article itemscope itemtype="http://schema.org/Article">
+            <img alt="15f045b232499584ee3f780083f85ced?d=https%3a%2f%2fidenticons.github.com%2f8813a47b86dc1366c9ce4e709506c70f" class="user-icon" src="https://2.gravatar.com/avatar/15f045b232499584ee3f780083f85ced?d=https%3A%2F%2Fidenticons.github.com%2F8813a47b86dc1366c9ce4e709506c70f.png" />
+            <div class="right">
+              <h6 itemprop="title">
+                <a href="/yujiorama_at_github/items/88158b33ccb0a3be35fb">git でよく使う &quot;^&quot;(サーカムフレックス) が zsh に解釈されて困る件</a>
+              </h6>
+              <img alt="Icon stocked" class="icon" src="/assets/icon-stocked-ad6d32c18d8a916c6821b9acda41a92d.png" />
+              10
+              <span class="divider">|</span>
+              <ul class="unstyled tag-list">
+                  <li>
+                    <a href="/tags/git">git</a>
+                  </li>
+                  <li>
+                    <a href="/tags/Zsh">Zsh</a>
+                  </li>
+              </ul>
+            </div>
+          </article>
+          <article itemscope itemtype="http://schema.org/Article">
+            <img alt="6f42f0c425feadff0fce22d12d251ce1 normal" class="user-icon" src="https://si0.twimg.com/profile_images/3073346345/6f42f0c425feadff0fce22d12d251ce1_normal.png" />
+            <div class="right">
+              <h6 itemprop="title">
+                <a href="/momoayumi/items/a7815c6ec55a71524cec">Compassを使ってみる</a>
+              </h6>
+              <img alt="Icon stocked" class="icon" src="/assets/icon-stocked-ad6d32c18d8a916c6821b9acda41a92d.png" />
+              5
+              <span class="divider">|</span>
+              <ul class="unstyled tag-list">
+                  <li>
+                    <a href="/tags/Ruby">Ruby</a>
+                  </li>
+              </ul>
+            </div>
+          </article>
+      </div>
+    </section>
+
+            <div class="text-advertisement">
+              <span class="label label-info">PR</span>
+              <a href="https://career.qiita.com/?utm_source=qiita&amp;utm_medium=text" target="_blank">
+                転職先、仕事先を探しているプログラマの方対象 - Qiita:Career <i class="icon-external-link"></i>
+</a>            </div>
+        </section>
+      </div>
+      <div class="span3">
+        <hr class="visible-phone" />
+        <div class="row">
+          <div class="span3">
+            <div class="social-buttons">
+  <div class="twitter">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-text="CSS - sass-globbingでSassファイルをお手軽管理 by @t32k on @Qiita">ツイート</a>
+  </div>
+  <div class="hatebu">
+    <a href="http://b.hatena.ne.jp/entry/http://qiita.com/t32k/items/229745617da41f308f20" class="hatena-bookmark-button" data-hatena-bookmark-title="CSS - sass-globbingでSassファイルをお手軽管理 - Qiita [キータ]" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+  </div>
+  <div class="facebook">
+    <div class="fb-like" data-href="http://qiita.com/t32k/items/229745617da41f308f20" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+  </div>
+</div>
+<script type="text/javascript">
+  $(function() {
+      twttr.ready(function (twttr) {
+          twttr.events.bind('tweet', function(event) {
+              if (event) {
+                  Qiita.Mixpanel.tweetAnItem({ uuid: "229745617da41f308f20" });
+                  ga('send', 'social', 'twitter', 'tweet', 'http://qiita.com');
+                  $.ajax({
+                      type: 'POST',
+                      url: '/notifications',
+                      data: {
+                          notification: {
+                              verb: 'tweet',
+                              uuid: '229745617da41f308f20'
+                          }
+                      }
+                  });
+              }
+          });
+          twttr.events.bind('click', function (e) {
+            if (e) {
+              ga('send', 'social', 'twitter', 'click', 'http://qiita.com');
+            }
+          });
+      });
+      window.fbAsyncInit = function() {
+          FB.Event.subscribe('edge.create', function(response) {
+              Qiita.Mixpanel.likeAnItem({ uuid: "229745617da41f308f20" });
+              ga('send', 'social', 'facebook', 'like', 'http://qiita.com');
+              $.ajax({
+                  type: 'POST',
+                  url: '/notifications',
+                  data: {
+                      notification: {
+                          verb: 'like',
+                          uuid: '229745617da41f308f20'
+                      }
+                  }
+              });
+          });
+      }
+  });
+</script>
+
+          </div>
+        </div>
+        <hr />
+          <section class="tag-version-box">
+            <h5>バージョン情報</h5>
+            <ul class="unstyled">
+              <li>
+                <span class="tag-name title">タグ</span>
+                <span class="tag-version title">バージョン</span>
+              </li>
+                <li>
+                  <span class="tag-name">
+                    <a href="/tags/sass">
+                      <img alt="Thumb" src="https://s3-ap-northeast-1.amazonaws.com/qiita-tag-image/bd8955fa28a7e582cacaed07becee82c1cd001cf/thumb.jpg?1364838969" />
+                      Sass
+</a>                  </span>
+                  <span class="tag-version">
+                    3.2.10
+                  </span>
+                </li>
+            </ul>
+          </section>
+          <hr />
+        <section id="author-info" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <div class="author-surface">
+    <a href="/t32k"><img alt="t32k" class="user-icon" itemprop="image" src="https://secure.gravatar.com/avatar/4cf842e43a782a585d8707f2ba7f9a5c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png" /></a>
+    <div class="right">
+      <strong class="user-name" itemprop="name">
+        <a href="/t32k" itemprop="url">t32k</a>
+      </strong>
+        <span class="btn btn-mini js-user-follow-btn"
+            data-url_name="t32k"
+            data-position="author-info">
+          フォローする
+        </span>
+      <br/>
+      <span class="contribution">
+        <span class="count">194</span>
+        <span class="unit">Contribution</span>
+      </span>
+    </div>
+  </div>
+  <section>
+    <h6>最新の投稿</h6>
+    <ul class="unstyled posts">
+        <li itemscope itemtype="http://schema.org/Article">
+          <a href="/t32k/items/229745617da41f308f20" itemprop="url">sass-globbingでSassファイルをお手軽管理</a>
+        </li>
+        <li itemscope itemtype="http://schema.org/Article">
+          <a href="/t32k/items/8609ffe0868da3e485a6" itemprop="url">君は知っているか、あのCompassのstatsコマンドを！</a>
+        </li>
+        <li itemscope itemtype="http://schema.org/Article">
+          <a href="/t32k/items/a6fb4e690c134854c22b" itemprop="url">Ellipsisスタイルと無効化</a>
+        </li>
+    </ul>
+  </section>
+    <section>
+      <h6>Organization</h6>
+        <span itemprop="memberOf" itemscope
+            itemtype="http://schema.org/Organization">
+          <a href="/organizations/cyberagent" itemprop="url">
+            <img alt="株式会社サイバーエージェント" class="organization-logo" itemprop="image" src="https://s3-ap-northeast-1.amazonaws.com/qiita-organization-image/30449696761e233912f1d7558f939175914b6ace/original.jpg?1370362501" />
+</a>        </span>
+    </section>
+</section>
+
+        <hr/>
+<style>
+.test-text-responsible { width: 200px; height: 200px; }
+@media(min-width: 1200px) {
+  .test-text-responsible { width: 250px; height: 250px; }
+}
+@media(max-width: 979px) and (min-width: 768px) {
+  .test-text-responsible { width: 120px; height: 240px; }
+}
+@media(max-width: 767px) {
+  .test-text-responsible { width: 320px; height: 50px; }
+}
+</style>
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- test_text_responsible -->
+<ins class="adsbygoogle test-text-responsible"
+     style="display:inline-block"
+     data-ad-client="ca-pub-8127218772604357"
+     data-ad-slot="3880091879"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <hr />
+        <div id="advertisement-s">
+    <a href="https://career.qiita.com?utm_content=AD0054&amp;utm_source=qiita&amp;utm_medium=banner" target="_blank" class="advertisement-link">
+      <img alt="Ad0054 increments career" src="/assets/banner/increments/AD0054_increments_career-09a4e170ab421d0e1b8846a1ee073933.png" />
+    </a>
+</div>
+<script type="text/javascript">
+$(function() {
+    $('.advertisement-link').click(function() {
+        Qiita.Mixpanel.advertisementClick({
+            place: 'right bottom',
+            adId: 'AD0054'
+        });
+    });
+});
+</script>
+
+      </div>
+    </div>
+  </div>
+  <section class="container" id="article-footer">
+    <div class="row">
+      <section class="span9">
+        <div id="action-content-box">
+  <div id="comments">
+  </div>
+    <div class="login-to-comment">
+  <p>新規登録/ログインして、会話に参加しましょう。</p>
+  <div>
+    <a class="btn btn-github" href="/auth/github"><i class="icon-github"></i>&nbsp;GitHubで新規登録/ログイン</a>
+    <a class="btn btn-twitter" href="/auth/twitter"><i class="icon-twitter"></i>&nbsp;Twitterで新規登録/ログイン</a>
+  </div>
+</div>
+
+</div>
+
+<script type="application/json" id="js-mention">
+    [{&quot;id&quot;:7956,&quot;url_name&quot;:&quot;t32k&quot;,&quot;profile_image_url&quot;:&quot;https://secure.gravatar.com/avatar/4cf842e43a782a585d8707f2ba7f9a5c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png&quot;}]
+</script>
+
+      </section>
+      <section class="span3">
+        <div id="other-titles-box">
+  <h5>新着投稿</h5>
+  <ul class="title-item-box unstyled">
+      <li>
+        <div class="user">
+          <a alt="hereticreader" href="/hereticreader"><img alt="Assets.github.com%2fimages%2fgravatars%2fgravatar user 420" class="user-icon" src="https://secure.gravatar.com/avatar/e4c44968a421699e59acdef421fbdceb?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" /></a>
+        </div>
+        <div class="content">
+          <a class="title" href="/hereticreader/items/031e83732ebd0f0407a9">Hive の ARRAY 型を Ruby の Custom MapReduce で扱う方法</a>
+          <ul class="unstyled tags">
+              <li><a class="tag" href="/tags/hive">hive</a></li>
+              <li><a class="tag" href="/tags/hadoop">hadoop</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="user">
+          <a alt="tys" href="/tys"><img alt="Ca008ed5c4b4ad1188596efeb99fd7b1?d=https%3a%2f%2fidenticons.github.com%2f8e7387acf626a04d39ef43dcb1faaeff" class="user-icon" src="https://1.gravatar.com/avatar/ca008ed5c4b4ad1188596efeb99fd7b1?d=https%3A%2F%2Fidenticons.github.com%2F8e7387acf626a04d39ef43dcb1faaeff.png" /></a>
+        </div>
+        <div class="content">
+          <a class="title" href="/tys/items/f2109d586da77d265138">ほげほげ</a>
+          <ul class="unstyled tags">
+              <li><a class="tag" href="/tags/%E3%81%BB%E3%81%92%E3%81%BB%E3%81%92">ほげほげ</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="user">
+          <a alt="yuku_t" href="/yuku_t"><img alt="Assets.github.com%2fimages%2fgravatars%2fgravatar user 420" class="user-icon" src="https://secure.gravatar.com/avatar/819238a23c270f774fa7d54c9d9aa244?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" /></a>
+        </div>
+        <div class="content">
+          <a class="title" href="/yuku_t/items/48caeb6d06bd6b4ac552">jQuery.fn.cssはChromeとFirefoxで微妙に挙動が異なる</a>
+          <ul class="unstyled tags">
+              <li><a class="tag" href="/tags/jQuery">jQuery</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="user">
+          <a alt="yuku_t" href="/yuku_t"><img alt="Assets.github.com%2fimages%2fgravatars%2fgravatar user 420" class="user-icon" src="https://secure.gravatar.com/avatar/819238a23c270f774fa7d54c9d9aa244?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" /></a>
+        </div>
+        <div class="content">
+          <a class="title" href="/yuku_t/items/5aa7d91bc27096748f74">jQuery.fn.cssで複数のプロパティに取得する場合1.9からは配列指定した方がいい</a>
+          <ul class="unstyled tags">
+              <li><a class="tag" href="/tags/jQuery">jQuery</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="user">
+          <a alt="Nunocky" href="/Nunocky"><img alt="Face normal" class="user-icon" src="https://si0.twimg.com/profile_images/759905475/face_normal.jpg" /></a>
+        </div>
+        <div class="content">
+          <a class="title" href="/Nunocky/items/8f316c98fb69dce651b1">devise: テスト用のユーザーを追加</a>
+          <ul class="unstyled tags">
+              <li><a class="tag" href="/tags/Rails">Rails</a></li>
+              <li><a class="tag" href="/tags/devise">devise</a></li>
+          </ul>
+        </div>
+      </li>
+  </ul>
+</div>
+
+      </section>
+    </div>
+  </section>
+</article>
+
+<script id="js-item" type="application/json">
+  {&quot;id&quot;:27680,&quot;uuid&quot;:&quot;229745617da41f308f20&quot;,&quot;user&quot;:{&quot;id&quot;:7956,&quot;url_name&quot;:&quot;t32k&quot;,&quot;profile_image_url&quot;:&quot;https://secure.gravatar.com/avatar/4cf842e43a782a585d8707f2ba7f9a5c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png&quot;},&quot;title&quot;:&quot;sass-globbingでSassファイルをお手軽管理&quot;,&quot;created_at&quot;:&quot;2013-09-25 10:57:10 +0900&quot;,&quot;updated_at&quot;:&quot;2013-09-25 10:57:10 +0900&quot;,&quot;created_at_in_words&quot;:&quot;7日前&quot;,&quot;updated_at_in_words&quot;:&quot;7日前&quot;,&quot;tags&quot;:[{&quot;name&quot;:&quot;Sass&quot;,&quot;url_name&quot;:&quot;sass&quot;,&quot;icon_url&quot;:&quot;https://s3-ap-northeast-1.amazonaws.com/qiita-tag-image/203ad8b11c98a9ac458b4277f4ca13e0c891a2d2/medium.jpg?1364838969&quot;},{&quot;name&quot;:&quot;CSS&quot;,&quot;url_name&quot;:&quot;css&quot;,&quot;icon_url&quot;:&quot;https://s3-ap-northeast-1.amazonaws.com/qiita-tag-image/2beeedde2a1052e414a46283ddb8391f7ab4a329/medium.jpg?1364837864&quot;}],&quot;stock_count&quot;:16,&quot;stock_users&quot;:[&quot;purprin&quot;,&quot;sanata_o_o&quot;,&quot;fushimik&quot;,&quot;habu0104&quot;,&quot;mersy@github&quot;,&quot;hazy_moon&quot;,&quot;yshrsmz@github&quot;,&quot;kazu69&quot;,&quot;tanamako@github&quot;,&quot;roatnek&quot;,&quot;tomtoma1025&quot;,&quot;montdsichel&quot;,&quot;hiloki@github&quot;,&quot;YusukeHirao&quot;,&quot;Layzie&quot;,&quot;1000ch&quot;],&quot;comments&quot;:[],&quot;comment_count&quot;:0,&quot;lgtm_count&quot;:0,&quot;url&quot;:&quot;http://qiita.com/t32k/items/229745617da41f308f20&quot;,&quot;gist_url&quot;:null,&quot;tweet&quot;:false,&quot;private&quot;:false,&quot;created_at_as_seconds&quot;:1380074230}
+</script>
+
+<script class="js-user" type="application/json">
+  {&quot;id&quot;:7956,&quot;url_name&quot;:&quot;t32k&quot;,&quot;profile_image_url&quot;:&quot;https://secure.gravatar.com/avatar/4cf842e43a782a585d8707f2ba7f9a5c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png&quot;}
+</script>
+
+<script>
+  Qiita.Mixpanel.properties.pageAccess = {
+    adId: "AD0054",
+    uuid: "229745617da41f308f20",
+    calendarName: ""
+  }
+</script>
+</div>
+
+    <footer id="footer-content">
+  <section class="container">
+    <div class="row">
+      <div class="span8">
+        <section>
+          <ul class="inline">
+            <li><a href="https://qiita.com/about">Qiitaとは</a></li>
+            <li><a href="https://qiita.com/tags">タグ一覧</a></li>
+            <li><a href="https://qiita.com/advent-calendar">Advent Calendar一覧</a></li>
+            <li><a href="https://qiita.com/organizations">Organization一覧</a></li>
+            <li><a href="https://qiita.com/users">ユーザー一覧</a></li>
+            <li><a href="https://qiita.com/docs">Developer API</a></li>
+          </ul>
+          <ul class="inline">
+            <li><a href="http://blog.qiita.com" target="_blank">公式ブログ</a></li>
+            <li><a href="https://qiita.com/terms">利用規約</a></li>
+            <li><a href="https://qiita.com/privacy">プライバシーポリシー</a></li>
+            <li><a href="https://qiita.com/asct">特定商取引法に基づく表記</a></li>
+            <li><a href="http://support.qiita.com" target="_blank">サポート</a></li>
+            <li><a href="https://increments.zendesk.com/anonymous_requests/new" target="_blank">お問い合わせ</a></li>
+            <li><a href="http://increments.co.jp" target="_blank">運営会社</a></li>
+          </ul>
+        </section>
+        <section>
+        <p class="increments-service">Incrementsのサービス</p>
+          <ul class="unstyled">
+            <li>
+              <a href="http://kobito.qiita.com" target="_blank">Kobito - プログラミングのメモやスニペットの記録に最適なMacアプリケーション</a>
+            </li>
+            <li>
+              <a href="http://teams.qiita.com" target="_blank">Qiita:Team - シンプル、スマートかつクローズドな情報共有サービス</a>
+            </li>
+            <li>
+              <a href="https://career.qiita.com" target="_blank">Qiita:Career - プログラマのためのキャリア構築支援サービス</a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <p>Copyright ©2013 Increments Inc.</p>
+        </section>
+        <aside class="visible-desktop">
+          <a href="https://mixpanel.com/f/partner" target="_blank">
+            <img src="https://mixpanel.com/site_media/images/partner/badge_light.png"
+                 alt="Real Time Web Analytics" />
+          </a>
+        </aside>
+      </div>
+      <section class="span4 feedback-form">
+  <div class="text-center">Qiitaについてご意見をお聞かせください</div>
+  <form accept-charset="UTF-8" action="/feedbacks" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="LX1KutXmK1Wzxj1vErj1yRv85AbPLbRD3TdzWfyxB/w=" /></div>
+    <textarea class="span4" id="feedback_message" name="feedback[message]" rows="5">
+</textarea>
+    <div style="position:fixed;top:-9999px;">
+      <input type="text" name="feedback[name]"/><!-- Honey Pot -->
+    </div>
+    <input class="btn btn-block" name="commit" type="submit" value="送信" />
+</form></section>
+
+    </div>
+  </section>
+</footer>
+
+  <script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","beacon-1.newrelic.com","32f5cacaf0","2630449","ewpXQ0JfCltQSk1bEV0IShhDWAlA",0,1849,new Date().getTime(),"","","","",""]);</script></body>
+</html>
+

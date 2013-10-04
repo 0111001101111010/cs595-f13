@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>       <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>          <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>          <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js"> <!--<![endif]-->
+<head>
+  <script type="text/javascript">
+    (function() {
+      var config = {
+        kitId: 'ijy4jab',
+        scriptTimeout: 3000
+      };
+      var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+    })();
+  </script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Postgres_ext continues to improve Rails&#039; PostgreSQL ActiveRecord Adapter - The Changelog</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
+  <meta name="copyright" content="RIZN Media, LLC" />
+  <link rel="stylesheet" href="http://thechangelog.com/wp-content/themes/tcl-theme/assets/css/styles.css" type="text/css" media="all" />
+  <link rel="pingback" href="http://thechangelog.com/xmlrpc.php" />
+  
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.15 - http://yoast.com/wordpress/seo/ -->
+<link rel="canonical" href="http://thechangelog.com/postgres_ext-continues-improve-rails-postgresql-activerecord-adapter/" />
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Postgres_ext continues to improve Rails&#039; PostgreSQL ActiveRecord Adapter - The Changelog"/>
+<meta property="og:description" content="Rails 4 brought with it many improvements to ActiveRecord&#8217;s PostgreSQL adapter. Many of these features &mdash; including support for powerful Postgres data types like arrays &mdash; first lived in the popular postgres_ext gem before getting merged in to Rails proper. Rails 4 is out and used en masse, but Dan McClain hasn&#8217;t rested on his [...]"/>
+<meta property="og:url" content="http://thechangelog.com/postgres_ext-continues-improve-rails-postgresql-activerecord-adapter/"/>
+<meta property="og:site_name" content="The Changelog"/>
+<meta property="article:publisher" content="https://www.facebook.com/thechangelog"/>
+<meta property="og:image" content="http://thechangelog.com/og-image.jpg"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@thechangelog"/>
+<meta name="twitter:domain" content="The Changelog"/>
+<meta name="twitter:creator" content="@jerodsanto"/>
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="The Changelog &raquo; Feed" href="http://thechangelog.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="The Changelog &raquo; Comments Feed" href="http://thechangelog.com/comments/feed/" />
+
+            <script type="text/javascript">//<![CDATA[
+            // Google Analytics for WordPress by Yoast v4.3.3 | http://yoast.com/wordpress/google-analytics/
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-4556641-20']);
+				            _gaq.push(['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script>
+			<link rel="alternate" type="application/rss+xml" title="The Changelog &raquo; Postgres_ext continues to improve Rails&#8217; PostgreSQL ActiveRecord Adapter Comments Feed" href="http://thechangelog.com/postgres_ext-continues-improve-rails-postgresql-activerecord-adapter/feed/" />
+<script type='text/javascript' src='http://thechangelog.com/wp-includes/js/jquery/jquery.js?ver=1.8.3'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://thechangelog.com/xmlrpc.php?rsd" />
+<link rel='shortlink' href='http://thechangelog.com/?p=6548' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+
+  <body class="single single-post postid-6548 single-format-link">
+
+  <nav class="popular-tags">
+  <ul class='wp-tag-cloud'>
+	<li><a href='http://thechangelog.com/tagged/ruby/' class='tag-link-9' title='264 topics' style='font-size: 13px;'>Ruby</a></li>
+	<li><a href='http://thechangelog.com/tagged/javascript/' class='tag-link-15' title='252 topics' style='font-size: 13px;'>JavaScript</a></li>
+	<li><a href='http://thechangelog.com/tagged/nodejs/' class='tag-link-81' title='106 topics' style='font-size: 13px;'>node.js</a></li>
+	<li><a href='http://thechangelog.com/tagged/python/' class='tag-link-92' title='67 topics' style='font-size: 13px;'>Python</a></li>
+	<li><a href='http://thechangelog.com/tagged/rubyonrails/' class='tag-link-8' title='65 topics' style='font-size: 13px;'>Ruby on Rails</a></li>
+	<li><a href='http://thechangelog.com/tagged/css/' class='tag-link-30' title='51 topics' style='font-size: 13px;'>CSS</a></li>
+	<li><a href='http://thechangelog.com/tagged/ios/' class='tag-link-13' title='47 topics' style='font-size: 13px;'>iOS</a></li>
+	<li><a href='http://thechangelog.com/tagged/api/' class='tag-link-25' title='45 topics' style='font-size: 13px;'>API</a></li>
+	<li><a href='http://thechangelog.com/tagged/html5/' class='tag-link-16' title='44 topics' style='font-size: 13px;'>HTML5</a></li>
+	<li><a href='http://thechangelog.com/tagged/jquery/' class='tag-link-72' title='44 topics' style='font-size: 13px;'>jQuery</a></li>
+	<li><a href='http://thechangelog.com/tagged/rubygems/' class='tag-link-67' title='40 topics' style='font-size: 13px;'>RubyGems</a></li>
+	<li><a href='http://thechangelog.com/tagged/sass/' class='tag-link-120' title='37 topics' style='font-size: 13px;'>Sass</a></li>
+	<li><a href='http://thechangelog.com/tagged/git/' class='tag-link-50' title='37 topics' style='font-size: 13px;'>Git</a></li>
+	<li><a href='http://thechangelog.com/tagged/twitter/' class='tag-link-71' title='33 topics' style='font-size: 13px;'>Twitter</a></li>
+	<li><a href='http://thechangelog.com/tagged/osx/' class='tag-link-23' title='30 topics' style='font-size: 13px;'>OS X</a></li>
+	<li><a href='http://thechangelog.com/tagged/nosql/' class='tag-link-179' title='30 topics' style='font-size: 13px;'>NoSQL</a></li>
+	<li><a href='http://thechangelog.com/tagged/design/' class='tag-link-193' title='28 topics' style='font-size: 13px;'>Design</a></li>
+	<li><a href='http://thechangelog.com/tagged/testing/' class='tag-link-113' title='27 topics' style='font-size: 13px;'>Testing</a></li>
+	<li><a href='http://thechangelog.com/tagged/php/' class='tag-link-213' title='25 topics' style='font-size: 13px;'>PHP</a></li>
+	<li><a href='http://thechangelog.com/tagged/mongodb/' class='tag-link-234' title='24 topics' style='font-size: 13px;'>MongoDB</a></li>
+	<li><a href='http://thechangelog.com/tagged/cli/' class='tag-link-31' title='24 topics' style='font-size: 13px;'>CLI</a></li>
+	<li><a href='http://thechangelog.com/tagged/iphone/' class='tag-link-189' title='23 topics' style='font-size: 13px;'>iPhone</a></li>
+	<li><a href='http://thechangelog.com/tagged/tools/' class='tag-link-420' title='22 topics' style='font-size: 13px;'>tools</a></li>
+	<li><a href='http://thechangelog.com/tagged/sinatra/' class='tag-link-229' title='21 topics' style='font-size: 13px;'>Sinatra</a></li>
+	<li><a href='http://thechangelog.com/tagged/json/' class='tag-link-7' title='20 topics' style='font-size: 13px;'>JSON</a></li>
+	<li><a href='http://thechangelog.com/tagged/redis/' class='tag-link-90' title='20 topics' style='font-size: 13px;'>Redis</a></li>
+	<li><a href='http://thechangelog.com/tagged/ui/' class='tag-link-190' title='19 topics' style='font-size: 13px;'>UI</a></li>
+	<li><a href='http://thechangelog.com/tagged/coffeescript/' class='tag-link-159' title='18 topics' style='font-size: 13px;'>CoffeeScript</a></li>
+	<li><a href='http://thechangelog.com/tagged/css3/' class='tag-link-57' title='18 topics' style='font-size: 13px;'>CSS3</a></li>
+	<li><a href='http://thechangelog.com/tagged/rack/' class='tag-link-36' title='18 topics' style='font-size: 13px;'>Rack</a></li>
+</ul>
+</nav>  <!--
+  <div class="on-air">
+    <p><a href="http://thechangelog.com/live"><b>LIVE!</b> Click here to listen to the live show and hang with us in IRC</a></p>
+  </div>
+  -->
+
+  <!--[if lt IE 7]>
+  <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+  <![endif]-->
+
+  <header id="header" class="page-container">
+    <h2><a href="http://thechangelog.com">The Changelog</a></h2>
+    <a href="http://thechangelog.com"><img src="http://thechangelog.com/wp-content/themes/tcl-theme/assets/images/the-changelog.svg" /></a>
+    <p>Open Source moves fast. Keep up.</p>
+  </header>
+
+  <div class="page-wrapper">
+  <div class="page-container">
+
+<div id="content" class="blog">
+
+  <aside id="sidebar">
+
+  
+<nav id="navigation-main" class="menu-main-navigation-container"><ul id="menu-main-navigation" class="menu"><li id="menu-item-2319" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2319"><a href="/">Front page</a></li>
+<li id="menu-item-4866" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4866"><a href="http://5by5.tv/changelog" onclick="javascript:_gaq.push(['_trackEvent','outbound-menu','http://5by5.tv']);">Podcast</a></li>
+<li id="menu-item-5688" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5688"><a href="http://thechangelog.com/weekly/" >Weekly</a></li>
+<li id="menu-item-771" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-771"><a title="Subscribe to The Changelog" href="http://thechangelog.com/subscribe/" >Subscribe</a></li>
+</ul></nav>
+
+<nav id="navigation-secondary" class="menu-secondary-navigation-container"><ul id="menu-secondary-navigation" class="menu"><li id="menu-item-6256" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6256"><a href="http://thechangelog.com/membership/" >Membership</a></li>
+<li id="menu-item-6636" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6636"><a href="http://thechangelog.com/benefits/" >Benefits</a></li>
+<li id="menu-item-6257" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6257"><a href="http://thechangelog.com/sponsorship/" >Sponsorship</a></li>
+<li id="menu-item-6265" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6265"><a href="http://thechangelog.com/partnership/" >Partnership</a></li>
+<li id="menu-item-6259" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6259"><a href="https://thechangelog.com/store/" >Store</a></li>
+<li id="menu-item-6261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6261"><a href="http://thechangelog.com/about/" >About</a></li>
+<li id="menu-item-6258" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6258"><a href="http://thechangelog.com/changeloggers/" >Team</a></li>
+<li id="menu-item-6262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6262"><a href="http://thechangelog.com/contact/" >Contact</a></li>
+</ul></nav>
+  <nav id="navigation-admin">
+    <ul>
+                    <li><a href="http://thechangelog.com?memberful_endpoint=auth">Sign-in</a></li>
+          </ul>
+  </nav>
+
+</aside>
+  <article id="post-6548" class="post-6548 post type-post status-publish format-link hentry category-links tag-activerecord tag-postgresql tag-rubyonrails text">
+
+  
+    
+<h1 class="post-title">
+  <a href="http://thechangelog.com/postgres_ext-continues-improve-rails-postgresql-activerecord-adapter/" rel="bookmark">Postgres_ext continues to improve Rails&#8217; PostgreSQL ActiveRecord Adapter</a>
+  <a href="https://github.com/dockyard/postgres_ext" class="post-title-icon ss-icon" rel="bookmark" title="Postgres_ext continues to improve Rails&#8217; PostgreSQL ActiveRecord Adapter">right</a>
+</h1>
+
+  <div class="post-content">
+    <p>Rails 4 brought with it many improvements to ActiveRecord&#8217;s PostgreSQL adapter. Many of these features &mdash; including support for powerful Postgres data types like arrays &mdash; first lived in the popular <a href="https://github.com/dockyard/postgres_ext" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">postgres_ext</a> gem before getting merged in to Rails proper.</p>
+
+<p>Rails 4 is out and used en masse, but <a href="http://danmcclain.net/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://danmcclain.net']);">Dan McClain</a> hasn&#8217;t rested on his laurels with adding Postgres-specific goodies to ActiveRecord.</p>
+
+<p>Posgtres_ext 2.1.0 adds support for <a href="http://www.postgresql.org/docs/current/static/queries-with.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.postgresql.org']);">Common Table Expressions</a> and the <a href="http://www.postgresql.org/docs/9.2/static/functions-window.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.postgresql.org']);">rank() windowing function</a>.</p>
+
+<p>Who knows, if these and other postgres_ext features gain enough steam, we may end up seeing them in Rails 4.1&#8230;</p>
+
+<p>You can read more about it on the <a href="http://reefpoints.dockyard.com/2013/09/06/postgres_ext-adds-rank-and-common-table-expressions.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://reefpoints.dockyard.com']);">DockYard blog</a> and don&#8217;t forget to contribute to the gem&#8217;s <a href="https://github.com/dockyard/postgres_ext" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">development on GitHub</a>!</p>
+  </div>
+
+<div class="post-info">
+  <p>Linked by <strong><a href="http://thechangelog.com/author/jerodsanto/" title="Posts by Jerod Santo" rel="author">Jerod Santo</a></strong> on Sep 23, 2013</p>
+  <p><span class="post-category"><a href="http://thechangelog.com/category/links/" title="View all posts in Links" rel="category tag">Links</a></span> <span class="post-tags"><a href="http://thechangelog.com/tagged/activerecord/" rel="tag">ActiveRecord</a>&nbsp;<a href="http://thechangelog.com/tagged/postgresql/" rel="tag">postgresql</a>&nbsp;<a href="http://thechangelog.com/tagged/rubyonrails/" rel="tag">Ruby on Rails</a></span></p>
+  </div>
+
+
+  
+</article>
+<div class="pagination">
+  <ul>
+    <li class="older"></li>
+    <li class="newer"></li>
+  </ul>
+</div>
+
+</div>
+
+    <div id="footer">
+      <p>&copy; 2009-2013 The Changelog</p>
+      <p>A <a href="http://riznmedia.com/">RIZN Media</a> Production <span class="hide-on-mobile">/</span> <a href="http://5by5.tv/founderstalk" class="hide-on-mobile">Founders Talk</a> <span class="hide-on-mobile">/</span> <a href="http://thesassway.com/" class="hide-on-mobile">The Sass Way</a></p>
+      <p>Hosted on <a href="http://thechangelog.com/r/mediatemple">(mt) Media Temple</a></p>
+    </div>
+
+    	<!--[if (gte IE 6)&(lte IE 8)]>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+	<![endif]-->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
+	<script src="http://thechangelog.com/wp-content/themes/tcl-theme/assets/javascripts/highlight.pack.js" type="text/javascript"></script>
+	<script src="http://thechangelog.com/wp-content/themes/tcl-theme/assets/javascripts/jquery.zoom-min.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js" type="text/javascript"></script>
+	<script src="http://thechangelog.com/wp-content/themes/tcl-theme/assets/javascripts/site.js" type="text/javascript"></script>
+	<script src="http://thechangelog.com/wp-content/themes/tcl-theme/assets/fonts/ss-social/ss-social.js" type="text/javascript"></script>
+	<script src="http://thechangelog.com/wp-content/themes/tcl-theme/assets/fonts/ss-standard/ss-standard.js" type="text/javascript"></script>
+
+    <!-- close .page-wrapper and .page-wrapper -->
+    </div>
+    </div>
+  </body>
+</html>

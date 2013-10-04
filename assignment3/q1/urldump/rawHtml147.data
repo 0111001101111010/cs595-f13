@@ -1,0 +1,629 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>  Stay Sharp: Monobrick for the EV3</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="description" content="If you’re a fan of C#, then you will love Monobrick, a communication library that works with the EV3.  It uses the EV3’s direct commands to remote control the brick.  It works with both the NXT and the EV3.  You can simply import the library into your project and start [&hellip;]" />
+<meta name="keywords" content="C#,EV3,Mindstorms,mindstorms ev3,NXT,programming," /><meta name="robots" content="index, follow" />
+
+<link rel="stylesheet" type="text/css" href="http://botbench.com/blog/wp-content/themes/sportpress/style.css" media="screen" />
+<link rel="stylesheet" href="http://botbench.com/blog/wp-content/themes/sportpress/css/dropdown.css" type="text/css" media="screen" />
+<!--[if IE 7 ]><link rel="stylesheet" type="text/css" href="http://botbench.com/blog/wp-content/themes/sportpress/css/ie7.css" /><![endif]-->
+<link rel="shortcut icon" href="http://botbench.com/blog/wp-content/uploads/2011/08/botbenchfavicon2.ico" type="image/x-icon" /> 
+<link rel="alternate" type="application/rss+xml" title="Bot Bench RSS Feed" href="http://botbench.com/blog/feed/" />
+<link rel="alternate" type="application/atom+xml" title="Bot Bench Atom Feed" href="http://botbench.com/blog/feed/atom/" />
+<link rel="pingback" href="http://botbench.com/blog/xmlrpc.php" />
+  
+<link rel="alternate" type="application/rss+xml" title="Bot Bench &raquo; Stay Sharp: Monobrick for the EV3 Comments Feed" href="http://botbench.com/blog/2013/09/26/stay-sharp-monobrick-for-the-ev3/feed/" />
+<link rel='stylesheet' id='wordpress-popular-posts-css'  href='http://botbench.com/blog/wp-content/plugins/wordpress-popular-posts/style/wpp.css?ver=2.3.7' type='text/css' media='all' />
+<link rel='stylesheet' id='social_comments-css'  href='http://botbench.com/blog/wp-content/plugins/social/assets/comments.css?ver=2.9.2' type='text/css' media='screen' />
+<link rel='stylesheet' id='jetpack-widgets-css'  href='http://botbench.com/blog/wp-content/plugins/jetpack/modules/widgets/widgets.css?ver=20121003' type='text/css' media='all' />
+<script type="text/javascript">/* <![CDATA[ */ var SHRSB_Globals = {"src":"http:\/\/botbench.com\/blog\/wp-content\/uploads\/shareaholic\/spritegen","perfoption":"1","twitter_template":"%24%7Btitle%7D+-+%24%7Bshort_link%7D+via+%40Shareaholic","locale":"0","shortener":"google","shortener_key":"","pubGaSocial":0,"pubGaKey":""}; /* ]]> */</script><script type='text/javascript' src='http://botbench.com/blog/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='http://botbench.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://botbench.com/blog/wp-includes/js/comment-reply.min.js?ver=3.6.1'></script>
+<script type='text/javascript' src='http://dtym7iokkjlif.cloudfront.net/media/js/jquery.shareaholic-publishers-sb.min.js?ver=6.1.5.1'></script>
+<script type='text/javascript' src='http://dtym7iokkjlif.cloudfront.net/media/js/jquery.shareaholic-publishers-rd.min.js?ver=6.1.5.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://botbench.com/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://botbench.com/blog/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6.1" />
+<link rel='canonical' href='http://botbench.com/blog/2013/09/26/stay-sharp-monobrick-for-the-ev3/' />
+<link rel='shortlink' href='http://wp.me/p1HOh6-1f0' />
+
+<!-- Shareaholic Content Tags -->
+
+<meta name='shareaholic:site_name' content='Bot Bench' />
+<meta name='shareaholic:image' content='http://botbench.com/blog/wp-content/uploads/2013/09/monobrick-small.png' />
+
+<!-- / Shareaholic Content Tags -->
+
+
+
+<!-- Shareaholic - Open Graph Tags -->
+
+<meta property='og:image' content='http://botbench.com/blog/wp-content/uploads/2013/09/monobrick-small.png' />
+
+<!-- / Shareaholic - Open Graph Tags -->
+
+	
+<!-- START: Syntax Highlighter ComPress -->
+<script type="text/javascript" src="http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shCore.js"></script>
+<script type="text/javascript" src="http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shAutoloader.js"></script>
+<link type="text/css" rel="stylesheet" href="http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/styles/shCoreDefault.css"/>
+<!-- END: Syntax Highlighter ComPress -->
+
+  
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Stay Sharp: Monobrick for the EV3" />
+<meta property="og:url" content="http://botbench.com/blog/2013/09/26/stay-sharp-monobrick-for-the-ev3/" />
+<meta property="og:description" content="If you’re a fan of C#, then you will love Monobrick, a communication library that works with the EV3.  It uses the EV3’s direct commands to remote control the brick.  It works with both the NXT and..." />
+<meta property="og:site_name" content="Bot Bench" />
+<meta property="og:image" content="http://botbench.com/blog/wp-content/uploads/2013/09/monobrick_thumb.png" />
+<meta name="twitter:site" content="@jetpack" />
+<meta name="twitter:image" content="http://botbench.com/blog/wp-content/uploads/2013/09/monobrick_thumb.png" />
+<meta name="twitter:card" content="photo" />
+<script type="text/javascript">document.write('<style type="text/css">.tabber{display:none;}</style>');</script> 
+</head>
+
+<body>
+
+<div id="container">
+
+  <div id="header">
+
+    <div class="wrapper">
+		<div id="logo">
+			<a href="http://botbench.com/blog"><img src="http://botbench.com/blog/wp-content/themes/sportpress/images/sportheadertest5b.png" alt="Bot Bench" /></a>
+		</div><!-- end #logo -->
+		
+		      
+					<div id="search_form">
+				<form method="get" id="searchform" action="http://botbench.com/blog/">
+	<fieldset>
+			<input type="text" onblur="if (this.value == '') {this.value = 'Search';}" onfocus="if (this.value == 'Search') {this.value = '';}" value="Search" name="s" id="s" />
+			<input type="submit" id="searchsubmit" value="Search" />
+	</fieldset>
+</form>
+ 			</div>
+					
+			
+      <div class="cleaner">&nbsp;</div>
+    </div><!-- end .wrapper -->
+
+  </div><!-- end #header -->
+  
+  <div id="navigation">
+
+    <div class="wrapper">
+      
+          <div id="nav" class="dropdown">
+            <ul id="menu-categories" class="mainmenu"><li id="menu-item-1202" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1202"><a href="http://botbench.com/blog/category/experiments/">Experiments</a></li>
+<li id="menu-item-1204" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-1204"><a href="http://botbench.com/blog/category/programming/">Programming</a>
+<ul class="sub-menu">
+	<li id="menu-item-1208" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1208"><a href="http://botbench.com/blog/category/programming/robotc-drivers/">ROBOTC Driver Suite</a></li>
+	<li id="menu-item-1207" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1207"><a href="http://botbench.com/blog/category/programming/robotc/">ROBOTC</a></li>
+	<li id="menu-item-1333" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-1333"><a href="http://botbench.com/blog/category/programming/c/">C#</a></li>
+	<li id="menu-item-1206" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1206"><a href="http://botbench.com/blog/category/programming/nxt-g/">NXT-G</a></li>
+	<li id="menu-item-1205" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1205"><a href="http://botbench.com/blog/category/programming/nxc/">NXC</a></li>
+</ul>
+</li>
+<li id="menu-item-1209" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1209"><a href="http://botbench.com/blog/category/ramblings/">Ramblings</a></li>
+<li id="menu-item-1211" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1211"><a href="http://botbench.com/blog/category/robots/">Robots</a>
+<ul class="sub-menu">
+	<li id="menu-item-4112" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4112"><a href="http://botbench.com/blog/category/robots/ev3/">EV3</a></li>
+	<li id="menu-item-1247" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1247"><a href="http://botbench.com/blog/category/robots/mindstorms-nxt/">NXT</a></li>
+	<li id="menu-item-1213" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1213"><a href="http://botbench.com/blog/category/robots/vex/">VEX</a></li>
+	<li id="menu-item-1212" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1212"><a href="http://botbench.com/blog/category/robots/arduino/">Arduino</a></li>
+	<li id="menu-item-1210" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1210"><a href="http://botbench.com/blog/category/robots/rcx/">RCX</a></li>
+</ul>
+</li>
+<li id="menu-item-1214" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1214"><a href="http://botbench.com/blog/category/sensors/">Sensors</a>
+<ul class="sub-menu">
+	<li id="menu-item-1203" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1203"><a href="http://botbench.com/blog/category/exposed/">Exposed</a></li>
+</ul>
+</li>
+<li id="menu-item-1215" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1215"><a href="http://botbench.com/blog/category/tutorials/">Tutorials</a></li>
+</ul>          </div>
+    
+      <div class="cleaner">&nbsp;</div>
+    </div><!-- end .wrapper -->
+
+  </div><!-- end #navigation -->
+<div id="frame">  
+
+<div id="layout">
+<div class="wrapper" id="wrapperMain">
+
+  <div id="content">
+
+	<div id="main">  
+
+		
+		<div class="metadata">
+			<div class="datetime"><span class="month">Sep</span><span class="date">26</span></div>			<div class="metainfo">
+			
+				<h1><a href="http://botbench.com/blog/2013/09/26/stay-sharp-monobrick-for-the-ev3/" rel="bookmark" title="Permanent Link to Stay Sharp: Monobrick for the EV3">Stay Sharp: Monobrick for the EV3</a></h1>
+				
+				<div class="meta">
+					<span class="cat_icon"><a href="http://botbench.com/blog/category/programming/c/" title="View all posts in C#" rel="category tag">C#</a></span>					
+					<span class="comm_icon"><a href="http://botbench.com/blog/2013/09/26/stay-sharp-monobrick-for-the-ev3/#commentspost" title="Jump to the comments">no comments</a></span>					
+					<span></span>
+				
+				</div>
+			</div>
+		</div><!-- end .metadata -->
+
+		<div class="entry">
+		
+					
+			<!-- Start Shareaholic LikeButtonSetTop Automatic --><!-- End Shareaholic LikeButtonSetTop Automatic --><p><a href="http://botbench.com/blog/wp-content/uploads/2013/09/monobrick.png"><img style="display: inline; border: 0px;" title="monobrick" alt="monobrick" src="http://botbench.com/blog/wp-content/uploads/2013/09/monobrick_thumb.png" width="590" height="108" border="0" /></a><br />
+If you’re a fan of C#, then you will love <a href="http://www.monobrick.dk/software/monobrick/" target="_blank">Monobrick</a>, a communication library that works with the EV3.  It uses the EV3’s direct commands to remote control the brick.  It works with both the NXT and the EV3.  You can simply import the library into your project and start hacking away.</p>
+<p>A simple example:</p>
+<pre class="brush:csharp">using System; 
+using MonoBrick.EV3;
+
+public static class Program{ 
+  static void Main(string[] args) 
+  { 
+    var ev3 = new Brick&lt;Sensor,Sensor,Sensor,Sensor&gt;("usb"); 
+    try{ 
+        ev3.Connection.Open(); 
+        ev3.MotorA.On(50); 
+        System.Threading.Thread.Sleep(3000); 
+        ev3.MotorA.Off(); 
+    } 
+    catch(Exception e){ 
+        Console.WriteLine(e.StackTrace); 
+        Console.WriteLine("Error: " + e.Message); 
+        Console.WriteLine("Press any key to end..."); 
+        Console.ReadKey();                
+    } 
+    finally{ 
+        ev3.Connection.Close(); 
+    } 
+  } 
+}</pre>
+<p>Monobrick sports the following features:</p>
+<ul>
+<li>Communicates with the brick using USB, Bluetooth, WiFi or a tunnel connection</li>
+<li>Works with Linux, Mac OS, Windows, Windows Phone and Android</li>
+<li>Support for all LEGO sensors that comes with the Retail and Educational sets</li>
+<li>Support for a wide range of Hitechnic sensors (not yet supported on the EV3)</li>
+<li>Control the motors individual or as a vehicle</li>
+<li>Use the mailbox system to send messages/data to the brick</li>
+<li>Play tones and sound files</li>
+<li>Use the file system to download and upload files</li>
+<li>Start and stop on-brick programs</li>
+<li>Use exceptions to catch sensor and communication errors</li>
+<li>Open and close connections with multiple bricks</li>
+<li>and more..</li>
+</ul>
+<p>You can use a variety of development environments to play with this.  My preference would go out to Visual Studio, but you can also use <a href="http://monodevelop.com/">MonoDevelop/Xamarin Studio</a>, if you’d like.  It works on Windows, Linux and OSX.</p>
+<p>Awesome work, Anders!  You can find the official page here: [<a href="http://www.monobrick.dk/software/monobrick/" target="_blank">LINK</a>], which also has links to documentation and more examples.</p>
+<div class="shr-publisher-4774"></div><!-- Start Shareaholic LikeButtonSetBottom Automatic --><div style="clear: both; min-height: 1px; height: 3px; width: 100%;"></div><div class='shareaholic-like-buttonset' style='float:none;height:30px;'><a class='shareaholic-fblike' data-shr_layout='standard' data-shr_showfaces='false' data-shr_href='http://botbench.com/blog/2013/09/26/stay-sharp-monobrick-for-the-ev3/' data-shr_title='Stay+Sharp%3A+Monobrick+for+the+EV3'></a><a class='shareaholic-fbsend' data-shr_href='http://botbench.com/blog/2013/09/26/stay-sharp-monobrick-for-the-ev3/'></a><a class='shareaholic-googleplusone' data-shr_size='standard' data-shr_count='true' data-shr_href='http://botbench.com/blog/2013/09/26/stay-sharp-monobrick-for-the-ev3/' data-shr_title='Stay+Sharp%3A+Monobrick+for+the+EV3'></a></div><div style="clear: both; min-height: 1px; height: 3px; width: 100%;"></div><!-- End Shareaholic LikeButtonSetBottom Automatic --><!-- Start Shareaholic Recommendations Automatic --><div class="shr_rd-4774"></div><!-- End Shareaholic Recommendations Automatic -->		
+						
+			<p class="tags">Tags <a href="http://botbench.com/blog/tag/c/" rel="tag">C#</a> <a href="http://botbench.com/blog/tag/ev3/" rel="tag">EV3</a> <a href="http://botbench.com/blog/tag/mindstorms/" rel="tag">Mindstorms</a> <a href="http://botbench.com/blog/tag/mindstorms-ev3/" rel="tag">mindstorms ev3</a> <a href="http://botbench.com/blog/tag/nxt/" rel="tag">NXT</a> <a href="http://botbench.com/blog/tag/programming-2/" rel="tag">programming</a></p>
+			<div class="cleaner">&nbsp;</div>
+			
+			
+		</div><!-- end .entry -->
+		
+		<div id="comments">
+			<div id="social">
+		<div class="social-post">
+		<div id="loading" style="display:none">
+			<input type="hidden" id="reload_url" value="http://botbench.com/blog/index.php?social_controller=auth&#038;social_action=reload_form&#038;redirect_to=http://botbench.com/blog/2013/09/26/stay-sharp-monobrick-for-the-ev3/&#038;post_id=4774" />
+			Logging In...		</div>
+										<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Profile <small><a rel="nofollow" id="cancel-comment-reply-link" href="/blog/2013/09/26/stay-sharp-monobrick-for-the-ev3/#respond" style="display:none;">cancel</a></small></h3>
+									<form action="http://botbench.com/blog/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+						<div class="social-sign-in-links social-clearfix">
+		<a class="social-twitter social-imr social-login comments" href="http://botbench.com/blog/index.php?social_controller=auth&#038;social_action=authorize&#038;key=twitter&#038;post_id=4774" id="twitter_signin" target="_blank">Sign in with Twitter</a>
+		<a class="social-facebook social-imr social-login comments" href="http://botbench.com/blog/index.php?social_controller=auth&#038;social_action=authorize&#038;key=facebook&#038;post_id=4774" id="facebook_signin" target="_blank">Sign in with Facebook</a>
+	</div>
+<div class="social-divider">
+	<span>or</span>
+</div>
+																				<p class="social-input-row social-input-row-author"><label for="author" class="social-label">Name</label><input id="author" name="author" class="social-input" required="required" type="text" value="" /></p>
+<p class="social-input-row social-input-row-email"><label for="email" class="social-label">Email</label><input id="email" name="email" class="social-input" required="required" type="text" value="" /><small class="social-help">Not published</small></p>
+<p class="social-input-row social-input-row-url"><label for="url" class="social-label">Website</label><input id="url" name="url" class="social-input" type="text" value="" /></p>
+
+<div class="captchaSizeDivSmall"><img id="si_image_com" class="si-captcha" src="http://botbench.com/blog/wp-content/plugins/si-captcha-for-wordpress/captcha/securimage_show.php?si_sm_captcha=1&amp;si_form_id=com&amp;prefix=dfdo3hHcGxVFOHcH" width="132" height="45" alt="CAPTCHA Image" title="CAPTCHA Image" />
+    <input id="si_code_com" name="si_code_com" type="hidden"  value="dfdo3hHcGxVFOHcH" />
+    <div id="si_refresh_com">
+<a href="#" rel="nofollow" title="Refresh Image" onclick="si_captcha_refresh('si_image_com','com','/blog/wp-content/plugins/si-captcha-for-wordpress/captcha','http://botbench.com/blog/wp-content/plugins/si-captcha-for-wordpress/captcha/securimage_show.php?si_sm_captcha=1&amp;si_form_id=com&amp;prefix='); return false;">
+      <img class="captchaImgRefresh" src="http://botbench.com/blog/wp-content/plugins/si-captcha-for-wordpress/captcha/images/refresh.png" width="22" height="20" alt="Refresh Image" onclick="this.blur();" /></a>
+  </div>
+  </div>
+<br />
+<p><input id="captcha_code" name="captcha_code" type="text" size="6"  />
+<label id="captcha_code_label" for="captcha_code" >CAPTCHA Code</label><span class="required">*</span>
+</p>												<p class="social-input-row social-input-row-comment"><label for="comment" class="social-label">Comment</label><textarea id="comment" name="comment" class="social-input" required="required"></textarea></p>												<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post It" />
+							<input type='hidden' name='comment_post_ID' value='4774' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+<input type="hidden" id="use_twitter_reply" name="use_twitter_reply" value="0" /><input type="hidden" id="in_reply_to_status_id" name="in_reply_to_status_id" value="" />						</p>
+						<div id="commentform-extras"><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="232abd28a0" /></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments" style="display: inline;">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog" style="display: inline;">Notify me of new posts by email.</label></p></div>					</form>
+							</div><!-- #respond -->
+							</div>
+	<div id="social-tabs-comments">
+			</div>
+	<!-- #Comments Tabs -->
+	</div>
+  
+		</div>
+		
+		
+		<div class="cleaner">&nbsp;</div>          
+          
+	</div><!-- end #main -->
+          
+	          
+		<div id="sidebar">
+			
+	<div class="author widget">
+		<h3 class="title">Author</h3>
+		<div class="padder">
+			<img alt='' src='http://0.gravatar.com/avatar/a3114595e89094e76e43ffc615e7655f?s=70&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D70&amp;r=G' class='avatar avatar-70 photo' height='70' width='70' />			<a href="http://botbench.com/blog/author/xander/" title="Posts by Xander" rel="author">Xander</a>			<p>Infrastructure architect by day, and robotics enthusiast by night. Xander builds and programs robots and sensors. He is also one of the founders of the Mindboards forums. As a member of the LEGO MCP, he helps spread the word about the LEGO Mindstorms robotics platform.</p>
+			<div class="cleaner">&nbsp;</div>
+		</div>
+	</div> 
+            
+<div class="banner"><a href="http://secure.softwarekey.com/solo/products/info.asp?A=91555" target="blank"><img src="http://www.breigh.com/graphics/sidebar.png"></a></div>
+			<div class="widget tabbed-widget-3" id="tabbertabs"><div class="tabber"><div id="wpzoom-recent-news" class="tabbertab recent_news"><h2 class="widgettitle">Recent</h2>
+<ul>
+		<li>
+		<a href="http://botbench.com/blog/2013/09/26/stay-sharp-monobrick-for-the-ev3/" rel="bookmark" title="Stay Sharp: Monobrick for the EV3">
+					<img src="http://botbench.com/blog/wp-content/themes/sportpress/scripts/timthumb.php?src=http://botbench.com/blog/wp-content/uploads/2013/09/monobrick-small.png&amp;w=45&amp;h=45&amp;zc=1" alt="Stay Sharp: Monobrick for the EV3" /> 
+			 		</a>
+ 		<a href="http://botbench.com/blog/2013/09/26/stay-sharp-monobrick-for-the-ev3/" rel="bookmark" title="Permanent Link to Stay Sharp: Monobrick for the EV3">Stay Sharp: Monobrick for the EV3</a>  
+		<span class="meta">September 26, 2013 at 7:44</span> 
+
+	</li>
+	 
+		<li>
+		<a href="http://botbench.com/blog/2013/09/21/awesome-ev3-daisy-chain-cable/" rel="bookmark" title="Awesome EV3 Daisy Chain Cable">
+					<img src="http://botbench.com/blog/wp-content/themes/sportpress/scripts/timthumb.php?src=http://botbench.com/blog/wp-content/uploads/2013/09/CIMG3253.jpg&amp;w=45&amp;h=45&amp;zc=1" alt="Awesome EV3 Daisy Chain Cable" /> 
+			 		</a>
+ 		<a href="http://botbench.com/blog/2013/09/21/awesome-ev3-daisy-chain-cable/" rel="bookmark" title="Permanent Link to Awesome EV3 Daisy Chain Cable">Awesome EV3 Daisy Chain Cable</a>  
+		<span class="meta">September 21, 2013 at 16:33</span> 
+
+	</li>
+	 
+		<li>
+		<a href="http://botbench.com/blog/2013/09/15/review-the-lego-build-it-book-volume-1/" rel="bookmark" title="Review: The LEGO Build-it Book &ndash; Volume 1">
+					<img src="http://botbench.com/blog/wp-content/themes/sportpress/scripts/timthumb.php?src=http://botbench.com/blog/wp-content/uploads/2013/09/Buildit1_cover_web.jpg&amp;w=45&amp;h=45&amp;zc=1" alt="Review: The LEGO Build-it Book &ndash; Volume 1" /> 
+			 		</a>
+ 		<a href="http://botbench.com/blog/2013/09/15/review-the-lego-build-it-book-volume-1/" rel="bookmark" title="Permanent Link to Review: The LEGO Build-it Book &ndash; Volume 1">Review: The LEGO Build-it Book &ndash; Volume 1</a>  
+		<span class="meta">September 15, 2013 at 12:41</span> 
+
+	</li>
+	 
+		<li>
+		<a href="http://botbench.com/blog/2013/09/08/new-release-robotc-3-62/" rel="bookmark" title="New Release: ROBOTC 3.62">
+					<img src="http://botbench.com/blog/wp-content/themes/sportpress/scripts/timthumb.php?src=http://botbench.com/blog/wp-content/uploads/2013/09/ROBOTC363.png&amp;w=45&amp;h=45&amp;zc=1" alt="New Release: ROBOTC 3.62" /> 
+			 		</a>
+ 		<a href="http://botbench.com/blog/2013/09/08/new-release-robotc-3-62/" rel="bookmark" title="Permanent Link to New Release: ROBOTC 3.62">New Release: ROBOTC 3.62</a>  
+		<span class="meta">September 8, 2013 at 10:42</span> 
+
+	</li>
+	 
+		<li>
+		<a href="http://botbench.com/blog/2013/09/04/hitechnic-sensor-ev3-blocks/" rel="bookmark" title="HiTechnic Sensor EV3 Blocks">
+					<img src="http://botbench.com/blog/wp-content/themes/sportpress/scripts/timthumb.php?src=http://botbench.com/blog/wp-content/uploads/2013/09/39948_422778357499_7006532_n.jpg&amp;w=45&amp;h=45&amp;zc=1" alt="HiTechnic Sensor EV3 Blocks" /> 
+			 		</a>
+ 		<a href="http://botbench.com/blog/2013/09/04/hitechnic-sensor-ev3-blocks/" rel="bookmark" title="Permanent Link to HiTechnic Sensor EV3 Blocks">HiTechnic Sensor EV3 Blocks</a>  
+		<span class="meta">September 4, 2013 at 10:45</span> 
+
+	</li>
+	 
+	</ul>
+  
+</div><div id="wpzoom-recent-comments" class="tabbertab recent_comments"><h2 class="widgettitle">Comments</h2>
+	<ul>
+					<li>
+					 <img alt='' src='http://0.gravatar.com/avatar/a3114595e89094e76e43ffc615e7655f?s=40&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /> 
+					<a href="http://botbench.com/blog/2013/06/03/botbench-on-github/#comment-3320">Xander:</a>
+					Done, you can find them here: https://github.com/botbench/robotcdriversuite 				</li>
+							<li>
+					 <img alt='' src='http://1.gravatar.com/avatar/18122d6bdd1d69739186690c401f9d66?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /> 
+					<a href="http://botbench.com/blog/2013/08/23/psa-issues-with-some-ev3-battery-packs/#comment-3319">suzanne lecompte:</a>
+					FYI, I have had a problem with totally 3 new battery pack on my new set of  				</li>
+							<li>
+					 <img alt='' src='http://1.gravatar.com/avatar/76dea4079f6543105cf4c1ae136b7125?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /> 
+					<a href="http://botbench.com/blog/2013/09/04/hitechnic-sensor-ev3-blocks/#comment-3318">Tim:</a>
+					Do you plan on doing any exposed articles on the new EV3 hardware? I would  				</li>
+							<li>
+					 <img alt='' src='http://0.gravatar.com/avatar/e6196818e4f099edae365ae5004fddfb?s=40&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /> 
+					<a href="http://botbench.com/blog/2013/06/03/botbench-on-github/#comment-3317">Jacob B:</a>
+					Can the driver suite (releases only even) be posted on github?  (then it ca 				</li>
+							<li>
+					 <img alt="" src="https://graph.facebook.com/776237515/picture" class="avatar avatar-40 photo " height="40" width="40" /> 
+					<a href="http://botbench.com/blog/2013/09/21/awesome-ev3-daisy-chain-cable/#comment-3315">Marc-André Bazergui:</a>
+					I also like these 2 that work great 
+http://dx.com/p/usb-male-to-mini-usb- 				</li>
+				</ul>
+	
+ </div><div id="wpzoom-popular-posts" class="tabbertab wpzoom_popular_posts"><h2 class="widgettitle">Popular</h2>
+<ul>
+<li><a href='http://botbench.com/blog/2011/10/02/nxt-g-2-0-available-for-download-from-lego/' rel='bookmark'>NXT-G 2.0 available for download from LEGO</a> <br /><span class='comm_bubble'>56 comments</span></li>
+<li><a href='http://botbench.com/blog/2010/03/21/pan-and-tilt-rig-for-nxtcamv3-and-firmware-tests/' rel='bookmark'>Pan and Tilt Rig for NXTCamV3 and Firmware Tests</a> <br /><span class='comm_bubble'>45 comments</span></li>
+<li><a href='http://botbench.com/blog/2011/09/21/exposed-lego-ultrasonic-sensor/' rel='bookmark'>Exposed: LEGO Ultrasonic Sensor</a> <br /><span class='comm_bubble'>40 comments</span></li>
+<li><a href='http://botbench.com/blog/2013/01/08/comparing-the-nxt-and-ev3-bricks/' rel='bookmark'>Comparing the NXT and EV3 bricks</a> <br /><span class='comm_bubble'>36 comments</span></li>
+<li><a href='http://botbench.com/blog/2011/02/16/robotc-using-the-nxt-2-0-colour-sensor/' rel='bookmark'>ROBOTC: Using the NXT 2.0 Colour Sensor</a> <br /><span class='comm_bubble'>24 comments</span></li>
+</ul>
+</div><div id="tag_cloud-3" class="tabbertab widget_tag_cloud"><h2 class="widgettitle">Tags</h2>
+<div class="tagcloud"><a href='http://botbench.com/blog/tag/android/' class='tag-link-20' title='9 topics' style='font-size: 10.3692307692pt;'>Android</a>
+<a href='http://botbench.com/blog/tag/arduino/' class='tag-link-4' title='15 topics' style='font-size: 12.5230769231pt;'>Arduino</a>
+<a href='http://botbench.com/blog/tag/bug-fix/' class='tag-link-126' title='5 topics' style='font-size: 8pt;'>bug fix</a>
+<a href='http://botbench.com/blog/tag/c/' class='tag-link-23' title='6 topics' style='font-size: 8.75384615385pt;'>C#</a>
+<a href='http://botbench.com/blog/tag/changelog/' class='tag-link-127' title='5 topics' style='font-size: 8pt;'>changelog</a>
+<a href='http://botbench.com/blog/tag/competition/' class='tag-link-27' title='5 topics' style='font-size: 8pt;'>competition</a>
+<a href='http://botbench.com/blog/tag/cortex/' class='tag-link-28' title='13 topics' style='font-size: 11.9846153846pt;'>Cortex</a>
+<a href='http://botbench.com/blog/tag/dexter-industries/' class='tag-link-31' title='34 topics' style='font-size: 16.1846153846pt;'>Dexter Industries</a>
+<a href='http://botbench.com/blog/tag/drivers/' class='tag-link-33' title='23 topics' style='font-size: 14.4615384615pt;'>Drivers</a>
+<a href='http://botbench.com/blog/tag/driver-suite/' class='tag-link-245' title='9 topics' style='font-size: 10.3692307692pt;'>driver suite</a>
+<a href='http://botbench.com/blog/tag/ev3/' class='tag-link-313' title='23 topics' style='font-size: 14.4615384615pt;'>EV3</a>
+<a href='http://botbench.com/blog/tag/exposed/' class='tag-link-7' title='7 topics' style='font-size: 9.29230769231pt;'>Exposed</a>
+<a href='http://botbench.com/blog/tag/featured/' class='tag-link-100' title='32 topics' style='font-size: 15.9692307692pt;'>Featured</a>
+<a href='http://botbench.com/blog/tag/give-away/' class='tag-link-116' title='9 topics' style='font-size: 10.3692307692pt;'>give-away</a>
+<a href='http://botbench.com/blog/tag/hitechnic/' class='tag-link-40' title='25 topics' style='font-size: 14.7846153846pt;'>HiTechnic</a>
+<a href='http://botbench.com/blog/tag/imu/' class='tag-link-41' title='8 topics' style='font-size: 9.83076923077pt;'>IMU</a>
+<a href='http://botbench.com/blog/tag/kinect/' class='tag-link-44' title='7 topics' style='font-size: 9.29230769231pt;'>Kinect</a>
+<a href='http://botbench.com/blog/tag/lego/' class='tag-link-45' title='43 topics' style='font-size: 17.2615384615pt;'>lego</a>
+<a href='http://botbench.com/blog/tag/lego-world/' class='tag-link-104' title='7 topics' style='font-size: 9.29230769231pt;'>LEGO World</a>
+<a href='http://botbench.com/blog/tag/linux/' class='tag-link-321' title='6 topics' style='font-size: 8.75384615385pt;'>LINUX</a>
+<a href='http://botbench.com/blog/tag/mindsensors/' class='tag-link-51' title='36 topics' style='font-size: 16.5076923077pt;'>Mindsensors</a>
+<a href='http://botbench.com/blog/tag/mindstorms/' class='tag-link-53' title='116 topics' style='font-size: 21.8923076923pt;'>Mindstorms</a>
+<a href='http://botbench.com/blog/tag/mindstorms-ev3/' class='tag-link-413' title='8 topics' style='font-size: 9.83076923077pt;'>mindstorms ev3</a>
+<a href='http://botbench.com/blog/tag/nxt/' class='tag-link-56' title='118 topics' style='font-size: 22pt;'>NXT</a>
+<a href='http://botbench.com/blog/tag/nxt-g/' class='tag-link-9' title='7 topics' style='font-size: 9.29230769231pt;'>NXT-G</a>
+<a href='http://botbench.com/blog/tag/omniwheel/' class='tag-link-144' title='5 topics' style='font-size: 8pt;'>omniwheel</a>
+<a href='http://botbench.com/blog/tag/programming-2/' class='tag-link-325' title='9 topics' style='font-size: 10.3692307692pt;'>programming</a>
+<a href='http://botbench.com/blog/tag/robot/' class='tag-link-184' title='6 topics' style='font-size: 8.75384615385pt;'>robot</a>
+<a href='http://botbench.com/blog/tag/robotc-2/' class='tag-link-67' title='81 topics' style='font-size: 20.1692307692pt;'>ROBOTC</a>
+<a href='http://botbench.com/blog/tag/robotc-3/' class='tag-link-109' title='11 topics' style='font-size: 11.2307692308pt;'>ROBOTC 3</a>
+<a href='http://botbench.com/blog/tag/robotc-3-5/' class='tag-link-257' title='6 topics' style='font-size: 8.75384615385pt;'>ROBOTC 3.5</a>
+<a href='http://botbench.com/blog/tag/robots/' class='tag-link-14' title='7 topics' style='font-size: 9.29230769231pt;'>Robots</a>
+<a href='http://botbench.com/blog/tag/robot-virtual-world/' class='tag-link-132' title='5 topics' style='font-size: 8pt;'>robot virtual world</a>
+<a href='http://botbench.com/blog/tag/rotacaster/' class='tag-link-69' title='19 topics' style='font-size: 13.6pt;'>Rotacaster</a>
+<a href='http://botbench.com/blog/tag/rs485/' class='tag-link-70' title='6 topics' style='font-size: 8.75384615385pt;'>RS485</a>
+<a href='http://botbench.com/blog/tag/sensor/' class='tag-link-71' title='47 topics' style='font-size: 17.6923076923pt;'>sensor</a>
+<a href='http://botbench.com/blog/tag/sensors/' class='tag-link-15' title='8 topics' style='font-size: 9.83076923077pt;'>Sensors</a>
+<a href='http://botbench.com/blog/tag/superpro-prototype-board/' class='tag-link-141' title='5 topics' style='font-size: 8pt;'>SuperPro Prototype Board</a>
+<a href='http://botbench.com/blog/tag/tetrix/' class='tag-link-98' title='7 topics' style='font-size: 9.29230769231pt;'>tetrix</a>
+<a href='http://botbench.com/blog/tag/tutorial/' class='tag-link-113' title='10 topics' style='font-size: 10.8pt;'>Tutorial</a>
+<a href='http://botbench.com/blog/tag/update/' class='tag-link-125' title='7 topics' style='font-size: 9.29230769231pt;'>update</a>
+<a href='http://botbench.com/blog/tag/vex/' class='tag-link-17' title='7 topics' style='font-size: 9.29230769231pt;'>VEX</a>
+<a href='http://botbench.com/blog/tag/video/' class='tag-link-96' title='13 topics' style='font-size: 11.9846153846pt;'>video</a>
+<a href='http://botbench.com/blog/tag/wifi/' class='tag-link-84' title='13 topics' style='font-size: 11.9846153846pt;'>WiFi</a>
+<a href='http://botbench.com/blog/tag/zwolle/' class='tag-link-105' title='8 topics' style='font-size: 9.83076923077pt;'>zwolle</a></div>
+</div>
+			<div class="cleaner">&nbsp;</div></div></div><div class="widget pages-3" id="widget_pages"><h3 class="title">Pages</h3><div class="padder">		<ul>
+			<li class="page_item page-item-26"><a href="http://botbench.com/blog/about/">About Xander</a></li>
+<li class="page_item page-item-4252"><a href="http://botbench.com/blog/botmag/">Botmag Article Companion Page</a></li>
+<li class="page_item page-item-1374"><a href="http://botbench.com/blog/robotc-driver-suite/">ROBOTC Driver Suite</a>
+<ul class='children'>
+	<li class="page_item page-item-4180"><a href="http://botbench.com/blog/robotc-driver-suite/setting-up-the-driver-suite/">Setting up the Driver Suite</a></li>
+</ul>
+</li>
+<li class="page_item page-item-1223"><a href="http://botbench.com/wiki" target="_blank">Sensor Compendium</a></li>
+<li class="page_item page-item-1801"><a href="http://botbench.com/blog/2012/10/04/want-to-support-this-site-2/">Support this Site</a></li>
+		</ul>
+		<div class="cleaner">&nbsp;</div></div></div><div class="widget wpzoom-social-widget" id="connectWithMe"><h3 class="title">Get Social</h3><div class="padder">		<ul class="social">
+				<li><a href="http://botbench.com/blog/feed/"><img src="http://botbench.com/blog/wp-content/themes/sportpress/images/icons/rss.png" alt="RSS Feed " />RSS Feed<span>Subscribe</span></a></li>				<li><a href="mailto:xander@botbench.com"><img src="http://botbench.com/blog/wp-content/themes/sportpress/images/icons/email.png" alt=" " />Contact<span>Email Me</span></a></li>				<li><a href="http://twitter.com/#!/xandersoldaat"><img src="http://botbench.com/blog/wp-content/themes/sportpress/images/icons/twitter.png" alt=" " />Twitter<span>Follow Me</span></a></li>												 								<li><a href="https://www.facebook.com/pages/Bot-Bench-Id-Rather-Be-Building-Robots/193855904008195"><img src="http://botbench.com/blog/wp-content/themes/sportpress/images/icons/facebook.png" alt=" " />Facebook<span>Be a Fan!</span></a></li>				<li><a href="http://www.linkedin.com/pub/xander-soldaat/5/213/4b5"><img src="http://botbench.com/blog/wp-content/themes/sportpress/images/icons/linkedin.png" alt=" " />Linkedin<span>Connect </span></a></li>  												<li><a href="http://www.youtube.com/xandersoldaat"><img src="http://botbench.com/blog/wp-content/themes/sportpress/images/icons/youtube.png" alt=" " />YouTube<span>My Channel</span></a></li>
+ 		</ul>
+		<div class="cleaner">&nbsp;</div>
+<div class="cleaner">&nbsp;</div></div></div><div class="widget archives-5" id="widget_archive"><h3 class="title">Archives</h3><div class="padder">		<select name="archive-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'> <option value="">Select Month</option> 	<option value='http://botbench.com/blog/2013/09/'> September 2013 &nbsp;(5)</option>
+	<option value='http://botbench.com/blog/2013/08/'> August 2013 &nbsp;(10)</option>
+	<option value='http://botbench.com/blog/2013/07/'> July 2013 &nbsp;(5)</option>
+	<option value='http://botbench.com/blog/2013/06/'> June 2013 &nbsp;(4)</option>
+	<option value='http://botbench.com/blog/2013/05/'> May 2013 &nbsp;(9)</option>
+	<option value='http://botbench.com/blog/2013/04/'> April 2013 &nbsp;(8)</option>
+	<option value='http://botbench.com/blog/2013/03/'> March 2013 &nbsp;(9)</option>
+	<option value='http://botbench.com/blog/2013/02/'> February 2013 &nbsp;(3)</option>
+	<option value='http://botbench.com/blog/2013/01/'> January 2013 &nbsp;(9)</option>
+	<option value='http://botbench.com/blog/2012/12/'> December 2012 &nbsp;(3)</option>
+	<option value='http://botbench.com/blog/2012/11/'> November 2012 &nbsp;(7)</option>
+	<option value='http://botbench.com/blog/2012/10/'> October 2012 &nbsp;(9)</option>
+	<option value='http://botbench.com/blog/2012/09/'> September 2012 &nbsp;(6)</option>
+	<option value='http://botbench.com/blog/2012/08/'> August 2012 &nbsp;(9)</option>
+	<option value='http://botbench.com/blog/2012/07/'> July 2012 &nbsp;(10)</option>
+	<option value='http://botbench.com/blog/2012/06/'> June 2012 &nbsp;(6)</option>
+	<option value='http://botbench.com/blog/2012/05/'> May 2012 &nbsp;(11)</option>
+	<option value='http://botbench.com/blog/2012/04/'> April 2012 &nbsp;(5)</option>
+	<option value='http://botbench.com/blog/2012/03/'> March 2012 &nbsp;(11)</option>
+	<option value='http://botbench.com/blog/2012/02/'> February 2012 &nbsp;(8)</option>
+	<option value='http://botbench.com/blog/2012/01/'> January 2012 &nbsp;(4)</option>
+	<option value='http://botbench.com/blog/2011/12/'> December 2011 &nbsp;(8)</option>
+	<option value='http://botbench.com/blog/2011/11/'> November 2011 &nbsp;(14)</option>
+	<option value='http://botbench.com/blog/2011/10/'> October 2011 &nbsp;(22)</option>
+	<option value='http://botbench.com/blog/2011/09/'> September 2011 &nbsp;(15)</option>
+	<option value='http://botbench.com/blog/2011/08/'> August 2011 &nbsp;(9)</option>
+	<option value='http://botbench.com/blog/2011/07/'> July 2011 &nbsp;(8)</option>
+	<option value='http://botbench.com/blog/2011/06/'> June 2011 &nbsp;(9)</option>
+	<option value='http://botbench.com/blog/2011/05/'> May 2011 &nbsp;(8)</option>
+	<option value='http://botbench.com/blog/2011/04/'> April 2011 &nbsp;(9)</option>
+	<option value='http://botbench.com/blog/2011/03/'> March 2011 &nbsp;(5)</option>
+	<option value='http://botbench.com/blog/2011/02/'> February 2011 &nbsp;(11)</option>
+	<option value='http://botbench.com/blog/2011/01/'> January 2011 &nbsp;(17)</option>
+	<option value='http://botbench.com/blog/2010/12/'> December 2010 &nbsp;(6)</option>
+	<option value='http://botbench.com/blog/2010/11/'> November 2010 &nbsp;(10)</option>
+	<option value='http://botbench.com/blog/2010/10/'> October 2010 &nbsp;(4)</option>
+	<option value='http://botbench.com/blog/2010/09/'> September 2010 &nbsp;(14)</option>
+	<option value='http://botbench.com/blog/2010/08/'> August 2010 &nbsp;(3)</option>
+	<option value='http://botbench.com/blog/2010/07/'> July 2010 &nbsp;(4)</option>
+	<option value='http://botbench.com/blog/2010/06/'> June 2010 &nbsp;(12)</option>
+	<option value='http://botbench.com/blog/2010/05/'> May 2010 &nbsp;(13)</option>
+	<option value='http://botbench.com/blog/2010/04/'> April 2010 &nbsp;(5)</option>
+	<option value='http://botbench.com/blog/2010/03/'> March 2010 &nbsp;(6)</option>
+	<option value='http://botbench.com/blog/2010/02/'> February 2010 &nbsp;(9)</option>
+	<option value='http://botbench.com/blog/2010/01/'> January 2010 &nbsp;(5)</option>
+	<option value='http://botbench.com/blog/2009/12/'> December 2009 &nbsp;(5)</option>
+	<option value='http://botbench.com/blog/2009/11/'> November 2009 &nbsp;(8)</option>
+	<option value='http://botbench.com/blog/2009/10/'> October 2009 &nbsp;(2)</option>
+	<option value='http://botbench.com/blog/2009/08/'> August 2009 &nbsp;(3)</option>
+	<option value='http://botbench.com/blog/2009/07/'> July 2009 &nbsp;(5)</option>
+	<option value='http://botbench.com/blog/2009/06/'> June 2009 &nbsp;(6)</option>
+	<option value='http://botbench.com/blog/2009/05/'> May 2009 &nbsp;(6)</option>
+	<option value='http://botbench.com/blog/2009/04/'> April 2009 &nbsp;(3)</option>
+	<option value='http://botbench.com/blog/2009/03/'> March 2009 &nbsp;(2)</option>
+	<option value='http://botbench.com/blog/2009/02/'> February 2009 &nbsp;(1)</option>
+	<option value='http://botbench.com/blog/2008/11/'> November 2008 &nbsp;(1)</option>
+	<option value='http://botbench.com/blog/2008/10/'> October 2008 &nbsp;(2)</option>
+	<option value='http://botbench.com/blog/2008/09/'> September 2008 &nbsp;(1)</option>
+	<option value='http://botbench.com/blog/2008/08/'> August 2008 &nbsp;(3)</option>
+	<option value='http://botbench.com/blog/2008/07/'> July 2008 &nbsp;(5)</option>
+	<option value='http://botbench.com/blog/2008/06/'> June 2008 &nbsp;(7)</option>
+ </select>
+<div class="cleaner">&nbsp;</div></div></div><div class="widget meta-4" id="widget_meta"><h3 class="title">Meta</h3><div class="padder">			<ul>
+						<li><a href="http://botbench.com/blog/wp-login.php" id="social_login">Log in</a></li>
+			<li><a href="http://botbench.com/blog/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://botbench.com/blog/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>						</ul>
+<div class="cleaner">&nbsp;</div></div></div><div class="cleaner">&nbsp;</div>		</div><!-- end #sidebar -->
+	
+	
+	<div class="cleaner">&nbsp;</div>
+</div><!-- end #content -->
+
+</div><!-- end .wrapper -->
+</div><!-- end #layout -->
+
+
+	<div class="wrapper">
+		<div id="footer">
+	  
+			<p class="wpzoom"><a href="http://www.wpzoom.com" target="_blank">Sport WordPress Theme</a> by <a href="http://www.wpzoom.com" target="_blank" title="Sport WordPress Themes"><img src="http://botbench.com/blog/wp-content/themes/sportpress/images/wpzoom.png" alt="WPZOOM" /></a></p>
+			<p class="copy">Copyright &copy; 2013 Bot Bench. All Rights Reserved.</p>
+	  
+		</div><!-- end #footer -->
+		
+		<div id="secondFooter">
+		
+			<div id="nav2">
+				<div class="menu"><ul><li class="page_item page-item-1223"><a href="http://botbench.com/wiki" target="_blank">Sensor Compendium</a></li><li class="page_item page-item-4252"><a href="http://botbench.com/blog/botmag/">Botmag Article Companion Page</a></li><li class="page_item page-item-1801"><a href="http://botbench.com/blog/2012/10/04/want-to-support-this-site-2/">Support this Site</a></li><li class="page_item page-item-1374"><a href="http://botbench.com/blog/robotc-driver-suite/">ROBOTC Driver Suite</a></li><li class="page_item page-item-26"><a href="http://botbench.com/blog/about/">About Xander</a></li></ul></div>
+			</div>
+			<div class="cleaner">&nbsp;</div>
+	  
+		</div><!-- end #2footer -->
+	</div>
+
+</div><!-- end #frame -->
+
+</div><!-- end #container -->
+
+ 
+
+<script type="text/javascript">var SHRSB_Settings = {"shr-publisher-4774":{"link":"http:\/\/botbench.com\/blog\/2013\/09\/26\/stay-sharp-monobrick-for-the-ev3\/","shortener":"google","title":"Stay Sharp: Monobrick for the EV3","notes":"%0D%0AIf%20you%E2%80%99re%20a%20fan%20of%20C%23%2C%20then%20you%20will%20love%20Monobrick%2C%20a%20communication%20library%20that%20works%20with%20the%20EV3.%C2%A0%20It%20uses%20the%20EV3%E2%80%99s%20direct%20commands%20to%20remote%20control%20the%20brick.%C2%A0%20It%20works%20with%20both%20the%20NXT%20and%20the%20EV3.%C2%A0%20You%20can%20simply%20import%20the%20library%20into%20your%20project%20and%20start%20hacking%20away.%0D%0A%0D%0AA%20si","service":"40,38,88,7,5,201,2,3","apikey":"8afa39428933be41f8afdb8ea21a495c","expand":"false","src":"http:\/\/botbench.com\/blog\/wp-content\/uploads\/shareaholic\/spritegen","localize":true,"share_src":"http:\/\/www.shareaholic.com","rel":"nofollow","target":"_blank","bgimg":"http:\/\/botbench.com\/blog\/wp-content\/plugins\/sexybookmarks\/images\/share-knowledge.png","bgimg_padding":"35px 0 0 10px","spaced":true,"twitter_template":"%24%7Btitle%7D+-+%24%7Bshort_link%7D+via+%40Shareaholic","mode":"inject","designer_toolTips":"1","tip_bg_color":"#000000","tip_text_color":"#ffffff","shrlink":"1"}};</script><script type="text/javascript">var SHRRD_Settings = {"shr_rd-4774":{"link":"http:\/\/botbench.com\/blog\/2013\/09\/26\/stay-sharp-monobrick-for-the-ev3\/","apikey":"8afa39428933be41f8afdb8ea21a495c","style":"image"}};</script><script type="text/javascript">/* <![CDATA[ */ var SHRSB_Globals = {"src":"http:\/\/botbench.com\/blog\/wp-content\/uploads\/shareaholic\/spritegen","perfoption":"1","twitter_template":"%24%7Btitle%7D+-+%24%7Bshort_link%7D+via+%40Shareaholic","locale":"0","shortener":"google","shortener_key":"","pubGaSocial":0,"pubGaKey":""}; /* ]]> */</script><script type='text/javascript' src='http://botbench.com/blog/wp-content/plugins/si-captcha-for-wordpress/captcha/si_captcha.js?ver=1.0'></script>
+<script type="text/javascript">
+//<![CDATA[
+var si_captcha_styles = "\
+<!-- begin SI CAPTCHA Anti-Spam - comment form style -->\
+<style type='text/css'>\
+div#captchaImgDiv { display:block; }\
+.captchaSizeDivSmall { width:175px; height:45px; padding-top:10px; }\
+.captchaSizeDivLarge { width:250px; height:60px; padding-top:10px; }\
+img#si_image_com,#si_image_reg,#si_image_log,#si_image_side_login { border-style:none; margin:0; padding-right:5px; float:left; }\
+.captchaImgRefresh { border-style:none; margin:0; vertical-align:bottom; }\
+div#captchaInputDiv { display:block; padding-top:15px; padding-bottom:5px; }\
+label#captcha_code_label { margin:0; }\
+input#captcha_code { width:65px; }\
+</style>\
+<!-- end SI CAPTCHA Anti-Spam - comment form style -->\
+";
+jQuery(document).ready(function($) {
+$('head').append(si_captcha_styles);
+});
+//]]>
+</script>
+	
+<!-- START: Syntax Highlighter ComPress -->
+<script type="text/javascript">
+    SyntaxHighlighter.autoloader(
+        'applescript			http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushAppleScript.js',
+        'actionscript3 as3		http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushAS3.js',
+        'bash shell				http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushBash.js',
+        'coldfusion cf			http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushColdFusion.js',
+        'cpp c					http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushCpp.js',
+        'c# c-sharp csharp		http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushCSharp.js',
+        'css					http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushCss.js',
+        'delphi pascal pas		http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushDelphi.js',
+        'diff patch			    http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushDiff.js',
+        'erl erlang				http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushErlang.js',
+        'groovy					http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushGroovy.js',
+        'java					http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushJava.js',
+        'jfx javafx				http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushJavaFX.js',
+        'js jscript javascript	http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushJScript.js',
+        'perl pl				http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushPerl.js',
+        'php					http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushPhp.js',
+        'text plain				http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushPlain.js',
+        'powershell ps          http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushPowerShell.js',
+        'py python				http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushPython.js',
+        'ruby rails ror rb		http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushRuby.js',
+        'sass scss              http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushSass.js',
+        'scala					http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushScala.js',
+        'sql					http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushSql.js',
+        'vb vbnet				http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushVb.js',
+        'xml xhtml xslt html	http://botbench.com/blog/wp-content/plugins/syntax-highlighter-compress/scripts/shBrushXml.js'
+    );
+                        SyntaxHighlighter.defaults['tab-size'] = 4;
+    SyntaxHighlighter.all();
+</script>
+<!-- END: Syntax Highlighter ComPress -->
+
+		<div style="display:none">
+	<div class="grofile-hash-map-a3114595e89094e76e43ffc615e7655f">
+	</div>
+	<div class="grofile-hash-map-18122d6bdd1d69739186690c401f9d66">
+	</div>
+	<div class="grofile-hash-map-76dea4079f6543105cf4c1ae136b7125">
+	</div>
+	<div class="grofile-hash-map-e6196818e4f099edae365ae5004fddfb">
+	</div>
+	<div class="grofile-hash-map-c76ec75f51c83fbbe88cfa5abf1d41df">
+	</div>
+	</div>
+<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201340'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var Sociali18n = {"commentReplyTitle":"Post a Reply"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://botbench.com/blog/wp-content/plugins/social/assets/social.js?ver=2.9.2'></script>
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2013Octaa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://botbench.com/blog/wp-content/plugins/jetpack/modules/wpgroho.js?ver=3.6.1'></script>
+
+	<script src="http://stats.wordpress.com/e-201340.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	st_go({v:'ext',j:'1:2.5',blog:'25217700',post:'4774',tz:'2'});
+	var load_cmc = function(){linktracker_init(25217700,4774,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script><script>var pltNewTabURLs = ["http:\/\/botbench.com\/wiki"];(function(){jQuery(function(e){return e("body").on("click","a",function(t){var n;n=e(this);if(e.inArray(n.attr("href"),pltNewTabURLs)>-1)return n.attr("target","_blank")})})}).call(this);</script>
+<script type="text/javascript" src="http://botbench.com/blog/wp-content/themes/sportpress/js/jtools.js"></script>
+<script type="text/javascript" src="http://botbench.com/blog/wp-content/themes/sportpress/js/jcarousel.js"></script>
+<script type="text/javascript" src="http://botbench.com/blog/wp-content/themes/sportpress/js/dropdown.js"></script>
+<script type="text/javascript" src="http://botbench.com/blog/wp-content/themes/sportpress/js/fancybox.js"></script>
+<script type="text/javascript" src="http://botbench.com/blog/wp-content/themes/sportpress/js/easing.js"></script>
+<script type="text/javascript" src="http://botbench.com/blog/wp-content/themes/sportpress/js/tabber-minimized.js"></script>
+<script type="text/javascript" src="http://botbench.com/blog/wp-content/themes/sportpress/js/wpzoom.js"></script>
+ 
+
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.917 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2013-10-02 04:07:30 -->
+
+<!-- Compression = gzip -->
+<!-- super cache -->

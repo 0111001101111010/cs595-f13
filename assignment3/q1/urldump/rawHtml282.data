@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="fr"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="fr"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="fr"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="fr" class="no-js">
+<!--<![endif]-->
+
+
+
+
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    
+      BlookUp, le livre de votre blog
+    
+  </title>
+
+  <meta name="description" content="
+    
+      Mon blog transformé en livre et e-book avec BlookUp. Wordpress, Tumblr, blogger, CanalBlog, BlogSpirit, Haut et Fort, Skyrock, imprimer mon blog pour en faire un livre souvenir.
+    
+    " />
+
+  <meta name="google-site-verification" content="zI-7_UED5jd9QYPLDqg2lpTfTWK32xTn9JSbgCRfK4A" />
+
+  <link rel="shortcut icon" type="image/ico" href="//blookup.com/static/images/blookup/favicon.ico" />
+  
+
+  <!--[if gte IE 7]><!-->
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="//blookup.com/static/stylesheets/screen_blookup.css" />
+  <!-- <![endif]-->
+
+  <!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
+  <![endif]-->
+
+  <!--[if lt IE 9]>
+    <script src="//blookup.com/static/js/html5shiv.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=News+Cycle" />
+  
+
+  <script type="text/javascript" src="//blookup.com/static/js/modernizr.min.js"></script>
+  <!--script type="text/javascript" src="//blookup.com/static/js/jquery-1.10.2.min.js"></script-->
+  <script type="text/javascript" src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="//blookup.com/static/js/jquery-ui-1.10.3.custom.min.js"></script>
+  <script type="text/javascript" src="//blookup.com/static/js/bootstrap-tooltip.js"></script>
+  <script type="text/javascript" src="//blookup.com/static/js/datepicker-patchfr.js"></script>
+  <script type="text/javascript" src="//blookup.com/static/js/jquery.equalizeHeight.js"></script>
+  <script type="text/javascript" src="//blookup.com/static/js/modal.js"></script>
+  <script type="text/javascript" src="//blookup.com/static/js/main.js"></script>
+  
+  
+  <script type="text/javascript">
+    var modal_shown;
+    var show_registration = function (evt) {
+        evt.preventDefault();
+        modal_shown = "registration";
+        $("#modal").one('show.bs.modal', function() {
+            $(window).trigger('registration-switch');
+        });
+
+        $('#modal').modal({
+          remote: "/myblookup/register/",
+        })
+    };
+    $(document).ready(function () {
+      $("#login-link").on('click', function(evt) {
+        evt.preventDefault();
+        modal_shown = "login";
+        $("#modal").one('shown.bs.modal', function(evt) {
+          $(window).trigger('login-switch');
+        });
+        $('#modal').modal({
+          remote: "/myblookup/register/",
+        })
+      })
+      $("#registration-link").on('click', show_registration);
+      
+        $("#create-blook-link").on('click', show_registration);
+      
+    });
+  </script>
+
+</head>
+<body  class="homepage">
+  <div id="wrapper">
+    <div class="gutter">
+
+      
+<header role="banner">
+  <div class="container">
+
+    
+<h1 class="header-logo">
+  BlookUp
+</h1>
+
+
+    <nav role="navigation">
+      <ul class="primary-nav">
+        <li><a href="/blookup/nos_produits" id="header-products-link">Nos produits</a></li>
+        <li><a href="/blookshop/" id="header-shop-link">Le Blookshop</a></li>
+        <li><a href="http://blookup.com/blog/" title="Le blog (nouvelle fenêtre)" target="_blank">News</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    
+      <ul class="log">
+        <li><a href="/myblookup/register/" id="registration-link">Inscription</a></li>
+        <li><a href="/myblookup/register/" id="login-link">Connexion</a></li>
+      </ul>
+    
+
+  </div>
+</header>
+
+
+      
+<script src="//blookup.com/static/js/jquery.slides.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $('#home-slider').slidesjs({
+      width: 1500,
+      height: 494,
+      navigation: false,
+      pagination: {
+        active: true
+      },
+      play: {
+        active: false,
+        auto: true,
+        interval: 4000,
+        swap: true
+      }
+    });
+  });
+</script>
+
+<div class="slider-container">
+  <div class="slider" id="home-slider">
+    <div style="background-image: url('//blookup.com/static/images/slider-hp/slider-1.jpg')">&nbsp;</div>
+    <div style="background-image: url('//blookup.com/static/images/slider-hp/slider-2.jpg')">&nbsp;</div>
+    <div style="background-image: url('//blookup.com/static/images/slider-hp/slider-3.jpg')">&nbsp;</div>
+  </div>
+</div>
+
+<div class="subheader">
+  <div class="container">
+    <img src="//blookup.com/static/images/blogging-platforms.png" alt="" />
+    <a class="btn btn-caps btn-arrow" id="create-blook-link"
+       href="/myblookup/blog/create/">
+      Créer le livre de mon blog</a>
+  </div>
+</div>
+
+
+      
+
+      
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div class="container static">
+  <div class="accroche" data-icon="4">
+    <h2>Créez le livre de votre Blog ...</h2>
+    <p>... en quelques minutes seulement, choisissez votre contenu, votre couverture personnalisée et imprimez votre blog. </p>
+  </div>
+  <div class="accroche" data-icon="1">
+    <h2>Achetez votre livre imprimé ...</h2>
+    <p>... et reliée dès 8€ les 24 pages.  </p>
+  </div>
+  <div class="accroche" data-icon="-">
+    <h2>Partagez votre livre ...</h2>
+    <p>... dans notre librairie, sur votre blog et sur les réseaux sociaux avec nos outils dédiés. Gagnez de l’argent sur chaque vente.</p>
+  </div>
+</div>
+
+<div class="container what static">
+  <main role="main">
+    <h2>Qu’est-ce que BlookUp ?</h2>
+    <p>
+      <strong>BlookUp, c’est la plateforme pour transformer votre blog en blook ! <br />
+      Blook = contraction de book (livre) et blog</strong>
+    </p>
+    <p>
+      Grâce à sa plateforme, BlookUp vous permet d’imprimer le livre de votre blog et de générer un e-book. Utilisable sur Wordpress, Tumblr, Blogger, Skyblog, CanalBlog, Haut et Fort, BlogSpirit et bientôt l’ensemble des hébergeurs de blogs, vous pourrez créer en quelques clics le livre de votre blog.<br />
+      <strong>A partir de 8 € pour 24 pages,</strong> le prix de votre blook dépendra de son nombre de pages.
+    </p>
+
+    <h2>Comment ça marche ?</h2>
+    <ul>
+      <li>Sélectionnez la plateforme de votre blog parmi nos partenaires</li>
+      <li>Choisissez les articles ou catégories d’articles que vous souhaitez imprimer</li>
+      <li>Mettez en page votre livre à l’aide de nos options</li>
+      <li>Créez la couverture de vos rêves en choisissant parmi nos modèles ou en l’important directement !</li>
+      <li>C’est prêt ! Achetez directement votre livre ou fixez un prix de vente pour le mettre en vente dans le blookshop !</li>
+    </ul>
+
+    <h2>Les usages :</h2>
+
+    <p><strong>Votre blog directement dans votre bibliothèque</strong><br>Dans un univers de plus en plus numérique combien d’heures passées sur son blog ? Et si tout disparaissait d’un coup ? Grâce à BlookUp, imprimez vos contenus numériques et gardez en une trace matérielle !</p>
+
+    <p><strong>Une conception du blog différente</strong><br>Revue, guide, romans, poésies, carnet de voyage, journal de bord, de campagne ou magazine d’entreprise : la publication de contenus en ligne a évolué. BlookUp vous permet de transposer ces spécificités directement au format papier !</p>
+
+    <p><strong>Une autre façon de partager avec vos lecteurs</strong><br>Grâce à sa possibilité d’imprimer le blog en livre, BlookUp offre à vos lecteurs la possibilité d’emmener partout avec eux vos écrits.</p>
+  </main>
+  <aside role="complementary">
+
+    <div class="fb-like-box" data-href="https://www.facebook.com/blookup" data-width="300" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
+
+    <div class="news-home">
+      <h2>News</h2>
+      <ul>
+        
+        <li>
+            <p class="date">30 septembre 2013</p>
+            <h3>Imprimer son blog WordPress avec BlookUp</h3>
+            <p>
+              WordPress est une plateforme de blog incontournable et très populaire. Evidemment, BlookUp prend en charge la création de livre de blog à partir d’un blog WordPress. C’est facile et simple. Quels sont les éléments que nous importons de votre blog WordPress ? BlookUP importera vos billets dans leur intégralité (titre, texte, photo, vidéo, liens,…) afin que [...]
+            </p>
+            <p class="more"><a href="http://blookup.com/blog/2013/09/imprimer-son-blog-wordpress-avec-blookup-2/">Lire la suite</a></p>
+
+        </li>
+        
+        <li>
+            <p class="date">20 septembre 2013</p>
+            <h3>Gérez le contenu de votre blook !</h3>
+            <p>
+              Modifier votre blook directement depuis l’interface du site, c’est enfin possible ! Chez BlookUp, nous avons tout mis en oeuvre dans le but de vous fournir les outils adéquates pour gérer vos blooks. Visualisez désormais le résultat final et faites les dernières modifications orthographiques ou de mise en page, avant d’effectuer votre commande. Nos améliorations [...]
+            </p>
+            <p class="more"><a href="http://blookup.com/blog/2013/09/gerez-le-contenu-de-votre-blook/">Lire la suite</a></p>
+
+        </li>
+        
+      </ul>
+    </div>
+
+  </aside>
+</div>
+
+
+      
+  
+<footer role="contentinfo">
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="powered">
+        <p>Fièrement propulsé</p>
+        <ul>
+          <li>
+            <a href="http://aquitaine.fr" target="_blank" title="Région Aquitaine (nouvelle fenêtre)">
+              <img src="//blookup.com/static/images/region-aquitaine.png" alt="Région Aquitaine" width="80%" />
+            </a>
+          </li>
+          <li>
+            <a href="http://wsb-agency.com" target="_blank" title="WSB agency (nouvelle fenêtre)">
+              <img src="//blookup.com/static/images/wsb-logo.png" alt="WSB agency" width="80%" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="news">
+        <p>L'actualité BlookUp</p>
+        <ul class="social-links">
+          <li>
+            <a href="http://www.facebook.com/blookup" target="_blank">
+              <i data-icon="3"></i> <span>Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/#!/Blook_up" target="_blank">
+              <i data-icon="2"></i> <span>Twitter</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://blookup.com/blog/" title="Le blog (nouvelle fenêtre)" target="_blank">
+              Le blog
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contact">
+        <p>Des questions ?</p>
+        <ul class="contact">
+          <li><a href="/contact">Contactez-nous</a></li>
+          <li class="divider">Ou</li>
+          <li class="tel">+33 (0)1 84 17 71 66</li>
+        </ul>
+      </div>
+      <div class="offre-editeur">
+        <p>BlookUp PRO</p>
+
+        <ul>
+          <li><a href="/compte/editeur">L'offre éditeur</a> de BlookUp pour les professionnels</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; 2013 - BlookUp</p>
+      <ul class="links">
+        <li><a href="/blookup/a_propos">À propos</a></li>
+        <li><a href="/blookup/blookshop_mentions">Confidentialité</a></li>
+        <li><a href="/blookup/blookshop_faq">FAQ</a></li>
+        <li><a href="/blookup/blookshop_cgu">CGU</a></li>
+        <li><a href="/contact">Contactez-nous</a></li>
+        <li><a href="/compte/editeur">L'offre Éditeur</a></li>
+      </ul>
+    </div>
+  </div>
+
+</footer>
+
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="main-modal" aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          
+        </div>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+       <script type="text/javascript">
+        $(function() {
+
+          $('.feedback').click(function(){
+            $('#modal-feedback').modal();
+          });
+
+          var form_selector = "#feedback_form form";
+
+          function on_form_submitted(evt) {
+            evt.preventDefault();
+
+            var $form = $(this);
+            $.post(
+              $form.attr("action"),
+              $form.serialize(),
+              function(response) {
+                var $newform = $("form", response);
+                var ok = $(".error, .error_log", $newform).length ? false : true;
+                if (ok) {
+                  $form.replaceWith($("<ul class='more-user-messages'><li class='success'>Votre message a été envoyé</li></ul>"));
+                }else {
+                  $form.replaceWith($newform);
+                  $(form_selector).submit(on_form_submitted);
+                }
+              }
+            );
+            return false;
+          };
+          $(form_selector).submit(on_form_submitted);
+        });
+      </script>
+
+
+      <div class="feedback">
+        <a href="#">Feedback</a>
+      </div>
+      <div class="modal fade" id="modal-feedback" tabindex="-2" role="dialog" aria-labelledby="feedback-modal" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <h1>Feedback</h1>
+              <form action="">
+  
+
+
+
+
+
+
+
+
+<div class="control-group">
+    <label for="id_email" class="control-label">Votre email&nbsp;:</label>
+    <div class="controls">
+      
+      <input type="email" name="email" required id="id_email">
+
+      
+
+
+      
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+<div class="control-group">
+    <label for="id_subject" class="control-label">Objet&nbsp;:</label>
+    <div class="controls">
+      
+      <input type="text" name="subject" required id="id_subject" maxlength="100">
+
+      
+
+
+      
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+<div class="control-group">
+    <label for="id_body" class="control-label">Votre message&nbsp;:</label>
+    <div class="controls">
+      
+      <textarea name="body" required rows="10" cols="40" id="id_body"></textarea>
+
+      
+
+
+      
+    </div>
+    <input type="hidden" name="sender" id="id_sender">
+
+</div>
+
+
+
+
+
+
+
+  <ul class="actions-btn">
+    <li><input class="btn btn-sub" type="submit" name="register-button" value="Envoyer"></li>
+  </ul>
+</form>
+            </div>
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- end .gutter -->
+  </div> <!-- end #wrapper -->
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-27265407-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+</body>
+</html>
+

@@ -1,0 +1,995 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es-ES">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+<title>Etiqueta meta HTML | Disco Duro de Roer</title>
+
+
+<!-- wp_header -->
+
+	<style type="text/css">
+		#fancybox-close{right:-15px;top:-15px}
+		div#fancybox-content{border-color:#FFFFFF}
+		div#fancybox-title{background-color:#FFFFFF}
+		div#fancybox-outer{background-color:#FFFFFF}
+		div#fancybox-title-inside{color:#333333}
+	</style>
+
+	<script type="text/javascript" src="http://yui.yahooapis.com/combo?2.7.0/build/yahoo-dom-event/yahoo-dom-event.js&2.7.0/build/animation/animation-min.js"></script><link rel="stylesheet" type="text/css" href="http://www.discoduroderoer.es/wp-content/plugins/wp-to-top/css/wp-to-top.css" /><!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="http://www.discoduroderoer.es/wp-content/plugins/wp-to-top/css/wp-to-topie6.css" /><![endif]--><link rel="alternate" type="application/rss+xml" title="Disco Duro de Roer &raquo; Feed" href="http://www.discoduroderoer.es/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Disco Duro de Roer &raquo; RSS de los comentarios" href="http://www.discoduroderoer.es/comments/feed/" />
+
+            <script type="text/javascript">//<![CDATA[
+            // Google Analytics for WordPress by Yoast v4.3.3 | http://yoast.com/wordpress/google-analytics/
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-34685567-1']);
+				            _gaq.push(['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script>
+			<link rel="alternate" type="application/rss+xml" title="Disco Duro de Roer &raquo; Etiqueta meta HTML RSS de los comentarios" href="http://www.discoduroderoer.es/etiqueta-meta-html/feed/" />
+<link rel='stylesheet' id='spu-css-css'  href='http://www.discoduroderoer.es/wp-content/plugins/social-popup/spu.css?ver=1.6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='thickbox-css'  href='http://www.discoduroderoer.es/wp-includes/js/thickbox/thickbox.css?ver=20121105' type='text/css' media='all' />
+<link rel='stylesheet' id='wpdm-front-css'  href='http://www.discoduroderoer.es/wp-content/plugins/download-manager/css/front.css?ver=3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.discoduroderoer.es/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='http://www.discoduroderoer.es/wp-content/plugins/fancybox-for-wordpress/fancybox/fancybox.css?ver=3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='social-widget-css'  href='http://www.discoduroderoer.es/wp-content/plugins/social-media-widget/social_widget.css?ver=3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-polls-css'  href='http://www.discoduroderoer.es/wp-content/plugins/wp-polls/polls-css.css?ver=2.63' type='text/css' media='all' />
+<link rel='stylesheet' id='themify-google-fonts-css'  href='http://fonts.googleapis.com/css?family=Ubuntu+Mono%3A400&#038;subset=latin&#038;ver=3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='themify-shortcodes-css'  href='http://www.discoduroderoer.es/wp-content/themes/itheme2/themify/css/shortcodes.css?ver=1.4.8' type='text/css' media='all' />
+<link rel='stylesheet' id='themify-builder-style-css'  href='http://www.discoduroderoer.es/wp-content/themes/itheme2/themify/themify-builder/css/themify-builder-style.css?ver=1.4.8' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-style-css'  href='http://www.discoduroderoer.es/wp-content/themes/itheme2/style.css?ver=1.3.7' type='text/css' media='all' />
+<link rel='stylesheet' id='themify-media-queries-css'  href='http://www.discoduroderoer.es/wp-content/themes/itheme2/media-queries.css?ver=3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='pretty-photo-css'  href='http://www.discoduroderoer.es/wp-content/themes/itheme2/themify/css/lightbox.css?ver=3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='rw_toprated-css'  href='http://css.rating-widget.com/wordpress/toprated.css?ck=Y2013M10D02&#038;ver=1.8.6' type='text/css' media='all' />
+<link rel='stylesheet' id='rw_recommendations-css'  href='http://css.rating-widget.com/widget/recommendations.css?ck=Y2013M10D02&#038;ver=1.8.6' type='text/css' media='all' />
+<script type="text/javascript">/* <![CDATA[ */ var SHRSB_Globals = {"src":"http:\/\/www.discoduroderoer.es\/wp-content\/plugins\/sexybookmarks\/spritegen_default","perfoption":"1","twitter_template":"%24%7Btitle%7D+-+%24%7Bshort_link%7D+via+%40DiscoDuroderoer","locale":"es","shortener":"bitly","shortener_key":"pikao%7cR_7f8d137f6dec547f3eda43b7545fd789","pubGaSocial":"1","pubGaKey":"UA-34685567-1"}; /* ]]> */</script><script type='text/javascript' src='http://www.discoduroderoer.es/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://connect.facebook.net/en_US/all.js?ver=1.6.2#xfbml=1'></script>
+<script type='text/javascript' src='http://platform.twitter.com/widgets.js?ver=1.6.2'></script>
+<script type='text/javascript' src='https://apis.google.com/js/plusone.js?ver=1.6.2'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/social-popup/spu.js?ver=1.6.2'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/fancybox-for-wordpress/fancybox/jquery.fancybox.js?ver=1.3.4'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-includes/js/comment-reply.min.js?ver=3.6'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/wp-to-top/js/wp-to-top.js?ver=3.6'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/easy-spoiler/js/easy-spoiler.js?ver=1.2'></script>
+<script type='text/javascript' src='http://dtym7iokkjlif.cloudfront.net/media/js/jquery.shareaholic-publishers-sb.min.js?ver=6.1.5.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.discoduroderoer.es/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.discoduroderoer.es/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Posicionamiento CSS' href='http://www.discoduroderoer.es/posicionamiento-css/' />
+<link rel='next' title='Propiedades Margin y Padding CSS' href='http://www.discoduroderoer.es/propiedades-margin-y-padding-css/' />
+<meta name="generator" content="WordPress 3.6" />
+<link rel='shortlink' href='http://www.discoduroderoer.es/?p=3750' />
+    <script language="JavaScript">
+    <!--
+      jQuery(function(){
+          
+          jQuery('.wpdm-popup').click(function(){
+              tb_show(jQuery(this).html(),this.href+'&modal=1&width=600&height=400');
+              return false;
+          });
+          
+          jQuery('.haspass').click(function(){
+              var url = jQuery(this).attr('href');
+              var id = jQuery(this).attr('rel');
+              var password = jQuery('#pass_'+id).val();
+              jQuery.post('http://www.discoduroderoer.es/',{download:id,password:password},function(res){
+                  
+                  if(res=='error') {
+                    
+                      jQuery('#wpdm_file_'+id+' .perror').html('Wrong Password');
+                      setTimeout("jQuery('#wpdm_file_"+id+" .perror').html('');",3000);
+                      return false;
+                  } else {
+                      location.href = 'http://www.discoduroderoer.es/?wpdmact=process&did='+res;
+                  }
+                  //if(res.url!='undefined') location.href=res.url;
+                                           
+              });
+               
+              return false;
+          });
+      })
+    //-->
+    </script>
+    <link type="text/css" rel="stylesheet" href="http://www.discoduroderoer.es/wp-content/plugins/easy-spoiler/easy-spoiler.css" />
+<!-- Fancybox for WordPress v3.0.2 -->
+<script type="text/javascript">
+jQuery(function(){
+
+jQuery.fn.getTitle = function() { // Copy the title of every IMG tag and add it to its parent A so that fancybox can show titles
+	var arr = jQuery("a.fancybox");
+	jQuery.each(arr, function() {
+		var title = jQuery(this).children("img").attr("title");
+		jQuery(this).attr('title',title);
+	})
+}
+
+// Supported file extensions
+var thumbnails = jQuery("a:has(img)").not(".nolightbox").filter( function() { return /\.(jpe?g|png|gif|bmp)$/i.test(jQuery(this).attr('href')) });
+
+thumbnails.addClass("fancybox").getTitle();
+jQuery("a.fancybox").fancybox({
+	'cyclic': false,
+	'autoScale': true,
+	'padding': 10,
+	'opacity': true,
+	'speedIn': 500,
+	'speedOut': 500,
+	'changeSpeed': 300,
+	'overlayShow': true,
+	'overlayOpacity': "0.3",
+	'overlayColor': "#666666",
+	'titleShow': true,
+	'titlePosition': 'inside',
+	'enableEscapeButton': true,
+	'showCloseButton': true,
+	'showNavArrows': true,
+	'hideOnOverlayClick': true,
+	'hideOnContentClick': false,
+	'width': 560,
+	'height': 340,
+	'transitionIn': "fade",
+	'transitionOut': "fade",
+	'centerOnScroll': true
+});
+
+
+})
+</script>
+<!-- END Fancybox for WordPress -->
+<!-- Meta tags added by Robots Meta: http://yoast.com/wordpress/meta-robots-wordpress-plugin/ -->
+<meta name="robots" content="noodp,noydir" />
+
+<!-- Shareaholic Content Tags -->
+
+<meta name='shareaholic:site_name' content='Disco Duro de Roer' />
+<meta name='shareaholic:image' content='http://www.discoduroderoer.es/wp-content/uploads/2013/01/meta.png' />
+
+<!-- / Shareaholic Content Tags -->
+
+
+
+<!-- Shareaholic - Facebook Open Graph Tags -->
+
+<link rel="shortcut icon" href="http://www.discoduroderoer.es/favicon.ico" type="image/x-icon" /><!-- Favi -->				
+					<style type="text/css">
+					.spu-button {
+	margin-left:15px;
+}
+#spu-msg-cont {
+	border-bottom:1px solid#ccc;
+	border-top:1px solid#ccc;
+	background-image:linear-gradient(bottom,#D8E7FC 0%,#EBF2FC 65%);
+	background-image:-o-linear-gradient(bottom,#D8E7FC 0%,#EBF2FC 65%);
+	background-image:-moz-linear-gradient(bottom,#D8E7FC 0%,#EBF2FC 65%);
+	background-image:-webkit-linear-gradient(bottom,#D8E7FC 0%,#EBF2FC 65%);
+	background-image:-ms-linear-gradient(bottom,#D8E7FC 0%,#EBF2FC 65%);
+	background-image:-webkit-gradient(linear,left bottom,left top,color-stop(0,#D8E7FC),color-stop(0.85,#EBF2FC));
+	padding:16px;
+}
+#spu-msg {
+	margin:0 0 22px;
+}
+.step-clear {
+	clear:both!important;
+}
+#spu-title {
+	font-family:"Lucida Sans Unicode","Lucida Grande",sans-serif!important;
+	font-size:12px;
+	padding:12px 0 9px 10px;
+	font-size:16px;
+}					</style>			
+					<script type="text/javascript">
+						jQuery(document).ready(function($){
+								
+						setTimeout( 
+						function(){				
+							socialPopUP({
+								// Configure display of popup
+								advancedClose: true,
+								opacity: "0.65",
+								s_to_close: "",
+								days_no_click: "2",
+								segundos : "seconds",
+								esperar : "Wait",
+								thanks_msg : "",
+								thanks_sec : "",
+							})
+						}
+							,1000								);
+						});	
+						
+						
+					</script>
+					
+	<script type="text/javascript">
+	window._wp_rp_static_base_url = 'http://dtmvdvtzf8rz0.cloudfront.net/static/';
+	window._wp_rp_wp_ajax_url = "http://www.discoduroderoer.es/wp-admin/admin-ajax.php";
+	window._wp_rp_plugin_version = '2.8';
+	window._wp_rp_post_id = '3750';
+	window._wp_rp_num_rel_posts = '5';
+	window._wp_rp_blog_id = '7961872';
+	window._wp_rp_thumbnails = false;
+	window._wp_rp_post_title = 'Etiqueta+meta+HTML';
+	window._wp_rp_post_tags = ['discoduroderoer', 'motores+bisqueda', 'meta', 'mejorar', 'manual', 'tutorial', 'html', 'seo', 'etiqueta', 'posicionamiento', 'web', 'manuales', 'html', 'os', 'ma', 'lo', 'al', 'hoi', 'valor', 'html', 'sea', 'es', 'el', 'usa', 'en', 'la', 'como', 'de'];
+	window._wp_rp_remote_recommendations = false;
+	window._wp_rp_promoted_content = true;
+	window._wp_rp_traffic_exchange = false;
+</script>
+<script type="text/javascript" src="http://dtmvdvtzf8rz0.cloudfront.net/static/js/pageview.js?version=2.8" async></script>
+<style type="text/css">
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 8px;
+	line-height: 10px;
+	height: 10px;
+	background: #d8e1eb;
+	border: 1px solid #c8c8c8;
+}
+</style>
+<script type="text/javascript">/* <![CDATA[ */ var SHRSB_Globals = {"src":"http:\/\/www.discoduroderoer.es\/wp-content\/plugins\/sexybookmarks\/spritegen_default","perfoption":"1","twitter_template":"%24%7Btitle%7D+-+%24%7Bshort_link%7D+via+%40DiscoDuroderoer","locale":"es","shortener":"bitly","shortener_key":"pikao%7cR_7f8d137f6dec547f3eda43b7545fd789","pubGaSocial":"1","pubGaKey":"UA-34685567-1"}; /* ]]> */</script>
+<!-- Start Of WP Popup Scheduler Script -->
+<link rel="stylesheet" href="http://www.discoduroderoer.es/wp-content/plugins/wp-popup-scheduler/popup_css.css" type="text/css" media="screen" />
+<!-- End Of WP Popup Scheduler Script -->
+<!-- Start Of Script Generated By Post-Views -->
+<script type="text/javascript">
+jQuery.ajax({type:"GET",async:false,url:"http://www.discoduroderoer.es/wp-content/plugins/post-views/post-views.php",data:"cache_post_id=3750&cache_view_type=robot&cache_output_type=excerpt",cache:false});</script>
+<!-- End Of Script Generated By Post-Views -->
+
+<!-- Open Graph Tags -->
+<meta property="og:site_name" content="Disco Duro de Roer" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="Otras entradas interesantes:Formularios HTMLNuevas etiquetas HTML 5Posicionamiento CSSEnlaces HTMLImágenes HTML" />
+<meta property="og:url" content="http://www.discoduroderoer.es/etiqueta-meta-html/" />
+<meta property="og:title"  content="Etiqueta meta HTML" />
+<!-- End Open Graph Tags -->
+
+<!-- modules styling -->
+<style type='text/css'>
+body {
+background-image: url(http://www.discoduroderoer.es/wp-content/uploads/2013/08/body-bg.jpg);
+}
+
+#site-logo a {
+font-family: "Ubuntu Mono";
+color: #fa00e5;
+font-size: 50px;
+}
+
+#site-description {
+font-family: "Ubuntu Mono";
+color: #f700ff;
+font-size: 20px;
+}
+
+</style>
+
+
+<!-- media-queries.js -->
+<!--[if lt IE 9]>
+	<script src="http://www.discoduroderoer.es/wp-content/themes/itheme2/js/respond.js"></script>
+<![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+	<!--[if lt IE 9]>
+	<script src="http://s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script> 
+	<![endif]-->
+	
+<!-- All in One SEO Pack 2.0.3.1 by Michael Torbert of Semper Fi Web Designob_start_detected [-1,-1] -->
+<link rel="author" href="https://plus.google.com/u/0/b/118327379272536388220/118327379272536388220/posts" />
+<meta name="description" content="manual o tutorial sobre la Etiqueta meta HTML, explicamos como funciona la etiqueta meta para mejorar la funcionalidad a nuestra pagina y la busqueda en motores de busqueda" />
+
+<meta name="keywords" content="discoduroderoer, manual, tutorial, meta, etiqueta, html, mejorar, posicionamiento, seo, motores bisqueda,etiqueta,html,manual,mejorar,meta,motores bisqueda,posicionamiento,seo,tutorial,manuales,web" />
+
+<link rel="canonical" href="http://www.discoduroderoer.es/etiqueta-meta-html/" />
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-34685567-1']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+		<script type="text/javascript">
+			function recordOutboundLink(link, category, action) {
+				_gat._getTrackerByName()._trackEvent(category, action);
+				if ( link.target == '_blank' ) return true;
+				setTimeout('document.location = "' + link.href + '"', 100);
+				return false;
+			}
+			/* use regular Javascript for this */
+			function getAttr(ele, attr) {
+				var result = (ele.getAttribute && ele.getAttribute(attr)) || null;
+				if( !result ) {
+					var attrs = ele.attributes;
+					var length = attrs.length;
+					for(var i = 0; i < length; i++)
+					if(attr[i].nodeName === attr) result = attr[i].nodeValue;
+				}
+				return result;
+			}
+
+			window.onload = function () {
+				var links = document.getElementsByTagName('a');
+				for (var x=0; x < links.length; x++) {
+					if (typeof links[x] == 'undefined') continue;
+					if (typeof links[x].onclick != 'undefined') continue;
+					links[x].onclick = function () {
+						var mydomain = new RegExp(document.domain, 'i');
+						href = getAttr(this, 'href');
+						if(href && href.toLowerCase().indexOf('http') === 0 && !mydomain.test(href)) {
+							recordOutboundLink(this, 'Outbound Links', href);
+						}
+					}
+				}
+			};
+		</script>
+<!-- /all in one seo pack -->
+<style type="text/css" media="all">
+/* <![CDATA[ */
+@import url("http://www.discoduroderoer.es/wp-content/plugins/wp-table-reloaded/css/plugin.css?ver=1.9.4");
+@import url("http://www.discoduroderoer.es/wp-content/plugins/wp-table-reloaded/css/datatables.css?ver=1.9.4");
+td, th {
+text-align:center;
+}
+/* ]]> */
+</style><style type="text/css" id="syntaxhighlighteranchor"></style>
+
+</head>
+
+<body class="single single-post postid-3750 single-format-standard skin-default sidebar1 frontend">
+
+<div id="pagewrap">
+
+    <div id="headerwrap">
+    	        <div id="header" class="pagewidth">
+        	    
+            <h1 id="site-logo"><a href="http://www.discoduroderoer.es" title="Disco Duro de Roer">Disco Duro de Roer</a></h1>
+            <div id="site-description">Deja de golpear a tu ordenador y soluciona tus problemas aquí</div>
+    
+                    
+            <div class="social-widget">
+                    
+                            </div>
+            <!--/social widget --> 
+    
+            <!-- header wdiegt -->
+            <div class="header-widget">
+                            </div>
+            <!--/header widget --> 
+    
+		    
+            <div id="main-nav-wrap">
+                <div id="menu-icon" class="mobile-button"></div>
+                <div id="nav-bar">
+                    <ul id="main-nav" class="main-nav"><li class="home"><a href="http://www.discoduroderoer.es/" >Home</a></li><li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84"><a href="http://www.discoduroderoer.es/acerca-de-mi/" >Acerca de mí</a></li>
+<li id="menu-item-4665" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-4665"><a href="http://www.discoduroderoer.es/category/manuales/" >Manuales</a>
+<ul class="sub-menu">
+	<li id="menu-item-694" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-694"><a href="http://www.discoduroderoer.es/category/manuales/internet-manuales/" >Internet</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1291" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1291"><a href="http://www.discoduroderoer.es/category/manuales/internet-manuales/google-internet-manuales/" >Google</a></li>
+		<li id="menu-item-1292" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1292"><a href="http://www.discoduroderoer.es/category/manuales/internet-manuales/redes-sociales/" >Redes sociales</a></li>
+	</ul>
+</li>
+	<li id="menu-item-4520" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4520"><a href="http://www.discoduroderoer.es/category/manuales/programacion/" >Programación</a>
+	<ul class="sub-menu">
+		<li id="menu-item-4521" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4521"><a href="http://www.discoduroderoer.es/category/manuales/programacion/pseudocodigo/" >Pseudocódigo</a></li>
+	</ul>
+</li>
+	<li id="menu-item-88" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-88"><a href="http://www.discoduroderoer.es/category/manuales/ofimatica/" >Ofimática</a>
+	<ul class="sub-menu">
+		<li id="menu-item-331" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-331"><a href="http://www.discoduroderoer.es/category/manuales/ofimatica/hoja-de-calculo/" >Hoja de cálculo</a></li>
+		<li id="menu-item-332" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-332"><a href="http://www.discoduroderoer.es/category/manuales/ofimatica/procesador-de-texto/" >Procesador de texto</a></li>
+	</ul>
+</li>
+	<li id="menu-item-122" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-122"><a href="http://www.discoduroderoer.es/category/manuales/sistemas-operativos-manuales/" >Sistemas operativos</a>
+	<ul class="sub-menu">
+		<li id="menu-item-178" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-178"><a href="http://www.discoduroderoer.es/category/manuales/sistemas-operativos-manuales/linux-manuales/" >Linux</a></li>
+		<li id="menu-item-121" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-121"><a href="http://www.discoduroderoer.es/category/manuales/sistemas-operativos-manuales/windows-manuales/" >Windows</a></li>
+	</ul>
+</li>
+	<li id="menu-item-351" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-351"><a href="http://www.discoduroderoer.es/category/manuales/software-manuales/" >Software</a></li>
+	<li id="menu-item-311" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-311"><a href="http://www.discoduroderoer.es/category/manuales/web-manuales/" >Web</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1677" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1677"><a href="http://www.discoduroderoer.es/category/manuales/web-manuales/css/" >CSS</a></li>
+		<li id="menu-item-2998" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2998"><a href="http://www.discoduroderoer.es/category/manuales/web-manuales/drupal-web-manuales/" >Drupal</a></li>
+		<li id="menu-item-3015" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3015"><a href="http://www.discoduroderoer.es/category/manuales/web-manuales/e-commerce/" >E-Commerce</a></li>
+		<li id="menu-item-2685" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2685"><a href="http://www.discoduroderoer.es/category/manuales/web-manuales/foro/" >Foro</a></li>
+		<li id="menu-item-1416" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-1416"><a href="http://www.discoduroderoer.es/category/manuales/web-manuales/html/" >HTML</a></li>
+		<li id="menu-item-312" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-312"><a href="http://www.discoduroderoer.es/category/manuales/web-manuales/joomla/" >Joomla</a></li>
+		<li id="menu-item-313" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-313"><a href="http://www.discoduroderoer.es/category/manuales/web-manuales/wordpress/" >WordPress</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-6533" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6533"><a href="http://www.discoduroderoer.es/category/ejercicio/" >Ejercicios</a>
+<ul class="sub-menu">
+	<li id="menu-item-6753" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6753"><a href="http://www.discoduroderoer.es/category/ejercicio/ejercicios-excel/" >Excel</a></li>
+	<li id="menu-item-6752" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6752"><a href="http://www.discoduroderoer.es/category/ejercicio/ejercicios-html/" >HTML</a></li>
+	<li id="menu-item-6534" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6534"><a href="http://www.discoduroderoer.es/category/ejercicio/ejercicios-pseudocodigo/" >Pseudocodigo</a></li>
+</ul>
+</li>
+<li id="menu-item-4667" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4667"><a href="http://www.discoduroderoer.es/category/software/" >Software</a>
+<ul class="sub-menu">
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="http://www.discoduroderoer.es/category/software/internet/" >Internet</a>
+	<ul class="sub-menu">
+		<li id="menu-item-340" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-340"><a href="http://www.discoduroderoer.es/category/software/internet/correo-electronico/" >Correo electrónico</a></li>
+		<li id="menu-item-878" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-878"><a href="http://www.discoduroderoer.es/category/software/internet/descargas/" >Descargas</a></li>
+		<li id="menu-item-350" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-350"><a href="http://www.discoduroderoer.es/category/software/internet/escritorio-remoto/" >Escritorio remoto</a></li>
+		<li id="menu-item-2711" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2711"><a href="http://www.discoduroderoer.es/category/software/internet/ftp/" >FTP</a></li>
+		<li id="menu-item-337" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-337"><a href="http://www.discoduroderoer.es/category/software/internet/mensajeria-instantanea/" >Mensajeria instantanea</a></li>
+		<li id="menu-item-142" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-142"><a href="http://www.discoduroderoer.es/category/software/internet/navegadores/" >Navegadores</a></li>
+		<li id="menu-item-2894" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2894"><a href="http://www.discoduroderoer.es/category/software/internet/redes-sociales-internet/" >Redes sociales</a></li>
+	</ul>
+</li>
+	<li id="menu-item-325" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-325"><a href="http://www.discoduroderoer.es/category/software/multimedia/" >Multimedia</a>
+	<ul class="sub-menu">
+		<li id="menu-item-338" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-338"><a href="http://www.discoduroderoer.es/category/software/multimedia/codecs/" >Codecs</a></li>
+		<li id="menu-item-3142" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3142"><a href="http://www.discoduroderoer.es/category/software/multimedia/edicioncreacion-video/" >Edicion/Creacion video</a></li>
+		<li id="menu-item-339" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-339"><a href="http://www.discoduroderoer.es/category/software/multimedia/reproductores/" >Reproductores</a></li>
+	</ul>
+</li>
+	<li id="menu-item-341" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-341"><a href="http://www.discoduroderoer.es/category/software/ofimatica-software/" >Ofimática</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1604" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1604"><a href="http://www.discoduroderoer.es/category/software/ofimatica-software/editores-de-texto/" >Editores de texto</a></li>
+		<li id="menu-item-342" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-342"><a href="http://www.discoduroderoer.es/category/software/ofimatica-software/pdf/" >PDF</a></li>
+		<li id="menu-item-343" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-343"><a href="http://www.discoduroderoer.es/category/software/ofimatica-software/suite-ofimatica/" >Suite ofimática</a></li>
+	</ul>
+</li>
+	<li id="menu-item-347" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-347"><a href="http://www.discoduroderoer.es/category/software/portables/" >Portables</a></li>
+	<li id="menu-item-4494" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4494"><a href="http://www.discoduroderoer.es/category/software/programacion-software-manuales/" >Programación</a></li>
+	<li id="menu-item-344" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-344"><a href="http://www.discoduroderoer.es/category/software/seguridad/" >Seguridad</a>
+	<ul class="sub-menu">
+		<li id="menu-item-345" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-345"><a href="http://www.discoduroderoer.es/category/software/seguridad/antivirus/" >Antivirus</a></li>
+		<li id="menu-item-610" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-610"><a href="http://www.discoduroderoer.es/category/software/seguridad/copias-de-seguridad/" >Copias de seguridad</a></li>
+		<li id="menu-item-346" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-346"><a href="http://www.discoduroderoer.es/category/software/seguridad/firewall/" >Firewall</a></li>
+	</ul>
+</li>
+	<li id="menu-item-326" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-326"><a href="http://www.discoduroderoer.es/category/software/sistema/" >Sistema</a>
+	<ul class="sub-menu">
+		<li id="menu-item-5004" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-5004"><a href="http://www.discoduroderoer.es/category/software/sistema/aspecto/" >Aspecto</a></li>
+		<li id="menu-item-622" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-622"><a href="http://www.discoduroderoer.es/category/software/sistema/cd-dvd/" >CD/DVD</a></li>
+		<li id="menu-item-609" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-609"><a href="http://www.discoduroderoer.es/category/software/seguridad/cifrado-seguridad/" >Cifrado</a></li>
+		<li id="menu-item-466" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-466"><a href="http://www.discoduroderoer.es/category/software/sistema/compresores/" >compresores</a></li>
+		<li id="menu-item-348" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-348"><a href="http://www.discoduroderoer.es/category/software/sistema/diagnostico/" >Diagnóstico</a></li>
+		<li id="menu-item-403" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-403"><a href="http://www.discoduroderoer.es/category/software/sistema/discos-duros/" >Discos duros</a></li>
+		<li id="menu-item-349" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-349"><a href="http://www.discoduroderoer.es/category/software/sistema/optimizacion/" >Optimización</a></li>
+		<li id="menu-item-771" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-771"><a href="http://www.discoduroderoer.es/category/software/sistema/virtualizacion/" >Virtualización</a></li>
+	</ul>
+</li>
+	<li id="menu-item-327" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-327"><a href="http://www.discoduroderoer.es/category/software/web-software/" >Web</a>
+	<ul class="sub-menu">
+		<li id="menu-item-328" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-328"><a href="http://www.discoduroderoer.es/category/software/web-software/joomla-web/" >Joomla</a>
+		<ul class="sub-menu">
+			<li id="menu-item-2423" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2423"><a href="http://www.discoduroderoer.es/category/software/web-software/joomla-web/administrador-joomla-web/" >administrador</a></li>
+			<li id="menu-item-2424" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2424"><a href="http://www.discoduroderoer.es/category/software/web-software/joomla-web/articulos-categorias/" >Artículos/Categorías</a></li>
+			<li id="menu-item-2425" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2425"><a href="http://www.discoduroderoer.es/category/software/web-software/joomla-web/modulos-joomla-web/" >Módulos</a></li>
+		</ul>
+</li>
+		<li id="menu-item-329" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-329"><a href="http://www.discoduroderoer.es/category/software/web-software/wordpress-web/" >WordPress</a>
+		<ul class="sub-menu">
+			<li id="menu-item-2403" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2403"><a href="http://www.discoduroderoer.es/category/software/web-software/wordpress-web/administrador/" >Administrador</a></li>
+			<li id="menu-item-2404" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2404"><a href="http://www.discoduroderoer.es/category/software/web-software/wordpress-web/entradas-paginas/" >Entradas/paginas</a></li>
+			<li id="menu-item-2406" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2406"><a href="http://www.discoduroderoer.es/category/software/web-software/wordpress-web/widgets/" >Widgets</a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-320" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-320"><a href="http://www.discoduroderoer.es/category/sistemas-operativos/" >Sistemas operativos</a>
+<ul class="sub-menu">
+	<li id="menu-item-323" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-323"><a href="http://www.discoduroderoer.es/category/sistemas-operativos/linux-sistemas-operativos/" >Linux</a></li>
+	<li id="menu-item-324" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-324"><a href="http://www.discoduroderoer.es/category/sistemas-operativos/windows-sistemas-operativos/" >Windows</a></li>
+	<li id="menu-item-4750" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4750"><a href="http://www.discoduroderoer.es/category/sistemas-operativos/otros/" >Otros</a></li>
+</ul>
+</li>
+<li id="menu-item-4510" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4510"><a href="http://www.discoduroderoer.es/category/ingles/" >Inglés</a></li>
+<li id="menu-item-333" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-333"><a href="http://www.discoduroderoer.es/category/noticias/" >Noticias</a></li>
+<li id="menu-item-1420" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1420"><a href="http://www.discoduroderoer.es/contactanos/" >Contáctanos</a></li>
+</ul>                </div><!--/nav bar -->
+			</div>
+            <!-- /#main-nav-wrap -->
+
+			        </div>
+        <!--/header -->
+            </div>
+    <!-- /headerwrap -->
+
+	<div id="body" class="clearfix">
+    
+
+	
+	<!-- layout-container -->
+	<div id="layout" class="clearfix">
+
+				<!-- content -->
+		<div id="content" class="list-post">
+        				
+			
+<div id="post-3750" class="post-3750 post type-post status-publish format-standard hentry category-html category-manuales category-web-manuales tag-discoduroderoer tag-etiqueta tag-html-2 tag-manual tag-mejorar tag-meta tag-motores-bisqueda tag-posicionamiento tag-seo tag-tutorial post clearfix cat-256 cat-1 cat-6">
+		
+	
+	<div class="post-content">
+					<p class="post-date">
+				<span class="month">mar</span>
+				<span class="day">13</span>
+				<span class="year">2013</span>
+			</p>
+			
+																	<h1 class="post-title"><a href="http://www.discoduroderoer.es/etiqueta-meta-html/" title="Etiqueta meta HTML">Etiqueta meta HTML</a></h1>
+				 
+			
+		    
+		
+					<!-- Start Shareaholic LikeButtonSetTop Automatic --><!-- End Shareaholic LikeButtonSetTop Automatic --><p style="text-align: justify;">Hola a todos, hoy os explicare como usar la la etiqueta <strong>meta</strong>, una etiqueta que se coloca dentro de la etiqueta head.</p>
+<p style="text-align: justify;"><span id="more-3750"></span></p>
+<p style="text-align: justify;">La etiqueta <strong>meta</strong> nos permite añadir información adicional a nuestra pagina, para mejorar el posicionamiento de nuestra pagina.</p>
+<p style="text-align: justify;">Los valores que debe usar son <strong>name</strong>, para el tipo de información, y <strong>content</strong>, para el describir esa información.</p>
+<p style="text-align: justify;">Veamos los valores mas usados, con la información que se debe escribir en el valor de <strong>content</strong>:</p>
+
+<table id="wp-table-reloaded-id-10-no-1" class="wp-table-reloaded wp-table-reloaded-id-10">
+<thead>
+	<tr class="row-1 odd">
+		<th class="column-1">Name</th><th class="column-2">Content</th>
+	</tr>
+</thead>
+<tbody>
+	<tr class="row-2 even">
+		<td class="column-1">author</td><td class="column-2">Autor de la página.</td>
+	</tr>
+	<tr class="row-3 odd">
+		<td class="column-1">description</td><td class="column-2">Descripción del contenido de la página, lo recomendado es hasta 160 caracteres.</td>
+	</tr>
+	<tr class="row-4 even">
+		<td class="column-1">keywords</td><td class="column-2">Palabras clave, se recomienda entre 3 y 10 palabras.</td>
+	</tr>
+</tbody>
+</table>
+
+<p style="text-align: justify;">Recuerda que si queremos poner mas de uno, deberemos poner una etiqueta <strong>meta</strong> por cada uno.</p>
+<p style="text-align: justify;"><strong>Meta</strong> es una etiqueta autocontenida, es decir, que se cierra al final de la etiqueta de apertura.</p>
+<p style="text-align: justify;">En la etiqueta Meta también podemos indicar el juego de caracteres que usa la página, se indica con el atributo <strong>charset=&#8221;juego de caracteres&#8221;.</strong> El mas usado es <strong>utf-8.</strong></p>
+<p style="text-align: justify;">Veamos algunos ejemplos:</p>
+<p><a href="http://www.discoduroderoer.es/wp-content/uploads/2013/01/meta.png" ><img class="aligncenter size-full wp-image-4330" alt="meta" src="http://www.discoduroderoer.es/wp-content/uploads/2013/01/meta.png" width="558" height="107" /></a></p>
+<p>Espero que os sea de ayuda.</p>
+<div class="shr-publisher-3750"></div><!-- Start Shareaholic LikeButtonSetBottom Automatic --><!-- End Shareaholic LikeButtonSetBottom Automatic -->
+<div class="wp_rp_wrap  wp_rp_plain" id="wp_rp_first"><div class="wp_rp_content"><h3 class="related_post_title">Otras entradas interesantes:</h3><ul class="related_post wp_rp" style="visibility: visible"><li data-position="0" data-poid="in-3667" data-post-type="none" ><a href="http://www.discoduroderoer.es/formularios-html/"  class="wp_rp_title">Formularios HTML</a></li><li data-position="1" data-poid="in-3748" data-post-type="none" ><a href="http://www.discoduroderoer.es/nuevas-etiquetas-html-5/"  class="wp_rp_title">Nuevas etiquetas HTML 5</a></li><li data-position="2" data-poid="in-3654" data-post-type="none" ><a href="http://www.discoduroderoer.es/posicionamiento-css/"  class="wp_rp_title">Posicionamiento CSS</a></li><li data-position="3" data-poid="in-4020" data-post-type="none" ><a href="http://www.discoduroderoer.es/enlaces-html/"  class="wp_rp_title">Enlaces HTML</a></li><li data-position="4" data-poid="in-4025" data-post-type="none" ><a href="http://www.discoduroderoer.es/imagenes-html/"  class="wp_rp_title">Imágenes HTML</a></li></ul></div></div>
+<div class="rw-left"><div class="rw-ui-container rw-class-blog-post rw-urid-37510" data-img="http://www.discoduroderoer.es/wp-content/uploads/2013/01/meta.png"></div></div><div id="themify_builder_content-3750" class="themify_builder_content themify_builder themify_builder_front">
+	
+	
+</div>
+<!-- /themify_builder_content -->			
+		    
+
+		
+	</div>
+	<!-- /.post-content -->		
+	
+    </div>
+<!--/post -->
+	
+			
+				
+				<!-- post-nav -->
+	<div class="post-nav clearfix"> 
+		<span class="prev"><a href="http://www.discoduroderoer.es/posicionamiento-css/" rel="prev">Posicionamiento CSS</a></span>		<span class="next"><a href="http://www.discoduroderoer.es/propiedades-margin-y-padding-css/" rel="next">Propiedades Margin y Padding CSS</a></span>	</div>
+	<!-- /post-nav -->
+	
+							
+
+
+<div id="comments" class="commentwrap">
+	
+	
+
+								<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Deja un comentario <small><a rel="nofollow" id="cancel-comment-reply-link" href="/etiqueta-meta-html/#respond" style="display:none;">Cancel</a></small></h3>
+									<form action="http://www.discoduroderoer.es/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																										<p class="comment-form-author"><input id="author" name="author" type="text" value="" size="30" class="required" /><label for="author">Tu nombre:</label> <span class="required">*</span></p>
+<p class="comment-form-email"><input id="email" name="email" type="text" value="" size="30" class="required email" /><label for="email">Tu E-mail:</label> <span class="required">*</span></p>
+<p class="comment-form-url"><input id="url" name="url" type="text" value="" size="30" /><label for="website">Tu sitio Web:</label> </p>
+
+<div class="captchaSizeDivLarge"><img id="si_image_com" class="si-captcha" src="http://www.discoduroderoer.es/wp-content/plugins/si-captcha-for-wordpress/captcha/securimage_show.php?si_form_id=com&amp;prefix=Db7J4vEMAEaN5x9a" width="175" height="60" alt="Imagen CAPTCHA" title="Imagen CAPTCHA" />
+    <input id="si_code_com" name="si_code_com" type="hidden"  value="Db7J4vEMAEaN5x9a" />
+    <div id="si_refresh_com">
+<a href="#" rel="nofollow" title="Refrescar imagen" onclick="si_captcha_refresh('si_image_com','com','/wp-content/plugins/si-captcha-for-wordpress/captcha','http://www.discoduroderoer.es/wp-content/plugins/si-captcha-for-wordpress/captcha/securimage_show.php?si_form_id=com&amp;prefix='); return false;">
+      <img class="captchaImgRefresh" src="http://www.discoduroderoer.es/wp-content/plugins/si-captcha-for-wordpress/captcha/images/refresh.png" width="22" height="20" alt="Refrescar imagen" onclick="this.blur();" /></a>
+  </div>
+  </div>
+<br />
+<p><input id="captcha_code" name="captcha_code" type="text" size="6"  />
+<label id="captcha_code_label" for="captcha_code" >Código CAPTCHA</label><span class="required"> *</span>
+</p>												<p class="comment-form-comment"><textarea id="comment" name="3689e-comment" cols="45" rows="8" aria-required="true" class="required"></textarea><textarea name="comment" style="display:none" rows="1" cols="1"></textarea></p>												<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Enviar comentario" />
+							<input type='hidden' name='comment_post_ID' value='3750' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+											</form>
+							</div><!-- #respond -->
+			        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                jQuery('#commentform').submit(function () {
+                    _gaq.push(
+                            ['_setAccount', 'UA-34685567-1'],
+                            ['_trackEvent', 'comment', 'submit']
+                    );
+                });
+            });
+        </script>
+					
+</div>
+<!-- /.commentwrap -->
+						
+            		</div>
+		<!--/content -->
+        
+
+<div id="sidebar">
+	
+	<div class="widgetwrap"><div id="search-2" class="widget widget_search"><h4 class="widgettitle">Busca lo que necesites en la web</h4><form method="get" id="searchform" action="http://www.discoduroderoer.es/">
+	<input type="text" name="s" id="s"  placeholder="Buscar">
+</form>
+</div></div><div class="widgetwrap"><div id="calendar-2" class="widget widget_calendar"><h4 class="widgettitle">Calendario de entradas</h4><div id="calendar_wrap"><table id="wp-calendar">
+	<caption>octubre 2013</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Lunes">L</th>
+		<th scope="col" title="Martes">M</th>
+		<th scope="col" title="Miércoles">X</th>
+		<th scope="col" title="Jueves">J</th>
+		<th scope="col" title="Viernes">V</th>
+		<th scope="col" title="Sábado">S</th>
+		<th scope="col" title="Domingo">D</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://www.discoduroderoer.es/2013/09/" title="Ver todas las entradas para septiembre 2013">&laquo; sep</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="1" class="pad">&nbsp;</td><td><a href="http://www.discoduroderoer.es/2013/10/01/" title="Métodos de String">1</a></td><td id="today">2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+	</tr>
+	<tr>
+		<td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td>
+	</tr>
+	<tr>
+		<td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+	</tr>
+	<tr>
+		<td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td>
+	</tr>
+	<tr>
+		<td>28</td><td>29</td><td>30</td><td>31</td>
+		<td class="pad" colspan="3">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></div></div><div class="widgetwrap"><div id="text-11" class="widget widget_text"><h4 class="widgettitle">Anuncios</h4>			<div class="textwidget"><p align="center"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3458932169190264";
+/* anuncio */
+google_ad_slot = "7520089661";
+google_ad_width = 125;
+google_ad_height = 125;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</p></div>
+		</div></div><div class="widgetwrap"><div id="text-12" class="widget widget_text">			<div class="textwidget"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3458932169190264";
+/* anuncio2 */
+google_ad_slot = "5159861372";
+google_ad_width = 234;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+		</div></div><div class="widgetwrap"><div id="text-15" class="widget widget_text"><h4 class="widgettitle">Traffic-Club</h4>			<div class="textwidget"><a href="http://siniestrotecamera37.blogspot.com.es" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://siniestrotecamera37.blogspot.com.es']);"><img src="http://img9.imageshack.us/img9/5986/12y.png" title="..::YO YA PERTENEZCO AL CLUB::..DIRECTORIO WEB TRAFFIC-CLUB" /></a></div>
+		</div></div><div class="widgetwrap"><div id="social-widget-3" class="widget Social_Widget"><h4 class="widgettitle">¡Síguenos en las redes sociales!</h4><div class="socialmedia-buttons smw_center"><a href="https://www.facebook.com/pages/Disco-Duro-de-Roer/516155851734486" rel="nofollow" target="_blank"><img width="64" height="64" src="http://www.discoduroderoer.es/wp-content/plugins/social-media-widget/images/default/64/facebook.png" 
+				alt="Hazte fan de nuestra cuenta de Facebook" 
+				title="Hazte fan de nuestra cuenta de Facebook"  class="scale" /></a><a href="https://plus.google.com/b/118327379272536388220/118327379272536388220/posts" rel="publisher" target="_blank"><img width="64" height="64" src="http://www.discoduroderoer.es/wp-content/plugins/social-media-widget/images/default/64/googleplus.png" 
+				alt="Hazte fan de nuestra cuenta de Google+" 
+				title="Hazte fan de nuestra cuenta de Google+"  class="scale" /></a><a href="https://twitter.com/DiscoDurodeRoer" rel="nofollow" target="_blank"><img width="64" height="64" src="http://www.discoduroderoer.es/wp-content/plugins/social-media-widget/images/default/64/twitter.png" 
+				alt="Hazte fan de nuestra cuenta de Twitter" 
+				title="Hazte fan de nuestra cuenta de Twitter"  class="scale" /></a><a href="http://www.youtube.com/user/DiscoDurodeRoer" rel="nofollow" target="_blank"><img width="64" height="64" src="http://www.discoduroderoer.es/wp-content/plugins/social-media-widget/images/default/64/youtube.png" 
+				alt="Hazte fan de nuestra cuenta de YouTube" 
+				title="Hazte fan de nuestra cuenta de YouTube"  class="scale" /></a><a href="http://feeds.feedburner.com/Discoduroderoer" rel="nofollow" target="_blank"><img width="64" height="64" src="http://www.discoduroderoer.es/wp-content/plugins/social-media-widget/images/default/64/rss.png" 
+				alt="Hazte fan de nuestra cuenta de RSS" 
+				title="Hazte fan de nuestra cuenta de RSS"  class="scale" /></a><a href="http://www.tuenti.com/#m=Page&func=index&page_key=1_2733_61601683" rel="nofollow" target="_blank"><img width="64" height="64" src="http://www.discoduroderoer.es/wp-content/uploads/2013/01/icono-tuenti-app-android.png" 
+				alt="Hazte fan de nuestra cuenta de Tuenti" 
+				title="Hazte fan de nuestra cuenta de Tuenti"  class="scale" /></a></div></div></div>
+<!-- Start - HTML Javascript Adder plugin v3.7 -->
+<div class="widgetwrap"><div id="html_javascript_adder-3" class="widget widget_html_javascript_adder"><h4 class="widgettitle">Afiliados</h4>
+<div class="hjawidget textwidget">
+<br/>
+<a href="http://www.deimer40.blogspot.com">Deimer4.0 Program</a>
+<br/>
+<br/>
+<a href="http://www.vicentejorge.com/">Blog de Vicente Jorge Adria</a>
+<br/><br/>
+<a href=" http://www.pisatec.com/enlaces-web/18-enlaces-tecnicos ">Pisatec Asesoramiento Tecnológico</a><br/><br/>
+<p>
+<a href=" http://www.swing-facil.blogspot.com/ ">Java Swing Tutorial</a></p>
+<p>
+<a href=" http://www.zzmultimedia.com ">Informática Empresas</a></p>
+<p>
+<a href="http://www.churrishop.info/"><img src="http://www.discoduroderoer.es/wp-content/uploads/2012/10/logonuevtrans.png" title="Tienda churrishop"></a>
+</p>
+<p>
+<a href="http://ideasforpc.blogspot.com.es/" title="Entra en IdeasPC y descargate: Programas, Videotutoriales, Referencias a otras paginas, Peliculas y más!"><img src="http://www.discoduroderoer.es/wp-content/uploads/2013/02/Cabecera Ideas4PC.png" heigth="200" width="300"></a>
+</p>
+<p align="center">
+<a href="http://todosqueremosfollowers.wordpress.com/" title="Todos queremos followers"><img src="http://www.discoduroderoer.es/wp-content/uploads/2013/08/avatar_paris.png" heigth="80" width="130"></a>
+</p>
+</div>
+</div></div><!-- End - HTML Javascript Adder plugin v3.7 -->
+<div class="widgetwrap"><div id="youtube_channel_widget-3" class="widget widget_youtube_channel_widget"><h4 class="widgettitle">Videomanual aleatorio</h4><div class="youtube_channel"><div class="ytc_video_container ytc_video_1 ytc_video_first">	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="240" height="165" id="ytc_aAn6oEoxv8I">
+		<param name="movie" value="http://www.youtube.com/v/aAn6oEoxv8I?version=3" />
+		<param name="allowScriptAccess" value="always">
+		<!--[if !IE]>-->
+		<object type="application/x-shockwave-flash" data="http://www.youtube.com/v/aAn6oEoxv8I?version=3" width="240" height="165">
+		<!--<![endif]-->
+		<param name="wmode" value="opaque" />
+		<!--[if !IE]>-->
+		</object>
+		<!--<![endif]-->
+	</object>
+</div><!-- .ytc_video_container --></div><!-- .youtube_channel --></div></div><b class="rw-ui-recommendations" data-id="44"></b>
+<script type="text/javascript">
+    var _rwq = _rwq || [];
+    _rwq.push(['_setRecommendations', {"id":44,"title":{"label":"Posts mas votados","show":true,"before":"<h4 class=\"widgettitle\">","after":"<\/h4>"},"options":{"align":"vertical","direction":"ltr","html":{"before":"<div class=\"widgetwrap\"><div id=\"ratingwidgetplugin_topratedwidget-3\" class=\"widget rw_top_rated\">","after":"<\/div><\/div>"}},"site":{"id":false,"domain":"www.discoduroderoer.es","type":"WordPress"},"itemGroups":[{"type":"posts","title":"Posts","showTitle":false,"style":"legacy","options":{"title":{"maxLen":30}},"items":[{"site":{"id":false,"domain":"www.discoduroderoer.es"},"page":{"externalID":1547,"url":"http:\/\/www.discoduroderoer.es\/windows-7-portable\/","title":"Windows 7 Portable"},"rating":{"localID":"15480","options":{"rclass":"blog-post"}}},{"site":{"id":false,"domain":"www.discoduroderoer.es"},"page":{"externalID":149,"url":"http:\/\/www.discoduroderoer.es\/formatear-un-equipo-con-windows-xp\/","title":"Formatear un equipo con Window..."},"rating":{"localID":"1500","options":{"rclass":"blog-post"}}},{"site":{"id":false,"domain":"www.discoduroderoer.es"},"page":{"externalID":3611,"url":"http:\/\/www.discoduroderoer.es\/ejercicios-propuestos-y-resueltos-en-pseudocodigo\/","title":"Ejercicios propuestos y resuel..."},"rating":{"localID":"36120","options":{"rclass":"blog-post"}}},{"site":{"id":false,"domain":"www.discoduroderoer.es"},"page":{"externalID":3425,"url":"http:\/\/www.discoduroderoer.es\/variables-y-constantes-en-pseudocodigo\/","title":"Variables y constantes en pseu..."},"rating":{"localID":"34260","options":{"rclass":"blog-post"}}},{"site":{"id":false,"domain":"www.discoduroderoer.es"},"page":{"externalID":4018,"url":"http:\/\/www.discoduroderoer.es\/tablas-html\/","title":"Tablas HTML"},"rating":{"localID":"40190","options":{"rclass":"blog-post"}}}]}]}]);
+</script>
+<div class="widgetwrap"><div id="wp_ara_widget_random_posts-2" class="widget wp_ara_widget_random_posts"><h4 class="widgettitle">Manuales aleatorios</h4><p><a href="http://www.discoduroderoer.es/reset-css/">Reset CSS</a><br />
+<a href="http://www.discoduroderoer.es/como-colocar-la-opcion-de-hibernar-wxp/">Como activar la opción de hibernar en Windows XP</a><br />
+<a href="http://www.discoduroderoer.es/api-java/">API Java</a><br />
+<a href="http://www.discoduroderoer.es/ver-archivos-o-carpetas-ocultas-en-windows/">Ver archivos o carpetas ocultas en Windows</a><br />
+<a href="http://www.discoduroderoer.es/formas-de-incluir-css-en-un-documento-html/">Formas de incluir CSS en un documento HTML</a><br />
+</p>
+</div></div><div class="widgetwrap"><div id="text-14" class="widget widget_text"><h4 class="widgettitle">Contador de visitas</h4>			<div class="textwidget"><p align="center"><!-- inicio codigo contador --><img style="border: 0px solid ; display: inline;" alt="contador de visitas" 
+	src="http://contador-de-visitas.com/hit.php?id=1770040&counter=37"></a><br /><!-- fin codigo contador --></p>
+</div>
+		</div></div>
+	</div>
+<!--/sidebar -->
+
+</div>
+<!-- layout-container -->
+	
+
+		</div>
+	<!-- /body -->
+		
+	<div id="footerwrap">
+    
+    			<footer id="footer" class="pagewidth clearfix">
+        				
+				
+			<!--<p class="back-top"><a href="#header">&uarr;</a></p>-->
+		
+				
+			<div class="footer-text clearfix">
+				<div class="one"></div>				<div class="two"></div>			</div>
+			<!-- /footer-text --> 
+
+					</footer>
+		<!-- /#footer --> 
+                
+	</div>
+	<!-- /#footerwrap -->
+	
+</div>
+<!-- /#pagewrap -->
+
+
+<!-- wp_footer -->
+<div id="takeMeUpContainer" style="display:none;right:5px;background-color:#EA2F7E"><span id="takeMeUp" style="color:#FFFFFF;">Vuelve al principio</span></div><!-- Start Of Script Generated By Post-Views -->
+<script type="text/javascript">
+jQuery.ajax({type:"GET",async:false,url:"http://www.discoduroderoer.es/wp-content/plugins/post-views/post-views.php",data:"cache_post_id=3750&cache_view_type=robot&cache_output_type=content",cache:false});</script>
+<!-- End Of Script Generated By Post-Views -->
+        <div class="rw-js-container">
+            <script type="text/javascript">
+                // Initialize ratings.
+                function RW_Async_Init(){
+                    RW.init({uid: "c9c6a6ad96543c96dd5c20f298c5ef7b",
+                        source: "WordPress",
+                        options: {
+                             
+                        }
+                    });
+                                        var options = {"lng":"es","size":"large","theme":"star_phuzion_diskonkey","advanced":{"font":{"color":"#ffffff"},"text":{"rateAwful":"Muy malo","ratePoor":"Malo","rateAverage":"Normal","rateThis":"Califica este post","like":"Te Gusta","dislike":"No te gusta","vote":"Voto"},"layout":{"align":{"hor":"right"},"dir":"ltr","lineHeight":"32px"}},"color":"yellow","frequency":1,"type":"star"};
+                                        RW.initClass("blog-post", options);
+                    RW.initRating("37510", {title: "Etiqueta meta HTML", url: "http://www.discoduroderoer.es/etiqueta-meta-html/"});RW.initRating("15480", {title: "", url: ""});RW.initRating("1500", {title: "", url: ""});RW.initRating("36120", {title: "", url: ""});RW.initRating("34260", {title: "", url: ""});RW.initRating("40190", {title: "", url: ""});                    RW.render(null, false);
+                }
+
+                
+                RW_Advanced_Options = {
+                    blockFlash: !(false)
+                };
+                
+                // Append RW JS lib.
+                if (typeof(RW) == "undefined"){ 
+                    (function(){
+                        var rw = document.createElement("script"); 
+                        rw.type = "text/javascript"; rw.async = true;
+                        rw.src = "http://js.rating-widget.com/external.min.js?ck=Y2013M10D02?wp=1.8.6";
+                        var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(rw, s);
+                    })();
+                }
+            </script>
+        </div> 
+<script type="text/javascript">var SHRSB_Settings = {"shr-publisher-3750":{"link":"http:\/\/www.discoduroderoer.es\/etiqueta-meta-html\/","shortener":"bitly","shortener_key":"pikao%7cR_7f8d137f6dec547f3eda43b7545fd789","title":"Etiqueta meta HTML","notes":"Hola%20a%20todos%2C%20hoy%20os%20explicare%20como%20usar%20la%20la%20etiqueta%20meta%2C%20una%20etiqueta%20que%20se%20coloca%20dentro%20de%20la%20etiqueta%20head.%0D%0A%0D%0ALa%20etiqueta%20meta%20nos%20permite%20a%C3%B1adir%C2%A0informaci%C3%B3n%C2%A0adicional%20a%20nuestra%20pagina%2C%20para%20mejorar%20el%20posicionamiento%20de%20nuestra%20pagina.%0D%0ALos%20valores%20que%20debe%20usar%20son%20name%2C%20para%20el%20tipo","service":"5,7,304","apikey":"8afa39428933be41f8afdb8ea21a495c","expand":true,"src":"http:\/\/www.discoduroderoer.es\/wp-content\/plugins\/sexybookmarks\/spritegen_default","localize":true,"share_src":"http:\/\/www.shareaholic.com","rel":"nofollow","target":"_blank","center":true,"twitter_template":"%24%7Btitle%7D+-+%24%7Bshort_link%7D+via+%40DiscoDuroderoer","mode":"inject","designer_toolTips":"1","tip_bg_color":"#000000","tip_text_color":"#ffffff"}};</script><script type="text/javascript">/* <![CDATA[ */ var SHRSB_Globals = {"src":"http:\/\/www.discoduroderoer.es\/wp-content\/plugins\/sexybookmarks\/spritegen_default","perfoption":"1","twitter_template":"%24%7Btitle%7D+-+%24%7Bshort_link%7D+via+%40DiscoDuroderoer","locale":"es","shortener":"bitly","shortener_key":"pikao%7cR_7f8d137f6dec547f3eda43b7545fd789","pubGaSocial":"1","pubGaKey":"UA-34685567-1"}; /* ]]> */</script><script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/si-captcha-for-wordpress/captcha/si_captcha.js?ver=1.0'></script>
+<script type="text/javascript">
+//<![CDATA[
+var si_captcha_styles = "\
+<!-- begin SI CAPTCHA Anti-Spam - comment form style -->\
+<style type='text/css'>\
+div#captchaImgDiv { display:block; }\
+.captchaSizeDivSmall { width:175px; height:45px; padding-top:10px; }\
+.captchaSizeDivLarge { width:250px; height:60px; padding-top:10px; }\
+img#si_image_com,#si_image_reg,#si_image_log,#si_image_side_login { border-style:none; margin:0; padding-right:5px; float:left; }\
+.captchaImgRefresh { border-style:none; margin:0; vertical-align:bottom; }\
+div#captchaInputDiv { display:block; padding-top:15px; padding-bottom:5px; }\
+label#captcha_code_label { margin:0; }\
+input#captcha_code { width:65px; }\
+</style>\
+<!-- end SI CAPTCHA Anti-Spam - comment form style -->\
+";
+jQuery(document).ready(function($) {
+$('head').append(si_captcha_styles);
+});
+//]]>
+</script>
+<div id="spu-bg"></div>
+				<div id="spu-main"><a href="#" onClick="spuFlush(2);" id="spu-close">Close</a><div id="spu-title">Siguenos para hacer una web mejor</div>
+<div id="spu-msg-cont">
+     <div id="spu-msg">
+     Haciendo click, nos ayudaras a saber que nuestra web te gusta</br>
+     <h3>Twitter <div class="spu-button spu-twitter"><a href="https://twitter.com/discoduroderoer" class="twitter-follow-button" data-show-count="false" >Follow Me</a></div> </h3>
+    <h3> Facebook <div class="spu-button spu-facebook"><div id="fb-root"></div><div class="fb-like" data-href="https://www.facebook.com/pages/Disco-Duro-de-Roer/516155851734486" data-send="false" data-width="450" data-show-faces="true"data-layout="button_count"></div></div> </h3>
+     <h3>Google+ <div class="spu-button spu-google"><div class="g-plusone" data-callback="googleCB" data-annotation="bubble" data-size="medium" data-href="https://plus.google.com/u/0/b/118327379272536388220/118327379272536388220/posts"></div></div> </h3>
+     </div>
+    <div class="step-clear"></div>
+</div><span id="spu-timer"></span></div>	<script type="text/javascript" src="http://www.discoduroderoer.es/wp-content/plugins/wp-popup-scheduler/simple_popup_min.js"></script>
+		<script type="text/javascript" src="http://www.discoduroderoer.es/wp-content/plugins/wp-popup-scheduler/float.js"></script>
+		<script type="text/javascript">
+		var popup_width = '600';
+		var bg_color = '#FFFFFF';
+		var popup_content = '<div class="wps_closewin_text"><a href="" onclick="document.getElementById(\'WPS_popup_message\').style.visibility=\'hidden\';return false;"><span style="color:#000000">Cerrar</span></a></div><div class="wps_headline"><h2 align="center"><span style="color:#000000">¡Bienvenido a DiscoDurodeRoer!</span></h2></div><div class="wps_body">&lt;p&gt;&lt;p&gt;Ay&amp;uacute;danos a mejorar la web, para ello:&lt;/p&gt;&lt;p&gt;- Vota los posts.&lt;/p&gt;&lt;p&gt;- D&amp;eacute;janos un comentario.&lt;/p&gt;&lt;div&gt;Tu opini&amp;oacute;n es lo m&amp;aacute;s importante para nosotros.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Recuerda que puedes seguirnos en Facebook, Twitter, Google+, Youtube y Tuenti.&lt;/div&gt;&lt;/p&gt;</div>';
+		var effect = 'dropdown';
+		var delay = 0;
+		var autoscroll = 1;
+		var popup_left = "center";var popup_top = "center";		loadPopup(popup_content,bg_color,popup_width,effect,popup_left,popup_top,delay,autoscroll);
+	</script>
+
+
+<script type="text/javascript">/* <![CDATA[ */ var SHRSB_Globals = {"src":"http:\/\/www.discoduroderoer.es\/wp-content\/plugins\/sexybookmarks\/spritegen_default","perfoption":"1","twitter_template":"%24%7Btitle%7D+-+%24%7Bshort_link%7D+via+%40DiscoDuroderoer","locale":"es","shortener":"bitly","shortener_key":"pikao%7cR_7f8d137f6dec547f3eda43b7545fd789","pubGaSocial":"1","pubGaKey":"UA-34685567-1"}; /* ]]> */</script><script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/wp-table-reloaded/js/jquery.datatables.min.js?ver=1.9.4'></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+jQuery(document).ready(function($){
+	$("#wp-table-reloaded-id-10-no-1").dataTable({"oLanguage":{"sUrl": "http://www.discoduroderoer.es/wp-content/plugins/wp-table-reloaded/languages/datatables/lang-es_ES.txt"}, "aaSorting": [], "bSortClasses": false, "asStripClasses":['even','odd'], "bSort": false, "bPaginate": false, "bLengthChange": false, "bFilter": false, "bInfo": false});
+});
+/* ]]> */
+</script><script type="text/javascript">/* <![CDATA[ */ var SHRSB_Globals = {"src":"http:\/\/www.discoduroderoer.es\/wp-content\/plugins\/sexybookmarks\/spritegen_default","perfoption":"1","twitter_template":"%24%7Btitle%7D+-+%24%7Bshort_link%7D+via+%40DiscoDuroderoer","locale":"es","shortener":"bitly","shortener_key":"pikao%7cR_7f8d137f6dec547f3eda43b7545fd789","pubGaSocial":"1","pubGaKey":"UA-34685567-1"}; /* ]]> */</script><script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushAS3.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushBash.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushColdFusion.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushClojure.js?ver=20090602'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCpp.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCSharp.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCss.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDelphi.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDiff.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushErlang.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushFSharp.js?ver=20091003'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushGroovy.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJava.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJavaFX.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJScript.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushLatex.js?ver=20090613'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushMatlabKey.js?ver=20091209'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushObjC.js?ver=20091207'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPerl.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPlain.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPowerShell.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPython.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushR.js?ver=20100919'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushRuby.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushScala.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSql.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushVb.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://www.discoduroderoer.es/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeEclipse.css?ver=3.0.83c";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['class-name'] = 'codigo';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Siguiente >","prev":"< Anterior","image":"Imagen","of":"de","close":"Cerrar","noiframes":"Esta funci\u00f3n requiere de frames insertados. Tienes los iframes desactivados o tu navegador no los soporta.","loadingAnimation":"http:\/\/www.discoduroderoer.es\/wp-includes\/js\/thickbox\/loadingAnimation.gif","closeImage":"http:\/\/www.discoduroderoer.es\/wp-includes\/js\/thickbox\/tb-close.png"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-includes/js/thickbox/thickbox.js?ver=3.1-20121105'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.40.0-2013.08.13'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.discoduroderoer.es\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Enviando..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.5.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pollsL10n = {"ajax_url":"http:\/\/www.discoduroderoer.es\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/plugins/wp-polls/polls-js.js?ver=2.63'></script>
+<script type='text/javascript' src='http://maps.google.com/maps/api/js?sensor=false&#038;ver=1.4.8'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/themes/itheme2/themify/js/carousel.min.js?ver=1.4.8'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/themes/itheme2/themify/themify-builder/js/themify.builder.module.plugins.js?ver=1.4.8'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/themes/itheme2/themify/themify-builder/js/themify.builder.script.js?ver=1.4.8'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/themes/itheme2/js/carousel.min.js?ver=3.6'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var themifyScript = {"lightbox":{"lightboxSelector":".lightbox","lightboxOn":true,"lightboxContentImages":false,"lightboxContentImagesSelector":".post-content a[href$=jpg],.page-content a[href$=jpg],.post-content a[href$=gif],.page-content a[href$=gif],.post-content a[href$=png],.page-content a[href$=png],.post-content a[href$=JPG],.page-content a[href$=JPG],.post-content a[href$=GIF],.page-content a[href$=GIF],.post-content a[href$=PNG],.page-content a[href$=PNG],.post-content a[href$=jpeg],.page-content a[href$=jpeg],.post-content a[href$=JPEG],.page-content a[href$=JPEG]","theme":"pp_default","social_tools":false,"allow_resize":true,"show_title":false,"overlay_gallery":false,"screenWidthNoLightbox":600,"deeplinking":false,"contentImagesAreas":".post, .type-page, .type-highlight, .type-slider","gallerySelector":".gallery-icon > a[href$=jpg],.gallery-icon > a[href$=gif],.gallery-icon > a[href$=png],.gallery-icon > a[href$=JPG],.gallery-icon > a[href$=GIF],.gallery-icon > a[href$=PNG],.gallery-icon > a[href$=jpeg],.gallery-icon > a[href$=JPEG]","lightboxGalleryOn":true},"lightboxContext":"#pagewrap"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/themes/itheme2/js/themify.script.js?ver=3.6'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/themes/itheme2/themify/js/themify.gallery.js?ver=3.6'></script>
+<script type='text/javascript' src='http://www.discoduroderoer.es/wp-content/themes/itheme2/themify/js/lightbox.js?ver=3.6'></script>
+
+</body>
+</html>

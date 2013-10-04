@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr" >
+<head>
+	
+  <meta charset="utf-8" />
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script><link rel="shortlink" href="https://www.edx.org/node/1136" />
+<link rel="publisher" href="www.edx.org" />
+<link rel="shortcut icon" href="https://www.edx.org/sites/all/themes/boron/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="https://www.edx.org/course/berkeley/cs169-1x/software-service/1136" />
+<meta name="copyright" content="© 2013 edX, some rights reserved." />
+<meta name="keywords" content="Edx, edX, MOOC, MIT, MITx, Harvard,  Harvardx, Berkeley, Georgetown, Wellesley, University of Texas System,  University, College, online learning, education, humanities,  interactive, computer science, public health, artificial  intelligence" />
+<meta name="robots" content="follow, index" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>BerkeleyX: CS169.1x - Software as a Service (Sep 2013) verified | edX</title>
+  <style type="text/css" media="all">@import url("https://www.edx.org/modules/system/system.base.css?mtpa5e");
+@import url("https://www.edx.org/modules/system/system.menus.css?mtpa5e");
+@import url("https://www.edx.org/modules/system/system.messages.css?mtpa5e");
+@import url("https://www.edx.org/modules/system/system.theme.css?mtpa5e");</style>
+<style type="text/css" media="all">@import url("https://www.edx.org/modules/aggregator/aggregator.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/modules/date/date_api/date.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/modules/date/date_popup/themes/datepicker.1.7.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/modules/fences/field.css?mtpa5e");
+@import url("https://www.edx.org/modules/node/node.css?mtpa5e");
+@import url("https://www.edx.org/modules/user/user.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/modules/views/css/views.css?mtpa5e");</style>
+<style type="text/css" media="all">@import url("https://www.edx.org/sites/all/modules/ckeditor/ckeditor.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/modules/ctools/css/ctools.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/modules/lightbox2/css/lightbox_alt.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/modules/panels/css/panels.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/modules/panels/plugins/layouts/flexible/flexible.css?mtpa5e");
+@import url("https://www.edx.org/sites/default/files/ctools/css/130b7bb6477a055b16c8bec527c20c64_2.css?mtpa5e");</style>
+<style type="text/css" media="all">@import url("https://www.edx.org/sites/all/themes/boron/css/fonts.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/header.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/layout.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/footer.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/faq.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/filters.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/course-detail.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/how-it-works.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/verified-certificate.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/courses.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/schools.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/school.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/internals.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/buttons.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/bios.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/open-positions.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/news.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/alerts.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/founders.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/mediakit.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/contactus.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/register.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/course-confirmation.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/blog.css?mtpa5e");
+@import url("https://www.edx.org/sites/all/themes/boron/css/homepage.css?mtpa5e");</style>
+
+<!--[if IE 8]>
+<style type="text/css" media="all">@import url("https://www.edx.org/sites/all/themes/boron/css/ie8.css?mtpa5e");</style>
+<![endif]-->
+
+<!--[if IE 7]>
+<style type="text/css" media="all">@import url("https://www.edx.org/sites/all/themes/boron/css/ie7.css?mtpa5e");</style>
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="https://www.edx.org/sites/default/files/css_injector/css_injector_5.css?mtpa5e" media="all" />
+
+  <script type="text/javascript" src="https://www.edx.org/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="https://www.edx.org/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://www.edx.org/misc/drupal.js?mtpa5e"></script>
+<script type="text/javascript" src="https://www.edx.org/sites/all/modules/lightbox2/js/lightbox_video.js?mtpa5e"></script>
+<script type="text/javascript" src="https://www.edx.org/sites/all/modules/lightbox2/js/lightbox.js?1380681926"></script>
+<script type="text/javascript" src="https://www.edx.org/sites/all/modules/panels/js/panels.js?mtpa5e"></script>
+<script type="text/javascript" src="https://www.edx.org/sites/all/modules/google_analytics/googleanalytics.js?mtpa5e"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-35248639-1"]);_gaq.push(["_setDomainName", "www.edx.org"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.edx.org/sites/all/themes/boron/scripts/jquery.browserdetect.js?mtpa5e"></script>
+<script type="text/javascript" src="https://www.edx.org/sites/all/themes/boron/scripts/jquery.dotdotdot.js?mtpa5e"></script>
+<script type="text/javascript" src="https://www.edx.org/sites/all/themes/boron/scripts/jquery.imagesloaded.js?mtpa5e"></script>
+<script type="text/javascript" src="https://www.edx.org/sites/all/themes/boron/scripts/jquery.infinitescroll.js?mtpa5e"></script>
+<script type="text/javascript" src="https://www.edx.org/sites/all/themes/boron/scripts/showhide.js?mtpa5e"></script>
+<script type="text/javascript" src="https://www.edx.org/sites/all/themes/boron/scripts/completesubmenu.js?mtpa5e"></script>
+<script type="text/javascript" src="https://www.edx.org/sites/all/themes/boron/scripts/regex.js?mtpa5e"></script>
+<script type="text/javascript" src="https://www.edx.org/sites/all/themes/boron/scripts/edx.js?mtpa5e"></script>
+<script type="text/javascript" src="https://www.edx.org/sites/all/themes/boron/scripts/scroll.js?mtpa5e"></script>
+<script type="text/javascript" src="https://www.edx.org/sites/default/files/js_injector/js_injector_4.js?mtpa5e"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"boron","theme_token":"THaPzl3nPjPeSR5YZlsACsOfCC8taC0VHdOKXAipw_M","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/lightbox2\/js\/lightbox_video.js":1,"sites\/all\/modules\/lightbox2\/js\/lightbox.js":1,"sites\/all\/modules\/panels\/js\/panels.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/themes\/boron\/scripts\/jquery.browserdetect.js":1,"sites\/all\/themes\/boron\/scripts\/jquery.dotdotdot.js":1,"sites\/all\/themes\/boron\/scripts\/jquery.imagesloaded.js":1,"sites\/all\/themes\/boron\/scripts\/jquery.infinitescroll.js":1,"sites\/all\/themes\/boron\/scripts\/showhide.js":1,"sites\/all\/themes\/boron\/scripts\/completesubmenu.js":1,"sites\/all\/themes\/boron\/scripts\/regex.js":1,"sites\/all\/themes\/boron\/scripts\/edx.js":1,"sites\/all\/themes\/boron\/scripts\/scroll.js":1,"sites\/default\/files\/js_injector\/js_injector_4.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/aggregator\/aggregator.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/ckeditor.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/lightbox2\/css\/lightbox_alt.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/panels\/plugins\/layouts\/flexible\/flexible.css":1,"public:\/\/ctools\/css\/130b7bb6477a055b16c8bec527c20c64_2.css":1,"sites\/all\/themes\/boron\/css\/fonts.css":1,"sites\/all\/themes\/boron\/css\/header.css":1,"sites\/all\/themes\/boron\/css\/layout.css":1,"sites\/all\/themes\/boron\/css\/footer.css":1,"sites\/all\/themes\/boron\/css\/registration.css":1,"sites\/all\/themes\/boron\/css\/news-events.css":1,"sites\/all\/themes\/boron\/css\/testimonials.css":1,"sites\/all\/themes\/boron\/css\/client-lists.css":1,"sites\/all\/themes\/boron\/css\/contact.css":1,"sites\/all\/themes\/boron\/css\/faq.css":1,"sites\/all\/themes\/boron\/css\/filters.css":1,"sites\/all\/themes\/boron\/css\/course-detail.css":1,"sites\/all\/themes\/boron\/css\/how-it-works.css":1,"sites\/all\/themes\/boron\/css\/verified-certificate.css":1,"sites\/all\/themes\/boron\/css\/courses.css":1,"sites\/all\/themes\/boron\/css\/schools.css":1,"sites\/all\/themes\/boron\/css\/school.css":1,"sites\/all\/themes\/boron\/css\/internals.css":1,"sites\/all\/themes\/boron\/css\/buttons.css":1,"sites\/all\/themes\/boron\/css\/bios.css":1,"sites\/all\/themes\/boron\/css\/open-positions.css":1,"sites\/all\/themes\/boron\/css\/news.css":1,"sites\/all\/themes\/boron\/css\/alerts.css":1,"sites\/all\/themes\/boron\/css\/founders.css":1,"sites\/all\/themes\/boron\/css\/mediakit.css":1,"sites\/all\/themes\/boron\/css\/contactus.css":1,"sites\/all\/themes\/boron\/css\/register.css":1,"sites\/all\/themes\/boron\/css\/course-confirmation.css":1,"sites\/all\/themes\/boron\/css\/blog.css":1,"sites\/all\/themes\/boron\/css\/homepage.css":1,"sites\/all\/themes\/boron\/css\/ie8.css":1,"sites\/all\/themes\/boron\/css\/ie7.css":1,"public:\/\/css_injector\/css_injector_5.css":1}},"edxtweak":{"base_path_edx_courses":"course-list"},"lightbox2":{"rtl":0,"file_path":"\/(\\w\\w\/)public:\/","default_image":"\/sites\/all\/modules\/lightbox2\/images\/brokenimage.jpg","border_size":20,"font_color":"ffffff","box_color":"363636","top_position":"0","overlay_opacity":"0.4","overlay_color":"363636","disable_close_click":1,"resize_sequence":0,"resize_speed":100,"fade_in_speed":200,"slide_down_speed":300,"use_alt_layout":1,"disable_resize":0,"disable_zoom":0,"force_show_nav":0,"show_caption":1,"loop_items":0,"node_link_text":"View Image Details","node_link_target":0,"image_count":"Image !current of !total","video_count":"Video !current of !total","page_count":"Page !current of !total","lite_press_x_close":"press \u003Ca href=\u0022#\u0022 onclick=\u0022hideLightbox(); return FALSE;\u0022\u003E\u003Ckbd\u003Ex\u003C\/kbd\u003E\u003C\/a\u003E to close","download_link_text":"","enable_login":false,"enable_contact":false,"keys_close":"c x 27","keys_previous":"p 37","keys_next":"n 39","keys_zoom":"z","keys_play_pause":"32","display_image_size":"original","image_node_sizes":"()","trigger_lightbox_classes":"","trigger_lightbox_group_classes":"","trigger_slideshow_classes":"","trigger_lightframe_classes":"","trigger_lightframe_group_classes":"","custom_class_handler":0,"custom_trigger_classes":"","disable_for_gallery_lists":true,"disable_for_acidfree_gallery_lists":true,"enable_acidfree_videos":true,"slideshow_interval":5000,"slideshow_automatic_start":true,"slideshow_automatic_exit":true,"show_play_pause":true,"pause_on_next_click":false,"pause_on_previous_click":true,"loop_slides":false,"iframe_width":600,"iframe_height":400,"iframe_border":1,"enable_video":1,"flvPlayer":"\/","flvFlashvars":"autoplay=1\u0026amp;playerMode=normal\u0026amp;rel=0"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip","trackDomainMode":"1"}});
+//--><!]]>
+</script>
+
+  
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+
+
+
+
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-1136 node-type-courses domain-prod-edx-org" >
+
+  
+  
+	<!--******* PAGE HEADER *********************************************************************************/ -->
+    <header>
+	   	<div class="header-menu clearfix">
+	   		<div class="logo">     <a href="/"><img title="edX" alt="edX" src="/sites/all/themes/boron/images/edx-logo-header.png"></a></div>            
+	   		<nav class="menu clearfix">
+				<ul class="menu"><li class="first leaf"><a href="/how-it-works" title="">how it works</a></li>
+<li class="leaf"><a href="/course-list" title="">courses</a></li>
+<li class="leaf"><a href="/schools" title="">schools</a></li>
+<li class="last leaf"><a href="https://courses.edx.org/register" title="">Register Now</a></li>
+</ul>			</nav>
+            <div class="sign-in">
+                <a id="login-button" class="btn btn-blue" href="https://courses.edx.org/login">Login</a>
+            </div>
+            <div class="dashboard">
+                <a id="dashboard-button" class="btn btn-blue" href="https://courses.edx.org/dashboard">dashboard</a>
+            </div>
+
+		</div>
+	</header>
+	
+	<!-- ****** MAIN CONTENT ******************************************************************************** -->
+	<div id="page-wrapper">
+		<div id="page"> 
+            <div id="content" role="main">
+        		                                                
+                                                
+               
+                  <div class="region region-content">
+    <div class="panel-flexible panels-flexible-18 clearfix" >
+<div class="panel-flexible-inside panels-flexible-18-inside">
+<div class="panels-flexible-region panels-flexible-region-18-center panels-flexible-region-first panels-flexible-region-last course-detail-container">
+  <div class="inside panels-flexible-region-inside panels-flexible-region-18-center-inside panels-flexible-region-inside-first panels-flexible-region-inside-last">
+<div class="panel-pane pane-views pane-course-view" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-course-view view-id-course_view view-display-id-default view-dom-id-65d43db8151927b39ce30f8882494d29">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+    <!-- This is the template for Course Detail Page -->
+<div class="header-white"><div class="header-white-title"><h2>Course detail</h2></div></div><section class="course-header clearfix"><article class="col-izq"><img src="https://www.edx.org/sites/default/files/CS-169.1x_608x211_0.jpg" width="608" height="211" alt="BerkeleyX: CS169.1x - Software as a Service" /></article><article class="col-der"><a href="http://youtube.com/watch?v=V36LpHqtcDY" rel="lightvideo"><div class="playvideo"></div><div class="description">Watch the Course Intro Video</div><img src="https://www.edx.org/sites/default/files/CS169.1x_320x211.jpg" width="320" height="211" alt="BerkeleyX: CS169.1x - Software as a Service Video" /></a></article></section><section class="course-detail clearfix"><article class="col-izq"><div class="title"><h1>Software as a Service</h1></div><div class="subtitle"><h2>CS169.1x teaches the fundamentals for engineering long-lived software using Agile techniques to develop Software as a Service (SaaS) using Ruby on Rails.</h2></div><div class="about-title"><h3>ABOUT THIS COURSE</h3></div><div class="about"><p>CS169.1x teaches the fundamentals for engineering long-lasting software using highly-productive Agile techniques to develop Software as a Service (SaaS) using Ruby on Rails. Students will understand the new challenges and opportunities of SaaS versus shrink-wrapped software. They will understand and apply fundamental programming techniques to the design, development, testing, and public cloud deployment of a simple SaaS application. Students will use best-of-breed tools that support modern development techniques including behavior-driven design, user stories, test-driven development, velocity, and pair programming. Students will learn how modern programming language features like metaprogramming and reflection can improve productivity and code maintainability. Students will work on weekly coding projects and quizzes. Those who successfully complete the assignments and earn a passing grade can get an honor code certificate or verified certificate from BerkeleyX. This run of the class includes all new videos, two new homeworks and all new exam questions.  The new class also includes embedded live chat with Teaching Assistants and other students and opportunities for remote pair programming with other students.  Group tutorial Q&amp;A sessions will also be held and broadcast live through Google Hangouts and YouTube.</p>
+</div><div class="course-how-take"><span><div class="course-how-take-title"><h3>Ways to take this edX course:</h3></div>
+<div class="course-how-take-content"></div>
+<div class="course-how-take-block course-how-take-audit">
+<h3>Simply Audit this Course</h3>
+<div class="course-how-take-block-content">
+<p>Can't commit to all of the lectures, assignments, and tests? Audit this course and have complete access to all of the course material, tests, and the online discussion forum.  You decide what and how much you want to do.</p>
+</div>
+<div class="course-how-take-block-footer">
+<p class="course-take-audit-cost">Free to All</p>
+<p class="course-take-audit-more"><a href="/student-faq#certificates">More about Auditing a Course</a></p>
+</div>
+</div></span><div class="course-how-take-or">or</div><div class="course-how-take-block course-how-take-verified"><h3>Pursue a Verified Certificate of Achievement</h3>
+<div class="course-how-take-block-content">
+<p>Plan to use your completed coursework for job applications, promotions or school applications?  Then you may prefer to work towards a verified Certificate of Achievement to document your accomplishment.</p>
+</div>
+<div class="course-how-take-block-footer">
+<p class="course-take-audit-cost">Minimum fee required. <a href="/verified-certificate#pricing">see details</a></p>
+<p class="course-take-audit-more"><a href="/verified-certificate">What is an ID verified Certificate of Achievement?</a></p>
+</div></div></div><div class="course-staff"><div class="course-staff-title"><h3>COURSE STAFF</h3></div><div class="view view-course-view view-id-course_view view-display-id-block_course_professor view-dom-id-7a9930daceec53adf431584b5b888f76">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <!-- This is the template for every professor row in Course Detail-->
+
+<div class="course-staff-row clearfix"><div class="course-staff-row-left"><div class="course-staff-photo"><img src="https://www.edx.org/sites/default/files/professor-fox.9f2dfcfcea67.jpg" width="110" height="110" alt="Armando Fox" title="Armando Fox" /></div></div><div class="course-staff-row-right"><div class="course-staff-name">Armando Fox</div><div class="course-staff-resume"><p>Armando Fox is an Adjunct Associate Professor at UC Berkeley and was previously an Assistant Professor at Stanford, where he received teaching and mentoring awards from the Associated Students of Stanford University, the Society of Women Engineers, and Tau Beta Pi Engineering Honor Society. In previous lives he helped design the Intel Pentium Pro microprocessor and founded a successful startup to commercialize his UC Berkeley dissertation research on mobile computing. His degrees in electrical engineering and computer science are from MIT, the University of Illinois, and UC Berkeley, and he is an ACM Distinguished Member.</p>
+</div></div></div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <!-- This is the template for every professor row in Course Detail-->
+
+<div class="course-staff-row clearfix"><div class="course-staff-row-left"><div class="course-staff-photo"><img src="https://www.edx.org/sites/default/files/professor-patterson.061b8a0e48a6.jpg" width="110" height="110" alt="David Patterson" title="David Patterson" /></div></div><div class="course-staff-row-right"><div class="course-staff-name">David Patterson</div><div class="course-staff-resume"><p>David Patterson is the Pardee Professor of Computer Science at UC Berkeley and the recipient of the Distinguished Teaching Award (UC Berkeley), the Karlstrom Outstanding Educator Award (ACM), the Mulligan Education Medal (IEEE), and the Undergraduate Teaching Award (IEEE). He has served as Chair of Berkeley&#039;s CS Division, Chair of the CRA, and President of the ACM. His best-known research projects are Reduced Instruction Set Computers (RISC), Redundant Arrays of Inexpensive Disks (RAID), and Network of Workstations (NOW). Among other distinctions, he&#039;s been elected to the National Academy of Engineering, the National Academy of Sciences, and the Silicon Valley Engineering Hall of Fame, and is a Fellow of the Computer History Museum. He received all his degrees from UCLA.</p>
+</div></div></div>  </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last">
+    <!-- This is the template for every professor row in Course Detail-->
+
+<div class="course-staff-row clearfix"><div class="course-staff-row-left"><div class="course-staff-photo"><img src="https://www.edx.org/sites/default/files/sam_joseph_x110_0.jpg" width="110" height="110" alt="Sam Joseph" title="Sam Joseph" /></div></div><div class="course-staff-row-right"><div class="course-staff-name">Sam Joseph</div><div class="course-staff-resume"><p>Sam Joseph is an Associate Professor at Hawaii Pacific University and was previously an Associate Researcher at University of Hawaii at Manoa (UHM). He is a recipient of the Raymond-Hide prize for Astrophysics and a Toshiba Fellowship. He teaches courses on game &amp; mobile programming &amp; design, software engineering and scientific research methods exclusively online from London, UK. He runs the funniest computer ever competition as part of his research on creating humorous chatbots, which dovetails nicely with his other research interests in software to support online collaborative learning, in particular remote pair programming. His degrees in Astrophysics, Cognitive Science and Computer Science are from the University of Leicester, the University of Edinburgh, and UHM, and he is an ACM Member.</p>
+</div></div></div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></div><div class="faq-title"><h3>FAQs</h3></div><div class="faq"><h3 class="faqfield-question">How will this course be different from previous offerings?</h3><div class="faqfield-answer"><p>The presentation order and amount of time spent on some material is being changed in response to feedback from both on-campus and online students. This run of the class also includes all new videos, two new homeworks and all new exam questions.  The new class also includes embedded live chat with Teaching Assistants and other students and opportunities for remote pair programming with other students.  Group tutorial Q&amp;A sessions will also be held and broadcast live through Google Hangouts and YouTube.</p>
+</div><h3 class="faqfield-question">What is the format of the class?</h3><div class="faqfield-answer"><p>The class will consist of lecture videos, which are broken into small chunks, usually between eight and twelve minutes each. Some of these may contain integrated &quot;check-yourself&quot; questions. There will also be programming assignments and standalone exams/quizzes, which are not part of the video lectures.</p>
+</div><h3 class="faqfield-question">How can I learn more about the course content?</h3><div class="faqfield-answer"><p>Please watch the video on this page that we recorded especially for this offering of the course.</p>
+</div><h3 class="faqfield-question">Will the text of the lectures be available?</h3><div class="faqfield-answer"><p>Yes, transcripts of the course will be made available.</p>
+</div><h3 class="faqfield-question">Do I need to watch the lectures live?</h3><div class="faqfield-answer"><p>No. You can watch the lectures at your leisure.</p>
+</div><h3 class="faqfield-question">How much does it cost to take the course?
+</h3><div class="faqfield-answer"><p>Nothing: the course is free. The recommended textbook is not free (US$10 for Kindle ebook, US$30 hardcopy, US$33 for both starting October 10), but there are free online sources to follow if you do not wish to purchase textbooks.</p>
+</div><h3 class="faqfield-question">What versions of Ruby and Rails will we use in the course?</h3><div class="faqfield-answer"><p>We will make available at least 2 weeks before class a virtual machine image with all required courseware. You can either download this image and run it using the free VirtualBox (virtualbox.org) software on any Intel x86-based computer, or you can deploy it on Amazon&#039;s Elastic Compute Cloud using instructions we will provide. In general, we&#039;ll be using Rails 3.2 and Ruby 1.9.3, but we will also be using many other tools, gems, and libraries that will be preinstalled.</p>
+</div></div><div class="prerequisites-left" id="prerequisites-container"><div class="prerequisites-left-title"><h3>Prerequisites:</h3></div><p>Programming proficiency in an object-oriented programming language such as Java, C#, C++, Python, or Ruby is required. We will teach the basics of Ruby at a very accelerated pace that assumes thorough familiarity with OOP inheritance, static/class vs. instance methods and attributes, recursion, hash tables/hash maps, list comprehensions, higher-order functions, lambda expressions. This course is NOT a good first course in programming. Basic Unix command-line skills are helpful; we will provide a cheat sheet.</p>
+</div><div class="closing-statement-title"></div><div class="closing-statement-body"></div><div class="action"><div class="iframe iframe-register action-register-course"><iframe src="https://courses.edx.org/mktg/BerkeleyX/CS.CS169.1x/3T2013"></iframe></div></div></article><article class="col-der"><div class="info"><div class="institution"><div class="field">School:</div>UC BerkeleyX</div><div class="code"><div class="field">Course code:</div>CS169.1x</div><div class="startdate"><div class="field">Classes start:</div>30 Sep 2013</div><div class="duration last"><div class="field">Course length:</div>5 weeks</div></div><div class="prerequisites-right"><div class="prerequisites-right-title">Prerequisites:</div><div class="prerequisites-right-container"><p>Programming proficiency in an object-oriented programming language such as Java, C#, C++, Python, or Ruby is required. We will teach the basics of Ruby at a very accelerated pace that assumes thorough familiarity with OOP inheritance, static/class vs. instance methods and attributes, recursion, hash tables/hash maps, list comprehensions, higher-order functions, lambda expressions. This course is NOT a good first course in programming. Basic Unix command-line skills are helpful; we will provide a cheat sheet.</p>
+</div><div class="prerequisites-right-seemore" id="prerequisites-seemore">see more...</div></div><div class="action"><div class="iframe iframe-register action-register-course"><iframe src="https://courses.edx.org/mktg/BerkeleyX/CS.CS169.1x/3T2013"></iframe></div></div><div class="course-social"><ul><li><a href="https://twitter.com/intent/tweet?text=I just registered for an #edX course ‐ join me at https://www.edx.org." data-popup="true" title="Twitter"><img src="/sites/all/themes/boron/images/ico-tweet.png" alt="Twitter" /></a></li><li class="separator"><img src="/sites/all/themes/boron/images/ico-separator.png"/></a></li><li><a href="http://www.facebook.com/EdxOnline" data-popup="true" title="Facebook"><img src="/sites/all/themes/boron/images/ico-like.png" alt="Facebook" /></a></li><li class="separator"><img src="/sites/all/themes/boron/images/ico-separator.png"/></a></li><li><a href="mailto:?subject=Take%20a%20course%20with%20edX%20online&amp;body=I just registered for an #edX course - join me at: http://www.edx.org/course/berkeley/cs169-1x/software-service/1136" title="email share"><img src="/sites/all/themes/boron/images/ico-email.png" alt="email share" /></a></li><li class="separator"><img src="/sites/all/themes/boron/images/ico-separator.png"/></a></li><li><a href="http://www.meetup.com/edx-communities" data-popup="true" title="Meetup"><img src="/sites/all/themes/boron/images/ico-meetup.png" alt="Meetup" /></a></li></ul></div></article></section>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+  </div>
+</div>
+</div>
+</div>
+  </div>
+                            </div> <!-- /#content -->
+        
+            <div id="main-wrapper">
+                <div id="main" class="clearfix with-navigation">
+        
+                </div>
+            </div> <!-- /#main, /#main-wrapper -->
+        
+            
+	
+    	</div>
+
+    	
+    	<script type="text/javascript">
+			  // WebFontConfig = {
+			  //   google: { families: [ 'Open+Sans:400italic,600italic,700italic,400,600,700:latin' ] }
+			  // };
+			  // (function() {
+			  //   var wf = document.createElement('script');
+			  //   wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+			  //     '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			  //   wf.type = 'text/javascript';
+			  //   wf.async = 'true';
+			  //   var s = document.getElementsByTagName('script')[0];
+			  //   s.parentNode.insertBefore(wf, s);
+			  // })(); 
+		</script> 
+    	
+    </div> <!-- /#page, /#page-wrapper -->
+
+    <footer>
+    	<div class="footer-inside clearfix">
+    		<div class="left-col">
+    			<div class="links">
+    				<ul class="clearfix">
+    					<li>
+                            <a href="/about-us">About Us</a>
+                        </li>
+                        <li>
+                            <a href="/jobs">Jobs</a>
+                        </li>
+                        <li>
+                            <a href="/in-the-news">Press</a>
+                        </li>
+                        <li>
+                            <a href="/student-faq">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="/contact">Contact</a>
+                        </li>
+    				</ul>
+    			</div>
+    			<div class="logo clearfix">
+    				<div class="image">
+    				</div>
+    				<div class="description copy-meta">
+EdX is a non-profit created by founding partners Harvard and MIT. We're bringing the best of higher education to students around the world. EdX offers MOOCs and interactive online classes in subjects including law, history, science, engineering, business, social sciences, computer science, public health, and artificial intelligence (AI).    				</div>
+    			</div>
+    		</div>
+    		<div class="right-col">
+                <div class="social clearfix">
+                    <div class="icon_meetup">
+                        <a data-popup="true" href="http://www.meetup.com/edx-communities" title="Meetup"><img src="/sites/all/themes/boron/images/social-meetup.png" alt="Meetup" /></a>
+                    </div>
+                    <div class="icon_facebook">
+                        <a data-popup="true" href="https://www.facebook.com/EdxOnline" title="Facebook"><img src="/sites/all/themes/boron/images/social-facebook.png" alt="Facebook" /></a>
+                    </div>
+                    <div class="icon_linkedin">
+                        <a data-popup="true" href="http://www.linkedin.com/company/edx" title="LinkedIn"><img src="/sites/all/themes/boron/images/social-linkedin.png" alt="LinkedIn" /></a>
+                    </div>                   
+                    <div class="icon_twitter">
+                        <a data-popup="true" href="https://twitter.com/edXOnline" title="Twitter"><img src="/sites/all/themes/boron/images/social-twitter.png" alt="Twitter" /></a>
+                    </div>
+                    <div class="icon_googleplus">
+                        <a data-popup="true" href="https://plus.google.com/108235383044095082735/posts" title="Google+"><img src="/sites/all/themes/boron/images/social-google-plus.png" alt="Google+" /></a>
+                    </div>
+                </div>
+                <div class="rights">
+                    © 2013 edX, except where noted, all rights reserved. 
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="/terms">Terms of Service and Honor Code</a>
+                        </li>
+                        <li>
+                            <a href="/privacypolicy">Privacy Policy (Revised 9/17/2013)</a>
+                        </li>
+                        <!-- <li>
+                            <a href="/honorcode">Honor Code</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+    	</div>
+    </footer> <!-- /.section, /#footer -->
+
+
+
+
+
+  
+
+<script type="text/javascript">if(!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.src=(("http:"===document.location.protocol)?"http:":"https:")+"//"+"js-agent.newrelic.com/nr-100.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","beacon-1.newrelic.com","1beac94c95","1800846","NQQGYUZWDUNSVUMPWQxOJVZAXgxeHEZWAVM9DAVbVVAGQmxYWAJTPRcNUENoE1FUUw==",0,1045,new Date().getTime(),"","","","",""]);</script></body>
+</html>

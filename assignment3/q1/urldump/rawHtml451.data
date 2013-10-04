@@ -1,0 +1,646 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<title>Welcome To Klass Boutique</title>
+
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta name="MSSmartTagsPreventParsing" content="TRUE"/>
+
+<script src="/include/js/loader.js"></script><style type='text/css'>/* -- RESET STYLES  -- */
+button.wdk_live-button,
+a.wdk_live-button,
+a.wdk_live-button:link,
+a.wdk_live-button:visited {
+  /*
+      Strip down the button and link elements to a base we can work with.
+  */
+  padding: 0 2px 0 0;
+  margin: 3px 6px 5px 0px;
+  border: none;
+  display: inline-block;
+
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  white-space: nowrap;
+  overflow: visible;
+  width: auto;
+}
+
+  * html a.wdk_live-button,
+  * html a.wdk_live-button:link,
+  * html a.wdk_live-button:visited {
+    /*
+        IE6 fix to make link fit text.
+    */
+    width: 1%;
+  }
+
+  button.wdk_live-button, x:-moz-any-link {
+    /*
+        FF fix to make button spacing even across browsers.
+    */
+    margin: 3px 3px 3px 0;
+  }
+
+  *:first-child+html button.wdk_live-button {
+    /*
+        Reset IE7 back to what it was for previous fix.
+    */
+    margin: 0 3px 0 3px;
+  }
+
+  button.wdk_live-button span,
+  a.wdk_live-button span,
+  a.wdk_live-button:link span,
+  a.wdk_live-button:visited span {
+    /*
+        Set the span tags to display: block, as they will work our background-image magic.
+    */
+    display: block;
+  }
+
+/* -- ------------------------------------------ -- */
+button.wdk_live-button, a.wdk_live-button, a.wdk_live-button:link, a.wdk_live-button:visited { 
+    font-family: georgia;
+    font-size: 12px;
+    height: 26px;
+    background: transparent;
+    color: #949596;
+    border: none;
+
+}
+button.wdk_live-button:hover, a.wdk_live-button:hover, a.wdk_live-button span span {
+color: #fff !important;
+text-decoration: none !important;
+}
+button.wdk_live-button:active,a.wdk_live-button:active {
+color: #fff;
+}button.wdk_live-button span,a.wdk_live-button span,
+  a.wdk_live-button:link span,
+  a.wdk_live-button:visited span {
+    padding: 0 12px 0 0;
+    height: 26px;
+    background: url(/siteimages/_buttons/black_r.png) no-repeat top right;
+  }
+
+  button.wdk_live-button span span,
+  a.wdk_live-button span span,
+  a.wdk_live-button:link span span,
+  a.wdk_live-button:visited span span {
+    padding: 0 0 0 13px;
+    height: 26px;
+    line-height: 26px;
+    background: url(/siteimages/_buttons/black_l.png) no-repeat top left;
+    text-shadow: #000 1px 1px 1px;
+  }
+
+  /* Hovering */
+  a.wdk_live-button:hover span,button.wdk_live-button:hover span{
+    background-position: right -26px;
+  }
+  a.wdk_live-button:hover span span, button.wdk_live-button:hover span span{
+    background-position: left -26px;
+  }
+   a.wdk_live-button:active span, button.wdk_live-button:active span{
+    background-position: right -52px;
+  }
+  a.wdk_live-button:active span span, button.wdk_live-button:active span span {
+    background-position: left -52px;
+  }
+</style><script src="/include/boltons/ajaxbasket/ajaxbasket.min.js"></script>        <link rel="stylesheet" href="/wdk_stylesheet.css" type="text/css" media="screen" />
+        <script src="/include/js/loader.js?v=1.4.2"></script>        <script type='text/javascript' src='/include/js/dropdown-menu_top.js'></script>
+<link rel='stylesheet' href='/include/css/dropdown-menu_top.css' type='text/css' media='screen' />
+        <!--[if IE]>
+        <script type="text/javascript" src="/include/js/DD_roundies_0.0.2a-min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                 DD_roundies.addRule('.curved, ul.wdk-listLevel_3', '6px');
+                 DD_roundies.addRule('.wdk_li_first a', '6px 6px 0px 0px');
+                 DD_roundies.addRule('.wdk_li_last a', '0px 0px 6px 6px');
+            });
+        </script>
+        <![endif]-->
+        <!--[if lte IE 9]>
+        <style type="text/css">
+        .wdk_menu-container-inner {
+            position: relative;
+            z-index: 990;
+        }
+        .wdk_menu-container {
+            position: relative;
+            z-index: 900;
+        }
+        </style>
+         <script type="text/javascript">
+            $(function() {
+
+                setTimeout(function() {
+
+                    var zIndexNumber = 2000;
+                    $('.wdk_menu-container ul li').each(function() {
+                        $(this).css('zIndex', zIndexNumber);
+                        zIndexNumber -= 10;
+                    });
+
+                }, 2000);
+
+            });
+        </script>
+        <![endif]-->
+        
+        
+
+        <script type="text/javascript">
+
+             $(function() {
+
+                // Javascript for depreciated WDK Shop drop-down
+                $('#wdk_shop_a').mouseover(function() {
+                    $('#wdk_shop_menu ul.wdk-shopCatList:first').show();
+                    $('#wdk_shop_a').addClass('down_arrow');
+                    $('#wdk_shop_menu').stop(true, true).slideDown(400);
+
+                });
+
+                $('#wdk_slide-container').hover(function() {
+                    $('#wdk_shop_menu').clearQueue();
+                    $('#wdk_shop_menu ul.wdk-shopCatList:first').show();
+                    $('#wdk_shop_a').addClass('down_arrow');
+                    $('#wdk_shop_menu').show();
+                }, function() {
+                    $('#wdk_shop_menu').stop(true, true).delay(400).slideUp(400);
+                    $('#wdk_shop_a').removeClass('down_arrow');
+                });
+       
+                $('.wdk-shopCatList li').hover(
+                function() {
+                    $(this).find('ul.wdk-shopCatList:first').show();
+                },
+                function(){
+                    $(this).find('ul.wdk-shopCatList:first').hide();
+                });
+
+                // Javascript for DDMs
+                $('.wdk_level_1 > a span').each(function(){
+                    if( $(this).text().length > 18 ){
+                        $(this).text($(this).text().substr(0, 18) + '...');
+                    }
+                });
+
+                $('ul.wdk_menu-ul li:has(ul)').hover(function() {
+                    $('> a', this).addClass('down_arrow');
+    
+                }, function() {
+                    $('> a', this).removeClass('down_arrow');
+                });
+
+
+             });
+
+        </script>
+        <!--[if !IE]><!-->
+        <style type="text/css">
+        body {
+                    
+        ;
+        }
+        </style>
+        <!--<![endif]-->
+        <style type="text/css">
+            .wdk_show {display:block !important;}
+            .wdk_hide {display:none !important;}
+            .wdk-listLevel_3 {display: none;}
+ 
+            body {
+                  background-repeat: repeat;
+                background-attachment: fixed;
+                background-position: 0 0;
+                font-family:georgia;
+                color:#000000; background-image:url("/siteimages/_templates/bg/flowers.png"); ;
+                background-color:#8a6480;
+            }
+            hr {
+                border: 0px;
+                height: 1px;
+                background:#8c8c8c !important;
+            }
+       img.bg {
+              /* Set rules to fill background */
+              min-height: 100%;
+              min-width: 1024px;
+                
+              /* Set up proportionate scaling */
+              width: 100%;
+              height: auto;
+                
+              /* Set up positioning */
+              position: fixed;
+              top: 0;
+              left: 0;
+              z-index: -1;
+            }
+
+            @media screen and (max-width: 1024px) { /* Specific to this particular image */
+              img.bg {
+                left: 50%;
+                margin-left: -512px;   /* 50% */
+              }
+            }
+            #wdk_template-sitecontainer {
+                background:#ffffff;
+            }
+            .wdk_menu-container {
+                background:#373737;
+                border-bottom: 3px solid #050505;
+                border-top: 3px solid #050505;
+            }
+            #wdk_content-sitenamecontainer {
+                -moz-box-shadow: 1px 1px 1px #8c8c8c;
+                -webkit-box-shadow: 1px 1px 1px #8c8c8c;
+                box-shadow: 1px 1px 1px #8c8c8c;
+                background:#373737;
+            }
+            div#wdk_template-footercontainer {
+
+                 background:#050505;
+            }
+
+            #wdk_top-divider {
+                border-top:1px solid #8c8c8c;
+            }
+
+             /*basket widget*/
+            #wdk_basket-link {
+                color:#ffffff;
+            }
+
+            /*footer*/
+
+            .wdk_template-footercontent {
+                color:#ffffff;
+            }
+            .wdk_template-footercontent a {
+                color:#ffffff;
+            }
+            .wdk_template-footercontent a:hover {
+                color:#d7d7d7;
+            }
+
+            /* Page Titles */
+
+            h6#wdk_site-name a {
+                color:#000000;
+            }
+            h6#wdk_template-sitename {
+                color:#ffffff;
+            }
+            .wdk_content-pagetitle {
+                color:#000000 !important;
+            }
+
+            /*--- Menu ---*/
+            .wdk_menu-item-link, ul.wdk_menu-ul li a {
+                color: #ffffff;
+                background-image: url('/siteimages/_templates/png/123/arrow-1-ffffff.png');
+                background-repeat: no-repeat;
+                background-position: 170px center;
+                background-color: none;
+            }
+            .down_arrow {
+                color: #ffffff;
+                background-image: url('/siteimages/_templates/png/123/arrow-2-ffffff.png');
+                background-repeat: no-repeat;
+                background-position: 170px center;
+                background-color: none; 
+            }
+            .wdk_menu-item {
+                background: #050505;
+                -moz-box-shadow: 1px 1px 1px #000000;
+                -webkit-box-shadow: 1px 1px 1px #000000;
+                box-shadow: 1px 1px 1px #000000;
+            }
+            .wdk-shopCatList li, .wdk_sub_menu li {
+                border-bottom: 1px dotted #414141; 
+            }
+            .wdk_li_last { border: 0 !important; }
+            .wdk-shopCatList li a {
+                color:#ffffff;
+                //background:#050505;
+            }
+            #wdk_shop_menu {
+                background:#050505;
+                -moz-box-shadow: 1px 1px 1px #000000;
+            }
+          
+            ul.wdk-listLevel_3, .wdk_sub_menu {
+                background:#000000;
+                 -moz-box-shadow: 1px 1px 1px #000000;
+                -webkit-box-shadow: 1px 1px 1px #000000;
+                box-shadow: 1px 1px 1px #000000;
+            }
+            .wdk_sub_menu.wdk_tier_3 {
+                background:#000000;
+            }
+            ul.wdk-listLevel_3 li a {
+                //background:#000000;
+            }
+
+            /*content*/
+            #wdk_content-container {
+                color: #000000;
+            }
+            #wdk_content-container a {
+                color:#000000;
+            }
+            #wdk_content-container a:hover {
+                /*border-bottom:1px dotted #000000;*/
+                color: #141414;
+            }
+         
+
+            .wdk_sidebasket-noitems {
+                color:#000000 !important;
+            }
+            .shopBasketDivider {
+                color:#000000 !important;
+            }
+
+            .breadCrumb a {
+                color: #000000 !important;
+            }
+            .wdk_shop-checkoutlinks {
+                color:#000000 !important;
+            }
+            .breadCrumb {
+                color: #000000 !important;
+            }
+
+            /**/
+            .headingProductTxt {background:transparent !important; color:#000000 !important; font-size:18px; font-weight: normal !important;}
+            table.headingProductTbl {background:transparent !important; color:#000000 !important;}
+            table.headingCategoryTbl,table.headingCategoryTbl strong {background:transparent !important; color:#000000 !important; font-size:18px; font-weight: normal !important;}
+            .headingProductCell { padding-bottom: 10px;}
+            /*.productTbl {border-bottom: 1px solid #050505 !important;}*/
+
+            .productCell a h2, .stock_quantity_box {text-decoration:none !important; font-size:13px !important;}
+            .wdk_shop-customerloginlink a {font-size:13px !important;}
+            a.wdk_category-backToTop {font-size:13px !important;}
+            .breadCrumb, .breadCrumb a {font-weight: normal !important;}
+
+             div.wdk_shop-tellafriend textarea#wdk_tellfriend-message, div.wdk_shop-tellafriend input {font-family: georgia;}
+
+        </style>
+       
+    </head>
+    <body>
+         <!--[if IE]>
+    
+    <![endif IE]-->
+        <table id="wdk_template-frame" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td width="50%"></td>
+                <td width="100%" valign="top">
+                    <div id="wdk_template-sitecontainer">
+
+                         <div id="wdk_template-headercontainer">
+
+                                 <div>
+                                 
+                                    
+                                        <a id="wdk_template-header3" style="border: 0; text-decoration: none;" href="/">
+                                            <img src="/siteimages/32/6/7/326706/logos/6929397.jpg?" style="width:1000px;height:200px;"  class="dyos_headerimage3" alt=""/>                                        </a>
+
+                                    
+                                                                    </div>
+
+
+                         </div>
+
+
+
+
+                            <div class="wdk_menu-container">
+                            
+                            
+                                <div class="wdk_menu-container-inner">
+
+                                                                    <ul class="wdk_menu-ul wdk_tier_1">
+<li class='wdk_home-page wdk_menu-item wdk_menu-firstitem wdk_level_1'><a href="/" ><span>Home</span></a>
+</li>
+<li class='wdk_menu-item wdk_level_1'><a href="/justarrived/"><span>Shop</span></a>
+<ul class="wdk_sub_menu wdk_tier_2">
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_753785-Bandage-Dresses.html" ><span><!-- 001 -->Bandage Dresses</span></a>
+</li>
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_755155-Celebrity-Style.html" ><span><!-- 002 -->Celebrity Style</span></a>
+</li>
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_753487-Dresses.html" ><span><!-- 003 -->Dresses</span></a>
+</li>
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_780429-Jeans.html" ><span><!-- 004 -->Jeans</span></a>
+</li>
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_753748-Jumpers-Tops.html" ><span><!-- 004 -->Jumpers & Tops</span></a>
+</li>
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_753746-Skirts-Leggings.html" ><span><!-- 004 -->Skirts & Leggings</span></a>
+</li>
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_760121-Jackets-Coats.html" ><span><!-- 005 -->Jackets & Coats</span></a>
+</li>
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_753784-Bags-Purses.html" ><span><!-- 006 -->Bags & Purses</span></a>
+</li>
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_754262-Shoes.html" ><span><!-- 006 -->Shoes</span></a>
+</li>
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_754263-Jewellery.html" ><span><!-- 007 -->Jewellery</span></a>
+</li>
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_755183-Just-Curves.html" ><span>Just Curves</span></a>
+</li>
+</ul>
+<ul class="wdk_sub_menu wdk_tier_2">
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_753785-Bandage-Dresses.html" ><span><!-- 001 -->Bandage Dresses</span></a></li>
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_755155-Celebrity-Style.html" ><span><!-- 002 -->Celebrity Style</span></a></li>
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_753487-Dresses.html" ><span><!-- 003 -->Dresses</span></a></li>
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_780429-Jeans.html" ><span><!-- 004 -->Jeans</span></a></li>
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_753748-Jumpers-Tops.html" ><span><!-- 004 -->Jumpers & Tops</span></a></li>
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_753746-Skirts-Leggings.html" ><span><!-- 004 -->Skirts & Leggings</span></a></li>
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_760121-Jackets-Coats.html" ><span><!-- 005 -->Jackets & Coats</span></a></li>
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_753784-Bags-Purses.html" ><span><!-- 006 -->Bags & Purses</span></a></li>
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_754262-Shoes.html" ><span><!-- 006 -->Shoes</span></a></li>
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_754263-Jewellery.html" ><span><!-- 007 -->Jewellery</span></a></li>
+<li class='wdk_menu-item wdk_level_2'><a href="/justarrived/cat_755183-Just-Curves.html" ><span>Just Curves</span></a></li>
+</ul>
+</li>
+<li class='wdk_menu-item wdk_level_1'><a href="/page_2963986.html" ><span>Clothes Parties</span></a>
+</li>
+<li class='wdk_menu-item wdk_level_1'><a href="/contactus.html" ><span>Contact Us</span></a>
+</li>
+<li class='wdk_menu-item wdk_menu-lastitem wdk_level_1'><a href="/page_2947211.html" ><span>Shipping & Returns</span></a>
+</li>
+</ul>
+                                                                </div>
+                            </div>
+
+
+
+                        <div class="curved" id="wdk_content-sitenamecontainer">
+
+                            <h6 id="wdk_template-sitename">Klass Boutique</h6>
+
+                                                        <div id="wdk_template-searchcontainer">
+                                <form method="get" action="/shop/search.php" name="sideSearchForm">
+                                    <input type="text" class="wdk_search-text" name="q" title="Product Search" value="Product Search" onfocus="if(this.value == this.title) { this.value = ''; }" onblur="if(this.value == '') { this.value = this.title; }"/>
+                                    <button type="submit" value="" name="search" class="wdk_live-button"><span><span>Search</span></span></button>
+                                </form>
+                            </div>
+                            
+                        </div>
+
+
+                        <table id="wdk_template-sitecontent" cellpadding="0" cellspacing="0" border="0">
+                            <tr><td valign="top">
+                            <div id="wdk_top-divider"></div>
+
+                            <table id="wdk_content-container" cellpadding="0" cellspacing="0" border="0" width="100%"
+                                   >
+                                <tr>
+
+                                                                        <td id="wdk_sidecolumn-containerleft" valign="top">
+                                    
+                                    <div class="wdk_sidecolumn-container">
+                                        
+                                        <div class="wdk_sidecolumn-item">
+                                            <div class="wdk_sidecolumn-itemtitle">
+                                                Shop 
+                                            </div>
+                                            <div class="wdk_sidecolumn-itemcontent">
+                                                <div class="wdk_sidecolumn-type-shopcats" style="width:160px; overflow-x: hidden;"><ul class="wdk_sidecolumn-shopcategories"><li class="shopcatlist wdk_sidecolumn-shopcat"><a href="/justarrived/cat_753785-Bandage-Dresses.html"><!-- 001 -->Bandage Dresses</a></li><li class="shopcatlist wdk_sidecolumn-shopcat"><a href="/justarrived/cat_755155-Celebrity-Style.html"><!-- 002 -->Celebrity Style</a></li><li class="shopcatlist wdk_sidecolumn-shopcat"><a href="/justarrived/cat_753487-Dresses.html"><!-- 003 -->Dresses</a></li><li class="shopcatlist wdk_sidecolumn-shopcat"><a href="/justarrived/cat_780429-Jeans.html"><!-- 004 -->Jeans</a></li><li class="shopcatlist wdk_sidecolumn-shopcat"><a href="/justarrived/cat_753748-Jumpers-Tops.html"><!-- 004 -->Jumpers & Tops</a></li><li class="shopcatlist wdk_sidecolumn-shopcat"><a href="/justarrived/cat_753746-Skirts-Leggings.html"><!-- 004 -->Skirts & Leggings</a></li><li class="shopcatlist wdk_sidecolumn-shopcat"><a href="/justarrived/cat_760121-Jackets-Coats.html"><!-- 005 -->Jackets & Coats</a></li><li class="shopcatlist wdk_sidecolumn-shopcat"><a href="/justarrived/cat_753784-Bags-Purses.html"><!-- 006 -->Bags & Purses</a></li><li class="shopcatlist wdk_sidecolumn-shopcat"><a href="/justarrived/cat_754262-Shoes.html"><!-- 006 -->Shoes</a></li><li class="shopcatlist wdk_sidecolumn-shopcat"><a href="/justarrived/cat_754263-Jewellery.html"><!-- 007 -->Jewellery</a></li><li class="shopcatlist wdk_sidecolumn-shopcat last"><a href="/justarrived/cat_755183-Just-Curves.html">Just Curves</a></li></ul><style type="text/css">.shopcatlist { text-align:left; } .shopcatlist a { color: #000000; font-size: 11px; text-decoration: none }.shopcatlist a:hover { text-decoration: underline; }</style></div>
+                                            </div>
+
+                                        </div>
+                                        
+                                        <div class="wdk_sidecolumn-item">
+                                            <div class="wdk_sidecolumn-itemtitle">
+                                                Klass Favourites
+                                            </div>
+                                            <div class="wdk_sidecolumn-itemcontent">
+                                                <div class="wdk_sidecolumn-type-featprod" style="width:160px; overflow-x: hidden;"><div class="wdk_sidecolumnitem-featuredproduct" style="text-align:center"><div style="width:160px; height: 120px; background-image: url('/siteimages/32/6/7/326706/2941385/t_2774574.jpg'); background-position: center center; background-repeat: no-repeat;"><a href="/justarrived/prod_2774574-Black-Lurex-Panel-Bandage-Dress.html"><img src="/siteimages/x.gif" style="width:120px;height:120px;border:none"/></a></div> <a href="/justarrived/prod_2774574-Black-Lurex-Panel-Bandage-Dress.html">Black Lurex Panel Bandage Dress</a><br /><strong class="wdk_featuredProductPrice">&pound;38.00</strong></div></div>
+                                            </div>
+
+                                        </div>
+                                                                            </div>
+                                    </td>
+                                    
+                                    <td id="wdk_content-maincontentcontainer" valign="top" width="100%">
+                                        <h1 class="wdk_content-pagetitle">Welcome To Klass Boutique</h1>
+<p><table style="border: 0px; border-style: none;" class="wdk_slideshow-container"><tr><td>        <script type="text/javascript">
+            if (!doneswfinclude) {
+                document.write('<scr'+'ipt type="text/javascript" src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js" ></scr'+'ipt>');
+                var doneswfinclude = 1;
+            }
+            if (typeof jQuery == 'undefined') {
+                document.write('<scr'+'ipt type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" ></scr'+'ipt>');
+            }
+        </script>
+
+        <div id="flashContent125926">
+            <p>Please install the latest version of Adobe Flash&reg;. <a href="http://get.adobe.com/flashplayer/" target="_blank">Click here</a> to download Flash now.</p>
+        </div>
+        <script type="text/javascript">
+            var flashvars = { imageScaleMode: "scaleToFit", showRegistration: "false",  showLogo: false,  dataFile: "/include/slideshowxml_v2.php%3Fgid%3D125926%26su%3D32%2F6%2F7%261380655639"};
+            var params = {wmode: 'transparent'};
+            var attributes = {};
+            swfobject.embedSWF(
+            "/include/slideshow_v2.swf", "flashContent125926",
+            "564","400", "10", false,
+            flashvars, params, attributes
+        );
+        </script>
+        </td></tr></table></p>
+<p>&nbsp;</p>
+<p>                                      <div id="fb-root"></div>
+                      <script>(function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+                        fjs.parentNode.insertBefore(js, fjs);
+                      }(document, 'script', 'facebook-jssdk'));</script>
+                      <div class="fb-like" data-href="/publish_live.phtml" data-send="false" data-layout="standard" data-width="450x" data-show-faces="0" data-action="like"></div>
+                   </p>
+        </td>
+
+                                                                        <td id="wdk_sidecolumn-containerright" valign="top">
+                                    
+                                    <div class="wdk_sidecolumn-container">
+                                        
+                                        <div class="wdk_sidecolumn-item">
+                                            <div class="wdk_sidecolumn-itemtitle">
+                                                Shopping Basket
+                                            </div>
+                                            <div class="wdk_sidecolumn-itemcontent">
+                                                <div class="wdk_sidecolumn-type-basket" style="width:160px; overflow-x: hidden;"><p style="text-align:center" class="wdk_sidebasket-noitems">You currently have no items in your basket.</p></div>
+                                            </div>
+
+                                        </div>
+                                        
+                                        <div class="wdk_sidecolumn-item">
+                                            <div class="wdk_sidecolumn-itemtitle">
+                                                Login
+                                            </div>
+                                            <div class="wdk_sidecolumn-itemcontent">
+                                                <div class="wdk_sidecolumn-type-login" style="width:160px; overflow-x: hidden;">			<form method="post" action="/account/" style="margin:0px">
+                                        <div class="wdk_sidecolumn-login-box">
+                                        <p><strong>Email / Username:</strong></p>
+                                        <p><input class="wdk_sidecolumn-input-text" type="text" name="username" size="14" /></p>
+
+                                        <p><strong>Password:</strong></p>
+                                        <p><input class="wdk_sidecolumn-input-text" type="password" name="password" size="14" /></p>
+
+			<p><input type="checkbox" class="wdk_sidecolumn-input-checkbox" name="remember" value="1" /><small>Remember me?</small></p>
+
+			<p><input type="hidden" name="pagefile" value=""/><input type="hidden" name="pagereturn" value="/index.html"/>
+<button class="wdk_live-button wdk_sidecolumn-input-submit" name="login" value="Login" type="submit" style="width: 100%"><span><span>Login</span></span></button>
+</p>	<p style="text-align:center"><a href="/account/">register an account</a></p><p style="margin-bottom:3px;text-align:center"><a class="wdk_sidecolumn-forgotpassword" href="/account/?atype=forgot">forgot password?</a></p>
+                            </div></form>
+			                        <style type="text/css">
+                            .wdk_sidecolumn-login-box p { margin:0px;margin-top:3px; }
+                            .wdk_sidecolumn-login-box a, .wdk_sidecolumn-login-box strong, .wdk_sidecolumn-login-box small { font-size:9px; }
+                        </style>
+                        </div>
+                                            </div>
+
+                                        </div>
+                                        
+                                        <div class="wdk_sidecolumn-item">
+                                            <div class="wdk_sidecolumn-itemtitle">
+                                                Klass Favourites
+                                            </div>
+                                            <div class="wdk_sidecolumn-itemcontent">
+                                                <div class="wdk_sidecolumn-type-featprod" style="width:160px; overflow-x: hidden;"><div class="wdk_sidecolumnitem-featuredproduct" style="text-align:center"><div style="width:160px; height: 120px; background-image: url('/siteimages/32/6/7/326706/2941385/t_2804634.jpg'); background-position: center center; background-repeat: no-repeat;"><a href="/justarrived/prod_2804634-Paris-Hilton-Print-Midi-Dress.html"><img src="/siteimages/x.gif" style="width:120px;height:120px;border:none"/></a></div> <a href="/justarrived/prod_2804634-Paris-Hilton-Print-Midi-Dress.html">Paris Hilton Print Midi Dress</a><br /><strong class="wdk_featuredProductPrice">&pound;21.00</strong></div></div>
+                                            </div>
+
+                                        </div>
+                                                                            </div>
+                                    </td>
+                                                                    </tr>
+                            </table>
+
+                            </td></tr></table>
+                    </div>
+                    <div class="bottom-curved" id="wdk_template-footercontainer">
+                        <div class="wdk_template-footercontent">
+                            <br style="clear:both;"/>
+
+
+<p style="text-align: center; font-size: 12px; display: block; z-index: 1000;">Powered by <a href="http://www.create.net/?source=footer" target="_blank">Create</a></p>                        </div>
+                    </div>
+                </td>
+                <td width="50%"></td>
+            </tr>
+        </table>
+
+        <style type="text/css">
+            #wdk_template-footercontainer, .wdk_template-footercontent { display: block !important; }
+        </style>
+    <script type="text/javascript">if(!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.src=(("http:"===document.location.protocol)?"http:":"https:")+"//"+"js-agent.newrelic.com/nr-100.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","beacon-5.newrelic.com","6126a1bc31","848025,828321","M1ZVNUQEWUZRUkdRWAocYhNfSl5bVFRLFkcMR1oN",0,5,new Date().getTime(),"","","","",""]);</script>
+</body>
+</html>

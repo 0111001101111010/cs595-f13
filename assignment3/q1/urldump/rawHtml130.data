@@ -1,0 +1,984 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>挑戦者求む！【ウチに来ない？】Ruby：JSON使ったピザ代の計算 by CodeIQ運営事務局 アプリケーションエンジニアを募集する企業│CodeIQ</title>
+<meta name="description" content="CodeIQでCodeIQ運営事務局のエンジニア、アプリケーションエンジニアを募集する企業さんがウチに来ない？の問題を挑戦受付中！「Ruby：JSON使ったピザ代の計算」" />
+<meta name="keywords" content="CodeIQ運営事務局,アプリケーションエンジニアを募集する企業,ウチに来ない？,エンジニア,スキル,市場価値,実力,code,コード,問題,技術者,挑戦,能力,システム,IT" />
+<meta property="fb:app_id" content="277045419020756" /><meta name="twitter:card" content="summary" /><meta name="twitter:image" content="https://codeiq.jp/simg/engineer/engineer_74.gif" /><meta property="fb:app_id" content="277045419020756">
+<meta property="og:title" content="挑戦者求む！Ruby：JSON使ったピザ代の計算 by CodeIQ運営事務局" />
+<meta property="og:description" content="JSONで出力されるピザ屋の注文データを使い、注文額を計算してください。">
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://codeiq.jp/img/facebookOGP.jpg" />
+<meta property="og:url" content="https://codeiq.jp/ace/joboffer_apli/q472" />
+<meta property="og:site_name" content="CodeIQ" />
+<link rel="canonical" href="https://codeiq.jp/ace/joboffer_apli/q472" />
+<link rel="stylesheet" type="text/css" href="/css/thickbox.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/cmn.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/other.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/colorbox.css" media="all" />
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="/js/cmn.js"></script>
+<script type="text/javascript" src="/js/thickbox.js"></script>
+<script type="text/javascript" src="/js/rollover.js"></script>
+<script type="text/javascript" src="/js/accord.js"></script>
+<script type="text/javascript" src="/js/jquery.colorbox.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/jquery.snippet.min.css" media="all" />
+<script type="text/javascript" src="/js/jquery.snippet.min.js"></script>
+<script type="text/javascript" src="/js/behave.js"></script>
+<script type="text/javascript" src="/js/syntax_highlight.js"></script>
+
+<script>
+jQuery(function($){
+$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+$(".inline").colorbox({inline:true, width:"965px"});
+});
+</script>
+
+</head>
+<body>
+<div id="fb-root"></div>
+<div id="container">
+	<!--header-->
+	<div id="header">
+		<div class="headerInnner">
+			<div class="headerleft">
+				<p class="logo"><strong><em><a href="/"><img src="/img/logo.gif" alt="CodeIQ（コードアイキュー）" /></a></em></strong></p>
+				<p class="headmessage">本当にできる人は、見逃されない</p>
+				<p class="recruitNew"><img src="/img/logo_header_produced_by_recruit_white.png" alt="PRODUCED BY RECRUIT" /></p>
+			</div>
+			<div class="headerright">
+				<table class="before" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td class="headAccountImg"><a href="/account.php"><img class="imgover" src="/img/btn_headeraccountnew.gif" width="174" height="21" alt="アカウント登録" /></a></td>
+						<td class="headName"><a id="LoginMenu" href="#">ログイン</a></td>
+						<td class="headMorebtn"><a id="LoginMenu" href="#"><img src="/img/icon_morebtn.gif"  alt="" width="19" height="19" /></a></td>
+					</tr>
+				</table>
+				<!--メニュー-->
+				<div class="topmenu" style="display:none;">
+						<p><a href="https://www.facebook.com/dialog/oauth?client_id=277045419020756&redirect_uri=https%3A%2F%2Fcodeiq.jp%2Flogin_fb.php&state=dc49d6f81cc3fbbc48751a3d52036c76&scope=publish_stream%2Cuser_about_me%2Cuser_birthday%2Cuser_education_history%2Cuser_work_history%2Cuser_website%2Cemail&redirect_url=https%3A%2F%2Fcodeiq.jp%2Flogin_fb.php"><img src="/img/ico_menufb.gif" width="20" height="20" alt="Facebook" />Facebook</a></p>
+						<p><a href="/account.php?cmd=login_tw"><img src="/img/ico_menutw.gif" width="20" height="20" alt="Twitter" />Twitter</a></p>
+						<p><a href="https://github.com/login/oauth/authorize?client_id=9f04cf6862b4a8cfe07e&redirect_uri=https%3A%2F%2Fcodeiq.jp%2Flogin_gh.php&scope=user:email"><img src="/img/ico_menugh.gif" width="20" height="20" alt="GitHub" />GitHub</a></p>
+				</div>
+				<!--メニュー-->
+			</div>
+		</div>
+	</div>	<!--header end-->
+	<!--content-->
+	<div id="content" class="subject">
+		<!--mainContent-->
+		<div class="mainContent">
+			<div class="pageTitle">
+				<h1>
+					<p class="h1"><strong>CodeIQ運営事務局</strong>&nbsp;&nbsp;<strong>アプリケーションエンジニアを募集する企業さん</strong>からの<strong>ウチに来ない？</strong>の問題</p>
+				</h1>
+			</div>
+
+			<div class="subjectBlock">
+				<form id="frmStartChallenge" action="/challenge.php?challenge_id=472" method="post">
+<input name="__uniq_id_m__" type="hidden" value="50dd48fd0d78c8a84c2e6dd4df425ea0" />
+				</form>
+				<script type="text/javascript">
+				
+				$(function(){
+					$(".startChallenge").click(function(){
+						$("#frmStartChallenge").submit();
+						return false;
+					});
+				});
+				
+				</script>
+				<div class="subjectBlockInner01">
+					<div class="subjectCassette">
+						<div class="cassetteLeft"><a href="/ace/joboffer_apli/"><img src="/simg/engineer/engineer_74.gif" alt="CodeIQ運営事務局" /></a>
+							<p class="cdata_Company"><a href="/ace/joboffer_apli/"><strong>CodeIQ運営事務局</strong><br />
+									<strong>アプリケーションエンジニアを募集する企業</strong></a></p>
+						</div>
+						<div class="cassetteRight02">
+						<h2>Ruby：JSON使ったピザ代の計算<img src="/simg/icon/101.png" alt="ウチに来ない？" width="73" height="74" /></h2>
+							<p class="cdata_Text02">JSONで出力されるピザ屋の注文データを使い、注文額を計算してください。</p>
+
+							<div class="cdata">
+							<p class="img_stars"><img src="/img/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆（当該領域で、基礎的なことができれば解けると思われるレベル）" /></p></div>
+														<div class="cdata"><span class="cdata_title">挑戦者数</span><span class="cdata_text_l">挑戦済み<span class="txtred">3</span>人</span><span class="cdata_text">　残り47人</span></div>
+							<div class="cdata"><span class="cdata_title">想定時間</span><span class="cdata_text_l"><span class="txtred">30</span>分～</span></div>
+							<div class="cdata"><span class="cdata_title">締切</span><span class="cdata_text">10月7日（月）AM8:00まで</span></div>
+							
+						</div>
+
+						<div class="btmCenterBtn">
+      							<span class="nozokimi"><a href="#inline_content" class="inline cboxElement"><img width="176" border="0" height="38" alt="設問1チラ見！" src="/img/btn_nozokimi.gif" class="imgover" hsrc="/img/btn_nozokimi_on.gif"></a></span>
+    							<p class="txt2"><a href="#adminRequest">CodeIQ運営事務局からのお願い事項</a>および<a target="_blank" href="/privacy.php">プライバシーポリシー</a>に</p>
+							<div class="btn1"><a href="#" class="startChallenge"><img class="imgover" src="/img/btn_start.gif" width="357" height="51" alt="同意の上、挑戦スタート" /></a></div>
+							<p class="txt2 ex">※アカウント未登録の方は、登録から始まります</p>
+  						</div>
+					</div>
+					<div class="snsarea">
+  						<ul class="snsbuttons">
+							<li class="snsfb">
+								<fb:like href="https://codeiq.jp/ace/joboffer_apli/q472" send="false" layout="button_count" width="80" show_faces="false"></fb:like>
+							</li>
+							<li class="snstw"><a href="https://twitter.com/share?url=http%3A%2F%2Fbit.ly%2F1gBxque&amp;counturl=https%3A%2F%2Fcodeiq.jp%2Face%2Fjoboffer_apli%2Fq472" class="twitter-share-button" data-url="http://bit.ly/1gBxque" data-text="挑戦者求む！Ruby：JSON使ったピザ代の計算 by CodeIQ運営事務局" data-via="codeiq" data-lang="ja">ツイート</a> </li>
+							<li class="snshtn"> <a class="button-container button-counter" onclick="if ((event.which || event.button) <= 1) { clickHandler(); return false; }" title="このエントリーをはてなブックマークに追加" target="_top" href="http://b.hatena.ne.jp/entry/s/codeiq.jp/ace/joboffer_apli/q472"><img class="button-image" alt="B!" src="/img/hatebu_entry.gif"><span class="counter-container"><span class="counter">0</span></span></a> </li>
+							<li class="snsli">
+								<script type="IN/Share" data-counter="right"></script>
+							</li>
+							<li class="snsgp">
+								<g:plusone size="medium" href="https://codeiq.jp/ace/joboffer_apli/q472"></g:plusone>
+							</li>
+							<li class="snsbi">
+								<script type="text/javascript" src="https://static.biz-iq.jp/js/connect.js"></script>
+							</li>
+						</ul>
+  					</div>
+					<div class="subjectInfotable">
+						<table width="0" border="0" cellspacing="5" cellpadding="0">
+              <tr>
+                <th scope="row"><img src="/img/tit_sub09.gif" width="184" height="46" alt="特典" /></th>
+                <td><pre><b>第一線の企業で活躍するエンジニアがあなたのコード・解答を見て、スカウト！</b>
+<font color="#ff0000">※この問題は、<b>アプリケーションエンジニア</b>として転職することに興味がある方が対象です。
+上記以外の方は挑戦をご遠慮ください。</font>
+
+●<b><a href="/company-list/" target="_blank">あなたのコード・解答を見る可能性がある企業</a></b>
+
+●「ウチに来ない？」と誘われるチャンス
+あなたの解答（※）を見て「ぜひ会ってみたい」という企業があった場合、企業またはCodeIQ運営事務局から面談へのお誘いのメールが届きます。直接エンジニアと話をして選考に進むか判断ください。
+
+●企業からの<b>スカウト確率 48.0%</b>
+「ウチに来ない？」問題の挑戦者のうち48.0％が
+上記企業のエンジニアから「是非会ってみたい」という評価をもらいました。（1月～5月実績）
+
+●<b>アカウント情報に「スキル」を登録することで、スカウト確率が更にアップ！</b>
+企業のエンジニアは、解答内容に加えて、あなたのスキルも見ています。
+こちらから入力できるので、まだの方は是非ご登録ください。
+<a href="https://codeiq.jp/my_account_skill.php" target="_blank">スキル登録画面へ</a></pre></td>
+              </tr>
+							<tr>
+								<th scope="row"><img src="/img/tit_sub05.gif" width="184" height="46" alt="解答評価のポイント" /></th>
+								<td><pre>以下の視点で採点をします。
+・仕様通りに動作するか
+・適切にコメント付けされているか
+・変数名やクラス名等は適切に命名されているか（可読性）
+・その他、可読性の高いコードになっているか
+・重複コード等無駄な記述やロジックはないか
+・将来的な拡張性を考慮しているか
+・出題の意図を過不足無く捉えられているか
+
+<img src="https://dl.dropboxusercontent.com/u/110505645/CodeIQ/2013/07/pizza.gif" height="150" width="200"></pre></td>
+							</tr>
+							<tr>
+								<th scope="row"><img src="/img/tit_sub01.gif" width="184" height="46" alt="出題エンジニア" /></th>
+								<td><strong>CodeIQ運営事務局</strong><br />
+									<strong>アプリケーションエンジニアを募集する企業</strong></td>
+							</tr>
+							<tr>
+								<th scope="row"><img src="/img/tit_sub02.gif" width="184" height="46" alt="言語・領域" /></th>
+								<td><strong>ウチに来ない？</strong>
+                <br /><strong>Ruby</strong>                </td>
+							</tr>
+							<tr>
+								<th scope="row"><img src="/img/tit_sub04.gif" width="184" height="46" alt="挑戦受付締切" /></th>
+								<td><b>2013年10月7日 AM8:00</b><br />
+									<em>※解答アップロード前に締め切り時間を過ぎた場合は、受付いたしかねます。 <br />
+</em></td>
+							</tr>
+							<tr>
+								<th scope="row"><img src="/img/tit_sub07.gif" width="184" height="46" alt="挑戦を開始する前にご準備いただきたいもの" /></th>
+								<td><pre>・言語は<b>Ruby</b>です。指定された言語以外での解答は評価されません。
+
+・解答はファイルアップロード形式です。問題文で提供されている解答用テキストファイルを完成させファイルアップロードで提出してください。
+
+・<a href="/ace/codeiq2/q85" target="_blank">CodeIQの解答システムが体験できる問題</a>も用意しています。
+　初めて解答するので解答方式がわからない／不安がある方は、事前にお試しください。</pre></td>
+							</tr>
+							<tr>
+								<th scope="row"><img src="/img/tit_sub08.gif" width="184" height="46" alt="その他注意事項" /></th>
+								<td><pre>・この問題に対するあなたの解答内容に対する評価フィードバックは行いません。あらかじめご了承ください。
+
+・何度でも挑戦できますが、初回の解答だけを参考にする場合や、最も良かった解答を見る場合など、各企業の判断の仕方は異なる場合があります。あらかじめご了承ください。</pre></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+     		 <div id="adminRequest" class="adminRequest">
+				<h3> <img width="250" height="18" alt="CodeIQ運営事務局からのお願い" src="/img/tit_subject_company.gif" /> </h3>
+				<ol>
+					<li>解答送信の有無を問わず、模範解答のネタばれにつながるような各種行為、別人による不正解答は、固くお断り申し上げます。</li>
+					<li>出題<strong>エンジニア</strong>をうならせる高得点者や、スマート・ユニークな良解答などをお送りいただいた方には本人から直接メッセージを送らせていただく場合があります。その場合、出題<strong>エンジニア</strong>からの要望に基づき、あなたのご登録情報をCodeIQ運営事務局よりお伝えいたします。予めご了承ください。</li>
+					<li>上記以外の目的で、あなたのご登録情報を企業に公開することはいたしません。ご安心ください。</li>
+					<li> 評価フィードバックが届いたら、ご登録のメールアドレスにお知らせします。</li>
+				</ol>
+			</div>
+		</div>
+		<div class="btmCenterBtn">
+  			<p class="txt1">上記のCodeIQ運営事務局からのお願い事項および<a target="_blank" href="/privacy.php">プライバシーポリシー</a>に</p>
+    			<div class="btn1">
+				<a href="#" class="startChallenge"><img class="imgover" src="/img/btn_subject.gif" width="393" height="82" alt="同意の上、挑戦スタート" /></a>
+			</div>
+      		</div>
+		<div class="othertitle">
+		      <h4><img width="959" height="36" alt="ほかの問題にも興味はありませんか？" src="/img/tit_othertitle.gif"></h4>
+			      <div class="alink">
+		        <h5>C++：ネズミはチーズがお好き？<img src="/simg/icon/101.png" alt="ウチに来ない？" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">30</span>分～</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/joboffer_apli/q481">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>現在時刻とロケールに依存するテスト<img src="/simg/icon/41.png" alt="テスト駆動開発" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level02.gif" width="315" height="22" alt="難易度★★☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">30</span>分～</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/wada_takuto/q469">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>目指せお釣りマスター！<img src="/simg/icon/77.png" alt="アルゴリズム" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level02.gif" width="315" height="22" alt="難易度★★☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">30</span>分～</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/ozy/q477">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>カードゲームの役を判定する<img src="/simg/icon/128.png" alt="ゲーム" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">30</span>分～</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/nabetani_takenori/q476">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>JS：素数の数を数えてください<img src="/simg/icon/101.png" alt="ウチに来ない？" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">30</span>分～</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/joboffer_apli/q473">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>平成変換<img src="/simg/icon/97.png" alt="数学" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level02.gif" width="315" height="22" alt="難易度★★☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">30</span>分～</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/ozy/q466">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>PHPエンジニア養成読本が当たる問題<img src="/simg/icon/19.png" alt="PHP" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">10</span>分</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/codeiq_phpengineer/q465">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>日付を扱うクラスの設計<img src="/simg/icon/117.png" alt="オブジェクト指向設計" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">10</span>分</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/toru_masuda/q458">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>制限時間あり、フォーム入力型<img src="/simg/icon/34.png" alt="体験版1" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">1</span>分</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/codeiq2/q205">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>制限時間なし、ファイルアップロード型<img src="/simg/icon/35.png" alt="体験版2" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">1</span>分</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/codeiq2/q85">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>文字列をクロスワードのように配置して<img src="/simg/icon/12.png" alt="JavaScript" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">30</span>分～</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/yanai_masakazu/q484">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>スネークソートで数字の並べ替えしよう<img src="/simg/icon/13.png" alt="Java" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">30</span>分～</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/yanai_masakazu/q485">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>再帰の海に棲むドラゴンを描いてみよう<img src="/simg/icon/14.png" alt="言語不問" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level02.gif" width="315" height="22" alt="難易度★★☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">30</span>分～</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/kawagashira_nobuyuki/q478">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>Python：フルーツの数を数えよう<img src="/simg/icon/101.png" alt="ウチに来ない？" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level02.gif" width="315" height="22" alt="難易度★★☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">30</span>分～</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/joboffer_apli/q479">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>IaaSと自社運用サーバを連携したい<img src="/simg/icon/101.png" alt="ウチに来ない？" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level02.gif" width="315" height="22" alt="難易度★★☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">10</span>分</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/joboffer_infra/q482">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>Java：フィギュアを最高額で売ろう<img src="/simg/icon/101.png" alt="ウチに来ない？" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">30</span>分～</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/joboffer_apli/q480">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>脆弱性への対策と攻撃コードを考えて！<img src="/simg/icon/78.png" alt="セキュリティ" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">20</span>分</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/masui/q470">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>Java：素数と醜いアヒルのコード<img src="/simg/icon/101.png" alt="ウチに来ない？" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level03.gif" width="315" height="22" alt="難易度★★★☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">30</span>分～</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/joboffer_apli/q474">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>PHP：兵士と巨人の川渡り<img src="/simg/icon/101.png" alt="ウチに来ない？" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level02.gif" width="315" height="22" alt="難易度★★☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">30</span>分～</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/joboffer_apli/q475">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>インターネットのDNSの実際の仕組み<img src="/simg/icon/110.png" alt="ネットワーク" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">30</span>分～</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/mat_kasano/q456">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>オブジェクトはどうやって生成するの？<img src="/simg/icon/117.png" alt="オブジェクト指向設計" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">10</span>分</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/toru_masuda/q459">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>WWWサーバへアクセス不可の問題解決<img src="/simg/icon/110.png" alt="ネットワーク" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level02.gif" width="315" height="22" alt="難易度★★☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">30</span>分～</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/mat_kasano/q457">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>半沢直樹に学べ！存在証明の実現とは？<img src="/simg/icon/78.png" alt="セキュリティ" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level02.gif" width="315" height="22" alt="難易度★★☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">30</span>分～</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/masui/q448">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>irisデータを使ったRの基礎<img src="/simg/icon/23.png" alt="R" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">15</span>分</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/codeiq_doradora09/q421">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>5分で新人研修プログラムを修正して！<img src="/simg/icon/19.png" alt="PHP" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">5</span>分</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/codeiq_ichikawa_kentaro/q331">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>5分で挑戦！起動と同時にサイトを表示<img src="/simg/icon/65.png" alt="Android" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">5</span>分</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/codeiq_yanai_masakazu/q309">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>5分で挑戦！今すぐサーババックアップ<img src="/simg/icon/11.png" alt="インフラ" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">5</span>分</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/codeiq_sogabe_takashi/q293">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>5分で挑戦！あの子は描けるかな？<img src="/simg/icon/10.png" alt="HTML5" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">5</span>分</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/codeiq_yanai_masakazu/q274">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>C/C++で最速コードを目指せ！<img src="/simg/icon/107.png" alt="C/C++" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">10</span>分</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/codeiq_stakemura/q249">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>5分で挑戦！3つのコードで完成させて<img src="/simg/icon/13.png" alt="Java" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">5</span>分</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/codeiq_yanai_masakazu/q257">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>5分で挑戦！色を変えたいんです！<img src="/simg/icon/33.png" alt="jQuery" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">5</span>分</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/codeiq_yanai_masakazu/q260">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>5分で挑戦！answerは何だろう？<img src="/simg/icon/12.png" alt="JavaScript" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">5</span>分</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/codeiq_yanai_masakazu/q258">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>行列計算のコツ<img src="/simg/icon/52.png" alt="線形代数" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">20</span>分</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/hiraoka_kazuyuki/q136">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>テスト駆動開発について学ぼう<img src="/simg/icon/41.png" alt="テスト駆動開発" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">15</span>分</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/otsuka_hiroki/q133">More</a></p>
+		      </div>
+			      <div class="alink">
+		        <h5>アジャイルソフトウェア開発の基礎！<img src="/simg/icon/40.png" alt="アジャイル開発" width="62" height="62" /></h5>
+		        <div class="questlevel">
+		          <p class="img_stars"><img src="/img/detail/img_data_level01.gif" width="315" height="22" alt="難易度★☆☆☆" /></p>
+		          <span class="cdata_title">想定時間</span>
+		          		          <span class="cdata_text_l"><span class="txtred">10</span>分</span>
+		          		      	</div>
+		        <p class="linkarea"><a class="todetail" href="https://codeiq.jp/ace/otsuka_hiroki/q134">More</a></p>
+		      </div>
+	
+		</div>
+
+<div style="display:none">
+<div style="background:#fff;" id="inline_content">
+  <div class="subject" id="content">
+    <!--mainContent-->
+    <div class="colorboxheader">設問1チラ見！</div>
+    <div class="mainContent">
+      <div class="pageTitle">
+        <h1>
+          <p class="h1 hightshort"><strong>CodeIQ運営事務局</strong>&nbsp;&nbsp;<strong>アプリケーションエンジニアを募集する企業さん</strong>からの<strong>ウチに来ない？</strong>の問題</p>
+        </h1>
+      </div>
+      <div class="subjectBlock">
+        <pre>※注意事項※
+この問題は、アプリケーションエンジニアとして転職することに興味がある方が対象です。
+上記以外の方は挑戦をご遠慮ください。
+
+<hr>
+■前説
+（最近、巷で噂のソラシピザのシャチョーとスタッフの会話です。）
+
+シャチョー「うちの自慢のピザがテレビで紹介されてから売上がぐんぐんのびておるのぉ」
+スタッフ「ですね、シャチョー！それはそうとして、先月、レジが壊れてしまいました・・・」
+シャチョー「なぜそれをはやく言わん」
+スタッフ「注文殺到でレジが対応できなくなってしまい・・・レジほしいです・・・」
+シャチョー「うむ、売上もあがっていることだし、レジを作ってもらうかのぉ」
+
+というわけで、ソラシピザでは新たにレジ機能を作ってもらうことにしました。
+あなたはそのシステム作成を委託されました。
+
+■仕様とサンプル
+ソラシピザでは以下のような注文ルールがあるので、それに考慮してレジを作る必要があります。
+　●ピザを2枚注文するとチキンナゲットが1パック無料でついてくる。
+　●ハーフ＆ハーフの価格は2枚のピザの平均を価格とする。また価格は10の位で四捨五入とする。
+　●注文の時間帯によって割増料金が設定される。
+　　○22時00分00秒〜06時59分59秒は深夜料金として10%を注文料金に上乗せ。上乗せ料金は小数点第1位で四捨五入。
+　　○07時00分00秒〜10時59分59秒は通常料金
+　　○11時00分00秒〜12時59分59秒はランチタイム料金として5%を注文料金に上乗せ。上乗せ料金は小数点第1位で四捨五入。
+　　○13時00分00秒〜16時59分59秒は通常料金
+　　○17時00分00秒〜21時59分59秒はディナータイム料金として5%を注文料金に上乗せ。上乗せ料金は小数点第1位で四捨五入。
+
+データはJSONで渡されます。JSONの仕様は以下のとおりです。
+　●order_id = 注文番号
+　●order_time = 注文時間。出力フォーマットはYYYY-MM-DD HH:MM:SS。
+　●order = 注文内容
+　　○category = 注文種別。1 = ピザ、2 = サイドメニュー、3 = ドリンク。
+　　○id = category別の商品ID
+　　○pizza = ピザの注文
+　　　- type(whole, half) = 1枚のホールピザか、ハーフ＆ハーフのピザか
+　　　- select = ハーフ&ハーフのピザ（type = half）の場合、2種類のピザを選ぶ
+　　○side = サイドメニューの注文
+　　○drink = ドリンクの注文
+　　　- size = ドリンクのサイズ。S, M, Lの3種。
+　　○quantity = 注文数
+　　○name = 注文名
+　　○price = 価格
+
+下記、注文番号10000のデータです。
+<code><pre class="highlight" lang="php">
+{
+        "order_id": 10000,
+        "order_time": "2013-07-01 18:20:31",
+        "order":
+        {
+            "pizza":[
+                {
+                    "type":"half",
+                    "quantity": 1,
+                    "select":[
+                        {
+                            "category": 1,
+                            "id": 1,
+                            "name":"マルゲリータ",
+                            "price": 1000
+                        },
+                        {
+                            "category": 1,
+                            "id": 3,
+                            "name":"もちもちピザ",
+                            "price": 1500
+                        }
+                    ]
+                },
+                {
+                    "type":"whole",
+                    "quantity": 1,
+                    "select":[
+                        {
+                            "category": 1,
+                            "id": 1,
+                            "name":"マルゲリータ",
+                            "price": 1000
+                        }
+                    ]
+                }
+            ],
+            "side":[
+                {
+                    "category": 2,
+                    "id": 1,
+                    "name":"チキンナゲット",
+                    "price": 400,
+                    "quantity": 1
+                }
+            ],
+            "drink":[
+                {
+                    "category": 3,
+                    "id": 1,
+                    "name":"コーラ",
+                    "size":"M",
+                    "price": 200,
+                    "quantity": 1
+                },
+                {
+                    "category": 3,
+                    "id": 2,
+                    "name":"オレンジジュース",
+                    "size":"M",
+                    "price": 190,
+                    "quantity": 1
+                }
+            ]
+        }
+}
+</pre></code>
+
+この注文番号10000の価格はいくらになるでしょうか。
+
+　●ハーフ＆ハーフのピザ1枚 (1000円 + 1500円) / 2 = 1250 → 10の位で四捨五入なので1300円
+　●ホールピザ1枚 1000円
+　●チキンナゲット1パック 400円 → 2枚買うとチキンナゲットプレゼントの対象なので無料
+　●コーラ1本 200円
+　●オレンジジュース1本 190円
+　●注文時間 18時20分 → ディナータイム料金5％上乗せ
+
+つまり、
+
+　1300円 + 1000円 + 200円 + 190円 = 2690円 * 5% = 2825円
+
+2825円が注文料金になります。
+
+■問題
+このようにソラシピザの注文ルールに従って料金を計算するレジ機能を作ってください。
+作成したレジ機能は仕様変更の可能性があることを考慮して作成してください。
+
+プログラミング言語はRubyで作ってください。
+
+■資料
+<a href="https://dl.dropboxusercontent.com/u/110505645/CodeIQ/2013/09/pizza_Ruby.zip">pizza_Ruby.zip</a>
+　zipファイルを解凍すると以下のファイルが入っています。
+
+pizza.json:
+　注文データです。
+
+answer.txt:
+　解答用テキストファイルです。
+
+■解答方法
+解答用テキストファイル（answer.txt）に従ってテキストファイルに解答を書き、アップロードしてください。
+
+<img src="https://dl.dropboxusercontent.com/u/110505645/CodeIQ/2013/07/pizza.gif"><br />      </div>
+      <div class="subjectInfotable">
+        <table width="0" cellspacing="5" cellpadding="0" border="0">
+          <tbody><tr>
+            <th scope="row"><img width="184" height="46" alt="挑戦を開始する前にご準備いただきたいもの" src="/img/tit_sub07.gif"></th>
+            <td><pre>・言語は<b>Ruby</b>です。指定された言語以外での解答は評価されません。
+
+・解答はファイルアップロード形式です。問題文で提供されている解答用テキストファイルを完成させファイルアップロードで提出してください。
+
+・<a href="/ace/codeiq2/q85" target="_blank">CodeIQの解答システムが体験できる問題</a>も用意しています。
+　初めて解答するので解答方式がわからない／不安がある方は、事前にお試しください。</pre></td>
+          </tr>
+          <tr>
+            <th scope="row"><img width="184" height="46" alt="その他注意事項" src="/img/tit_sub08.gif"></th>
+            <td><pre>・この問題に対するあなたの解答内容に対する評価フィードバックは行いません。あらかじめご了承ください。
+
+・何度でも挑戦できますが、初回の解答だけを参考にする場合や、最も良かった解答を見る場合など、各企業の判断の仕方は異なる場合があります。あらかじめご了承ください。</pre></tr>
+        </tbody></table>
+      </div>
+      <div class="adminRequest" id="adminRequest">
+        <h3> <img width="250" height="18" src="/img/tit_subject_company.gif" alt="CodeIQ運営事務局からのお願い"> </h3>
+        <ol>
+          <li>解答送信の有無を問わず、模範解答のネタばれにつながるような各種行為、別人による不正解答は、固くお断り申し上げます。</li>
+          <li>出題<strong>エンジニア</strong>をうならせる高得点者や、スマート・ユニークな良解答などをお送りいただいた方には本人から直接メッセージを送らせていただく場合があります。その場合、出題<strong>エンジニア</strong>からの要望に基づき、あなたのご登録情報をCodeIQ運営事務局よりお伝えいたします。予めご了承ください。</li>
+          <li>上記以外の目的で、あなたのご登録情報を企業に公開することはいたしません。ご安心ください。</li>
+          <li> 評価フィードバックが届いたら、ご登録のメールアドレスにお知らせします。</li>
+        </ol>
+      </div>
+      <div class="btmCenterBtn">
+        <p class="txt1">上記のCodeIQ運営事務局からのお願い事項および<a target="_blank" href="/privacy.php">プライバシーポリシー</a>に</p>
+				<div class="btn1">
+				<a href="#" class="startChallenge"><img class="imgover" src="/img/btn_subject.gif" width="393" height="82" alt="同意の上、挑戦スタート" /></a>
+			</div>
+	      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<!--Content end-->
+<!--footer-->
+	<div class="footerInnerWrp"><a class="qurage" href="https://www.facebook.com/codeiq/app_1393676404180815" target="_blank"><strong><img class="imgover" src="/img/Qurage.png" width="125" height="78" alt="キュラゲ" /></strong></a> <a class="backtotop" onclick="backToTop(); return false" href="#"><img class="imgover" src="/img/toTopPage.gif" width="133" height="29" alt="ページ上部へ" /></a> </div>
+	<div id="footer">
+		<div class="footerInner">
+			<ul class="toSNSaccount">
+				<li><a href="https://www.facebook.com/codeiq" target="_blank"><img src="/img/btn_tofacebook.gif" alt="公式Facebookページ" width="223" height="44" /></a></li>
+				<li><a href="https://twitter.com/codeiq" target="_blank"><img src="/img/btn_totwitter.gif" alt="公式Twitterアカウント" width="223" height="44" /></a></li>
+				<li><a href="http://codeiq.hatenablog.com/" target="_blank"><img src="/img/btn_toblog.gif" alt="公式ブログ" width="223" height="44" /></a></li>
+				<li><a href="https://codeiq.jp/rss.xml" target="_blank"><img src="/img/btn_toRSS.gif" alt="Read CodeIQ on RSS" width="223" height="44" /></a></li>
+			</ul>
+			<ul class="footerList">
+				<li>
+					<dl class="aboutCodeIQ">
+						<dt><strong>CodeIQ</strong>とは</dt>
+						<dd><strong>CodeIQ（コードアイキュー）</strong>とは、自分の<strong>実力</strong>を知りたい<strong>ITエンジニア</strong>向けの、実務<strong>スキル</strong>評価サービスです。<br />
+							<ul>
+								<li><a href="http://www.recruitcareer.co.jp/news/old/2012/20120618_01/" target="_blank">プレスリリース</a></li>
+								<li><a href="https://www.facebook.com/codeiq/app_501856259825035" target="_blank">CodeIQの使い方</a></li>
+								<li><a href="https://www.facebook.com/codeiq/app_113718352156022" target="_blank">ウチに来ない？問題とは</a></li>
+							</ul>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="useCodeIQ">
+						<dt><strong>CodeIQ</strong>ご利用にあたって</dt>
+						<dd><a href="/engineer_subject.php" target="_blank"><strong>エンジニア</strong>からの問題一覧</a></dd>
+						<dd><a href="/ace/" target="_blank"><strong>エンジニア</strong>一覧</a></dd>
+						<dd><a href="/kiyaku.php" target="_blank">利用規約</a></dd>
+						<dd><a href="/privacy.php" target="_blank">プライバシーポリシー</a></dd>
+						<dd><a href="/inquiry.php" target="_blank">お問い合わせ</a></dd>
+						<dd><a href="/inquiry.php" target="_blank">出題希望者受付</a></dd>
+					</dl>
+				</li>
+				<li class="last">
+					<dl class="otherSite">
+						<dt>関連サイト</dt>
+						<dd><a href="http://next.rikunabi.com/?vos=drnncodeiq00001" target="_blank">リクナビNEXT</a></dd>
+						<dd><a href="http://next.rikunabi.com/rnc/docs/ci_s00010.jsp?vos=drnncodeiq00002" target="_blank">リクナビNEXT ITキャリア</a></dd>
+						<dd><a href="http://next.rikunabi.com/tech/docs/ct_s01100.jsp?vos=drnncodeiq00003" target="_blank">リクナビNEXT Tech総研</a></dd>
+						<dd><a href="http://biz-iq.jp/" target="_blank">Biz-IQ</a></dd>
+						<dd><a href="http://www.keyman.or.jp/" target="_blank">キーマンズネット</a></dd>
+					</dl>
+				</li>
+			</ul>
+						  <div class="site_list">
+				<ul>
+                <li class="first_li"><a href="https://codeiq.jp/q/dot_net" target="_blank">.NET</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/android" target="_blank">Android</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/android_ga" target="_blank">Android GA</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/aws" target="_blank">AWS</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/c" target="_blank">C</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/c_sharp" target="_blank">C#</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/cpp" target="_blank">C++</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/c_cplus" target="_blank">C/C++</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/cakephp" target="_blank">CakePHP</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/css3" target="_blank">CSS3</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/dynamodb" target="_blank">DynamoDB</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/ga" target="_blank">GA</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/go" target="_blank">Go</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/google_analytics" target="_blank">Google Analytics</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/google_technology" target="_blank">Google技術</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/haskell_math" target="_blank">Haskell数学</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/html5" target="_blank">HTML5</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/ios" target="_blank">iOS</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/java" target="_blank">Java</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/javascript" target="_blank">JavaScript</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/jquery" target="_blank">jQuery</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/nodejs_scraping" target="_blank">Node.js、スクレイピング</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/nosql" target="_blank">NoSQL</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/objective-c" target="_blank">Objective-C</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/perl" target="_blank">Perl</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/perl_php_ruby" target="_blank">Perl、PHP、Ruby</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/php" target="_blank">PHP</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/php_mail" target="_blank">PHP、メール</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/pmbok" target="_blank">PMBOK</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/python" target="_blank">Python</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/python_html" target="_blank">Python、HTML</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/python_ir" target="_blank">Python、情報推薦</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/python_statistics" target="_blank">Python、統計</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/r" target="_blank">R</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/ruby" target="_blank">Ruby</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/rubyonrails" target="_blank">Ruby on Rails</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/r_datascience" target="_blank">R、データサイエンス</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/scala" target="_blank">Scala</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/sql" target="_blank">SQL</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/unix" target="_blank">UNIX</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/vba" target="_blank">VBA</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/windows8_c_sharp" target="_blank">Windows8、C#</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/access_analysis" target="_blank">アクセス解析</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/agile" target="_blank">アジャイル開発</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/algorithm" target="_blank">アルゴリズム</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/infrastructure" target="_blank">インフラ</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/webapps" target="_blank">ウェブアプリ</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/scout" target="_blank">ウチに来ない？</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/code_design" target="_blank">コード設計</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/system_planning" target="_blank">システム企画</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/system_infrastructure" target="_blank">システム基盤</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/system_design" target="_blank">システム設計</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/tdd" target="_blank">テスト駆動開発</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/database_design" target="_blank">データベース設計</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/data_visualization" target="_blank">データ可視化</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/data_structure" target="_blank">データ構造</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/data_analysis" target="_blank">データ解析</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/batch_processing" target="_blank">バッチ処理</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/mail" target="_blank">メール</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/math" target="_blank">数学</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/ml" target="_blank">機械学習</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/probability_prediction" target="_blank">確率予測</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/linear_algebra" target="_blank">線形代数</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/nlp" target="_blank">自然言語処理</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/any_programming_language" target="_blank">言語不問</a>&nbsp;｜</li>
+                <li><a href="https://codeiq.jp/q/speechrec_ocr" target="_blank">音声認識OCR等</a>&nbsp;｜</li>
+				</ul>
+
+				<ul class="last">
+				<li class="first_li"><a href="http://next.rikunabi.com/" target="_blank">転職</a>&nbsp;｜</li>
+				<li><a href="http://www.r-agent.com/" target="_blank">転職支援</a>&nbsp;｜</li>
+				<li><a href="http://toranet.jp/" target="_blank">女性転職</a>&nbsp;｜</li>
+				<li><a href="http://www.rikunabi.com/" target="_blank">就職</a>/
+				<li><a href="http://job.rikunabi.com/" target="_blank">就職活動</a>&nbsp;｜</li>
+				<li><a href="http://haken.rikunabi.com/" target="_blank">派遣</a>/
+				<li><a href="http://www.r-staffing.co.jp/" target="_blank">派遣会社</a>&nbsp;｜</li>
+				<li><a href="http://entrenet.jp/" target="_blank">独立・起業・フランチャイズ</a>&nbsp;｜</li>
+				<li><a href="http://www.froma.com/" target="_blank">アルバイト</a>&nbsp;｜</li>
+				<li><a href="http://townwork.net" target="_blank">仕事</a>&nbsp;｜</li>
+				<li><a href="http://www.hatalike.jp/" target="_blank">求人</a>/
+				<li><a href="http://www.fromacareer.com/" target="_blank">求人情報</a>/
+				<li><a href="http://kyujinban.jp/" target="_blank">求人板</a>&nbsp;｜</li>
+				<li><a href="http://www.recruit-dc.co.jp/" target="_blank">医師求人</a>&nbsp;｜</li>
+				<li><a href="http://premium-nurse.jp/" target="_blank">看護師求人</a>&nbsp;｜</li>
+				<li><a href="http://www.shikakutoshigoto.net/" target="_blank">資格</a>/
+				<li><a href="http://www.keikotomanabu.net" target="_blank">スクール</a>&nbsp;｜</li>
+				<li><a href="http://shingakunet.com/" target="_blank">大学・専門学校</a>&nbsp;｜</li>
+				<li><a href="https://jyukensapuri.jp/" target="_blank">大学受験</a>&nbsp;｜</li>
+				<li><a href="http://www.jalan.net/" target="_blank">国内旅行</a>&nbsp;｜</li>
+				<li><a href="http://www.ab-road.net/" target="_blank">海外旅行</a>&nbsp;｜</li>
+				<li><a href="http://zexy.net/" target="_blank">結婚</a>&nbsp;｜</li>
+				<li><a href="http://akasugu.fcart.jp/" target="_blank">出産準備</a>&nbsp;｜</li>
+				<li><a href="http://www.ponparemall.com/" target="_blank">通販サイト</a>&nbsp;｜</li>
+				<li><a href="http://eruca.jp/" target="_blank">下着通販</a>&nbsp;｜</li>
+				<li><a href="http://eyeco.fcart.jp/" target="_blank">海外雑貨通販</a>&nbsp;｜</li>
+				<li><a href="http://fcart.jp/" target="_blank">通販</a>&nbsp;｜</li>
+				<li><a href="http://www.gochimaru.com/" target="_blank">食品通販</a>&nbsp;｜</li>
+				<li><a href="http://ponpare.jp/" target="_blank">クーポン</a>&nbsp;｜</li>
+				<li><a href="http://suumo.jp/" target="_blank">不動産</a>&nbsp;｜</li>
+				<li><a href="http://suumo.jp/chintai/" target="_blank">賃貸住宅</a>&nbsp;｜</li>
+				<li><a href="http://www.smatch.jp/" target="_blank">不動産会社</a>&nbsp;｜</li>
+				<li><a href="http://www.housingnavi.jp/" target="_blank">注文住宅</a>&nbsp;｜</li>
+				<li><a href="http://bessou.suumo.jp/" target="_blank">別荘・リゾート</a>&nbsp;｜</li>
+				<li><a href="http://www.suumocounter.jp/" target="_blank">住宅相談</a>&nbsp;｜</li>
+				<li><a href="http://www.carsensor.net/" target="_blank">中古車</a>&nbsp;｜</li>
+				<li><a href="http://www.hotpepper.jp/" target="_blank" >グルメ</a>/
+				<li><a href="http://beauty.hotpepper.jp/" target="_blank">美容院</a>&nbsp;｜</li>
+				<li><a href="http://lesson.hotpepper.jp/" target="_blank">体験レッスン</a>&nbsp;｜</li>
+				<li><a href="http://dock.cocokarada.jp/" target="_blank">人間ドック</a>&nbsp;｜</li>
+				<li><a href="http://r25.yahoo.co.jp/" target="_blank">フリーマガジン</a>&nbsp;｜</li>
+				<li><a href="http://www.rgf-hragent.asia/" target="_blank">海外求人</a>&nbsp;｜</li>
+				<li><a href="https://codeiq.jp/" target="_blank">ITエンジニアスキル</a>&nbsp;｜</li>
+				<li><a href="http://www.isize.com/top/kanren/" target="_blank">関連サイト</a>&nbsp;｜</li>
+				<li><a href="http://www.recruit.jp/group/" target="_blank">関連会社</a>&nbsp;｜</li>
+				<li><a href="http://www.isize.com/" target="_blank">ISIZE TOP</a></li>
+				</ul>
+			<div class="logo_recruitNew floatLeft">
+				<a href="http://www.recruitcareer.co.jp/" target="_blank"> <img src="/img/logo_footer_recruit_white.png" width="101" height="27" alt="リクルート"></a>
+				<div class="copyright"><a href="http://www.recruitcareer.co.jp/" target="_blank">(C) Recruit Career Co.,Ltd.</a></div>
+				<div class="textLink"><a href="http://www.recruit.jp/" target="_blank">リクルートグループサイトへ</a></div>
+			</div>
+			<div class="logo_mixpanel">
+            	<a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_blue.png" alt="Mobile Analytics" /></a>
+            </div>
+			  <!--/site_list--></div>		</div>
+	</div><!--footer end-->
+
+<script type="text/javascript">
+
+(function(w,d){
+w.___gcfg={lang:"ja"};
+var s,e=d.getElementsByTagName("script")[0],
+a=function(u,i){if(!d.getElementById(i)){s=d.createElement("script");
+s.src=u;s.async=true;if(i){s.id=i;}e.parentNode.insertBefore(s,e);}};
+a("//apis.google.com/js/plusone.js");
+a("//platform.twitter.com/widgets.js","twitter-wjs");
+a("//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=277045419020756","facebook-jssdk");
+a("//platform.linkedin.com/in.js");
+})(this,document);
+
+</script>
+<!-- GA -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30868502-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- リターゲティングタグ -->
+<script type="text/javascript">
+document.writeln('<sc'+'ript language="JavaScript" type="text/javascript" src="'+location.protocol+'//cdn.c-team.jp/ran/r/code-iq/code-iq.js"></sc'+'ript>');
+</script>
+
+<!-- ADPLAN  -->
+<script language="JavaScript" type="text/javascript" src="//o.advg.jp/ojs?aid=6139&pid=1" charset="UTF-8">
+</script>
+
+<!-- for Reqruit Communications -->
+<script type="text/javascript" src="//tm.r-ad.ne.jp/12/ra10011343.js" charset="utf-8">
+</script>
+
+<noscript>
+<iframe src="//o.advg.jp/oif?aid=6139&pid=1" width="1" height="1">
+</iframe>
+</noscript>
+
+<!-- Fringe81  -->
+<script type="text/javascript">
+var DIGITALICE_CID = "4iFMgwaaJDGE";
+var DIGITALICE_SID = "Q_8plRjVN3f_";
+(function() {
+var io = document.createElement('script');
+io.type = 'text/javascript';
+io.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'c.iogous.com/js/banner/DIGITALICE_REC.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(io, s);
+})();
+</script>
+
+<!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.increment people.append people.track_charge".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||
+[]);
+mixpanel.init("7b2fad4b66dc42d4d1e80f3e30e96a36");</script><!-- end Mixpanel -->
+
+
+
+<div style="display: none; opacity: 1; cursor: auto;" id="cboxOverlay"></div><div style="display: none; padding-bottom: 20px; padding-right: 0px; top: 361px; left: 201px; position: absolute; width: 965px; height: 1558px; opacity: 1; cursor: auto;" class="" id="colorbox"><div style="height: 1578px; width: 965px;" id="cboxWrapper"><div><div style="float: left;" id="cboxTopLeft"></div><div style="float: left; width: 965px;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div style="clear: left;"><div style="float: left; height: 1558px;" id="cboxMiddleLeft"></div><div style="float: left; width: 965px; height: 1558px;" id="cboxContent"><div style="float: left; display: block;" id="cboxTitle"></div><div style="float: left; display: none;" id="cboxCurrent"></div><div style="float: left; display: none;" id="cboxNext"></div><div style="float: left; display: none;" id="cboxPrevious"></div><div style="float: left; display: none;" id="cboxSlideshow"></div><div style="float: left;" id="cboxClose">close</div></div><div style="float: left; height: 1558px;" id="cboxMiddleRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left; width: 965px;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div>
+</body></html>

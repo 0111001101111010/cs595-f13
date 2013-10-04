@@ -1,0 +1,563 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang=en-US prefix="og: http://ogp.me/ns#">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"/>
+<title>Using Javascript eval function | YourHowTo.net</title>
+<meta name=viewport content="width=device-width, initial-scale=1.0"/>
+<meta name=alexaVerifyID content=qsitSNKBt3R6hQsbc2hpT1W48gA />
+<meta name=google-site-verification content=dgJdPw6fvahptYNAfwvG644SD6qAJG1JVIe1jWS6Zuw />
+<!--[if lt IE 8]><link rel="stylesheet" href="http://www.yourhowto.net/wp-content/themes/assets/lib/css/ie.css" type="text/css" media="screen, projection" /><![endif]-->
+<meta name=description content="The javascript eval function evaluates or executes an expression you give as a string as an argument in this function, and then evaluated as an expression."/>
+<meta name=keywords content="javascript eval function"/>
+<link rel=canonical href="http://www.yourhowto.net/using-javascript-eval-function/"/>
+<link rel=publisher href="https://plus.google.com/106837146420859060105"/>
+<meta property=og:locale content=en_US />
+<meta property=og:type content=article />
+<meta property=og:title content="Using Javascript eval function - YourHowTo.net"/>
+<meta property=og:description content="The javascript eval function evaluates or executes an expression you give as a string as an argument in this function, and then evaluated as an expression."/>
+<meta property=og:url content="http://www.yourhowto.net/using-javascript-eval-function/"/>
+<meta property=og:site_name content=YourHowTo.net />
+<meta property=article:publisher content="https://www.facebook.com/yourhowtonet"/>
+<meta property=og:image content="http://www.yourhowto.net/wp-content/uploads/2013/09/js-logo.png"/>
+<meta name=twitter:card content=summary />
+<meta name=twitter:site content="@yourhowtonet"/>
+<meta name=twitter:domain content=YourHowTo.net />
+<meta name=twitter:creator content="@yourhowtonet"/>
+<link rel=alternate type="application/rss+xml" title="YourHowTo.net &raquo; Using Javascript eval function Comments Feed" href="http://www.yourhowto.net/using-javascript-eval-function/feed/"/>
+<link rel=stylesheet id=wp-pagenavi-css href='http://www.yourhowto.net/wp-content/themes/assets/pagenavi-css.css?ver=2.70' type='text/css' media=all />
+<script>var nr_domain = "www.yourhowto.net", nr_is_home = 0, nr_pageurl = 'http://www.yourhowto.net/using-javascript-eval-function/';</script>
+<script async id=nrelate_loader_script data-nrelate-options="{&quot;plugins&quot;:{&quot;related&quot;:{&quot;cssstyle&quot;:&quot;default&quot;,&quot;thumbsize&quot;:80,&quot;widgetstyle&quot;:0},&quot;flyout&quot;:{&quot;cssstyle&quot;:&quot;default&quot;,&quot;thumbsize&quot;:90,&quot;widgetstyle&quot;:0,&quot;location&quot;:&quot;right&quot;,&quot;animation&quot;:&quot;slideout&quot;,&quot;offset&quot;:1,&quot;element&quot;:&quot;#comments&quot;,&quot;width&quot;:360,&quot;widthtype&quot;:&quot;px&quot;,&quot;frombot&quot;:45,&quot;frombottype&quot;:&quot;px&quot;,&quot;animstyle&quot;:&quot;nyt&quot;}}}" src="http://www.yourhowto.net/wp-content/plugins/nrelate-flyout/admin/nrelate_js.min.js?ver=0.52.4"></script><link rel=EditURI type="application/rsd+xml" title=RSD href="http://www.yourhowto.net/xmlrpc.php?rsd"/>
+<link rel=wlwmanifest type="application/wlwmanifest+xml" href="http://www.yourhowto.net/wp-includes/wlwmanifest.xml"/>
+<link rel=shortlink href='http://wp.me/p2NizQ-u4'/>
+<link href='//www.yourhowto.net/wp-content/uploads/am_assets/head-19054934c04e96b45f9ac5ac4f9e464a.css' media='screen, projection' rel=stylesheet type='text/css'><script src='//www.yourhowto.net/wp-content/uploads/am_assets/head-fa026140a7d0489cb99ef93eb450fee7.js'></script><link rel="shortcut icon" href="http://www.yourhowto.net/favicon.ico" type="image/x-icon"/>
+<link rel=alternate type="application/rss+xml" title="YourHowTo.net RSS Feed" href="http://www.yourhowto.net/feed/"/>
+<link rel=pingback href="http://www.yourhowto.net/xmlrpc.php"/>
+</head>
+<body class="single single-post postid-1864 single-format-standard">
+<div id=container>
+<div class=clearfix>
+<div class=menu-primary-container><ul id=menu-top_pages class="menus menu-primary"><li id=menu-item-1328 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1328"><a href="/">Home</a></li>
+<li id=menu-item-1326 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1326"><a href="http://www.yourhowto.net/domain-whois/">Domain Whois</a></li>
+<li id=menu-item-1423 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1423"><a href="http://www.yourhowto.net/generate-virtual-host/">Generate Virtual Host</a></li>
+<li id=menu-item-1577 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1577"><a href="http://www.yourhowto.net/htaccess-tools/">.Htaccess tools</a></li>
+<li id=menu-item-1845 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1845"><a href="http://www.yourhowto.net/are-you-a-new-visitor-to-this-site/">Are you a new visitor to this site?</a></li>
+<li id=menu-item-1327 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1327"><a href="http://www.yourhowto.net/contact/">Contact</a></li>
+</ul></div>
+</div>
+<div id=header>
+<div class=logo>
+<a href="http://www.yourhowto.net"><img src="http://www.yourhowto.net/wp-content/uploads/2013/08/logo90.png" alt=YourHowTo.net title=YourHowTo.net /></a>
+</div>
+<div class=header-right>
+<div style="width:728px;height: 106px;/* text-align: center; */margin: 0 10px 0 0;float: right;">
+<script data-cfasync=false><!--
+			google_ad_client = "ca-pub-5263953090220209";
+			/* 728_90_yourhowto_top */
+			google_ad_slot = "8168530800";
+			google_ad_width = 728;
+			google_ad_height = 90;
+			//-->
+			</script>
+<script data-cfasync=false src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script>
+</div>
+<div id=top-social-profiles>
+</div>
+</div>
+</div>
+<div class="clearfix menufloat" style="background:#056DB3;">
+<div class=menu-secondary-container>
+<ul class="menus menu-secondary">
+<li class="cat-item cat-item-31"><a href="http://www.yourhowto.net/blogs/" title="View all posts filed under Blogs">Blogs</a>
+</li>
+<li class="cat-item cat-item-1"><a href="http://www.yourhowto.net/databases/" title="View all posts filed under Databases">Databases</a>
+</li>
+<li class="cat-item cat-item-67"><a href="http://www.yourhowto.net/free-time/" title="View all posts filed under Free time">Free time</a>
+</li>
+<li class="cat-item cat-item-21"><a href="http://www.yourhowto.net/programming/" title="View all posts filed under Programming">Programming</a>
+<ul class=children>
+<li class="cat-item cat-item-270"><a href="http://www.yourhowto.net/programming/ajax/" title="View all posts filed under Ajax">Ajax</a>
+</li>
+<li class="cat-item cat-item-271"><a href="http://www.yourhowto.net/programming/html-css/" title="View all posts filed under HTML / CSS">HTML / CSS</a>
+</li>
+<li class="cat-item cat-item-269"><a href="http://www.yourhowto.net/programming/js-jquery/" title="View all posts filed under JS / jQuery">JS / jQuery</a>
+</li>
+<li class="cat-item cat-item-272"><a href="http://www.yourhowto.net/programming/php-programming/" title="View all posts filed under PHP">PHP</a>
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-34"><a href="http://www.yourhowto.net/servers/" title="View all posts filed under Servers">Servers</a>
+<ul class=children>
+<li class="cat-item cat-item-293"><a href="http://www.yourhowto.net/servers/apache-servers/" title="View all posts filed under Apache">Apache</a>
+</li>
+<li class="cat-item cat-item-328"><a href="http://www.yourhowto.net/servers/proxy/" title="View all posts filed under Proxy">Proxy</a>
+</li>
+<li class="cat-item cat-item-3"><a href="http://www.yourhowto.net/servers/whmcpanel/" title="View all posts filed under WHM/cPanel">WHM/cPanel</a>
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-10"><a href="http://www.yourhowto.net/site-optimization/" title="View all posts filed under Site optimization">Site optimization</a>
+</li>
+<li class="cat-item cat-item-46"><a href="http://www.yourhowto.net/tutorials/" title="View all posts filed under Tutorials">Tutorials</a>
+</li>
+</ul>
+</div>
+<div style="margin-top:1px;border-top:1px solid #fff;">
+<script><!--
+				google_ad_client = "ca-pub-5263953090220209";
+				/* 728_15_yourhowto */
+				google_ad_slot = "4369272005";
+				google_ad_width = 728;
+				google_ad_height = 15;
+				//-->
+			</script>
+<script src="//pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+<span style="float: right;margin-top: 1px;color: #fff;margin-right: 5px;">&larr;Advertisment</span>
+</div>
+</div>
+<div id=main>
+<div id=content>
+<div class="post-1864 post type-post status-publish format-standard hentry category-js-jquery category-programming tag-eval tag-evaluate tag-expressions tag-javascript tag-js post post-single clearfix" id=post-1864>
+<h2 class=title>Using Javascript eval function</h2>
+<div class=postmeta-primary>
+<span class=meta_date>September 18, 2013</span>
+&nbsp; <span class=meta_categories><a href="http://www.yourhowto.net/programming/js-jquery/" title="View all posts in JS / jQuery" rel="category tag">JS / jQuery</a>, <a href="http://www.yourhowto.net/programming/" title="View all posts in Programming" rel="category tag">Programming</a></span>
+</div>
+</div>
+<span class="label label-info" style="width: 605px;height: 30px;font-size: 15px;text-align: center;margin-bottom: 10px;">
+<a href="http://www.yourhowto.net/are-you-a-new-visitor-to-this-site/" style="color: #fff;text-decoration: none;text-align: center;line-height: 30px;">&rarr; Are you a new visitor? Please visit the page guidance for new visitors &larr; </a></span>
+<div class="entry clearfix">
+<div id=adsenseads style="padding:5px;background:#fff;float: right;margin: 5px;border:1px solid #ddd;">
+<script data-cfasync=false><!--
+		google_ad_client = "ca-pub-5263953090220209";
+		/* 300_250_yourhowto_inline */
+		google_ad_slot = "7373442006";
+		google_ad_width = 300;
+		google_ad_height = 250;
+		//-->
+		</script>
+<script data-cfasync=false src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+</div>
+<div id=nrelate_flyout_placeholder><h2>Javascript eval function</h2>
+<p>Long, long in the past, I was trying to obtain a logical expression from some different variables and concatenate them into one single variable, to use that further for a jQuery plugin. Everything looked great when running console.log(myVar), but then the problem came. In my mind, I didn&#8217;t thought that the result would be a string, and not an expression, and I cannot use that further in my validation.</p>
+<h2>Function eval() to the rescue</h2>
+<p>The eval() function evaluates or executes an argument. Basically, you give a string as an argument in this function, and then it is evaluated as an expression.</p>
+<p><strong>Syntax:</strong></p>
+<p>eval(<i>string</i>);</p>
+<p>Let&#8217;s see an example:</p>
+<div id=crayon-524860bc966eb126953455 class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; float: none; clear: both; font-size: 12px !important; line-height: 15px !important;">
+<div class=crayon-toolbar data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class=crayon-title></span>
+<div class=crayon-tools style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class=crayon-button-icon></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class=crayon-button-icon></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class=crayon-button-icon></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class=crayon-button-icon></div></div><div class="crayon-button crayon-copy-button" title="Expand Code"><div class=crayon-button-icon></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class=crayon-button-icon></div></div><span class=crayon-language>JavaScript</span></div></div>
+<div class=crayon-info style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+<div class=crayon-plain-wrap><textarea wrap=off class="crayon-plain print-no" data-settings=dblclick readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+var myVar = "console.log('test')";
+eval(myVar); //outputs test</textarea></div>
+<div class=crayon-main style="">
+<table class=crayon-table>
+<tr class=crayon-row>
+<td class="crayon-nums " data-settings=show>
+<div class=crayon-nums-content style="font-size: 12px !important; line-height: 15px !important;"><div class=crayon-num data-line=crayon-524860bc966eb126953455-1>1</div><div class="crayon-num crayon-striped-num" data-line=crayon-524860bc966eb126953455-2>2</div></div>
+</td>
+<td class=crayon-code><div class=crayon-pre style="font-size: 12px !important; line-height: 15px !important;"><div class=crayon-line id=crayon-524860bc966eb126953455-1><span class=crayon-t>var</span><span class=crayon-h> </span><span class="crayon-e ">myVar</span><span class=crayon-h> </span><span class=crayon-o>=</span><span class=crayon-h> </span><span class=crayon-s>"console.log('test')"</span><span class=crayon-sy>;</span></div><div class="crayon-line crayon-striped-line" id=crayon-524860bc966eb126953455-2><span class=crayon-r>eval</span><span class=crayon-sy>(</span><span class=crayon-i>myVar</span><span class=crayon-sy>)</span><span class=crayon-sy>;</span><span class=crayon-h> </span><span class=crayon-c>//outputs test</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+<p>This is very useful when you want to evaluate expressions, or if you like more this other exposure: To transform functions, variables or other things that are written as strings into javascript expression that are not strings, and can be evaluated.</p>
+<p>The eval() function is supported in all major browsers.</p>
+<h2>Beware! eval can be evil</h2>
+<p>The eval function gives you access to javascript’s compiler. This can be a huge security risk because it grants far too much power to the passed in text. Avoid this function if you cannot trust 100% the strings that you are passing to it (eg: strings from the DOM, or strings passed by users, etc&#8230;).</p>
+<h2>Performance</h2>
+<p>A problem with <code>eval()</code> is its performance. In older browsers, you encountered a double interpretation from the browser, which means that your code is interpreted and the code inside the <code>eval()</code> is interpreted also. The result could be ten times slower in some browsers.</p>
+<h2>Summary</h2>
+<p>Although this is a good tool for evaluating strings as expressions in javascript, you should be aware of it&#8217;s performance and vulnerability problems when you use it in your projects.</p>
+<p>That&#8217;s it for now, see you in our next article!</p>
+</div>
+<div class=nr_related_placeholder data-permalink="http://www.yourhowto.net/using-javascript-eval-function/" data-title="Using Javascript eval function"></div><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class=sd-title>Share this:</h3><div class=sd-content><ul><li class=share-facebook><a rel=nofollow class="share-facebook sd-button share-icon" href="http://www.yourhowto.net/using-javascript-eval-function/?share=facebook" target=_blank title="Share on Facebook" id=sharing-facebook-1864><span>Facebook</span></a></li><li class=share-twitter><a rel=nofollow class="share-twitter sd-button share-icon" href="http://www.yourhowto.net/using-javascript-eval-function/?share=twitter" target=_blank title="Click to share on Twitter" id=sharing-twitter-1864><span>Twitter</span></a></li><li class=share-google-plus-1><a rel=nofollow class="share-google-plus-1 sd-button share-icon" href="http://www.yourhowto.net/using-javascript-eval-function/?share=google-plus-1" target=_blank title="Click to share on Google+" id=sharing-google-1864><span>Google</span></a></li><li class=share-stumbleupon><a rel=nofollow class="share-stumbleupon sd-button share-icon" href="http://www.yourhowto.net/using-javascript-eval-function/?share=stumbleupon" target=_blank title="Click to share on StumbleUpon"><span>StumbleUpon</span></a></li><li><a href="#" class="sharing-anchor sd-button share-more"><span>More</span></a></li><li class=share-end></li></ul><div class=sharing-hidden><div class=inner style="display: none;"><ul><li class=share-digg><a rel=nofollow class="share-digg sd-button share-icon" href="http://www.yourhowto.net/using-javascript-eval-function/?share=digg" target=_blank title="Click to Digg this post"><span>Digg</span></a></li><li class=share-pinterest><a rel=nofollow class="share-pinterest sd-button share-icon" href="http://www.yourhowto.net/using-javascript-eval-function/?share=pinterest" target=_blank title="Click to share on Pinterest"><span>Pinterest</span></a></li><li class=share-end></li><li class=share-linkedin><a rel=nofollow class="share-linkedin sd-button share-icon" href="http://www.yourhowto.net/using-javascript-eval-function/?share=linkedin" target=_blank title="Click to share on LinkedIn" id=sharing-linkedin-1864><span>LinkedIn</span></a></li><li class=share-reddit><a rel=nofollow class="share-reddit sd-button share-icon" href="http://www.yourhowto.net/using-javascript-eval-function/?share=reddit" target=_blank title="Click to share on Reddit"><span>Reddit</span></a></li><li class=share-end></li><li class=share-email><a rel=nofollow class="share-email sd-button share-icon" href="http://www.yourhowto.net/using-javascript-eval-function/?share=email" target=_blank title="Click to email this to a friend"><span>Email</span></a></li><li class=share-print><a rel=nofollow class="share-print sd-button share-icon" href="http://www.yourhowto.net/using-javascript-eval-function/#print" target=_blank title="Click to print"><span>Print</span></a></li><li class=share-end></li><li class=share-end></li></ul></div></div></div></div></div> <div class=postmeta-secondary><span class=meta_tags><a href="http://www.yourhowto.net/tags/eval/" rel=tag>eval</a>, <a href="http://www.yourhowto.net/tags/evaluate/" rel=tag>evaluate</a>, <a href="http://www.yourhowto.net/tags/expressions/" rel=tag>expressions</a>, <a href="http://www.yourhowto.net/tags/javascript/" rel=tag>javascript</a>, <a href="http://www.yourhowto.net/tags/js/" rel=tag>js</a></span></div>
+</div>
+<div id=respond class=comment-respond>
+<h3 id=reply-title class=comment-reply-title>Leave a comment <small><a rel=nofollow id=cancel-comment-reply-link href="/using-javascript-eval-function/#respond" style="display:none;">Cancel reply</a></small></h3>
+<div id=commentform class=comment-form>
+<iframe src="http://jetpack.wordpress.com/jetpack-comment/?blogid=41302158&#038;postid=1864&#038;comment_registration=0&#038;require_name_email=1&#038;stc_enabled=1&#038;stb_enabled=1&#038;show_avatars=0&#038;avatar_default=blank&#038;greeting=Leave+a+comment&#038;greeting_reply=Leave+a+Reply+to+%25s&#038;color_scheme=light&#038;lang=en-US&#038;jetpack_version=2.5&#038;sig=ac2a21a6badb76582f1ea7238cdd9ee0fa9a2141#parent=http%3A%2F%2Fwww.yourhowto.net%2Fusing-javascript-eval-function%2F" allowtransparency=false style="width:100%; height: 430px;border:0px;" frameBorder=0 scrolling=no name=jetpack_remote_comment id=jetpack_remote_comment></iframe>
+</div>
+</div>
+<input type=hidden name=comment_parent id=comment_parent value=""/>
+</div>
+<div id=sidebar-primary>
+<ul class=widget-container>
+<li id=text-13 class="widget widget_text"><h3 class=widgettitle>Follow us on</h3> <div class=textwidget><div class=socialimgs>
+<div style="text-align:center;">
+<a href="http://twitter.com/yourhowtonet" target=_blank><img height=32px width=32px title=Twitter alt=Twitter src="http://www.yourhowto.net/wp-content/plugins/simple-share-buttons-adder/buttons/somacro/twitter.png"></a>
+<a href="http://facebook.com/yourhowtonet" target=_blank><img height=32px width=32px title=Facebook alt=Facebook src="http://www.yourhowto.net/wp-content/plugins/simple-share-buttons-adder/buttons/somacro/facebook.png"></a>
+<a href="https://plus.google.com/106837146420859060105" target=_blank><img height=32px width=32px title="Google+" alt="Google+" src="http://www.yourhowto.net/wp-content/plugins/simple-share-buttons-adder/buttons/somacro/google.png"></a>
+<a href="http://www.yourhowto.net/feed/" target=_blank><img height=32px width=32px title="RSS Feed" alt="RSS Feed" src="http://www.yourhowto.net/rss.png"></a>
+<a href="mailto:contact@yourhowto.net" target=_blank><img height=32px width=32px title=Email alt=Email src="http://www.yourhowto.net/wp-content/plugins/simple-share-buttons-adder/buttons/somacro/email.png"></a>
+</div>
+<br>
+<form class=fbf-widget action="http://yourhowto.us7.list-manage2.com/subscribe/post?u=4ad6395b280a31195ada1ae23&amp;id=148cbbbf52" method=post target=popupwindow onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=yourhowtonet', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+<label>Daily Email:</label>
+<input class=subscription_email name=EMAIL style="width: 160px; background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset; transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s; border-radius: 4px 4px 4px 4px; height: 20px; padding: 4px 6px;" placeholder="email address" style="width:160px;" type=email><input value=yourhowtonet name=uri type=hidden>
+<input name=loc value=en_US type=hidden>
+<input class="subscription_btn btn" style="margin-bottom:5px;" name=subscribe value=ok type=submit>
+</form>
+</div>
+</div>
+</li>
+</ul>
+<ul class=widget-container>
+<li id=text-12 class="widget widget_text"><h3 class=widgettitle>Search on this site</h3>
+<div class=textwidget><div class=socialimgs>
+<div style="border: 1px solid #D8D8D8;background: #fff;text-align: left;padding: 6px 24px 6px 6px;">
+<form action="http://www.yourhowto.net/search-results/" id=cse-search-box style="width: 285px;">
+<div>
+<input type=hidden name=cx value=partner-pub-5263953090220209:8098675200 />
+<input type=hidden name=cof value=FORID:10 />
+<input type=hidden name=ie value=UTF-8 />
+<input size=35 style="border:1px solid #ccc;width: 255px;" name=q />
+<input type=image name=sa src="http://www.yourhowto.net/wp-content/themes/Sitefine/images/search.png" style="vertical-align: middle; margin-bottom: 5px;"/>
+</div>
+</form>
+<script src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+</div>
+<script src="http://www.google.com/cse/query_renderer.js"></script>
+<div id=queries></div>
+<script src="http://www.google.com/cse/api/partner-pub-5263953090220209/cse/8098675200/queries/js?oe=UTF-8&amp;callback=(new+PopularQueryRenderer(document.getElementById(%22queries%22))).render"></script>
+</div></div>
+</li>
+</ul>
+<ul class=widget-container><li id=recent-posts-4 class="widget widget_recent_entries">	<h3 class=widgettitle>Recent articles</h3>	<ul>
+<li>
+<a href="http://www.yourhowto.net/how-to-install-node-js-on-debian-and-centos-linux/" title="How to install node.js on Debian and CentOS linux">How to install node.js on Debian and CentOS linux</a>
+</li>
+<li>
+<a href="http://www.yourhowto.net/nginx-block-sql-injection-and-file-injection/" title="Nginx block sql injection and file injection">Nginx block sql injection and file injection</a>
+</li>
+<li>
+<a href="http://www.yourhowto.net/mysql-server-optimization-innodb-myisam/" title="Mysql server optimization for InnoDB and MyISAM">Mysql server optimization for InnoDB and MyISAM</a>
+</li>
+<li>
+<a href="http://www.yourhowto.net/mysql-sample-configuration-innodb-4gb-ram/" title="Mysql sample configuration for InnoDB 4GB ram">Mysql sample configuration for InnoDB 4GB ram</a>
+</li>
+<li>
+<a href="http://www.yourhowto.net/mysql-sample-configuration-512m-ram/" title="Mysql sample configuration with 512M ram">Mysql sample configuration with 512M ram</a>
+</li>
+<li>
+<a href="http://www.yourhowto.net/mysql-sample-configuration-less-64m/" title="Mysql sample configuration for less than 64M">Mysql sample configuration for less than 64M</a>
+</li>
+<li>
+<a href="http://www.yourhowto.net/mysql-sample-configuration-less-128m/" title="Mysql sample configuration for less than 128M">Mysql sample configuration for less than 128M</a>
+</li>
+<li>
+<a href="http://www.yourhowto.net/mysql-sample-configuration-1g-2g-ram/" title="Mysql sample configuration for 1G-2G ram">Mysql sample configuration for 1G-2G ram</a>
+</li>
+<li>
+<a href="http://www.yourhowto.net/how-to-make-a-remote-mysql-connection/" title="Remote mysql connection using cPanel and VPS server">Remote mysql connection using cPanel and VPS server</a>
+</li>
+<li>
+<a href="http://www.yourhowto.net/lets-laugh-a-bit/" title="Let&#8217;s laugh a bit&#8230;">Let&#8217;s laugh a bit&#8230;</a>
+</li>
+</ul>
+</li></ul>
+<ul class=widget-container><li id=wpp-2 class="widget popular-posts">
+<h3 class=widgettitle>POPULAR ARTICLES</h3><ul class=wpp-list>
+<li><a href="http://www.yourhowto.net/increasing-squid-cache-directory-size/" title="Increasing squid cache directory size" class=wpp-post-title target=_self>Increasing squid cache directory size</a> <span class=post-stats></span></li>
+<li><a href="http://www.yourhowto.net/5-of-the-best-php-frameworks-for-programmers/" title="5 of the best PHP frameworks for programmers" class=wpp-post-title target=_self>5 of the best PHP frameworks for programmers</a> <span class=post-stats></span></li>
+<li><a href="http://www.yourhowto.net/how-to-update-and-install-php-5-3-and-php-5-2-centos-webtatic-repo/" title="How to update and install php 5.3 and php 5.2 CentOS webtatic repo" class=wpp-post-title target=_self>How to update and install php 5.3 and php 5.2 CentOS webtatic repo</a> <span class=post-stats></span></li>
+<li><a href="http://www.yourhowto.net/slow-speed-in-prestashop-1-5/" title="Slow speed in prestashop 1.5" class=wpp-post-title target=_self>Slow speed in prestashop 1.5</a> <span class=post-stats></span></li>
+<li><a href="http://www.yourhowto.net/slow-load-in-prestashop/" title="Slow load in prestashop" class=wpp-post-title target=_self>Slow load in prestashop</a> <span class=post-stats></span></li>
+<li><a href="http://www.yourhowto.net/reverse-cache-proxy-using-squid-proxy/" title="Reverse cache proxy using squid proxy" class=wpp-post-title target=_self>Reverse cache proxy using squid proxy</a> <span class=post-stats></span></li>
+<li><a href="http://www.yourhowto.net/install-squid-proxy-with-enable-ssl-for-https_port/" title="Install squid proxy with &#8211;enable-ssl for https_port" class=wpp-post-title target=_self>Install squid proxy with &#8211;enable-ssl for https_port</a> <span class=post-stats></span></li>
+<li><a href="http://www.yourhowto.net/lets-laugh-a-bit/" title="Let&#039;s laugh a bit&#8230;" class=wpp-post-title target=_self>Let&#039;s laugh a bit&#8230;</a> <span class=post-stats></span></li>
+<li><a href="http://www.yourhowto.net/jquery-autocomplete-_rendeitem-method/" title="jQuery autocomplete _rendeItem method" class=wpp-post-title target=_self>jQuery autocomplete _rendeItem method</a> <span class=post-stats></span></li>
+<li><a href="http://www.yourhowto.net/how-to-increase-joomla-slow-speed-using-browser-cache/" title="How to increase joomla slow speed using browser cache" class=wpp-post-title target=_self>How to increase joomla slow speed using browser cache</a> <span class=post-stats></span></li>
+<li><a href="http://www.yourhowto.net/how-to-make-a-remote-mysql-connection/" title="Remote mysql connection using cPanel and VPS server" class=wpp-post-title target=_self>Remote mysql connection using cPanel and VPS server</a> <span class=post-stats></span></li>
+<li><a href="http://www.yourhowto.net/how-to-fix-eth0-network-interface-on-centos-redhat-clone-vm/" title="How to fix eth0 network interface on centos, redhat clone VM" class=wpp-post-title target=_self>How to fix eth0 network interface on centos, redhat clone VM</a> <span class=post-stats></span></li>
+<li><a href="http://www.yourhowto.net/mysql-server-optimization-innodb-myisam/" title="Mysql server optimization for InnoDB and MyISAM" class=wpp-post-title target=_self>Mysql server optimization for InnoDB and MyISAM</a> <span class=post-stats></span></li>
+<li><a href="http://www.yourhowto.net/how-to-check-your-network-bandwidth-usage-on-linux/" title="How to check your network bandwidth usage on linux" class=wpp-post-title target=_self>How to check your network bandwidth usage on linux</a> <span class=post-stats></span></li>
+<li><a href="http://www.yourhowto.net/preload-not-working-in-wp-super-cache/" title="Preload not working in wp-super-cache" class=wpp-post-title target=_self>Preload not working in wp-super-cache</a> <span class=post-stats></span></li>
+</ul>
+</li></ul>
+<ul class=widget-container><li id=recent-posts-8 class="widget widget_recent_entries"><h3 class=widgettitle>Random articles</h3>
+<ul>
+<li><a href="http://www.yourhowto.net/how-to-update-and-install-php-5-3-and-php-5-2-centos-webtatic-repo/" title="How to update and install php 5.3 and php 5.2 CentOS webtatic repo">How to update and install php 5.3 and php 5.2 CentOS webtatic repo</a></li>
+<li><a href="http://www.yourhowto.net/how-to-use-a-free-dns-service/" title="How to use a free DNS service">How to use a free DNS service</a></li>
+<li><a href="http://www.yourhowto.net/using-the-local-dns-server/" title="Using the local DNS Server">Using the local DNS Server</a></li>
+<li><a href="http://www.yourhowto.net/how-to-fix-wp-super-cache-0-cached-pages/" title="How to fix wp-super-cache 0 Cached Pages">How to fix wp-super-cache 0 Cached Pages</a></li>
+<li><a href="http://www.yourhowto.net/install-flvtool2-mediainfo-and-neroaacenc-on-centos-x86_64/" title="Install flvtool2, mediainfo and neroAacEnc on centos x86_64">Install flvtool2, mediainfo and neroAacEnc on centos x86_64</a></li>
+<li><a href="http://www.yourhowto.net/how-to-make-a-jquery-ajax-call/" title="How to make a jQuery ajax call">How to make a jQuery ajax call</a></li>
+<li><a href="http://www.yourhowto.net/slow-speed-in-prestashop-1-5/" title="Slow speed in prestashop 1.5">Slow speed in prestashop 1.5</a></li>
+<li><a href="http://www.yourhowto.net/how-to-make-a-remote-mysql-connection/" title="Remote mysql connection using cPanel and VPS server">Remote mysql connection using cPanel and VPS server</a></li>
+<li><a href="http://www.yourhowto.net/how-to-use-php-with-mysql/" title="How to use php with MySQL">How to use php with MySQL</a></li>
+<li><a href="http://www.yourhowto.net/speed-check-when-icmp-packets-are-disabled-hping3/" title="Speed check when ICMP packets are disabled, hping3">Speed check when ICMP packets are disabled, hping3</a></li>
+<li><a href="http://www.yourhowto.net/build-responsive-websites-with-foundation-from-zurb/" title="Build responsive websites with foundation from ZURB">Build responsive websites with foundation from ZURB</a></li>
+<li><a href="http://www.yourhowto.net/random-background-image-on-website/" title="Random background image on website">Random background image on website</a></li>
+<li><a href="http://www.yourhowto.net/increasing-squid-cache-directory-size/" title="Increasing squid cache directory size">Increasing squid cache directory size</a></li>
+<li><a href="http://www.yourhowto.net/best-practices-to-optimize-code-performance-in-php/" title="Best practices to optimize code performance in php">Best practices to optimize code performance in php</a></li>
+<li><a href="http://www.yourhowto.net/how-to-fix-eth0-network-interface-on-centos-redhat-clone-vm/" title="How to fix eth0 network interface on centos, redhat clone VM">How to fix eth0 network interface on centos, redhat clone VM</a></li>
+</ul>
+</ul>
+<ul class="widget-container ad_160">
+<li id=text-7 class="widget widget_text">
+<div class=textwidget>
+<center>
+<script><!--
+		google_ad_client = "ca-pub-5263953090220209";
+		/* 160_600_sidebar */
+		google_ad_slot = "4500700809";
+		google_ad_width = 160;
+		google_ad_height = 600;
+		//-->
+		</script>
+<script src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+<br>
+<span style="bottom: 0;margin: 0px auto;font-size: smaller;">Advertisment</span>
+</center>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id=footer>
+<div id=copyrights>
+&copy; 2013 <a href="http://www.yourhowto.net">YourHowTo.net</a>
+</div>
+<div id=credits>Powered by <a href="http://wordpress.org/"><strong>WordPress</strong></a></div>
+</div>
+</div>
+<script>
+		WPCOM_sharing_counts = {"http:\/\/www.yourhowto.net\/using-javascript-eval-function\/":1864}	</script>
+<script>
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+<script>
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+<script>
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-google-plus-1' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+		});
+		</script>
+<script>
+			jQuery(document).on('ready', function(){
+				jQuery('body').on('click', 'a.share-pinterest', function(e){
+					e.preventDefault();
+
+					// Load Pinterest Bookmarklet code
+					var s = document.createElement("script");
+					s.type = "text/javascript";
+					s.src = window.location.protocol + "//assets.pinterest.com/js/pinmarklet.js?r=" + ( Math.random() * 99999999 );
+					var x = document.getElementsByTagName("script")[0];
+					x.parentNode.insertBefore(s, x);
+
+					// Trigger Stats
+					var s = document.createElement("script");
+					s.type = "text/javascript";
+					s.src = this + ( this.toString().indexOf( '?' ) ? '&' : '?' ) + 'js_only=1';
+					var x = document.getElementsByTagName("script")[0];
+					x.parentNode.insertBefore(s, x);
+				});
+			});
+			</script>
+<script>
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-linkedin' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+				return false;
+			});
+		});
+		</script>
+<div id=sharing_email style="display: none;">
+<form action="/using-javascript-eval-function/" method=post>
+<label for=target_email>Send to Email Address</label>
+<input name=target_email id=target_email value=""/>
+<label for=source_name>Your Name</label>
+<input name=source_name id=source_name value=""/>
+<label for=source_email>Your Email Address</label>
+<input name=source_email id=source_email value=""/>
+<img style="float: right; display: none" class=loading src="http://www.yourhowto.net/wp-content/plugins/jetpack/modules/sharedaddy/images/loading.gif" alt=loading width=16 height=16 />
+<input type=submit value="Send Email" class=sharing_send />
+<a href="#cancel" class=sharing_cancel>Cancel</a>
+<div class="errors errors-1" style="display: none;">
+Post was not sent - check your email addresses!	</div>
+<div class="errors errors-2" style="display: none;">
+Email check failed, please try again	</div>
+<div class="errors errors-3" style="display: none;">
+Sorry, your blog cannot share posts by email.	</div>
+</form>
+</div>
+<link rel=stylesheet id=crayon-css href='http://www.yourhowto.net/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=2.4.1' type='text/css' media=all />
+<script src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201339'></script>
+<script>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"2.4.1","is_admin":"0","ajaxurl":"http:\/\/www.yourhowto.net\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script src='http://www.yourhowto.net/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=2.4.1'></script>
+<script>
+/* <![CDATA[ */
+var recaptcha_options = {"lang":"en"};
+/* ]]> */
+</script>
+<script src='http://www.yourhowto.net/wp-content/plugins/jetpack/modules/sharedaddy/sharing.js?ver=20121205'></script>
+<script>
+var _gaq = _gaq || [];
+(function (tos) {
+  window.setInterval(function () {
+    tos = (function (t) {
+      return t[0] == 50 ? (parseInt(t[1]) + 1) + ':00' : (t[1] || '0') + ':' + (parseInt(t[0]) + 10);
+    })(tos.split(':').reverse());
+    window.pageTracker ? pageTracker._trackEvent('Time', 'Log', tos) : _gaq.push(['_trackEvent', 'Time', 'Log', tos]);
+  }, 10000);
+})('00');
+</script>
+<!--[if IE]>
+		<script type="text/javascript">
+		if ( 0 === window.location.hash.indexOf( '#comment-' ) ) {
+			// window.location.reload() doesn't respect the Hash in IE
+			window.location.hash = window.location.hash;
+		}
+		</script>
+		<![endif]-->
+<script>
+			var comm_par_el = document.getElementById( 'comment_parent' ),
+			    comm_par = (comm_par_el && comm_par_el.value) ? comm_par_el.value : '',
+			    frame = document.getElementById( 'jetpack_remote_comment' ),
+			    tellFrameNewParent;
+
+			tellFrameNewParent = function() {
+				if ( comm_par ) {
+					frame.src = "http:\/\/jetpack.wordpress.com\/jetpack-comment\/?blogid=41302158&postid=1864&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=0&avatar_default=blank&greeting=Leave+a+comment&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en-US&jetpack_version=2.5&sig=ac2a21a6badb76582f1ea7238cdd9ee0fa9a2141#parent=http%3A%2F%2Fwww.yourhowto.net%2Fusing-javascript-eval-function%2F" + '&replytocom=' + parseInt( comm_par, 10 ).toString();
+				} else {
+					frame.src = "http:\/\/jetpack.wordpress.com\/jetpack-comment\/?blogid=41302158&postid=1864&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=0&avatar_default=blank&greeting=Leave+a+comment&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en-US&jetpack_version=2.5&sig=ac2a21a6badb76582f1ea7238cdd9ee0fa9a2141#parent=http%3A%2F%2Fwww.yourhowto.net%2Fusing-javascript-eval-function%2F";
+				}
+			};
+
+	
+			if ( 'undefined' !== typeof addComment ) {
+				addComment._Jetpack_moveForm = addComment.moveForm;
+
+				addComment.moveForm = function( commId, parentId, respondId, postId ) {
+					var returnValue = addComment._Jetpack_moveForm( commId, parentId, respondId, postId ), cancelClick, cancel;
+
+					if ( false === returnValue ) {
+						cancel = document.getElementById( 'cancel-comment-reply-link' );
+						cancelClick = cancel.onclick;
+						cancel.onclick = function() {
+							var cancelReturn = cancelClick.call( this );
+							if ( false !== cancelReturn ) {
+								return cancelReturn;
+							}
+
+							if ( !comm_par ) {
+								return cancelReturn;
+							}
+
+							comm_par = 0;
+
+							tellFrameNewParent();
+
+							return cancelReturn;
+						};
+					}
+
+					if ( comm_par == parentId ) {
+						return returnValue;
+					}
+
+					comm_par = parentId;
+
+					tellFrameNewParent();
+
+					return returnValue;
+				};
+			}
+
+	
+			if ( window.postMessage ) {
+				if ( document.addEventListener ) {
+					window.addEventListener( 'message', function( event ) {
+						if ( "http:\/\/jetpack.wordpress.com" !== event.origin ) {
+							return;
+						}
+
+						jQuery( frame ).height( event.data );
+					} );
+				} else if ( document.attachEvent ) {
+					window.attachEvent( 'message', function( event ) {
+						if ( "http:\/\/jetpack.wordpress.com" !== event.origin ) {
+							return;
+						}
+
+						jQuery( frame ).height( event.data );
+					} );
+				}
+			}
+		</script>
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-43693128-1']);
+  _gaq.push(['_setDomainName', 'yourhowto.net']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<div id=popupsub>
+<span class="button b-close"><span>X</span></span>
+<div style="width:520px;">
+<h3 class=widgettitle style="padding-left:2px;">Subscribe for updates on your Email.</h3>
+<form class=fbf-widget action="http://yourhowto.us7.list-manage2.com/subscribe/post?u=4ad6395b280a31195ada1ae23&amp;id=148cbbbf52" method=post target=popupwindow onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=yourhowtonet', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+<label>Daily Email:</label>
+<input class=subscription_email name=EMAIL style="width: 260px; background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset; transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s; border-radius: 4px 4px 4px 4px; height: 20px; padding: 4px 6px;" placeholder="email address" style="width:160px;" type=email><input value=yourhowtonet name=uri type=hidden>
+<input name=loc value=en_US type=hidden>
+<input class="subscription_btn btn" style="margin-bottom:5px;" name=subscribe value="I want updates!" type=submit>
+</form>
+*<span style=font-size:small>We respect privacy and you will never receive spam! Service is provided by google Feedburner!</span>
+</div>
+<br/><br/>
+<div style="width:520px;">
+<h3 class=widgettitle style="padding-left:2px;">Or follow us on Twitter, Facebook or Google+</h3>
+<div class=fb-like data-href="https://www.facebook.com/yourhowtonet" data-width=285 data-show-faces=false data-send=false></div>
+</br>
+<a href="https://twitter.com/yourhowtonet" class=twitter-follow-button data-show-count=true data-size=large>Follow @yourhowtonet</a>
+<div class=g-follow data-annotation=bubble data-height=24 data-href="//plus.google.com/106837146420859060105" data-rel=publisher></div>
+</div>
+</div>
+<div class=sticky-footer>
+<div class=sticky-content>
+<form class=fbf-widget action="http://yourhowto.us7.list-manage2.com/subscribe/post?u=4ad6395b280a31195ada1ae23&amp;id=148cbbbf52" method=post target=popupwindow onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=yourhowtonet', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="width:430px;display: inline;float:left;margin-top: 3px;">
+<label>Daily Email:</label>
+<input class=subscription_email name=EMAIL style="width: 200px; background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset; transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s; border-radius: 4px 4px 4px 4px; height: 20px; padding: 4px 6px;" placeholder="email address" type=email><input value=yourhowtonet name=uri type=hidden>
+<input name=loc value=en_US type=hidden>
+<input class="subscription_btn btn" style="margin-bottom:5px;" name=subscribe value="I want updates!" type=submit>
+</form>
+<div class=follow-us>
+<ul class=like-bottons>
+<li class=follow-us-label><label>Or follow us on:</label></li>
+<li class=follow-us-facebook><div class=fb-like data-href="https://www.facebook.com/yourhowtonet" data-width=90 data-show-faces=false data-layout=button_count data-send=false></div></li>
+<li class=follow-us-twitter><a href="https://twitter.com/yourhowtonet" class=twitter-follow-button data-show-count=false data-size=small>Follow @yourhowtonet</a></li>
+<li class=follow-us-google><div class=g-follow data-annotation=bubble data-height=24 data-href="//plus.google.com/106837146420859060105" data-rel=publisher></div></li>
+</ul>
+</div>
+</div>
+</div>
+<div id=fb-root></div>
+</body>
+</html>

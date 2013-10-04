@@ -1,0 +1,1264 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html>
+<head>
+	<title>Connecting the Dream Cheeky Thunder Missile Launcher to Windows 8.1  - CodeProject</title> 
+	<link type="text/css" rel="stylesheet" href="/App_Themes/CodeProject/Css/Main.min.css?dt=2.6.1309030.1">
+
+	
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Description" content="Leverage new device APIs in Win8.1.; Author: Lewis Benge; Updated: 26 Sep 2013; Section: Windows Runtime; Chapter: Platforms, Frameworks &amp; Libraries; Updated: 26 Sep 2013" />
+<meta name="Keywords" content="C#, Windows, Dev, Intermediate, Win8,Windows Runtime,Platforms, Frameworks &amp; Libraries,Free source code, tutorials" />
+<meta name="Author" content="Lewis Benge" />
+<meta name="Rating" content="General" />
+<meta name="Robots" content="index, follow, NOODP" />
+<meta name="Revisit-After" content="1 days" />
+<meta name="application-name" content="CodeProject" />
+
+<link rel="dns-prefetch" href="//ajax.googleapis.com" /> 
+<link rel="canonical" href="/Articles/659380/Connecting-the-Dream-Cheeky-Thunder-Missile-Launch" />
+<meta name="syndication-source" content="http://lewisbenge.azurewebsites.net/2013/09/26/connecting-the-dream-cheeky-thunder-missile-launcher-to-windows-8-1/">
+
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - All Topics" href="http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=1" />
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - MFC/C++" href="http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=2" />
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - C#" href="http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=3" />
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - VB.NET" href="http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=6" />
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - Mobile" href="http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=18" />
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - ASP.NET" href="http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=4" />
+<link rel="alternate" type="application/rss+xml" title="CodeProject Lounge Postings" href="http://www.codeproject.com/webservices/LoungeRSS.aspx" />
+<link rel="search" type="application/opensearchdescription+xml" title="CodeProject" href="http://www.codeproject.com/info/OpenSearch.xml" />
+
+	<base target="_top" />
+	<link rel="icon" href="/favicon.ico" type="image/ico" >
+<link rel="shortcut icon" href="/favicon.ico"  type="image/ico" >
+<link rel="apple-touch-icon" href="/images/FavIcon-Apple.png" type="image/png" >
+<script type="text/javascript" language="Javascript">//<![CDATA[
+function defrm () { /* thanks twitter */ document.write = ''; window.top.location = window.self.location;  setTimeout(function() { document.body.innerHTML = ''; }, 0);  window.self.onload = function(evt) { document.body.innerHTML = ''; }; }if (window.top !== window.self) {  try {  if (window.top.location.host) { /* will throw */ } else { defrm(); /* chrome */ }  } catch (ex) { defrm(); /* everyone else */ } }if (typeof(DemoUrl)!='undefined')   document.write(unescape('%3Cme')+'ta http'+'-equiv="re'+'fresh"                  con'+'tent="1;url='+DemoUrl+unescape('"%3CE'));
+function _dmBootstrap(file) { var _dma = document.createElement('script');  _dma.type = 'text/javascript'; _dma.async = true;  _dma.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + file; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(_dma);}
+function _dmFollowup(file) { if (typeof DMAds === 'undefined')  _dmBootstrap('cdn2.developermedia.com/a.min.js?dt=2.6.1309030.1');}
+(function () { _dmBootstrap('cdn1.developermedia.com/a.min.js?dt=2.6.1309030.1'); setTimeout(_dmFollowup, 2000);})();
+
+//]]>
+</script>
+
+	
+
+
+
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-1735123-1']);
+	_gaq.push(['_trackPageview']);
+	_gaq.push(['_setDomainName', 'www.codeproject.com']);
+	_gaq.push(['_setSessionTimeout', '1200']); 
+
+	(function () {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})(); 
+</script>
+
+
+</head>	
+
+<body class="unknown unknown0">
+
+<a href="#Main"><img alt="Click here to Skip to main content" class="access-link" src="/Images/t.gif" /></a>
+
+
+
+
+
+<div class="page-background">
+
+	
+	
+
+	
+
+	<table id="ctl00_Bn" style="width:100%;height:135px" cellpadding="0" cellspacing="0" class="banner fixed">
+	<tr valign="bottom">
+		<td class="blank-background" style="height:31px">&nbsp;</td>
+		<td class="blank-background" rowspan="3" style="width:250px;height:135px"><a href="/"><img id="ctl00_Logo" tabindex="1" title="CodeProject" src="/App_Themes/CodeProject/Img/logo250x135.gif" alt="Home" height="135" width="250" border="0" /></a></td>
+		<td class="blank-background align-right" style="width:728px;height:31px">
+
+<div class="container memberbar clearfix">
+
+	<div id="ctl00_MemberMenu_GenInfo" class="float-left">10,118,810 members (40,628 online) &nbsp; &nbsp; </div>
+
+	<div class="float-left">
+		
+	</div>
+
+	<div class="float-right">
+
+		<span id="ctl00_MemberMenu_CodeProjectTV" class="tooltip" style="margin-right:15px;">
+			<div class="speech-bubble-container-up" style="width:180px;line-height:20px">
+				<div class="speech-bubble-up">
+					<b><a href="http://codeproject.TV">Visit CodeProject.TV</a><br />
+					<a id="ctl00_MemberMenu_DiscussCPTV" href="/Forums/1829610/CodeProject-TV.aspx">Discuss CodeProject.TV</a></b>
+				</div>
+				<div class="speech-bubble-pointer-up">
+					<div class="speech-bubble-pointer-up-inner"></div>
+				</div>
+			</div>
+		</span>
+
+		
+
+		
+
+		
+
+			<script type="text/javascript">//<!--
+			function doSubmit(secure)
+			{
+				if (secure)
+					document.subForm.action = "https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fArticles%2f659380%2fConnecting-the-Dream-Cheeky-Thunder-Missile-Launch%3futm_source%3d54j33dh4%26utm_medium%3dtwitter"
+				else
+					document.subForm.action = "https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fArticles%2f659380%2fConnecting-the-Dream-Cheeky-Thunder-Missile-Launch%3futm_source%3d54j33dh4%26utm_medium%3dtwitter"
+				document.subForm.submit();
+				return true;
+			}//-->
+			</script>
+
+			<a name="SignUp"></a>
+			<span class="member-signin tooltip openable">
+				<span><a href="https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fArticles%2f659380%2fConnecting-the-Dream-Cheeky-Thunder-Missile-Launch%3futm_source%3d54j33dh4%26utm_medium%3dtwitter">Sign in</a></span>
+
+				<div class="tooltip-flyout">
+					<form name="subForm" id="subForm" action="https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fArticles%2f659380%2fConnecting-the-Dream-Cheeky-Thunder-Missile-Launch%3futm_source%3d54j33dh4%26utm_medium%3dtwitter" method="post" 
+						class="tight">
+
+						
+						<input id="FormName" name="FormName" value="MenuBarForm" type="hidden" />
+
+						<div>Email</div>
+						<div><input class="small-text" type="email" name="Email" id="Email" /></div>
+						<div>Password</div>
+						<div><input class="small-text" type="password" name="Password" id="Password" /></div>
+						<div class="action">
+							<script type="text/javascript">
+function Join(){document.location.href='http://www.codeproject.com/script/Membership/Modify.aspx';return false;}
+document.write('<input type="button" class="create" onclick="return Join();" value="Join"');
+document.write('<input type="hidden" name="fld_quicksign" value="true" />');
+</script>
+							<input type="submit" value="Sign in" class="signin" 
+								onclick="return doSubmit(false);" />
+						</div>
+
+						<div class="container">
+							
+							&nbsp;
+							<a id="ctl00_MemberMenu_SendPassword" class="forgot float-right" href="/script/Membership/SendPassword.aspx?rp=%2fArticles%2f659380%2fConnecting-the-Dream-Cheeky-Thunder-Missile-Launch%3futm_source%3d54j33dh4%26utm_medium%3dtwitter">Forgot your password?</a>
+						</div>
+					</form>
+
+					<hr class="divider-dark" />
+
+					Sign in using <a class="oauth" title="Sign in using Facebook" href="/script/Membership/OAuthLogOn.aspx?auth=Facebook"><img src="/script/Membership/Images/facebook.png" style="vertical-align:middle;padding-right:3px;border:0;" /></a>
+<a class="oauth" title="Sign in using Google" href="/script/Membership/OAuthLogOn.aspx?auth=Google"><img src="/script/Membership/Images/google-plus.png" style="vertical-align:middle;padding-right:3px;border:0;" /></a>
+<a class="oauth" title="Sign in using Linkedin" href="/script/Membership/OAuthLogOn.aspx?auth=LinkedIn"><img src="/script/Membership/Images/linkedin.png" style="vertical-align:middle;padding-right:3px;border:0;" /></a>
+
+				</div>
+		
+	</div>
+</div></td>
+		<td class="blank-background" style="height:31px">&nbsp;</td>
+	</tr>
+	<tr valign="middle">
+		<td class="theme1-background" style="height:94px">&nbsp;</td>
+		<td class="theme1-background ad"><div class="msg-728x90" data-format="728x90" data-type="ad" data-publisher="lqm.codeproject.site" data-zone="ros"  data-tags='C#, Windows, Dev, Intermediate, Win8,rating3'></div></td>
+		<td class="theme1-background" style="height:94px">&nbsp;</td>
+	</tr>
+	<tr valign="top">
+		<td style="height: 10px;"></td>
+		<td style="height: 10px;" class="blank-background"></td>
+		<td style="height: 10px;"></td>
+	</tr>
+</table>
+
+
+	<a href="#Main"><img alt="Click here to Skip to main content" class="access-link" 
+		src="/Images/t.gif" /></a>
+
+	
+	<div id="ctl00_TPR" class="sub-headerbar fixed">
+	<table cellpadding="0" cellspacing="0" class="extended"><tr><td nowrap="nowrap">
+		
+
+<div class="navbar clearfix">
+<ul class="navmenu openable">
+
+<li><a id="ctl00_TopNavBar_Home" href="http://www.codeproject.com">home</a>
+
+
+<li class="openable"><a id="ctl00_TopNavBar_Art" class="down selected" href="/script/Articles/Latest.aspx">articles</a>
+
+	<ul>
+		<li class="openable"><a id="ctl00_TopNavBar_ArtTopicList" class="fly" onmouseover="navBarMenu.ShowMap(this, &#39;ctl00_TopNavBar_MapFlyout&#39;);" href="/script/Content/SiteMap.aspx">Chapters and Sections<span class="has-submenu">&gt;</span></a><ul id="ctl00_TopNavBar_MapFlyout">
+			<li>
+				<div id="siteMap">
+					<img src="/images/animated.gif" alt="loading" style="margin:150px;width:100px;height:100px;" />
+				</div>
+			</li>
+			</ul>
+		</li>
+		<li><a id="ctl00_TopNavBar_ArtSearch" class="fly break" href="/search.aspx">Search</a></li>
+		<li><a id="ctl00_TopNavBar_ArtLatestArts" class="fly" href="/script/Articles/Latest.aspx?at=1,3,7">Latest Articles</a></li>
+		<li><a id="ctl00_TopNavBar_ArtLatestTips" class="fly" href="/script/Articles/Latest.aspx?at=6">Latest Tips/Tricks</a></li>
+		<li><a id="ctl00_TopNavBar_ArtTop" class="fly" href="/script/Articles/TopArticles.aspx?ta_so=5">Top Articles</a></li>
+		<li><a id="ctl00_TopNavBar_ArtBeginner" class="fly" href="/search.aspx?aidlst=152&amp;sa_us=True">Beginner Articles</a></li>
+		<li><a id="ctl00_TopNavBar_ArtBlogArticles" class="fly break" href="/script/Articles/BlogArticleList.aspx">Technical Blogs</a></li>
+		<li><a id="ctl00_TopNavBar_ArtGuide" class="fly" href="/info/Submit.aspx">Posting/Update Guidelines</a></li>
+		<li><a id="ctl00_TopNavBar_ArtHelpForum" class="fly" href="/Forums/1641/Article-Writing.aspx">Article Help Forum</a></li>
+		<li><a id="ctl00_TopNavBar_ArtCompetition" class="fly break" href="/script/Awards/CurrentCompetitions.aspx?cmpTpId=1">Article Competition</a></li>
+		<li><a id="ctl00_TopNavBar_ArtPostArticle" class="fly highlight1" href="/script/Articles/Submit.aspx">
+			<img src="/images/write-gr.png" width="19px" height="13px" /> Submit an article or tip
+			</a></li>
+		<li><a id="ctl00_TopNavBar_ArtPostBlog" class="fly highlight2" href="/script/Articles/BlogFeed.aspx">
+			<img src="/images/write-or.png" width="19px" height="13px" /> Post your Blog
+			</a></li>		<li class="last"></li>
+	</ul>
+
+</li>
+
+
+
+<li class="openable"><a id="ctl00_TopNavBar_Answers" href="/script/Answers/List.aspx?tab=active">quick answers</a>
+	<ul>
+		<li id="ctl00_TopNavBar_AQL"><a id="ctl00_TopNavBar_ArticleQuestion" class="fly highlight1" href="#_comments">
+			<img src="/images/write-gr.png" width="19px" height="13px" /> Ask a Question about this 
+			article</a>
+		</li>
+
+		<li><a id="ctl00_TopNavBar_QAAsk" class="fly highlight2" href="/Questions/ask.aspx"><img 
+			src="/images/write-or.png" width="19px" height="13px" /> Ask a Question</a></li>
+
+		
+		<li><a id="ctl00_TopNavBar_QAUnanswered" class="fly" href="/script/Answers/List.aspx?tab=unanswered">View Unanswered Questions</a></li>
+		<li><a id="ctl00_TopNavBar_QALatest" class="fly" href="/script/Answers/List.aspx?tab=active">View All Questions...</a></li>
+		
+				<li><a id="ctl00_TopNavBar_QATR_ctl00_Tag" class="fly" href="/script/Answers/List.aspx?tab=active&amp;alltags=true&amp;tags=81" style="padding-left:30px">C# questions</a></li>
+			
+				<li><a id="ctl00_TopNavBar_QATR_ctl01_Tag" class="fly" href="/script/Answers/List.aspx?tab=active&amp;alltags=true&amp;tags=85" style="padding-left:30px">ASP.NET questions</a></li>
+			
+				<li><a id="ctl00_TopNavBar_QATR_ctl02_Tag" class="fly" href="/script/Answers/List.aspx?tab=active&amp;alltags=true&amp;tags=842" style="padding-left:30px">VB.NET questions</a></li>
+			
+				<li><a id="ctl00_TopNavBar_QATR_ctl03_Tag" class="fly" href="/script/Answers/List.aspx?tab=active&amp;alltags=true&amp;tags=308" style="padding-left:30px">C#4.0 questions</a></li>
+			
+				<li><a id="ctl00_TopNavBar_QATR_ctl04_Tag" class="fly" href="/script/Answers/List.aspx?tab=active&amp;alltags=true&amp;tags=78" style="padding-left:30px">C++ questions</a></li>
+			
+		<li class="last"></li>
+	</ul>
+
+</li>
+
+
+
+<li class="openable"><a id="ctl00_TopNavBar_Forums" href="/script/Forums/List.aspx">discussions</a>
+
+	<ul>
+		<li><a id="ctl00_TopNavBar_MessageBoardsAll" class="fly" href="/script/Forums/List.aspx">All Message Boards...</a></li>
+		<li class="openable"><a class="fly" style="padding-left:30px" href="/Forums/1580997/Application-Lifecycle.aspx">Application Lifecycle<span class="has-submenu">&gt;</span></a>
+<ul class="openable"><li><a class="fly" href="/Forums/1533717/Running-a-Business.aspx">Running a Business</a></li>
+<li><a class="fly" href="/Forums/1533716/Sales-Marketing.aspx">Sales / Marketing</a></li>
+<li><a class="fly" href="/Forums/1651/Collaboration-Beta-Testing.aspx">Collaboration / Beta Testing</a></li>
+<li><a class="fly" href="/Forums/3304/Work-Training-Issues.aspx">Work &amp; Training Issues</a></li>
+</ul></li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/369270/Design-and-Architecture.aspx">Design and Architecture</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/12076/ASP-NET.aspx">ASP.NET</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1580226/JavaScript.aspx">JavaScript</a>
+</li>
+<li class="openable"><a class="fly" style="padding-left:30px" href="/Forums/1647/C-Cplusplus-MFC.aspx">C / C++ / MFC<span class="has-submenu">&gt;</span></a>
+<ul class="openable"><li><a class="fly" href="/Forums/4486/ATL-WTL-STL.aspx">ATL /  WTL / STL</a></li>
+<li><a class="fly" href="/Forums/3785/Managed-Cplusplus-CLI.aspx">Managed C++/CLI</a></li>
+</ul></li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1827459/Adobe-Technologies.aspx">Adobe Technologies</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1649/Csharp.aspx">C#</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1627782/Free-Tools.aspx">Free Tools</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1827460/Objective-C.aspx">Objective-C</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1832431/Ruby-On-Rails.aspx">Ruby On Rails</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1725/Database.aspx">Database</a>
+</li>
+<li class="openable"><a class="fly" style="padding-left:30px" href="/Forums/186301/Hardware-Devices.aspx">Hardware &amp; Devices<span class="has-submenu">&gt;</span></a>
+<ul class="openable"><li><a class="fly" href="/Forums/1644/System-Admin.aspx">System Admin</a></li>
+</ul></li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1606152/Hosting-and-Servers.aspx">Hosting and Servers</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1643/Java.aspx">Java</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1650/NET-Framework.aspx">.NET Framework</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/13695/Mobile.aspx">Mobile</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1653293/VS-2012-2013-NET-4-5-1.aspx">VS 2012/2013 &amp; .NET 4.5.1</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1540733/Sharepoint.aspx">Sharepoint</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1004257/Silverlight-WPF.aspx">Silverlight / WPF</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1646/Visual-Basic.aspx">Visual Basic</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1640/Web-Development.aspx">Web Development</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1645/Site-Bugs-Suggestions.aspx">Site Bugs / Suggestions</a>
+</li>
+
+		<li class="last"></li>
+	</ul>
+
+</li>
+
+
+
+
+<li class="openable"><a id="ctl00_TopNavBar_Features" href="/Feature/">features</a>
+
+	<ul>
+		<li><a id="ctl00_TopNavBar_CPTV" class="fly highlight1" href="http://CodeProject.TV">
+			<img src="/images/CPTV-24.png" width="24px" height="24px" alt="CP.TV" style="vertical-align:text-bottom"/>
+				CodeProject.TV</a></li>
+		<li><a id="ctl00_TopNavBar_Catalog" class="fly" href="/script/Catalog/List.aspx">Component & Service Catalog</a></li>
+		<li><a id="ctl00_TopNavBar_Comps" class="fly" href="/script/Awards/CurrentCompetitions.aspx?cmpTpId=1&amp;awsac=true">Competitions</a></li>
+		<li><a id="ctl00_TopNavBar_News" class="fly" href="/script/News/List.aspx">News</a></li>
+		<li><a id="ctl00_TopNavBar_Insider" class="fly" href="/Feature/Insider/">The Insider Newsletter</a></li>
+		<li><a id="ctl00_TopNavBar_Newsletters" class="fly" href="/script/Mailouts/Archive.aspx?mtpid=1">Newsletter archive</a></li>
+		<li><a id="ctl00_TopNavBar_Surveys" class="fly" href="/script/Surveys/List.aspx">Surveys</a></li>
+		<li><a id="ctl00_TopNavBar_Showcase" class="fly" href="/KB/showcase/">Product Showcase</a></li>
+		<li><a id="ctl00_TopNavBar_Research" class="fly" href="/script/ResearchLibrary/Index.aspx">Research Library</a></li>
+
+		
+		<li><a id="ctl00_TopNavBar_Stuff" class="fly" href="/Info/Stuff.aspx">CodeProject Stuff</a></li>
+		<li class="last"></li>
+	</ul>
+
+</li>
+
+
+<li  class="openable"><a id="ctl00_TopNavBar_Lounge" href="/Lounge.aspx">community</a>
+
+	<ul>
+		<li><a id="ctl00_TopNavBar_InsiderLnk" class="fly" href="/Insider.aspx">The Insider News</a></li>
+		<li><a id="ctl00_TopNavBar_LoungeLnk" class="fly" href="/Lounge.aspx">The Lounge  </a></li>
+		<li><a id="ctl00_TopNavBar_WeirdWonderful" class="fly" href="/Feature/WeirdAndWonderful.aspx">The Weird & The Wonderful</a></li>
+		<li><a id="ctl00_TopNavBar_SoapBoxLnk" class="fly" href="/Forums/1536756/The-Soapbox.aspx">The Soapbox</a></li>
+		<li><a id="ctl00_TopNavBar_PRLnk" class="fly break" href="/Forums/1738007/Press-Releases.aspx">Press Releases</a></li>
+		<li><a id="ctl00_TopNavBar_WhosWho" class="fly" href="/script/Membership/Profiles.aspx">Who's Who</a></li>
+		<li><a id="ctl00_TopNavBar_MVPs" class="fly" href="/script/Awards/MVPWinners.aspx">Most Valuable Professionals</a></li>
+		<li><a id="ctl00_TopNavBar_Companies" class="fly break" href="/script/Membership/Profiles.aspx?mgtid=1&amp;mgm=True">Company Listings</a></li>
+
+		
+		<li class="openable"><a class="fly" href="/Forums/1580229/Hindi.aspx">Non-English Language
+			<span class="has-submenu">&gt;</span></a>
+		<ul>
+		<li><a class="fly" href="/Forums/1580229/Hindi.aspx">General Indian Topics</a></li>
+		<li><a class="fly" href="/Forums/1580230/Chinese.aspx">General Chinese Topics</a></li>
+		</ul>
+		<li class="last"></li>
+		
+	</ul>
+
+</li>
+
+
+<li class="openable" style="margin-left:20px"><a id="ctl00_TopNavBar_Help" href="/KB/FAQs/">help</a>
+
+	<ul>
+		<li><a id="ctl00_TopNavBar_HelpWhatIs" class="fly" href="/info/guide.aspx">What is 'CodeProject'?</a></li>
+		<li><a id="ctl00_TopNavBar_HelpGeneral" class="fly break" href="/KB/FAQs/">General FAQ</a></li>
+		<li><a id="ctl00_TopNavBar_HelpPostQuestion" class="fly break highlight1" href="/Questions/ask.aspx">Ask a Question</a></li>
+		<li><a id="ctl00_TopNavBar_HelpBugs" class="fly" href="/Forums/1645/Site-Bugs-Suggestions.aspx">Bugs and Suggestions</a></li>
+		<li><a id="ctl00_TopNavBar_HelpArticles" class="fly" href="/Forums/1641/Article-Writing.aspx">Article Help Forum</a></li>
+		<li><a id="ctl00_TopNavBar_HelpSiteMap" class="fly" href="/script/Content/SiteMap.aspx">Site Map</a></li>
+		<li><a id="ctl00_TopNavBar_HelpAdvertise" class="fly" href="http://developermedia.com/">Advertise with us</a></li>
+		<li><a id="ctl00_TopNavBar_HelpJobs" class="fly" href="/info/Jobs/">Employment Opportunities</a></li>
+		<li><a id="ctl00_TopNavBar_HelpAboutUs" class="fly" href="/info/about.aspx">About Us</a></li>
+		<li class="last"></li>
+	</ul>
+
+</li>
+
+</ul>
+
+</div>
+	</td><td align="right">
+		
+
+<div class="searchbar">
+
+<form method="get" action="/search.aspx" name="Search" class="tight">
+
+
+<table border="0" cellspacing="0" cellpadding="0" class="search"><tr><td><input TabIndex="2" class="search " id="sb_tb" value="" name="q" /></td><td><input type="image" src="/images/search.gif" /></td></tr></table>
+
+<div class="hover-container">
+	<div id="SearchFilter" class="search-advanced popup small-text align-left">
+	<b>Search within:<br /></b>
+		
+		<input type="radio" id="sb_kw" name="sbo" value="kw" checked="true"><label for="sb_kw">Articles</label><br>
+<input type="radio" id="sb_vkw" name="sbo" value="vkw"><label for="sb_vkw">Videos</label><br>
+<input type="radio" id="sb_qa" name="sbo" value="qa"><label for="sb_qa">Quick Answers</label><br>
+<input type="radio" id="sb_fm" name="sbo" value="fm"><label for="sb_fm">Messages</label><br>
+<input type="radio" id="sb_ctlk" name="sbo" value="ctlk"><label for="sb_ctlk">Product Catalog</label><br>
+
+
+		
+		
+	</div>
+</div>
+</form>
+
+</div>
+	</td></tr></table>
+	<div class="sub-headerbar-divider"></div>
+	</div>
+	
+
+	<div id="A" class="container-content-wrap fixed"> 
+
+	<div itemscope itemtype="http://schema.org/Article" class="container-content"> 
+
+		<div class="clearfix">
+			<div class="float-left container-breadcrumb">
+				<div><a href="/script/Content/SiteMap.aspx">Articles</a> &#187; <a href="/Chapters/8/Platforms-Frameworks-Libraries.aspx">Platforms, Frameworks & Libraries</a> &#187; <a href="/KB/WinRT/"><span itemprop="articleSection">Windows Runtime</span></a> &#187; <a href="/KB/WinRT/#General">General</a></div>
+			</div>
+
+			<div class="align-left float-right padded-top">
+				
+
+
+ 
+&nbsp;
+
+
+
+
+
+
+
+
+
+
+			</div>
+
+			<div class="float-right container-breadcrumb article-nav">
+				
+<div class="">
+
+
+<a id="ctl00_PrevNext_NextLink" title="Next" href="/script/Articles/PrevNextLookup.aspx?aid=659380&amp;at=1&amp;secId=165" style="margin-left:5px">Next</a>
+<img id="ctl00_PrevNext_NextImg" title="Next" rel="nofollow" src="/Images/arrow-right.png" border="0" style="vertical-align:bottom;" />
+</div>
+			</div>
+
+			<div class="align-right float-left">
+				
+			</div>
+		</div>
+
+		<table class="extended container-article-parts" cellpadding="0" cellspacing="0"><tr valign="top">
+		<td>
+
+			<div id="ctl00_Nav" class="container-article-tabs">
+				<div class="tabs">
+					
+
+<div class="">
+	<div class="selected">Article</div><div class="unselected"><a href="/script/Articles/ViewDownloads.aspx?aid=659380">Browse Code</a></div><div class="unselected"><a href="/script/Articles/Statistics.aspx?aid=659380">Stats</a></div><div class="unselected"><a href="/script/Articles/ListVersions.aspx?aid=659380">Revisions (4)</a></div><div class="unselected"><a href="/script/Articles/ListAlternatives.aspx?aid=659380">Alternatives</a></div>
+</div>	
+
+
+					<!-- anchorLink used to auto-link to comments at end of article -->
+					<div class="unselected"><a href="../../MasterPages/#_comments" id="ctl00_CommentLink" class="anchorLink">Comments &amp; 
+						Discussions <span id="ctl00_CmtCnt"></span></a>
+					</div>
+				</div>
+
+				
+			</div>
+
+		</td>
+		<td>
+			
+			<div id="AT" class="container-article  fixed"> 
+				<div class="article">
+
+					<form name="aspnetForm" method="post" action="/Articles/659380/Connecting-the-Dream-Cheeky-Thunder-Missile-Launch?utm_source=54j33dh4&amp;utm_medium=twitter" id="aspnetForm" style="margin:0;padding:0">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjExOTQzNjk4Mw8WAh4TVmFsaWRhdGVSZXF1ZXN0TW9kZQIBFgJmD2QWBAIKDxYCHgVjbGFzcwUTc3ViLWhlYWRlcmJhciBmaXhlZGQCCw8WAh8BBRxjb250YWluZXItY29udGVudC13cmFwIGZpeGVkFhACAQ9kFgJmDxYCHgRUZXh0BawCPGRpdj48YSBocmVmPSIvc2NyaXB0L0NvbnRlbnQvU2l0ZU1hcC5hc3B4Ij5BcnRpY2xlczwvYT4gJiMxODc7IDxhIGhyZWY9Ii9DaGFwdGVycy84L1BsYXRmb3Jtcy1GcmFtZXdvcmtzLUxpYnJhcmllcy5hc3B4Ij5QbGF0Zm9ybXMsIEZyYW1ld29ya3MgJiBMaWJyYXJpZXM8L2E+ICYjMTg3OyA8YSBocmVmPSIvS0IvV2luUlQvIj48c3BhbiBpdGVtcHJvcD0iYXJ0aWNsZVNlY3Rpb24iPldpbmRvd3MgUnVudGltZTwvc3Bhbj48L2E+ICYjMTg3OyA8YSBocmVmPSIvS0IvV2luUlQvI0dlbmVyYWwiPkdlbmVyYWw8L2E+PC9kaXY+ZAIDD2QWBAICDw8WAh4LTmF2aWdhdGVVcmwFOS9zY3JpcHQvQXdhcmRzL0FkbWluL0F3YXJkT2JqZWN0LmFzcHg/b2JpZD02NTkzODAmb2J0aWQ9MmRkAgwPDxYCHwMFMC9zY3JpcHQvQXJ0aWNsZXMvQWRtaW4vUXVldWVFZGl0LmFzcHg/YWlkPTY1OTM4MGRkAgUPZBYEAgIPDxYGHwMFPi9zY3JpcHQvQXJ0aWNsZXMvUHJldk5leHRMb29rdXAuYXNweD9haWQ9NjU5MzgwJmF0PTEmc2VjSWQ9MTY1HgdUb29sVGlwBQROZXh0HgdWaXNpYmxlZ2RkAgMPDxYEHghJbWFnZVVybAUXL0ltYWdlcy9hcnJvdy1yaWdodC5wbmcfBWcWBB4Fc3R5bGUFFnZlcnRpY2FsLWFsaWduOmJvdHRvbTseA3JlbAUIbm9mb2xsb3dkAgkPZBYEAgMPFgQeBGhyZWYFCiNfY29tbWVudHMfAQUKYW5jaG9yTGlua2QCBQ8PFgIfAwU3L3NjcmlwdC9BcnRpY2xlcy9TdWJtaXNzaW9uV2l6YXJkLmFzcHg/YXQ9MSZhcGlkPTY1OTM4MGRkAgsPFgIfAQUYY29udGFpbmVyLWFydGljbGUgIGZpeGVkFgICAQ8WAh4GYWN0aW9uBWovQXJ0aWNsZXMvNjU5MzgwL0Nvbm5lY3RpbmctdGhlLURyZWFtLUNoZWVreS1UaHVuZGVyLU1pc3NpbGUtTGF1bmNoP3V0bV9zb3VyY2U9NTRqMzNkaDQmdXRtX21lZGl1bT10d2l0dGVyFgYCAQ8WAh8FZxYIZg8WAh4JaW5uZXJodG1sBURDb25uZWN0aW5nIHRoZSBEcmVhbSBDaGVla3kgVGh1bmRlciBNaXNzaWxlIExhdW5jaGVyIHRvIFdpbmRvd3MgOC4xIGQCAQ8WAh8CBbkBPGEgaHJlZj0iL3NjcmlwdC9NZW1iZXJzaGlwL1ZpZXcuYXNweD9taWQ9MzM1ODEwNiIgcmVsPSJhdXRob3IiPjxzcGFuIGl0ZW1wcm9wPSJhdXRob3IiIGl0ZW1zY29wZSBpdGVtdHlwZT0iaHR0cDovL3NjaGVtYS5vcmcvUGVyc29uIj48c3BhbiBpdGVtcHJvcD0ibmFtZSI+TGV3aXMgQmVuZ2U8L3NwYW4+PC9zcGFuPjwvYT5kAgIPFgIfAgUTMjAxMy0wOS0yNiAwOToyNTowMGQCAw8WAh8CBQsyNiBTZXAgMjAxM2QCAw8PFgIfBWdkZAIND2QWCAIDD2QWAgIBDxYCHwVoZAIFD2QWAgICD2QWAgIBDxBkZBYAZAIKDxYCHgtfIUl0ZW1Db3VudAIBZAIMDxYCHwIFowE8YSBjbGFzcz0iYW5jaG9yTGluayIgaHJlZj0iL0FydGljbGVzLzY1OTM4MC9Db25uZWN0aW5nLXRoZS1EcmVhbS1DaGVla3ktVGh1bmRlci1NaXNzaWxlLUxhdW5jaD91dG1fc291cmNlPTU0ajMzZGg0JnV0bV9tZWRpdW09dHdpdHRlciNfYXJ0aWNsZVRvcCI+QXJ0aWNsZSBUb3A8L2E+ZAIND2QWBAILD2QWBAICDw8WAh8DBVEvQXJ0aWNsZXMvNjU5MzgwL0Nvbm5lY3RpbmctdGhlLURyZWFtLUNoZWVreS1UaHVuZGVyLU1pc3NpbGUtTGF1bmNoP2Rpc3BsYXk9UHJpbnRkZAIEDw8WAh8DBTIvc2NyaXB0L2NvbW1vbi9UZWxsRnJpZW5kLmFzcHg/b2J0aWQ9MiZvYmlkPTY1OTM4MGRkAg0PFgIfBWdkAg8PDxYEHwIFCVBlcm1hbGluax8DBUMvQXJ0aWNsZXMvNjU5MzgwL0Nvbm5lY3RpbmctdGhlLURyZWFtLUNoZWVreS1UaHVuZGVyLU1pc3NpbGUtTGF1bmNoZGQCHw8WAh8CBR1Db3B5cmlnaHQgMjAxMyBieSBMZXdpcyBCZW5nZWRk7Q8RHYl6HYYHx6HooXDK6r8K1U8=" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAiwqwYocX+oSaITjYG80wo6RvOcnushDLd/TkEGNtrL06Qq43t+AS+6dEKjdHRuA6nMWBAZv0jw3kYO0FC78WuSHT/BAL0q7pGFBQSXHmuCpz6+w2I3QiXJYdmrbxkvR4Dx4vgrctYqvv3nY5DxgLwch2U8pjwkk1+tVXPdo4CpKPQn2g3yg0YO4DzgGdp4TbugDqZ7" />
+
+					
+					 
+					<div class="header">
+
+					<a name="Main"></a>
+
+					
+					<a name="_articleTop" id="_articleTop"></a>
+					<div class="title">
+					
+					
+					<h1 id="ctl00_ArticleTitle" itemprop="name">Connecting the Dream Cheeky Thunder Missile Launcher to Windows 8.1 </h1> 
+					</div>
+
+					
+					<div class="entry">
+						By <span class="author"><a href="/script/Membership/View.aspx?mid=3358106" rel="author"><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Lewis Benge</span></span></a></span>, 
+						<span class="date" itemprop="dateModified" content="2013-09-26 09:25:00">
+							26 Sep 2013</span>
+			
+									
+					</div>
+
+					
+					<table class="voting-bar"><tr><td>
+						<div id="ctl00_CurRat" class="tooltip anchorLink" style="cursor:pointer" name="CurRat_659380">
+				
+							
+
+<table cellpadding="0" cellspacing="0" class="small-text" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"> 
+<tr>
+	
+	<td class="nowrap">
+
+		
+			<meta itemprop="bestRating" content="5"> 
+			<meta itemprop="worstRating" content="1">
+		
+
+		<span id="ctl00_ArticleRating_VI">
+		<div class="nowrap rating-stars-large" style="position:relative;">
+	<div class="clipped align-left float-left">
+		<img src="/script/Ratings/Images/stars-fill-lg.png" border="0" />
+	</div><div class="clipped" style="position:relative;">
+		<img src="/script/Ratings/Images/stars-empty-lg.png" border="0" style="position:absolute;top:0;right:0;" />
+	</div>
+</div>
+		</span>
+
+		
+	</td>
+	
+	<td id="ctl00_ArticleRating_VR" class="nowrap">
+		&nbsp;
+		<span id="ctl00_ArticleRating_VotesR">&nbsp;<span itemprop="ratingValue" class="rating">4.00</span> (<span itemprop="ratingCount" class="count">1</span> vote)</span>
+		
+	</td>
+
+</tr>
+
+</table>
+
+
+							<div id="ctl00_RB" class="speech-bubble-container-up">
+								<div class="speech-bubble-up" style="width:150px !important">
+									            
+<div>
+<table class="feature" width="100%" height="50px" title="Voting Distribution. Recent data only" cellpadding="0" cellspacing="0"><tr class="chart-row"><td class="chart-column"><img src="/Images/t.gif" width="20pxpx" height="1px" border="0px" alt="" title="" /><br /><span title="0 votes">1</span></td>
+<td class="chart-column"><img src="/Images/t.gif" width="20pxpx" height="1px" border="0px" alt="" title="" /><br /><span title="0 votes">2</span></td>
+<td class="chart-column"><img src="/Images/t.gif" width="20pxpx" height="1px" border="0px" alt="" title="" /><br /><span title="0 votes">3</span></td>
+<td class="chart-column"><img src="/script/Ratings/Images/pollcol.gif" width="20pxpx" height="50px" border="0px" alt="1 vote, 100.0%" title="1 vote, 100.0%" /><br /><span title="1 vote">4</span></td>
+<td class="chart-column"><img src="/Images/t.gif" width="20pxpx" height="1px" border="0px" alt="" title="" /><br /><span title="0 votes">5</span></td>
+</tr></table><div class="small-text align-center">4.00/5 - 1 vote</div><div class="small-text align-center subdue">μ 4.00, σ<sub>a</sub> 5.00 [<a href="/KB/FAQs/RatingReputationFAQ.aspx#noisefilter">?</a>]</div>
+</div>
+								</div>
+								<div class="speech-bubble-pointer-up">
+									<div class="speech-bubble-pointer-up-inner"></div>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						
+					</td>
+					<td id="ctl00_RateArticleRow" class="voting-bar">
+							
+							<div class="float-right align-right">
+								<div id="ctl00_RateArticle_RateItemWrapper" class="container-rating small-text" name="RateItem_659380">
+
+	<table width="100%" cellpadding="0" cellspacing="0" class="small-text">
+	<tr>
+		<td id="ctl00_RateArticle_VoteResultDiv" class="rating-result align-right">
+			<span class="align-right"></span>
+			<img class="loaderImg" width="16px" alt="loading..." height="16px" 
+				src="/Images/animated_loading_blue.gif" style="display:none;" /> 
+		</td>
+
+	
+		<td class="voteTbl" style="white-space:nowrap" align="right">
+			<table class="small-text">
+			<tr>
+				<td id="ctl00_RateArticle_SignIn" nowrap="nowrap">
+					<a href="#SignUp">Sign Up</a> to vote
+				</td>
+
+				
+				
+				<td id="ctl00_RateArticle_VoteFormDiv" class="nowrap rating-stars-voter-large">
+					
+
+					<span id="ctl00_RateArticle_RB" class="tooltip ajaxHist radio voting">
+						<span id="ctl00_RateArticle_VoteRBL"><input id="ctl00_RateArticle_VoteRBL_0" type="radio" name="ctl00$RateArticle$VoteRBL" value="1" /><input id="ctl00_RateArticle_VoteRBL_1" type="radio" name="ctl00$RateArticle$VoteRBL" value="2" /><input id="ctl00_RateArticle_VoteRBL_2" type="radio" name="ctl00$RateArticle$VoteRBL" value="3" /><input id="ctl00_RateArticle_VoteRBL_3" type="radio" name="ctl00$RateArticle$VoteRBL" value="4" /><input id="ctl00_RateArticle_VoteRBL_4" type="radio" name="ctl00$RateArticle$VoteRBL" value="5" /></span> 
+
+						
+					</span>
+
+				</td>
+
+				
+				<td style="padding-left:5px">	
+					<input type="submit" name="ctl00$RateArticle$SubmitRateBtn" value="Vote!" id="ctl00_RateArticle_SubmitRateBtn" class="button" />
+				</td>
+			</tr>
+			</table>
+			
+		</td>
+	</tr>
+	</table>
+	<div class="hover-container">
+		<div id="ctl00_RateArticle_RCD" class="rating-comment align-left float-right">
+			Add a reason or comment to your vote:
+            <a href="#" id="clear-rate_ctl00_RateArticle_RCD" title="close" class="rating-close">x</a>
+            <br />
+			<textarea class="RateComment" rows="5" cols="60" style="width:98%;"></textarea>
+			<span id="ctl00_RateArticle_CommentReq" class="subdue">Votes of 3 or less require a comment</span>
+		</div>
+	</div>
+</div>
+							</div>
+							<div class="float-right">
+								
+
+<div class="social-bookmarks">
+<span class="facebook"><div id="fb-root"></div><div class="fb-like" data-href="http://www.codeproject.com/Articles/659380/Connecting-the-Dream-Cheeky-Thunder-Missile-Launch?utm_source=54j33dh4&utm_medium=twitter" data-send="false" data-layout="button_count" data-width="450"  data-show-faces="false" data-font="segoe ui"></div></span>
+<span class="google"><div class="g-plusone" data-size="medium"></div></span>
+<span class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="CodeProject">Tweet</a></span>
+</div>
+							</div> 
+												
+					</td>
+
+					</tr></table>
+
+					</div>
+					
+					
+
+					
+					
+
+					
+					
+					
+
+						
+					
+
+					
+
+							
+							<div id="contentdiv" class="text" itemprop="articleBody">
+							
+
+
+
+<p>Ever since the 2013 BUILD conference, a huge amount of people have attempted to integrate peripherals into their modern applications – and of all the devices we can plug 
+into our computers only one has stood out as the prized device people want to connect?</p><p>The <a href="http://www.dreamcheeky.com/thunder-missile-launcher" data-mce-href="http://www.dreamcheeky.com/thunder-missile-launcher">Dream Cheeky Thunder 
+Missile Launcher</a> is a $35 novelty toy available from various retailers 
+around the world. The Thunder is simple in its constructions – its a USB based air-powered missile launcher that allows you to sight and fire foam darts at unsuspecting people 
+hovering in your immediate vicinity. The device has been so popular with geeks globally that it has even featured in the Big Bang theory.&nbsp;</p>
+<h2>Modern apps –&gt; HID Device</h2>
+<p>Aside from its creditability with those of us that frequent code, one of the other exciting features of the Thunder is its driver stack. Instead of using a proprietary 
+driver in a similar fashion to the <a href="http://lewisbenge.azurewebsites.net/2013/09/20/integrating-windows-8-1-with-owi-535-robotic-arm/" data-mce-href="http://lewisbenge.azurewebsites.net/2013/09/20/integrating-windows-8-1-with-owi-535-robotic-arm/">OWI-535 robotic arm</a> the device 
+itself actually leverages an existing Windows standard as a HID (Human interface device) in much the same way as a keyboard and mouse. So why would 
+this be existing for us a developers? Firstly because we don’t need to do anything with the OS to install or configure the device, and also as it uses 
+a standard Windows driver which has been ported to the ARM stack the device will also work on a Windows RT device such as a Surface too!</p>
+<p>Plugging in the device and Windows recognizing it is only a small part of our solution. As app developers we want to leverage this device from our modern application, 
+and allow our users to start shooting each other. Luckily Windows 8.1 provides us with the support for such a 
+dilemma by introducing the <code>Windows.Device.HumanInterfaceDevices</code> namespace. 
+So lets spend a few minutes looking at the code required to start firing our missiles.&nbsp;</p>
+<h2>Windows.Device.HumanInterfaceDevice</h2>
+<p>As with any modern application that wants to go beyond some standard UI prompts, we need to ask permission from our user to access the device. 
+This is a security feature that prevents apps from becoming malware.&nbsp; In Windows 8.1, as per Windows 8 we do this via the <em>package.appxmanifest</em> file, 
+and we leverage the namespace extensions that allows us to reference the new 8.1 capabilities. Currently Visual Studio manifest editor doesn’t support these changes, 
+so open up your file in a text editor and add the following lines:&nbsp;</p>
+<pre lang="cs">&lt;?xml version=<span class="code-string">"</span><span class="code-string">1.0"</span> encoding=<span class="code-string">"</span><span class="code-string">utf-8"</span>?&gt; 
+&lt;Package xmlns=<span class="code-string">"</span><span class="code-string">http://schemas.microsoft.com/appx/2010/manifest"</span> 
+        xmlns:m2=<span class="code-string">"</span><span class="code-string">http://schemas.microsoft.com/appx/2013/manifest"</span>&gt; 
+  &lt;Capabilities&gt;    ... 
+    &lt;m2:DeviceCapability Name=<span class="code-string">"</span><span class="code-string">humaninterfacedevice"</span>&gt; 
+      &lt;m2:Device Id=<span class="code-string">"</span><span class="code-string">any"</span>&gt; 
+          &lt;m2:Function Type=<span class="code-string">"</span><span class="code-string">usage:0001 0010"</span>/&gt; 
+      <span class="code-keyword">&lt;/</span><span class="code-leadattribute">m2:Device</span><span class="code-keyword">&gt;</span> 
+    <span class="code-keyword">&lt;</span><span class="code-keyword">/</span><span class="code-leadattribute">m2:DeviceCapability</span><span class="code-keyword">&gt;</span><span class="code-keyword">&lt;</span><span class="code-keyword">/</span><span class="code-leadattribute">Capabilities</span><span class="code-keyword">&gt;</span>  
+<span class="code-keyword">&lt;</span><span class="code-keyword">/</span><span class="code-leadattribute">Package</span><span class="code-keyword">&gt;</span></pre>
+<p>In this example I’ve been a little bit broader in the request I am making to the user. Specifically instead of defining a product, I am asking for access to any HID 
+device which match the usage page and usage ID included. I’ve done this deliberately to show the difference between specifying an app looking for one particular devices vs. a range of devices. 
+If you did want to be a little granular you could specify the VID and PID as per my USB example in stead of the any argument.</p>
+<p>Once we have declared our intention to access, we need to wire up some code to find if the device is attached to our machine. Again just to show some contrast to my last post, 
+I’m going to do this using a <code>DeviceWatcher</code>. If I wanted a moment in-time view of if the device is connected I can use the 
+<code>Windows.Devices.Enumeration</code> technique I demonstrated 
+in my robot arm article. Instead I have opted to use a watcher, using a method on the same object 
+<code>Windows.Devices.Enumeration.DeviceInformation</code>. 
+A watcher however monitors the device manager on the machine for devices to be added, and will raise an event if it then finds a device. This provides you with functionality 
+within your app to deal with devices to be added or removed at anytime in the life cycle.</p><p>The code we need to create a watcher is :&nbsp;&nbsp;</p>
+<pre lang="cs"><span class="code-keyword">const</span> <span class="code-keyword">ushort</span> vid = <span class="code-digit">8483</span>; 
+<span class="code-keyword">const</span> <span class="code-keyword">ushort</span> pid = <span class="code-digit">4112</span>;
+<span class="code-keyword">const</span> <span class="code-keyword">ushort</span> uid = <span class="code-digit">16</span>; 
+<span class="code-keyword">const</span> <span class="code-keyword">ushort</span> uPage = <span class="code-digit">1</span>; 
+
+<span class="code-keyword">var</span> deviceWatcher = DeviceInformation.CreateWatcher(
+   HidDevice.GetDeviceSelector(uPage, uid, vid, pid));
+deviceWatcher.Added += (s, a) =&gt; Dispatcher.RunAsync(
+   CoreDispatcherPriority.Normal, <span class="code-keyword">async</span> () =&gt; { .. <span class="code-keyword">do</span> something here.. });
+
+deviceWatcher.Start(); </pre>
+<p>This is very similar to any device connectivity connection. We are creating an AQS (query statement) string using a helper method on 
+<code>Windows.Devices.HumanInterfaceDevice.HidDevice</code> 
+by passing in the Vendor ID, Product Id, Usage ID, and Usage Page values. The AQS is then used by the watcher to find any devices connected to the machine, which causes the event 
+to be fired. One important piece of code to note is the dispatcher in the event handler. This is present because when the device is added and you try to connect a Windows appears 
+in the UI asking for permission from the user.&nbsp; Therefore any code used to connect to the device needs to be on the UI thread.</p>
+<p>To actually open up a connection to the device, it’s a matter of calling one async method on the 
+<code>Windows.Devices.HumanInterfaceDevice.HidDevice</code> object.&nbsp;</p>
+<pre lang="cs">_hidDevice = <span class="code-keyword">await</span> HidDevice.FromIdAsync(a.Id,FileAccessMode.ReadWrite);</pre>
+<p>The <code>FromIdAsync</code> method takes two arguments, which is the device ID (returned as part of the
+<code>DeviceInformation</code> from the watcher event), and also an enumerated 
+<code>FileAccessMode</code> 
+to specify the connection type – which in our instance is <code>ReadWrite</code> due to our wanting to pass commands to the device.</p>
+<p>Now we have an active connection to the device, so we can start sending data to it. HID devices have fairly small and easy payloads to transmit – if you imagine 
+a keyboard HID device it simply sends the corresponding keypress data, which are all relatively small. Being of a similar device type the Thunder expects simple small 
+payloads (especially in comparison to the USB robotic arm), which correspond to up, down, left, right, fire.</p>
+<p>To send such data, we simply use a byte[] and add it out an <code>OutputReport</code> object. Luckily another helper class creates the object for us, so we just need to append 
+our payload and send the data using code similar to this:</p>
+<pre lang="cs"><span class="code-keyword">private</span> <span class="code-keyword">async</span> Task SendOutputMessage(<span class="code-keyword">byte</span>[] message) { 
+<span class="code-keyword">if</span> (_hidDevice != <span class="code-keyword">null</span>) {
+ <span class="code-keyword">var</span> report = _hidDevice.CreateOutputReport(); 
+ report.Data = message.AsBuffer(); 
+ <span class="code-keyword">await</span> _hidDevice.SendOutputReportAsync(report);
+} 
+}</pre>
+<p>And that is it! Using those few lines of code we have an active connection to the USB Thunder missile launcher and can start sending commands.</p>
+<p>Here is how we would toggle the LED on:&nbsp;</p>
+<pre lang="cs"><span class="code-keyword">var</span> LED_ON = <span class="code-keyword">new</span> <span class="code-keyword">byte</span>[] { <span class="code-digit">0</span>, <span class="code-digit">3</span>, <span class="code-digit">1</span>, <span class="code-digit">0</span>, <span class="code-digit">0</span>, <span class="code-digit">0</span>, <span class="code-digit">0</span>, <span class="code-digit">0</span>, <span class="code-digit">0</span> }; 
+<span class="code-keyword">await</span> SendOutputMessage(LED_ON);  </pre>
+<p>In the meantime have fun with your hardware hacking!&nbsp;</p>
+
+
+							</div>
+							
+
+							
+							
+							<h2>License</h2>
+							<div id="LicenseTerms"><p>This article, along with any associated source code and files, is licensed under <a href="http://www.codeproject.com/info/cpol10.aspx" rel="license">The Code Project Open License (CPOL)</a></p></div>
+							
+
+							<div class="float-right" style="margin:20px 0 0 0;border:1px solid #ccc">
+							<div class="msg-300x250" data-format="300x250" data-type="ad" data-publisher="lqm.codeproject.site" data-zone="ros"  data-loadOnView='true'  data-tags='C#, Windows, Dev, Intermediate, Win8,rating3'></div>
+							</div>
+
+							
+							<h2 id="ctl00_AboutHeading">About the Author</h2>
+							
+
+<div class="container">
+<div style="width:210px;overflow:hidden;float:left;text-align:center">
+	<img id="ctl00_AboutAuthorRptr_ctl00_AboutAuthor_memberPhoto" class="profile-pic" src="/script/Membership/Images/member_unknown.gif" border="0" style="transform:rotate(-2deg);" />
+</div>
+<div class="container-member float-left" style="width:235px">
+	<b><a id="ctl00_AboutAuthorRptr_ctl00_AboutAuthor_memberProfileLink" class="author" href="/Members/Lewis-Benge">Lewis Benge</a></b>
+	<div class="company">
+		<span id="ctl00_AboutAuthorRptr_ctl00_AboutAuthor_memberJobTitle">Software Developer (Senior)</span>
+		<span id="ctl00_AboutAuthorRptr_ctl00_AboutAuthor_memberCompany"></span> 
+		<br /><span id="ctl00_AboutAuthorRptr_ctl00_AboutAuthor_memberLocation">Australia <img src="/script/Geo/Images/AU.gif" alt="Australia" width="16px" height="11px" /></span>
+	</div>
+</div>
+	
+<div class="padded-top float-left clearfix" style="width:600px">
+	No Biography provided
+
+	
+
+	<div id="ctl00_AboutAuthorRptr_ctl00_AboutAuthor_FollowOn" class="padded-top">Follow on
+		&nbsp; <a href="http://www.twitter.com/LewisBenge"><img style="vertical-align:middle;border:0;" alt="Twitter" src="http://twitter-badges.s3.amazonaws.com/t_logo-a.png"/></a> <a href="http://www.twitter.com/LewisBenge?rel=author" rel="author" class="small-text">Twitter</a>
+		
+		
+	</div>
+</div>
+</div><br />
+							
+							
+
+							<div class="clearfix"></div>
+
+							<div class="float-left" style="padding-top:8px">
+								<a class="anchorLink" href="/Articles/659380/Connecting-the-Dream-Cheeky-Thunder-Missile-Launch?utm_source=54j33dh4&utm_medium=twitter#_articleTop">Article Top</a>
+							</div>
+
+
+						
+						<div style="margin:auto;height:90px;margin-top:10px"> 
+							<div class="msg-728x90" data-format="728x90" data-type="ad" data-publisher="lqm.codeproject.site" data-zone="bottom"  data-loadOnView='true'  data-tags='C#, Windows, Dev, Intermediate, Win8,pos_bottom'></div>
+						</div>
+						
+					
+
+					</form>
+
+				</div>
+
+				
+					
+					<h2>Comments and Discussions</h2>
+					<a class="float-left" name="_comments" id="_comments">&nbsp;</a><div id="_MessageBoardctl00_MessageBoard" onclick="return SwitchMessage(event, null)">
+	<table id="ForumTable" class="forum relaxed" cellpadding="0" cellspacing="0">
+		<tr>
+			<td class="header1 callout"><b>You must <a href="https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fArticles%2f659380%2fConnecting-the-Dream-Cheeky-Thunder-Missile-Launch%3futm_source%3d54j33dh4%26utm_medium%3dtwitter%26fid%3d1843332%26df%3d90%26mpp%3d10%26noise%3d1%26prof%3dTrue%26sort%3dPosition%26view%3dQuick%26spc%3dRelaxed">Sign In</a> to use this message board.</b></td>
+		</tr><tr>
+			<td><table width="100%" border="0" cellpadding="3px" cellspacing="0">
+				<tr class="header1">
+					<td colspan="2" nowrap="nowrap"><div class="container">
+						<div class="float-right">
+							<form action="/Search.aspx?fid=0" method="get" class="tight">
+								<input type="hidden" name="fid" value="1843332" /><b>Search this forum </b><input type="text" class="text-input" name="qf" />&nbsp;<input type="submit" value="Go" class="button" />
+							</form>
+						</div>
+					</div></td><tr class="header2">
+						<td></td><td width="100%"><div align="right">
+							<form action="/script/Forums/SetOptions.aspx?utm_source=54j33dh4&amp;utm_medium=twitter&amp;floc=%2fArticles%2f659380%2fConnecting-the-Dream-Cheeky-Thunder-Missile-Launch&amp;fid=1843332&amp;df=90&amp;mpp=10&amp;noise=1&amp;prof=True&amp;sort=Position&amp;view=Quick&amp;spc=Relaxed" method="get">
+								<input type="hidden" name="fid" value="1843332" /><input type="hidden" name="currentQS" value="?utm_source=54j33dh4&amp;utm_medium=twitter&amp;floc=%2fArticles%2f659380%2fConnecting-the-Dream-Cheeky-Thunder-Missile-Launch&amp;fid=1843332&amp;df=90&amp;mpp=10&amp;noise=1&amp;prof=True&amp;sort=Position&amp;view=Quick&amp;spc=Relaxed" /><input type="hidden" name="floc" value="/Articles/659380/Connecting-the-Dream-Cheeky-Thunder-Missile-Launch" /><input type="checkbox" checked="checked" name="prof" id="prof" valign="middle" /><label for="prof">Profile popups</label>&nbsp;&nbsp;&nbsp;&nbsp;Spacing<select size="1" class="dropdown" name="spc">
+									<option selected value="Relaxed">Relaxed</option><option value="Compact">Compact</option><option value="Tight">Tight</option>
+								</select>&nbsp;&nbsp;Noise<select size="1" class="dropdown" name="noise">
+									<option selected value="1">Very High</option><option value="2">High</option><option value="3">Medium</option><option value="4">Low</option><option value="5">Very Low</option>
+								</select>&nbsp;&nbsp;Layout<select size="1" class="dropdown" name="view">
+									<option value="Expanded">Open All</option><option value="Thread">Thread View</option><option value="Normal">No Javascript</option><option value="Preview">Preview</option>
+								</select>&nbsp;&nbsp;Per page<select size="1" class="dropdown" name="mpp">
+									<option selected value="10">10</option><option value="25">25</option><option value="50">50</option>
+								</select>&nbsp;&nbsp;&nbsp;<input type="submit" value="Update" name="SetOpt" class="button" />
+							</form>
+						</div></td>
+					</tr>
+				</tr>
+			</table></td><tr>
+				<td><a name="xx0xx"></a><table border="0" cellpadding="2px" cellspacing="0" width="100%">
+					<tr class="navbar">
+						<td></td><td align="right" width="50%"></td><td align="right" nowrap="nowrap">&nbsp;</td>
+					</tr>
+				</table></td>
+			</tr><tr>
+				<td><table border="0" cellpadding="0" cellspacing="0" width="100%" class="fixed-layout blank-background">
+					<tr>
+						<td><img src="/script/Forums/Images/t.gif" border="0" width="1px" height="5px" alt="" /></td>
+					</tr><tr>
+						<td align="center" class="small-text">-- There are no messages in this forum --</td>
+					</tr><tr>
+						<td><img src="/script/Forums/Images/t.gif" border="0" width="1px" height="5px" alt="" /></td>
+					</tr>
+				</table></td>
+			</tr>
+		</tr>
+	</table>
+
+				
+
+			</div>
+			
+		</td>
+		<td>
+			<div id="ctl00_RightSideBar" class="container-article-info">
+
+				<div class="header">About Article</div>
+				<div class="article-summary">
+
+					
+					
+
+					
+					
+
+					
+					<div class="summary"><span id="ctl00_ArticleDescr">Leverage new device APIs in Win8.1.</span></div>
+
+					<a id="ctl00_InfoBox_ParentLink"></a>
+
+<table cellpadding="0" cellspacing="0" class="article-info">
+
+	
+	<tr><td>Type&nbsp;</td><td class="value"><a id="ctl00_InfoBox_TypeName" href="/script/Articles/Types.aspx?#Article">Article</a></td></tr>
+	
+
+	<tr><td>Licence&nbsp;</td><td class="value"><a href="http://www.codeproject.com/info/cpol10.aspx" title="The Code Project Open License (CPOL)">CPOL</a></td></tr>
+
+	
+
+	<tr><td>First Posted&nbsp;</td><td nowrap="nowrap" class="value"><span itemprop="datePublished" content="2013-09-26">26 Sep 2013</span></td></tr>
+
+	<tr><td>Views&nbsp;</td><td class="value">2,341</td></tr>
+
+		
+
+	
+	<tr><td>Bookmarked&nbsp;</td><td class="value">4 times</td></tr>
+	
+
+	
+
+	
+	
+	
+	<tr><td colspan="2"></td>
+	</tr>
+	
+	
+</table>
+
+					<div class="tags"> 
+					<span id="ctl00_TagsList_TagWrp" class="tags">
+	
+	
+	
+	<span id="ctl00_TagsList_VisibleTags"><span class="t"><a rel="tag" href="/Tags/C--hash--">C#</a></span><span class="t"><a rel="tag" href="/Tags/Windows">Windows</a></span><span class="t"><a rel="tag" href="/Tags/Dev">Dev</a></span><br><span class="t"><a rel="tag" href="/Tags/Intermediate">Intermediate</a></span><span class="t"><a rel="tag" href="/Tags/Win8">Win8</a></span></span> 
+
+	
+	
+</span>
+
+					</div>
+
+					<div class="nowrap align-left">
+						 
+
+<a id="ctl00_ActionLinks_PrintLnk" href="/Articles/659380/Connecting-the-Dream-Cheeky-Thunder-Missile-Launch?display=Print">
+	<img src="/App_Themes/CodeProject/Img/print.gif" 
+		width="46px" height="46px" style="border:0">
+</a>
+
+<a id="ctl00_ActionLinks_MailLink" href="/script/common/TellFriend.aspx?obtid=2&amp;obid=659380">
+	<img src="/App_Themes/CodeProject/Img/email.gif" 
+		width="46px" height="46px" style="border:0">
+</a>
+					</div>
+
+					<div id="ctl00_SectionSponsor" style="width:120px;margin: 10px auto 0 auto;">
+						<div class="msg-120x60" data-format="120x60" data-type="ad" data-publisher="lqm.codeproject.site" data-zone="section-winrt"  data-tags='C#, Windows, Dev, Intermediate, Win8,rating3'></div>
+					</div>
+				</div>
+
+				<div style="width:160px;margin: 10px auto;">
+					<div class="msg-160x600" data-format="160x600" data-type="ad" data-publisher="lqm.codeproject.site" data-zone="ros"  data-tags='C#, Windows, Dev, Intermediate, Win8,rating3'></div>
+				</div>
+
+				
+<div class="padded-top">
+<div class="header">Top News</div>
+
+<p><a id="ctl00_News_News_ctl01_Link" href="http://mashable.com/2013/09/19/tim-cook-android-low-usage/">Tim Cook slams Android, citing low usage</a></p>
+
+Get the <a id="ctl00_News_News_ctl02_Subscribe" href="/Feature/Insider/">Insider News</a> free each morning.
+</div>
+
+				
+
+				<div class="padded-top">
+					
+	<div id="ctl00_RelatedVideos_RelatedResults_ctl00_header" class="header">Related Videos</div>
+	<div class="content-list align-center">	
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedVideos_RelatedResults_ctl01_Link" class="title" href="http://codeproject.tv/video/5003975/windows_8_xaml_event_handling_and_property_binding_part_3"><img id="ctl00_RelatedVideos_RelatedResults_ctl01_Thumbnail" src="//codeprojecttv.s3.amazonaws.com/thumbnails_production/9/4676/thumb/cptv100x80ms.jpg" style="border-style:None;width:125px;border-width:0px;" /></a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedVideos_RelatedResults_ctl02_Link" class="title" href="http://codeproject.tv/video/5004089/windows_8_xaml_markup_extensions"><img id="ctl00_RelatedVideos_RelatedResults_ctl02_Thumbnail" src="//codeprojecttv.s3.amazonaws.com/thumbnails_production/c/4395/thumb/cptv100x80ms.jpg" style="border-style:None;width:125px;border-width:0px;" /></a>
+		
+	</div>
+	
+	</div>
+	
+
+				</div>
+				<div class="padded-top">
+					
+	<div id="ctl00_RelatedArticles_RelatedResults_ctl00_header" class="header">Related Articles</div>
+	<div class="content-list">	
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl02_Link" class="title" href="/Articles/19310/Hitting-a-Moving-Target-The-Missile-Guidance-Syste">Hitting a Moving Target:  The Missile Guidance System</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl03_Link" class="title" href="/Articles/109153/Launch-Application-Windows-in-MultiScreen">Launch Application Windows in MultiScreen</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl04_Link" class="title" href="/Articles/17352/JVM-Launcher">JVM Launcher</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl05_Link" class="title" href="/Articles/12520/Thunder-Measurement-Unit-Conversion-Framework">Thunder Measurement Unit Conversion Framework</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl06_Link" class="title" href="/Articles/648672/Scholar-Education-Tablet-App">Scholar - Education Tablet App</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl07_Link" class="title" href="/Articles/4682/Voice-chat-using-a-client-server-architecture">Voice chat using a client-server architecture</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl08_Link" class="title" href="/Articles/13544/Agents-and-Multi-agent-Systems">Agents and Multi-agent Systems</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl09_Link" class="title" href="/Articles/364537/YaAppLauncher-A-Drawer-Style-Application-Launcher-">YaAppLauncher - A Drawer Style Application Launcher Using WinForms</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl10_Link" class="title" href="/Articles/3548/Joshua-Trupin-of-MSDN-What-NET-means-to-developers">Joshua Trupin of MSDN: What .NET means to developers</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl11_Link" class="title" href="/Articles/125721/Installer-and-Patching-Program-using-Visual-Studio">Installer and Patching Program using Visual Studio 2010</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl12_Link" class="title" href="/Articles/653571/Understanding-SQL-Server-Configuration-Manager">Understanding SQL Server Configuration Manager</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl13_Link" class="title" href="/Articles/33406/A-Csharp-Tiny-Fireworks-Simulator">A C# Tiny Fireworks Simulator</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl14_Link" class="title" href="/Articles/29623/Managed-Wrapper-to-Connection-Manager-and-How-to-B">Managed Wrapper to Connection Manager and How to Bypass the Connection Planner</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl15_Link" class="title" href="/Articles/117313/Mars-Mission-1-surface-landing">Mars Mission (1) : surface landing</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl16_Link" class="title" href="/Articles/83102/Csharp-SocketAsyncEventArgs-High-Performance-Socke">C# SocketAsyncEventArgs High Performance Socket Code</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl17_Link" class="title" href="/Articles/136166/Windows-Phone-7-Launchers-Choosers-The-absolute-gu">Windows Phone 7 Launchers & Choosers: The absolute guide</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl18_Link" class="title" href="/Articles/616074/Wp7nl-utilities-Contribution">Wp7nl utilities Contribution</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl19_Link" class="title" href="/Articles/395226/Old-Games-Launcher">Old Games Launcher</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl20_Link" class="title" href="/Articles/11908/Building-Multiplayer-Capability-into-Your-Game-in-">Building Multiplayer Capability into Your Game in One Hour</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl21_Link" class="title" href="/Articles/1639/Showing-Dial-up-Connection-Status-Window">Showing Dial-up Connection Status Window</a>
+		
+	</div>
+	
+	</div>
+	
+
+				</div>
+				<div class="padded-top">
+					
+				</div>
+
+				
+				
+			</div>
+		</td>
+		</tr></table>
+
+		
+		<div class="theme1-background" style="height:2px"></div>
+
+		<div class="extended tiny-text">
+			<div class="row">
+				<div class="float-left">
+					<a id="ctl00_PermaLink" itemprop="url" href="/Articles/659380/Connecting-the-Dream-Cheeky-Thunder-Missile-Launch">Permalink</a> | 
+					<a id="ctl00_AdvertiseLink" href="http://developermedia.com/">Advertise </a> |
+					<a id="ctl00_PrivacyLink" href="/info/privacy.aspx">Privacy</a> |
+					<a id="ctl00_Mobile" rel="nofollow" href="/Articles/659380/Connecting-the-Dream-Cheeky-Thunder-Missile-Launch?utm_source=54j33dh4&amp;utm_medium=twitter&amp;display=Mobile">Mobile</a>
+					<br />
+								
+					
+					Web04 |
+					2.6.1309030.1 |
+					Last Updated 26 Sep 2013								
+				</div>
+				<div class="float-right align-right">
+					Article Copyright 2013 by Lewis Benge<br />Everything else
+					Copyright &copy; <a href="mailto:webmaster@codeproject.com">CodeProject</a>, 1999-2013 <br />
+					<a id="ctl00_TermsOfUseLink" href="/info/TermsOfUse.aspx">Terms of Use</a>
+				</div>
+
+				
+
+
+<div class="page-width">
+Layout: <a id="ctl00_PageWidth_FixedT" title="Fixed width layout" rel="nofollow" class=" active" href="/Articles/659380/Connecting-the-Dream-Cheeky-Thunder-Missile-Launch?utm_source=54j33dh4&amp;utm_medium=twitter&amp;PageFlow=FixedWidth">fixed</a>
+|
+<a id="ctl00_PageWidth_FluidT" title="Fluid layout" rel="nofollow" href="/Articles/659380/Connecting-the-Dream-Cheeky-Thunder-Missile-Launch?utm_source=54j33dh4&amp;utm_medium=twitter&amp;PageFlow=Fluid">fluid</a>
+</div>
+
+
+
+			</div>
+		</div>
+		
+
+		<br clear="all" />
+		
+			
+
+	</div> 
+	</div>
+</div>
+
+
+<div style="display:none;" id="lqm_AdTable">
+	
+</div>
+
+
+<script type="text/javascript" language="Javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script><script type='text/javascript'>//<![CDATA[
+if (typeof jQuery == 'undefined') {
+    document.write(unescape("%3Cscript src='/script/JS/jquery-1.6.2.min.js' type='text/javascript' %3E%3C/script%3E"));
+}//]]></script>
+<script type="text/javascript" language="Javascript" src="/script/Articles/JS/article.min.js?dt=2.6.1309030.1"></script>
+<script type="text/javascript" language="Javascript" src="/script/JS/navbar.min.js?dt=2.6.1309030.1"></script>
+<script type="text/javascript" language="Javascript" src="/script/Membership/JS/Notifications.min.js?dt=2.6.1309030.1"></script>
+<script type="text/javascript" language="Javascript" src="/Script/Membership/JS/MemberProfilePopup.min.js?v=1.3"></script>
+<script type="text/javascript" language="Javascript">//<![CDATA[
+$(document).ready(function() { anchorAnimate(); });
+(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
+(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })();
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){ js=d.createElement(s);js.id=id; js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+var DMReportsOK = null;function showDMAlert() {   var $div = $('div.msg-728x90');  $div.append($('<img src="/images/alert-top-block.gif" style="right:0;position:absolute;z-index:0">'));}function onDMcallBack(event){   if (event.originalEvent) event = event.originalEvent;   jQuery.support.cors = true;   if (event.data == 'DM-disabled') DMReportsOK = false;   else if (event.data == 'DM-enabled') DMReportsOK = true;}function checkLoaded() {  var recordCheck  = false; var showBlockMsg = false; var block        = 'None'; if (!DMReportsOK && block == 'None' && typeof DMAds === 'undefined')     block = 'ResourceBlocked'; if (DMReportsOK === true) block = 'None'; else if (DMReportsOK === false) block = 'DomModified'; if (recordCheck) {  $.ajax({ url:'/script/AdServe/Ajax/VS.aspx',data:{'adbm':block}, cache:false, async:true }); } if (showBlockMsg && block != 'None')    showDMAlert();}$(document).ready(function() {  $(window).bind('message', onDMcallBack);  setTimeout(checkLoaded, 4000);});
+$(function ()
+                {
+                    $('.oauth').click(function () {
+                        $this = $(this);
+                        href = $this.attr('href');
+                        var myWindow = window.open(href, 'popup',
+                                    'width=800,height=600,location=0,menubar=0,resizeable=0,scrollbars=0,toolbar=0');
+                        myWindow.focus();
+                        var timer = setInterval(function () {
+                                        if (myWindow.closed) {
+                                            clearInterval(timer);
+                                            // window.location.reload(); // May do a POST reload, shows a warning
+                                            window.location = window.location; // force a GET reload
+                                        }
+                                    }, 200);
+                        return false;
+                    });
+                });
+var oSrchFlt = false, oSrchBox=false,srchBoxFoc=false;
+$(document).ready(function() {
+ if(InitWatermark)InitWatermark('sb_tb', 'Search for articles, questions, tips');
+ var sbar = $('#sb_tb'); 
+ var sfilter = $('#SearchFilter');
+ if (sbar && sfilter) {
+  sfilter.removeClass('popup'); sfilter.hide();
+  sbar.blur(function() {
+ if (!oSrchFlt)sfilter.hide();
+ srchBoxFoc=false;
+ /*sbar.animate( { width:'210px' }, { queue:false, duration:300 });
+*/ });
+  sbar.focus(function() {
+ oSrchFlt=false;srchBoxFoc=true;
+ sfilter.show();
+ /*sbar.animate( { width:'500px' }, { queue:false, duration:300 });
+*/ });
+  sbar.mouseleave(function() { oSrchBox=false; });
+  sbar.mouseover(function() { oSrchBox=true; });
+  sfilter.mouseleave(function() { oSrchFlt=false; if (!srchBoxFoc&&!oSrchBox)sfilter.hide();});
+  sfilter.mouseover(function() { oSrchFlt=true; });
+ }
+});
+$("#ctl00_RateArticle_RateItemWrapper").removeClass("container-rating");$('#clear-rate_ctl00_RateArticle_RCD').click(function () { $('#ctl00_RateArticle_RCD').hide(); return false;});
+function PostBack_ctl00_RateArticle_RateItemWrapper() {
+  return rateItem(659380,2,1,true,true,3,'LargeStars');
+}
+
+                        function getVotesHistogram(objectId, objectTypeId, containerId, loadingId) {
+                            if (!$('#' + containerId).attr('alreadyRequested')){
+                                $.ajax({
+                                    url: '/script/Ratings/Ajax/Histogram.aspx?obid=' + objectId + '&obtid='+objectTypeId,
+                                    success: function (data) {
+                                        $('#' + containerId).html(data);
+                                        $('#' + loadingId).hide();
+                                    }
+                                });
+                                $('#' + containerId).attr('alreadyRequested', 'true');
+                            }
+                        }
+$(document).ready(function() {   new starRating('#ctl00_RateArticle_VoteFormDiv', PostBack_ctl00_RateArticle_RateItemWrapper,'ctl00_RateArticle');
+  $('#ctl00_RateArticle_RB').mouseenter(function() {     getVotesHistogram(659380,2   ,'ctl00_RateArticle_Histogram','ctl00_RateArticle_Loading');  })})
+$(document).ready(function() { $('#ctl00_RateArticle_SubmitRateBtn').hide(); });
+$(document).ready(function() { $('#ctl00_RateArticle_SubmitRateBtn').hide(); });function ChkRtctl00_RateArticle(val) {showCommentBox('ctl00_RateArticle', val<=3||true);
+}
+
+forumDir = '/script/Forums/';
+staticServer = '';
+allowReporting = false;
+allowRating = false;
+allowRatingDisplay = true;
+var smoothScroll = true;
+Selected        = -1;
+oldTitle        = document.title;
+minMessageScore = 1;
+minMessageScore = 5;
+abuseScore      = -2;
+spamScore       = -1;
+getRatingUrl    = '/script/Ratings/Ajax/GetRatings.aspx';
+noiseThreshold  = 1;
+getRatingRefKey = 'obrs';
+
+
+//]]>
+</script>
+
+
+</body>
+</html>

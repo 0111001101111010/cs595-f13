@@ -1,0 +1,249 @@
+
+ 
+<!DOCTYPE HTML>
+<!--[if IE]><![endif]-->
+<html>
+  <head>
+    <title>Home : The Official Microsoft ASP.NET Site</title>
+    <meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="application-name" content="Microsoft ASP.NET Site"/>
+  <meta name="msapplication-TileColor" content="#08679C"/>
+  <meta name="msapplication-TileImage" content='http://i3.asp.net/images/content/ASPNET-tile.png?cdn_id=2013-08-19-002'/>  
+    
+<meta name="keywords" content="Microsoft ASP.NET" />
+<meta name="description" content="Portal site for the Microsoft ASP.NET development community. Download Visual Studio, post to the forums, read ASP.NET blogs and learn about ASP.NET." />
+        
+    
+  <link href='http://i3.asp.net/umbraco-beta-css/home.min.css?cdn_id=2013-08-19-002' rel="stylesheet" type="text/css" media="all" />   
+
+    <!--[if lte IE 7]>
+      <link href='http://i1.asp.net/umbraco-beta-css/lteIE7.min.css?cdn_id=2013-08-19-002' rel="stylesheet" type="text/css" media="screen" />
+    <![endif]-->
+	<!--[if lte IE 9]>
+      <script src='http://i2.asp.net/umbraco-beta-scripts/html5.js?cdn_id=2013-08-19-002' type="text/javascript"></script>
+    <![endif]-->
+    <link href='http://i3.asp.net/images/content/favicon.ico?cdn_id=2013-08-19-002' rel="shortcut icon" />
+  </head>
+  <body class=''>
+    
+    <div class='allcontent home'>
+    <header>
+      <a href="/" id="logo">The Official Microsoft ASP.NET Site</a><form method="post" id="search-query-masthead" action="/search"><div class="search-header"><input type="text" class="search-input input-common" value="Search ASP.NET" data-uitext="Search ASP.NET" data-uitype="autoreset" name="searchterm" /><input type="submit" name="submit" class="search-submit" value="" title="Search" /></div></form>
+      <div class="language-translation"><a href="javascript:;" class="language">Language</a><div class="common-dropdown translator collapse"><div id="MicrosoftTranslatorWidget"><noscript><a href="https://ssl.microsofttranslator.com/bv.aspx?a=http%3a%2f%2fwww.asp.net%2f">Translate this page</a><br />Powered by <a href="http://www.bing.com/translator">Microsoft® Translator</a></noscript></div><script type="text/javascript"> setTimeout(function() { var s = document.createElement("script"); s.type = "text/javascript"; s.charset = "UTF-8"; s.src = ((location && location.href && location.href.indexOf('https') == 0) ? "https://ssl.microsofttranslator.com" : "http://www.microsofttranslator.com" ) + "/ajax/v2/widget.aspx?siteData=hDMSNj1B-W4OOr927lQxRR-KST_HhdX9o0IyhnPNZbOzZxrQJELJaxa3TuwCUIqdfTZwdChw3GzGg-y_7crelzCRdxLAvlW-PyUqByb0r8YClbGWQCKA2z1BPLQR43nO&mode=manual&from=en&layout=ts&hideLanguages=ar,bg,ca,da,nl,et,fi,el,ht,he,hi,ms,mww,hu,id,lv,lt,no,fa,ro,sk,sl,sv,tlh,th,uk,ur,vi"; var p = document.getElementsByTagName('head')[0] || document.documentElement; p.insertBefore(s, p.firstChild); }, 0);    
+          </script></div></div>
+	  <script type="text/javascript">var currentUsername = '';</script><div class="nav-user logged-out"><p><a href="http://login.asp.net/login/signin.aspx?ReturnUrl=http://www.asp.net/">Sign In</a><span class="separator">|</span><a href="http://login.asp.net/login/createuser.aspx?ReturnUrl=http://www.asp.net/">Join</a></p></div>   
+	  <nav class="clearfix nav-main"><ul><li><a href="/" class="selected">Home</a></li><li><a href="/get-started">
+      Get Started
+    </a></li><li class="nav-main-solutions"><a href="javascript:;" class="learnpulldown">
+			Learn <span class="icon-dropdown"></span></a>
+	    <div class="dropdown-learn">
+	<div class="col">
+	  <h2>WEB APPLICATIONS</h2>
+	  <ul>
+		<li><a href="http://www.asp.net/web-forms">Web Forms</a></li>
+		<li><a href="http://www.asp.net/mvc">MVC</a></li>
+		<li><a href="http://www.asp.net/web-pages">Web Pages/Razor</a></li>
+		<li><a href="http://www.asp.net/mobile">Mobile</a></li>
+		<li><a href="http://www.asp.net/single-page-application">Single Page Apps</a></li>
+                                   <li style="width:175px;"><hr/></li>
+                                   <li><a href="http://www.asp.net/aspnet">Common ASP.NET Features</a></li>
+
+	  </ul>
+	</div>
+	<div class="col">
+	  <h2>WEB SERVICES / API's</h2>
+		<ul>
+		  <li><a href="http://www.asp.net/web-api">Web API</a></li>
+		</ul>
+	</div>
+	<div class="col">
+	  <h2>DATA ACCESS</h2>
+		<ul>
+		  <li><a href="http://www.asp.net/entity-framework">Entity Framework</a></li>
+		</ul>
+	</div>
+	<div class="col">
+	  <h2>REAL TIME</h2>
+		<ul>
+		  <li><a href="http://www.asp.net/signalr">SignalR</a></li>
+		</ul>
+	</div>
+	<div class="col">
+	  <h2>FUTURE RELEASES</h2>
+		<ul>
+		  <li><a href="http://www.asp.net/vnext">Visual Studio 2013 Release Candidate</a></li>
+		</ul>
+	</div>
+  </div>
+      </li><li><a href="/hosting">
+      Hosting
+    </a></li><li><a href="/downloads">
+      Downloads
+    </a></li><li class="nav-main-solutions"><a href="/community" class="communitypulldown">
+			Community <span class="icon-dropdown"></span></a>
+	  
+		<div class="dropdown-community">
+			<div class="col">
+				<ul>
+					<li><a href="http://www.asp.net/community">Overview</a></li>
+					<li><a href="http://www.asp.net/community/spotlight">Daily Spotlight</a></li>
+					<li><a href="http://www.asp.net/community/articles">Articles of the Day</a></li>
+					<li><a href="http://www.asp.net/community/news">News</a></li>
+					<li><a href="http://weblogs.asp.net/">Community Blogs</a></li>
+					<li><a href="http://weblogs.asp.net/aspnet-team/">Microsoft Blogs</a></li>
+					<li><a href="http://www.asp.net/community/events">Events</a></li>
+				</ul>
+			</div>
+			<div class="col">
+				<ul>
+					<li><a href="http://www.asp.net/community/recognition/hall-of-fame">Hall Of Fame</a></li>
+					<li><a href="http://code.msdn.microsoft.com/site/search?f[0].Type=Technology&amp;f[0].Value=ASP.NET&amp;sortBy=Date">MSDN Samples</a></li>
+					<li><a href="http://forums.asp.net/">Forums</a></li>
+				</ul>
+			</div>
+			<div class="col">
+				<ul>
+<li><a href="http://www.asp.net/community/websites">Community Websites</a></li>
+<li><a href="http://www.asp.net/community/support">Community Support</a></li>
+</ul>
+</div>
+		</div>
+
+	  </li><li><a href="http://forums.asp.net">Forums</a></li><li><a href="/contact-us">Help</a></li></ul></nav>
+    </header>
+        
+  <div class="content home">
+    <div class="large-slideshow clearfix">
+        <div class="slideshow-chunk">
+            <div class="slideshow-control">
+                <div style="" class="slide s-0 active">
+                	<div class="slide-wrapper" onclick="document.location.href = '/get-started';">
+	                	<div class="slide-content-block2">
+							<h1>Learning ASP.NET</h1>
+							<p>ASP.NET is a free web framework for building web sites,<br />apps and services with HTML, CSS and JavaScript.</p><a href="/get-started" class="arrow-link">Learn more<span></span></a>
+	                	</div>
+					</div>
+				</div>
+                <div style="" class="slide s-1">
+                	<div class="slide-wrapper" onclick="document.location.href = '/aspnet/overview/aspnet-45/making-websites-with-aspnet';">
+						<div class="slide-content-block2">
+							<h1>Web Sites</h1>
+							<p>ASP.NET is great for building standards-based websites with HTML5, CSS3, and JavaScript.</p><a href="/aspnet/overview/aspnet-45/making-websites-with-aspnet" class="arrow-link">Learn more<span></span></a>
+	                	</div>
+					</div>
+				</div>
+                <div style="" class="slide s-2">
+                	<div class="slide-wrapper" onclick="document.location.href = '/web-api';">
+						<div class="slide-content-block2">
+							<h1>ASP.NET powered Web APIs</h1>
+							<p>You can write ASP.NET Web APIs and Services that produce JSON or XML to talk to connected devices!</p><a href="/web-api" class="arrow-link-black">Learn more<span></span></a>
+	                	</div>
+					</div>
+				</div>
+                <div class="slide s-3">
+                	<div class="slide-wrapper" onclick="document.location.href = '/signalr';">
+						<div class="slide-content-block2">
+							<h1>Real-time ASP.NET</h1>
+							<p>With ASP.NET SignalR you can enable real-time bi-directional communication between client and server with web sockets.</p><a href="/signalr" class="arrow-link-black">Learn more<span></span></a>
+	                	</div>
+					</div>
+				</div>
+                <div class="slide s-4">
+                	<div class="slide-wrapper" onclick="document.location.href = '/mobile';">
+						<div class="slide-content-block2">
+							<h1>Mobile Apps &amp; Sites with ASP.NET</h1>
+							<p>ASP.NET can power your mobile apps with responsive design or mobile frameworks like jQuery Mobile and more.</p><a href="/mobile" class="arrow-link-black">Learn more<span></span></a>
+	                	</div>
+					</div>
+				</div>
+       		</div>
+
+	    	<ul class="s-ctrl">
+	            <li class="s-0 active"><a href="javascript:;">Meet ASP.NET<span class="timer"></span></a></li>
+	            <li class="s-1"><a href="javascript:;">Web Sites<span class="timer"></span></a></li>
+	            <li class="s-2"><a href="javascript:;">APIs<span class="timer"></span></a></li>
+	            <li class="s-3"><a href="javascript:;">Real-time<span class="timer"></span></a></li>
+	            <li class="s-4"><a href="javascript:;">Mobile<span class="timer"></span></a></li>
+	    	</ul>
+		</div>
+	</div> 
+
+<div class="hero-wrap">
+		<div class="hero">
+			<ul class="nav-home">
+				<li>
+					<h2>
+						<a class="get-started" href="/get-started">
+							<span>Get Started</span>
+						</a>
+					</h2>
+				</li>
+				<li>
+					<h2>
+						<a class="download" href="/downloads">
+							<span>Downloads</span>
+						</a>
+					</h2>
+				</li>
+				<li>
+					<h2>
+						<a class="forums" href="http://forums.asp.net">
+							<span>Forums</span>
+						</a>
+					</h2>
+				</li>
+			</ul> 
+		</div>
+	</div>
+	<div class="col-center">
+      <div id="HomeAd" data-adzoneid="14175" data-adtypeid="1361" class="ad-home" data-adwidth="820px" data-adheight="48px" style="width:820px;height:48px;"></div> 
+      <ul class="common-list-horz list-one"><li class="icon-announce"> </li><li class="announcement"><span>Announcements</span><div> <a href="/vnext">Visual Studio 2013 Release Candidate</a> <span class="pipe"> | </span> <a href="/open-source">Open Source</a></div></li></ul><ul class="common-list-horz list-two"><li class="icon-rss-lrg"><a href="/rss/spotlight"> </a></li><li class="announcement"><span>Daily Community Spotlight</span> <a href="/community/spotlight">View All</a><div class="social"><span>Follow us on<a href="https://www.facebook.com/asp.net" class="facebook"></a><a href="http://twitter.com/aspnet" class="twitter"></a></span></div></li></ul>
+      <div class="common-post"><a href="http://blogs.msdn.com/b/webdev/archive/2013/09/09/announcing-release-of-asp-net-and-web-tools-for-visual-studio-2013-rc.aspx" data-s-object-id="spotlight 1"><img alt="Announcing Release of ASP.NET and Web Tools for Visual Studio 2013 RC" class="social-avatar" width="59" height="59" src="http://i2.asp.net/media/3222147/xinyang-qiu.png?cdn_id=2013-08-19-002" /></a><h3><a href="http://blogs.msdn.com/b/webdev/archive/2013/09/09/announcing-release-of-asp-net-and-web-tools-for-visual-studio-2013-rc.aspx" data-s-object-id="spotlight 1">Announcing Release of ASP.NET and Web Tools for Visual Studio 2013 RC</a></h3><p class="excerpt">Visual Studio 2013 RC is available now! Xinyang Qiu demonstrates the top ASP.NET and Web Tools features in this release candidate.</p></div><div class="common-post"><a href="http://blogs.msdn.com/b/ie/archive/2013/09/26/introducing-browserswarm-spend-less-time-testing-your-next-javascript-project.aspx" data-s-object-id="spotlight 2"><img alt="Introducing BrowserSwarm – Spend less time testing your next JavaScript project" class="social-avatar" width="59" height="59" src="http://i2.asp.net/media/4002806/sandeep_singhal.jpg?cdn_id=2013-08-19-002" /></a><h3><a href="http://blogs.msdn.com/b/ie/archive/2013/09/26/introducing-browserswarm-spend-less-time-testing-your-next-javascript-project.aspx" data-s-object-id="spotlight 2">Introducing BrowserSwarm – Spend less time testing your next JavaScript project</a></h3><p class="details">Monday, September 30, 2013</p><p class="excerpt">Sandeep Singhal introduces BrowserSwarm, a free automated testing solution that can run unit tests against your GitHub repositories</p></div><div class="common-post"><a href="http://www.asp.net/aspnet/overview/owin-and-katana/getting-started-with-owin-and-katana" data-s-object-id="spotlight 3"><img alt="Getting Started with OWIN and Katana " class="social-avatar" width="59" height="59" src="http://i3.asp.net/media/3132378/mike-wasson.jpg?cdn_id=2013-08-19-002" /></a><h3><a href="http://www.asp.net/aspnet/overview/owin-and-katana/getting-started-with-owin-and-katana" data-s-object-id="spotlight 3">Getting Started with OWIN and Katana </a></h3><p class="details">Friday, September 27, 2013</p><p class="excerpt">Great introduction to OWIN and Katana from Mike Wasson, demonstrating hosting OWIN applications both in IIS and self-hosting in a console.</p></div><div class="common-post"><a href="http://www.strathweb.com/2013/09/dynamic-per-controller-httpconfiguration-asp-net-web-api/?utm_source=twitterfeed&amp;utm_medium=twitter" data-s-object-id="spotlight 4"><img alt="Dynamic per-controller HttpConfiguration in ASP.NET Web API" class="social-avatar" width="59" height="59" src="http://i1.asp.net/media/3265883/filip-wojcieszyn.jpg?cdn_id=2013-08-19-002" /></a><h3><a href="http://www.strathweb.com/2013/09/dynamic-per-controller-httpconfiguration-asp-net-web-api/?utm_source=twitterfeed&amp;utm_medium=twitter" data-s-object-id="spotlight 4">Dynamic per-controller HttpConfiguration in ASP.NET Web API</a></h3><p class="details">Thursday, September 26, 2013</p><p class="excerpt">Filip Woj. demonstrates once again that you can do just about anything with ASP.NET Web API if you know the right hooks. This time, he's configuring controllers at run-time.</p></div><div class="common-post last"><a href="http://weblogs.asp.net/dwahlin/archive/2013/08/16/using-an-angularjs-factory-to-interact-with-a-restful-service.aspx" data-s-object-id="spotlight 5"><img alt="Using an AngularJS Factory to Interact with a RESTful Service" class="social-avatar" width="59" height="59" src="http://i2.asp.net/media/3185818/dan-wahlin.jpg?cdn_id=2013-08-19-002" /></a><h3><a href="http://weblogs.asp.net/dwahlin/archive/2013/08/16/using-an-angularjs-factory-to-interact-with-a-restful-service.aspx" data-s-object-id="spotlight 5">Using an AngularJS Factory to Interact with a RESTful Service</a></h3><p class="details">Wednesday, September 25, 2013</p><p class="excerpt">Dan Wahlin demonstrates how to use AngularJS Factories to abstract your interaction from front-end controllers to a server-side ASP.NET Web API service</p></div>
+    </div>
+    <div class="col-right">
+      <div id="FeaturedAd" data-adzoneid="14024" data-adtypeid="5" class="ad-300x250 ad " data-adwidth="300px" data-adheight="290px" style="width:300px;height:290px;"></div> 
+      <div id="FeaturedAd2" data-adzoneid="14025" data-adtypeid="5" class="ad-300x250 ad " data-adwidth="300px" data-adheight="290px" style="width:300px;height:290px;"></div>  
+    </div><!--end col right-->
+  </div><!-- end main content area-->
+
+      <div class="footer">
+<div class="clear"></div>
+<ul class="footer-menu">
+<li class="block">
+<h2>This site is managed for Microsoft by Neudesic, LLC. | © 2013 Microsoft. All rights reserved.</h2>
+</li>
+<li><a href="http://www.asp.net/privacy">Privacy Statement</a><span class="separator">|</span></li>
+<li><a href="http://www.asp.net/terms-of-use">Terms of Use</a><span class="separator">|</span></li>
+<li><a href="http://www.asp.net/contact-us">Contact Us</a><span class="separator">|</span></li>
+<li><a href="http://www.neudesicmediagroup.com/Advertising.aspx?site=asp">Advertise With Us</a><span class="separator">|</span></li>
+<li><a href="http://www.umbraco.org">CMS by Umbraco</a></li>
+</ul>
+<ul class="footer-menu last">
+<li class="block">
+<h2><a class="logo-microsoft" title="Microsoft" href="http://microsoft.com">Microsoft</a></h2>
+</li>
+<li><a href="http://aspnet.uservoice.com">Feedback on ASP.NET</a><span class="separator">|</span></li>
+<li><a href="https://connect.microsoft.com/VisualStudio">File Bugs</a></li>
+</ul>
+</div>
+    </div>    
+    <div class="modal modal-webpi" style="display:none;"><a href="javascript:;" class="modal-close">✖</a><div class="modal-contents"><h2>Installs powered by the Microsoft Web Platform Installer</h2><p>The product(s) you are about to install leverage the Web Platform Installer (WebPI) for installation.<br /><br />By downloading and using WebPI, you agree to the <a href="http://go.microsoft.com/fwlink/?LinkId=251729">license terms</a> and <a href="http://go.microsoft.com/fwlink/?LinkId=251732">privacy statement</a> for WebPI. This installer will contact Microsoft over the Internet to retrieve product information. Some of the Microsoft software obtained through WebPI may use Microsoft's Customer Experience Improvement Program (CEIP). To view which software uses CEIP, see <a href="http://go.microsoft.com/?LinkID=9816722">here</a>.</p><a href="javascript:;" class="btn-install">Accept and install</a></div></div><div class="modal-cover" style="display:none;"></div>
+	
+<input type="hidden" id="meta-contentType" value="Home" />
+<input type="hidden" id="meta-contentLiveDate" value="2011-02-01" />
+
+    
+      <script src='http://i2.asp.net/umbraco-beta-scripts/jquery-1.7.2.min.js?cdn_id=2013-08-19-002' type="text/javascript"></script>
+      <script type="text/javascript">$.ajaxSetup({ cache: false });var omni_guid="a188fa72-584a-42ed-a43d-950e7d3569cf";</script>
+    
+  <script type="text/javascript">var s=document.createElement('script');s.type='text/javascript';s.src='http://i2.asp.net/umbraco-beta-scripts/prod-home.min.js?cdn_id=2013-08-19-002';document.body.appendChild(s);</script>
+
+    <!--[if gte IE 9]>
+      <script src='http://i3.asp.net/umbraco-beta-scripts/prod-pinnedsite.min.js?cdn_id=2013-08-19-002' type="text/javascript"></script>
+    <![endif]-->
+    <script type="text/javascript">if ((Math.floor(Math.random()*100))<5){$.getScript("/scripts/prod-survey.min.js?cdn_id=2013-08-19-002");}</script>
+    <noscript><a href="http://www.omniture.com" title="Web Analytics"><img src="http://msstonojsaspnet.112.2O7.net/b/ss/msstonojsaspnet/1/H.20.2--NS/0" height="1" width="1" alt="omni" /></a></noscript>
+  </body>
+</html>  

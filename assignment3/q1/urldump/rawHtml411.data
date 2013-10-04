@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" xmlns:addthis="http://www.addthis.com/help/api-spec">
+<head>
+<meta content="IE=9" http-equiv="X-UA-Compatible">
+<meta charset="utf-8">
+<title>KweekWeek - Discover local activities and events suggested to you in real-time</title>
+<meta content="437472372934090" property="fb:app_id">
+<meta content="website" property="og:type">
+<meta content="http://www.kweekweek.com/clmurgue/966379ef10" property="og:url">
+<meta content="HTML5 CodeShow" property="og:title">
+<meta content="We are a group of hackers/developers/tech enthusiasts who are ecstatic about what the future of the web and mobile apps will bring." property="og:description">
+<meta content="http://www.kweekweek.com/system/image_attachments/images/000/000/4000/facebook/London_HTML5_CodeShow_London.jpeg?1380118592" property="og:image">
+<meta content="product" name="twitter:card">
+<meta content="kweekweek" name="twitter:site">
+<meta content="HTML5 CodeShow" name="twitter:title">
+<meta content="We are a group of hackers/developers/tech enthusiasts who are ecstatic about what the future of the web and mobile apps will bring." name="twitter:description">
+<meta content="http://www.kweekweek.com/system/image_attachments/images/000/000/4000/facebook/London_HTML5_CodeShow_London.jpeg?1380118592" name="twitter:image">
+<meta content="0.0£" name="twitter:data1">
+<meta content="PRICE FROM" name="twitter:label1">
+<meta content="SKYPE, , London EC1N 2ST" name="twitter:data2">
+<meta content="LOCATION" name="twitter:label2">
+<link href="/assets/favicon.ico" rel="icon" type="images/x-icon">
+<!--[if lt IE 9]>
+<!-- %script{:src => "/assets/html5shiv.js"} -->
+<!-- %script{:src => "/assets/modernizr-2.5.3.min.js"} -->
+<!-- %script{:src => "/assets/jquery.placeholder.js"} -->
+<!-- %script{:src => "/assets/jquery.progressbar.js"} -->
+<![endif]-->
+<script>
+  //<![CDATA[
+    if (window.location.hash == '#_=_')window.location.hash = '';
+  //]]>
+</script>
+<link href="/assets/application-ff8ab5310c1b13eac7a79bf9887cc77e.css" media="all" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+<style>
+  /*<![CDATA[*/
+    body.home .tooltip {
+      margin-left:-135px;
+    }
+    #strapline {
+      font-size: 17px;
+    }
+  /*]]>*/
+</style>
+<![endif]-->
+<script>
+  //<![CDATA[
+    var gridonload = "off";
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    var signed_in = "false";
+  //]]>
+</script>
+
+<script src="/assets/application-f4a7b9c321c69994adf494f35389ebf0.js" type="text/javascript"></script>
+<style type="text/css"></style>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="AGtGo8BHHmnULeguOpEjiNUMNBKtrunjjgFYh7hru1s=" name="csrf-token" />
+
+
+</head>
+<!--[if IE 7 ]><body class='activities show ie7'> <![endif]-->
+    <!--[if IE 8 ]><body class='activities show ie8'> <![endif]-->
+    <!--[if IE 9 ]><body class='activities show ie9'> <![endif]-->
+    <!--[if gt IE 9]><body class='activities show'> <![endif]-->
+    <!--[if !IE]><!--> <body class='activities show'> <!--<![endif]-->
+<script charset="utf-8" type="text/javascript">
+var addthis_config = { "data_track_addressbar":false, "data_track_clickback": false };
+var addthis_share =  { templates: { twitter: 'Checkout "{{title}}" on Kweekweek: {{url}}' }, url: "http://www.kweekweek.com", title: "KweekWeek", description: "Visit KweekWeek and discover local activities and events suggested to you in real-time: http://www.kweekweek.com", email_template: "kweekweek_sharing" }
+</script>
+<!-- App Promo -->
+<!-- Header -->
+<header role="banner">
+<div class="wrapper1 clearfix" id="header_section">
+<!-- Logo Area -->
+<div class="ir" id="logo_area">
+<a href="/"></a>
+</div>
+<!-- Navigation -->
+<nav role="navigation">
+<ul>
+<li class="menu_links gradient_gray1 corner-tl">
+<a href="/">Homepage</a>
+</li>
+<li class="menu_links gradient_gray1 border_left_gray1">
+<a href="/pages/how-it-works">How It Works</a>
+</li>
+<li class="menu_links gradient_gray1 border_left_gray1">
+<a href="/pages/browse">Browse</a>
+</li>
+<li class="activity_links btn_gradient_orange corner-tr border_left_gray1">
+<a href="/new">+ Add Activity</a>
+</li>
+<li class="user_links btn_gradient_black corner-tl border_right_black1">
+<a class="user_signup" href="/home/signup">Sign up</a>
+</li>
+<li class="user_links btn_gradient_black corner-tr border_left_gray2">
+<a href="/users/login" class="user_login">Log in</a>
+</li>
+</ul>
+</nav>
+
+<!-- Search Area -->
+<div id="query_area">
+<form accept-charset="UTF-8" action="/pages/browse" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+<input class="float_left" id="query_text" name="query" type="text" value="Search">
+<input class="float_left" id="query_btn" type="submit" value="">
+</form>
+
+</div>
+
+<!-- User Area -->
+</div>
+</header>
+<div class="clearfix" id="main" role="main">
+<div class="wrapper2" id="content_section">
+<!--[if IE 6]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+<div class="alert-container"></div>
+<div data-break-from-modal id="event-page">
+
+<div class="left">
+<a href="/system/image_attachments/images/000/000/4000/original/London_HTML5_CodeShow_London.jpeg?1380118592" class="fancybox" data-fancybox-group="activity-images"><img alt="London_html5_codeshow_london" src="/system/image_attachments/images/000/000/4000/medium/London_HTML5_CodeShow_London.jpeg?1380118592" /></a>
+<ul class="tickets_detailed_list">
+<li class="price">
+<span>Price From</span>
+<img alt="Ui-greyarrow" src="/assets/ui-greyarrow-fc7859cf082239683dd364f79a16d86f.png" />
+<span class="yellow">
+FREE
+</span>
+<img alt="Ui-showdetails" class="show-details" src="/assets/ui-showdetails-22258504974784349bacfa5064f31d27.png" />
+<li class="ticket-prices">
+<div>
+<span class="ticket-info">
+
+</span>
+<span class="ticket-title">
+I am a super developer 
+</span>
+<span class="ticket-info">
+£0.00
+</span>
+</div>
+</li>
+<li class="tickets">
+<span>Tickets Left</span>
+<img alt="Ui-greyarrow" src="/assets/ui-greyarrow-fc7859cf082239683dd364f79a16d86f.png" />
+<span class="yellow">
+200
+</span>
+<img alt="Ui-showdetails" class="show-details" src="/assets/ui-showdetails-22258504974784349bacfa5064f31d27.png" />
+</li>
+<li class="tickets-left">
+<div>
+<span class="ticket-info">
+
+</span>
+<span class="ticket-title">
+I am a super developer 
+</span>
+<span class="ticket-info tickets-remaining">
+200
+</span>
+<span class="tooltip">
+
+</span>
+</div>
+</li>
+<li class="time">
+<span>Time Remaining</span>
+<img alt="Ui-greyarrow" src="/assets/ui-greyarrow-fc7859cf082239683dd364f79a16d86f.png" />
+<span class="yellow">
+<span id="time_until_event">12 days 15:38:16</span>
+<div class="hidden" id="total_secs_remaining">
+1093096
+</div>
+</span>
+</li>
+</li>
+</ul>
+<div class="bottom">
+<div class="wishlist">
+<form accept-charset="UTF-8" action="/activities/html5-codeshow/reminders" class="simple_form wishlist-form" data-remote="true" data-replace="true" data-type="html" id="new_reminder" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="AGtGo8BHHmnULeguOpEjiNUMNBKtrunjjgFYh7hru1s=" /></div>
+
+<div class="form-actions">
+<button class="activity_btn_wishlist btn_gradient_black rounded_corners" type="submit"><i class='icon-plus icon-white'></i> Wishlist</button>
+</div>
+</form>
+</div>
+<div class="book buy">
+<a href="/activities/html5-codeshow/orders/new" class="btn btn-primary buy big purchase_ticket" data-modal="data-modal">Book Now</a>
+
+</div>
+</div>
+
+<div id="recommend">
+<h3>Recommend this activity</h3>
+<!-- AddThis Button BEGIN -->
+<div addthis:address="2 Waterhouse Square, 138 Holborn" addthis:description="We are a group of hackers/developers/tech enthusiasts who are ecstatic about what the future of the web and mobile apps will bring." addthis:enddate="Mon 14th October 2013 at 22:30" addthis:firstname="" addthis:host="Claire" addthis:startdate="Mon 14th October 2013 at 19:30" addthis:title="HTML5 CodeShow" addthis:url="http://www.kweekweek.com/clmurgue/966379ef10" addthis:user_email="" addthis:venue="SKYPE" class="addthis_toolbox addthis_default_style addthis_32x32_style">
+<div class="buttons">
+<a class="addthis_button_facebook"></a>
+<a class="addthis_button_twitter"></a>
+<a class="addthis_button_linkedin"></a>
+<a class="addthis_button_email"></a>
+<a class="addthis_button_compact"></a>
+</div>
+<div class="counter">
+<a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<div class="text_box">
+<p>Share this activity with your friends</p>
+</div>
+</div>
+<!-- AddThis Button END -->
+
+</div>
+</div>
+<div class="right-cont">
+<div class="middle">
+<h1>
+HTML5 CodeShow
+
+</h1>
+<hr>
+<div id="datetime">
+<div>
+<strong id="start">Start:</strong>
+Mon 14th October 2013
+<strong>at</strong>
+19:30
+</div>
+<div>
+<strong id="end">End:</strong>
+Mon 14th October 2013
+<strong>at</strong>
+22:30
+</div>
+</div>
+<hr>
+<div id="provider-info">
+<strong>Provider:</strong>
+<strong>
+<a href="/clmurgue" class="provider-name">Claire</a>
+</strong>
+<!-- #rating.todo -->
+<!-- / %span.yellow &#9733 -->
+<!-- / %span.yellow &#9733 -->
+<!-- / %span.yellow &#9733 -->
+<!-- / %span.yellow &#9733 -->
+<!-- / %span &#9733 -->
+<a href="/clmurgue" class="provider-avatar"><img alt="Image003" src="/system/users/images/000/011/375/thumb/image003.jpg?1380118391" /></a>
+
+</div>
+<hr><div id="categories"><strong>Category:</strong><span>Knowledge</span><span>Conferences</span></div></div>
+
+<div class="right">
+<a href="/activities/html5-codeshow/orders/new" class="btn btn-primary buy big purchase_ticket" data-modal="data-modal">Book Now</a>
+
+<aside class="attendees attendee-summary">
+<h3>
+<a class="view-all-attendees" data-toggle="modal" href="#" id="1957">Attending <span class="attendee-count"> 0</span></a>
+<input id="attendees_offset" type="hidden" value="0">
+</h3>
+<ol>
+</ol>
+</aside>
+<aside class="modal fade" id="all-attendees" style="display: none; ">
+<div class="modal-inner attendees">
+<div class="modal-header">
+<button class="close" data-dismiss="modal">x</button>
+<h2 class="no-margin">Attendees for "HTML5 CodeShow"</h2>
+</div>
+<ol class="modal-body">
+<div class="attending-list"></div>
+<div class="loading-image">
+<img alt="Spinner" src="/assets/spinner-79ccd1295effd53fb0c51c8f7d3f0759.gif" />
+</div>
+</ol>
+</div>
+</aside>
+
+</div>
+</div>
+<div class="right-cont nobg">
+<div class="middle">
+<p>
+<strong>
+We are a group of hackers/developers/tech enthusiasts who are ecstatic about what the future of the web and mobile apps will bring.
+</strong>
+</p>
+<ul class="dividedList">
+<li id="event-desc" class="hover-to-edit-noposchange event-desc hover-to-edit">
+
+<p>Hi everyone,&nbsp;<br /><br /></p>
+<p><span>Save the date, the 6th HTML5 CodeShow is coming up!</span></p>
+<p><span>It will, this time be at&nbsp;<a href="http://www.skype.com/en/">Skype</a>&nbsp;on the 14th of October.&nbsp;</span></p>
+<p><span>&nbsp;</span>&nbsp;</p>
+<p><span><strong><a href="https://twitter.com/MarquisdeGeek"><em>Steven Goodwin</em></a>&nbsp;will present an IRC client</strong></span></p>
+<p>Web browsers talk to servers.&nbsp;Servers&nbsp;talk to other servers. And servers talk to databases. Why don't web browsers talk to other web browsers?&nbsp;Well, they can.&nbsp;<br />With a few tricks here and there, you can implement full client-to-client communication in your own HTML5 apps.&nbsp;Steven&nbsp;will demonstrate this by writing an IRC example application live during his talk.&nbsp;</p>
+<p>&nbsp;</p>
+<p>We are still looking for speakers so if you would like to livecode something, feel free to contact me.</p>
+<p>&nbsp;</p>
+<p>Here is a quick presentation of the&nbsp;<a href="http://www.meetup.com/HTML5-CodeShow/events/135509012/">fifth HTML5 CodeShow</a>&nbsp;and here are the hashtags you can use : #HTML5 #CodeShow #London&nbsp;</p>
+
+</li>
+</ul>
+<h3 style="clear: both;">
+Comments &amp; Reviews
+</h3>
+<div id="reviews">
+<div id="no_comments">
+No comments have been posted for this activity.
+</div>
+</div>
+</div>
+<div class="right">
+<div id="venue-map-container">
+<div class="rectangle-map">
+<img alt="Map of SKYPE" data-toggle="modal" href="#map_preview" id="venue_map" src="http://maps.googleapis.com/maps/api/staticmap?markers=London2%20Waterhouse%20Square,%20138%20HolbornEC1N%202ST&amp;zoom=15&amp;size=300x300&amp;maptype=roadmap&amp;sensor=false&amp;key=AIzaSyAGVL8HsBcPXWw2K1Wg1okMYmKt5dY2DTs&amp;center=">
+<div class="modal fade" id="map_preview">
+<div class="modal-inner">
+<div class="modal-header">
+<button class="close" data-dismiss="modal">×</button>
+</div>
+<div class="modal-body">
+<img alt="Map of SKYPE" id="big_venue_map" src="http://maps.googleapis.com/maps/api/staticmap?markers=London2%20Waterhouse%20Square,%20138%20HolbornEC1N%202ST&amp;zoom=15&amp;size=640x640&amp;maptype=roadmap&amp;sensor=false&amp;key=AIzaSyAGVL8HsBcPXWw2K1Wg1okMYmKt5dY2DTs&amp;center=">
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div id="venue-details">
+<strong>Venue</strong>
+<br>
+SKYPE
+<br>
+2 Waterhouse Square, 138 Holborn
+<br>
+
+<br>
+London
+<br>
+EC1N 2ST
+<br>
+<br>
+</div>
+<strong>Website</strong>
+<br>
+<a href="http://bemyapp.com" target="_blank">bemyapp.com</a>
+<br>
+<br>
+<a href="/activities/1957/contact_hosts/new" class="btn btn-light-grey" data-modal="data-modal" id="contact-host-btn">Contact Host</a>
+
+
+</div>
+</div>
+
+<div id="event-footer">
+<div id="event-footer-inner">
+<div id="event-footer-text">
+<h3>You may also like:</h3>
+</div>
+<div id="suggestions">
+<section class="activity_box margin_right shadow_gray1" id="activity1709">
+<!-- Activity Box -->
+<div class="activity_poster">
+<!-- <div class="activity_btn_close"></div> -->
+<a href="/olganavarro-romero/df732f8456"><img alt="P1080101" src="/system/image_attachments/images/000/000/3264/browselist/P1080101.JPG?1378150190" />
+</a></div>
+<div class="activity_social_media">
+<!-- .addthis_toolbox -->
+<!-- %a.activity_btn_like.activity_btn_sm{:href => ""} Like -->
+<!-- %a.activity_btn_tweet.activity_btn_sm{:href => ""} Tweet -->
+<!-- %a.activity_btn_share.activity_btn_sm{:href => ""} Share -->
+<div addthis:description="Private Spanish lessons in London with a native Spanish speaker from Madrid" addthis:title="Private Spanish Language Lessons" addthis:url="http://www.kweekweek.com/olganavarro-romero/df732f8456" class="addthis_toolbox">
+<a class="addthis_button_facebook">
+<img alt="Kweek_facebook_button" src="/assets/kweek_facebook_button-c67f6047a2e7b2df44eac5b784e7e3c5.png" />
+</a>
+<a class="addthis_button_twitter">
+<img alt="Kweek_tweeter_button" src="/assets/kweek_tweeter_button-88e235bef2cfe8c85c12248015c0a388.png" />
+</a>
+<a class="addthis_button_googleplus">
+<img alt="Kweek_gplus_button" src="/assets/kweek_gplus_button-7af0e9f7ec525a22c2d223a103ca8c2d.png" />
+</a>
+</div>
+</div>
+<div class="activity_details">
+<h1 class="activity_title">
+<a href="/olganavarro-romero/df732f8456"><span class="text_data1">Private Spanish Language Lessons</span>
+</a></h1>
+<dl class="clearfix">
+<dt class="activity_date"></dt>
+<dd class="activity_date_text">
+<time datetime="2013-09-02 13:00:00 +0100"> 2 Sep 2013</time>
+</dd>
+<dt class="activity_host"></dt>
+<dd class="activity_host_text">
+<a href="/olganavarro-romero" class="text_data2">Olga Navarro</a>
+</dd>
+<dt class="activity_location"></dt>
+<dd class="activity_location_text">
+<span class="text_data3">
+Angel/Islington , London, London
+</span>
+</dd>
+</dl>
+</div>
+<div class="activity_description rounded_corners" id="activity_description1709">
+<div class="activity_description_content rounded_corners">
+<h2>Private Spanish Language Lessons</h2>
+<p>Private Spanish lessons in London with a native Spanish speaker from Madrid</p>
+<div class="activity_options">
+<a href="/olganavarro-romero/df732f8456">Learn more &gt;</a>
+<form accept-charset="UTF-8" action="/activities/private-spanish-language-lessons/reminders" class="simple_form wishlist-form" data-remote="true" data-replace="true" data-type="html" id="new_reminder" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="AGtGo8BHHmnULeguOpEjiNUMNBKtrunjjgFYh7hru1s=" /></div>
+
+<div class="form-actions">
+<button class="activity_btn_wishlist btn_gradient_black rounded_corners" type="submit"><i class='icon-plus icon-white'></i> Wishlist</button>
+</div>
+</form>
+</div>
+<div class="activity_info clearfix">
+<span class="activity_price">20.00</span>
+<span class="activity_time">
+Happening now
+</span>
+</div>
+</div>
+</div>
+
+</section>
+<section class="activity_box margin_right shadow_gray1" id="activity1831">
+<!-- Activity Box -->
+<div class="activity_poster">
+<!-- <div class="activity_btn_close"></div> -->
+<a href="/miriamrgilbert/fe710e6cef"><img alt="Money_on_the_line_-_small" src="/system/image_attachments/images/000/000/3658/browselist/money_on_the_line_-_small.jpg?1378907295" />
+</a></div>
+<div class="activity_social_media">
+<!-- .addthis_toolbox -->
+<!-- %a.activity_btn_like.activity_btn_sm{:href => ""} Like -->
+<!-- %a.activity_btn_tweet.activity_btn_sm{:href => ""} Tweet -->
+<!-- %a.activity_btn_share.activity_btn_sm{:href => ""} Share -->
+<div addthis:description="Learn new skills to impress and persuade" addthis:title="Big Data Stories: how to do more with data - for Finance Managers" addthis:url="http://www.kweekweek.com/miriamrgilbert/fe710e6cef" class="addthis_toolbox">
+<a class="addthis_button_facebook">
+<img alt="Kweek_facebook_button" src="/assets/kweek_facebook_button-c67f6047a2e7b2df44eac5b784e7e3c5.png" />
+</a>
+<a class="addthis_button_twitter">
+<img alt="Kweek_tweeter_button" src="/assets/kweek_tweeter_button-88e235bef2cfe8c85c12248015c0a388.png" />
+</a>
+<a class="addthis_button_googleplus">
+<img alt="Kweek_gplus_button" src="/assets/kweek_gplus_button-7af0e9f7ec525a22c2d223a103ca8c2d.png" />
+</a>
+</div>
+</div>
+<div class="activity_details">
+<h1 class="activity_title">
+<a href="/miriamrgilbert/fe710e6cef"><span class="text_data1">Big Data Stories: how to do more with data - for Finance Managers</span>
+</a></h1>
+<dl class="clearfix">
+<dt class="activity_date"></dt>
+<dd class="activity_date_text">
+<time datetime="2013-10-29 10:00:00 +0000">29 Oct 2013</time>
+</dd>
+<dt class="activity_host"></dt>
+<dd class="activity_host_text">
+<a href="/miriamrgilbert" class="text_data2">Storytelling with Numbers - by Miriam Gilbert</a>
+</dd>
+<dt class="activity_location"></dt>
+<dd class="activity_location_text">
+<span class="text_data3">
+Central London Zone1/2, ., London, EC1V 9HW
+</span>
+</dd>
+</dl>
+</div>
+<div class="activity_description rounded_corners" id="activity_description1831">
+<div class="activity_description_content rounded_corners">
+<h2>Big Data Stories: how to do more with data - for Finance Managers</h2>
+<p>Learn new skills to impress and persuade</p>
+<div class="activity_options">
+<a href="/miriamrgilbert/fe710e6cef">Learn more &gt;</a>
+<form accept-charset="UTF-8" action="/activities/big-data-stories-how-to-do-more-with-data-for-finance-managers/reminders" class="simple_form wishlist-form" data-remote="true" data-replace="true" data-type="html" id="new_reminder" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="AGtGo8BHHmnULeguOpEjiNUMNBKtrunjjgFYh7hru1s=" /></div>
+
+<div class="form-actions">
+<button class="activity_btn_wishlist btn_gradient_black rounded_corners" type="submit"><i class='icon-plus icon-white'></i> Wishlist</button>
+</div>
+</form>
+</div>
+<div class="activity_info clearfix">
+<span class="activity_price">FREE</span>
+<span class="activity_time">
+27 days 07:08:16
+</span>
+</div>
+</div>
+</div>
+
+</section>
+<section class="activity_box margin_right shadow_gray1" id="activity1020">
+<!-- Activity Box -->
+<div class="activity_poster">
+<!-- <div class="activity_btn_close"></div> -->
+<a href="/Actotum/efde5ccf60"><img alt="3d2sq" src="/system/image_attachments/images/000/000/1198/browselist/3d2sq.jpg?1372437959" />
+</a></div>
+<div class="activity_social_media">
+<!-- .addthis_toolbox -->
+<!-- %a.activity_btn_like.activity_btn_sm{:href => ""} Like -->
+<!-- %a.activity_btn_tweet.activity_btn_sm{:href => ""} Tweet -->
+<!-- %a.activity_btn_share.activity_btn_sm{:href => ""} Share -->
+<div addthis:description="This engaging and accessible 3-hour course is the perfect introduction to Delivering Presentations. " addthis:title="Presentation Skills...for Everyone" addthis:url="http://www.kweekweek.com/Actotum/efde5ccf60" class="addthis_toolbox">
+<a class="addthis_button_facebook">
+<img alt="Kweek_facebook_button" src="/assets/kweek_facebook_button-c67f6047a2e7b2df44eac5b784e7e3c5.png" />
+</a>
+<a class="addthis_button_twitter">
+<img alt="Kweek_tweeter_button" src="/assets/kweek_tweeter_button-88e235bef2cfe8c85c12248015c0a388.png" />
+</a>
+<a class="addthis_button_googleplus">
+<img alt="Kweek_gplus_button" src="/assets/kweek_gplus_button-7af0e9f7ec525a22c2d223a103ca8c2d.png" />
+</a>
+</div>
+</div>
+<div class="activity_details">
+<h1 class="activity_title">
+<a href="/Actotum/efde5ccf60"><span class="text_data1">Presentation Skills...for Everyone</span>
+</a></h1>
+<dl class="clearfix">
+<dt class="activity_date"></dt>
+<dd class="activity_date_text">
+<time datetime="2013-11-21 18:30:00 +0000">21 Nov 2013</time>
+</dd>
+<dt class="activity_host"></dt>
+<dd class="activity_host_text">
+<a href="/actotum" class="text_data2">Actotum</a>
+</dd>
+<dt class="activity_location"></dt>
+<dd class="activity_location_text">
+<span class="text_data3">
+Raindance, 10 Craven Street, London, WC2N 5PE
+</span>
+</dd>
+</dl>
+</div>
+<div class="activity_description rounded_corners" id="activity_description1020">
+<div class="activity_description_content rounded_corners">
+<h2>Presentation Skills...for Everyone</h2>
+<p>This engaging and accessible 3-hour course is the perfect introduction to Delivering Presentations. </p>
+<div class="activity_options">
+<a href="/Actotum/efde5ccf60">Learn more &gt;</a>
+<form accept-charset="UTF-8" action="/activities/presentation-skills-for-everyone--3/reminders" class="simple_form wishlist-form" data-remote="true" data-replace="true" data-type="html" id="new_reminder" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="AGtGo8BHHmnULeguOpEjiNUMNBKtrunjjgFYh7hru1s=" /></div>
+
+<div class="form-actions">
+<button class="activity_btn_wishlist btn_gradient_black rounded_corners" type="submit"><i class='icon-plus icon-white'></i> Wishlist</button>
+</div>
+</form>
+</div>
+<div class="activity_info clearfix">
+<span class="activity_price">50.00</span>
+<span class="activity_time">
+50 days 15:38:16
+</span>
+</div>
+</div>
+</div>
+
+</section>
+<section class="activity_box margin_right shadow_gray1" id="activity1021">
+<!-- Activity Box -->
+<div class="activity_poster">
+<!-- <div class="activity_btn_close"></div> -->
+<a href="/Actotum/0b15e75b61"><img alt="3d2sq" src="/system/image_attachments/images/000/000/1199/browselist/3d2sq.jpg?1372438265" />
+</a></div>
+<div class="activity_social_media">
+<!-- .addthis_toolbox -->
+<!-- %a.activity_btn_like.activity_btn_sm{:href => ""} Like -->
+<!-- %a.activity_btn_tweet.activity_btn_sm{:href => ""} Tweet -->
+<!-- %a.activity_btn_share.activity_btn_sm{:href => ""} Share -->
+<div addthis:description="This engaging and accessible 3-hour course is the perfect introduction to writing inspiring and engaging Presentations." addthis:title="Presentation Writing...for Everyone" addthis:url="http://www.kweekweek.com/Actotum/0b15e75b61" class="addthis_toolbox">
+<a class="addthis_button_facebook">
+<img alt="Kweek_facebook_button" src="/assets/kweek_facebook_button-c67f6047a2e7b2df44eac5b784e7e3c5.png" />
+</a>
+<a class="addthis_button_twitter">
+<img alt="Kweek_tweeter_button" src="/assets/kweek_tweeter_button-88e235bef2cfe8c85c12248015c0a388.png" />
+</a>
+<a class="addthis_button_googleplus">
+<img alt="Kweek_gplus_button" src="/assets/kweek_gplus_button-7af0e9f7ec525a22c2d223a103ca8c2d.png" />
+</a>
+</div>
+</div>
+<div class="activity_details">
+<h1 class="activity_title">
+<a href="/Actotum/0b15e75b61"><span class="text_data1">Presentation Writing...for Everyone</span>
+</a></h1>
+<dl class="clearfix">
+<dt class="activity_date"></dt>
+<dd class="activity_date_text">
+<time datetime="2013-10-03 18:30:00 +0100"> 3 Oct 2013</time>
+</dd>
+<dt class="activity_host"></dt>
+<dd class="activity_host_text">
+<a href="/actotum" class="text_data2">Actotum</a>
+</dd>
+<dt class="activity_location"></dt>
+<dd class="activity_location_text">
+<span class="text_data3">
+Raindance, 10 Craven Street, London, WC2N 5PE
+</span>
+</dd>
+</dl>
+</div>
+<div class="activity_description rounded_corners" id="activity_description1021">
+<div class="activity_description_content rounded_corners">
+<h2>Presentation Writing...for Everyone</h2>
+<p>This engaging and accessible 3-hour course is the perfect introduction to writing inspiring and engaging Presentations.</p>
+<div class="activity_options">
+<a href="/Actotum/0b15e75b61">Learn more &gt;</a>
+<form accept-charset="UTF-8" action="/activities/presentation-writing-for-everyone/reminders" class="simple_form wishlist-form" data-remote="true" data-replace="true" data-type="html" id="new_reminder" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="AGtGo8BHHmnULeguOpEjiNUMNBKtrunjjgFYh7hru1s=" /></div>
+
+<div class="form-actions">
+<button class="activity_btn_wishlist btn_gradient_black rounded_corners" type="submit"><i class='icon-plus icon-white'></i> Wishlist</button>
+</div>
+</form>
+</div>
+<div class="activity_info clearfix">
+<span class="activity_price">50.00</span>
+<span class="activity_time">
+1 days 14:38:15
+</span>
+</div>
+</div>
+</div>
+
+</section>
+<section class="activity_box activity_last shadow_gray1" id="activity1022">
+<!-- Activity Box -->
+<div class="activity_poster">
+<!-- <div class="activity_btn_close"></div> -->
+<a href="/Actotum/60082f51e0"><img alt="3d2sq" src="/system/image_attachments/images/000/000/1200/browselist/3d2sq.jpg?1372438265" />
+</a></div>
+<div class="activity_social_media">
+<!-- .addthis_toolbox -->
+<!-- %a.activity_btn_like.activity_btn_sm{:href => ""} Like -->
+<!-- %a.activity_btn_tweet.activity_btn_sm{:href => ""} Tweet -->
+<!-- %a.activity_btn_share.activity_btn_sm{:href => ""} Share -->
+<div addthis:description="This engaging and accessible 3-hour course is the perfect introduction to writing inspiring and engaging Presentations." addthis:title="Presentation Writing...for Everyone" addthis:url="http://www.kweekweek.com/Actotum/60082f51e0" class="addthis_toolbox">
+<a class="addthis_button_facebook">
+<img alt="Kweek_facebook_button" src="/assets/kweek_facebook_button-c67f6047a2e7b2df44eac5b784e7e3c5.png" />
+</a>
+<a class="addthis_button_twitter">
+<img alt="Kweek_tweeter_button" src="/assets/kweek_tweeter_button-88e235bef2cfe8c85c12248015c0a388.png" />
+</a>
+<a class="addthis_button_googleplus">
+<img alt="Kweek_gplus_button" src="/assets/kweek_gplus_button-7af0e9f7ec525a22c2d223a103ca8c2d.png" />
+</a>
+</div>
+</div>
+<div class="activity_details">
+<h1 class="activity_title">
+<a href="/Actotum/60082f51e0"><span class="text_data1">Presentation Writing...for Everyone</span>
+</a></h1>
+<dl class="clearfix">
+<dt class="activity_date"></dt>
+<dd class="activity_date_text">
+<time datetime="2013-11-28 18:30:00 +0000">28 Nov 2013</time>
+</dd>
+<dt class="activity_host"></dt>
+<dd class="activity_host_text">
+<a href="/actotum" class="text_data2">Actotum</a>
+</dd>
+<dt class="activity_location"></dt>
+<dd class="activity_location_text">
+<span class="text_data3">
+Raindance, 10 Craven Street, London, WC2N 5PE
+</span>
+</dd>
+</dl>
+</div>
+<div class="activity_description rounded_corners" id="activity_description1022">
+<div class="activity_description_content rounded_corners">
+<h2>Presentation Writing...for Everyone</h2>
+<p>This engaging and accessible 3-hour course is the perfect introduction to writing inspiring and engaging Presentations.</p>
+<div class="activity_options">
+<a href="/Actotum/60082f51e0">Learn more &gt;</a>
+<form accept-charset="UTF-8" action="/activities/presentation-writing-for-everyone--2/reminders" class="simple_form wishlist-form" data-remote="true" data-replace="true" data-type="html" id="new_reminder" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="AGtGo8BHHmnULeguOpEjiNUMNBKtrunjjgFYh7hru1s=" /></div>
+
+<div class="form-actions">
+<button class="activity_btn_wishlist btn_gradient_black rounded_corners" type="submit"><i class='icon-plus icon-white'></i> Wishlist</button>
+</div>
+</form>
+</div>
+<div class="activity_info clearfix">
+<span class="activity_price">50.00</span>
+<span class="activity_time">
+57 days 15:38:15
+</span>
+</div>
+</div>
+</div>
+
+</section>
+<div class="cleardiv"></div>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+<footer role="contentinfo">
+<div class="wrapper1" id="footer_section">
+<div id="footer_logo"></div>
+<p class="footer_catchphrase">
+Discover local activities and events
+<br>
+suggested to you in real-time
+</p>
+<p class="footer_links" id="footer_s">
+<a href="https://twitter.com/kweekweek" id="footer_tw_link" target="_blank" title="Twitter"></a>
+<a href="https://www.facebook.com/KweekWeek" id="footer_fb_link" target="_blank" title="Facebook"></a>
+</p>
+<p class="footer_links" id="footer_p">
+<a href="/pages/how-it-works">How It Works</a>
+|
+<a href="http://kweekweek.wordpress.com">Blog</a>
+|
+<a href="/pages/terms">Terms &amp; Conditions</a>
+|
+<a href="/pages/privacy">Privacy Policy</a>
+|
+<a href="/pages/aup">Acceptable Use Policy</a>
+|
+<a href="mailto:contact@kweekweek.com">Contact</a>
+|
+<a href="/pages/about">About us</a>
+</p>
+<div class="cleardiv"></div>
+<p class="footer_copyright">© Copyright KweekWeek 2013</p>
+</div>
+</footer>
+<aside class="modal fade" id="confirmations-popup" style="display: none; ">
+<div class="modal-inner learn-more">
+<div class="modal-header">
+<button class="close" data-dismiss="modal">x</button>
+</div>
+<div class="modal-body">
+<div class="message">
+<h2>Are you sure?</h2>
+</div>
+<div class="actions">
+<a class="btn_gradient_orange btn_text_orange rounded_corners" data-method="delete" href="#" id="confirmation-yes">
+Yes
+</a>
+<a class="btn_gradient_orange btn_text_orange rounded_corners" href="#" id="confirmation-no">
+No
+</a>
+</div>
+</div>
+</div>
+</aside>
+
+<script charset="utf-8" type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-31948084-1']);
+_gaq.push(['b._setAccount', 'UA-41695713-1']);
+_gaq.push(['_setDomainName', 'kweekweek.com']);
+_gaq.push(['b._setDomainName', 'kweekweek.com']);
+_gaq.push(['_trackPageview']);
+_gaq.push(['b._trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4fc3a4e51dfea221" type="text/javascript"></script>
+<!--[if lte IE 7]>
+<script>
+  //<![CDATA[
+    var options = {};
+    $('#ieModal').modal(options);
+  //]]>
+</script>
+<![endif]-->
+</html>

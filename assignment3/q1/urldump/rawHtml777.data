@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Hurdles: Jump Small Problems With Some Quick Code Snippets | Art &amp; Logic Blog</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://blog.artlogic.com/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://s0.wp.com/wp-content/themes/pub/twentytwelve/js/html5.js?m=1351293567g" type="text/javascript"></script>
+<![endif]-->
+<script type="text/javascript">
+(function() {
+	var s = document.createElement('SCRIPT'), s1 = document.getElementsByTagName('SCRIPT')[0];
+	s.type = 'text/javascript';
+	s.async = true;
+	s.src = 'http://widgets.digg.com/buttons.js';
+	s1.parentNode.insertBefore(s, s1);
+})();
+</script>
+		<script src='http://r-login.wordpress.com/remote-login.php?action=js&amp;host=blog.artlogic.com&amp;id=35069269&amp;t=1380682659&amp;back=blog.artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-some-quick-code-snippets%2F' type="text/javascript"></script>
+		<script type="text/javascript">
+		/* <![CDATA[ */
+			if ( 'function' === typeof WPRemoteLogin ) {
+				document.cookie = "wordpress_test_cookie=test; path=/";
+				if ( document.cookie.match( /(;|^)\s*wordpress_test_cookie\=/ ) ) {
+					WPRemoteLogin();
+				}
+			}
+		/* ]]> */
+		</script>
+		<link rel="alternate" type="application/rss+xml" title="Art &amp; Logic Blog &raquo; Feed" href="http://blog.artlogic.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Art &amp; Logic Blog &raquo; Comments Feed" href="http://blog.artlogic.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Art &amp; Logic Blog &raquo; Hurdles: Jump Small Problems With Some Quick Code&nbsp;Snippets Comments Feed" href="http://blog.artlogic.com/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!='function'){window.onload=func;}else{window.onload=function(){oldonload();func();}}}
+/* ]]> */
+</script>
+<link rel='stylesheet' id='all-css-0' href='http://s0.wp.com/_static/??-eJxljtEKwjAMRX/IGrSi+CB+y9bF2i1tiklX9vdWfXCwl8C9nMMN1GwcJ8WkEIvJVHxIAhQmFBhRc+cm8017J7KDFd4T+7/A3uPARc2DibhCDYNH3UirjczSaOrCC0QXwg2rT4zti1x60NqKpV2a8Uebmh3Hj3OPt4O9XO3peLZ2fAOaqU4f' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-2' href='http://s2.wp.com/wp-content/themes/pub/twentytwelve/style.css?m=1375463284g' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://s0.wp.com/wp-content/themes/pub/twentytwelve/css/ie.css?m=1354779338g&#038;ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='all-css-4' href='http://s2.wp.com/_static/??/wp-content/mu-plugins/post-flair/sharing/sharing.css,/wp-content/themes/h4/global.css?m=1366905946j' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var LoggedOutFollow = {"invalid_email":"Your subscription did not succeed, please try again with a valid email address."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://s2.wp.com/_static/??-eJyFkN0KwjAMRl/IrviDxQvxWbYuK6ltU5vWMZ/eDiYoDnaVkBxy+CLHKDSFDCFLy9JThw5EYUitqTOBYaDG8k5WDoN2pQeeQfsokKalbALCo0lthsZj+MBf1kicPTBX5cr2V4XhiTBuYhZybPVdJGB8/V3tHBkRXTEYWNbeQE8li4Gco1GO2BvIa6E0eT9/JUF00xLm5q/7o1KHs7qok30DqLN9jA=='></script>
+<link rel='stylesheet' id='all-css-0' href='http://s2.wp.com/wp-content/mu-plugins/highlander-comments/style.css?m=1377793621g' type='text/css' media='all' />
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='http://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563g&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://artlogic1991.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://artlogic1991.wordpress.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Designing For An International&nbsp;Audience' href='http://blog.artlogic.com/2013/09/17/designing-for-an-international-audience/' />
+<link rel='next' title='PdbpPlease!' href='http://blog.artlogic.com/2013/09/25/pdbpplease/' />
+<meta name="generator" content="WordPress.com" />
+<link rel='canonical' href='http://blog.artlogic.com/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/' />
+<link rel='shortlink' href='http://wp.me/p2n97n-1z2' />
+<link rel="alternate" type="application/json+oembed" href="http://public-api.wordpress.com/oembed/1.0/?format=json&amp;url=http%3A%2F%2Fblog.artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-some-quick-code-snippets%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="http://public-api.wordpress.com/oembed/1.0/?format=xml&amp;url=http%3A%2F%2Fblog.artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-some-quick-code-snippets%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Hurdles: Jump Small Problems With Some Quick Code Snippets" />
+<meta property="og:url" content="http://blog.artlogic.com/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/" />
+<meta property="og:description" content="During the course of any complex project (and even many simple ones), on the way to accomplish the actual goal, you&#039;re certain to encounter any number of small hurdles along the way - little proble..." />
+<meta property="og:site_name" content="Art &amp; Logic Blog" />
+<meta property="og:image" content="http://i0.wp.com/artlogic1991.files.wordpress.com/2013/09/cuhurdleheights.jpg?fit=1600%2C1600" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta name="twitter:image" content="http://i0.wp.com/artlogic1991.files.wordpress.com/2013/09/cuhurdleheights.jpg?fit=1600%2C1600" />
+<meta name="twitter:card" content="photo" />
+<meta name="twitter:creator" content="@wordpressdotcom" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+<link rel="shortcut icon" type="image/x-icon" href="http://s2.wp.com/i/favicon.ico?m=1311975824g" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="http://s2.wp.com/i/favicon.ico?m=1311975824g" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon-precomposed" href="http://s0.wp.com/i/webclip.png?m=1355642671g" />
+<link rel='openid.server' href='http://artlogic1991.wordpress.com/?openidserver=1' />
+<link rel='openid.delegate' href='http://artlogic1991.wordpress.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="http://blog.artlogic.com/osd.xml" title="Art &#38; Logic Blog" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wordpress.com/opensearch.xml" title="WordPress.com" />
+		<style>
+		/* <![CDATA[ */
+		/* Block: reblog */
+		
+		.reblog-from img                   { margin: 0 10px 0 0; vertical-align: middle; padding: 0; border: 0; }
+		.reblogger-note img.avatar         { float: left; padding: 0; border: 0; }
+		.reblogger-note-content            { margin: 0 0 20px; }
+		.reblog-post .wpcom-enhanced-excerpt-content { border-left: 3px solid #eee; padding-left: 15px; }
+		.reblog-post ul.thumb-list         { display: block; list-style: none; margin: 2px 0; padding: 0; clear: both; }
+		.reblog-post ul.thumb-list li      { display: inline; margin: 0; padding: 0 1px; border: 0; }
+		.reblog-post ul.thumb-list li a    { margin: 0; padding: 0; border: 0; }
+		.reblog-post ul.thumb-list li img  { margin: 0; padding: 0; border: 0; }
+		
+		.reblog-post .wpcom-enhanced-excerpt { clear: both; }
+		
+		.reblog-post .wpcom-enhanced-excerpt address,
+		.reblog-post .wpcom-enhanced-excerpt li,
+		.reblog-post .wpcom-enhanced-excerpt h1,
+		.reblog-post .wpcom-enhanced-excerpt h2,
+		.reblog-post .wpcom-enhanced-excerpt h3,
+		.reblog-post .wpcom-enhanced-excerpt h4,
+		.reblog-post .wpcom-enhanced-excerpt h5,
+		.reblog-post .wpcom-enhanced-excerpt h6,
+		.reblog-post .wpcom-enhanced-excerpt p { font-size: 100% !important; }
+		
+		.reblog-post .wpcom-enhanced-excerpt blockquote,
+		.reblog-post .wpcom-enhanced-excerpt pre,
+		.reblog-post .wpcom-enhanced-excerpt code,
+		.reblog-post .wpcom-enhanced-excerpt q { font-size: 98% !important; }
+		
+
+		/* ]]> */
+		</style>
+		<meta name="application-name" content="Art &amp; Logic Blog" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-task" content="name=Subscribe;action-uri=http://blog.artlogic.com/feed/;icon-uri=http://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=http://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico" /><meta name="title" content="Hurdles: Jump Small Problems With Some Quick Code&nbsp;Snippets | Art &amp; Logic Blog on WordPress.com" />
+<meta name="description" content="During the course of any complex project (and even many simple ones), on the way to accomplish the actual goal, you&#039;re certain to encounter any number of small hurdles along the way - little problems which need to be resolved for the bigger picture to come into focus. Below, in no particular order, are some&hellip;" />
+	<style type="text/css" id="twentytwelve-header-css">
+			.site-title,
+		.site-description {
+			position: absolute;
+			clip: rect(1px 1px 1px 1px); /* IE7 */
+			clip: rect(1px, 1px, 1px, 1px);
+		}
+		</style>
+	<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #e6e6e6; }
+</style>
+
+<script type='text/javascript'>/*<![CDATA[*/if(typeof(addLoadEvent)!='undefined'){addLoadEvent(function(){if(top==self){i=document.createElement('img');i.src='http://botd.wordpress.com/botd.gif?blogid=35069269&postid=6016&lang=1&date=1380037145&ip=98.183.229.89&url=http://blog.artlogic.com/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/&loc='+document.location;i.id='botd';i.style.width='0px';i.style.height='0px';i.style.overflow='hidden';document.body.appendChild(i);}});}/*]]>*/</script>
+
+<script type='text/javascript'>/*<![CDATA[*/if(typeof(addLoadEvent)!='undefined'){addLoadEvent(function(){if(top==self){i=document.createElement('img');i.src='http://botd2.wordpress.com/botd.gif?blog=35069269&post=6016&lang=en&date=1380037145&ip=98.183.229.89&url=http://blog.artlogic.com/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/';i.id='botd2';i.style.width='0px';i.style.height='0px';i.style.overflow='hidden';document.body.appendChild(i);}});}/*]]>*/</script>
+<style id="syntaxhighlighteranchor"></style>
+		<link rel="stylesheet" id="custom-css-css" type="text/css" href="http://blog.artlogic.com/?custom-css=1&#038;csblog=2n97n&#038;cscache=6&#038;csrev=5" />
+		</head>
+
+<body class="single single-post postid-6016 single-format-standard custom-background typekit-enabled custom-font-enabled mp6 highlander-enabled highlander-light">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+				<hgroup>
+			<h1 class="site-title"><a href="http://blog.artlogic.com/" title="Art &amp; Logic Blog" rel="home">Art &amp; Logic Blog</a></h1>
+			<h2 class="site-description"></h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h3 class="menu-toggle">Menu</h3>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-james-container"><ul id="menu-james" class="nav-menu"><li id="menu-item-5363" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-5363"><a href="http://blog.artlogic.com">Blog Home</a></li>
+<li id="menu-item-5364" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5364"><a href="http://www.artlogic.com">Art &amp; Logic Corporate Site</a></li>
+<li id="menu-item-5365" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5365"><a href="http://blog.artlogic.com/contact">Contact</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+						<a href="http://blog.artlogic.com/"><img src="http://artlogic1991.files.wordpress.com/2013/07/blogheader2.png" class="header-image" width="960" height="44" alt="" /></a>
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-6016" class="post-6016 post type-post status-publish format-standard hentry category-development">
+				<header class="entry-header">
+									<h1 class="entry-title">Hurdles: Jump Small Problems With Some Quick Code&nbsp;Snippets</h1>
+										<div class="comments-link">
+					<a href="http://blog.artlogic.com/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/#respond" title="Comment on Hurdles: Jump Small Problems With Some Quick Code&nbsp;Snippets"><span class="leave-reply">Leave a reply</span></a>				</div><!-- .comments-link -->
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><a href="http://artlogic1991.files.wordpress.com/2013/09/cuhurdleheights.jpg"><img class="aligncenter size-large wp-image-6021" alt="Hurdles" src="http://artlogic1991.files.wordpress.com/2013/09/cuhurdleheights.jpg?w=625&#038;h=477"   /></a></p>
+<p>During the course of any complex project (and even many simple ones), on the way to accomplish the <em>actual</em> goal, you&#8217;re certain to encounter any number of small hurdles along the way &#8211; little problems which need to be resolved for the bigger picture to come into focus.</p>
+<p>Below, in no particular order, are some of the &#8216;little&#8217; problems I&#8217;ve encountered, and solutions thereto &#8211; hopefully giving you a leg up so that when and if you encounter something similar, you can jump it without breaking stride.</p>
+<p><span id="more-6016"></span></p>
+<h5>Is that a Promise?</h5>
+<p>To determine whether a Javascript object implements the <a href="http://wiki.commonjs.org/wiki/Promises/A">promise interface</a>, we&#8217;ll have to rely on <a href="http://en.wikipedia.org/wiki/Duck_typing">duck typing</a>. This is generally safe (outside of a potentially hostile environment), and if you&#8217;re suspicious that tested objects might return false positives, you can add/change what is tested tailored to the specific implementation you&#8217;re using.</p>
+<p>For instance, you might add a test on functions like &#8216;promise&#8217; and &#8216;pipe&#8217; being present for jQuery Deferred. This could also be stretched to try and tell one implementation apart from another, if you&#8217;re mixing them for whatever reason.</p>
+<pre class="brush: jscript; title: ; notranslate" title="">
+    /**
+     * Determine whether object implements promises.
+     * @param object
+     * @returns {*}
+     */
+    isPromise:function(object){
+        return (typeof object.then === 'function');
+    }
+</pre>
+<h5>IE Console woes, log only in debug mode</h5>
+<p>It&#8217;s extremely common to litter your js with some <code>console.log</code> calls while developing, in order to get a better handle on inputs, outpus, variable states, etc. Some of these calls are obviated by the incresingly powerful built-in browser tools, but inevitably your code will pick up a few.</p>
+<p>Suddenly, you realize that you need to port that code to an IE version &lt;= 8. The code breaks. You open up devtools. The code works. What&#8217;s going on? The <code>console</code> object doesn&#8217;t exist until you open up devtools &#8211; its tricky the first time you stumble into it. Here&#8217;s the quick fix:</p>
+<pre class="brush: jscript; title: ; notranslate" title="">
+window.console = window.console || {
+	/** @param {...*} args */
+	log:function(){};
+};
+</pre>
+<p>Have code that needs to be tested on a production server, but want to leave those console.log calls in for future debugging use &#8211; but not have them output when you&#8217;re on the production server? Set a variable (either global if you must, or better, in an init call to a function, on the function prototype, etc.) to indicate &#8216;debug mode&#8217; and call console.log like so:</p>
+<pre class="brush: jscript; title: ; notranslate" title="">
+this.debug &amp;&amp; console.log(&quot;Console output.&quot;);
+</pre>
+<h5>Getting a <code>trim</code>, Capitals and splitting camelCase</h5>
+<p>It seems that even libraries purporting to support older browsers expect the <code>String.prototype.trim</code> function to be present (see the Google Maps v3 api, for instance). Unfortunately, IE versions &lt;= 8 and Safari &lt;= 5 don&#8217;t. We&#8217;ll just quickly pop that in to place, then:</p>
+<pre class="brush: jscript; title: ; notranslate" title="">
+if (typeof String.prototype.trim !== 'function'){
+    String.prototype.trim = function(){
+        return this.replace(/^\s+|\s+$/g, '');
+    };
+}
+</pre>
+<p>If you have input strings that you know will need capitalizing (say database column names that will end up in the <code>th</code> of an html table), best to wrap that in an easily callable, chainable function:</p>
+<pre class="brush: jscript; title: ; notranslate" title="">
+String.prototype.capitalize = function(){
+    return this.charAt(0).toUpperCase() + this.slice(1);
+};
+</pre>
+<p>We can do something similar if we know we&#8217;ll need to split a string on camelCaseNames:</p>
+<pre class="brush: jscript; title: ; notranslate" title="">
+String.prototype.splitCamelCase = function(){
+    return this.replace(/([A-Z])/g, ' $1');
+};
+</pre>
+<p>If you cringe at the idea of adding to the built-in prototypes, we can do something similar with, for example <a href="http://underscorejs.org/">underscore&#8217;s</a> mixins:</p>
+<pre class="brush: jscript; title: ; notranslate" title="">
+_.mixin({
+    capitalize:function(string){
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    },
+    splitCamelCase:function(string){
+        return string.replace(/([A-Z])/g, ' $1');
+    }
+});
+</pre>
+<h5>This Space Reserved</h5>
+<p>So, you&#8217;ve created an object somewhere in your code, probably something with meaningful names given the function their value is expected to be used for/perform, and run it, only to be met with an error: &#8216;Expected identifier, string or number&#8217;. Chances are you&#8217;ve accidentally used a reserved keyword in your object keys.</p>
+<p>Something like this:</p>
+<pre class="brush: jscript; title: ; notranslate" title="">
+var ob = {
+    for:12,
+    class:15
+};
+</pre>
+<p>Needs to be altered to this:</p>
+<pre class="brush: jscript; title: ; notranslate" title="">
+var ob = {
+	'for':12,
+	'class':15
+};
+</pre>
+<p>This will keep the js engine in question from seeing a keyword where an object key was intended. Another alternative is, of course, to simply avoid using any of the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Reserved_Words">reserved keywords</a> as object keys.</p>
+<h5>Expert Timing</h5>
+<p>setTimeout/setInterval is not very accurate. It has to compete with ui events and other callbacks, and really only guarantees that <em>at least</em> the specified interval will have passed before it gets called. Usually, its not an issue. If it <em>is</em> important that the timing be accurate, however, we&#8217;ll have to work a little harder.</p>
+<p>In modern browsers, we can rely on <code>window.performance.now()</code> for a highly accurate (10 us) timestamp. In older browsers, we&#8217;ll have to make do with ms resolution from Date(). Either way, we&#8217;ll be altering our desired interval with this number in our next call for the setTimeout, in order to try and keep the callbacks happening as regularly as possible, accounting for delays. This is still subject to variation, and very short intervals likely won&#8217;t be long enough to allow for us to account for said variation, but the result should still be more accurate than a simple setTimeout/setInterval call, in a way that offers a similar api to the standard setInterval call.</p>
+<p><script src="https://gist.github.com/SaneMethod/6677116.js"></script></p>
+<p>Hopefully, one or more of the above offers you a quick solution so you can get back to the <em>real</em> problem you were supposed to be solving&#8230; and if not, at least offer you some solace as you struggle &#8211; we&#8217;ve all hit a few little hurdles along the way.</p>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-official sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><div class="twitter_button"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fwp.me%2Fp2n97n-1z2&#038;counturl=http%3A%2F%2Fblog.artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-some-quick-code-snippets%2F&#038;count=horizontal&#038;text=Hurdles%3A%20Jump%20Small%20Problems%20With%20Some%20Quick%20Code%20Snippets%3A&#038;via=wordpressdotcom&#038;related=wordpressdotcom" style="width:101px; height:20px;"></iframe></div></li><li class="share-facebook"><div class="like_button"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fblog.artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-some-quick-code-snippets%2F&amp;layout=button_count&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;height=21&amp;locale=en_US&amp;width=90" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:96px; height:21px;" allowTransparency="true"></iframe></div></li><li class="share-google-plus-1"><div class="googleplus1_button"><div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://blog.artlogic.com/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/"></div></div></li><li class="share-reddit"><div class="reddit_button"><iframe src="http://www.reddit.com/static/button/button1.html?width=120&amp;url=http%3A%2F%2Fblog.artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-some-quick-code-snippets%2F&amp;title=Hurdles%3A%20Jump%20Small%20Problems%20With%20Some%20Quick%20Code%20Snippets" height="22" width="120" scrolling="no" frameborder="0"></iframe></div></li><li><a href="#" class="sharing-anchor sd-button share-more"><span>More</span></a></li><li class="share-end"></li></ul><div class="sharing-hidden"><div class="inner" style="display: none;"><ul><li class="share-email"><a rel="nofollow" class="share-email sd-button" href="http://blog.artlogic.com/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/?share=email" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-print"><a rel="nofollow" class="share-print sd-button" href="http://blog.artlogic.com/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/#print" title="Click to print"><span>Print</span></a></li><li class="share-end"></li><li class="share-tumblr"><a target="" href="http://www.tumblr.com/share/link/?url=http%3A%2F%2Fblog.artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-some-quick-code-snippets%2F&name=Hurdles%3A%20Jump%20Small%20Problems%20With%20Some%20Quick%20Code%20Snippets" title="Share on Tumblr" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:62px; height:20px; background:url('http://platform.tumblr.com/v1/share_2.png') top left no-repeat transparent;">Share on Tumblr</a></li><li class="share-linkedin"><div class="linkedin_button"><script type="in/share" data-url="http://blog.artlogic.com/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/" data-counter="right"></script></div></li><li class="share-end"></li><li class="share-stumbleupon"><div class="stumbleupon_button"><iframe src="http://www.stumbleupon.com/badge/embed/1/?url=http%3A%2F%2Fblog.artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-some-quick-code-snippets%2F&amp;title=Hurdles%3A%20Jump%20Small%20Problems%20With%20Some%20Quick%20Code%20Snippets" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:74px; height: 18px;" allowTransparency="true"></iframe></div></li><li class="share-digg"><div class="digg_button"><a rel="nofollow" class="DiggThisButton DiggCompact share-digg sd-button" href="http://digg.com/submit?url=http%3A%2F%2Fblog.artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-some-quick-code-snippets%2F&amp;title=Hurdles%3A%20Jump%20Small%20Problems%20With%20Some%20Quick%20Code%20Snippets" title="Click to Digg this post"><span>Digg</span></a></div></li><li class="share-end"></li><li class="share-pinterest"><div class="pinterest_button"><a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fblog.artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-some-quick-code-snippets%2F&#038;description=Hurdles%3A%20Jump%20Small%20Problems%20With%20Some%20Quick%20Code%20Snippets&#038;media=http%3A%2F%2Fartlogic1991.files.wordpress.com%2F2013%2F09%2Fcuhurdleheights.jpg" class="pin-it-button" count-layout="horizontal"> Pin It</a></div></li><li class="share-end"></li></ul></div></div></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-35069269-6016-524b8ba3b2c08' data-src='//widgets.wp.com/likes/#blog_id=35069269&amp;post_id=6016&amp;origin=artlogic1991.wordpress.com&amp;obj_id=35069269-6016-524b8ba3b2c08' data-name='like-post-frame-35069269-6016-524b8ba3b2c08'><h3 class='sd-title'>Like this:</h3><div class='post-likes-widget-placeholder' style='height:55px'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div></div>					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="http://blog.artlogic.com/category/development/" title="View all posts in Development" rel="category tag">Development</a> on <a href="http://blog.artlogic.com/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/" title="7:39 am" rel="bookmark"><time class="entry-date" datetime="2013-09-24T07:39:05+00:00">September 24, 2013</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="http://blog.artlogic.com/author/sanemethod/" title="View all posts by sanemethod" rel="author">sanemethod</a></span></span>.										<div class="author-info">
+					<div class="author-avatar">
+						<img alt='' src='http://1.gravatar.com/avatar/4e0c380f1dfbc4b0c1c403869b75d2d8?s=68&amp;d=identicon&amp;r=G' class='avatar avatar-68' height='68' width='68' />					</div><!-- .author-avatar -->
+					<div class="author-description">
+						<h2>About sanemethod</h2>
+						<p>Christopher Keefer is a Senior Software Engineer at Art &amp; Logic. He generally spends his spare time on the computer too, so there isn't much hope for him.</p>
+						<div class="author-link">
+							<a href="http://blog.artlogic.com/author/sanemethod/" rel="author">
+								View all posts by sanemethod <span class="meta-nav">&rarr;</span>							</a>
+						</div><!-- .author-link	-->
+					</div><!-- .author-description -->
+				</div><!-- .author-info -->
+					</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="http://blog.artlogic.com/2013/09/17/designing-for-an-international-audience/" rel="prev"><span class="meta-nav">&larr;</span> Designing For An International&nbsp;Audience</a></span>
+					<span class="nav-next"><a href="http://blog.artlogic.com/2013/09/25/pdbpplease/" rel="next">PdbpPlease! <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://blog.artlogic.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																										
+
+
+												<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="52974e150c" /><input type="hidden" name="_wp_http_referer" value="/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/" />
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest" />
+
+<div class="comment-form-field comment-textarea">
+	<label for="comment">Enter your comment here...</label>
+	<div id="comment-form-comment"><textarea id="comment" name="comment" title="Enter your comment here..."></textarea></div>
+</div>
+
+<div id="comment-form-identity">
+
+	<div id="comment-form-nascar">
+		<p>Fill in your details below or click an icon to log in:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="#comment-form-guest" id="postas-guest" title="Guest">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook">
+					<span></span>
+				</a>
+			</li>
+			<li>
+			<iframe id="googleplus-sign-in" name="googleplus-sign-in" src="https://public-api.wordpress.com/connect/?googleplus-sign-in=1" width="24" height="24" scrolling="no" allowtransparency="true" seamless="seamless" frameborder="0"></iframe>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Gravatar" width="25" class="no-grav" />
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="required">(required)</span> <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value="" /></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Name <span class="required">(required)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value="" /></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Website</label>
+					<div class="comment-form-input"><input id="url" name="url" type="text" value="" /></div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="http://s2.wp.com/wp-content/mu-plugins/highlander-comments/images/wplogo.png?m=1289230950g" alt="WordPress.com Logo" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="" />
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="" />
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="" />
+				<p class="comment-form-posting-as pa-wordpress"><strong></strong> You are commenting using your WordPress.com account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'wordpress' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Twitter picture" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="" />
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="" />
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="" />
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> You are commenting using your Twitter account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'twitter' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Facebook photo" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="" />
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="" />
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="" />
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> You are commenting using your Facebook account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'facebook' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Google+ photo" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="" />
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="" />
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="" />
+				<p class="comment-form-posting-as pa-googleplus"><strong></strong> You are commenting using your Google+ account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'googleplus' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancel</a></div>
+		<p>Connecting to %s</p>
+	</div>
+
+	
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" tabindex="6"/> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of follow-up comments via email.</label></p></div>
+
+												<p class="form-submit">
+							<input name="submit" type="submit" id="comment-submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='6016' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						
+<input type="hidden" name="genseq" value="1380682659" />
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="485ab3e70c" /></p><script type='text/javascript' src='http://s2.wp.com/wp-content/mu-plugins/akismet-2.5/form.js?m=1308783962g'></script>
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="230"/></p>					</form>
+							</div><!-- #respond -->
+			<div style="clear: both"></div>			
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+						<aside id="twitter_timeline-2" class="widget widget_twitter_timeline"><h3 class="widget-title">Follow Art &amp; Logic on Twitter</h3><a class="twitter-timeline" data-widget-id="372443980484452352" data-theme="light" data-link-color="#f96e5b" data-border-color="#e8e8e8" data-chrome="noborders" data-tweet-limit="2" width="225" height="400" lang="EN">My Tweets</a></aside><aside id="image-2" class="widget widget_image"><h3 class="widget-title">Follow the Art &amp; Logic Blog via RSS</h3><div style="overflow:hidden;"><a href="http://feeds.feedburner.com/ArtLogic"><img src="http://blog.artlogic.com/i/rss/orange-large.png" alt="RSS" class="alignleft" width="32" height="32" /></a></div>
+</aside><aside id="facebook-likebox-3" class="widget widget_facebook_likebox"><iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fartandlogic&#038;width=200&#038;height=110&#038;colorscheme=light&#038;show_faces=false&#038;stream=false&#038;show_border=false&#038;header=false&#038;force_wall=false" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 200px;  height: 110px; background: #fff"></iframe></aside><aside id="wp_tag_cloud-2" class="widget wp_widget_tag_cloud"><h3 class="widget-title">Tags</h3><div style="overflow:hidden"><a href='http://blog.artlogic.com/tag/android/' class='tag-link-641922' title='4 topics' style='font-size: 10.825688073394pt;'>android</a>
+<a href='http://blog.artlogic.com/tag/angular/' class='tag-link-463744' title='4 topics' style='font-size: 10.825688073394pt;'>angular</a>
+<a href='http://blog.artlogic.com/tag/angularjs/' class='tag-link-68515894' title='5 topics' style='font-size: 11.853211009174pt;'>angularjs</a>
+<a href='http://blog.artlogic.com/tag/app/' class='tag-link-232047' title='3 topics' style='font-size: 9.5412844036697pt;'>app</a>
+<a href='http://blog.artlogic.com/tag/apple/' class='tag-link-291' title='10 topics' style='font-size: 15.192660550459pt;'>apple</a>
+<a href='http://blog.artlogic.com/tag/audio/' class='tag-link-413' title='7 topics' style='font-size: 13.394495412844pt;'>audio</a>
+<a href='http://blog.artlogic.com/tag/audiounits/' class='tag-link-62915' title='2 topics' style='font-size: 8pt;'>AudioUnits</a>
+<a href='http://blog.artlogic.com/tag/authentication/' class='tag-link-44620' title='2 topics' style='font-size: 8pt;'>Authentication</a>
+<a href='http://blog.artlogic.com/tag/backbone-js/' class='tag-link-45303827' title='4 topics' style='font-size: 10.825688073394pt;'>backbone.js</a>
+<a href='http://blog.artlogic.com/tag/backup/' class='tag-link-5469' title='3 topics' style='font-size: 9.5412844036697pt;'>Backup</a>
+<a href='http://blog.artlogic.com/tag/book-review/' class='tag-link-7215' title='8 topics' style='font-size: 14.036697247706pt;'>book review</a>
+<a href='http://blog.artlogic.com/tag/books/' class='tag-link-178' title='3 topics' style='font-size: 9.5412844036697pt;'>books</a>
+<a href='http://blog.artlogic.com/tag/c/' class='tag-link-2426' title='9 topics' style='font-size: 14.678899082569pt;'>C++</a>
+<a href='http://blog.artlogic.com/tag/cocoa/' class='tag-link-1691' title='18 topics' style='font-size: 18.275229357798pt;'>cocoa</a>
+<a href='http://blog.artlogic.com/tag/coffeescript/' class='tag-link-29450027' title='6 topics' style='font-size: 12.752293577982pt;'>coffeescript</a>
+<a href='http://blog.artlogic.com/tag/concurrency/' class='tag-link-214618' title='2 topics' style='font-size: 8pt;'>concurrency</a>
+<a href='http://blog.artlogic.com/tag/core-data/' class='tag-link-895080' title='7 topics' style='font-size: 13.394495412844pt;'>Core Data</a>
+<a href='http://blog.artlogic.com/tag/cryptography/' class='tag-link-25818' title='11 topics' style='font-size: 15.706422018349pt;'>cryptography</a>
+<a href='http://blog.artlogic.com/tag/css/' class='tag-link-169' title='6 topics' style='font-size: 12.752293577982pt;'>CSS</a>
+<a href='http://blog.artlogic.com/tag/data-formats/' class='tag-link-99343' title='3 topics' style='font-size: 9.5412844036697pt;'>data formats</a>
+<a href='http://blog.artlogic.com/tag/data-visualization/' class='tag-link-86765' title='2 topics' style='font-size: 8pt;'>data visualization</a>
+<a href='http://blog.artlogic.com/tag/design/' class='tag-link-148' title='9 topics' style='font-size: 14.678899082569pt;'>design</a>
+<a href='http://blog.artlogic.com/tag/development-2/' class='tag-link-22974853' title='7 topics' style='font-size: 13.394495412844pt;'>development</a>
+<a href='http://blog.artlogic.com/tag/digital-audio-workstation/' class='tag-link-3922336' title='2 topics' style='font-size: 8pt;'>Digital audio workstation</a>
+<a href='http://blog.artlogic.com/tag/education/' class='tag-link-1342' title='3 topics' style='font-size: 9.5412844036697pt;'>education</a>
+<a href='http://blog.artlogic.com/tag/encryption/' class='tag-link-6474' title='7 topics' style='font-size: 13.394495412844pt;'>encryption</a>
+<a href='http://blog.artlogic.com/tag/frameworks/' class='tag-link-45348' title='6 topics' style='font-size: 12.752293577982pt;'>Frameworks</a>
+<a href='http://blog.artlogic.com/tag/games/' class='tag-link-21' title='3 topics' style='font-size: 9.5412844036697pt;'>games</a>
+<a href='http://blog.artlogic.com/tag/git/' class='tag-link-209196' title='2 topics' style='font-size: 8pt;'>git</a>
+<a href='http://blog.artlogic.com/tag/github/' class='tag-link-5603054' title='7 topics' style='font-size: 13.394495412844pt;'>github</a>
+<a href='http://blog.artlogic.com/tag/html/' class='tag-link-647' title='2 topics' style='font-size: 8pt;'>HTML</a>
+<a href='http://blog.artlogic.com/tag/html5/' class='tag-link-53242' title='6 topics' style='font-size: 12.752293577982pt;'>html5</a>
+<a href='http://blog.artlogic.com/tag/ideas/' class='tag-link-374' title='3 topics' style='font-size: 9.5412844036697pt;'>ideas</a>
+<a href='http://blog.artlogic.com/tag/infosec/' class='tag-link-52624' title='6 topics' style='font-size: 12.752293577982pt;'>infosec</a>
+<a href='http://blog.artlogic.com/tag/internet-of-things/' class='tag-link-780658' title='2 topics' style='font-size: 8pt;'>internet of things</a>
+<a href='http://blog.artlogic.com/tag/ios/' class='tag-link-324281' title='36 topics' style='font-size: 22pt;'>iOS</a>
+<a href='http://blog.artlogic.com/tag/javascript/' class='tag-link-457' title='23 topics' style='font-size: 19.559633027523pt;'>javascript</a>
+<a href='http://blog.artlogic.com/tag/jquery/' class='tag-link-203308' title='7 topics' style='font-size: 13.394495412844pt;'>JQuery</a>
+<a href='http://blog.artlogic.com/tag/juce/' class='tag-link-1896019' title='4 topics' style='font-size: 10.825688073394pt;'>JUCE</a>
+<a href='http://blog.artlogic.com/tag/language/' class='tag-link-1934' title='2 topics' style='font-size: 8pt;'>language</a>
+<a href='http://blog.artlogic.com/tag/learning/' class='tag-link-264' title='8 topics' style='font-size: 14.036697247706pt;'>Learning</a>
+<a href='http://blog.artlogic.com/tag/literate-programming/' class='tag-link-10005432' title='2 topics' style='font-size: 8pt;'>Literate Programming</a>
+<a href='http://blog.artlogic.com/tag/mac-os-x/' class='tag-link-3348' title='3 topics' style='font-size: 9.5412844036697pt;'>Mac OS X</a>
+<a href='http://blog.artlogic.com/tag/midi/' class='tag-link-62912' title='2 topics' style='font-size: 8pt;'>MIDI</a>
+<a href='http://blog.artlogic.com/tag/mobile/' class='tag-link-120' title='6 topics' style='font-size: 12.752293577982pt;'>mobile</a>
+<a href='http://blog.artlogic.com/tag/music/' class='tag-link-18' title='4 topics' style='font-size: 10.825688073394pt;'>music</a>
+<a href='http://blog.artlogic.com/tag/objective-c/' class='tag-link-12117' title='13 topics' style='font-size: 16.605504587156pt;'>Objective-C</a>
+<a href='http://blog.artlogic.com/tag/os-x/' class='tag-link-2438' title='3 topics' style='font-size: 9.5412844036697pt;'>OS X</a>
+<a href='http://blog.artlogic.com/tag/package-management-system/' class='tag-link-9801775' title='2 topics' style='font-size: 8pt;'>Package management system</a>
+<a href='http://blog.artlogic.com/tag/passwords/' class='tag-link-78192' title='5 topics' style='font-size: 11.853211009174pt;'>passwords</a>
+<a href='http://blog.artlogic.com/tag/pgp/' class='tag-link-55756' title='4 topics' style='font-size: 10.825688073394pt;'>pgp</a>
+<a href='http://blog.artlogic.com/tag/php/' class='tag-link-458' title='4 topics' style='font-size: 10.825688073394pt;'>php</a>
+<a href='http://blog.artlogic.com/tag/privacy/' class='tag-link-3279' title='3 topics' style='font-size: 9.5412844036697pt;'>privacy</a>
+<a href='http://blog.artlogic.com/tag/productivity/' class='tag-link-2704' title='3 topics' style='font-size: 9.5412844036697pt;'>productivity</a>
+<a href='http://blog.artlogic.com/tag/programming/' class='tag-link-196' title='18 topics' style='font-size: 18.275229357798pt;'>programming</a>
+<a href='http://blog.artlogic.com/tag/project-management/' class='tag-link-510' title='2 topics' style='font-size: 8pt;'>project management</a>
+<a href='http://blog.artlogic.com/tag/proposals/' class='tag-link-19923' title='3 topics' style='font-size: 9.5412844036697pt;'>proposals</a>
+<a href='http://blog.artlogic.com/tag/python/' class='tag-link-832' title='9 topics' style='font-size: 14.678899082569pt;'>python</a>
+<a href='http://blog.artlogic.com/tag/qt/' class='tag-link-61037' title='3 topics' style='font-size: 9.5412844036697pt;'>qt</a>
+<a href='http://blog.artlogic.com/tag/rails/' class='tag-link-6652' title='6 topics' style='font-size: 12.752293577982pt;'>rails</a>
+<a href='http://blog.artlogic.com/tag/ruby/' class='tag-link-4872' title='8 topics' style='font-size: 14.036697247706pt;'>ruby</a>
+<a href='http://blog.artlogic.com/tag/salting/' class='tag-link-6415899' title='2 topics' style='font-size: 8pt;'>salting</a>
+<a href='http://blog.artlogic.com/tag/security/' class='tag-link-801' title='6 topics' style='font-size: 12.752293577982pt;'>security</a>
+<a href='http://blog.artlogic.com/tag/single-sign-on/' class='tag-link-148060' title='2 topics' style='font-size: 8pt;'>single-sign-on</a>
+<a href='http://blog.artlogic.com/tag/sql-injection/' class='tag-link-129960' title='2 topics' style='font-size: 8pt;'>sql injection</a>
+<a href='http://blog.artlogic.com/tag/steganography/' class='tag-link-143959' title='3 topics' style='font-size: 9.5412844036697pt;'>steganography</a>
+<a href='http://blog.artlogic.com/tag/style/' class='tag-link-2286' title='4 topics' style='font-size: 10.825688073394pt;'>style</a>
+<a href='http://blog.artlogic.com/tag/testing/' class='tag-link-12' title='3 topics' style='font-size: 9.5412844036697pt;'>testing</a>
+<a href='http://blog.artlogic.com/tag/tools/' class='tag-link-1981' title='3 topics' style='font-size: 9.5412844036697pt;'>tools</a>
+<a href='http://blog.artlogic.com/tag/ui/' class='tag-link-27940' title='7 topics' style='font-size: 13.394495412844pt;'>ui</a>
+<a href='http://blog.artlogic.com/tag/user-interface/' class='tag-link-6171' title='8 topics' style='font-size: 14.036697247706pt;'>user interface</a>
+<a href='http://blog.artlogic.com/tag/ux/' class='tag-link-81969' title='2 topics' style='font-size: 8pt;'>ux</a>
+<a href='http://blog.artlogic.com/tag/website/' class='tag-link-995' title='2 topics' style='font-size: 8pt;'>website</a>
+<a href='http://blog.artlogic.com/tag/windows/' class='tag-link-800' title='3 topics' style='font-size: 9.5412844036697pt;'>windows</a>
+<a href='http://blog.artlogic.com/tag/xml/' class='tag-link-6852' title='3 topics' style='font-size: 9.5412844036697pt;'>XML</a></div></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+					<li>
+				<a href="http://blog.artlogic.com/2013/09/30/flash-drive-makers-hate-you/" title="Flash Drive Makers Hate&nbsp;You">Flash Drive Makers Hate&nbsp;You</a>
+						</li>
+					<li>
+				<a href="http://blog.artlogic.com/2013/09/27/bringing-radio-to-a-software-engineers-world/" title="Bringing Radio to a Software Engineer’s&nbsp;World">Bringing Radio to a Software Engineer’s&nbsp;World</a>
+						</li>
+					<li>
+				<a href="http://blog.artlogic.com/2013/09/25/pdbpplease/" title="PdbpPlease!">PdbpPlease!</a>
+						</li>
+					<li>
+				<a href="http://blog.artlogic.com/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/" title="Hurdles: Jump Small Problems With Some Quick Code&nbsp;Snippets">Hurdles: Jump Small Problems With Some Quick Code&nbsp;Snippets</a>
+						</li>
+					<li>
+				<a href="http://blog.artlogic.com/2013/09/17/designing-for-an-international-audience/" title="Designing For An International&nbsp;Audience">Designing For An International&nbsp;Audience</a>
+						</li>
+				</ul>
+		</aside><aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://blog.artlogic.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+			<a href="http://theme.wordpress.com/credits/blog.artlogic.com/" title="Learn about customizing this theme with the Custom Design upgrade">Customized Twenty Twelve Theme</a>.			<a href="http://wordpress.com/?ref=footer" rel="generator">Blog at WordPress.com</a>.
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+
+<script type="text/javascript">
+var _qevents = _qevents || [], wpcomQuantcastData = {"qacct":"p-18-mFEk4J448M","labels":",language.en,type.wpcom"};
+function wpcomQuantcastPixel( labels, options ) {
+	var i, defaults = wpcomQuantcastData, data = { event: 'ajax' };
+
+	labels  = labels  || '';
+	options = options || {};
+
+	if ( typeof labels != 'string' )
+		options = labels;
+
+	for ( i in defaults ) {
+		data[i] = defaults[i];
+	}
+
+	for ( i in options ) {
+		data[i] = options[i];
+	}
+
+	if ( data.labels ) {
+		data.labels += ',' + labels;
+	} else {
+		data.labels = labels;
+	}
+
+	_qevents.push( data );
+};
+(function() {var elem = document.createElement('script');elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";elem.async = true;elem.type = "text/javascript";var scpt = document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem, scpt);  })();
+_qevents.push( wpcomQuantcastData );
+</script>
+<noscript><div style="display: none;"><img src="//pixel.quantserve.com/pixel/p-18-mFEk4J448M.gif?labels=%2Clanguage.en%2Ctype.wpcom" height="1" width="1" alt="" /></div></noscript>
+
+<script type='text/javascript' src='//0.gravatar.com/js/gprofiles.js?ver=201340ae'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://s2.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781g'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-4e0c380f1dfbc4b0c1c403869b75d2d8">
+	</div>
+	</div>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"http:\/\/artlogic1991.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"http:\/\/artlogic1991.wordpress.com\/wp-login.php?action=logout&_wpnonce=778f2f531e","homeURL":"http:\/\/blog.artlogic.com\/","postID":"6016","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"0","userIsLoggedIn":"","isJetpack":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://s1.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1379020420j'></script>
+
+	<div id="bit" class="loggedout-follow-normal">
+		<a class="bsub" href="javascript:void(0)"><span id='bsub-text'>Follow</span></a>
+		<div id="bitsubscribe">
+
+					<h3><label for="loggedout-follow-field">Follow &ldquo;Art &amp; Logic Blog&rdquo;</label></h3>
+
+			<form action="https://subscribe.wordpress.com" method="post" accept-charset="utf-8" id="loggedout-follow">
+			<p>Get every new post delivered to your Inbox.</p>
+
+			<p id="loggedout-follow-error" style="display: none;"></p>
+
+						<p class="bit-follow-count">Join 79 other followers</p>
+			<p><input type="email" name="email" style="width: 95%; padding: 1px 2px" value="Enter your email address" onfocus='this.value=(this.value=="Enter your email address") ? "" : this.value;' onblur='this.value=(this.value=="") ? "Enter email address" : this.value;'  id="loggedout-follow-field"/></p>
+
+			<input type="hidden" name="action" value="subscribe"/>
+			<input type="hidden" name="blog_id" value="35069269"/>
+			<input type="hidden" name="source" value="http://blog.artlogic.com/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/"/>
+			<input type="hidden" name="sub-type" value="loggedout-follow"/>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="3a2894aa3d" /><input type="hidden" name="_wp_http_referer" value="/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/" />
+			<p id='bsub-subscribe-button'><input type="submit" value="Sign me up" /></p>
+			</form>
+					<div id='bsub-credit'><a href="http://wordpress.com/signup/?ref=lof">Powered by WordPress.com</a></div>
+		</div><!-- #bitsubscribe -->
+	</div><!-- #bit -->
+		<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+					<script type="text/javascript">
+			  (function() {
+			    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			    po.src = 'https://apis.google.com/js/plusone.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			</script>
+				<div id="sharing_email" style="display: none;">
+		<form action="/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/" method="post">
+			<label for="target_email">Send to Email Address</label>
+			<input type="text" name="target_email" id="target_email" value="" />
+
+			
+				<label for="source_name">Your Name</label>
+				<input type="text" name="source_name" id="source_name" value="" />
+
+				<label for="source_email">Your Email Address</label>
+				<input type="text" name="source_email" id="source_email" value="" />
+
+			
+			<div class="recaptcha" id="sharing_recaptcha"></div><input type="hidden" name="recaptcha_public_key" id="recaptcha_public_key" value="6LcYW8MSAAAAADBAuEH9yaPcF7lWh11Iq62ZKtoo" />
+			<img style="float: right; display: none" class="loading" src="http://s2.wp.com/wp-content/mu-plugins/post-flair/sharing/images/loading.gif?m=1315610318g" alt="loading" width="16" height="16" />
+			<input type="submit" value="Send Email" class="sharing_send" />
+			<a href="#cancel" class="sharing_cancel">Cancel</a>
+
+			<div class="errors errors-1" style="display: none;">
+				Post was not sent - check your email addresses!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Email check failed, please try again			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Sorry, your blog cannot share posts by email.			</div>
+		</form>
+	</div>
+<script type="text/javascript" src="http://platform.tumblr.com/v1/share.js"></script><script type="text/javascript">
+			jQuery( document ).ready( function() {
+			    jQuery.getScript( 'http://platform.linkedin.com/in.js?async=true', function success() {
+			        IN.init();
+			    });
+			});
+			jQuery( document.body ).on( 'post-load', function() {
+				if ( typeof IN != 'undefined' )
+					IN.parse();
+			});
+			</script>					<script type="text/javascript">
+				// Pinterest shared resources
+				var s = document.createElement("script");
+				s.type = "text/javascript";
+				s.async = true;
+				s.src = window.location.protocol + "//assets.pinterest.com/js/pinit.js";
+				var x = document.getElementsByTagName("script")[0];
+				x.parentNode.insertBefore(s, x);
+				// if 'Pin it' button has 'counts' make container wider
+				jQuery(window).load( function(){ jQuery( 'li.share-pinterest a span:visible' ).closest( '.share-pinterest' ).width( '80px' ); } );
+			</script>
+				<iframe src='http://widgets.wp.com/likes/master.html?ver=20130620a#ver=20130620a&amp;mp6=1' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+		<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+		<script type="text/javascript">
+		//<![CDATA[
+			var jetpackLikesWidgetQueue = [];
+			var jetpackLikesMasterReady = false;
+
+			function JetpackLikespostMessage( message, target ) {
+				if ( "string" === typeof message ){
+					try{
+						message = JSON.parse( message );
+					}
+					catch(e) {
+						return;
+					}
+				}
+
+				pm( {
+					target: target,
+					type: 'likesMessage',
+					data: message,
+					origin: '*'
+				} );
+			}
+
+			function JetpackLikesMessageListener( event ) {
+				if ( "undefined" == typeof event.event )
+					return;
+
+				if ( 'masterReady' == event.event ) {
+					jQuery( document ).ready( function() {
+						jetpackLikesMasterReady = true;
+
+						var stylesData = {
+								event: 'injectStyles'
+						};
+
+						if ( jQuery( 'iframe.admin-bar-likes-widget' ).length > 0 ) {
+							JetpackLikespostMessage( { event: 'adminBarEnabled' }, window.frames[ 'likes-master' ] );
+
+							stylesData.adminBarStyles = {
+								background: jQuery( '#wpadminbar .quicklinks li#wp-admin-bar-wpl-like > a' ).css( 'background' )
+							};
+						}
+
+						if ( !window.addEventListener )
+							jQuery( '#wp-admin-bar-admin-bar-likes-widget' ).hide();
+
+						stylesData.textStyles = {
+							color: jQuery( '.sd-text-color').css( 'color' ),
+							fontFamily: jQuery( '.sd-text-color' ).css( 'font-family' ),
+							fontSize: jQuery( '.sd-text-color' ).css( 'font-size' ),
+							direction: jQuery( '.sd-text-color' ).css( 'direction' ),
+							fontWeight: jQuery( '.sd-text-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-text-color' ).css( 'font-style' ),
+							textDecoration: jQuery( '.sd-text-color' ).css('text-decoration')
+						};
+
+						stylesData.linkStyles = {
+							color: jQuery( '.sd-link-color' ).css('color'),
+							fontFamily: jQuery( '.sd-link-color' ).css('font-family'),
+							fontSize: jQuery( '.sd-link-color' ).css('font-size'),
+							textDecoration: jQuery( '.sd-link-color' ).css('text-decoration'),
+							fontWeight: jQuery( '.sd-link-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-link-color' ).css( 'font-style' )
+						};
+
+						JetpackLikespostMessage( stylesData, window.frames[ 'likes-master' ] );
+
+						var requests = [];
+						jQuery( '.jetpack-likes-widget-wrapper' ).each( function( i ) {
+							var regex = /like-(post|comment)-wrapper-(\d+)-(\d+)-(\w+)/;
+							var match = regex.exec( this.id );
+							if ( ! match || match.length != 5 )
+								return;
+
+							var info = {
+								blog_id: match[2],
+								width:   this.width
+							};
+
+							if ( 'post' == match[1] ) {
+								info.post_id = match[3];
+							} else if ( 'comment' == match[1] ) {
+								info.comment_id = match[3];
+							}
+
+							info.obj_id = match[4];
+
+							requests.push( info );
+						});
+
+						JetpackLikespostMessage( { event: 'initialBatch', requests: requests }, window.frames['likes-master'] );
+
+						jQuery( document ).on( 'inview', 'div.jetpack-likes-widget-unloaded', function() {
+							jetpackLikesWidgetQueue.push( this.id );
+						});
+					});
+				}
+
+				if ( 'showLikeWidget' == event.event ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 10 );
+					jQuery( '#' + event.id + ' .post-likes-widget-placeholder'  ).fadeOut( 'fast', function() {
+						jQuery( '#' + event.id + ' .post-likes-widget' ).fadeIn( 'fast', function() {
+							JetpackLikespostMessage( { event: 'likeWidgetDisplayed', blog_id: event.blog_id, post_id: event.post_id, obj_id: event.obj_id }, window.frames['likes-master'] );
+						});
+					});
+				}
+
+				if ( 'showOtherGravatars' == event.event ) {
+					var $container = jQuery( '#likes-other-gravatars' );
+					var $list = $container.find( 'ul' );
+
+					$container.hide();
+					$list.html( '' );
+
+					$container.find( '.likes-text span' ).text( event.total );
+
+					jQuery.each( event.likers, function( i, liker ) {
+						$list.append( '<li class="' + liker.css_class + '"><a href="' + liker.profile_URL + '" class="wpl-liker" rel="nofollow" target="_parent"><img src="' + liker.avatar_URL + '" alt="' + liker.name + '" width="30" height="30" style="padding-right: 3px;" /></a></li>');
+					} );
+
+					var offset = jQuery( "[name='" + event.parent + "']" ).offset();
+
+					$container.css( 'left', offset.left + event.position.left - 10 + 'px' );
+					$container.css( 'top', offset.top + event.position.top - 33 + 'px' );
+
+					var rowLength = Math.floor( event.width / 37 );
+					var height = ( Math.ceil( event.likers.length / rowLength ) * 37 ) + 13;
+					if ( height > 204 ) {
+						height = 204;
+					}
+
+					$container.css( 'height', height + 'px' );
+					$container.css( 'width', rowLength * 37 - 7 + 'px' );
+
+					$list.css( 'width', rowLength * 37 + 'px' );
+
+					$container.fadeIn( 'slow' );
+
+					var scrollbarWidth = $list[0].offsetWidth - $list[0].clientWidth;
+					if ( scrollbarWidth > 0 ) {
+						$container.width( $container.width() + scrollbarWidth );
+						$list.width( $list.width() + scrollbarWidth );
+					}
+				}
+			}
+
+			pm.bind( 'likesMessage', function(e) { JetpackLikesMessageListener(e); } );
+
+			jQuery( document ).click( function( e ) {
+				var $container = jQuery( '#likes-other-gravatars' );
+
+				if ( $container.has( e.target ).length === 0 ) {
+					$container.fadeOut( 'slow' );
+				}
+			});
+
+			function JetpackLikesWidgetQueueHandler() {
+				var wrapperID;
+				if ( ! jetpackLikesMasterReady ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+					return;
+				}
+
+				if ( jetpackLikesWidgetQueue.length > 0 ) {
+					// We may have a widget that needs creating now
+					var found = false;
+					while( jetpackLikesWidgetQueue.length > 0 ) {
+						// Grab the first member of the queue that isn't already loading.
+						wrapperID = jetpackLikesWidgetQueue.splice( 0, 1 )[0];
+						if ( jQuery( '#' + wrapperID ).hasClass( 'jetpack-likes-widget-unloaded' ) ) {
+							found = true;
+							break;
+						}
+					}
+					if ( ! found ) {
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				} else if ( jQuery( 'div.jetpack-likes-widget-unloaded' ).length > 0 ) {
+					// Get the next unloaded widget
+					wrapperID = jQuery( 'div.jetpack-likes-widget-unloaded' ).first()[0].id;
+					if ( ! wrapperID ) {
+						// Everything is currently loaded
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				}
+
+				var $wrapper = jQuery( '#' + wrapperID );
+				$wrapper.find( 'iframe' ).remove();
+
+				if ( $wrapper.hasClass( 'slim-likes-widget' ) ) {
+					$wrapper.find( '.post-likes-widget-placeholder' ).after( "<iframe class='post-likes-widget jetpack-likes-widget' name='" + $wrapper.data( 'name' ) + "' height='22px' width='68px' frameBorder='0' scrolling='no' src='" + $wrapper.data( 'src' ) + "'></iframe>" );
+				} else {
+					$wrapper.find( '.post-likes-widget-placeholder' ).after( "<iframe class='post-likes-widget jetpack-likes-widget' name='" + $wrapper.data( 'name' ) + "' height='55px' width='100%' frameBorder='0' src='" + $wrapper.data( 'src' ) + "'></iframe>" );
+				}
+
+				$wrapper.removeClass( 'jetpack-likes-widget-unloaded' ).addClass( 'jetpack-likes-widget-loading' );
+
+				$wrapper.find( 'iframe' ).load( function( e ) {
+					var $iframe = jQuery( e.target );
+					$wrapper.removeClass( 'jetpack-likes-widget-loading' ).addClass( 'jetpack-likes-widget-loaded' );
+
+					JetpackLikespostMessage( { event: 'loadLikeWidget', name: $iframe.attr( 'name' ), width: $iframe.width() }, window.frames[ 'likes-master' ] );
+
+					if ( $wrapper.hasClass( 'slim-likes-widget' ) ) {
+						$wrapper.find( 'iframe' ).Jetpack( 'resizeable' );
+					}
+				});
+				setTimeout( JetpackLikesWidgetQueueHandler, 250 );
+			}
+			JetpackLikesWidgetQueueHandler();
+		//]]>
+		</script>
+<script type='text/javascript' src='http://s1.wp.com/_static/??-eJzTLy/QTc7PK0nNK9EvyClNz8wr1i+uzCtJrMjITM/IAeKS1CJMEWP94uSizIISoOIM5/yiVL2sYh19yo1yKiotzvAKBvOBRtrn2hoamxkbG5iYGJpkAQCa50E5'></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://s0.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?m=1370811927g&amp;ver=3.0.83c";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://s0.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?m=1363304414g&amp;ver=3.0.83c";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+<script type='text/javascript' src='//platform.twitter.com/widgets.js?ver=3.7-alpha-25157'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var recaptcha_options = {"lang":"en"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://s2.wp.com/_static/??/wp-content/js/devicepx.js,/wp-content/themes/pub/twentytwelve/js/navigation.js,/wp-content/mu-plugins/post-flair/sharing/sharing.js?m=1373391538j'></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="http://s.stats.wordpress.com/w.js?21" type="text/javascript"></script>
+<script type="text/javascript">
+st_go({'blog':'35069269','v':'wpcom','tz':'-8','user_id':'0','post':'6016','subd':'artlogic1991'});
+ex_go({'crypt':'UE40eW5QN0p8M2Y/RE1TaVhzUzFMbjdWNHpwZGhTayxPSUFCMGRVYVNrSFguN3FwSmQ5RGtNX3VQcj1yVzhiflM1THQtLGFdQ2toOXYlQjYrMC9LMHBCOUQzVkNBOFFkOCY3LFguP2ZmMSt4OXZTMnI9TzVXK3VkSlFOSWklQkpDZVc3a28xSyxpbHFrK0lsP3dpdHZSV09FRGdhdkIvR0FESFAzL05RLVEtSkUxTD95anF2cTQ0MHNpZSx8eXd4QTguRHFBbFZLbnkxSEJsLnpLbmI5cGErNmpRM11mYUQ2VERZanlmUUtbTXFRSz1walYtK0lLWFNTW3FmQ1hJbTZpNGFhV28uZF9wLk18RThSdHxTWXBYZDdmNlJ5U3Y3bFREVEFnNE1Xb01NekJuK0c4RFBSfno5Z0dFS19hSVFdV1AvVjNbWGhXRC83VUdKaVEwZjI='});
+addLoadEvent(function(){linktracker_init('35069269',6016);});
+	</script>
+<noscript><img src="http://stats.wordpress.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//stats.wordpress.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script></body>
+</html>

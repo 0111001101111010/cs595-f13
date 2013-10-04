@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<script>var __pbpa = true;</script><script>var translated_warning_string = 'Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?';</script><script type="text/javascript" language="javascript" src="http://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=90496f22ffd4b193ff4f3aa39d43d2af"></script>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" xml:lang="en" lang="en">
+<!-- Svbtle Theme for Tumblr by matteoroversi.com -->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="imagetoolbar" content="false" />
+        <!-- Title -->
+        <title>
+            alois dg - Faire un Slider XAML complet en 5 petites étapes
+        </title>
+        <!-- Description -->
+        
+        <meta name="description" content="Faire un Slider XAML complet en 5 petites &eacute;tapes Si vous &ecirc;tes &agrave; l&rsquo;aise avec le XAML, passez directement &agrave; l&rsquo;etape 4. Introduction Le slider est un control XAML des plus basique. Il est tr&egrave;s simple &agrave;..." />
+        
+        <!-- Fav and touch icons -->
+        <link rel="shortcut icon" href="http://24.media.tumblr.com/avatar_aab91af5343a_128.png" />
+        <link rel="apple-touch-icon" href="http://24.media.tumblr.com/avatar_aab91af5343a_128.png" />
+        <!-- Custom Fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet" type="text/css" />
+        <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic" rel="stylesheet" type="text/css" />
+        <link href='http://static.tumblr.com/dbek3sy/VtLmbsu90/socialico.css' rel='stylesheet' type='text/css'>
+        <!-- Meta -->
+        <meta name="color:Sidebar Colour" content="#ffffff" />
+        <meta name="image:Logo 200x200" content="http://i.imgur.com/Ujk973c.png" />
+        <meta name="image:Logo Retina 400x400" content="http://i.imgur.com/PGj3J4i.png" />
+        <meta name="color:Blog Name Colour" content="#1A1A1A" />
+        <meta name="color:Description Colour" content="#1A1A1A" />
+        <meta name="color:Highlight Colour" content="#FF7400" />
+        <meta name="color:Navigation Colour" content="#FF9033" />
+        <meta name="color:Text Colour" content="#1A1A1A" />
+        <meta name="color:Date Colour" content="#7f7f7f" />
+        <meta name="color:Post Title Colour" content="#1A1A1A" />
+        <meta name="text:Google Analytics ID" content="" />
+        <meta name="text:Disqus Shortname" content="aloisdg" />
+        <meta name="if:Enable Comment Count" content="1" />
+        <!-- For Font Awesome -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <!-- For Syntax Highlighting -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <!-- <link rel="stylesheet" type="text/css" href="https://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css">-->
+            <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/vwgert9/8Ovmtnt1r/tomorrow.css">
+        </link>  
+        <script src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>  
+        <script>
+            function styleCode() {
+                if (typeof disableStyleCode != 'undefined') { return; }
+        
+                var a = false;
+                
+                $('code').each(function() {
+                    if (!$(this).hasClass('prettyprint') && !$(this).hasClass('uglyprint')) {
+                        $(this).addClass('prettyprint');
+                        a = true;
+                    }
+                });
+        
+                if (a) { prettyPrint(); } 
+            }
+    
+            $(function() {styleCode();});
+        </script>
+        <!-- Facebook Open Graph -->
+        <meta property="og:site_name" content="alois dg"/>
+        
+            <meta property="og:url" content="http://aloisdg.tumblr.com/post/62201179204/faire-un-slider-xaml-complet-en-5-petites-etapes"/>
+            <meta property="og:type" content="article"/>
+            
+                
+                    
+                        <meta property="og:title" content="Faire un Slider XAML complet en 5 petites &eacute;tapes"/>
+                    
+                    <meta property="og:description" content="Si vous êtes à l&#8217;aise avec le XAML, passez directement à l&#8217;etape 4.
+
+
+Introduction
+
+
+
+ Le slider est un control XAML des plus basique. Il est très simple à mettre en place. Cependant, je lui reproche son manque de personnalisation. Si il est aisé de changer sa couleur de fond ou sa largeur, nous sommes vite limités. Naturellement, si nous souhaitons augmenter la hauteur de notre Slider, nous pensons à augmenter la valeur de l’attribut Height. Essayons.
+
+
+
+ Le premier Slider a la Height par défaut. Le second possède une Height à 200.
+
+
+
+ Décevant n&#8217;est-ce pas&#160;? Nous avons agrandi la taille du control mais le slider en lui-même n&#8217;a pas bougé.
+
+
+
+ Habituellement pour toute personnalisation d&#8217;un Slider, il est de rigueur d&#8217;en éditer le template.
+
+
+
+ Je vais vous proposer une autre solution. Nous remarquons un léger problème. Si nous glissons le doigt le long du bas du control, nous prennons la main sur le slider sans vraiment le toucher. C&#8217;est grâce à cette feature que l&#8217;astuce que je vais vous présenter fonctionne.
+
+
+N&#8217;hésitez pas à tester chaque snippet tout au long de l&#8217;article.
+
+
+1ère Etape
+
+
+
+ Dans un StackPanel, nous allons placer une Grid et un Slider. Nous nommons le StackPanel &#8220;ContainerSlider&#8221;, la Grid &#8220;FakeSlider1&#8221; et le Slider &#8220;Slider1&#8221;. Ensuite, bindons l&#8217;attribut Maximum à l&#8217;ActualWidth de ContainerSlider1 et bindons la Width de la Grid à la Value de Slider1
+
+
+
+
+
+
+
+&lt;StackPanel x:Name="ContainerSlider1"&gt;
+    &lt;Grid x:Name="FakeSlider1" HorizontalAlignment="Left" Background="Orange" Height="24" Width="{Binding ElementName=Slider1, Path=Value }" /&gt;
+    &lt;Slider x:Name="Slider1" Minimum="0" Maximum="{Binding ActualWidth, ElementName=ContainerSlider1}" Value="50" /&gt;
+&lt;/StackPanel&gt; 
+
+
+
+2e Etape
+
+
+
+ Dans notre code, remplaçons le StackPanel par une Grid. Ajoutons à ContainerSlider1 un Background BlueViolet. Ce qui nous intéresse ici, c&#8217;est la superposition propre à l&#8217;élément Grid. ContainerSlider1 prend la taille de Slider1. Slider1 qui est le dernier élément de ContainerSlider1 se trouve au premier plan.
+
+
+
+
+
+
+
+&lt;Grid x:Name="ContainerSlider1" Background="BlueViolet"&gt;
+    &lt;Grid x:Name="FakeSlider1"  Background="Orange" HorizontalAlignment="Left" Width="{Binding Value, ElementName=Slider1}"&gt;&lt;/Grid&gt;
+    &lt;Slider x:Name="Slider1" Height="100" Minimum="0" Maximum="{Binding ActualWidth, ElementName=ContainerSlider1}" Value="50" /&gt;
+&lt;/Grid&gt;
+
+
+
+
+3e Etape
+
+
+
+ A présent nous allons régler l&#8217;opacité de Slider1 à 0 et changer les couleurs de nos Grid. Je trouve qu&#8217;à ce stade nous avons déjà un rendu plutôt intéressant. Qu&#8217;en pensez-vous&#160;?
+
+
+
+
+
+
+
+&lt;Grid x:Name="ContainerSlider1" Background="{StaticResource PhoneChromeBrush}"&gt;
+    &lt;Grid x:Name="FakeSlider1" Background="{StaticResource PhoneAccentBrush}" HorizontalAlignment="Left" Width="{Binding Value, ElementName=Slider1}"&gt;&lt;/Grid&gt;
+    &lt;Slider x:Name="Slider3" Opacity="0" Height="100" Minimum="0" Maximum="{Binding ActualWidth, ElementName=ContainerSlider1}" Value="50" /&gt;
+&lt;/Grid&gt;
+
+
+
+
+4e Etape
+
+
+
+ Nous allons créer un curseur. Insérons une nouvelle Grid entre Slider1 et FakeSlider1. Nous nommons cette Grid &#8220;Cursor1&#8221;. Sa largeur est de 20. Afin que notre curseur soit toujours à droite de FakeSlider, nous allons les placer dans un StackPanel horizontale. Pour centrer le curseur, il suffit de lui ajouter une marge négative à gauche équivalente à la moitié de sa largeur. Avec une largeur de 20, nous obtenons une marge de -10.
+
+
+
+
+
+
+
+&lt;Grid x:Name="ContainerSlider1" Background="{StaticResource PhoneChromeBrush}"&gt;
+    &lt;StackPanel Orientation="Horizontal"&gt;
+        &lt;Grid x:Name="FakeSlider1" Background="{StaticResource PhoneAccentBrush}" Width="{Binding Value, ElementName=Slider1}"&gt;&lt;/Grid&gt;
+        &lt;Grid x:Name="Cursor1" Width="20" Margin="-10,0,0,0" Background="{StaticResource PhoneForegroundBrush}"/&gt;
+    &lt;/StackPanel&gt;
+    &lt;Slider x:Name="Slider1" Opacity="0" Height="100" Minimum="0" Maximum="{Binding ActualWidth, ElementName=ContainerSlider1}" Value="50" /&gt;
+&lt;/Grid&gt;
+
+
+
+
+5e Etape
+
+
+
+ Cette étape sert à rendre le comportement du curseur plus réaliste. En fonction de la localisation du curseur, nous modifierons la valeur de la marge.
+
+
+
+private void Slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs&lt;double&gt; e)
+{
+    if (Slider1 != null)
+        Cursor1.Margin = SetCursorMargin(ContainerSlider1.ActualWidth, Cursor1.Width, e.NewValue);
+}
+
+private Thickness SetCursorMargin(double containerWidth, double thumbWidth, double sliderValue)
+{
+    Thickness marginCursor = new Thickness();
+    double cursorWidthHalf = thumbWidth / 2;
+    if (sliderValue &lt; cursorWidthHalf)
+        marginCursor.Left = -sliderValue;
+    else if (sliderValue &gt; containerWidth - cursorWidthHalf)
+        marginCursor.Left = -(thumbWidth + sliderValue - containerWidth);
+    else
+        marginCursor.Left = -thumbWidth / 2;
+    return marginCursor;
+}
+
+
+J&#8217;ai fait en sorte  de rendre le code ci-dessus le plus compréhensible possible, quitte à mettre de côté des questions de performance. Il n&#8217;en est pas sujet ici.
+
+
+Aller plus loin
+
+
+ Ce slider n&#8217;est rien d&#8217;autre qu&#8217;un ensemble de Grid. On peut mettre absolument tout et n&#8217;importe quoi dedans. Vous pouvez parfaitement remplacer le curseur par une image, du texte, une vidéo, un calendrier, etc.
+
+
+
+
+
+
+
+tl;dr
+
+
+ Il est possible de créer un slider facilement manipulable et modifiable avec deux Binding et un slider classique. Il suffit de rendre le slider invisible et de compter sur sa large zone tactile.
+
+
+
+ Retrouvez l&#8217;ensemble des sources de cet article sur mon GitHub"/>
+                    <meta property="og:image" content="http://24.media.tumblr.com/avatar_aab91af5343a_128.png"/>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            
+        
+                
+        <!-- CSS -->
+        <style type="text/css">
+            /* General Settings */
+            body {
+                font-family: "PT Sans", sans-serif;
+                font-weight: 400;
+                -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+                -webkit-font-smoothing: antialiased;
+                margin: 0 0 0 0;
+            }
+            img, img a {
+                border-style: none;
+                border: 0px;
+                text-decoration: none;
+            }
+            /* Sidebar */
+            #sidebar {
+                width: 300px;
+                min-height: 100%;
+                position: fixed;
+                overflow: hidden;
+                background-color: #ffffff;
+            }
+            #sidebar .logo .img {
+                width: 140px;
+                height: 140px;
+                display: block;
+                margin-top: 30px;
+                margin-left: 40px;
+                background-image: url("http://static.tumblr.com/47a3f95cb13c85e5c6b35e7731f8757a/vwgert9/ExBmte6m9/tumblr_static_archplain.png");
+                background-size: 140px 140px;
+                background-repeat: no-repeat;
+        		background-color:transparent;
+    			background-position:center center;
+            }
+            #sidebar .logo h1 {
+                text-transform: uppercase;
+                font-family: "Oswald", sans-serif;
+                font-size: 28px;
+                margin-left: 40px;
+                margin-right: 30px;
+                margin-bottom: 5px;
+                color: #1a1a1a;
+            }
+            #sidebar .logo a {
+                text-decoration: none;
+            }
+            #sidebar .description {
+                font-size: 16px;
+                line-height: 24px;
+                margin-left: 40px;
+                margin-right: 30px;
+                margin-top: 0px;
+                color: #1a1a1a;
+            }
+            #sidebar .description a, #sidebar .description a:visited {
+                text-decoration: none;
+                font-weight: 600;
+                color: #ff7400;
+            }
+            #sidebar .description a:hover {
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -ms-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                color: #fff;
+                background-color: #ff7400;
+            }
+            #sidebar .navigation {
+                display: block;
+                clear:both;
+                width: 50%;
+                margin-top: 10px;
+            }
+            #sidebar .navigation a {
+                display: inline-block;
+                text-decoration: none;
+                border: 3px solid;
+                border-radius: 30px;
+                border-color: #efefef;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 14px;
+                padding: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-top: 12px;
+                margin-left: 30px;
+                webkit-border-radius: 30px;
+                moz-border-radius: 30px;
+                color: #7f7f7f;
+            }
+            #sidebar .navigation a:hover {
+                -webkit-transition: all 0.25s ease;
+                -moz-transition: all 0.25s ease;
+                -ms-transition: all 0.25s ease;
+                -o-transition: all 0.25s ease;
+                transition: all 0.25s ease;
+                color: #ff7400;
+                border-color: #ff7400;
+            }
+            /* Main Content */
+            #main {
+                margin-left: 300px;
+                background-color: #fff;
+                border-left: 1px solid #e3e3e3;
+                min-height: 900px;
+            }
+            /* Date */
+            #date {
+                padding-top: 40px;
+                border-top: 1px solid #e3e3e3;
+            }
+            #date a, #date a:visited {
+                font-size: 14px;
+                font-weight: 600;
+                margin-left: 40px;
+                text-decoration: none;
+                color: #7f7f7f;
+            }
+            #date a:hover {
+                -webkit-transition: all 0.25s ease;
+                -moz-transition: all 0.25s ease;
+                -ms-transition: all 0.25s ease;
+                -o-transition: all 0.25s ease;
+                transition: all 0.25s ease;
+                color: #ff7400;
+            }
+            /* Post */
+            #post {
+                margin-left: 40px;
+                margin-right: 40px;
+                max-width: 700px;
+                padding-bottom: 50px;
+            }
+            #post a {
+                text-decoration: none;
+            }
+            #post .text {
+                font-size: 16px;
+                line-height: 24px;
+                color: #1a1a1a;
+            }
+            #post .text img {
+                width: 100%;
+                height: auto;
+                url("");
+                margin-top: 10px;
+            }
+            #post .text img a:hover {
+                text-decoration: none;
+            }   
+            #post .text a, #post .text a:visited {
+                text-decoration: none;
+                font-weight: bold;
+                color: #ff7400;
+            }
+            #post .text a:hover {
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -ms-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                color: #fff;
+                background-color: #ff7400;  
+            }
+            #post .text h3 {
+                margin-top: 40px;
+            }
+            #post .text h2 {
+                font-family: "socialicoregular";
+                font-size: 60px;
+                color: #7f7f7f;
+            }
+            #post .text h2 a, #post .text h2 a:visited {
+                text-decoration: none;
+                font-weight: normal;
+                color: #7f7f7f;
+            }
+            #post .text h2 a:hover {
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -ms-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                background-color: #fff;
+                color: #ff7400;
+            }
+            #post .text ul, #post .text ol {
+                margin-left: 0;
+                margin-bottom: 20px;
+                padding-left: 7%;
+            }
+            #post .text ul {
+                display: block;
+                list-style-type: line;
+            }
+            #post .text ol {
+                display: block;
+                list-style: decimal;
+            }
+            #post .text li {
+                line-height: 24px;
+                margin-top: 10px;
+                color: #1a1a1a;
+            }
+            #post blockquote {
+                margin: 0;
+                padding-left: 5%;
+                border-left: solid 4px #ff7400;
+            }
+            #post .title {
+                font-family: "Oswald", sans-serif;
+                font-size: 24px;
+                margin-top: 20px;
+                font-weight: 400;
+                color: #1a1a1a;
+            }
+            #post .title a {
+                text-decoration: none;
+                color: #1a1a1a;
+            }
+            #post .quote {
+                font-family: "Oswald", sans-serif;
+                font-size: 24px;
+                font-weight: 400;
+                margin-top: 20px;
+                color: #1a1a1a;
+            }
+            #post img {
+                margin-top: 20px;
+                width: 100%;
+            }
+            #post .photoset {
+                margin-top: 20px;
+                width: 100%;
+            }
+            #post .video {
+                width: 100%;
+            }
+            #post .audio {
+                margin-top: 20px;
+            }
+            #post .audiocaption {
+                font-size: 14px;
+                color: #1a1a1a;
+            }
+            /* Responsive videos */
+            .video {
+                position: relative;
+                padding-bottom: 56.25%; /* 16/9 ratio */
+                height: 0;
+                overflow: hidden;
+            }
+            .video iframe,
+            .video object,
+            .video embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            /* Responsive media */
+            .embed-container {
+                position: relative;
+                padding-bottom: 56.25%; /* 16/9 ratio */
+                height: 0;
+                overflow: hidden;
+            }
+            .embed-container iframe,
+            .embed-container object,
+            .embed-container embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            /* Social */
+            #social {
+                border-top: 1px solid #e3e3e3;
+                padding-top: 25px;
+                padding-bottom: 20px;
+            }
+            .social_links {
+                margin-left: 40px;
+            }
+            .fb-like {
+            vertical-align: top;
+            }
+            /* Post Footer */
+            #postfooter {
+                border-top: 1px solid #e3e3e3;
+                padding-top: 40px;
+                padding-bottom: 100px;
+            }
+            #postfooter a, #postfooter a:visited {
+                float: left;
+                margin-left: 40px;
+                text-decoration: none;
+                border: 3px solid;
+                border-radius: 30px;
+                font-weight: 600;
+                moz-border-radius: 30px;
+                padding: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+                text-transform: uppercase;
+                webkit-border-radius: 30px;
+                border-color: #ff7400;
+                color: #ff7400;
+            }
+            #postfooter a:hover {
+                -webkit-transition: all 0.25s ease;
+                -moz-transition: all 0.25s ease;
+                -ms-transition: all 0.25s ease;
+                -o-transition: all 0.25s ease;
+                transition: all 0.25s ease;
+                border-color: #1a1a1a;
+                color: #1a1a1a;
+            }
+            /* Disqus */
+            #disqus_thread {
+                margin-left: 40px;
+                margin-right: 40px;
+                max-width: 700px;
+                padding-bottom: 50px;
+            }
+            /* Pagination */
+            #pagination {
+                border-top: 1px solid #e3e3e3;
+                padding-top: 40px;
+                padding-bottom: 100px;
+            }
+            #pagination .next {
+                display: block;
+                float: right;
+                margin-right: 40px;
+            }
+            #pagination .prev {
+                display: block;
+                float: left;
+                margin-left: 40px;
+            }
+            #pagination .prev a, #pagination .prev a:visited, #pagination .next a, #pagination .next a:visited {
+                text-decoration: none;
+                border: 3px solid;
+                border-radius: 30px;
+                font-weight: 600;
+                moz-border-radius: 30px;
+                padding: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+                text-transform: uppercase;
+                webkit-border-radius: 30px;
+                border-color: #ff7400;
+                color: #ff7400;
+            }
+            #pagination .prev a:hover, #pagination .next a:hover {
+                -webkit-transition: all 0.25s ease;
+                -moz-transition: all 0.25s ease;
+                -ms-transition: all 0.25s ease;
+                -o-transition: all 0.25s ease;
+                transition: all 0.25s ease;
+                border-color: #1a1a1a;
+                color: #1a1a1a;
+            }
+            /* Start of Media Queries */
+            /* Large desktops ----------- */
+            @media only screen and (min-width: 1281px) {
+                #sidebar {
+                    width: 400px;
+                }
+                #sidebar .logo .img {
+                	width: 200px;
+                	height: 200px;
+                	margin-left: 50px;
+                	background-size: 200px 200px;
+                }
+                #sidebar .logo h1 {
+                	font-size: 30px;
+                	margin-left: 50px;
+                    margin-right: 40px;
+                    margin-bottom: 8px;
+                }
+                #sidebar .description {
+                	font-size: 18px;
+                	line-height: 26px;
+                	margin-left: 50px;
+                    margin-right: 40px;
+                    margin-top: 0px;
+                }
+                #sidebar .navigation a {
+                	font-size: 18px;
+                	margin-top: 16px;
+                	margin-left: 38px;
+                    padding: 12px;
+                    padding-left: 24px;
+                    padding-right: 24px;
+                    border: 4px solid;
+                    border-color: #efefef;
+                }
+                #main {
+                	margin-left: 400px;
+                }
+                #date {
+                    padding-top: 50px;
+                }
+                #date a, #date a:visited {
+                	font-size: 16px;
+                	margin-left: 50px;
+                }
+                #post {
+                	margin-left: 50px;
+                	margin-right: 50px;
+                	max-width: 900px;
+                }
+                #post .text {
+                	font-size: 18px;
+                	line-height: 26px;
+                }
+                #post .title {
+                	font-size: 26px;
+                }
+                #post .quote {
+                	font-size: 26px;
+                }
+                #post .audiocaption {
+                	font-size: 16px;
+                }
+                .social_links {
+                margin-left: 50px;
+                }
+                
+                #postfooter a, #postfooter a:visited {
+                	margin-left: 50px;
+                }
+                #disqus_thread {
+                    margin-left: 50px;
+                    margin-right: 50px;
+                    max-width: 900px;
+                }
+                #pagination .next {
+                	margin-right: 50px;
+                }
+                #pagination .prev {
+                	margin-left: 50px;
+                }
+            }
+            /* Tablets (Portrait) ----------- */
+            @media only screen and (max-width: 800px) {
+                #sidebar {
+                    display: block;
+                	height: auto;
+                	margin: 0;
+                	padding: 0;
+                    padding-bottom: 40px;
+                	position: relative;
+                	text-align: center;
+                	width: auto;
+                }
+                #sidebar .logo .img {
+                	margin-left: 0px;
+                    margin: 20px auto;
+                }
+                #sidebar .logo h1 {
+                	margin-left: 6%;
+                	margin-right: 6%;
+                }
+                #sidebar .description {
+                	margin-left: 6%;
+                	margin-right: 6%;
+                }
+                #sidebar .navigation {
+                	display: inline-block;
+                    width: 100%;
+                }
+                #sidebar .navigation a {
+                	margin-left: 2px;
+                    margin-right: 2px;
+                }
+                #main {
+                    margin-left: 0px;
+                    margin-right: 0px;
+                    border-left: none;
+                    min-height: auto;
+                }
+                #date a, #date a:visited {
+                    margin-left: 6%;
+                }
+                #post {
+                	margin-left: 6%;
+                    margin-right: 6%;
+                    max-width: 768px;
+                }
+                .social_links {
+                margin-left: 6%;
+                }
+                #postfooter a, #postfooter a:visited {
+                	margin-left: 6%;
+                }
+                #disqus_thread {
+                    margin-left: 6%;
+                    margin-right: 6%;
+                    max-width: 768px;
+                }
+                #pagination .next {
+                	margin-right: 6%;
+                }
+                #pagination .prev {
+                	margin-left: 6%;
+                }
+            }
+            /* Tablets (Landscape) ----------- */
+            @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+                #sidebar {
+                    position: absolute;
+                }
+            }
+            /* Retina Displays ----------- */ 
+            @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+                #sidebar .logo .img {
+                    background-image: url("http://static.tumblr.com/39489dd5dbfcfac98661e009eab1948f/vwgert9/y9Vmte6mr/tumblr_static_archplain400.png");
+                }
+            }
+        </style>
+        <!-- Canonical URL -->
+        
+            <link rel="canonical" href="http://aloisdg.tumblr.com/post/62201179204/faire-un-slider-xaml-complet-en-5-petites-etapes">
+        
+        <!-- Custom CSS -->
+        <style>
+            .com { color: #008000; }
+.str, .tag { color: #A31515; }
+.kwd, .atv { color: #0000FF; }
+.typ { color: #2B91AF; }
+.lit, .atn { color: #FF0000; }
+.pun, .pln { color: #000000; }
+.dec { color: purple; }
+        </style>
+        <style>
+pre.prettyprint {
+overflow-x: auto;
+margin: 5px 20px 20px;
+}
+</style>
+    <!-- TWITTER TAGS -->
+<meta charset="utf-8">
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:description" content="Si vous &ecirc;tes &agrave; l&amp;#8217;aise avec le XAML, passez directement &agrave; l&amp;#8217;etape 4.
+
+Introduction
+
+ Le slider est un control XAML des plus basique. Il est tr&egrave;s simple &agrave; mettre en place. Cependant, je lui reproche son manque de personnalisation. Si il est ais&eacute; de changer sa couleur de fond ou sa largeur, nous sommes vite limit&eacute;s. Naturellement, si nous souhaitons augmenter la hauteur de notre Slider, nous pensons &agrave; augmenter la valeur de l&rsquo;attribut Height. Essayons.
+
+ Le premier Slider a la Height par d&eacute;faut. Le second poss&egrave;de une Height &agrave; 200.
+
+ D&eacute;cevant n&amp;#8217;est-ce pas&amp;#160;? Nous avons agrandi la taille du control mais le slider en lui-m&ecirc;me n&amp;#8217;a pas boug&eacute;.
+
+ Habituellement pour toute personnalisation d&amp;#8217;un Slider, il est de rigueur d&amp;#8217;en &eacute;diter le template.
+
+ Je vais vous proposer une autre solution. Nous remarquons un l&eacute;ger probl&egrave;me. Si nous glissons le doigt le long du bas du control, nous prennons la main sur le slider sans vraiment le toucher. C&amp;#8217;est gr&acirc;ce &agrave; cette feature que l&amp;#8217;astuce que je vais vous pr&eacute;senter fonctionne.
+
+N&amp;#8217;h&eacute;sitez pas &agrave; tester chaque snippet tout au long de l&amp;#8217;article.
+
+1&egrave;re Etape
+
+ Dans un StackPanel, nous allons placer une Grid et un Slider. Nous nommons le StackPanel &amp;#8220;ContainerSlider&amp;#8221;, la Grid &amp;#8220;FakeSlider1&amp;#8221; et le Slider &amp;#8220;Slider1&amp;#8221;. Ensuite, bindons l&amp;#8217;attribut Maximum &agrave; l&amp;#8217;ActualWidth de ContainerSlider1 et bindons la Width de la Grid &agrave; la Value de Slider1
+
+
+
+&amp;lt;StackPanel x:Name=&quot;ContainerSlider1&quot;&amp;gt;
+    &amp;lt;Grid x:Name=&quot;FakeSlider1&quot; HorizontalAlignment=&quot;Left&quot; Background=&quot;Orange&quot; Height=&quot;24&quot; Width=&quot;{Binding ElementName=Slider1, Path=Value }&quot; /&amp;gt;
+    &amp;lt;Slider x:Name=&quot;Slider1&quot; Minimum=&quot;0&quot; Maximum=&quot;{Binding ActualWidth, ElementName=ContainerSlider1}&quot; Value=&quot;50&quot; /&amp;gt;
+&amp;lt;/StackPanel&amp;gt; 
+
+2e Etape
+
+ Dans notre code, rempla&ccedil;ons le StackPanel par une Grid. Ajoutons &agrave; ContainerSlider1 un Background BlueViolet. Ce qui nous int&eacute;resse ici, c&amp;#8217;est la superposition propre &agrave; l&amp;#8217;&eacute;l&eacute;ment Grid. ContainerSlider1 prend la taille de Slider1. Slider1 qui est le dernier &eacute;l&eacute;ment de ContainerSlider1 se trouve au premier plan.
+
+
+
+&amp;lt;Grid x:Name=&quot;ContainerSlider1&quot; Background=&quot;BlueViolet&quot;&amp;gt;
+    &amp;lt;Grid x:Name=&quot;FakeSlider1&quot;  Background=&quot;Orange&quot; HorizontalAlignment=&quot;Left&quot; Width=&quot;{Binding Value, ElementName=Slider1}&quot;&amp;gt;&amp;lt;/Grid&amp;gt;
+    &amp;lt;Slider x:Name=&quot;Slider1&quot; Height=&quot;100&quot; Minimum=&quot;0&quot; Maximum=&quot;{Binding ActualWidth, ElementName=ContainerSlider1}&quot; Value=&quot;50&quot; /&amp;gt;
+&amp;lt;/Grid&amp;gt;
+
+
+3e Etape
+
+ A pr&eacute;sent nous allons r&eacute;gler l&amp;#8217;opacit&eacute; de Slider1 &agrave; 0 et changer les couleurs de nos Grid. Je trouve qu&amp;#8217;&agrave; ce stade nous avons d&eacute;j&agrave; un rendu plut&ocirc;t int&eacute;ressant. Qu&amp;#8217;en pensez-vous&amp;#160;?
+
+
+
+&amp;lt;Grid x:Name=&quot;ContainerSlider1&quot; Background=&quot;&quot;&amp;gt;
+    &amp;lt;Grid x:Name=&quot;FakeSlider1&quot; Background=&quot;&quot; HorizontalAlignment=&quot;Left&quot; Width=&quot;{Binding Value, ElementName=Slider1}&quot;&amp;gt;&amp;lt;/Grid&amp;gt;
+    &amp;lt;Slider x:Name=&quot;Slider3&quot; Opacity=&quot;0&quot; Height=&quot;100&quot; Minimum=&quot;0&quot; Maximum=&quot;{Binding ActualWidth, ElementName=ContainerSlider1}&quot; Value=&quot;50&quot; /&amp;gt;
+&amp;lt;/Grid&amp;gt;
+
+
+4e Etape
+
+ Nous allons cr&eacute;er un curseur. Ins&eacute;rons une nouvelle Grid entre Slider1 et FakeSlider1. Nous nommons cette Grid &amp;#8220;Cursor1&amp;#8221;. Sa largeur est de 20. Afin que notre curseur soit toujours &agrave; droite de FakeSlider, nous allons les placer dans un StackPanel horizontale. Pour centrer le curseur, il suffit de lui ajouter une marge n&eacute;gative &agrave; gauche &eacute;quivalente &agrave; la moiti&eacute; de sa largeur. Avec une largeur de 20, nous obtenons une marge de -10.
+
+
+
+&amp;lt;Grid x:Name=&quot;ContainerSlider1&quot; Background=&quot;&quot;&amp;gt;
+    &amp;lt;StackPanel Orientation=&quot;Horizontal&quot;&amp;gt;
+        &amp;lt;Grid x:Name=&quot;FakeSlider1&quot; Background=&quot;&quot; Width=&quot;{Binding Value, ElementName=Slider1}&quot;&amp;gt;&amp;lt;/Grid&amp;gt;
+        &amp;lt;Grid x:Name=&quot;Cursor1&quot; Width=&quot;20&quot; Margin=&quot;-10,0,0,0&quot; Background=&quot;&quot;/&amp;gt;
+    &amp;lt;/StackPanel&amp;gt;
+    &amp;lt;Slider x:Name=&quot;Slider1&quot; Opacity=&quot;0&quot; Height=&quot;100&quot; Minimum=&quot;0&quot; Maximum=&quot;{Binding ActualWidth, ElementName=ContainerSlider1}&quot; Value=&quot;50&quot; /&amp;gt;
+&amp;lt;/Grid&amp;gt;
+
+
+5e Etape
+
+ Cette &eacute;tape sert &agrave; rendre le comportement du curseur plus r&eacute;aliste. En fonction de la localisation du curseur, nous modifierons la valeur de la marge.
+
+private void Slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs&amp;lt;double&amp;gt; e)
+{
+    if (Slider1 != null)
+        Cursor1.Margin = SetCursorMargin(ContainerSlider1.ActualWidth, Cursor1.Width, e.NewValue);
+}
+
+private Thickness SetCursorMargin(double containerWidth, double thumbWidth, double sliderValue)
+{
+    Thickness marginCursor = new Thickness();
+    double cursorWidthHalf = thumbWidth / 2;
+    if (sliderValue &amp;lt; cursorWidthHalf)
+        marginCursor.Left = -sliderValue;
+    else if (sliderValue &amp;gt; containerWidth - cursorWidthHalf)
+        marginCursor.Left = -(thumbWidth + sliderValue - containerWidth);
+    else
+        marginCursor.Left = -thumbWidth / 2;
+    return marginCursor;
+}
+
+J&amp;#8217;ai fait en sorte  de rendre le code ci-dessus le plus compr&eacute;hensible possible, quitte &agrave; mettre de c&ocirc;t&eacute; des questions de performance. Il n&amp;#8217;en est pas sujet ici.
+
+Aller plus loin
+ Ce slider n&amp;#8217;est rien d&amp;#8217;autre qu&amp;#8217;un ensemble de Grid. On peut mettre absolument tout et n&amp;#8217;importe quoi dedans. Vous pouvez parfaitement remplacer le curseur par une image, du texte, une vid&eacute;o, un calendrier, etc.
+
+
+
+tl;dr
+ Il est possible de cr&eacute;er un slider facilement manipulable et modifiable avec deux Binding et un slider classique. Il suffit de rendre le slider invisible et de compter sur sa large zone tactile.
+
+ Retrouvez l&amp;#8217;ensemble des sources de cet article sur mon GitHub" />
+            <meta name="twitter:title" content="Faire un Slider XAML complet en 5 petites &eacute;tapes" />
+            <meta name="twitter:url" content="http://aloisdg.tumblr.com/post/62201179204/faire-un-slider-xaml-complet-en-5-petites-etapes" />
+            <meta name="twitter:site" content="tumblr" />
+            <meta name="twitter:app:name:iphone" content="Tumblr" />
+            <meta name="twitter:app:name:ipad" content="Tumblr" />
+            <meta name="twitter:app:name:googleplay" content="Tumblr" />
+            <meta name="twitter:app:id:iphone" content="305343404" />
+            <meta name="twitter:app:id:ipad" content="305343404" />
+            <meta name="twitter:app:id:googleplay" content="com.tumblr" />
+            <meta name="twitter:app:url:iphone" content="tumblr://x-callback-url/blog?blogName=aloisdg&amp;postID=62201179204&amp;referrer=twitter-cards" />
+            <meta name="twitter:app:url:ipad" content="tumblr://x-callback-url/blog?blogName=aloisdg&amp;postID=62201179204&amp;referrer=twitter-cards" />
+            <meta name="twitter:app:url:googleplay" content="tumblr://x-callback-url/blog?blogName=aloisdg&amp;postID=62201179204&amp;referrer=twitter-cards" />
+    
+
+<script type="text/javascript" src="http://assets.tumblr.com/assets/scripts/tumblelog.js?_v=530b76c3ccad06e5b7d907a6c515b841"></script>
+<meta http-equiv="x-dns-prefetch-control" content="off"/>
+
+<meta name="keywords" content="binding,xaml,slider" />
+
+</head>
+    <body>        
+        <!-- Facebook Script -->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/ca_EN/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <!-- Sidebar
+        ---------------------------------->
+        <div id="sidebar">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="/" title="alois dg">
+                    <span class="img"></span>
+                </a>
+                <a href="/" title="alois dg">
+                    <h1>alois dg</h1>
+			    </a>
+            </div>
+            <!-- Description -->
+            <div class="description">
+                <div style="color:#FF7400;display:inline;"><br />
+<a href="http://facebook.com/aloisdg" title="Facebook"  style="float:left; margin-right:6px;"><i class="icon-facebook-sign icon-large"></i></a><br />
+<a href="http://twitter.com/aloisdg" title="Twitter" style="float:left;margin-right:6px;"><i class="icon-twitter-sign icon-large"></i></a><br />
+<a href="http://github.com/aloisdg" title="Github" style="float:left;margin-right:6px;"><i class="icon-github-sign icon-large"></i></a><br />
+<a href="http://fr.linkedin.com/in/aloisdg" title="LinkedIn" style="float:left;"><i class="icon-linkedin-sign icon-large"></i></a><br />
+</div>
+            </div>
+            <!-- Navigation -->
+            <div class="navigation">
+                
+                
+                
+            </div>
+        </div>
+        <!-- Main Content
+        ---------------------------------->
+        <div id="main">
+        
+            <!-- Photo -->   
+            
+            <!-- Photoset -->
+            
+            <!-- Video -->
+            
+            <!-- Audio -->
+            
+            <!-- Quote -->
+            
+            <!-- Text -->
+            
+                <div id="date">
+                    <a href="http://aloisdg.tumblr.com/post/62201179204/faire-un-slider-xaml-complet-en-5-petites-etapes">
+                        25 September 2013
+                    </a>
+                    
+                    
+                </div>
+                <div id="post">
+                    <a href="http://aloisdg.tumblr.com/post/62201179204/faire-un-slider-xaml-complet-en-5-petites-etapes">
+                        
+                            <div class="title">Faire un Slider XAML complet en 5 petites &eacute;tapes</div>
+                        
+                    </a>
+                    <div class="text"><br/><em>Si vous êtes à l&#8217;aise avec le XAML, passez directement à <a href="#step4" title="go to step 4">l&#8217;etape 4.</a></em>
+
+<p style="font-size:24px;">Introduction</p>
+
+<p>Le slider est un control XAML des plus basique. Il est très simple à mettre en place. Cependant, je lui reproche son manque de personnalisation. Si il est aisé de changer sa couleur de fond ou sa largeur, nous sommes vite limités. Naturellement, si nous souhaitons augmenter la hauteur de notre Slider, nous pensons à augmenter la valeur de l’attribut Height. Essayons.</p>
+
+<center><a href="http://media.tumblr.com/188cc00eed6cf58341b76cb484220cfe/tumblr_inline_mtnkvty38g1sn9pf9.jpg" title="slider and border"><img src="http://media.tumblr.com/188cc00eed6cf58341b76cb484220cfe/tumblr_inline_mtnkvty38g1sn9pf9.jpg" alt="slider border" style="max-width:400px"/></a><br/><em>Le premier Slider a la Height par défaut. Le second possède une Height à 200.</em></center>
+
+<p>Décevant n&#8217;est-ce pas&#160;? Nous avons agrandi la taille du control mais le slider en lui-même n&#8217;a pas bougé.</p>
+
+<p>Habituellement pour toute personnalisation d&#8217;un Slider, il est de rigueur d&#8217;en éditer le template.</p>
+
+<p>Je vais vous proposer une autre solution. Nous remarquons un léger problème. Si nous glissons le doigt le <a href="http://3.bp.blogspot.com/_lXVrTUeY2SQ/TOctDbp4zyI/AAAAAAAACcc/ACjefJZddw4/s1600/NevilleYR1.jpg" title="" style="color:black; font-weight:normal;" onmouseover="this.style.background='#FFFFFF'" onmouseout="this.style.background='#FFFFFF'">long du bas</a> du control, nous prennons la main sur le slider sans vraiment le toucher. C&#8217;est grâce à <abbr title="ce bug">cette feature que l&#8217;astuce que je vais vous présenter fonctionne.</abbr></p>
+
+<em>N&#8217;hésitez pas à tester chaque snippet tout au long de l&#8217;article.</em>
+
+<p style="font-size:24px;">1<sup>ère</sup> Etape</p>
+
+<p>Dans un StackPanel, nous allons placer une Grid et un Slider. Nous nommons le StackPanel &#8220;ContainerSlider&#8221;, la Grid &#8220;FakeSlider1&#8221; et le Slider &#8220;Slider1&#8221;. Ensuite, bindons l&#8217;attribut Maximum à l&#8217;ActualWidth de ContainerSlider1 et bindons la Width de la Grid à la Value de Slider1</p>
+
+<center><a href="http://i.imgur.com/uP0rSP1.jpg" title="step 1"><img src="http://i.imgur.com/uP0rSP1.jpg" alt="slider border" style="max-width:400px"/></a></center>
+
+<pre class="prettyprint"><code>&lt;StackPanel x:Name="ContainerSlider1"&gt;
+    &lt;Grid x:Name="FakeSlider1" HorizontalAlignment="Left" Background="Orange" Height="24" Width="{Binding ElementName=Slider1, Path=Value }" /&gt;
+    &lt;Slider x:Name="Slider1" Minimum="0" Maximum="{Binding ActualWidth, ElementName=ContainerSlider1}" Value="50" /&gt;
+&lt;/StackPanel&gt; </code></pre>
+
+<p style="font-size:24px;">2<sup>e</sup> Etape</p>
+
+<p>Dans notre code, remplaçons le StackPanel par une Grid. Ajoutons à ContainerSlider1 un Background BlueViolet. Ce qui nous intéresse ici, c&#8217;est la superposition propre à l&#8217;élément Grid. ContainerSlider1 prend la taille de Slider1. Slider1 qui est le dernier élément de ContainerSlider1 se trouve au premier plan.</p>
+
+<center><a href="http://i.imgur.com/dw7swzX.jpg" title="step 2"><img src="http://i.imgur.com/dw7swzX.jpg" alt="slider border" style="max-width:400px"/></a></center>
+
+<pre class="prettyprint"><code>&lt;Grid x:Name="ContainerSlider1" Background="BlueViolet"&gt;
+    &lt;Grid x:Name="FakeSlider1"  Background="Orange" HorizontalAlignment="Left" Width="{Binding Value, ElementName=Slider1}"&gt;&lt;/Grid&gt;
+    &lt;Slider x:Name="Slider1" Height="100" Minimum="0" Maximum="{Binding ActualWidth, ElementName=ContainerSlider1}" Value="50" /&gt;
+&lt;/Grid&gt;
+</code></pre>
+
+<p style="font-size:24px;">3<sup>e</sup> Etape</p>
+
+<p>A présent nous allons régler l&#8217;opacité de Slider1 à 0 et changer les couleurs de nos Grid. Je trouve qu&#8217;à ce stade nous avons déjà un rendu plutôt intéressant. Qu&#8217;en pensez-vous&#160;?</p>
+
+<center><a href="http://i.imgur.com/xIK8FxW.jpg" title="step 3"><img src="http://i.imgur.com/xIK8FxW.jpg" alt="slider border" style="max-width:400px"/></a></center>
+
+<pre class="prettyprint"><code>&lt;Grid x:Name="ContainerSlider1" Background="{StaticResource PhoneChromeBrush}"&gt;
+    &lt;Grid x:Name="FakeSlider1" Background="{StaticResource PhoneAccentBrush}" HorizontalAlignment="Left" Width="{Binding Value, ElementName=Slider1}"&gt;&lt;/Grid&gt;
+    &lt;Slider x:Name="Slider3" Opacity="0" Height="100" Minimum="0" Maximum="{Binding ActualWidth, ElementName=ContainerSlider1}" Value="50" /&gt;
+&lt;/Grid&gt;
+</code></pre>
+
+<p style="font-size:24px;" id="step4">4<sup>e</sup> Etape</p>
+
+<p>Nous allons créer un curseur. Insérons une nouvelle Grid entre Slider1 et FakeSlider1. Nous nommons cette Grid &#8220;Cursor1&#8221;. Sa largeur est de 20. Afin que notre curseur soit toujours à droite de FakeSlider, nous allons les placer dans un StackPanel horizontale. Pour centrer le curseur, il suffit de lui ajouter une marge négative à gauche équivalente à la moitié de sa largeur. Avec une largeur de 20, nous obtenons une marge de -10.</p>
+
+<center><a href="http://i.imgur.com/lf8pUzd.jpg" title="step 4"><img src="http://i.imgur.com/lf8pUzd.jpg" alt="slider border" style="max-width:400px"/></a></center>
+
+<pre class="prettyprint"><code>&lt;Grid x:Name="ContainerSlider1" Background="{StaticResource PhoneChromeBrush}"&gt;
+    &lt;StackPanel Orientation="Horizontal"&gt;
+        &lt;Grid x:Name="FakeSlider1" Background="{StaticResource PhoneAccentBrush}" Width="{Binding Value, ElementName=Slider1}"&gt;&lt;/Grid&gt;
+        &lt;Grid x:Name="Cursor1" Width="20" Margin="-10,0,0,0" Background="{StaticResource PhoneForegroundBrush}"/&gt;
+    &lt;/StackPanel&gt;
+    &lt;Slider x:Name="Slider1" Opacity="0" Height="100" Minimum="0" Maximum="{Binding ActualWidth, ElementName=ContainerSlider1}" Value="50" /&gt;
+&lt;/Grid&gt;
+</code></pre>
+
+<p style="font-size:24px;">5<sup>e</sup> Etape</p>
+
+<p>Cette étape sert à rendre le comportement du curseur plus réaliste. En fonction de la localisation du curseur, nous modifierons la valeur de la marge.</p>
+
+<pre class="prettyprint"><code>private void Slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs&lt;double&gt; e)
+{
+    if (Slider1 != null)
+        Cursor1.Margin = SetCursorMargin(ContainerSlider1.ActualWidth, Cursor1.Width, e.NewValue);
+}
+
+private Thickness SetCursorMargin(double containerWidth, double thumbWidth, double sliderValue)
+{
+    Thickness marginCursor = new Thickness();
+    double cursorWidthHalf = thumbWidth / 2;
+    if (sliderValue &lt; cursorWidthHalf)
+        marginCursor.Left = -sliderValue;
+    else if (sliderValue &gt; containerWidth - cursorWidthHalf)
+        marginCursor.Left = -(thumbWidth + sliderValue - containerWidth);
+    else
+        marginCursor.Left = -thumbWidth / 2;
+    return marginCursor;
+}</code></pre>
+
+<em>J&#8217;ai fait en sorte  de rendre le code ci-dessus le plus compréhensible possible, quitte à mettre de côté des questions de performance. Il n&#8217;en est pas sujet ici.</em>
+
+<p style="font-size:24px;">Aller plus loin</p>
+<p>Ce slider n&#8217;est rien d&#8217;autre qu&#8217;un ensemble de Grid. On peut mettre absolument tout et n&#8217;importe quoi dedans. Vous pouvez parfaitement remplacer le curseur par une image, du texte, une vidéo, un calendrier, etc.</p>
+
+<center><a href="http://i.imgur.com/19Lg38X.jpg" title="slider bonus"><img src="http://i.imgur.com/19Lg38X.jpg" alt="slider border bonus" style="max-width:400px"/></a></center>
+
+<p style="font-size:24px;">tl;dr</p>
+<p>Il est possible de créer un slider facilement manipulable et modifiable avec deux Binding et un slider classique. Il suffit de rendre le slider invisible et de compter sur sa large zone tactile.</p>
+
+<p>Retrouvez l&#8217;ensemble des sources de cet article sur <a href="https://github.com/aloisdg/Slider" title="github slider">mon GitHub</a></p></div>
+                </div>
+            
+            <!-- Answer -->
+            
+            <!-- Chat -->
+            
+            <!-- Link -->
+            
+            <!-- Post Footer -->
+            
+            <div id="social">
+                <div class="social_links">
+                    <div class="g-plusone" data-size="medium"></div>
+                    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    <div class="fb-like" data-send="false" data-layout="button_count"></div>
+                </div>
+            </div>
+            <div id="postfooter">
+                
+                    
+                    
+                    
+                    <div id="disqus_thread"></div>
+                    <script>
+                        (function() {
+                            var disqus_url = "http://aloisdg.tumblr.com/post/62201179204/faire-un-slider-xaml-complet-en-5-petites-etapes";
+                            var disqus_title ="Faire un Slider XAML complet en 5 petites &eacute;tapes";
+                            var disqus_shortname = 'aloisdg';
+                            var dsq = document.createElement('script');
+                            dsq.type = 'text/javascript';
+                            dsq.async = true;
+                            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/">comments powered by Disqus.</a></noscript>
+                    
+                    
+                    
+                
+                <a href="/" title="Faire un Slider XAML complet en 5 petites &eacute;tapes">&larr; Read More</a>
+            </div>
+            
+        
+        <!-- Pagination -->
+        
+        </div>
+    <!-- BEGIN TUMBLR CODE -->
+        
+    
+        <iframe id="tumblr_controls" width="1" height="1" frameborder="0" scrolling="no" style="position:absolute; z-index:2147483647; top:0; right:0; border:0; background-color:transparent; overflow:hidden; " src="http://assets.tumblr.com/assets/html/iframe/o.html?_v=0f8339d83792f50916ca29c1a64ddfa0#src=http%3A%2F%2Faloisdg.tumblr.com%2Fpost%2F62201179204%2Ffaire-un-slider-xaml-complet-en-5-petites-etapes&amp;pid=62201179204&amp;rk=9fl8vG8F&amp;lang=en_US&amp;name=aloisdg&amp;brag=false&amp;avatar=http%3A%2F%2F25.media.tumblr.com%2Favatar_aab91af5343a_64.png&amp;title=alois+dg&amp;url=http%3A%2F%2Faloisdg.tumblr.com%2F&amp;page_slide=slide"></iframe>    <div id="teaser_iframe_container" style="display:none;"><iframe scrolling="no" frameborder="0" src="http://www.tumblr.com/assets/html/iframe/teaser.html#src=http%3A%2F%2Faloisdg.tumblr.com%2Fpost%2F62201179204%2Ffaire-un-slider-xaml-complet-en-5-petites-etapes&amp;pid=62201179204&amp;rk=9fl8vG8F&amp;lang=en_US&amp;name=aloisdg&amp;brag=false&amp;avatar=http%3A%2F%2F25.media.tumblr.com%2Favatar_aab91af5343a_64.png&amp;title=alois+dg&amp;url=http%3A%2F%2Faloisdg.tumblr.com%2F&amp;page_slide=slide" id="teaser_iframe" width="1" height="1"></iframe></div>
+
+<script type="text/javascript">
+    (function(Tumblr){
+        var follow_iframe_initialized = false;
+        if (Tumblr.FollowTeaser && Tumblr.PostMessageListener) {
+            // Don't do anything until the first initialize event
+            Tumblr.PostMessageListener.initialize(function(message, origin) {
+                if (follow_iframe_initialized || message.length < 2) return;
+
+                if (message[0] === 'follow_iframe' && message[1] === 'enable') {
+                    Tumblr.FollowTeaser.current_page = 1;
+                    Tumblr.FollowTeaser.infer_infinite_scroll = true;
+                    Tumblr.FollowTeaser.create_from_tumblr_controls('http://assets.tumblr.com/assets/html/iframe/follow.html?_v=0a154d6dc1bbb72ed95291d64cf96d0e');
+                    Tumblr.FollowTeaser.scroll_listener(true);
+                    follow_iframe_initialized = true;
+                }
+            });
+        }
+    })(this.Tumblr || (this.Tumblr = {}));
+</script>
+    
+    <!--[if IE]><script type="text/javascript">document.getElementById('tumblr_controls').allowTransparency=true;</script><![endif]-->
+    
+        
+<iframe src="http://assets.tumblr.com/analytics.html?63fae489732da54993e4a941e42dcf5e" scrolling="no" width="1" height="1" frameborder="0" style="background-color:transparent; overflow:hidden; position:absolute; top:0; left:0 z-index:9999;" id="ga_target"></iframe>
+
+    <script>
+        var COMSCORE = true;
+        window.setTimeout(function() {
+            var analytics_frame = document.getElementById('ga_target');
+            analytics_frame.contentWindow.postMessage('enable_comscore;' + window.location, analytics_frame.src.split('/analytics.html')[0]);
+        }, 1000);
+    </script>
+
+
+
+    <script type="text/javascript">
+      var _qevents = _qevents || [];
+
+      (function() {
+       var elem = document.createElement('script');
+
+       elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+       elem.async = true;
+       elem.type = "text/javascript";
+       var scpt = document.getElementsByTagName('script')[0];
+       scpt.parentNode.insertBefore(elem, scpt);
+      })();
+    </script>
+    <script type="text/javascript">
+        _qevents.push( { qacct: 'p-19UtqE8ngoZbM' } );
+    </script>
+    <noscript>
+        <div style="display: none;"><img src="//pixel.quantserve.com/pixel/'p-19UtqE8ngoZbM'.gif" height="1" width="1" alt="Quantcast"/></div>
+    </noscript>
+
+
+    <script type="text/javascript">!function(s){s.src='http://www.tumblr.com/impixu?T=1380681973&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvYWxvaXNkZy50dW1ibHIuY29tXC9wb3N0XC82MjIwMTE3OTIwNFwvZmFpcmUtdW4tc2xpZGVyLXhhbWwtY29tcGxldC1lbi01LXBldGl0ZXMtZXRhcGVzIiwicmVxdHlwZSI6MCwicm91dGUiOiJcL3Bvc3RcLzppZFwvOnN1bW1hcnkifQ==&U=MDPABGHKKK&K=14c0e102c96a3d83bedeeea6e2edb0607af1a7e6ef1c5a3b67ef7558bef28e32&R='.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="http://www.tumblr.com/impixu?T=1380681973&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvYWxvaXNkZy50dW1ibHIuY29tXC9wb3N0XC82MjIwMTE3OTIwNFwvZmFpcmUtdW4tc2xpZGVyLXhhbWwtY29tcGxldC1lbi01LXBldGl0ZXMtZXRhcGVzIiwicmVxdHlwZSI6MCwicm91dGUiOiJcL3Bvc3RcLzppZFwvOnN1bW1hcnkiLCJub3NjcmlwdCI6MX0=&U=MDPABGHKKK&K=ef8a22e0feb6cccfcb8fdb0f2401dc0239ec13773ee34c2d57d8a5d8c3a0fd22&R="></noscript><script type="text/javascript">!function(s){s.src='http://www.tumblr.com/impixu?T=1380681973&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Fsb2lzZGcudHVtYmxyLmNvbVwvcG9zdFwvNjIyMDExNzkyMDRcL2ZhaXJlLXVuLXNsaWRlci14YW1sLWNvbXBsZXQtZW4tNS1wZXRpdGVzLWV0YXBlcyIsInJlcXR5cGUiOjAsInJvdXRlIjoiXC9wb3N0XC86aWRcLzpzdW1tYXJ5IiwicG9zdHMiOlt7InBvc3RpZCI6IjYyMjAxMTc5MjA0IiwiYmxvZ2lkIjoiMTM3NDkwNTU0Iiwic291cmNlIjozM31dfQ==&U=AHAOJCCOPG&K=f5b9eec6fed39527b52d1a8e1facfe3944a20da3cc2c89324b1c62e6b651d817&R='.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="http://www.tumblr.com/impixu?T=1380681973&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Fsb2lzZGcudHVtYmxyLmNvbVwvcG9zdFwvNjIyMDExNzkyMDRcL2ZhaXJlLXVuLXNsaWRlci14YW1sLWNvbXBsZXQtZW4tNS1wZXRpdGVzLWV0YXBlcyIsInJlcXR5cGUiOjAsInJvdXRlIjoiXC9wb3N0XC86aWRcLzpzdW1tYXJ5IiwicG9zdHMiOlt7InBvc3RpZCI6IjYyMjAxMTc5MjA0IiwiYmxvZ2lkIjoiMTM3NDkwNTU0Iiwic291cmNlIjozM31dLCJub3NjcmlwdCI6MX0=&U=AHAOJCCOPG&K=d3477ab2eb70bb9e6151a80edb439d8c4aa02984c67ea36b0c8d2ada5ee516c4&R="></noscript><!-- END TUMBLR CODE -->
+</body>
+    <!-- Disqus -->
+    
+    <script>
+		var disqus_shortname = 'aloisdg';
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
+	
+    <!-- Google Analytics -->
+    
+    <script>
+        var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-44328232-1']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	
+    <!-- Google Plusone -->
+    <script type="text/javascript">
+        (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+    </script>
+</html>

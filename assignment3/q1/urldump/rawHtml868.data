@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<meta property="fb:admins" content="763699465" />
+	<meta property="og:url" content="http://www.hongkiat.com/blog/css3-border-shape/"/>
+	<meta property="og:title" content="A Look Into: CSS Border Corner Shape" />
+	<meta property="og:description" content="We have been seeing several new CSS3 features that are widely implemented, such as Rounded Corner, Box Shadow, and Text Shadow, just to name a few. Still, there are several features that are experimental, such as what we are going to discuss in this post: Border Corner Shape. Border Corner ... Continue reading &raquo;" />
+	<meta property="og:type" content="article" />
+	<meta property="og:image" content="http://media02.hongkiat.com/css3-border-shape/cover.jpg" />
+
+<title>CSS Border Corner Shape</title>
+
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700|Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href='http://static02.hongkiat.com/v5/css/style.min.css?0718' rel='stylesheet' type='text/css' media='screen, projection'>
+<link href='http://static04.hongkiat.com/v5/css/print.min.css' rel='stylesheet' type='text/css' media="print">
+<!--[if IE]><link rel='stylesheet' href="http://static04.hongkiat.com/v5/css/ie.css" type='text/css' media='screen, projection'><![endif]-->
+
+<!-- google dfp -->
+<script src='http://partner.googleadservices.com/gampad/google_service.js' type='text/javascript'></script>
+<script type='text/javascript'>
+	GS_googleAddAdSenseService("ca-pub-8918970543424762");
+	GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+	GA_googleAddSlot("ca-pub-8918970543424762", "hkdc_145x120-01");
+	GA_googleAddSlot("ca-pub-8918970543424762", "hkdc_145x120-02");
+	GA_googleAddSlot("ca-pub-8918970543424762", "hkdc_145x120-03");
+	GA_googleAddSlot("ca-pub-8918970543424762", "hkdc_sidebar_all_top-right_300x250");
+</script>
+<script type='text/javascript'>GA_googleFetchAds();</script>
+<!-- google dfp -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Hongkiat.com RSS Feed" href="http://feeds2.feedburner.com/24thfloor" />
+<link rel="pingback" href="http://www.hongkiat.com/blog/xmlrpc.php" />
+<link rel="shortcut icon" href="http://mediatemplestatic.hongkiat.netdna-cdn.com/logo/hkdc/favicon.ico" />
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
+<script type='text/javascript' src='http://static04.hongkiat.com/v5/js/include-top.min.js?0417-252'></script>
+<link rel="alternate" type="application/rss+xml" title="hongkiat.com &raquo; A Look Into: CSS Border Corner Shape Comments Feed" href="http://www.hongkiat.com/blog/css3-border-shape/feed/" />
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js?ver=3.6.1'></script>
+<link rel='prev' title='25 Fantasy Wallpapers For Your Desktop' href='http://www.hongkiat.com/blog/ww-fantasy-wallpapers/' />
+<link rel='next' title='35 Collage Photoshop Tutorials for Beginners (and Experts)' href='http://www.hongkiat.com/blog/collage-photoshop-tutorials/' />
+
+<link rel='shortlink' href='http://www.hongkiat.com/blog/?p=18205' />
+
+<!-- All in One SEO Pack 1.6.15.3 by Michael Torbert of Semper Fi Web Design[969,1034] -->
+<meta name="description" content="We have been seeing several new CSS3 features that are widely implemented, such as Rounded Corner, Box Shadow, and Text Shadow, just to name a few. Still," />
+<meta name="keywords" content="web design" />
+<link rel="canonical" href="http://www.hongkiat.com/blog/css3-border-shape/" />
+<!-- /all in one seo pack -->
+	<link href="http://mediatemplestatic.hongkiat.netdna-cdn.com/v5/js/google-syntax-highlighter/Styles/SyntaxHighlighter.css" type="text/css" rel="stylesheet" />
+	
+<!--Plugin Missed Schedule 2013.0130.2222 Active - Key Tag: bkytCi8L522P8RbgYIlkQbL6Yz4JDvIWlTlXN5q776Yvq5t7gxkCvB643C7osdFV6-->
+
+
+</head>
+
+<body>
+<a name="top"></a>
+
+<!-- stats -->
+<script type='text/javascript'>var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-275126-1"]);_gaq.push(["_trackPageview"]);(function(){var b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)})();</script>
+<!-- stats -->
+
+<!-- sticky header -->
+<div id="hSlideContainer">
+	<div id="hSlideContent">
+		<ul id="sliderLeft">
+		
+			<li class="hkdc_logo"><a href="/blog/#top">Back to Home, top</a></li>
+			
+						
+						<li id="hPrevNext">
+				<div class="prev"><a href="http://www.hongkiat.com/blog/collage-photoshop-tutorials/" rel="next">prev</a> </div>
+				<div class="next"><a href="http://www.hongkiat.com/blog/ww-fantasy-wallpapers/" rel="prev">next</a> </div>
+			</li>
+			
+			<li class="sharetxt">Share this post - </li>
+			<li class="fb"><div><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.hongkiat.com%2Fblog%2Fcss3-border-shape%2F&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=314604755231445" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe></div></li>
+			<li class="twitter"><div><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div></li>
+			<li class="gplus"><div><g:plusone size="medium" href="http://www.hongkiat.com/blog/css3-border-shape/"></g:plusone></div></li>
+			<li class="su"><div><script src="http://www.stumbleupon.com/hostedbadge.php?s=4"></script></div></li>
+						
+		</ul>
+		
+		<ul id="sliderRight">
+			<li class="searchbox">
+				<form id="searchform" method="get" action="/blog/search">
+				<input name="q" type="text" id="s" class="search" placeholder="E.g. Free vectors"/>
+				</form>			
+			</li>
+			<li class="btt"><a href="#top" title="Back to top">&uarr;</a></li>
+		</ul>
+	</div>
+</div>	
+<!-- sticky header -->
+
+
+	<!-- header type #1 -->
+	<div id="headerbanner01" class="clearfix">
+		<div class="headerbanner_wrap clearfix">
+				
+				<div class="s728">
+				<script type='text/javascript' src='http://static.fmpub.net/zone/4724'></script>
+				</div>
+				
+				<div class="s230">
+				<iframe src="/blog/wp-content/themes/v5/ads/230x90.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" style="" frameborder="0" scrolling="no" width="230" height="90"></iframe>
+				</div>
+		
+			
+		</div>
+	</div>
+	<!-- header type #1 -->
+	
+	<!-- header start -->
+	<div id="header" class="clearfix">
+		<div class="logorow clearfix">
+			<div class="thelogo">
+				<h1><a href="http://www.hongkiat.com/blog/">hongkiat.com</a></h1>
+			</div>
+			<div class="thebanner">
+				<iframe src="/blog/wp-content/themes/v5/ads/468x60.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" style="" frameborder="0" scrolling="no" width="468" height="60"></iframe>
+			</div>
+		</div>
+		
+		<div class="navirow clearfix">
+			<ul class="sf-menu">
+				<li class=" home"> <a href="/blog/">Home</a>
+					<ul>
+						<li><a href="/blog/about-us/">About Us</a></li>
+						<li><a href="/blog/advertise/">Advertise</a></li>
+						<li><a href="/blog/contact/">Contact us</a></li>
+						<li><a href="/blog/write-for-us/">Become an author</a></li>
+						<li><a href="/blog/submit-news-tips/">Submit tips</a></li>
+					</ul>
+				</li>
+				<li class=" photoshop"><a href="/blog/category/photoshop/">Photoshop</a></li>
+				<li class=" icons"><a href="/blog/category/free-icons/">Icons</a></li>
+				<li class="active design"><a href="/blog/category/design/">Design</a></li>
+				<li class=" wordpress"><a href="/blog/category/wordpress/">Wordpress</a></li>
+				<li class=" tools"><a href="/blog/category/tools/">Tools</a></li>
+				<li class=" inspiration"><a href="/blog/category/inspiration/">Inspiration</a></li>
+				<li class=" graphics"><a href="/blog/category/graphics/">Graphics</a></li>
+				<li class=" wallpapers"><a href="/blog/category/free-wallpapers/">Wallpapers</a></li>
+				<li class=" howto"><a href="/blog/category/how-to/">How-to</a></li>
+				<li class=" web20"><a href="/blog/category/web-20/">Web 2.0</a></li>
+                <!--
+				<li class=" freebies"><a href="/blog/category/freebies-online/">Freebies</a></li>
+                -->
+                <li class="deals"><a href="http://hongki.at/deals/">Deals</a></li>
+			</ul>
+			
+			<div class="searchbox">
+				<form id="searchform" method="get" action="/blog/search">
+				<input name="q" type="text" id="s" class="search" placeholder="E.g. Free vectors"/>
+				</form>
+			</div>
+		</div>
+		
+	</div>
+	<!-- header end -->
+	
+		
+	<div id="main" class="clearfix">
+		<div class="contentwrap"><div class="content single">
+  	<div class="post clearfix" id="post-18205">
+	   	
+		<!-- google_ad_section_start -->
+		<h1 >A Look Into: CSS Border Corner Shape</h1>
+		<!-- google_ad_section_end -->
+		
+		<!-- post meta -->
+		<div class="sMeta">
+			<p>
+				By 
+					<strong><a href="http://www.hongkiat.com/blog/author/hongkiat/" title="Posts by Hongkiat Lim" rel="author">Hongkiat Lim</a></strong>. 
+				<span class="cat">Filed in <a href="http://www.hongkiat.com/blog/category/design/" title="View all posts in Web Design" rel="category tag">Web Design</a></span>
+				<span class="edit"></span>
+			</p>  
+		</div>
+		
+		                    <!-- // -->
+                    <div class="gad_wrap"> 
+						<script language="JavaScript"> 
+						var google_adnum = 0;
+						function google_ad_request_done(google_ads) {	
+						var s = ''; var i;
+						if (google_ads.length == 0) { return; }
+							if (google_ads.length == 1) {		
+								s += '<div class=\"gad_adFeedback\"><a href=\"'+google_info.feedback_url+'\">Ads by Google</a></div><div class=\"gad_unit\"><a class=\"gad_adTitle\" href=\"'+google_ads[0].url+'\" onmouseout=\"window.status=\'\'\" onmouseover=\"window.status=\'go to '+google_ads[0].visible_url+';return true\'\"><span>'+google_ads[0].line1+'</span></a><a class=\"gad_adURL\" href=\"'+google_ads[0].url+'\" onmouseout=\"window.status=\'\'\" onmouseover=\"window.status=\'go to '+google_ads[0].visible_url+';return true\'\"><span>'+google_ads[0].visible_url+'</span></a> <span class=\"gad_adText\">'+google_ads[0].line2+' '+google_ads[0].line3+'</span></div>';
+							}
+							else if (google_ads.length > 1) {	
+								s += '<div class=\"gad_adFeedback\"><a href=\"' + google_info.feedback_url + '\">Ads by Google</a></div>';
+								for(i = 0; i < google_ads.length; ++i) {
+								s += '<div class=\"gad_unit\"><a class=\"gad_adTitle\" href=\"'+google_ads[i].url+'\" onmouseout=\"window.status=\'\'\" onmouseover=\"window.status=\'go to '+google_ads[i].visible_url+';return true\'\"><span>'+google_ads[i].line1+'</span></a><a class=\"gad_adURL\" href=\"'+google_ads[i].url+'\" onmouseout=\"window.status=\'\'\" onmouseover=\"window.status=\'go to '+google_ads[i].visible_url+';return true\'\"><span>'+google_ads[i].visible_url+'</span></a> <span class=\"gad_adText\">'+google_ads[i].line2+' '+google_ads[i].line3+'</span></div>';
+								}
+							}
+							if (google_ads[0].bidtype == "CPC") { 
+								google_adnum = google_adnum + google_ads.length;
+							}	
+						document.write(s);
+						return;
+						}
+						google_ad_client = 'pub-8918970543424762'; 
+						google_ad_channel = '0510687918';
+						google_ad_output = 'js'; 
+						google_max_num_ads = '1';
+						google_ad_type = 'text'; 
+						google_feedback = 'on';
+						google_skip = google_adnum;
+						</script> 
+						<script language="JavaScript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+					</div>
+                    <!-- /// -->
+                    			
+		<!-- content -->
+		<div class="sContent ">
+			<!-- google_ad_section_start -->    
+			<div class="series"><a href="http://www.hongkiat.com/blog/tag/series-html5-css3-tuts/">This article is part of our <strong>"HTML5/CSS3 Tutorials series&quot;</strong> - dedicated to help make you a better designer and/or developer. <strong><u>Click here</u></strong> to see more articles from the same series.</a></div>
+<p>We have been seeing several new <a href="http://www.hongkiat.com/blog/beginners-guide-to-css3/" rel="external">CSS3</a> features that are widely implemented, such as Rounded Corner, <a href="http://www.hongkiat.com/blog/css3-box-shadows-effects/" rel="external">Box Shadow</a>, and Text Shadow, just to name a few. Still, there are several features that are experimental, such as what we are going to discuss in this post: <strong><a href="http://dev.w3.org/csswg/css-backgrounds-4/#border-corner-shape0" rel="external">Border Corner Shape</a></strong>.</p>
+<p>Border Corner Shape allows us to manipulate element corners further. While we can create rounded corners by using <code>border-radius</code>, the Border Corner Shape allows us to form beveled corners, scoop-style corners, and rectangle-notch corners.</p>
+<p class="sw"><img src="http://media02.hongkiat.com/css3-border-shape/cover.jpg" width="500" height="300"></p>
+<h3>How to Use it</h3>
+<p>We use <code>border-corner-shape</code> to define the shape. At the time of the writing, it accepts four predefined shapes with the following values: <code>curve</code>, <code>scoop</code>, <code>bevel</code>, and <strong>notch</strong> &ndash; it is also proposed that we use <code>cubic-bezier</code> for forming custom shape (<a href="http://lists.w3.org/Archives/Public/www-style/2013Mar/0495.html" rel="external">see the proposal here</a>).</p>
+<p>It is worth noting that the <code>border-corner-shape</code> only declares <strong>the shape</strong>, while the <strong>length of the shape</strong> is specified using the <strong>border-radius</strong> property. So, to be able to see the result, when forming the shape these two properties should be declared together.</p>
+<pre name="code" class="css">
+.box {
+	background-color: #3498DB;
+	border-corner-shape: scoop;
+	border-radius: 30px;
+	width: 200px;
+	height: 200px;
+}
+</pre>
+<p>Given the example of the above style rules, we will get a result as shown in the following screenshot.</p>
+<p class="sw"><img src="http://media02.hongkiat.com/css3-border-shape/scoop.jpg" width="500" height="300"></p>
+<p>Let&#8217;s take a look at one more example. This time we specify the corner shape to <strong>bevel</strong>, and set the border radius for 50% except in <strong>the bottom right corner</strong>, as follows.</p>
+<pre name="code">
+.box {
+	background-color: #3498DB;
+	border-corner-shape: bevel;
+	border-radius: 50% 50% 0% 50%;
+	width: 200px;
+	height: 200px;
+}
+</pre>
+<p>The above style rules will give us the following result.</p>
+<p class="sw"><img src="http://media02.hongkiat.com/css3-border-shape/bevel.jpg" width="500" height="300"></p>
+<p>It is quite fascinating, isn&#8217;t it?</p>
+<h3>Thing to Note</h3>
+<p>Sadly, as I said earlier, the <code>border-corner-shape</code> property is experimental, and has not been implemented in any of the current browsers. So, it is not (yet) applicable. But, you can preview the demo, and play with the property syntax from <a href="http://leaverou.github.io/border-corner-shape/" rel="external">this app</a>, created by Lea Verou.</p>
+<p>What do you thing of this CSS feature? Do you want to see it implemented in the future? Are there any cases that this property can be very useful? Share your thoughts in the comment box below.</p>
+			
+						
+			<!-- google_ad_section_end -->
+					</div> 
+		
+		<!-- slider -->
+		<!--
+		<div id="slidebox">
+			<a class="close"></a>
+			<h6>Suggestion:</h6>
+			<div class="related">
+				<a href="">
+				<img src="" />
+				<span class="title"></span>
+				</a>
+			</div>
+		</div>
+		-->
+
+		<p id="last"></p>
+		
+		<!-- related post -->
+		<div class="sRelated_post clearfix">
+			<div class='yarpp-related'>
+
+
+<h4>You might like:</h4>
+<ol class="related-posts-thumbs clearfix">
+			<li>			<a href="http://www.hongkiat.com/blog/css-masking/" rel="bookmark" title="Web Design: Clipping and Masking With CSS" onClick="javascript: _gaq.push(['_trackPageview', '/hkdc/related-posts/bottom-black']);">
+			<img src="http://media03.hongkiat.com/thumbs/150x96/css-masking.jpg" title="Web Design: Clipping and Masking With CSS"/>
+			<span class="yarpp-title" onClick="javascript: _gaq.push(['_trackPageview', '/hkdc/related-posts/bottom-black/text']);">Web Design: Clipping and Masking With CSS</span>
+			</a>
+		</li>
+			<li>			<a href="http://www.hongkiat.com/blog/css3-border-image/" rel="bookmark" title="CSS3 Border-Image Property: Making Photos Really Cool!" onClick="javascript: _gaq.push(['_trackPageview', '/hkdc/related-posts/bottom-black']);">
+			<img src="http://media03.hongkiat.com/thumbs/150x96/css3-border-image.jpg" title="CSS3 Border-Image Property: Making Photos Really Cool!"/>
+			<span class="yarpp-title" onClick="javascript: _gaq.push(['_trackPageview', '/hkdc/related-posts/bottom-black/text']);">CSS3 Border-Image Property: Making Photos Really Cool!</span>
+			</a>
+		</li>
+			<li>			<a href="http://www.hongkiat.com/blog/rss-feed-logo-with-css3/" rel="bookmark" title="How to Create RSS Feed Logo with CSS3" onClick="javascript: _gaq.push(['_trackPageview', '/hkdc/related-posts/bottom-black']);">
+			<img src="http://media03.hongkiat.com/thumbs/150x96/rss-feed-logo-with-css3.jpg" title="How to Create RSS Feed Logo with CSS3"/>
+			<span class="yarpp-title" onClick="javascript: _gaq.push(['_trackPageview', '/hkdc/related-posts/bottom-black/text']);">How to Create RSS Feed Logo with CSS3</span>
+			</a>
+		</li>
+			<li>			<a href="http://www.hongkiat.com/blog/css-stitched-effect/" rel="bookmark" title="Creating a Stitched Effect Using CSS" onClick="javascript: _gaq.push(['_trackPageview', '/hkdc/related-posts/bottom-black']);">
+			<img src="http://media03.hongkiat.com/thumbs/150x96/css-stitched-effect.jpg" title="Creating a Stitched Effect Using CSS"/>
+			<span class="yarpp-title" onClick="javascript: _gaq.push(['_trackPageview', '/hkdc/related-posts/bottom-black/text']);">Creating a Stitched Effect Using CSS</span>
+			</a>
+		</li>
+	</ol>
+</div>
+		</div>
+	
+		  
+		<!-- author -->
+		<a name="theauthor"></a>
+		<div class="sAuthor">
+							
+				<div class="AuthorContainer clearfix"><a name="theauthor"></a>
+					<div class="AuthorPic"><img src="http://media05.hongkiat.com/author/hongkiat.jpg" class="aPhoto" /></div>
+					<div class="AuthorBio">
+						<h5><em>Author:</em> <span><a href="http://www.hongkiat.com/blog/author/hongkiat/" title="Posts by Hongkiat Lim" rel="author">Hongkiat Lim</a></span></h5>
+						<p>Founder and Chief Editor of Hongkiat.com, a designer, developer and hardcore fan of Apple. Follow him on <a href="http://www.twitter.com/hongkiat">Twitter</a>, or befriend him on <a href="http://www.facebook.com/hongkiat">Facebook</a>.</p>
+					</div>
+				</div>
+				
+					</div> 
+		
+		<!-- fm content well -->
+      	<script type='text/javascript' src='http://static.fmpub.net/zone/7972'></script>
+		<!-- fm content well -->
+		
+		<!-- post tags -->
+		<div class="sTags clearfix">
+			<span>Tags:</span> <ul><li><a href="http://www.hongkiat.com/blog/tag/border-corner-shape/" rel="tag">border-corner-shape</a></li><li><a href="http://www.hongkiat.com/blog/tag/coding/" rel="tag">coding</a></li><li><a href="http://www.hongkiat.com/blog/tag/css/" rel="tag">css</a></li></ul>		</div> 
+		 
+		<!-- after content --> 
+		<div class="sBF_banner">
+			<p class="UFSquareAd">Advertisement</p>
+			<iframe src="/blog/wp-content/themes/v5/ads/500x100.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" style="" frameborder="0" scrolling="no" width="500" height="100"></iframe> 
+		</div>      		    	
+	</div>
+    
+    
+<div id="disqus_thread">
+    </div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var disqus_url = 'http://www.hongkiat.com/blog/css3-border-shape/';
+    var disqus_identifier = '18205 http://www.hongkiat.com/blog/?p=18205';
+    var disqus_container_id = 'disqus_thread';
+    var disqus_domain = 'disqus.com';
+    var disqus_shortname = 'hongkiat';
+    var disqus_title = "A Look Into: CSS Border Corner Shape";
+        var disqus_config = function () {
+        var config = this; // Access to the config object
+        config.language = '';
+
+        /*
+           All currently supported events:
+            * preData — fires just before we request for initial data
+            * preInit - fires after we get initial data but before we load any dependencies
+            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
+            * afterRender - fires when template is rendered but before we show it
+            * onReady - everything is done
+         */
+
+        config.callbacks.preData.push(function() {
+            // clear out the container (its filled for SEO/legacy purposes)
+            document.getElementById(disqus_container_id).innerHTML = '';
+        });
+                config.callbacks.onReady.push(function() {
+            // sync comments in the background so we don't block the page
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = '?cf_action=sync_comments&post_id=18205';
+
+            var firstScript = document.getElementsByTagName( "script" )[0];
+            firstScript.parentNode.insertBefore(script, firstScript);
+        });
+                    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var DsqLocal = {
+        'trackbacks': [
+            {
+                'author_name':    "Tweet Parade (no.39 Sep 2013) - The Best Articles of Last Week | gonzoblog",
+                'author_url':    "http:\/\/www.gonzoblog.nl\/2013\/09\/28\/tweet-parade-no-39-sep-2013\/",
+                'date':            "09\/28\/2013 09:02 PM",
+                'excerpt':        "[&#8230;] A Look Into: CSS Border Corner Shape &#8211; Border Corner Shape allows us to manipulate element corners further. The &hellip;",
+                'type':            "pingback"            }
+,            {
+                'author_name':    "September 28, 2013: Weekly Roundup of Web Development and Design Resources",
+                'author_url':    "http:\/\/www.lireo.com\/september-28-2013-weekly-roundup-web-development-design-resources\/",
+                'date':            "09\/29\/2013 11:17 AM",
+                'excerpt':        "[&#8230;] A Look Into: CSS Border Corner Shape: The CSS3 Border Corner Shape feature, an experimental feature not yet implemented &hellip;",
+                'type':            "pingback"            }
+,            {
+                'author_name':    "How to Create Rounded Corners for Your Box Borders in CSS - Beginners Website",
+                'author_url':    "http:\/\/blogs.123beginners.com\/how-to-create-rounded-corners-for-your-box-borders-in-css\/",
+                'date':            "09\/29\/2013 03:59 PM",
+                'excerpt':        "[&#8230;] view plaincopy to clipboardprint? [&#8230;] ",
+                'type':            "pingback"            }
+,            {
+                'author_name':    "A Look Into: CSS Border Corner Shape - HackEinste.in - An InfoSec Blog",
+                'author_url':    "http:\/\/hackeinste.in\/a-look-into-css-border-corner-shape\/",
+                'date':            "09\/30\/2013 07:13 AM",
+                'excerpt':        "[&#8230;] hongkiat.com » Web Design [&#8230;] ",
+                'type':            "pingback"            }
+        ],
+        'trackback_url': "http:\/\/www.hongkiat.com\/blog\/css3-border-shape\/trackback\/"    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.' + 'disqus.com' + '/embed.js?pname=wordpress&pver=2.74';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+/* ]]> */
+</script>
+	
+    </div>
+
+<!-- -->
+	<!-- google_ad_section_start(weight=ignore) -->
+<div class="sidebar"> 
+
+	<div id="mc_embed_signup">
+	<form action="http://hongkiat.us1.list-manage.com/subscribe/post?u=2cad5936fa92d77b81f41d691&amp;id=e23e003d87" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+		<label for="mce-EMAIL">Get the latest in your Inbox for free.</label>
+		<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Insert email address" required>
+		<div class="clear"><input type="submit" value="Subscribe!" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+		<div style="clear:both"></div>
+	</form>
+	</div>
+	
+	<div class="block social_container clearfix">
+		<div class="facebook">
+			<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fhongkiatcom&amp;send=false&amp;layout=button_count&amp;width=95&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:95px; height:21px;" allowTransparency="true"></iframe>
+		</div>
+		
+		<div class="gplus">
+			<g:plusone size="medium" annotation="none" href="http://www.hongkiat.com/blog/"></g:plusone>
+		</div>
+		
+		<div class="twitter">
+			<a href="https://twitter.com/hongkiat" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false" data-width="150px">Follow @hongkiat</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>		
+		</div>		
+	</div>
+	
+	<div class="block bannerWrap clearfix" style="margin-bottom:10px;">
+		<div class="b300x250">     
+				
+        	<script type='text/javascript'>GA_googleAddSlot("ca-pub-8918970543424762", "300x250-Global-DesignerTools");</script>
+			<script type='text/javascript'>GA_googleFillSlot("300x250-Global-DesignerTools");</script>
+		
+		        
+        <!--
+        <iframe src="/blog/wp-content/themes/v5/ads/fm-300x250.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" style="" frameborder="0" scrolling="no" width="300" height="250"></iframe>
+        <script type='text/javascript'>GA_googleFillSlot("hkdc_sidebar_all_top-right_300x250");</script>
+        -->         
+		</div>
+	</div>
+	
+	<div class="block bannerWrap clearfix">
+	
+		<div class="b300x120">
+			<div id="bsap_1237809" class="bsarocks bsap_9d66286b452642a759aabeac9d39d265"></div>
+		</div>
+		<div class="b145x120 clearfix"><!--145x120 -->
+			<div id="bsap_1557" class="bsarocks bsap_9d66286b452642a759aabeac9d39d265"></div>
+			<script type='text/javascript'>GA_googleFillSlot("hkdc_145x120-01");</script>
+            <!--
+			<script type='text/javascript'>GA_googleFillSlot("hkdc_145x120-02");</script>
+			<script type='text/javascript'>GA_googleFillSlot("hkdc_145x120-03");</script>
+            -->
+		</div>
+ 	</div>
+	
+	<h4 class="rad_top"><strong>Popular</strong> Now</h4>
+	<div class="block listtop clearfix rad_bot shadowXtop">
+	<script type="text/javascript" src="http://hongkiat.disqus.com/popular_threads_widget.js?num_items=10"></script>
+	</div>
+	
+	<div class="block clearfix">
+		<div class="rad_all shadow" id="fbWrapper">
+			<iframe class="fbLikeBox" src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fhongkiatcom&amp;width=300&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23ffffff&amp;stream=false&amp;header=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:258px;" allowTransparency="true"></iframe>
+			<iframe class="fbActivity" src="http://www.facebook.com/plugins/activity.php?site=hongkiat.com&amp;width=298&amp;height=580&amp;header=true&amp;colorscheme=light&amp;font&amp;border_color=%23ffffff&amp;large_thumbations=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:298px; height:580px;" allowTransparency="true"></iframe>
+		</div>
+	</div>
+	
+	<div class="block bannerWrap clearfix">
+		<div class="b300x250">
+			<iframe src="/blog/wp-content/themes/v5/ads/300x250-02.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" style="" frameborder="0" scrolling="no" width="300" height="250"></iframe>
+		</div>
+	</div>
+	
+	<!-- #-->
+	<!--
+	<div class="block custom-a clearfix">
+		<h5></h5>
+		<p></p>
+		<div><a href="" class="cButton">#</a></div>
+	</div>
+	-->	
+	
+	<div class="block bannerWrap clearfix">
+		<div class="right">
+		<script type='text/javascript' src='http://static.fmpub.net/zone/4725'></script>
+      <!--
+      <iframe src="/blog/wp-content/themes/v5/ads/fm-160x600.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" style="" frameborder="0" scrolling="no" width="160" height="600"></iframe>
+      -->         
+		</div>
+		
+		
+		<div class="left rad_bot shadowXtop" id="readers_fav">
+		<h4 class="rad_top"><strong>Readers' Fav</strong></h4>
+			<style>
+				#readers_fav .wallpapers a {background-position:0 0;}
+				#readers_fav .social-media a {background-position:-121px 0;}
+				#readers_fav .photography a {background-position:-242px 0;}
+				#readers_fav .photo-manipulation a {background-position:-363px 0;}
+				#readers_fav .freebie a {background-position:-484px 0;}
+				#readers_fav .photoshop a {background-position:-605px 0;}
+				#readers_fav .freelance a {background-position:0 -83px;}
+			</style>
+			<ul>
+				<li class="wallpapers"><a href="/blog/category/freebies-online/free-wallpapers/">Wallpapers</a></li>
+				<li class="social-media"><a href="/blog/tag/social-media/">Social Media</a></li>
+				<li class="photography"><a href="/blog/tag/photography/">Photography</a></li>
+				<li class="photo-manipulation"><a href="/blog/tag/photo-manipulation/">Photo Manipulation</a></li>
+				<li class="freebie"><a href="/blog/tag/freebie/">Freebie</a></li>
+				<li class="photoshop"><a href="/blog/category/photoshop-tutorial/">Photoshop</a></li>
+				<li class="freelance"><a href="/blog/tag/freelance/">Freelance</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<!--
+	<div class="block custom-b clearfix">
+		<h5></h5>
+		<p></p>
+		<div><a href="" class="cButton">#</a></div>
+	</div>
+	-->
+
+</div>
+<!-- google_ad_section_end --><!-- -->
+
+
+			</div><!--contentwrap-->
+		</div><!--main-->
+<!-- google_ad_section_start(weight=ignore) -->	
+	<div id="footer">
+		<div class="footer_container">
+			<div class="footer-row1 clearfix">
+				<div id="footCol01">
+				</div>
+				
+				<div id="footCol02">
+					<h4>About Us</h4>
+					<p>Hongkiat.com is a design weblog dedicated to designers and bloggers. We constantly publish useful tricks, tools, tutorials and inspirational artworks. <a href="/blog/about-us/">Read more...</a></p>
+				</div>
+				
+				<div id="footCol03">
+					<h4>Navigate</h4>
+					<ul>
+						<li><a href="/blog/about-us/">About Us</a></li>
+						<li><a href="/blog/advertise/">Advertise</a></li>
+						<li><a href="/blog/contact/">Contact Us</a></li>
+						<li><a href="/blog/write-for-us/">Write for Us</a></li>
+						<li><a href="/blog/submit-news-tips/">Submit Tips</a></li>
+						<li><a href="/blog/privacy-policy-for-hongkiatcom/">Privacy Policy</a></li>
+						<li><a href="/blog/publishing-policy/">Publishing Policy</a></li>
+					</ul>
+				</div>
+				
+				<div id="footCol04">
+					<h4>We're Social</h4>
+					<ul class="social">
+						<li class="fb"><span></span><a rel="external" href="http://www.facebook.com/hongkiatcom">Facebook</a></li>
+						<li class="tw"><span></span><a rel="external" href="http://www.twitter.com/hongkiat">Twitter</a></li>
+						<li class="gp"><span></span><a rel="external publisher" href="https://plus.google.com/102816829103930695344">Google +</a></li>
+						<li class="rf"><span></span><a rel="external" href="http://feeds2.feedburner.com/24thfloor">RSS</a></li>
+						<li class="dg"><span></span><a rel="external" href="http://digg.com/hongkiat">Digg</a></li>
+						<li class="da"><span></span><a rel="external" href="http://hongkiat.deviantart.com/">Deviant Art</a></li>
+						<li class="ff"><span></span><a rel="external" href="http://friendfeed.com/hongkiat">FriendFeed</a></li>
+					</ul>
+				</div>
+				
+				<div id="footCol05">
+					<h4 id="foot-partners">Our Partners</h4>
+					<ul class="foot-partners-logo">
+						<li id="netdna" class="partners" title="Content accelerated by NetDNA"><a rel="external" href="http://www.netdna.com">NetDNA</a></li>
+						<li id="wpwebhost" class="partners" title="Hosting powered by WPWebHost"><a rel="external" href="http://www.wpwebhost.com">WPWebhost</a></li>
+					</ul>
+					
+				</div>
+				
+			</div>
+			
+			<div class="footer-row2 clearfix">
+				<p class="disclaimer">
+					&copy; 2012 Hongkiat.com. Designed by Hongkiat Lim. <a rel="external" href="/blog/sitemap.xml">Sitemap</a><br/>
+					Reproduction without explicit permission is prohibited.  All Rights Reserved.<br/>
+					<br/>
+					Disclaimer: The editor(s) reserve the right to edit any comments that are found to be abusive, offensive, contain profanity, serves as spam, is largely self-promotional, or displaying attempts to harbour irrelevant text links for any purpose.
+				</p>
+				<p class="endofpage-btt">
+					<a href="#top" title="Back to top">&uarr; Back to Top</a>
+				</p>
+			</div>
+			
+			<!-- fm -->
+         <script type='text/javascript' src='http://static.fmpub.net/site/hongkiat'></script>	
+        
+			
+			<!-- bsa -->
+			<!--
+			<script type="text/javascript">
+             (function(){
+               var bsa = document.createElement('script');
+                  bsa.type = 'text/javascript';
+                  bsa.async = true;
+                  bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+               (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+             })();
+             </script>
+             -->			
+			
+			
+			<!-- facebook -->
+			<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=14499445211";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+			</script>
+			
+
+			<!-- mailchimp -->
+			<script type="text/javascript">
+			function clearMCEmail(a){if(a.defaultValue==a.value)a.value="";else if(a.value=="")a.value=a.defaultValue}function mce_success_cb(a){mce_jQuery("#mce-success-response").hide();mce_jQuery("#mce-error-response").hide();if(a.result=="success"){mce_jQuery("#mce-"+a.result+"-response").show();mce_jQuery("#mce-"+a.result+"-response").html(a.msg);mce_jQuery("#mc-embedded-subscribe-form").each(function(){this.reset()})}else{var b=-1;var c;try{var d=a.msg.split(" - ",2);if(d[1]==undefined){c=a.msg}else{i=parseInt(d[0]);if(i.toString()==d[0]){b=d[0];c=d[1]}else{b=-1;c=a.msg}}}catch(e){b=-1;c=a.msg}try{if(b==-1){mce_jQuery("#mce-"+a.result+"-response").show();mce_jQuery("#mce-"+a.result+"-response").html(c)}else{err_id="mce_tmp_error_msg";html='<div id="'+err_id+'" style="'+err_style+'"> '+c+"</div>";var f="#mc_embed_signup";var g=mce_jQuery(f);if(ftypes[b]=="address"){f="#mce-"+fnames[b]+"-addr1";g=mce_jQuery(f).parent().parent().get(0)}else{if(ftypes[b]=="date"){f="#mce-"+fnames[b]+"-month";g=mce_jQuery(f).parent().parent().get(0)}else{f="#mce-"+fnames[b];g=mce_jQuery().parent(f).get(0)}}if(g){mce_jQuery(g).append(html);mce_jQuery(f).focus()}else{mce_jQuery("#mce-"+a.result+"-response").show();mce_jQuery("#mce-"+a.result+"-response").html(c)}}}catch(e){mce_jQuery("#mce-"+a.result+"-response").show();mce_jQuery("#mce-"+a.result+"-response").html(c)}}}var fnames=new Array;var ftypes=new Array;fnames[0]="EMAIL";ftypes[0]="email";fnames[1]="NAME";ftypes[1]="text";var err_style="";try{err_style=mc_custom_error_style}catch(e){err_style=""}var mce_jQuery=jQuery.noConflict();mce_jQuery(document).ready(function(a){var b={errorClass:"mce_inline_error",errorElement:"div",errorStyle:err_style,onkeyup:function(){},onfocusout:function(){},onblur:function(){}};var c=mce_jQuery("#mc-embedded-subscribe-form").validate(b);b={url:"http://hongkiat.us1.list-manage.com/subscribe/post-json?u=2cad5936fa92d77b81f41d691&id=e23e003d87&c=?",type:"GET",dataType:"json",contentType:"application/json; charset=utf-8",beforeSubmit:function(){mce_jQuery("#mce_tmp_error_msg").remove();mce_jQuery(".datefield","#mc_embed_signup").each(function(){var a="filled";var b=new Array;var c=0;mce_jQuery(":text",this).each(function(){b[c]=this;c++});mce_jQuery(":hidden",this).each(function(){if(b[0].value=="MM"&&b[1].value=="DD"&&b[2].value=="YYYY"){this.value=""}else{if(b[0].value==""&&b[1].value==""&&b[2].value==""){this.value=""}else{this.value=b[0].value+"/"+b[1].value+"/"+b[2].value}}})});return c.form()},success:mce_success_cb};mce_jQuery("#mc-embedded-subscribe-form").ajaxForm(b)});			
+			</script>
+	
+			
+			<!-- Google +1 -->
+			<script type="text/javascript">
+			  (function() {
+				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			</script>
+			
+			
+			<!-- Intellitxt -->
+			<script type="text/javascript" src="http://hongkiat.us.intellitxt.com/intellitxt/front.asp?ipid=29794"></script>
+			
+			
+			<!-- comScore -->
+			<script>var csDocDomain = document.location.href; document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E")); </script>
+			<script>COMSCORE.beacon({ c1:2, c2:"6035753", c3:"6035753", c4:csDocDomain, c5:"Technology - News", c6:"", c15:"" }); </script>
+			<noscript><img src="http://b.scorecardresearch.com/b?c1=2&c2=6035753&c3=6035753&c4=http://www.hongkiat.com&c5=Technology - News&c6=&c15=&cv=1.3&cj=1" style="display:none" width="0" height="0" alt="" /></noscript>
+			
+			
+			<!-- Quantcast -->
+			<script type="text/javascript"> _qoptions={ qacct:"p-306sOjcgY0NWo" }; </script>
+			<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+			<noscript><img src="http://pixel.quantserve.com/pixel/p-306sOjcgY0NWo.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/> </noscript>
+			
+			
+			    <script type="text/javascript">
+    // <![CDATA[
+        var disqus_shortname = 'hongkiat';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('rel'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) url = url[0];
+                    else url = url[1]
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + 'disqus.com/forums/' + disqus_shortname + '/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    //]]>
+    </script>
+<script class="javascript" src="http://mediatemplestatic.hongkiat.netdna-cdn.com/v5/js/google-syntax-highlighter/Scripts/all.js"></script>
+<script class="javascript">
+dp.SyntaxHighlighter.ClipboardSwf = 'http://mediatemplestatic.hongkiat.netdna-cdn.com/v5/js/google-syntax-highlighter/Scripts/clipboard.swf';
+dp.SyntaxHighlighter.HighlightAll('code');
+</script>
+
+<!--Plugin Missed Schedule 2013.0130.2222 Active - Key Tag: bkytCi8L522P8RbgYIlkQbL6Yz4JDvIWlTlXN5q776Yvq5t7gxkCvB643C7osdFV6-->
+
+			</div><!--footer_container-->
+		
+	</div><!--footer-->
+<!-- google_ad_section_end -->
+
+</body>
+</html>
+<!-- Dynamic page generated in 0.309 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2013-09-30 21:23:56 -->
+
+<!-- super cache -->

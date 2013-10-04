@@ -1,0 +1,92 @@
+		<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		var pageTracker = _gat._getTracker("UA-1475087-1");
+		pageTracker._initData();
+		pageTracker._trackPageview();
+		</script>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	
+	<title>MBA-Exchange.com</title>
+	
+	<link rel="stylesheet" type="text/css" href="../mbacss/structure.css" />
+	<link rel="stylesheet" type="text/css" href="../mbacss/styles.css" />
+	<link href="../mbacss/topNavigationDropDown.css" rel="stylesheet" type="text/css" />
+	<link href="../mbacss/topNavigationLevelA.css" rel="stylesheet" type="text/css" />
+	<link href="../css/css/login.css" rel="stylesheet" type="text/css" />
+	
+	<script language="javascript" src="../JS/jsLoader.js"></script>
+	
+	<script type="text/javascript">
+		function resizeFrame(evt) {
+			var h = 0;
+		    var w = 0;
+		    if (typeof(window.innerWidth) == 'number') {
+				h = window.innerHeight;
+				w = window.innerWidth;
+			}
+			else {
+				if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+					h = document.documentElement.clientHeight;
+					w = document.documentElement.clientWidth;
+				}
+				else {
+					if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+						h = document.body.clientHeight;
+						w = document.body.clientWidth;
+					}
+				}
+			}
+			
+			$('iFrmDetail').setStyle({
+	            height: (h-90) + 'px'
+	        });
+		}
+	</script>
+	
+	<style type="text/css">
+		.headerIframe {
+			width: 100%;
+			height: 74px;
+			border-bottom: 3px solid #115CA6;
+		}
+		
+		#headerIframeContent {
+			padding: 0 10px;
+		}
+	</style>
+	
+</head>
+<body onload="resizeFrame();" onresize="resizeFrame();">
+	
+	<div id="headerFrame" class="headerIframe">
+		<div id="headerIframeContent">
+			<div style="float: right;">
+				<a href="http://www.indeed.com/rc/clk?jk=55cf4fd5732165c1&atk=">
+					<img src="http://www.mba-exchange.com/Assets/images/buttons/Btn_HideFrame.gif" border="0" />
+				</a>
+			</div>
+			<div>
+				<a href="http://www.mba-exchange.com"><img src="http://www.mba-exchange.com/Assets/Design/ARC/img3.jpg" alt="MBA-Exchange.com" border="0" /></a>
+			    				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span style="color:#ff8040;">
+					<b>This job is on an external website where you might need to register / login separately to apply to the position.</b>
+				</span>
+			</div>
+			<br>
+	  </div>
+	</div>
+	
+	<div id="jobFrame">
+		<iframe id="iFrmDetail" name="iFrmDetail" width="100%" height="600" frameborder="no"
+			 marginheight="0" marginwidth="0" src="http://www.indeed.com/rc/clk?jk=55cf4fd5732165c1&atk="></iframe>
+	</div>
+	
+</body>
+</html>

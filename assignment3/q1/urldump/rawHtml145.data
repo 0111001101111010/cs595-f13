@@ -1,0 +1,3218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir='ltr'>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script type="text/javascript">(function() { var b=window,e="jstiming",g="tick";(function(){function d(a){this.t={};this.tick=function(a,d,c){c=void 0!=c?c:(new Date).getTime();this.t[a]=[c,d]};this[g]("start",null,a)}var a=new d;b.jstiming={Timer:d,load:a};if(b.performance&&b.performance.timing){var a=b.performance.timing,c=b[e].load,f=a.navigationStart,a=a.responseStart;0<f&&a>=f&&(c[g]("_wtsrt",void 0,f),c[g]("wtsrt_","_wtsrt",a),c[g]("tbsd_","wtsrt_"))}try{a=null,b.chrome&&b.chrome.csi&&(a=Math.floor(b.chrome.csi().pageT),c&&0<f&&(c[g]("_tbnd",void 0,b.chrome.csi().startE),
+c[g]("tbnd_","_tbnd",f))),null==a&&b.gtbExternal&&(a=b.gtbExternal.pageT()),null==a&&b.external&&(a=b.external.pageT,c&&0<f&&(c[g]("_tbnd",void 0,b.external.startE),c[g]("tbnd_","_tbnd",f))),a&&(b[e].pt=a)}catch(l){}})();b.tickAboveFold=function(d){var a=0;if(d.offsetParent){do a+=d.offsetTop;while(d=d.offsetParent)}d=a;750>=d&&b[e].load[g]("aft")};var h=!1;function k(){h||(h=!0,b[e].load[g]("firstScrollTime"))}b.addEventListener?b.addEventListener("scroll",k,!1):b.attachEvent("onscroll",k);
+ })();</script>
+<meta content='blogger' name='generator'/>
+<link href='http://flyingfrogblog.blogspot.co.uk/favicon.ico' rel='icon' type='image/x-icon'/>
+<link href='http://flyingfrogblog.blogspot.com/2013/09/ironjs.html' rel='canonical'/>
+<link rel="alternate" type="application/atom+xml" title="The Flying Frog Blog - Atom" href="http://flyingfrogblog.blogspot.com/feeds/posts/default" />
+<link rel="alternate" type="application/rss+xml" title="The Flying Frog Blog - RSS" href="http://flyingfrogblog.blogspot.com/feeds/posts/default?alt=rss" />
+<link rel="service.post" type="application/atom+xml" title="The Flying Frog Blog - Atom" href="http://www.blogger.com/feeds/1779668156488517434/posts/default" />
+
+<link rel="alternate" type="application/atom+xml" title="The Flying Frog Blog - Atom" href="http://flyingfrogblog.blogspot.com/feeds/1088388806487509054/comments/default" />
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+<title>The Flying Frog Blog: A look at the IronJS source code</title>
+<link type='text/css' rel='stylesheet' href='//www.blogger.com/static/v1/widgets/2775015444-widget_css_bundle.css' />
+<link type='text/css' rel='stylesheet' href='//www.blogger.com/dyn-css/authorization.css?targetBlogID=1779668156488517434&amp;zx=cb12fb97-0dc0-4c2f-8a64-85464ab15aca&quot;/&gt;
+' />
+<style id='page-skin-1' type='text/css'><!--
+/*
+Blogger Template Style
+Name:     TicTac
+Date:     1 March 2004
+Updated by: Blogger Team
+*/
+/* Variable definitions
+====================
+<Variable name="textcolor" description="Text Color"
+type="color" default="#333">
+<Variable name="pagetitlecolor" description="Page Header Color"
+type="color" default="#FFF">
+<Variable name="datecolor" description="Date Header Color"
+type="color" default="#f93">
+<Variable name="titlecolor" description="Post Title Color"
+type="color" default="#f63">
+<Variable name="footercolor" description="Post Footer Color"
+type="color" default="#999">
+<Variable name="sidebartextcolor" description="Sidebar Text Color"
+type="color" default="#999">
+<Variable name="sidebarcolor" description="Sidebar Title Color"
+type="color" default="#666">
+<Variable name="linkcolor" description="Link Color"
+type="color" default="#69c">
+<Variable name="visitedlinkcolor" description="Visited Link Color"
+type="color" default="#666699">
+<Variable name="bodyfont" description="Text Font"
+type="font"
+default="normal normal 100% Verdana, sans-serif">
+<Variable name="pagetitlefont" description="Page Header Font"
+type="font" default="normal normal 100% 'Lucida Grande','Trebuchet MS'">
+<Variable name="titlefont" description="Post Title Font"
+type="font" default="normal bold 130% 'Lucida Grande','Trebuchet MS'">
+<Variable name="sidebarheaderfont" description="Sidebar Title Font"
+type="font" default="normal bold 130% 'Lucida Grande','Trebuchet MS'">
+<Variable name="startSide" description="Start side in blog language"
+type="automatic" default="left">
+<Variable name="endSide" description="End side in blog language"
+type="automatic" default="right">
+*/
+/* ---( page defaults )--- */
+body {
+margin: 0;
+padding: 0;
+font-size: small;
+text-align: center;
+color: #333333;
+background: #e0e0e0;
+}
+blockquote {
+margin-top: 0;
+margin-right: 0;
+margin-bottom: 0;
+margin-left: 30px;
+padding-top: 10px;
+padding-right: 0;
+padding-bottom: 0;
+padding-left: 20px;
+font-size: 88%;
+line-height: 1.5em;
+color: #666;
+background: url(http://www.blogblog.com/tictac/quotes.gif) no-repeat top left;
+}
+blockquote p {
+margin-top: 0;
+}
+abbr, acronym {
+cursor: help;
+font-style: normal;
+border-bottom: 1px dotted;
+}
+code {
+color: #f63;
+}
+hr {
+display: none;
+}
+img {
+border: none;
+}
+/* unordered list style */
+ul {
+list-style: none;
+margin-left: 10px;
+padding: 0;
+}
+li {
+list-style: none;
+padding-left: 14px;
+margin-bottom: 3px;
+background: url(http://www.blogblog.com/tictac/tictac_orange.gif) no-repeat left 6px;
+}
+/* links */
+a:link {
+color: #6699cc;
+}
+a:visited {
+color: #666699;
+}
+a:hover {
+color: #693;
+}
+a:active {
+color: #cc3333;
+text-decoration: none;
+}
+/* ---( layout structure )---*/
+#outer-wrapper {
+width: 847px;
+margin: 0px auto 0;
+text-align: left;
+font: normal normal 100% Verdana, sans-serif;
+background: url(http://www.blogblog.com/tictac/tile_left.gif) repeat-y;
+}
+#content-wrapper {
+margin-left: 42px; /* to avoid the border image */
+width: 763px;
+}
+#main {
+float: left;
+width: 460px;
+margin-top: 20px;
+margin-right: 0;
+margin-bottom: 0;
+margin-left: 0;
+padding-top: 0;
+padding-right: 0;
+padding-bottom: 0;
+padding-left: 1em;
+line-height: 1.5em;
+word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
+overflow: hidden;     /* fix for long non-text content breaking IE sidebar float */
+}
+#sidebar {
+float: right;
+width: 259px;
+padding-top: 20px;
+padding-right: 0px;
+padding-bottom: 0;
+padding-left: 0;
+font-size: 85%;
+line-height: 1.4em;
+color: #999999;
+background: url(http://www.blogblog.com/tictac/sidebar_bg.gif) no-repeat left top;
+word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
+overflow: hidden;     /* fix for long non-text content breaking IE sidebar float */
+}
+/* ---( header and site name )--- */
+#header-wrapper {
+margin: 0;
+padding: 0;
+font: normal normal 100% 'Lucida Grande','Trebuchet MS';
+background: #e0e0e0 url(http://www.blogblog.com/tictac/top_div_left.gif) no-repeat left top;
+}
+#header {
+margin: 0;
+padding-top: 25px;
+padding-right: 60px;
+padding-bottom: 35px;
+padding-left: 160px;
+color: #FFFFFF;
+background: url(http://www.blogblog.com/tictac/top_h1.gif) no-repeat bottom left;
+}
+#header h1 {
+font-size: 200%;
+text-shadow: #81A75B 2px 2px 2px;
+}
+#header h1 a {
+text-decoration: none;
+color: #FFFFFF;
+}
+#header h1 a:hover {
+color: #eee;
+}
+/* ---( main column )--- */
+h2.date-header {
+margin-top: 0;
+padding-left: 14px;
+font-size: 90%;
+color: #ff9933;
+background: url(http://www.blogblog.com/tictac/date_icon.gif) no-repeat left 50%;
+}
+.post h3 {
+margin-top: 0;
+font: normal bold 130% 'Lucida Grande','Trebuchet MS';
+letter-spacing: -1px;
+color: #ff6633;
+}
+.post {
+margin-top: 0;
+margin-right: 0;
+margin-bottom: 1.5em;
+margin-left: 0;
+padding-top: 0;
+padding-right: 0;
+padding-bottom: 1.5em;
+padding-left: 14px;
+border-bottom: 1px solid #ddd;
+}
+.post h3 a,
+.post h3 a:visited {
+color: #ff6633;
+text-decoration: none;
+}
+.post-footer {
+margin: 0;
+padding-top: 0;
+padding-right: 0;
+padding-bottom: 0;
+padding-left: 14px;
+font-size: 88%;
+color: #999999;
+background: url(http://www.blogblog.com/tictac/tictac_grey.gif) no-repeat left 8px;
+}
+.post img, table.tr-caption-container {
+padding: 6px;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+border-bottom: 1px solid #c0c0c0;
+border-right: 1px solid #c0c0c0;
+}
+.tr-caption-container img {
+border: none;
+padding: 0;
+}
+.feed-links {
+clear: both;
+line-height: 2.5em;
+}
+#blog-pager-newer-link {
+float: left;
+}
+#blog-pager-older-link {
+float: right;
+}
+#blog-pager {
+text-align: center;
+}
+/* comment styles */
+#comments {
+padding: 10px 10px 0px 10px;
+font-size: 85%;
+line-height: 1.5em;
+color: #666;
+background: #eee url(http://www.blogblog.com/tictac/comments_curve.gif) no-repeat top left;
+}
+#comments h4 {
+margin-top: 20px;
+margin-right: 0;
+margin-bottom: 15px;
+margin-left: 0;
+padding-top: 8px;
+padding-right: 0;
+padding-bottom: 0;
+padding-left: 40px;
+font-family: "Lucida Grande", "Trebuchet MS";
+font-size: 130%;
+color: #666;
+background: url(http://www.blogblog.com/tictac/bubbles.gif) no-repeat 10px 0;
+height: 29px !important; /* for most browsers */
+height /**/:37px; /* for IE5/Win */
+}
+#comments ul {
+margin-left: 0;
+}
+#comments li {
+background: none;
+padding-left: 0;
+}
+.comment-body {
+padding-top: 0;
+padding-right: 10px;
+padding-bottom: 0;
+padding-left: 25px;
+background: url(http://www.blogblog.com/tictac/tictac_orange.gif) no-repeat 10px 5px;
+}
+.comment-body p {
+margin-bottom: 0;
+}
+.comment-author {
+margin-top: 4px;
+margin-right: 0;
+margin-bottom: 0;
+margin-left: 0;
+padding-top: 0;
+padding-right: 10px;
+padding-bottom: 0;
+padding-left: 60px;
+color: #999;
+background: url(http://www.blogblog.com/tictac/comment_arrow.gif) no-repeat 44px 2px;
+}
+.comment-footer {
+border-bottom: 1px solid #ddd;
+padding-bottom: 1em;
+}
+.deleted-comment {
+font-style:italic;
+color:gray;
+}
+/* ---( sidebar )--- */
+.sidebar h2 {
+margin-top: 0;
+margin-right: 0;
+margin-bottom: 0;
+margin-left: 0;
+padding-top: 25px;
+padding-right: 0;
+padding-bottom: 0;
+padding-left: 40px;
+font: normal bold 130% 'Lucida Grande','Trebuchet MS';
+color: #666666;
+height: 32px;
+background: url(http://www.blogblog.com/tictac/sidebar_icon.gif) no-repeat 10px 15px;
+height: 32px !important; /* for most browsers */
+height /**/:57px; /* for IE5/Win */
+}
+.sidebar .widget {
+margin: 0;
+padding-top: 0;
+padding-right: 0;
+padding-bottom: 10px;
+padding-left: 10px;
+border-bottom: 1px solid #ddd;
+}
+.sidebar li {
+background: url(http://www.blogblog.com/tictac/tictac_green.gif) no-repeat left 5px;
+}
+.profile-textblock {
+clear: both;
+margin-left: 0;
+}
+.profile-img {
+float: left;
+margin-top: 0;
+margin-right: 5px;
+margin-bottom: 5px;
+margin-left: 0;
+border: 1px solid #ddd;
+padding: 4px;
+}
+/* ---( footer )--- */
+.clear { /* to fix IE6 padding-top issue */
+clear: both;
+}
+#footer-wrapper {
+margin: 0;
+padding-top: 0;
+padding-right: 0;
+padding-bottom: 9px;
+padding-left: 0;
+font-size: 85%;
+color: #ddd;
+background: url(http://www.blogblog.com/tictac/bottom_sill.gif) no-repeat bottom left;
+}
+#footer {
+margin: 0;
+padding-top: 20px;
+padding-right: 320px;
+padding-bottom: 20px;
+padding-left: 95px;
+background: url(http://www.blogblog.com/tictac/bottom_sash_left.gif) no-repeat top left;
+}
+/** Page structure tweaks for layout editor wireframe */
+body#layout #outer-wrapper,
+body#layout #main,
+body#layout #sidebar {
+padding-top: 0;
+margin-top: 0;
+}
+body#layout #outer-wrapper,
+body#layout #content-wrapper {
+width: 740px;
+}
+body#layout #sidebar {
+margin-right: 0;
+margin-bottom: 1em;
+}
+body#layout #header,
+body#layout #footer,
+body#layout #main {
+padding: 0;
+}
+body#layout #content-wrapper {
+margin: 0px;
+}
+
+--></style>
+<script type="text/javascript">var a=navigator,b="userAgent",c="indexOf",f="&m=1",g="(^|&)m=",h="?",k="?m=1";function l(){var d=window.location.href,e=d.split(h);switch(e.length){case 1:return d+k;case 2:return 0<=e[1].search(g)?null:d+f;default:return null}}if(-1!=a[b][c]("Mobile")&&-1!=a[b][c]("WebKit")&&-1==a[b][c]("iPad")||-1!=a[b][c]("Opera Mini")||-1!=a[b][c]("IEMobile")){var m=l();m&&window.location.replace(m)};
+</script><script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('headEnd');
+</script></head>
+<body>
+<div class='navbar section' id='navbar'><div class='widget Navbar' id='Navbar1'><script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener('load',
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
+      }
+    }
+  </script>
+<div id="navbar-iframe-container"></div>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript">
+        gapi.load("iframes-styles-bubble", function() {
+          if (window.iframes && iframes.open) {
+            iframes.open(
+                '//www.blogger.com/navbar.g?targetBlogID\0751779668156488517434\46blogName\75The+Flying+Frog+Blog\46publishMode\75PUBLISH_MODE_BLOGSPOT\46navbarType\75BLUE\46layoutType\75LAYOUTS\46searchRoot\75http://flyingfrogblog.blogspot.com/search\46blogLocale\75en_GB\46v\0752\46homepageUrl\75http://flyingfrogblog.blogspot.com/\46targetPostID\0751088388806487509054\46blogPostOrPageUrl\75http://flyingfrogblog.blogspot.com/2013/09/ironjs.html\46vt\75-1678207566331566938',
+                {
+                  container: "navbar-iframe-container",
+                  id: "navbar-iframe"
+                },
+                {
+                });
+          }
+        });
+      </script><script type="text/javascript">
+(function() {
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/google_top_exp.js';
+var head = document.getElementsByTagName('head')[0];
+if (head) {
+head.appendChild(script);
+}})();
+</script>
+</div></div>
+<div id='outer-wrapper'><div id='wrap2'>
+<!-- skip links for text browsers -->
+<span id='skiplinks' style='display:none;'>
+<a href='#main'>skip to main </a> |
+      <a href='#sidebar'>skip to sidebar</a>
+</span>
+<div id='header-wrapper'>
+<div class='header section' id='header'><div class='widget Header' id='Header1'>
+<div id='header-inner'>
+<div class='titlewrapper'>
+<h1 class='title'>
+<a href='http://flyingfrogblog.blogspot.co.uk/'>The Flying Frog Blog</a>
+</h1>
+</div>
+<div class='descriptionwrapper'>
+<p class='description'><span>
+</span></p>
+</div>
+</div>
+</div></div>
+</div>
+<div id='content-wrapper'>
+<div id='crosscol-wrapper' style='text-align:center'>
+<div class='crosscol section' id='crosscol'></div>
+</div>
+<div id='main-wrapper'>
+<div class='main section' id='main'><div class='widget Blog' id='Blog1'>
+<div class='blog-posts hfeed'>
+<!-- google_ad_section_start(name=default) -->
+
+          <div class="date-outer">
+        
+<h2 class='date-header'><span>Saturday, 14 September 2013</span></h2>
+
+          <div class="date-posts">
+        
+<div class='post-outer'>
+<div class='post hentry uncustomized-post-template' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+<meta content='1779668156488517434' itemprop='blogId'/>
+<meta content='1088388806487509054' itemprop='postId'/>
+<a name='1088388806487509054'></a>
+<h3 class='post-title entry-title' itemprop='name'>
+A look at the IronJS source code
+</h3>
+<div class='post-header'>
+<div class='post-header-line-1'></div>
+</div>
+<div class='post-body entry-content' id='post-body-1088388806487509054' itemprop='description articleBody'>
+<div class="WordSection1">
+<div class="MsoNormal">
+The author of IronJS has made <a href="http://ironjs.wordpress.com/2012/04/19/why-not-f/">some claims</a> (e.g. F# can feel &#8220;like a slightly crappier version of C#&#8221;) that I find surprising so I'm reading his code. I find it to be quite odd for a variety of reasons:<o:p></o:p></div>
+<div class="MsoNormal">
+</div>
+<ol>
+<li>Surprisingly OOP (dozens of interfaces and classes and hundreds of augmentations, static members and overloads) given how well suited ML is to writing compilers.</li>
+<li>Lots of low-level bit-twiddling.</li>
+<li>Uses&nbsp;<span style="font-family: Consolas;">List.empty</span>&nbsp;instead of&nbsp;<span style="font-family: Consolas;">[]</span>.</li>
+<li>Uses large tuples.</li>
+<li>Uses arrays of closures, e.g.&nbsp;<span style="font-family: Consolas;">Stmt : (Lexer.Token -&gt; State -&gt; Ast.Tree) array</span>.</li>
+<li>Doesn't use a symbol table.</li>
+<li>Choice of data structures appears to incur lots of unnecessary boxing.</li>
+<li>Odd choice of data structures for memory representation, e.g.&nbsp;<span style="font-family: Consolas;">null</span>,&nbsp;<span style="font-family: Consolas;">left</span>&nbsp;and&nbsp;<span style="font-family: Consolas;">stmt</span>&nbsp;fields for a token are scattered.</li>
+<li>Doesn't seem to use concurrency or parallelism.</li>
+<li>Parser contains only 42&nbsp;<span style="font-family: Consolas;">match</span>&nbsp;expressions in 1,400 lines of code.</li>
+<li>Massive amounts of code duplication.</li>
+<li>Hand-rolled parser is unusual. Hand-rolled lexer without tables is even more unusual.</li>
+<li>Strange choice of syntax, e.g. lots of&nbsp;<span style="font-family: Consolas;">p |&gt; csymbol</span>&nbsp;instead of just&nbsp;<span style="font-family: Consolas;">csymbol p</span>.</li>
+<li>Allegedly optimized but no structs.</li>
+<li>Uses&nbsp;<span style="font-family: Consolas;">HashSet.Add</span>&nbsp;repeatedly instead of the declarative constructor from a&nbsp;seq.</li>
+<li>Doesn't use&nbsp;<span style="font-family: Consolas;">HashIdentity.Structural</span>.</li>
+</ol>
+Furthermore, I don't recall ever seeing that author ask anyone for help with it and it looks like he could do with quite a bit of advice. So I'd take the "rewrite in C#" with a pinch of salt...<o:p></o:p><br />
+<div class="MsoNormal">
+<o:p></o:p></div>
+<div class="MsoNormal">
+Here's an example of some code from the hand-rolled lexer that is using many comparisons of unicode characters when single table lookups could suffice:<o:p></o:p><br />
+<br /></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">let inline isAlpha c = (c &gt;= 'a' &amp;&amp; c &lt;= 'z') || (c &gt;= 'A' &amp;&amp; c &lt;= 'Z')<o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">let inline isDecimal c = c &gt;= '0' &amp;&amp; c &lt;= '9'<o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">let inline isOctal c = c &gt;= '0' &amp;&amp; c &lt;= '7'<o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">let inline isNonOctalDigit c = c = '8' &amp;&amp; c = '9'<o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">let inline isHex c = isDecimal c || (c &gt;= 'A' &amp;&amp; c &lt;= 'F') || (c &gt;= 'a' &amp;&amp; c &lt;= 'f')<o:p></o:p></span></div>
+<div class="MsoNormal">
+<br />
+Here's an example of some odd code that uses OOP methods to give names to the elements of a tuple when it should just use a record type instead of a tuple:<o:p></o:p><br />
+<br /></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">member x.TokenName = <o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">&nbsp;&nbsp;let s, _, _, _ = x.Token in s |&gt; Lexer.Symbol.getName<o:p></o:p></span></div>
+<div class="MsoNormal">
+<br /></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">member x.TokenValue = <o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">&nbsp;&nbsp;let _, v, _, _ = x.Token in v<o:p></o:p></span></div>
+<div class="MsoNormal">
+<br /></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">member x.TokenLine = <o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">&nbsp;&nbsp;let _, _, l, _ = x.Token in l<o:p></o:p></span></div>
+<div class="MsoNormal">
+<br /></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">member x.TokenColumn = <o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">&nbsp;&nbsp;let _, _, _, c = x.Token in c<o:p></o:p></span></div>
+<div class="MsoNormal">
+<br />
+I believe this is the offending type definition:<o:p></o:p><br />
+<br /></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">type Token = int * string * int * int<o:p></o:p></span></div>
+<div class="MsoNormal">
+<br />
+Here's another example of some strange code from the lexer where the programmer has manually assigned consecutive integers to symbols:<o:p></o:p><br />
+<br /></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">let [&lt;Literal&gt;] Break = 0<o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">let [&lt;Literal&gt;] Case = 1<o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">let [&lt;Literal&gt;] Catch = 2<o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">let [&lt;Literal&gt;] Continue = 3<o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">let [&lt;Literal&gt;] Default = 4<o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">...<o:p></o:p></span></div>
+<div class="MsoNormal">
+<br />
+Note the complete absence of any metaprogramming here, which is surprising because it is written in a MetaLanguage (ML).<o:p></o:p></div>
+<div class="MsoNormal">
+<br />
+Here's another oddity, the use of&nbsp;new&nbsp;when constructing non-IDisposable&nbsp;objects:<o:p></o:p><br />
+<br /></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">new Dictionary&lt;string, int&gt;(<o:p></o:p></span></div>
+<div class="MsoNormal">
+<br />
+Yet another oddity, pretending that all type definitions are mutually recursive when they are actually completely independent:<o:p></o:p><br />
+<br /></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">and ScopeType<o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">&nbsp; = GlobalScope<o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">&nbsp; | FunctionScope <o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">and EvalMode<o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">&nbsp; = Clean <o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">&nbsp;&nbsp;| Contains <o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">&nbsp;&nbsp;| Effected <o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">and LookupMode<o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">&nbsp; = Static <o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">&nbsp;&nbsp;| Dynamic <o:p></o:p></span></div>
+<div class="MsoNormal">
+<br />
+Very odd to say that a&nbsp;Dictionary&nbsp;being faster than a&nbsp;Map&nbsp;is "sad" when it isn't even being mutated:<o:p></o:p><br />
+<br /></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">// Sadly a normal Dictionary is so<o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">// much faster then a F# Map that<o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">// it's worth using it<o:p></o:p></span></div>
+<div class="MsoNormal">
+<span style="font-family: Consolas;">new Dictionary&lt;string, int&gt;(<o:p></o:p></span></div>
+<div class="MsoNormal">
+<br />
+In summary, although IronJS is written in F# it is not idiomatic F# code and there is a <i>lot</i> of room for improvement. I see no reason to believe that the problems with the IronJS code base have anything to do with the F# programming language.<o:p></o:p></div>
+<div class="MsoNormal">
+<br /></div>
+</div>
+<div style='clear: both;'></div>
+</div>
+<div class='post-footer'>
+<div class='post-footer-line post-footer-line-1'>
+<span class='post-author vcard'>
+Posted by
+<span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
+<meta content='http://www.blogger.com/profile/11059316496121100950' itemprop='url'/>
+<a class='g-profile' href='http://www.blogger.com/profile/11059316496121100950' rel='author' title='author profile'>
+<span itemprop='name'>Jon Harrop</span>
+</a>
+</span>
+</span>
+<span class='post-timestamp'>
+at
+<meta content='http://flyingfrogblog.blogspot.com/2013/09/ironjs.html' itemprop='url'/>
+<a class='timestamp-link' href='http://flyingfrogblog.blogspot.co.uk/2013/09/ironjs.html' rel='bookmark' title='permanent link'><abbr class='published' itemprop='datePublished' title='2013-09-14T07:57:00-07:00'>07:57</abbr></a>
+</span>
+<span class='reaction-buttons'>
+</span>
+<span class='star-ratings'>
+</span>
+<span class='post-comment-link'>
+</span>
+<span class='post-backlinks post-comment-link'>
+</span>
+<span class='post-icons'>
+<span class='item-control blog-admin pid-568691926'>
+<a href='http://www.blogger.com/post-edit.g?blogID=1779668156488517434&postID=1088388806487509054&from=pencil' title='Edit Post'>
+<img alt='' class='icon-action' height='18' src='http://img2.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
+</a>
+</span>
+</span>
+<div class='post-share-buttons goog-inline-block'>
+</div>
+</div>
+<div class='post-footer-line post-footer-line-2'>
+<span class='post-labels'>
+Labels:
+<a href='http://flyingfrogblog.blogspot.co.uk/search/label/idiomatic' rel='tag'>idiomatic</a>,
+<a href='http://flyingfrogblog.blogspot.co.uk/search/label/ironjs' rel='tag'>ironjs</a>,
+<a href='http://flyingfrogblog.blogspot.co.uk/search/label/performance' rel='tag'>performance</a>
+</span>
+</div>
+<div class='post-footer-line post-footer-line-3'>
+<span class='post-location'>
+</span>
+</div>
+</div>
+</div>
+<div class='comments' id='comments'>
+<a name='comments'></a>
+<h4>3 comments:</h4>
+<div id='Blog1_comments-block-wrapper'>
+<dl class='avatar-comment-indent' id='comments-block'>
+<dt class='comment-author ' id='c7949458606235820132'>
+<a name='c7949458606235820132'></a>
+<div class="avatar-image-container vcard"><span dir="ltr"><a href="http://www.blogger.com/profile/08313802559573057206" rel="nofollow" onclick="" class="avatar-hovercard" id="av-0-08313802559573057206"><img src="http://img1.blogblog.com/img/blank.gif" width="35" height="35" alt="" class="delayLoad" style="display: none;" longdesc="//lh6.googleusercontent.com/-SrjYhF0jCic/AAAAAAAAAAI/AAAAAAAAASI/ku07WwIxebU/s512-c/photo.jpg" title="Anton Tayanovskyy">
+
+<noscript><img src="//lh6.googleusercontent.com/-SrjYhF0jCic/AAAAAAAAAAI/AAAAAAAAASI/ku07WwIxebU/s512-c/photo.jpg" width="35" height="35" class="photo" alt=""></noscript></a></span></div>
+<a href='http://www.blogger.com/profile/08313802559573057206' rel='nofollow'>Anton Tayanovskyy</a>
+said...
+</dt>
+<dd class='comment-body' id='Blog1_cmt-7949458606235820132'>
+<p>
+Mostly agree, just two questions on parsing/lexing.<br /><br />1. Lexing: I once toyed with lexing JS files with fslex, and lexing a file the size of jQuery was visibly slow. I think I might have used --unicode. This probably can be fixed in fslex, a table driven approach certainly should be fast enough when properly done but.. For the moment, there is at least some motivation hand-written lexers.<br /><br />Do you default to using FsLex, or are there other better tools?<br /><br />2. Parsing: JS (EMCA-262) grammar is expressed in EBNF but has the most annoying exceptions in margin notes, notably semicolon insertion and some meta-rules on lookahead. In my attempts I utterly failed to coerce this to a format ocamlyacc or fsyacc (LALR(1)) would accept; it does not mean it is impossible - probably just that I am not very experienced with these tools; they have some &quot;error recovery&quot; feature that might do it, but I was not sure how.  So for my code I do this in a hand-rolled parser or parsec-style combinators, where there is a lot of manual control.<br /><br />Do you routinely use fsyacc for parsing? FParsec? Something else perhaps?<br />
+</p>
+</dd>
+<dd class='comment-footer'>
+<span class='comment-timestamp'>
+<a href='http://flyingfrogblog.blogspot.com/2013/09/ironjs.html?showComment=1380117068307#c7949458606235820132' title='comment permalink'>
+25 September 2013 06:51
+</a>
+<span class='item-control blog-admin pid-1204589986'>
+<a class='comment-delete' href='http://www.blogger.com/delete-comment.g?blogID=1779668156488517434&postID=7949458606235820132' title='Delete Comment'>
+<img src='//www.blogger.com/img/icon_delete13.gif'/>
+</a>
+</span>
+</span>
+</dd>
+<dt class='comment-author ' id='c207941772691946840'>
+<a name='c207941772691946840'></a>
+<div class="avatar-image-container vcard"><span dir="ltr"><a href="http://www.blogger.com/profile/03622573187942388226" rel="nofollow" onclick="" class="avatar-hovercard" id="av-1-03622573187942388226"><img src="http://img1.blogblog.com/img/blank.gif" width="35" height="35" alt="" class="delayLoad" style="display: none;" longdesc="//lh4.googleusercontent.com/-2RuDl9kgBeE/AAAAAAAAAAI/AAAAAAAABcw/gN-pZTmFn18/s512-c/photo.jpg" title="Steve Gilham">
+
+<noscript><img src="//lh4.googleusercontent.com/-2RuDl9kgBeE/AAAAAAAAAAI/AAAAAAAABcw/gN-pZTmFn18/s512-c/photo.jpg" width="35" height="35" class="photo" alt=""></noscript></a></span></div>
+<a href='http://www.blogger.com/profile/03622573187942388226' rel='nofollow'>Steve Gilham</a>
+said...
+</dt>
+<dd class='comment-body' id='Blog1_cmt-207941772691946840'>
+<p>
+Even granted that this picks on the more egregious highlights, it sounds like a case of &quot;The determined Real Programmer can write FORTRAN programs in any language.&quot; (except that the state of the art seems to have moved on from FORTRAN to Java).<br /><br />Perhaps someone with the bandwidth to take it on should attempt a rewrite in F# :)
+</p>
+</dd>
+<dd class='comment-footer'>
+<span class='comment-timestamp'>
+<a href='http://flyingfrogblog.blogspot.com/2013/09/ironjs.html?showComment=1380524716934#c207941772691946840' title='comment permalink'>
+30 September 2013 00:05
+</a>
+<span class='item-control blog-admin pid-1035537562'>
+<a class='comment-delete' href='http://www.blogger.com/delete-comment.g?blogID=1779668156488517434&postID=207941772691946840' title='Delete Comment'>
+<img src='//www.blogger.com/img/icon_delete13.gif'/>
+</a>
+</span>
+</span>
+</dd>
+<dt class='comment-author blog-author' id='c4501974891727100297'>
+<a name='c4501974891727100297'></a>
+<div class="avatar-image-container avatar-stock"><span dir="ltr"><a href="http://www.blogger.com/profile/11059316496121100950" rel="nofollow" onclick="" class="avatar-hovercard" id="av-2-11059316496121100950"><img src="http://img2.blogblog.com/img/b16-rounded.gif" width="16" height="16" alt="" title="Jon Harrop">
+
+</a></span></div>
+<a href='http://www.blogger.com/profile/11059316496121100950' rel='nofollow'>Jon Harrop</a>
+said...
+</dt>
+<dd class='comment-body' id='Blog1_cmt-4501974891727100297'>
+<p>
+@Anton: In F# today I use active patterns for both lexing and parsing. I would use fslex and fsyacc if they had tooling (i.e. VS integration and preferably run-time compilation rather than 2-stage) but they don&#39;t so I steer clear of them.<br /><br />@Steve: Exactly.<br />
+</p>
+</dd>
+<dd class='comment-footer'>
+<span class='comment-timestamp'>
+<a href='http://flyingfrogblog.blogspot.com/2013/09/ironjs.html?showComment=1380664918353#c4501974891727100297' title='comment permalink'>
+1 October 2013 15:01
+</a>
+<span class='item-control blog-admin pid-568691926'>
+<a class='comment-delete' href='http://www.blogger.com/delete-comment.g?blogID=1779668156488517434&postID=4501974891727100297' title='Delete Comment'>
+<img src='//www.blogger.com/img/icon_delete13.gif'/>
+</a>
+</span>
+</span>
+</dd>
+</dl>
+</div>
+<p class='comment-footer'>
+<a href='http://www.blogger.com/comment.g?blogID=1779668156488517434&amp;postID=1088388806487509054' onclick=''>Post a Comment</a>
+</p>
+<div id='backlinks-container'>
+<div id='Blog1_backlinks-container'>
+</div>
+</div>
+</div>
+</div>
+
+        </div></div>
+      
+<!-- google_ad_section_end -->
+</div>
+<div class='blog-pager' id='blog-pager'>
+<span id='blog-pager-newer-link'>
+<a class='blog-pager-newer-link' href='http://flyingfrogblog.blogspot.co.uk/2013/09/whats-new-in-garbage-collection.html' id='Blog1_blog-pager-newer-link' title='Newer Post'>Newer Post</a>
+</span>
+<span id='blog-pager-older-link'>
+<a class='blog-pager-older-link' href='http://flyingfrogblog.blogspot.co.uk/2013/09/efficient-parallel-stencil-convolution.html' id='Blog1_blog-pager-older-link' title='Older Post'>Older Post</a>
+</span>
+<a class='home-link' href='http://flyingfrogblog.blogspot.co.uk/'>Home</a>
+</div>
+<div class='clear'></div>
+<div class='post-feeds'>
+<div class='feed-links'>
+Subscribe to:
+<a class='feed-link' href='http://flyingfrogblog.blogspot.com/feeds/1088388806487509054/comments/default' target='_blank' type='application/atom+xml'>Post Comments (Atom)</a>
+</div>
+</div>
+<script type="text/javascript">window.___gcfg = {'lang': 'en_GB'};</script>
+</div><div class='widget HTML' id='HTML1'>
+<div class='widget-content'>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"/>
+<script type="text/javascript">
+_uacct = "UA-197840-1";
+urchinTracker();</script>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=1779668156488517434&widgetType=HTML&widgetId=HTML1&action=editWidget&sectionId=main' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML1"));' target='configHTML1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div></div>
+</div>
+<div id='sidebar-wrapper'>
+<div class='sidebar section' id='sidebar'><div class='widget LinkList' id='LinkList1'>
+<h2>Links</h2>
+<div class='widget-content'>
+<ul>
+<li><a href='http://www.ffconsultancy.com/products/fsharp_for_technical_computing/?ffb'>Visual F# 2010 for Technical Computing (book)</a></li>
+<li><a href='http://www.ffconsultancy.com/products/fsharp_journal/?ffb'>The F#.NET Journal (on-line magazine)</a></li>
+<li><a href='http://www.ffconsultancy.com/products/ocaml_journal/?ffb'>The OCaml Journal (on-line magazine)</a></li>
+<li><a href='http://www.ffconsultancy.com/products/fsharp_for_numerics/?ffb'>F# for Numerics (library)</a></li>
+<li><a href='http://www.ffconsultancy.com/products/fsharp_for_visualization/?ffb'>F# for Visualization (library)</a></li>
+<li><a href='http://www.ffconsultancy.com/products/ocaml_for_scientists/?ffb'>OCaml for Scientists (book)</a></li>
+<li><a href='http://www.ffconsultancy.com/products/signal_processing_net/?ffb'>FFT .NET (library)</a></li>
+<li><a href='http://www.ffconsultancy.com/products/CWT/?ffb'>Time-Frequency Analysis (Mathematica library)</a></li>
+<li><a href='http://www.ffconsultancy.com/ocaml/hlvm/?ffb'>High-Level Virtual Machine (HLVM)</a></li>
+<li><a href='http://www.ffconsultancy.com/products/smoke_vector_graphics/?ffb'>Smoke Vector Graphics (OCaml library)</a></li>
+</ul>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=1779668156488517434&widgetType=LinkList&widgetId=LinkList1&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("LinkList1"));' target='configLinkList1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget PopularPosts' id='PopularPosts1'>
+<h2>Popular Posts</h2>
+<div class='widget-content popular-posts'>
+<ul>
+<li>
+<div class='item-content'>
+<div class='item-title'><a href='http://flyingfrogblog.blogspot.co.uk/2012/06/are-functional-languages-inherently.html'>Are functional languages inherently slow?</a></div>
+<div class='item-snippet'> Functional languages require infrastructure that inevitably adds overheads over what can theoretically be attained using assembler by hand....</div>
+</div>
+<div style='clear: both;'></div>
+</li>
+<li>
+<div class='item-content'>
+<div class='item-title'><a href='http://flyingfrogblog.blogspot.co.uk/2009/04/f-vs-ocaml-vs-haskell-hash-table.html'>F# vs OCaml vs Haskell: hash table performance</a></div>
+<div class='item-snippet'>I just stumbled upon an interesting benchmark. Put mappings i -&gt; i for i in 1..10M in a hash table, print the entry for 100. Don Stewart&...</div>
+</div>
+<div style='clear: both;'></div>
+</li>
+<li>
+<div class='item-content'>
+<div class='item-thumbnail'>
+<a href='http://flyingfrogblog.blogspot.co.uk/2011/01/boosts-sharedptr-up-to-10-slower-than.html' target='_blank'>
+<img alt='' border='0' height='72' src='http://4.bp.blogspot.com/_NMRkpon4Ps0/TR9TZQDFHoI/AAAAAAAAAK0/7dEkUaqWIhI/s72-c/nQueensAllocatorPerformance.png' width='72'/>
+</a>
+</div>
+<div class='item-title'><a href='http://flyingfrogblog.blogspot.co.uk/2011/01/boosts-sharedptr-up-to-10-slower-than.html'>Boost's shared_ptr up to 10&#215; slower than OCaml's garbage collection</a></div>
+<div class='item-snippet'>Our recent post  about the merits of accurate garbage collection over reference counting prompted Tezka to ask for measurements demonstratin...</div>
+</div>
+<div style='clear: both;'></div>
+</li>
+<li>
+<div class='item-content'>
+<div class='item-thumbnail'>
+<a href='http://flyingfrogblog.blogspot.co.uk/2012/01/c-renaissance.html' target='_blank'>
+<img alt='' border='0' height='72' src='http://2.bp.blogspot.com/-rY4jtfaNKzA/TxVLhLWqkrI/AAAAAAAAAOQ/JHmh2M2-_Zk/s72-c/C%252B%252BRenaissance.GIF' width='72'/>
+</a>
+</div>
+<div class='item-title'><a href='http://flyingfrogblog.blogspot.co.uk/2012/01/c-renaissance.html'>The "C++ renaissance"</a></div>
+<div class='item-snippet'>According to Herb Sutter, C++ (and C and Fortran) are unmatched for performance per dollar and, therefore, he believes C++ will once again t...</div>
+</div>
+<div style='clear: both;'></div>
+</li>
+<li>
+<div class='item-content'>
+<div class='item-title'><a href='http://flyingfrogblog.blogspot.co.uk/2010/05/why-is-haskell-used-so-little-in.html'>Why is Haskell used so little in the industry?</a></div>
+<div class='item-snippet'>Bugspy asked an interesting question on Stack Overflow  recently:   It is a wonderful, very fast, mature and complete language. It exists fo...</div>
+</div>
+<div style='clear: both;'></div>
+</li>
+<li>
+<div class='item-content'>
+<div class='item-thumbnail'>
+<a href='http://flyingfrogblog.blogspot.co.uk/2010/08/rise-and-fall-of-ocaml.html' target='_blank'>
+<img alt='' border='0' height='72' src='http://3.bp.blogspot.com/_NMRkpon4Ps0/TFVthFI3KsI/AAAAAAAAAJQ/bZe2GtRNHxI/s72-c/OCamlListTraffic.png' width='72'/>
+</a>
+</div>
+<div class='item-title'><a href='http://flyingfrogblog.blogspot.co.uk/2010/08/rise-and-fall-of-ocaml.html'>The rise and fall of OCaml</a></div>
+<div class='item-snippet'>After over 3 years, The OCaml Journal  is finally closing down. New subscriptions offer access to the 75 existing articles and only a few mo...</div>
+</div>
+<div style='clear: both;'></div>
+</li>
+<li>
+<div class='item-content'>
+<div class='item-title'><a href='http://flyingfrogblog.blogspot.co.uk/2010/09/are-multicore-capable-garbage.html'>Are multicore-capable garbage collectors hard to write?</a></div>
+<div class='item-snippet'>In this era of multicore computing, garbage collectors need to allow user threads (aka mutators ) to run in parallel on separate cores simul...</div>
+</div>
+<div style='clear: both;'></div>
+</li>
+<li>
+<div class='item-content'>
+<div class='item-thumbnail'>
+<a href='http://flyingfrogblog.blogspot.co.uk/2009/01/mono-22.html' target='_blank'>
+<img alt='' border='0' height='72' src='http://2.bp.blogspot.com/_NMRkpon4Ps0/SYNYxwR9OcI/AAAAAAAAACY/boq0agmBiJc/s72-c/scimark2_composite.gif' width='72'/>
+</a>
+</div>
+<div class='item-title'><a href='http://flyingfrogblog.blogspot.co.uk/2009/01/mono-22.html'>Mono 2.2 vs OCaml vs .NET vs LLVM vs JDK</a></div>
+<div class='item-snippet'>Mono 2.2 was recently shipped and a new JIT code generator was the main selling point  promoted by the Mono project because it provides the ...</div>
+</div>
+<div style='clear: both;'></div>
+</li>
+<li>
+<div class='item-content'>
+<div class='item-title'><a href='http://flyingfrogblog.blogspot.co.uk/2010/07/mono-24-still-leaking-like-sieve.html'>Mono 2.4 still leaking like a sieve</a></div>
+<div class='item-snippet'>How fast are hash tables in Mono 2.4 compared to .NET 4? An excellent question but one which led us to another trivial program that leaks me...</div>
+</div>
+<div style='clear: both;'></div>
+</li>
+<li>
+<div class='item-content'>
+<div class='item-title'><a href='http://flyingfrogblog.blogspot.co.uk/2010/08/scala-is-foremost-industrial-language.html'>"Scala is foremost an industrial language"</a></div>
+<div class='item-snippet'>In a recent interview  about Scala and Clojure, Martin Odersky of Scala gave some interesting answers including the following: Q:  Rich Hick...</div>
+</div>
+<div style='clear: both;'></div>
+</li>
+</ul>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=1779668156488517434&widgetType=PopularPosts&widgetId=PopularPosts1&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("PopularPosts1"));' target='configPopularPosts1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget FollowByEmail' id='FollowByEmail1'>
+<h2 class='title'>Follow by Email</h2>
+<div class='widget-content'>
+<div class='follow-by-email-inner'>
+<form action='http://feedburner.google.com/fb/a/mailverify' method='post' onsubmit='window.open("http://feedburner.google.com/fb/a/mailverify?uri=TheFlyingFrogBlog", "popupwindow", "scrollbars=yes,width=550,height=520"); return true' target='popupwindow'>
+<table width='100%'>
+<tr>
+<td>
+<input class='follow-by-email-address' name='email' placeholder='Email address...' type='text'/>
+</td>
+<td width='64px'>
+<input class='follow-by-email-submit' type='submit' value='Submit'/>
+</td>
+</tr>
+</table>
+<input name='uri' type='hidden' value='TheFlyingFrogBlog'/>
+<input name='loc' type='hidden' value='en_US'/>
+</form>
+</div>
+</div>
+<span class='item-control blog-admin'>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=1779668156488517434&widgetType=FollowByEmail&widgetId=FollowByEmail1&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("FollowByEmail1"));' target='configFollowByEmail1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</span>
+</div><div class='widget BlogList' id='BlogList1'>
+<h2 class='title'>Related Blogs</h2>
+<div class='widget-content'>
+<div class='blog-list-container' id='BlogList1_container'>
+<ul id='BlogList1_blogs'>
+<li style='display: block;'>
+<div class='blog-icon'>
+<img data-lateloadsrc='http://fsharpnews.blogspot.com/favicon.ico' height='16' width='16'/>
+</div>
+<div class='blog-content'>
+<div class='blog-title'>
+<a href='http://fsharpnews.blogspot.com/' target='_blank'>
+F# News</a>
+</div>
+<div class='item-content'>
+<span class='item-title'>
+<a href='http://fsharpnews.blogspot.com/2013/10/downloading-stock-prices-reloaded.html' target='_blank'>
+Downloading stock prices reloaded</a>
+</span>
+
+                      -
+                    
+<span class='item-snippet'>
+
+
+We recently published a blog post describing a 14-line solution for 
+downloading stock prices using F# 2.0. Type providers are a major new 
+feature in F# 3...
+</span>
+<div class='item-time'>
+3 hours ago
+</div>
+</div>
+</div>
+<div style='clear: both;'></div>
+</li>
+</ul>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=1779668156488517434&widgetType=BlogList&widgetId=BlogList1&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("BlogList1"));' target='configBlogList1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div>
+</div><div class='widget Subscribe' id='Subscribe1'>
+<div style='white-space:nowrap'>
+<h2 class='title'>Subscribe</h2>
+<div class='widget-content'>
+<div class='subscribe-wrapper subscribe-type-POST'>
+<div class='subscribe expanded subscribe-type-POST' id='SW_READER_LIST_Subscribe1POST' style='display:none;'>
+<div class='top'>
+<span class='inner' onclick='return(_SW_toggleReaderList(event, "Subscribe1POST"));'>
+<img class='subscribe-dropdown-arrow' src='http://img2.blogblog.com/img/widgets/arrow_dropdown.gif'/>
+<img align='absmiddle' alt='' border='0' class='feed-icon' src='http://img1.blogblog.com/img/icon_feed12.png'/>
+Posts
+</span>
+<div class='feed-reader-links'>
+<a class='feed-reader-link' href='http://www.netvibes.com/subscribe.php?url=http%3A%2F%2Fflyingfrogblog.blogspot.com%2Ffeeds%2Fposts%2Fdefault' target='_blank'>
+<img src='http://img1.blogblog.com/img/widgets/subscribe-netvibes.png'/>
+</a>
+<a class='feed-reader-link' href='http://add.my.yahoo.com/content?url=http%3A%2F%2Fflyingfrogblog.blogspot.com%2Ffeeds%2Fposts%2Fdefault' target='_blank'>
+<img src='http://img1.blogblog.com/img/widgets/subscribe-yahoo.png'/>
+</a>
+<a class='feed-reader-link' href='http://flyingfrogblog.blogspot.com/feeds/posts/default' target='_blank'>
+<img align='absmiddle' class='feed-icon' src='http://img1.blogblog.com/img/icon_feed12.png'/>
+                Atom
+              </a>
+</div>
+</div>
+<div class='bottom'></div>
+</div>
+<div class='subscribe' id='SW_READER_LIST_CLOSED_Subscribe1POST' onclick='return(_SW_toggleReaderList(event, "Subscribe1POST"));'>
+<div class='top'>
+<span class='inner'>
+<img class='subscribe-dropdown-arrow' src='http://img2.blogblog.com/img/widgets/arrow_dropdown.gif'/>
+<span onclick='return(_SW_toggleReaderList(event, "Subscribe1POST"));'>
+<img align='absmiddle' alt='' border='0' class='feed-icon' src='http://img1.blogblog.com/img/icon_feed12.png'/>
+Posts
+</span>
+</span>
+</div>
+<div class='bottom'></div>
+</div>
+</div>
+<div class='subscribe-wrapper subscribe-type-PER_POST'>
+<div class='subscribe expanded subscribe-type-PER_POST' id='SW_READER_LIST_Subscribe1PER_POST' style='display:none;'>
+<div class='top'>
+<span class='inner' onclick='return(_SW_toggleReaderList(event, "Subscribe1PER_POST"));'>
+<img class='subscribe-dropdown-arrow' src='http://img2.blogblog.com/img/widgets/arrow_dropdown.gif'/>
+<img align='absmiddle' alt='' border='0' class='feed-icon' src='http://img1.blogblog.com/img/icon_feed12.png'/>
+Comments
+</span>
+<div class='feed-reader-links'>
+<a class='feed-reader-link' href='http://www.netvibes.com/subscribe.php?url=http%3A%2F%2Fflyingfrogblog.blogspot.com%2Ffeeds%2F1088388806487509054%2Fcomments%2Fdefault' target='_blank'>
+<img src='http://img1.blogblog.com/img/widgets/subscribe-netvibes.png'/>
+</a>
+<a class='feed-reader-link' href='http://add.my.yahoo.com/content?url=http%3A%2F%2Fflyingfrogblog.blogspot.com%2Ffeeds%2F1088388806487509054%2Fcomments%2Fdefault' target='_blank'>
+<img src='http://img1.blogblog.com/img/widgets/subscribe-yahoo.png'/>
+</a>
+<a class='feed-reader-link' href='http://flyingfrogblog.blogspot.com/feeds/1088388806487509054/comments/default' target='_blank'>
+<img align='absmiddle' class='feed-icon' src='http://img1.blogblog.com/img/icon_feed12.png'/>
+                Atom
+              </a>
+</div>
+</div>
+<div class='bottom'></div>
+</div>
+<div class='subscribe' id='SW_READER_LIST_CLOSED_Subscribe1PER_POST' onclick='return(_SW_toggleReaderList(event, "Subscribe1PER_POST"));'>
+<div class='top'>
+<span class='inner'>
+<img class='subscribe-dropdown-arrow' src='http://img2.blogblog.com/img/widgets/arrow_dropdown.gif'/>
+<span onclick='return(_SW_toggleReaderList(event, "Subscribe1PER_POST"));'>
+<img align='absmiddle' alt='' border='0' class='feed-icon' src='http://img1.blogblog.com/img/icon_feed12.png'/>
+Comments
+</span>
+</span>
+</div>
+<div class='bottom'></div>
+</div>
+</div>
+<div style='clear:both'></div>
+</div>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=1779668156488517434&widgetType=Subscribe&widgetId=Subscribe1&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("Subscribe1"));' target='configSubscribe1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget BlogArchive' id='BlogArchive1'>
+<h2>Blog Archive</h2>
+<div class='widget-content'>
+<div id='ArchiveList'>
+<div id='BlogArchive1_ArchiveList'>
+<ul class='hierarchy'>
+<li class='archivedate expanded'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy toggle-open'>&#9660;&#160;</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/search?updated-min=2013-01-01T00:00:00-08:00&amp;updated-max=2014-01-01T00:00:00-08:00&amp;max-results=7'>2013</a>
+<span class='post-count' dir='ltr'>(7)</span>
+<ul class='hierarchy'>
+<li class='archivedate expanded'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy toggle-open'>&#9660;&#160;</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2013_09_01_archive.html'>September</a>
+<span class='post-count' dir='ltr'>(6)</span>
+<ul class='posts'>
+<li><a href='http://flyingfrogblog.blogspot.co.uk/2013/09/how-do-reference-counting-and-tracing.html'>How do reference counting and tracing garbage coll...</a></li>
+<li><a href='http://flyingfrogblog.blogspot.co.uk/2013/09/why-is-garbage-collection-important.html'>Why is garbage collection an important feature?</a></li>
+<li><a href='http://flyingfrogblog.blogspot.co.uk/2013/09/whats-new-in-garbage-collection.html'>What&#39;s new in garbage collection?</a></li>
+<li><a href='http://flyingfrogblog.blogspot.co.uk/2013/09/ironjs.html'>A look at the IronJS source code</a></li>
+<li><a href='http://flyingfrogblog.blogspot.co.uk/2013/09/efficient-parallel-stencil-convolution.html'>Efficient Parallel Stencil Convolution in Haskell</a></li>
+<li><a href='http://flyingfrogblog.blogspot.co.uk/2013/09/hash-table-insertion-performance-f-vs.html'>Hash table insertion performance: F# vs OCaml vs H...</a></li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2013_02_01_archive.html'>February</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/search?updated-min=2012-01-01T00:00:00-08:00&amp;updated-max=2013-01-01T00:00:00-08:00&amp;max-results=23'>2012</a>
+<span class='post-count' dir='ltr'>(23)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2012_11_01_archive.html'>November</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2012_06_01_archive.html'>June</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2012_05_01_archive.html'>May</a>
+<span class='post-count' dir='ltr'>(14)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2012_04_01_archive.html'>April</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2012_03_01_archive.html'>March</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2012_01_01_archive.html'>January</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/search?updated-min=2011-01-01T00:00:00-08:00&amp;updated-max=2012-01-01T00:00:00-08:00&amp;max-results=16'>2011</a>
+<span class='post-count' dir='ltr'>(16)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2011_11_01_archive.html'>November</a>
+<span class='post-count' dir='ltr'>(5)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2011_09_01_archive.html'>September</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2011_03_01_archive.html'>March</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2011_02_01_archive.html'>February</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2011_01_01_archive.html'>January</a>
+<span class='post-count' dir='ltr'>(6)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/search?updated-min=2010-01-01T00:00:00-08:00&amp;updated-max=2011-01-01T00:00:00-08:00&amp;max-results=50'>2010</a>
+<span class='post-count' dir='ltr'>(53)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2010_12_01_archive.html'>December</a>
+<span class='post-count' dir='ltr'>(7)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2010_11_01_archive.html'>November</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2010_10_01_archive.html'>October</a>
+<span class='post-count' dir='ltr'>(6)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2010_09_01_archive.html'>September</a>
+<span class='post-count' dir='ltr'>(4)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2010_08_01_archive.html'>August</a>
+<span class='post-count' dir='ltr'>(7)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2010_07_01_archive.html'>July</a>
+<span class='post-count' dir='ltr'>(9)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2010_06_01_archive.html'>June</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2010_05_01_archive.html'>May</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2010_04_01_archive.html'>April</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2010_03_01_archive.html'>March</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2010_02_01_archive.html'>February</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2010_01_01_archive.html'>January</a>
+<span class='post-count' dir='ltr'>(7)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/search?updated-min=2009-01-01T00:00:00-08:00&amp;updated-max=2010-01-01T00:00:00-08:00&amp;max-results=28'>2009</a>
+<span class='post-count' dir='ltr'>(28)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2009_12_01_archive.html'>December</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2009_11_01_archive.html'>November</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2009_10_01_archive.html'>October</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2009_09_01_archive.html'>September</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2009_07_01_archive.html'>July</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2009_05_01_archive.html'>May</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2009_04_01_archive.html'>April</a>
+<span class='post-count' dir='ltr'>(7)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2009_03_01_archive.html'>March</a>
+<span class='post-count' dir='ltr'>(7)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2009_01_01_archive.html'>January</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/search?updated-min=2008-01-01T00:00:00-08:00&amp;updated-max=2009-01-01T00:00:00-08:00&amp;max-results=10'>2008</a>
+<span class='post-count' dir='ltr'>(10)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2008_12_01_archive.html'>December</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2008_11_01_archive.html'>November</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2008_10_01_archive.html'>October</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2008_08_01_archive.html'>August</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2008_04_01_archive.html'>April</a>
+<span class='post-count' dir='ltr'>(4)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2008_02_01_archive.html'>February</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/search?updated-min=2007-01-01T00:00:00-08:00&amp;updated-max=2008-01-01T00:00:00-08:00&amp;max-results=21'>2007</a>
+<span class='post-count' dir='ltr'>(21)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2007_12_01_archive.html'>December</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2007_11_01_archive.html'>November</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2007_10_01_archive.html'>October</a>
+<span class='post-count' dir='ltr'>(4)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2007_09_01_archive.html'>September</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2007_08_01_archive.html'>August</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2007_07_01_archive.html'>July</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2007_06_01_archive.html'>June</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://flyingfrogblog.blogspot.co.uk/2007_05_01_archive.html'>May</a>
+<span class='post-count' dir='ltr'>(6)</span>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=1779668156488517434&widgetType=BlogArchive&widgetId=BlogArchive1&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("BlogArchive1"));' target='configBlogArchive1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget Label' id='Label1'>
+<h2>Labels</h2>
+<div class='widget-content list-label-widget-content'>
+<ul>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/.net'>.net</a>
+<span dir='ltr'>(5)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/academic'>academic</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/accumulator%20generator'>accumulator generator</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/advantages'>advantages</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/allocation'>allocation</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/amd'>amd</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/amorphous'>amorphous</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/analysis'>analysis</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/animation'>animation</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/API'>API</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/apple'>apple</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/arm'>arm</a>
+<span dir='ltr'>(3)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/array'>array</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/articles'>articles</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/asynchronous'>asynchronous</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/asynchronous%20workflow'>asynchronous workflow</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/beginner'>beginner</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/Beltway'>Beltway</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/benchmark'>benchmark</a>
+<span dir='ltr'>(5)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/bfg'>bfg</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/bitvector'>bitvector</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/bitwise'>bitwise</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/block%20sorting'>block sorting</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/bloxors'>bloxors</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/boehm'>boehm</a>
+<span dir='ltr'>(4)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/book'>book</a>
+<span dir='ltr'>(3)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/book%20sales'>book sales</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/books'>books</a>
+<span dir='ltr'>(3)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/boost'>boost</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/boxing'>boxing</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/bubble%20sort'>bubble sort</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/bug'>bug</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/bugs'>bugs</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/burrows%20wheeler'>burrows wheeler</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/burton%20smith'>burton smith</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/business'>business</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/c%23'>c#</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/c%2B%2B'>c++</a>
+<span dir='ltr'>(6)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/cache'>cache</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/channel'>channel</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/clojure'>clojure</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/clos'>clos</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/closures'>closures</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/clr'>clr</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/code%20base'>code base</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/color'>color</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/color%20laser%20printer'>color laser printer</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/commercial'>commercial</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/common%20language%20runtime'>common language runtime</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/comparison'>comparison</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/compatibility'>compatibility</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/compiler'>compiler</a>
+<span dir='ltr'>(4)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/computer%20programming'>computer programming</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/concurrency'>concurrency</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/concurrent'>concurrent</a>
+<span dir='ltr'>(4)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/concurrent%20garbage%20collector'>concurrent garbage collector</a>
+<span dir='ltr'>(3)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/concurrent%20gc'>concurrent gc</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/conservative%20gc'>conservative gc</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/consultant'>consultant</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/convolution'>convolution</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/copying%20collection'>copying collection</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/corruption'>corruption</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/cpu'>cpu</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/darcs'>darcs</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/data'>data</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/data%20compression'>data compression</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/data%20parallel%20haskell'>data parallel haskell</a>
+<span dir='ltr'>(3)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/debian'>debian</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/determinism'>determinism</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/diffraction'>diffraction</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/directx'>directx</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/disadvantages'>disadvantages</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/discount'>discount</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/disruptor'>disruptor</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/don%20stewart'>don stewart</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/don%20syme'>don syme</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/easy'>easy</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/eclipse'>eclipse</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/erik%20meijer'>erik meijer</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/erlang'>erlang</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/evolutionary'>evolutionary</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/examples'>examples</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/extensibility'>extensibility</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/f%23'>f#</a>
+<span dir='ltr'>(29)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/f%23%20for%20numerics'>f# for numerics</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/f%23%20for%20scientists'>f# for scientists</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/f%23%20for%20technical%20computing'>f# for technical computing</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/f%23%20for%20visualization'>f# for visualization</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/f%23%20meetup'>f# meetup</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/f%23.net'>f#.net</a>
+<span dir='ltr'>(4)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/f%23.net%20journal'>f#.net journal</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/fft'>fft</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/first-class%20functions'>first-class functions</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/fortran'>fortran</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/fourier'>fourier</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/free'>free</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/front%20end'>front end</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/fsharp'>fsharp</a>
+<span dir='ltr'>(4)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/funarg%20problem'>funarg problem</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/functional%20programming'>functional programming</a>
+<span dir='ltr'>(9)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/funding'>funding</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/g%2B%2B'>g++</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/G1'>G1</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/gainward'>gainward</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/game'>game</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/ganesh%20sittampalam'>ganesh sittampalam</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/garbage%20collection'>garbage collection</a>
+<span dir='ltr'>(23)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/gc'>gc</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/gc%20pause'>gc pause</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/generational%20garbage%20collection'>generational garbage collection</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/generics'>generics</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/ghc'>ghc</a>
+<span dir='ltr'>(3)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/google%20chrome'>google chrome</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/google%20go'>google go</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/goroutine'>goroutine</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/gpu'>gpu</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/graphics'>graphics</a>
+<span dir='ltr'>(3)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/graphics%20card'>graphics card</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/guido%20van%20rossum'>guido van rossum</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/hard%20drive'>hard drive</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/hash%20table'>hash table</a>
+<span dir='ltr'>(6)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/haskell'>haskell</a>
+<span dir='ltr'>(30)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/heap'>heap</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/heap%20sort'>heap sort</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/herb%20sutter'>herb sutter</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/hewlett%20packard'>hewlett packard</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/higher-order%20module'>higher-order module</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/hitachi'>hitachi</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/hlvm'>hlvm</a>
+<span dir='ltr'>(14)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/householder%20reductions'>householder reductions</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/hp'>hp</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/ide'>ide</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/idiomatic'>idiomatic</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/Immix'>Immix</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/imperative'>imperative</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/industrial%20haskell%20group'>industrial haskell group</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/industry'>industry</a>
+<span dir='ltr'>(4)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/intel'>intel</a>
+<span dir='ltr'>(3)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/interview'>interview</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/io'>io</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/ipad'>ipad</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/ironjs'>ironjs</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/java'>java</a>
+<span dir='ltr'>(6)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/jit'>jit</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/job'>job</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/jobs'>jobs</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/joe%20marshall'>joe marshall</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/joe%20pamer'>joe pamer</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/jvm'>jvm</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/kde'>kde</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/kde%204'>kde 4</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/language'>language</a>
+<span dir='ltr'>(3)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/laser'>laser</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/latency'>latency</a>
+<span dir='ltr'>(4)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/layout'>layout</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/leak'>leak</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/lecture'>lecture</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/lexer'>lexer</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/lexmark'>lexmark</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/limitations'>limitations</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/lines%20of%20code'>lines of code</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/linux'>linux</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/lisp'>lisp</a>
+<span dir='ltr'>(3)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/llvm'>llvm</a>
+<span dir='ltr'>(4)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/LMAX'>LMAX</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/loc'>loc</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/local%20optimization'>local optimization</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/london'>london</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/lwt'>lwt</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/macro'>macro</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/mailing%20list'>mailing list</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/managed%20code'>managed code</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/mark%20compact'>mark compact</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/mark%20region'>mark region</a>
+<span dir='ltr'>(5)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/mark%20sweep'>mark sweep</a>
+<span dir='ltr'>(4)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/market'>market</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/martin%20odersky'>martin odersky</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/marvell'>marvell</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/mathematica'>mathematica</a>
+<span dir='ltr'>(8)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/maximization'>maximization</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/median'>median</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/memory'>memory</a>
+<span dir='ltr'>(3)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/memory%20safety'>memory safety</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/message%20passing'>message passing</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/microsoft'>microsoft</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/milestone'>milestone</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/MinCut'>MinCut</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/ml'>ml</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/mlton'>mlton</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/module%20system'>module system</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/monad'>monad</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/mono'>mono</a>
+<span dir='ltr'>(8)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/monte%20carlo'>monte carlo</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/multicore'>multicore</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/nacl'>nacl</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/native%20code'>native code</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/netbook'>netbook</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/norman%20ramsey'>norman ramsey</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/numeric%20tower'>numeric tower</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/numerical'>numerical</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/numerical%20methods'>numerical methods</a>
+<span dir='ltr'>(3)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/numerical%20recipes'>numerical recipes</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/numerics'>numerics</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/nvidia'>nvidia</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/o%27reilly'>o&#39;reilly</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/object%20oriented%20programming'>object oriented programming</a>
+<span dir='ltr'>(3)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/ocaml'>ocaml</a>
+<span dir='ltr'>(30)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/ocaml%20for%20scientists'>ocaml for scientists</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/ocaml%20journal'>ocaml journal</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/OpenCV'>OpenCV</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/optimization'>optimization</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/pa_monad'>pa_monad</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/paper'>paper</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/parallel'>parallel</a>
+<span dir='ltr'>(10)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/parallel%20arrays'>parallel arrays</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/parallel%20garbage%20collection'>parallel garbage collection</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/parallel%20programming'>parallel programming</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/ParallelTable'>ParallelTable</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/parser'>parser</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/partial%20specialization'>partial specialization</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/pattern'>pattern</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/pattern%20matching'>pattern matching</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/paul%20graham'>paul graham</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/pause'>pause</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/performance'>performance</a>
+<span dir='ltr'>(29)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/phd'>phd</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/plugin'>plugin</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/polymorphic%20variants'>polymorphic variants</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/polymorphism'>polymorphism</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/popularity'>popularity</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/printer'>printer</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/product'>product</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/products'>products</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/profit'>profit</a>
+<span dir='ltr'>(3)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/profits'>profits</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/programming%20language'>programming language</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/proper%20tail%20recursion'>proper tail recursion</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/public'>public</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/purely%20functional%20data%20structure'>purely functional data structure</a>
+<span dir='ltr'>(3)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/pythagoras%20tree'>pythagoras tree</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/python'>python</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/qr%20decomposition'>qr decomposition</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/quadcore'>quadcore</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/quicksort'>quicksort</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/raspberry%20pi'>raspberry pi</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/ray%20tracer'>ray tracer</a>
+<span dir='ltr'>(4)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/real-time'>real-time</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/reddit'>reddit</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/reference%20counting'>reference counting</a>
+<span dir='ltr'>(5)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/reference%20type'>reference type</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/regular%20expression'>regular expression</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/reified%20generics'>reified generics</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/release'>release</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/reliability'>reliability</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/representation'>representation</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/research'>research</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/review'>review</a>
+<span dir='ltr'>(4)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/rewrite'>rewrite</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/rich%20hickey'>rich hickey</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/richard%20jones'>richard jones</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/rule'>rule</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/running%20cost'>running cost</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/sadek%20drobi'>sadek drobi</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/sal%20mangano'>sal mangano</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/sales'>sales</a>
+<span dir='ltr'>(4)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/scala'>scala</a>
+<span dir='ltr'>(10)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/scheme'>scheme</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/scientific%20computing'>scientific computing</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/semi-space'>semi-space</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/shadow%20stack'>shadow stack</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/share'>share</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/shared_ptr'>shared_ptr</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/signal'>signal</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/simon%20marlow'>simon marlow</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/simple'>simple</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/size'>size</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/sml'>sml</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/software'>software</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/source%20code'>source code</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/special%20offer'>special offer</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/sse'>sse</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/stack%20overflow'>stack overflow</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/standard%20ml'>standard ml</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/stencil'>stencil</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/stop-the-world'>stop-the-world</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/structural'>structural</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/sun'>sun</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/symbolic'>symbolic</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/tail%20calls'>tail calls</a>
+<span dir='ltr'>(3)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/task%20parallelism'>task parallelism</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/tco'>tco</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/technical%20computing'>technical computing</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/template%20haskell'>template haskell</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/term%20rewriting'>term rewriting</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/Texas%20Multicore%20Technologies'>Texas Multicore Technologies</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/thesis'>thesis</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/throughput'>throughput</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/time-frequency%20analysis'>time-frequency analysis</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/tools'>tools</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/tracing%20garbage%20collection'>tracing garbage collection</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/trading'>trading</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/treadmill'>treadmill</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/trend'>trend</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/trends'>trends</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/tuples'>tuples</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/tutorial'>tutorial</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/type%20class'>type class</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/value'>value</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/value%20types'>value types</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/variant%20type'>variant type</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/verbosity'>verbosity</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/video'>video</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/virginity'>virginity</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/virtual%20machine'>virtual machine</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/vista'>vista</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/visual%20studio%20integration'>visual studio integration</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/visualization'>visualization</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/wavelet'>wavelet</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/western%20digital'>western digital</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/windows'>windows</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://flyingfrogblog.blogspot.co.uk/search/label/write%20barrier'>write barrier</a>
+<span dir='ltr'>(1)</span>
+</li>
+</ul>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=1779668156488517434&widgetType=Label&widgetId=Label1&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("Label1"));' target='configLabel1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget Profile' id='Profile1'>
+<h2>About Me</h2>
+<div class='widget-content'>
+<dl class='profile-datablock'>
+<dt class='profile-data'>
+<a class='profile-name-link g-profile' href='http://www.blogger.com/profile/11059316496121100950' rel='author' style='background-image: url(//www.blogger.com/img/logo-16.png);'>
+Jon Harrop
+</a>
+</dt>
+<dd class='profile-textblock'>Specialist in the use of functional programming for technical computing in industry and academia.</dd>
+</dl>
+<a class='profile-link' href='http://www.blogger.com/profile/11059316496121100950' rel='author'>View my complete profile</a>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=1779668156488517434&widgetType=Profile&widgetId=Profile1&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("Profile1"));' target='configProfile1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget Stats' id='Stats1'>
+<h2>Total Pageviews</h2>
+<div class='widget-content'>
+<div id='Stats1_content' style='display: none;'>
+<img alt='Sparkline' height='30' id='Stats1_sparkline' width='75'/>
+<span class='counter-wrapper text-counter-wrapper' id='Stats1_totalCount'></span>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=1779668156488517434&widgetType=Stats&widgetId=Stats1&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("Stats1"));' target='configStats1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div>
+</div></div>
+</div>
+<!-- spacer for skins that want sidebar and main to be the same height-->
+<div class='clear'>&#160;</div>
+</div>
+<!-- end content-wrapper -->
+<div id='footer-wrapper'>
+<div class='footer section' id='footer'></div>
+</div>
+</div></div>
+<!-- end outer-wrapper -->
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('widgetJsBefore');
+</script><script type="text/javascript" src="//www.blogger.com/static/v1/widgets/3545113424-widgets.js"></script>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type='text/javascript'>
+if (typeof(BLOG_attachCsiOnload) != 'undefined' && BLOG_attachCsiOnload != null) { window['blogger_templates_experiment_id'] = "templatesV1";window['blogger_blog_id'] = '1779668156488517434';BLOG_attachCsiOnload('item_'); }_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d1779668156488517434','//flyingfrogblog.blogspot.co.uk/2013/09/ironjs.html','1779668156488517434');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '1779668156488517434', 'bloggerUrl': 'http://www.blogger.com', 'title': 'The Flying Frog Blog', 'pageType': 'item', 'url': 'http://flyingfrogblog.blogspot.co.uk/2013/09/ironjs.html', 'canonicalUrl': 'http://flyingfrogblog.blogspot.com/2013/09/ironjs.html', 'canonicalHomepageUrl': 'http://flyingfrogblog.blogspot.com/', 'homepageUrl': 'http://flyingfrogblog.blogspot.co.uk/', 'blogspotFaviconUrl': 'http://flyingfrogblog.blogspot.co.uk/favicon.ico', 'enabledCommentProfileImages': true, 'adultContent': false, 'disableAdSenseWidget': false, 'analyticsAccountNumber': '', 'searchLabel': '', 'searchQuery': '', 'pageName': 'A look at the IronJS source code', 'pageTitle': 'The Flying Frog Blog: A look at the IronJS source code', 'encoding': 'UTF-8', 'locale': 'en_GB', 'localeUnderscoreDelimited': 'en_gb', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'languageDirection': 'ltr', 'feedLinks': '\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42The Flying Frog Blog - Atom\42 href\75\42http://flyingfrogblog.blogspot.com/feeds/posts/default\42 /\76\n\74link rel\75\42alternate\42 type\75\42application/rss+xml\42 title\75\42The Flying Frog Blog - RSS\42 href\75\42http://flyingfrogblog.blogspot.com/feeds/posts/default?alt\75rss\42 /\76\n\74link rel\75\42service.post\42 type\75\42application/atom+xml\42 title\75\42The Flying Frog Blog - Atom\42 href\75\42http://www.blogger.com/feeds/1779668156488517434/posts/default\42 /\76\n\n\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42The Flying Frog Blog - Atom\42 href\75\42http://flyingfrogblog.blogspot.com/feeds/1088388806487509054/comments/default\42 /\76\n', 'meTag': '', 'openIdOpTag': '', 'imageSrcTag': '', 'latencyHeadScript': '\74script type\75\42text/javascript\42\76(function() { var b\75window,e\75\42jstiming\42,g\75\42tick\42;(function(){function d(a){this.t\75{};this.tick\75function(a,d,c){c\75void 0!\75c?c:(new Date).getTime();this.t[a]\75[c,d]};this[g](\42start\42,null,a)}var a\75new d;b.jstiming\75{Timer:d,load:a};if(b.performance\46\46b.performance.timing){var a\75b.performance.timing,c\75b[e].load,f\75a.navigationStart,a\75a.responseStart;0\74f\46\46a\76\75f\46\46(c[g](\42_wtsrt\42,void 0,f),c[g](\42wtsrt_\42,\42_wtsrt\42,a),c[g](\42tbsd_\42,\42wtsrt_\42))}try{a\75null,b.chrome\46\46b.chrome.csi\46\46(a\75Math.floor(b.chrome.csi().pageT),c\46\0460\74f\46\46(c[g](\42_tbnd\42,void 0,b.chrome.csi().startE),\nc[g](\42tbnd_\42,\42_tbnd\42,f))),null\75\75a\46\46b.gtbExternal\46\46(a\75b.gtbExternal.pageT()),null\75\75a\46\46b.external\46\46(a\75b.external.pageT,c\46\0460\74f\46\46(c[g](\42_tbnd\42,void 0,b.external.startE),c[g](\42tbnd_\42,\42_tbnd\42,f))),a\46\46(b[e].pt\75a)}catch(l){}})();b.tickAboveFold\75function(d){var a\0750;if(d.offsetParent){do a+\75d.offsetTop;while(d\75d.offsetParent)}d\75a;750\76\75d\46\46b[e].load[g](\42aft\42)};var h\75!1;function k(){h||(h\75!0,b[e].load[g](\42firstScrollTime\42))}b.addEventListener?b.addEventListener(\42scroll\42,k,!1):b.attachEvent(\42onscroll\42,k);\n })();\74/script\076', 'mobileHeadScript': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/15de8d1bfc9ff1d1', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'testHtml5CssSrc': '//www.blogger.com/static/v1/widgets/721438413-css_bundle_html5.css', 'sf': 'n', 'tf': ''}}, {'name': 'skin', 'data': {'vars': {'sidebartextcolor': '#999999', 'linkcolor': '#6699cc', 'visitedlinkcolor': '#666699', 'textcolor': '#333333', 'pagetitlefont': 'normal normal 100% \47Lucida Grande\47,\47Trebuchet MS\047', 'titlefont': 'normal bold 130% \47Lucida Grande\47,\47Trebuchet MS\047', 'titlecolor': '#ff6633', 'datecolor': '#ff9933', 'pagetitlecolor': '#FFFFFF', 'bodyfont': 'normal normal 100% Verdana, sans-serif', 'endSide': 'right', 'startSide': 'left', 'sidebarcolor': '#666666', 'footercolor': '#999999', 'sidebarheaderfont': 'normal bold 130% \47Lucida Grande\47,\47Trebuchet MS\047'}, 'override': ''}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '/?view\75classic'}, 'flipcard': {'name': 'flipcard', 'url': '/?view\75flipcard'}, 'magazine': {'name': 'magazine', 'url': '/?view\75magazine'}, 'mosaic': {'name': 'mosaic', 'url': '/?view\75mosaic'}, 'sidebar': {'name': 'sidebar', 'url': '/?view\75sidebar'}, 'snapshot': {'name': 'snapshot', 'url': '/?view\75snapshot'}, 'timeslide': {'name': 'timeslide', 'url': '/?view\75timeslide'}}}]);
+_WidgetManager._RegisterWidget('_LinkListView', new _WidgetInfo('LinkList1', 'sidebar', null, document.getElementById('LinkList1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PopularPostsView', new _WidgetInfo('PopularPosts1', 'sidebar', null, document.getElementById('PopularPosts1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_FollowByEmailView', new _WidgetInfo('FollowByEmail1', 'sidebar', null, document.getElementById('FollowByEmail1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogListView', new _WidgetInfo('BlogList1', 'sidebar', null, document.getElementById('BlogList1'), {'numItemsToShow': 0, 'totalItems': 1}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_SubscribeView', new _WidgetInfo('Subscribe1', 'sidebar', null, document.getElementById('Subscribe1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogArchiveView', new _WidgetInfo('BlogArchive1', 'sidebar', null, document.getElementById('BlogArchive1'), {'languageDirection': 'ltr'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LabelView', new _WidgetInfo('Label1', 'sidebar', null, document.getElementById('Label1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ProfileView', new _WidgetInfo('Profile1', 'sidebar', null, document.getElementById('Profile1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_StatsView', new _WidgetInfo('Stats1', 'sidebar', null, document.getElementById('Stats1'), {'title': 'Total Pageviews', 'showGraphicalCounter': false, 'showAnimatedCounter': false, 'showSparkline': true, 'statsUrl': '//flyingfrogblog.blogspot.co.uk/b/stats?style\75BLACK_TRANSPARENT\46timeRange\75ALL_TIME\46token\75ymrGeEEBAAA.lawlKW_SHLMvfKogXjQp3tUBezAZ-XcivkP2VWinwqc.zC2DGtmsNhHkuKxFbJg-wQ'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header', null, document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_NavbarView', new _WidgetInfo('Navbar1', 'navbar', null, document.getElementById('Navbar1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': '//www.blogger.com/static/v1/jsbin/3761528788-lbx__en_gb.js', 'lightboxCssUrl': '//www.blogger.com/static/v1/v-css/4138445517-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML1', 'main', null, document.getElementById('HTML1'), {}, 'displayModeFull'));
+</script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18771510-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- line 230 -->
+<!-- got here -->
+
+        <script type="text/javascript">
+            function Adcourier() { this.locale = 'en'; }
+
+            var Adcourier = new Adcourier();
+        </script>
+    <script type="text/javascript">
+            function translate_js (translation_hash) {
+                var locale = Adcourier.locale;
+                if ( !locale ) { locale = 'en'; }
+
+                var text = translation_hash[locale];
+
+                if( !text ){ text = translation_hash['en']; }
+
+                for (var i=1, len=arguments.length; i<len; i++) {
+                    var regex = new RegExp('%'+i+'%', 'g');
+                    text = text.replace(regex, arguments[i]);
+                }
+                return text;
+            }
+        </script>    <head>
+        <!-- LOCALE: en -->
+        <!-- generic with form -->
+        <title>Director - Credit Risk</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+        <style type="text/css">
+            body{
+                background: url("/twitter/bg.png") no-repeat fixed 0 0 #C0DEED;
+                color: #333333;
+                font: 0.75em 'Lucida Grande',sans-serif;
+                text-align: center;
+            }
+            #container {
+                margin:1em auto;
+                position:relative;
+                text-align:left;
+                width:763px;
+            }
+            #logo {
+                /*float: left;*/
+                padding-bottom: 30px;
+            }
+            .columns {
+                margin-bottom: 15px;
+                width: 100%;
+                text-align: left;
+            }
+            #content {
+                background-color: #FFFFFF;
+                margin-top: 0;
+                width: 564px;
+                word-wrap: break-word;
+            }
+            .wrapper {
+                padding: 15px;
+            }
+            .profile-user {
+                padding: 0 10px;
+            }
+            #content h2.thumb {
+                padding-bottom: 20px;
+                margin: 0;
+                padding:10px 15px 10px 0;
+                padding-bottom:20px;
+                line-height:50px;
+                font-size: 25px;
+                border-bottom:1px solid #EEEEEE;
+            }
+            
+            .content-bubble-arrow  {
+                background: url("/twitter/arr2.gif");
+                background-position:32px 0;
+                background-repeat:no-repeat;
+                height:11px;
+                margin-top:6px;
+                overflow:hidden;
+            }
+            .screen-name{
+                vertical-align: top;
+                margin-left: 20px;
+            }
+            .show, #app_form{
+                font-size: 14px;
+                padding-left:0.5em;
+                margin: 20px;
+                padding-bottom: 20px;
+            }
+            .show{
+                border-bottom:1px solid #EEEEEE;
+            }
+            #profile-image{
+        
+            }
+            .show div {
+                display: block;
+                padding-top: 20px;
+            }
+        } 
+        </style>
+    </head>
+
+    <body bgcolor="#ffffff" leftMargin=0 topMargin=0 marginWidth=0 marginHeight=0>
+
+<script type="text/javascript">
+
+function validation() {
+    if (document.apply.from_email.value == '') {
+        alert ("You must enter your email address");
+        return false;
+    }
+    var address_check = /^[a-z\d][\w\.\-\_]*@([a-z\d\-\_]+\.)+[a-z]{2,}$/gi;
+    var field = document.apply.from_email.value;
+    if (!field.match(address_check)) {
+        alert ("You have not entered a valid email address");
+        return false;
+    }
+    if (document.apply.fname.value == '') {
+        alert ("You must enter your first name");
+        return false;
+    }
+    if (document.apply.lname.value == '') {
+        alert ("You must enter your surname");
+        return false;
+    }
+    if (document.apply.psa1[0].checked || document.apply.psa1[1].checked || document.apply.psa1[2].checked) {
+        // OK
+    } else {
+        alert ("You must say if you are authorised to work in the UK and/or EU");
+        return false;
+    }
+    return true;
+}
+        </script>
+
+
+        <div id="container">
+            <div id="header">   
+                    <!--<a id="logo" title="Twitter / Home" href="http://twitter.com">-->
+                    <img id="logo" alt="Twitter.com" src="/twitter/twitter_logo_header.png"/>
+                <!--</a>-->
+            </div>
+            <div class="content-bubble-arrow"></div>
+            <table class="columns" cellspacing="0">
+                <tr>
+                    <td id="content" class="round-left column">
+                        <div class="wrapper">
+                            <div class="profile-user">
+                                <h2 class="thumb clearfix">
+                                    <img id="profile-image" valign="middle" src="twitter/twitter_logo_normal.jpg"/><span class="screen-name">Director - Credit Risk</span>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="show">
+                            <div>Location: &nbsp;London</div>
+<div>Salary: &nbsp;GBP80000 - GBP300000 per annum + excellent benefits</div><div><br /><br />The Company<br />
+Our client provides global Research and Analytics services. They deliver offshore analytical content to world leading corporations including global research support, corporate functions, equity research, fixed-income research, risk management, and derivatives. Our client has teams in Europe, North America and Asia. Their clients include corporate central functions, business unit leaders, investment banks, asset management firms, insurance companies and leading global corporations.  Due to continued success they are now looking to appoint an Director - Credit Risk based in London or the surrounding Home Counties.<br />
+<br />
+The Role<br />
+The purpose and remit of the Director – Credit Risk role:-<br />
+* Lead role in growing our practice in the Risk space in Commercial / Retail Banking<br />
+* Interacting with senior client stakeholders, and consulting with them on all aspects of their credit risk program, including credit policy, IRB processes, credit risk  modelling analytics, model validation, and documentation<br />
+* Managing and mentoring team-members located across the globe<br />
+* Responsible for overall project management<br />
+* Making presentations, writing articles, and thought pieces relevant to industry participants in the Credit Risk space<br />
+* Willingness to travel occasionally<br />
+<br />
+The Candidate<br />
+The Director – Credit Risk skills and qualifications:-<br />
+* Minimum of 8-10 years’ experience in Credit Risk in Commercial / Retail Banking<br />
+* Excellent overall understanding of Commercial/Retail Banking operations<br />
+* Analytical / Numerical expertise demonstrated by cutting edge quantitative/statistical research and analysis projects and by familiarity with statistical packages such as SAS/R/MATLAB<br />
+* Strong understanding of regulations associated with modelling credit risk parameters<br />
+* Created / managed the full credit approval process for retail loans, credit cards, mortgages or commercial lending including creation of models and scorecards<br />
+* Exposure to counterparty credit risk assessment<br />
+* Exposure to databases and resources used in the retail and commercial banking space<br />
+* Good understanding of regulations such as BASEL 2/2.5/3 and implications for banks <br />
+* Excellent communication and senior client handling skills<br />
+* Qualified B.S/M.S/PhD in Mathematics, Statistics, Econometrics, Operations Research, or Engineering or, An MBA with demonstrable advanced knowledge of statistics and numerical techniques<br />
+* Professional qualifications such as FRM/CFA/PRM will be desirable in addition to the above<br />
+<br />
+The Reward<br />
+In return Director - Credit Risk will receive an atractive package depending upon experience geared to atract the best along with an excellent range of company benefits. Our client is committed to growth and there are excellent career progression opportunities.<br />
+If you are interested in this position please email us your CV.<br />
+Visit our website now at www.atr-solutions.com to view similar positions.</div>    </div>
+    <div id='app_form'>
+
+                    <div><p>Please check the job details&#44; then fill in your details below and click "Submit now".<br /><br /><font color='red'>* Indicates a required field&#46;</font></p></div>
+                    <form method='post' action='/generic/submit.cgi' name='apply' enctype="multipart/form-data" onSubmit="return validation()">
+                        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tr><td colspan="2"><b>Your Details</b></td></tr>
+                            <tr><td colspan="2"></td></tr>
+                            <tr>
+                                <td>First Name <font color="red">*</font><br><input type="text" name="fname"></td>
+                                <td>Last Name <font color="red">*</font><br><input type="text" name="lname"></td>
+                            </tr>
+                            <tr><td colspan="2"></td></tr>
+                            <tr>
+                <td colspan="2">Email <font color="red">*</font><br><input type="text" name="from_email"></td>
+                            </tr>
+                            <tr><td colspan="2"></td></tr>
+                            <tr>
+                                <td>Phone Number(s)<br>Work: <br><input type="text" name="evening"><br>Home/Mobile/Cell: <br><input type="text" name="mobile"></td>
+                                <td>Address <br><textarea name="address" cols="25" rows="4"></textarea></td>
+                            </tr>
+                            <tr><td colspan="2"></td></tr>
+
+                            <tr>
+                                <td class="header2">Please attach your CV/R&#233;sum&#233; <font color="red">* </font></td>
+                                <td colspan="2"><input type="file" name="thefilename" value="" size="26" class="categorylist"></td>
+                            </tr>
+                            <tr>
+                                <td class="header2">Existing CV</td>
+                            </tr>
+                            <tr><td colspan="2"></td></tr>
+                            <tr>
+                                <td class="header2" width="50%">Please state whether you are currently eligible to work (work permit/visa/citizenship) in the country to which you are applying: <font color="red">* </font></td>
+                                <td colspan="2">
+                                    <input type="hidden" name="psq1" value="Please state whether you are currently eligible (work permit/visa/citizenship) in the country to which you are applying:">
+                                    <input type="Radio" name="psa1" value="Yes" > Yes<br>
+                                    <input type="Radio" name="psa1" value="No" > No<br>
+                                </td>
+                            </tr>
+                        </table>
+                        <table width="100%">
+                            <tr>
+                                <td colspan="2" align="right">
+                                    <input type="submit" value="Submit now" alt="Submit now" name="Submit now" border=0 class="button">
+                                </td>
+                            </tr>
+                        </table>
+                            <input type="hidden" name="ID" value="1380682945frank.hamilton.55946.twi@atrsolutions.aplitrak.com">
+                            <input type="hidden" name="jobref" value="FH201520A">
+                            <input type="hidden" name="time" value="1380682945">
+                            <input type="hidden" name="boardID" value="twi">
+                            <input type="hidden" name="company" value="atrsolutions">
+                            <input type="hidden" name="office" value="london">
+                            <input type="hidden" name="consultant" value="frank.hamilton">
+                            <input type="hidden" name="aplitrakID" value="55946">
+                            <input type="hidden" name="from_name" value="">
+                            <input type="hidden" name="jobtitle" value="Director - Credit Risk">
+                        </form>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+          <meta charset="utf-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>Flickr</title>
+        <link rel="stylesheet" id="gpp-custom-fonts-css"  href="http://fonts.googleapis.com/css?family=Abel%3A400%7CMolengo&#038;ver=3.6" type="text/css" media="all" />
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+
+        <header>
+            <h1></h1>
+            <h2><a href="#"></a></h2>
+        </header>
+
+        <nav>
+            <ul></ul>
+            <a href="#" class="menu">Select A Set</a>
+        </nav>
+
+        <div id="photo">
+            <img src="" alt="Loading Flickr Images"  />
+            <div id="information">
+                <h2 class="title"></h2>
+                <uL>
+                    <li class="views"></li>
+                    <li class="comments"></li>
+                    <li class="tags">
+                        Tags:
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div id="gallery">
+            <ul></ul>
+        </div>
+
+        <footer>All images are owned and copyrighted by the photographers used in this application.  Photographers are selected via Flickr API</footer>
+
+        <!-- JavaScript Includes -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js/scripts.js"></script>
+
+    </body>
+</html>

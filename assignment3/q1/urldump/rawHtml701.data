@@ -1,0 +1,785 @@
+
+
+
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>caarlos0/turbolinks_transitions · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <link rel="logo" type="image/svg" href="https://github-media-downloads.s3.amazonaws.com/github-logo.svg" />
+    <meta property="og:image" content="https://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png">
+    <meta name="hostname" content="github-fe134-cp1-prd.iad.github.net">
+    <meta name="ruby" content="ruby 1.9.3p194-tcs-github-tcmalloc (2012-05-25, TCS patched 2012-05-27, GitHub v1.0.36) [x86_64-linux]">
+    <link rel="assets" href="https://github.global.ssl.fastly.net/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035/">
+    <link rel="xhr-socket" href="/_sockets" />
+    
+
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="selected-link" value="repo_source" data-pjax-transient />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="62B7E559:5B07:11E27E1:524B8B60" name="octolytics-dimension-request_id" />
+    
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="B8g+l9wXIG60mKfRThOsnf9Hi9gDlyEBZtAdMWeJGGQ=" name="csrf-token" />
+
+    <link href="https://github.global.ssl.fastly.net/assets/github-ae794206d0e4e8a84619ca476b2b906ec038d487.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://github.global.ssl.fastly.net/assets/github2-4e9347ae8f53d7710a27ba7dfdfb83229471a306.css" media="all" rel="stylesheet" type="text/css" />
+    
+
+    
+
+      <script src="https://github.global.ssl.fastly.net/assets/frameworks-4e5aeedcc7a86dcff8294cb84644a333b46202a2.js" type="text/javascript"></script>
+      <script src="https://github.global.ssl.fastly.net/assets/github-d7ac31eea49e88b740350eb21b88f43c6d4762e4.js" type="text/javascript"></script>
+      
+      <meta http-equiv="x-pjax-version" content="ccb4657696f961d39751d7d8046a072a">
+
+        <meta property="og:title" content="turbolinks_transitions"/>
+  <meta property="og:type" content="githubog:gitrepository"/>
+  <meta property="og:url" content="https://github.com/caarlos0/turbolinks_transitions"/>
+  <meta property="og:image" content="https://github.global.ssl.fastly.net/images/gravatars/gravatar-user-420.png"/>
+  <meta property="og:site_name" content="GitHub"/>
+  <meta property="og:description" content="turbolinks_transitions - Easily add an awesome fade effect to turbolinks page changes."/>
+
+  <meta name="description" content="turbolinks_transitions - Easily add an awesome fade effect to turbolinks page changes." />
+
+  <meta content="245435" name="octolytics-dimension-user_id" /><meta content="caarlos0" name="octolytics-dimension-user_login" /><meta content="7743463" name="octolytics-dimension-repository_id" /><meta content="caarlos0/turbolinks_transitions" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="7743463" name="octolytics-dimension-repository_network_root_id" /><meta content="caarlos0/turbolinks_transitions" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/caarlos0/turbolinks_transitions/commits/master.atom" rel="alternate" title="Recent Commits to turbolinks_transitions:master" type="application/atom+xml" />
+
+  </head>
+
+
+  <body class="logged_out  env-production  vis-public">
+    <div class="wrapper">
+      
+      
+      
+
+
+      
+      <div class="header header-logged-out">
+  <div class="container clearfix">
+
+    <a class="header-logo-wordmark" href="https://github.com/">
+      <span class="mega-octicon octicon-logo-github"></span>
+    </a>
+
+    <div class="header-actions">
+        <a class="button primary" href="/signup">Sign up</a>
+      <a class="button signin" href="/login?return_to=%2Fcaarlos0%2Fturbolinks_transitions%3Futm_source%3Dbuffer%26utm_campaign%3DBuffer%26utm_content%3Dbufferdad1b%26utm_medium%3Dtwitter">Sign in</a>
+    </div>
+
+    <div class="command-bar js-command-bar  in-repository">
+
+      <ul class="top-nav">
+          <li class="explore"><a href="/explore">Explore</a></li>
+        <li class="features"><a href="/features">Features</a></li>
+          <li class="enterprise"><a href="https://enterprise.github.com/">Enterprise</a></li>
+          <li class="blog"><a href="/blog">Blog</a></li>
+      </ul>
+        <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
+
+<input type="text" data-hotkey="/ s" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
+    
+    
+      data-repo="caarlos0/turbolinks_transitions"
+      data-branch="master"
+      data-sha="d80b83663d54d854f8ac85af4bdf9d6216c9af13"
+  >
+
+    <input type="hidden" name="nwo" value="caarlos0/turbolinks_transitions" />
+
+    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
+      <span class="minibutton select-menu-button js-menu-target">
+        <span class="js-select-button">This repository</span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container">
+        <div class="select-menu-modal">
+
+          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked" />
+            <div class="select-menu-item-text js-select-button-text">This repository</div>
+          </div> <!-- /.select-menu-item -->
+
+          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" name="search_target" value="global" />
+            <div class="select-menu-item-text js-select-button-text">All repositories</div>
+          </div> <!-- /.select-menu-item -->
+
+        </div>
+      </div>
+    </div>
+
+  <span class="octicon help tooltipped downwards" title="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+
+  <input type="hidden" name="ref" value="cmdform">
+
+</form>
+    </div>
+
+  </div>
+</div>
+
+
+      
+
+
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+
+<ul class="pagehead-actions">
+
+
+  <li>
+  <a href="/login?return_to=%2Fcaarlos0%2Fturbolinks_transitions"
+  class="minibutton with-count js-toggler-target star-button entice tooltipped upwards"
+  title="You must be signed in to use this feature" rel="nofollow">
+  <span class="octicon octicon-star"></span>Star
+</a>
+<a class="social-count js-social-count" href="/caarlos0/turbolinks_transitions/stargazers">
+  21
+</a>
+
+  </li>
+
+    <li>
+      <a href="/login?return_to=%2Fcaarlos0%2Fturbolinks_transitions"
+        class="minibutton with-count js-toggler-target fork-button entice tooltipped upwards"
+        title="You must be signed in to fork a repository" rel="nofollow">
+        <span class="octicon octicon-git-branch"></span>Fork
+      </a>
+      <a href="/caarlos0/turbolinks_transitions/network" class="social-count">
+        4
+      </a>
+    </li>
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="repo-label"><span>public</span></span>
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author">
+            <a href="/caarlos0" class="url fn" itemprop="url" rel="author"><span itemprop="title">caarlos0</span></a></span
+          ><span class="repohead-name-divider">/</span><strong
+          ><a href="/caarlos0/turbolinks_transitions" class="js-current-repository js-repo-home-link">turbolinks_transitions</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="Octocat-spinner-32" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+
+      <div class="repository-with-sidebar repo-container with-full-navigation">
+
+        <div class="repository-sidebar">
+            
+
+<div class="repo-nav repo-nav-full js-repository-container-pjax js-octicon-loaders">
+  <div class="repo-nav-contents">
+    <ul class="repo-menu">
+      <li class="tooltipped leftwards" title="Code">
+        <a href="/caarlos0/turbolinks_transitions" aria-label="Code" class="js-selected-navigation-item selected" data-gotokey="c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_tags repo_branches /caarlos0/turbolinks_transitions">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+        <li class="tooltipped leftwards" title="Issues">
+          <a href="/caarlos0/turbolinks_transitions/issues" aria-label="Issues" class="js-selected-navigation-item js-disable-pjax" data-gotokey="i" data-selected-links="repo_issues /caarlos0/turbolinks_transitions/issues">
+            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+            <span class='counter'>0</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+
+      <li class="tooltipped leftwards" title="Pull Requests"><a href="/caarlos0/turbolinks_transitions/pulls" aria-label="Pull Requests" class="js-selected-navigation-item js-disable-pjax" data-gotokey="p" data-selected-links="repo_pulls /caarlos0/turbolinks_transitions/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class='counter'>0</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+
+    </ul>
+    <div class="repo-menu-separator"></div>
+    <ul class="repo-menu">
+
+      <li class="tooltipped leftwards" title="Pulse">
+        <a href="/caarlos0/turbolinks_transitions/pulse" aria-label="Pulse" class="js-selected-navigation-item " data-pjax="true" data-selected-links="pulse /caarlos0/turbolinks_transitions/pulse">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" title="Graphs">
+        <a href="/caarlos0/turbolinks_transitions/graphs" aria-label="Graphs" class="js-selected-navigation-item " data-pjax="true" data-selected-links="repo_graphs repo_contributors /caarlos0/turbolinks_transitions/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" title="Network">
+        <a href="/caarlos0/turbolinks_transitions/network" aria-label="Network" class="js-selected-navigation-item js-disable-pjax" data-selected-links="repo_network /caarlos0/turbolinks_transitions/network">
+          <span class="octicon octicon-git-branch"></span> <span class="full-word">Network</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+            <div class="only-with-full-nav">
+              
+
+  
+
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/caarlos0/turbolinks_transitions.git" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/caarlos0/turbolinks_transitions.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><strong>Subversion</strong> checkout URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/caarlos0/turbolinks_transitions" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/caarlos0/turbolinks_transitions" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>,
+      or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <span class="octicon help tooltipped upwards" title="Get help on which URL is right for you.">
+    <a href="https://help.github.com/articles/which-remote-url-should-i-use">
+    <span class="octicon octicon-question"></span>
+    </a>
+  </span>
+</p>
+
+
+
+              <a href="/caarlos0/turbolinks_transitions/archive/master.zip"
+                 class="minibutton sidebar-button"
+                 title="Download this repository as a zip file"
+                 rel="nofollow">
+                <span class="octicon octicon-cloud-download"></span>
+                Download ZIP
+              </a>
+            </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+          
+<div class="js-info-carrier" data-show-full-navigation="yes"></div>
+
+<div class="repository-meta js-details-container ">
+    <div class="repository-description js-details-show">
+      <p>Easily add an awesome fade effect to turbolinks page changes.</p>
+    </div>
+
+    <div class="repository-website js-details-show">
+      <p><a href="http://caarlos0.github.com/posts/animating-page-transitions-in-turbolinks/" rel="nofollow">http://caarlos0.github.com/posts/animating-page-transitions-in-turbolinks/</a></p>
+    </div>
+
+
+</div>
+
+<div class="capped-box overall-summary ">
+
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax href="/caarlos0/turbolinks_transitions/commits/master">
+          <span class="num">
+            <span class="octicon octicon-history"></span>
+            18
+          </span>
+          commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax href="/caarlos0/turbolinks_transitions/branches">
+          <span class="num">
+            <span class="octicon octicon-git-branch"></span>
+            1
+          </span>
+          branch
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax href="/caarlos0/turbolinks_transitions/releases">
+          <span class="num">
+            <span class="octicon octicon-tag"></span>
+            5
+          </span>
+          releases
+        </a>
+      </li>
+
+      <li>
+
+  <a href="/caarlos0/turbolinks_transitions/contributors">
+    <span class="num">
+      <span class="octicon octicon-organization"></span>
+      1
+    </span>
+    contributor
+  </a>
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="/caarlos0/turbolinks_transitions/search?l=ruby">
+                <span class="color-block language-color" style="background-color:#701516;"></span>
+                <span class="lang">Ruby</span>
+                <span class="percent">87.5%</span>
+              </a>
+          </li>
+          <li>
+              <a href="/caarlos0/turbolinks_transitions/search?l=coffeescript">
+                <span class="color-block language-color" style="background-color:#244776;"></span>
+                <span class="lang">CoffeeScript</span>
+                <span class="percent">12.5%</span>
+              </a>
+          </li>
+        </ol>
+      </div>
+  </div>
+
+</div>
+
+  <a href="#"
+     class="repository-lang-stats-graph js-toggle-lang-stats tooltipped downwards"
+     title="Show language statistics"
+     style="background-color:#244776">
+  <span class="language-color" style="width:87.5%; background-color:#701516;" itemprop="keywords">Ruby</span><span class="language-color" style="width:12.5%; background-color:#244776;" itemprop="keywords">CoffeeScript</span>
+  </a>
+
+
+
+<div class="file-navigation in-mid-page">
+    <a href="/caarlos0/turbolinks_transitions/compare" aria-label="Compare, review, create a pull request" class="minibutton compact primary tooltipped downwards" title="Compare &amp; review" data-pjax>
+      <span class="octicon octicon-git-compare"></span>
+    </a>
+
+  
+
+
+<div class="select-menu js-menu-container js-select-menu" >
+  <span class="minibutton select-menu-button js-menu-target" data-hotkey="w"
+    data-master-branch="master"
+    data-ref="master"
+    role="button" aria-label="Switch branches or tags" tabindex="0">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-remove-close js-menu-close"></span>
+      </div> <!-- /.select-menu-header -->
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div><!-- /.select-menu-tabs -->
+      </div><!-- /.select-menu-filters -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item selected">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/caarlos0/turbolinks_transitions/tree/master"
+                 data-name="master"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="master">master</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/caarlos0/turbolinks_transitions/tree/v0.0.5"
+                 data-name="v0.0.5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.0.5">v0.0.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/caarlos0/turbolinks_transitions/tree/v0.0.4"
+                 data-name="v0.0.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.0.4">v0.0.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/caarlos0/turbolinks_transitions/tree/v0.0.3"
+                 data-name="v0.0.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.0.3">v0.0.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/caarlos0/turbolinks_transitions/tree/v0.0.2"
+                 data-name="v0.0.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.0.2">v0.0.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/caarlos0/turbolinks_transitions/tree/v0.0.1"
+                 data-name="v0.0.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.0.1">v0.0.1</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+    </div> <!-- /.select-menu-modal -->
+  </div> <!-- /.select-menu-modal-holder -->
+</div> <!-- /.select-menu -->
+
+
+  <div class="breadcrumb"><span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/caarlos0/turbolinks_transitions" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">turbolinks_transitions</span></a></span></span><span class="separator"> / </span><form action="/login?return_to=%2Fcaarlos0%2Fturbolinks_transitions" class="js-new-blob-form tooltipped rightwards new-file-link" method="post" title="Sign in to make or propose changes"><span aria-label="Sign in to make or propose changes" class="js-new-blob-submit octicon octicon-file-add" data-test-id="create-new-git-file" role="button"></span></form></div>
+</div>
+
+
+
+<a href="/caarlos0/turbolinks_transitions/find/master"
+  data-hotkey="t" class="js-show-file-finder" style="display:none" data-pjax>Show File Finder</a>
+<div class="bubble files-bubble">
+  <table class="files" data-pjax>
+    <thead>
+
+
+  <div class="commit commit-tease js-details-container" >
+    <p class="commit-title ">
+        <a href="/caarlos0/turbolinks_transitions/commit/026d866921183ba1e73ef1ece8a13029a19fd295" class="message" data-pjax="true" title="Update README.md">Update README.md</a>
+        
+    </p>
+    <div class="commit-meta">
+      <span class="js-zeroclipboard zeroclipboard-link" data-clipboard-text="026d866921183ba1e73ef1ece8a13029a19fd295" data-copied-hint="copied!" title="Copy SHA"><span class="octicon octicon-clippy"></span></span>
+      <a href="/caarlos0/turbolinks_transitions/commit/026d866921183ba1e73ef1ece8a13029a19fd295" class="sha-block" data-pjax>latest commit <span class="sha">026d866921</span></a>
+
+      <div class="authorship">
+        <img class="gravatar" height="20" src="https://2.gravatar.com/avatar/7ef3cd04888c6d17f34d43e29ec3d46f?d=https%3A%2F%2Fidenticons.github.com%2F28903544929337be93eae568695cd85e.png&amp;s=140" width="20" />
+        <span class="author-name"><a href="/caarlos0" data-skip-pjax="true" rel="author">caarlos0</a></span>
+        authored <time class="js-relative-date updated" datetime="2013-07-04T12:00:00-07:00" title="2013-07-04 12:00:00">July 04, 2013</time>
+
+      </div>
+    </div>
+  </div>
+    </thead>
+
+    
+<tbody class=""
+  data-url="/caarlos0/turbolinks_transitions/file-list/master">
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/caarlos0/turbolinks_transitions/tree/master/lib" class="js-directory-link" id="e8acc63b1e238f3255c900eed37254b8-7398e78db407f6dffe0538e765869b38a7502258" title="lib">lib</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/caarlos0/turbolinks_transitions/commit/34c71f5936341abd237fda638f2c95313ec81e06" class="message" data-pjax="true" title="fixed #1 again">fixed</a> <a href="https://github.com/caarlos0/turbolinks_transitions/issues/1" class="issue-link" title="page fade away when press browser back button">#1</a> <a href="/caarlos0/turbolinks_transitions/commit/34c71f5936341abd237fda638f2c95313ec81e06" class="message" data-pjax="true" title="fixed #1 again">again</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-02-03T15:47:05-08:00" title="2013-02-03 15:47:05">February 03, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/caarlos0/turbolinks_transitions/blob/master/.gitignore" class="js-directory-link" id="a084b794bc0759e7a6b77810e01874f2-d87d4be66f458acd52878902bbf1391732ad21e1" title=".gitignore">.gitignore</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/caarlos0/turbolinks_transitions/commit/e2a26f4b59c994bbc757efc5115ec86602ee6593" class="message" data-pjax="true" title="first version">first version</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-01-21T16:53:48-08:00" title="2013-01-21 16:53:48">January 21, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/caarlos0/turbolinks_transitions/blob/master/Gemfile" class="js-directory-link" id="8b7db4d5cc4b8f6dc8feb7030baa2478-934d5aea25a997a5725afe361e09d54bab7d86c0" title="Gemfile">Gemfile</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/caarlos0/turbolinks_transitions/commit/e2a26f4b59c994bbc757efc5115ec86602ee6593" class="message" data-pjax="true" title="first version">first version</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-01-21T16:53:48-08:00" title="2013-01-21 16:53:48">January 21, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/caarlos0/turbolinks_transitions/blob/master/LICENSE.txt" class="js-directory-link" id="61e0bdf7e1b43c5c93d9488b22e04170-b9a853d1dc8c402b485824d6a3867536ead9b1ee" title="LICENSE.txt">LICENSE.txt</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/caarlos0/turbolinks_transitions/commit/e2a26f4b59c994bbc757efc5115ec86602ee6593" class="message" data-pjax="true" title="first version">first version</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-01-21T16:53:48-08:00" title="2013-01-21 16:53:48">January 21, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/caarlos0/turbolinks_transitions/blob/master/README.md" class="js-directory-link" id="04c6e90faac2675aa89e2176d2eec7d8-09e87b1fa456a65ee46f7a224b7cdb8556839ba7" title="README.md">README.md</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/caarlos0/turbolinks_transitions/commit/026d866921183ba1e73ef1ece8a13029a19fd295" class="message" data-pjax="true" title="Update README.md">Update README.md</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-07-04T12:00:00-07:00" title="2013-07-04 12:00:00">July 04, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/caarlos0/turbolinks_transitions/blob/master/Rakefile" class="js-directory-link" id="52c976fc38ed2b4e3b1192f8a8e24cff-29955274e0d42e164337c411ad9144e8ffd7e46e" title="Rakefile">Rakefile</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/caarlos0/turbolinks_transitions/commit/e2a26f4b59c994bbc757efc5115ec86602ee6593" class="message" data-pjax="true" title="first version">first version</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-01-21T16:53:48-08:00" title="2013-01-21 16:53:48">January 21, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/caarlos0/turbolinks_transitions/blob/master/turbolinks_transitions.gemspec" class="js-directory-link" id="d67443d109d6986cda096e69d19c6842-33a25491a19d35eea654361e3838ade000c77bc7" title="turbolinks_transitions.gemspec">turbolinks_transitions.gemspec</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/caarlos0/turbolinks_transitions/commit/34c71f5936341abd237fda638f2c95313ec81e06" class="message" data-pjax="true" title="fixed #1 again">fixed</a> <a href="https://github.com/caarlos0/turbolinks_transitions/issues/1" class="issue-link" title="page fade away when press browser back button">#1</a> <a href="/caarlos0/turbolinks_transitions/commit/34c71f5936341abd237fda638f2c95313ec81e06" class="message" data-pjax="true" title="fixed #1 again">again</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-02-03T15:47:05-08:00" title="2013-02-03 15:47:05">February 03, 2013</time></span></td>
+    </tr>
+</tbody>
+
+  </table>
+</div>
+
+  <div id="readme" class="clearfix announce instapaper_body md">
+    <span class="name"><span class="octicon octicon-book"></span> README.md</span><article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
+<a name="turbolinkstransition" class="anchor" href="#turbolinkstransition"><span class="octicon octicon-link"></span></a>TurbolinksTransition</h1>
+
+<p>Just read <a href="http://caarlos0.github.com/posts/animating-page-transitions-in-turbolinks/">this</a>.</p>
+
+<p><a href="https://github-camo.global.ssl.fastly.net/fabb9442228b2776b2116e2a02868b8189d7df4f/687474703a2f2f646c2e64726f70626f782e636f6d2f752f3234373134322f626c6f672f6c6f6c2f747572626f6c696e6b735f7472616e736974696f6e2e676966" target="_blank"><img src="https://github-camo.global.ssl.fastly.net/fabb9442228b2776b2116e2a02868b8189d7df4f/687474703a2f2f646c2e64726f70626f782e636f6d2f752f3234373134322f626c6f672f6c6f6c2f747572626f6c696e6b735f7472616e736974696f6e2e676966" alt="live example" style="max-width:100%;"></a></p>
+
+<blockquote>
+<p>notice the really fast fade!</p>
+</blockquote>
+
+<p><a href="http://wealcash.com">Live example</a>.</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Add this line to your application's Gemfile:</p>
+
+<pre><code>gem 'turbolinks_transitions'
+</code></pre>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install turbolinks_transitions
+</code></pre>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Just add the id <code>content</code> to your 'master div', for example, in your
+<code>application.html.erb</code>:</p>
+
+<div class="highlight highlight-erb"><pre><span class="x">&lt;div class="container" id="content"&gt;</span>
+<span class="x">  </span><span class="cp">&lt;%=</span> <span class="k">yield</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="x">&lt;/div&gt;</span>
+</pre></div>
+
+<p>And import the JS:</p>
+
+<div class="highlight highlight-coffeescript"><pre><span class="c1">#= require jquery</span>
+<span class="c1">#= require jquery_ujs</span>
+<span class="c1">#= require turbolinks</span>
+<span class="c1">#= require turbolinks_transitions</span>
+<span class="c1">#= require_tree .</span>
+</pre></div>
+
+<p>Thats it, you're now ready to roll.</p>
+
+<h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol></article>
+  </div>
+
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com">API</a></li>
+      <li><a href="http://training.github.com">Training</a></li>
+      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+
+    </ul>
+
+    <a href="/">
+      <span class="mega-octicon octicon-mark-github"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2013 <span title="0.02632s from github-fe134-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+          <div class="suggester-container">
+              <div class="suggester fullscreen-suggester js-navigation-container" id="fullscreen_suggester"
+                 data-url="/caarlos0/turbolinks_transitions/suggestions/commit">
+              </div>
+          </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped leftwards" title="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped leftwards"
+      title="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-remove-close close ajax-error-dismiss"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+  </body>
+</html>
+

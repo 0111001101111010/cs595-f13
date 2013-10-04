@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title> DR3WH0  | RadioBlog  </title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" media="screen" charset="utf-8"/>
+  <link rel="icon" type="image/png" href="https://dl.dropboxusercontent.com/u/8239797/DR3WH0_favicon.png"/>
+  <script src="/javascripts/scale.fix.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ruby script for loading the free Last.Fm web radio service from the command line, tweeting recently listened tracks, and generating a Markdown formatted radio station blog post for a Jekyll site." />
+</head>
+
+  <body>
+    <!-- SCM Music Player http://scmplayer.net -->
+    <script type="text/javascript" src="http://dr3wh0.net/musicplayer/script.js" 
+    data-config="{'skin':'skins/simpleBlack/skin.css','volume':42,'autoplay':false,'shuffle':true,'repeat':1,'placement':'bottom','showplaylist':false,'playlist':[{'title':'Aphex Twin - Avril 14th','url':'http://www.youtube.com/watch?v=MBFXJw7n-fU'},{'title':'Low - Fearless (P.Floyd Cover)','url':'http://www.youtube.com/watch?v=2LyEcWxI3UQ'},{'title':'Stars Of The Lid - December Hunting','url':'http://www.youtube.com/watch?v=u-MXZDkcPKM'},{'title':'Abfarhrt Hinwil - Radiowellen','url':'http://t.co/JrzTapEmhw'},{'title':'Com Truise - Cyanide Sisters','url':'http://t.co/BRepBDsdAz'},{'title':'Point 7 - One Movie','url':'http://freedownloads.last.fm/download/209722767/One%2BMovie.mp3'},{'title':'Gimmik - Sister Moon','url':'http://goo.gl/MTuAeR'},{'title':'zotalayer - ebb telemetry','url':'http://t.co/aN2HsvUyAK'},{'title':'Abfarht Hinwil - Bumperstufe2','url':'http://t.co/7ZG79jKjQs'},{'title':'Point 7 - Ous','url':'http://t.co/S3zq3Oyuy7'},{'title':'Gimmik - Back to Basics','url':'http://t.co/PuisfO2zhP'},{'title':'Sense - zed','url':'http://t.co/WM16WZ9ug6'},{'title':'Point 7 - Hacker IP','url':'http://t.co/YIjeAFdwzi'},{'title':'Abfahrt Hinwil - Links Oben','url':'http://t.co/XUiKfWxTj6'},{'title':'Gimmik - Thing on a Spring','url':'http://t.co/hrwKRcv7e4'},{'title':'Abfahrt Hinwil - Sonic Surface','url':'http://t.co/5PfdFmiKVg'},{'title':'Abfahrt Hinwil - Trilogy','url':'http://t.co/Wg6EBntsgS'},{'title':'Abfahrt Hinwil - Tech 8','url':'http://t.co/5vxj8bRhV9'},{'title':'Robert Schumann - Lotus Flower','url':'http://t.co/lXz85vA3er'},{'title':'ESEM - Thinmute','url':'http://t.co/Oft4EPe8lw'},{'title':'Abfahrt Hinwil - The Light','url':'http://t.co/mifR3LfBye'},{'title':'Johannes Brahms - Ballade in Dm','url':'http://t.co/dlt70d9sPn'},{'title':'Gimmik - Syntax','url':'http://t.co/MMYKQj4Lhq'},{'title':'Robert Schumann - Impromptu No.3','url':'http://t.co/AxFnDtXJPb'},{'title':'aAirial - Les minutes deviennent secondes..','url':'http://t.co/nt1zCg5Bhi'},{'title':'Motionfield - Timelines','url':'http://t.co/YCKXGIPIbc'},{'title':'Iqtu - Strategy 5','url':'http://t.co/rNBXiucwzi'},{'title':'Monoceros - Sinus','url':'http://t.co/L2CBxmzTUg'},{'title':'Praveen - Only to Make Ammends','url':'http://t.co/ag3Us8L3kL'},{'title':'Verbose - shram','url':'http://t.co/lkaM6frYOz'},{'title':'Sovacusa - Osloka','url':'http://t.co/UEN8ulgYtm'},{'title':'Monoceros - Background birds','url':'http://t.co/WbSQ4cMT9n'},{'title':'IJO - have a nice day','url':'http://t.co/RZ0hsqpWNy'},{'title':'Monoceros - Fractions (2.0)','url':'http://t.co/EW5qU4R6Me'},{'title':'aAirial - Smriti','url':'http://t.co/fSN4HguhH3'},{'title':'Yvat - Accession','url':'http://t.co/Mg0Gl2PujQ'},{'title':'IJO - Jamaica Road','url':'http://t.co/QgrDmcYdbp'},{'title':'IJO - Little Miss Summer','url':'http://t.co/PLe1VFiK7i'},{'title':'Monoceros - Pizzicato spoon','url':'http://t.co/8oIF88p9Ry'},{'title':'Recue - Orchard Rd.','url':'http://t.co/ksELzRWoul'},{'title':'Veell - Qlocker','url':'http://t.co/CHmhrFiYhB'},{'title':'Proswell - Ahi','url':'http://goo.gl/zRwIqG'},{'title':'Monoceros - Life In a Fishbowl (Are They* Watching Us?)','url':'http://goo.gl/9zdcRd'},{'title':'Gas - Microscopic','url':'http://goo.gl/Jp4Tgf'},{'title':'Natural Snow Buildings - Memories found in a bill from a small animal vet','url':'http://goo.gl/TOBxil'},{'title':'Claude Debussy - Hommage a Rameau (Debussy)','url':'http://goo.gl/5DjDXb'},{'title':'Marcos Paiva - Edison N. 2','url':'http://goo.gl/VtzUku'},{'title':'Dum Dum Dum - 24689','url':'http://goo.gl/e4GqDZ'},{'title':'G.M.Orchestra - Erotic Club (Live)','url':'http://goo.gl/iov5uT'},{'title':'Sax a. Moryson - Rhythm Of My Hearts (Live)','url':'http://goo.gl/JiwPtL'},{'title':'pumpkin jacket - The perils of yeast','url':'http://goo.gl/pf7IP7'},{'title':'Mahat - Relief','url':'http://goo.gl/wMcQ8S'},{'title':'Eric Romine - Cosmic Dust','url':'http://goo.gl/W6T0DL'},{'title':'Fieldtriqp - Old Haunts','url':'http://goo.gl/A1VvQS'},{'title':'Fieldtriqp - windswept','url':'http://goo.gl/25TXmG'},{'title':'Gimmik - Square Two','url':'http://goo.gl/YuuPgd'},{'title':'Abfahrt Hinwil - Syntax Data','url':'http://goo.gl/0biu9W'},{'title':'Kettel - Not Gonna Get','url':'http://goo.gl/XjDkoi'},{'title':'Lackluster - Starcell U.K.','url':'http://goo.gl/d4uaNn'},{'title':'Monoceros - How was the earth? (mother)','url':'http://goo.gl/BgtCtk'},{'title':'Praveen - Float','url':'http://goo.gl/LyWAi2'},{'title':'aAirial - On the eve of summer','url':'http://goo.gl/Xtrh19'},{'title':'Sinq - Acid Jazz','url':'http://goo.gl/8K9RVy'},{'title':'Robert Schumann - Impromptu','url':'http://goo.gl/dbOCRA'},{'title':'Lithops - Attached','url':'http://goo.gl/OSgb47'},{'title':'Oval - Ah!','url':'http://goo.gl/T253wb'},{'title':'ESEM - Caffeine','url':'http://goo.gl/Z5MIT5'}]}" ></script>
+<!-- SCM Music Player script end -->
+
+    <div class="wrapper">
+      <header>
+  <h1 class="default"><a href="/index.html" title="Recent Posts"><img src="https://dl.dropboxusercontent.com/u/8239797/DR3WH0.png" alt="DR3WH0.png" height="42" width="42" /> DR3WH0</a></h1>
+  <h3>Time Travel &amp; Other Anomalies</h3>
+  <p class="view"><a href="/archive.html" title="Thought Archive">Thoughts<small>the master list</small></a>
+  <p class="view"><a href="/radio.html" title="Radio Archive">Radio<small>favorite tunes</small></a>
+  <p class="view"><a href="/tags.html" title="Tag List">Tags<small>idea graffiti</small></a>
+  <p class="view"><a href="/categories.html" title="Category List">Categories<small>data herds</small></a>
+  <p class="view"><a href="http://about.me/DR3WH0" title="DR3WH0: about.me">DR3WH0<small>about.me</small></a>
+<!--  <p class="view"><a href="http://dr3wh0.tumblr.com/" title="DR3WH0: Tumblr">Tumblr<small>daily back yard</small></a>
+  <p class="view"><a href="http://www.last.fm/user/DR3WH0" title="DR3WH0: Last.fm">Last.fm<small>favorite tunes</small></a>
+  <p class="view"><a href="https://twitter.com/DR3WH0" title="DR3WH0: Twitter">Twitter<small>realtime tunes</small></a>
+  <p class="view"><a href="http://www.flickr.com/photos/dr3wh0/"  title="DR3WH0: Flickr" target="tab">Flickr<small>lo-fi photography</small></a>-->
+</header>
+
+      <section id="main">
+        <article>
+  <h2>RadioBlog</h2>
+  <hr/>
+
+  
+    
+      <ul><p class="view">Ruby script for loading the free Last.Fm web radio service from the command line, tweeting recently listened tracks, and generating a Markdown formatted radio station blog post for a Jekyll site.</p></ul>
+      <hr/>
+    
+  
+
+  <p><strong>Features</strong></p>
+
+<ul>
+<li>Load &amp; auto-resume free <a href="http://last.fm">Last.fm</a> web radio from the command line</li>
+<li>Tweet tracks and free MP3 downloads to <a href="http://twitter.com">Twitter</a> timeline</li>
+<li>Generate a <a href="http://daringfireball.net/projects/markdown/">Markdown</a> formatted radio station blog post for <a href="http://jekyllrb.com/">Jekyll</a></li>
+</ul>
+
+
+<p><strong>Requirements</strong></p>
+
+<ul>
+<li>Jekyll web site (<a href="http://pages.github.com/">Github Pages</a>)</li>
+<li><a href="https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb">_radioblog.rb</a></li>
+<li><a href="http://www.ruby-lang.org/en/">Ruby</a> 1.9.2 or higher</li>
+<li><a href="http://rubygems.org/gems/selenium-webdriver">selenium-webdriver gem</a></li>
+<li><a href="http://rubygems.org/gems/twurl">twurl gem</a></li>
+<li><a href="http://rubygems.org/gems/xml-simple">xml-simple gem</a></li>
+<li><a href="http://rubygems.org/gems/googl">googl gem</a></li>
+<li><a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a> and a <a href="https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data">profile</a> called 'lastfm'</li>
+</ul>
+
+
+<p><strong>Install Instructions</strong></p>
+
+<ol>
+<li><a href="http://dr3wh0.github.io/2013/08/17/lastfm-autoresume-part-2/">Set up a 'lastfm' profile</a> with the Firefox Profile Manager.</li>
+<li>Create a <a href="http://www.last.fm/api/account/create">Last.fm API key</a> and add it to the <a href="https://github.com/DR3WH0/DR3WH0.github.io/blob/master/_config.yml#L90-92">_config.yml</a> for your Jekyll site along with your Last.fm username. (You may use my key for testing purposes.)</li>
+<li><a href="http://rubydoc.info/gems/twurl/0.8.3/file/README">Authenticate Twurl</a> with a Twitter API Key. You will need to set up a <a href="https://dev.twitter.com/">Twitter Dev Application</a> for your account and enable it to 'Read &amp; Write.' <a href="http://stackoverflow.com/questions/12916539/simplest-php-example-for-retrieving-user-timeline-with-twitter-api-version-1-1/15314662#15314662">Stack Overflow</a> has a walk-through.</li>
+<li>Place <a href="https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb">_radioblog.rb</a> in the root directory of your Jekyll site.</li>
+<li>Run <code>ruby _radioblog.rb</code>.</li>
+<li>Push the <a href="http://dr3wh0.net/2013/09/06/kiln-radio">radio</a> <a href="http://dr3wh0.net/2013/09/07/thelonious-monk-radio">station</a> <a href="http://dr3wh0.net/2013/09/08/chopin-radio">post</a> to your site with <a href="http://dr3wh0.net/2013/08/25/git-reference">git</a> after the station has ended.</li>
+</ol>
+
+
+<p><strong>Possible Modifications</strong></p>
+
+<p><em>This software is tailored for my personal use and may require modification beyond what is described here.</em></p>
+
+<p>I've installed the <a href="http://scmplayer.net">SCM Music Player</a> on <a href="https://github.com/DR3WH0/DR3WH0.github.io/tree/master/musicplayer">DR3WH0.NET</a>, and I added some code to write free download tracks to _config.yml for automatic playlist updates. You may want to <a href="https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L145-160">remove these lines</a> in the <a href="https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L109-169">free_download</a> function if you have no use for that feature. If want to use the SCM playlist feature on your site, see <a href="http://dr3wh0.net/2013/08/25/scm-music-player-for-github-pages">SCM Music Player for GitHub Pages</a> for installation instructions.</p>
+
+<p>The track tweets are not really necessary, although it takes a bit of doing to remove them. I may create NoTweet branch if there's any interest. To stop the tweets, skip step 3 of the Install Instructions and remove the following functions: <a href="https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L48-55">format_hash</a> &amp; <a href="https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L57-112">get_tags</a>. Then remove the lines of code <a href="https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L127-148">here</a>, <a href="https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L203-204">here</a>, <a href="https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L210">here</a>, <a href="https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L216">here</a>, <a href="https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L240">here</a>, <a href="https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L285">here</a>, <a href="https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L288-291">here</a>, <a href="https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L297-299">here</a>, <a href="https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L302-340">here</a>, <a href="https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L343">here</a>, and <a href="https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L366">here</a>. Whew! Almost done. Finally, remove the variables <code>hashtags, tweet, tcolen,</code> <a href="https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L114">here</a> and <code>@hashtags, tweet, tcolen,</code> <a href="https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L351">here</a> and the variable <code>(#{textlen})</code> <a href="https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L344">here</a>.
+Let me know if there's anything I missed or if there's a way to rubify the code to make it more modular.</p>
+
+</article>
+
+<p style="text-align:right"><small><a href="/guestbook.html"><b>COMMENTS >>></b></a></small></p>
+<hr/>
+
+
+
+<ul class="tag_box inline">
+    
+  
+
+
+  
+     
+    	<li><a href="/search.html?tags=lastfm">lastfm<!-- <span>4</span>--></a></li>
+     
+    	<li><a href="/search.html?tags=twitter">twitter<!-- <span>2</span>--></a></li>
+     
+    	<li><a href="/search.html?tags=jekyll">jekyll<!-- <span>5</span>--></a></li>
+     
+    	<li><a href="/search.html?tags=github">github<!-- <span>5</span>--></a></li>
+     
+    	<li><a href="/search.html?tags=ruby">ruby<!-- <span>4</span>--></a></li>
+     
+    	<li><a href="/search.html?tags=webdriver">webdriver<!-- <span>3</span>--></a></li>
+     
+    	<li><a href="/search.html?tags=twurl">twurl<!-- <span>2</span>--></a></li>
+     
+    	<li><a href="/search.html?tags=yaml">yaml<!-- <span>3</span>--></a></li>
+     
+    	<li><a href="/search.html?tags=markdown">markdown<!-- <span>2</span>--></a></li>
+     
+    	<li><a href="/search.html?tags=automation">automation<!-- <span>4</span>--></a></li>
+    
+  
+
+
+
+</ul>
+
+<p style="text-align:right"><span>Saturday, September  7, 2013</span>  <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a><br /><small>This post is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</small></p>
+<!--
+<div id="disqus_thread"><p></p></div>
+<script src="/javascripts/disqus.js"></script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+-->
+
+      </section>
+      <footer>
+  <p><small><a href="/about.html" title="About This Site">ABOUT</a> | <a href="https://github.com/DR3WH0/DR3WH0.github.io" title="Source Code on GitHub" target="tab">SOURCE</a></small><br />
+  <small><a href="http://statcounter.com/p9114352/?guest=1" title="StatCounter Statistics">DR3WH0 Statistics</a></small><br />
+  <script src="/javascripts/statcounter.js"></script>
+  <noscript><div class="statcounter">
+    <a title="website statistics" href="http://statcounter.com/" class="statcounter">
+    <img class="statcounter" src="http://c.statcounter.com/9114352/0/f55f8078/0/" alt="website statistics" /></a>
+  </div></noscript>&nbsp;<small><a href="/feed.xml">RSS Feed</a></small></p>
+</footer>
+
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="/javascripts/liquidescape.js"></script>
+<script type="text/javascript" src="/javascripts/analytics.js"></script>
+
+  </body>
+</html>

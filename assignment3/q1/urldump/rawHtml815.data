@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+	<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Uloop News &rsaquo; Registration Form</title>
+	<link rel='stylesheet' id='wp-admin-css'  href='http://blog.uloop.com/wp-admin/css/wp-admin.css?ver=3.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='colors-fresh-css'  href='http://blog.uloop.com/wp-admin/css/colors-fresh.css?ver=3.4.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://blog.uloop.com/wp-content/themes/channelpro/js/jquery.min.js?ver=1.4.3'></script>
+<script type='text/javascript' src='http://blog.uloop.com/wp-content/plugins/myu-plugins/js/share_admin_screen.js?ver=3.4.1'></script>
+<script type='text/javascript' src='http://blog.uloop.com/wp-content/plugins/myu-plugins/js/jquery.colorbox.js?ver=3.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var myu_ajax_script = {"ajaxurl":"http:\/\/blog.uloop.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://blog.uloop.com/wp-content/plugins/myu-plugins/js/myu_ajax.js?ver=3.4.1'></script>
+<script type='text/javascript' src='http://blog.uloop.com/wp-content/themes/channelpro/js/jcookie.js?ver=0.1'></script>
+<script type='text/javascript' src='http://blog.uloop.com/wp-content/themes/channelpro/js/superfish.js?ver=1.0'></script>
+<script type='text/javascript' src='http://blog.uloop.com/wp-content/themes/channelpro/js/global.js?ver=1.0'></script>
+<script type='text/javascript' src='http://blog.uloop.com/wp-content/themes/channelpro/js/jquery.nivo.slider.pack.js?ver=1.0'></script>
+<script type='text/javascript' src='http://blog.uloop.com/wp-content/themes/channelpro/js/scrolltopcontrol.js?ver=1.1'></script>
+        <link rel="image_src" href="http://www.uloop.com/images/homepage/buy-and-sell-textbooks.jpg" />
+        <meta property="og:title" content="Apply to Uloop News">
+        <meta property=og:image content="http://www.uloop.com/images/homepage/buy-and-sell-textbooks.jpg" />
+        <style type="text/css">
+            body.login div#login h1 a {
+                background-image: url(http://blog.uloop.com/wp-content/plugins/myu-plugins/images/logo.png) !important;
+                padding-bottom: 30px;
+                margin-left: 100px;
+            }
+            #login {
+                width: 520px;
+            }
+            form#registerform textarea {
+                height: 140px;
+            }
+        </style>
+    <meta name='robots' content='noindex,nofollow' />
+	</head>
+	<body class="login">
+	<div id="login">
+		<h1><a href="http://wordpress.org/" title="Powered by WordPress">Uloop News</a></h1>
+	<p class="message register"><strong>Uloop News Writer Application</strong>  <br/><br/>Uloop News is one of the fastest 
+            growing news sites for college students. Our student writers cover campus news, events, local businesses,
+            sports, and a variety of related topics.
+            Many have also been featured on
+            <a href="http://www.huffingtonpost.com/uloop/" target="_blank">the Huffington Post</a> and 
+            <a href="http://www.usatodayeducate.com/staging/index.php/tag/uloop" target="_blank">USA Today College</a>
+            thanks to our content partnership program.
+            <br/><br/>Find out more about writing at Uloop News <a href="http://blog.uloop.com/uloop-contributor-network/writers/" target="_blank">here</a>.</p>
+
+<form name="registerform" id="registerform" action="http://blog.uloop.com/wp-login.php?action=register" method="post">
+	<p>
+		<label for="user_login">Username<br />
+		<input type="text" name="user_login" id="user_login" class="input" value="" size="20" tabindex="10" /></label>
+	</p>
+	<p>
+		<label for="user_email">E-mail<br />
+		<input type="email" name="user_email" id="user_email" class="input" value="" size="25" tabindex="20" /></label>
+	</p>
+<style> 
+    textarea#experience, textarea#sample {
+        color: #555;
+        font-weight: 200;
+        font-size: 24px;
+        line-height: 1;
+        width: 100%;
+        padding: 3px;
+        margin-top: 2px;
+        margin-right: 6px;
+        margin-bottom: 16px;
+        border: 1px solid #E5E5E5;
+        background: #FBFBFB;
+        outline: 0;
+        -moz-box-shadow: inset 1px 1px 2px rgba(200,200,200,0.2);
+        -webkit-box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
+        box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
+    }
+</style>
+
+    <p><label>First Name<br/>
+        <input id="first_name" type="text" tabindex="30" size="25" value="" name="first_name" />
+	</label></p>
+    <p><label>Last Name<br/>
+        <input id="last_name" type="text" tabindex="30" size="25" value="" name="last_name" />
+	</label></p>
+
+	<p><label>College<br/>
+<select id="college" name="college" class="input"><option value="34">American University</option><option value="182">Appalachian State University</option><option value="16">Arizona State</option><option value="183">Arkansas State</option><option value="14">Auburn University</option><option value="53">Ball State University</option><option value="128">Baylor University</option><option value="67">Boston College</option><option value="68">Boston University</option><option value="69">Brandeis University</option><option value="155">Bridgewater College</option><option value="156">Brigham Young Hawaii </option><option value="139">Brigham Young University</option><option value="121">Brown</option><option value="216">Buffalo State College</option><option value="18">CSU Chico</option><option value="159">CSU Fresno</option><option value="19">CSU Fullerton</option><option value="20">CSU Long Beach</option><option value="21">CSU Northridge</option><option value="22">CSU Sacramento</option><option value="184">CSU San Marcos</option><option value="2">Cal Poly</option><option value="17">Cal Poly Pomona</option><option value="114">Carnegie Mellon</option><option value="105">Case Western</option><option value="75">Central Michigan University</option><option value="218">Champlain College</option><option value="157">Claremont Colleges</option><option value="122">Clemson University</option><option value="143">College of William and Mary</option><option value="30">Colorado State University</option><option value="211">Columbia College Chicago</option><option value="93">Columbia University</option><option value="208">Cornell College</option><option value="94">Cornell University</option><option value="89">Dartmouth College</option><option value="47">DePaul University</option><option value="205">DePauw</option><option value="160">Denison University</option><option value="209">Dillard University</option><option value="115">Drexel University</option><option value="100">Duke University</option><option value="101">East Carolina University</option><option value="185">East Tennessee State</option><option value="76">Eastern Michigan University</option><option value="163">Eckerd College</option><option value="43">Emory University</option><option value="37">Florida Atlantic University</option><option value="38">Florida International University</option><option value="39">Florida State University</option><option value="95">Fordham University</option><option value="144">George Mason University</option><option value="35">George Washington University</option><option value="45">Georgia State</option><option value="44">Georgia Tech</option><option value="164">Gettysburg College</option><option value="77">Grand Valley State</option><option value="70">Harvard University</option><option value="186">Humboldt State University </option><option value="54">IUPUI</option><option value="50">Illinois State University</option><option value="55">Indiana</option><option value="57">Iowa State University</option><option value="165">James Madison University</option><option value="65">Johns Hopkins</option><option value="60">Kansas State University</option><option value="107">Kent State University</option><option value="64">LSU</option><option value="116">Lehigh University</option><option value="166">Lewis University</option><option value="51">Loyola University Chicago</option><option value="150">Marquette University</option><option value="66">Maryland</option><option value="72">Massachusetts Institute of Technology</option><option value="108">Miami University-Oxford</option><option value="79">Michigan State University</option><option value="125">Middle Tennessee State University</option><option value="84">Mississippi State</option><option value="210">Mississippi University for Women</option><option value="167">Missouri State University</option><option value="187">Montana State University</option><option value="168">Mt. Holyoke College</option><option value="96">New York University</option><option value="103">North Carolina State</option><option value="170">North Georgia College & State University</option><option value="73">Northeastern University</option><option value="52">Northern Illinois University</option><option value="174">Northern Michigan University</option><option value="3">Northwestern</option><option value="4">Ohio State</option><option value="109">Ohio University</option><option value="110">Oklahoma State University</option><option value="188">Old Dominion University</option><option value="83">Ole Miss</option><option value="112">Oregon State University</option><option value="171">Other/Not Listed</option><option value="117">Penn State</option><option value="24">Pepperdine</option><option value="113">Portland State University</option><option value="90">Princeton University</option><option value="153">Purdue</option><option value="214">Queens College</option><option value="189">Radford University</option><option value="213">Randolph-Macon College</option><option value="131">Rice University</option><option value="91">Rutgers University</option><option value="192">SUNY at Fredonia</option><option value="181">SUNY at Oswego</option><option value="190">Saint Cloud State</option><option value="191">Saint Edward\'s University</option><option value="25">San Diego State</option><option value="26">San Francisco State University</option><option value="27">San Jose State University</option><option value="132">Southern Methodist University</option><option value="11">Stanford University</option><option value="98">Stony Brook University</option><option value="99">Syracuse University</option><option value="207">Tacoma Community College</option><option value="120">Temple</option><option value="173">Tennessee Tech</option><option value="134">Texas A&M</option><option value="133">Texas State</option><option value="138">Texas Tech</option><option value="169">The New School</option><option value="15">Troy University</option><option value="74">Tufts University</option><option value="193">Tulane</option><option value="23">UC Berkeley</option><option value="5">UC Davis</option><option value="6">UC Irvine</option><option value="12">UC Los Angeles</option><option value="194">UC Merced</option><option value="195">UC Riverside</option><option value="7">UC San Diego</option><option value="1">UC Santa Barbara</option><option value="8">UC Santa Cruz</option><option value="102">UNC</option><option value="88">UNLV</option><option value="28">USC</option><option value="135">UT Arlington</option><option value="137">UT San Antonio</option><option value="172">Uloop Partners</option><option value="206">University at Albany, SUNY</option><option value="97">University at Buffalo, SUNY</option><option value="13">University of Alabama</option><option value="180">University of Alabama at Birmingham</option><option value="154">University of Arizona</option><option value="36">University of Central Florida</option><option value="217">University of Central Missouri</option><option value="106">University of Cincinnati</option><option value="29">University of Colorado at Boulder</option><option value="158">University of Colorado at Colorado Springs</option><option value="31">University of Connecticut</option><option value="175">University of Dayton</option><option value="33">University of Delaware</option><option value="161">University of Denver</option><option value="40">University of Florida</option><option value="46">University of Georgia</option><option value="129">University of Houston</option><option value="49">University of Illinois</option><option value="48">University of Illinois at Chicago</option><option value="58">University of Iowa</option><option value="59">University of Kansas</option><option value="61">University of Kentucky</option><option value="62">University of Louisville</option><option value="71">University of Massachusetts</option><option value="124">University of Memphis</option><option value="41">University of Miami</option><option value="78">University of Michigan</option><option value="82">University of Minnesota</option><option value="162">University of Minnesota-Duluth </option><option value="85">University of Missouri</option><option value="196">University of Missouri - Kansas City </option><option value="87">University of Nebraska</option><option value="92">University of New Mexico</option><option value="130">University of North Texas</option><option value="197">University of Northern Colorado</option><option value="198">University of Northern Iowa</option><option value="56">University of Notre Dame</option><option value="111">University of Oklahoma</option><option value="9">University of Oregon</option><option value="118">University of Pennsylvania</option><option value="119">University of Pittsburgh</option><option value="212">University of Rhode Island</option><option value="123">University of South Carolina</option><option value="42">University of South Florida</option><option value="177">University of Southern Mississippi</option><option value="126">University of Tennessee - Knoxville</option><option value="178">University of Tennessee - Martin</option><option value="136">University of Texas at Austin</option><option value="200">University of Toledo</option><option value="141">University of Utah</option><option value="142">University of Vermont</option><option value="147">University of Virginia</option><option value="10">University of Washington</option><option value="151">University of Wisconsin</option><option value="215">University of Wisconsin - Whitewater</option><option value="201">University of Wisconsin-La Crosse</option><option value="152">University of Wisconsin-Milwaukee</option><option value="179">University of Wisconsin-Oshkosh</option><option value="176">University of the Incarnate Word</option><option value="140">Utah Valley University</option><option value="127">Vanderbilt</option><option value="146">Virginia Commonwealth University</option><option value="145">Virginia Tech</option><option value="104">Wake Forest</option><option value="148">Washington State University</option><option value="86">Washington University</option><option value="80">Wayne State University</option><option value="149">West Virginia</option><option value="202">Western Illinois University</option><option value="63">Western Kentucky</option><option value="81">Western Michigan University</option><option value="203">Winona State University</option><option value="32">Yale University</option><option value="204">Youngstown State University</option></select>	</label>
+    </p>
+    <div style="font-size:.9em;">If your college is not on this list, we have not added news there yet.
+        Check back next semester as we will add more colleges at that time.</div><br/>
+
+    <p><label>Phone Number<br/>
+        <input id="phone" type="text" tabindex="30" size="25" value="" name="phone" />
+	</label></p>
+    <p><label>Graduation Date<br/>
+        <input id="grad" type="text" tabindex="30" size="25" value="" name="grad" />
+	</label></p>
+    <p><label>Major/Concentration<br/>
+        <input id="major" type="text" tabindex="30" size="25" value="" name="major" />
+	</label></p>
+    <p><label>Please outline your previous experience writing or editing:<br/>
+        <textarea id="experience" tabindex="30" name="experience" >
+                    </textarea>
+	</label></p>
+    <p><label>Please attach one or two samples of your recent work:<br/>
+        <em>(Include links to articles online or paste the complete text.)</em><br/>
+        <textarea id="sample" tabindex="30" name="sample" >
+                    </textarea>
+	</label></p>
+
+    <p><label>Select your preferred area of writing:<br/>
+        <select id="preference" name="preference" class="input">
+            <option value="business">Business</option>
+            <option value="campus">Campus Life</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="fashion">Fashion</option>
+            <option value="health">Health</option>
+            <option value="politics">Politics</option>
+            <option value="sports">Sports</option>
+            <option value="technology">Technology</option>
+            <option value="none">No Preference</option>
+        </select>
+    </label></p>
+	
+    <p><label>How did you hear about this position?<br/>
+        <select id="referred" name="referred" class="input">
+            <option value="google_search">Google Search</option>
+            <option value="friend_family">Friend/Family Member</option>
+            <option value="editor_contact">Contacted by Editor</option>
+            <option value="school_email">School Email</option>
+            <option value="job_board">Job Board</option>
+            <option value="uloop">Uloop.com</option>
+            <option value="website">Other Website</option>
+            <option value="not_listed">Not Listed</option>
+        </select>
+    </label></p>
+
+    <p>By applying and joining, you are agreeing to our 
+        <a href="http://blog.uloop.com/wp-content/uploads/2012/09/Uloop-News-Terms-9-18-12.pdf" target="_blank">
+        Terms and Conditions
+        </a>.</p>
+
+        <input id="inviter" type="hidden" value="d1000402-1456" name="inviter" />
+        	<p id="reg_passmail">You will be notified by one of our editors when your application is reviewed. 
+         Usually within one week.</p>
+	<br class="clear" />
+	<input type="hidden" name="redirect_to" value="" />
+	<p class="submit"><input type="submit" name="wp-submit" id="wp-submit" class="button-primary" value="Apply to Uloop News" tabindex="100" /></p>
+</form>
+
+<p id="nav">
+<a href="http://blog.uloop.com/wp-login.php">Log in</a> |
+<a href="http://blog.uloop.com/wp-login.php?action=lostpassword" title="Password Lost and Found">Lost your password?</a>
+</p>
+
+	<p id="backtoblog"><a href="http://blog.uloop.com/" title="Are you lost?">&larr; Back to Uloop News</a></p>
+	
+	</div>
+
+		<script type="text/javascript">
+	try{document.getElementById('user_login').focus();}catch(e){}
+	if(typeof wpOnload=='function')wpOnload();
+	</script>
+	
+	<link rel='stylesheet' id='myu_styles-css'  href='http://blog.uloop.com/wp-content/plugins/myu-plugins/myu_styles.css?ver=3.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='myu_colorbox-css'  href='http://blog.uloop.com/wp-content/plugins/myu-plugins/js/colorbox.css?ver=3.4.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://platform.twitter.com/widgets.js?ver=3.4.1'></script>
+	<div class="clear"></div>
+	</body>
+	</html>
+	

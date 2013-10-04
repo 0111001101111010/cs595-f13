@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://www.ijava2.com/wp-content/themes/twentyten/style.css" />
+<link rel="pingback" href="http://www.ijava2.com/xmlrpc.php" />
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.18 - http://yoast.com/wordpress/seo/ -->
+<title>(Displaying the first days of each month) Write a program that prompts the user to enter the year and first day of the year | iJava2--Java Programming Blog</title>
+<link rel="canonical" href="http://www.ijava2.com/displaying-days-month-write-program-prompts-user-enter-year-day-year/" />
+<!-- / Yoast WordPress SEO plugin. -->
+
+
+            <script type="text/javascript">//<![CDATA[
+            // Google Analytics for WordPress by Yoast v4.3.3 | http://yoast.com/wordpress/google-analytics/
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-43649543-1']);
+				</script><script src="http://www.ijava2.com/wp-content/plugins/google-analytics-for-wordpress/custom_se_async.js" type="text/javascript"></script>
+<script type="text/javascript">            _gaq.push(['_setAllowLinker',true],['_setDomainName','ijava2.com'],['_setCustomVar',2,'categories','opinions',3],['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script>
+			<link rel='stylesheet' id='bwp-rc-css'  href='http://www.ijava2.com/wp-content/plugins/bwp-recent-comments/css/bwp-recent-comments.css?ver=1.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_likes-css'  href='http://www.ijava2.com/wp-content/plugins/jetpack/modules/likes/style.css?ver=2.5' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack-widgets-css'  href='http://www.ijava2.com/wp-content/plugins/jetpack/modules/widgets/widgets.css?ver=20121003' type='text/css' media='all' />
+<link rel='stylesheet' id='prettify-css'  href='http://www.ijava2.com/wp-content/plugins/prettify-code-syntax/stylesheets/default.css?ver=3.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='http://www.ijava2.com/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.4' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.ijava2.com/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='http://www.ijava2.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://www.ijava2.com/wp-content/plugins/bwp-recent-comments/js/bwp-rc-ajax.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://www.ijava2.com/wp-content/plugins/wp-ajaxify-comments/jsuri-1.1.1.js?ver=0.17.0'></script>
+<script type='text/javascript' src='http://www.ijava2.com/wp-content/plugins/wp-ajaxify-comments/jquery.blockUI.js?ver=0.17.0'></script>
+<script type='text/javascript' src='http://www.ijava2.com/wp-content/plugins/wp-ajaxify-comments/idle-timer.js?ver=0.17.0'></script>
+<script type='text/javascript' src='http://www.ijava2.com/wp-content/plugins/wp-ajaxify-comments/wp-ajaxify-comments.js?ver=0.17.0'></script>
+<script type='text/javascript' src='http://www.ijava2.com/wp-content/plugins/jetpack/_inc/postmessage.js?ver=2.5'></script>
+<script type='text/javascript' src='http://www.ijava2.com/wp-content/plugins/jetpack/_inc/jquery.inview.js?ver=2.5'></script>
+<script type='text/javascript' src='http://www.ijava2.com/wp-content/plugins/jetpack/_inc/jquery.jetpack-resize.js?ver=2.5'></script>
+<meta name="generator" content="WordPress 3.6.1" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='http://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<style type='text/css'>
+
+
+
+			.social_facebook_ftgssbfw_share_buttons_container{
+
+				position: relative; 
+
+				width: 100%; 
+				height: 180px; 
+
+				padding-top: 15px;
+
+				background: transparent;
+
+				border: none 1px #000000;	/*  Option */
+
+				font-family: arial,helvetica,sans-serif;
+				font-size: 8pt;
+				font-weight: bold;
+
+			}
+			
+			.social_facebook_ftgssbfw_share_buttons{
+
+				position: relative;
+
+				float: left;
+		
+
+				width : 100px;
+				height: 20px;
+
+				margin-top: 0px;
+				margin-bottom: 10px;
+				margin-left: 25px;
+				margin-right: 0px;
+
+				border: dotted 1px #000000;	/*  Option */
+				text-align: center;
+
+				background: transparent;
+				color: #000000;	 /*  Option */
+
+				/* color: #;   */
+
+			}
+
+
+			div:last_child.social_facebook_ftgssbfw_share_buttons{
+
+				position: relative;
+
+				float: left;
+		
+
+				width : 100px;
+				height: 20px;
+
+				margin-top: 0px;
+				margin-bottom: 10px;
+				margin-left: 90px;
+				margin-right: 0px;
+
+				border: dashed 1px #000000;    /* Option */
+				text-align: center;
+		
+				/* background: #ffffff; */
+				color: #000000;
+
+				/* color: #;   */
+
+			}
+
+
+
+
+
+
+		</style><script type='text/javascript'>
+			
+
+
+					  /*  Share buttons display handling */
+
+						jQuery(document).ready(function() {
+
+						    var share_buttons = jQuery('.social_facebook_ftgssbfw_share_buttons_container').find('.social_facebook_ftgssbfw_share_buttons');
+						    var share_buttons_source_codes = new Array;
+						    var div_boxes_to_display_total = share_buttons.length;
+						    var share_buttons_total = share_buttons.length;
+
+						    var opening_duration = 2000;				/*  Option in milliseconds */
+						    var closing_duration = 2000;				/*  Option */
+						    var animation_speed = 3000;				/*  Option */
+
+						    share_buttons.each(function(){
+						      share_buttons_source_codes.push(jQuery(this).html());
+						    });
+
+
+						    // animation
+						    var change_share_buttons = function(){
+
+						      var div_box_to_display_random_index = Math.floor(div_boxes_to_display_total * Math.random());
+						      var share_buttons_source_codes_random_index = Math.floor(share_buttons_total * Math.random());
+
+						      share_buttons.eq(div_box_to_display_random_index).fadeTo(closing_duration,0,function(){
+						        jQuery(this).html(share_buttons_source_codes[share_buttons_source_codes_random_index]).fadeTo(opening_duration,1);
+						      });
+
+
+						    };
+						    setInterval(change_share_buttons, animation_speed);
+
+
+						    return this;
+
+
+
+
+
+
+
+
+
+						});	//  jQuery(document).ready(function() { End
+
+
+
+
+
+
+		</script>
+
+
+		<script type='text/javascript' src='http://widgets.givealink.com/buttons.js'></script>
+		
+
+
+
+
+
+		
+
+
+
+	<script type='text/javascript' src='http://ijava2.api.oneall.com/socialize/library.js'></script>
+<script type="text/javascript">if (!window["WPAC"]) var WPAC = {};WPAC._Options = {enable:true,debug:false,selectorCommentForm:"#commentform",selectorCommentsContainer:"#comments",selectorCommentPagingLinks:"#comments [class^='nav-'] a",selectorRespondContainer:"#respond",selectorErrorContainer:"p:parent",popupCornerRadius:5,popupMarginTop:10,popupWidth:30,popupPadding:5,popupFadeIn:400,popupFadeOut:400,popupTimeout:3000,popupBackgroundColorLoading:"#000",popupTextColorLoading:"#fff",popupBackgroundColorSuccess:"#008000",popupTextColorSuccess:"#fff",popupBackgroundColorError:"#f00",popupTextColorError:"#fff",popupOpacity:70,popupTextAlign:"center",popupTextFontSize:"Default font size",popupZindex:1000,scrollSpeed:500,autoUpdateIdleTime:0,textPosted:"Your comment has been posted. Thank you!",textPostedUnapproved:"Your comment has been posted and is awaiting moderation. Thank you!",textReloadPage:"Reloading page. Please wait&hellip;",textPostComment:"Posting your comment. Please wait&hellip;",textRefreshComments:"Loading comments. Please wait&hellip;",textUnknownError:"Something went wrong, your comment has not been posted.",disableUrlUpdate:false,commentsEnabled:true,version:"0.17.0"};WPAC._Callbacks = {"onBeforeSelectElements": function(dom) {},"onBeforeUpdateComments": function() {},"onAfterUpdateComments": function() {},"onBeforeSubmitComment": function() {},};</script><script type="text/javascript">
+	var bwp_ajax_url = 'http://www.ijava2.com/';
+</script>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+<script src='/google_analytics_auto.js'></script></head>
+
+<body class="single single-post postid-2903 single-format-gallery">
+<div id="wrapper" class="hfeed">
+	<div id="header">
+		<div id="masthead">
+			<div id="branding" role="banner">
+								<div id="site-title">
+					<span>
+						<a href="http://www.ijava2.com/" title="iJava2&#8211;Java Programming Blog" rel="home">iJava2&#8211;Java Programming Blog</a>
+					</span>
+				</div>
+				<div id="site-description">Love Java&#8211;coffee and Java programming.</div>
+
+							</div><!-- #branding -->
+
+			<div id="access" role="navigation">
+			  				<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+								<div class="menu"><ul><li ><a href="http://www.ijava2.com/" title="Home">Home</a></li><li class="page_item page-item-5434"><a href="http://www.ijava2.com/ijava2-support-page/">iJava2 Support Page</a></li><li class="page_item page-item-6767"><a href="http://www.ijava2.com/java-programming-solutions-manuals/">Java Programming Solutions Manuals</a></li></ul></div>
+			</div><!-- #access -->
+		</div><!-- #masthead -->
+	</div><!-- #header -->
+
+	<div id="main">
+
+		<div id="container">
+			<div id="content" role="main">
+
+			
+
+				<div id="nav-above" class="navigation">
+					<div class="nav-previous"><a href="http://www.ijava2.com/obtaining-accurate-results-computing-series-obtain-accurate-results-computing-left-left/" rel="prev"><span class="meta-nav">&larr;</span> (Obtaining more accurate results) In computing the following series, you will obtain more accurate results by computing from right to left rather than from left to right:</a></div>
+					<div class="nav-next"><a href="http://www.ijava2.com/displaying-leap-years-write-program-displays-leap-years-ten-line-twentyfirst-century/" rel="next">(Displaying leap years) Write a program that displays all the leap years, ten per line, in the twenty-first century <span class="meta-nav">&rarr;</span></a></div>
+				</div><!-- #nav-above -->
+
+				<div id="post-2903" class="post-2903 post type-post status-publish format-gallery hentry category-opinions">
+					<h1 class="entry-title">(Displaying the first days of each month) Write a program that prompts the user to enter the year and first day of the year</h1>
+
+					<div class="entry-meta">
+						<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://www.ijava2.com/displaying-days-month-write-program-prompts-user-enter-year-day-year/" title="10:59 pm" rel="bookmark"><span class="entry-date">May 21, 2012</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://www.ijava2.com/author/ij2k/" title="View all posts by iJava2Admin">iJava2Admin</a></span>					</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+						<p>/*<br />
+ * 4.28**(Displaying the first days of each month) Write a program that prompts the user to<br />
+enter the year and first day of the year, and displays the first day of each month in<br />
+the year on the console. For example, if the user entered the year 2005, and 6 for<br />
+Saturday, January 1, 2005, your program should display the following output<br />
+(note that Sunday is 0):<br />
+January 1, 2005 is Saturday<br />
+&#8230;<br />
+December 1, 2005 is Thursday</p>
+<p> */</p>
+<p><code><br />
+import java.util.Scanner;<br />
+public class DetermineFirstDay<br />
+{<br />
+  public static void main(String[] args)<br />
+  {<br />
+    Scanner input = new Scanner(System.in);</p>
+<p>    System.out.print("Enter a year: ");<br />
+    int year = input.nextInt();</p>
+<p>    System.out.print("Enter the first day of the year: ");<br />
+    int firstDay = input.nextInt();</p>
+<p>    int numberOfDaysInMonth = 0;</p>
+<p>    for (int month = 1; month < = 12; month++)<br />
+    {<br />
+      switch (month) { case 1:<br />
+        System.out.print("January 1, " + year + " is ");<br />
+        numberOfDaysInMonth = 31;<br />
+        break;<br />
+      case 2:<br />
+        System.out.print("February 1, " + year + " is ");<br />
+        if ((year % 400 == 0) || ((year % 4 == 0) &#038;&#038; (year % 100 != 0)))<br />
+          numberOfDaysInMonth = 29;<br />
+        else<br />
+          numberOfDaysInMonth = 28;<br />
+        break;<br />
+      case 3:<br />
+        System.out.print("March 1, " + year + " is ");<br />
+        numberOfDaysInMonth = 31;<br />
+        break;<br />
+      case 4:<br />
+        System.out.print("April 1, " + year + " is ");<br />
+        numberOfDaysInMonth = 30;<br />
+        break;<br />
+      case 5:<br />
+        System.out.print("May 1, " + year + " is ");<br />
+        numberOfDaysInMonth = 31;<br />
+        break;<br />
+      case 6:<br />
+        System.out.print("June 1, " + year + " is ");<br />
+        numberOfDaysInMonth = 30;<br />
+        break;<br />
+      case 7:<br />
+        System.out.print("July 1, " + year + " is ");<br />
+        numberOfDaysInMonth = 31;<br />
+        break;<br />
+      case 8:<br />
+        System.out.print("August 1, " + year + " is ");<br />
+        numberOfDaysInMonth = 31;<br />
+        break;<br />
+      case 9:<br />
+        System.out.print("September 1, " + year + " is ");<br />
+        numberOfDaysInMonth = 30;<br />
+        break;<br />
+      case 10:<br />
+        System.out.print("October 1, " + year + " is ");<br />
+        numberOfDaysInMonth = 31;<br />
+        break;<br />
+      case 11:<br />
+        System.out.print("November 1, " + year + " is ");<br />
+        numberOfDaysInMonth = 30;<br />
+        break;<br />
+      case 12:<br />
+        System.out.print("December 1, " + year + " is ");<br />
+        numberOfDaysInMonth = 31;<br />
+      }</p>
+<p>      switch (firstDay) { case 0:<br />
+        System.out.println("Sunday"); break;<br />
+      case 1:<br />
+        System.out.println("Monday"); break;<br />
+      case 2:<br />
+        System.out.println("Tuesday"); break;<br />
+      case 3:<br />
+        System.out.println("Wednesday"); break;<br />
+      case 4:<br />
+        System.out.println("Thursday"); break;<br />
+      case 5:<br />
+        System.out.println("Friday"); break;<br />
+      case 6:<br />
+        System.out.println("Saturday");<br />
+      }</p>
+<p>      firstDay = (firstDay + numberOfDaysInMonth) % 7;<br />
+    }<br />
+  }<br />
+}<br />
+</code></p>
+<p></code><code><br />
+/***********Sample output**********</p>
+<p>Enter a year: 2001<br />
+Enter the first day of the year: 1<br />
+January 1, 2001 is Monday<br />
+February 1, 2001 is Thursday<br />
+March 1, 2001 is Thursday<br />
+April 1, 2001 is Sunday<br />
+May 1, 2001 is Tuesday<br />
+June 1, 2001 is Friday<br />
+July 1, 2001 is Sunday<br />
+August 1, 2001 is Wednesday<br />
+September 1, 2001 is Saturday<br />
+October 1, 2001 is Monday<br />
+November 1, 2001 is Thursday<br />
+December 1, 2001 is Saturday<br />
+*********************************/</p>
+<p></code></p>
+<div class="addtoany_share_save_container"><div class="a2a_kit a2a_target addtoany_list" id="wpa2a_1"><a class="a2a_dd addtoany_share_save" href="http://www.addtoany.com/share_save" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.addtoany.com/share_save']);"><img src="http://i0.wp.com/www.ijava2.com/wp-content/plugins/add-to-any/share_save_171_16.png?resize=171%2C16" alt="Share" data-recalc-dims="1"/></a>
+<script type="text/javascript"><!--
+wpa2a.script_load();
+//--></script>
+</div></div>											</div><!-- .entry-content -->
+
+					<div id="entry-author-info">
+						<div id="author-avatar">
+							<img alt='' src='http://0.gravatar.com/avatar/c43fc0469aeda4f45e902629c7997561?s=60&amp;d=retro&amp;r=G' class='avatar avatar-60 photo' height='60' width='60' />						</div><!-- #author-avatar -->
+						<div id="author-description">
+							<h2>About iJava2Admin</h2>
+							<b>Please share, bookmark, and add us to your favorites! Follow us on Twitter! You are welcomed to provide your own version of any of the Java solutions that we have listed on our Java programming blog. You are welcomed to provide any fix to any of the Java solutions. Fixing Java code is a great way to become a better programmer.</b>
+
+<i>I'm a little teapot - short and stout! Here is my handle, here is my spout.</i>							<div id="author-link">
+								<a href="http://www.ijava2.com/author/ij2k/" rel="author">
+									View all posts by iJava2Admin <span class="meta-nav">&rarr;</span>								</a>
+							</div><!-- #author-link	-->
+						</div><!-- #author-description -->
+					</div><!-- #entry-author-info -->
+
+					<div class="entry-utility">
+						This entry was posted in <a href="http://www.ijava2.com/opinions/" title="View all posts in What we think!" rel="category tag">What we think!</a>. Bookmark the <a href="http://www.ijava2.com/displaying-days-month-write-program-prompts-user-enter-year-day-year/" title="Permalink to (Displaying the first days of each month) Write a program that prompts the user to enter the year and first day of the year" rel="bookmark">permalink</a>.											</div><!-- .entry-utility -->
+				</div><!-- #post-## -->
+
+				<div id="nav-below" class="navigation">
+					<div class="nav-previous"><a href="http://www.ijava2.com/obtaining-accurate-results-computing-series-obtain-accurate-results-computing-left-left/" rel="prev"><span class="meta-nav">&larr;</span> (Obtaining more accurate results) In computing the following series, you will obtain more accurate results by computing from right to left rather than from left to right:</a></div>
+					<div class="nav-next"><a href="http://www.ijava2.com/displaying-leap-years-write-program-displays-leap-years-ten-line-twentyfirst-century/" rel="next">(Displaying leap years) Write a program that displays all the leap years, ten per line, in the twenty-first century <span class="meta-nav">&rarr;</span></a></div>
+				</div><!-- #nav-below -->
+
+				
+			<div id="comments">
+
+
+
+					
+		<div id="respond" class="comment-respond">
+			<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/displaying-days-month-write-program-prompts-user-enter-year-day-year/#respond" style="display:none;">Cancel reply</a></small></h3>
+			<div id="commentform" class="comment-form">
+				<iframe src="http://jetpack.wordpress.com/jetpack-comment/?blogid=32548938&#038;postid=2903&#038;comment_registration=0&#038;require_name_email=1&#038;stc_enabled=1&#038;stb_enabled=1&#038;show_avatars=1&#038;avatar_default=retro&#038;greeting=Leave+a+Reply&#038;greeting_reply=Leave+a+Reply+to+%25s&#038;color_scheme=light&#038;lang=en-US&#038;jetpack_version=2.5&#038;sig=f140ca434c0939c570623f4d65bfc9d80b10598e#parent=http%3A%2F%2Fwww.ijava2.com%2Fdisplaying-days-month-write-program-prompts-user-enter-year-day-year%2F" allowtransparency="false" style="width:100%; height: 430px;border:0px;" frameBorder="0" scrolling="no" name="jetpack_remote_comment" id="jetpack_remote_comment"></iframe>
+			</div>
+		</div>
+
+		
+		<input type="hidden" name="comment_parent" id="comment_parent" value="" />
+
+					
+</div><!-- #comments -->
+
+
+			</div><!-- #content -->
+		</div><!-- #container -->
+
+
+		<div id="primary" class="widget-area" role="complementary">
+			<ul class="xoxo">
+
+<li id="search-2" class="widget-container widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://www.ijava2.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></li><li id="twitter_timeline-2" class="widget-container widget_twitter_timeline"><h3 class="widget-title">Follow iJava2 on Twitter</h3><a class="twitter-timeline" data-widget-id="380527373159895040" data-theme="light" data-link-color="#f96e5b" data-border-color="#000000" width="225" height="400" lang="EN">My Tweets</a></li><li id="bwp_recent_comments-2" class="widget-container bwp-rc-widget"><h3 class="widget-title">Recent Comments</h3>
+		<ul class="bwp-rc-ulist">
+<li class="recent-comment"><span class="recent-comment-avatar"><img alt='User Avatar' src='http://0.gravatar.com/avatar/cf8a82b58946793c922602ae6b8bf8c2?s=40&amp;d=retro&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /></span><span class="recent-comment-single"><span class="recent-comment-author">DivyaH</span><span class="recent-comment-text"> { @dinh9x, try this code /** * Get a diff between two dates * @param date1 the oldest date * @param date2 the newest date *... } – </span> <a href="http://www.ijava2.com/ijava2-support-page/#comment-3364" title="Comment on iJava2 Support Page"><strong>Sep 24, 1:24 AM</strong></a></span></li>
+<li class="recent-comment"><span class="recent-comment-avatar"><img alt='User Avatar' src='http://0.gravatar.com/avatar/4910e4da4ba372ffcd840b1e7b137e2f?s=40&amp;d=retro&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /></span><span class="recent-comment-single"><span class="recent-comment-author">dinh9x</span><span class="recent-comment-text"> { Please help me solve this homework: This programming assignment involves writing a Java application which inputs a date from the user, and calculates how many... } – </span> <a href="http://www.ijava2.com/ijava2-support-page/#comment-3363" title="Comment on iJava2 Support Page"><strong>Sep 24, 1:09 AM</strong></a></span></li>
+<li class="recent-comment"><span class="recent-comment-avatar"><img alt='User Avatar' src='http://1.gravatar.com/avatar/37f873e3a84a4fff323b6e684e474306?s=40&amp;d=retro&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /></span><span class="recent-comment-single"><span class="recent-comment-author">maneesh</span><span class="recent-comment-text"> { hello. Where is the solution for this program?? Can I have it immediately? Many thanks. } – </span> <a href="http://www.ijava2.com/time-class-design-class-named-time-class-java-programming-concepts/#comment-3362" title="Comment on (The Time Class)  Design A Class Named Time.  The Class Contains The Following Java Programming Concepts:"><strong>Sep 23, 3:38 PM</strong></a></span></li>
+<li class="recent-comment"><span class="recent-comment-avatar"><img alt='User Avatar' src='http://0.gravatar.com/avatar/c43fc0469aeda4f45e902629c7997561?s=40&amp;d=retro&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /></span><span class="recent-comment-single"><span class="recent-comment-author">iJava2Admin</span><span class="recent-comment-text"> { @Sanjeev, thank you for correcting the code. Your comment is greatly appreciated. Thank you. } – </span> <a href="http://www.ijava2.com/game-atm-machine-account-class-created-exercise-87-simulate-atm-machine/#comment-3361" title="Comment on Game ATM Machine Use The Account Class Created In Exercise 8.7 To Simulate An ATM Machine."><strong>Sep 23, 3:23 PM</strong></a></span></li>
+<li class="recent-comment"><span class="recent-comment-avatar"><img alt='User Avatar' src='http://1.gravatar.com/avatar/3205976282e7d345be130a1a7c97e237?s=40&amp;d=retro&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /></span><span class="recent-comment-single"><span class="recent-comment-author">Sanjeev</span><span class="recent-comment-text"> { Hi, In getAChoice(), just remove break statement, instead of that place "return choice"; and also remove int choice = 0; return choice; statements. If we... } – </span> <a href="http://www.ijava2.com/game-atm-machine-account-class-created-exercise-87-simulate-atm-machine/#comment-3360" title="Comment on Game ATM Machine Use The Account Class Created In Exercise 8.7 To Simulate An ATM Machine."><strong>Sep 23, 8:32 AM</strong></a></span></li>
+<li class="bwp-rc-ajax-nav">
+	<input type="hidden" name="bwp_rc_instance" value="bwp_rc_list" />
+	<input type="hidden" name="bwp_rc_paged" value="1" />
+	<input type="hidden" name="bwp_rc_paged_limit" value="5" />
+ <a title="View older comments" href="#" class="bwp-rc-older-nav">Older »</a></li>
+		</ul>
+</li><li id="categories-2" class="widget-container widget_categories"><h3 class="widget-title">Topics</h3>		<ul>
+	<li class="cat-item cat-item-258"><a href="http://www.ijava2.com/advanced-java/" title="Advanced topics using the Java programming language are discussed here.">Advanced Java</a>
+<ul class='children'>
+	<li class="cat-item cat-item-46"><a href="http://www.ijava2.com/advanced-java/arrays/" title="Section devoted to discussing arrays and their various complexities, formation, and design.">Arrays</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-406"><a href="http://www.ijava2.com/advanced-java/arrays/multidimensional-arrays/" title="View all posts filed under Multidimensional Arrays">Multidimensional Arrays</a>
+</li>
+	<li class="cat-item cat-item-392"><a href="http://www.ijava2.com/advanced-java/arrays/single-dimensional-arrays/" title="View all posts filed under Single Dimensional Arrays">Single Dimensional Arrays</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-444"><a href="http://www.ijava2.com/advanced-java/borders-containers-layout-managers/" title="View all posts filed under Borders Containers Layout Managers">Borders Containers Layout Managers</a>
+</li>
+	<li class="cat-item cat-item-427"><a href="http://www.ijava2.com/advanced-java/generics/" title="View all posts filed under Generics">Generics</a>
+</li>
+	<li class="cat-item cat-item-430"><a href="http://www.ijava2.com/advanced-java/graphs-applications/" title="View all posts filed under Graphs Applications">Graphs Applications</a>
+</li>
+	<li class="cat-item cat-item-456"><a href="http://www.ijava2.com/advanced-java/heap-sort/" title="Heap Sort A heap is  by definition partially sorted because each linear string from root to leaf is sorted.  This produces an efficient general sorting algorithm called the heap sort.  As with all sorting algorithms, it applies to an array (or vector).  However, the underlying heap structure, which is a binary tree, that the array represents is used to define this algorithm.  Like the merge sort and quick sort, the heap sort uses an auxiliary function that is called from the sort() function.  And also like the merge sort and the quick sort, the heap sort has complexity function o(n lg n).  But unlike the merge sort and the quick sort, the heap sort is not recursive.  The heap sort essentially loads n elements into a heap and then unloads them.  Each element  takes O(lg n) time to load and O(lg n) time to unload, so the entire process on n element runs in O(n lg n) time.">Heap Sort</a>
+</li>
+	<li class="cat-item cat-item-355"><a href="http://www.ijava2.com/advanced-java/iteration/" title="View all posts filed under iteration">iteration</a>
+</li>
+	<li class="cat-item cat-item-403"><a href="http://www.ijava2.com/advanced-java/java-collections-framework/" title="A Java Collections Framework (JCF) is a group of classes and interfaces in the java.util packages whose main purpose is to provide a unified framework for implementing common data structures so that the resulting classes can be used in a consistent efficient, and intuitive manner.  A collection is an object that contains other objects, which are called elements of the collection.  The JCF specifies four general types of collections: List, Queue, Set, and Map.  These are defined interfaces and are extended and implemented with other interfaces and classes in the java.util package.  The JCF implements interfaces with several different data structures.  The simplest structure is an indexed structure called an array.  Arrays use the ArrayList, the ArrayDeque, the HashSet, and the HashMap classes.  Other implementations use a linked structure.  The LinkedList class uses the doubly linked linear structure, the PriorityQueue class uses a heap tree, the TreeSet and TreeMap classes use a linked binary search tree, and the LinkedHashSet and LinkedHashMap classes use a hybrid linked array structure.  The java.util package includes four other container classes that were created prior to the JCF in Java version 1.2.  Those are the Vector, Stack, Dictionary, and Hashtable classes.  The Vector and Stack classes have been superseded by the ArrayList class, and the Dictionary and Hashtable by the HashMap class.  However, the Collection interface provides the basis for most of the other interfaces and classes in the JCF.  ">Java Collections Framework</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-459"><a href="http://www.ijava2.com/advanced-java/java-collections-framework/queues/" title="QueuesQueues are a collection that implements the first-in-first-out (FIFO) protocol.  This means that the only accessible object in the collection is the first one that was inserted.  A very common real-world concept of a queue is a line full of people waiting.  The fundamental operations of a queue are as follows:
+1. Add an element to the back of the queue.
+2.  Access the current element at the front of the queue.
+3.  Remove the current element at the front of the queue.
+Alternatively, you can use the terms enqueue and dequeue for the add and remove operations of a Queue. A key difference between a stack and a queue is the access point.  With a queue it is at the front, where the &quot;oldest&quot; element--the one that has been there the longest--is found.  With a stack, it is at the top, where the &quot;youngest&quot; element--the one that arrived most recently--is found.  ">Queues</a>
+</li>
+	<li class="cat-item cat-item-372"><a href="http://www.ijava2.com/advanced-java/java-collections-framework/stacks/" title="Stacks A stack is a collection that implements the last-in-first-out (LIFO) protocol.  This means that the only accessible object in the collection is the last one that was inserted.  A stack of books, or a stack of plates serve as good examples because you can&#039;t reach for the bottom book without first removing the books that are stacked on top.  The fundamental operations of a stack are:
+1.  Add an element onto the top of the stack.
+2. Access the current element on the top of the stack.
+3.  Remove the current element on the top of the stack.
+These three operations are usually called push, peek, and pop.
+The operational requirements of the stack interface can be formalized using a stack interface while using an indexed implementation.  That is, you can implement a stack with an array.  Stacks can also be implemented using a linked implementation.">Stacks</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-370"><a href="http://www.ijava2.com/advanced-java/java-utilities-package-bit-manipulation/" title="View all posts filed under Java Utilities Package Bit Manipulation">Java Utilities Package Bit Manipulation</a>
+</li>
+	<li class="cat-item cat-item-439"><a href="http://www.ijava2.com/advanced-java/jtable-jtree/" title="View all posts filed under JTable JTree">JTable JTree</a>
+</li>
+	<li class="cat-item cat-item-458"><a href="http://www.ijava2.com/advanced-java/list/" title="A list is a collection of elements that are accessible sequentially:  the first element, followed by the second element, followed by the third element, and so on.  This is called sequential access or linked access (as opposed to direct or index access).  A list is different from a set because a set does not contain duplicates, whereas, a list can contain duplicates.  Sets are also typically known as unordered collections of unique elements.  Array indices, lists indices are zero based, and list can be manipulated through their indices by manipulating a specified range of elements, searching for elements, and obtaining the listIterator to access the elements.">Lists</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-482"><a href="http://www.ijava2.com/advanced-java/list/arraylist/" title="View all posts filed under ArrayList">ArrayList</a>
+</li>
+	<li class="cat-item cat-item-326"><a href="http://www.ijava2.com/advanced-java/list/linkedlist/" title="Linked data structures allow you to maintain ordered list that allow for quick insertions and deletions.  This is very unlike an array because while arrays work well for unordered sequences, and for some ordered sequences if they don&#039;t change much, linked data structures surpass arrays when you must insert and delete data efficiently.  Linked list are typically constructed with node elements.  ">LinkedList</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-437"><a href="http://www.ijava2.com/advanced-java/menus-toolbars-dialogs/" title="View all posts filed under Menus Toolbars Dialogs">Menus Toolbars Dialogs</a>
+</li>
+	<li class="cat-item cat-item-455"><a href="http://www.ijava2.com/advanced-java/merge-sort/" title="Merge Sort Merge sort applies the divide-and-conquer strategy to sort a sequence.  First, it subdivides the sequence into singletons.  Singletons are binary search trees with no value and no child. Then, the merge sort successfully merges the singletons pairwise until a single sequence is re-formed.  Each merge preserves order, so each merged sub-sequence is sorted.  When the final merge is finished, the complete sequence is sorted.  Merge sort can be implemented iteratively, however, it is naturally recursive.  The recursion in the merge sort occurs by splitting the sequence into two, sort each half, and then merge them back together preserving their order.  The basis occurs when the sub-sequence contains only a single element.  
+Merge Sort Algorithm works as follows:
+1. if q - p &gt;1, do steps 2 - 5.
+2. Split S into two sub-sequences, a = { Sp...Sm -1} and b = {Sm...Sq - 1}, where m = (q - p)/2.
+3. Sort a.
+4. Sort b.
+5. Merge a and b back into S, preserving their order.
+">Merge Sort</a>
+</li>
+	<li class="cat-item cat-item-426"><a href="http://www.ijava2.com/advanced-java/quick-sort/" title="Quick Sort Quick sort algorithm is similar to merge sort because it is recursive, requires auxiliary functions with several loops, and it runs on O(n lg n) time.  However, quick sort is usually faster than merge sort.  Quick sort functions by by partitioning the array into two pieces separated by a single element X that is greater than or equal to every element in the left piece and less than or equal to every element in the right piece.  In this manner, the single element X, called the pivot element, is in its correct position.  Now, the algorithm proceeds, applying the same method to the two pieces separately.  This is naturally recursive and very quick.  Hence, the algorithm is named &quot;Quick Sort&quot;.">Quick Sort</a>
+</li>
+	<li class="cat-item cat-item-134"><a href="http://www.ijava2.com/advanced-java/recursion/" title="Recursion is the process of writing functions that call themselves.  This is a powerful technique for producing repetition without using loops such as while-loops and for loops.  It can produce substantial results from very little Java code.  Thus, recursion allows for elegant solutions to difficult problems.  However, recursion can also be misused, thereby, producing inefficient code.  Recursive code is usually produced from recursive algorithms.  For these algorithms to work correctly, recursion must implement a basis and a recursive part.  The basis is what stops the recursion, and the recursive part is the part that calls itself.  Recursion can be further analyzed in different formats such as mutual recursion, tail recursion, direct and indirect recursion.  Recursion is also used in dynamic programming.">Recursion</a>
+</li>
+	<li class="cat-item cat-item-457"><a href="http://www.ijava2.com/advanced-java/trees/" title="Tree structures are used to store data because their organization renders more efficient access to the data.  There are several representations of trees in Computer Science.  Some are search trees, and binary trees, and heaps.  Tree structures are also found in sorting algorithms such as a heap sort.  ">Trees</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-428"><a href="http://www.ijava2.com/advanced-java/trees/binary-trees/" title="A binary tree is an ordered tree in which every internal node has degree 2.  A binary tree can be recursive in nature, and it is either the empty set or a triple T = (x, L, R), where x is a node and L and R are disjoint binary trees, neither of which contains x.  The node X is called the root of the tree, and the subtrees L and R are called left subtree and right subtree of T rooted at X.  In short, a binary tree is just an ordered tree of order 2.  Binary trees are traversed with the following algorithms: level-order traversal, preorder traversal, postorder traversal, inorder traversal.  Arithmetic expressions can also be incorporated into binary trees, and when this happens, the trees are called expression trees.  ">Binary Trees</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-492"><a href="http://www.ijava2.com/advanced-java/web-internet-programming/" title="View all posts filed under Web Internet Programming">Web Internet Programming</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-440"><a href="http://www.ijava2.com/advanced-java/web-internet-programming/mvc-swing-models/" title="View all posts filed under MVC Swing Models">MVC Swing Models</a>
+</li>
+	<li class="cat-item cat-item-318"><a href="http://www.ijava2.com/advanced-java/web-internet-programming/servlets/" title="View all posts filed under Servlets">Servlets</a>
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-21"><a href="http://www.ijava2.com/beginner-java/" title="Discuss introductory level programming concepts relates to the Java programming language.">Beginner Java</a>
+<ul class='children'>
+	<li class="cat-item cat-item-69"><a href="http://www.ijava2.com/beginner-java/beginner-java-graphics/" title="View all posts filed under Beginner Java Graphics">Beginner Java Graphics</a>
+</li>
+	<li class="cat-item cat-item-373"><a href="http://www.ijava2.com/beginner-java/classes-objects/" title="View all posts filed under Classes Objects">Classes Objects</a>
+</li>
+	<li class="cat-item cat-item-464"><a href="http://www.ijava2.com/beginner-java/composition/" title="Composition is the creation of one Java class using another class for its component data.  As such, this fact highlights the features of object-oriented programming that makes it so powerful!  With object-oriented programming, and the appropriate implementation, you programmers can reuse implementations for different programming purposes to achieve amazing results through efficient programming practices.  The concept known as composition allows this to occur.
+
+">Composition</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://www.ijava2.com/beginner-java/control-statements/" title="Post to discuss control statements using the Java programming language.">Control Statements</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-207"><a href="http://www.ijava2.com/beginner-java/control-statements/control-structures/" title="Section devoted to discussing control structures and how they are used to code Java programs using loops and other controlling abilities.">Control Structures</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-4"><a href="http://www.ijava2.com/beginner-java/control-statements/control-structures/loops/" title="Section devoted to discussing programming loops.">Loops</a>
+			<ul class='children'>
+	<li class="cat-item cat-item-5"><a href="http://www.ijava2.com/beginner-java/control-statements/control-structures/loops/for/" title="View all posts filed under For">For</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://www.ijava2.com/beginner-java/control-statements/control-structures/loops/while/" title="View all posts filed under While">While</a>
+</li>
+			</ul>
+</li>
+	<li class="cat-item cat-item-61"><a href="http://www.ijava2.com/beginner-java/control-statements/control-structures/switch-statements-control-structures/" title="Section devoted to discussing switch-statements, and its many related Java programming aspects.">Switch Statements</a>
+</li>
+		</ul>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-390"><a href="http://www.ijava2.com/beginner-java/elementary-programming/" title="View all posts filed under Elementary Programming">Elementary Programming</a>
+</li>
+	<li class="cat-item cat-item-173"><a href="http://www.ijava2.com/beginner-java/java-2d-graphics/" title="Section devoted to discussing Java&#039;s two-dimensional graphics capabilities.">Graphics and Java 2D</a>
+</li>
+	<li class="cat-item cat-item-468"><a href="http://www.ijava2.com/beginner-java/how-to-display-a-pattern-java/" title="View all posts filed under How to Display a Pattern Java">How to Display a Pattern Java</a>
+</li>
+	<li class="cat-item cat-item-469"><a href="http://www.ijava2.com/beginner-java/how-to-display-a-table-java/" title="View all posts filed under How to Display a Table Java">How to Display a Table Java</a>
+</li>
+	<li class="cat-item cat-item-467"><a href="http://www.ijava2.com/beginner-java/how-to-display-messages-java/" title="View all posts filed under How to Display Messages Java">How to Display Messages Java</a>
+</li>
+	<li class="cat-item cat-item-67"><a href="http://www.ijava2.com/beginner-java/inheritance-and-polymorphism/" title="Inheritance is a programming technique for creating new classes from existing classes by adding more functionality to them.  Programmers often say that new classes inherit the functionality from existing classes.  As such, this leads to a very specialized set of classes.  Inheritance is typically implemented using the Java programming concept of extension.  To define a class as an extension of an existing class, we simply use an extends clause in the header of the new classes definition.  This results in all non-private members of the extended class to be considered members of the new class, just as they had been defined there.  Extended classes are often referred to as child classes or subclasses of the extended classes.  This leads to the extended class being called the parent class or super class.  ">Inheritance and Polymorphism</a>
+</li>
+	<li class="cat-item cat-item-465"><a href="http://www.ijava2.com/beginner-java/interfaces/" title="Interfaces are like classes that cannot be instantiated.  Their purpose is to specify sets of requirements for classes to implement.  These requirements are sometimes regarded as contracts between the implementing class and any client that uses it.  By stating in its header that it implements the interface, the class is guaranteeing that the required methods carry out the behavior specified by the interface.  Contract requirements are specified by a sets of method headers, which in turn, implementing classes are obliged to define bodies of executable code.  Important aspects of object-oriented design is to create interfaces whose classes implementations will be done later.  ">Interfaces</a>
+</li>
+	<li class="cat-item cat-item-34"><a href="http://www.ijava2.com/beginner-java/java-applets/" title="Category to discuss Java applets to include implementation, design, and flexibility. ">Java Applets</a>
+</li>
+	<li class="cat-item cat-item-208"><a href="http://www.ijava2.com/beginner-java/ijava-applications/" title="Category devoted to discussion of Java applications that will definitely help beginner Java programmers learn to program in Java.">Java Applications</a>
+</li>
+	<li class="cat-item cat-item-215"><a href="http://www.ijava2.com/beginner-java/methods/" title="View all posts filed under Methods">Methods</a>
+</li>
+	<li class="cat-item cat-item-220"><a href="http://www.ijava2.com/beginner-java/object-oriented-programming/" title="Objected Oriented Programming Objects and classes.   Thinking in Objects. Introduction to Java Programming Comprehensive 8th, 9th Edition. Daniel Y. Liang.  Objected oriented programming Deitel Java How to Program 8th, 9th Edition.">Object Oriented Programming</a>
+</li>
+	<li class="cat-item cat-item-55"><a href="http://www.ijava2.com/beginner-java/programming-logic/" title="Logic is an integral part of Computer Science, and programming.  Java has many mechanisms that allow you to perform various programming operations involving programming logic.">Programming Logic</a>
+</li>
+	<li class="cat-item cat-item-341"><a href="http://www.ijava2.com/beginner-java/selection/" title="View all posts filed under Selection">Selection</a>
+</li>
+	<li class="cat-item cat-item-393"><a href="http://www.ijava2.com/beginner-java/strings-text-input-output-io/" title="Strings Text Input Output Strings, characters stringBuilder stringBuffer, File class, printWriter, Scanner Liang  Y. Daniel Chapter 9 Introduction to Java Comprehensive Edition 8th 9th.">Strings Text Input Output I/O</a>
+</li>
+	<li class="cat-item cat-item-621"><a href="http://www.ijava2.com/beginner-java/thinking-in-objects/" title="Thinking In Objects Chapter 10 Eighth Edition, Daniel Y.  Liang Java Solutions">Thinking In Objects</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-27"><a href="http://www.ijava2.com/c-plus-plus-c/" title="C plus plus (C++) related information.">C plus plus (C++)</a>
+</li>
+	<li class="cat-item cat-item-583"><a href="http://www.ijava2.com/codingbat-javabat-solutions/" title="All Java programming solutions to Codingbat are found in this category.  They are organized according to their respective names on the Codingbat website.  ">Codingbat Javabat Solutions</a>
+<ul class='children'>
+	<li class="cat-item cat-item-600"><a href="http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-ap-1/" title="View all posts filed under Codingbat Javabat Solutions AP-1">Codingbat Javabat Solutions AP-1</a>
+</li>
+	<li class="cat-item cat-item-588"><a href="http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-array-1/" title="Codingbat Array 1 problems should be taken as the first set of array related problems that you should complete to test your knowledge of programming arrays.  Array exists in a variety of languages, but Codingbat&#039;s Array 1 section utilizes arrays using the Java programming language.
+
+Arrays in the Array 1 section of Codingbat are accessed just like you would arrays in other Java applications, but understand that before you can use an array, you have to initialize it.
+
+The problems in this section of Codingbat do not use any loops.  So you are simply just declaring arrays, and then using other Java methods to manipulate the Java syntax to reach a particular solution that will compile correctly on Codingbat.">Codingbat Javabat Solutions Array 1</a>
+</li>
+	<li class="cat-item cat-item-590"><a href="http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-array-2/" title="Array 2 Codingbat problems further test your abilities to work with and manipulate Arrays using Java syntax.  The level of difficulty in Array 2 Codingbat problems is around medium-level difficulty because you will use arrays to do so much more than Array 1 codingbat problems.
+
+Array 2 problems force you to not only have some of the elements found in Array 1 problems well understood, but they also give you the chance to develop new ways of manipulating arrays to arrive at viable codingbat solutions.
+
+You will definitely use loops in these arrays, along with other programming concepts, however, you will only use at most one loop for the arrays found in Array 2 problems.  Recall that for-loops are required to iterate through arrays, and when you use the general for-loop that most new programmers learn, you should keep in mind that the
+
+	initialization expression initializes the loop, that is, it begins the loop allowing it to execute.  In most programming language, elements must be initialized before they can be used.  After the for-loop begins, it is then controlled with a boolean expression that terminates the loop when the value return false.  The increment expression is invoked after each iteration through the loop, and this is what helps the loop iterate so that it can increment or decrement in value.
+
+For loops usually have the following general structure&quot;
+for (initialization; termination;
+     increment) {
+    statement(s)
+}">Codingbat Javabat Solutions Array 2</a>
+</li>
+	<li class="cat-item cat-item-595"><a href="http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-array-3/" title="View all posts filed under Codingbat Javabat Solutions Array 3">Codingbat Javabat Solutions Array 3</a>
+</li>
+	<li class="cat-item cat-item-598"><a href="http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-logic-1/" title="View all posts filed under Codingbat Javabat Solutions Logic 1">Codingbat Javabat Solutions Logic 1</a>
+</li>
+	<li class="cat-item cat-item-599"><a href="http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-logic-2/" title="Logic 2 Java solutions for Nick Parlante&#039;s Codingbat website.  ">Codingbat Javabat Solutions Logic 2</a>
+</li>
+	<li class="cat-item cat-item-584"><a href="http://www.ijava2.com/codingbat-javabat-solutions/codingbat-solutions-java-recursion-1/" title="Recursion 1 problems from Codingbat deal with a very fundamental programming concept–recursion.  Recursion receives negative and positive praises from people because some people love it for the functionality it provides in solving complex problems with very minimal code; others espouse the fact that recursion can be handy, but it offers a lot of negative value in the form of over-head because making constant calls to a method has a habit of using and wasting precious resources.">Codingbat Javabat Solutions Recursion 1</a>
+</li>
+	<li class="cat-item cat-item-585"><a href="http://www.ijava2.com/codingbat-javabat-solutions/codingbat-solutions-java-recursion-2/" title="Recursion 2 problems from Codingbat.  This set of problems also deals with recursion, but the difficulty of the problems has increased.  Note that with increased difficulty in programming problems on a general level, that leaves you with the possibility to formulate some very interesting solutions to solve any particular problem.  As such, don&#039;t worry that the problems found in Recursion 2 are of a difficult nature because the rewards you receive from knowing how to solve these clearly outweigh any negative aspects related to this set of problems.
+
+The problems found in Recursion 2 are currently made up of the programming concept known as recursive backtracking with the use of arrays.
+
+Recursive backtracking is an interesting concept found in programming because it essentially requires you to solve a problem in a piece-wise manner (think piece-wise defined functions), that is, step-by-step until you arrive at a solution of some kind.
+
+Here is a sample algorithm written in pseudocode for recursive backtracking:
+Step 1: Is my current location a potential solution?
+Step 2: No it is not a potential solution.  No problem! Where can I go from here, if I am able to go anywhere?
+
+Step 3: Find a place, and go there.
+
+Step 4:  Is my new location a potential solution? If so, then return true, however, we are not done yet.
+Step 5: Are there remaining locations to visit? If so, choose one, if not, return to step 3.
+Step 6: Are we out of locations to visit? If so, return false.
+
+Here is a sample algorithm for recursive backtracking.  Note how each step in the pseudocode is well-thought out and must be executed before it reaches another step.  You will definitely find a couple of return statements, as well as a few if-statements.  However, you should not use for-loops when you are using recursion.  Using for-loops with recursion is redundant, and a bad programming practice.
+boolean findSolutions(n, other params) {
+if (found a solution) {
+displaySolution();
+return true;
+}
+for (val = first to last)  {
+if (isValid (val, n) )  {
+applyValue(val, n);
+if (findSolutions(n + 1, other params))
+return true;
+removeValue(val, n);
+}
+}
+return false;
+}
+As you can see, recursive backtracking can get messy, but it can help you achieve some amazing results when used at the right time, and for the right time of program.  Recursive backtracking, just like recursion in general, is a programming concept that should be used sparingly.  We hope you&#039;ll enjoy Recursion 2 Codingbat problems.">Codingbat Javabat Solutions Recursion 2</a>
+</li>
+	<li class="cat-item cat-item-596"><a href="http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-string-1/" title="View all posts filed under Codingbat Javabat Solutions String 1">Codingbat Javabat Solutions String 1</a>
+</li>
+	<li class="cat-item cat-item-587"><a href="http://www.ijava2.com/codingbat-javabat-solutions/codingbat-solutions-java-string-2/" title="String 2 Codingbat problems increase in difficulty, but also offer the chance to improve your string manipulation abilities. You&#039;ll be manipulating strings using Java syntax, methods, and parameters. The problems in this section are of medium level difficulty, and you&#039;ll more than likely only be dealing with one loop.">Codingbat Javabat Solutions String 2</a>
+</li>
+	<li class="cat-item cat-item-586"><a href="http://www.ijava2.com/codingbat-javabat-solutions/codingbat-solutions-java-string-3/" title="String 3 Codingbat problems are much harder, and they contain two loops. This is significant when it comes to string manipulation.
+As usual, the harder the Codingbat set of problems, the less problems there is to solve. Thanks to Nick Parlante for this awesome break in coding. Holy smokes! I just identified an algorithm in Nick Parlante’s Codingbat. The easier a section is, the more problems it will contain, and the harder a section is, the less problems it will contain. Awesome! This minor algorithm can be written several ways, and we can also create a math formulate to actually test the validity of this “Codingbat Algorithm”. Will we do it? Who knows. Maybe.
+Anyways, this section of Codingbat deals with Java string class, and there is not very many problems to solve, so take your time and analyze each step of a particular solution so that you can gain maximum benefit from the minimum set of problems.">Codingbat Javabat Solutions String 3</a>
+</li>
+	<li class="cat-item cat-item-597"><a href="http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-warm-up-1/" title="View all posts filed under Codingbat Javabat Solutions Warm-Up 1">Codingbat Javabat Solutions Warm-Up 1</a>
+</li>
+	<li class="cat-item cat-item-601"><a href="http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-warm-up-2/" title="View all posts filed under Codingbat Javabat Solutions Warm-up 2">Codingbat Javabat Solutions Warm-up 2</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-266"><a href="http://www.ijava2.com/computer-network-security/" title="Computer and Network security issues using Java programming language.">Computer and Network Security</a>
+<ul class='children'>
+	<li class="cat-item cat-item-156"><a href="http://www.ijava2.com/computer-network-security/encryption/" title="Encryption as it relates to Java programming.">Encryption</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-314"><a href="http://www.ijava2.com/database-management/" title="Techniques to implement Java using the latest database management solutions">Database Management</a>
+<ul class='children'>
+	<li class="cat-item cat-item-449"><a href="http://www.ijava2.com/database-management/advanced-java-database-programming/" title="View all posts filed under Advanced Java Database Programming">Advanced Java Database Programming</a>
+</li>
+	<li class="cat-item cat-item-359"><a href="http://www.ijava2.com/database-management/java-database-connectivity-jdbc/" title="View all posts filed under Java Database Connectivity JDBC">Java Database Connectivity JDBC</a>
+</li>
+	<li class="cat-item cat-item-438"><a href="http://www.ijava2.com/database-management/java-database-programming/" title="View all posts filed under Java Database Programming">Java Database Programming</a>
+</li>
+	<li class="cat-item cat-item-331"><a href="http://www.ijava2.com/database-management/sql-structured-query-language/" title="View all posts filed under SQL Structured Query Language">SQL Structured Query Language</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-461"><a href="http://www.ijava2.com/game-programming/" title="Programming Game Applications Learn how to program and code video games using Java, and Construct 2.">Game Programming</a>
+<ul class='children'>
+	<li class="cat-item cat-item-462"><a href="http://www.ijava2.com/game-programming/classic-games/" title="Classic Game Programmed with Java">Classic Games</a>
+</li>
+	<li class="cat-item cat-item-485"><a href="http://www.ijava2.com/game-programming/how-to-create-a-random-color-game/" title="Random color games are an excellent way to test out our Java programming abilities.  Learn how to create a random color game object using Java.">How to Create a Random Color Game</a>
+</li>
+	<li class="cat-item cat-item-494"><a href="http://www.ijava2.com/game-programming/how-to-create-a-slot-machine/" title="Slot machines share many important functions that are very important to programming.  Java allows you the opportunity to create slot machine games.">How to Create a Slot Machine</a>
+</li>
+	<li class="cat-item cat-item-486"><a href="http://www.ijava2.com/game-programming/how-to-create-color-matching-game-java/" title="View all posts filed under How to Create Color Matching Game Java">How to Create Color Matching Game Java</a>
+</li>
+	<li class="cat-item cat-item-495"><a href="http://www.ijava2.com/game-programming/windows-8-application-development/" title="View all posts filed under Windows 8 Application Development">Windows 8 Application Development</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-80"><a href="http://www.ijava2.com/intermediate-java-programming/" title="Posts related intermediate level Java programming concepts.">Intermediate Java</a>
+<ul class='children'>
+	<li class="cat-item cat-item-415"><a href="http://www.ijava2.com/intermediate-java-programming/applets-multimedia/" title="Applets Multimedia">Applets Multimedia</a>
+</li>
+	<li class="cat-item cat-item-452"><a href="http://www.ijava2.com/intermediate-java-programming/binary-inputouput-io/" title="View all posts filed under Binary Input/Ouput I/O">Binary Input/Ouput I/O</a>
+</li>
+	<li class="cat-item cat-item-407"><a href="http://www.ijava2.com/intermediate-java-programming/event-driven-programming/" title="View all posts filed under Event Driven Programming">Event Driven Programming</a>
+</li>
+	<li class="cat-item cat-item-289"><a href="http://www.ijava2.com/intermediate-java-programming/exception-handling/" title="View all posts filed under Exception Handling">Exception Handling</a>
+</li>
+	<li class="cat-item cat-item-249"><a href="http://www.ijava2.com/intermediate-java-programming/files-streams/" title="Files, streams, using Java programming language.">Files And Streams</a>
+</li>
+	<li class="cat-item cat-item-204"><a href="http://www.ijava2.com/intermediate-java-programming/graphical-user-interface/" title="Section devoted to covering all aspects of Java&#039;s very flexible user interface components, abilities, and graphics. ">Graphical User Interface (GUI)</a>
+</li>
+	<li class="cat-item cat-item-417"><a href="http://www.ijava2.com/intermediate-java-programming/graphics-intermediate-java-programming/" title="View all posts filed under Graphics">Graphics</a>
+</li>
+	<li class="cat-item cat-item-252"><a href="http://www.ijava2.com/intermediate-java-programming/multimedia-animation-images-audio-video/" title="Discuss Java&#039;s multimedia properties such as animation, audio, video, and image manipulation.">Multimedia: Animation Images Audio Video</a>
+</li>
+	<li class="cat-item cat-item-267"><a href="http://www.ijava2.com/intermediate-java-programming/java-multithreading/" title="Section to discuss Java&#039; multithreading abilities.">Multithreading</a>
+</li>
+	<li class="cat-item cat-item-250"><a href="http://www.ijava2.com/intermediate-java-programming/networking/" title="Java Networking is made easy with the Java programming language because it has specific tools to facilitate networking.  Networking facilitates the completion of many pivotal computer operations, and on certain occasions, a server is involved.  ">Networking</a>
+</li>
+	<li class="cat-item cat-item-210"><a href="http://www.ijava2.com/intermediate-java-programming/strings-characters/" title="Section devoted to discussing Java Strings and characters, and performing various coding tasks with them.">Strings and Characters</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-589"><a href="http://www.ijava2.com/java-math-calculations/" title="View all posts filed under Java Math Calculations">Java Math Calculations</a>
+</li>
+	<li class="cat-item cat-item-176"><a href="http://www.ijava2.com/math/" title="This category focuses on math concepts that are essential to Computer Science.">Math</a>
+<ul class='children'>
+	<li class="cat-item cat-item-470"><a href="http://www.ijava2.com/math/how-to-compute-math-expressions-java/" title="Java has many uses, and with those uses, comes the ability to perform various math calculations, and math tasks.  We present various Java programming that perform a wide variety of math calculations using Java vast programming abilities.  ">How to Compute Math Expressions Java</a>
+</li>
+	<li class="cat-item cat-item-471"><a href="http://www.ijava2.com/math/how-to-perform-math-calculations-java/" title="Math calculations are an important part of Computer Science, and programming.  Java has many abilities that allow you to perform math calculations easily.">How to Perform Math Calculations Java</a>
+</li>
+	<li class="cat-item cat-item-419"><a href="http://www.ijava2.com/math/precalculus/" title="Precalculus concepts using Java programming language.">Precalculus</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-371"><a href="http://www.ijava2.com/operating-systems/" title="View all posts filed under Operating Systems">Operating Systems</a>
+<ul class='children'>
+	<li class="cat-item cat-item-418"><a href="http://www.ijava2.com/operating-systems/computer-organization-embedded-systems/" title="Chapter Outlines, chapter keyword definitions, and solutions manual for Computer Organization and Embedded Systesm by Hamacher.">Computer Organization Embedded Systems</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-271"><a href="http://www.ijava2.com/programming-challenges/" title="Java Programming Challenges  Programming challenges can be solved using any programming language such as C++, C#, C, or Java.">Programming Challenges</a>
+</li>
+	<li class="cat-item cat-item-239"><a href="http://www.ijava2.com/project-euler-solutions/" title="Section devoted to discussing Project Euler problems, Project Euler solutions, and Project Euler answers, using the Java programming language.">Project Euler Solutions</a>
+</li>
+	<li class="cat-item cat-item-231"><a href="http://www.ijava2.com/python-codingbat-solutions/" title="Python Codinbat Solutions  Warmup-1, Warmup-2, String-1, List-1, Logic-1, Logic-2,  String-2, List-2 
+">Python CodingBat Solutions</a>
+<ul class='children'>
+	<li class="cat-item cat-item-246"><a href="http://www.ijava2.com/python-codingbat-solutions/python-list-1/" title="Python List 1 Codingbat Solutions ">Python List 1Codingbat Solutions</a>
+</li>
+	<li class="cat-item cat-item-311"><a href="http://www.ijava2.com/python-codingbat-solutions/python-codingbat-list-2/" title="Python List 2 Codingbat Solutions">Python List 2 Codingbat Solutions</a>
+</li>
+	<li class="cat-item cat-item-337"><a href="http://www.ijava2.com/python-codingbat-solutions/python-codingbat-logic-2/" title="Python Logic 2 Codingbat Solutions">Python Logic 2 CodingBat Solutions</a>
+</li>
+	<li class="cat-item cat-item-237"><a href="http://www.ijava2.com/python-codingbat-solutions/string-1-python-codingbat-solutions/" title="Python String 1 Codingbat Solutions:  hello_name, make_abba, make_tags, make_out_word, extra_end, first_two, first_half,  without_end, combo_string, non_start, left2">Python String 1 Codingbat Solutions</a>
+</li>
+	<li class="cat-item cat-item-338"><a href="http://www.ijava2.com/python-codingbat-solutions/python-codingbat-string-2/" title="Python String 2 Codingbat Solutions  double_char, count_hi, cat_dog, count_code, end_other, xyz_there.">Python String 2 Codingbat Solutions</a>
+</li>
+	<li class="cat-item cat-item-232"><a href="http://www.ijava2.com/python-codingbat-solutions/python-codingbat-warm-up-1/" title="Python Warm-Up 1 Codingbat Solutions:  sleep_in, monkey_trouble, sum_double, diff21, parrot_trouble, makes10, near_hundred, 	 pos_neg, not_string, missing_char, front_back, front3">Python Warm-up 1 Codingbat Solutions</a>
+</li>
+	<li class="cat-item cat-item-263"><a href="http://www.ijava2.com/python-codingbat-solutions/python-codingbat-warm-up-2/" title="Python Warm-Up 2 Codingbat Solutions:   string_times, front_times, string_bits, string_splosion, last2, array_count9, array_front9, array123,  string_match">Python Warm-Up 2 Codingbat Solutions</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.ijava2.com/opinions/" title="This is where we post daily blog updates on whatever we feel like blogging about! ">What we think!</a>
+<ul class='children'>
+	<li class="cat-item cat-item-493"><a href="http://www.ijava2.com/opinions/ijava2-contact/" title="iJava2 Java Programming Coding Blog Contact Form  Contact us with the following form if you have any inquiries related to our Java Programming and Coding Blog. ">iJava2 Contact</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-354"><a href="http://www.ijava2.com/writer-directory/" title="View all posts filed under Writer Directory">Writer Directory</a>
+<ul class='children'>
+	<li class="cat-item cat-item-115"><a href="http://www.ijava2.com/writer-directory/java-programming-tutorials/" title="Section discussing articles and tutorials related to Java programming.">Tutorials</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-501"><a href="http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-analyze-test-scores/" title="View all posts filed under How to Analyze Test Scores">How to Analyze Test Scores</a>
+</li>
+	<li class="cat-item cat-item-473"><a href="http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-calculate-sales-tax-java/" title="Calculate Taxes Calculating taxes such as sales tax, income tax, federal tax, and other known taxes is a common programming practice.  Java facilitates the calculation of various forms of taxes using various programming mechanisms.  This Java application shows you how to calculate sales tax.">How to Calculate Sales Tax Java</a>
+</li>
+	<li class="cat-item cat-item-484"><a href="http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-code-a-countdown-timer-java/" title="Creating an object that functions as a timer is a very common task in programming.  Java allows you to create such objects with ease.">How to code a Countdown Timer Java</a>
+</li>
+	<li class="cat-item cat-item-474"><a href="http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-a-deck-of-cards-java/" title="Java Applications for Deck(s) of Cards">How to Create a Deck of Cards Java</a>
+</li>
+	<li class="cat-item cat-item-487"><a href="http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-a-guestbook/" title="Create a Java GuestBook Object: The GuestBook object is one of the most common applications to create, and it is an application that carries over to a lot of other applications due to its functionality.  ">How to Create a GuestBook</a>
+</li>
+	<li class="cat-item cat-item-500"><a href="http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-bank-account-object/" title="Bank accounts are a common programming concepts in various languages, and Computer Science courses.  In this category, we create different bank account objects with different functions.  Some are interest accounts, others will pay dividends, and others will accrue interests for specified periods of time.  Whatever the case may be, rest assured that all bank accounts are very similar, and once you understand the basic elements of a bank account object, you, too, will be able to program bank account programs and applications using Java.">How to Create Bank Account Object</a>
+</li>
+	<li class="cat-item cat-item-502"><a href="http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-game-of-craps/" title="View all posts filed under How to Create Game of Craps">How to Create Game of Craps</a>
+</li>
+	<li class="cat-item cat-item-497"><a href="http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-gradebook-object-using-arrays/" title="View all posts filed under How to Create GradeBook Object Using Arrays">How to Create GradeBook Object Using Arrays</a>
+</li>
+	<li class="cat-item cat-item-499"><a href="http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-the-gradebook-object/" title="View all posts filed under How to Create the GradeBook Object">How to Create the GradeBook Object</a>
+</li>
+	<li class="cat-item cat-item-481"><a href="http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-display-a-tictacto-game/" title="Java Applications to Create Tic Tac Toe Game">How to Display a TicTacTo Game</a>
+</li>
+	<li class="cat-item cat-item-472"><a href="http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-display-current-time/" title="Displaying the current time is a common task in any programming language.  Java allows the ability to display the current time in various formats very easily.">How to Display Current Time</a>
+</li>
+	<li class="cat-item cat-item-491"><a href="http://www.ijava2.com/writer-directory/java-programming-tutorials/parse-text-files-read-text-files-write-text-files/" title="Parse Text Files Using Java
+Explore Java&#039;s string and numerical parsing abilities.  Learn to parse text files, read text files, write text files, read large text files, write large text files.">How to Parse Text Files Read Text Files Write Text Files</a>
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+		</ul>
+</li><li id="oa_social_login-2" class="widget-container widget_oa_social_login"><h3 class="widget-title">Connect with:</h3><div class="oneall_social_login">
+ <div class="oneall_social_login_providers" id="oneall_social_login_providers_4225568"></div>
+ <script type="text/javascript">
+  oneall.api.plugins.social_login.build("oneall_social_login_providers_4225568", {
+   "providers": ["facebook","twitter","google","linkedin","yahoo","github","foursquare","youtube","openid","wordpress","steam","windowslive","blogger","disqus","stackexchange"], 
+   "callback_uri": (window.location.href + ((window.location.href.split('?')[1] ? '&amp;':'?') + "oa_social_login_source=widget")), 
+   "css_theme_uri": "http://public.oneallcdn.com/css/api/socialize/themes/wordpress/default.css" 
+  });
+ </script>
+ <!-- OneAll.com / Social Login for WordPress / v4.4 -->
+</div></li><li id="meta-2" class="widget-container widget_meta"><h3 class="widget-title">User Control Panel</h3>			<ul>
+			<li><a rel="nofollow" href="http://www.ijava2.com/wp-login.php?action=register">Register</a></li>			<li><a rel="nofollow" href="http://www.ijava2.com/wp-login.php">Log in</a></li>
+			<li><a href="http://www.ijava2.com/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.ijava2.com/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>						</ul>
+</li><li id="blog_subscription-2" class="widget-container jetpack_subscription_widget"><h3 class="widget-title"><label for="subscribe-field">Subscribe to Blog via Email</label></h3>
+		<form action="" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-2">
+			<p>Enter your email address to subscribe to this blog and receive notifications of new posts by email.</p><p>Join 20 other subscribers</p>
+
+			<p><input type="text" name="email" style="width: 95%; padding: 1px 2px" value="Email Address" id="subscribe-field" onclick="if ( this.value == 'Email Address' ) { this.value = ''; }" onblur="if ( this.value == '' ) { this.value = 'Email Address'; }" /></p>
+
+			<p>
+				<input type="hidden" name="action" value="subscribe" />
+				<input type="hidden" name="source" value="http://www.ijava2.com/displaying-days-month-write-program-prompts-user-enter-year-day-year/" />
+				<input type="hidden" name="sub-type" value="widget" />
+				<input type="hidden" name="redirect_fragment" value="blog_subscription-2" />
+								<input type="submit" value="Subscribe" name="jetpack_subscriptions_widget" />
+			</p>
+		</form>
+
+		
+</li>			</ul>
+		</div><!-- #primary .widget-area -->
+
+	</div><!-- #main -->
+
+	<div id="footer" role="contentinfo">
+		<div id="colophon">
+
+
+		  
+			<div id="site-info">
+				<a href="http://www.ijava2.com/" title="iJava2&#8211;Java Programming Blog" rel="home">
+					iJava2&#8211;Java Programming Blog				</a>
+			</div><!-- #site-info -->
+
+			<div id="site-generator">
+								<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress.</a>
+			</div><!-- #site-generator -->
+		
+		  <p><a href="http://www.ijava2.com/codingbat-javabat-solutions/" title="Codingbat Javabat Solutions" target="_blank">Codingbat Javabat Solutions</a>  <a href="http://www.ijava2.com/codingbat-javabat-solutions/codingbat-solutions-java-recursion-1/" title="Codingbat Recursion 1 Solutions" target="_blank">Codingbat Answers Recursion 1</a></p>
+		
+	  </div><!-- #colophon -->
+	</div><!-- #footer -->
+
+</div><!-- #wrapper -->
+
+
+<script type="text/javascript"><!--
+wpa2a.targets=[
+{title:'(Displaying the first days of each month) Write a program that prompts the user to enter the year and first day of the year',url:'http://www.ijava2.com/displaying-days-month-write-program-prompts-user-enter-year-day-year/'}];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<!-- begin visitor maps  -->
+<script type="text/javascript">
+//<![CDATA[
+function wo_map_console(url) {
+  window.open(url,"wo_map_console","height=650,width=800,toolbar=no,statusbar=no,scrollbars=yes").focus();
+}
+//]]>
+</script>
+<!-- end visitor maps -->
+	<div style="display:none">
+	<div class="grofile-hash-map-c43fc0469aeda4f45e902629c7997561">
+	</div>
+	</div>
+<script type='text/javascript' src='//platform.twitter.com/widgets.js?ver=3.6.1'></script>
+<script type='text/javascript' src='http://www.ijava2.com/wp-content/plugins/jetpack/modules/photon/photon.js?ver=20130122'></script>
+<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201339'></script>
+<script type='text/javascript' src='http://www.ijava2.com/wp-content/plugins/prettify-code-syntax/javascripts/prettify.js?ver=3.6.1'></script>
+<script type='text/javascript' src='http://www.ijava2.com/wp-content/plugins/prettify-code-syntax/javascripts/lang-css.js?ver=3.6.1'></script>
+<script type='text/javascript' src='http://www.ijava2.com/wp-content/plugins/prettify-code-syntax/javascripts/lang-sql.js?ver=3.6.1'></script>
+<script type='text/javascript' src='http://www.ijava2.com/wp-content/plugins/prettify-code-syntax/javascripts/lang-tex.js?ver=3.6.1'></script>
+<script type='text/javascript' src='http://www.ijava2.com/wp-content/plugins/prettify-code-syntax/javascripts/load.js?ver=3.6.1'></script>
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2013Sepaa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.ijava2.com/wp-content/plugins/jetpack/modules/wpgroho.js?ver=3.6.1'></script>
+
+		<!--[if IE]>
+		<script type="text/javascript">
+		if ( 0 === window.location.hash.indexOf( '#comment-' ) ) {
+			// window.location.reload() doesn't respect the Hash in IE
+			window.location.hash = window.location.hash;
+		}
+		</script>
+		<![endif]-->
+		<script type="text/javascript">
+			var comm_par_el = document.getElementById( 'comment_parent' ),
+			    comm_par = (comm_par_el && comm_par_el.value) ? comm_par_el.value : '',
+			    frame = document.getElementById( 'jetpack_remote_comment' ),
+			    tellFrameNewParent;
+
+			tellFrameNewParent = function() {
+				if ( comm_par ) {
+					frame.src = "http:\/\/jetpack.wordpress.com\/jetpack-comment\/?blogid=32548938&postid=2903&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=retro&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en-US&jetpack_version=2.5&sig=f140ca434c0939c570623f4d65bfc9d80b10598e#parent=http%3A%2F%2Fwww.ijava2.com%2Fdisplaying-days-month-write-program-prompts-user-enter-year-day-year%2F" + '&replytocom=' + parseInt( comm_par, 10 ).toString();
+				} else {
+					frame.src = "http:\/\/jetpack.wordpress.com\/jetpack-comment\/?blogid=32548938&postid=2903&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=retro&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en-US&jetpack_version=2.5&sig=f140ca434c0939c570623f4d65bfc9d80b10598e#parent=http%3A%2F%2Fwww.ijava2.com%2Fdisplaying-days-month-write-program-prompts-user-enter-year-day-year%2F";
+				}
+			};
+
+	
+			if ( window.postMessage ) {
+				if ( document.addEventListener ) {
+					window.addEventListener( 'message', function( event ) {
+						if ( "http:\/\/jetpack.wordpress.com" !== event.origin ) {
+							return;
+						}
+
+						jQuery( frame ).height( event.data );
+					} );
+				} else if ( document.attachEvent ) {
+					window.attachEvent( 'message', function( event ) {
+						if ( "http:\/\/jetpack.wordpress.com" !== event.origin ) {
+							return;
+						}
+
+						jQuery( frame ).height( event.data );
+					} );
+				}
+			}
+		</script>
+
+	
+	<script src="http://stats.wordpress.com/e-201339.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	st_go({v:'ext',j:'1:2.5',blog:'32548938',post:'2903',tz:'0'});
+	var load_cmc = function(){linktracker_init(32548938,2903,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script></body>
+</html>
+
+<!-- Dynamic page generated in 1.528 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2013-09-24 10:52:49 -->
+
+<!-- super cache -->

@@ -1,0 +1,626 @@
+    <!DOCTYPE html>
+<html>
+<head>
+
+    <title>Python IDE &amp Django IDE for Web developers : JetBrains PyCharm</title>
+    <meta charset="utf-8">
+
+    <meta name="robots" content="all"/>
+    <meta name="author" content="JetBrains, Inc., http://www.jetbrains.com"/>
+
+        
+<link rel="canonical" href="http://www.jetbrains.com/pycharm/" />
+
+
+                  <meta name="description" content="Python and Django IDE with refactorings, code completion, on-the-fly code analysis and coding productivity orientation"/>  <meta name="keywords" content="Python, Python editor, Python Development, Django, Django editor, Django Development, IDE, automatic refactoring, debugging, Django Web development with the best HTML, CSS and JavaScript support, JavaScript debugger, Windows, MacOS Python IDE, Linux Python IDE, code editing, completion, refactoring and debugging, JetBrains, JetBrain, refactoring, refactoring IDE,
+integrated development environment, development environment, code editor, code inspection, code refactoring"/>     
+        <link rel="stylesheet" type="text/css" media="screen" href="styleset1.css?ver=26092013"/>
+
+ <link rel="stylesheet" type="text/css" media="screen" href="styleset1.css"/> 
+<link rel="stylesheet" type="text/css" media="handheld" href="/styles2/mobile.css"/>
+<link rel="alternate stylesheet" type="text/css" media="screen"
+      href="/styles2/alternate_styles/alternate_style.css" title="textmode"/>
+
+<noscript>
+    <link rel="stylesheet" type="text/css" media="screen" href="/styles2/noscript.css"/>
+</noscript>
+        <script type="text/javascript" src="/js2/css_browser_selector.js"></script>
+<script type="text/javascript" src="/js2/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/js2/jquery/highlight.js"></script>
+<script type="text/javascript" src="/js2/html5.js"></script>
+<script type="text/javascript" src="/js2/common.js?20062013"></script>
+<script type="text/javascript" src="/js2/mkto_function.js"></script>         <link rel="stylesheet" type="text/css" media="screen" href="styleset1.css"/>              <script type="text/javascript" src="../js2/jquery/fancybox.js"></script>                      <script type="text/javascript" src="../js2/checkOS.js"></script>                      <script type="text/javascript" src="../js2/cookie.js"></script>                      <script type="text/javascript">
+        $(document).ready(function() {
+            $(".js-video").videoPlayer();
+        });
+    </script>                      <script type="text/javascript">
+        function newsJetBrains(e) {
+            deleteCookie("downloadFile", "/");
+            form = document.getElementById("sendEmail");
+            form.os.value = e;
+            if (form) {
+                form.submit();
+            }
+        }
+    </script>                      <script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>                      <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>                                 
+        
+                <link rel="Shortcut Icon" href="/pycharm/favicon.ico?08052013" type="image/x-icon"/>
+        <link rel="apple-touch-icon" href="/pycharm/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/pycharm/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/pycharm/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/pycharm/apple-touch-icon-144x144.png" />
+
+        
+        <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(
+    ['_setAccount', 'UA-940435-16'],
+    ['_trackPageview'],
+    ['all._setAccount', 'UA-940435-1'],
+    ['all._trackPageview']
+);
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script></head>
+
+<body id="products" class="pycharm overview wide" >
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-HNX4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-HNX4');</script>
+<!-- End Google Tag Manager -->
+<header>
+    <div class="container">
+                    <a href="/" class="jb_logo" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: JetBrains Home']);">JetBrains</a>
+                
+        <ul id="jb_nav">
+            <li class="products"><a href="/products.html" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: Products']);">Products</a></li>
+            <li class="support"><a href="/support/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: Support']);">Support</a></li>
+            <li class="devnet"><a href="/devnet/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: Community']);">Community</a></li>
+            <li class="company"><a href="/company/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: Company']);">Company</a></li>
+            
+        </ul>
+    </div>
+</header>
+<div id="menu_products">
+    <div class="container">
+    <span class="close" title="Close">&times;</span>
+    <div class="leftfloated block25">
+        <h4>IDEs</h4>
+        <ul>
+            <li class="idea"><a href="/idea" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: IntelliJ IDEA']);"><i class="icon product-logo logo-idea-grey size1"></i>IntelliJ IDEA</a></li>
+            <li class="ps"><a href="/phpstorm" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: PhpStorm']);"><i class="icon product-logo logo-phpstorm-grey size1"></i>PhpStorm</a></li>
+            <li class="pc"><a href="/pycharm" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: PyCharm']);"><i class="icon product-logo logo-pycharm-grey size1"></i>PyCharm</a></li>
+            <li class="ruby"><a href="/ruby" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: RubyMine']);"><i class="icon product-logo logo-rubymine-grey size1"></i>RubyMine</a></li>
+            <li class="ws"><a href="/webstorm" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: WebStorm']);"><i class="icon product-logo logo-webstorm-grey size1"></i>WebStorm</a></li>
+            <li class="objc"><a href="/objc" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: AppCode']);"><i class="icon product-logo logo-appcode-grey size1"></i>AppCode</a></li>
+        </ul>
+    </div>
+    <div class="leftfloated block20">
+        <h4>.NET</h4>
+        <ul>
+            <li class="rs"><a href="/resharper" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: ReSharper']);"><i class="icon product-logo logo-resharper-grey size1"></i>ReSharper</a></li>
+            <li class="dt"><a href="/profiler" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: dotTrace']);"><i class="icon product-logo logo-dottrace-grey size1"></i>dotTrace</a></li>
+            <li class="dc"><a href="/dotcover" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: dotCover']);"><i class="icon product-logo logo-dotcover-grey size1"></i>dotCover</a></li>
+            <li class="dp"><a href="/dotpeek" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: dotPeek']);"><i class="icon product-logo logo-dotpeek-grey size1"></i>dotPeek</a></li>
+        </ul>
+    </div>
+    <div class="leftfloated block30">
+        <h4>Teamware</h4>
+        <ul>
+            <li class="tc"><a href="/teamcity" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: TeamCity']);"><i class="icon product-logo logo-teamcity-grey size1"></i>TeamCity</a></li>
+            <li class="yt"><a href="/youtrack" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: YouTrack']);"><i class="icon product-logo logo-youtrack-grey size1"></i>YouTrack</a></li>
+        </ul>
+        <h4>Mobile development</h4>
+        <ul>
+            <li class="objc"><a href="/objc" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: AppCode']);"><i class="icon product-logo logo-appcode-grey size1"></i>AppCode</a></li>
+            <li class="idea"><a href="/idea#community_edition" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: IntelliJ IDEA Community Edition']);"><i class="icon product-logo logo-idea-grey size1"></i>IntelliJ IDEA Community Edition</a></li>
+        </ul>
+    </div>
+    <div class="rightfloated block20">
+        <h4>Languages</h4>
+        <ul class="research">
+            <li class="mps"><a href="/mps" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: MPS']);"><i class="icon product-logo logo-mps-grey size1"></i>MPS</a></li>
+            <li class="kotlin"><a href="/kotlin" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: Kotlin']);"><i class="icon product-logo logo-kotlin-grey size1"></i>Kotlin</a></li>
+            
+        </ul>
+        <p><a href="/products.html" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: View All Products']);">View all products &raquo;</a></p>
+    </div>
+    <br class="clr"/>
+</div></div>
+
+
+
+<div id="product">
+<div class="container">
+        <a class="home_product" href="/pycharm/">PyCharm</a>
+                 
+                
+
+    </div>
+</div>
+<nav>
+<div class="container">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--start_noindex-->
+
+   <ul class="nav">
+
+        <li class="current">Overview</li>
+
+        <li class="whatsnew"><a href="/pycharm/whatsnew/index.html" title="What's New">What's New</a></li>
+
+        <li class="features"><a href="/pycharm/features/index.html" title="Features &amp; Screenshots">Features &amp; Screenshots</a></li>
+
+        <li class="documentation"><a href="/pycharm/documentation/index.html" title="Resources">Resources</a></li>
+
+        <li class="quickstart"><a href="/pycharm/quickstart/index.html" title="Quickstart Guide">Quickstart Guide</a></li>
+
+        <li class="download"><a href="/pycharm/download/index.html" title="Download">Download</a></li>
+
+        <li class="buy"><a href="/pycharm/buy/index.jsp" title="Buy">Buy</a></li>
+
+    </ul>
+
+
+<!--end_noindex-->
+
+</div>
+</nav>
+
+
+
+<div id="main">
+    <div class="container">
+                <div id="content">
+                                                                        
+            
+        <div class="leftfloated block40">
+            <h1>PyCharm 3</h1>
+            <h2 class="title">The intelligent Python IDE with unique code assistance and analysis, for productive Python development on all levels.</h2>
+            <a class="btn-product btn-pycharm -download" href="download">Get PyCharm 3 Now</a>
+        </div>
+        <div class="rightfloated block60 right-align overview-frame">
+            <a class="js-video" onClick="_gaq.push(['_trackEvent', 'Click Video', 'Internal', 'PyCharm 3.0 Overview']);" data-video-url="//www.youtube.com/embed/iutkLjeGc6w?wmode=opaque" href="//www.youtube.com/embed/iutkLjeGc6w?wmode=opaque"><img src="img/video_thumb30.png" alt="PyCharm 3.0 Overview"/></a>
+        </div>
+        <br class="clr"/>
+        <div class="blockcenter center-align like">
+            <ul class="">
+                <li><g:plusone size="medium"></g:plusone></li>
+                <li><a href="http://twitter.com/share" class="twitter-share-button" data-text="PyCharm &mdash; The most intelligent Python IDE, for productive Python development on all levels" data-count="horizontal" data-via="pycharm">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
+                <li><div id="fb-root"></div><script charset="local" type="text/javascript" src="http://connect.facebook.net/en_US/all.js#appId=225642620794980&xfbml=1"></script><fb:like href="http://www.jetbrains.com/pycharm/" send="false" layout="button_count" width="200" show_faces="false" font="arial"></fb:like></li>
+            </ul>
+        </div>
+        <br class="clr"/><br/>
+
+        <div class="leftfloated block50">
+            <div class="edition">
+                <h2>Professional Edition</h2>
+                <h4 class="gray">advanced tool for professional Python and Web development</h4>
+                <ul class="mdashlist">
+                    <li>Support for modern web development frameworks, such as Django, Flask, Google App Engine,
+                        Pyramid, web2py, etc.
+                    </li>
+                    <li>Smart multi-language and cross-technology support, covering Python, JavaScript, CoffeeScript,
+                        TypeScript, HTML/CSS, Cython, Template languages and more
+                    </li>
+                    <li>Running, debugging and testing applications on remote hosts or virtual machines</li>
+                    <li>Databases &amp; SQL support, Class and database model diagrams</li>
+                </ul>
+            </div>
+        </div>
+        <div class="rightfloated block50">
+            <div class="edition free rightfloated">
+                <h2>Free Community Edition</h2>
+                <h4 class="gray">for pure Python coding and learning</h4>
+                <ul class="mdashlist">
+                    <li>Intelligent Editor, with code completion, on-the-fly error highlighting, auto-fixes, etc.</li>
+                    <li>Automated code refactorings and rich navigation capabilities</li>
+                    <li>Integrated debugger and unit testing support</li>
+                    <li>Native VCS integrations</li>
+                    <li>Customizable UI and key-bindings, with VIM<br/>emulation available</li>
+                    <li>And much more, all available under the <a href="http://www.jetbrains.org/display/IJOS/License+Information">Apache 2 license</a></li>
+                </ul>
+            </div>
+        </div>
+        <br class="clr"/><br/>
+        <div class="center-align">
+            <h3 class="light"><a href="features/editions_comparison_matrix.html">Editions Comparison Matrix &raquo;</a></h3>
+        </div>
+        <br class="clr"/>
+        <hr class="markoff"/>
+        <br class="clr"/><br/>
+
+        <h2>Why PyCharm?</h2>
+        <div class="leftfloated block25">
+        <div class="block90">
+            <h3>Your smart assistant</h3>
+            <p>It knows everything about your code, thus providing intelligent auto-completion, on-the-fly error checking and quick-fixes, easy project navigation, etc.</p>
+        </div>
+        </div>
+        <div class="leftfloated block25">
+        <div class="block95">
+            <h3>Code quality guru</h3>
+            <p>It keeps your code under control with PEP8 checks, testing assistance, smart refactorings, bunch of inspections helping you write neat and maintainable code.</p>
+        </div>
+        </div>
+        <div class="leftfloated block25">
+        <div class="block95">
+            <h3>Your coding partner</h3>
+            <p>It takes over all routine job, letting you focus on bigger things and enjoy writing your code, through a keyboard-centric approach and many other productivity features.</p>
+        </div>
+        </div>
+        <div class="leftfloated block25">
+        <div class="block95">
+            <h3>Simply all you need</h3>
+            <p>It was designed by programmers for programmers with the aim to provide you with all the tools that you need for productive and joyful Python and Web development.</p>
+        </div>
+        </div>
+        <br class="clr"/>
+        <div class="leftfloated block25">
+        <div class="img enlarge">
+            <a class="imagepopup" rel="PyCharm_group" href="img/30/assistant_white.png" title="Your smart assistant">
+                <img src="img/30/assistant_white_thumb.png" alt=""/>
+            </a>
+        </div>
+        </div>
+        <div class="leftfloated block25">
+        <div class="img enlarge">
+            <a class="imagepopup" rel="PyCharm_group" href="img/30/quality_guru_white.png" title="Code quality guru">
+                <img src="img/30/quality_guru_white_thumb.png" alt=""/>
+            </a>
+        </div>
+        </div>
+        <div class="leftfloated block25">
+        <div class="img enlarge">
+            <a class="imagepopup" rel="PyCharm_group" href="img/30/productivity_white.png" title="Your coding partner">
+                <img src="img/30/productivity_white_thumb.png" alt=""/>
+            </a>
+        </div>
+        </div>
+        <div class="leftfloated block25">
+        <div class="img enlarge">
+            <a class="imagepopup" rel="PyCharm_group" href="img/30/allyouneed_white.png" title="Simply all you need">
+                <img src="img/30/allyouneed_white_thumb.png" alt=""/>
+            </a>
+        </div>
+        </div>
+        <br class="clr"/>
+        <div class="right-align">
+            <h3 class="light"><a href="whatsnew">See what's new in PyCharm 3.0 &raquo;</a></h3>
+        </div>
+        <br class="clr"/>
+        <hr class="markoff"/>
+        <br class="clr"/>
+
+
+
+
+        <div class="center-align">
+            <img src="img/customers.png" alt="Customers"/>
+        </div>
+        <br class="clr"/>
+        <div class="leftfloated block50">
+        <div class="block95">
+            <p class="quote">In the past, I've been evaluating many Python IDE's and editors available, since I can't live without a decent IDE with syntax highlighting and code completion. For my school projects I implemented mostly Python applications with web front-ends, built with Django or Flask frameworks and this is the area where PyCharm excels. Its debugger helped me to sort out many problems that would otherwise take hours to pinpoint. I recommend PyCharm to everyone who's looking for a Python IDE and I've got used to the PyCharm so much that I'll definitely buy a developer license for my personal/professional use after finishing the school.</p>
+            <p class="gray">Says Jan Cermak, a student  working now on master thesis called "Database of new synthetic drugs? at Institute of Chemical Technology, Prague, Czech Republic</p>
+        </div>
+        </div>
+        <div class="rightfloated block50">
+        <div class="rightfloated block95">
+            <p class="quote">PyCharm, with the IdeaVim plugin, offers enough parity with Vim to make me happy despite having a few warts, while the editor&rsquo;s code navigation, refactoring tools, test runner, debugger and other features I will discuss in this review keep me more focused and joyful than I have ever been writing code.</p>
+            <p class="gray">Says Andrew Brookins, an experienced developer who has tried different text editors and tools for Python and Web development, in his amazingly comprehensive review <a href="http://andrewbrookins.com/tech/one-year-later-an-epic-review-of-pycharm-2-7-from-a-vim-users-perspective/">One Year Later: An Epic Review of PyCharm 2.7 from a Vim User&rsquo;s Perspective</a>.</p>
+            <hr class="markoff"/>
+            <br/>
+            <div class="interested">
+                <h4>Follow product development and give us your feedback</h4>
+                <ul class="leftfloated">
+                    <li class="forum"><a href="http://devnet.jetbrains.com/community/python" onClick="_gaq.push(['_trackEvent', 'Follow links', 'External', 'Forum :: fromFooter']);">Forum</a></li>
+                    <li class="twitter"><a href="http://twitter.com/pycharm" onClick="_gaq.push(['_trackEvent', 'Follow links', 'External', 'Twitter :: fromFooter']);">Twitter</a></li>
+                    <li class="bugtracker"><a href="http://youtrack.jetbrains.com/dashboard/PY#tab=0" onclick="_gaq.push(['_trackEvent', 'Follow links', 'External', 'JIRA :: fromFooter']);">Issue Tracker</a></li>
+                    <li class="rss"><a href="http://blogs.jetbrains.com/pycharm" onClick="_gaq.push(['_trackEvent', 'Follow links', 'External', 'Blog :: fromFooter']);">Blog</a></li>
+                </ul>
+
+            </div>
+        </div>
+        </div>
+        <br class="clr"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                </div>
+        <aside>
+                    </aside>
+        <br class="clr"/>
+    </div>
+</div>
+
+
+<!-- Google Code - site Remarketing List -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1071903267;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "666666";
+var google_conversion_label = "M6tICMCk8QEQo-SP_wM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1071903267/?label=M6tICMCk8QEQo-SP_wM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+ <footer>
+    <div class="container">
+        <div class="leftfloated block30 products">
+        <div class="block75">
+            <h3>all products</h3>
+            <ul>
+                <li><a href="/idea/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: IntelliJ IDEA']);">IntelliJ IDEA</a></li>
+                <li><a href="/resharper/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: ReSharper']);">ReSharper</a></li>
+                <li><a href="/webstorm/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: WebStorm']);">WebStorm</a></li>
+                <li><a href="/phpstorm/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: PhpStorm']);">PhpStorm</a></li>
+                <li><a href="/pycharm/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: PyCharm']);">PyCharm</a></li>
+                <li><a href="/ruby/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: RubyMine']);">RubyMine</a></li>
+                <li><a href="/objc/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: AppCode']);">AppCode</a></li>
+                <li><a href="/youtrack/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: YouTrack']);">YouTrack</a></li>
+                <li><a href="/teamcity/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: TeamCity']);">TeamCity</a></li>
+                <li><a href="/profiler/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: dotTrace']);">dotTrace</a></li>
+                <li><a href="/dotcover/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: dotCover']);">dotCover</a></li>
+                <li><a href="/dotpeek/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: dotPeek']);">dotPeek</a></li>
+                <li><a href="/mps/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: MPS']);">MPS</a></li>
+                <li><a href="/kotlin/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: Kotlin']);">Kotlin</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="leftfloated block20">
+            <h3>resources</h3>
+            <ul>
+                <li><a href="/devnet/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: Developer Community']);">Developer Community</a></li>
+                <li><a href="/support/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: Support']);">Support</a></li>
+                <li><a href="http://tv.jetbrains.net/" onclick="_gaq.push(['_trackEvent', 'Click Buttons', 'External', 'Site Footer :: JetBrains TV']);">JetBrains TV</a></li>
+                <li><a href="http://blogs.jetbrains.com/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'External', 'Site Footer :: Blogs']);">Blogs</a></li>
+            </ul>
+        </div>
+        <div class="leftfloated block20">
+            <h3>company</h3>
+            <ul>
+                <li><a href="/company/contacts/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: Contact Us']);">Contact Us</a></li>
+                <li><a href="/partners/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: Partners']);">Partners</a></li>
+                <li><a href="/company/customers/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: Customer List']);">Customer List</a></li>
+                <li><a href="/company/customers/testimonials.html" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: Testimonials']);">Testimonials</a></li>
+                <li><a href="/company/jobs/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Footer :: Jobs']);">Jobs</a></li>
+            </ul>
+        </div>
+        <div class="rightfloated block25 contacts_sub">
+            <ul class="social">
+                <li class="facebook"><a href="http://www.facebook.com/JetBrains" onclick="_gaq.push(['_trackEvent', 'Click Buttons', 'External', 'Site Footer :: Facebook']);">Facebook</a></li>
+                <li class="gPlus"><a href="https://plus.google.com/+jetbrains/" onclick="_gaq.push(['_trackEvent', 'Click Buttons', 'External', 'Site Footer :: Google+']);">Google+</a></li>
+                <li class="in"><a href="http://www.linkedin.com/company/jetbrains" onclick="_gaq.push(['_trackEvent', 'Click Buttons', 'External', 'Site Footer :: LinkedIn']);">LinkedIn</a></li>
+                <li class="twitter"><a href="http://twitter.com/#!/jetbrains" onclick="_gaq.push(['_trackEvent', 'Click Buttons', 'External', 'Site Footer :: Twitter']);">Twitter</a></li>
+                <li class="rss"><a href="/rss.xml" onclick="_gaq.push(['_trackEvent', 'Click Buttons', 'Internal', 'Site Footer :: RSS']);">JetBrains RSS</a></li>
+            </ul>
+            <br class="clr"/>
+                        <h6>Get Monthly Newsletter</h6>
+            
+
+<script type='text/javascript' src='/eforms/dwr/interface/SubscriptionService.js'></script>
+<script type='text/javascript' src='/eforms/dwr/engine.js'></script>
+<script type="text/javascript">
+    function trim(str) {
+        return str.replace(/^\s+|\s+$/g, '');
+    }
+    function errMsg(state) {
+        var msg = document.getElementById('error-msg');
+        if (state)msg.style.display = 'block';
+        else msg.style.display = 'none';
+    }
+    function validateEmail(valfield) {
+        var tfld = trim(valfield.value);
+        var email = /^[^@]+@[^@.]+\.[^@]*\w\w$/  ;
+        if (!email.test(tfld)) {
+            errMsg(true);
+            return false;
+        }
+        errMsg(false);
+        return true;
+    }
+    function Proceed() {
+        var el = document.getElementById('emaiForSubscription');
+        if (!validateEmail(el)) {
+            el.focus();
+            return;
+        }
+        document.getElementById('sForm').style.display = "none";
+        document.getElementById('progress').style.display = "block";
+        var request = {
+            email: document.getElementById('emaiForSubscription').value,
+            topic: "jb.community.newsletter"
+        };
+        SubscriptionService.submitSubscriptionRequest(request, {
+            callback: function (result) {
+                setMessage(result ? "You request has been processed! Please check your mailbox." : "Internal error.");
+            },
+            timeout: 30000,
+            errorHandler:function(message) {
+                setMessage("Oops: " + message);
+            }
+        });
+        function setMessage(text) {
+            var span = document.getElementById("formContainer");
+            span.style.display = "block";
+            span.innerHTML = text;
+            document.getElementById('progress').style.display = "none";
+        }
+    }
+    function doBlurOn(el) {
+        if (el.value == '') {
+            el.value = 'E-mail JetBrains news to me';
+            el.style.color = '#bcbcbc';
+        }
+    }
+    function doFocusOn(el) {
+        if (el.value == 'E-mail JetBrains news to me') {
+            el.value = '';
+            el.style.color = '#333';
+        }
+    }
+</script>
+<dl id="submitionContent" class="newsletter">
+    <dd id="formContainer">
+        <form action="javascript:get();" name="sForm" id="sForm">
+            <input class="text required" name="emaiForSubscription" id="emaiForSubscription" value="E-mail JetBrains news to me" onblur="doBlurOn(this)" onfocus="doFocusOn(this)"/>
+            <input type="submit" class="submit" id="button" value="Subscribe" onclick="Proceed();"/>
+            <span class="msg" id="error-msg" style="display:none;">Incorrect e-mail address</span>
+        </form>
+    </dd>
+    <dd id="progress" style="display:none;"></dd>
+</dl>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#sForm').submit(function() {
+            var mail = $('#emaiForSubscription').val();
+            if (mail) {
+                var mktoData = {};
+                mktoData[MKTO_SOURCE_FIELD] = 'email-subscription';
+                mktoDoAsync(mail, mktoData);
+            }
+            return false;
+        });
+    });
+</script>
+
+            <br class="clr"/>
+                        <h6 class="contacts">Contacts:</h6>
+            <ul>
+                <li><a href="/company/contacts/">Sales Team</a></li>
+                <li><a href="mailto:marketing@jetbrains.com">Marketing Team</a></li>
+                <li><a href="mailto:webmaster@jetbrains.com">Webmaster</a></li>
+            </ul>
+        </div>
+        <br class="clr"/>
+    </div>
+</footer>
+<div id="footer">
+    <div class="container">
+        <p class="rightfloated gray right-align">&copy; 2000-2013 JetBrains. All rights reserved<br/>Developed with <a href="/webstorm">WebStorm</a></p>
+        <ul class="block35">
+            <li><a href="/company/privacy.html">Privacy Policy</a></li>
+            <li><a href="/company/useterms.html">Terms of Use</a></li>
+            <li><a href="/map.html">Site map</a></li>
+        </ul>
+        <br class="clr"/>
+    </div>
+</div>                                <script type="text/javascript" src="/js2/search.js"></script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter16823155 = new Ya.Metrika({id:16823155, enableAll: true, webvisor:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/16823155" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0013/6939.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script><script type="text/javascript">
+(function() {
+  var didInit = false;
+    function initMunchkin() {
+        if(didInit === false) {
+            didInit = true;
+            Munchkin.init('426-QVD-114');
+        }
+    }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script></body>
+</html>

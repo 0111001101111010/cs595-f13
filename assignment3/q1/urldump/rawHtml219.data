@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en-us" class="ie6 ielt8"><![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7 ielt8"><![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en-us"><!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <title>XML to JSON JavaScript Objectifier by Martin Ivanov (@wemakesitesnet)</title>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="description" content="XML to JSON JavaScript Objectifier Class" />
+        <meta name="keywords" content="json, php, XML, xml to json converter, javascript" />
+        <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/acidmartin" title="Dev Blog of Martin Ivanov" />
+        <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/acidjs" title="Acid.JS Web UI Library" />
+        <link rel="stylesheet" href="server/load-css.php?files=../styles/styles.min.css" />
+                    <script>
+var 
+    _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-17572030-11']);
+    _gaq.push(['_trackPageview']);
+
+(function() {
+    var
+        ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var 
+        s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+})();
+</script>
+    </head>
+    <body>
+        <div>
+            <div class="top-bar">
+    <div>
+        <a href="http://www.w3.org/html/logo/" target="_blank"><img src="images/html5-logo.png" width="357" height="64" alt="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage" title="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage" /></a>
+    </div><ul>
+        <li><a href="https://acidmartin.wordpress.com/" title="My blog" target="_blank">Blog</a></li><li>
+            <a href="http://wemakesites.net/" title="About me" target="_blank">About</a></li><li>
+            <a href="https://twitter.com/wemakesitesnet" title="Follow @wemakesitesnet on Twitter" target="_blank">@wemakesitesnet</a></li><li>
+            <a href="http://wemakesites.net/#!/contact" title="Contact me" target="_blank">Contact</a></li><li>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=QFUHPWJB2JDBS" title="Keep this site alive" target="_blank">Donate</a></li>    </ul>
+</div><nav>
+    <div>
+        <header>
+            <h1><a href="./">HTML5, CSS3 and JavaScript Insight</a></h1>
+        </header>
+        <!--[if lt IE 9]>
+        <p class="options-block">Your browser is outdated and some of the examples on this site may not work. Please, make sure that you use Internet Explorer 9 or higher, or Mozilla Firefox, Google Chrome, Opera or Apple Safari.</p>
+        <![endif]-->
+        <ul><li>
+                      <a href="javascript.html" title="Go to the JavaScript examples">JavaScript</a>
+                      <ul class="sub-nav"><li><a href="xml-to-json-javascript-objectifier.html" title="XML to JSON JavaScript Objectifier Class" ><span>XML to JSON JavaScript Objectifier</span></a></li><li><a href="uri-to-json-serializer.html" title="URI to JSON Serializer JavaScript Class" ><span>URI to JSON Serializer</span></a></li><li><a href="coming-soon.html" title="Coming Soon - HTML5, JavaScript and CSS3 Replacement Page" ><span>Coming Soon - HTML5, JavaScript and CSS3 Replacement Page</span></a></li><li><a href="javascript-iphone-toggle-buttons.html" title="HTML5, CSS3 and JavaScript iPhone Toggle Switch Button" ><span>JavaScript iPhone Toggle Switch Button</span></a></li><li><a href="html5-resume-builder.html" title="HTML5, CSS3, JSON and JavaScript Resume Generator and Onepager Website" ><span>HTML5 Resume Generator and Onepager Website</span></a></li><li><a href="reflections.html" title="JavaScript and CSS3 Image Reflections" ><span>JavaScript and CSS3 Image Reflections</span></a></li><li><a href="javascript-inheritance-without-constructors.html" title="JavaScript Inheritance Without Constructors" ><span>JavaScript Inheritance Without Constructors</span></a></li><li><a href="javascript-api-for-imdb.html" title="JavaScript API for IMDB Movie Data" ><span>IMDB Movie Data Fetcher</span></a></li><li><a href="javascript-mapper-for-restful-methods.html" title="JavaScript Mapper for RESTFul Methods" ><span>JavaScript Mapper for RESTFul Methods</span></a></li><li><a href="javascript-api-for-tinyurl.html" title="JavaScript API for TinyURL" ><span>TinyURL JavaScript API</span></a></li><li><a href="javascript-wrapper-for-the-html5-webworkers-api.html" title="JavaScript Wrapper for the HTML5 WebWorkers API" ><span>Wrapper for the HTML5 WebWorkers API</span></a></li><li><a href="javascript-class-augmenter.html" title="JavaScript Class Augmenter" ><span>JavaScript Class Augmenter</span></a></li><li><a href="html-5-details-element-enabler.html" title="HTML5 Details Enabler YUI Class" ><span>HTML5 Details Enabler YUI Class</span></a></li><li><a href="javascript-html-template-engine.html" title="Client-side HTML Template Engine" ><span>JavaScript HTML Template Engine</span></a></li><li><a href="quick-and-dirty-localization-with-javascript.html" title="Quick and Dirty Localization With JavaScript" ><span>JavaScript Localization Class</span></a></li><li><a href="html5-charts.html" title="Pure HTML5, CSS3 and JavaScript Charts" ><span>HTML5 Charts</span></a></li><li><a href="html5-placeholder-enabler.html" title="HTML5 Placeholder Enabler YUI Class" ><span>HTML5 Placeholder Enabler YUI Class</span></a></li><li><a href="http://acidmartin.wordpress.com/category/javascript/" title="All JavaScript Experiments and Insight" target="blank"><span>All JavaScript Experiments and Insight</span></a></li></ul>
+                  </li><li>
+                      <a href="css.html" title="Go to the CSS3 examples">CSS3</a>
+                      <ul class="sub-nav"><li><a href="custom-css3-checkboxes-and-radios.html" title="Imageless Custom Checkboxes and Radio Buttons with CSS3" ><span>Custom Checkboxes and Radio Buttons</span></a></li><li><a href="css3-iphone-toggle-buttons.html" title="How to Create iPhone Toggle Buttons with CSS3" ><span>CSS3 iPhone Toggle Buttons</span></a></li><li><a href="using-crossbrowser-rgba-to-prevent-the-css-opacity-inheritance-from-parent-to-child-elements.html" title="Crossbrowser RGBA and Prevention of Opacity Propagation. Starting with IE6" ><span>Crossbrowser RGBA and Prevention of Opacity Propagation. Starting with IE6</span></a></li><li><a href="css3-slides-viewer.html" title="CSS3 Driven Slides Viewer Without any JavaScript" ><span>CSS3 Slides Viewer</span></a></li><li><a href="fancy-css3-tooltips.html" title="Fancy CSS3 Tooltips without any JavaScript" ><span>Fancy CSS3 Tooltips</span></a></li><li><a href="css3-treeview.html" title="CSS3 Driven Treeview Without any JavaScript" ><span>CSS3 Treeview. No JavaScript</span></a></li><li><a href="css3-metro-dropdown.html" title="CSS3 Metro Dropdown Styling" ><span>CSS3 Metro Dropdown Styling</span></a></li><li><a href="css3-element-reflections.html" title="How to Create Crossbrowser Element Reflections with CSS3" ><span>CSS3 Element Reflections</span></a></li><li><a href="css3-selectbox.html" title="How to Style Select Boxes with CSS3" ><span>Dropdown Styling with CSS3</span></a></li><li><a href="css3-background-image-cropping.html" title="How to Crop Background Images with CSS3" ><span>CSS3 Background Image Cropping</span></a></li><li><a href="css3-inline-file-input.html" title="How to Create an Inline Masked File Upload Form with CSS3 and HTML5" ><span>Inline Masked File Upload Form with CSS3 and HTML5</span></a></li><li><a href="css3-tabstrip.html" title="CSS3 Driven Tabstrip Without any JavaScript" ><span>CSS3 Tabstrip</span></a></li><li><a href="css3-gaussian-blur.html" title="How to Achieve Gaussian Blur Effect with CSS3" ><span>CSS3 Gaussian Blur</span></a></li><li><a href="http://acidmartin.wordpress.com/category/css3/" title="All CSS3 Experiments and Insight" target="blank"><span>All CSS3 Experiments and Insight</span></a></li></ul>
+                  </li><li>
+                      <a href="http://acidjs.wemakesites.net/" target="_blank" title="Acid.JS Dev Tools">Dev Tools</a>
+                      <ul class="sub-nav"><li><a href="http://acidjs.wemakesites.net/validator.html" title="HTML markup validation bookmarklet" target="blank"><span>HTML Validation Bookmarklet</span></a></li><li><a href="http://buildercss.wemakesites.net/" title="Online CSS Merger and Minifier" target="blank"><span>Builder.CSS</span></a></li><li><a href="http://image2base64.wemakesites.net/" title="Online Image to Base64 Encoder Using the new HTML5 File API" target="blank"><span>Image to Base-64 Encoder</span></a></li><li><a href="http://stickeez.wemakesites.net/" title="Sticky notes JavaScript app using the new HTML5 File API and localStorage" target="blank"><span>HTML5 Sticky Notes App</span></a></li><li><a href="http://acidjs.wemakesites.net/builder-js.html" title="JavaScript minifier and obfuscator" target="blank"><span>JavaScript Minifier and Obfuscator</span></a></li><li><a href="http://acidjs.wemakesites.net/templatr.html" title="JSON to HTML Template Engine" target="blank"><span>JSON to HTML Template Engine</span></a></li><li><a href="http://acidjs.wemakesites.net/pisi.html" title="Client-side HTML Template Engine" target="blank"><span>HTML Template Engine</span></a></li><li><a href="http://acidjs.wemakesites.net/guitar-chords-js.html" title="HTML5 and JavaScript guitar chords finder and player" target="blank"><span>HTML5 Guitar Chords Player</span></a></li><li><a href="http://acidjs.wemakesites.net/imdb-fetcher.html" title="Experimental IMDB JavaScript and PHP API" target="blank"><span>IMDB Movie Data Fetcher</span></a></li><li><a href="http://hasher.wemakesites.net/" title="Online Message Digest Encrypter" target="blank"><span>Message Digest Encrypter</span></a></li><li><a href="http://acidjs.wemakesites.net/rest-builder.html" title="Free Web-based RESTFul Services Builder, Debugger and Tester" target="blank"><span>RESTFul Builder and Tester</span></a></li></ul>
+                  </li><li>
+                      <a href="http://acidjs.wemakesites.net/" target="_blank" title="Acid.JS Web.UI">Web.UI</a>
+                      <ul class="sub-nav">
+                        <li><a target="blank" title="Amazing HTML5 Shopping Cart" href="http://html5-cart.com/"><span>HTML5 Shopping Cart</span></a></li><li><a href="http://acidjs.wemakesites.net/ribbon-bar-xml.html" title="Arguably among the best recreations of the desktop ribbon bar with JavaScript, CSS3 and HTML5" target="blank"><span>Ribbon Bar Web UI</span></a></li><li><a href="http://acidjs.wemakesites.net/auto-complete.html" title="Skinnable and configurable JavaScript, CSS3 and HTML5 auto complete widget" target="blank"><span>Auto Complete Widget</span></a></li><li><a href="http://acidjs.wemakesites.net/gauge.html" title="HTML5 canvas gauge component with easy to use, but yet powerful API" target="blank"><span>HTML5 Canvas Gauge</span></a></li><li><a href="http://acidjs.wemakesites.net/table-painter.html" title="Table painter widget for WYSIWYG editors and web applications" target="blank"><span>Table Painter Widget</span></a></li><li><a href="http://acidjs.wemakesites.net/forms-js.html" title="AcidJs.Forms will seamlessly add cool metro looks to your HTML forms" target="blank"><span>CSS3 Metro Forms</span></a></li><li><a href="http://acidjs.wemakesites.net/split-button-xml.html" title="Split Button HTML5, CSS and JavaScript Component" target="blank"><span>Split Button Widget</span></a></li><li><a href="http://acidjs.wemakesites.net/progressbar-js.html" title="Fully customizable HTML5 and CSS3 progressbar" target="blank"><span>HTML5 and CSS3 Progressbar</span></a></li><li><a href="http://acidjs.wemakesites.net/tour-dates.html" title="Bands, Performers and Artists Tourdates and Events Scheduler" target="blank"><span>Tourdates and Events Scheduler</span></a></li><li><a href="http://acidjs.wemakesites.net/tabstrip-xml.html" title="Skinnable AJAX tabstrip component" target="blank"><span>TabStrip Web UI</span></a></li><li><a href="http://acidjs.wemakesites.net/hotel-reservation-form-js.html" title="Full featured AJAX hotel booking system for online reservations" target="blank"><span>Hotel Booking Form</span></a></li></ul>
+                  </li><li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li></ul>
+    </div>
+</nav>            <div class="content">
+                <div>
+                    <!--googleoff: all--><noscript>
+                                            </noscript><!--googleon: all-->
+                                    <h2>XML to JSON JavaScript Objectifier Class</h2>
+                    <!--googleoff: all--><p class="options-block">You can read the original blogpost on this 
+    <a href="http://acidmartin.wordpress.com/2012/07/09/xml-to-json-javascript-objectifier/" target="_blank" title="View the original blogpost for XML to JSON JavaScript Objectifier">link</a>, or you can 
+    <a href="http://acidmartin.wemakesites.net/DownloadAdmin/click.php?id=202" title="Download XML to JSON JavaScript Objectifier">download the example</a>.
+</p><!--googleon: all-->                                
+<p>Run this page on a web-server with PHP support and use your browser's developer 
+    tools (Firebug, Chrome Developer Tools, etc) to see how it works and how to 
+    include XmlToJson in your project. Visit this page to learn about the API methods of the class.</p>
+<p>If you like this class, you can visit <a href="http://acidjs.wemakesites.net/" target="_blank">Acid.JS's website</a>, check the <a href="http://acidmartin.wordpress.com/" target="_blank">blog</a>
+    or <a href="https://twitter.com/#!/wemakesitesnet" target="_blank">follow us on Twitter</a> to receive updates
+    for other cool website widgets and components.</p>
+        
+<h3>Register the Class</h3>
+<p>Download the source code from <a href="http://acidmartin.wemakesites.net/DownloadAdmin/click.php?id=202">this URL</a>.</p>
+<pre class="brush: html">&lt;script src="AcidJs.XmlToJson/Scripts/AcidJs.XmlToJson.js"&gt;&lt;/script&gt;</pre>
+
+<h3>Using the Class</h3>
+<!--googleoff: all--><pre class="brush: js">(function() {
+    window.xmltojson = new AcidJs.XmlToJson({
+        //rootFolder: "Martin/" // optional, default is empty string
+    });
+    window.xmltojson.getRemoteData({
+        name: "rss",
+        url: "http://acidjs.wemakesites.net/pages/whats-new/whats-new.rss",
+        success: function(data) {
+            console.log(data);
+        }
+    });
+    window.xmltojson.getRemoteData({
+        name: "feedburner",
+        url: "http://feeds.feedburner.com/acidmartin",
+        success: function(data) {
+            console.log(data);
+        }
+    });
+    /*window.xmltojson.getRemoteData({
+        name: "slayer",
+        url: "http://ws.audioscrobbler.com/2.0/",
+        params: [
+            {
+                method: "album.getinfo"
+            },{
+                api_key: "XXXXXX" // use yor Last.FM API key here
+            },{
+                artist: "Slayer"
+            },{
+                album: "Seasons in the Abyss"
+            }
+        ],
+        success: function(data) {
+            console.log("data object: ", data); // return the entire data object
+            console.log("JSON object: ", data.json); // return the converted XML to JSON object only
+            console.log("data object name: ", data.name); // return the name of the data object
+            console.log("request url: ", data.url); // return the request url
+            console.log("request parameters as objects: ", data.params); // return the remote request parameters as objects
+            console.log("removte request with the params as get data: " + data.remoteUrl); // return the removte request with the params as get data
+        }
+    });*/
+})();   </pre><!--googleon: all-->                </div>
+            </div>
+            <footer>
+    <ul class="inline-list">
+        <li>&copy; 2001-2013 Martin Ivanov</li>
+        <li><a href="https://acidmartin.wordpress.com/" title="My blog" target="_blank">Blog</a></li><li>
+            <a href="http://wemakesites.net/" title="About me" target="_blank">About</a></li><li>
+            <a href="https://twitter.com/wemakesitesnet" title="Follow @wemakesitesnet on Twitter" target="_blank">@wemakesitesnet</a></li><li>
+            <a href="http://wemakesites.net/#!/contact" title="Contact me" target="_blank">Contact</a></li><li>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=QFUHPWJB2JDBS" title="Keep this site alive" target="_blank">Donate</a></li>        <li><a href="http://validator.w3.org/check?uri=referer" target="_blank" title="Valid HTML5">Valid HTML5</a></li>
+    </ul>
+</footer>        </div>
+        <script src="server/load-js.php?files=../classes/site.min.js"></script><script>
+                  (function() {
+                      "use strict";
+
+                      window.experiments = new AcidJs.Site({
+                          controls: ["ribbon-bar-xml","gauge","forms-js","auto-complete","table-painter","progressbar-js","tour-dates","split-button-xml","tabstrip-xml","hotel-reservation-form-js"]
+                      });
+                  })();
+                  </script><script src="server/load-js.php?files=..%2Fpages%2Fjavascript-html-template-engine%2Fexample%2FAcidJs.Renderer%2FRenderer.js"></script>
+                        <script src="server/load-js.php?files=..%2Fpages%2Fjavascript-html-template-engine%2Fexample%2FAcidJs.Renderer%2FExample.js"></script>
+                            </body>
+</html>

@@ -1,0 +1,1990 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# slideshare: http://ogp.me/ns/fb/slideshare#">
+   <meta charset="utf-8">
+   <!--
+   __________.__SlideShare_______               __
+   \______   \__| ____ \______   \ ____   _____/  |_
+    |    |  _/  |/ ___\ |    |  _//  _ \ /  _ \   __\
+    |    |   \  / /_/  >|    |   (  <_> |  <_> )  |
+    |______  /__\___  / |______  /\____/ \____/|__|
+           \/  /_____/         \/
+   -->
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- SL:start:notranslate -->
+  <title>Making Your Capistrano Recipe Book</title>
+  <!-- SL:end:notranslate -->
+  <meta name="viewport" content="width=1024">
+  <!-- SL:start:notranslate -->
+  <meta name="description" content="Talk given at January 2010 Sydney RORO (Ruby on Rails Oceania) meeting." />
+  <meta name="thumbnail" content="http://cdn.slidesharecdn.com/ss_thumbnails/capistranorecipebook-100118175359-phpapp01-thumbnail-2.jpg?1263874041" />
+  <!-- SL:end:notranslate -->
+
+  <!--[if !IE]>-->
+  <link rel="dns-prefetch" href="//www.slideshare.net">
+  <link rel="dns-prefetch" href="//public.slidesharecdn.com">
+  <link rel="dns-prefetch" href="//image.slidesharecdn.com">
+  <link rel="dns-prefetch" href="//cdn.slidesharecdn.com">
+  <link rel="dns-prefetch" href="//cdn01.smartling.com">
+  <!--<![endif]-->
+
+  <!--[if IE 9]>
+  <link rel="prefetch" href="//www.slideshare.net">
+  <link rel="prefetch" href="//public.slidesharecdn.com">
+  <link rel="prefetch" href="//image.slidesharecdn.com">
+  <link rel="prefetch" href="//cdn.slidesharecdn.com">
+  <link rel="prefetch" href="//cdn01.smartling.com">
+  <![endif]-->
+
+  <div></div>
+  <link href="http://public.slidesharecdn.com/bigboot/css/sv-core.css?7123e03d35" media="screen" rel="stylesheet" type="text/css" />
+  <meta name="robots" content="index" /><link rel='stylesheet' type='text/css' media='all' href='http://public.slidesharecdn.com/slideview/styles/combined.css?9e4c9c9f' />
+  <div></div>
+  
+  
+  <!--<link rel="stylesheet" media="all and (min-width: 748px) and (max-width: 977px)" href="grid-748.css"> 
+  <link rel="stylesheet" media="all and (min-width: 0px) and (max-width: 747px)" href="grid-300.css">-->
+  <link href="http://public.slidesharecdn.com/stylesheets/ssplayer/combined_presentation.css?0c288b5cfc" media="screen" rel="stylesheet" type="text/css" />
+
+
+  <script type="text/javascript" id="page-load">
+  // <![CDATA[
+    var timer = (new Date()).getTime();
+    var _jspl = {}
+    _jspl.pageInitTime = timer;
+    var _ssPageMetrics = {};
+  // ]]> 
+  </script>
+
+  <script type="text/javascript">
+  var jQl={q:[],dq:[],ready:function(a){typeof a=="function"&&jQl.q.push(a);return jQl},unq:function(){for(var a=0;a<jQl.q.length;a++)jQl.q[a]();jQl.q=[]},bId:null,boot:function(a){if(typeof window.jQuery.fn=="undefined"){if(!jQl.bId)jQl.bId=setInterval(function(){jQl.boot(a)},25)}else{jQl.bId&&clearInterval(jQl.bId);jQl.bId=0;jQl.unqjQdep();$(jQl.unq());typeof a=="function"&&a()}},booted:function(){return jQl.bId===0},loadjQ:function(a,c){setTimeout(function(){var b=document.createElement("script"); b.src=a;document.getElementsByTagName("head")[0].appendChild(b)},1);jQl.boot(c)},loadjQdep:function(a){jQl.loadxhr(a,jQl.qdep)},qdep:function(a){if(a)typeof window.jQuery.fn!=="undefined"&&!jQl.dq.length?jQl.rs(a):jQl.dq.push(a)},unqjQdep:function(){if(typeof window.jQuery.fn=="undefined")setTimeout(jQl.unqjQdep,50);else{for(var a=0;a<jQl.dq.length;a++)jQl.rs(jQl.dq[a]);jQl.dq=[]}},rs:function(a){var c=document.createElement("script");document.getElementsByTagName("head")[0].appendChild(c);c.text= a},loadxhr:function(a,c){var b;b=jQl.getxo();b.onreadystatechange=function(){b.readyState!=4||200!=b.status||c(b.responseText,a)};try{b.open("GET",a,true);b.send("")}catch(d){}},getxo:function(){var a=false;try{a=new XMLHttpRequest}catch(c){for(var b=["MSXML2.XMLHTTP.5.0","MSXML2.XMLHTTP.4.0","MSXML2.XMLHTTP.3.0","MSXML2.XMLHTTP","Microsoft.XMLHTTP"],d=0;d<b.length;++d){try{a=new ActiveXObject(b[d])}catch(e){continue}break}}finally{return a}}}; if(typeof window.jQuery=="undefined")var $=jQl.ready,jQuery=$;
+  </script>
+
+  <script id="page-json" type="text/javascript"><!--
+ var slideshare_object =  {"related_type":"related","useHttp":1,"gam_cat_name":"business-mgmt","jsplayer":{"author_id":3489868,"lastscreen":{"url":"http://www.slideshare.net/timriley/making-your-capistrano-recipe-book","related":[{"author_login":"romalapin","thumbnail":"//cdn.slidesharecdn.com/ss_thumbnails/capistrano-php-120422013526-phpapp01-thumbnail-2.jpg?1335076803","url":"/romalapin/capistrano-for-php-applications-deployment","views":1854,"title":"Capistrano for PHP Applications Dep...","author":"Roman Lapin"},{"author_login":"zfconf","thumbnail":"//cdn.slidesharecdn.com/ss_thumbnails/5-lapin-120422032809-phpapp01-thumbnail-2.jpg?1335083555","url":"/zfconf/zfconf-2012-capistrano-php","views":1751,"title":"ZFConf 2012: Capistrano \u0434\u043b\u044f \u0434\u0435\u043f\u043b\u043e\u0439\u043c...","author":"ZFConf Conference"},{"author_login":"travisroberts","thumbnail":"//cdn.slidesharecdn.com/ss_thumbnails/capistrano-100422131107-phpapp02-thumbnail-2.jpg?1271960413","url":"/travisroberts/capistrano","views":692,"title":"Capistrano","author":"Travis Roberts"},{"author_login":"travisroberts","thumbnail":"//cdn.slidesharecdn.com/ss_thumbnails/capistrano-100422183749-phpapp01-thumbnail-2.jpg?1271979513","url":"/travisroberts/capistrano-overview","views":4983,"title":"Capistrano Overview","author":"Travis Roberts"},{"author_login":"freelancing_god","thumbnail":"//cdn.slidesharecdn.com/ss_thumbnails/railsconf-sphinx-090508130811-phpapp01-thumbnail-2.jpg?1241879456","url":"/freelancing_god/solving-the-riddle-of-search-using-sphinx-with-rails-1406954","views":13455,"title":"Solving the Riddle of Search: Using...","author":"freelancing_god"},{"author_login":"tomcopeland","thumbnail":"//cdn.slidesharecdn.com/ss_thumbnails/railsconf2011deploymenttipsforslideshare-110518161155-phpapp01-thumbnail-2.jpg?1305753540","url":"/tomcopeland/railsconf2011-deployment-tipsforslideshare","views":2743,"title":"Railsconf2011 deployment tips_for_s...","author":"tomcopeland"}],"html":"\u003C!--[if IE 7]\u003E\n  \u003Cstyle\u003E\n    .small.lastScreen{\n      margin-top:23%;\n    }\n    .normal.lastScreen{\n      margin-top:8%;\n    }\n    .lastScreen{\n      margin-top:13%;\n    }\n  \u003C/style\u003E\n\u003C![endif]--\u003E\n\n\u003Cdiv class=\"lastScreen\"\u003E\n  \u003Cdiv class=\"pro-overlay\"\u003E\n\t\u003Cspan class=\"close-btn\"\u003E\u003Ca href=\"#\"\u003E\u0026times;\u003C/a\u003E\u003C/span\u003E\n    \u003Cdiv class=\"proSharingText\"\u003ELike this presentation? Why not share!\u003C/div\u003E\n    \u003Cul class=\"lastActions\"\u003E\n      \u003Cli class=\"email\"\u003E\u003Ca href=\"#\" class=\"lastScreen-sprite lastScreenEmailShare j-tooltip\" data-original-title=\"Email this to your contacts\" title=\"Email this to your contacts\" \u003Eemail\u003C/a\u003E\u003C/li\u003E\n      \u003Cli class=\"embed\"\u003E\u003Clabel \u003Eembed\u003C/label\u003E\u003Cinput type='text' class=\"lastScreenEmbedCode j-tooltip\" data-original-title=\"Embed this on your website or blog\" title=\"Embed this on your website or blog\" /\u003E\u003C/li\u003E\n      \u003Cli class=\"url\"\u003E\u003Clabel \u003Eurl\u003C/label\u003E\u003Cinput type='text' class=\"lastScreenSSUrl j-tooltip\" data-original-title=\"View on Slideshare\" title=\"View on Slideshare\" /\u003E\u003C/li\u003E\n      \u003Cli class=\"replay last\"\u003E\u003Ca href=\"#\" class=\"lastScreen-sprite lastScreenReplay j-tooltip\" data-original-title=\"View again\" title=\"View again\" \u003E\u0026nbsp;\u003C/a\u003E\u003C/li\u003E\n    \u003C/ul\u003E\n    \u003Cdiv class=\"relatedPresentation\"\u003E\n      \u003Ca href=\"#\" class=\"close\"\u003E\u0026times;\u003C/a\u003E\n      \u003Cul\u003E\n        \u003Cli class='relatedContent'\u003E\n          \u003Ca class=\"relatedThumb\" href=\"#\"\u003E\u003Cimg src=\"//public.slidesharecdn.com/images/thumbnail.png\"\u003E\u003C/a\u003E\n          \u003Cdiv class=\"presentationMeta\"\u003E\n            \u003Ca href=\"#\" class=\"relatedTitle\"\u003Etitle comes here\u003C/a\u003E\n            \u003Cp\u003EFrom: \u003Ca class=\"relatedAuthor\" href=\"#\"\u003EName comes here\u003C/a\u003E\u003C/p\u003E\n            \u003Cp\u003EViews: \u003Cspan class=\"relatedViews\"\u003EViews comes here\u003C/span\u003E\u003C/p\u003E\n          \u003C/div\u003E\n        \u003C/li\u003E\n\n        \u003Cli class='relatedContent'\u003E\n          \u003Ca class=\"relatedThumb\" href=\"#\"\u003E\u003Cimg src=\"//public.slidesharecdn.com/images/thumbnail.png\"\u003E\u003C/a\u003E\n          \u003Cdiv class=\"presentationMeta\"\u003E\n            \u003Ca href=\"#\" class=\"relatedTitle\"\u003Etitle comes here\u003C/a\u003E\n            \u003Cp\u003EFrom: \u003Ca class=\"relatedAuthor\" href=\"#\"\u003EName comes here\u003C/a\u003E\u003C/p\u003E\n            \u003Cp\u003EViews: \u003Cspan class=\"relatedViews\"\u003EViews comes here\u003C/span\u003E\u003C/p\u003E\n          \u003C/div\u003E\n        \u003C/li\u003E\n      \u003C/ul\u003E\n      \u003Cdiv class=\"relatedNav\"\u003E\n        \u003Ca href=\"#\" class=\"lastScreen-sprite lastScreenNext\"\u003E\u0026nbsp;\u003C/a\u003E\n        \u003Ca href=\"#\" class=\"lastScreen-sprite lastScreenPrev\"\u003E\u0026nbsp;\u003C/a\u003E\n      \u003C/div\u003E\n    \u003C/div\u003E\n  \u003C/div\u003E \u003C!-- end of div class pro-overlay --\u003E\n\u003C/div\u003E\u003C!-- last screen ends here --\u003E\n"},"html_ttffont_url_suffix":".js","disable_eagerload":false,"replayscreen":{"html":"\u003Ca href=\"#\" class=\"replayScreenReplay\" \u003EView again\u003C/a\u003E"},"spinner_url_fullscreen":"//public.slidesharecdn.com/images/ssplayer/loading_white.gif?c5889cf60d","has_audio":false,"disable_share":true,"embed_code":"\u003Ciframe src=\"http://www.slideshare.net/slideshow/embed_code/2943932\" width=\"427\" height=\"356\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" style=\"border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px\" allowfullscreen\u003E \u003C/iframe\u003E \u003Cdiv style=\"margin-bottom:5px\"\u003E \u003Cstrong\u003E \u003Ca href=\"https://www.slideshare.net/timriley/making-your-capistrano-recipe-book\" title=\"Making Your Capistrano Recipe Book\" target=\"_blank\"\u003EMaking Your Capistrano Recipe Book\u003C/a\u003E \u003C/strong\u003E from \u003Cstrong\u003E\u003Ca href=\"http://www.slideshare.net/timriley\" target=\"_blank\"\u003ETim Riley\u003C/a\u003E\u003C/strong\u003E \u003C/div\u003E","sharescreen":{"slideshow_id":2943932,"url":"http://www.slideshare.net/timriley/making-your-capistrano-recipe-book","title":"Making Your Capistrano Recipe...","html":"\u003Cdiv class=\"shareScreen\"\u003E\n  \u003Ca href=\"#\" class=\"close\"\u003E\u0026times;\u003C/a\u003E\n  \u003Cul class=\"shareMethods\"\u003E\n    \u003Cli class=\"embed\"\u003E\n      \u003Clabel for=\"embed-code\"\u003EEmbed\u003C/label\u003E\n      \u003Cinput type='text' class=\"shareScreenEmbedCode\" value=\"code\" name=\"embed-code\" /\u003E\n    \u003C/li\u003E\n    \u003Cli class=\"url last\"\u003E\n      \u003Clabel for=\"embed-url\"\u003EURL\u003C/label\u003E\n      \u003Cinput type='text' class=\"shareScreenSSUrl\" value=\"code\" name=\"embed-url\" /\u003E\n\t\u003C/li\u003E\n  \u003C/ul\u003E\n  \u003Cform class=\"emailShare\"\u003E\n    \u003Cfieldset\u003E\n      \u003Clegend\u003EEmail this\u003C/legend\u003E\n      \u003Cinput type=\"hidden\" class=\"shareDefaultMessage\" value=\"I think you will find this useful.\" /\u003E\n      \u003Cul\u003E\n        \u003Cli\u003E\n          \u003Clabel for=\"name\"\u003EYour name\u003C/label\u003E\n          \u003Cinput class='shareScreenFromName' type=\"text\" value=\"\" /\u003E\n        \u003C/li\u003E\n        \u003Cli\u003E\n          \u003Clabel for=\"mailID\"\u003EEmail to\u003C/label\u003E\n          \u003Cinput class=\"shareScreenMailID\" type=\"text\" value=\"\" /\u003E\n        \u003C/li\u003E\n        \u003Cli class=\"submit\"\u003E\n          \u003Clabel\u003E\u0026nbsp;\u003C/label\u003E\n          \u003Cinput class=\"shareSprite\" type=\"submit\" value=\"\" /\u003E\n        \u003C/li\u003E        \n      \u003C/ul\u003E\n      \u003C/fieldset\u003E\n  \u003C/form\u003E\n\u003C/div\u003E\u003C!-- shareScreen ends here --\u003E","user_name":""},"html_eotfont_url_suffix":"-eot.js","preload_after_pageload":true,"start_slide":1,"page":1,"has_lead":false,"stripped_title":"making-your-capistrano-recipe-book","slide_error_template":"\u003Cstyle type=\"text/css\"\u003E\n  .jsplayer-slide-error {\n    background-color: #000;\n    padding: 20% 0 13% !important;\n  }\n  .jsplayer-slide-error div {\n    text-align: center;\n  }\n  .jsplayer-slide-error img {\n    height: 79px !important;\n    margin: 0 0 10px;\n    width: 80px !important;\n  }\n  .jsplayer-slide-error .slide-error-body {\n    color: #eee;\n    font-family: 'Lucida Grande',Verdana, Arial, Helvetica, sans-serif;\n    padding: 0 !important;\n  }\n  .jsplayer-slide-error .slide-error-body p {\n    font-size: 0.8em;\n    line-height: 1.1em;\n    margin: 7px 0 11px;\n  }\n  .jsplayer-slide-error .slide-error-body input[type=button] {\n    margin: 7px 0 0;\n    padding: 7px 14px;\n  }\n\u003C/style\u003E\n\u003Cdiv class=\"jsplayer-slide-error\"\u003E\n  \u003Cdiv style=\"position:relative;\"\u003E\n    \u003Cimg src='//public.slidesharecdn.com/images/ssplayer/error_dudes-80x79.png' height=\"79\" width=\"80\" /\u003E\n    \u003Cdiv class=\"slide-error-body\"\u003E\n      \u003Cp\u003EWe were unable to load the slide.\u003C/p\u003E\n      \u003Cinput class=\"btn btn-large\" type=\"button\" value=\"Reload slide\" /\u003E\n    \u003C/div\u003E\n  \u003C/div\u003E\n\u003C/div\u003E\n","shareoptions":{"facebook_share":"http://www.slideshare.net/share/facebook/2943932/Check%20out%20this%20SlideShare%20presentation%20:%20Making%20Your%20Capistrano%20Recipe%20Book","facebook_like_button":"\u003Ciframe class=\"fb-like\" src=\"//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book\u0026amp;width=50\u0026amp;height=21\u0026amp;colorscheme=light\u0026amp;layout=button_count\u0026amp;action=like\u0026amp;show_faces=false\u0026amp;send=false\u0026amp;appId=2490221586\" scrolling=\"no\" frameborder=\"0\" style=\"border:none; overflow:hidden; width:50px; height:25px;\" allowTransparency=\"true\"\u003E\u003C/iframe\u003E","twitter_share":"http://www.slideshare.net/share/tweet/2943932/Making%20Your%20Capistrano%20Recipe%20Book","html":"\u003Cscript\u003E\n(function(){  var FBInitParams = {\n    appId  : '2490221586',\n    status : true, // check login status\n    cookie : true, // enable cookies to allow the server to access the session\n    xfbml  : true, // parse XFBML\n    oauth  : true,  // to enable OAuth 2.0\n    channelUrl  : '//public.slidesharecdn.com/channel.html'\n  };\n  if(typeof(FB) === \"object\"){\n    window.setTimeout(function(){\n      FB.XFBML.parse();\n      FB.Event.subscribe('edge.create',fbLike);\n    },50);\n  }else{\n    window.fbAsyncInit = function() {\n      FB.init(FBInitParams);\n      FB.Event.subscribe('edge.create',fbLike);\n    }\n  }\n})();\n\u003C/script\u003E\n\n\u003Cdiv class=\"shareoptions\"\u003E\n  \u003Cul class=\"thirdPartyShare\"\u003E\n  \t\u003Cli\u003E\u003Ca href=\"#\" class=\"shareSprite Twitter\"\u003E\u0026nbsp; \u003C/a\u003E\u003C/li\u003E\n    \u003Cli\u003E\u003Ca href=\"#\" class=\"shareSprite Linkedin\"\u003E\u0026nbsp; \u003C/a\u003E\u003C/li\u003E\n    \u003Cli\u003E\u003Ca href=\"#\" class=\"fb-like\"/\u003E\u003C/li\u003E\n  \u003C/ul\u003E\n\u003C/div\u003E","linkedin_share":"http://www.slideshare.net/share/linkedin/2943932/SlideShare:%20Making%20Your%20Capistrano%20Recipe%20Book"},"player_type":"presentation","slide_count":18,"show_image_player":true,"track_slide_enable":1,"has_video":false,"is_private":false,"meta_error_template":"\u003Cstyle type=\"text/css\"\u003E\n  .jsplayer-slide-error {\n    background-color: #000;\n    padding: 20% 0 13% !important;\n  }\n  .jsplayer-slide-error div {\n    text-align: center;\n  }\n  .jsplayer-slide-error img {\n    height: 79px !important;\n    margin: 0 0 10px;\n    width: 80px !important;\n  }\n  .jsplayer-slide-error .slide-error-body {\n    color: #eee;\n    font-family: 'Lucida Grande',Verdana, Arial, Helvetica, sans-serif;\n    padding: 0 !important;\n  }\n  .jsplayer-slide-error .slide-error-body p {\n    font-size: 0.8em;\n    line-height: 1.1em;\n    margin: 8px 0;\n  }   \n  .jsplayer-slide-error .slide-error-body input[type=button] {\n    margin: 7px 0 0;\n    padding: 7px 14px;\n  }\n\u003C/style\u003E\n\u003Cdiv class=\"jsplayer-slide-error\"\u003E\n  \u003Cdiv style=\"position:relative;\"\u003E\n    \u003Cimg src='//public.slidesharecdn.com/images/ssplayer/error_dudes-80x79.png' height=\"79\" width=\"80\" /\u003E\n    \u003Cdiv class=\"slide-error-body\"\u003E\n      \u003Cp\u003EWe have encountered an error.\u003C/p\u003E\n      \u003Cp\u003EPlease refresh the page.\u003C/p\u003E\n    \u003C/div\u003E\n  \u003C/div\u003E\n\u003C/div\u003E\n","fullscreen_bgcolor":"jsplBgColorWhite","bucket_location":"//html.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/","fullscreen_url":"/fullscreen/timriley/making-your-capistrano-recipe-book","video_slides_count":0,"toolbar_html":"\u003C!--[if IE 7]\u003E\n  \u003Cstyle\u003E\n    .toolbar .navActions { position: relative; top: -28px; }\n    div.toolbar .nav {margin-left : 37%; }\n  \u003C/style\u003E\n\u003C![endif]--\u003E\n  \u003Ca href=\"#\" class=\"sprite btnViewOnSS\" title=\"View on SlideShare\"\u003E\u0026nbsp;\u003C/a\u003E\u003C!-- view on SS --\u003E\n  \u003Cdiv class=\"nav\"\u003E\n    \u003Ca href=\"#btnFirst\" class=\"btnFirst\" title=\"First Slide\" rel=\"nofollow\"\u003E\u0026laquo;\u003C/a\u003E\n    \u003Ca href=\"#btnPrevious\" class=\"btnPrevious\" title=\"Previous Slide\" rel=\"nofollow\"\u003E\u0026lsaquo;\u003C/a\u003E\n    \u003Ca href=\"#btnNext\" class=\"btnNext\" title=\"Next Slide\" rel=\"nofollow\"\u003E\u0026rsaquo;\u003C/a\u003E\n    \u003Ca href=\"#btnLast\" class=\"btnLast\" title=\"Last Slide\" rel=\"nofollow\"\u003E\u0026raquo;\u003C/a\u003E\n  \u003C/div\u003E\n  \u003Cdiv class=\"navActions\"\u003E\n    \u003Ca href=\"#\" class=\"btnFullScreen\" title=\"View Fullscreen\" rel=\"nofollow\"\u003E\u0026nbsp;\u003C/a\u003E\n    \u003Ca href=\"#\" class=\"btnLeaveFullScreen\" title=\"Exit Fullscreen\" rel=\"nofollow\"\u003E\u0026nbsp;\u003C/a\u003E\n    \u003Clabel class=\"goToSlideLabel\"\u003E\u003Cinput type=\"text\" name=\"goToSlide\" value=\"1\" /\u003E\u003Cspan\u003E/123\u003C/span\u003E\u003C/label\u003E\n      \u003Ca href=\"#\" class=\"btnShare\" title=\"Share\" rel=\"nofollow\"\u003E\u003C/a\u003E\n  \u003C/div\u003E\n","player_bgcolor":"jsplBgColorBigfoot","is_only_private":false,"container":"svPlayerId","slideview_url":"/timriley/making-your-capistrano-recipe-book","mode":"image","timestamp":1263874041,"ppt_location":"capistranorecipebook-100118175359-phpapp01","image_bucket_location":"//image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01","id":2943932,"hosted_in":"slideview","inpage_full_screen":true,"beacon_url":"stats.slideshare.net/1.gif","spinner_url":"//public.slidesharecdn.com/images/ssplayer/loading_bigfoot.gif?7bb6a01864","use_ssl":false,"image_ready":true},"slideshow_placeholder":"//public.slidesharecdn.com/images/thumbnail.png","dev":false,"stats":{"url":"http://www.slideshare.net/~/slideshow/stats/2943932.json"},"is_free_author":false,"show_branding":1,"startSlide":1,"totalSlides":18,"downloads":{"sp_isdwnl":true,"allow":true},"stripped_title":"making-your-capistrano-recipe-book","user":{"member_type":"non-member"},"li_bar":{"get_url":"/li_bar"},"userimage_placeholder":"//public.slidesharecdn.com/images/user-48x48.png","activities":{"favorites":{"url":"/~/slideshow/favorites_list/2943932.json","count":10,"total":11}},"presentationId":2943932,"comments":{"slideview_template":"\u003Cli\u003E\n                    \u003Ca href=\"#\" title=\"Commenter Title\" class=\"notranslate commenter h-commenter j-author-photo\" rel=\"nofollow\"\u003E\n                        \u003Cimg class=\"nickname\" src=\"/images/user-48x48.png\" height=\"48\" alt=\"Full Name\" original=\"/images/user-48x48.png\" width=\"48\" /\u003E\n                        \u003Cstrong class=\"h-username j-username notranslate\"\u003EFull Name\u003C/strong\u003E\u003Cspan class=\"bioStub notranslate\"\u003E\u003Cspan class=\"h-commenter-role\"\u003E\u003C/span\u003E\u003Cspan class=\"h-commenter-org\"\u003E\u003C/span\u003E\u003C/span\u003E\n                    \u003C/a\u003E\n                    \u003Cspan class=\"commentText h-comment-text notranslate\"\u003E\n                        Comment goes here. \n                    \u003C/span\u003E\n                    \u003Cspan class=\"commentMeta h-comment-meta\"\u003E\n                      \u003Cspan class=\"commentTimestamp h-timestamp\"\u003E12 hours ago\u003C/span\u003E\n                      \u003Cspan class=\"commentActions h-comment-actions hide\"\u003E\n                        \u003Cbutton class=\"j-reply btn btn-mini\"\u003EReply\u003C/button\u003E\n                        \u003Cbutton class=\"action-edit btn btn-mini\"\u003EEdit\u003C/button\u003E\n                        \u003Cbutton class=\"action-delete btn btn-mini\"\u003EDelete\u003C/button\u003E\n                        \u003Cbutton class=\"action-spam btn btn-mini\"\u003ESpam\u003C/button\u003E\n                        \u003Cbutton class=\"action-block btn btn-mini\"\u003EBlock\u003C/button\u003E\n                      \u003C/span\u003E\n                    \u003C/span\u003E\n                    \u003Cdiv class=\"alertMessage blockMessage warning\" id=\"confirmDialog\"\u003E\n                        \u003Cspan class=\"title\"\u003EAre you sure you want to\u003C/span\u003E\n                        \u003Cbutton class=\"btn btn-mini\" id=\"yes\"\u003EYes\u003C/button\u003E\n                        \u003Cbutton class=\"btn btn-mini\" id=\"no\"\u003ENo\u003C/button\u003E\n                    \u003C/div\u003E\n                    \u003Cdiv class=\"alertMessage blockMessage warning\" id=\"messageDialog\"\u003E\n                        Your message goes here\n                    \u003C/div\u003E\n\n                    \u003Cspan class=\"j-loading hide\"\u003E \u003Cimg src=\"\u003C%= $slideshare_conf['static-origin-server'] %\u003Eimages/indicator.gif\" height=\"5\" alt=\"Processing\u0026hellip;\" width=\"21\" /\u003E \u003C/span\u003E\n\n                \u003C/li\u003E","ajaxurl":"/~/slideshow/comments/2943932.json","captcha_url":"http://s3.amazonaws.com/ss-captchas/","total_count":0},"doc":"capistranorecipebook-100118175359-phpapp01","preview":"no","cached_template_url":"//public.slidesharecdn.com/get_cacheable_template","flagging":{"flagged_value":null},"pvt":0,"slideshow":{"type":"presentation","is_audio":false,"is_author_premium":false,"pin_image_url":"http://cdn.slidesharecdn.com/ss_thumbnails/capistranorecipebook-100118175359-phpapp01-thumbnail-4.jpg?1263874041","allow_embeds":true,"zeroclipboard_url":"http://static.slidesharecdn.com/ZeroClipboard.swf","form_after_slide_number":null,"facade_slide_url":"http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-1-728.jpg?1263874041","embed_sizes":{"config":{"defaultPreset":"preset2"},"presets":{"preset2":{"displaySize":{"height":38,"width":50},"size":{"height":355,"width":425}},"preset3":{"displaySize":{"height":45,"width":60},"size":{"height":420,"width":510}},"preset4":{"displaySize":{"height":53,"width":70},"size":{"height":485,"width":595}},"preset1":{"displaySize":{"height":30,"width":40},"size":{"height":290,"width":340}}}},"iframe_url":"http://www.slideshare.net/slideshow/embed_code/2943932","form_is_blocking":false,"user_login":"timriley","wp_code":"[slideshare id=2943932\u0026doc=capistranorecipebook-100118175359-phpapp01]","title":"Making Your Capistrano Recipe Book","ss_url":"http://www.slideshare.net/timriley/making-your-capistrano-recipe-book","total_slides":18,"fullscreen_bg_color":"White","id":"2943932","view_action_state":"unpublished","iframe_code":"\u003Ciframe src=\"{iframe_url}\" width=\"{width}\" height=\"{height}\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" style=\"border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px\" allowfullscreen\u003E \u003C/iframe\u003E \u003Cdiv style=\"margin-bottom:5px\"\u003E \u003Cstrong\u003E \u003Ca href=\"https://www.slideshare.net/timriley/making-your-capistrano-recipe-book\" title=\"Making Your Capistrano Recipe Book\" target=\"_blank\"\u003EMaking Your Capistrano Recipe Book\u003C/a\u003E \u003C/strong\u003E from \u003Cstrong\u003E\u003Ca href=\"http://www.slideshare.net/timriley\" target=\"_blank\"\u003ETim Riley\u003C/a\u003E\u003C/strong\u003E \u003C/div\u003E","show_related_content":"1","user_name":"Tim Riley"},"show_ads":{},"sharing_more":{"url":"http://www.slideshare.net/~/slideshow/sharing_more/2943932.html"},"category":{"featured":0},"version_no":"1263874041","default_tab":".svMoreAuthor","relative_static_origin_server":"//public.slidesharecdn.com/","asset_id":"47141","key":false,"facebook_app_id":2490221586,"embeds_count":12,"fb_app_name":"slideshare","top_nav":{"get_url":"/top_nav"},"beacon_url":"stats.slideshare.net/1.gif"}; var user_info =  {"name":null,"su":false,"is_pro":"false","userGroup":"non-member","fb_access_token":null,"is_opengraph_user":false,"id":null,"has_uploads":null,"is_fbuser":null,"fb_userid":null,"opengraph_permissions":{},"loggedin":false,"login":"guest"}; 
+//--></script>
+  <script id="adQueue" type="text/javascript"><!--
+ if(!slideshare_object.delayedLIAd){ slideshare_object._adQueue = []; } 
+//--></script>
+  <script type="text/javascript">
+//<![CDATA[
+jQl.loadjQ("//public.slidesharecdn.com/slideview/scripts/combined_presentation_init.js?47141");
+//]]>
+</script>
+    
+  <script type="text/javascript" id="ga-init">
+  // <![CDATA[
+    window._gaq = [];
+    window._gaq.push(['_trackEvent', 'bigfoot_slideview', 'pageload', slideshare_object.gam_cat_name, undefined, true]);
+    window._sstq && _sstq.push(['track', 'player_share_cta', 'slideview_pageload']);
+    if(slideshare_object.user.member_type === "non-member"){
+      window._gaq.push(['_trackEvent', 'bigfoot_slideview', 'loggedout_pageload', slideshare_object.gam_cat_name, undefined, true]);
+    }
+  // ]]>
+  </script>
+  <script id="h-qu-experiment-instrumentation"></script>
+  <script id="rails_environment" type="text/javascript"><!--
+ slideshare_object.deploy_environment = 'production';
+//--></script>
+
+  
+  
+ 
+  <!--[if lt IE 9]><script src="//public.slidesharecdn.com/javascripts/plugins/html5.js"></script><![endif]-->
+
+  <script type="text/javascript">
+//<![CDATA[
+
+var smtId = "ab5bb963d";
+var smtDefaultStyles = false;
+var smtRedirect = true;
+var smtProt = (("https:" == document.location.protocol) ? "https://" : "http://");
+
+var smtPreRender = function(data) {
+  for (i in data) {
+    if (data[i].code === "en-us") {
+      data[i].name = "English";
+    }
+  }
+};
+
+var smtRedirectMapper = function(locale, sites) {
+  if (/^es/i.test(locale)){ //disable redirect to spanish site
+    return null;
+  }
+  if (locale in sites) {
+    return sites[locale];
+  }
+  if (/^fr/i.test(locale)) {
+    return sites['fr-fr'] || null;
+  }
+  if (/^de/i.test(locale)) {
+    return sites['de-de'] || null;
+  }
+  return null;
+};
+
+document.write(unescape("%3Cscript src='" + smtProt + "cdn01.smartling.com/ls/"+ smtId +".js' type='text/javascript'%3E%3C/script%3E"));
+
+//]]>
+</script>
+
+  <link rel="Shortcut Icon" href="//public.slidesharecdn.com/images/favicon.ico">
+  <link href="http://www.slideshare.net/timriley/making-your-capistrano-recipe-book" rel="canonical" />
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/latest">
+  <link rel="search" type="application/opensearchdescription+xml" href="/search/opensearch.xml" title="SlideShare Search">
+  <link href="http://www.slideshare.net/api/oembed/2?format=json&amp;url=http://www.slideshare.net/timriley/making-your-capistrano-recipe-book" title="Slideshow oEmbed Profile" rel="alternate" type="application/json+oembed" />
+  <link href="http://www.slideshare.net/api/oembed/2?format=xml&amp;url=http://www.slideshare.net/timriley/making-your-capistrano-recipe-book" title="Slideshow oEmbed Profile" rel="alternate" type="text/xml+oembed" />
+  <link href="http://www.slideshare.net/mobile/timriley/making-your-capistrano-recipe-book" rel="alternate" media="handheld" />
+  
+  <!-- fb open graph meta tags -->
+  <meta name="fb_app_id" property="fb:app_id" class="fb_og_meta" content="2490221586" />
+  <meta name="og_type" property="og:type" class="fb_og_meta" content="slideshare:presentation" />
+  <meta name="og_url" property="og:url" class="fb_og_meta" content="http://www.slideshare.net/timriley/making-your-capistrano-recipe-book" />
+  <meta name="og_image" property="og:image" class="fb_og_meta" content="http://cdn.slidesharecdn.com/ss_thumbnails/capistranorecipebook-100118175359-phpapp01-thumbnail-4.jpg?1263874041" />
+  <!-- SL:start:notranslate -->
+  <meta name="og_title" property="og:title" class="fb_og_meta" content="Making Your Capistrano Recipe Book" />
+  <meta name="og_description" property="og:description" class="fb_og_meta" content="Talk given at January 2010 Sydney RORO (Ruby on Rails Oceania) meeting." />
+  <!-- SL:end:notranslate -->
+  <meta name="slideshow_published_time" property="slideshare:published" class="fb_og_meta" content="2010-01-18T17:53:32-06:00" />
+  <meta name="slideshow_author" property="slideshare:author" class="fb_og_meta" content="http://www.slideshare.net/timriley" />
+  <meta name="slideshow_view_count" property="slideshare:view_count" class="fb_og_meta" content="15899" />
+  <meta name="slideshow_embed_count" property="slideshare:embed_count" class="fb_og_meta" content="12" />
+  <meta name="slideshow_comment_count" property="slideshare:comment_count" class="fb_og_meta" content="0" />
+  <meta name="slideshow_download_count" property="slideshare:download_count" class="fb_og_meta" content="100" />
+  <meta name="slideshow_created_at" property="slideshare:created_at" class="fb_og_meta" content="Mon Jan 18 17:53:32 -0600 2010" />
+  <meta name="slideshow_updated_at" property="slideshare:updated_at" class="fb_og_meta" content="Mon Jan 18 22:07:21 -0600 2010" />
+  <meta name="slideshow_featured_on" property="slideshare:featured_on" class="fb_og_meta" content="" />
+  <meta name="slideshow_favorites_count" property="slideshare:favorites_count" class="fb_og_meta" content="11" />
+  <meta name="slideshow_category" property="slideshare:category" class="fb_og_meta" content="Technology" />
+  
+  <!-- SL:start:notranslate -->
+  <meta name="twitter:card" value="player" />
+  <meta name="twitter:site" value="@slideshare" />
+  <meta name="twitter:player" class="twitter_player" value="https://www.slideshare.net/slideshow/embed_code/2943932" />
+  <meta name="twitter:player:width" value="342" />
+  <meta name="twitter:player:height" value="291" />
+  <meta name="twitter:title" class="twitter_title" value="Making Your Capistrano Recipe Book" />
+  <meta name="twitter:image" class="twitter_image" value="http://cdn.slidesharecdn.com/ss_thumbnails/capistranorecipebook-100118175359-phpapp01-thumbnail.jpg?1263874041" />
+  <!-- SL:end:notranslate -->
+
+  </head>
+  
+  <body class="">
+    <div class="li-global-msg-container hide"></div>
+    <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <div class="logo-wrapper" itemscope itemtype="http://schema.org/Organization">
+              <a class="sprite-brand" href="/?ss" itemprop="url" title="Homepage" id="j-slideshare-logo" rel="tooltip">
+                <img itemprop="logo" src="//public.slidesharecdn.com/images/logo.png" width="185" height="38" alt="SlideShare" />
+              </a>
+            </div>
+            <form class="navbar-search pull-left" method="get" action="/search/slideshow">
+              <input type="submit" class="iconTemp-search hide-text">
+              <input name="searchfrom" type="hidden" value="header">
+              <input class="search-query" name="q" id="search_query_top" type="text" placeholder="Search&hellip;" autocomplete="off">
+              <div class="suggestionContainer"></div>
+            </form>
+            
+            <ul class="nav">
+                <li>
+                  <span>
+                  <a href="/upload?from_source=loggedout_slideview_navbar" class="btn btn-primary h-upload-navbar" rel="nofollow">Upload</a>
+                  </span></li>
+                <li class="dropdown" id="browse">
+                    <a href="#browse" class="dropdown-toggle-caret" data-toggle="dropdown">Browse <span class="divider">&nbsp;</span><b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="/featured">Featured</a>
+                        </li>
+                        <li>
+                            <a href="/popular">Most viewed</a>
+                        </li>
+                        <li>
+                            <a href="/most-favorited">Most liked</a>
+                        </li>
+                        <li>
+                            <a href="/pro_accounts">Channels</a>
+                        </li>
+                        <li>
+                            <a href="/popular/media/videos">Videos</a>
+                        </li>
+                    </ul>
+                </li>                
+            </ul>
+            <div class="pull-right" id="topNavLinks-11">
+ <ul class="nav pull-right" id="login_link">
+
+     <li>
+        <a id="go-pro" href="/business/premium/plans?cmp_src=general&cmp_src_from=main_nav" title="Upgrade to SlideShare PRO" class="goPro j-tooltip" onclick="window._gaq = _gaq || []; _gaq.push(['_trackEvent', 'top_nav','topnav','business-index']);">
+            Go <span class="goProLabel">Pro</span>
+        </a>
+     </li>
+
+
+     <li>
+        <a id="login" href="https://www.slideshare.net/login" class="void_fancybox void_redirect_link">Login</a>
+     </li>
+     <li>
+        <a id="signup" href="https://www.slideshare.net/signup" class="void_fancybox void_redirect_link" title="Signup now for a SlideShare account">Signup</a>
+     </li>
+
+ </ul>
+
+
+</div>
+          </div>
+        </div>
+    </div>
+    
+   
+ 
+      <div id="fb-root"></div>
+      
+
+    <section>
+
+        
+        <div class="sectionElements container">
+        <div class="banner h-top-ad">
+            <div class="leaderboard1" id="leaderboardAd" style="height:36px"><script type="text/javascript"> slideshare_object._adQueue.push({ tile : 1, zone : 'slideview', dart_code: '%3Bkw%3DBusiness%3Bkw%3DProgramming%3Bkw%3DLanguages%3Bkw%3DRuby%3Bkw%3DRails%3Bkw%3DTelecommunications%3Bkw%3DServices%3Bkw%3DOAuth%3Bcat%3Dbusiness-mgmt%3Bcat%3Dtechnology', width: 1, height: 1, appendTo: 'leaderboardAd'}); </script></div>
+            
+        </div>
+        
+        
+        <div id="h-modal-flash"></div>
+        <div class="playerWrapper" style="width: 728px;">
+            <div class="actions">
+                <ul class="ssActions h-tools">
+                    <li class="action-share public-only"><a href="#" title="Email this presentation to your contacts" class="sprite iconEmail j-tooltip" rel="nofollow">Email</a></li>
+                    <li class="action-addfav public-only" ><a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" title="Like this" class="sprite iconFav j-tooltip" rel="nofollow">Like</a></li>
+
+                    <li class="action-fav public-only" style="display:none">
+                    <a href="#" class="sprite removeFav delete iconFavOn j-tooltip" title="You have liked this" rel="nofollow">Liked <strong>&times;</strong></a>
+                      <span class="j-favPulse fav-pulse"></span>
+                    </li>
+                    
+                    <li class="action-download" style=""><a href="/signup?login_source=slideview.popup.download&from=download&from_source=%2Fsavedfiles%3Fs_title%3Dmaking-your-capistrano-recipe-book%26user_login%3Dtimriley&download_id=2943932-036b7f5a985d07bbf819713f5879c04c4b77ea03-slideshow" title="Save this presentation" class="sprite iconDownload j-tooltip" rel="nofollow">Save</a></li>
+                    
+                    <li class="hide h-private-notice last"><span class="iconPrivate" title="Private Content">Private Content</span></li>
+                    <li class="action-embed h-action-embed"><a href="#" title="Embed this presentation" class="sprite iconEmbed j-tooltip" rel="nofollow">Embed</a></li>
+                    <li class="expandedOverlay action-embed-code embedPanel h-embed-allow" style="display:none">Loading embed code&hellip;</li>
+                  <li class="expandedOverlay action-addfav-new public-only" style="display:none">
+                    <a class="close cancel">&times;</a>
+                    <i class="linkedin-picture"></i>
+                    <p class="linkedin-shared">This activity has also been shared with your LinkedIn network</p>
+                    <span rel="tooltip" data-original-title="You can undo LinkedIn share from the activity feed on your LinkedIn profile."><a class="iconTemp-question-sign" href="#"></a></span>&nbsp;<a class="muted text-info" href="http://www.linkedin.com" target="_blank">Undo LinkedIn share</a>&nbsp;<a href="#" class="fav-settings"><i class="iconTemp-cog"></i>Settings</a>
+                  </li>
+
+                  <li class="expandedOverlay action-unverified-download public-only" style="display:none">
+                     <p>
+                        We have emailed the verification/download link to <strong>"<span class="user-email"></span>"</strong>.
+                        <br/>
+                        Login to your email and click the link to download the file directly.
+                      </p>
+                      <form class='changeEmail change-unverified-email'>
+                        <fieldset>
+                        <legend>To request the link at a different email address, update it here.</legend>
+                        <input name="unverified-email" class="text unverified-email" value="" />
+                        <input type='submit' class="submit btn" value="Update" />
+                        <a class="ilink cancel" href="#" rel="nofollow">Close</a><br/>
+                        <span class='change-unverified-email-validate' style='display:none'>Validation messages.</span>
+                        <span class='change-unverified-email-win' style='display:none;color:#0A0'>Success message.</span>
+                        <span class='change-unverified-email-fail' style='display:none;color:#A00'>Fail message.</span>
+                        </fieldset>
+                      </form>
+                      <p style="margin:0"><span class="hint">Check your bulk/spam folders if you can't find our mail.</span></p>
+                    </li>
+
+                  <li class="expandedOverlay action-leads-contact" style="display:none">
+                      
+                  </li>
+                  <li class="expandedOverlay j-menu-loading" style="display:none">
+                    <div class="svLightBox"><span class="h-loading">Loading <img alt="Loading&hellip;" src="//public.slidesharecdn.com/images/indicator.gif" height="5" width="21" style="margin:0;float:none;vertical-align:middle" /></span>
+                    </div>
+                  </li>
+                </ul>
+                
+            </div>
+
+            
+            <div class="h-js-player"><!-- For slideview page , combined js for player is now combined with slideview javascripts for logged out users-->
+ 
+
+<div class="player lightPlayer fluidImage presentation_player" id="svPlayerId">
+  <div class="stage">
+    <a class="exit-fullscreen j-exit-fullscreen"></a>
+    <div class="slide_container">
+            <div data-index="1" class="slide show">
+              <img class="slide_image" src="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-1-728.jpg?1263874041" data-normal="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-1-728.jpg?1263874041" data-full="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-1-1024.jpg?1263874041" data-small="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/85/slide-1-320.jpg?1263874041" />
+            </div>
+            <div data-index="2" class="slide">
+              <img class="slide_image" src="" data-normal="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-2-728.jpg?1263874041" data-full="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-2-1024.jpg?1263874041" data-small="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/85/slide-2-320.jpg?1263874041" />
+            </div>
+            <div data-index="3" class="slide">
+              <img class="slide_image" src="" data-normal="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-3-728.jpg?1263874041" data-full="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-3-1024.jpg?1263874041" data-small="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/85/slide-3-320.jpg?1263874041" />
+            </div>
+            <div data-index="4" class="slide">
+              <img class="slide_image" src="" data-normal="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-4-728.jpg?1263874041" data-full="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-4-1024.jpg?1263874041" data-small="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/85/slide-4-320.jpg?1263874041" />
+            </div>
+            <div data-index="5" class="slide">
+              <img class="slide_image" src="" data-normal="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-5-728.jpg?1263874041" data-full="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-5-1024.jpg?1263874041" data-small="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/85/slide-5-320.jpg?1263874041" />
+            </div>
+            <div data-index="6" class="slide">
+              <img class="slide_image" src="" data-normal="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-6-728.jpg?1263874041" data-full="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-6-1024.jpg?1263874041" data-small="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/85/slide-6-320.jpg?1263874041" />
+            </div>
+            <div data-index="7" class="slide">
+              <img class="slide_image" src="" data-normal="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-7-728.jpg?1263874041" data-full="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-7-1024.jpg?1263874041" data-small="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/85/slide-7-320.jpg?1263874041" />
+            </div>
+            <div data-index="8" class="slide">
+              <img class="slide_image" src="" data-normal="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-8-728.jpg?1263874041" data-full="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-8-1024.jpg?1263874041" data-small="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/85/slide-8-320.jpg?1263874041" />
+            </div>
+            <div data-index="9" class="slide">
+              <img class="slide_image" src="" data-normal="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-9-728.jpg?1263874041" data-full="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-9-1024.jpg?1263874041" data-small="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/85/slide-9-320.jpg?1263874041" />
+            </div>
+            <div data-index="10" class="slide">
+              <img class="slide_image" src="" data-normal="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-10-728.jpg?1263874041" data-full="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-10-1024.jpg?1263874041" data-small="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/85/slide-10-320.jpg?1263874041" />
+            </div>
+            <div data-index="11" class="slide">
+              <img class="slide_image" src="" data-normal="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-11-728.jpg?1263874041" data-full="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-11-1024.jpg?1263874041" data-small="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/85/slide-11-320.jpg?1263874041" />
+            </div>
+            <div data-index="12" class="slide">
+              <img class="slide_image" src="" data-normal="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-12-728.jpg?1263874041" data-full="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-12-1024.jpg?1263874041" data-small="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/85/slide-12-320.jpg?1263874041" />
+            </div>
+            <div data-index="13" class="slide">
+              <img class="slide_image" src="" data-normal="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-13-728.jpg?1263874041" data-full="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-13-1024.jpg?1263874041" data-small="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/85/slide-13-320.jpg?1263874041" />
+            </div>
+            <div data-index="14" class="slide">
+              <img class="slide_image" src="" data-normal="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-14-728.jpg?1263874041" data-full="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-14-1024.jpg?1263874041" data-small="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/85/slide-14-320.jpg?1263874041" />
+            </div>
+            <div data-index="15" class="slide">
+              <img class="slide_image" src="" data-normal="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-15-728.jpg?1263874041" data-full="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-15-1024.jpg?1263874041" data-small="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/85/slide-15-320.jpg?1263874041" />
+            </div>
+            <div data-index="16" class="slide">
+              <img class="slide_image" src="" data-normal="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-16-728.jpg?1263874041" data-full="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-16-1024.jpg?1263874041" data-small="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/85/slide-16-320.jpg?1263874041" />
+            </div>
+            <div data-index="17" class="slide">
+              <img class="slide_image" src="" data-normal="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-17-728.jpg?1263874041" data-full="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-17-1024.jpg?1263874041" data-small="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/85/slide-17-320.jpg?1263874041" />
+            </div>
+            <div data-index="18" class="slide">
+              <img class="slide_image" src="" data-normal="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-18-728.jpg?1263874041" data-full="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/95/slide-18-1024.jpg?1263874041" data-small="http://image.slidesharecdn.com/capistranorecipebook-100118175359-phpapp01/85/slide-18-320.jpg?1263874041" />
+            </div>
+    </div>
+  </div> <!-- end stage -->
+    <div class="toolbar_wrapper">
+      <div class="toolbar normal">
+        <!--[if IE 7]>
+  <style>
+    .toolbar .navActions { position: relative; top: -28px; }
+    div.toolbar .nav {margin-left : 37%; }
+  </style>
+<![endif]-->
+  <a href="#" class="sprite btnViewOnSS" title="View on SlideShare">&nbsp;</a><!-- view on SS -->
+  <div class="nav">
+    <a href="#btnFirst" class="btnFirst" title="First Slide" rel="nofollow">&laquo;</a>
+    <a href="#btnPrevious" class="btnPrevious" title="Previous Slide" rel="nofollow">&lsaquo;</a>
+    <a href="#btnNext" class="btnNext" title="Next Slide" rel="nofollow">&rsaquo;</a>
+    <a href="#btnLast" class="btnLast" title="Last Slide" rel="nofollow">&raquo;</a>
+  </div>
+  <div class="navActions">
+    <a href="#" class="btnFullScreen" title="View Fullscreen" rel="nofollow">&nbsp;</a>
+    <a href="#" class="btnLeaveFullScreen" title="Exit Fullscreen" rel="nofollow">&nbsp;</a>
+    <label class="goToSlideLabel"><input type="text" name="goToSlide" value="1" /><span>/18</span></label>
+  </div>
+
+      </div>
+    </div>
+    <div class="image_maps"></div>
+</div>
+<script type="text/javascript">
+
+  $(document).ready(function() {
+    var ele = $('#svPlayerId');
+    
+    player = new SSPlayer(slideshare_object.jsplayer);
+    $(player).bind('slidechanged', function(e){
+      if(typeof(loadDataForSlide) === 'function'){
+      loadDataForSlide(e.ssData.index);
+     }
+    });
+
+    /* Infographics experiment */
+
+    setupInfographicPlayer = function() {
+      // Add proper class to the player
+      $(".player").addClass("infographic_player");
+
+      var $toolBar = $(".toolbar_wrapper");
+      var $topToolBar = $(".playerWrapper .actions");
+      var $toolBarClone = $toolBar.clone(true);
+
+      // Tweak bottom toolbar
+      $toolBar.children(".toolbar").empty().height(10).css({
+        "border-radius" : "0 0 3px 3px",
+        "border-bottom" : "none"
+      });
+
+      // Tweak new toolbar
+      $toolBarClone.find(".toolbar").css({
+        "background" : "none",
+        "border-top" : "none"
+      });
+      $toolBarClone.find(".nav").remove();
+      $toolBarClone.find(".goToSlideLabel").remove();
+
+      // Tweak top toolbar
+      $topToolBar.height(34);
+      $topToolBar.children(".ssActions").css({
+        "float"      : "left",
+        "margin-top" : "8px"
+      });
+
+      // Add new toolbar
+      $topToolBar.append($toolBarClone);
+
+      // Add exit fullscreen button, show it on mousemove, hide it after 2 seconds
+      var exitFullscreenOverlay = $("<div><div></div></div>").addClass("exit_fullscreen_overlay").appendTo($(".stage"));
+
+      exitFullscreenOverlay.on("click", function() {
+        $(".btnLeaveFullScreen").trigger("click");
+      });
+
+      var countdown;
+      var startCountDown = function() {
+        countdown = setTimeout(function() {
+          exitFullscreenOverlay.removeClass("show");
+        }, 2000);
+      }
+      $(".player").mousemove(function() {
+        exitFullscreenOverlay.addClass("show");
+        clearTimeout(countdown);
+        startCountDown();
+      })
+
+      // Set max height to prevent zooming from growing the player viewport
+      $(window).load(function() {
+        $(".stage").css({
+          "max-height" : $(".slide").first().height() + "px"
+        });
+      });
+    }
+
+    if (false && player.config.show_image_player && player.config.player_type === "document" && slideshare_object.totalSlides === 1) {
+      setupInfographicPlayer();
+    }
+  });
+</script>
+
+</div>
+            
+
+        </div>
+
+        
+
+        
+
+        <aside class="h-related-more-tab j-related-more-tab" style="">
+          <div class="mediumRectangleAd h-medium-rectangle-ad" style="margin:0 0 10px">
+            <div class="h-top-right-div j-top-right-div" id="topRightAd"><script type="text/javascript"> slideshare_object._adQueue.push({ tile : 5, zone : 'slideview', dart_code: '%3Bkw%3DBusiness%3Bkw%3DProgramming%3Bkw%3DLanguages%3Bkw%3DRuby%3Bkw%3DRails%3Bkw%3DTelecommunications%3Bkw%3DServices%3Bkw%3DOAuth%3Bcat%3Dbusiness-mgmt%3Bcat%3Dtechnology', width: 300, height: 250, appendTo: 'topRightAd'}); </script></div>
+            
+          </div>
+
+            <ul class="tabs">
+                <li title="" class="active j-related-slideshows h-related-tab"><a href="#">Related</a></li>
+                <li class="h-more-tab j-more-slideshows"><a href="#" data-original-title="More by Tim Riley" class="j-tooltip" rel="nofollow">More</a></li>  
+            </ul>
+            
+            <ul class="notranslate relatedContent thumbnailGrid h-related-slideshows j-tab-content activeContent" id="relatedList">
+<li>
+                    <a href="/romalapin/capistrano-for-php-applications-deployment" title="Capistrano for PHP Applications Deployment">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Capistrano for PHP Applications Deployment" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/capistrano-php-120422013526-phpapp01-thumbnail-2.jpg?1335076803" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Capistrano for PHP Applications Deployment</span>
+                        <span class="h-related-views view-count">1854&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="12637304" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="12637304" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/zfconf/zfconf-2012-capistrano-php" title="ZFConf 2012: Capistrano для деплоймента PHP-приложений (Роман Лапин)">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="ZFConf 2012: Capistrano для деплоймента PHP-приложений (Роман Лапин)" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/5-lapin-120422032809-phpapp01-thumbnail-2.jpg?1335083555" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">ZFConf 2012: Capistrano для деплоймента PHP-приложений (&hellip;</span>
+                        <span class="h-related-views view-count">1751&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="12637885" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="12637885" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/travisroberts/capistrano" title="Capistrano">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Capistrano" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/capistrano-100422131107-phpapp02-thumbnail-2.jpg?1271960413" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Capistrano</span>
+                        <span class="h-related-views view-count">692&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="3820253" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="3820253" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/travisroberts/capistrano-overview" title="Capistrano Overview">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Capistrano Overview" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/capistrano-100422183749-phpapp01-thumbnail-2.jpg?1271979513" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Capistrano Overview</span>
+                        <span class="h-related-views view-count">4983&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="3823796" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="3823796" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/freelancing_god/solving-the-riddle-of-search-using-sphinx-with-rails-1406954" title="Solving the Riddle of Search: Using Sphinx with Rails">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Solving the Riddle of Search: Using Sphinx with Rails" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/railsconf-sphinx-090508130811-phpapp01-thumbnail-2.jpg?1241879456" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Solving the Riddle of Search: Using Sphinx with Rails</span>
+                        <span class="h-related-views view-count">13455&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="1406954" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="1406954" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/tomcopeland/railsconf2011-deployment-tipsforslideshare" title="Railsconf2011 deployment tips_for_slideshare">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Railsconf2011 deployment tips_for_slideshare" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/railsconf2011deploymenttipsforslideshare-110518161155-phpapp01-thumbnail-2.jpg?1305753540" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Railsconf2011 deployment tips_for_slideshare</span>
+                        <span class="h-related-views view-count">2743&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="8017391" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="8017391" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/intinig/deploy-drupal-with-capistrano-a-year-later" title="Deploy Drupal With Capistrano A Year Later">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Deploy Drupal With Capistrano A Year Later" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/deploydrupalwithcapistranoayearlater-090618090126-phpapp02-thumbnail-2.jpg?1245333731" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Deploy Drupal With Capistrano A Year Later</span>
+                        <span class="h-related-views view-count">8250&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="1603333" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="1603333" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/SmartLogic/practical-chef-and-capistrano-for-your-rails-app" title="Practical Chef and Capistrano for Your Rails App">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Practical Chef and Capistrano for Your Rails App" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/practicalchefandcapistranoforyourrailsapp-121220084538-phpapp01-thumbnail-2.jpg?1356014829" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Practical Chef and Capistrano for Your Rails App</span>
+                        <span class="h-related-views view-count">4957&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="15713563" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="15713563" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/mpasternacki/best-of-both-worlds-4312897" title="Best Of Both Worlds">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Best Of Both Worlds" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/best-of-both-worlds-100526042933-phpapp02-thumbnail-2.jpg?1274866210" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Best Of Both Worlds</span>
+                        <span class="h-related-views view-count">2346&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="4312897" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="4312897" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/lucamea/capistrano2-presentation-905912" title="Capistrano2">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Capistrano2" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/capistrano2-1231592814855249-1-thumbnail-2.jpg?1231592982" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Capistrano2</span>
+                        <span class="h-related-views view-count">1733&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="905912" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="905912" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/adorepump/getting-started-with-capistrano-in-ten-easy-steps-presentation" title="Getting Started with Capistrano in Ten Easy Steps">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Getting Started with Capistrano in Ten Easy Steps" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/gettingstartedwithcapistrano-1228568174998584-9-thumbnail-2.jpg?1228560889" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Getting Started with Capistrano in Ten Easy Steps</span>
+                        <span class="h-related-views view-count">3399&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="824061" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="824061" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/m3nd3s/deploying-rails-applications-with-capistrano" title="Deploying Rails Applications with Capistrano">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Deploying Rails Applications with Capistrano" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/capistrano-110720122829-phpapp01-thumbnail-2.jpg?1311182974" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Deploying Rails Applications with Capistrano</span>
+                        <span class="h-related-views view-count">1372&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="8646091" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="8646091" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/nyrostechnologies/capistrano-deployment-by-nyros-developer" title="Capistrano Deployment By Nyros Developer">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Capistrano Deployment By Nyros Developer" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/capdeployment-100721004603-phpapp01-thumbnail-2.jpg?1279691234" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Capistrano Deployment By Nyros Developer</span>
+                        <span class="h-related-views view-count">2220&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="4801205" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="4801205" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/nyrostechnologies/deploying-rails-apps-with-capistrano-1595280" title="Deploying Rails Apps with Capistrano">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Deploying Rails Apps with Capistrano" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/capistranobychaitanya-090616225528-phpapp01-thumbnail-2.jpg?1245211280" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Deploying Rails Apps with Capistrano</span>
+                        <span class="h-related-views view-count">4662&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="1595280" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="1595280" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/jasonjnoble/capistrano-2656318" title="Capistrano">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Capistrano" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/capistrano-091205111826-phpapp02-thumbnail-2.jpg?1260033564" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Capistrano</span>
+                        <span class="h-related-views view-count">2661&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="2656318" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="2656318" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/launchany/getting-started-with-capistrano-13619676" title="Getting Started with Capistrano">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Getting Started with Capistrano" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/capistrano-gettingstarted-120712131542-phpapp01-thumbnail-2.jpg?1342117031" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Getting Started with Capistrano</span>
+                        <span class="h-related-views view-count">944&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="13619676" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="13619676" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/nyrostechnologies/capistrano-deployment-tool" title="Capistrano - Deployment Tool">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Capistrano - Deployment Tool" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/capistranobynagesh-090616222527-phpapp02-thumbnail-2.jpg?1245210259" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Capistrano - Deployment Tool</span>
+                        <span class="h-related-views view-count">3986&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="1595227" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="1595227" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/GergelyNmeth1/deploy-nodejs-app-with-capistrano" title="Deploy node.js app with capistrano">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Deploy node.js app with capistrano" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/deploynode-130816064739-phpapp01-thumbnail-2.jpg?1376654583" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Deploy node.js app with capistrano</span>
+                        <span class="h-related-views view-count">508&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="25307276" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="25307276" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/ladislavprskavec/deployment-prakticky" title="Deployment prakticky">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Deployment prakticky" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/prednaska-110923042050-phpapp01-thumbnail-2.jpg?1316771414" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Deployment prakticky</span>
+                        <span class="h-related-views view-count">3573&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="9388737" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="9388737" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/igasgeek/ec2-15411793" title="EC2">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="EC2" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/ec2-121129120332-phpapp01-thumbnail-2.jpg?1354212377" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">EC2</span>
+                        <span class="h-related-views view-count">250&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="15411793" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="15411793" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/robbertvandenbogerd/deployment-talk-dpc-13-v2" title="Deployment talk dpc 13">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Deployment talk dpc 13" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/deploymenttalkdpc13v2-130608082318-phpapp01-thumbnail-2.jpg?1370697947" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Deployment talk dpc 13</span>
+                        <span class="h-related-views view-count">414&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="22658075" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="22658075" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/SmartLogic/guided-exploration-deploying-rails-apps-with-chef-and-capistrano" title=" Deploying Rails Apps with Chef and Capistrano">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt=" Deploying Rails Apps with Chef and Capistrano" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/guidedexploration-deployingrailsappswithchefandcapistrano-130726095039-phpapp02-thumbnail-2.jpg?1374855409" />
+                          </span>
+                        </span>
+                        <span class="h-related-title"> Deploying Rails Apps with Chef and Capistrano</span>
+                        <span class="h-related-views view-count">876&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="24653779" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="24653779" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/DigitalNativesBudapest/budapestrb-201101-rails-deployment" title="Budapest.rb 2011/01 - Rails Deployment">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Budapest.rb 2011/01 - Rails Deployment" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/budapest-rb201101deployment-110121040123-phpapp02-thumbnail-2.jpg?1295604109" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Budapest.rb 2011/01 - Rails Deployment</span>
+                        <span class="h-related-views view-count">2697&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="6649867" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="6649867" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/smouf/secure-deployment-with-capistrano" title="Secure deployment with capistrano">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Secure deployment with capistrano" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/securedeploymentwithcapistrano-copie-121018115433-phpapp02-thumbnail-2.jpg?1350595190" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Secure deployment with capistrano</span>
+                        <span class="h-related-views view-count">349&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="14787192" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="14787192" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/teksymmetryan/deploy-rails-application-by-capistrano" title="Deploy Rails Application by Capistrano">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Deploy Rails Application by Capistrano" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/rubyonrails-100119014108-phpapp01-thumbnail-2.jpg?1263886885" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Deploy Rails Application by Capistrano</span>
+                        <span class="h-related-views view-count">3823&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="2946158" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="2946158" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/zfconf/6-sphinxoverview2011" title="ZFConf 2011: Что такое Sphinx, зачем он вообще нужен и как его использовать с PHP (от простого индекса до поискового кластера) (Владимир Федорков)">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="ZFConf 2011: Что такое Sphinx, зачем он вообще нужен и как его использовать с PHP (от простого индекса до поискового кластера) (Владимир Федорков)" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/6-sphinx-overview-2011-110615154920-phpapp02-thumbnail-2.jpg?1308173380" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">ZFConf 2011: Что такое Sphinx, зачем он вообще нужен �&hellip;</span>
+                        <span class="h-related-views view-count">2428&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="8319997" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="8319997" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/dugsmith/twostep-deployment-with-rails" title="Two-Step Deployment with Rails">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Two-Step Deployment with Rails" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/deploylightningpreso-130307110448-phpapp02-thumbnail-2.jpg?1367385987" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Two-Step Deployment with Rails</span>
+                        <span class="h-related-views view-count">177&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="17010557" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="17010557" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/jesusejackson/developing-rails-apps-in-technical-isolation" title="Developing Rails Apps in Technical Isolation">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Developing Rails Apps in Technical Isolation" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/developingrailsappsintechnicalisolation-130514203542-phpapp02-thumbnail-2.jpg?1368581797" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Developing Rails Apps in Technical Isolation</span>
+                        <span class="h-related-views view-count">168&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="21182341" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="21182341" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/sazwqa/using-thinking-sphinx-with-rails-presentation" title="Using Thinking Sphinx with rails">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Using Thinking Sphinx with rails" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/sp4-1227528901740588-8-thumbnail-2.jpg?1227522973" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Using Thinking Sphinx with rails</span>
+                        <span class="h-related-views view-count">15280&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="782883" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="782883" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/keithpitty/why-would-a-java-shop-want-to-use-ruby" title="Why would a Java shop want to use Ruby?">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Why would a Java shop want to use Ruby?" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/why-would-a-java-shop-want-to-use-ruby-1196308108114620-2-thumbnail-2.jpg?1196300909" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Why would a Java shop want to use Ruby?</span>
+                        <span class="h-related-views view-count">6408&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="185111" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="185111" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/peter_marklund/ruby-on-rails-101-presentation-slides-for-a-five-day-introductory-course" title="Ruby on Rails 101 - Presentation Slides for a Five Day Introductory Course">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Ruby on Rails 101 - Presentation Slides for a Five Day Introductory Course" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/ruby-on-rails-101-presentation-slides-for-a-five-day-introductory-course-119407436077654-3-thumbnail-2.jpg?1235730743" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Ruby on Rails 101 - Presentation Slides for a Five Day Introductory Course</span>
+                        <span class="h-related-views view-count">207540&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="154208" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="154208" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/AliHishamMalik/ror-training-workshop" title="RoR Training Workshop">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="RoR Training Workshop" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/rorworkshop-v7-121115011332-phpapp01-thumbnail-2.jpg?1352978122" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">RoR Training Workshop</span>
+                        <span class="h-related-views view-count">1453&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="15185785" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="15185785" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/intinig/deploy-drupal-with-capistrano-presentation" title="Deploy Drupal With Capistrano">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Deploy Drupal With Capistrano" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/deploydrupalwithcapistrano-1223130890636917-8-thumbnail-2.jpg?1223123765" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Deploy Drupal With Capistrano</span>
+                        <span class="h-related-views view-count">3591&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="635839" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="635839" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/mauricio.linhares/deploying-your-rails-application-to-a-clean-ubuntu-10" title="Deploying your rails application to a clean ubuntu 10">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Deploying your rails application to a clean ubuntu 10" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/deployingyourrailsapplicationtoacleanubuntu10-100824235650-phpapp02-thumbnail-2.jpg?1282712269" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Deploying your rails application to a clean ubuntu 10</span>
+                        <span class="h-related-views view-count">11647&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="5050889" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="5050889" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/fiyuer/how-to-disassemble-one-monster-app-into-an-ecosystem-of-30-4836729" title="How to disassemble one monster app into an ecosystem of 30">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="How to disassemble one monster app into an ecosystem of 30" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/howtodisassembleonemonsterappintoanecosystemof30-100726012358-phpapp01-thumbnail-2.jpg?1280196179" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">How to disassemble one monster app into an ecosystem of 30</span>
+                        <span class="h-related-views view-count">1609&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="4836729" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="4836729" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/barnaclebarnes/things-i-heart-presentation" title="Things I Heart">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Things I Heart" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/things-i-heart-1226863982030472-9-thumbnail-2.jpg?1226856701" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Things I Heart</span>
+                        <span class="h-related-views view-count">2252&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="757933" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="757933" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/SwissHUG/14052012-opening-the-tool-box-development-testing-and-deployment-in-the-hadoop-ecosystem-jeanpierre-knig-memo-news-ag" title="14.05.2012 Opening the tool box: Development, testing and deployment in the Hadoop ecosystem (Jean-Pierre König, MeMo News AG)">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="14.05.2012 Opening the tool box: Development, testing and deployment in the Hadoop ecosystem (Jean-Pierre König, MeMo News AG)" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/mn-swisshug-openingthetoolbox-120516091228-phpapp01-thumbnail-2.jpg?1337177751" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">14.05.2012 Opening the tool box: Development, testing and deployment in the Hado&hellip;</span>
+                        <span class="h-related-views view-count">513&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="12956894" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="12956894" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/mathie/capistrano-2-rocks-my-world" title="Capistrano 2 Rocks My World">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Capistrano 2 Rocks My World" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/capistrano-2-rocks-my-world1884-thumbnail-2.jpg?1184912005" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Capistrano 2 Rocks My World</span>
+                        <span class="h-related-views view-count">5611&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="80167" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="80167" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/akandels/sphinx-full-text-search-server" title="Sphinx Full Text Search Server">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Sphinx Full Text Search Server" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/sphinx-120419165140-phpapp02-thumbnail-2.jpg?1334872393" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">Sphinx Full Text Search Server</span>
+                        <span class="h-related-views view-count">1528&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="12609032" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="12609032" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+
+<li>
+                    <a href="/nickblah/nlit-2011-chef-capistrano" title="NLIT 2011: Chef &amp; Capistrano">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="NLIT 2011: Chef &amp; Capistrano" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/2011-06-15chefcapistrano-110615082902-phpapp02-thumbnail-2.jpg?1308145212" />
+                          </span>
+                        </span>
+                        <span class="h-related-title">NLIT 2011: Chef &amp; Capistrano</span>
+                        <span class="h-related-views view-count">1724&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="8315375" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="8315375" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+</ul>
+
+            
+
+            </noscript>
+            <ul class="notranslate  moreContent thumbnailGrid h-author-slideshows j-tab-content" id="moreList" style="display:none">
+<li>
+                    <a href="/timriley/sinatra-fast-fun-flexible-web-apps-in-ruby" title="Sinatra: Fast, Fun &amp; Flexible Web Apps in Ruby">
+                        <span class="thumbWrapper">
+                          <span>
+                            <img class="h-thumbnail" src="//public.slidesharecdn.com/images/thumbnail.png" alt="Sinatra: Fast, Fun &amp; Flexible Web Apps in Ruby" width="120" original="http://cdn.slidesharecdn.com/ss_thumbnails/sinatrabcc2010links-100206195702-phpapp01-thumbnail-2.jpg?1265507867" />
+                          </span>
+                        </span>
+                        <span class="h-more-title">Sinatra: Fast, Fun &amp; Flexible Web Apps in Ruby</span>
+                        <span class="h-more-views view-count">932&nbsp;views</span>
+                    </a>
+                    <a href="/signup?login_source=slideview.popup.like&from=favorite&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" data-ssid="3092929" class="h-favorite j-favorite favorite-cta" rel="nofollow" style="">Like</a>
+                    <a href="javascript:void();" data-ssid="3092929" class="h-favorited j-favorited favorite-cta" rel="nofollow" style="display:none">Liked</a>
+                </li>
+</ul>
+
+            <span class="follow-in-sidebar h-follow-in-sidebar author">
+              <span class="h-author author-image"><img class="h-author-image" src="//cdn.slidesharecdn.com/profile-photo-timriley-48x48.jpg?1309579181" height="40" alt="Tim Riley" width="40" /></span>
+              <div class="follow-cta-container">
+                <span class="title">
+                  <p class="h-author-name">Tim Riley</p>
+                </span>
+                <span class="j-section-add-contact h-section-add-contact user-3489868"><a href="/signup?login_source=slideview.popup.follow&from=addcontact&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" class="btn btn-inverse h-follow" rel="nofollow">Follow</a></span>
+                <span class="hide indicator j-follow-progress h-follow-sidebar-progress"><img alt="Processing..." height="14" src="http://public.slidesharecdn.com/images/ssplayer/video_buffer.gif?a51c5608d0" style="float:none;" width="14" /></span>
+              </div>
+            </span>
+            
+
+        </aside>
+        <ul class="socialActions public-only j-socialActions">
+                  <li class="social-fb">
+                    <div data-send="false" class="fb-like" data-width="450" data-layout="box_count" data-href="http://www.slideshare.net/timriley/making-your-capistrano-recipe-book" data-colorscheme="dark" data-show-faces="false">
+                    </div>                            
+                  </li>
+                   <li class="social-tw">
+                        <a data-via="SlideShare" href="https://twitter.com/share" data-url="http://www.slideshare.net/timriley/making-your-capistrano-recipe-book" class="twitter-share-button" rel="nofollow" data-count="vertical" data-text="Making Your Capistrano Recipe Book #capistrano #deployment" data-related="">Tweet</a>
+                    </li>
+                    <li class="social-li">
+                       <script data-url="http://www.slideshare.net/timriley/making-your-capistrano-recipe-book" data-onsuccess="linkedInShareSuccess" data-counter="top" type="IN/Share"></script>
+                     </li>
+                  <li class="social-go">
+                    <div class="g-plusone" data-size="tall" data-annotation="none" data-callback="plusone_success"></div>
+                  </li>
+                  <li class="social-pi">
+                    <a href="#" class="sprite j-pinit pin-it-button" count-layout="none" target="_blank" title="Pin It">Pin It</a> 
+                  </li>
+                  <li class="social-wp">
+                     <a href="#" title="Embed this on your Wordpress blog" class="sprite action-wpshare" rel="nofollow">Wordpress</a>
+                  </li>
+                </ul>
+        </div><!-- .sectionElements -->
+    </section>
+
+    <article>
+        <div class="articleElements container">
+        <div class="articleCore">
+        <div class="author">
+            <a href="/timriley" title="timriley" class="notranslate h-author">
+                <img class="h-author-image" src="//cdn.slidesharecdn.com/profile-photo-timriley-48x48.jpg?1309579181" height="50" alt="Tim Riley" width="50" />
+            </a>
+            <span class="j-section-add-contact h-section-add-contact user-3489868"><a href="/signup?login_source=slideview.popup.follow&from=addcontact&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" class="button h-follow" rel="nofollow">+ Follow</a></span>
+            <span class="hide indicator j-follow-progress h-follow-progress"><img alt="Processing..." height="5" src="http://public.slidesharecdn.com/images/indicator.gif?cca1cac641" style="float:none;" width="21" /></span>
+        </div>
+
+        <div class="title">
+            <h1 class="h-slideshow-title notranslate">Making Your Capistrano Recipe Book</h1>
+            <h2>by <a href="/timriley?utm_campaign=profiletracking&amp;utm_medium=sssite&amp;utm_source=ssslideview" class="j-tooltip h-author-name notranslate" title="timriley" rel="author">Tim Riley</a><span class="h-date-container"> on <em class="h-slideshow-created-at">Jan 18, 2010</em></span>
+              
+            </h2>
+        </div>
+        <ul class="basicStats">
+            <li><strong class="j-tooltip h-view-count notranslate" title="15899 views">15,899</strong> views</li>
+        </ul>
+
+        <p class="description notranslate" style="">Talk given at January 2010 Sydney RORO (Ruby on Rails Oceania) meeting.</p>
+        <div class="descToggleMore" style="">
+            <button class="j-desc-more btn btn-inverse" type="button">More&hellip;</button>
+        </div>
+
+
+        <p class="descriptionExpanded notranslate" style="">Talk given at January 2010 Sydney RORO (Ruby on Rails Oceania) meeting.</p>
+
+        <div class="row detailedStats h-detail-stats" style="">
+
+          <div class="performance-stats"><h3><span class="sprite iconAnalytics">Statistics</span></h3></div>
+
+          <div class="row stats-wrapper">
+            <div class="h-stats">
+              <div class="span info-stats">
+                <h3>Views</h3>
+                <dl class="statistics">
+                  <dt class="sprite iconViews">Total Views</dt> <dd class="notranslate views">15,899</dd>
+                  <dt class="sprite iconSSViews">Views on SlideShare</dt> <dd class="notranslate on-site">6,349</dd>
+                  <dt class="sprite iconEmbedViews">Embed Views</dt> <dd class="notranslate from-embed">9,550</dd>
+                </dl>
+              </div>
+
+              <div class="span info-stats">
+                <h3>Actions</h3>
+                <dl class="statistics">
+                  <dt class="sprite iconFav">Likes</dt> <dd class="notranslate favorites">11</dd>
+                  <dt class="sprite iconDownload">Downloads</dt> <dd class="notranslate downloads">100</dd>
+                  <dt class="sprite iconComment">Comments</dt> <dd class="notranslate comments">0</dd>
+                </dl>
+              </div>
+
+              <div class="span info-stats h-embed-wrapper">
+                <h3 class="h-embed-heading embedHeading"><span class="embed-count">12 Embeds</span> <span class="notranslate from-embed hint">9,550</span></h3>
+                <div class="h-embeds infoEmbeds">
+                  
+                  <table class="notranslate embedDetails">
+                    <tbody>
+<tr>
+                        <td class="url h-url">http://openmonkey.com</td>
+                        <td class="count h-views">9502</td>
+                      </tr>
+
+<tr>
+                        <td class="url h-url">http://www.slideshare.net</td>
+                        <td class="count h-views">26</td>
+                      </tr>
+
+<tr>
+                        <td class="url h-url">http://francescoagati.posterous.com</td>
+                        <td class="count h-views">9</td>
+                      </tr>
+
+<tr>
+                        <td class="url h-url">http://webcache.googleusercontent.com</td>
+                        <td class="count h-views">4</td>
+                      </tr>
+
+<tr>
+                        <td class="url h-url">http://www.techgig.com</td>
+                        <td class="count h-views">2</td>
+                      </tr>
+
+<tr>
+                        <td class="url h-url">http://us-w1.rockmelt.com</td>
+                        <td class="count h-views">1</td>
+                      </tr>
+
+<tr>
+                        <td class="url h-url">http://web1.conversationminer.com</td>
+                        <td class="count h-views">1</td>
+                      </tr>
+
+<tr>
+                        <td class="url h-url">http://posterous.com</td>
+                        <td class="count h-views">1</td>
+                      </tr>
+
+<tr>
+                        <td class="url h-url">http://flavors.me</td>
+                        <td class="count h-views">1</td>
+                      </tr>
+
+<tr>
+                        <td class="url h-url">http://static.slidesharecdn.com</td>
+                        <td class="count h-views">1</td>
+                      </tr>
+
+<tr>
+                        <td class="url h-url">http://localhost:9292</td>
+                        <td class="count h-views">1</td>
+                      </tr>
+
+<tr>
+                        <td class="url h-url">http://www.docseek.net</td>
+                        <td class="count h-views">1</td>
+                      </tr>
+</tbody>
+                  </table>
+                </div>
+                <a href="#" class="h-more-embeds j-more-embeds" rel="nofollow">More...</a>
+                <img class="j-waiting-embeds" src="http://public.slidesharecdn.com/images/indicator.gif?cca1cac641" style="display: none; " />
+              </div>
+
+              
+
+              
+
+            </div>
+
+            </div>
+
+            <div class="h-generic info-generic">
+              <div class="span2">
+                <h3>Accessibility</h3>
+                <ul>
+                  <li class="h-view-text"><a class="j-text-version" href="#text-version">View text version</a></li>
+                </ul>
+              </div>
+              <div class="span2">
+                <h3 class="h-categories-label">Categories</h3>
+                <ul class="h-slideshow-categories">
+                  <li class="su-category"><a href="/category/business-mgmt">Business &amp; Mgmt</a></li>
+                  <li class="category"><a href="/category/technology" rel="nofollow">Technology</a></li>
+                </ul>
+              </div>
+              <div class="span2">
+                <h3>Upload Details</h3>
+                <p>Uploaded via <a href="/" class="api-credit-text" rel="nofollow">SlideShare</a> <span class="h-as-text">as </span><a href="/" class="uploaded-as">Apple Keynote</a></p>
+              </div>
+              <div class="span2">
+                <h3>Usage Rights</h3>
+                <p class="license">&copy; All Rights Reserved</p>
+              </div>
+              <!-- Flag begins here-->
+              <div class="span2">
+                <h3>Report content</h3>
+                <div class="flag flag-inappropriate">
+                  <a href="/signup?login_source=slideview.popup.flags&from=flagss&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" class="action-flag" rel="nofollow">
+                    <span title="This presentation has been flagged" class="j-tooltip flagged">Flagged as inappropriate</span>
+                    <span title="Flag this presentation as inappropriate" class="j-tooltip flag">Flag as inappropriate</span>
+                  </a>
+                  <form action="#" method="post" accept-charset="utf-8" style="display:none">
+                    <fieldset>
+                      <legend>Flag as inappropriate</legend>
+                      <p>Select your reason for flagging this <span class="type-string-down">presentation</span> as inappropriate. If needed, use the <a href="/feedback" rel="nofollow">feedback form</a> to let us know more details.</p>
+
+                      
+                      <select name="ia_value">
+                        <option value="0">None</option>
+                          <option value="1">Pornographic</option>
+                          <option value="3">Defamatory</option>
+                          <option value="4">Illegal/Unlawful</option>
+                                  <option value="6">Spam</option>
+                          <option value="5">Other Terms Of Service Violation</option>
+                          
+                          
+                          
+                          
+                        </select>
+
+                      <input type="submit" value="Flag" class="button action-submit" />
+                      <a href="#" class="ilink action-cancel" rel="nofollow">Cancel</a>
+                    </fieldset>
+                  </form>
+                </div>
+                <!-- Other issues similar to flagging begins here -->
+                <div>
+                  <a href="http://www.slideshare.net/terms#dmca" rel="nofollow">File a copyright complaint</a>
+                </div>
+                <!-- End other issues -->
+              </div><!-- Flag ends here-->
+
+              <!-- SuperUser actions being here-->
+              <!-- SuperUser actions end here-->
+
+          </div>
+
+        </div>
+
+        <div class="descToggle" style="">
+            <button class="j-desc-less btn btn-inverse" type="button">Less</button>
+        </div>
+
+        </div><!-- .articleCore -->
+
+        </div><!-- .articleElements -->
+    </article>
+
+    <div class="assets container">
+        <div class="commentsNotes">
+            <ul class="tabs">
+                <li class="active h-comments-tab j-comments"><a class="j-comments-tab" href="#"><em class="h-comments-count">No comments yet</em></a></li>
+                <li class="j-notes"><a class="j-notes-tab" href="#">Notes on Slide <em class="which-slide-value notranslate">1</em></a></li>
+            </ul>
+            <div class="commentsWrapper">
+            
+            <ul class="commentWrapper h-comment-list" id="commentsList" style="display: none;"></ul>
+            
+            
+            <form action="#" method="post" accept-charset="utf-8" id="postComment" class="postComment h-comment-post">
+              <fieldset>
+
+                
+                <textarea cols="40" rows="4" class="h-post-comment-textarea j-post-comment-textarea"></textarea>
+                <div class='h-non-user-message postCommentSubmit'>  
+                  <label class="comments-subscribe checkbox"><input type="checkbox" id="followupComments" checked="checked"> Subscribe to comments</label>
+                  <a href="/signup?login_source=slideview.popup.comment&from=comments&from_source=http%3A%2F%2Fwww.slideshare.net%2Ftimriley%2Fmaking-your-capistrano-recipe-book" class="btn btn-inverse" rel="nofollow" id="login-provider-slideshare">Post Comment</a>
+                </div><!-- .h-non-user-message -->
+
+                
+              </fieldset>
+            </form>
+
+
+            <form action="#" method="post" accept-charset="utf-8" class="updateComment update-form">
+              <fieldset>
+                <legend>Edit your comment</legend>
+                <textarea cols="40" rows="4"></textarea>
+                <input class="btn btn-mini action-update" type="submit" value="Update" />
+                <button class="btn btn-mini action-cancel">Cancel</button>
+              </fieldset>
+            </form>
+            </div>
+
+            <ul class="notranslate tabContent h-notes notesWrapper" id="notesList"></ul>
+        </div>
+
+        <!-- Favorites and Downloads start -->
+        <div class="favsDownloads">
+          <ul class="tabs">
+            <li class="active h-favorites-tab j-favorites"><a href="#favsList" rel="nofollow"><em class="h-favorites-count">11 Likes</em></a></li>
+            
+          </ul>
+          <ul class="favWrapper h-favs-list" id="favsList">
+<li>
+              <a href="/shogoochiai?utm_campaign=profiletracking&amp;utm_medium=sssite&amp;utm_source=ssslideshow" title="shogoochiai" class="notranslate favoriter h-favoriter" rel="nofollow">
+                <img class="nickname" src="//public.slidesharecdn.com/images/user-48x48.png" height="48" alt="shogoochiai" original="//cdn.slidesharecdn.com/profile-photo-shogoochiai-48x48.jpg?1380630772" width="48" />
+                <strong class="h-username ">Shogo Ochiai</strong><span class="bioStub"><span class="h-favoriter-role">, 社長補佐 </span><span class="h-favoriter-org"> at Change Field Inc.</span></span>
+              </a>
+              <span class="favTags h-tags notranslate"></span>
+              <span class="favoriteMeta">6 days ago</span>
+            </li>
+
+<li>
+              <a href="/wyvan?utm_campaign=profiletracking&amp;utm_medium=sssite&amp;utm_source=ssslideshow" title="wyvan" class="notranslate favoriter h-favoriter" rel="nofollow">
+                <img class="nickname" src="//public.slidesharecdn.com/images/user-48x48.png" height="48" alt="wyvan" original="//public.slidesharecdn.com/images/user-48x48.png" width="48" />
+                <strong class="h-username ">Yoon Wyvan</strong><span class="bioStub"><span class="h-favoriter-role"></span><span class="h-favoriter-org"></span></span>
+              </a>
+              <span class="favTags h-tags notranslate"></span>
+              <span class="favoriteMeta">6 months ago</span>
+            </li>
+
+<li>
+              <a href="/brunoarueira?utm_campaign=profiletracking&amp;utm_medium=sssite&amp;utm_source=ssslideshow" title="brunoarueira" class="notranslate favoriter h-favoriter" rel="nofollow">
+                <img class="nickname" src="//public.slidesharecdn.com/images/user-48x48.png" height="48" alt="brunoarueira" original="//cdn.slidesharecdn.com/profile-photo-brunoarueira-48x48.jpg?1363610460" width="48" />
+                <strong class="h-username ">Bruno Arueira</strong><span class="bioStub"><span class="h-favoriter-role">, Software Developer. </span><span class="h-favoriter-org"> at -</span></span>
+              </a>
+              <span class="favTags h-tags notranslate">Tags <strong><a href='/tag/capistrano' rel='nofollow'>capistrano</a></strong></span>
+              <span class="favoriteMeta">1 year ago</span>
+            </li>
+
+<li>
+              <a href="/dandrewsify?utm_campaign=profiletracking&amp;utm_medium=sssite&amp;utm_source=ssslideshow" title="dandrewsify" class="notranslate favoriter h-favoriter" rel="nofollow">
+                <img class="nickname" src="//public.slidesharecdn.com/images/user-48x48.png" height="48" alt="dandrewsify" original="//public.slidesharecdn.com/images/user-48x48.png" width="48" />
+                <strong class="h-username ">dandrewsify</strong><span class="bioStub"><span class="h-favoriter-role"></span><span class="h-favoriter-org"></span></span>
+              </a>
+              <span class="favTags h-tags notranslate">Tags <strong><a href='/tag/capistrano' rel='nofollow'>capistrano</a></strong></span>
+              <span class="favoriteMeta">1 year ago</span>
+            </li>
+
+<li>
+              <a href="/advani1?utm_campaign=profiletracking&amp;utm_medium=sssite&amp;utm_source=ssslideshow" title="advani1" class="notranslate favoriter h-favoriter" rel="nofollow">
+                <img class="nickname" src="//public.slidesharecdn.com/images/user-48x48.png" height="48" alt="advani1" original="//cdn.slidesharecdn.com/profile-photo-advani1-48x48.jpg?1376451998" width="48" />
+                <strong class="h-username ">Aditya Advani</strong><span class="bioStub"><span class="h-favoriter-role">, Human Interaction Agent </span><span class="h-favoriter-org"> at Moonraker Design</span></span>
+              </a>
+              <span class="favTags h-tags notranslate"></span>
+              <span class="favoriteMeta">1 year ago</span>
+            </li>
+
+<li>
+              <a href="/charlenopires?utm_campaign=profiletracking&amp;utm_medium=sssite&amp;utm_source=ssslideshow" title="charlenopires" class="notranslate favoriter h-favoriter" rel="nofollow">
+                <img class="nickname" src="//public.slidesharecdn.com/images/user-48x48.png" height="48" alt="charlenopires" original="//cdn.slidesharecdn.com/profile-photo-charlenopires-48x48.jpg?1378008185" width="48" />
+                <strong class="h-username ">Charleno Pires</strong><span class="bioStub"><span class="h-favoriter-role">, Professor </span><span class="h-favoriter-org"> at Instituto Federal do Piauí</span></span>
+              </a>
+              <span class="favTags h-tags notranslate">Tags <strong><a href='/tag/deploy' rel='nofollow'>deploy</a></strong> <strong><a href='/tag/ruby' rel='nofollow'>ruby</a></strong> <strong><a href='/tag/capistrano' rel='nofollow'>capistrano</a></strong></span>
+              <span class="favoriteMeta">1 year ago</span>
+            </li>
+
+<li>
+              <a href="/riethmayer?utm_campaign=profiletracking&amp;utm_medium=sssite&amp;utm_source=ssslideshow" title="riethmayer" class="notranslate favoriter h-favoriter" rel="nofollow">
+                <img class="nickname" src="//public.slidesharecdn.com/images/user-48x48.png" height="48" alt="riethmayer" original="//cdn.slidesharecdn.com/profile-photo-riethmayer-48x48.jpg?1380634386" width="48" />
+                <strong class="h-username ">Jan Riethmayer </strong><span class="bioStub"><span class="h-favoriter-role">, CTO </span><span class="h-favoriter-org"> at bonusbox GmbH</span></span>
+              </a>
+              <span class="favTags h-tags notranslate"></span>
+              <span class="favoriteMeta">1 year ago</span>
+            </li>
+
+<li>
+              <a href="/bicherele?utm_campaign=profiletracking&amp;utm_medium=sssite&amp;utm_source=ssslideshow" title="bicherele" class="notranslate favoriter h-favoriter" rel="nofollow">
+                <img class="nickname" src="//public.slidesharecdn.com/images/user-48x48.png" height="48" alt="bicherele" original="//public.slidesharecdn.com/images/user-48x48.png" width="48" />
+                <strong class="h-username ">Bicherele Yahii</strong><span class="bioStub"><span class="h-favoriter-role"></span><span class="h-favoriter-org"> at cocoandkiwi</span></span>
+              </a>
+              <span class="favTags h-tags notranslate">Tags <strong><a href='/tag/gem' rel='nofollow'>gem</a></strong> <strong><a href='/tag/ruby' rel='nofollow'>ruby</a></strong> <strong><a href='/tag/capistrano' rel='nofollow'>capistrano</a></strong></span>
+              <span class="favoriteMeta">2 years ago</span>
+            </li>
+
+<li>
+              <a href="/manobi?utm_campaign=profiletracking&amp;utm_medium=sssite&amp;utm_source=ssslideshow" title="manobi" class="notranslate favoriter h-favoriter" rel="nofollow">
+                <img class="nickname" src="//public.slidesharecdn.com/images/user-48x48.png" height="48" alt="manobi" original="//public.slidesharecdn.com/images/user-48x48.png" width="48" />
+                <strong class="h-username ">Bi  Oliveira</strong><span class="bioStub"><span class="h-favoriter-role"></span><span class="h-favoriter-org"></span></span>
+              </a>
+              <span class="favTags h-tags notranslate">Tags <strong><a href='/tag/deploy' rel='nofollow'>deploy</a></strong> <strong><a href='/tag/capistrano' rel='nofollow'>capistrano</a></strong></span>
+              <span class="favoriteMeta">2 years ago</span>
+            </li>
+
+<li>
+              <a href="/wxmcan?utm_campaign=profiletracking&amp;utm_medium=sssite&amp;utm_source=ssslideshow" title="wxmcan" class="notranslate favoriter h-favoriter" rel="nofollow">
+                <img class="nickname" src="//public.slidesharecdn.com/images/user-48x48.png" height="48" alt="wxmcan" original="//public.slidesharecdn.com/images/user-48x48.png" width="48" />
+                <strong class="h-username ">Bob Wang</strong><span class="bioStub"><span class="h-favoriter-role"></span><span class="h-favoriter-org"> at mysharebook.cn</span></span>
+              </a>
+              <span class="favTags h-tags notranslate">Tags <strong><a href='/tag/capistrano' rel='nofollow'>capistrano</a></strong></span>
+              <span class="favoriteMeta">3 years ago</span>
+            </li>
+</ul>
+          <div class="viewMore action-morefavs j-favs-more" style="display:none"><a rel="nofollow" class="btn btn-inverse" href="#">More&hellip;</a></div>
+          
+            
+        </div>
+
+        <!-- Favorites and Downloads end -->
+        <div class="notranslate transcript h-slideshow-transcript-bottom">
+            <a id="text-version" rel="nofollow"></a>
+            
+            <h2 class="h-slideshow-title">
+              <span class="slideshow-thumb">
+                <img src="//cdn.slidesharecdn.com/ss_thumbnails/capistranorecipebook-100118175359-phpapp01-thumbnail-2.jpg?1263874041" height="37" alt="Making Your Capistrano Recipe Book" width="60" />
+              </span>
+              <span class="presentation-title notranslate">Making Your Capistrano Recipe Book</span> 
+              <span class="h-title-meta title-meta">Presentation Transcript</span>
+            </h2>
+            <ul class="transcripts h-transcripts"><li>Making Your Capistrano
+     Recipe Book
+
+        Tim Riley
+        @timriley
+ </li><li>development:
+                                                                                                                     oauth_consumer_key: secret_oauth_thing
+                                                                                                                     oauth_consumer_secret: secret_oauth_thing
+                                                        namespace :gems do
+                                                                                                                     oauth_callback: &quot;http://decafsucks.com/oauth_callback&quot;
+                                                          task :install, :roles =&gt; :app do
+# App                                                                                                                &lt;&lt;: *base
+                                                            sudo &quot;sh -c 'cd #{release_path} &amp;&amp; sudo RAILS_ENV=production rake gems:install'&quot;
+set :application, &quot;decafsucks&quot;
+                                                          end
+                                                                                                                   test: &amp;test
+                                                        end
+# Server                                                                                                             oauth_consumer_key: secret_oauth_thing
+set :user, 'deployer'                                                                                                oauth_consumer_secret: secret_oauth_thing
+                                                        namespace :db do
+set :deploy_to, &quot;/home/deployer/deployments/#{application}&quot;                                                          oauth_callback: &quot;http://decafsucks.com/oauth_callback&quot;
+                                                          task :generate_yaml, :roles =&gt; :app do
+set :use_sudo, false                                                                                                 &lt;&lt;: *base
+                                                            db_config = &lt;&lt;-EOF
+set :port, '2222'
+                                                        base: &amp;base
+                                                                                                                   production:
+                                                          adapter: mysql
+role :app, '192.168.0.1'                                                                                             oauth_consumer_key: secret_oauth_thing
+                                                          encoding: utf8
+role :web, '192.168.0.1'                                                                                             oauth_consumer_secret: secret_oauth_thing
+                                                          username: mysql_user
+role :db,   '192.168.0.1', :primary =&gt; true                                                                          oauth_callback: &quot;http://decafsucks.com/oauth_callback&quot;
+                                                          password: #{db_password}
+                                                                                                                     &lt;&lt;: *base
+                                                          socket: /var/run/mysqld/mysqld.sock
+# Other                                                                                                            EOF
+set :db_password, Proc.new { Capistrano::CLI.password_prompt('DB password: ')}                                         run &quot;mkdir -p #{shared_path}/config&quot;
+                                                        development:
+                                                                                                                       put twitter_config, &quot;#{shared_path}/config/twitter_auth.yml&quot;
+                                                          database: decafsucks_development
+# SCM                                                                                                                end
+                                                          &lt;&lt;: *base
+set :scm, :git
+set :repository, 'git@somehwere.com/myapp.git'                                                                       desc 'Make symlink for database yaml'
+                                                        test: &amp;test
+set :branch, 'master'                                                                                                task :symlink, :roles =&gt; :app do
+                                                          database: decafsucks_test
+set :deploy_via, :remote_cache                                                                                         run &quot;ln -nfs #{shared_path}/config/twitter_auth.yml #{release_path}/co
+                                                          &lt;&lt;: *base
+                                                                                                                     end
+default_run_options[:pty] = true                                                                                   end
+                                                        rumble:
+set :ssh_options, { :forward_agent =&gt; true }
+                                                          database: decafsucks_production
+                                                                                                                   namespace :sphinx do
+                                                          &lt;&lt;: *base
+# Passenger                                                                                                          desc 'Create a directory to store the sphinx indexes'
+namespace :deploy do                                                                                                 task :create_db_dir, :roles =&gt; :app do
+                                                        production:
+  desc &quot;Restarting mod_rails with restart.txt&quot;                                                                         run &quot;mkdir -p #{shared_path}/sphinx&quot;
+                                                          database: decafsucks_production
+  task :restart, :roles =&gt; :app, :except =&gt; { :no_release =&gt; true } do                                               end
+                                                          &lt;&lt;: *base
+    run &quot;touch #{current_path}/tmp/restart.txt&quot;
+                                                        EOF
+  end                                                                                                                desc 'Generate a config yaml in shared path'
+                                                            run &quot;mkdir -p #{shared_path}/config&quot;
+                                                                                                                     task :generate_yaml, :roles =&gt; :app do
+                                                            put db_config, &quot;#{shared_path}/config/database.yml&quot;
+  [:start, :stop].each do |t|                                                                                          sphinx_yaml = &lt;&lt;-EOF
+                                                          end
+    desc &quot;#{t} task is a no-op with mod_rails&quot;                                                                     development: &amp;base
+    task t, :roles =&gt; :app do ; end                                                                                  morphology: stem_en
+                                                          desc 'Make symlink for database yaml'
+  end                                                                                                                config_file: #{shared_path}/config/sphinx.conf
+                                                          task :symlink, :roles =&gt; :app do
+end                                                                                                                test:
+                                                            run &quot;ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml&quot;
+                                                                                                                     &lt;&lt;: *base
+                                                          end
+before 'deploy:setup', 'db:generate_yaml'                                                                          production:
+                                                        end
+before 'deploy:setup', 'twitter:generate_yaml'                                                                       &lt;&lt;: *base
+before 'deploy:setup', 'sphinx:create_db_dir'                                                                      EOF
+                                                        namespace :twitter do
+before 'deploy:setup', 'sphinx:generate_yaml'                                                                          run &quot;mkdir -p #{shared_path}/config&quot;
+                                                          task :generate_yaml, :roles =&gt; :app do
+                                                                                                                       put sphinx_yaml, &quot;#{shared_path}/config/sphinx.yml&quot;
+                                                            twitter_config = &lt;&lt;-EOF
+after 'deploy:update_code', 'db:symlink'                                                                             end
+                                                        base: &amp;base
+after 'deploy:update_code', 'twitter:symlink'                                                                        desc 'Symlink the sphinx yml and config files, and the db directory for
+                                                          strategy: oauth
+after 'deploy:update_code', 'sphinx:symlink'                                                                         task :symlink, :roles =&gt; :app do
+                                                          base_url: &quot;https://twitter.com&quot;
+                                                                                                                       run &quot;ln -nfs #{shared_path}/sphinx             #{release_path}/db/sphi
+                                                          authorize_path: &quot;/oauth/authenticate&quot;
+# after 'deploy:update_code', 'gems:install'                                                                           run &quot;ln -nfs #{shared_path}/config/sphinx.yml #{release_path}/config/
+                                                          api_timeout: 10
+                                                                                                                       run &quot;ln -nfs #{shared_path}/config/sphinx.conf #{release_path}/config/
+                                                          remember_for: 14 # days
+                                                                                                                     end
+                                                                                                                   end
+ </li><li>set   :application, &quot;decafsucks&quot;
+set   :user, 'deployer'
+set   :deploy_to, &quot;/home/deployer/deployments/#{application}&quot;
+set   :use_sudo, false
+
+role :app,    '192.168.0.1'
+role :web,    '192.168.0.1'
+role :db,     '192.168.0.1', :primary =&gt; true
+
+set   :scm, :git
+set   :repository, 'git@git.mycorp.net:decafsucks.git’
+set   :branch, 'master'
+set   :deploy_via, :remote_cache
+
+default_run_options[:pty] = true
+set :ssh_options, { :forward_agent =&gt; true }
+ </li><li>namespace :deploy do
+  desc &quot;Restarting mod_rails with restart.txt&quot;
+  task :restart, :roles =&gt; :app, :except =&gt; { :no_release =&gt; true } do
+    run &quot;touch #{current_path}/tmp/restart.txt&quot;
+  end
+
+  [:start, :stop].each do |t|
+    desc &quot;#{t} task is a no-op with mod_rails&quot;
+    task t, :roles =&gt; :app do ; end
+  end
+end
+ </li><li>before   'deploy:setup',       'sphinx:create_db_dir'
+before   'deploy:setup',       'sphinx:generate_yaml'
+after    'deploy:update_code', 'sphinx:symlink'
+
+namespace :sphinx do
+  desc 'Create a directory to store the sphinx indexes'
+  task :create_db_dir, :roles =&gt; :app do
+    run &quot;mkdir -p #{shared_path}/sphinx&quot;
+  end
+
+  desc 'Generate a config yaml in shared path'
+  task :generate_yaml, :roles =&gt; :app do
+    sphinx_yaml = &lt;&lt;-EOF
+development: &amp;base
+  morphology: stem_en
+  config_file: #{shared_path}/config/sphinx.conf
+test:
+  &lt;&lt;: *base
+production:
+  &lt;&lt;: *base
+EOF
+    run &quot;mkdir -p #{shared_path}/config&quot;
+    put sphinx_yaml, &quot;#{shared_path}/config/sphinx.yml&quot;
+  end
+
+  desc 'Symlink the sphinx yml and config files, and the db directory for storage of indexes'
+  task :symlink, :roles =&gt; :app do
+    run &quot;ln -nfs #{shared_path}/sphinx             #{release_path}/db/sphinx&quot;
+    run &quot;ln -nfs #{shared_path}/config/sphinx.yml #{release_path}/config/sphinx.yml&quot;
+    run &quot;ln -nfs #{shared_path}/config/sphinx.conf #{release_path}/config/sphinx.conf&quot;
+  end
+end
+ </li><li>configuration = Capistrano::Configuration.respond_to?(:instance) ?
+  Capistrano::Configuration.instance(:must_exist) :
+  Capistrano.configuration(:must_exist)
+
+configuration.load do
+  # stuff here...
+end
+ </li><li>unless Capistrano::Configuration.respond_to?(:instance)
+  abort &quot;capistrano/ext/multistage requires Capistrano 2&quot;
+end
+
+Capistrano::Configuration.instance.load do
+  # stuff here...
+end
+ </li><li>base.rb
+configuration.load do
+
+# User details
+_cset :user,            'deployer'
+_cset(:group)           { user }
+
+# Application details
+_cset(:app_name)        { abort &quot;Specify the short name of your app, set :app_name, 'foo'&quot; }
+set(:application)       { &quot;#{app_name}.mycorp.com&quot; }
+_cset(:runner)          { user }
+_cset :use_sudo,        false
+
+# SCM settings
+_cset(:appdir)          { &quot;/home/#{user}/deployments/#{application}&quot; }
+_cset :scm,             'git'
+set(:repository)        { &quot;git@git.mycorp.com:#{app_name}.git&quot;}
+_cset :deploy_via,      'remote_cache'
+set(:deploy_to)         { appdir }
+
+# Git settings for capistrano
+default_run_options[:pty]     = true
+ssh_options[:forward_agent]   = true
+
+end
+ </li><li>common.rb
+
+
+
+def _cset(name, *args, &amp;block)
+  unless exists?(name)
+    set(name, *args, &amp;block)
+  end
+end
+ </li><li>base.rb
+configuration.load do
+
+# User details
+_cset :user,            'deployer'
+_cset(:group)           { user }
+
+# Application details
+_cset(:app_name)        { abort &quot;Specify the short name of your app, set :app_name, 'foo'&quot; }
+set(:application)       { &quot;#{app_name}.mycorp.com&quot; }
+_cset(:runner)          { user }
+_cset :use_sudo,        false
+
+# SCM settings
+_cset(:appdir)          { &quot;/home/#{user}/deployments/#{application}&quot; }
+_cset :scm,             'git'
+set(:repository)        { &quot;git@git.mycorp.com:#{app_name}.git&quot;}
+_cset :deploy_via,      'remote_cache'
+set(:deploy_to)         { appdir }
+
+# Git settings for capistrano
+default_run_options[:pty]     = true
+ssh_options[:forward_agent]   = true
+
+end
+ </li><li>require 'capistrano/mycorp/common'
+configuration.load do
+_cset(:app_name) { abort &quot;Specify the short name of your app, set :app_name, 'foo'&quot; }
+
+before   'deploy:setup',       'sphinx:create_db_dir'
+before   'deploy:setup',       'sphinx:generate_yaml'
+after    'deploy:update_code', 'sphinx:symlink'
+
+namespace :sphinx do
+  desc 'Create a directory to store the sphinx indexes'
+  task :create_db_dir, :roles =&gt; :app do
+    run &quot;mkdir -p #{shared_path}/sphinx&quot;
+
+
+                                                               thinking_
+  end
+
+  desc 'Generate a config yaml in shared path'
+  task :generate_yaml, :roles =&gt; :app do
+    sphinx_yaml = &lt;&lt;-EOF
+development: &amp;main_settings
+  config_file: #{shared_path}/config/sphinx.conf
+                                                               sphinx.rb
+  pid_file: #{shared_path}/pids/sphinx.pid
+production:
+  &lt;&lt;: *main_settings
+EOF
+    put sphinx_yaml, &quot;#{shared_path}/config/sphinx.yml&quot;
+  end
+
+  desc 'Symlink the sphinx yml and config files, and the db directory for storage of indexes'
+  task :symlink, :roles =&gt; :app do
+    run &quot;ln -nfs #{shared_path}/sphinx             #{release_path}/db/sphinx&quot;
+    run &quot;ln -nfs #{shared_path}/config/sphinx.yml #{release_path}/config/sphinx.yml&quot;
+    run &quot;ln -nfs #{shared_path}/config/sphinx.conf #{release_path}/config/sphinx.conf&quot;
+  end
+end
+end
+ </li><li>Rakeﬁle
+
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gemspec|
+    gemspec.name = &quot;capistrano-mycorp&quot;
+    gemspec.summary = &quot;MyCorp recipes for Capistrano&quot;
+    gemspec.description = &quot;MyCorp recipes for Capistrano&quot;
+    gemspec.email = &quot;tim@openmonkey.com&quot;
+    gemspec.homepage = &quot;http://github.com/timriley/capistrano-mycorp&quot;
+    gemspec.authors = [&quot;Tim Riley&quot;]
+  end
+rescue LoadError
+  puts &quot;Jeweler not available. Install it with: gem install jeweler&quot;
+end
+ </li><li>echo &quot;0.0.1&quot; &gt; VERSION
+rake gemspec
+rake build
+
+jeweler --help
+ </li><li>set   :application, &quot;decafsucks&quot;
+set   :user, 'deployer'
+set   :deploy_to, &quot;/home/deployer/deployments/#{application}&quot;            namespace :sphinx do
+set   :use_sudo, false                                                     desc 'Create a directory to store the sphinx indexes'
+                                                                           task :create_db_dir, :roles =&gt; :app do
+role :app,    '192.168.0.1'                                                  run &quot;mkdir -p #{shared_path}/sphinx&quot;
+role :web,    '192.168.0.1'                                                end
+role :db,     '192.168.0.1', :primary =&gt; true
+                                                                           desc 'Generate a config yaml in shared path'
+set   :scm, :git                                                           task :generate_yaml, :roles =&gt; :app do
+set   :repository, 'git@git.mycorp.net:decafsucks.git'                       sphinx_yaml = &lt;&lt;-EOF
+set   :branch, 'master'                                                  development: &amp;base
+set   :deploy_via, :remote_cache                                           morphology: stem_en
+                                                                           config_file: #{shared_path}/config/sphinx.conf
+default_run_options[:pty] = true                                         test:
+set :ssh_options, { :forward_agent =&gt; true }                               &lt;&lt;: *base
+                                                                         production:
+namespace :deploy do                                                       &lt;&lt;: *base
+  desc &quot;Restarting mod_rails with restart.txt&quot;                           EOF
+  task :restart, :roles =&gt; :app, :except =&gt; { :no_release =&gt; true } do       run &quot;mkdir -p #{shared_path}/config&quot;
+    run &quot;touch #{current_path}/tmp/restart.txt&quot;                              put sphinx_yaml, &quot;#{shared_path}/config/sphinx.yml&quot;
+  end                                                                      end
+
+  [:start, :stop].each do |t|                                              desc 'Symlink the sphinx yml and config files, and the db directory for storage of indexes'
+    desc &quot;#{t} task is a no-op with mod_rails&quot;                             task :symlink, :roles =&gt; :app do
+    task t, :roles =&gt; :app do ; end                                          run &quot;ln -nfs #{shared_path}/sphinx             #{release_path}/db/sphinx&quot;
+  end                                                                        run &quot;ln -nfs #{shared_path}/config/sphinx.yml #{release_path}/config/sphinx.yml&quot;
+end                                                                          run &quot;ln -nfs #{shared_path}/config/sphinx.conf #{release_path}/config/sphinx.conf&quot;
+                                                                           end
+before    'deploy:setup',       'sphinx:create_db_dir'                   end
+before    'deploy:setup',       'sphinx:generate_yaml'
+after     'deploy:update_code', 'sphinx:symlink'
+ </li><li>set :app_name, 'decafsucks'
+
+role :app,   '192.168.0.1'
+role :web,   '192.168.0.1'
+role :db,    '192.168.0.1', :primary =&gt; true
+
+require 'capistrano/mycorp/base'
+require 'capistrano/mycorp/thinking_sphinx'
+ </li><li>★ Multistage defaults
+★ Mounting shares
+★ web:disable
+★ Gem installation
+★ Gem bundling
+★ Populating conﬁg.yml
+★ Populating database.yml
+★ Thinking Sphinx
+★ ...
+ </li><li>Thank You!
+
+
+        @timriley
+
+    openmonkey.com
+
+timriley/capistrano-mycorp
+
+ technicalpickles/jeweler
+ </li></ul>
+
+
+            
+          </div><!-- .transcript -->
+    </div><!-- .assets -->
+           
+           
+           <footer>
+            <div class="footer-leaderboard-ad h-below-transcript-ad">
+              <div class="transcriptAd">
+                <div class="h-transcriptAdDiv" id="transcriptAdHolder"><script type="text/javascript">slideshare_object._adQueue.push({ tile : 4, zone : 'slideview', dart_code: '%3Bkw%3DBusiness%3Bkw%3DProgramming%3Bkw%3DLanguages%3Bkw%3DRuby%3Bkw%3DRails%3Bkw%3DTelecommunications%3Bkw%3DServices%3Bkw%3DOAuth%3Bcat%3Dbusiness-mgmt%3Bcat%3Dtechnology', width: 728, height: 90, appendTo: 'transcriptAdHolder', lazyLoad: true});</script></div>
+                
+              </div>
+            </div>
+           <div class="footerWrapper">
+           <div class="footer">
+            <div class="footerLeft">
+            <form class="footerSearch" method="get" action="/search/slideshow">
+              <fieldset>
+                <input type="hidden" name="searchfrom" value="footer" />
+                <div class="suggestionContainerFooter">
+                  <input type="text" class="text" name="q" id="search_query_bottom" autocomplete="off" value="" /><input type="submit" value="Search" class="ctaNormal" />
+                </div>
+              </fieldset>
+            </form>
+           <!-- .social-links -->
+           <div class="social-links">
+               <ul>
+                  <li><a href="http://www.linkedin.com/company/slideshare" class="iconLinkedInFooter" rel="nofollow">Follow us on LinkedIn</a></li>
+                  <li><a href="http://twitter.com/SlideShare" class="iconTwitterFooter" rel="nofollow">Follow us on Twitter</a></li>               
+                  <li><a href="http://www.facebook.com/slideshare" class="iconFacebookFooter" rel="nofollow">Find us on Facebook</a></li>
+                  <li><a href="http://plus.google.com/107202479304826454162" class="iconGooglePlusFooter" rel="nofollow">Find us on Google+</a></li>
+               </ul>
+           </div>
+           <!-- /.social-links -->
+            </div>
+            <div class="links footerRight">
+              <div class="fColumn fColumnSmall">
+                <ul class="linksList">
+                  <li><strong>Learn About Us</strong></li>
+                  <li><a title="About us" href="/about">About</a></li>
+                  <li><a title="Careers" href="/about/workatslideshare">Careers</a></li>
+                  <li><a title="Our Blog" href="http://blog.slideshare.net">Our Blog</a></li>
+                  <li><a title="Press" href="/about/press" rel="nofollow">Press</a></li>
+                  <li><a title="Contact us" href="/about/contactus" rel="nofollow">Contact Us</a></li>
+                    <li><a id='j-helpLink' title="Get Help" href="http://help.slideshare.com/home" rel="nofollow">Help &amp; Support</a></li>
+                  </ul>
+              </div><!-- .fColumn -->
+              <div class="fColumn fColumnMid">
+                <ul class="linksList">
+                  <li><strong>Using SlideShare</strong></li>
+                  <li><a title="SlideShare 101" href="/about" rel="nofollow">SlideShare 101</a></li>
+                  <li><a title="Terms of Use" href="/terms" rel="nofollow">Terms of Use</a></li>
+                  <li><a title="Privacy Policy" href="/privacy" rel="nofollow">Privacy Policy</a></li>
+                  <li><a title="Copyright &amp; DMCA" href="/terms#dmca" rel="nofollow">Copyright &amp; DMCA</a></li>
+                  <li><a title="Community Guidelines" href="/community_guidelines" rel="nofollow">Community Guidelines</a></li>
+                  <li><a title="SlideShare Mobile" href="http://www.slideshare.net/mobile?enable_mobile=true" rel="nofollow">SlideShare on Mobile</a></li>
+        </ul>
+              </div><!-- .fColumn -->
+              <div class="fColumn">
+                <ul class="linksList">
+                  <li><strong>Pro &amp; more</strong></li>
+                  <li><a title="Go PRO" href="/business/premium/plans?cmp_src=general&cmp_src_from=footer">Go PRO</a></li>
+                  <li><a title="Enterprise Sales" href="/contact_sales" rel="nofollow">Enterprise Sales</a></li>
+                  <li><a title="PRO Features" href="/features?cmp_src=general&cmp_src_from=footer&tabs=true" rel="nofollow">PRO Features</a></li>
+                 </ul>
+              </div><!-- .fColumn -->
+              <div class="fColumn last">
+                <ul class="linksList">
+                  <li><strong>Developers &amp; API</strong></li>
+                  <li><a href="/developers" rel="nofollow">Developers Section</a></li>
+                  <li><a href="http://groups.google.com/group/slideshare-developers?lnk=srg" rel="nofollow">Developers Group</a></li>
+                  <li><a title="Engineering Blog" href="http://engineering.slideshare.com">Engineering Blog</a></li>
+                  <li><a title="Widgets for your blog" href="http://www.slideshare.net/widgets/blogbadge">Blog Widgets</a></li>
+                </ul>
+              </div><!-- .fColumn -->
+            </div><!-- .links -->
+            <div class="copyright">
+               <p>&copy; 2013 SlideShare Inc. All rights reserved.</p>
+                <a href="http://www.slideshare.net/rss/latest" class="rssFooter" rel="nofollow">RSS Feed</a>
+              <div id="smt-lang-selector"></div>
+            </div>   
+           </div><!-- .footer -->
+            <img alt="" height="1" src="http://www.linkedin.com/analytics/noauthtracker?pageType=full_page&amp;type=leo.pageTracking&amp;pageKey=sld_slideshow_jsbeacon" width="1" />
+           </div><!-- .footerWrapper -->
+           </footer>
+
+
+    
+ <script type='text/javascript' charset='utf-8' id='page-load-loggedout'>
+    // <![CDATA[
+      $(document).ready(function() {
+        var loadAdditionalFunctionality = function(){
+          e = document.createElement('script'); 
+          e.type = 'text/javascript'; 
+          e.async = true;
+          e.src =  '//public.slidesharecdn.com/slideview/scripts/combined_loggedout.js?e8f7ac47';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s);
+        };
+        if(document.readyState === 'complete'){
+          loadAdditionalFunctionality();
+        }else{
+          if(window.addEventListener){
+            window.addEventListener('load', loadAdditionalFunctionality, false);
+          }else if(window.attachEvent){
+            window.attachEvent('onload', loadAdditionalFunctionality);
+          }
+        }
+      });
+    // ]]> 
+    </script>
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </body>
+</html>
+

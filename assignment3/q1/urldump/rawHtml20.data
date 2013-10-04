@@ -1,0 +1,363 @@
+
+
+
+<!doctype html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <title>Central logging in Django with Graylog2 and graypy</title>
+  <meta name="description" content="">
+  <meta name="author" content="Caktus Consulting Group, LLC">
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="/static/images/favicon.png">
+  
+    <link rel="stylesheet" href="/static/CACHE/css/0d36c27fcece.css" type="text/css" media="all" />
+
+
+  
+  <link rel="stylesheet" href="/static/CACHE/css/adb5623ac5b4.css" type="text/css" media="all" />
+  
+  
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+  
+
+</head>
+<body class="white-background post_detail" id="blog-detail">
+  
+      
+        <nav class="navbar">
+            <div class="container">
+              <ul class="nav main hidden-phone">
+                <li><a href="/about/">about</a></li>
+                <li><a href="/services/">services</a></li>
+                <li><a href="/portfolio/">clients</a></li>
+                <li class="brand"><a href="/"><img src="/static/images/caktus-logo.png" alt="Caktus logo"></a></li>
+                <li><a href="/blog/">blog</a></li>
+                <li><a href="/events/">events</a></li>
+                <li><a href="/contact/">contact</a></li>
+              </ul>
+              <ul class="nav mobile visible-phone">
+                 <li class="brand"><a href="/"><img src="/static/images/caktus-logo.png" alt="Caktus logo"></a></li>
+                <li class="dropdown">
+                  <form action="." method="post">
+                    <label>
+                      <select id='mobile-nav'>
+                        <option value="/">home</option>
+                        <option value="/about/">about</option>
+                        <option value="/services/">services</option>
+                        <option value="/portfolio/">clients</option>
+                        <option value="/blog/">blog</option>
+                        <option value="/events/">events</option>
+                        <option value="/contact/">contact</option>
+                      </select>
+                    </label>
+                  </form>
+                </li>
+              </ul>
+            </div>
+        </nav>
+
+        <script type="text/javascript">
+          // Select the correct nav option depending on path name
+          // This allows you to select the 'home' option when not on 'home'
+          if(location && location.pathname) {
+              var menu = document.getElementById('mobile-nav');
+              var parent = location.pathname.split('/')[1];
+
+              // The split caused '/' for home to be empty (as expected)
+              if(parent) {
+                  menu.value = '/' + parent + '/';
+              } else {
+                  menu.value = '/';
+              }
+          }
+        </script>
+      
+
+    <div id="page">
+      <div class="container" role="main">
+      
+    <div class="row">
+        <div class="span10">
+          <article>
+              <header>
+              
+              
+                <a rel="author" href="/about/#tobias"><img alt="Tobias McNulty" src="/media/cache/4d/a1/4da1d53cbbd4064c2d39b27c890ddf74.jpg" class="profile"/></a>
+              
+              
+              <h2 class="title">Central logging in Django with Graylog2 and graypy</h2>
+              <p class="author">Written by
+                
+                  <a href="/about/#tobias">Tobias McNulty</a>
+                
+              </p>
+              <time pubdate datetime="2013-09-18T10:00:12">September 18, 2013</time>
+              </header>
+              <div class='blog-image'>
+                
+              </div>
+              <p>Django's <a target="_blank" class="reference external" href="https://docs.djangoproject.com/en/1.5/topics/logging/">logging configuration</a> facilities, which arrived in version 1.3, have greatly eased (and standardized) the process of configuring logging for Django projects. When building complex and interactive web applications at Caktus, we've found that detailed (and properly configured!) logs are key to successful and efficient debugging. Another step in that process—which can be particularly useful in environments where you have multiple web servers—is setting up a centralized logging server to receive all your logs and make them available through an easily accessible web interface. There are a number useful tools to do this, but one we've found that works quite well is <a target="_blank" class="reference external" href="http://graylog2.org/">Graylog2</a>.  Installing and configuring Graylog2 is outside the scope of this post, but there are plenty of tutorials on how to do so accessible through your search engine of choice.</p>
+<p>Once you have it setup, getting logs flowing to Graylog2 from Django is relatively straightforward. First, grab a copy of the <tt class="docutils literal">graypy</tt> package from PyPI and add it to your requirements file:</p>
+<pre class="literal-block">
+pip install -U graypy
+</pre>
+<p>Next, add the following configuration inside the <tt class="docutils literal"><span class="pre">LOGGING['handlers']</span></tt> dictionary in your <tt class="docutils literal">settings.py</tt>, where <tt class="docutils literal">graylog2.example.com</tt> is the hostname of your Graylog2 server:</p>
+<pre class="code python literal-block">
+<span class="n">LOGGING</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c"># ...</span>
+    <span class="s">'handlers'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="c"># ...</span>
+        <span class="s">'gelf'</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">'class'</span><span class="p">:</span> <span class="s">'graypy.GELFHandler'</span><span class="p">,</span>
+            <span class="s">'host'</span><span class="p">:</span> <span class="s">'graylog2.example.com'</span><span class="p">,</span>
+            <span class="s">'port'</span><span class="p">:</span> <span class="mi">12201</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</pre>
+<p>You'll most likely want to tell your project's top-level logger to send logs to the new <tt class="docutils literal">gelf</tt> handler as well, like so:</p>
+<pre class="code python literal-block">
+<span class="n">LOGGING</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c"># ...</span>
+    <span class="s">'loggers'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="c"># ...</span>
+        <span class="s">'projectname'</span><span class="p">:</span> <span class="p">{</span>
+            <span class="c"># mail_admins will only accept ERROR and higher</span>
+            <span class="s">'handlers'</span><span class="p">:</span> <span class="p">[</span><span class="s">'mail_admins'</span><span class="p">,</span> <span class="s">'gelf'</span><span class="p">],</span>
+            <span class="s">'level'</span><span class="p">:</span> <span class="s">'DEBUG'</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</pre>
+<p>With this configuration in place, log messages with a severity of <tt class="docutils literal">DEBUG</tt> or greater that are sent to the <tt class="docutils literal">projectname</tt> logger should begin flowing to Graylog2.  You can easily test this by opening Django's <tt class="docutils literal">python manage.py shell</tt>, grabbing the logger manually, and sending a log message:</p>
+<pre class="code python literal-block">
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">'projectname'</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">'testing message to graylog2'</span><span class="p">)</span>
+</pre>
+<p>You should see the message show up in Graylog2 almost immediately.</p>
+<p>Now, this is all well and good, but if you want to use your Graylog2 server for multiple projects, you'll quickly find that all the log messages are interspersed and it can be difficult to tell what messages are coming from what projects.  To address this issue, Graylog2 supports the concept of &quot;streams,&quot; that is, filters that you can setup (which work only on incoming messages, not existing messages) to show messages that match only certain criteria.  A simple solution here could be to filter on the hostname of the originating web servers, but this may not scale well in environments like Amazon Web Services' EC2 where you're often adding or removing web servers.  As a better alternative, you can add metadata to log messages at the Python level prior to sending them to Graylog2 that will help you more easily identify the messages for different projects.</p>
+<p>To do this, you need to use a feature of Python <a target="_blank" class="reference external" href="http://docs.python.org/2/library/logging.html#filter-objects">logging filters</a>.  While filters are most commonly used to filter out certain types of messages from being emitted altogether (as discussed in the <a target="_blank" class="reference external" href="https://docs.djangoproject.com/en/1.5/topics/logging/#filters">Django documentation</a>), they can also be used to modify the log records in transit and <a target="_blank" class="reference external" href="http://docs.python.org/2/howto/logging-cookbook.html#using-filters-to-impart-contextual-information">impart contextual metadata</a> to be transmitted with the original message.  To add this to our logging configuration, first create the following filter class in a Python module accessible from your project:</p>
+<pre class="code python literal-block">
+<span class="k">class</span> <span class="nc">StaticFieldFilter</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">Filter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;
+    Python logging filter that adds the given static contextual information
+    in the ``fields`` dictionary to all logging records.
+    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fields</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">static_fields</span> <span class="o">=</span> <span class="n">fields</span>
+
+    <span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">record</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">static_fields</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="n">record</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">True</span>
+</pre>
+<p>Next, we need to load this filter in our logging configuration and tell the <tt class="docutils literal">gelf</tt> logger to pass records through it:</p>
+<pre class="code python literal-block">
+<span class="n">LOGGING</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c"># ...</span>
+    <span class="s">'filters'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="c"># ...</span>
+        <span class="s">'static_fields'</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">'()'</span><span class="p">:</span> <span class="s">'projectname.core.logfilters.StaticFieldFilter'</span><span class="p">,</span>
+            <span class="s">'fields'</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s">'project'</span><span class="p">:</span> <span class="s">'projectname'</span><span class="p">,</span> <span class="c"># CHANGEME</span>
+                <span class="s">'environment'</span><span class="p">:</span> <span class="s">'staging'</span><span class="p">,</span> <span class="c"># can be overridden in local_settings.py</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s">'handlers'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="c"># ...</span>
+        <span class="s">'gelf'</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">'class'</span><span class="p">:</span> <span class="s">'graypy.GELFHandler'</span><span class="p">,</span>
+            <span class="s">'host'</span><span class="p">:</span> <span class="s">'graylog2.example.com'</span><span class="p">,</span>
+            <span class="s">'port'</span><span class="p">:</span> <span class="mi">12201</span><span class="p">,</span>
+            <span class="s">'filters'</span><span class="p">:</span> <span class="p">[</span><span class="s">'static_fields'</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="c"># ...</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</pre>
+<p>The configuration under <tt class="docutils literal">filters</tt> instantiates the <tt class="docutils literal">StaticFieldFilter</tt> class and passes in the static fields that we want to attach to all of our log records.  In this case, two fields are attached, a <tt class="docutils literal">'project'</tt> field with value <tt class="docutils literal">'projectname'</tt> and an <tt class="docutils literal">'environment'</tt> field with value <tt class="docutils literal">'staging'</tt>.  The configuration for the <tt class="docutils literal">gelf</tt> logger is the same, with the addition of the <tt class="docutils literal">static_fields</tt> filter on the last line.</p>
+<p>With these two items in place, you should be able to create streams via the Graylog2 web interface to trap and display records that match the combination of project and environment names that you're looking for.</p>
+<p>Lastly, as an optional addition to this logging configuration, it may be desirable to filter out Django <tt class="docutils literal">request</tt> objects from being sent to Graylog2.  The request is added to log messages created by Django's exception handler and may contain sensitive information or in some cases may not be capable of being pickled (which is necessary to encode and send it with the log message).  You can remove them from log messages with the following filter:</p>
+<pre class="code python literal-block">
+<span class="k">class</span> <span class="nc">RequestFilter</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">Filter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;
+    Python logging filter that removes the (non-pickable) Django ``request``
+    object from the logging record.
+    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">record</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">record</span><span class="p">,</span> <span class="s">'request'</span><span class="p">):</span>
+            <span class="k">del</span> <span class="n">record</span><span class="o">.</span><span class="n">request</span>
+        <span class="k">return</span> <span class="bp">True</span>
+</pre>
+<p>and this corresponding filter configuration:</p>
+<pre class="code python literal-block">
+<span class="n">LOGGING</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c"># ...</span>
+    <span class="s">'filters'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="c"># ...</span>
+        <span class="s">'django_exc'</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">'()'</span><span class="p">:</span> <span class="s">'projectname.core.logfilters.RequestFilter'</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s">'handlers'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="c"># ...</span>
+        <span class="s">'gelf'</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">'class'</span><span class="p">:</span> <span class="s">'graypy.GELFHandler'</span><span class="p">,</span>
+            <span class="s">'host'</span><span class="p">:</span> <span class="s">'graylog2.example.com'</span><span class="p">,</span>
+            <span class="s">'port'</span><span class="p">:</span> <span class="mi">12201</span><span class="p">,</span>
+            <span class="s">'filters'</span><span class="p">:</span> <span class="p">[</span><span class="s">'static_fields'</span><span class="p">,</span> <span class="s">'django_exc'</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="c"># ...</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</pre>
+<p>With this configuration in place, you can have log messages flowing to Graylog2 from any number of project and server environment combinations, limited only by the resources of the log server itself.</p>
+
+          </article>
+
+          
+
+          
+          <p class="inline_tag_list"><strong>Related tags:</strong>
+            
+                <a href="/blog/tags/django/">django</a>, 
+            
+                <a href="/blog/tags/logging/">logging</a>, 
+            
+                <a href="/blog/tags/python/">python</a>
+            
+          </p>
+          
+
+          <div class="blog-pagination row">
+            <div class="prev span5">
+              
+                 <a href="/blog/2013/09/02/caktus-participates-djangocon-2013/" title="Caktus Participates in DjangoCon 2013"><b>&larr; Caktus Participates in DjangoCon 2013</b></a>
+              
+            </div>
+            
+          </div>
+
+          <div class="comments">
+            <h2>Comments</h2>
+            
+              
+              <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var disqus_shortname = 'wwwcaktusblog';
+    var disqus_domain = 'disqus.com';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.' + disqus_domain + '/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    /* ]]> */
+</script>
+<noscript>Please enable JavaScript to view the <a target="_blank" href="http://disqus.com/?ref_noscript=">comments powered by Disqus.</a></noscript>
+<p><a target="_blank" href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a></p>
+            
+          </div>
+        </div>
+    </div>
+
+      </div>
+    </div>
+
+  <footer>
+    <div class="container">
+      <div id="pagelet-47" class="pagelet careers_footer_ad careers row span12">
+	
+	
+	
+    <div class="pagelet-content">
+    
+        <p>
+<a href="/careers/"><strong>We're hiring!</strong> Visit our careers page to see what opportunities await you.</a>
+</p>
+    
+    </div>
+</div>
+
+      <div class="row">
+        <div class="span4">
+          <h3>Let's be friends</h3>
+          <ul class="unstyled social">
+            <li><a target="_blank" class="fb" href="http://www.facebook.com/CaktusGroup/">Facebook</a></li>
+            <li><a target="_blank" class="twt" href="http://twitter.com/caktusgroup/">Twitter</a></li>
+            <li><a target="_blank" class="lnkdin" href="http://www.linkedin.com/company/caktus-consulting-group-llc/">LinkedIN</a></li>
+          </ul>
+        </div>
+
+        <div class="span4">
+          <h3>Our Company</h3>
+          <ul class="unstyled">
+            <li><a href="/about/">About Us</a></li>
+            <li>
+<a href="/careers/">Careers</a>
+</li>
+          </ul>
+        </div>
+
+        <div class="span3">
+          <h3>Contact Us</h3>
+          <ul class="unstyled">
+            <li>919.951.0052</li>
+            <li>Email: <a href="mailto:solutions@caktusgroup.com">solutions@caktusgroup.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <small>&copy; 2007 - 2013 Caktus Consulting Group, LLC.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="/static/js/galleria/galleria-1.2.7.min.js"></script>
+  <script src="/static/js/galleria/plugins/flickr/galleria.flickr.min.js"></script>
+
+  <script>var STATIC_URL = '/static/';</script>
+
+  <script src="/static/js/flickr.js"></script>
+  
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-15492387-4']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $('#mobile-nav').change(function (e) {
+            e.preventDefault();
+            location.href = $('#mobile-nav').val();
+        });
+    });
+  </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,740 @@
+
+
+
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AmirolAhmad/bootstrap_v3 · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <link rel="logo" type="image/svg" href="https://github-media-downloads.s3.amazonaws.com/github-logo.svg" />
+    <meta property="og:image" content="https://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png">
+    <meta name="hostname" content="github-fe115-cp1-prd.iad.github.net">
+    <meta name="ruby" content="ruby 1.9.3p194-tcs-github-tcmalloc (2012-05-25, TCS patched 2012-05-27, GitHub v1.0.36) [x86_64-linux]">
+    <link rel="assets" href="https://github.global.ssl.fastly.net/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035/">
+    <link rel="xhr-socket" href="/_sockets" />
+    
+
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="selected-link" value="repo_source" data-pjax-transient />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="62B7E559:5B06:2C752EF:524B8B60" name="octolytics-dimension-request_id" />
+    
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="FqL23i2g4VOgFw6aKAEEweG86FBmjP9PvbtUr7tYd/8=" name="csrf-token" />
+
+    <link href="https://github.global.ssl.fastly.net/assets/github-ae794206d0e4e8a84619ca476b2b906ec038d487.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://github.global.ssl.fastly.net/assets/github2-4e9347ae8f53d7710a27ba7dfdfb83229471a306.css" media="all" rel="stylesheet" type="text/css" />
+    
+
+    
+
+      <script src="https://github.global.ssl.fastly.net/assets/frameworks-4e5aeedcc7a86dcff8294cb84644a333b46202a2.js" type="text/javascript"></script>
+      <script src="https://github.global.ssl.fastly.net/assets/github-d7ac31eea49e88b740350eb21b88f43c6d4762e4.js" type="text/javascript"></script>
+      
+      <meta http-equiv="x-pjax-version" content="ccb4657696f961d39751d7d8046a072a">
+
+        <meta property="og:title" content="bootstrap_v3"/>
+  <meta property="og:type" content="githubog:gitrepository"/>
+  <meta property="og:url" content="https://github.com/AmirolAhmad/bootstrap_v3"/>
+  <meta property="og:image" content="https://github.global.ssl.fastly.net/images/gravatars/gravatar-user-420.png"/>
+  <meta property="og:site_name" content="GitHub"/>
+  <meta property="og:description" content="bootstrap_v3 - Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development."/>
+
+  <meta name="description" content="bootstrap_v3 - Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development." />
+
+  <meta content="1130863" name="octolytics-dimension-user_id" /><meta content="AmirolAhmad" name="octolytics-dimension-user_login" /><meta content="13111293" name="octolytics-dimension-repository_id" /><meta content="AmirolAhmad/bootstrap_v3" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="13111293" name="octolytics-dimension-repository_network_root_id" /><meta content="AmirolAhmad/bootstrap_v3" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/AmirolAhmad/bootstrap_v3/commits/master.atom" rel="alternate" title="Recent Commits to bootstrap_v3:master" type="application/atom+xml" />
+
+  </head>
+
+
+  <body class="logged_out  env-production  vis-public">
+    <div class="wrapper">
+      
+      
+      
+
+
+      
+      <div class="header header-logged-out">
+  <div class="container clearfix">
+
+    <a class="header-logo-wordmark" href="https://github.com/">
+      <span class="mega-octicon octicon-logo-github"></span>
+    </a>
+
+    <div class="header-actions">
+        <a class="button primary" href="/signup">Sign up</a>
+      <a class="button signin" href="/login?return_to=%2FAmirolAhmad%2Fbootstrap_v3">Sign in</a>
+    </div>
+
+    <div class="command-bar js-command-bar  in-repository">
+
+      <ul class="top-nav">
+          <li class="explore"><a href="/explore">Explore</a></li>
+        <li class="features"><a href="/features">Features</a></li>
+          <li class="enterprise"><a href="https://enterprise.github.com/">Enterprise</a></li>
+          <li class="blog"><a href="/blog">Blog</a></li>
+      </ul>
+        <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
+
+<input type="text" data-hotkey="/ s" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
+    
+    
+      data-repo="AmirolAhmad/bootstrap_v3"
+      data-branch="master"
+      data-sha="f4141d2a801228f49d16d882405501c1e6030b02"
+  >
+
+    <input type="hidden" name="nwo" value="AmirolAhmad/bootstrap_v3" />
+
+    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
+      <span class="minibutton select-menu-button js-menu-target">
+        <span class="js-select-button">This repository</span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container">
+        <div class="select-menu-modal">
+
+          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked" />
+            <div class="select-menu-item-text js-select-button-text">This repository</div>
+          </div> <!-- /.select-menu-item -->
+
+          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" name="search_target" value="global" />
+            <div class="select-menu-item-text js-select-button-text">All repositories</div>
+          </div> <!-- /.select-menu-item -->
+
+        </div>
+      </div>
+    </div>
+
+  <span class="octicon help tooltipped downwards" title="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+
+  <input type="hidden" name="ref" value="cmdform">
+
+</form>
+    </div>
+
+  </div>
+</div>
+
+
+      
+
+
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+
+<ul class="pagehead-actions">
+
+
+  <li>
+  <a href="/login?return_to=%2FAmirolAhmad%2Fbootstrap_v3"
+  class="minibutton with-count js-toggler-target star-button entice tooltipped upwards"
+  title="You must be signed in to use this feature" rel="nofollow">
+  <span class="octicon octicon-star"></span>Star
+</a>
+<a class="social-count js-social-count" href="/AmirolAhmad/bootstrap_v3/stargazers">
+  0
+</a>
+
+  </li>
+
+    <li>
+      <a href="/login?return_to=%2FAmirolAhmad%2Fbootstrap_v3"
+        class="minibutton with-count js-toggler-target fork-button entice tooltipped upwards"
+        title="You must be signed in to fork a repository" rel="nofollow">
+        <span class="octicon octicon-git-branch"></span>Fork
+      </a>
+      <a href="/AmirolAhmad/bootstrap_v3/network" class="social-count">
+        1
+      </a>
+    </li>
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="repo-label"><span>public</span></span>
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author">
+            <a href="/AmirolAhmad" class="url fn" itemprop="url" rel="author"><span itemprop="title">AmirolAhmad</span></a></span
+          ><span class="repohead-name-divider">/</span><strong
+          ><a href="/AmirolAhmad/bootstrap_v3" class="js-current-repository js-repo-home-link">bootstrap_v3</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="Octocat-spinner-32" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+
+      <div class="repository-with-sidebar repo-container with-full-navigation">
+
+        <div class="repository-sidebar">
+            
+
+<div class="repo-nav repo-nav-full js-repository-container-pjax js-octicon-loaders">
+  <div class="repo-nav-contents">
+    <ul class="repo-menu">
+      <li class="tooltipped leftwards" title="Code">
+        <a href="/AmirolAhmad/bootstrap_v3" aria-label="Code" class="js-selected-navigation-item selected" data-gotokey="c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_tags repo_branches /AmirolAhmad/bootstrap_v3">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+        <li class="tooltipped leftwards" title="Issues">
+          <a href="/AmirolAhmad/bootstrap_v3/issues" aria-label="Issues" class="js-selected-navigation-item js-disable-pjax" data-gotokey="i" data-selected-links="repo_issues /AmirolAhmad/bootstrap_v3/issues">
+            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+            <span class='counter'>0</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+
+      <li class="tooltipped leftwards" title="Pull Requests"><a href="/AmirolAhmad/bootstrap_v3/pulls" aria-label="Pull Requests" class="js-selected-navigation-item js-disable-pjax" data-gotokey="p" data-selected-links="repo_pulls /AmirolAhmad/bootstrap_v3/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class='counter'>0</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+
+    </ul>
+    <div class="repo-menu-separator"></div>
+    <ul class="repo-menu">
+
+      <li class="tooltipped leftwards" title="Pulse">
+        <a href="/AmirolAhmad/bootstrap_v3/pulse" aria-label="Pulse" class="js-selected-navigation-item " data-pjax="true" data-selected-links="pulse /AmirolAhmad/bootstrap_v3/pulse">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" title="Graphs">
+        <a href="/AmirolAhmad/bootstrap_v3/graphs" aria-label="Graphs" class="js-selected-navigation-item " data-pjax="true" data-selected-links="repo_graphs repo_contributors /AmirolAhmad/bootstrap_v3/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" title="Network">
+        <a href="/AmirolAhmad/bootstrap_v3/network" aria-label="Network" class="js-selected-navigation-item js-disable-pjax" data-selected-links="repo_network /AmirolAhmad/bootstrap_v3/network">
+          <span class="octicon octicon-git-branch"></span> <span class="full-word">Network</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+            <div class="only-with-full-nav">
+              
+
+  
+
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/AmirolAhmad/bootstrap_v3.git" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/AmirolAhmad/bootstrap_v3.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><strong>Subversion</strong> checkout URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/AmirolAhmad/bootstrap_v3" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/AmirolAhmad/bootstrap_v3" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>,
+      or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <span class="octicon help tooltipped upwards" title="Get help on which URL is right for you.">
+    <a href="https://help.github.com/articles/which-remote-url-should-i-use">
+    <span class="octicon octicon-question"></span>
+    </a>
+  </span>
+</p>
+
+
+
+              <a href="/AmirolAhmad/bootstrap_v3/archive/master.zip"
+                 class="minibutton sidebar-button"
+                 title="Download this repository as a zip file"
+                 rel="nofollow">
+                <span class="octicon octicon-cloud-download"></span>
+                Download ZIP
+              </a>
+            </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+          
+<div class="js-info-carrier" data-show-full-navigation="yes"></div>
+
+<div class="repository-meta js-details-container ">
+    <div class="repository-description js-details-show">
+      <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
+    </div>
+
+    <div class="repository-website js-details-show">
+      <p><a href="https://rubygems.org/gems/bootstrap_v3" rel="nofollow">https://rubygems.org/gems/bootstrap_v3</a></p>
+    </div>
+
+
+</div>
+
+<div class="capped-box overall-summary ">
+
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax href="/AmirolAhmad/bootstrap_v3/commits/master">
+          <span class="num">
+            <span class="octicon octicon-history"></span>
+            31
+          </span>
+          commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax href="/AmirolAhmad/bootstrap_v3/branches">
+          <span class="num">
+            <span class="octicon octicon-git-branch"></span>
+            1
+          </span>
+          branch
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax href="/AmirolAhmad/bootstrap_v3/releases">
+          <span class="num">
+            <span class="octicon octicon-tag"></span>
+            1
+          </span>
+          release
+        </a>
+      </li>
+
+      <li>
+
+  <a href="/AmirolAhmad/bootstrap_v3/contributors">
+    <span class="num">
+      <span class="octicon octicon-organization"></span>
+      1
+    </span>
+    contributor
+  </a>
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="/AmirolAhmad/bootstrap_v3/search?l=ruby">
+                <span class="color-block language-color" style="background-color:#701516;"></span>
+                <span class="lang">Ruby</span>
+                <span class="percent">57.4%</span>
+              </a>
+          </li>
+          <li>
+              <a href="/AmirolAhmad/bootstrap_v3/search?l=css">
+                <span class="color-block language-color" style="background-color:#1f085e;"></span>
+                <span class="lang">CSS</span>
+                <span class="percent">41.6%</span>
+              </a>
+          </li>
+          <li>
+              <a href="/AmirolAhmad/bootstrap_v3/search?l=javascript">
+                <span class="color-block language-color" style="background-color:#f15501;"></span>
+                <span class="lang">JavaScript</span>
+                <span class="percent">1.0%</span>
+              </a>
+          </li>
+        </ol>
+      </div>
+  </div>
+
+</div>
+
+  <a href="#"
+     class="repository-lang-stats-graph js-toggle-lang-stats tooltipped downwards"
+     title="Show language statistics"
+     style="background-color:#f15501">
+  <span class="language-color" style="width:57.4%; background-color:#701516;" itemprop="keywords">Ruby</span><span class="language-color" style="width:41.6%; background-color:#1f085e;" itemprop="keywords">CSS</span><span class="language-color" style="width:1.0%; background-color:#f15501;" itemprop="keywords">JavaScript</span>
+  </a>
+
+
+
+<div class="file-navigation in-mid-page">
+    <a href="/AmirolAhmad/bootstrap_v3/compare" aria-label="Compare, review, create a pull request" class="minibutton compact primary tooltipped downwards" title="Compare &amp; review" data-pjax>
+      <span class="octicon octicon-git-compare"></span>
+    </a>
+
+  
+
+
+<div class="select-menu js-menu-container js-select-menu" >
+  <span class="minibutton select-menu-button js-menu-target" data-hotkey="w"
+    data-master-branch="master"
+    data-ref="master"
+    role="button" aria-label="Switch branches or tags" tabindex="0">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-remove-close js-menu-close"></span>
+      </div> <!-- /.select-menu-header -->
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div><!-- /.select-menu-tabs -->
+      </div><!-- /.select-menu-filters -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item selected">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AmirolAhmad/bootstrap_v3/tree/master"
+                 data-name="master"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="master">master</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AmirolAhmad/bootstrap_v3/tree/v0.1"
+                 data-name="v0.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.1">v0.1</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+    </div> <!-- /.select-menu-modal -->
+  </div> <!-- /.select-menu-modal-holder -->
+</div> <!-- /.select-menu -->
+
+
+  <div class="breadcrumb"><span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/AmirolAhmad/bootstrap_v3" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">bootstrap_v3</span></a></span></span><span class="separator"> / </span><form action="/login?return_to=%2FAmirolAhmad%2Fbootstrap_v3" class="js-new-blob-form tooltipped rightwards new-file-link" method="post" title="Sign in to make or propose changes"><span aria-label="Sign in to make or propose changes" class="js-new-blob-submit octicon octicon-file-add" data-test-id="create-new-git-file" role="button"></span></form></div>
+</div>
+
+
+
+<a href="/AmirolAhmad/bootstrap_v3/find/master"
+  data-hotkey="t" class="js-show-file-finder" style="display:none" data-pjax>Show File Finder</a>
+<div class="bubble files-bubble">
+  <table class="files" data-pjax>
+    <thead>
+
+
+  <div class="commit commit-tease js-details-container" >
+    <p class="commit-title ">
+        <a href="/AmirolAhmad/bootstrap_v3/commit/19380d0a62f69a03866b0ddee279f9f11e68b6d4" class="message" data-pjax="true" title="remove">remove</a>
+        
+    </p>
+    <div class="commit-meta">
+      <span class="js-zeroclipboard zeroclipboard-link" data-clipboard-text="19380d0a62f69a03866b0ddee279f9f11e68b6d4" data-copied-hint="copied!" title="Copy SHA"><span class="octicon octicon-clippy"></span></span>
+      <a href="/AmirolAhmad/bootstrap_v3/commit/19380d0a62f69a03866b0ddee279f9f11e68b6d4" class="sha-block" data-pjax>latest commit <span class="sha">19380d0a62</span></a>
+
+      <div class="authorship">
+        <img class="gravatar" height="20" src="https://2.gravatar.com/avatar/0385d51ad69470a8cd4d2f5fc63c7bc6?d=https%3A%2F%2Fidenticons.github.com%2Ff2bf9024aec235cf9a5d6da7477e6a88.png&amp;s=140" width="20" />
+        <span class="author-name"><a href="/AmirolAhmad" data-skip-pjax="true" rel="author">AmirolAhmad</a></span>
+        authored <time class="js-relative-date updated" datetime="2013-09-25T23:55:22-07:00" title="2013-09-25 23:55:22">September 25, 2013</time>
+
+      </div>
+    </div>
+  </div>
+    </thead>
+
+    
+<tbody class=""
+  data-url="/AmirolAhmad/bootstrap_v3/file-list/master">
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AmirolAhmad/bootstrap_v3/tree/master/lib" class="js-directory-link" id="e8acc63b1e238f3255c900eed37254b8-4d0acf8a08580f0dc7f14efd5cec45fe1a0a0790" title="lib">lib</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AmirolAhmad/bootstrap_v3/commit/26638b88d811763dac1b98ab4acf32cdfe25e5eb" class="message" data-pjax="true" title="update version">update version</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-25T23:54:37-07:00" title="2013-09-25 23:54:37">September 25, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AmirolAhmad/bootstrap_v3/tree/master/vendor" class="js-directory-link" id="7c3613dba5171cb6027c67835dd3b9d4-7958c5f2258f2a19fe102bcffcda882c81e689a1" title="vendor">vendor</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AmirolAhmad/bootstrap_v3/commit/41b96dd02b5e0022919ec007b1e353c906ab9a4d" class="message" data-pjax="true" title="Initial update">Initial update</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-25T22:58:15-07:00" title="2013-09-25 22:58:15">September 25, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AmirolAhmad/bootstrap_v3/blob/master/Gemfile" class="js-directory-link" id="8b7db4d5cc4b8f6dc8feb7030baa2478-d15753b8beb4949f5cdace973f5000bf90025207" title="Gemfile">Gemfile</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AmirolAhmad/bootstrap_v3/commit/f2ec5764478816ac92351fd43446ba322151ae74" class="message" data-pjax="true" title="Initial added">Initial added</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-25T19:45:38-07:00" title="2013-09-25 19:45:38">September 25, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AmirolAhmad/bootstrap_v3/blob/master/LICENSE" class="js-directory-link" id="9879d6db96fd29134fc802214163b95a-18c9127985a38b1d13a6ba0b5981ac3ddf0cbf46" title="LICENSE">LICENSE</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AmirolAhmad/bootstrap_v3/commit/db560f03b8d8f4f01e0b88f6a8f29bf447565d66" class="message" data-pjax="true" title="Initial commit">Initial commit</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-25T19:43:24-07:00" title="2013-09-25 19:43:24">September 25, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AmirolAhmad/bootstrap_v3/blob/master/README.md" class="js-directory-link" id="04c6e90faac2675aa89e2176d2eec7d8-df0d8a92ad08bc61b4ddd9ecb37277f829ded059" title="README.md">README.md</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AmirolAhmad/bootstrap_v3/commit/3de1ecd513e236f3de64491568f19a0ea4aacc14" class="message" data-pjax="true" title="Update readme">Update readme</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-25T23:49:29-07:00" title="2013-09-25 23:49:29">September 25, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AmirolAhmad/bootstrap_v3/blob/master/Rakefile" class="js-directory-link" id="52c976fc38ed2b4e3b1192f8a8e24cff-13a79ede9e53c5a18845054c918d052dbf87aaf7" title="Rakefile">Rakefile</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AmirolAhmad/bootstrap_v3/commit/f2ec5764478816ac92351fd43446ba322151ae74" class="message" data-pjax="true" title="Initial added">Initial added</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-25T19:45:38-07:00" title="2013-09-25 19:45:38">September 25, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AmirolAhmad/bootstrap_v3/blob/master/bootstrap.thor" class="js-directory-link" id="3bc6258c98a6d4527eb5ed5e02be2e98-7ece585f3f89a0e17871c45d54121107f8a65578" title="bootstrap.thor">bootstrap.thor</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AmirolAhmad/bootstrap_v3/commit/41b96dd02b5e0022919ec007b1e353c906ab9a4d" class="message" data-pjax="true" title="Initial update">Initial update</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-25T22:58:15-07:00" title="2013-09-25 22:58:15">September 25, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AmirolAhmad/bootstrap_v3/blob/master/bootstrap_v3.gemspec" class="js-directory-link" id="2aee4d059d9c3f610ddf7e33c481ab2c-66baf86e5f076d3d005132fd5f0012e080cde9ca" title="bootstrap_v3.gemspec">bootstrap_v3.gemspec</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AmirolAhmad/bootstrap_v3/commit/39dc9d97a859e013a24cab955110b2e49783b99b" class="message" data-pjax="true" title="Initial added">Initial added</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-25T19:57:14-07:00" title="2013-09-25 19:57:14">September 25, 2013</time></span></td>
+    </tr>
+</tbody>
+
+  </table>
+</div>
+
+  <div id="readme" class="clearfix announce instapaper_body md">
+    <span class="name"><span class="octicon octicon-book"></span> README.md</span><article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
+<a name="bootstrap-v3-for-rails" class="anchor" href="#bootstrap-v3-for-rails"><span class="octicon octicon-link"></span></a>Bootstrap V3 (for Rails)</h1>
+
+<p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
+
+<p>Homepage: <a href="http://getbootstrap.com/">http://getbootstrap.com/</a></p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Inside your Gemfile add the following lines:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">gem</span> <span class="s1">'therubyracer'</span>
+<span class="n">gem</span> <span class="s1">'less-rails'</span>
+<span class="n">gem</span> <span class="s2">"bootstrap_v3"</span>
+</pre></div>
+
+<p>Then run <code>bundle install</code> to install gems.</p>
+
+<p>Run generator to include assets to your project</p>
+
+<div class="highlight highlight-bash"><pre>rails g bootstrap:install
+</pre></div>
+
+<h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol></article>
+  </div>
+
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com">API</a></li>
+      <li><a href="http://training.github.com">Training</a></li>
+      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+
+    </ul>
+
+    <a href="/">
+      <span class="mega-octicon octicon-mark-github"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2013 <span title="0.04515s from github-fe115-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+          <div class="suggester-container">
+              <div class="suggester fullscreen-suggester js-navigation-container" id="fullscreen_suggester"
+                 data-url="/AmirolAhmad/bootstrap_v3/suggestions/commit">
+              </div>
+          </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped leftwards" title="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped leftwards"
+      title="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-remove-close close ajax-error-dismiss"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+  </body>
+</html>
+
