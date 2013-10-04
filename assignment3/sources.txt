@@ -6,3 +6,12 @@ http://stackoverflow.com/questions/6554386/getting-html-with-pycurl
 Writing into multiple files:
 ============================
 http://stackoverflow.com/questions/13798447/write-multiple-files-at-a-time
+
+SSL Certs
+=======================
+Missing certificate causes this error: 
+pycurl.error: (60, 'server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none')
+http://stackoverflow.com/questions/8332643/pycurl-and-ssl-cert
+
+Beautiful Soup Parsing
+==================

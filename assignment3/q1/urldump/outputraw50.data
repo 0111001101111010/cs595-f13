@@ -1,258 +1,0 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<!-- 	
-	James Robertson's Blog
-	Powered by Cincom Smalltalk
-	http://www.jarober.com/blog
-	James A. Robertson, Vassili Bykov
-
-	Structure:
-
-       body
-       	#container
-			#header
-			#main
-				#content
-					#posts
-						.post *
-					#referrers
-				#menu
--->
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-
-	
-	
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-
-	<style type="text/css" media="screen, projection">@import "http://www.jarober.com/css/impact-blog.css";</style>
-	<style type="text/css" media="print, handheld">@import "http://www.jarober.com/css/impact-blog.css";</style>
-
-
-	
-	<title>PY 4U 4: Numbers in Python</title>
-
-
-	<link rel="alternate" type="text/xml" title="RSS Feed" href="http://www.jarober.com/rss/blog.xml" />
-	<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="http://www.jarober.com/rss/blog.xml" />
-	<link rel="pingback" href="servlet/PingbackServlet" />
-
-	<meta name="description" content="James Robertson on Smalltalk and the Technology Business" />
-	<meta name="ICBM" content="39.214103, -76.878807" />
-	<meta name="DC.title" content="James Robertson - Smalltalk and the Tech Industry" /> 
-
-	<script language="JavaScript">
-	<!--
-	
-	function sendMailTo(name, company, domain) {
-	  locationstring = 'mai' + 'lto:' + name + '@' + company + '.' + domain;
-	  window.location.replace(locationstring);
-	}
-	//-->
-	</script>
-
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-298425-2");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-.
-<script src="http://developer.apple.com/internet/AC_Quicktime.js" language="JavaScript" type="text/javascript"></script>
-<script src="http://www.apple.com/library/quicktime/scripts/qtp_library.js" language="JavaScript" type="text/javascript"></script>
-<link href="http://www.apple.com/library/quicktime/stylesheets/qtp_library.css" rel="StyleSheet" type="text/css" />
-.
-
-</head>
-
-
-<body>
-
-    <div id="container">
-
-	<div id="header">
-	<div class="watermark"></div>	
-		
-		<p id="communityblogs">
-			<a href="/">Home</a>
-		</p>
-		<a href="/" title="Home">
-		 	<div id="logo"></div>
-		</a>
-		
-		<h1><a href="blogView">Smalltalk with James Robertson</a></h1>
-		<h2><a href="javascript:sendMailTo('jarober', 'gmail', 'com')" title="Email author">Email James Robertson</a></h2>
-		<div id="blurb">
-			<p><a href="http://www.cincomsmalltalk.com/developers" title="Smalltalk">Powered by Smalltalk</a></p>
-			<p>Opinions expressed in this blog are those of James Robertson.</p>
-		</div>
-	
-		<p class="accessibility"><a href="#menu">Skip to Menu</a></p>
-
-	</div> <!-- #header -->
-
-	<div id="main">
-	<div class="watermark"></div>	
-
-		<div id="content">
-		<div class="watermark"></div>	
-		
-			<div id="posts">	
-			<div class="watermark"></div>	
-				<a name="3557639051"></a><div class="post"><p class="category"><a href="http://www.jarober.com/blog/blogView?searchCategory=py4u">py4u</a></p><h2><a href="http://www.jarober.com/blog/blogView?showComments=true&printTitle=PY_4U_4:_Numbers_in_Python&entry=3557639051" rel="bookmark">PY 4U 4: Numbers in Python</a></h2><p class="timestamp">September 26, 2013 9:04:11.634</p><div class="postbody"><div xmlns="http://www.w3.org/1999/xhtml"><p>Today's <a href="http://www.jarober.com/blog/py4u.ssp" title="Python 4 You">Python 4 You</a> goes over some of the basics about numbers in Python, using the shell REPL.  If you have trouble viewing it here in the browser, you can also <a href="http://youtu.be/IPUvqt9KlmI">navigate directly to YouTube</a>.    To watch now, click on the image below:</p><p><a href="https://archive.org/download/Py4u4IPhone/py4u4.mp4"><img src="/images/py4u/py4u4-poster.jpg" alt="Numbers" title="Numbers" /></a></p><p>If you have trouble viewing that directly, you can <a href="https://archive.org/download/Py4u4IPhone/py4u4.mp4">click here</a> to download the video directly.  If you need the video in a Windows Media format, then <a href="https://archive.org/download/Py4u4IPhone/py4u4.wmv">download that here</a>. </p><p>You can also watch it on YouTube:</p><p><iframe width="420" height="315" src="//www.youtube.com/embed/IPUvqt9KlmI" frameborder="0" allowfullscreen></iframe></p><!-- technorati tags start --><p style="text-align:right;font-size:10px;">Tags: <a href="http://www.technorati.com/tag/python" rel="tag">python</a>, <a href="http://www.technorati.com/tag/numbers" rel="tag">numbers</a></p><!-- technorati tags end --></div></div><p><b>Enclosures:</b><br/>[<a href="http://www.jarober.com/py4uFiles/py4u4-iPhone.m4v">py4u4-iPhone.m4v ( Size: 2622223 )</a>]<br/></p><div style="display:table;height:50px;"><div style="display:table-cell;vertical-align:middle;"><iframe src="http://www.facebook.com/plugins/like.php?href=http:%2F%2Fwww.jarober.com%2Fblog%2FblogView?entry=3557639051&amp;layout=button_count&amp;show_faces=true&amp;width=100&amp; action=like&amp;font=arial&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none;  vertical-align: middle; overflow:hidden; width:100px; height:21px;"></iframe>&nbsp;<a name="fb_share" type="button_count" href="http://www.facebook.com/sharer.php?u=http:%2F%2Fwww.jarober.com%2Fblog%2FblogView?entry=3557639051">Share</a><script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>&nbsp;<a href="http://twitter.com/?status=http:%2F%2Fwww.jarober.com%2Fblog%2FblogView?entry=3557639051 alt="Tweet This"><img src="http://twitter-badges.s3.amazonaws.com/twitter-c.png" alt="Tweet This" title="Tweet This" style="border:none;  vertical-align: middle; overflow:hidden; height: 21px;" /></a><p><g:plusone></g:plusone></p></div></div><p class="postfooter"><a href="http://www.jarober.com/blog/blogView?showComments=true&title=PY+4U+4%3A+Numbers+in+Python&entry=3557639051#3557639051">comments(1)</a> | <a name="3557639051"> <a href="http://www.jarober.com/blog/blogView?entry=3557639051">permanent link</a> |  <a href="SingleView.ssp?showComments=true&forPrinter=true&entry=3557639051">printer friendly</a> | <a href="http://www.jarober.com/blog/blogView?nextFrom=3557639051">next</a> | <a href="http://www.jarober.com/blog/blogView?prevFrom=3557639051">prev</a></p></div>
-			</div> <!-- #posts -->
-			
-			<!--  Place this tag after the last plusone tag -->
-<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
-
-			
-		</div> <!-- #content -->
-	
-		<!--		THE MENU SECTION		-->
-	
-		<div id="menu">
-		<div class="watermark"></div>	
-	
-				<h2>Subscribe</h2>
-				<ul>
-				<li><a class="feedbutton" href="http://www.jarober.com/rss/blog.xml" target="_new" title="Subscribe using your RSS reader">RSS</a></li>
-				<li><hr /></li>
-				</ul>
-			<h2>Posts</h2>
-			<ul>
-				<li><a href="blogView">Recent</a></li>
-				<li><a href="http://www.jarober.com/blog/blogArchive?month=9&year=2013">September 2013</a></li><li><a href="http://www.jarober.com/blog/blogArchive?month=8&year=2013">August 2013</a></li><li><a href="http://www.jarober.com/blog/blogArchive?month=7&year=2013">July 2013</a></li><li><a href="http://www.jarober.com/blog/blogArchive?month=6&year=2013">June 2013</a></li>
-				<li><a href="http://www.jarober.com/blog/blogArchive">Archives</a></li>
-				<li><a href="blogView?content=smalltalkArchives">Smalltalk Archives</li>
-				<li><hr /></li>
-			</ul>
-<h2>Slicehost</h2>
-<ul>
-<li><a href="https://manage.slicehost.com/customers/new?referrer=b22249f4efba5dd1c130a13d3b7e0cda">Get Slicehost</a></li>
-</ul>
-
-<h2>Events</h2>
-<ul>
-<li><a href="blogView?content=events">Where in the World</a></li>
-<li><a href="/blog/talks.ssp">Presentation Materials</a></li>
-</ul>
-<h2>Reading List</h2>
-<ul>
-<li><a href="blogView?content=bookList">Book Reviews</a></li>
-</ul>
-<ul><li><a href="http://www.jarober.com/blog/blogView?entry=3496763724"><img border="0" src="/images/books/danceDragons-book.png" title="A Dance With Dragons" alt="A Dance With Dragons" /></a></li><li><a href="http://www.jarober.com/blog/blogView?showComments=true&printTitle=Pondering_the_Past&entry=3457508038"><img border="0" src="/images/books/armenian-golgotha-book.png" title="Armenian Golgotha" alt="Armenian Golgotha" /></a></li><li><a href="http://www.jarober.com/blog/blogView?showComments=true&printTitle=Bootstrapping_Innovation&entry=3454822156"><img border="0" src="http://www.jarober.com/images/books/innovation4-book.png"></a></li><li><a href="http://www.jarober.com/blog/blogView?entry=3470210972"><img border="0"  src="/images/books/axis-book.png" title="Axis" alt="Axis" /></a></li></ul>
-
-<h2>Support this Blog</h2>
-<ul>
-<li>
-<SCRIPT charset="utf-8" type="text/javascript" src="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&MarketPlace=US&ID=V20070822/US/smallwithjame-20/8002/214e45a1-d938-491a-b711-ba64e5d6747b"> </SCRIPT> <NOSCRIPT><A HREF="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&MarketPlace=US&ID=V20070822%2FUS%2Fsmallwithjame-20%2F8002%2F214e45a1-d938-491a-b711-ba64e5d6747b&Operation=NoScript">Amazon.com Widgets</A></NOSCRIPT>
-</li>
-
-<li><br/></li>
-<script type="text/javascript"><!--
-google_ad_client = "pub-3034441087619083";
-/* GoogleSidebarJarober-1-4-10 */
-google_ad_slot = "3016099589";
-google_ad_width = 125;
-google_ad_height = 125;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-			<li><hr/></li>
-</ul>
-			<h2>Search</h2>
-<ul>
-			<form name="blogViewForm" method="post" action="servlet/SearchServlet">
-			<p><label for="searchID" accesskey="4">Archives:</label></p>
-			<p><input type="checkbox" checked name="searchTitle" value="searchTitle" />Title
-			     <input type="checkbox" checked name="searchBodies" value="searchBodies" />Body</p>
-			<p><input type="text" name="searchText" size="17" maxlength="80" id="searchID" />
-			     <input type="submit" value="Go" name="search_button" /></p>
-			</form>
-<hr/>
-</ul>
-
-<h2>Software Media</h2>
-<ul>
-<li><a href="stic13.ssp">STIC 2013</a></li>
-<li><a href="im.ssp">Independent Misinterpretations</a></li>
-<li><a href="st4u.ssp">Smalltalk 4 U</a></li>
-<li><a href="pharoResources.ssp">Pharo Resources</a></li>
-<li><a href="js4u.ssp">Javascript 4 U</a></li>
-<li><a href="py4u.ssp">Python 4 U</a></li>
-</ul>
-
-<h2>Game Media</h2>
-<ul>
-<li><a href="/thuumcast">Thu'umcast: Skyrim Diary</a></li>
-<li><a href="https://www.facebook.com/groups/thuumcast/">Thu'umcast Group on Facebook</a></li>
-<li><a href="https://www.facebook.com/pages/Thuumcast">Thu'umcast Page on Facebook</a></li>
-<li><a href="fnv.ssp">That Podcast: An FNV Diary</a></li>
-<li>
-<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FThuumcast%2F120163764760169&amp;width=100&amp;colorscheme=light&amp;connections=10&amp;stream=true&amp;header=true&amp;height=587" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:587px;" allowTransparency="true"></iframe>
-
-</li>
-</ul>
-
-
-
-			<h2>Links</h2>
-			<ul>
-				<li><a href="http://www.jarober.com/blog/blogView?content=aboutMe">About Me</a></li><li><a href="http://www.jarober.com/blog/blogView?content=smalltalk_projects">Smalltalk Projects</a></li><li><a href="https://manage.slicehost.com/customers/new?referrer=b22249f4efba5dd1c130a13d3b7e0cda">Get Slicehost</a></li><li><a href="http://twitter.com/jarober">Me on Twitter</a></li><li><a href="http://facebook.com/jarober">Me on Facebook</a></li><li><a href="http://youtube.com/jarober">ST on YouTube</a></li><li><a href="http://www.jarober.com/blog/blogView?content=tutorials">Tutorial Posts</a></li><li><a href="http://www.jarober.com/blog/blogView?showComments=true&printTitle=Working_with_Silt&entry=3443471551">Run Silt</a></li><li><a href="http://www.jarober.com/blog/blogView?showComments=true&printTitle=Debugging_Hard_Problems&entry=3450586712">VM Debugging</a></li><li><a href="http://www.jarober.com/blog/blogView?showComments=true&printTitle=Comparing_Seaside_and_Ruby_on_Rails&entry=3450708968">Why Seaside?</a></li><li><a href="http://www.jarober.com/blog/blogView?content=esug2010">ESUG 2010 Videos</a></li>
-<li>
-<iframe src="http://www.google.com/talk/service/badge/Show?tk=z01q6amlqq4vi6kltk09uh1jsan2nt314sv21ut3m32lhs6k50i4lmdel4ne4soc1j5ro30fb1qaaptpl8svdngiv6tqh7879t1u8cqrb90ihjkh896e4612pusdcuns2lloskcpe9tp4g98&amp;w=200&amp;h=60" allowtransparency="true" width="160" frameborder="0" height="60"></iframe>
-</li>
-			</ul>
-
-			<h2>Categories</h2>
-			<ul>
-				<select style='border: 1px solid;width: 100px;'><option>Select...</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=advertising'">advertising</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=audio'">audio</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=blog'">blog</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=books'">books</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=BottomFeeder'">BottomFeeder</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=browsers'">browsers</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=campst'">campst</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=cincom'">cincom</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=copyright'">copyright</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=culture'">culture</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=da2diary'">da2diary</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=da2diaryAAC'">da2diaryAAC</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=development'">development</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=DRM'">DRM</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=education'">education</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=esug10'">esug10</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=esug11'">esug11</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=esug12'">esug12</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=esug13'">esug13</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=esug2010'">esug2010</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=events'">events</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=fnvdiary'">fnvdiary</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=fnvdiaryAAC'">fnvdiaryAAC</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=gadgets'">gadgets</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=gamecast'">gamecast</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=games'">games</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=general'">general</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=history'">history</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=holiday'">holiday</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=humor'">humor</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=itNews'">itNews</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=jobs'">jobs</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=js4u'">js4u</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=law'">law</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=Macintosh'">Macintosh</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=management'">management</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=marketing'">marketing</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=media'">media</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=movies'">movies</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=music'">music</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=news'">news</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=open source'">open source</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=podcast'">podcast</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=podcastAAC'">podcastAAC</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=podcasting'">podcasting</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=PR'">PR</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=privacy'">privacy</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=py4u'">py4u</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=rss'">rss</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=science'">science</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=scifi'">scifi</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=search'">search</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=security'">security</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=service'">service</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=skyrim'">skyrim</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=skyrimAAC'">skyrimAAC</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=smalltalk'">smalltalk</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=smalltalkDaily'">smalltalkDaily</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=social media'">social media</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=spam'">spam</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=sports'">sports</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=st4u'">st4u</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=standards'">standards</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=stic12'">stic12</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=stic13'">stic13</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=stupidity'">stupidity</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=testing'">testing</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=traffic'">traffic</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=training'">training</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=travel'">travel</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=tutorial'">tutorial</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=tv'">tv</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=weather'">weather</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=web'">web</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=webVelocity'">webVelocity</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=windows'">windows</option><option onClick="window.location='http://www.jarober.com/blog/blogView?searchCategory=yankees'">yankees</option></select>
-			</ul>
-		
-	<h2>Category Syndication Links</h2>
-	<ul>
-	<select style='border: 1px solid;width: 100px;'><option>Select...</option><option onClick="window.location='http://www.jarober.com/rss/blog_advertising.xml'">advertising</option><option onClick="window.location='http://www.jarober.com/rss/blog_audio.xml'">audio</option><option onClick="window.location='http://www.jarober.com/rss/blog_blog.xml'">blog</option><option onClick="window.location='http://www.jarober.com/rss/blog_books.xml'">books</option><option onClick="window.location='http://www.jarober.com/rss/blog_BottomFeeder.xml'">BottomFeeder</option><option onClick="window.location='http://www.jarober.com/rss/blog_browsers.xml'">browsers</option><option onClick="window.location='http://www.jarober.com/rss/blog_campst.xml'">campst</option><option onClick="window.location='http://www.jarober.com/rss/blog_cincom.xml'">cincom</option><option onClick="window.location='http://www.jarober.com/rss/blog_copyright.xml'">copyright</option><option onClick="window.location='http://www.jarober.com/rss/blog_culture.xml'">culture</option><option onClick="window.location='http://www.jarober.com/rss/blog_da2diary.xml'">da2diary</option><option onClick="window.location='http://www.jarober.com/rss/blog_da2diaryAAC.xml'">da2diaryAAC</option><option onClick="window.location='http://www.jarober.com/rss/blog_development.xml'">development</option><option onClick="window.location='http://www.jarober.com/rss/blog_DRM.xml'">DRM</option><option onClick="window.location='http://www.jarober.com/rss/blog_education.xml'">education</option><option onClick="window.location='http://www.jarober.com/rss/blog_esug10.xml'">esug10</option><option onClick="window.location='http://www.jarober.com/rss/blog_esug11.xml'">esug11</option><option onClick="window.location='http://www.jarober.com/rss/blog_esug12.xml'">esug12</option><option onClick="window.location='http://www.jarober.com/rss/blog_esug13.xml'">esug13</option><option onClick="window.location='http://www.jarober.com/rss/blog_esug2010.xml'">esug2010</option><option onClick="window.location='http://www.jarober.com/rss/blog_events.xml'">events</option><option onClick="window.location='http://www.jarober.com/rss/blog_fnvdiary.xml'">fnvdiary</option><option onClick="window.location='http://www.jarober.com/rss/blog_fnvdiaryAAC.xml'">fnvdiaryAAC</option><option onClick="window.location='http://www.jarober.com/rss/blog_gadgets.xml'">gadgets</option><option onClick="window.location='http://www.jarober.com/rss/blog_gamecast.xml'">gamecast</option><option onClick="window.location='http://www.jarober.com/rss/blog_games.xml'">games</option><option onClick="window.location='http://www.jarober.com/rss/blog_general.xml'">general</option><option onClick="window.location='http://www.jarober.com/rss/blog_history.xml'">history</option><option onClick="window.location='http://www.jarober.com/rss/blog_holiday.xml'">holiday</option><option onClick="window.location='http://www.jarober.com/rss/blog_humor.xml'">humor</option><option onClick="window.location='http://www.jarober.com/rss/blog_itNews.xml'">itNews</option><option onClick="window.location='http://www.jarober.com/rss/blog_jobs.xml'">jobs</option><option onClick="window.location='http://www.jarober.com/rss/blog_js4u.xml'">js4u</option><option onClick="window.location='http://www.jarober.com/rss/blog_law.xml'">law</option><option onClick="window.location='http://www.jarober.com/rss/blog_Macintosh.xml'">Macintosh</option><option onClick="window.location='http://www.jarober.com/rss/blog_management.xml'">management</option><option onClick="window.location='http://www.jarober.com/rss/blog_marketing.xml'">marketing</option><option onClick="window.location='http://www.jarober.com/rss/blog_media.xml'">media</option><option onClick="window.location='http://www.jarober.com/rss/blog_movies.xml'">movies</option><option onClick="window.location='http://www.jarober.com/rss/blog_music.xml'">music</option><option onClick="window.location='http://www.jarober.com/rss/blog_news.xml'">news</option><option onClick="window.location='http://www.jarober.com/rss/blog_opensource.xml'">open source</option><option onClick="window.location='http://www.jarober.com/rss/blog_podcast.xml'">podcast</option><option onClick="window.location='http://www.jarober.com/rss/blog_podcastAAC.xml'">podcastAAC</option><option onClick="window.location='http://www.jarober.com/rss/blog_podcasting.xml'">podcasting</option><option onClick="window.location='http://www.jarober.com/rss/blog_PR.xml'">PR</option><option onClick="window.location='http://www.jarober.com/rss/blog_privacy.xml'">privacy</option><option onClick="window.location='http://www.jarober.com/rss/blog_py4u.xml'">py4u</option><option onClick="window.location='http://www.jarober.com/rss/blog_rss.xml'">rss</option><option onClick="window.location='http://www.jarober.com/rss/blog_science.xml'">science</option><option onClick="window.location='http://www.jarober.com/rss/blog_scifi.xml'">scifi</option><option onClick="window.location='http://www.jarober.com/rss/blog_search.xml'">search</option><option onClick="window.location='http://www.jarober.com/rss/blog_security.xml'">security</option><option onClick="window.location='http://www.jarober.com/rss/blog_service.xml'">service</option><option onClick="window.location='http://www.jarober.com/rss/blog_skyrim.xml'">skyrim</option><option onClick="window.location='http://www.jarober.com/rss/blog_skyrimAAC.xml'">skyrimAAC</option><option onClick="window.location='http://www.jarober.com/rss/blog_smalltalk.xml'">smalltalk</option><option onClick="window.location='http://www.jarober.com/rss/blog_smalltalkDaily.xml'">smalltalkDaily</option><option onClick="window.location='http://www.jarober.com/rss/blog_socialmedia.xml'">social media</option><option onClick="window.location='http://www.jarober.com/rss/blog_spam.xml'">spam</option><option onClick="window.location='http://www.jarober.com/rss/blog_sports.xml'">sports</option><option onClick="window.location='http://www.jarober.com/rss/blog_st4u.xml'">st4u</option><option onClick="window.location='http://www.jarober.com/rss/blog_standards.xml'">standards</option><option onClick="window.location='http://www.jarober.com/rss/blog_stic12.xml'">stic12</option><option onClick="window.location='http://www.jarober.com/rss/blog_stic13.xml'">stic13</option><option onClick="window.location='http://www.jarober.com/rss/blog_stupidity.xml'">stupidity</option><option onClick="window.location='http://www.jarober.com/rss/blog_testing.xml'">testing</option><option onClick="window.location='http://www.jarober.com/rss/blog_traffic.xml'">traffic</option><option onClick="window.location='http://www.jarober.com/rss/blog_training.xml'">training</option><option onClick="window.location='http://www.jarober.com/rss/blog_travel.xml'">travel</option><option onClick="window.location='http://www.jarober.com/rss/blog_tutorial.xml'">tutorial</option><option onClick="window.location='http://www.jarober.com/rss/blog_tv.xml'">tv</option><option onClick="window.location='http://www.jarober.com/rss/blog_weather.xml'">weather</option><option onClick="window.location='http://www.jarober.com/rss/blog_web.xml'">web</option><option onClick="window.location='http://www.jarober.com/rss/blog_webVelocity.xml'">webVelocity</option><option onClick="window.location='http://www.jarober.com/rss/blog_windows.xml'">windows</option><option onClick="window.location='http://www.jarober.com/rss/blog_yankees.xml'">yankees</option></select>
-			</ul>
-			
-	      </div> <!-- menu -->
-			
-
-	
-      </div> <!-- #main -->
-
-    </div> <!-- container -->
-
-  </body>
-
-</html>
-<!-- Built with Cincom Smalltalk. http://www.cincomsmalltalk.com -->

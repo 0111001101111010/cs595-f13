@@ -1,451 +1,482 @@
-<html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraph.org/schema/"> <head>
+<!DOCTYPE html>
+<script>var __pbpa = true;</script><script>var translated_warning_string = 'Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?';</script><script type="text/javascript" language="javascript" src="http://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=90496f22ffd4b193ff4f3aa39d43d2af"></script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
+        <title>Scaling Django to 8 Billion Page Views | Disqus: The Official Blog</title>
+        <link rel="shortcut icon" href="http://mediacdn.disqus.com/1366744527/img/favicon16-32.ico" type="image/vnd.microsoft.icon" />
+        <link rel="alternate" type="application/rss+xml" href="http://blog.disqus.com/rss">
+        <link href="http://mediacdn.disqus.com/1361595726/css/base.css" type="text/css" rel="stylesheet"/>
         
-<meta property="og:title" content="Python Weekly - Issue  106"/>
-<meta property="fb:page_id" content="43929265776" />        
-		<title>Python Weekly - Issue  106</title>
-	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		
-	<style type="text/css">
-		body,.backgroundTable{
-			background-color:#EEEEEE;
-		}
-		#contentTable{
-			border:1px solid #d3d3d3;
-			margin-top:;
-		}
-		.headerTop{
-			background-color:#F5F1DE;
-			border-top:0px none #000000;
-			border-bottom:0px none #FFFFFF;
-			text-align:center;
-			padding:0px;
-		}
-		.adminText{
-			font-size:10px;
-			color:#333333;
-			line-height:200%;
-			font-family:Helvetica;
-			text-decoration:none;
-		}
-		.headerBar{
-			background-color:#F5F1DE;
-			border-top:0px none #333333;
-			border-bottom:0px none #FFFFFF;
-			padding:0px;
-		}
-		.headerBarText{
-			color:#333333;
-			font-size:30px;
-			font-family:Arial;
-			font-weight:normal;
-			text-align:left;
-		}
-		.title{
-			font-size:24px;
-			font-weight:bold;
-			color:#000000;
-			font-family:Helvetica;
-			line-height:150%;
-		}
-		.subTitle{
-			font-size:14px;
-			font-weight:bold;
-			color:#000000;
-			font-style:normal;
-			font-family:Helvetica;
-		}
-		.defaultText{
-			font-size:13px;
-			color:#333333;
-			line-height:150%;
-			font-family:Helvetica;
-			background-color:#ffffff;
-			padding:20px;
-			border:0px none #FFFFFF;
-		}
-		.footerRow{
-			background-color:#F5F1DE;
-			border-top:0px none #F5F1DE;
-			padding:20px;
-		}
-		.footerText{
-			font-size:10px;
-			color:#666666;
-			line-height:100%;
-			font-family:Helvetica;
-		}
-		a,a:link,a:visited{
-			color:#1173C7;
-			text-decoration:underline;
-			font-weight:bold;
-		}
-		.headerTop a{
-			color:#17488a;
-			text-decoration:none;
-			font-weight:normal;
-		}
-		.footerRow a{
-			color:#17488a;
-			text-decoration:underline;
-			font-weight:normal;
-		}
-		.headerBarText a{
-			color:#000000;
-			text-decoration:none;
-		}
-		a,a:link,a:visited{
-			color:#1173C7;
-			font-weight:bold;
-		}
-		body,.backgroundTable{
-			background-color:#EEEEEE;
-		}
-</style>        <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-            </script>
-            <script type="text/javascript">
-            try {
-                var _gaq = _gaq || [];
-                _gaq.push(["_setAccount", "UA-329148-88"]);
-                _gaq.push(["_setDomainName", ".campaign-archive.com"]);
-                _gaq.push(["_trackPageview"]);
-                _gaq.push(["_setAllowLinker", true]);
-            } catch(err) {console.log(err);}</script>
-                    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> <link rel="stylesheet" href="http://us2.campaign-archive2.com/css/archivebar-desktop.css" mc:nocompile> <script type="text/javascript" src="http://us2.campaign-archive2.com/js/archivebar-desktop-plugins.js" mc:nocompile></script> <script src="http://downloads.mailchimp.com/ZeroClipboard.min.js" mc:nocompile></script> <script type="text/javascript">
-            $(document).ready(function() {
-                ZeroClipboard.setDefaults({ moviePath: "//downloads.mailchimp.com/ZeroClipboard.07.13.swf", trustedDomains: ['us2.campaign-archive2.com']});
-                var clip = new ZeroClipboard( $('#copyURL') );
-                clip.setHandCursor(true);
-                clip.on('complete', function(client, args) {alert('Copied "'+args.text+'" to your clipboard.');});
-                clip.on('mouseover', function (client) { $('#copyURL').addClass('hover'); });
-                clip.on('mouseout', function (client) { $('#copyURL').removeClass('hover'); });
+        <style type="text/css">
+        @import "http://static.tumblr.com/mhakwey/hdQlsnv4o/tiptip.css";
+        .cta-button {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            background-color: rgb(255,115,0);
+            background-image: linear-gradient(bottom, rgb(255,100,43) 19%, rgb(255,115,0) 60%);
+            background-image: -o-linear-gradient(bottom, rgb(255,100,43) 19%, rgb(255,115,0) 60%);
+            background-image: -moz-linear-gradient(bottom, rgb(255,100,43) 19%, rgb(255,115,0) 60%);
+            background-image: -webkit-linear-gradient(bottom, rgb(255,100,43) 19%, rgb(255,115,0) 60%);
+            background-image: -ms-linear-gradient(bottom, rgb(255,100,43) 19%, rgb(255,115,0) 60%);
 
-                $('li.more > a').click(function(){
-                    var toToggle = $($(this).attr('href'));
-                    if(toToggle.is(':visible')){
-                        toToggle.slideUp('fast');
-                        $(this).removeClass('is-active');
-                        if ($('#awesomebar').find('.is-active').length < 1){
-                            $('#awesomebar').removeClass('sub-active');
-                        }
-                    } else {
-                        toToggle.slideDown('fast');
-                        $(this).addClass('is-active');
-                        $('#awesomebar').addClass('sub-active');
-                    }
-                    return false;
-                });
+            background-image: -webkit-gradient(
+                linear,
+                left bottom,
+                left top,
+            	color-stop(0.19, rgb(255,100,43)),
+            	color-stop(0.6, rgb(255,115,0))
+            );
+            border: 1px solid #d03500;
+            border-radius:3px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ie-border-radius: 3px;
+            }
 
+            .cta-spacer {
+                margin: 40px 0;
+            }
+
+            .caption {
+                display: block;
+                text-align:center;
+                font-size: 12px;
+                font-weight:bold;
+                margin-top: -14px;
+            }
+            
+            .caption-left {
+                display: block;
+                font-size: 12px;
+                font-weight:bold;
+                margin-top: -14px;
+            }
+
+            .post img.no-decoration {
+                padding: 0;
+            	border: none;
+            	-webkit-border-radius: 0;
+            	-moz-border-radius: 0;
+            	border-radius: 0;
+            	-webkit-box-shadow: none;
+            	-moz-box-shadow: none;
+            	box-shadow: none;
+            }
+
+            hr {
+                display: block;
+                height: 1px;
+                overflow: hidden;
+                border: none;
+                visibility: visible;
+                width: 100%;
+                background: #EEE;
+                margin: 30px 0;
+            }
+            .post h3 {
+                font-weight: 600;
+                margin-top: 2em;
+            }
+            
+        </style>
+        
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+        <script type="text/javascript" src="http://static.tumblr.com/mhakwey/MlDlsnv67/tiptip.js"></script>
+        <script type="text/javascript">       
+              $(function(){
+            $(".avatars").tipTip({defaultPosition: "top", delay: 0, maxWidth: 300});
             });
-        </script> <script src="http://us2.campaign-archive2.com/js/mailchimp/fancyzoom.mc.js"></script> <script type="text/javascript">
-    function updateFacebookCommentsCount(num) {
-        $('#campaign-fb-comments-btn span').fadeOut().html(num).fadeIn();
-    }
-</script> <script type="text/javascript">
-    function incrementFacebookLikeCount() {
-        var current = parseInt($('#campaign-fb-like-btn span').html());
-        $('#campaign-fb-like-btn span').fadeOut().html(++current).fadeIn();
-    }
+        </script>
+        
 
-    function getUrlParams(str) {
-        var vars = {}, hash;
-        if (!str) return vars;
-        var hashes = str.slice(str.indexOf('?') + 1).split('&');
-        for(var i = 0; i < hashes.length; i++) {
-            hash = hashes[i].split('=');
-            vars[hash[0]] = hash[1];
-        }
-        return vars;
-    }
+        
+            <meta name="description" content="Scaling Django to 8 Billion Page Views As we&rsquo;re approaching 8 billion page views per month and 45k requests per second, we&rsquo;ve learned a couple things about delivering comments to a lot of different..." />
+        
+        
+        <link href="http://content.disqus.com/tumblr/blog-2013-08-28.css" type="text/css" rel="stylesheet" />
+        
+        <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1410476-11']);
+      _gaq.push(['_trackPageview']);
     
-    function setupSocialSharingStuffs() {
-        var numSocialElems = $('a[rel=socialproxy]').length;
-        var numSocialInitialized = 0;
-        var urlParams = getUrlParams(window.document.location.href);
-        var paramsToCopy = {'e':true, 'eo':true};
-        $('a[rel=socialproxy]').each(function() {
-            var href = $(this).attr('href');
-            var newHref = decodeURIComponent(href.match(/socialproxy=(.*)/)[1]);
-            // for facebook insanity to work well, it needs to all be run against just campaign-archive
-            newHref = newHref.replace(/campaign-archive(\d)/gi, 'campaign-archive');
-            var newHrefParams = getUrlParams(newHref);
-            for(var param in urlParams) {
-                if ((param in paramsToCopy) && !(param in newHrefParams)) {
-                    newHref += '&' + param + '=' + urlParams[param];
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+    </script>
+    <script type="text/javascript">
+    (function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");
+    b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+
+    '//cdn.mxpnl.com/libs/mixpanel-2.1.min.js';d=c.getElementsByTagName("script")[0];
+    d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){
+    var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);a[b]=function(){a.push([b].concat(
+    Array.prototype.slice.call(arguments,0)))}}var g=a;"undefined"!==typeof f?g=a[f]=[]:
+    f="mixpanel";g.people=g.people||[];h=['disable','track','track_pageview','track_links',
+    'track_forms','register','register_once','unregister','identify','name_tag',
+    'set_config','people.identify','people.set','people.increment'];for(e=0;e<h.length;e++)d(g,h[e]);
+    a._i.push([b,c,f])};a.__SV=1.1;})(document,window.mixpanel||[]);
+    mixpanel.init("f6fcda8710871be3efb6da4e46ec68e2", { track_pageview: false });
+    
+    mixpanel.track("Pageview /blog");
+</script>
+
+<script type="application/javascript">var _prum={id:"50b319405d010c4a41000006"};var PRUM_EPISODES=PRUM_EPISODES||{};PRUM_EPISODES.q=[];PRUM_EPISODES.mark=function(b,a){PRUM_EPISODES.q.push(["mark",b,a||new Date().getTime()])};PRUM_EPISODES.measure=function(b,a,b){PRUM_EPISODES.q.push(["measure",b,a,b||new Date().getTime()])};PRUM_EPISODES.done=function(a){PRUM_EPISODES.q.push(["done",a])};PRUM_EPISODES.mark("firstbyte");(function(){var b=document.getElementsByTagName("script")[0];var a=document.createElement("script");a.type="text/javascript";a.async=true;a.charset="UTF-8";a.src="//rum-static.pingdom.net/prum.min.js";b.parentNode.insertBefore(a,b)})();</script>
+
+    
+<!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS -->
+<!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. -->
+<!-- Read more: http://ogp.me/ -->
+<meta property="fb:app_id" content="48119224995" />
+<meta property="og:site_name" content="Disqus: The Official Blog" />
+<meta property="og:title" content="Scaling Django to 8 Billion Page Views" />
+<meta property="og:url" content="http://blog.disqus.com/post/62187806135/scaling-django-to-8-billion-page-views" />
+<meta property="og:description" content="As we&rsquo;re approaching 8 billion page views per month and 45k requests per second, we&rsquo;ve learned a couple things about delivering comments to a lot of different people. Disqus is very well known for..." />
+<meta property="og:determiner" content="a" />
+<meta property="og:type" content="tumblr-feed:entry" />
+<meta property="og:image" content="http://assets.tumblr.com/images/og/text_200.png" />
+<!-- END TUMBLR FACEBOOK OPENGRAPH TAGS -->
+
+
+<!-- TWITTER TAGS -->
+<meta charset="utf-8">
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:description" content="As we&rsquo;re approaching 8 billion page views per month and 45k requests per second, we&rsquo;ve learned a couple things about delivering comments to a lot of different people. Disqus is very well known for using Django for almost all of our web traffic, and that continues to be a thing today. As with any web framework, there are inherent trade-offs: rapid development vs performance, familiarity for new developers vs something custom, etc. Disqus likes to lean towards rapid development and familiarity over performance, and something fine tuned for our exact needs.
+
+So, why is a web framework slow?
+
+ On the surface, the first impression is that a web framework is slow because there is a lot of boiler plate and unnecessary code that is not needed for your application, and that is a valid impression. In practice, slowness is usually not a product of your framework&rsquo;s bloat or the language choice. Slowness is likely a result of the fact that your request is communicating with other services across your network. In our case, these other services are PostgreSQL, Redis, Cassandra, and Memcached, just to name a few. Slow database queries and network latency generally outweigh the performance overhead of a robust framework such as Django.
+
+ To get around these latencies, people use various forms of caching. The most tangible approach would be to use the built-in Django cache library.
+
+ The common pattern for application level caching is such:
+
+data = cache.get(&#039;stuff&#039;)
+if data is None:
+    data = list(Stuff.objects.all())
+    cache.set(&#039;stuff&#039;, data)
+return data
+
+ If you are familiar with Django, this should be a pretty familiar pattern. This form of caching is simple and straightforward, and works really well for most things. Paired with Memcached, things are fast enough, but there is still a lot of work still being done to serve a request.
+
+Dealing with 45k requests per second
+
+ We&rsquo;ve cached our &ldquo;slow&rdquo; things. There is still a lot of unnecessary work that needs to be done at rate of 45 thousand times per second. We&rsquo;re probably rendering some JSON, or rendering an HTML template, or simply parsing HTML and executing our Django middleware. The point is, we want to be able to short-circuit all of this work, and leave Django to do what it does best: serve unique data only.
+
+ Out of 45k requests per second, how many are truly unique? How many of those responses are actually different from one response to the next? Do we really need to keep doing the same work over and over again when the result is always the same? We really want to cache whole responses and skip all of the other work.
+
+Introducing Varnish
+
+ What even is Varnish? Varnish is a piece of software that sits between our load balancers and our Django backends and acts as an HTTP caching layer. What this means is that it can cache the entire HTTP response without even hitting a Django server, if we know that request won&rsquo;t be unique.
+
+ Previously, Varnish was a bit of a black box to us. We installed it and configuration was very minimal, and honestly, this worked very well. But I thought we could do more.
+
+ I spent some time learning more about Varnish and some tricks that we could use. Over time, we were able to shave off several thousands of requests per second from ever hitting our Django servers. Today, out of the 45k inbound requests every second, only about 15k or so actually hit our app servers. The rest are absorbed by Varnish and served to the user very quickly and efficiently.
+
+ Since this has been very useful for us and a good learning experience, this topic has been the subject of a few recent talks of mine.
+
+ Most recently, I spoke at DjangoCon US in Chicago. This talk was aimed toward people who weren&rsquo;t familiar with Varnish, with the hopes of inspiring and motivating them to learn more. For me, I was excited to give this talk because it&rsquo;s a topic that isn&rsquo;t explained very often to application developers. It&rsquo;s a talk that I&rsquo;d really liked to have heard a few years ago, and hopefully bridges the gap in understanding how HTTP really works and how you can manipulate it to interact with tools such as Varnish.
+
+ Prior to that, I presented at VUG7 (Varnish User Group) in New York, and went into details about some of the exact tricks that we use to help overcome some of our problems. This talk goes into a lot of detail about the specific VCLs that we use for each endpoint needed to deliver our embed.
+
+tl;dr
+
+ Check out Varnish. It won&rsquo;t solve all of your problems, but it&rsquo;s something worth investing the time into learning about and evaluating.
+
+ If this kind of stuff is interesting to you, and you&rsquo;d like to yell at computers with me at least 5 days a week, we are hiring!" />
+            <meta name="twitter:title" content="Scaling Django to 8 Billion Page Views" />
+            <meta name="twitter:url" content="http://blog.disqus.com/post/62187806135/scaling-django-to-8-billion-page-views" />
+            <meta name="twitter:site" content="tumblr" />
+            <meta name="twitter:creator" content="disqus" />
+            <meta name="twitter:app:name:iphone" content="Tumblr" />
+            <meta name="twitter:app:name:ipad" content="Tumblr" />
+            <meta name="twitter:app:name:googleplay" content="Tumblr" />
+            <meta name="twitter:app:id:iphone" content="305343404" />
+            <meta name="twitter:app:id:ipad" content="305343404" />
+            <meta name="twitter:app:id:googleplay" content="com.tumblr" />
+            <meta name="twitter:app:url:iphone" content="tumblr://x-callback-url/blog?blogName=disqus&amp;postID=62187806135&amp;referrer=twitter-cards" />
+            <meta name="twitter:app:url:ipad" content="tumblr://x-callback-url/blog?blogName=disqus&amp;postID=62187806135&amp;referrer=twitter-cards" />
+            <meta name="twitter:app:url:googleplay" content="tumblr://x-callback-url/blog?blogName=disqus&amp;postID=62187806135&amp;referrer=twitter-cards" />
+    
+
+<script type="text/javascript" src="http://assets.tumblr.com/assets/scripts/tumblelog.js?_v=9c98aa6a34ba37da21bff0195ab13193"></script>
+<meta http-equiv="x-dns-prefetch-control" content="off"/>
+
+<meta name="keywords" content="webscale,djangocon,python,scaling,varnish" />
+
+</head>
+    <body>
+        <div id="header">
+            <div id="global-nav">
+                <div class="container">
+                    
+                </div>
+            </div>
+            <div id="local-nav">
+                <div class="container">
+                    <a href="http://disqus.com" id="logo"><img src="http://disqus-cloudfront.s3.amazonaws.com/tumblr/disqus-logo.png" width="102" height="20" alt="DISQUS" title="Disqus - Discover your community"></a>
+                    <ul id="account-nav">
+                        <li><a href="http://disqus.com/websites">For Websites</a></li>
+                        <li><a href="http://disqus.com/community">Using Disqus</a></li>
+                    </ul>
+                    <a id="log-in-link"href="http://disqus.com/profile/login/?next=http://disqus.com/">Log in</a>
+                </div>
+            </div>
+        </div>
+        <div id="page-header">
+            <div class="container">
+                <h1><a href="/">Company Blog</a></h1>
+                <!--<div id="search">
+                    <form action="/search" method="get" id="search-form">
+                        <input type="hidden" name="t" value="disqus" />
+                        <input type="hidden" name="scope" value="my_blog" />
+                        <input type="text" name="q" class="query" value="" />
+                    </form>
+                </div>-->
+            </div>
+        </div>
+        <div id="content">
+            <div class="container">
+                <div class="primary">
+                    <ol id="posts">
+                            
+
+                            
+
+                        
+                            <li class="post 
+                                text 
+                                  
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                django varnish scaling python webscale djangocon main">
+
+                            
+                                <div class="author">
+                                    <img src="http://31.media.tumblr.com/avatar_7b187e1b509b_64.png" class="avatars" alt="mattrobenolt" title="mattrobenolt">
+                                </div>
+                                
+                                    <h2><a href="http://blog.disqus.com/post/62187806135/scaling-django-to-8-billion-page-views">Scaling Django to 8 Billion Page Views</a></h2>
+                                    <div class="info">Posted on September 24, 2013 by mattrobenolt</div>
+                                
+                                    <p>As we’re approaching 8 billion page views per month and 45k requests per second, we’ve learned a couple things about delivering comments to a lot of different people. Disqus is very well known for using <a href="https://www.djangoproject.com/" target="_blank">Django</a> for almost all of our web traffic, and that continues to be a thing today. As with any web framework, there are inherent trade-offs: rapid development vs performance, familiarity for new developers vs something custom, etc. Disqus likes to lean towards rapid development and familiarity over performance, and something fine tuned for our exact needs.</p>
+
+<h2>So, why is a web framework slow?</h2>
+
+<p>On the surface, the first impression is that a web framework is slow because there is a lot of boiler plate and unnecessary code that is not needed for your application, and that is a valid impression. In practice, slowness is usually not a product of your framework’s bloat or the language choice. Slowness is likely a result of the fact that your request is communicating with other services across your network. In our case, these other services are <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a>, <a href="http://redis.io/" target="_blank">Redis</a>, <a href="http://cassandra.apache.org/" target="_blank">Cassandra</a>, and <a href="http://memcached.org/" target="_blank">Memcached</a>, just to name a few. Slow database queries and network latency generally outweigh the performance overhead of a robust framework such as Django.</p>
+
+<p>To get around these latencies, people use various forms of caching. The most tangible approach would be to use the built-in <a href="https://docs.djangoproject.com/en/dev/topics/cache/" target="_blank">Django cache library</a>.</p>
+
+<p>The common pattern for application level caching is such:</p>
+
+<pre>data = cache.get('stuff')
+if data is None:
+    data = list(Stuff.objects.all())
+    cache.set('stuff', data)
+return data</pre>
+
+<p>If you are familiar with Django, this should be a pretty familiar pattern. This form of caching is simple and straightforward, and works really well for most things. Paired with Memcached, things are fast enough, but there is still a lot of work still being done to serve a request.</p>
+
+<h2>Dealing with 45k requests per second</h2>
+
+<p>We’ve cached our “slow” things. There is still a lot of unnecessary work that needs to be done at rate of 45 thousand times per second. We’re probably rendering some JSON, or rendering an HTML template, or simply parsing HTML and executing our Django middleware. The point is, we want to be able to short-circuit all of this work, and leave Django to do what it does best: serve unique data only.</p>
+
+<p>Out of 45k requests per second, how many are truly unique? How many of those responses are actually different from one response to the next? Do we really need to keep doing the same work over and over again when the result is always the same? We really want to cache whole responses and skip all of the other work.</p>
+
+<h3>Introducing Varnish</h3>
+
+<p>What even is <a href="https://www.varnish-cache.org/" target="_blank">Varnish</a>? Varnish is a piece of software that sits between our load balancers and our Django backends and acts as an HTTP caching layer. What this means is that it can cache the entire HTTP response without even hitting a Django server, if we know that request won’t be unique.</p>
+
+<p>Previously, Varnish was a bit of a black box to us. We installed it and configuration was very minimal, and honestly, this worked very well. But I thought we could do more.</p>
+
+<p>I spent some time learning more about Varnish and some tricks that we could use. Over time, we were able to shave off several thousands of requests per second from ever hitting our Django servers. Today, out of the 45k inbound requests every second, only about 15k or so actually hit our app servers. The rest are absorbed by Varnish and served to the user very quickly and efficiently.</p>
+
+<p>Since this has been very useful for us and a good learning experience, this topic has been the subject of a few recent talks of mine.</p>
+
+<p>Most recently, I spoke at <a href="http://www.djangocon.us/" target="_blank">DjangoCon US</a> in Chicago. This talk was aimed toward people who weren’t familiar with Varnish, with the hopes of inspiring and motivating them to learn more. For me, I was excited to give this talk because it’s a topic that isn’t explained very often to application developers. It’s a talk that I’d really liked to have heard a few years ago, and hopefully bridges the gap in understanding how HTTP really works and how you can manipulate it to interact with tools such as Varnish.</p>
+
+<script async class="speakerdeck-embed" data-id="d8fa46d0f569013035d14afa8daffd2f" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script><p>Prior to that, I presented at <a href="https://www.varnish-cache.org/vug7/" target="_blank">VUG7 (Varnish User Group)</a> in New York, and went into details about some of the exact tricks that we use to help overcome some of our problems. This talk goes into a lot of detail about the specific <a href="https://www.varnish-cache.org/docs/3.0/reference/vcl.html" target="_blank">VCLs</a> that we use for each endpoint needed to deliver our embed.</p>
+
+<script async class="speakerdeck-embed" data-id="43c1a180ac5a0130829856f160bede9f" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script><h2>tl;dr</h2>
+
+<p>Check out <a href="https://www.varnish-cache.org/" target="_blank">Varnish</a>. It won’t solve all of your problems, but it’s something worth investing the time into learning about and evaluating.</p>
+
+<p>If this kind of stuff is interesting to you, and you’d like to yell at computers with me at least 5 days a week, <a href="http://disqus.com/jobs/" target="_blank">we are hiring</a>!</p>
+                                    <div class="clear"></div>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+            
+                        
+                        </li>
+                        
+                    
+                    <p style="font-size: .9em; margin-bottom: 1em;">We welcome relevant, respectful comments. Please read our <a href="http://help.disqus.com/customer/portal/articles/748668-community-guidelines">Community Guidelines</a>.</p>
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                    var disqus_url = "http://blog.disqus.com/post/62187806135/scaling-django-to-8-billion-page-views";
+                    var disqus_title = "Scaling Django to 8 Billion Page Views";
+
+                    function disqus_config() {
+                        this.strings = {
+                            'MOD': 'DISQUS TEAM',
+                            'MODERATOR': 'DISQUS TEAM'
+                        };
+                    }
+
+                      /* * * DON'T EDIT BELOW THIS LINE * * */
+                      (function() {
+                       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                       dsq.src = 'http://disqus.disqus.com/embed.js';
+                       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                      })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=disqus">comments powered by Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+                    
+                    </ol>
+
+                    
+
+                </div>
+                <div class="secondary">
+                    <ul id="sidebar">
+                        <li class="module module-divider">
+                            <h3>What is Disqus?</h3>
+                            <p><strong>Disqus</strong> (<a href="https://vine.co/v/b50Wx0OmTIz" target="new">dis&middot;cuss &bull; d&iuml;-sk&uuml;s'</a>) is all about changing the way people think about discussion on the web. We're big believers in the conversations and communities that form on blogs and other sites.</p>
+                        <br/>
+                            <h4><a href="http://disqus.com/about/#our-team" target="new">Meet the Team</a></h4>
+                            
+                        <li class="module module-divider">
+                        
+                            <h3>Follow &amp; Subscribe</h3>
+                            
+                            <a href="https://twitter.com/disqus"><img class="follow-twitter" src="http://disqus-cloudfront.s3.amazonaws.com/tumblr/icon-follow-twitter.png"></a>
+                            
+                            <a href="http://www.facebook.com/disqus"><img class="follow-facebook" src="http://disqus-cloudfront.s3.amazonaws.com/tumblr/icon-follow-facebook.png" alt="Facebook" /></a>
+                            
+                            <a href="http://feedburner.google.com/fb/a/mailverify?uri=BigHeadLabs&loc=en_US"><img class="follow-mail" src="http://disqus-cloudfront.s3.amazonaws.com/tumblr/icon-follow-mail.png" alt="email" /></a>
+                            
+                            <a href="http://feeds.feedburner.com/BigHeadLabs/"><img class="follow-rss" src="http://disqus-cloudfront.s3.amazonaws.com/tumblr/icon-follow-rss.png" alt="RSS" /></a>
+                            
+                        </li>
+                        
+                        <li class="module module-divider">
+                            <h3>Our Blogs</h3>
+                            <ul>
+                                <li><a href="http://blog.disqus.com">Company Blog</a></li>
+                                <li><a href="http://community.disqus.com">Community Blog</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="module">
+                            <h3>Links</h3>
+                            <ul>
+                                <li><a href="http://blog.disqus.com/archive">Blog Archive</a></li>
+                                <li><a href="http://disqus.com/help">Help</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>    
+        </div>
+        <div id="footer">
+            <div class="container">
+                <p class="copyright">&copy; 2007-2013 &middot; <a href="/"class="disqus">DISQUS</a></p>
+                <ul>
+                    <li><a href="http://disqus.com/websites/">For Websites</a></li>
+                    <li><a href="http://disqus.com/community/">Using Disqus</a></li>
+                    <li><a href="http://disqus.com/about/">About</a></li>
+                    <li><a href="http://help.disqus.com">Help</a></li>
+                    <li><a href="http://blog.disqus.com">Blog</a></li>
+                    <li><a href="http://disqus.com/api/">API</a></li>
+                    <li><a href="http://disqus.com/jobs/">Jobs</a></li>
+                    <li><a href="http://docs.disqus.com/kb/terms-and-policies/">Terms and Policies</a></li>
+                </ul>
+            </div>
+        </div>
+    <!-- BEGIN TUMBLR CODE -->
+        
+    
+        <iframe id="tumblr_controls" width="1" height="1" frameborder="0" scrolling="no" style="position:absolute; z-index:2147483647; top:0; right:0; border:0; background-color:transparent; overflow:hidden; " src="http://assets.tumblr.com/assets/html/iframe/o.html?_v=03e46de2c31f616e91612be5ae062acd#src=http%3A%2F%2Fblog.disqus.com%2Fpost%2F62187806135%2Fscaling-django-to-8-billion-page-views&amp;pid=62187806135&amp;rk=HAGGmcaX&amp;lang=en_US&amp;name=disqus&amp;brag=false&amp;avatar=http%3A%2F%2F25.media.tumblr.com%2Favatar_7da8d8f28b8a_64.png&amp;title=Disqus%3A+The+Official+Blog&amp;url=http%3A%2F%2Fblog.disqus.com%2F&amp;page_slide=slide"></iframe>    <div id="teaser_iframe_container" style="display:none;"><iframe scrolling="no" frameborder="0" src="http://www.tumblr.com/assets/html/iframe/teaser.html#src=http%3A%2F%2Fblog.disqus.com%2Fpost%2F62187806135%2Fscaling-django-to-8-billion-page-views&amp;pid=62187806135&amp;rk=HAGGmcaX&amp;lang=en_US&amp;name=disqus&amp;brag=false&amp;avatar=http%3A%2F%2F25.media.tumblr.com%2Favatar_7da8d8f28b8a_64.png&amp;title=Disqus%3A+The+Official+Blog&amp;url=http%3A%2F%2Fblog.disqus.com%2F&amp;page_slide=slide" id="teaser_iframe" width="1" height="1"></iframe></div>
+
+<script type="text/javascript">
+    (function(Tumblr){
+        var follow_iframe_initialized = false;
+        if (Tumblr.FollowTeaser && Tumblr.PostMessageListener) {
+            // Don't do anything until the first initialize event
+            Tumblr.PostMessageListener.initialize(function(message, origin) {
+                if (follow_iframe_initialized || message.length < 2) return;
+
+                if (message[0] === 'follow_iframe' && message[1] === 'enable') {
+                    Tumblr.FollowTeaser.current_page = 1;
+                    Tumblr.FollowTeaser.infer_infinite_scroll = true;
+                    Tumblr.FollowTeaser.create_from_tumblr_controls('http://assets.tumblr.com/assets/html/iframe/follow.html?_v=1c38ddb221b64d02021cc5cc3fb77b98');
+                    Tumblr.FollowTeaser.scroll_listener(true);
+                    follow_iframe_initialized = true;
                 }
-            }
-            $(this).attr('href', newHref);
-            if (href.indexOf('facebook-comment') !== -1) {
-                $(this).fancyZoom({"zoom_id": "social-proxy", "width":620, "height":450, "iframe_height": 450});
-            } else {
-                $(this).fancyZoom({"zoom_id": "social-proxy", "width":500, "height":200, "iframe_height": 500});
-            }
-            numSocialInitialized++;
-                    });
-    }
-	if (window.top!=window.self){
-        $(function() {
-          var iframeOffset = $("#archive", window.parent.document).offset();
-          $("a").each(function () {
-              var link = $(this);
-              var href = link.attr("href");
-              if (href && href[0] == "#") {
-                  var name = href.substring(1);
-                  $(this).click(function () {
-                      var nameElement = $("[name='" + name + "']");
-                      var idElement = $("#" + name);
-                      var element = null;
-                      if (nameElement.length > 0) {
-                          element = nameElement;
-                      } else if (idElement.length > 0) {
-                          element = idElement;
-                      }
-         
-                      if (element) {
-                          var offset = element.offset();
-                          var height = element.height();
-                          //3 is totally arbitrary, but seems to work best.
-                          window.parent.scrollTo(offset.left, (offset.top + iframeOffset.top - (height*3)) );
-                      }
-         
-                      return false;
-                  });
-              }
-          });
-        });
-    }
-</script>  <script type="text/javascript">
-            $(document).ready(function() {
-                setupSocialSharingStuffs();
             });
-        </script> </head> <body id="archivebody"> <div id="awesomewrap"> <div id="awesomeshare"> <div id="zclipwrap"> <label for="shortURL">Short URL</label> <span id="copyURL" data-clipboard-target="shortURL"> <input id="shortURL" name="shorturl" style="margin-top:6px;" type="text" value="http://eepurl.com/FTEKn" class="av-text"> <span>Copy</span> </span> <div id="zero_clipboard"></div> </div> <ul id="awesomesocial"> <li class="fbk"> <a class="fbk-like" id="campaign-fb-like-btn" rel="socialproxy" href="/?socialproxy=http%3A%2F%2Fus2.campaign-archive2.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26url%3Dhttp%253A%252F%252Fus2.campaign-archive2.com%252F%253Fu%253De2e180baf855ac797ef407fc7%2526id%253Dc4a3a2ab87%26title%3DPython%2520Weekly%2520-%2520Issue%2520%2520106" title="Like Python Weekly - Issue  106 on Facebook">Facebook <b>0 <i>likes</i></b></a> </li> <li class="twt"> <a title="Share on Twitter" target="_blank" href="http://twitter.com/share?url=http%3A%2F%2Feepurl.com%2FFTEKn">Twitter <b>0 <i>tweets</i></b></a> </li> <li class="ggl"> <a title="+1 on Google Plus" id="campaign-gpo-btn" href="http://us2.campaign-archive1.com/?u=e2e180baf855ac797ef407fc7&amp;id=c4a3a2ab87&amp;socialproxy=http%3A%2F%2Fus2.campaign-archive2.com%2Fsocial-proxy%2Fgoogle-plus-one%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26url%3Dhttp%253A%252F%252Fus2.campaign-archive1.com%252F%253Fu%253De2e180baf855ac797ef407fc7%2526id%253Dc4a3a2ab87%26title%3DPython%2520Weekly%2520-%2520Issue%2520%2520106" class="twitter-share-button" rel="socialproxy">Google +1</a> </li> </ul> </div> <ul id="awesomebar"> <li> <a href="http://eepurl.com/fPpcb" title="Subscribe to List" target="_blank">Subscribe</a> </li> <li id="toggleshare" class="more"><a href="#awesomeshare">Share</a></li> <li><a href="http://us2.campaign-archive1.com/home/?u=e2e180baf855ac797ef407fc7&amp;id=9e26887fc5" title="View Past Issues" target="_blank">Past Issues</a></li> <li class="float-r"><a class="rss" target="_blank" href="http://us2.campaign-archive2.com/feed?u=e2e180baf855ac797ef407fc7&amp;id=9e26887fc5" title="subscribe to the email archive feed">RSS</a></li> <li class="float-r more"><a href="#translate">Translate</a> <ul id="translate"> <li> <a rel="nofollow" title="English" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|en&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">English</a> </li><li> <a rel="nofollow" title="العربية" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|ar&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">العربية</a> </li><li> <a rel="nofollow" title="Afrikaans" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|af&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Afrikaans</a> </li><li> <a rel="nofollow" title="беларуская мова" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|be&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">беларуская мова</a> </li><li> <a rel="nofollow" title="български" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|bg&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">български</a> </li><li> <a rel="nofollow" title="català" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|ca&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">català</a> </li><li> <a rel="nofollow" title="中文（简体）" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|zh-CN&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">中文（简体）</a> </li><li> <a rel="nofollow" title="中文（繁體）" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|zh-TW&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">中文（繁體）</a> </li><li> <a rel="nofollow" title="Hrvatski" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|hr&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Hrvatski</a> </li><li> <a rel="nofollow" title="Česky" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|cs&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Česky</a> </li><li> <a rel="nofollow" title="Dansk" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|da&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Dansk</a> </li><li> <a rel="nofollow" title="eesti&amp;nbsp;keel" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|et&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">eesti&nbsp;keel</a> </li><li> <a rel="nofollow" title="Nederlands" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|nl&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Nederlands</a> </li><li> <a rel="nofollow" title="Suomi" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|fi&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Suomi</a> </li><li> <a rel="nofollow" title="Fran&amp;ccedil;ais" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|fr&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Fran&ccedil;ais</a> </li><li> <a rel="nofollow" title="Deutsch" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|de&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Deutsch</a> </li><li> <a rel="nofollow" title="&amp;Epsilon;&amp;lambda;&amp;lambda;&amp;eta;&amp;nu;&amp;iota;&amp;kappa;ή" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|el&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">&Epsilon;&lambda;&lambda;&eta;&nu;&iota;&kappa;ή</a> </li><li> <a rel="nofollow" title="हिन्दी" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|hi&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">हिन्दी</a> </li><li> <a rel="nofollow" title="Magyar" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|hu&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Magyar</a> </li><li> <a rel="nofollow" title="Gaeilge" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|ga&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Gaeilge</a> </li><li> <a rel="nofollow" title="Indonesia" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|id&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Indonesia</a> </li><li> <a rel="nofollow" title="íslenska" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|is&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">íslenska</a> </li><li> <a rel="nofollow" title="Italiano" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|it&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Italiano</a> </li><li> <a rel="nofollow" title="日本語" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|ja&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">日本語</a> </li><li> <a rel="nofollow" title="한국어" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|ko&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">한국어</a> </li><li> <a rel="nofollow" title="македонски&amp;nbsp;јазик" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|mk&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">македонски&nbsp;јазик</a> </li><li> <a rel="nofollow" title="بهاس ملايو" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|ms&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">بهاس ملايو</a> </li><li> <a rel="nofollow" title="Malti" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|mt&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Malti</a> </li><li> <a rel="nofollow" title="Norsk" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|no&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Norsk</a> </li><li> <a rel="nofollow" title="Polski" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|pl&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Polski</a> </li><li> <a rel="nofollow" title="Portugu&amp;ecirc;s" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|pt&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Portugu&ecirc;s</a> </li><li> <a rel="nofollow" title="Portugu&amp;ecirc;s&amp;nbsp;-&amp;nbsp;Portugal" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|pt-PT&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Portugu&ecirc;s&nbsp;-&nbsp;Portugal</a> </li><li> <a rel="nofollow" title="Rom&amp;acirc;nă" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|ro&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Rom&acirc;nă</a> </li><li> <a rel="nofollow" title="Русский" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|ru&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Русский</a> </li><li> <a rel="nofollow" title="Espa&amp;ntilde;ol" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|es&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Espa&ntilde;ol</a> </li><li> <a rel="nofollow" title="Kiswahili" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|sw&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Kiswahili</a> </li><li> <a rel="nofollow" title="Svenska" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|sv&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Svenska</a> </li><li> <a rel="nofollow" title="עברית" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|iw&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">עברית</a> </li><li> <a rel="nofollow" title="Lietuvių" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|lt&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Lietuvių</a> </li><li> <a rel="nofollow" title="latviešu" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|lv&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">latviešu</a> </li><li> <a rel="nofollow" title="slovenčina" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|sk&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">slovenčina</a> </li><li> <a rel="nofollow" title="slovenščina" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|sl&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">slovenščina</a> </li><li> <a rel="nofollow" title="српски" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|sr&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">српски</a> </li><li> <a rel="nofollow" title="ภาษาไทย" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|th&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">ภาษาไทย</a> </li><li> <a rel="nofollow" title="Türkçe" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|tr&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Türkçe</a> </li><li> <a rel="nofollow" title="Filipino" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|tl&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Filipino</a> </li><li> <a rel="nofollow" title="украї́нська" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|uk&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">украї́нська</a> </li><li> <a rel="nofollow" title="Tiếng&amp;nbsp;Việt" href="http://translate.google.com/translate?hl=auto&amp;langpair=auto|vi&amp;u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer">Tiếng&nbsp;Việt</a> </li> </ul> </li> </ul> </div>
-        <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="background-color: #EEEEEE;">
-		<table width="100%" cellspacing="0" class="backgroundTable" style="background-color: #EEEEEE;">
-			<tr>
-				<td valign="top" align="center">
-					<table id="contentTable" cellspacing="0" cellpadding="0" width="600" style="border: 1px solid #d3d3d3;margin-top: ;">
-						<tr>
-							<td>
-								<table width="600" cellpadding="0" cellspacing="0">
-									<tr>
-										<!---->
-									</tr>
- 									<tr>
-										<td class="headerBar" style="background-color: #F5F1DE;border-top: 0px none #333333;border-bottom: 0px none #FFFFFF;padding: 0px;">
-											<div class="headerBarText" style="color: #333333;font-size: 30px;font-family: Arial;font-weight: normal;text-align: left;">
-												<div style="text-align: center;"><img src="http://gallery.mailchimp.com/e2e180baf855ac797ef407fc7/images/python_weekly_logo.png" alt="" border="0" style="height: 87px; width: 324px; margin: 0; padding: 0;max-width: 600px;" width="324" height="87"></div>
-											</div>
-										</td>
-									</tr>
-								</table>
-								<table width="600" cellpadding="20" cellspacing="0" class="bodyTable">
-									<tr>
-										<td valign="top" align="left" class="defaultText" style="font-size: 13px;color: #333333;line-height: 150%;font-family: Helvetica;background-color: #ffffff;padding: 20px;border: 0px none #FFFFFF;">Welcome to issue 106 of Python Weekly.&nbsp;Let&#39;s get straight to the links this week.&nbsp;<br>
-<br>
-<strong><span style="font-size:16px;"><span style="color:#a52a2a;"><span class="yiv601008724Apple-style-span" style="border-collapse: separate; font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; "><span class="yiv601008724Apple-style-span" style="border-collapse: collapse; font-family: Helvetica; font-weight: bold; line-height: 16px; ">News</span></span></span></span></strong><br>
-<br>
-<div>
-	<span style="font-size:14px;"><a href="http://www.pytennessee.org/" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">PyTennessee 2014 CFP</a></span></div>
-<div>
-	PyTennessee 2014, taking place for the first time in Nashville, will be accepting all types of proposals starting Oct 1st, 2013 through Nov 1st, 2013. Due to the competitive nature of the selection process, we encourage prospective speakers to submit their proposals as early as possible. We&#39;re looking forward to receiving your best proposals for tutorials and talks. Lightning talk sign ups will be available at the registration desk the day of the event.</div>
-<div>
-	&nbsp;</div>
-<div>
-	<span style="font-size:14px;"><a href="http://www.jetbrains.com/pycharm/" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">JetBrains Delights the Python Community with a Free Edition of its PyCharm IDE</a></span></div>
-<div>
-	JetBrains has announced the general availability of PyCharm 3.0, a major new version of their renowned Python IDE, now distributed in Community and Professional editions.</div>
-<div>
-	&nbsp;</div>
-<br>
-<strong><span style="font-size:16px;"><span style="color:#a52a2a;"><span class="yiv601008724Apple-style-span" style="border-collapse: separate; font-family: 'Times New Roman'; font-weight: normal; line-height: normal; "><span class="yiv601008724Apple-style-span" style="border-collapse: collapse; font-family: Helvetica; line-height: 15px; "><span class="yiv601008724yiv1810326523yiv2066971547yiv1761786840yiv1758569282yiv748652842subTitle" style="line-height: 1.2em; outline-style: none; font-weight: bold; ">Articles</span>,<span class="yiv601008724yiv1810326523yiv2066971547yiv1761786840yiv1758569282yiv748652842subTitle" style="line-height: 1.2em; outline-style: none; font-weight: bold; "><span class="yiv601008724Apple-converted-space">&nbsp;</span>Tutorials and Talks</span></span></span></span></span></strong><br>
-<br>
-<div>
-	<span style="font-size:14px;"><a href="http://www.toptal.com/python/why-are-there-so-many-pythons" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">Why Are There So Many Pythons?</a></span></div>
-<div>
-	This post starts from scratch and move through the various Python implementations, concluding with a thorough introduction to PyPy.</div>
-<div>
-	&nbsp;</div>
-<div>
-	<span style="font-size:14px;"><a href="https://www.openshift.com/blogs/build-your-app-on-openshift-using-flask-sqlalchemy-and-postgresql-92" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">Build Your App on OpenShift Using Flask, SQLAlchemy, and PostgreSQL 9.2</a></span></div>
-<div>
-	In this post, we will write a todo application using Flask , Flask-SQLAlchemy , PostgreSQL , and Twitter Bootstrap. The purpose of this post is not just to help developers write Python Flask web applications but to also help them deploy their application in the Cloud.&nbsp;</div>
-<div>
-	&nbsp;</div>
-<div>
-	<span style="font-size:14px;"><a href="http://www.realpython.com/blog/python/integration-testing-with-pyvows-and-django/" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">Integration testing with pyVows and Django</a></span></div>
-<div>
-	This article explores how pyVows can be used for integration testing django and testing of django models.</div>
-<div>
-	&nbsp;</div>
-<div>
-	<span style="font-size:14px;"><a href="http://blog.cloudera.com/blog/2013/09/how-to-use-the-hbase-thrift-interface-part-1/" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">How-to: Use the HBase Thrift Interface, Part 1</a></span></div>
-<div>
-	In this series of how-to&#39;s you&#39;ll learn your way around the Thrift interface and explore Python code samples for doing that. This first post will cover HBase Thrift, working with Thrift, and some boilerplate code for connecting to Thrift.</div>
-<div>
-	<br>
-	<div>
-		<span style="font-size:14px;"><a href="http://blog.techresidents.com/post/62242774205" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">Debugging and Decrypting an HTTPS API: Rackspace Cloudfiles</a></span></div>
-	<div>
-		This is the story of our experience with a low-level, intermittent bug in the Rackspace Cloudfiles API, and the steps we took to help root cause the problem. While the bug itself may be unique to Rackspace, our approach to debugging it is general and should be helpful to anyone looking to decrypt an HTTPS API from the darkness of the client side.</div>
-	<div>
-		&nbsp;</div>
-</div>
-<div>
-	<span style="font-size:14px;"><a href="http://blog.disqus.com/post/62187806135/scaling-django-to-8-billion-page-views" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">Scaling Django to 8 Billion Page Views</a></span></div>
-<div>
-	&nbsp;</div>
-<div>
-	<span style="font-size:14px;"><a href="http://blog.olgabotvinnik.com/post/58941062205/prettyplotlib-painlessly-create-beautiful-matplotlib" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">prettyplotlib: Painlessly create beautiful matplotlib plots</a></span></div>
-<div>
-	&nbsp;</div>
-<div>
-	<span style="font-size:14px;"><a href="http://www.biomedcentral.com/1471-2105/14/201" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">Bioinformatic pipelines in Python with Leaf</a></span></div>
-<div>
-	&nbsp;</div>
-<div>
-	<span style="font-size:14px;"><a href="https://developer.nvidia.com/content/numbapro-high-performance-python-cuda-acceleration" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">NumbaPro: High-Performance Python with CUDA Acceleration</a></span></div>
-<div>
-	&nbsp;</div>
-<div>
-	<span style="font-size:14px;"><a href="https://lukasa.co.uk/2013/09/Requests_20/" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">Requests 2.0 Changelog Explained</a></span><br>
-	<br>
-	<div>
-		<span style="font-size:14px;"><a href="http://tomforb.es/breaking-out-of-secured-python-environments" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">Breaking out of secured Python environments</a></span></div>
-	<div>
-		&nbsp;</div>
-</div>
-<div>
-	&nbsp;</div>
-<div>
-	<strong><span style="font-size:16px;"><span style="color:#a52a2a;"><span class="yiv601008724Apple-style-span" style="border-collapse: separate; font-family: 'Times New Roman'; font-weight: normal; line-height: normal; "><span class="yiv601008724Apple-style-span" style="border-collapse: collapse; font-family: Helvetica; font-weight: bold; line-height: 16px; ">Interesting Projects, Tools and Libraries</span></span></span></span></strong><br>
-	<br>
-	<div>
-		<span style="font-size:14px;"><a href="https://github.com/FZambia/centrifuge" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">Centrifuge</a></span></div>
-	<div>
-		Simple platform for real-time message broadcasting in web applications.<span class="Apple-tab-span" style="white-space: pre; "> </span></div>
-	<div>
-		<br>
-		<div>
-			<span style="font-size: 14px; "><a href="http://telemeta.org/" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">Telemeta</a></span></div>
-		<div>
-			Telemeta is a free and open source web audio content management system which introduces useful and secure methods to backup, index, transcode, analyse and publish any digitalized audio file with its metadata. It is dedicated to professionnals who wants to easily organize, backup, archive and publish documented sound collections of audio files, CDs, digitalized vinyls and magnetic tapes over a strong database, in accordance with open web standards.</div>
-		<div>
-			&nbsp;</div>
-		<div>
-			<span style="font-size: 14px; "><a href="https://github.com/KvasirSecurity/Kvasir" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">Kvasir</a></span></div>
-		<div>
-			Penetration tests can be data management nightmares because of the large amounts of information that is generally obtained. Vulnerability scanners return lots of actual and potential vulnerabilitites to review. Port scanners can return thousands of ports for just a few hosts. How easy is it to share all this data with your co-workers? That&#39;s what Kvasir is here to help you with<br>
-			&nbsp;</div>
-	</div>
-	<div>
-		<span style="font-size:14px;"><a href="https://github.com/perrygeo/python-raster-stats" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">python-raster-stats</a></span></div>
-	<div>
-		The rasterstats python module provides a fast, flexible and robust tool to summarize geospatial raster datasets based on vector geometries.</div>
-	<div>
-		&nbsp;</div>
-	<div>
-		<span style="font-size:14px;"><a href="https://github.com/JackStouffer/Flask-Foundation" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">Flask Foundation</a></span></div>
-	<div>
-		Flask Foundation is a solid foundation for flask applications, built with best practices, that you can easily construct your website/webapp off of.</div>
-	<div>
-		&nbsp;</div>
-	<div>
-		<span style="font-size:14px;"><a href="https://github.com/analytics-pros/universal-analytics-python" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">Universal Analytics for Python</a></span></div>
-	<div>
-		This library provides a Python interface for the Universal Analytics Measurement Protocol, with an interface modeled (loosely) after Google&#39;s analytics.js.</div>
-	<div>
-		&nbsp;</div>
-	<div>
-		<span style="font-size:14px;"><a href="http://nimfa.biolab.si/" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">Nimfa</a></span></div>
-	<div>
-		Nimfa is an open-source Python library that provides a unified interface to nonnegative matrix factorization algorithms. It includes implementations of state-of-the-art factorization methods, initialization approaches, and quality scoring. Both dense and sparse matrix representation are supported.</div>
-	<div>
-		&nbsp;</div>
-	<div>
-		<span style="font-size:14px;"><a href="https://github.com/bluquar/cubr" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">cubr</a></span></div>
-	<div>
-		Rubik&#39;s Cube Solver -- Uses OpenCV</div>
-	<div>
-		<br>
-		<br>
-		<strong><span style="font-size: 16px; "><span style="color: rgb(165, 42, 42); ">Python Jobs of the Week</span></span></strong><br>
-		<br>
-		<div>
-			<span style="font-size:14px;"><a href="http://jobs.pythonweekly.com/jobs/open-source-system-developer/" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">Open-Source System Developer at Datadog</a></span></div>
-		<div>
-			Have you been running and contributing to open-source tools and OSes for as long as you can remember? Do you enjoy working on github with a community of end-users? Have you felt first-hand the pain of running and optimizing production systems? Let&#39;s talk... We&#39;re on a mission to bring sanity to Dev &amp; Ops and we need you to connect Datadog with the vast ecosystem our customers use. Join us to instrument everything from OS counters to programming languages to databases to cloud providers.&nbsp;</div>
-		<div>
-			&nbsp;</div>
-		<div>
-			<span style="font-size:14px;"><a href="http://jobs.pythonweekly.com/jobs/back-end-developer/" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">Back End Developer at Datadog</a></span></div>
-		<div>
-			Do you eat data pipelines for breakfast, distributed databases for lunch and numerical processing for dinner? Did you read the Sparks, Dynamo or Dremel papers and wish you could put those to good use? Stay with us... We&#39;re on a mission to bring sanity to Dev &amp; Ops and we need you to build the data pipelines to ingest, store, analyze and query hundreds of billions of events a day. Join us to build powerful and resilient data systems using Redis, Cassandra, Kafka, Elasticsearch and Postgres.&nbsp;</div>
-		<div>
-			&nbsp;</div>
-		<br>
-		<strong><span style="font-size:16px;"><span style="color:#a52a2a;"><span class="yiv601008724Apple-style-span" style="border-collapse: separate; font-family: 'Times New Roman'; font-weight: normal; line-height: normal; "><span class="yiv601008724Apple-style-span" style="border-collapse: collapse; font-family: Helvetica; font-weight: bold; line-height: 16px; ">New Releases</span></span></span></span></strong><br>
-		<br>
-		<div>
-			<span style="font-size:14px;"><a href="http://www.mail-archive.com/web2py@googlegroups.com/msg120558.html" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">web2py 2.6.4</a></span></div>
-		<div>
-			This release includes bug fixes including a problem with sessions in 2.6.x.</div>
-		<div>
-			<br>
-			<br>
-			<strong><span style="font-size:16px;"><span style="color:#a52a2a;"><span class="yiv601008724Apple-style-span" style="border-collapse: separate; font-family: 'Times New Roman'; font-weight: normal; line-height: normal; "><span class="yiv601008724Apple-style-span" style="border-collapse: collapse; font-family: Helvetica; font-weight: bold; line-height: 16px; ">Upcoming Events and Webinars</span></span></span></span></strong><br>
-			<br>
-			<div>
-				<span style="font-size:14px;"><a href="http://baypiggies.net/" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">Duck Typing and testing - two halves of the same coin - Mountain View, CA</a></span></div>
-			<div>
-				Duck typing revolutionized the software world and enabled Python, among many other languages. While making it easy to start projects and produce working code very quickly, maintenance of large code bases was made more difficult. Testing solved this, at a price. A philosophical discussion about software, testing, typing, and Python.<br>
-				<br>
-				<div>
-					<span style="font-size:14px;"><a href="http://www.pyptug.org/2013/09/pyptug-meeting-september-30th.html" target="_self" style="color: #1173C7;text-decoration: underline;font-weight: bold;">PYPTUG September 2013 Meetup - Winston-Salem, NC</a></span></div>
-				<div>
-					Learn about a computer&#39;s clock, time, timekeeping and scheduling with a little automation thrown in for good measure with Francois Dion. The next Piedmont Triad Python Users Group meeting is on Monday, September 30th starts at 5:30.</div>
-				<div>
-					<br>
-					<br>
-					<span style="font-size: 16px; "><span style="color: rgb(47, 79, 79);"><strong>Share Python Weekly</strong></span></span>&nbsp; <a rel="nofollow" target="_blank" href="http://www.facebook.com/share.php?u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87&t=Python%20Weekly%20-%20Issue%20%20106" title="Facebook"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/facebook.png" title="Facebook" alt="Facebook" class="mc-share"></a> <a rel="nofollow" target="_blank" href="http://twitter.com/?status=Python%20Weekly%20-%20Issue%20%20106%20-%20http%3A%2F%2Feepurl.com%2FFTG6T" title="Twitter"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/twitter.png" title="Twitter" alt="Twitter" class="mc-share"></a> <a rel="nofollow" target="_blank" href="http://reddit.com/submit?url=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87&title=Python%20Weekly%20-%20Issue%20%20106" title="Reddit"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/reddit.png" title="Reddit" alt="Reddit" class="mc-share"></a> <a rel="nofollow" target="_blank" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87&title=Python%20Weekly%20-%20Issue%20%20106" title="StumbleUpon"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/stumbleupon.png" title="StumbleUpon" alt="StumbleUpon" class="mc-share"></a> <a rel="nofollow" target="_blank" href="http://www.dzone.com/links/add.html?url=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87&title=Python%20Weekly%20-%20Issue%20%20106" title="DZone"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/dzone.png" title="DZone" alt="DZone" class="mc-share"></a> <a rel="nofollow" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fus2.campaign-archive1.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87&title=Python%20Weekly%20-%20Issue%20%20106" title="LinkedIn"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/linkedin.png" title="LinkedIn" alt="LinkedIn" class="mc-share"></a> <a rel="nofollow" target="_blank" href="http://digg.com/submit?phase=2&url=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87&title=Python%20Weekly%20-%20Issue%20%20106" title="Digg"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/digg.png" title="Digg" alt="Digg" class="mc-share"></a> <a rel="nofollow" target="_blank" href="http://del.icio.us/post?url=http%3A%2F%2Fus2.campaign-archive1.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87&title=Python%20Weekly%20-%20Issue%20%20106" title="Delicious"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/delicious.png" title="Delicious" alt="Delicious" class="mc-share"></a> <a rel="nofollow" target="_blank" href="http://slashdot.org/bookmark.pl?title=Python%20Weekly%20-%20Issue%20%20106&url=http%3A%2F%2Fus2.campaign-archive1.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87" title="Slashdot"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/slashdot.png" title="Slashdot" alt="Slashdot" class="mc-share"></a> </div>
-			</div>
-		</div>
-	</div>
-</div>
-<br>
-</td>
-									</tr>
-									<tr>
-										<td class="footerRow" align="left" valign="top" style="background-color: #F5F1DE;border-top: 0px none #F5F1DE;padding: 20px;">
-											<div class="footerText" style="font-size: 10px;color: #666666;line-height: 100%;font-family: Helvetica;">
-												
-												<!--  -->
-    											You are receiving our weekly newsletter because you signed up at http://www.PythonWeekly.com.
-												<!--  -->
-												<br>
-    											<br>
-		    									<a href="http://pythonweekly.us2.list-manage.com/unsubscribe?u=e2e180baf855ac797ef407fc7&id=9e26887fc5&e=[UNIQID]&c=c4a3a2ab87" style="color: #17488a;text-decoration: underline;font-weight: normal;">Unsubscribe</a> &lt;&lt;Email Address>> from this list | <a href="http://us2.forward-to-friend.com/forward?u=e2e180baf855ac797ef407fc7&id=c4a3a2ab87&e=[UNIQID]" style="color: #17488a;text-decoration: underline;font-weight: normal;">Forward to a friend</a> | <a href="http://pythonweekly.us2.list-manage1.com/profile?u=e2e180baf855ac797ef407fc7&id=9e26887fc5&e=[UNIQID]" style="color: #17488a;text-decoration: underline;font-weight: normal;">Update your profile</a>
-												
-		    									<br>
-												<!--  -->
-		    									<strong>Our mailing address is:</strong>
-												<br>
-		    									<div class="vcard"><span class="org fn">Python Weekly</span><div class="adr"><div class="street-address">Brooklyn</div><span class="locality">Brooklyn</span>, <span class="region">NY</span>  <span class="postal-code">11209</span></div><br><a href="http://pythonweekly.us2.list-manage2.com/vcard?u=e2e180baf855ac797ef407fc7&id=9e26887fc5" class="hcard-download">Add us to your address book</a></div>
-												<br>
-												<!--  -->
-		    									<em>Copyright (C) 2013 Python Weekly All rights reserved.</em>
-												<br>    
-												
-											</div>
-											
-										</td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-		</table>
-		<span style="padding: 0px;"></span>
-	</body>    </body> </html>
+        }
+    })(this.Tumblr || (this.Tumblr = {}));
+</script>
+    
+    <!--[if IE]><script type="text/javascript">document.getElementById('tumblr_controls').allowTransparency=true;</script><![endif]-->
+    
+        
+<iframe src="http://assets.tumblr.com/analytics.html?63fae489732da54993e4a941e42dcf5e" scrolling="no" width="1" height="1" frameborder="0" style="background-color:transparent; overflow:hidden; position:absolute; top:0; left:0 z-index:9999;" id="ga_target"></iframe>
+
+    <script>
+        var COMSCORE = true;
+        window.setTimeout(function() {
+            var analytics_frame = document.getElementById('ga_target');
+            analytics_frame.contentWindow.postMessage('enable_comscore;' + window.location, analytics_frame.src.split('/analytics.html')[0]);
+        }, 1000);
+    </script>
+
+
+
+    <script type="text/javascript">
+      var _qevents = _qevents || [];
+
+      (function() {
+       var elem = document.createElement('script');
+
+       elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+       elem.async = true;
+       elem.type = "text/javascript";
+       var scpt = document.getElementsByTagName('script')[0];
+       scpt.parentNode.insertBefore(elem, scpt);
+      })();
+    </script>
+    <script type="text/javascript">
+        _qevents.push( { qacct: 'p-19UtqE8ngoZbM' } );
+    </script>
+    <noscript>
+        <div style="display: none;"><img src="//pixel.quantserve.com/pixel/'p-19UtqE8ngoZbM'.gif" height="1" width="1" alt="Quantcast"/></div>
+    </noscript>
+
+
+    <script type="text/javascript">!function(s){s.src='http://www.tumblr.com/impixu?T=1380647129&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvYmxvZy5kaXNxdXMuY29tXC9wb3N0XC82MjE4NzgwNjEzNVwvc2NhbGluZy1kamFuZ28tdG8tOC1iaWxsaW9uLXBhZ2Utdmlld3MiLCJyZXF0eXBlIjowLCJyb3V0ZSI6IlwvcG9zdFwvOmlkXC86c3VtbWFyeSJ9&U=JBBILFJCOE&K=c70594dd88063b81e92bfdb5ad0852431cd6dd400a908c3031c7a047e6efe495&R='.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="http://www.tumblr.com/impixu?T=1380647129&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvYmxvZy5kaXNxdXMuY29tXC9wb3N0XC82MjE4NzgwNjEzNVwvc2NhbGluZy1kamFuZ28tdG8tOC1iaWxsaW9uLXBhZ2Utdmlld3MiLCJyZXF0eXBlIjowLCJyb3V0ZSI6IlwvcG9zdFwvOmlkXC86c3VtbWFyeSIsIm5vc2NyaXB0IjoxfQ==&U=JBBILFJCOE&K=43d4694d036d1c94f754d3ed56c9faf9992fcbf2190d490a4f28123e66d656ca&R="></noscript><script type="text/javascript">!function(s){s.src='http://www.tumblr.com/impixu?T=1380647129&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Jsb2cuZGlzcXVzLmNvbVwvcG9zdFwvNjIxODc4MDYxMzVcL3NjYWxpbmctZGphbmdvLXRvLTgtYmlsbGlvbi1wYWdlLXZpZXdzIiwicmVxdHlwZSI6MCwicm91dGUiOiJcL3Bvc3RcLzppZFwvOnN1bW1hcnkiLCJwb3N0cyI6W3sicG9zdGlkIjoiNjIxODc4MDYxMzUiLCJibG9naWQiOiIxNDcwNzUzIiwic291cmNlIjozM31dfQ==&U=MCLJKLPCBI&K=12e691b8ba0ec187303f6f7d5544ebc3af69d0582cc260330e70105636f2ad4c&R='.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="http://www.tumblr.com/impixu?T=1380647129&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Jsb2cuZGlzcXVzLmNvbVwvcG9zdFwvNjIxODc4MDYxMzVcL3NjYWxpbmctZGphbmdvLXRvLTgtYmlsbGlvbi1wYWdlLXZpZXdzIiwicmVxdHlwZSI6MCwicm91dGUiOiJcL3Bvc3RcLzppZFwvOnN1bW1hcnkiLCJwb3N0cyI6W3sicG9zdGlkIjoiNjIxODc4MDYxMzUiLCJibG9naWQiOiIxNDcwNzUzIiwic291cmNlIjozM31dLCJub3NjcmlwdCI6MX0=&U=MCLJKLPCBI&K=6fc7eea78cca1790608f72d306e4f9eb54b27eb339b467f0c07781ce52a7a5ae&R="></noscript><!-- END TUMBLR CODE -->
+</body>
+</html>
