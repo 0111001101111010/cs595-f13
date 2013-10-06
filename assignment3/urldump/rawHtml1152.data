@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18771510-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- line 230 -->
+<!-- got here -->
+
+        <script type="text/javascript">
+            function Adcourier() { this.locale = 'en'; }
+
+            var Adcourier = new Adcourier();
+        </script>
+    <script type="text/javascript">
+            function translate_js (translation_hash) {
+                var locale = Adcourier.locale;
+                if ( !locale ) { locale = 'en'; }
+
+                var text = translation_hash[locale];
+
+                if( !text ){ text = translation_hash['en']; }
+
+                for (var i=1, len=arguments.length; i<len; i++) {
+                    var regex = new RegExp('%'+i+'%', 'g');
+                    text = text.replace(regex, arguments[i]);
+                }
+                return text;
+            }
+        </script>    <head>
+        <!-- LOCALE: en -->
+        <!-- generic with form -->
+        <title>Mechanical Engineer - Bristol - 12 Months</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+        <style type="text/css">
+            body{
+                background: url("/twitter/bg.png") no-repeat fixed 0 0 #C0DEED;
+                color: #333333;
+                font: 0.75em 'Lucida Grande',sans-serif;
+                text-align: center;
+            }
+            #container {
+                margin:1em auto;
+                position:relative;
+                text-align:left;
+                width:763px;
+            }
+            #logo {
+                /*float: left;*/
+                padding-bottom: 30px;
+            }
+            .columns {
+                margin-bottom: 15px;
+                width: 100%;
+                text-align: left;
+            }
+            #content {
+                background-color: #FFFFFF;
+                margin-top: 0;
+                width: 564px;
+                word-wrap: break-word;
+            }
+            .wrapper {
+                padding: 15px;
+            }
+            .profile-user {
+                padding: 0 10px;
+            }
+            #content h2.thumb {
+                padding-bottom: 20px;
+                margin: 0;
+                padding:10px 15px 10px 0;
+                padding-bottom:20px;
+                line-height:50px;
+                font-size: 25px;
+                border-bottom:1px solid #EEEEEE;
+            }
+            
+            .content-bubble-arrow  {
+                background: url("/twitter/arr2.gif");
+                background-position:32px 0;
+                background-repeat:no-repeat;
+                height:11px;
+                margin-top:6px;
+                overflow:hidden;
+            }
+            .screen-name{
+                vertical-align: top;
+                margin-left: 20px;
+            }
+            .show, #app_form{
+                font-size: 14px;
+                padding-left:0.5em;
+                margin: 20px;
+                padding-bottom: 20px;
+            }
+            .show{
+                border-bottom:1px solid #EEEEEE;
+            }
+            #profile-image{
+        
+            }
+            .show div {
+                display: block;
+                padding-top: 20px;
+            }
+        } 
+        </style>
+    </head>
+
+    <body bgcolor="#ffffff" leftMargin=0 topMargin=0 marginWidth=0 marginHeight=0>
+
+<script type="text/javascript">
+
+function validation() {
+    if (document.apply.from_email.value == '') {
+        alert ("You must enter your email address");
+        return false;
+    }
+    var address_check = /^[a-z\d][\w\.\-\_]*@([a-z\d\-\_]+\.)+[a-z]{2,}$/gi;
+    var field = document.apply.from_email.value;
+    if (!field.match(address_check)) {
+        alert ("You have not entered a valid email address");
+        return false;
+    }
+    if (document.apply.fname.value == '') {
+        alert ("You must enter your first name");
+        return false;
+    }
+    if (document.apply.lname.value == '') {
+        alert ("You must enter your surname");
+        return false;
+    }
+    if (document.apply.psa1[0].checked || document.apply.psa1[1].checked || document.apply.psa1[2].checked) {
+        // OK
+    } else {
+        alert ("You must say if you are authorised to work in the UK and/or EU");
+        return false;
+    }
+    return true;
+}
+        </script>
+
+
+        <div id="container">
+            <div id="header">   
+                    <!--<a id="logo" title="Twitter / Home" href="http://twitter.com">-->
+                    <img id="logo" alt="Twitter.com" src="/twitter/twitter_logo_header.png"/>
+                <!--</a>-->
+            </div>
+            <div class="content-bubble-arrow"></div>
+            <table class="columns" cellspacing="0">
+                <tr>
+                    <td id="content" class="round-left column">
+                        <div class="wrapper">
+                            <div class="profile-user">
+                                <h2 class="thumb clearfix">
+                                    <img id="profile-image" valign="middle" src="twitter/twitter_logo_normal.jpg"/><span class="screen-name">Mechanical Engineer - Bristol - 12 Months</span>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="show">
+                            <div>Location: &nbsp;--Bristol</div>
+<div>Salary: &nbsp;GBP40 - GBP55 per hour</div><div><br /><br /><p>Mechanical Engineer – Subsea –Bristol- £45-55 per hour</p><br />
+<p> Are you currently looking for a long term contract?</p><br />
+<p>Huxley are currently looking for multiple contractors for an initial 12 Month piece of work.</p><br />
+<p>Must have skills:</p><br />
+<ul><br />
+<li>5 Years Experience as a Mechanical Engineer</li><br />
+<li>FEA, CALCS</li><br />
+<li>Previous experience working on Large Structures (including hydraulics and controls integration)</li><br />
+</ul><br />
+<p>Desirable Skills:</p><br />
+<ul><br />
+<li>Subsea Experience</li><br />
+</ul><br />
+<p>Duration: 12 Months</p><br />
+<p>Rate: £45-55 per hour</p><br />
+<p>Location: Bristol  </p><br />
+<p>Please send your CV or call me on 011793 88 088 for more information.</p></div>    </div>
+    <div id='app_form'>
+
+                    <div><p>Please check the job details&#44; then fill in your details below and click "Submit now".<br /><br /><font color='red'>* Indicates a required field&#46;</font></p></div>
+                    <form method='post' action='/generic/submit.cgi' name='apply' enctype="multipart/form-data" onSubmit="return validation()">
+                        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tr><td colspan="2"><b>Your Details</b></td></tr>
+                            <tr><td colspan="2"></td></tr>
+                            <tr>
+                                <td>First Name <font color="red">*</font><br><input type="text" name="fname"></td>
+                                <td>Last Name <font color="red">*</font><br><input type="text" name="lname"></td>
+                            </tr>
+                            <tr><td colspan="2"></td></tr>
+                            <tr>
+                <td colspan="2">Email <font color="red">*</font><br><input type="text" name="from_email"></td>
+                            </tr>
+                            <tr><td colspan="2"></td></tr>
+                            <tr>
+                                <td>Phone Number(s)<br>Work: <br><input type="text" name="evening"><br>Home/Mobile/Cell: <br><input type="text" name="mobile"></td>
+                                <td>Address <br><textarea name="address" cols="25" rows="4"></textarea></td>
+                            </tr>
+                            <tr><td colspan="2"></td></tr>
+
+                            <tr>
+                                <td class="header2">Please attach your CV/R&#233;sum&#233; <font color="red">* </font></td>
+                                <td colspan="2"><input type="file" name="thefilename" value="" size="26" class="categorylist"></td>
+                            </tr>
+                            <tr>
+                                <td class="header2">Existing CV</td>
+                            </tr>
+                            <tr><td colspan="2"></td></tr>
+                            <tr>
+                                <td class="header2" width="50%">Please state whether you are currently eligible to work (work permit/visa/citizenship) in the country to which you are applying: <font color="red">* </font></td>
+                                <td colspan="2">
+                                    <input type="hidden" name="psq1" value="Please state whether you are currently eligible (work permit/visa/citizenship) in the country to which you are applying:">
+                                    <input type="Radio" name="psa1" value="Yes" > Yes<br>
+                                    <input type="Radio" name="psa1" value="No" > No<br>
+                                </td>
+                            </tr>
+                        </table>
+                        <table width="100%">
+                            <tr>
+                                <td colspan="2" align="right">
+                                    <input type="submit" value="Submit now" alt="Submit now" name="Submit now" border=0 class="button">
+                                </td>
+                            </tr>
+                        </table>
+                            <input type="hidden" name="ID" value="1380683019AIBN.45650.twi@sthreeuk.aplitrak.com">
+                            <input type="hidden" name="jobref" value="HA-12363853">
+                            <input type="hidden" name="time" value="1380683019">
+                            <input type="hidden" name="boardID" value="twi">
+                            <input type="hidden" name="company" value="sthreeuk">
+                            <input type="hidden" name="office" value="HA">
+                            <input type="hidden" name="consultant" value="AIBN">
+                            <input type="hidden" name="aplitrakID" value="45650">
+                            <input type="hidden" name="from_name" value="">
+                            <input type="hidden" name="jobtitle" value="Mechanical Engineer - Bristol - 12 Months">
+                        </form>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>

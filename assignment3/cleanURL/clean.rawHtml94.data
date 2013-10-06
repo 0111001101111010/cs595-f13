@@ -1,0 +1,286 @@
+   #[1]GitHub [2]Recent Commits to sandi_meter:master
+
+   [3]Sign up [4]Sign in
+     * [5]Explore
+     * [6]Features
+     * [7]Enterprise
+     * [8]Blog
+
+   ____________________
+   This repository
+   (*)
+   This repository
+   ( )
+   All repositories
+     * [9]Star [10]148
+     * [11]Fork [12]8
+
+public [13]makaroni4/[14]sandi_meter Octocat-spinner-32
+
+     * [15]Code Octocat-spinner-32
+     * [16]Issues 3 Octocat-spinner-32
+     * [17]Pull Requests 1 Octocat-spinner-32
+
+     * [18]Pulse Octocat-spinner-32
+     * [19]Graphs Octocat-spinner-32
+     * [20]Network Octocat-spinner-32
+
+HTTPS clone URL
+
+   https://github.com/m
+
+Subversion checkout URL
+
+   https://github.com/m
+
+   You can clone with [21]HTTPS, or [22]Subversion.
+   [23]Download ZIP
+
+   Static analysis tool for checking Ruby code for Sandi Metz' rules.
+
+   [24]https://rubygems.org/gems/sandi_meter
+     * [25]55 commits
+     * [26]2 branches
+     * [27]6 releases
+     * [28]Fetching contributors
+
+    1. [29]Ruby 74.9%
+    2. [30]CSS 20.1%
+    3. [31]JavaScript 5.0%
+
+   [32]RubyCSSJavaScript
+   branch: master
+   Switch branches/tags
+   ____________________
+     * [33]Branches
+     * [34]Tags
+
+   [35]feature/details
+   [36]master
+   Nothing to show
+   [37]v0.0.6
+   [38]v0.0.5
+   [39]v0.0.4
+   [40]v0.0.3
+   [41]v0.0.2
+   [42]v0.0.1
+   Nothing to show
+   [43]sandi_meter /
+   [44]Show File Finder
+
+   [45]Merge pull request [46]#11 [47]from DNNX/master [48]…
+Fixing a typo: missindented -> misindented
+
+   [49]latest commit 2018ce7134
+   [e302c3320cd14b02cbe237b479d7f884?d=https%3A%2F%2Fidenticons.github.com
+   %2F59f6c86ebe1eb6e6b645806e2265ecaa.png&amp;s=140] [50]makaroni4
+   authored September 28, 2013
+   Octocat-spinner-32 [51]bin [52]Refactor CLI and bin September 26, 2013
+   Octocat-spinner-32 [53]html [54]fix mailto September 26, 2013
+   Octocat-spinner-32 [55]lib [56]Fixing a typo: missindented ->
+   misindented September 27, 2013
+   Octocat-spinner-32 [57]spec [58]Fixing a typo: missindented ->
+   misindented September 27, 2013
+   Octocat-spinner-32 [59].gitignore [60]Added html generator September
+   24, 2013
+   Octocat-spinner-32 [61].rspec [62]FIX typo, added .rspec file September
+   22, 2013
+   Octocat-spinner-32 [63].travis.yml [64]Travis CI yml September 23, 2013
+   Octocat-spinner-32 [65]Gemfile [66]Added CLI interface September 22,
+   2013
+   Octocat-spinner-32 [67]Gemfile.lock [68]Bump to new version September
+   26, 2013
+   Octocat-spinner-32 [69]LICENSE [70]Added gem stuff and executable
+   September 14, 2013
+   Octocat-spinner-32 [71]README.md [72]Fixing a typo: missindented ->
+   misindented September 27, 2013
+   Octocat-spinner-32 [73]Rakefile [74]Gemspec added files September 14,
+   2013
+   Octocat-spinner-32 [75]sandi_meter.gemspec [76]Ruby version specified
+   in gemspec September 25, 2013
+   README.md
+
+SandiMeter
+
+   [77]Build Status [78]Gem Version
+
+   Static analysis tool for checking your Ruby code for [79]Sandi Metz'
+   four rules.
+     * 100 lines per class
+     * 5 lines per method
+     * 4 params per method call (and don't even try cheating with hash
+       params)
+     * 1 instance variables per controller' action
+
+CLI mode
+
+gem install sandi_meter
+
+sandi_meter --help
+-g, --graph                      Create folder and log data to graph
+-l, --log                        Show syntax error and indentation log output
+-p, --path PATH                  Path to folder or file to analyze
+-r, --rules                      Show rules
+-h, --help                       Help
+
+sandi_meter -p ~/your/ruby/or/rails/project
+
+1. 94% of classes are under 100 lines.
+2. 53% of methods are under 5 lines.
+3. 98% of methods calls accepts are less than 4 parameters.
+4. 21% of controllers have one instance variable per action.
+
+HTML mode
+
+   Try using gem with -g (--graph) option, so it will create a folder with
+   beautiful html output and log file with results of any scan.
+
+   [80]SandiMeter HTML mode
+
+Ruby script mode
+
+require 'sandi_meter/file_scanner'
+require 'pp'
+
+scanner = SandiMeter::FileScanner.new
+data = scanner.scan(PATH_TO_PROJECT)
+pp data
+# {:first_rule=>
+#   {:small_classes_amount=>916,
+#    :total_classes_amount=>937,
+#    :misindented_classes_amount=>1},
+#  :second_rule=>
+#   {:small_methods_amount=>1144,
+#    :total_methods_amount=>1833,
+#    :misindented_methods_amount=>0},
+#  :third_rule=>{:proper_method_calls=>5857, :total_method_calls=>5894},
+#  :fourth_rule=>{:proper_controllers_amount=>17, :total_controllers_amount=>94}
+}
+
+     * [81]Status
+     * [82]API
+     * [83]Training
+     * [84]Shop
+     * [85]Blog
+     * [86]About
+
+     * © 2013 GitHub, Inc.
+     * [87]Terms
+     * [88]Privacy
+     * [89]Security
+     * [90]Contact
+
+
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+
+   Something went wrong with that request. Please try again.
+
+References
+
+   Visible links
+   1. file://localhost/opensearch.xml
+   2. https://github.com/makaroni4/sandi_meter/commits/master.atom
+   3. file://localhost/signup
+   4. file://localhost/login?return_to=%2Fmakaroni4%2Fsandi_meter
+   5. file://localhost/explore
+   6. file://localhost/features
+   7. https://enterprise.github.com/
+   8. file://localhost/blog
+   9. file://localhost/login?return_to=%2Fmakaroni4%2Fsandi_meter
+  10. file://localhost/makaroni4/sandi_meter/stargazers
+  11. file://localhost/login?return_to=%2Fmakaroni4%2Fsandi_meter
+  12. file://localhost/makaroni4/sandi_meter/network
+  13. file://localhost/makaroni4
+  14. file://localhost/makaroni4/sandi_meter
+  15. file://localhost/makaroni4/sandi_meter
+  16. file://localhost/makaroni4/sandi_meter/issues
+  17. file://localhost/makaroni4/sandi_meter/pulls
+  18. file://localhost/makaroni4/sandi_meter/pulse
+  19. file://localhost/makaroni4/sandi_meter/graphs
+  20. file://localhost/makaroni4/sandi_meter/network
+  21. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml94.data
+  22. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml94.data
+  23. file://localhost/makaroni4/sandi_meter/archive/master.zip
+  24. https://rubygems.org/gems/sandi_meter
+  25. file://localhost/makaroni4/sandi_meter/commits/master
+  26. file://localhost/makaroni4/sandi_meter/branches
+  27. file://localhost/makaroni4/sandi_meter/releases
+  28. file://localhost/makaroni4/sandi_meter/contributors
+  29. file://localhost/makaroni4/sandi_meter/search?l=ruby
+  30. file://localhost/makaroni4/sandi_meter/search?l=css
+  31. file://localhost/makaroni4/sandi_meter/search?l=javascript
+  32. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml94.data
+  33. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml94.data
+  34. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml94.data
+  35. file://localhost/makaroni4/sandi_meter/tree/feature/details
+  36. file://localhost/makaroni4/sandi_meter/tree/master
+  37. file://localhost/makaroni4/sandi_meter/tree/v0.0.6
+  38. file://localhost/makaroni4/sandi_meter/tree/v0.0.5
+  39. file://localhost/makaroni4/sandi_meter/tree/v0.0.4
+  40. file://localhost/makaroni4/sandi_meter/tree/v0.0.3
+  41. file://localhost/makaroni4/sandi_meter/tree/v0.0.2
+  42. file://localhost/makaroni4/sandi_meter/tree/v0.0.1
+  43. file://localhost/makaroni4/sandi_meter
+  44. file://localhost/makaroni4/sandi_meter/find/master
+  45. file://localhost/makaroni4/sandi_meter/commit/2018ce713460999bbb30b7010d85ce726af09e2e
+  46. https://github.com/makaroni4/sandi_meter/pull/11
+  47. file://localhost/makaroni4/sandi_meter/commit/2018ce713460999bbb30b7010d85ce726af09e2e
+  48. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml94.data
+  49. file://localhost/makaroni4/sandi_meter/commit/2018ce713460999bbb30b7010d85ce726af09e2e
+  50. file://localhost/makaroni4
+  51. file://localhost/makaroni4/sandi_meter/tree/master/bin
+  52. file://localhost/makaroni4/sandi_meter/commit/f9fada794e7a07a73e72bff80335f8411aab317b
+  53. file://localhost/makaroni4/sandi_meter/tree/master/html
+  54. file://localhost/makaroni4/sandi_meter/commit/349de692bf874479b259ca8ba681a61f22bbc311
+  55. file://localhost/makaroni4/sandi_meter/tree/master/lib
+  56. file://localhost/makaroni4/sandi_meter/commit/d9a6632975ee16de13fcf95e4c242551605406d6
+  57. file://localhost/makaroni4/sandi_meter/tree/master/spec
+  58. file://localhost/makaroni4/sandi_meter/commit/d9a6632975ee16de13fcf95e4c242551605406d6
+  59. file://localhost/makaroni4/sandi_meter/blob/master/.gitignore
+  60. file://localhost/makaroni4/sandi_meter/commit/6ff89f082935207ffade93bd5b37f52aa57ec1a9
+  61. file://localhost/makaroni4/sandi_meter/blob/master/.rspec
+  62. file://localhost/makaroni4/sandi_meter/commit/f0562766449a73a309564113c0641e7ee450ae66
+  63. file://localhost/makaroni4/sandi_meter/blob/master/.travis.yml
+  64. file://localhost/makaroni4/sandi_meter/commit/ee584478d0b14ea4bf2cb9a2767da2254a4b963c
+  65. file://localhost/makaroni4/sandi_meter/blob/master/Gemfile
+  66. file://localhost/makaroni4/sandi_meter/commit/bc5b9755ae2bd4a3ee963086e61baf8a5f1e7a97
+  67. file://localhost/makaroni4/sandi_meter/blob/master/Gemfile.lock
+  68. file://localhost/makaroni4/sandi_meter/commit/78b04cf34b0e6d598b657db77e487f38dde0a523
+  69. file://localhost/makaroni4/sandi_meter/blob/master/LICENSE
+  70. file://localhost/makaroni4/sandi_meter/commit/4f1ffb3561fa7c0d90508452857a41ac064d92a5
+  71. file://localhost/makaroni4/sandi_meter/blob/master/README.md
+  72. file://localhost/makaroni4/sandi_meter/commit/d9a6632975ee16de13fcf95e4c242551605406d6
+  73. file://localhost/makaroni4/sandi_meter/blob/master/Rakefile
+  74. file://localhost/makaroni4/sandi_meter/commit/5b6ab367f6e9731bf2565325a8428c58373a7a1a
+  75. file://localhost/makaroni4/sandi_meter/blob/master/sandi_meter.gemspec
+  76. file://localhost/makaroni4/sandi_meter/commit/e3f4a12abfd24eed7e4bcd2b7a06117fc8c1c34c
+  77. https://travis-ci.org/makaroni4/sandi_meter
+  78. http://badge.fury.io/rb/sandi_meter
+  79. http://robots.thoughtbot.com/post/50655960596/sandi-metz-rules-for-developers
+  80. https://github-camo.global.ssl.fastly.net/73bdc7675603bf3df5873f3cc6efb6b4dfd1032c/687474703a2f2f696d673534352e696d616765736861636b2e75732f696d673534352f353630312f7438716b2e706e67
+  81. https://status.github.com/
+  82. http://developer.github.com/
+  83. http://training.github.com/
+  84. http://shop.github.com/
+  85. file://localhost/blog
+  86. file://localhost/about
+  87. file://localhost/site/terms
+  88. file://localhost/site/privacy
+  89. file://localhost/security
+  90. file://localhost/contact
+
+   Hidden links:
+  92. https://github.com/
+  93. https://help.github.com/articles/which-remote-url-should-i-use
+  94. file://localhost/makaroni4/sandi_meter/compare
+  95. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml94.data#sandimeter
+  96. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml94.data#cli-mode
+  97. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml94.data#html-mode
+  98. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml94.data#ruby-script-mode
+  99. file://localhost/
+ 100. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml94.data
+ 101. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml94.data
+ 102. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml94.data

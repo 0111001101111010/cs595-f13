@@ -1,0 +1,154 @@
+   #[1]Dev Blog of Martin Ivanov [2]Acid.JS Web UI Library
+
+[3]HTML^5 Shopping Cart
+
+     * [4]About
+     * [5]@wemakesitesnet
+     * [6]Blog
+     * [7]Contact
+
+     * [8]Home
+     * [9]Features
+     * [10]Download
+     * [11]Licensing
+     * [12]Demo
+     * [13]Purchase
+     * [14]API
+
+   This website as well as HTML5 Cart make heavy use of JavaScript, which
+   is disabled in your browser. For complete experience, please, enable
+   JavaScript and reload the page.
+
+HTML5 Cart Features
+
+Platform-independent
+
+   HTML^5 Cart operates fully in the browser, and does not depend on the
+   type of the web-server you are using.
+
+HTML5, CSS3 and JavaScript Driven
+
+   Amazingly fast and responsive. Built with best practices and latest
+   development trends in mind.
+
+Powerful Build Tools
+
+   Each commercial [15]license of HTML^5 Cart comes with free access to
+   our online state-of-the-art [16]HTML5-driven editor, which allows you
+   easy creation or modification or shopping cart data files straight into
+   your favorite browser. The Developer [17]license comes with powerful
+   JavaScript and CSS optimization and minification tools.
+
+Support for Different Payment Gateways
+
+   Currently, the small business and enterprise [18]licenses come with one
+   payment provider - PayPal, but we are working on support for Google
+   Checkout and Amazon Payments. The basic version of HTML^5 Cart does not
+   include a payment provider, but you can easily create one, using our
+   API, which allows the integration of any payment provider. For more
+   information about payment providers, please, check our
+   [19]Documentation and API page.
+
+Lightweight and Elegant
+
+   The entire HTML^5 Cart (CSS, JavaScript and template files) is just
+   about 40KB minified and g-zipped.
+
+External Templates
+
+   If you know HTML and CSS you can easily change the looks and the
+   rendering of HTML^5 Cart.
+
+International Currency Support
+
+   HTML^5 Cart will support any currency, supported by the selected
+   [20]payment provider. It will also add automatically the currency
+   symbol (if available) along with the currency code.
+
+Flexible Licenses
+
+   We provide flexible and affordable licenses for any businesses. For
+   more information, please, check our [21]licenses page.
+
+Supported Browsers:
+
+     * Mozilla Firefox
+     * Google Chrome
+     * Apple Safari
+     * Opera
+     * Internet Explorer 8+ (but still working with IE6/7)
+
+Add to Cart Buttons
+
+   If you do not want to use the "shop" mode of HTML^5 Cart, you can
+   associate the items you sell on your website with our [22]add to cart
+   buttons. This can done extremely easy, and any license of HTML^5 Cart
+   is shipped with 5 ready to use add to cart buttons. Moreover, you can
+   easily create your own buttons with CSS.
+
+Easy to Install, Configure and Run.
+
+   No data bases and server setup - just pure client-side implementation.
+   Basically, what you need to do is adding a few JavaScript and CSS
+   files, defining a few configuration properties and include your items
+   to a simple JSON file. Please, check the [23]documentation for a jump
+   start using HTML^5 Cart.
+
+Modes
+
+   HTML^5 Cart supports two operation modes - "cart" (default) and "shop".
+   Please, check our [24]documentation page for more info about modes.
+
+Localizable
+
+   The current version of HTML^5 Cart comes with English and Bulgarian
+   languages, but creating a [25]language file is a matter of minutes -
+   all you have to do is to edit a simple JSON file.
+
+Support for Multiple Data Files in Cross-platform JSON Format.
+
+   You can have different shopping carts on a single website. Please,
+   check our [26]documentation.
+
+Themes
+
+   The support for themes is currently under development and will be
+   released soon.
+     * ©2013
+     * [27]About
+     * [28]@wemakesitesnet
+     * [29]Blog
+     * [30]Contact
+
+References
+
+   1. http://feeds.feedburner.com/acidmartin
+   2. http://feeds.feedburner.com/acidjs
+   3. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+   4. http://wemakesites.net/
+   5. https://twitter.com/wemakesitesnet
+   6. http://acidmartin.wordpress.com/
+   7. http://wemakesites.net/#!/contact
+   8. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+   9. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/features.html
+  10. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/download.html
+  11. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/licensing.html
+  12. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/demo.html
+  13. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/purchase.html
+  14. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/documentation.html
+  15. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/licensing.html
+  16. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/editor.html
+  17. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/licensing.html
+  18. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/licensing.html
+  19. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/documentation.html#heading-payment-providers
+  20. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/documentation.html#heading-payment-providers
+  21. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/licensing.html
+  22. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/documentation.html#add-to-cart-buttons
+  23. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/documentation.html
+  24. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/documentation.html#configuring-html5-cart
+  25. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/documentation.html#heading-localization
+  26. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/documentation.html#cart-items-data-files
+  27. http://wemakesites.net/
+  28. https://twitter.com/wemakesitesnet
+  29. http://acidmartin.wordpress.com/
+  30. http://wemakesites.net/#!/contact

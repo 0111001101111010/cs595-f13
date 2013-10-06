@@ -1,0 +1,1623 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:rnews="http://iptc.org/std/rNews/2011-10-07#" xml:lang="en-GB">
+        
+    
+    
+    
+	
+    
+    
+    
+    
+    
+    
+    
+	
+    
+	
+    
+	
+	
+	
+	
+    
+	
+
+        
+    
+<!-- THIS FILE CONFIGURES SHARED HIGHWEB STATIC ASSETS -->
+
+
+
+
+
+<!-- mapping_nature.inc -->
+<!-- THIS FILE CONFIGURES NATURE STATIC ASSETS  -->
+
+
+
+
+    <!-- hi/shared/head_initial.inc -->
+
+
+
+
+	        <head profile="http://dublincore.org/documents/dcq-html/" resource="http://www.bbc.co.uk/nature/24205093" typeof="rnews:NewsItem">
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>BBC Nature - Cuckoo finch fools host with multiple eggs</title>
+        <meta name="Description" content="Cuckoo finches lay multiple eggs in the nests of other birds to make it harder to detect the &#039;imposters&#039;, researchers find."/>
+        <meta property="rnews:description" content="Cuckoo finches lay multiple eggs in the nests of other birds to make it harder to detect the &#039;imposters&#039;, researchers find."/>
+                <meta name="OriginalPublicationDate" content="2013/09/25 15:08:23"/>
+        <meta property="rnews:datePublished" content="2013/09/25 15:08:23"/>
+        <meta name="UKFS_URL" content="/nature/24205093"/>
+                <meta name="THUMBNAIL_URL" content="http://news.bbcimg.co.uk/media/images/70088000/jpg/_70088773_6cuckoofinchchickclairespottiswoode.jpg"/>
+        <meta property="rnews:thumbnailUrl" content="http://news.bbcimg.co.uk/media/images/70088000/jpg/_70088773_6cuckoofinchchickclairespottiswoode.jpg"/>
+                <meta name="Headline" content="Cuckoo fools host with multiple eggs"/>
+        <meta property="rnews:headline" content="Cuckoo fools host with multiple eggs"/>
+        <meta name="IFS_URL" content="/nature/24205093"/>
+        <meta name="Section" content="News"/>
+        <meta name="contentFlavor" content="STORY"/>
+		                        <meta name="CPS_ID" content="24205093" />
+        <meta name="CPS_SITE_NAME" content="BBC Nature" />
+        <meta name="CPS_SECTION_PATH" content="News" />
+        <meta name="CPS_ASSET_TYPE" content="STY" />
+        <meta name="CPS_PLATFORM" content="HighWeb" />
+        <meta name="CPS_AUDIENCE" content="Domestic" />
+        <meta property="rnews:creator" content="http://www.bbc.co.uk#org"/>
+
+            		<meta property="og:title" content="Cuckoo fools host with multiple eggs"/>
+    		<meta property="og:type" content="article"/>
+    		<meta property="og:url" content="http://www.bbc.co.uk/nature/24205093"/>
+    		<meta property="og:site_name" content="BBC Nature"/>
+            			<meta property="og:image" content="http://newsimg.bbc.co.uk/media/images/67165000/jpg/_67165918_67165917.jpg"/>
+											
+				<meta name="bbcsearch_noindex" content="atom"/>
+		
+        <link rel="canonical" href="http://www.bbc.co.uk/nature/24205093" />
+       	        
+        
+        
+
+        <!-- hi/nature/head_first.inc -->
+        
+<!-- PULSE_ENABLED:yes -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		
+		
+	
+
+
+
+
+
+
+
+	
+	
+	
+	
+		
+	
+
+
+
+
+
+	
+		
+
+    
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />  
+  <link rel="schema.dcterms" href="http://purl.org/dc/terms/" />  <link rel="index" href="http://www.bbc.co.uk/a-z/" title="A to Z" /> <link rel="copyright" href="http://www.bbc.co.uk/terms/" title="Terms of Use" /> <link rel="icon" href="http://www.bbc.co.uk/favicon.ico" type="image/x-icon" />  <meta name="viewport" content="width = 996" /> 
+
+ <link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/frameworks/barlesque/2.48.3/desktop/3.5/style/main.css"  />  <script type="text/javascript">/*<![CDATA[*/ if (typeof bbccookies_flag === 'undefined') { bbccookies_flag = 'ON'; } showCTA_flag = false; cta_enabled = (showCTA_flag && (bbccookies_flag === 'ON') ); (function(){var e="ckns_policy",m="Thu, 01 Jan 1970 00:00:00 GMT",k={ads:true,personalisation:true,performance:true,necessary:true};function f(p){if(f.cache[p]){return f.cache[p]}var o=p.split("/"),q=[""];do{q.unshift((o.join("/")||"/"));o.pop()}while(q[0]!=="/");f.cache[p]=q;return q}f.cache={};function a(p){if(a.cache[p]){return a.cache[p]}var q=p.split("."),o=[];while(q.length&&"|co.uk|com|".indexOf("|"+q.join(".")+"|")===-1){if(q.length){o.push(q.join("."))}q.shift()}f.cache[p]=o;return o}a.cache={};function i(o,t,p){var z=[""].concat(a(window.location.hostname)),w=f(window.location.pathname),y="",r,x;for(var s=0,v=z.length;s<v;s++){r=z[s];for(var q=0,u=w.length;q<u;q++){x=w[q];y=o+"="+t+";"+(r?"domain="+r+";":"")+(x?"path="+x+";":"")+(p?"expires="+p+";":"");bbccookies.set(y,true)}}}window.bbccookies={_setEverywhere:i,cookiesEnabled:function(){var o="ckns_testcookie"+Math.floor(Math.random()*100000);this.set(o+"=1");if(this.get().indexOf(o)>-1){g(o);return true}return false},set:function(o){return document.cookie=o},get:function(){return document.cookie},_setPolicy:function(o){return h.apply(this,arguments)},readPolicy:function(o){return b.apply(this,arguments)},_deletePolicy:function(){i(e,"",m)},isAllowed:function(){return true},_isConfirmed:function(){return c()!==null},_acceptsAll:function(){var o=b();return o&&!(j(o).indexOf("0")>-1)},_getCookieName:function(){return d.apply(this,arguments)},_showPrompt:function(){return(!this._isConfirmed()&&window.cta_enabled&&this.cookiesEnabled()&&!window.bbccookies_disable)}};bbccookies._getPolicy=bbccookies.readPolicy;function d(p){var o=(""+p).match(/^([^=]+)(?==)/);return(o&&o.length?o[0]:"")}function j(o){return""+(o.ads?1:0)+(o.personalisation?1:0)+(o.performance?1:0)}function h(r){if(typeof r==="undefined"){r=k}if(typeof arguments[0]==="string"){var o=arguments[0],q=arguments[1];if(o==="necessary"){q=true}r=b();r[o]=q}else{if(typeof arguments[0]==="object"){r.necessary=true}}var p=new Date();p.setYear(p.getFullYear()+1);p=p.toUTCString();bbccookies.set(e+"="+j(r)+";domain=bbc.co.uk;path=/;expires="+p+";");bbccookies.set(e+"="+j(r)+";domain=bbc.com;path=/;expires="+p+";");return r}function l(o){if(o===null){return null}var p=o.split("");return{ads:!!+p[0],personalisation:!!+p[1],performance:!!+p[2],necessary:true}}function c(){var o=new RegExp("(?:^|; ?)"+e+"=(\\d\\d\\d)($|;)"),p=document.cookie.match(o);if(!p){return null}return p[1]}function b(o){var p=l(c());if(!p){p=k}if(o){return p[o]}else{return p}}function g(o){return document.cookie=o+"=;expires="+m+";"}function n(){var o='<script type="text/javascript" src="http://static.bbci.co.uk/frameworks/bbccookies/0.5.9/script/bbccookies.js"><\/script>';if(window.bbccookies_flag==="ON"&&!bbccookies._acceptsAll()&&!window.bbccookies_disable){document.write(o)}}n()})(); /*]]>*/</script>      <script type="text/javascript"> if (! window.gloader) { window.gloader = [ "glow", {map: "http://node1.bbcimg.co.uk/glow/glow/map.1.7.7.js"}]; } </script>  <script type="text/javascript" src="http://node1.bbcimg.co.uk/glow/gloader.0.1.6.js"></script>   <script type="text/javascript" src="http://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"></script> <script type="text/javascript">  bbcRequireMap = {"jquery-1":"http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.7.2", "jquery-1.4":"http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.4", "jquery-1.9":"http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.9.1", "swfobject-2":"http://static.bbci.co.uk/frameworks/swfobject/0.1.10/sharedmodules/swfobject-2", "demi-1":"http://static.bbci.co.uk/frameworks/demi/0.9.8/sharedmodules/demi-1", "gelui-1":"http://static.bbci.co.uk/frameworks/gelui/0.9.12/sharedmodules/gelui-1", "cssp!gelui-1/overlay":"http://static.bbci.co.uk/frameworks/gelui/0.9.12/sharedmodules/gelui-1/overlay.css", "istats-1":"http://static.bbci.co.uk/frameworks/istats/0.16.1/modules/istats-1", "relay-1":"http://static.bbci.co.uk/frameworks/relay/0.2.4/sharedmodules/relay-1", "clock-1":"http://static.bbci.co.uk/frameworks/clock/0.1.9/sharedmodules/clock-1", "canvas-clock-1":"http://static.bbci.co.uk/frameworks/clock/0.1.9/sharedmodules/canvas-clock-1", "cssp!clock-1":"http://static.bbci.co.uk/frameworks/clock/0.1.9/sharedmodules/clock-1.css", "jssignals-1":"http://static.bbci.co.uk/frameworks/jssignals/0.3.6/modules/jssignals-1", "jcarousel-1":"http://static.bbci.co.uk/frameworks/jcarousel/0.1.10/modules/jcarousel-1"}; require({ baseUrl: 'http://static.bbci.co.uk/', paths: bbcRequireMap, waitSeconds: 30 }); </script>      <script type="text/javascript" src="http://static.bbci.co.uk/frameworks/barlesque/2.48.3/desktop/3.5/script/barlesque.js"></script>
+  
+<!--[if IE 6]>
+        <script type="text/javascript">
+        try {
+            document.execCommand("BackgroundImageCache",false,true);
+        } catch(e) {}
+    </script>
+        <style type="text/css">
+        /* Use filters for IE6 */
+        #blq-blocks a {
+            background-image: none;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.bbci.co.uk/frameworks/barlesque/2.48.3/desktop/3.5//img/blq-blocks_white_alpha.png', sizingMethod='image');
+        }
+        .blq-masthead-focus #blq-blocks a,
+        .blq-mast-text-dark #blq-blocks a {
+            background-image: none;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.bbci.co.uk/frameworks/barlesque/2.48.3/desktop/3.5//img/blq-blocks_grey_alpha.png', sizingMethod='image');
+        }
+        #blq-nav-search button span {
+            background-image: none;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.bbci.co.uk/frameworks/barlesque/2.48.3/desktop/3.5//img/blq-search_grey_alpha.png', sizingMethod='image');
+        }
+        #blq-nav-search button img {
+            position: absolute;
+            left: -999em;    
+        }
+    </style>
+<![endif]-->
+
+<!--[if (IE 7])|(IE 8)>
+    <style type="text/css">
+        .blq-clearfix {
+            display: inline-block;
+        }
+    </style>
+<![endif]-->
+
+<script type="text/javascript">
+     blq.setEnvironment('live');  if (blq.setLabel) blq.setLabel('searchSuggestion', "Search");  if (! /bbc\.co\.uk$/i.test(window.location.hostname) ) { document.documentElement.className += ' blq-not-bbc-co-uk'; } </script>
+
+    <script type="text/javascript"> if (! window.gloader) { window.gloader = [ "glow", {map: "http://node1.bbcimg.co.uk/glow/glow/map.1.7.7.js"}]; } </script>
+    <!-- BBCDOTCOM template:server-side journalismVariant: true ipIsAdvertiseCombined: true adsEnabled: false showDotcom: true flagpole: ON -->
+                         
+	
+
+
+		<!-- shared/head -->
+<meta http-equiv="imagetoolbar" content="no" />
+<!--[if !(lt IE 6)]>
+   	<link rel="stylesheet" type="text/css" href="http://news.bbcimg.co.uk/view/3_0_16/cream/hi/shared/type.css" />
+
+
+		<link rel="stylesheet" type="text/css" media="screen" href="http://news.bbcimg.co.uk/view/3_0_16/cream/hi/shared/global.css" />
+
+
+	<link rel="stylesheet" type="text/css" media="print" href="http://news.bbcimg.co.uk/view/3_0_16/cream/hi/shared/print.css" />
+
+	<link rel="stylesheet" type="text/css" media="screen and (max-device-width: 976px)" href="http://news.bbcimg.co.uk/view/3_0_16/cream/hi/shared/mobile.css" />
+	
+
+
+
+<link rel="stylesheet" type="text/css" href="http://news.bbcimg.co.uk/view/3_0_16/cream/hi/shared/components/components.css" />
+
+<![endif]-->
+<!--[if !IE]>-->
+   	<link rel="stylesheet" type="text/css" href="http://news.bbcimg.co.uk/view/3_0_16/cream/hi/shared/type.css" />
+
+
+		<link rel="stylesheet" type="text/css" media="screen" href="http://news.bbcimg.co.uk/view/3_0_16/cream/hi/shared/global.css" />
+
+
+	<link rel="stylesheet" type="text/css" media="print" href="http://news.bbcimg.co.uk/view/3_0_16/cream/hi/shared/print.css" />
+
+	<link rel="stylesheet" type="text/css" media="screen and (max-device-width: 976px)" href="http://news.bbcimg.co.uk/view/3_0_16/cream/hi/shared/mobile.css" />
+	
+
+
+
+<link rel="stylesheet" type="text/css" href="http://news.bbcimg.co.uk/view/3_0_16/cream/hi/shared/components/components.css" />
+
+<!--<![endif]-->
+<script type="text/javascript">
+/*<![CDATA[*/
+gloader.load(["glow","1","glow.dom"],{onLoad:function(glow){glow.dom.get("html").addClass("blq-js")}});
+gloader.load(["glow","1","glow.dom"],{onLoad:function(glow){glow.ready(function(){if (glow.env.gecko){var gv = glow.env.version.split(".");for (var i=gv.length;i<4;i++){gv[i]=0;}if((gv[0]==1 && gv[1]==9 && gv[2]==0)||(gv[0]==1 && gv[1]<9)||(gv[0]<1)){glow.dom.get("body").addClass("firefox-older-than-3-5");}}});}});
+
+window.disableFacebookSDK=true;
+if (window.location.pathname.indexOf('+')>=0){window.disableFacebookSDK=true;}
+
+/*]]>*/
+</script>
+<script type="text/javascript" src="http://news.bbcimg.co.uk/js/locationservices/locator/v4_0/locator.js"></script>
+
+<script type="text/javascript" src="http://news.bbcimg.co.uk/js/core/3_3_1/bbc_fmtj.js"></script>
+
+<script type="text/javascript">
+<!--
+	bbc.fmtj.page = {
+		serverTime: 1380682794000,
+		editionToServe: 'domestic',
+		queryString: '',
+		section: 'news',
+		sectionPath: '/News',
+		siteName: 'BBC Nature',
+		siteToServe: 'nature',
+		siteVersion: 'cream',
+		storyId: '24205093',
+		assetType: 'story',
+		uri: '/nature/24205093',
+		country: 'us',
+		masthead: false,
+		adKeyword: null,
+		templateVersion: 'v1_0'
+	}
+-->
+</script>
+<script type="text/javascript" src="http://news.bbcimg.co.uk/js/common/3_2_1/bbc_fmtj_common.js"></script>
+
+
+<script type="text/javascript">$useMap({map:"http://news.bbcimg.co.uk/js/map/map_0_0_33.js"});</script>
+<script type="text/javascript">$loadView("0.0",["bbc.fmtj.view"]);</script>
+<script type="text/javascript">$render("livestats-heatmap");</script>
+
+
+<script type="text/javascript" src="http://news.bbcimg.co.uk/js/config/apps/4_7_2/bbc_fmtj_config.js"></script>
+
+
+
+
+<script type="text/javascript">
+    //<![CDATA[
+        require(['jquery-1'], function($){
+            
+            // set up EMP once it's loaded
+            var setUp = function(){
+                // use our own pop out page
+        	    embeddedMedia.setPopoutUrl('/player/emp/2_0_55/popout/pop.stm');
+
+        	    // store EMP's notifyParent function
+        	    var oldNotifyParent = embeddedMedia.console.notifyParent;
+        	    // use our own to add livestats to popout
+        	    embeddedMedia.console.notifyParent = function(childWin){
+        	        oldNotifyParent(childWin);
+        	        // create new live stats url
+                    var liveStatsUrl = bbc.fmtj.av.emp.liveStatsForPopout($('#livestats').attr('src'));
+                    var webBug = $('<img />', {
+                                     id:  'livestats',
+                                     src: liveStatsUrl
+                                 });
+                    // append it to popout
+                    $(childWin.document).find('body').append(webBug);
+                }
+            }
+                
+            // check if console is available to manipulate
+            if(window.embeddedMedia && window.embeddedMedia.console){
+                setUp();
+            }
+            // otherwise emp is still loading, so add event listener
+            else{
+                $(document).bind('empReady', function(){
+                    setUp();
+                });
+            }
+        });
+    //]]>
+</script>
+
+
+		
+	<!-- get BUMP from cdn -->
+    <script type="text/javascript" src="http://emp.bbci.co.uk/emp/bump?emp=worldwide&amp;enableClear=1"></script>
+
+<!-- load glow and required modules -->
+<script type="text/javascript">
+    //<![CDATA[
+        gloader.load(['glow', '1', 'glow.dom']);
+    //]]>
+</script>
+
+
+
+	<!-- pull in our emp code -->
+	<script type="text/javascript" src="http://news.bbcimg.co.uk/js/app/av/emp/2_0_55/emp.js"></script>
+	<!-- pull in compatibility.js -->
+	<script type="text/javascript" src="http://news.bbcimg.co.uk/js/app/av/emp/2_0_55/compatibility.js"></script>
+
+
+<script type="text/javascript">
+	//<![CDATA[
+	    
+	
+	    
+	        
+	    
+	
+	    
+	        
+	    
+	
+	    // set site specific config
+	    
+	        bbc.fmtj.av.emp.configs.push('nature');
+	    
+	    
+	    // when page loaded, write all created emps
+	    glow.ready(function(){
+			if(typeof bbcdotcom !== 'undefined' && bbcdotcom.av && bbcdotcom.av.emp){
+				bbcdotcom.av.emp.configureAll();
+			}
+			embeddedMedia.each(function(emp){
+				emp.set('enable3G', true);
+				emp.setMediator('href', '{protocol}://{host}/mediaselector/5/select/version/2.0/mediaset/{mediaset}/vpid/{id}');						
+			});
+			embeddedMedia.writeAll();
+	        // mark the emps as loaded
+	        bbc.fmtj.av.emp.loaded = true;
+			
+			
+	    });
+	//]]>
+</script>
+<!-- Check for advertising testing -->
+
+<meta name="viewport" content="width = 996" />
+
+
+
+        <!-- shared/head_story -->
+<!-- THESE STYLESHEETS VARY ACCORDING TO PAGE CONTENT -->															  
+
+<link rel="stylesheet" type="text/css" media="screen" href="http://news.bbcimg.co.uk/view/3_0_16/cream/hi/shared/layout/story.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="http://news.bbcimg.co.uk/view/3_0_16/cream/hi/shared/story.css" />
+
+
+<!-- js story view -->
+<script type="text/javascript">$loadView("0.0",["bbc.fmtj.view.news.story"]);</script>
+
+<!-- EMP -->
+<script type="text/javascript" src="http://news.bbc.co.uk/js/app/av/emp/compatibility.js"></script>
+<!-- /EMP -->
+
+        
+        <!-- #CREAM hi nature domestic head.inc -->
+                            <!-- is suitable for ads adding isadvertise ... -->
+			
+
+			 
+
+			
+	
+	
+<script type="text/javascript">/*<![CDATA[*/if(bbcdotcom===undefined){var bbcdotcom={}}bbcdotcom.objects=function(d,e,f){var b,c,a;b=d.split(".");if(e===undefined){e="valid"}if(f===undefined){f=window}for(c=0,a=b.length;c<a;c++){if(f[b[c]]===undefined){if(e==="create"){f[b[c]]={}}else{return false}}else{if(typeof f[b[c]]==="function"){if(f[b[c]]()!==undefined){return f[b[c]]()}}}f=f[b[c]]}return f};bbcdotcom.objects("bbcdotcom.config","create");bbcdotcom.config=(function(d,c){var b=d,a=c;return{setAdsEnabled:function(e){b=(b!==0)?e:0},isAdsEnabled:function(){return b},setAnalyticsEnabled:function(e){a=(a!==0)?e:0},isAnalyticsEnabled:function(){return a}}}(1,1));bbcdotcom.objects("bbcdotcom.stats","create");if(BBC===undefined){var BBC={}}if(BBC.adverts===undefined){BBC.adverts={setZone:function(){},configure:function(){},write:function(){},show:function(){},isActive:function(){return false},setScriptRoot:function(){},setImgRoot:function(){},getAdvertTag:function(){},getSectionPath:function(){}}};/*]]>*/</script>
+<meta name="application-name" content="BBC"/>
+<meta name="msapplication-tooltip" content="Explore the BBC, for latest news, sport and weather, TV &amp; radio schedules and highlights, with nature, food, comedy, children's programmes and much more"/>
+
+	<meta name="msapplication-starturl" content="http://www.bbc.com/?ocid=global-nature-pinned-ie9"/>
+
+<meta name="msapplication-window" content="width=1024;height=768"/>
+<meta name="msapplication-task" content="name=BBC Home;action-uri=http://www.bbc.com/?ocid=global-homepage-pinned-ie9;icon-uri=http://news.bbcimg.co.uk/shared/img/bbccom/favicon_16.ico" />
+<meta name="msapplication-task" content="name=BBC News;action-uri=http://www.bbc.com/news/?ocid=global-news-pinned-ie9;icon-uri=http://news.bbcimg.co.uk/shared/img/bbccom/favicon_16.ico" />
+<meta name="msapplication-task" content="name=BBC Sport;action-uri=http://www.bbc.com/sport/0/?ocid=global-sport-pinned-ie9;icon-uri=http://news.bbcimg.co.uk/shared/img/bbccom/favicon_16.ico" />
+<meta name="msapplication-task" content="name=BBC Future;action-uri=http://www.bbc.com/future?ocid=global-future-pinned-ie9;icon-uri=http://news.bbcimg.co.uk/shared/img/bbccom/favicon_16.ico" />
+<meta name="msapplication-task" content="name=BBC Travel;action-uri=http://www.bbc.com/travel?ocid=global-travel-pinned-ie9;icon-uri=http://news.bbcimg.co.uk/shared/img/bbccom/favicon_16.ico" />
+<meta name="msapplication-task" content="name=BBC Weather;action-uri=http://www.bbc.co.uk/weather/?ocid=global-weather-pinned-ie9;icon-uri=http://news.bbcimg.co.uk/shared/img/bbccom/favicon_16.ico" />
+
+<!-- BBCCOM Server-side -->
+
+<link href="http://news.bbcimg.co.uk/css/screen/shared/0.3.205/3pt_ads.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://news.bbcimg.co.uk/js/app/bbccom/0.3.205/bbccom.js"></script>
+<script type="text/javascript">/*<![CDATA[*/
+    bbcdotcom.objects('page', 'create', bbcdotcom);
+    bbcdotcom.page.edition = '(none)';
+    bbcdotcom.page.url = '/nature/24205093';
+    bbcdotcom.page.zoneFile = '3pt_zone_file';
+    bbcdotcom.page.http_host = 'wwwnews.live.bbc.co.uk';
+    
+    
+/*]]>*/</script>
+<script type="text/javascript">/*<![CDATA[*/ bbcdotcom.config.setAdsEnabled(1); /*]]>*/</script>
+<script type="text/javascript">/*<![CDATA[*/(function(){switch(bbcdotcom.page.url){case"/":case"/default.stm":bbcdotcom.page.url=(bbcdotcom.page.edition==="domestic")?"/1/hi/default.stm":"/2/hi/default.stm";break;case"/sport":case"/sport/":case"/sport/default.stm":bbcdotcom.page.url=(bbcdotcom.page.edition==="domestic")?"/sport1/hi/default.stm":"/sport2/hi/default.stm";break}if(bbcdotcom.page.bddUseLatestFromTest){BBC.adverts.setScriptRoot("http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/js/app/bbccom/"+bbcdotcom.latest_version+"/")}else{BBC.adverts.setScriptRoot("http://news.bbcimg.co.uk/js/app/bbccom/0.3.205/")}BBC.adverts.setImgRoot("http://news.bbcimg.co.uk/shared/img/bbccom/");BBC.adverts.init({domain:bbcdotcom.page.http_host,location:bbcdotcom.page.url,zoneVersion:bbcdotcom.page.zoneFile,zoneReferrer:document.referrer})}());(function(){if(typeof require!=="undefined"){require({paths:{bbcdotcom:"http://news.bbcimg.co.uk/js/app/bbccom/0.3.205"}})}})();if(BBC.adverts.getV6Gvl3()&&"undefined"!==typeof bbcdotcom.page.bddUseLatestFromTest){document.write(unescape('%3Cscript type="text/javascript" src="http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/js/app/bbccom/'+bbcdotcom.latest_version+'/advert.js"'))}else{if(BBC.adverts.getV6Gvl3()){document.write(unescape('%3Cscript type="text/javascript" src="http://news.bbcimg.co.uk/js/app/bbccom/0.3.205/advert.js"%3E%3C/script%3E'))}}if(/[?|&]metadata=yes(&|$)/.test(window.location.search)){document.write("http://www.test.bbc.com/wwscripts/metadata?bbcdotcom_asset="+window.location.hostname+window.location.pathname)};/*]]>*/</script>
+
+<div id="gnlAnalyticsEnabled" class="bbccom_display_none"></div>
+
+
+    
+        
+
+	
+	
+
+        
+
+<script type="text/javascript">
+	if(typeof BBC.adverts != 'undefined' && typeof BBC.adverts.setPageVersion != 'undefined'){
+		BBC.adverts.setPageVersion('(none)');
+	}
+</script>
+
+
+    
+
+        		<!-- hi/nature/head_last.inc -->
+
+<link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/thingstodo/v3/styles/ttd-widget-index.css" />
+<!--[if IE 6]> <link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/thingstodo/v3/styles/ttd-widget-ie6.css" /> <![endif]-->
+
+
+	<link rel="stylesheet" type="text/css" media="screen" href="http://news.bbcimg.co.uk/view/3_0_7/cream/hi/nature/skin.css" />
+	<link rel="stylesheet" type="text/css" media="print" href="http://news.bbcimg.co.uk/view/3_0_7/cream/hi/nature/printable.css" />	
+
+
+
+
+	
+		<script type="text/javascript">
+            if(bbcdotcom.objects('BBC.adverts.getAdvertTag')) {
+                gloader.load(["glow","1","glow.dom"],{onLoad: function(glow){
+                    glow.ready(function(){
+                        if(bbcdotcom.objects('BBC.adverts.getAdvertTag')) {
+                            var adImageUrl = BBC.adverts.getAdvertTag('printableversionsponsorship','','standardUri');
+
+                            if (glow.env.ie ) {
+                                window.onbeforeprint = function(){
+                                    var printAdvert = glow.dom.get("#print-advert");
+                                    if (printAdvert.get("img").length == 0)
+                                    {
+                                        printAdvert.append('<img src="'+adImageUrl+'" alt="" />');
+                                    }
+                                };
+                            }else{
+                                glow.dom.get("head").append('<style type="text/css">#print-advert {display:none};</style><style type="text/css" media="print">#print-advert::after{content:url('+adImageUrl+');} #print-advert{display:block;overflow:hidden;}</style>');
+                            }
+                        }
+                    });
+                }});
+            }
+		</script>
+	
+
+
+<link rel="apple-touch-icon" href="http://news.bbcimg.co.uk/img/3_0_0/cream/hi/nature/iphone.png"/> 
+<script type="text/javascript">
+blq.externalGoTrackingConfig = {
+	".story-body a":"{path}/ext/story-body/{dir}",
+	".story-related .related-links a":"{path}/ext/related-links/{dir}",
+	".story-related .newstracker-list a":"{path}/ext/newstracker/{dir}"
+}
+</script>
+<style type="text/css">
+.ie .blq-mast-bg-transparent-light #blq-blocks, .ie .blq-mast-bg-transparent-light #blq-nav-main, .ie .blq-mast-bg-transparent-light #blq-nav-main li, .ie .blq-mast-bg-transparent-light #id-status,
+.ie .blq-mast-bg-transparent #blq-mast,.ie .blq-mast-bg-transparent-light #blq-mast,
+.ie7 .blq-mast-bg-transparent-light #blq-blocks, .ie7 .blq-mast-bg-transparent-light #blq-nav-main, .ie7 .blq-mast-bg-transparent-light #blq-nav-main li, .ie7 .blq-mast-bg-transparent-light #id-status,
+.ie7 .blq-mast-bg-transparent #blq-mast,.ie7 .blq-mast-bg-transparent-light #blq-mast,
+.ie8 .blq-mast-bg-transparent-light #blq-blocks, .ie8 .blq-mast-bg-transparent-light #blq-nav-main, .ie8 .blq-mast-bg-transparent-light #blq-nav-main li, .ie8 .blq-mast-bg-transparent-light #id-status,
+.ie8 .blq-mast-bg-transparent #blq-mast,.ie8 .blq-mast-bg-transparent-light #blq-mast{
+border-color: #660;
+}
+.ie .blq-masthead-focus #blq-blocks, .ie .blq-masthead-focus #blq-nav-main, .ie .blq-masthead-focus #blq-nav-main li, .ie .blq-masthead-focus #id-status,
+.ie .blq-masthead-focus #blq-mast,.ie .blq-masthead-focus #blq-mast,
+.ie7 .blq-masthead-focus #blq-blocks, .ie7 .blq-masthead-focus #blq-nav-main, .ie7 .blq-masthead-focus #blq-nav-main li, .ie7 .blq-masthead-focus #id-status,
+.ie7 .blq-masthead-focus #blq-mast,.ie7 .blq-masthead-focus #blq-mast,
+.ie8 .blq-masthead-focus #blq-blocks, .ie8 .blq-masthead-focus #blq-nav-main, .ie8 .blq-masthead-focus #blq-nav-main li, .ie8 .blq-masthead-focus #id-status,
+.ie8 .blq-masthead-focus #blq-mast,.ie8 .blq-masthead-focus #blq-mast{
+border-color: #ccc;
+}
+</style>
+	   <!--Rendered by NOLAPPS203-6002 -->
+	   <link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+	   <meta name="DCTERMS.created" content="2013-09-25T15:08:23+00:00" />
+	   <meta name="DCTERMS.modified" content="2013-09-25T15:08:23+00:00" />
+    </head>
+
+        	    <!--[if lte IE 6]><body class="nature ie disable-wide-advert"><![endif]-->
+    <!--[if IE 7]><body class="nature ie7 disable-wide-advert"><![endif]-->
+    <!--[if IE 8]><body class="nature ie8 disable-wide-advert"><![endif]-->
+    <!--[if !IE]>--><body class="nature disable-wide-advert"><!--<![endif]-->
+	
+
+
+<div class="livestats-web-bug" id="livestats-web-bug-tag"></div>
+
+<script type="text/JavaScript">
+	var referrer = document.referrer;
+
+	var livestatsBug = "<img alt='' id='livestats' src='http://stats.bbc.co.uk/o.gif?~RS~s~RS~Vision~RS~t~RS~HighWeb_Story~RS~i~RS~24205093~RS~p~RS~101107~RS~a~RS~Domestic~RS~u~RS~/nature/24205093~RS~r~RS~"+referrer+"~RS~q~RS~utm_content=bufferf1dbe&amp;utm_source=buffer&amp;utm_medium=twitter&amp;utm_campaign=Buffer~RS~z~RS~54~RS~'>";
+
+
+	document.getElementById('livestats-web-bug-tag').innerHTML = livestatsBug;
+</script>
+
+
+<noscript>
+<div class="livestats-web-bug"><img alt="" id="livestats" src="http://stats.bbc.co.uk/o.gif?~RS~s~RS~Vision~RS~t~RS~HighWeb_Story~RS~i~RS~24205093~RS~p~RS~101107~RS~a~RS~Domestic~RS~u~RS~/nature/24205093~RS~q~RS~utm_content=bufferf1dbe&amp;utm_source=buffer&amp;utm_medium=twitter&amp;utm_campaign=Buffer~RS~z~RS~54~RS~"/></div>
+</noscript>
+        
+	
+    <!-- BBCDOTCOM body first include -->
+    
+
+<script type="text/javascript">BBC.adverts.write("wallpaper",false);</script>
+<script type="text/javascript">/*<![CDATA[*/BBC.adverts.wallpaperBodyTag=document.getElementsByTagName("body");BBC.adverts.wallpaperATag=document.getElementsByTagName("a");if("undefined"!=typeof BBC.adverts.wallpaperATag&&"undefined"!=typeof BBC.adverts.wallpaperATag[0]&&"undefined"!=typeof BBC.adverts.wallpaperBodyTag&&"undefined"!=typeof BBC.adverts.wallpaperBodyTag[0]&&-1!==BBC.adverts.wallpaperATag[0].href.indexOf("http://ad.doubleclick.net")){BBC.adverts.wallpaperBodyTag[0].removeChild(BBC.adverts.wallpaperATag[0])};/*]]>*/</script>
+
+
+	
+	
+
+       <!-- BBCDOTCOM body first spectrum -->
+     <!-- ISTATS -->
+
+
+
+    
+
+
+
+
+
+
+ <script type="text/javascript">/*<![CDATA[*/ bbcFlagpoles_istats = 'ON'; istatsTrackingUrl = '//sa.bbc.co.uk/bbc/bbc/s?name=nature.news.story.24205093.page&cps_asset_id=24205093&page_type=story&section=news&app_version=6.2.156-RC1&first_pub=2013-09-25T15:08:23+00:00&last_editorial_update=2013-09-25T15:08:23+00:00&title=Cuckoo+fools+host+with+multiple+eggs&comments_box=false&cps_media_type=&cps_media_state=&by_nation=&app_type=web&ml_name=SSI&ml_version=0.16.1&language=en-GB'; if (window.istats_countername) { istatsTrackingUrl = istatsTrackingUrl.replace(/([?&]name=)[^&]+/ig, '$1' + istats_countername); } (function() { if ( /\bIDENTITY=/.test(document.cookie) ) { istatsTrackingUrl += '&bbc_identity=1'; } var c = (document.cookie.match(/\bckns_policy=(\d\d\d)/)||[]).pop() || ''; istatsTrackingUrl += '&bbc_mc=' + (c? 'ad'+c.charAt(0)+'ps'+c.charAt(1)+'pf'+c.charAt(2) : 'not_set'); if ( /\bckns_policy=\d\d0/.test(document.cookie) ) { istatsTrackingUrl += '&ns_nc=1'; } var screenWidthAndHeight = 'unavailable'; if (window.screen && screen.width && screen.height) { screenWidthAndHeight = screen.width + 'x' + screen.height; } istatsTrackingUrl += ('&screen_resolution=' + screenWidthAndHeight); istatsTrackingUrl += '&blq_s=3.5&blq_r=3.5&blq_v=journalism-worldwide'; })(); /*]]>*/</script>  <!-- Begin iStats 20100118 (UX-CMC 1.1009.3) --> <script type="text/javascript">/*<![CDATA[*/ (function() { window.istats || (istats = {}); var cookieDisabled = (document.cookie.indexOf('NO-SA=') != -1), hasCookieLabels = (document.cookie.indexOf('sa_labels=') != -1), hasClickThrough = /^#sa-(.*?)(?:-sa(.*))?$/.test(document.location.hash), runSitestat = !cookieDisabled && !hasCookieLabels && !hasClickThrough && !istats._linkTracked; if (runSitestat && bbcFlagpoles_istats === 'ON') { sitestat(istatsTrackingUrl); } else { window.ns_pixelUrl = istatsTrackingUrl; /* used by Flash library to track */ } function sitestat(n){var j=document,f=j.location,b="";if(j.cookie.indexOf("st_ux=")!=-1){var k=j.cookie.split(";");var e="st_ux",h=document.domain,a="/";if(typeof ns_!="undefined"&&typeof ns_.ux!="undefined"){e=ns_.ux.cName||e;h=ns_.ux.cDomain||h;a=ns_.ux.cPath||a}for(var g=0,f=k.length;g<f;g++){var m=k[g].indexOf("st_ux=");if(m!=-1){b="&"+unescape(k[g].substring(m+6))}}document.cookie=e+"=; expires="+new Date(new Date().getTime()-60).toGMTString()+"; path="+a+"; domain="+h}ns_pixelUrl=n;n=ns_pixelUrl+"&ns__t="+(new Date().getTime())+"&ns_c="+((j.characterSet)?j.characterSet:j.defaultCharset)+"&ns_ti="+escape(j.title)+b+"&ns_jspageurl="+escape(f&&f.href?f.href:j.URL)+"&ns_referrer="+escape(j.referrer);if(n.length>2000&&n.lastIndexOf("&")){n=n.substring(0,n.lastIndexOf("&")+1)+"ns_cut="+n.substring(n.lastIndexOf("&")+1,n.lastIndexOf("=")).substring(0,40)}(j.images)?new Image().src=n:j.write('<p><i'+'mg src="'+n+'" height="1" width="1" alt="" /></p>')}; })(); /*]]>*/</script> <noscript><p style="position: absolute; top: -999em;"><img src="//sa.bbc.co.uk/bbc/bbc/s?name=nature.news.story.24205093.page&amp;cps_asset_id=24205093&amp;page_type=story&amp;section=news&amp;app_version=6.2.156-RC1&amp;first_pub=2013-09-25T15:08:23+00:00&amp;last_editorial_update=2013-09-25T15:08:23+00:00&amp;title=Cuckoo+fools+host+with+multiple+eggs&amp;comments_box=false&amp;cps_media_type=&amp;cps_media_state=&amp;by_nation=&amp;app_type=web&amp;ml_name=SSI&amp;ml_version=0.16.1&amp;language=en-GB&amp;blq_s=3.5&amp;blq_r=3.5&amp;blq_v=journalism-worldwide" height="1" width="1" alt="" /></p></noscript> <!-- End iStats (UX-CMC) -->   <div id="blq-global"> <div id="blq-pre-mast" xml:lang="en-GB"> <!-- Pre mast --> 
+<!-- BBCDOTCOM leaderboard template:server-side journalismVariant: true ipIsAdvertiseCombined: true adsEnabled: false showDotcom: true flagpole: ON showAdAboveBlq: true blqLeaderboardAd: true -->
+ </div> </div>  <script type="text/html" id="blq-bbccookies-tmpl"><![CDATA[ <div id="bbccookies-prompt"> <h2> Cookies on the BBC website </h2> <p> We use cookies to ensure that we give you the best experience on our website. We also use cookies to ensure we show you advertising that is relevant to you. If you continue without changing your settings, we'll assume that you are happy to receive all cookies on the BBC website. However, if you would like to, you can <a href="/privacy/cookies/managing/cookie-settings.html">change your cookie settings</a> at any time. </p> <ul> <li id="bbccookies-continue"> <button type="button" id="bbccookies-continue-button">Continue</button> </li> <li id="bbccookies-more"><a href="/privacy/cookies/bbc">Find out more</a></li></ul> </div> ]]></script> <script type="text/javascript">/*<![CDATA[*/ (function(){if(bbccookies._showPrompt()){var i=document,b=i.getElementById("blq-pre-mast"),f=i.getElementById("blq-global"),h=i.getElementById("blq-container"),c=i.getElementById("blq-bbccookies-tmpl"),a,g,e;if(b&&i.createElement){a=i.createElement("div");a.id="bbccookies";e=c.innerHTML;e=e.replace("<"+"![CDATA[","").replace("]]"+">","");a.innerHTML=e;if(f){f.insertBefore(a,b)}else{h.insertBefore(a,b)}g=i.getElementById("bbccookies-continue-button");g.onclick=function(){a.parentNode.removeChild(a);return false};bbccookies._setPolicy()}}})(); /*]]>*/</script>  <div id="blq-masthead" class="blq-clearfix blq-mast-bg-transparent-light blq-lang-en-GB blq-ltr"> <span id="blq-mast-background"><span></span></span>  <div id="blq-mast" class="blq-rst">  <div id="blq-mast-bar" class="blq-masthead-container blq-journalism-worldwide"> <div id="blq-blocks"> <a href="http://www.bbc.co.uk/" hreflang="en-GB"> <abbr title="British Broadcasting Corporation" class="blq-home"> <img src="http://static.bbci.co.uk/frameworks/barlesque/2.48.3/desktop/3.5/img/blq-blocks_grey_alpha.png" alt="BBC" width="84" height="24" /> </abbr> </a> </div> <div id="blq-acc-links"> <h2 id="page-top">Accessibility links</h2> <ul>  <li><a href="#main-content">Skip to content</a></li>  <li><a href="#blq-local-nav">Skip to local navigation</a></li>  <li><a href="http://www.bbc.co.uk/accessibility/">Accessibility Help</a></li> </ul> </div> <div id="blq-sign-in" class="blq-gel">  </div> <div id="blq-nav"> <h2>bbc.co.uk navigation</h2>     <ul id="blq-nav-main">   <li id="blq-nav-news"> <a href="http://www.bbc.com/news/">News</a> </li>    <li id="blq-nav-sport"> <a href="http://www.bbc.co.uk/sport/">Sport</a> </li>    <li id="blq-nav-weather"> <a href="http://www.bbc.co.uk/weather/">Weather</a> </li>    <li id="blq-nav-capital"> <a href="http://www.bbc.com/capital/">Capital</a> </li>    <li id="blq-nav-culture"> <a href="http://www.bbc.com/culture/">Culture</a> </li>    <li id="blq-nav-autos"> <a href="http://www.bbc.com/autos/">Autos</a> </li>    <li id="blq-nav-tv"> <a href="http://www.bbc.co.uk/tv/">TV</a> </li>    <li id="blq-nav-radio"> <a href="http://www.bbc.co.uk/radio/">Radio</a> </li>    <li id="blq-nav-more"> <a href="http://www.bbc.co.uk/a-z/">More&hellip;</a> </li>      </ul>   <div id="blq-nav-search"> <form method="get" action="http://search.bbc.co.uk/search" accept-charset="utf-8" id="blq-search-form"> <div>  <input type="hidden" name="go" value="toolbar" />  <input type="hidden" value="http://wwwnews.live.bbc.co.uk/nature/24205093" name="uri" />    <input type="hidden" name="scope" value="all:scienceandnature" />  <label for="blq-search-q" class="blq-hide">Search term:</label> <input id="blq-search-q" type="text" name="q" value="" maxlength="128" /> <button id="blq-search-btn" type="submit"><span><img src="http://static.bbci.co.uk/frameworks/barlesque/2.48.3/desktop/3.5/img/blq-search_grey_alpha.png" width="13" height="13" alt="Search"/></span></button> </div> </form> </div>  </div> </div> </div> </div> <div id="blq-container-outer" class="blq-journalism-worldwide blq-ltr" >  <div id="blq-container" class="blq-lang-en-GB blq-dotcom"> <div id="blq-container-inner" xml:lang="en-GB">   <div id="blq-main" class="blq-clearfix">   
+	
+
+                        		    	
+		<div class="news  has-no-ticker ">
+			<div id="header-wrapper">
+
+			  
+    		      			      				  <h2 id="header">
+    			      	            <a rel="index" href="http://www.bbc.co.uk/nature/"><img alt="BBC Nature" src="http://news.bbcimg.co.uk/img/3_0_0/cream/hi/nature/nature-blocks.gif" /></a>
+    	                	            	    	            		<span class="section-title">News</span>
+    	            	    	            		   		      				  </h2>
+    			  			  
+			  
+			    <div class="bbccom_advert_placeholder">
+			      <script type="text/javascript">$render("advert","advert-sponsor-section");</script>
+			    </div>
+			    <script type="text/javascript">$render("advert-post-script-load");</script>
+			  
+		        
+
+			  	            <div id="blq-local-nav">
+ 	            <ul id="nav" class="nav">
+                	
+        	        		                	
+        	            	<li class="first-child "><a href="/nature/">Home</a></li>
+                            	
+        	        	        	
+        	        		<li class="selected"><a href="/nature/news/">News</a></li>
+        		        		                            	
+        	        	        	
+        	            	<li><a href="/nature/features/">Features</a></li>
+                            	
+        	        	        	
+        	            	<li><a href="http://www.bbc.co.uk/nature/collections">Video collections</a></li>
+                            	
+        	        	        	
+        	            	<li><a href="http://www.bbc.co.uk/nature/wildlife/">Wildlife</a></li>
+                            	
+        	        	        	
+        	            	<li><a href="http://www.bbc.co.uk/nature/prehistoric">Prehistoric life</a></li>
+                            	
+        	        	        	
+        	            	<li><a href="http://www.bbc.co.uk/nature/places">Places</a></li>
+                            	
+        	        	        	
+        	            	<li><a href="http://www.bbc.co.uk/nature/contact">Contact</a></li>
+                            </ul> 
+        
+	    	</div>
+
+			  
+	        </div>
+	        <!-- START CPS_SITE CLASS: domestic -->
+	        <div id="content-wrapper" class="domestic">
+
+					<div class="advert">
+													
+							<div class="bbccom_advert_placeholder">
+								<script type="text/javascript">$render("advert","advert-leaderboard");</script>
+							</div>
+							<script type="text/javascript">$render("advert-post-script-load");</script>
+							
+											</div>
+                                            <div id="bbccom_custom_branding">
+    <script type="text/javascript">
+        /*<![CDATA[*/
+        if(typeof bbcdotcom.objects('bbcdotcom.branding.init') === 'function') {
+            bbcdotcom.branding.init(BBC.adverts.getZoneData().zone, BBC.adverts.getAdKeyword());
+            bbcdotcom.branding.write();
+        }
+        /*]]>*/
+    </script>
+	<div class="bbccom_advert_placeholder">
+    <script type="text/javascript">
+        /*<![CDATA[*/
+        $render("advert","advert-sponsor-subsection");
+        /*]]>*/
+    </script>
+</div>
+</div>
+<script type="text/javascript">
+        /*<![CDATA[*/
+	$render("advert-post-script-load");
+        /*]]>*/
+</script>
+                    
+	            <!-- START CPS_SITE CLASS: story -->
+	            <div id="main-content" class="story blq-clearfix">
+		
+
+
+	
+
+<div id="print-advert">
+
+</div>	
+
+
+
+
+
+<div class="layout-block-a">
+    <div class="story-body">
+    		  <span class="story-date">
+    <span class="date">25 September 2013</span>
+<span class="time-text">Last updated at </span><span class="time">16:08</span>
+	  
+</span>
+
+	<div id="page-bookmark-links-head" class="share-help">
+  <h3>Share this page</h3>
+  <ul>  	
+    <li class="delicious">
+      <a title="Post this story to Delicious" href="http://del.icio.us/post?url=http://www.bbc.co.uk/nature/24205093&amp;title=BBC+Nature+-+Cuckoo+finch+fools+host+with+multiple+eggs">Delicious</a>
+    </li>
+    <li class="digg">
+      <a title="Post this story to Digg" href="http://digg.com/submit?url=http://www.bbc.co.uk/nature/24205093&amp;title=BBC+Nature+-+Cuckoo+finch+fools+host+with+multiple+eggs">Digg</a>
+    </li>
+    <li class="facebook">
+      <a title="Post this story to Facebook" href="http://www.facebook.com/sharer.php?u=http://www.bbc.co.uk/nature/24205093&amp;t=BBC+Nature+-+Cuckoo+finch+fools+host+with+multiple+eggs">Facebook</a>
+    </li>
+    <li class="reddit">
+      <a title="Post this story to reddit" href="http://reddit.com/submit?url=http://www.bbc.co.uk/nature/24205093&amp;title=BBC+Nature+-+Cuckoo+finch+fools+host+with+multiple+eggs">reddit</a>
+    </li>
+    <li class="stumbleupon">
+      <a title="Post this story to StumbleUpon" href="http://www.stumbleupon.com/submit?url=http://www.bbc.co.uk/nature/24205093&amp;title=BBC+Nature+-+Cuckoo+finch+fools+host+with+multiple+eggs">StumbleUpon</a>
+    </li>
+    <li class="twitter">
+      <a title="Post this story to Twitter" href="http://twitter.com/home?status=BBC+Nature+-+Cuckoo+finch+fools+host+with+multiple+eggs+http://www.bbc.co.uk/nature/24205093">Twitter</a>
+    </li>
+    <li class="email">
+      <a title="Email this story" href="http://newsvote.bbc.co.uk/mpapps/pagetools/email/www.bbc.co.uk/nature/24205093">Email</a>
+    </li>
+    <li class="print">
+      <a title="Print this story" href="?print=true">Print</a>
+    </li>
+  </ul>
+<!--  Social media icons by Paul Annet | http://nicepaul.com/icons  -->
+</div>
+<script type="text/javascript"> 
+<!--
+$render("page-bookmark-links","page-bookmark-links-head",{
+    useForgeShareTools:"true",
+    position:"top",
+    site:'Vision', 
+    headline:'BBC Nature - Cuckoo finch fools host with multiple eggs', 
+    storyId:'24205093', 
+    sectionId:'101107', 
+    url:'http://www.bbc.co.uk/nature/24205093', 
+    edition:'Domestic'
+}); 
+-->
+</script>
+
+
+
+
+
+	<h1 class="story-header">Cuckoo finch fools host with multiple eggs</h1>
+
+     
+         
+ 
+    
+    
+					            	    		 			<span class="byline">
+														<span class="byline-name">By Ella Davies</span>
+				<span class="byline-title">Reporter, BBC Nature</span>
+			</span>
+		
+        <div class="caption full-width">
+  <img src="http://news.bbcimg.co.uk/media/images/70085000/jpg/_70085920_6cuckoofinchchickclairespottiswoode.jpg" width="624" height="351" alt="Cuckoo finch chick in nest" />
+
+    <span style="width:624px;">Cuckoo finch chicks can go undetected in prinia nests</span>
+  </div>
+	<div class="story-feature related narrow">
+		<a class="hidden" href="#story_continues_1">Continue reading the main story</a>		<h2>Related Stories</h2>
+		<ul class="related-links-list">
+						
+
+
+
+
+	
+
+
+	
+
+
+
+
+<li>
+	<a class="story" rel="published-1307409399465" href="/nature/13559202">Cuckoos tagged with GPS trackers</a>
+
+		</li>
+
+
+											
+
+
+
+
+	
+
+
+	
+
+
+
+
+<li>
+	<a class="story" rel="published-1315352035007" href="/nature/14802180">Underground chick-killers filmed </a>
+
+		</li>
+
+
+								</ul>
+	</div>
+                      <p class="introduction" id="story_continues_1">Cuckoo finches lay multiple eggs in the nests of other birds to make it harder to detect the &#039;imposters&#039;, researchers have found.</p>
+        <p>The name cuckoo is common to many parasitic bird species that rely upon others to raise their young.</p>
+        <p>African tawny-flanked prinias are the targets of cuckoo finches in southern Zambia.</p>
+        <p>Prinias&#039; egg colours vary widely but by laying multiple eggs in a nest, cuckoo finches reduce the risk of rejection.</p>
+        <p>The results of the study undertaken by researchers from the University of Exeter and the University of Cambridge are published in the journal <a href="http://dx.doi.org/10.1038/ncomms3475" title="Repeated targeting of the same hosts by a brood - Nature Communications journal" >Nature Communications</a>.</p>
+  <div class="story-feature wide ">
+	<a class="hidden" href="#story_continues_2">Continue reading the main story</a>		<h2>Cuckoos clocked</h2>
+		<!-- pullout-items-->
+	<div class="caption body-narrow-width">
+  <img src="http://news.bbcimg.co.uk/media/images/70085000/jpg/_70085918_common_cuckoo_1.jpg" width="304" height="171" alt="European cuckoo" />
+
+  </div>
+
+	<!-- pullout-body-->
+	      <p><a href="http://www.bbc.co.uk/nature/life/Common_Cuckoo#p005lmgh" title="BBC Nature video clip: Cuckoo chick expels nest rival" >Watch a European cuckoo chick kick out its warbler nest rival</a></p>
+        <p><a href="http://www.bbc.co.uk/nature/adaptations/Parasitism#p00m2nc2" title="BBC Nature video clips: Cuckoo duck lays eggs on gull nest" >See the cuckoo duck take advantage of a gull&#039;s nest</a></p>
+        <p><a href="http://www.bbc.co.uk/nature/adaptations/Parasitism#p00m1z20" title="BBC Nature video clip: Cuckoo egg rejection" >Witness how different birds react to alien eggs</a></p>
+  
+	<!-- pullout-links-->
+	</div>      <p id="story_continues_2">&quot;Many brood parasites [such as cuckoo finches] and hosts are locked in ongoing evolutionary arms races, with parasites evolving attack strategies to get their eggs accepted - such as egg mimicry - and hosts evolving defences  - such as egg rejection,&quot; explained co-author Dr Martin Stevens from the University of Exeter. </p>
+        <p>&quot;Our work shows that the cuckoo finch has evolved another novel strategy of attack, whereby it defeats both sensory and cognitive components of host rejection behaviour.&quot; </p>
+        <p>The female African tawny-flanked prinia, a species of warbler, lays eggs in a wide spectrum of colours in an effort to fool cuckoo finches.</p>
+        <p>Although cuckoos have adapted their egg patterns to mimic those of their hosts they cannot guarantee their eggs will exactly match those of their chosen nest.</p>
+        <p>&quot;Having highly variable eggs among individuals makes it hard for each female cuckoo finch to match many of the egg types that different prinias lay,&quot; explained Dr Stevens.</p>
+        <p>To understand more about prinias&#039; egg rejection behaviour, the scientists experimented by mixing the clutches in birds&#039; nests.</p>
+  <div class="caption body-narrow-width">
+  <img src="http://news.bbcimg.co.uk/media/images/70085000/jpg/_70085919_10priniaeggslcuckoofincheggsrclairespottiswoode.jpg" width="304" height="500" alt="Prinia eggs and cuckoo eggs" />
+
+    <span style="width:304px;">Cuckoo finches&#039; eggs (right) can closely mimic those of African tawny-flanked prinias (left)</span>
+  </div>
+      <p>One theory was that the birds reject eggs based on their appearance compared with the rest of the clutch.</p>
+        <p>Alternatively, researchers thought the birds could be using a learnt &quot;internal template&quot; of what their eggs should look like to identify imposters.</p>
+        <p>Results of the trials suggested the birds combined the two methods to asses the colour and pattern of the eggs.</p>
+        <p>But as a result of comparing the eggs with others in the clutch, the birds struggled to successfully identify and reject the parasites as the proportion of foreign eggs in the nest increased.</p>
+        <p>Researchers found that the cuckoo finches repeatedly targeted the same nests to improve the probability of their eggs being cared for.</p>
+        <p>&quot;In general there are many species of brood parasite that we don&#039;t know much about and it will be exciting in the future to see what strategies they have to successfully parasitise hosts,&quot; said Dr Stevens.</p>
+        <p>&quot;It would be great to know whether other parasites have a similar strategy to the cuckoo finch, and whether there is any way hosts can fight back.&quot; </p>
+        <p>Join BBC Nature on <a href="http://www.facebook.com/bbcnature" title="BBC Nature facebook" >Facebook</a> and Twitter <a href="http://twitter.com/bbcnature" title="BBC Nature on Twitter" >@BBCNature</a>.</p>
+  
+
+	</div><!-- / story-body -->
+  
+  <div>
+ 	<!--Related hypers and stories -->
+	<div class="story-related">
+	<h2>More on This Story</h2>
+	  
+	
+<style>
+.related-links-list li {
+position: relative;
+}
+.related-links-list .gvl3-icon {
+position: absolute;
+top: 0;
+left: 0;
+}
+</style>
+
+<div class="see-also">
+    <h3>Related Stories</h3>
+    <ul class="related-links-list">
+				
+        			        		<li class=" first">
+                        
+
+
+
+
+	
+
+
+	
+
+
+
+
+<div>
+	<a class="story" rel="published-1307409399465" href="/nature/13559202">Cuckoos tagged with GPS trackers</a>
+
+		</div>
+
+                        
+                                                <span class="timestamp">07 JUNE 2011</span>,                                                
+                                                <span class="section">NEWS</span>
+                                        </li>
+							        			        		<li class="">
+                        
+
+
+
+
+	
+
+
+	
+
+
+
+
+<div>
+	<a class="story" rel="published-1315352035007" href="/nature/14802180">Underground chick-killers filmed </a>
+
+		</div>
+
+                        
+                                                <span class="timestamp">07 SEPTEMBER 2011</span>,                                                
+                                                <span class="section">HOME</span>
+                                        </li>
+							            </ul>
+</div>
+<script type="text/javascript">$render("page-see-also","ID");</script> 
+
+	<script type="text/javascript">$render("page-newstracker","ID");</script> 
+
+	        
+<div class="related-internet-links">
+	<h3>Related Internet links</h3>
+	<ul class="related-links">
+											
+							    	<li class="column-1  first-child">
+	            <a href="http://www2.zoo.cam.ac.uk/africancuckoos/home.html">University of Cambridge: African cuckoos </a>
+	        </li>
+								
+										    	<li class="column-2 ">
+	            <a href="http://dx.doi.org/10.1038/ncomms3475">Nature Communications: Repeated targeting of the same hosts by a brood</a>
+	        </li>
+		    </ul>
+</div>
+
+  		
+<div class="related-bbc-links">
+	<h3>Around the BBC</h3>
+	<ul class="related-links">
+											
+							    	<li class="column-1  first-child">
+	            <a href="http://www.bbc.co.uk/nature/adaptations/Parasitism">Parasitic wildlife videos, news and facts</a>
+	        </li>
+		    </ul>
+</div>
+
+        <p class="disclaimer">The BBC is not responsible for the content of external Internet sites</p>
+	</div>
+<script type="text/javascript">$render("page-related-items","ID");</script>
+
+  </div>
+
+  
+  <div class="share-body-bottom">
+	<div id="page-bookmark-links-foot" class="share-help">
+  <h3>Share this page</h3>
+  <ul>  	
+    <li class="delicious">
+      <a title="Post this story to Delicious" href="http://del.icio.us/post?url=http://www.bbc.co.uk/nature/24205093&amp;title=BBC+Nature+-+Cuckoo+finch+fools+host+with+multiple+eggs">Delicious</a>
+    </li>
+    <li class="digg">
+      <a title="Post this story to Digg" href="http://digg.com/submit?url=http://www.bbc.co.uk/nature/24205093&amp;title=BBC+Nature+-+Cuckoo+finch+fools+host+with+multiple+eggs">Digg</a>
+    </li>
+    <li class="facebook">
+      <a title="Post this story to Facebook" href="http://www.facebook.com/sharer.php?u=http://www.bbc.co.uk/nature/24205093&amp;t=BBC+Nature+-+Cuckoo+finch+fools+host+with+multiple+eggs">Facebook</a>
+    </li>
+    <li class="reddit">
+      <a title="Post this story to reddit" href="http://reddit.com/submit?url=http://www.bbc.co.uk/nature/24205093&amp;title=BBC+Nature+-+Cuckoo+finch+fools+host+with+multiple+eggs">reddit</a>
+    </li>
+    <li class="stumbleupon">
+      <a title="Post this story to StumbleUpon" href="http://www.stumbleupon.com/submit?url=http://www.bbc.co.uk/nature/24205093&amp;title=BBC+Nature+-+Cuckoo+finch+fools+host+with+multiple+eggs">StumbleUpon</a>
+    </li>
+    <li class="twitter">
+      <a title="Post this story to Twitter" href="http://twitter.com/home?status=BBC+Nature+-+Cuckoo+finch+fools+host+with+multiple+eggs+http://www.bbc.co.uk/nature/24205093">Twitter</a>
+    </li>
+    <li class="email">
+      <a title="Email this story" href="http://newsvote.bbc.co.uk/mpapps/pagetools/email/www.bbc.co.uk/nature/24205093">Email</a>
+    </li>
+    <li class="print">
+      <a title="Print this story" href="?print=true">Print</a>
+    </li>
+  </ul>
+<!--  Social media icons by Paul Annet | http://nicepaul.com/icons  -->
+
+<div class="bbccom_advert_placeholder">
+	<script type="text/javascript">$render("advert","advert-sponsor-module","page-bookmark-links");</script>
+</div>
+<script type="text/javascript">$render("advert-post-script-load");</script>
+  
+</div>
+<script type="text/javascript"> 
+<!--
+$render("page-bookmark-links","page-bookmark-links-foot",{
+    useForgeShareTools:"true",
+    position:"bottom",
+    site:'Vision', 
+    headline:'BBC Nature - Cuckoo finch fools host with multiple eggs', 
+    storyId:'24205093', 
+    sectionId:'101107', 
+    url:'http://www.bbc.co.uk/nature/24205093', 
+    edition:'Domestic'
+}); 
+-->
+</script>
+
+ </div>
+
+
+      	
+		<div class="bbccom_advert_placeholder">
+	      	<script type="text/javascript">$render("advert","advert-google-adsense");</script>
+		</div>
+		<script type="text/javascript">$render("advert-post-script-load");</script>
+    	
+
+
+</div><!-- / layout-block-a -->
+
+<div class="layout-block-b">
+			
+
+
+
+
+		     <div class="hyperpuff">
+	       	         <div id="include-2" class="include-only special-event-promotion-best">
+    	<script type="text/javascript" src="http://static.bbci.co.uk/naturelibrary/3.1.1.4/js/carousel-flickr.js"></script>
+<div class="carousel carousel-flickr box" id="flickr">
+    <h2>Your nature photos</h2>
+
+    <div class="carousel-container">
+    <ul class="carousel-items" id="carousel-flickr">
+                        <li class="nth-child-1">
+            <a href="http://www.flickr.com/photos/rjtrevis-smith/9501144907/">
+                <img src="http://farm8.staticflickr.com/7314/9501144907_3f72c6a5b0_s.jpg" width="80" height="80" alt="Common Lizard" />
+            </a>
+        </li>
+                                <li class="nth-child-2">
+            <a href="http://www.flickr.com/photos/flyingfast/9395279828/">
+                <img src="http://farm6.staticflickr.com/5483/9395279828_30a1644531_s.jpg" width="80" height="80" alt="Peregrine Falcon" />
+            </a>
+        </li>
+                                <li class="nth-child-3">
+            <a href="http://www.flickr.com/photos/vab2009/10022212085/">
+                <img src="http://farm6.staticflickr.com/5347/10022212085_2c90f0fe14_s.jpg" width="80" height="80" alt="The fledglings" />
+            </a>
+        </li>
+                                <li class="nth-child-4">
+            <a href="http://www.flickr.com/photos/63021221@N05/9839361113/">
+                <img src="http://farm6.staticflickr.com/5506/9839361113_7f7b19f641_s.jpg" width="80" height="80" alt="Kestrel" />
+            </a>
+        </li>
+                                <li class="nth-child-5">
+            <a href="http://www.flickr.com/photos/31864189@N07/10023966463/">
+                <img src="http://farm4.staticflickr.com/3745/10023966463_8a6ef89143_s.jpg" width="80" height="80" alt="Fly Agaric" />
+            </a>
+        </li>
+                                <li class="nth-child-6">
+            <a href="http://www.flickr.com/photos/4gyp/10025955706/">
+                <img src="http://farm3.staticflickr.com/2874/10025955706_929060229b_s.jpg" width="80" height="80" alt="Barn Owl...  BBC Springwatch Favourite" />
+            </a>
+        </li>
+                                <li class="nth-child-7">
+            <a href="http://www.flickr.com/photos/38971900@N08/10025263535/">
+                <img src="http://farm4.staticflickr.com/3819/10025263535_8f2a73154a_s.jpg" width="80" height="80" alt="Brown Hares having a disagreement Lepus europaeus" />
+            </a>
+        </li>
+                                <li class="nth-child-8">
+            <a href="http://www.flickr.com/photos/naturenev/10025974943/">
+                <img src="http://farm3.staticflickr.com/2855/10025974943_c87c4b77c5_s.jpg" width="80" height="80" alt="Little Owl" />
+            </a>
+        </li>
+                                <li class="nth-child-9">
+            <a href="http://www.flickr.com/photos/98635632@N06/9240873135/">
+                <img src="http://farm6.staticflickr.com/5511/9240873135_0a23911cea_s.jpg" width="80" height="80" alt="Waves of poppies" />
+            </a>
+        </li>
+                                <li class="nth-child-10">
+            <a href="http://www.flickr.com/photos/24940353@N03/10025843266/">
+                <img src="http://farm6.staticflickr.com/5325/10025843266_db6a097aba_s.jpg" width="80" height="80" alt="Glossy Ibis (Plegadis falcinellus) Horwich Moor 30th September 2013 A.Dancy CR 415a" />
+            </a>
+        </li>
+                                <li class="nth-child-11">
+            <a href="http://www.flickr.com/photos/philwinter/10026979375/">
+                <img src="http://farm4.staticflickr.com/3737/10026979375_ebfcc36d61_s.jpg" width="80" height="80" alt="Little Owl (Athene noctua)" />
+            </a>
+        </li>
+                                <li class="nth-child-12">
+            <a href="http://www.flickr.com/photos/farmer55/9997003445/">
+                <img src="http://farm3.staticflickr.com/2864/9997003445_cea87101af_s.jpg" width="80" height="80" alt="Face To Face With A Wild Stag" />
+            </a>
+        </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+    </div>
+
+    <p>Share your photos of wildlife in summer.</p>
+
+    <p><a href="http://www.flickr.com/groups/bbcsummerwatch/">Visit the Summerwatch Flickr group </a></p>
+</div>
+
+</div>
+<script type="text/javascript">$render("include-2","include-2");</script> 
+	       	         
+<div id="genre-promotion" class="container-features-and-analysis">
+ 	 	<h2 class="features-header"><a href="http://www.bbc.co.uk/nature/22370883">Summer of Wildlife</a></h2>
+		
+ <ul>
+  	
+
+
+		
+	
+						
+			<!-- Non specific version -->
+			
+			
+							
+									
+												
+		<li class="first-child large-image">
+
+			
+
+
+
+
+	
+
+
+		
+
+
+
+
+<h3 class=" feature-header">
+	<a class="story" rel="published-1368723917618" href="http://www.bbc.co.uk/nature/22370883"><img src="http://news.bbcimg.co.uk/media/images/67654000/jpg/_67654515_sow_logo_169green_blocks.jpg" alt="Summer of Wildlife logo" />Summer of Wildlife</a>
+
+		</h3>
+
+			
+							<p>A special season of BBC programming and events celebrating the UK&#039;s unique and extraordinary wildlife 	
+				  <span id="dna-comment-count___CPS__22560630" class="gvl3-icon gvl3-icon-comment comment-count"></span></p>
+			
+					</li>
+	
+	 
+	
+	
+
+
+  	
+
+
+		
+	
+						
+			<!-- Non specific version -->
+			
+			
+							
+		<li class="medium-image">
+
+			
+
+
+
+
+	
+
+
+		
+
+
+
+
+<h3 class=" feature-header">
+	<a class="story" rel="published-1378719538262" href="/nature/23420492"><img src="http://news.bbcimg.co.uk/media/images/68905000/jpg/_68905555_helicopter.jpg" alt="BBC Natural History Unit producer Bridget Appleby in front of a helicopter" />Wildlife on film</a>
+
+		</h3>
+
+			
+							<p>Find out what it takes to be a wildlife film-maker 	
+				  <span id="dna-comment-count___CPS__23420492" class="gvl3-icon gvl3-icon-comment comment-count"></span></p>
+			
+							<hr />
+					</li>
+			
+							
+		<li class="medium-image">
+
+			
+
+
+
+
+	
+
+
+		
+
+
+
+
+<h3 class=" feature-header">
+	<a class="story" rel="published-1369394873001" href="/nature/22280481"><img src="http://news.bbcimg.co.uk/media/images/67303000/jpg/_67303903_zb800_130489_0015.jpg" alt="Badger crossing sign, Scotland" />Emergency contacts</a>
+
+		</h3>
+
+			
+							<p>Who do you call in a wildlife emergency? 	
+				  <span id="dna-comment-count___CPS__22280481" class="gvl3-icon gvl3-icon-comment comment-count"></span></p>
+			
+							<hr />
+					</li>
+			
+							
+		<li class="medium-image">
+
+			
+
+
+
+
+	
+
+
+		
+
+
+
+
+<h3 class=" feature-header">
+	<a class="story" rel="published-1370955996050" href="/nature/22720319"><img src="http://news.bbcimg.co.uk/media/images/69296000/jpg/_69296401_hedgehoghome_creditptes.jpg" alt="A purpose built hedgehog home, or hibernacula" />Build a box</a>
+
+		</h3>
+
+			
+							<p>How to make space for wildlife in your garden 	
+				  <span id="dna-comment-count___CPS__22720319" class="gvl3-icon gvl3-icon-comment comment-count"></span></p>
+			
+							<hr />
+					</li>
+			
+							
+		<li class="medium-image">
+
+			
+
+
+
+
+	
+
+
+		
+
+
+
+
+<h3 class=" feature-header">
+	<a class="story" rel="published-1371828643435" href="/nature/22907171"><img src="http://news.bbcimg.co.uk/media/images/68262000/jpg/_68262248_small_tortoiseshell_conall.jpg" alt="Small tortoiseshell (c) Conall" />ID garden butterflies</a>
+
+		</h3>
+
+			
+							<p>Identifying common butterflies by wing colour and markings 	
+				  <span id="dna-comment-count___CPS__22907171" class="gvl3-icon gvl3-icon-comment comment-count"></span></p>
+			
+							<hr />
+					</li>
+			
+							
+		<li class="medium-image">
+
+			
+
+
+
+
+	
+
+
+		
+
+
+
+
+<h3 class=" feature-header">
+	<a class="story" rel="published-1369394261113" href="/nature/22126467"><img src="http://news.bbcimg.co.uk/media/images/67016000/jpg/_67016437_zb827_159067_0010.jpg" alt="American mink" />Hot list</a>
+
+		</h3>
+
+			
+							<p>The top ten &quot;most wanted&quot; invasive species in the UK 	
+				  <span id="dna-comment-count___CPS__22126467" class="gvl3-icon gvl3-icon-comment comment-count"></span></p>
+			
+							<hr />
+					</li>
+			
+							
+		<li class="medium-image">
+
+			
+
+
+
+
+	
+
+
+		
+
+
+
+
+<h3 class=" feature-header">
+	<a class="story" rel="published-1379030962397" href="/nature/23898679"><img src="http://news.bbcimg.co.uk/media/images/69816000/jpg/_69816476_b763_eaj009752a.jpg" alt="House spider in silhouette" />House guests</a>
+
+		</h3>
+
+			
+							<p>Smartphone app aims to boost study of spiders  	
+				  <span id="dna-comment-count___CPS__23898679" class="gvl3-icon gvl3-icon-comment comment-count"></span></p>
+			
+							<hr />
+					</li>
+			
+							
+		<li class="medium-image">
+
+			
+
+
+
+
+	
+
+
+		
+
+
+
+
+<h3 class=" feature-header">
+	<a class="story" rel="published-1379288933210" href="/nature/24079279"><img src="http://news.bbcimg.co.uk/media/images/69833000/jpg/_69833500_smalltortoiseshell_ianakirk,butterflyconservation.jpg" alt="Small tortoiseshell" />UK Butterfly boost</a>
+
+		</h3>
+
+			
+							<p>Butterfly numbers are up following a summer of warm weather 	
+				  <span id="dna-comment-count___CPS__24079279" class="gvl3-icon gvl3-icon-comment comment-count"></span></p>
+			
+							<hr />
+					</li>
+	
+	 
+	
+	
+
+
+   </ul>
+</div>
+<script type="text/javascript">$render("container-features-and-analysis","genre-promotion");</script> 
+
+	       	         <div id="include-1" class="include-only special-event-promotion-best">
+    	<script type="text/javascript" src="http://static.bbci.co.uk/naturelibrary/3.1.1.4/js/find.js"></script>
+<div id="find">
+    <h2><label for="filter-text">Find wildlife</label></h2>
+    <div class="input-wrapper">
+        <input id="filter-text" type="text" name="filter" value="" />
+    </div>
+    <noscript>
+        <p>(To use the "Find" box, you need to have
+            <a href="http://www.bbc.co.uk/webwise/askbruce/articles/browse/java_1.shtml">JavaScript</a> turned on.)
+        </p>
+    </noscript>
+</div>
+
+<script type="text/javascript">//<![CDATA[
+gloader.load(["glow", "1", "glow.dom", "glow.events", "glow.widgets.AutoSuggest"], {
+    async: false,
+    onLoad: function(glow) {
+        window.glow = glow;
+        glow.ready(function() {
+
+            var dataUrl = '/nature/tools/search',
+                select = { 'panel': '#filter-text' },
+                opts = {
+                    'initialText'    : 'Search for your favourite wildlife',
+                    'id'             : 'find-results',
+                    'maxItems'       : 8,
+                    'indicateMore'   : true,
+                    'debug'          : true
+                },
+                theSearch = kFind(dataUrl, select, opts);
+
+            theSearch.init();
+    });
+}});
+//]]></script>
+
+</div>
+<script type="text/javascript">$render("include-1","include-1");</script> 
+	       	         	<div class="best-quote-box">
+				
+					
+								
+									<blockquote>
+					  <p>
+						<a href="https://www.facebook.com/bbcnature/posts/564751823580511?comment_id=5858960&offset=0&total_comments=26">												<span class="open-quote">&ldquo;</span>Stunning rare occurance.<span class="close-quote">&rdquo;</span>
+						</a>					  </p>
+					</blockquote>
+
+											<span class="quote_credit">Chris Bravery on Facebook discusses news that a wild two headed adder has been photographed in the UK</span>
+																
+																													
+										</div>
+
+	       	         <div id="include-3" class="include-only special-event-promotion-best">
+    	<div id="follow">
+    <ul>
+        <li class="twitter"><a href="http://twitter.com/BBCnature">Twitter</a></li>
+        <li class="facebook"><a href="http://www.facebook.com/pages/BBC-Nature/110556269000071">Facebook</a></li>        
+    </ul>
+</div>
+</div>
+<script type="text/javascript">$render("include-3","include-3");</script> 
+	       	         <div id="include-4" class="include-only special-event-promotion-best">
+    	  <div id="ttd-widget"> <div id="ttd-widget-header"> <h2><a href="/thingstodo/category/nature">Things To Do</a></h2> <p>RUN BY THE BBC AND PARTNERS</p> <div id="ttd-widget-header-image"></div> </div> <div id="ttd-widget-content"> <ul>  <li> <a href="/thingstodo/activity/experiences-of-an-african-game-ranger/occurrence/317344" title="Experiences of an African Game Ranger"> <img src="http://ichef.bbci.co.uk/thingstodo/image/128x72/2013/09/27/experiences-of-an-african-game-ranger_cebe3acc.jpg" width="128" height="72" alt="Woolley Firs Environmental Education Centre by..." /> </a> <p class="date-block"><span class="date"><span class="dayText">WED </span><span class="day">2 </span><span class="month">OCT</span></span></p> <h3><a href="/thingstodo/activity/experiences-of-an-african-game-ranger/occurrence/317344">Experiences of an African Game Ranger</a></h3>  <p class="partner location">Berkshire, Buckinghamshire and Oxfordshire Wildlife Trust</p>  </li>  <li> <a href="/thingstodo/activity/biodiversity-action-team-east/occurrence/318072" title="Biodiversity Action Team East"> <img src="http://ichef.bbci.co.uk/thingstodo/image/128x72/2013/07/26/biodiversity-action-team-east_67bcc137.jpg" width="128" height="72" alt="Dipping platform at Pimp Hall Nature Reserve" /> </a> <p class="date-block"><span class="date"><span class="dayText">WED </span><span class="day">2 </span><span class="month">OCT</span></span></p> <h3><a href="/thingstodo/activity/biodiversity-action-team-east/occurrence/318072">Biodiversity Action Team East</a></h3>  <p class="partner location">The Conservation Volunteers</p>  </li>  <li> <a href="/thingstodo/activity/conservation-course-taster-days/occurrence/290308" title="Conservation Course Taster Days"> <img src="http://ichef.bbci.co.uk/thingstodo/image/128x72/2013/07/24/-Marek-Mierzejewski-copy_ffd6b9d0.jpg" width="128" height="72" alt="© Marek Mierzejewski copy" /> </a> <p class="date-block"><span class="date"><span class="dayText">WED </span><span class="day">2 </span><span class="month">OCT</span></span></p> <h3><a href="/thingstodo/activity/conservation-course-taster-days/occurrence/290308">Conservation Course Taster Days</a></h3>  <p class="partner location">The Conservation Volunteers</p>  </li>  </ul>  <p class="more"><a href="/thingstodo/category/nature" title="Nature ">More Nature Activities &gt;</a></p>  </div> <div id="ttd-widget-footer"> <form action="/thingstodo/category/nature?max[0]=3&amp;priority[0]=1&amp;priority[1]=2&amp;priority[2]=3&amp;sort[0]=priority&amp;sort[1]=start&amp;order[0]=desc&amp;order[1]=asc&amp;uniqueActivity=true&amp;instanceId=locator_global&amp;from=2013-10-02T04:50:22" method="get"> <div><input type="hidden" name="max[]" value="3" />
+<input type="hidden" name="priority[]" value="1" />
+<input type="hidden" name="priority[]" value="2" />
+<input type="hidden" name="priority[]" value="3" />
+<input type="hidden" name="sort[]" value="priority" />
+<input type="hidden" name="sort[]" value="start" />
+<input type="hidden" name="order[]" value="desc" />
+<input type="hidden" name="order[]" value="asc" />
+<input type="hidden" name="uniqueActivity" value="true" />
+<input type="hidden" name="instanceId" value="locator_global" />
+<input type="hidden" name="from" value="2013-10-02T04:50:22" />
+ <label for="ttd-widget-search">Find Nature  activities near you</label> <input id="ttd-widget-search" name="search" type="text" value="Town, city, postcode" onfocus="this.value=''" /> <input id="ttd-widget-search-btn" type="submit" value="Search" /> </div> </form> </div> </div> <!-- Widget assembled at: Wed, 02 Oct 13 03:50:22 +0100 -->
+</div>
+<script type="text/javascript">$render("include-4","include-4");</script> 
+	       	     </div>
+	
+	
+
+		<!-- no promotional module -->
+	
+	 	
+	<div class="bbccom_advert_placeholder">
+ 		<script type="text/javascript">$render("advert","advert-partner-button");</script>
+	</div>
+	<script type="text/javascript">$render("advert-post-script-load");</script>
+	
+	
+		<!-- no programme breakout hyper -->
+	
+	 	
+	<div class="bbccom_advert_placeholder">
+		<script type="text/javascript">$render("advert","advert-native-side");</script>
+	</div>
+	<script type="text/javascript">$render("advert-post-script-load");</script>
+	<div class="bbccom_advert_placeholder">
+		<script type="text/javascript">$render("advert","advert-mpu-bottom");</script>
+	</div>
+	<script type="text/javascript">$render("advert-post-script-load");</script>
+	
+	
+</div>
+
+	<!-- END #MAIN-CONTENT & CPS_ASSET_TYPE CLASS: story -->
+	</div>
+<!-- END CPS_AUDIENCE CLASS: domestic -->
+	
+</div> 
+<!-- related services -->
+</div><!-- close news -->
+
+
+
+	
+	
+
+   </div>   <!--[if IE 6]> <div id="blq-ie6-upgrade"> <p> <span>You're using the Internet Explorer 6 browser to view the BBC website. Our site will work much better if you change to a more modern browser. It's free, quick and easy.</span> <a href="http://www.browserchoice.eu/">Find out more <span>about upgrading your browser</span> here&hellip;</a> </p> </div> <![endif]-->  <div id="blq-foot" xml:lang="en-GB" class="blq-rst blq-clearfix blq-foot-transparent blq-foot-text-dark"> <div id="blq-footlinks"> <h2 class="blq-hide">BBC links</h2>       <ul>                    <li class="blq-footlinks-row"> <ul class="blq-footlinks-row-list"> <li><a href="http://m.bbc.co.uk/" id="blq-footer-mobile">Mobile site</a></li><li><a href="http://www.bbc.co.uk/terms/">Terms of Use</a></li><li><a href="http://www.bbc.co.uk/aboutthebbc/">About the BBC</a></li> </ul> </li>                     <li class="blq-footlinks-row"> <ul class="blq-footlinks-row-list"> <li><a href="http://advertising.bbcworldwide.com">Advertise With Us</a></li><li><a href="http://www.bbc.co.uk/privacy/">Privacy</a></li><li><a href="http://www.bbc.co.uk/accessibility/">Accessibility Help</a></li> </ul> </li>                     <li class="blq-footlinks-row"> <ul class="blq-footlinks-row-list"> <li><a href="http://www.bbc.co.uk/bbc.com/ad-choices/">Ad Choices</a></li><li><a href="http://www.bbc.co.uk/privacy/bbc-cookies-policy.shtml">Cookies</a></li><li><a href="http://www.bbc.co.uk/contact/">Contact the BBC</a></li> </ul> </li>           <li class="blq-footlinks-row"> <ul class="blq-footlinks-row-list"> <li><a href="http://www.bbc.co.uk/guidance/">Parental Guidance</a></li> </ul> </li>             </ul> <script type="text/javascript">/*<![CDATA[*/ (function() { var mLink = document.getElementById('blq-footer-mobile'), stick = function() { var d = new Date (); d.setYear(d.getFullYear() + 1); d = d.toUTCString(); window.bbccookies.set('ckps_d=m;domain=.bbc.co.uk;path=/;expires=' + d ); window.bbccookies.set('ckps_d=m;domain=.bbc.com;path=/;expires=' + d ); }; if (mLink) {  if (mLink.addEventListener) { mLink.addEventListener('click', stick, false); } else if (mLink.attachEvent) { mLink.attachEvent('onclick', stick); } } })(); /*]]>*/</script>  </div>  <div id="blq-foot-blocks" class="blq-footer-image-dark"><img src="http://static.bbci.co.uk/frameworks/barlesque/2.48.3/desktop/3.5/img/blocks/dark.png" width="84" height="24" alt="BBC" /></div>  <p id="blq-disclaim"><span id="blq-copy">BBC &copy; 2013</span> <a href="http://www.bbc.co.uk/help/web/links/">The BBC is not responsible for the content of external sites. Read more.</a></p> <div id="blq-obit"><p><strong>This page is best viewed in an up-to-date web browser with style sheets (CSS) enabled. While you will be able to view the content of this page in your current browser, you will not be able to get the full visual experience. Please consider upgrading your browser software or enabling style sheets (CSS) if you are able to do so.</strong></p></div> </div> </div> 
+<!-- BBCDOTCOM analytics template:server-side journalismVariant: true ipIsAdvertiseCombined: true adsEnabled: false showDotcom: true flagpole: ON -->
+            
+    <!-- BBCCOM analytics server-side -->
+<div id="bbccomWebBug" class="bbccomWebBug"></div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    if('undefined' != typeof(bbcdotcom) && 'undefined' != typeof(bbcdotcom.stats)) {
+        bbcdotcom.stats.contentType = "HTML";
+    }
+    /*]]>*/
+</script>
+
+
+	<div id="gnlAnalyticsEnabled" class="bbccom_display_none"></div>
+
+    <!-- Start Audience Science -->
+    <script type="text/javascript" src="http://js.revsci.net/gateway/gw.js?csid=J08781"></script>
+    <script type="text/javascript">
+        /*<![CDATA[*/
+        var adKeyword = document.getElementsByName('ad_keyword');
+        if('/news/uk-11767495' == window.location.pathname) {
+            J08781.DM_addEncToLoc("Section","Royal Wedding");
+        } else if (undefined != adKeyword[0]) {
+            J08781.DM_addEncToLoc("Section",adKeyword[0].content);
+        } else if ("undefined" != typeof bbc &&
+            "undefined" != typeof bbc.fmtj &&
+            "undefined" != typeof bbc.fmtj.page &&
+            "undefined" != typeof bbc.fmtj.page.section) {
+                J08781.DM_addEncToLoc("Section", bbc.fmtj.page.section);
+        }
+        J08781.DM_tag();
+        /*]]>*/
+    </script>
+    <!-- End Audience Science -->
+
+    <!-- SiteCatalyst code version: H.21.
+    Copyright 1996-2010 Adobe, Inc. All Rights Reserved
+    More info available at http://www.omniture.com -->
+    
+        <script type="text/javascript">
+            var s_account = "bbcwglobalprod";
+        </script>
+    
+    
+        <script type="text/javascript" src="http://news.bbcimg.co.uk/js/app/bbccom/0.3.205/s_code.js"></script>
+    
+    <script type="text/javascript"><!--
+        /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+        var s_code=scw.t();if(s_code)document.write(s_code)//--></script>
+        <script type="text/javascript"><!--
+        if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+        //--></script><noscript><div><a href="http://www.omniture.com" title="Web Analytics"><img
+        src="http://sa.bbc.com/b/ss/bbcwglobalprod/1/H.21--NS/0"
+        height="1" width="1" alt="" /></a></div></noscript><!--/DO NOT REMOVE/-->
+    <!-- End SiteCatalyst code version: H.21. -->
+
+
+    <!-- Begin comScore Tag -->
+    <script type="text/javascript">
+        document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));</script>
+    <script type="text/javascript">
+        COMSCORE.beacon({
+            c1:2,
+            c2:"6035051",
+            c3:"",
+            c4:"wwwnews.live.bbc.co.uk/nature/24205093",
+            c5:"",
+            c6:"",
+            c15:""
+        });
+    </script>
+    <noscript>
+        <div>
+            <img src="http://b.scorecardresearch.com/b?c1=2&amp;c2=6035051&amp;c3=&amp;c4=wwwnews.live.bbc.co.uk/nature/24205093&amp;c5=&amp;c6=&amp;c15=&amp;cv=1.3&amp;cj=1" style="display:none" width="0" height="0" alt="" />
+        </div>
+    </noscript>
+    <!-- End comScore Tag -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- START Nielsen Online SiteCensus V6.0 -->
+    <!-- COPYRIGHT 2010 Nielsen Online -->
+    <script type="text/javascript">
+        (function () {
+            var d = new Image(1, 1);
+            d.onerror = d.onload = function () {
+                d.onerror = d.onload = null;
+            };
+            d.src = [('https:' == document.location.protocol ? 'https:' : 'http:') + "//secure-us.imrworldwide.com/cgi-bin/m?ci=us-804789h&amp;cg=0&amp;cc=1&amp;si=", escape(window.location.href), "&amp;rp=",
+            escape(document.referrer), "&amp;ts=compact&amp;rnd=", (new Date()).getTime()].join('');
+        })();
+    </script>
+    <noscript>
+      <div>
+        <img src="http://secure-us.imrworldwide.com/cgi-bin/m?ci=us-804789h&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="" />
+      </div>
+    </noscript>
+    <!-- END Nielsen Online SiteCensus V6.0 -->
+
+
+
+
+
+
+
+    <!-- Effective Measure BBCCOM-1195 -->
+    <script type="text/javascript">
+      (function() {
+        var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
+        em.src = ('https:' == document.location.protocol ? 'https://me-ssl' : 'http://me-cdn') + '.effectivemeasure.net/em.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
+      })();
+    </script>
+    <noscript>
+        <div>
+            <img src="http://me.effectivemeasure.net/em_image" alt="" style="position:absolute; left:-5px;" />
+        </div>
+    </noscript>
+    <!-- End Effective Measure -->
+
+
+
+
+
+
+     </div> </div>  <script type="text/javascript"> if (typeof require !== 'undefined') { require(['istats-1'], function(istats){ istats.track('external', { region: document.getElementById('blq-main') }); istats.track('download', { region: document.getElementById('blq-main') }); }); } </script>  <script type="text/html" id="blq-panel-template-promo"><![CDATA[ <div id="blq-panel-promo" class="blq-masthead-container"></div> ]]></script> <script type="text/html" id="blq-panel-template-more"><![CDATA[ <div id="blq-panel-more" class="blq-masthead-container  blq-clearfix" xml:lang="en-GB" dir="ltr"> <div class="blq-panel-container panel-paneltype-more"> <div class="panel-header"> <h2> <a href="http://www.bbc.co.uk/a-z/">  More&hellip;  </a> </h2>  <a href="http://www.bbc.co.uk/a-z/" class="panel-header-links panel-header-link">Full A-Z<span class="blq-hide"> of BBC sites</span></a>  </div> <div class="panel-component panel-links">       <ul>   <li> <a href="http://www.bbc.co.uk/cbbc/"  >CBBC</a> </li>    <li> <a href="http://www.bbc.co.uk/cbeebies/"  >CBeebies</a> </li>    <li> <a href="http://www.bbc.co.uk/comedy/"  >Comedy</a> </li>   </ul>  <ul>   <li> <a href="http://www.bbc.co.uk/food/"  >Food</a> </li>    <li> <a href="http://www.bbc.co.uk/history/"  >History</a> </li>    <li> <a href="http://www.bbc.co.uk/learning/"  >Learning</a> </li>   </ul>  <ul>   <li> <a href="http://www.bbc.co.uk/music/"  >Music</a> </li>    <li> <a href="http://www.bbc.co.uk/science/"  >Science</a> </li>    <li> <a href="http://www.bbc.co.uk/nature/"  >Nature</a> </li>   </ul>  <ul>   <li> <a href="http://www.bbc.co.uk/local/"  >Local</a> </li>    <li> <a href="http://www.bbc.co.uk/travelnews/"  >Travel News</a> </li>   </ul>   </div> </div> ]]></script>            
+	
+
+<!-- shared/foot -->
+<script type="text/javascript">
+	bbc.fmtj.common.removeNoScript({});
+	bbc.fmtj.common.tabs.createTabs({});
+</script>
+<!-- hi/nature/foot.inc -->
+
+<script type="text/javascript">
+	glow.dom.get("#header").append(
+  		'<a href="http://www.bbc.co.uk/blogs/internet/posts/Knowledge-Learning-Product-Curriculum-Refresh" id="kl-beta">Knowledge &amp; Learning Beta</a>'
+	);
+</script> 
+<!-- shared/foot_story -->
+<!-- #CREAM hi nature domestic foot.inc -->
+
+ 
+
+</body>
+</html>
+
+

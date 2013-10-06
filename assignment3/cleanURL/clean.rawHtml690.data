@@ -1,0 +1,156 @@
+    #[1]The Changelog » Feed [2]The Changelog » Comments Feed [3]The
+   Changelog » Postgres_ext continues to improve Rails’ PostgreSQL
+   ActiveRecord Adapter Comments Feed
+
+     * [4]Ruby
+     * [5]JavaScript
+     * [6]node.js
+     * [7]Python
+     * [8]Ruby on Rails
+     * [9]CSS
+     * [10]iOS
+     * [11]API
+     * [12]HTML5
+     * [13]jQuery
+     * [14]RubyGems
+     * [15]Sass
+     * [16]Git
+     * [17]Twitter
+     * [18]OS X
+     * [19]NoSQL
+     * [20]Design
+     * [21]Testing
+     * [22]PHP
+     * [23]MongoDB
+     * [24]CLI
+     * [25]iPhone
+     * [26]tools
+     * [27]Sinatra
+     * [28]JSON
+     * [29]Redis
+     * [30]UI
+     * [31]CoffeeScript
+     * [32]CSS3
+     * [33]Rack
+
+[34]The Changelog
+
+   [35][the-changelog.svg]
+
+   Open Source moves fast. Keep up.
+
+     * [36]Front page
+     * [37]Podcast
+     * [38]Weekly
+     * [39]Subscribe
+
+     * [40]Membership
+     * [41]Benefits
+     * [42]Sponsorship
+     * [43]Partnership
+     * [44]Store
+     * [45]About
+     * [46]Team
+     * [47]Contact
+
+     * [48]Sign-in
+
+[49]Postgres_ext continues to improve Rails’ PostgreSQL ActiveRecord Adapter
+[50]right
+
+   Rails 4 brought with it many improvements to ActiveRecord’s PostgreSQL
+   adapter. Many of these features — including support for powerful
+   Postgres data types like arrays — first lived in the popular
+   [51]postgres_ext gem before getting merged in to Rails proper.
+
+   Rails 4 is out and used en masse, but [52]Dan McClain hasn’t rested on
+   his laurels with adding Postgres-specific goodies to ActiveRecord.
+
+   Posgtres_ext 2.1.0 adds support for [53]Common Table Expressions and
+   the [54]rank() windowing function.
+
+   Who knows, if these and other postgres_ext features gain enough steam,
+   we may end up seeing them in Rails 4.1…
+
+   You can read more about it on the [55]DockYard blog and don’t forget to
+   contribute to the gem’s [56]development on GitHub!
+
+   Linked by [57]Jerod Santo on Sep 23, 2013
+
+   [58]Links [59]ActiveRecord [60]postgresql [61]Ruby on Rails
+     *
+     *
+
+   © 2009-2013 The Changelog
+
+   A [62]RIZN Media Production / [63]Founders Talk / [64]The Sass Way
+
+   Hosted on [65](mt) Media Temple
+
+References
+
+   1. http://thechangelog.com/feed/
+   2. http://thechangelog.com/comments/feed/
+   3. http://thechangelog.com/postgres_ext-continues-improve-rails-postgresql-activerecord-adapter/feed/
+   4. http://thechangelog.com/tagged/ruby/
+   5. http://thechangelog.com/tagged/javascript/
+   6. http://thechangelog.com/tagged/nodejs/
+   7. http://thechangelog.com/tagged/python/
+   8. http://thechangelog.com/tagged/rubyonrails/
+   9. http://thechangelog.com/tagged/css/
+  10. http://thechangelog.com/tagged/ios/
+  11. http://thechangelog.com/tagged/api/
+  12. http://thechangelog.com/tagged/html5/
+  13. http://thechangelog.com/tagged/jquery/
+  14. http://thechangelog.com/tagged/rubygems/
+  15. http://thechangelog.com/tagged/sass/
+  16. http://thechangelog.com/tagged/git/
+  17. http://thechangelog.com/tagged/twitter/
+  18. http://thechangelog.com/tagged/osx/
+  19. http://thechangelog.com/tagged/nosql/
+  20. http://thechangelog.com/tagged/design/
+  21. http://thechangelog.com/tagged/testing/
+  22. http://thechangelog.com/tagged/php/
+  23. http://thechangelog.com/tagged/mongodb/
+  24. http://thechangelog.com/tagged/cli/
+  25. http://thechangelog.com/tagged/iphone/
+  26. http://thechangelog.com/tagged/tools/
+  27. http://thechangelog.com/tagged/sinatra/
+  28. http://thechangelog.com/tagged/json/
+  29. http://thechangelog.com/tagged/redis/
+  30. http://thechangelog.com/tagged/ui/
+  31. http://thechangelog.com/tagged/coffeescript/
+  32. http://thechangelog.com/tagged/css3/
+  33. http://thechangelog.com/tagged/rack/
+  34. http://thechangelog.com/
+  35. http://thechangelog.com/
+  36. file://localhost/
+  37. http://5by5.tv/changelog
+  38. http://thechangelog.com/weekly/
+  39. http://thechangelog.com/subscribe/
+  40. http://thechangelog.com/membership/
+  41. http://thechangelog.com/benefits/
+  42. http://thechangelog.com/sponsorship/
+  43. http://thechangelog.com/partnership/
+  44. https://thechangelog.com/store/
+  45. http://thechangelog.com/about/
+  46. http://thechangelog.com/changeloggers/
+  47. http://thechangelog.com/contact/
+  48. http://thechangelog.com/?memberful_endpoint=auth
+  49. http://thechangelog.com/postgres_ext-continues-improve-rails-postgresql-activerecord-adapter/
+  50. https://github.com/dockyard/postgres_ext
+  51. https://github.com/dockyard/postgres_ext
+  52. http://danmcclain.net/
+  53. http://www.postgresql.org/docs/current/static/queries-with.html
+  54. http://www.postgresql.org/docs/9.2/static/functions-window.html
+  55. http://reefpoints.dockyard.com/2013/09/06/postgres_ext-adds-rank-and-common-table-expressions.html
+  56. https://github.com/dockyard/postgres_ext
+  57. http://thechangelog.com/author/jerodsanto/
+  58. http://thechangelog.com/category/links/
+  59. http://thechangelog.com/tagged/activerecord/
+  60. http://thechangelog.com/tagged/postgresql/
+  61. http://thechangelog.com/tagged/rubyonrails/
+  62. http://riznmedia.com/
+  63. http://5by5.tv/founderstalk
+  64. http://thesassway.com/
+  65. http://thechangelog.com/r/mediatemple

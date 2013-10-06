@@ -1,0 +1,2170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" xml:lang="en" lang="en">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript">
+		var topicid = "1";
+		var subtopicid = "";
+		var typeid = "5001";
+		var __rxroot = "http://" + window.location.host + "/Rhythmyx";
+	</script>
+	<!-- Article -->
+	<title>iPhone TouchID fingerprint biometrics broken by German hacker club - Network World</title>
+	<link rel="apple-touch-icon" href="http://computerworld.com.edgesuite.net/SMicons/300x300/NWW-200x200.png" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="channels" content="Network World"/>
+	<meta name="description" content="Chaos Computer Club shows online video demonstrating use of a gummy finger hack of an Apple iPhone"/>
+	<meta name="contenttype" content="Article"/>
+	<meta name="publicationDate" content="2013-09-23"/>
+	<meta name="DC.date.issued" content="2013-09-23T10:53-05:00"/>
+	<meta name="articletype" content="News"/>
+	<meta name="author" content="Ellen Messmer"/>
+	<meta name="publisher" content="Network World"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=7" />
+	<meta name="news_keywords" content="Apple, iPhone, Chaos Computer Club; Apple TouchID; biometrics">
+	
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- **************** START OMNITURE VARIABLES **************** -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- **************** END OMNITURE VARIABLES **************** -->
+	<script type="text/javascript">var bcid = 0;</script>
+	<link rel="canonical" href="http://www.networkworld.com/news/2013/092313-iphone-biometrics-hacked-274082.html">
+	<meta name="syndication-source" content="http://www.networkworld.com/news/2013/092313-iphone-biometrics-hacked-274082.html"> 
+	
+	
+ 
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+<!--<script type="text/javascript" src="http://m.networkworld.com/mobify/redirect.js"></script>
+<script type="text/javascript">try{_mobify("http://m.networkworld.com/");} catch(err) {};</script>-->
+<script type="text/javascript"src="http://m.networkworld.com/mobify/redirect.js"></script>
+<script type="text/javascript">
+var _mref_rewrite=true;
+try{_mobify("http://m.networkworld.com/");} catch(err) {};
+</script> 
+
+
+
+<!-- nsdr_auth: no -->
+
+
+	
+ 
+<!--
+rxptopic:  security<br>
+rxptopicname: Security<br>
+-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+	
+
+
+	
+		
+			
+		
+	
+	  
+
+
+
+	
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--if expr="${HTTP_REFERER} = /riverbed/" -->
+	<!--set var="site" value="dimension" -->
+	<!--set var="adpagename" value="Riverbed_C766" -->
+<!--endif -->
+
+<!-- Added by JCroci 8/4/08 per Justine's request-->
+
+
+
+
+
+ 
+
+
+
+<!--if expr="${rxprimaryadtopic} != ''" -->
+	<!--set var="site" value="${rxprimaryadtopic}" -->
+<!--endif-->
+
+
+
+
+
+
+
+
+
+	<!--set var="adtype" value="${adtype}${myref}" -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- added by tkroon 11/10/11 -->
+
+
+
+
+
+
+
+	
+	
+
+
+	
+	<link type="application/rss+xml" title="Network World RSS feed on security" href="http://www.networkworld.com/rss/security.xml" rel="alternate" />
+	
+
+
+
+<link rel="stylesheet" type="text/css" media="screen and (max-device-width: 480px)" href="/includes/styles/mobile/mobile.css" />
+<link rel="stylesheet" type="text/css" media="screen and (min-device-width: 768px) and (max-device-width: 1024px)" href="/includes/styles/mobile/mobile.css" />
+
+<script type="text/javascript">
+  var outerref = new String("(none)");
+  var nwchannel = 'Network World';
+  var rxprimarytopic = 'security';
+</script>
+
+<script type="text/javascript">
+	var dogfish_type = 'article';
+    OPG = window.OPG || {};
+    OPG.PageInfo = OPG.PageInfo || {};
+	OPG.PageInfo = function() {
+		return {
+			eloqua_type: 'article',
+			eloqua_topic: 'security'
+		};
+	}();
+    NW = window.NW || {};
+    NW.PageInfo = NW.PageInfo || {};
+    NW.PageInfo = function() {
+        return{
+            cookie_domain: "networkworld.com",
+			rxprimarytopic: 'security',
+			rxprimarytopicname: 'Security',
+			rxsubtopicname: 'Endpoint Security',
+			pgtype: 'article',
+			subtopic: '',
+			freemium: 'n',
+			nsdr_auth: 'no',
+            subtopicid: 0,
+            outerref: '(none)',
+            nwchannel: 'Network World',
+            request_uri: '/news/2013/092313-iphone-biometrics-hacked-274082.html',
+            doc_uri: '/news/2013/092313-iphone-biometrics-hacked-274082.html',
+            site: 'security',
+            rxid: '274082',
+            nodeid: ''	
+        };
+    }();
+var jq_nodeid = "";
+var jq_request_uri = "/news/2013/092313-iphone-biometrics-hacked-274082.html";
+var jq_site = "security";
+var jq_doc_uri = "(none)";   
+ var jq_rxid = "274082";
+    if (NW.PageInfo.pgtype=='article') doubleclick_article_page = true;
+    var predates = new Array();
+</script>
+
+
+<script type="text/javascript" src="/includes/r08/idg_ads.js?2532"></script>
+
+<script language="JavaScript" type="text/javascript">
+  IDG.ads.networkID = "/8456/IDG.Networkworld_Enterprise";
+  IDG.ads.targets["site"] = "idge.nww.home";
+
+  IDG.ads.targets["site"] = 'idge.nww.security';
+
+
+  IDG.ads.targets["zone"] = 'endpointsecurity';
+
+
+  IDG.ads.targets["author"] = 'ellen_messmer';
+
+
+
+  IDG.ads.targets["articleId"] = '274082';
+
+
+  IDG.ads.targets["kw"] = "Apple,iPhone,ChaosComputerClub;AppleTouchID;biometrics";
+
+  IDG.ads.targets["dcopt"] = "ist";
+
+</script>
+
+<script type="text/javascript" src="/includes/r08/demandbase.js?132"></script>
+<script type="text/javascript" src="http://api.demandbase.com/api/v2/ip.json?token=5ac3f05022124d36bc82c03d41344df2cd89dd59&callback=OPG.Demandbase.dbase_parse"></script>
+
+<script type="text/javascript">
+  IDG.ads.setAllTargetings();
+  IDG.ads.defineAllSlots();
+  IDG.ads.enable();
+</script>
+
+
+ 
+<script type="text/javascript" src="/includes/jqlib/exp_nwLib_head-min.js"></script>
+
+
+
+	
+
+
+<!-- begin DogEar ad ad --> 
+<div id="dogear"><script type="text/javascript">
+  googletag.cmd.push(function() {
+    googletag.display("dogear");
+  });
+</script>
+</div><!-- end DogEar ad ad -->
+
+
+
+
+<!-- Retrieve CCD assets by topic was here 31512-->
+<script type="text/javascript" src="/includes/main08.js"></script>
+<script type="text/javascript" src="/includes/js/_head-min.js"></script>
+<script type="text/javascript">
+/* Gets inform links from url and write to page */
+//var infRelatedLinks = new Array();
+//
+
+
+var infRelatedLinks = new Array();
+infRelatedLinks[0] = new NW.RelatedLinks.linkObj("Forthcoming PCI changes will bring challenges for payment card network community","http://www.networkworld.com/news/2013/100113-pci-274386.html","inform")
+infRelatedLinks[1] = new NW.RelatedLinks.linkObj("Public release of IE exploit could spark widespread attacks","http://www.networkworld.com/news/2013/100113-public-release-of-ie-exploit-274383.html","inform")
+infRelatedLinks[2] = new NW.RelatedLinks.linkObj("Privacy campaigners barred from releasing Facebook&#39;s response to complaints","http://www.networkworld.com/news/2013/100113-privacy-campaigners-barred-from-releasing-274372.html","inform")
+infRelatedLinks[3] = new NW.RelatedLinks.linkObj("Shutdown could test IT security at federal agencies","http://www.networkworld.com/news/2013/100113-shutdown-could-test-it-security-274361.html","inform")
+infRelatedLinks[4] = new NW.RelatedLinks.linkObj("10 encryption tips for the enterprise","http://www.networkworld.com/news/2013/093013-encryption-tips-274185.html","inform")
+infRelatedLinks[5] = new NW.RelatedLinks.linkObj("Fake AdBlock Plus app removed from Google&#39;s Play store","http://www.networkworld.com/news/2013/100113-fake-adblock-plus-app-removed-274355.html","inform")
+infRelatedLinks[6] = new NW.RelatedLinks.linkObj("Security company scours &#39;Dark Web&#39; for stolen data","http://www.networkworld.com/news/2013/100113-security-company-scours-39dark-web39-274352.html","inform")
+infRelatedLinks[7] = new NW.RelatedLinks.linkObj("Former Qwest CEO out of prison, blames NSA for troubles","http://www.networkworld.com/news/2013/093013-former-qwest-ceo-out-of-274368.html","inform")
+infRelatedLinks[8] = new NW.RelatedLinks.linkObj("Symantec seizes part of massive peer-to-peer botnet ZeroAccess","http://www.networkworld.com/news/2013/093013-symantec-seizes-part-of-massive-274347.html","inform")
+infRelatedLinks[9] = new NW.RelatedLinks.linkObj("Former Qwest CEO out prison, blames NSA for troubles","http://www.networkworld.com/news/2013/093013-nsa-nacchio-274344.html","inform")
+
+
+</script>
+
+
+
+<script language="javascript">
+	
+		var rxprimarytopicid = "10";
+	
+								
+	var whitepaper = new Array();
+	
+	
+		  					
+		  					<!-- CCD: CALL FOR RELATED LINKS (special-resources.html) -->
+		  					/* Uncomment to directly call CCD for results
+		  					var types = new Array("whitepaper");
+							var ccd_url = CCD.Module.get_ccd_module_url("Networkworld-RightRail-Module-Backfill", types);
+						    $.ajax({
+								url: ccd_url+".json",
+								dataType: 'jsonp',
+								jsonp: 'jsoncallback',
+								type: "GET",
+								success: function(json){
+									if(typeof(json) != "undefined"){
+										$.each(json, function(i,item){
+											var asset = json[i].asset;
+											whitepaper[i] = new NW.SpecialResources.linkObj(asset.title,asset.url,asset.description);
+										});
+									}
+								}
+							});
+							*/
+							
+							CCD.Module.fillWhitepaperArray();
+							
+							
+							
+</script>
+<script src="http://admin.brightcove.com/js/experience_util.js" type="text/javascript"></script>
+
+	 
+
+ 
+	<script>
+</script>
+
+
+<script type="text/javascript">
+	// *** NSDR AUTH LOGIC *** //
+	if($.cookie('nsdr') != null) NW.PageInfo.nsdr_auth = 'yes';
+</script>
+
+<script type="text/javascript">
+   var _gaq = _gaq || [];
+   _gaq.push(['_setAccount', 'UA-230061-1']);
+   _gaq.push(['_setDomainName', 'networkworld.com']);
+   _gaq.push(['_trackPageview']);
+   (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+   })();
+</script>
+
+<!-- BEGIN Krux Control Tag for Network World -->
+<script class="kxct" data-id="Hx-yBRge" data-version="async:1.7" type="text/javascript">
+  window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);
+  (function(){
+    var k=document.createElement('script');k.type='text/javascript';k.async=true;
+    var m,src=(m=location.href.match(/\bkxsrc=([^&]+)/))&&decodeURIComponent(m[1]);    
+    k.src = /^https?:\/\/([^\/]+\.)?krxd\.net(:\d{1,5})?\//i.test(src) ? src : src === "disable" ? "" :
+      (location.protocol==="https:"?"https:":"http:")+"//cdn.krxd.net/controltag?confid=Hx-yBRge";
+    var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);
+  })();
+</script>
+<!-- END Krux Controltag -->
+
+<link rel="stylesheet" href="/includes/styles/r08/all.css" type="text/css" charset="utf-8" />
+      <!--[if lt IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/includes/styles/r08/ie.css" /><![endif]-->
+      <link rel="stylesheet" href="/includes/styles/sharing-styles.css" type="text/css" charset="utf-8" />
+	<!-- Social Tags -->
+	<meta property="og:title" content="iPhone TouchID fingerprint biometrics broken by German hacker club" />
+	<meta property="og:type" content="article" />
+	<meta property="og:image" content="http://www.networkworld.com/images/nww-logo-fb2.gif" />
+	<link rel="image_src" href="http://www.networkworld.com/images/nww-logo-fb2.gif" />
+	<meta property="og:site_name" content="Network World" />
+	<meta property="fb:app_id" content="147094931979429" />
+	<meta property="og:url" content="http://www.networkworld.com/news/2013/092313-iphone-biometrics-hacked-274082.html" />
+	<meta property="og:description" content="Chaos Computer Club shows online video demonstrating use of a gummy finger hack of an Apple iPhone" />
+	<!-- Twitter card -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@networkworld" />
+	<meta name="twitter:site:id" content="9737032" />
+	<meta name="twitter:url" content="http://www.networkworld.com/news/2013/092313-iphone-biometrics-hacked-274082.html" />
+	<meta name="twitter:title" content="iPhone TouchID fingerprint biometrics broken by German hacker club" />
+	<meta name="twitter:description" content="Chaos Computer Club shows online video demonstrating use of a gummy finger hack of an Apple iPhone" />
+	<meta name="twitter:image" content="http://www.networkworld.com/images/nww-logo-fb2.gif" />
+      <link rel="stylesheet" href="/includes/styles/twitter.css" type="text/css" charset="utf-8" />
+	</head>
+<body>
+	
+
+
+<!-- begin Sidekick ad --> 
+<div id="sidekick_container"><div id="sidekick_floater"><div id="sidekick_holder"><div id="sidekick">
+<div id="sidekick"><script type="text/javascript">
+  googletag.cmd.push(function() {
+    googletag.display("sidekick");
+  });
+</script>
+</div></div></div></div></div>
+<!-- end Sidekick ad -->
+
+
+
+	<a id="top"></a>
+	<div style="position: absolute; left: -99999em;">
+		<h3>Skip Links</h3>
+		<ul>
+			<li><a href="#leftcol">Go to page content</a></li>
+			<li><a href="#menu">Go to site-wide navigation</a></li>
+			<li><a href="/aboutus/contact.html">Go to Contact Us page</a></li>
+		</ul>
+	</div>
+	<!--stopindex-->
+<!-- DO NOT REMOVE HEADER_PROMO DIV - PLACE CONTENT INSIDE THIS DIV -->
+<!--<div id="header_promo">
+<div id="poll_strip"><span>Our site has been redesigned!</span><a href="/includes/r08/poll-layer.html">Add your comments in our poll</a></div>
+</div>-->
+
+<!-- Begin comScore Tag -->
+<script>
+document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b")
++ ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+</script>
+<script>
+COMSCORE.beacon({
+c1:2,
+c2:"6035308",
+c3:"",
+c4:"",
+c5:"",
+c6:"",
+c15:""
+});
+</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/b?c1=2&c2=6035308&c3=&c4=&c5=&c6=&c15=&cv=1.3&cj=1"
+style="display:none" width="0" height="0" alt="" />
+</noscript>
+<!-- End comScore Tag -->
+
+<!-- OMNITURE PAGE VARIABLES - ONLY FOR RHYTHMYX PUBLISHED PAGES -->
+
+	  
+	     
+	     
+	  
+	  
+	  
+	  	  
+	  
+	  
+	     
+	  
+	  
+	  
+	  	 
+	  
+	  
+	  
+	  
+	     
+	  
+	  
+	  
+	     
+	  
+	  
+	     
+	  
+	  
+	  	 
+	  
+      
+      
+         
+         
+         
+         
+         
+         
+         
+         
+         
+      
+      
+        
+			
+			
+		
+		
+			
+		
+	  
+
+<!-- //OMNITURE PAGE VARIABLES -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- SiteCatalyst code version: H.20.3. Copyright 1996-2010 Adobe, Inc. All Rights Reserved More info available at http://www.omniture.com -->
+<script type="text/javascript" src="/includes/jqlib/s_code.js"></script>
+<script type="text/javascript">
+	var errorpage = "(none)";
+	var track_with_omniture = "yes";
+	var track_detailed_content = "yes";
+	if(errorpage == "yes") {
+		s.pageType="errorPage"; // only set if error page
+		track_with_omniture = "yes";
+	} else {
+			s.pageName="article:RX274082:iPhone TouchID fingerprint biometrics broken by German hacker club";
+			s.channel="Security";
+			s.prop1="Security:Endpoint Security";
+			s.prop2="article";
+			s.hier1="Security,Endpoint Security,content page";
+			s.prop50="/news/2013/092313-iphone-biometrics-hacked-274082.html";
+			// handles events for applications
+			
+			// handles insider pages
+			if(NW.PageInfo.freemium == 'y'){
+				s.prop34 = "Insider Page View";
+				if(NW.PageInfo.nsdr_auth == 'no') s.events=s.apl(s.events,"event40",",",0);
+			}
+			if(track_detailed_content != "no") {
+				s.prop11="RX274082";
+				s.prop12="iPhone TouchID fingerprint biometrics broken by German hacker club";
+				s.prop13="Network World";
+				s.prop14="Ellen Messmer";
+				s.prop15="news";
+				s.prop16="2013-09-23";
+				s.prop36 = "1 of 1" || om_page_number;
+				
+				
+				
+			}
+			if(typeof(om_search_term) != "undefined") s.prop9 = unescape(om_search_term); //Found on search page
+		/* Conversion Variables 
+		s.campaign="";
+		s.state="";
+		s.zip="";
+		s.events="";
+		s.products="";
+		s.purchaseID="";
+		s.transactionID="";
+		s.eVar1="";
+		*/
+	}
+	// Omniture override function used in ccd application
+	if(typeof(omniture_override) == "function") omniture_override();
+	/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+	if(track_with_omniture != "no") s.t();
+</script>
+<!-- End SiteCatalyst code version: H.20.3. -->
+
+<!--removed quantcast.html -->
+
+
+
+
+<script type="text/javascript">
+/*************** LEADGEN TRACKING *******************/
+LeadGen = window.LeadGen || {};
+LeadGen.Tracking = LeadGen.Tracking || {};
+LeadGen.Tracking = function() {
+	//?source={BU Site Name}_{Referring Domain}_{Taxonomy}_{Page Type}_{Article Type}_{Content ID}_{Story Source}_{Author}_{Module}
+	var emptyStr = 'na';
+	var dlm = '_';
+	var internal_links = new RegExp ("(nww.com)|(networkworld.com)","i");
+    return {
+    	bu_name: 'nwwsite',
+		domain: $.cookie('idglg_ref_domain'),
+		taxonomy: "General",
+		pageType: emptyStr,
+		articleType: emptyStr,
+		contentid: emptyStr,
+		story_source: emptyStr,
+		author_name: emptyStr,
+		getRootDomain:function(){
+			return document.domain.substring(document.domain.indexOf('.'));
+		},
+		parseDomain:function(referrer){
+			var urlpattern = new RegExp("(http|https)://(.*?)/.*$");
+			var parsedurl = referrer.match(urlpattern);
+			if(parsedurl[2] && parsedurl[2].indexOf('www.') > -1) return parsedurl[2].substring(4);
+			return parsedurl[2];
+		},
+		setDomain: function(){
+			if(this.domain == null){
+				if(document.referrer != ""){
+					this.domain = LeadGen.Tracking.parseDomain(document.referrer);
+					$.cookie('idglg_ref_domain', this.domain, {path: '/',domain: LeadGen.Tracking.getRootDomain()});
+				}
+				else{
+					this.domain = emptyStr;
+					$.cookie('idglg_ref_domain', emptyStr, {path: '/', domain: LeadGen.Tracking.getRootDomain()});
+				}
+			}
+			if(this.domain == null || this.domain == "") this.domain = this.emptyStr;
+		},
+		addSourceCode: function(_element){
+			var params = [];
+			var moduleName = emptyStr;
+			if(_element){
+				if(_element.className != undefined && _element.className.indexOf("idglg") > -1){
+					var params =  _element.className.split("-");
+					if(_element.tagName != "A") _element = $(_element.tagName + "." + _element.className).find("a")[0];
+				}
+				if(_element.id != undefined && _element.id.indexOf("idglg") > -1){
+					var params =  _element.id.split("-");
+					if(_element.tagName != "A") _element = $(_element.tagName + "#" + _element.id).find("a")[0];
+				}
+				if(params[1] && params[1] != "") moduleName = params[1];
+				var idglg = "idglg=" + escape(LeadGen.Tracking.appendModuleName(moduleName));
+				if(_element && _element.href){
+					var href_with_idglg = LeadGen.Tracking.addTrackingCode(_element.href,idglg);
+					window.open(href_with_idglg,'window');
+				}
+			}
+			return false;
+		},
+		idglg_params:function(){
+			return [this.bu_name, this.domain, this.taxonomy, this.pageType, this.articleType, this.contentid, this.story_source, this.author_name].join(dlm);
+		},
+		appendModuleName:function(moduleName){
+			return LeadGen.Tracking.idglg_params() + dlm + moduleName;
+		},
+		addTrackingCode:function(href,code){
+			if(href == null || href == "") return;
+			split_url = href.split("?");
+			for(i=0;i<split_url.length;i++){
+				if(internal_links.test(split_url[i])){
+					if(i < split_url.length-1) split_url[i+1] += "&" + code; 
+					else split_url[i] += "?" + code; 
+				}
+			}
+			return split_url.join("?");
+		},
+    	init:function(){
+			LeadGen.Tracking.setDomain();  
+			if(typeof(s.prop1) != "undefined"  && s.prop1 != null  && s.prop1 != "")  this.taxonomy = s.prop1; 
+			if(typeof(s.prop2) != "undefined"  && s.prop2 != null  && s.prop2 != "")  this.pageType = s.prop2; 
+			if(typeof(s.prop15) != "undefined" && s.prop15 != null && s.prop15 != "") this.articleType = s.prop15; 
+			if(typeof(s.prop11) != "undefined" && s.prop11 != null && s.prop11 != "") this.contentid = s.prop11; 
+			if(typeof(s.prop13) != "undefined" && s.prop13 != null && s.prop13 != "") this.story_source = s.prop13; 
+			if(typeof(s.prop14) != "undefined" && s.prop14 != null && s.prop14 != "") this.author_name = s.prop14; 
+			if(typeof(console) != "undefined"){
+				console.log('LeadGen.Tracking.init(): ' + escape(LeadGen.Tracking.idglg_params()));
+			}
+	    }      	
+    }
+}();
+LeadGen.Tracking.init();
+/*************** //LEADGEN TRACKING *******************/
+</script>
+<script type="text/javascript">
+	/*(function() {
+		$("meta").each(function (i) {
+			if(this.name && this.content) {
+				//alert(this.name + " - " + this.content);
+				NW.PageInfo[this.name] = this.content;
+			}
+		});
+	})();*/
+	
+	// Retrieve CCD assets by topic
+	var ccd_topicid = "0";
+	if(typeof(topicid) != "undefined" && topicid != "") ccd_topicid = topicid;
+	if(typeof(subtopicid) != "undefined" && subtopicid != "") ccd_topicid = subtopicid;  
+ 	if (window.document.createElement && (script = document.createElement('script'))) {
+		script.src = "/includes/ccd-cache/assets-"+ccd_topicid+".js";
+    	window.document.body.appendChild(script);
+ 	}
+</script>
+		
+	<div id="nww_container">
+	    <div id="morepopupcontainer" class="nocontent" style="display:none;">
+            <div id="morepopup">        
+                <ul id="morepopup_top" class="nocontent">
+                    <li><a href="/newsletters/subscribe.html?k=NLHP09C" name="&lpos=Nav:More" class="idglg-nav">Newsletter Subscriptions</a></li>
+					<li><a href="/newsletters/" name="&lpos=Nav:More">Newsletter Archives</a></li>
+                    <li><a href="http://resources.networkworld.com/ccd/sites/nww/library/?type=whitepaper" name="&lpos=Nav:More">White Papers</a></li>
+                    <li><a href="http://resources.networkworld.com/ccd/sites/nww/library/?type=webcast" name="&lpos=Nav:More">Webcasts</a></li>
+                    <li><a href="/podcasts/" name="&lpos=Nav:More">Podcasts</a></li>
+                    <li><a href="http://itjobs.networkworld.com" name="&lpos=Nav:More">IT Jobs</a></li>
+                    <li><a href="/community/" name="&lpos=Nav:More">Community</a></li>
+                    <li><a href="/slideshows/" name="&lpos=Nav:More">Slideshows</a></li>
+                    <li><a href="/supp/2009/ndc3/051809-cloud-carlsbad.html" name="&lpos=Nav:More">New Data Center</a></li>
+                </ul>
+            </div>  <!-- End morepopup  -->      
+        </div>  <!-- End morepopupcontainer  -->
+
+		<div id="nww_header" class="nocontent">
+			<div id="lb_container_top">
+				<div class="subscribe"><!--include virtual="/includes/widgets/nwnews-medallion.html"--></div>
+				<div class="leaderboard_left">
+
+
+<!-- begin Top Leaderboard ad --> 
+<div id="leaderboard_left_overlay"></div><center>
+<div id="topleaderboard"><script type="text/javascript">
+  googletag.cmd.push(function() {
+    googletag.display("topleaderboard");
+  });
+</script>
+</div></center>
+<!-- end Top Leaderboard ad -->
+
+
+<!--<div class="advert_leaderboard"></div>--></div>		
+				<div class="clear"></div>
+			</div>
+			<span id="nw_logo"><a href="/index.html">Network World</a></span>
+			<!--  Styles for the Events/Resources Dropdown  -->
+<style type="text/css">
+
+#nww_header ul.top_nav li.dropdown div#resources_dropdown {
+display:none;
+z-index: 5000000; /* changed May 2013 by lfracalossi to bring in line with IAB specs */
+}
+#nww_header ul.top_nav li.dropdown_active div#resources_dropdown {
+background:url("http://www.networkworld.com/includes/styles/r08/img/more-back.gif") repeat-x scroll left top black;
+cursor:pointer !important;
+border:1px solid black;
+position:absolute;
+margin-top:20px;
+display:block;
+width:385px;
+top:0;
+left:0;
+padding:5px 0;
+}
+
+#nww_header ul.top_nav li.dropdown div#resources_dropdown ul {
+	float:left;
+	width:50%;
+}
+
+#nww_header ul.top_nav li ul li {
+background:none repeat scroll 0 0 transparent;
+margin-left:0;
+padding:0;
+width:90%
+}
+#nww_header ul.top_nav li div#resources_dropdown ul li.sectiontitle {
+	font-size: 14px;
+margin-bottom: 5px;
+margin-left: 10px;
+font-family: Arial, sans-serif;
+color: #58a1ff;
+cursor:default;
+}
+#nww_header ul.top_nav li.dropdown_active ul li a {
+background:url("http://www.networkworld.com/includes/styles/r08/img/more-sep.gif") no-repeat scroll left bottom transparent;
+cursor:pointer !important;
+text-decoration:none;
+line-height:11px;
+padding:3px 10px 5px 10px;
+color:#EEEEEE;
+display:block;
+width:100%;
+}
+#nww_header ul.top_nav li.dropdown_active ul li:last-child a {
+background:none;
+}
+#nww_header ul.top_nav li.dropdown_active ul li a:hover {
+background:url("http://www.networkworld.com/includes/styles/r08/img/more-hi.gif") repeat-x scroll left bottom transparent;
+
+}
+</style>
+<!--  Styles for the Events/Resources Dropdown End -->
+
+<!--  JS for the 'More' Dropdown  -->
+<script type="text/javascript">
+    function isMoreHovering() {
+        $("#morepopupcontainer").bind("mouseleave", function() {
+           $("#morepopupcontainer").hide();
+        });
+        $("#morepopupcontainer").show();     
+    }
+</script>  
+<!-- end JS for the 'More' Dropdown  -->
+
+<!--  JS for the Events/Resources Dropdown  -->
+<script type="text/javascript">
+ $(document).ready(function() {
+	$('.dropdown').hover(
+	  function () {
+		$(this).addClass("dropdown_active");
+	  },
+	  function () {
+		$(this).removeClass("dropdown_active");
+	  }
+	);													
+ });
+</script>
+<!--  end JS for the Events/Resources Dropdown  -->
+
+
+<ul class="top_nav">
+				<li id="nav_news" class="first"><a href="/news/" name="&lpos=Nav:Utility">News</a></li>
+				<li id="nav_blogs"><a href="/blogs/">Blogs</a></li>
+                <li><a href="/newsletters/subscribe.html?k=NLHP09C" name="&lpos=Nav:Utility">Newsletters</a></li>
+				
+				<li><a href="/video/" name="&lpos=Nav:Utility">Videos</a></li>
+				<li><a href="http://events.networkworld.com/ehome/index.php?eventid=8349&" name="&lpos=Nav:Utility">Events</a></li> <!-- end events link -->
+                
+                <li class="dropdown">Resources
+                
+                	<div id="resources_dropdown">
+                    	<ul>
+                    		<li class="sectiontitle nocontent">Communities</li>
+                            
+                            <!--  9/15/13 – 11/14/13  -->
+                            <li class="nocontent"><a href="http://resources.networkworld.com/show/200018275/00726240097921NWWG0NSNOT6KS/" name="&amp;lpos=Nav:Resources:Communities">Capitalizing on Desktop Virtualization</a></li>
+                            
+                            <li class="nocontent"><a href="http://resources.networkworld.com/show/200015175/00662910082709NWW59ZZF7GR7D/" name="&amp;lpos=Nav:Resources:Communities">The Challenges of OS Migration</a></li>
+                            <li class="nocontent"><a href="http://www.mobileenterprise360.com/" name="&amp;lpos=Nav:Resources:Communities">Citrix's Mobile Enterprise 360</a></li>
+                            <li class="nocontent"><a href="http://cloudpoweredwork.com/" name="&amp;lpos=Nav:Resources:Communities">Cloud Powered Work</a></li>
+                            <!--  7/15/13 – 12/31/13  -->
+                            <li class="nocontent"><a href="http://resources.networkworld.com/ccd/show/200017578/00701110093703NWWGPW2H7YXR4/" name="&amp;lpos=Nav:Resources:Communities">Dispelling Myths About Cloud-based Archiving KnowledgeVault Exchange</a></li>
+                            <li class="nocontent"><a href="http://resources.networkworld.com/show/200015641/00663930083376NWW7C94MMK7DQ/" name="&amp;lpos=Nav:Resources:Communities">The Essential Guide to Managing Power</a></li>
+                            <li class="nocontent"><a href="http://resources.networkworld.com/show/200015995/00660430085010NWWCTROGEW4OY/" name="&amp;lpos=Nav:Resources:Communities">Get an Integrated Approach to Data Management</a></li>
+                            <!--  9/30/13 – 12/31/13  -->
+                            <li class="nocontent"><a href="http://resources.networkworld.com/show/200019118/00664380103120NWWQVU3QMXDXK/" name="&amp;lpos=Nav:Resources:Communities">HP Software Defined Networking</a></li>
+                            <li class="nocontent"><a href="http://resources.networkworld.com/show/200015327/00619580082264NWW99USJNL93C/" name="&amp;lpos=Nav:Resources:Communities">Oracle Cloud KnowledgeVault</a></li>    
+                            <li class="nocontent"><a href="http://resources.networkworld.com/show/200018159/00776540095430NWWY7DB0FL1LG/" name="&amp;lpos=Nav:Resources:Communities">A Smarter Approach to Data Protection</a></li> 
+                            <li class="nocontent"><a href="http://resources.networkworld.com/show/200015328/00621610082902NWW43ZC715H9K/?email=%25%25emailaddr%25%25" name="&amp;lpos=Nav:Resources:Communities">Your IT Journey &mdash; Your Way</a></li>                                                                    
+                                                                                                    
+						</ul>
+                        <ul>
+                    		<li class="sectiontitle nocontent">Research</li>
+                            <li class="nocontent"><a href="http://solutioncenters.networkworld.com/aruba_byod_2012/" name="&amp;lpos=Nav:Resources:Research">Aruba Networks Bring Your Own Device</a></li>
+                            <li class="nocontent"><a href="http://solutioncenters.networkworld.com/everything_you_need_to_become_blackberry_10_ready/" name="&amp;lpos=Nav:Resources:Research">BlackBerry: Build up your BlackBerry&reg; 10 knowledge</a></li>
+                            <li class="nocontent"><a href="http://solutioncenters.networkworld.com/hp_converged_storage/" name="&amp;lpos=Nav:Resources:Research">HP Converged Storage Solution Center</a></li>
+                            <li class="nocontent"><a href="http://solutioncenters.cio.com/ibm_smartcloud/" name="&amp;lpos=Nav:Resources:Research">IBM SmartCloud Solutions</a></li>
+                            
+                            <li class="nocontent"><a href="http://solutioncenters.networkworld.com/application_performance_management_challenge/" name="&amp;lpos=Nav:Resources:Research">Network World Application Performance Management Challenge 2013</a></li>
+                            <li class="nocontent"><a href="http://solutioncenters.networkworld.com/the_2013_mobile_application_management_challenge/" name="&amp;lpos=Nav:Resources:Research">The 2013 Mobile Application Management Challenge</a></li>
+                            <li class="nocontent"><a href="http://solutioncenters.networkworld.com/ngfw_challenge_2013/" name="&amp;lpos=Nav:Resources:Research">Network World The Next Generation Firewall Challenge</a></li>
+                            <li class="nocontent"><a href="http://solutioncenters.networkworld.com/data_center_challenge_2012/" name="&amp;lpos=Nav:Resources:Research">Network World Data Center Challenge 2012</a></li>
+                            <li class="nocontent"><a href="http://solutioncenters.networkworld.com/network_world_challenge_series_2013_wi-fi_challenge/" name="&amp;lpos=Nav:Resources:Research">Network World 2013 WI-FI Challenge</a></li>                            
+                            <li class="nocontent"><a href="http://solutioncenters.networkworld.com/steelhead_solution_center_nww/" name="&amp;lpos=Nav:Resources:Research">Riverbed Accelerate Business Performance Solution Center</a></li>
+                            <li class="nocontent"><a href="http://solutioncenters.networkworld.com/riverbed_cascade_q113_nww" name="&amp;lpos=Nav:Resources:Research">Riverbed Cascade® Solution Center</a></li>
+                            <li class="nocontent"><a href="http://solutioncenters.networkworld.com/internet_security_resource_center/" name="&amp;lpos=Nav:Resources:Research">Webroot - Internet Security Resource Center</a></li>        
+                            <li class="nocontent"><a href="http://solutioncenters.networkworld.com/nww_sc_home/" name="&amp;lpos=Nav:Resources:Research"><strong><em>View all Solution Centers</em></strong></a></li>        
+                                                 
+                                                                                                    
+						</ul>
+                    </div><!-- /resources_dropdown -->
+                
+                </li><!-- end Resources link -->
+                
+                <li class="insider-container"><a href="/insider/" class="insider_link" name="&lpos=Nav:Utility"><span class="insider">Insider</span></a></li>                
+                
+				<li><a href="#" onmouseover='javascript:isMoreHovering();'>More</a></li>
+                <li style="padding-left:10px !important; padding-right:0 !important;"><!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="small" data-annotation="none" data-rel="publisher"></div>
+
+</li>
+                <li class="no-divider"><a class="twitter-icon" title="Networkworld Twitter" href="http://twitter.com/#!/networkworld" name="&lpos=Nav:Utility" rel="nofollow" target="_blank"><span class="topnav twitterTop">Twitter</span></a></li>
+                                           
+                <li class="no-divider"><a title="Networkworld Facebook" class="fb-icon" href="http://www.facebook.com/#!/pages/Network-World/40168412104" name="&lpos=Nav:Utility" rel="nofollow" target="_blank"><span class="topnav facebookTop">Facebook</span></a></li>                
+                
+				<li class="no-divider"><a class="li-icon" title="Networkworld Linked In" href="http://www.linkedin.com/company/network-world" name="&lpos=Nav:Utility" rel="nofollow" target="_blank"><span class="topnav linkedinTop">Linked In</span></a></li>
+
+</ul> <!-- End Top Nav TC 2010 -->
+
+			<div id="nww_search">
+	<form action="/search/index.html" id="cse-search-box">
+	    <input type="hidden" name="cx" value="014839440456418836424:mzedprvnwmy" />
+	    <input type="hidden" name="cof" value="FORID:9" />
+	    <input type="hidden" name="ie" value="UTF-8" />
+		
+
+	    <div class="input_text" style="position: relative;"><input id="searchqt" type="text" name="q" class="textbox"></input></div>
+	    <input type="image" src="/includes/styles/r08/img/btn-search.gif" alt="search" class="search" />
+	</form>
+	<gcse:search></gcse:search>
+</div>
+
+			<!-- RX : nwPgGlobalNav -->
+<div class="menu">
+	<div class="top-box">
+		<ul id="menu">
+			<li id="security"><a name="&lpos=Nav:Main" href="/topics/security.html" class="security"><span>Security</span></a></li>
+			<li id="lanwan"><a name="&lpos=Nav:Main" href="/topics/lan-wan.html" class="lanwan"><span>LAN & WAN</span></a></li>
+			<li id="uc"><a name="&lpos=Nav:Main" href="/topics/unified-communications.html" class="uc"><span>Unified Communications</span></a></li>
+			<li id="cloudcomputing"><a name="&lpos=Nav:Main" href="/topics/cloud-computing.html" class="cloudcomputing"><span>Cloud</span></a></li>
+			<li id="infrastructuremgmt"><a name="&lpos=Nav:Main" href="/topics/infrastructure-management.html" class="infrastructuremgmt"><span>Infrastructure Management</span></a></li>
+			<li id="wirelessmobile"><a name="&lpos=Nav:Main" href="/topics/wireless.html" class="wirelessmobile"><span>Wireless</span></a></li>
+			<li id="software"><a name="&lpos=Nav:Main" href="/topics/software.html" class="software"><span>Software</span></a></li>
+			<li id="datacenter"><a name="&lpos=Nav:Main" href="/topics/data-center.html" class="datacenter"><span>Data Center</span></a></li>
+			<li id="smb"><a name="&lpos=Nav:Main" href="/topics/smb-networking.html" class="smb"><span>SMB Networking</span></a></li>
+			<li id="careers"><a name="&lpos=Nav:Main" href="/topics/it-careers/" class="careers"><span>IT Careers</span></a></li>
+			<li id="gearhead"><a name="&lpos=Nav:Main" href="/community/blog/96" class="gearhead"><span>Gearhead</span></a></li>
+			<li id="techdebate"><a name="&lpos=Nav:Main" href="/community/techdebate" class="techdebate"><span>Tech Debate</span></a></li>
+			<li id="tests"><a name="&lpos=Nav:Main" href="/reviews/" class="tests"><span>Tests</span></a></li>
+			<li class="communityspace dropdown">
+				<span class="subnets">Community</span>
+				<ul>
+					<li><a name="&lpos=Nav:Community" href="/subnets/cisco/">Cisco Subnet</a></li>
+					<li><a name="&lpos=Nav:Community" href="/subnets/microsoft/">Microsoft Subnet</a></li>
+					<li><a name="&lpos=Nav:Community" href="/subnets/opensource/">Open Source Subnet</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="submenu">
+		<ul id="security_subtopics" style="display:none;">
+			<li id="sub14"><a name="&lpos=Nav:Subtopic" href="/topics/anti-malware.html">Anti-malware</a></li>
+			<li id="sub53"><a name="&lpos=Nav:Subtopic" href="/topics/compliance.html">Compliance</a></li>
+			<li id="sub155"><a name="&lpos=Nav:Subtopic" href="/topics/cybercrime.html">Cybercrime</a></li>
+			<li id="sub106"><a name="&lpos=Nav:Subtopic" href="/topics/firewall-utm.html">Firewall & UTM</a></li>
+			<li id="sub107"><a name="&lpos=Nav:Subtopic" href="/topics/ids-ips.html">IDS/IPS</a></li>
+			<li id="sub85"><a name="&lpos=Nav:Subtopic" href="/topics/endpoint-security.html">Endpoint Security</a></li>
+			<li id="sub88"><a name="&lpos=Nav:Subtopic" href="/topics/siem.html">SIEM</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=whitepaper&tid=1">White Papers</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=webcast&tid=1">Webcasts</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="/reviews/">Tests</a></li>
+       </ul>
+		<ul id="lanwan_subtopics" style="display:none;">
+			<li id="sub164"><a name="&lpos=Nav:Subtopic" href="/topics/sdn.html">SDN</a></li>
+			<li id="sub19"><a name="&lpos=Nav:Subtopic" href="/topics/ethernet-switch.html">Ethernet Switch</a></li>
+			<li id="sub18"><a name="&lpos=Nav:Subtopic" href="/topics/router.html">Router</a></li>
+			<li id="sub89"><a name="&lpos=Nav:Subtopic" href="/topics/ipv6.html">IPv6</a></li>
+			<li id="sub64"><a name="&lpos=Nav:Subtopic" href="/topics/service-providers.html">Service Providers</a></li>
+			<li id="sub57"><a name="&lpos=Nav:Subtopic" href="/topics/metro-ethernet.html">Metro Ethernet</a></li>
+			<li id="sub56"><a name="&lpos=Nav:Subtopic" href="/topics/mpls.html">MPLS</a></li>
+			<li id="sub105"><a name="&lpos=Nav:Subtopic" href="/topics/vpn.html">VPN</a></li>
+			<li id="sub86"><a name="&lpos=Nav:Subtopic" href="/topics/wan-optimization.html">WAN Optimization</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=whitepaper&tid=71">White Papers</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=webcast&tid=71">Webcasts</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="/reviews/">Tests</a></li>
+       </ul>
+		<ul id="uc_subtopics" style="display:none;">
+			<li id="sub21"><a name="&lpos=Nav:Subtopic" href="/topics/voip.html">VoIP</a></li>
+			<li id="sub44"><a name="&lpos=Nav:Subtopic" href="/topics/email-services.html">E-mail services</a></li>
+			<li id="sub161"><a name="&lpos=Nav:Subtopic" href="/topics/videoconferencing.html">Videoconferencing</a></li>
+			<li id="sub43"><a name="&lpos=Nav:Subtopic" href="/topics/collaboration-web20.html">Collaboration / Web 2.0</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=whitepaper&tid=3">White Papers</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=webcast&tid=3">Webcasts</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="/reviews/">Tests</a></li>
+       </ul>
+		<ul id="cloudcomputing_subtopics" style="display:none;">
+			<li id="sub78"><a name="&lpos=Nav:Subtopic" href="/topics/saas.html">SaaS</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=whitepaper&tid=42">White Papers</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=webcast&tid=42">Webcasts</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="/reviews/">Tests</a></li>
+       </ul>
+		<ul id="infrastructuremgmt_subtopics" style="display:none;">
+			<li id="sub90"><a name="&lpos=Nav:Subtopic" href="/topics/network-management.html">Network Management</a></li>
+			<li id="sub27"><a name="&lpos=Nav:Subtopic" href="/topics/system-management.html">System Management</a></li>
+			<li id="sub103"><a name="&lpos=Nav:Subtopic" href="/topics/identity-management.html">Identity Management</a></li>
+			<li id="sub28"><a name="&lpos=Nav:Subtopic" href="/topics/patch-management.html">Patch Management</a></li>
+			<li id="sub26"><a name="&lpos=Nav:Subtopic" href="/topics/application-management.html">Application Management</a></li>
+			<li id="sub104"><a name="&lpos=Nav:Subtopic" href="/topics/asset-management.html">Asset Management</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=whitepaper&tid=4">White Papers</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=webcast&tid=4">Webcasts</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="/reviews/">Tests</a></li>
+       </ul>
+		<ul id="wirelessmobile_subtopics" style="display:none;">
+			<li id="sub93"><a name="&lpos=Nav:Subtopic" href="/topics/3g-4g.html">3G & 4G</a></li>
+			<li id="sub33"><a name="&lpos=Nav:Subtopic" href="/topics/smartphones.html">Smartphones</a></li>
+			<li id="sub158"><a name="&lpos=Nav:Subtopic" href="/topics/mobile-apps.html">Mobile Apps</a></li>
+			<li id="sub29"><a name="&lpos=Nav:Subtopic" href="/topics/wi-fi.html">Wi-Fi</a></li>
+			<li id="sub30"><a name="&lpos=Nav:Subtopic" href="/topics/wimax-lte.html">WiMAX & LTE</a></li>
+			<li id="sub109"><a name="&lpos=Nav:Subtopic" href="/topics/wireless-management.html">Wireless Management</a></li>
+			<li id="sub32"><a name="&lpos=Nav:Subtopic" href="/topics/wi-fi-security.html">Wi-Fi Security</a></li>
+			<li id="sub162"><a name="&lpos=Nav:Subtopic" href="/topics/mdm.html">MDM</a></li>
+			<li id="sub163"><a name="&lpos=Nav:Subtopic" href="/topics/byod.html">BYOD</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=whitepaper&tid=5">White Papers</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=webcast&tid=5">Webcasts</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="/reviews/">Tests</a></li>
+       </ul>
+		<ul id="software_subtopics" style="display:none;">
+			<li id="sub34"><a name="&lpos=Nav:Subtopic" href="/topics/windows.html">Windows</a></li>
+			<li id="sub36"><a name="&lpos=Nav:Subtopic" href="/topics/linux.html">Linux</a></li>
+			<li id="sub8"><a name="&lpos=Nav:Subtopic" href="/topics/applications.html">Applications</a></li>
+			<li id="sub159"><a name="&lpos=Nav:Subtopic" href="/topics/crm.html">CRM</a></li>
+			<li id="sub160"><a name="&lpos=Nav:Subtopic" href="/topics/erp.html">ERP</a></li>
+			<li id="sub154"><a name="&lpos=Nav:Subtopic" href="/topics/business-intelligence.html">Business Intelligence</a></li>
+			<li id="sub165"><a name="&lpos=Nav:Subtopic" href="/topics/big-data.html">Big Data</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=whitepaper&tid=73">White Papers</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=webcast&tid=73">Webcasts</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="/reviews/">Tests</a></li>
+       </ul>
+		<ul id="datacenter_subtopics" style="display:none;">
+			<li id="sub52"><a name="&lpos=Nav:Subtopic" href="/topics/virtualization.html">Virtualization</a></li>
+			<li id="sub156"><a name="&lpos=Nav:Subtopic" href="/topics/disaster-recovery.html">Disaster Recovery</a></li>
+			<li id="sub40"><a name="&lpos=Nav:Subtopic" href="/topics/server.html">Server</a></li>
+			<li id="sub41"><a name="&lpos=Nav:Subtopic" href="/topics/pc.html">PC</a></li>
+			<li id="sub50"><a name="&lpos=Nav:Subtopic" href="/topics/network-storage.html">Network Storage</a></li>
+			<li id="sub51"><a name="&lpos=Nav:Subtopic" href="/topics/storage-management.html">Storage Management</a></li>
+			<li id="sub87"><a name="&lpos=Nav:Subtopic" href="/topics/green-it.html">Green IT</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=whitepaper&tid=72">White Papers</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=webcast&tid=72">Webcasts</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="/reviews/">Tests</a></li>
+       </ul>
+		<ul id="smb_subtopics" style="display:none;">
+			<li id="sub59"><a name="&lpos=Nav:Subtopic" href="/topics/broadband.html">Broadband</a></li>
+			<li id="sub67"><a name="&lpos=Nav:Subtopic" href="/topics/collaboration.html">Collaboration</a></li>
+			<li id="sub63"><a name="&lpos=Nav:Subtopic" href="/topics/equipment.html">Equipment</a></li>
+			<li id="sub65"><a name="&lpos=Nav:Subtopic" href="/topics/mobile.html">Mobile</a></li>
+			<li id="sub66"><a name="&lpos=Nav:Subtopic" href="/topics/networks.html">Networks </a></li>
+			<li id="sub61"><a name="&lpos=Nav:Subtopic" href="/topics/smb-security.html">Security</a></li>
+			<li id="sub62"><a name="&lpos=Nav:Subtopic" href="/topics/smb-storage.html">Storage</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=whitepaper&tid=11">White Papers</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=webcast&tid=11">Webcasts</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="/reviews/">Tests</a></li>
+       </ul>
+		<ul id="careers_subtopics" style="display:none;">
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=whitepaper&tid=148">White Papers</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=webcast&tid=148">Webcasts</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="/reviews/">Tests</a></li>
+       </ul>
+		<ul id="gearhead_subtopics" style="display:none;">
+			<li id="sub111"><a name="&lpos=Nav:Subtopic" href="/community/toolshed/cooltools">Cool Tools</a></li>
+			<li id="sub97"><a name="&lpos=Nav:Subtopic" href="/community/itaa">IT Asked & Answered</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=whitepaper&tid=96">White Papers</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=webcast&tid=96">Webcasts</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="/reviews/">Tests</a></li>
+       </ul>
+		<ul id="techdebate_subtopics" style="display:none;">
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=whitepaper&tid=157">White Papers</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=webcast&tid=157">Webcasts</a></li>
+			<li><a name="&lpos=Nav:Subtopic" href="/reviews/">Tests</a></li>
+       </ul>
+	</div>
+	<div class="right-menu" style="display:none;">
+		<div class="left-part">
+			<ul>
+                <li><a name="&lpos=Nav:Main" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=whitepaper">White Papers</a></li>
+                <li><a name="&lpos=Nav:Main" href="http://resources.networkworld.com/ccd/sites/nww/library/?type=webcast">Webcasts</a></li>
+                <li><a name="&lpos=Nav:Main" href="http://solutioncenters.networkworld.com/nww_sc_home/">Solution Centers</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+		</div>
+		
+        		<div class="flash-clear"></div>
+<div id="ticker">
+
+
+<!-- begin Ticker ad --> 
+<div class="wideticker" align="center">
+<div id="ticker"><script type="text/javascript">
+  googletag.cmd.push(function() {
+    googletag.display("ticker");
+  });
+</script>
+</div></div>
+<!-- end Ticker ad -->
+
+
+</div>
+
+
+		<div id="nww_content">
+			
+
+
+
+				<div id="leftcol">
+	<!--\include virtual="/includes/community/sharetoolbar_hidden.html"-->
+	<!--\include virtual="/includes/community/sharetoolbar_hover_ad.html"-->
+		
+	
+
+
+
+<div class="insider_alert" id="insider_alert_out" style="display:none;">
+	<img class="insider_icon" src="/images/insider/icon_insider_46x15.gif">You are previewing premium content. <a href="http://reg.idgenterprise.com/insider.html?url=http://www.networkworld.com/news/2013/092313-iphone-biometrics-hacked-274082.html">Become an Insider</a> to read the full article.
+</div>
+
+<div class="insider_alert" id="insider_alert_in" style="display:none;">
+	  		<img src="/images/insider/icon_insider_46x15.gif" class="insider_icon">You are viewing Insider content. <a href="/insider/">Browse other Insider articles</a>
+</div>
+
+<script type="text/javascript">
+	if(NW.PageInfo.freemium == 'y' && NW.PageInfo.nsdr_auth == 'no') $('div#insider_alert_out').show();
+	else if(NW.PageInfo.freemium == 'y' && NW.PageInfo.nsdr_auth == 'yes') $('div#insider_alert_in').show();
+</script>
+	<!-- Header Override -->
+				<div id="article_header">			
+			<!-- Template Type Branch -->
+									<div id="article_title">
+				<!--HEADLINE GOES HERE-->
+<a class="eyebrow nocontent" href="/news/">News</a>				<!--startindex-->
+				<h1>																				iPhone TouchID fingerprint biometrics broken by German hacker club
+</h1>
+			
+			</div>
+        	        		<div id="article_subtitle"><h2>Chaos Computer Club shows online video demonstrating use of a gummy finger hack of an Apple iPhone
+</h2></div>
+        	        	<div id="article_author">
+																																 By 
+      <a rel="author" href="/Home/emessmer.html">Ellen Messmer</a>, Network World <br/> September 23, 2013 11:03 AM ET 	        	</div>
+						<!-- Template Type Branch -->
+						        	<div id="fb-root"></div>
+   <script type="text/javascript">
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId  : '147094931979429', //NWW appId
+          status : true, // check login status
+          cookie : true, // enable cookies to allow the server to access the session
+          xfbml  : true  // parse XFBML
+        });
+        
+        FB.Event.subscribe('edge.create', function(response) {
+  			if(typeof(OPG.Eloqua) != 'undefined') OPG.Eloqua.refresh_iframe("social");
+		});
+
+        
+      };
+    
+      (function() {
+        var e = document.createElement('script');
+        e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+        e.async = true;
+        document.getElementById('fb-root').appendChild(e);
+      }()); 
+    </script> 
+    <script type="text/javascript" src="http://wd.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">
+	stLight.options({
+		publisher: '8fc0bc5f-13f9-4ea6-9dee-97f073f43459',
+		onhover: false,
+		embeds: true,
+		tracking:'google'
+	});
+</script>
+
+    <script type="text/javascript">NW.PageInfo.ShareToolbar = true;</script>
+    <div id="sharetop" class="storytools nocontent">
+        <!-- NEW Facebook Like -->
+        
+        	<!--  <div class="fb_recommend">  -->
+        
+         <!--   <script type = "text/javascript">
+                //<![CDATA[
+                document.writeln('<fb:like action="like" href="' + document.location + '" show_faces="false" width="80" font="arial" layout="button_count"></fb:like>');
+                //]]>        
+            </script>  -->
+            
+
+            <!-- Google+ Script -->
+           <!--  <g:plusone size="medium"></g:plusone>  -->
+            
+            
+      <!--  </div>  -->
+  
+   
+     
+           
+        	<ul id="sharetop_nav" class="storytools_nav">
+            	<li class="storytools_nav_comments"><a href="#disqus_thread" class="disqus-comments" title="Jump to the comments of this posting." data-disqus-identifier="http://www.networkworld.com/274082/"></a></li>
+            	<li id="sharetop_print" class="community_nav_print">Print</li>
+        	</ul>
+            
+            
+            <div class="share_tools">
+            
+				<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+            		<span class="linkedIn"><script type="IN/Share" data-counter="right"></script></span>
+            
+            	<script type = "text/javascript">
+                    document.writeln('<span class="st_twitter_custom" st_url="' + document.location + '" st_via="networkworld" st_username="networkworld"></span>');
+				
+                    document.writeln('<div class="g-plusone" data-size="medium" data-annotation="none"></div>');
+                                       
+                    document.writeln('<span class="st_reddit_custom" st_url="' + document.location + '"></span>');
+                                            
+                    document.writeln('<fb:like href="' + document.location + '" send="false" layout="button_count" width="55" show_faces="false"></fb:like>');
+                                
+                    document.writeln('<span class="st_email_custom" st_url="' + document.location + '"></span>');
+				</script>
+            
+        
+        <script type = "text/javascript">
+         document.writeln('<span class="st_sharethis_custom" st_url="' + document.location + '" st_via="networkworld" st_username="networkworld"></span>');
+		 </script>
+         </div><!--end share_tools-->
+    </div>
+    
+
+		</div>
+    	<div id="article_copy">
+		<div id="iconimage"></div>
+		<!-- CONTENT GOES HERE-->
+        <div style="display:none;" id="insider_promo_body"><p>The German hacking group Chaos Computer Club says its biometrics hacking team has discovered how to bypass the biometric security of Apple's TouchID fingerprint authentication through a simple method based on a rubbery duplicate of a fingerprint the group devised.</p>
+<p>The Chaos Computer Club demonstrated its method of tricking the Apple Touch ID sensor in a video it <a href="http://www.ccc.de/en/updates/2013/ccc-breaks-apple-touchid">posted online</a> showing how the Apple iPhone was easily fooled by a gummy copy of an individual’s fingerprint previously used to access the smartphone. The Chaos Computer Club said it made this copy of a registered fingerprint through a simple process involving creating a gummy image of the fingerprint out of latex and glue.</p>
+<p>The gummy fingerprint trick is one that is well-known in biometrics and has been used before to raise questions about how uncrackable some fingerprint-based biometrics might be.</p>     		<link href="insider3-snippets.css" rel="stylesheet" type="text/css" /><a id="insider_action" href="http://reg.idgenterprise.com/insider.html?url=http://www.networkworld.com/news/2013/092313-iphone-biometrics-hacked-274082.html"><h4>To continue reading, register here to become an Insider</h4><h5>It's FREE to join</h5></a><div id="insider_extras"><p id="insider_learnmore"><img class="insider_icon" src="http://computerworld.com.edgesuite.net/insider/insider3-0/icon_insider_46x15.gif" /> <a href="/insider/">Learn More</a></p><p id="insider_signin">Already an Insider? <a href="http://reg.idgenterprise.com/insider.html?url=http://www.networkworld.com/news/2013/092313-iphone-biometrics-hacked-274082.html">Sign in</a></p></div>
+</div>
+		<div id="insider_body">
+																						<p class="first"><span class="article-source">Network World - </span>The German hacking group Chaos Computer Club says its biometrics hacking team has discovered how to bypass the biometric security
+   of Apple's TouchID fingerprint authentication through a simple method based on a rubbery duplicate of a fingerprint the group
+   devised.
+</p>
+<p>The Chaos Computer Club demonstrated its method of tricking the Apple Touch ID sensor in a video it <a href="http://www.ccc.de/en/updates/2013/ccc-breaks-apple-touchid">posted online</a> showing how the Apple iPhone was easily fooled by a gummy copy of an individual&#8217;s fingerprint previously used to access the
+   smartphone. The Chaos Computer Club said it made this copy of a registered fingerprint through a simple process involving
+   creating a gummy image of the fingerprint out of latex and glue.
+</p>
+
+<p>The gummy fingerprint trick is one that is well-known in biometrics and has been used before to raise questions about how
+   uncrackable some fingerprint-based biometrics might be.
+</p>
+<p><b>[MORE:</b> <a href="http://www.networkworld.com/slideshow/120776/10-ways-to-beat-fingerprint-biometrics.html">10 ways to beat fingerprint biometrics</a><b>]</b></p>
+<p><b>[NEWS:</b> <a href="http://www.networkworld.com/community/blog/ios7-must-have-upgrade-why?t51hb&amp;hpg1=mp">The iOS 7: A must-have upgrade, why?</a><b>]</b></p>
+<p>&#8220;We hope this finally puts to rest the illusions people have about fingerprint biometrics. It is plain stupid to use something
+   that you can&#8217;t change and that you leave everywhere every day as a security token,&#8221; said Frank Rieger, spokesperson for the
+   Chaos Computer Club in a statement over the weekend. &#8220;The public should no longer be fooled by the biometrics industry with
+   false security claims. Biometrics is fundamentally a technology designed for oppression and control, not for securing everyday
+   device access.&#8221;
+</p>
+<p>The club adds that it believes that fingerprint biometrics in passports is a poor practice in terms of security gains.</p>
+<p>The Chaos Computer Club went on to say that iPhone users should avoid protecting sensitive data with fingerprint biometrics
+   &#8220;because it can be easily faked, as demonstrated by the CCC team. Also, you can easily be forced to unlock your phone against
+   your will when being arrested. Forcing you to give up your (hopefully long) passcode is much harder under most jurisdictions
+   that just casually swiping your phone over your handcuffed hands.&#8221;
+</p>
+<p><i>Ellen Messmer is senior editor at Network World, an IDG publication and website, where she covers news and technology trends
+      related to information security. Twitter: MessmerE. E-mail: <a href="mailto:emessmer@nww.com">emessmer@nww.com</a></i></p>
+<p><a href="http://www.networkworld.com/topics/security.html" target="blank">Read more about security</a> in Network World's Security section.
+</p>
+								</div>
+		<!-- CONTENT ENDS HERE -->
+		<!--stopindex-->
+	</div>
+    <div id="tagcloud">
+	</div> 
+	<div id="sharebot" class="storytools nocontent" style="margin-bottom:18px;">
+
+	<div id="toolbar_ad" style="float:right;">
+          	<!-- begin NWW Ad --> 
+<script language="JavaScript" type="text/javascript"> 
+//<![CDATA[ 
+document.write('<script language="JavaScript" src="'+ OPG.Doubleclick.processAdUrl('http://ad.doubleclick.net/adj/idge.nww.security/endpointsecurity;pos=sidecar;sz=60x55,130x55;tile=8;author=ellen_messmer;cid=274082;kw=Apple,iPhone,ChaosComputerClub;AppleTouchID;biometrics;') +'" type="text/javascript"><\/scr'+'ipt>'); 
+
+ //]]>
+</script> 
+<noscript><a href="http://ad.doubleclick.net/jump/idge.nww.security/endpointsecurity;pos=sidecar;sz=60x55,130x55;tile=8;author=ellen_messmer;cid=274082;kw=Apple,iPhone,ChaosComputerClub;AppleTouchID;biometrics;ord=6526253135?" target="_blank"><img src="http://ad.doubleclick.net/ad/idge.nww.security/endpointsecurity;pos=sidecar;sz=60x55,130x55;tile=8;author=ellen_messmer;cid=274082;kw=Apple,iPhone,ChaosComputerClub;AppleTouchID;biometrics;ord=6526253135?" width="60" height="55" border="0" alt=""></a></noscript>
+<!-- end NWW Ad -->
+
+          </div>
+
+   <ul id="sharebot_nav" class="storytools_nav storytools_btm_nav">
+        <li class="storytools_nav_comments"><a href="#disqus_thread" class="disqus-comments" title="Jump to the comments of this posting." data-disqus-identifier="http://www.networkworld.com/274082/"></a></li>
+        <li id="sharebot_print" class="storytools_nav_print">Print</li>
+    </ul>
+    
+    <div class="share_tools">
+    
+            		<span class="linkedIn"><script type="IN/Share" data-counter="right"></script></span>
+    
+          <script type = "text/javascript">
+          		document.writeln('<span class="st_twitter_custom" st_url="' + document.location + '" st_via="networkworld" st_username="networkworld"></span>');
+
+                document.writeln('<div class="g-plusone" data-size="medium" data-annotation="none"></div>');
+                                                        
+                document.writeln('<span class="st_reddit_custom" st_url="' + document.location + '"></span>');
+                                            
+                document.writeln('<fb:like href="' + document.location + '" send="false" layout="button_count" width="55" show_faces="false"></fb:like>');
+                                
+                document.writeln('<span class="st_email_custom" st_url="' + document.location + '"></span>');
+		  </script>
+                <!-- Begin Tech Briefcase bookmarklet button 
+            <div class="tech_briefcase"><a href="javascript:(function(e,a,g,h,f,c,b,d){if(!(f=e.jQuery)||g>f.fn.jquery||h(f)){c=a.createElement('script');c.type='text/javascript';c.src='http://ajax.googleapis.com/ajax/libs/jquery/'+g+'/jquery.min.js';c.onload=c.onreadystatechange=function(){if(!b&&(!(d=this.readyState)||d=='loaded'||d=='complete')){h((f=e.jQuery).noConflict(1),b=1);f(c).remove()}};a.documentElement.childNodes[0].appendChild(c)}})(window,document,'1.3.2',function($,L){var%20content_script%20=%20$('<script></script>').attr('src','http://dev1.technologybriefcase.com/js/bookmarklet_content.js').attr('type','text/javascript').attr('language','Javascript');$('head').append(content_script);});" name="&lpos=Bookmarklet button" class="tb_btn"><span class="tb_btn_text"> . </span></a></div>  -->
+ 
+          <script type = "text/javascript">
+         document.writeln('<span class="st_sharethis_custom" st_url="' + document.location + '" st_via="networkworld" st_username="networkworld"></span>');
+		 </script>
+         
+         
+        
+             </div>
+          
+          <div class="clear"></div>
+</div>
+
+	
+
+
+<!-- begin Newsletter Intercept 420x30 ad --> 
+<div class="intercept">
+<div id="intercept"><script type="text/javascript">
+  googletag.cmd.push(function() {
+    googletag.display("intercept");
+  });
+</script>
+</div></div>
+<!-- end Newsletter Intercept 420x30 ad -->
+
+
+
+	<div id="article-most-read" class="nocontent">
+<div class="most_hdr">Most Read</div>
+<ul id="most-read-articles">
+	<li><h4><a name="&lpos=Most Read"  href="http://www.networkworld.com/news/2013/093013-hp-sdn-274313.html?t51hb">HP opens up on SDNs</a></h4></li>
+	<li><h4><a name="&lpos=Most Read"  href="http://www.networkworld.com/news/2013/093013-brute-force-malware-targets-email-and-274333.html?t51hb">Brute force malware targets email and FTP servers</a></h4></li>
+	<li><h4><a name="&lpos=Most Read"  href="http://www.networkworld.com/news/2013/093013-nsa-nacchio-274344.html?t51hb">Former Quest CEO out of prison, blames NSA for troubles</a></h4></li>
+	<li><h4><a name="&lpos=Most Read"  href="http://www.networkworld.com/news/2013/093013-cisco-intel-geolocation-274337.html?t51hb">Cisco, Intel push &#39;trusted geolocation in the cloud&#39;</a></h4></li>
+	<li><h4><a name="&lpos=Most Read"  href="http://www.networkworld.com/news/2013/093013-blackberry-responds-to-gartner39s-call-274324.html?t51hb">BlackBerry responds to Gartner&#39;s call for clients to ditch BB products</a></h4></li>
+</ul>
+</div>
+
+	<!-- Hitbox Campaign code to track impressions for Related Content box -->
+<!--<img src="http://ai.hitbox.com/ai?hb=DM550223OGAN&ai=ILC-sl" width="1" height="1" border="0">-->
+
+<img src=http://ai.hitbox.com/ai?hb=DM550223OGAN&ai=ILC-rcb width=1 height=1 border=0>
+<script language="JavaScript">
+	//Generates + Writes related links box
+	//NW.RelatedLinks.init("<ul>","<li>","related_content dl dd", rxprimarytopic, NW.PageInfo.doc_uri);
+	//var $html = "<div class=\"rel_nl_signup\"><a href=\"http://www.networkworld.com/nl/nl_single_reg/daily-news.html?k=NLDNRC\" class=\"email\">Get Daily News by Email</a></div>";
+	//$("div#related_content").append($html);
+	$("div#related_content").hide();
+	
+	OPG = window.OPG || {};
+	OPG.Insider = OPG.Insider || {};
+	OPG.Insider = function() {
+		return {
+			init: function() {
+				
+			}
+		};
+	}();
+
+	
+	//NSDR show body logic
+	if(NW.PageInfo.freemium == 'y' && NW.PageInfo.nsdr_auth == 'no') $('div#insider_body,div#insider_promo_body').toggle();
+	
+	//if(NW.PageInfo.freemium == 'y' && NW.PageInfo.nsdr_auth == 'no') $('div#insider_promo_body').show();
+	//else $('div#insider_body').show();
+	
+</script>
+
+<!-- From CIO.com promo -->
+<div id="cio-promo" class="nocontent">
+
+	<div class="header">
+        <h4 style="padding-left:4px;"><a href="http://www.cio.com/?source=nwwartcio_hdr">From CIO.com</a></h4>
+    	<h4><a href="http://www.csoonline.com/?source=nwwartcso_hdr">From CSO Online</a></h4>
+    </div><!-- /.header active -->
+    <div class="clear"></div>
+    <div class="content">
+        <ul style="width:45%;padding-right:6px;"><li><a href="http://www.cio.com/slideshow/detail/121028/iOS-7--Must-Know-Tips-and-Tricks-?source=nwwartcio" name="&amp;lpos=Article:CIO" target="_blank">iOS 7 Must Know Tips and Tricks</a></li><li><a href="http://www.cio.com/article/740194/Apple_iPhone_5S_vs._Nokia_Lumia_1020_Which_Camera_is_Better_?source=nwwartcio" name="&amp;lpos=Article:CIO" target="_blank">Apple iPhone 5S vs. Nokia Lumia 1020: Which Camera is Better?</a></li><li><a href="http://www.cio.com/article/740426/How_Tech_Companies_Can_Succeed_by_Going_Private?source=nwwartcio" name="&amp;lpos=Article:CIO" target="_blank">How Tech Companies Can Succeed by Going Private</a></li><li><a href="http://www.cio.com/article/740099/CIOs_Share_How_They_Made_the_Leap_to_CEO?source=nwwartcio" name="&amp;lpos=Article:CIO" target="_blank">CIOs Share How They Made the Leap to CEO</a></li></ul>
+        
+        <ul style="width:45%;">
+        
+        <li><a href="http://www.csoonline.com/slideshow/detail/121253/7-service-requests-that-make-IT-support-folks-cry?source=nwwartcso" name="&lpos=Article:From CSO Online" target="_blank">Slideshow: 7 ways users drive IT support crazy</a></li>
+        <li><a href="http://www.csoonline.com/slideshow/detail/118916/How-to-spot-a-phishing-email?source=csoartcso?source=nwwartcso" name="&lpos=Article:From CSO Online" target="_blank">How to spot a phishing email</a></li>
+        <li><a href="http://www.csoonline.com/article/514063/social-engineering-the-basics?source=nwwartcso" name="&lpos=Article:From CSO Online" target="_blank">Social engineering: The basics</a></li>
+        <li><a href="http://www.csoonline.com/slideshow/detail/66493?source=nwwartcso" name="&lpos=Article:From CSO Online" target="_blank">20 security and privacy apps for Android and iPhone</a></li>       
+
+		</ul>
+       <div class="clear"></div> 
+    </div><!-- /.content -->
+    <div class="viewmoreborder">
+        <div style="padding-right: 6px;" class="readmorelinks">
+        	<a class="viewmore" href="http://www.cio.com/?source=nwwartcio_cta">Read more at CIO.com</a>
+        </div>
+        <div class="readmorelinks">
+        	<a class="viewmore" href="http://www.csoonline.com/?source=nwwartcso_cta">Read the latest from CSO Online</a>
+   		</div>
+    </div>
+
+           
+</div><!-- /#cio-promo -->
+<div class="clear"></div>
+
+<!-- Tablesorting CSS/JS -->
+		<style type="text/css">
+            @import url("/includes/styles/r08/itables.css");
+        </style>
+        <script type="text/javascript" src="/includes/jqlib/jquery.metadata.js"></script>
+        <script type="text/javascript" src="/includes/jqlib/jquery.tablesorter.min.js"></script>
+        <script type="text/javascript">
+				$(document).ready(function(){
+				  $('.tablesorter').tablesorter({
+					  widgets: ['zebra']
+					});
+				});
+
+		</script>
+<!-- /table sorting scripts -->
+
+	<!-- alt guid and source p -->
+	<!-- T W I T T E R   S T A R T -->				
+	<script type="text/javascript">
+		var firstKeyword = "";
+	</script>
+		
+		<!-- T W I T T E R   E N D -->
+	<div id="commentscontainer">
+		<div id="promoslot">
+		
+	<!--include virtual="/client/client08/Sophos/CIS899_070908/CIS899_Sophos_070908.html"-->
+	<!--include virtual="/client/client08/MessageLabs/C666D_CIS/CIS666D_messagelab_exp.htm"-->
+	
+
+
+		<!--include virtual="/includes/r08/topic/${rxprimarytopic}-nl-signup.html"-->
+<!--include virtual="/includes/r08/topic/nlform_new.html"-->
+
+		</div>
+		
+<div id="disqus_thread" style="width: 586px;"></div>
+<script type="text/javascript"> 
+  var disqus_shortname = 'idg-networkworld';
+  var disqus_url = 'http://www.networkworld.com/news/2013/092313-iphone-biometrics-hacked-274082.html';
+  var disqus_identifier = 'http://www.networkworld.com/274082/';
+  var disqus_title = 'iPhone TouchID fingerprint biometrics broken by German hacker club';
+  var disqus_developer = 1;
+  var disqus_config = null;
+  var disqus_def_name = null;
+  var disqus_def_email = null;
+
+  // Show Disqus thread
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+  
+  // Update comment counters
+  (function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  }());
+
+  function disqus_config() {
+    this.callbacks.onNewComment = [function() { 
+      if (typeof(OPG.Eloqua) != 'undefined') {
+        OPG.Eloqua.refresh_iframe('social');
+      }
+    }];
+  }
+</script>
+
+
+		<div id="article-most-commented" class="nocontent">
+			<div class="commented_hdr">Most Commented on Network World</div>
+			<script type="text/javascript" src="http://disqus.com/forums/idg-networkworld/popular_threads_widget.js?num_items=5"></script>
+		</div>
+		
+	</div>
+ </div>
+<div id ="rightcol">
+	<!-- Updates to global-wrapper-right-article.html for NWW traffic project -->
+<!-- Patch changes here to global-wrapper-right-article.html for release -->
+
+<!--stopindex-->
+
+
+
+
+<!-- begin Top IMU ad --> 
+<div class="banner top-pad"><div class="podpis"></div>
+<div id="topimu"><script type="text/javascript">
+  googletag.cmd.push(function() {
+    googletag.display("topimu");
+  });
+</script>
+</div></div>
+<!-- end Top IMU ad -->
+
+
+
+
+<!--cloud include -->
+
+
+<div id="article-latest-news">
+<div class="latest_hdr">Latest News</div>
+<div class="rss_icon"><a href="http://www.networkworld.com/netflash.rss"><img src="/includes/styles/r08/feed-icon-14x14.png" alt="rss" /></a><span>Rss Feed</span></div>
+<ul>
+     <li ><a href="/news/2013/100113-government-healthcare-274390.html">Heavy traffic hampers healthcare exchanges</a></li>
+<li  class="alt" ><a href="/news/2013/100113-apples-64-bit-a7-chip-a-274397.html">Apple's 64-bit A7 chip a 'marketing gimmick', Qualcomm exec says</a></li>
+<li ><a href="/news/2013/100113-nsa-encryption-defeating-efforts-will-backfire-274399.html">NSA encryption-defeating efforts will backfire, privacy advocates say</a></li>
+<li  class="alt" ><a href="/news/2013/100113-windows-8-brushes-up-against-274378.html">Windows 8 brushes up against 10% user share mark</a></li>
+<li ><a href="/news/2013/100113-red-hat-linux-274409.html">New Red Hat Enterprise Linux licensing plan designed to unify cloud, physical environments</a></li>
+</ul><ul id="latestnews" style="display:none;">
+<li  class="alt" ><a href="/news/2013/100113-aruba-announces-cloud-based-wi-fi-management-274365.html">Aruba announces cloud-based Wi-Fi management service</a></li>
+<li ><a href="/news/2013/100113-shutdown-could-test-it-security-274361.html">Shutdown could test IT security at federal agencies</a></li>
+<li  class="alt" ><a href="/news/2013/100113-pci-274386.html">Forthcoming PCI changes will bring challenges for payment card network community</a></li>
+<li ><a href="http://www.networkworld.com/community/node/83923">Debunking data breach myths</a></li>
+<li  class="alt" ><a href="http://www.networkworld.com/community/blog/expect-attacks-exploiting-ie-zero-day-ramp-metasploit-module-released">IE zero-day attacks to ramp up: Metasploit releases module</a></li>
+<li ><a href="/news/2013/093013-encryption-tips-274185.html">10 encryption tips for the enterprise</a></li>
+<li  class="alt" ><a href="/news/2013/100113-internet-hall-274379.html">Nominations open for Internet Hall of Fame Class of 2014</a></li>
+<li ><a href="/news/2013/092713-the-new-role-for-it-274297.html">The New Role for IT: Generator of Innovative Ideas</a></li>
+<li  class="alt" ><a href="/news/2013/100113-blackberry-mdm-274371.html">BlackBerry's MDM business still has value, despite handset woes </a></li>
+<li ><a href="/news/2013/100113-intel-to-acquire-network-security-274354.html">Intel to acquire network security firm Sensory Networks</a></li>
+<li  class="alt" ><a href="/news/2013/100113-dell-private-cloud-274370.html">Dell updates private cloud to become PCI compliant </a></li>
+<li ><a href="/news/2013/093013-symantec-seizes-part-of-massive-274347.html">Symantec seizes part of massive peer-to-peer botnet ZeroAccess</a></li>
+<li  class="alt" ><a href="/news/2013/093013-bmc-puts-hadoop-on-the-274341.html">BMC puts Hadoop on the company timesheet</a></li>
+<li ><a href="/news/2013/093013-nsa-nacchio-274344.html">Former Qwest CEO out prison, blames NSA for troubles</a></li>
+<li  class="alt" ><a href="/news/2013/093013-is-that-hotspot-safe-to-274332.html">Is that hotspot safe to use? Wi-Fi Alliance wants to help</a></li>
+<li ><a href="/news/2013/093013-cisco-intel-geolocation-274337.html">Cisco, Intel push 'trusted geolocation in the cloud'</a></li>
+<li  class="alt" ><a href="/news/2013/092513-ellison39s-team-pulls-off-stunning-274208.html">Ellison&#39;s team pulls off stunning America&#39;s Cup comeback</a></li>
+<li ><a href="/news/2013/093013-blackberry-responds-to-gartners-call-274324.html">BlackBerry responds to Gartner's call for clients to ditch BB products</a></li>
+<li  class="alt" ><a href="/news/2013/093013-ford-chief-alan-mulally-climbs-274335.html">Ford chief Alan Mulally climbs to No. 2 on Microsoft CEO betting line</a></li>
+<li ><a href="/news/2013/093013-emc-bets-big-on-flash-274323.html">EMC Bets Big on Flash Storage</a></li>
+</ul>
+<a href="javascript:void(0);" id="togglelist-latestnews" name="togglelist-latestnews" class="viewmore">View more Latest News</a>
+</div>
+
+
+
+
+<!-- begin Hover Ad ad --> 
+<div id="hoverad"><script type="text/javascript">
+  googletag.cmd.push(function() {
+    googletag.display("hoverad");
+  });
+</script>
+</div><!-- end Hover Ad ad -->
+
+
+
+<div id="leadgen_module" class="nocontent">
+	<div class="box" style="display:none;">
+		<div class="box-top"></div>
+		<div id="leadgen_module_container"></div>
+		<div class="box-bottom"></div>
+	</div>
+</div>
+
+<script type="text/javascript">	
+	/* Uncomment to call CCD directly
+	var types = new Array ("whitepaper","webcast","report","download");
+	var target_elements = new Array ("div#leadgen_module_container","div#leadgen_module_container","div#leadgen_module_container","div#leadgen_module_container");
+	var addHeaders = function(){
+		var seo_topicname = ((NW.PageInfo.rxsubtopicname == "" || NW.PageInfo.rxsubtopicname == "(none)") ? NW.PageInfo.rxprimarytopicname.toString() : NW.PageInfo.rxsubtopicname.toString());
+		if(seo_topicname == "General" || seo_topicname == "(none)" ) seo_topicname = "";
+		if(s.pageName.toLowerCase().match(/community/) != null) seo_topicname = "";
+		var selectNum = 0;
+		for(i=0;i<types.length;i++){
+			if(CCD.Module.ccd_data[i].length){
+				var seo_type_name = (types[i].charAt(0)).toUpperCase()+types[i].substring(1)+'s';
+				var resource_type_param = types[i];
+				if(types[i] == "whitepaper") seo_type_name = "White Papers";
+				if(types[i] == "report"){
+					seo_type_name = "Special " + seo_type_name;
+					resource_type_param = "special+" + types[i];
+				}
+				var header = (seo_topicname == "" ? seo_type_name : (seo_topicname + ' ' + seo_type_name));
+				var $leadgen_container = $("div#leadgen_module_container div.leadgen_container div.leadgen_inner").eq(selectNum);
+				var $header_html = $('<div></div>').attr("class","head").html(header);
+				var $more_link = $("<li></li>").html('<div class="bottom-links"><a href="http://www.networkworld.com/resourcelibrary/?tid='+topicid+'&type='+resource_type_param+'">View more ' + header + '</a></div>');
+				if(i==0) $header_html.addClass("top");
+				$leadgen_container.prepend($header_html);
+				if(i > 1) $leadgen_container.find("ul.leadgen_items li:gt(1)").hide();
+				$leadgen_container.find("ul.leadgen_items").append($more_link);
+				selectNum++;
+			}
+		}
+		$("div#leadgen_module_container div.leadgen_container:last").addClass("last");
+		if(selectNum > 0) $("div#leadgen_module div.box").show();
+	}
+	var moduleName = (NW.PageInfo.pgtype == "research center" ? "Networkworld-RightRail-Module" : "Networkworld-RightRail-Module-Backfill");
+	CCD.Module.render(moduleName, types, target_elements, addHeaders);
+	*/
+	if(typeof OPG.Slideshow === "undefined" || !OPG.Slideshow.wpwcDone){
+		CCD.Module.writeSpecialResourcesBlock(["whitepapers","reports","downloads"]);
+		if(typeof OPG.Slideshow != "undefined") OPG.Slideshow.wpwcDone = true;
+	}
+
+	/* FOR SUBTOPIC PAGES */
+	if(NW.PageInfo.pgtype == "research center" && typeof(subtopicid) != "undefined" && subtopicid != ""){
+		<!-- CCD: CALL FOR SUBTOPIC WHITEPAPER EMBEDDED CONTENT (special-resources-block.html) -->
+		/* Uncomment to call CCD directly
+		var ccd_url = CCD.Module.get_ccd_module_url("Networkworld-RightRail-Module", new Array("whitepaper"));
+		$.ajax({
+			url: ccd_url+".json",
+			dataType: 'jsonp',
+			jsonp: 'jsoncallback',
+			type: "GET",
+			success: function(json){
+				if(typeof(json) != "undefined"){
+					$.each(json, function(i,item){
+						if(i>4) return;
+						x = 150;
+						var asset = json[i].asset;
+						var description = asset.description;
+						if(description != null && description.length > 150){
+							description = description.substring(0,x) + "...";
+							while(x > 0 && description.substring(x,x+1) != " "){
+								description = description.substring(0,x);
+								x = x - 1;
+							}
+							description = description.trim() + "...";
+						}
+						$('div.multifeed dl dd.whitepaper').eq(i).html("<dl><dt><a class=\"idglg-stc\" href=\""+ asset.url+"\" target=\"_blank\">"+ asset.title +"<span class=\"relatedtype whitepaper\">WHITE PAPER</span></a></dt><dd>"+description+"</dd></dl>");
+					});
+				}
+			}
+		});
+		*/
+		
+		CCD.Module.writeSubtopicAssets(["whitepapers"]);
+	 }
+</script>
+
+
+
+
+<!--include virtual="/includes/r08/newsletter-signup.html">
+    <!--include virtual="/includes/r08/topic/nlform_new.html"-->	
+    <!--include virtual="/news/briefs/${rxprimarytopic}-bg-box.html" -->
+    
+    
+
+
+<!-- begin Bottom IMU ad --> 
+<div class="banner top-pad"><div class="podpis"></div>
+<div id="bottomimu"><script type="text/javascript">
+  googletag.cmd.push(function() {
+    googletag.display("bottomimu");
+  });
+</script>
+</div></div>
+<!-- end Bottom IMU ad -->
+
+
+
+    <!--endif -->
+    <!--if expr="${pritopic} = 'datacenter'"-->
+	<!--include virtual="/news-alerts/data-center-alert.html"-->
+
+<!--elif expr="${pritopic} = 'software'" -->
+	<!--include virtual="/news-alerts/daily-news-alert.html"-->
+	
+<!--elif expr="${pritopic} = 'security'" -->
+	<!--include virtual="/news-alerts/security-alert.html"-->
+	
+<!--elif expr="${pritopic} = 'convergencevoip'" -->
+	<!--include virtual="/news-alerts/virtualization-alert.html"-->
+     
+<!--elif expr="${pritopic} = 'wirelessmobile'" -->
+	<!--include virtual="/news-alerts/data-center-alert.html"-->
+
+<!--elif expr="${pritopic} = 'Infrastructuremgmt'" -->
+	<!--include virtual="/news-alerts/dns-alert.html"-->
+
+<!--elif expr="${pritopic} = 'networksystemsmgmt'" -->
+	<!--include virtual="/news-alerts/dns-alert.html"-->
+	
+<!--elif expr="${pritopic} = 'remote'" -->
+	<!--include virtual="/news-alerts/daily-news-alert.html"-->
+	
+<!--elif expr="${pritopic} = 'lanwan'" -->
+	<!--include virtual="/news-alerts/daily-news-alert.html"-->
+
+<!--elif expr="${pritopic} = 'storage'" -->
+	<!--include virtual="/news-alerts/storage-alert.html"-->
+
+
+<!--elif expr="${channels} = /^hm/" -->
+	<!--include virtual="/news-alerts/daily-news-alert.html"-->
+<!--endif -->
+
+
+
+
+</div>
+			<div id="block">
+								
+ 
+<div style="margin-left: 11%; margin-top: 15px; margin-bottom: 15px; display: inline; float: left;">
+
+
+<!-- begin Bottom Leaderboard ad --> 
+<div id="leaderboard_bottom"><div id="leaderboard_bottom_overlay"></div>
+<div id="bottomleaderboard"><script type="text/javascript">
+  googletag.cmd.push(function() {
+    googletag.display("bottomleaderboard");
+  });
+</script>
+</div></div>
+<!-- end Bottom Leaderboard ad -->
+
+
+
+</div>
+
+
+
+
+
+<!-- begin ciu ad --> 
+<div id="ciu">
+<div id="ciu"><script type="text/javascript">
+  googletag.cmd.push(function() {
+    googletag.display("ciu");
+  });
+</script>
+</div></div>
+<!-- end ciu ad -->
+
+
+
+
+
+<div class="sponsor nocontent">
+
+	<div class="right">
+    <h3>
+        Sponsored Links
+    </h3>
+		<script type="text/javascript">
+	
+	/* Uncomment to call CCD directly
+	var ccd_url = "";
+	var widget_name = "Networkworld-Sponsored-Links-Module";
+	if(NW.PageInfo.pgtype == 'homepage') ccd_url = CCD.Module.get_homepage_sponsored_links_url(widget_name);
+	else ccd_url = CCD.Module.get_sponsored_links_url(widget_name);
+	$.ajax({
+		url: ccd_url+".json",
+		dataType: 'jsonp',
+		jsonp: 'jsoncallback',
+		type: "GET",
+		success: function(data){ 
+			var col1_num = Math.ceil(data.length/2);
+			$target_div = $("div.sponsor div.right");
+			var $col1_ul = $('<ul class="right"></ul>');
+			var $col2_ul = $('<ul class="left"></ul>');
+			for(var i=0; i < col1_num; i++){
+				var asset = data[i].asset;
+				var $html = '<li><a rel="nofollow" target="_blank" title="'+asset.advertiser_name+'" href="'+asset.url+'">'+asset.title+'</a><strong>- '+asset.advertiser_name+'</strong></li>';
+				$col1_ul.append($html);
+			}
+			for(var i=col1_num; i < data.length; i++){
+				var asset = data[i].asset;
+				var $html = '<li><a rel="nofollow" target="_blank" title="'+asset.advertiser_name+'" href="'+asset.url+'">'+asset.title+'</a><strong>- '+asset.advertiser_name+'</strong></li>';
+				$col2_ul.append($html);
+			}
+			$target_div.append($col1_ul).append($col2_ul);
+		}
+	});
+	*/
+	CCD.Module.writeSponsoredLinks();
+</script>
+	</div>
+	<!--<h5>Sponsored links <A href="http://www.industrybrains.com/networkworld/Default.aspx">Buy a link now</A></h5>-->
+    
+	<div class="left">
+    <h3>
+        Resource Center
+    </h3>
+		<script type="text/javascript" src="http://jlinks.industrybrains.com/jsct?sid=93&ct=NETWORKWORLD_HOMEPAGE_AND_ROS&num=5&layt=12&fmt=simp"></script>
+        <div style="margin-top: 5px;">
+        <a href="http://www.techwords.com/"><img src="/graphics/logos/techwords.gif" style="border: 0; padding: 4px 0 2px 0;" /></a>
+        <a href="http://www.techwords.com/">See your link here</a>
+        </div>
+	</div>
+	
+</div>
+
+
+			</div>
+		</div>
+		<div id="nww_footer" class="nocontent">
+			
+
+    <div id="nww_footer_signup">
+		<dl>
+			<dt style="margin-bottom:15px;">
+				Network World's Daily Newsletter
+				<span style="margin-top:15px; display:block;">Stay up to date with the most important tech news </span>
+			</dt>
+			<dd>
+			<form target="new_window" id="footerNLform" name="footerNLform" method="get" action="http://www.networkworld.com/nl/nl_single_reg/daily-news.html?email=&source=nwwnla_nlt_ftr_mod2" onsubmit="openNewWindow()">
+				<!--input type="hidden" name="lists" value="networkworld_daily_news_alert"/-->
+		      <!--<input type="text" name="email" id="netflashinstantsignup" value="Email address"/>-->
+		        <input type="hidden" value="nwwnla_nlt_ftr_mod" name="source"/>
+
+				<button type="submit">Sign-up</button>
+				<!--<a href="/tos.html"><span class="signupterms">Terms of Service</span></a>-->
+            </form>
+			</dd>
+			<script type="text/javascript">
+			$("form#footerNLform input#netflashinstantsignup").focus(function () {
+         		$(this).val("");
+    		});
+        	</script>
+		</dl>
+</div>
+
+	<div id="nww_footer_nwwitems">
+		<dl>
+			<dt>
+				Network World, Inc <a href="feed://www.networkworld.com/rss/netflash.xml"><img alt="RSS" src="/includes/styles/r08/img/ico-rss.gif"/></a>
+				<span>The Connected Enterprise</span>
+			</dt>
+			<dd>
+				<ul>
+					<li><a href="http://www.networkworld.com/aboutus/index.html" rel="nofollow">About Us</a></li>
+					<li><a target="_blank" href="http://careers.idg.com/" rel="nofollow">Careers @ IDG</a></li>
+					<li><a href="http://www.networkworld.com/newsletters/subscribe.html?k=nwwnla_ftr_link">Newsletter Subscriptions</a></li>                    
+				</ul>
+				<ul>
+					<li><a href="http://www.networkworld.com/aboutus/index.html" rel="nofollow">Contact Us</a></li>
+					<li><a href="http://www.networkworldmediakit.com" target="_blank" rel="nofollow">Advertise</a></li>
+					<li><a href="http://www.networkworld.com/partnerships/" rel="nofollow">Partnerships</a></li>
+                    <li class="adChoiceLogo"><a href="http://www.networkworld.com/adchoices/about_adchoices.html" rel="nofollow">AdChoices</a></li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+	<div id="nww_footer_idgitems">
+		<dl>
+			<dt>
+				Other IDG Sites
+			</dt>
+			<dd>
+				<ul>
+                	<li><a href="http://www.cfoworld.com?source=nwwfooter" target="_blank">CFOworld</a></li>
+					<li><a href="http://www.cio.com?source=nwwfooter" target="_blank">CIO</a></li>
+                    <li><a href="http://www.citeworld.com?source=nwwfooter" target="_blank">CITEworld</a></li>
+					<li><a href="http://www.computerworld.com?source=nwwfooter" target="_blank">Computerworld</a></li>
+					<li><a href="http://www.csoonline.com?source=nwwfooter" target="_blank">CSO</a></li>
+					<li><a href="http://www.demo.com?source=nwwfooter" target="_blank">DEMO</a></li>
+					<li><a href="http://www.idgconnect.com?source=nwwfooter" target="_blank">IDG Connect</a></li>
+                    
+				</ul>
+				<ul>
+                	<li><a href="http://www.idgknowledgehub.com?source=nwwfooter" target="_blank">IDG Knowledge Hub</a></li>
+					<li><a href="http://www.idgtechnetwork.com?source=nwwfooter" target="_blank">IDG TechNetwork</a></li>
+                    <li><a href="http://www.idgventures.com?source=nwwfooter" target="_blank">IDG Ventures</a></li>
+                    <li><a href="http://www.infoworld.com?source=nwwfooter" target="_blank">InfoWorld</a></li>
+                    <li><a href="http://www.itwhitepapers.com/index.php?source=nwwfooter" target="_blank">ITwhitepapers</a></li>
+                	<li><a href="http://www.itworld.com?source=nwwfooter" target="_blank">ITworld</a></li>
+                    <li><a href="http://www.javaworld.com?source=nwwfooter" target="_blank">JavaWorld</a></li>
+				</ul>
+				<ul>
+					<li><a href="http://www.linuxworld.com?source=nwwfooter" target="_blank">LinuxWorld</a></li>
+					<li><a href="http://www.macworld.com?source=nwwfooter" target="_blank">MacWorld</a></li>
+					<li><a href="http://www.networkworld.com/?source=nwwfooter">Network World</a></li>
+					<li><a href="http://www.pcworld.com?source=nwwfooter" target="_blank">PC World</a></li>
+                    <li><a href="http://www.techhive.com?source=nwwfooter" target="_blank">TechHive</a></li>
+					<li><a href="http://technologybriefcase.com/allCategories" target="_blank">Technology Briefcase</a></li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+	<div class="clear"></div>
+	
+	<div id="nww_footer_bottom">
+		<span>Copyright &copy; 1994 - 2013 Network World, Inc.  All rights reserved.</span>
+		<ul>
+			<li class="last_item"><a href="http://www.networkworld.com/aboutus/tos.html" rel="nofollow">Privacy Policy</a></li>
+		</ul>
+		<div class="clear"></div>
+	</div>			
+
+<script type="text/javascript">
+var q = document.location.search || document.location.href.hash || "";
+var randomNumber= Math.floor ((Math.random()*20)); // scale back to 1 in 5 scale to 1/2 (10-20) 11708
+if (document.referrer != "http://www.networkworld.com/includes/ads-pre.html" && q.indexOf("YB") == -1) {	
+    if (randomNumber < 1) {	
+		//tjk 4/29/09 loadIPScript();
+	}
+}
+//This function loads the script on the client's homepage and it in turn generates the invitation page.
+function loadIPScript() {
+  //get the head tag and append the script to it
+  var head = document.getElementsByTagName("head")[0];
+  var script = document.createElement('script');
+  script.type = "text/javascript";
+  script.src = "http://group11.iperceptions.com/Invitations/Javascripts/ip_Layer_Invitation_547.js";
+  head.appendChild(script)
+}
+</script>
+
+<script type="text/javascript" src="http://content.dl-rms.com/rms/mother/575/nodetag.js"></script> 
+
+
+
+
+<!-- begin Catfish ad --> 
+<div id="catfish"><script type="text/javascript">
+  googletag.cmd.push(function() {
+    googletag.display("catfish");
+  });
+</script>
+</div><!-- end Catfish ad -->
+
+
+
+
+		</div>
+	</div>		
+			</div> 		
+    
+
+    
+    
+
+    
+
+    
+        <script type='text/javascript'>
+            var axel = Math.random() + '';
+            var a = axel * 10000000000000;
+            document.write('<img src="http://pubads.g.doubleclick.net/activity;dc_iu=/8456/DFPAudiencePixel;retargeting_pixel=IDGE_Security;ord=' + a + '?" width=1 height=1 border=0/>');
+        </script>
+        <noscript>
+            <img src="http://pubads.g.doubleclick.net/activity;dc_iu=/8456/DFPAudiencePixel;retargeting_pixel=IDGE_Security;ord=1?" width=1 height=1 border=0/>
+        </noscript>
+    
+
+
+	<script type="text/javascript" src="/includes/jqlib/exp_nwLib_tail-min.js"></script>
+
+<!-- Google+ Script -->
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+
+<script>if(typeof(adx_tri) != "undefined" && $(window).width() < 1150){$('#nww_header').addClass('pagecurl');}</script>
+
+<!-- Slideshow javascript -->
+
+
+<!-- Podcast javascript -->
+
+
+<!-- Twitter + short url javascript for article pages -->
+
+	<script type="text/javascript" charset="utf-8" src="http://bit.ly/javascript-api.js?version=latest&login=tweettrackjs&apiKey=R_7e9987b2fd13d7e4e881f9cbb168f523"></script>
+	<script type="text/javascript" charset="utf-8" src="http://s.bit.ly/TweetAndTrack.js?v=1.01 "></script>
+
+
+<script type="text/javascript" src="/includes/tail-scripts08-min.js"></script>
+
+<!-- Begin comScore Tag -->
+<script>
+document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b")
++ ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+</script>
+<script>
+COMSCORE.beacon({
+c1:2,
+c2:"",
+c3:"",
+c4:"",
+c5:"",
+c6:"",
+c15:""
+});
+</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/b?c1=2&c2=&c3=&c4=&c5=&c6=&c15=&cv=1.3&cj=1"
+style="display:none" width="0" height="0" alt="" />
+</noscript>
+<!-- End comScore Tag -->
+<!-- START Nielsen Online SiteCensus V6.0 -->
+
+<!-- COPYRIGHT 2010 Nielsen Online -->
+
+<script type="text/javascript">
+
+  (function () {
+
+    var d = new Image(1, 1);
+
+    d.onerror = d.onload = function () {
+
+      d.onerror = d.onload = null;
+
+    };
+
+    d.src = ["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-203426h&cg=0&cc=1&si=", escape(window.location.href), "&rp=", escape(document.referrer), "&ts=compact&rnd=", (new Date()).getTime()].join('');
+
+  })();
+
+</script>
+
+<noscript>
+
+  <div>
+
+    <img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-203426h&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="" />
+
+  </div>
+
+</noscript>
+
+<!-- END Nielsen Online SiteCensus V6.0 -->
+
+
+
+<!-- ELOQUA CODE -->
+
+	<script type="text/javascript" src="/elqNow/elqCfg.js"></script>
+    <script type="text/javascript" src="/elqNow/elqImg.js"></script>
+	<script type='text/javascript' src="/elqNow/elqFCS.js"></script>
+  	<script type="text/javascript" src="/elqNow/elqOPG.js"></script>
+
+
+
+<!-- Chart beat -->
+
+<script type='text/javascript'>
+    var _sf_async_config={};
+    /** CONFIGURATION START **/
+    _sf_async_config.uid = 29363;
+    _sf_async_config.domain = 'idgenterprise.com';
+    _sf_async_config.path = '/news/2013/092313-iphone-biometrics-hacked-274082.html';
+    _sf_async_config.title = 'iPhone TouchID fingerprint biometrics broken by German hacker club';
+    _sf_async_config.useCanonical = true;
+    _sf_async_config.sections = 'networkworld.com';
+    _sf_async_config.authors = 'Ellen Messmer';
+    /** CONFIGURATION END **/
+    (function(){
+      function loadChartbeat() {
+        window._sf_endpt=(new Date()).getTime();
+        var e = document.createElement('script');
+        e.setAttribute('language', 'javascript');
+        e.setAttribute('type', 'text/javascript');
+        e.setAttribute('src',
+           (('https:' == document.location.protocol) ? 'https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/' : 'http://static.chartbeat.com/') +
+           'js/chartbeat.js');
+        document.body.appendChild(e);
+      }
+      var oldonload = window.onload;
+      window.onload = (typeof window.onload != 'function') ?
+         loadChartbeat : function() { oldonload(); loadChartbeat(); };
+    })();
+</script>
+
+<!-- begin collective media tag -->
+<script language="JavaScript" type="text/javascript">
+	var _companysize = OPG.Demandbase.getDbaseVar('company_size');
+	var _forbes2000 = OPG.Demandbase.getDbaseVar('forbes_2000');
+	var _compsz = "cu";
+	var _g2000 = "gn";
+
+	if(typeof _companysize != 'undefined'){
+		switch(_companysize) {
+			case "small":
+				_compsz="cs";
+			break;
+			case "mid-market":
+				_compsz="cm";
+			break;
+			case "enterprise":
+				_compsz="ce";
+			break;
+		}
+	}
+	if(typeof _forbes2000 != 'undefined' && _forbes2000 == "yes") _g2000 = "gy";
+	document.write('<div style="display:none;"><img src="http://a.collective-media.net/datapair?net=idgt&segs='+_g2000+','+_compsz+'&op=add" width="0" height="0"></div>');
+</script>
+<!-- end collective media tag -->
+
+<!-- Begin BlueKai Tag -->
+
+<iframe name="__bkframe" height="0" width="0" frameborder="0" src="javascript:void(0)"></iframe>
+
+<script type="text/javascript" src="http://tags.bkrtx.com/js/bk-coretag.js"></script>
+
+<script type="text/javascript">
+
+
+
+bk_addPageCtx("channel", (typeof(s_c_il[0].channel)!=='undefined')?s_c_il[0].channel:'');
+
+bk_addPageCtx("p1", (typeof(s_c_il[0].prop1)!=='undefined')?s_c_il[0].prop1:'');
+
+bk_addPageCtx("p2", (typeof(s_c_il[0].prop2)!=='undefined')?s_c_il[0].prop2:'');
+
+bk_addPageCtx("p15", (typeof(s_c_il[0].prop15)!=='undefined')?s_c_il[0].prop15:'');
+
+bk_addPageCtx("p41", (typeof(s_c_il[0].prop41)!=='undefined')?s_c_il[0].prop41:'');
+
+bk_addPageCtx("p42", (typeof(s_c_il[0].prop42)!=='undefined')?s_c_il[0].prop42:'');
+
+bk_use_first_party = true;
+bk_ignore_outside_iframe = false;
+bk_doJSTag(14351, 10);
+
+
+
+</script>
+
+<!-- End BlueKai Tag -->
+
+
+<!--Visual Revenue Reader Response Tracking Script (v6) -->
+<script type="text/javascript">
+
+			var _vrq = _vrq || [];
+			_vrq.push(['id', 481]);
+			 
+			
+			_vrq.push(['track', function(){}]);
+			(function(d, a) {
+				var s = d.createElement(a),
+				x = d.getElementsByTagName(a)[0];
+				s.async = true;
+				s.src = 'http://a.visualrevenue.com/vrs.js';
+				x.parentNode.insertBefore(s, x);
+			})(document, 'script');
+		</script>
+<!-- End of VR RR Tracking Script - All rights reserved -->
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+JSWarrior by FusionCharts
+
+The JavaScript Warrior
+
+   [warrior.png]
+
+   Welcome to the JSWarrior Game. Unlike traditional games, you can't
+   control your character through a keyboard or joystick. The only way you
+   can control your character is through JavaScript. To beat JSWarrior you
+   can't just mash buttons, you need to think up a strategy and program
+   the strategy as a JavaScript function.
+
+   But what's the point? Sure you will probably get a great intellectual
+   thrill of having programmed some primitive AI within 30 minutes. But if
+   you complete JSWarrior, and you are at JSFoo 2013, we'll give you a
+   cookie!! Yes, it's a real cookie, the kind you can eat (a good one -
+   the chewy kind), not document.cookie.
+
+   [1]Start playing!
+
+Credits
+
+   [captive.png]
+   Note: This game was built in a hackathon for [2]JSFoo 2013, a
+   JavaScript conference in Bangalore, India. Since a lot of people are
+   enjoying it, we decided to keep it up for anyone to play.
+
+     * Concept and level design from Ryan Bates' [3]Ruby Warrior
+     * Web application concept from [4]Bloc.io
+     * The free [5]SpriteLib sprite library for the graphics
+     * [6]Ameen - Game Engine and Graphics
+     * [7]Anirudh - Backend and Documentation
+
+   Several people asked us to make this open-source and easily hostable to
+   use as an interview screening tool. We will be doing so shortly, along
+   with instructions to run it on Google App Engine for free.
+   Powered by Google App Engine [8][fc_logo_300x60.gif]
+
+References
+
+   1. file://localhost/level/1
+   2. http://jsfoo.in/
+   3. https://github.com/ryanb/ruby-warrior
+   4. https://www.bloc.io/ruby-warrior/#/
+   5. http://www.widgetworx.com/widgetworx/portfolio/spritelib.html
+   6. http://ameen-ahmed.me/
+   7. http://www.skyronic.com/
+   8. http://fusioncharts.com/careers/

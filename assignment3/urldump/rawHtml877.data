@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <meta charset="utf-8">
+  <title>Plans &amp; Pricing Table · HTML &amp; CSS Code Snippet</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta content="174863825948497" property="fb:app_id">
+  <link href="http://assets.cssflow.com/assets/application-de070006977c08496d159cca7e1733dc.css" media="all" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="http://cdn.cssflow.com/favicon.ico">
+  <link rel="apple-touch-icon" href="http://cdn.cssflow.com/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="http://cdn.cssflow.com/apple-touch-icon-72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="http://cdn.cssflow.com/apple-touch-icon-114.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="http://cdn.cssflow.com/apple-touch-icon-144.png">
+  <link href="http://feeds.feedburner.com/WebInterfaceLab" rel="alternate" title="Subscribe to CSSFlow" type="application/atom+xml">
+  <link href="http://www.cssflow.com/snippets/plans-pricing-table" rel="canonical">
+  <meta content="A simple pricing page to showcase your SaaS subscription plans. Hand-coded with HTML5 &amp; CSS3." name="description">
+  <link href="http://www.cssflow.com/snippets" rel="index">
+  <meta content="article" property="og:type">
+  <meta content="http://www.cssflow.com/snippets/plans-pricing-table" property="og:url">
+  <meta content="http://cdn.cssflow.com/snippets/plans-pricing-table/preview-260.png" property="og:image">
+  <meta content="CSSFlow" property="og:site_name">
+  <meta content="Plans &amp; Pricing Table · HTML &amp; CSS Code Snippet" property="og:title">
+  <meta content="A simple pricing page to showcase your SaaS subscription plans." property="og:description">
+  <meta content="2013-09-26T14:11:34Z" property="article:published_time">
+  <meta content="2013-09-26T14:11:34Z" property="article:modified_time">
+  <meta content="Table, Checkout, Button, Pricing" property="article:tag">
+  <meta content="summary" name="twitter:card">
+  <meta content="@CSSFlow" name="twitter:site">
+  <meta content="http://www.cssflow.com/snippets/plans-pricing-table" name="twitter:url">
+  <meta content="http://cdn.cssflow.com/snippets/plans-pricing-table/preview-260.png" name="twitter:image">
+  <meta content="@tibc" name="twitter:creator">
+  <meta content="Plans &amp; Pricing Table · HTML &amp; CSS Code Snippet" name="twitter:title">
+  <meta content="A simple pricing page to showcase your SaaS subscription plans." name="twitter:description">
+  
+</head>
+<body>
+  <header class="header">
+    <div class="row">
+      <a href="/" class="header-logo" tabindex="-1">CSSFlow</a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/" class="header-link header-nav-link">Home</a>
+          <a href="/snippets" class="header-link header-nav-link active">Code Snippets</a>
+          <a href="/ui-kits" class="header-link header-nav-link">Interface Kits</a>
+          <a href="/faq" class="header-link header-nav-link">FAQ</a>
+          <a href="/search" class="header-link header-search-link" data-toggle="search">Search</a>
+        </nav>
+        <form method="get" accept-charset="UTF-8" action="/search" id="search" class="header-search">
+          <input type="search" name="q" placeholder="Search terms…">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    <div class="row">
+      <section class="main">
+        
+<article class="snippet">
+  <header class="snippet-header">
+    <div class="snippet-title">
+      <h1>Plans &amp; Pricing Table</h1>
+      <nav class="snippet-nav">
+        <a href="/snippets/simple-toggle-switch" class="button prev" title="Previous snippet">Previous</a>
+        
+      </nav>
+    </div>
+
+    <ul class="snippet-links">
+      <li><a href="/snippets/plans-pricing-table/demo" class="button button-blue">Demo</a></li>
+      <li><a href="/snippets/plans-pricing-table.zip" class="button button-green">Download</a></li>
+      <li class="snippet-share">
+        <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.cssflow.com%2Fsnippets%2Fplans-pricing-table&amp;via=CSSFlow&amp;text=%23CSS%20code%20snippet%3A%20Plans%20%26%20Pricing%20Table" class="soc-button soc-button-twitter">Tweet</a>
+      </li>
+      <li class="snippet-share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.cssflow.com%2Fsnippets%2Fplans-pricing-table&amp;t=CSS%20code%20snippet%3A%20Plans%20%26%20Pricing%20Table" class="soc-button soc-button-facebook">Share</a>
+      </li>
+    </ul>
+
+    <dl class="snippet-meta">
+      <dt class="meta-date">Published on</dt>
+      <dd><time datetime="2013-09-26T14:11:34Z" pudate="true">September 26, 2013</time></dd>
+
+      <dt class="meta-tags">Tags</dt>
+      <dd><a href="/snippets/tag/table">Table</a>, <a href="/snippets/tag/checkout">Checkout</a>, <a href="/snippets/tag/button">Button</a>, <a href="/snippets/tag/pricing">Pricing</a></dd>
+
+      <dt class="meta-comments">No. of comments</dt>
+      <dd><a href="#comments">No comments yet</a></dd>
+
+      <dt class="meta-browsers">Browser compatibility</dt>
+      <dd>Firefox 4, Safari 4, Chrome 14, Opera 10, IE 8</dd>
+
+      <dt class="meta-license">License</dt>
+      <dd><a href="/mit-license">MIT License</a></dd>
+    </dl>
+  </header>
+
+  <a href="/snippets/plans-pricing-table/demo" class="snippet-preview" tabindex="-1">      <div class="picture" data-picture data-alt="Plans & Pricing Table CSS Code Snippet">
+        <div data-src="http://cdn.cssflow.com/snippets/plans-pricing-table/preview-580.png"></div>
+        <div data-src="http://cdn.cssflow.com/snippets/plans-pricing-table/preview-580@2x.png" data-media="(-webkit-min-device-pixel-ratio: 1.5) and (min-device-width: 480px), (min-resolution: 144dpi) and (min-device-width: 480px)"></div>
+        <noscript><img src="http://cdn.cssflow.com/snippets/plans-pricing-table/preview-580.png" alt="Plans & Pricing Table CSS Code Snippet"></noscript>
+      </div>
+</a>
+  <p><strong>A simple pricing table to showcase your subscription plans.</strong></p>
+
+<p>Comes with the usual “highlighted” plan.</p>
+
+<p>Original PSD by <a href="http://dribbble.com/shots/1184256-Pricing-table-free-PSD">Benoît Philibert</a>.</p>
+
+  <div class="dl-promo">
+  <a href="/snippets/download" class="dl-promo-link">
+    <strong>Download all snippets + a bonus<br>in one easy .zip</strong>
+          <div class="picture" data-picture data-alt="Reminders App CSS Snippet Preview">
+        <div data-src="http://cdn.cssflow.com/snippets/bonus-reminders-app/promo.png"></div>
+        <div data-src="http://cdn.cssflow.com/snippets/bonus-reminders-app/promo@2x.png" data-media="(-webkit-min-device-pixel-ratio: 1.5) and (min-device-width: 480px), (min-resolution: 144dpi) and (min-device-width: 480px)"></div>
+        <noscript><img src="http://cdn.cssflow.com/snippets/bonus-reminders-app/promo.png" alt="Reminders App CSS Snippet Preview"></noscript>
+      </div>
+
+</a></div>
+
+  <div class="comments" id="comments"></div>
+
+  <form accept-charset="UTF-8" action="/snippets/plans-pricing-table/comments#new_comment" class="new-comment" data-remote="true" data-type="script" id="new_comment" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;"></div>
+  <h3>Leave a comment</h3>
+
+  
+
+  <label for="comment_name">
+    Name *
+    <input id="comment_name" maxlength="50" name="comment[name]" size="50" type="text" />
+</label>
+  <label for="comment_email">
+    Email * <small>(will not be published)</small>
+    <input id="comment_email" maxlength="50" name="comment[email]" size="50" type="email" />
+</label>
+  <label for="comment_url">
+    Website
+    <input id="comment_url" maxlength="50" name="comment[url]" size="50" type="url" />
+</label>
+  <label for="comment_content">
+    Comment *
+    <textarea cols="40" id="comment_content" maxlength="2000" name="comment[content]" rows="20">
+</textarea>
+</label>
+  <input data-disable-with="Submitting..." name="commit" type="submit" value="Submit Comment">
+</form>
+</article>
+
+      </section>
+      <aside class="aside">
+        <div class="subscribe">
+  <a href="https://twitter.com/CSSFlow" class="soc-button soc-button-twitter" rel="nofollow">Follow</a>
+  <a href="https://www.facebook.com/CSSFlow" class="soc-button soc-button-facebook" rel="nofollow">Like</a>
+  <a href="http://feeds.feedburner.com/WebInterfaceLab" class="soc-button soc-button-rss">Feed</a>
+</div>
+
+<form action="http://feedburner.google.com/fb/a/mailverify?" method="post" class="mailing" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=WebInterfaceLab','popupwindow','scrollbars=yes,width=550,height=520');return true">
+  <input type="hidden" value="WebInterfaceLab" name="uri">
+  <input type="hidden" name="loc" value="en_US">
+  <input type="email" name="email" placeholder="Email">
+  <button type="submit" tabindex="-1">Subscribe</button>
+</form>
+
+<div class="thankyou">
+  <div id="carbonads-container">
+    <div class="carbonad">
+      <div id="azcarbon"></div>
+      <script>
+        var z = document.createElement('script'); z.type = 'text/javascript'; z.async = true;
+        z.src = 'http://engine.carbonads.com/z/15651/azcarbon_2_1_0_HORIZ';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(z, s);
+      </script>
+    </div>
+  </div>
+</div>
+<div class="tags" id="tags">
+  <div class="tags-heading">
+    <h4>Tags</h4>
+    <a class="tags-toggle" data-toggle="tags">Show Tag List</a>
+  </div>
+
+  <ul class="tags-list">
+    <li><a href="/snippets/tag/3d" class="tag">3D</a></li>
+    <li><a href="/snippets/tag/alert" class="tag">Alert</a></li>
+    <li><a href="/snippets/tag/app" class="tag">App</a></li>
+    <li><a href="/snippets/tag/autocomplete" class="tag">Autocomplete</a></li>
+    <li><a href="/snippets/tag/badge" class="tag">Badge</a></li>
+    <li><a href="/snippets/tag/blockquote" class="tag">Blockquote</a></li>
+    <li><a href="/snippets/tag/button" class="tag">Button</a></li>
+    <li><a href="/snippets/tag/calendar" class="tag">Calendar</a></li>
+    <li><a href="/snippets/tag/chart" class="tag">Chart</a></li>
+    <li><a href="/snippets/tag/checkbox" class="tag">Checkbox</a></li>
+    <li><a href="/snippets/tag/checkout" class="tag">Checkout</a></li>
+    <li><a href="/snippets/tag/clock" class="tag">Clock</a></li>
+    <li><a href="/snippets/tag/colors" class="tag">Colors</a></li>
+    <li><a href="/snippets/tag/counter" class="tag">Counter</a></li>
+    <li><a href="/snippets/tag/css3-transforms" class="tag">CSS3 Transforms</a></li>
+    <li><a href="/snippets/tag/css3-transitions" class="tag">CSS3 Transitions</a></li>
+    <li><a href="/snippets/tag/date-picker" class="tag">Date Picker</a></li>
+    <li><a href="/snippets/tag/dropdown" class="tag">Dropdown</a></li>
+    <li><a href="/snippets/tag/facebook" class="tag">Facebook</a></li>
+    <li><a href="/snippets/tag/form" class="tag">Form</a></li>
+    <li><a href="/snippets/tag/glossy" class="tag">Glossy</a></li>
+    <li><a href="/snippets/tag/graph" class="tag">Graph</a></li>
+    <li><a href="/snippets/tag/growl" class="tag">Growl</a></li>
+    <li><a href="/snippets/tag/header" class="tag">Header</a></li>
+    <li><a href="/snippets/tag/icons" class="tag">Icons</a></li>
+    <li><a href="/snippets/tag/ios" class="tag">iOS</a></li>
+    <li><a href="/snippets/tag/list" class="tag">List</a></li>
+    <li><a href="/snippets/tag/loading" class="tag">Loading</a></li>
+    <li><a href="/snippets/tag/login" class="tag">Login</a></li>
+    <li><a href="/snippets/tag/menu" class="tag">Menu</a></li>
+    <li><a href="/snippets/tag/metal" class="tag">Metal</a></li>
+    <li><a href="/snippets/tag/modal" class="tag">Modal</a></li>
+    <li><a href="/snippets/tag/navigation" class="tag">Navigation</a></li>
+    <li><a href="/snippets/tag/newsletter" class="tag">Newsletter</a></li>
+    <li><a href="/snippets/tag/notepad" class="tag">Notepad</a></li>
+    <li><a href="/snippets/tag/notepaper" class="tag">Notepaper</a></li>
+    <li><a href="/snippets/tag/notification" class="tag">Notification</a></li>
+    <li><a href="/snippets/tag/os-x" class="tag">OS X</a></li>
+    <li><a href="/snippets/tag/pagination" class="tag">Pagination</a></li>
+    <li><a href="/snippets/tag/popover" class="tag">Popover</a></li>
+    <li><a href="/snippets/tag/pricing" class="tag">Pricing</a></li>
+    <li><a href="/snippets/tag/progress-bar" class="tag">Progress Bar</a></li>
+    <li><a href="/snippets/tag/push" class="tag">Push</a></li>
+    <li><a href="/snippets/tag/radio" class="tag">Radio</a></li>
+    <li><a href="/snippets/tag/search" class="tag">Search</a></li>
+    <li><a href="/snippets/tag/select" class="tag">Select</a></li>
+    <li><a href="/snippets/tag/share" class="tag">Share</a></li>
+    <li><a href="/snippets/tag/sign-up" class="tag">Sign Up</a></li>
+    <li><a href="/snippets/tag/social" class="tag">Social</a></li>
+    <li><a href="/snippets/tag/switch" class="tag">Switch</a></li>
+    <li><a href="/snippets/tag/table" class="tag">Table</a></li>
+    <li><a href="/snippets/tag/tabs" class="tag">Tabs</a></li>
+    <li><a href="/snippets/tag/tag" class="tag">Tag</a></li>
+    <li><a href="/snippets/tag/tag-cloud" class="tag">Tag Cloud</a></li>
+    <li><a href="/snippets/tag/toggle" class="tag">Toggle</a></li>
+    <li><a href="/snippets/tag/tooltip" class="tag">Tooltip</a></li>
+    <li><a href="/snippets/tag/top-bar" class="tag">Top Bar</a></li>
+    <li><a href="/snippets/tag/widget" class="tag">Widget</a></li>
+    <li><a href="/snippets/tag/window" class="tag">Window</a></li>
+  </ul>
+</div>
+
+      </aside>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="row">
+      <p class="footer-copy">
+        &copy; 2012&ndash;2013 <a href="http://thibaut.me">Thibaut Courouble</a>
+      </p>
+      <p class="footer-links">
+        <a href="/about">About</a>
+        <a href="mailto:thibaut@cssflow.com">Contact</a>
+      </p>
+      <ul class="footer-subscribe">
+        <li><a href="https://twitter.com/CSSFlow" class="subscribe-icon subscribe-twitter" rel="nofollow">Twitter</a></li>
+        <li><a href="https://www.facebook.com/CSSFlow" class="subscribe-icon subscribe-facebook" rel="nofollow">Facebook</a></li>
+        <li><a href="http://feeds.feedburner.com/WebInterfaceLab" class="subscribe-icon subscribe-rss">RSS</a></li>
+        <li><a href="http://feedburner.google.com/fb/a/mailverify?uri=WebInterfaceLab&amp;loc=en_US" class="subscribe-icon subscribe-email" rel="nofollow">Newsletter</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="http://assets.cssflow.com/assets/application-c11c997240b6e8b99bd0b228a707dd25.js" async></script>
+  <script>
+  var _gaq=[['_setAccount','UA-5544833-10'],['_setDomainName', 'cssflow.com'],
+  ['_setCustomVar', 1, 'Pixel Ratio', window.devicePixelRatio > 1.5 ? 'High' : 'Normal', 2 ],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+  <script src="http://assets.cssflow.com/ads.js"></script>
+</body>
+</html>

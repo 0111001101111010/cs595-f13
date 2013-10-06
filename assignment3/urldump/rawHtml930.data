@@ -1,0 +1,1057 @@
+
+<!DOCTYPE html>    
+<html>    
+  <head>
+  	
+    <title>Steam Machine gaming PCs will be built by third parties</title>					
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="index,follow" />		
+    <meta name="description" content="Hot on the heels of the announcement of SteamOS, computer game developer and distributor Valve has announced a range of SteamOS gaming computers called Stea..." />
+    <meta name="keywords" content="Steam,Computers,NVIDIA,Valve,PC,Games" />        
+        <meta name="news_keywords" content="Steam, Computers, NVIDIA, Valve, PC" />
+        
+    <link rel="canonical" href="http://www.gizmag.com/steam-machines/29186/" />
+    
+      		
+    
+    				
+    <link rel="image_src" href="http://images.gizmag.com/hero/steam-machines.png" />		
+    	
+    
+        <link rel="alternate" media="handheld" href="http://m.gizmag.com/article/29186" />
+        
+    
+        <link rel="stylesheet" type="text/css" href="http://files.gizmag.com/static_styles.min.css?x=1380668415" />
+        
+    <link rel="stylesheet" type="text/css" href="/css/dynamic_styles.php?x=1380668415" />		
+    
+    <script src="/inc/css_browser_selector.js" type="text/javascript"></script>
+    
+    <link rel="alternate" type="application/rss+xml" href="http://www.gizmag.com/xml/" title="Gizmag Emerging Technology Magazine" />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png" />
+    
+    <!-- auvid_inc -->		
+    
+    <!-- for google publisher tags - async implementation -->
+    <script type="text/javascript">
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+      (function() {
+        var gads = document.createElement("script");
+        gads.async = true;
+        gads.type = "text/javascript";
+        var useSSL = "https:" == document.location.protocol;
+        gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+        var node = document.getElementsByTagName("script")[0];
+        node.parentNode.insertBefore(gads, node);
+      })();
+    </script>
+
+    <!-- google ad slots -->
+    <script type="text/javascript">
+    	googletag.cmd.push(function() {
+    		gpt_leaderboard = googletag.defineSlot('/1007667/ca-pub-1607124478120364/Games_Leaderboard_Top_728x90', [728,90], 'leaderboard')
+    		.addService(googletag.pubads());
+    		    		gpt_islandtr = googletag.defineSlot('/1007667/ca-pub-1607124478120364/Games_IslandTop_Right_300x250', [[300,250], [336,280], [300,600], [300,1050]], 'island_top_right')
+    		.addService(googletag.pubads());
+    		gpt_islandbr = googletag.defineSlot('/1007667/ca-pub-1607124478120364/Games_IslandBottom_Right_300x250', [[300,250], [336,280], [300,600]], 'island_bottom_right')
+    		.addService(googletag.pubads());
+    		    		gpt_skyscraper = googletag.defineSlot('/1007667/ca-pub-1607124478120364/Games_Skyscraper_Right_160x600', [160,600], 'skyscraper_right')
+    		.addService(googletag.pubads());		      		
+    		    		gpt_bottom_inc = googletag.defineSlot('/1007667/ca-pub-1607124478120364/bottom_include', [1,1], 'bottom_include')
+    		.addService(googletag.pubads());
+    		    		 
+    		    		googletag.pubads().enableSingleRequest();
+    		    		    		    		googletag.pubads().setTargeting('pt', 'a');
+    		    		    		
+    		googletag.pubads().collapseEmptyDivs();
+        googletag.pubads().set('page_url','http://www.gizmag.com/steam-machines/29186/');
+    		googletag.enableServices();
+    	});
+    </script>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>	
+    
+    <script type="text/javascript" src="/inc/global_public.js?1377327827"></script>
+    
+    
+        		
+    	
+        
+        
+        
+        
+    
+    
+    
+        <script type="text/javascript" src="/inc/articles_public.js?1377327827"></script>
+                  
+  </head>
+	
+	<body>
+		
+        			
+    
+    <script type="text/javascript" src="/inc/login_comments.js?1377327827"></script>
+    
+    <!-- Facebook Javascript (loads asynchronously) -->
+        <div id="fb-root"></div>
+
+     <script>
+         
+	  window.fbAsyncInit = function() {
+		FB.init({
+            appId: '38456013908',
+            status: true,
+            cookie: true,
+            xfbml: true,
+            oauth: true,
+            channelUrl: window.location.protocol + '//www.gizmag.com/fb_channel.php'    //channel file to avoid cross domain communication issues
+        });
+
+        FB.Event.subscribe('auth.logout', function(response) {
+            
+            if(response.authResponse===null){ //user is logging out of facebook
+                logoutUser();
+            } 
+        });
+        
+	  };
+
+       // Load the SDK Asynchronously
+      (function(d){
+         var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement('script'); js.id = id; js.async = true;
+         js.src = "//connect.facebook.net/en_US/all.js";
+         ref.parentNode.insertBefore(js, ref);
+       }(document));
+
+       var $jqr = jQuery.noConflict();
+
+              $jqr(document).ready(function() {
+            var fbuser = checkFBUser();
+        });
+        
+	  </script>
+
+        
+    <!-- Link to mobile Site -->
+    
+        
+        
+    <!-- Google analytics tracking script -->
+    <script type="text/javascript">	
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-2235360-4']);	  
+    _gaq.push(['_setCustomVar', 1, 'Section','Games',3 ]); 	  
+    _gaq.push(['_setCustomVar', 2, 'Writer', 'James Holloway', 3 ]); 
+    _gaq.push(['_setCustomVar', 4, 'PPV_test3', '1', 3 ]);     _gaq.push(['_setCustomVar', 5, 'ArticleID', '29186', 3 ]);	
+    	
+    _gaq.push(['_setCustomVar', 3, 'View', 'Article', 3 ]);		  		
+    
+        _gaq.push(['_trackPageview']);
+            
+    _gaq.push(['_trackPageLoadTime']);
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+    })();
+    </script>
+    
+        <!-- Google Analytics Social Button Tracking -->
+    <script type="text/javascript" src="/inc/ga_social_tracking_min.js"></script>
+        
+        
+    <!-- Start Quantcast tag -->
+    <script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+    <script type="text/javascript">_qacct="p-23Y-rtuj52xr6";quantserve();</script>
+    <noscript><img src="http://pixel.quantserve.com/pixel/p-23Y-rtuj52xr6.gif" style="display: none" height="1" width="1" alt="Quantcast" /></noscript>
+    <!-- End Quantcast tag -->		
+    
+		
+
+	
+	<!-- Top Index -->		
+	<div class="index" id="top_index">
+		<div class="index_center">
+
+			<ul class="header_links float_left">
+				<li><a href="http://www.youtube.com/user/gizmag" title="Gizmag's YouTube Channel" id="header_youtube">Gizmag's YouTube Channel</a></li>
+    			<li><a href="http://twitter.com/gizmag/" title="Follow Gizmag on Twitter" id="header_twitter">Follow Gizmag on Twitter</a></li>
+				<li><a href="http://www.stumbleupon.com/to/stumble/stumblethru:gizmag.com?utm_source=GizMag&amp;utm_medium=StumbleThru&amp;utm_campaign=StumbleThruButton" title="Explore Gizmag" rel="nofollow" id="header_stumbleupon">Explore Gizmag</a></li>
+                <li><a href="http://www.gizmag.com/xml/" title="Subscribe to Gizmag's RSS feed" id="header_rss">Subscribe</a></li>
+			
+			</ul>
+
+			<!-- Google Search -->
+			<div id="search_form_top">
+				<form action="http://www.gizmag.com/search/" id="cse-search-box-top">
+				  <div>
+				    <input type="hidden" name="cx" value="partner-pub-1607124478120364:cf1bgg5f284" />
+				    <input type="hidden" name="cof" value="FORID:11" />
+				    <input type="hidden" name="ie" value="ISO-8859-1" />
+				    <input type="text" name="q" size="28" class="gsearch"/>
+				    <input type="submit" name="sa" value="Search" />
+				  </div>
+				</form>
+				<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box-top&amp;lang=en"></script>
+			</div>
+					
+		</div>
+	</div>	
+		
+	<!-- Top Strip:  cached  -->
+	<div id="top_strip"><a href="http://www.gizmag.com/tag/frankfurt-motor-show-2013/" target="_blank">2013 Frankfurt Motor Show highlights</a></div>
+
+
+	
+	<div class="center">
+	
+		<div id="header">
+			<a href="/" id="logo"></a>	
+			<div class="snap_noshots" id="leaderboard">
+			    
+    <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("leaderboard"); 
+    });
+    </script>
+    
+    
+			</div>		
+		</div>
+		
+		<!-- Top Stories:  cached  -->
+	<div id="top_stories">
+
+		<ul>
+				<li id="top_story0">
+			<a class="ts_img" href="/defender-bike-light-review/29230/" title="Review: Defender Bike Light"></a>
+			<div class="ts_title">
+				<a href="/defender-bike-light-review/29230/">Review: Defender Bike Light</a>				
+			</div>
+		</li>
+				<li id="top_story1">
+			<a class="ts_img" href="/htc-one-vs-note-3/29236/" title="Samsung Galaxy Note 3 vs. HTC One"></a>
+			<div class="ts_title">
+				<a href="/htc-one-vs-note-3/29236/">Samsung Galaxy Note 3 vs. HTC One</a>				
+			</div>
+		</li>
+				<li id="top_story2">
+			<a class="ts_img" href="/battheads-wi-fi-controlled-batteries/29232/" title="Batthead batteries could allow any device to be wirelessly controlled"></a>
+			<div class="ts_title">
+				<a href="/battheads-wi-fi-controlled-batteries/29232/">Batthead batteries could allow any device to be wirelessly controlled</a>				
+			</div>
+		</li>
+				<li id="top_story3">
+			<a class="ts_img" href="/martin-jetpack-p12/29215/" title="Redesigned Martin Jetpack deliveries expected to start in 2014"></a>
+			<div class="ts_title">
+				<a href="/martin-jetpack-p12/29215/">Redesigned Martin Jetpack deliveries expected to start in 2014</a>				
+			</div>
+		</li>
+				<li id="top_story4">
+			<a class="ts_img" href="/tree-snake-houses-ra-architects/29226/" title="Sustainable 'Tree Snake Houses' completed in Portugal"></a>
+			<div class="ts_title">
+				<a href="/tree-snake-houses-ra-architects/29226/">Sustainable 'Tree Snake Houses' completed in Portugal</a>				
+			</div>
+		</li>
+				</ul>
+		
+		<div id="more_top_stories">
+			<a id="mts_img" href="/top_stories/"></a>
+			<a id="mts_txt" href="/top_stories/">more top stories</a>
+		</div>
+
+		<div class="clear_both"></div>
+	</div>
+
+		
+						        
+		<div id="content" class="narrow_content" >
+                    
+		
+		<div id="article_top" class="summary_details" data-article="29186">
+		
+			<!-- stumbleupon_follow_button -->
+			
+						 <div class="sd_top">
+			             <a class="vsmall" href="/games/" style="float: left; margin-right: 9px;">GAMES</a>
+                  				            				  </div>
+      <!--a class="rss-section-button" ></a-->
+      			
+
+			<h1 id="ar_title">Steam Machine gaming PCs will be built by third parties</h1>		
+      
+      			<div class="summary_details_left">
+				<p>By <a href="/author/james-holloway/" rel="author">James Holloway</a></p>
+				<p><em>September 26, 2013</em></p>
+			</div>
+			
+			<div class="summary_details_right">
+				<div class="has_comments"><a href="steam-machines#comments">1 Comment</a></div> 							</div>
+      
+
+		</div>		
+	
+		    <div id="article_share_rail">
+            <div class="as_button"><div class="fb-like" data-href="http://www.gizmag.com/steam-machines/29186/" data-send="false" data-layout="box_count" data-show-faces="false"></div><script type="text/javascript">_ga.trackFacebook();</script></div>
+            <div class="as_button"><a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="gizmag">Tweet</a></div>
+            <div class="as_button"><div class="g-plusone" data-size="tall" data-href="http://www.gizmag.com/steam-machines/29186/"></div></div>
+            <div class="as_button"><iframe style="overflow: hidden; margin: 0px; padding: 0px; border: 0px; " src="http://badge.stumbleupon.com/badge/embed/5/?url=http%3A%2F%2Fwww.gizmag.com%2Fsteam-machines%2F29186%2F" width="50" height="60" id="iframe-stmblpn-widget-1"></iframe></div>
+            <div class="as_button"><div class="pin-it-button" data-url="http://www.gizmag.com/steam-machines/29186/" data-image="http://images.gizmag.com/hero/steam-machines.png" data-description="Hot on the heels of the announcement of SteamOS, computer game developer and distributor Valve has announced a range of SteamOS gaming computers called Steam Machines. The machines will be built by other companies with the aim of bringing PC gaming firmly into the living room."></div></div>              
+            <div class="as_button"><script type="IN/Share" data-counter="top"></script></div>
+            <div class="as_button" id="reddit_button_rail"><script type="text/javascript">reddit_newwindow='1'</script></div>
+            <div class="as_button" id="email_a_friend_rail"><span class="email_a_friend">Email</span></div>
+       
+    </div>
+    
+						
+			<div id="hero_box" style="width: 529px;">
+	
+				<a id="hero_link" href="/steam-machines/29186/pictures">
+					<img src="http://images.gizmag.com/hero/steam-machines.png" title="Valve announces third-party Steam Machines, which will land in 2014" 3 alt="Valve announces third-party Steam Machines, which will land in 2014" /></a>
+					
+					<div class="pic_caption">
+					
+					<p>Valve announces third-party Steam Machines, which will land in 2014</p>
+				
+					 </div>
+
+				<div class="clear_both"></div>	
+				
+			</div>
+			
+		
+	<div class="article_body">
+
+		<div id="top_unit"></div>
+			<script type="text/javascript"><!--
+	
+		var google_adnum = 0;		
+		adstage = '2';
+		google_ad_client = 'pub-1607124478120364';
+		google_ad_output = 'js';
+		google_ad_channel = '5541773889+8761738140+9190761177+';
+		google_max_num_ads = '4';
+		google_skip = google_adnum;
+		google_feedback = 'on'; 
+		google_ad_type = 'text';
+		google_image_size = '300x250';
+		
+		//-->
+	</script>
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
+			
+			
+	
+		<p><p>Hot on the heels of the announcement of its own Linux-based operating system, <a href="http://www.gizmag.com/valve-linux-steamos/29156/">SteamOS</a>, computer game developer and distributor Valve has announced a range of SteamOS gaming computers called Steam Machines. The machines will be built by other companies with the aim of bringing PC gaming firmly into the living room.</p></p>
+
+<p><p>The announcement is the latest twist in the ongoing Steam Box saga. Though the <a href="http://www.gizmag.com/steam-box-confirmed/25378/">Steam Box</a> name was never used by Valve, the company was known to be developing its own gaming hardware to run PC games acquired and managed using Steam, its own games distribution, management software and social network. </p></p>
+
+<p><p>Following this latest announcement it seems Valve's hardware efforts to date will culminate in Steam Machine prototypes. The company says that it will distribute 300 prototypes to chosen Steam Users before the end of the year. Among the requirements for eligibility are having 10 friends on Steam, and playing a game using a gamepad in Steam's Big Picture mode.</p></p>
+
+<p><p>The company says that a number of Steam Machines will be available in 2014, with different models optimized for different users. &quot;The specific machine we're testing is designed for users who want the most control possible over their hardware,&quot; Valve says. &quot;Other boxes will optimize for size, price, quietness, or other factors.&quot;</p></p>
+
+<p><p>The big question at this stage is who will make the Steam Machines? Though Valve's lips are sealed at this point, <a href="http://www.wired.com/gamelife/2013/09/steam-machines/">Wired</a> notes a concurrent press release from Nvidia emphasizes the company's involvement with SteamOS. With <a href="http://www.gizmag.com/nvidia-project-shield/25657/">Project Shield</a>, Nvidia has already demonstrated its willingness to develop stand-alone gaming hardware, and it would appear to be a strong candidate as a potential Steam Machine manufacturer.</p></p>
+
+<p><p>Addressing gamer concerns on being forced to use a certain type of input device, Valve says that users will be free to use a mouse and keyboard, but reasserted its position that gamepads work well with Steam and SteamOS. Most intriguingly, the company said it will shortly say more on the subject of input, which raises the possibility of a novel input device. Watch this space.</p></p>
+
+<p><p>Sources: <a href="http://store.steampowered.com/livingroom/SteamMachines/">Valve</a>, <a href="http://blogs.nvidia.com/blog/2013/09/25/steam-rolling-into-your-living-room/">Nvidia</a></p></p>
+
+		
+		<!-- INTEL BANNER -->
+						
+
+				
+		
+				
+					
+					
+		
+        <!-- stumbleupon_recommended -->
+    
+    <!-- FM Content Well Zone Zone -->
+    <script type='text/javascript' src='http://static.fmpub.net/zone/7980'></script>
+    
+		<div id="bottom_unit">	<script type="text/javascript"><!--
+	
+				
+		adstage = '2';
+		google_ad_client = 'pub-1607124478120364';
+		google_ad_output = 'js';
+		google_ad_channel = '5541773889+7414841517';
+		google_max_num_ads = '1';
+		google_skip = google_adnum;
+		google_feedback = 'on'; 
+		google_ad_type = 'text';
+		google_image_size = '300x250';
+		
+		//-->
+	</script>
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
+	</div>
+    
+    	</div>
+  
+	    <span class="title share_bar">Share</span>
+    <div id="article_share_bar" class="dotsontop share_bar">
+        <div class="as_button fb_as_button"><div class="fb-like" data-href="http://www.gizmag.com/steam-machines/29186/" data-send="false" data-layout="box_count" data-show-faces="false"></div><script type="text/javascript">_ga.trackFacebook();</script></div>
+        <div class="as_button"><a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="gizmag">Tweet</a></div>
+        <div class="as_button"><div class="g-plusone" data-size="tall" data-href="http://www.gizmag.com/steam-machines/29186/"></div></div>
+        <div class="as_button"><iframe style="overflow: hidden; margin: 0px; padding: 0px; border: 0px; " src="http://badge.stumbleupon.com/badge/embed/5/?url=http%3A%2F%2Fwww.gizmag.com%2Fsteam-machines%2F29186%2F" width="50" height="60" id="iframe-stmblpn-widget-2"></iframe></div>
+        <div class="as_button"><div class="pin-it-button" data-url="http://www.gizmag.com/steam-machines/29186/" data-image="http://images.gizmag.com/hero/steam-machines.png" data-description="Hot on the heels of the announcement of SteamOS, computer game developer and distributor Valve has announced a range of SteamOS gaming computers called Steam Machines. The machines will be built by other companies with the aim of bringing PC gaming firmly into the living room."></div></div>
+        <div class="as_button"><script type="IN/Share" data-counter="top"></script></div>
+        <div class="as_button" id="reddit_button_bar"><script type="text/javascript">reddit_newwindow='1'</script></div>
+        <div class="as_button" id="email_a_friend_bar"><span class="email_a_friend">Email</span></div>
+    </div>
+
+    
+	<!-- Polls -->
+		
+	
+	
+		<span class="title clear_left" id="author_byline_title">About the Author</span>
+		<div class="dotsontop" id="authorcontainer">
+
+						<!-- Bio Pic -->
+      <a href="/author/james-holloway/">
+	      <img src="http://images.gizmag.com/author_profiles/159.jpg" alt="James Holloway" id="bio_pic"/>
+	    </a>
+      			
+			<!-- Bio Text -->      
+<!-- 			<a href="/author/james-holloway/">James Holloway</a><br/> -->
+			James lives in East London where he punctuates endless tea drinking with freelance writing and meteorological angst. Unlocking Every Extend Extra Extreme’s “Master of Extreme” achievement was the fourth proudest moment of his life. &nbsp; <a href="/author/james-holloway/">All articles by James Holloway</a>
+			
+      
+      <span id="author_byline_links">
+        
+        <!-- RSS Link -->
+        <!--
+        <span class="bootbtn" id="rss-author-button">
+        <a></a>
+        </span> -->
+        
+        
+        <!-- Author Twitter Link -->
+        <a href="http://twitter.com/jamesholloway" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @jamesholloway</a>                        
+              
+      </span>
+      <br class="clear_both">
+      </div>
+        
+        	
+	
+	<!-- Tags -->
+			<div id="tags">
+		<span class="title">Tags</span>
+		<div class="dotsontop">
+			<ul>
+					
+				<li>&raquo;&nbsp;<a href="/tag/computers/" rel="tag">Computers</a></li>
+					
+				<li>&raquo;&nbsp;<a href="/tag/nvidia/" rel="tag">NVIDIA</a></li>
+					
+				<li>&raquo;&nbsp;<a href="/tag/pc/" rel="tag">PC</a></li>
+					
+				<li>&raquo;&nbsp;<a href="/tag/steam/" rel="tag">Steam</a></li>
+					
+				<li>&raquo;&nbsp;<a href="/tag/valve/" rel="tag">Valve</a></li>
+						</ul>
+			<div class="clear_both"></div>			
+		</div>
+		</div>
+		
+	
+	<div id="bing_unit"><!-- bing_unit --></div>
+	
+		
+	<!-- Comments -->
+	<span class="title" id="comments">1 Comment</span>
+	<div class="dotsontop">
+
+					        <div id="comment-258865" class="a_comment">
+				<p>Youtube is all abuzz with the tech reviewers about this. Most of them don't really get it I think. Yes, the average consumer will be confused by multiple configurations from multiple venders, but Valve will set a minimum and so every steambox will be able to play a base set of games, and developers will make their games run for that spec. Valve will probably set a few standards, I'm guessing, bronze, silver, and gold, or whatever. When Valve updates the specs the top tier will become the middle, the middle the lower, and the lowest will need to be upgraded to get into a tier. The point is the specs will be upgraded in a shorter span of 10 years so in a few years the steambox spec will blow the consoles out of the water. They'll also be upgradeable, so it won't be a huge investment. Also, games won't be $60-$70, they'll actually come down in price. What you save in games will pay for a nice upgrade down the road. </p>
+				
+				<span class="name">exodous</span><br>
+				<span class="date"> 26th September, 2013 @ 01:00 pm PDT</span>
+			</div>			
+			
+				
+		
+	
+	</div>	
+	
+		
+	<span class="title">Post a Comment</span>
+<div class="dotsontop" id="comment_form_div">
+<div id="comment_form" data-article="29186">
+  
+	<div id="comments_login">
+		<form action="/index.php" name="login_form" id="login_form" onsubmit="return false;">
+			<p class="bold">Login with your gizmag account:</p>
+			<p id="login_status"></p>
+			<label for="email">Email</label><input type="text" name="email" id="email" value="" />
+			<label for="password">Password</label><input type="password" name="password" id="password" value="" />
+			<input type="submit" value="Log In" class="med"/>
+			<div id="options">
+				<a href="/register/">Register here</a><br> 
+				<a href="/new_password/">Forgotten your password?</a>
+			</div>
+			<input type="hidden" id="expired_comment" value="" />
+		</form>	
+	</div>
+
+	<div id="facebook_login">
+		<p>Or <span class="bold">Login with Facebook:</span></p><br/>
+		<div class="fb-login-button" data-scope="email" data-max-rows="1" data-onlogin="loginFUser(29186);" data-autologoutlink="true"></div>
+	</div>
+
+  </div>
+
+<div class="clear_both"></div>
+</div>
+
+		
+	
+	
+	<!-- Related Articles:  cached -->
+							
+
+	 
+	<span class="title">Related Articles</span>
+	<div id="related_articles" class="dotsontop">								
+		<ul>
+								<li>
+				<a href="/valve-linux-steamos/29156/" title="SteamOS">
+					<img src="http://images.gizmag.com/related/valve-linux-steamos.png" alt="SteamOS" />
+				</a>
+				<a class="rel_title" href="/valve-linux-steamos/29156/">SteamOS: Valve's latest bid to win over your TV</a>
+				<p class="rel_date">24th September, 2013</p>
+			</li>
+								<li>
+				<a href="/valve-steam-expansion/23651/" title="Valve has announced that its distribution platform, Steam, will expand beyond game softwar...">
+					<img src="http://images.gizmag.com/related/steam-non-game-expansion.jpg" alt="Valve has announced that its distribution platform, Steam, will expand beyond game softwar..." />
+				</a>
+				<a class="rel_title" href="/valve-steam-expansion/23651/">Valve to open Steam to non-game software</a>
+				<p class="rel_date">9th August, 2012</p>
+			</li>
+								<li>
+				<a href="/steam-box-confirmed/25378/" title="Valve's Gabe Newell has finally confirmed that Valve has a 'Steam Box' games system in the...">
+					<img src="http://images.gizmag.com/related/valve-steam-box-confirmed.jpg" alt="Valve's Gabe Newell has finally confirmed that Valve has a 'Steam Box' games system in the..." />
+				</a>
+				<a class="rel_title" href="/steam-box-confirmed/25378/">Valve's Gabe Newell confirms Steam Box games system in development</a>
+				<p class="rel_date">10th December, 2012</p>
+			</li>
+								<li>
+				<a href="/valve-releases-steam-big-picture/25297/" title="Steam Big Picture now available to all gamers with huge televisions">
+					<img src="http://images.gizmag.com/related/steam-big-picture.png" alt="Steam Big Picture now available to all gamers with huge televisions" />
+				</a>
+				<a class="rel_title" href="/valve-releases-steam-big-picture/25297/">Valve opens up Steam Big Picture to all gamers</a>
+				<p class="rel_date">5th December, 2012</p>
+			</li>
+								<li>
+				<a href="/steam-big-picture/24085/" title="Valve has launched Big Picture, a version of its Steam gaming service that is formatted sp...">
+					<img src="http://images.gizmag.com/related/valve-steam-big-picture.jpg" alt="Valve has launched Big Picture, a version of its Steam gaming service that is formatted sp..." />
+				</a>
+				<a class="rel_title" href="/steam-big-picture/24085/">Steam's Big Picture plays PC games on your TV</a>
+				<p class="rel_date">11th September, 2012</p>
+			</li>
+								<li>
+				<a href="/valve-announces-mac-support/14445/" title="New friends, more zombies and coming to a Mac ... Left 4 Dead 2 will be one of the first t...">
+					<img src="http://images.gizmag.com/related/valve-for-macs.png" alt="New friends, more zombies and coming to a Mac ... Left 4 Dead 2 will be one of the first t..." />
+				</a>
+				<a class="rel_title" href="/valve-announces-mac-support/14445/">It's game-on for Mac users as Valve announces support for OS X</a>
+				<p class="rel_date">9th March, 2010</p>
+			</li>
+				
+		</ul>
+		<div class="clear_both"></div>
+	</div>
+
+		
+	
+
+	<!-- Email a friend -->	
+	<div id="email_friend_div" class="dotsontop">
+		<p><em>Just enter your friends and your email address into the form below</em></p>
+        <p><span id="emailfriendnote">For multiple addresses, separate each with a comma</span></p>
+		
+		<form id="emailafriend" name="emailafriend" action="" data-article="29186">
+		<div id="emailresult"></div>
+		
+		<div class="emailbox">
+		<label for="youremail">Your Email</label><br/>
+		<input id="youremail" type="text" name="youremail" />
+		</div>
+		
+		<div class="emailbox">
+		<label for="friendsemail">Friends Email</label><br/>
+		<input id="friendsemail" type="text" name="friendsemail" />
+		</div>
+		
+		<input type="submit" value="Send"/>
+    <input type="hidden" name="csrf_token" id="csrf_token" value="f9760c82ac8c2339e188efa24f49263e" />
+		</form>
+ 
+        <br class="clear_both" />
+		
+		<p id="privacy">Privacy is safe with us because we have a strict <a href="/privacy/">privacy policy</a>.</p>
+	</div>
+	
+    	
+	<!-- Google Search Box -->
+	<div id="search_form_bottom">
+	<form action="http://www.gizmag.com/search/" id="cse-search-box-bottom">
+		<span class="title">Looking for something? Search our 24,196 articles</span>
+		<div class="dotsontop">	
+		    <input type="hidden" name="cx" value="partner-pub-1607124478120364:bqw4wo-1udf" />
+		    <input type="hidden" name="cof" value="FORID:11" />
+		    <input type="hidden" name="ie" value="ISO-8859-1" />
+		    <input type="text" name="q" size="60" id="search_input" />
+		    <input type="submit" name="sa" value="Search" />
+		</div>
+	</form>
+	<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box-bottom&amp;lang=en"></script>
+	</div>
+	
+	
+	        </div>
+
+    	
+		<div id="right_cols">
+
+			<div class="island" id="island_top_right">    
+    <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("island_top_right"); 
+    });
+    </script>
+    
+    </div>
+
+			<div id="right_col_a">
+
+				<div id="right_col_b">
+
+					<div class="ad" id="skyscraper_right">    
+    <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("skyscraper_right"); 
+    });
+    </script>
+    
+    </div>
+					<div class="ad">				
+	
+  <span class="title">Sections</span>				
+  	<ul class="dots" id="sections_list">
+  	  <li><a href="/features/" class="features_reviews_list">Features</a></li>
+  		<li><a href="/reviews/" class="features_reviews_list">Reviews</a></li>
+  		  	
+  			<li><a href="/aircraft/">Aircraft</a></li>
+  		  	
+  			<li><a href="/architecture/">Architecture</a></li>
+  		  	
+  			<li><a href="/aroundthehome/">Around The Home</a></li>
+  		  	
+  			<li><a href="/automotive/">Automotive</a></li>
+  		  	
+  			<li><a href="/bicycles/">Bicycles</a></li>
+  		  	
+  			<li><a href="/children/">Children</a></li>
+  		  	
+  			<li><a href="/computers/">Computers</a></li>
+  		  	
+  			<li><a href="/digital-cameras/">Digital Cameras</a></li>
+  		  	
+  			<li><a href="/electronics/">Electronics</a></li>
+  		  	
+  			<li><a href="/environment/">Environment</a></li>
+  		  	
+  			<li><a href="/games/">Games</a></li>
+  		  	
+  			<li><a href="/goodthinking/">Good Thinking</a></li>
+  		  	
+  			<li><a href="/health/">Health and Wellbeing</a></li>
+  		  	
+  			<li><a href="/destinations/">Holiday Destinations</a></li>
+  		  	
+  			<li><a href="/homeentertainment/">Home Entertainment</a></li>
+  		  	
+  			<li><a href="/remarkablepeople/">Inventors and Remarkable People</a></li>
+  		  	
+  			<li><a href="/laptops/">Laptops</a></li>
+  		  	
+  			<li><a href="/marine/">Marine</a></li>
+  		  	
+  			<li><a href="/medical/">Medical</a></li>
+  		  	
+  			<li><a href="/military/">Military</a></li>
+  		  	
+  			<li><a href="/mobiletechnology/">Mobile Technology</a></li>
+  		  	
+  			<li><a href="/motorcycles/">Motorcycles</a></li>
+  		  	
+  			<li><a href="/music/">Music</a></li>
+  		  	
+  			<li><a href="/outdoors/">Outdoors</a></li>
+  		  	
+  			<li><a href="/pets/">Pets</a></li>
+  		  	
+  			<li><a href="/robotics/">Robotics</a></li>
+  		  	
+  			<li><a href="/science/">Science</a></li>
+  		  	
+  			<li><a href="/space/">Space</a></li>
+  		  	
+  			<li><a href="/sports/">Sports</a></li>
+  		  	
+  			<li><a href="/telecommunications/">Telecommunications</a></li>
+  		  	
+  			<li><a href="/urbantransport/">Urban Transport</a></li>
+  		  	
+  			<li><a href="/wearableelectronics/">Wearable Electronics</a></li>
+  		  	</ul>					
+
+	</div>					
+
+				</div>
+
+				<!-- Recent Popular:  cached  -->
+
+	<span class="title">Recent popular articles in Games</span>
+	
+	<ul id="recent_popular" class="vertical_sprite recent_popular_22">
+				<li id="story0">
+			<a class="vs_img" href="/gta-5-review/29190/" title="Review: Grand Theft Auto V"></a>
+			<div class="vs_title">
+				<a href="/gta-5-review/29190/">Review: Grand Theft Auto V</a>
+			</div>
+		</li>
+				<li id="story1">
+			<a class="vs_img" href="/xbox-one-ps4-launch-games/28861/" title="The 15 launch games only available on Xbox One or PS4 consoles"></a>
+			<div class="vs_title">
+				<a href="/xbox-one-ps4-launch-games/28861/">The 15 launch games only available on Xbox One or PS4 consoles</a>
+			</div>
+		</li>
+				<li id="story2">
+			<a class="vs_img" href="/valve-linux-steamos/29156/" title="SteamOS: Valve's latest bid to win over your TV"></a>
+			<div class="vs_title">
+				<a href="/valve-linux-steamos/29156/">SteamOS: Valve's latest bid to win over your TV</a>
+			</div>
+		</li>
+				<li id="story3">
+			<a class="vs_img" href="/virtualizer-vr-gaming-walking/29174/" title="&quot;Virtualizer&quot; lets VR gamers walk on the spot to move in the game"></a>
+			<div class="vs_title">
+				<a href="/virtualizer-vr-gaming-walking/29174/">"Virtualizer" lets VR gamers walk on the spot to move in the game</a>
+			</div>
+		</li>
+				<li id="story4">
+			<a class="vs_img" href="/watch-dogs-preview/29212/" title="Latest Watch Dogs demo suggests current gen experience"></a>
+			<div class="vs_title">
+				<a href="/watch-dogs-preview/29212/">Latest Watch Dogs demo suggests current gen experience</a>
+			</div>
+		</li>
+				<li id="story5">
+			<a class="vs_img" href="/steam-machines/29186/" title="Steam Machine gaming PCs will be built by third parties"></a>
+			<div class="vs_title">
+				<a href="/steam-machines/29186/">Steam Machine gaming PCs will be built by third parties</a>
+			</div>
+		</li>
+				<li id="story6">
+			<a class="vs_img" href="/valve-reveals-steam-controller/29211/" title="Valve reveals the hackable, touch-enabled Steam Controller"></a>
+			<div class="vs_title">
+				<a href="/valve-reveals-steam-controller/29211/">Valve reveals the hackable, touch-enabled Steam Controller</a>
+			</div>
+		</li>
+				<li id="story7">
+			<a class="vs_img" href="/xbox-one-ps4-most-wanted/27943/" title="Top 10 most-wanted next-gen games for Xbox One and Playstation 4"></a>
+			<div class="vs_title">
+				<a href="/xbox-one-ps4-most-wanted/27943/">Top 10 most-wanted next-gen games for Xbox One and Playstation 4</a>
+			</div>
+		</li>
+				<li id="story8">
+			<a class="vs_img" href="/xbox-one-vs-playstation-4-specs-comparison/27897/" title="Xbox One vs. PS4"></a>
+			<div class="vs_title">
+				<a href="/xbox-one-vs-playstation-4-specs-comparison/27897/">Xbox One vs. PS4</a>
+			</div>
+		</li>
+				<li id="story9">
+			<a class="vs_img" href="/hands-on-with-the-creative-senz3d/28975/" title="Hands-on with the Creative Senz3D"></a>
+			<div class="vs_title">
+				<a href="/hands-on-with-the-creative-senz3d/28975/">Hands-on with the Creative Senz3D</a>
+			</div>
+		</li>
+			</ul>
+	
+	<div class="clear_both"></div>
+	
+									
+				<div class="island" id="island_bottom_right">    
+    <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("island_bottom_right"); 
+    });
+    </script>
+    
+    </div>
+								
+								
+												
+				<!-- tailsweep_analytics -->		
+										
+			<!-- close right col a -->
+			</div>
+			
+		<!-- close right cols -->
+		</div>	
+
+					
+		<div class="clear_left"></div>
+
+	<!-- close center -->
+	</div>
+	
+	<!-- footer -->
+    <script type="text/javascript" src="/inc/footer_tabs.js?1377327827"></script>
+	<div id="footer_outer">
+	<div id="footer">
+						
+        <!-- Popoular Articles -->
+        <div class="footer_item" id="footer_popular">
+            <span class="footer_title">Most Popular Articles</span>            
+                <!-- Popular articles (footer):  cached  -->
+
+    <div class="tabbable"> 
+      <ul class="nav nav-tabs" id="most_popular_tabs">
+        <li class="active"><a data-target="#popular_today" data-toggle="tab" data-period="day">Today</a></li>
+        <li><a data-target="#popular_week" data-toggle="tab" data-period="week">Last week</a></li>
+        <li><a data-target="#popular_all" data-toggle="tab" data-period="all">All time</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="popular_today">
+            <ul class="popular_articles">
+                                <li><a href="http://www.gizmag.com/htc-one-vs-note-3/29236/">Samsung Galaxy Note 3 vs. HTC One</a></li>
+                                <li><a href="http://www.gizmag.com/gopro-hero3plus/29237/">GoPro announces smaller and lighter Hero3+ actioncams</a></li>
+                                <li><a href="http://www.gizmag.com/blooming-bamboo-hp-architects/29225/">Low-cost Blooming Bamboo home built to withstand floods</a></li>
+                                <li><a href="http://www.gizmag.com/iphone-5s-vs-iphone-5c-vs-iphone-4s/29214/">iPhone 5s vs. iPhone 5c vs. iPhone 4s</a></li>
+                                <li><a href="http://www.gizmag.com/ishin-den-shin-playsback-messages-through-finger/29054/">Ishin-Den-Shin system plays spoken messages through your finger</a></li>
+                                <li><a href="http://www.gizmag.com/defender-bike-light-review/29230/">Review: Defender Bike Light</a></li>
+                                <li><a href="http://www.gizmag.com/samsung-galaxy-note-3-vs-apple-iphone-5s-specs-comparison/29128/">iPhone 5s vs. Galaxy Note 3</a></li>
+                                <li><a href="http://www.gizmag.com/martin-jetpack-p12/29215/">Redesigned Martin Jetpack deliveries expected to start in 2014</a></li>
+                                <li><a href="http://www.gizmag.com/stir-kinetic-desk-automatically-rises/29223/">Stir Kinetic Desk automatically adjusts its height to keep you alert</a></li>
+                                <li><a href="http://www.gizmag.com/mipwr-dynamo-iphone-charging-case/29235/">Mipwr Dynamo puts the squeeze on iPhone charging</a></li>
+                            </ul>
+        </div>
+        <div class="tab-pane" id="popular_week">
+          <ul class="popular_articles">                
+          </ul>
+        </div>
+        <div class="tab-pane" id="popular_all">
+        <ul class="popular_articles">            
+        </ul>
+        </div>
+      </div>
+    </div>
+
+    
+        </div>	
+
+        <!-- Commented Articles -->
+        <div class="footer_item" id="footer_commented">
+            <span class="footer_title">Most Commented Articles</span>
+                <!-- Commented articles (footer):  cached  -->
+
+    <div class="tabbable"> 
+      <ul class="nav nav-tabs" id="most_commented_tabs">
+        <li class="active"><a data-target="#commented_today" data-toggle="tab" id="commented_today_tab" data-period="day">Today</a></li>
+        <li><a data-target="#commented_week" data-toggle="tab" id="commented_week_tab" data-period="week">Last week</a></li>
+        <li><a data-target="#commented_all" data-toggle="tab" id="commented_all_tab" data-period="all">All time</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="commented_today">
+            <ul class="commented_articles">                
+            </ul>
+        </div>
+        <div class="tab-pane" id="commented_week">
+          <ul class="commented_articles">
+                                <li><a href="/objective-europa/29132/">Objective Europa wants to send astronauts on a one-way mission to Jupiter's moons</a> (31)</li>
+                                <li><a href="/martin-jetpack-p12/29215/">Redesigned Martin Jetpack deliveries expected to start in 2014</a> (30)</li>
+                                <li><a href="/cota-ossia-wireless-charging-microwave-phased-array/29217/">Cota system transmits power wirelessly at up to 30 feet</a> (18)</li>
+                                <li><a href="/equus-bass-770-muscle-car/29175/">Luxury muscle: The Equus Bass 770 </a> (13)</li>
+                                <li><a href="/volvo-3-million-miles/29157/">How far is 3 million miles?</a> (13)</li>
+                                <li><a href="/ishin-den-shin-playsback-messages-through-finger/29054/">Ishin-Den-Shin system plays spoken messages through your finger</a> (11)</li>
+                                <li><a href="/impressions-from-piloting-lamborghinis-691-hp-aventador-lp700-4/28993/">Test drive: Lamborghini's 700 hp attack fighter, the Aventador LP 700-4</a> (10)</li>
+                                <li><a href="/boeing-f16-jet-unmanned-drone/29203/">Boeing converts F-16 fighter jet into an unmanned drone</a> (9)</li>
+                                <li><a href="/apple-ipad-mini-vs-kindle-fire-hdx/29200/">Kindle Fire HDX vs. iPad mini</a> (9)</li>
+                                <li><a href="/mit-skycall-guides-users-on-campus/29080/">MIT's SkyCall system uses a drone to guide people around campus</a> (8)</li>
+                          </ul>
+        </div>
+        <div class="tab-pane" id="commented_all">
+        <ul class="commented_articles">            
+        </ul>
+        </div>
+      </div>
+    </div>
+
+    
+        </div>
+
+        <!-- Subscribe Options -->
+        <div class="footer_item nomargin" style="margin: 0px;" id="footer_subscribe">
+            <div>
+              <form id="footer_email_form" class="form-inline" action="/index.php">
+                  <span class="small">Subscribe to Gizmag's</span><br/>
+                  <span class="large">Email Newsletter</span>
+                  <input type="text" name="email" class="email" value="Enter Your Email Address ..." onclick="this.value=''; this.style.color='#999'" id="footer_email"/>
+                  <button type="submit" class="bootbtn" id="footer_subscribe_button">Subscribe</button>
+              </form>		
+              <script type="text/javascript" src="/inc/subscribe_footer.js?1377327827"></script>
+  
+              <div class="subscribe_options">
+                  <a target="_blank" href="http://twitter.com/gizmag/" class="twitter_footer greytitle">
+                  <span class="small">Follow Gizmag on</span>
+                  <span class="large">Twitter</span></a>
+              </div>
+  
+              <div class="subscribe_options">
+                  <a target="_blank" href="http://www.youtube.com/user/gizmag" class="youtube_footer greytitle">
+                  <span class="small">Subscribe to Gizmag's</span>
+                  <span class="large">YouTube channel</span></a>
+              </div>
+  
+              <div class="subscribe_options">
+                  <a href="http://www.gizmag.com/xml/" class="rss_footer greytitle">
+                  <span class="small">Subscribe to Gizmag's </span>
+                  <span class="large">RSS feed</span></a>					
+              </div>
+  
+              <div class="subscribe_options">
+                  <a href="http://www.stumbleupon.com/channel/Gizmag/" class="su_footer greytitle">
+                  <span class="small">Follow Gizmag on </span>
+                  <span class="large">Stumbleupon</span></a>					
+              </div>                
+  
+              <div class="subscribe_options">
+                  <a href="https://plus.google.com/105149739082983197804" class="gplus_footer greytitle">
+                  <span class="small">Follow Gizmag on </span>
+                  <span class="large">Google Plus</span></a>					
+              </div>                                				
+            </div>
+        </div>
+
+        <div class="clear_both"></div>	
+			
+	</div>
+
+        <div id="copyright"><em>All content copyright &copy; Gizmag 2003 - 2013</em></div>
+		
+		
+		
+	
+		
+		<div class="clear_left"></div>					
+
+	</div>	
+	
+	
+	<div class="index" id="footer_index">				
+		<div class="index_center bottom_strip">
+			<ul>
+			<li><a href="#top">Top</a></li>
+			<li><a href="/">Home</a></li>
+			<li><a href="/about/">About</a></li>
+			<li><a href="/contact/">Contact</a></li>
+			<li><a href="/privacy/">Privacy</a></li>
+			<li><a href="/termsofuse/">Terms &amp; Conditions</a></li>
+			<li><a href="/advertise/" class="brighter">Advertise</a></li>								
+			</ul>
+		</div>				
+	</div> 
+        <!-- Sharing JS -->
+    
+    
+    
+    <link rel ="stylesheet" type="text/css" href="/inc/jqmodal/jqModal.css" />
+    <script type="text/javascript" src="/inc/jqmodal/jqModal.js"></script>
+            <div id="subscribe_overlay_container" class="jqmWindowModSize"></div>
+    <script type="text/javascript" src="/inc/subscribe_overlay.js?x=1380682790"></script>
+  
+    
+    
+        
+	
+	<!-- Clicky Tracing Code -->
+	<script src="http://static.getclicky.com/js" type="text/javascript"></script>
+	<script type="text/javascript">clicky.init(110681);</script>
+	<noscript><p><img alt="Clicky" width="1" height="1" src="http://in.getclicky.com/110681ns.gif" /></p></noscript>
+	
+
+    <!-- FM Tracking Pixel -->
+	<script type="text/javascript" src="http://static.fmpub.net/site/gizmag"></script>
+	
+	
+	<!-- Chartbeat Tracking Code -->	
+	<script type="text/javascript">
+	var _sf_async_config={uid:4159,domain:"gizmag.com"};
+	(function(){
+	  function loadChartbeat() {
+	    window._sf_endpt=(new Date()).getTime();
+	    var e = document.createElement('script');
+	    e.setAttribute('language', 'javascript');
+	    e.setAttribute('type', 'text/javascript');
+	    e.setAttribute('src',
+	       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+	       "static.chartbeat.com/js/chartbeat.js");
+	    document.body.appendChild(e);
+	  }
+	  var oldonload = window.onload;
+	  window.onload = (typeof window.onload != 'function') ?
+	     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+	})();
+	
+	</script>	
+	
+	<!-- Crazy Egg -->
+	<script type="text/javascript" src="http://s3.amazonaws.com/new.cetrk.com/pages/scripts/0008/8786.js"> </script>
+	
+		
+	<!-- auvid -->
+	
+  <!-- bottom include: ABA -->
+  
+  <div id="bottom_include">
+      <script type="text/javascript">googletag.cmd.push(function() {
+    googletag.display("bottom_include"); 
+  });</script>
+  </div>
+		
+  <!-- FM AD SKIN Zone -->
+  <script type="text/javascript" src="http://static.fmpub.net/zone/8204"></script>
+  <!-- FM AD SKIN Zone -->
+
+	    
+    
+    <!--script language="JavaScript" type="text/javascript" src="/inc/jquery.history.js?"></script-->
+    <!--[if !lt IE 9]>-->
+    <!--script language="JavaScript" type="text/javascript" src="/inc/article_load.js?"></script-->
+    <!--<![endif]-->
+    
+	        
+    
+	<!-- Page Loaded in: page_load_time sec --> 		
+	<!-- Displayed on: gizweb2 --> 	
+	<!--  Article Cached -->	
+    
+	
+	</body>
+	</html>
+	
+	

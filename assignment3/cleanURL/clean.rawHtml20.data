@@ -1,0 +1,253 @@
+
+     * [1]about
+     * [2]services
+     * [3]clients
+     * [4]Caktus logo
+     * [5]blog
+     * [6]events
+     * [7]contact
+
+     * [8]Caktus logo
+     * [home____]
+
+   [9]Tobias McNulty
+
+Central logging in Django with Graylog2 and graypy
+
+   Written by [10]Tobias McNulty
+   September 18, 2013
+
+   Django's [11]logging configuration facilities, which arrived in version
+   1.3, have greatly eased (and standardized) the process of configuring
+   logging for Django projects. When building complex and interactive web
+   applications at Caktus, we've found that detailed (and properly
+   configured!) logs are key to successful and efficient debugging.
+   Another step in that process—which can be particularly useful in
+   environments where you have multiple web servers—is setting up a
+   centralized logging server to receive all your logs and make them
+   available through an easily accessible web interface. There are a
+   number useful tools to do this, but one we've found that works quite
+   well is [12]Graylog2. Installing and configuring Graylog2 is outside
+   the scope of this post, but there are plenty of tutorials on how to do
+   so accessible through your search engine of choice.
+
+   Once you have it setup, getting logs flowing to Graylog2 from Django is
+   relatively straightforward. First, grab a copy of the graypy package
+   from PyPI and add it to your requirements file:
+pip install -U graypy
+
+   Next, add the following configuration inside the LOGGING['handlers']
+   dictionary in your settings.py, where graylog2.example.com is the
+   hostname of your Graylog2 server:
+LOGGING = {
+    # ...
+    'handlers': {
+        # ...
+        'gelf': {
+            'class': 'graypy.GELFHandler',
+            'host': 'graylog2.example.com',
+            'port': 12201,
+        },
+    },
+}
+
+   You'll most likely want to tell your project's top-level logger to send
+   logs to the new gelf handler as well, like so:
+LOGGING = {
+    # ...
+    'loggers': {
+        # ...
+        'projectname': {
+            # mail_admins will only accept ERROR and higher
+            'handlers': ['mail_admins', 'gelf'],
+            'level': 'DEBUG',
+        },
+    },
+}
+
+   With this configuration in place, log messages with a severity of DEBUG
+   or greater that are sent to the projectname logger should begin flowing
+   to Graylog2. You can easily test this by opening Django's python
+   manage.py shell, grabbing the logger manually, and sending a log
+   message:
+import logging
+logger = logging.getLogger('projectname')
+logger.debug('testing message to graylog2')
+
+   You should see the message show up in Graylog2 almost immediately.
+
+   Now, this is all well and good, but if you want to use your Graylog2
+   server for multiple projects, you'll quickly find that all the log
+   messages are interspersed and it can be difficult to tell what messages
+   are coming from what projects. To address this issue, Graylog2 supports
+   the concept of "streams," that is, filters that you can setup (which
+   work only on incoming messages, not existing messages) to show messages
+   that match only certain criteria. A simple solution here could be to
+   filter on the hostname of the originating web servers, but this may not
+   scale well in environments like Amazon Web Services' EC2 where you're
+   often adding or removing web servers. As a better alternative, you can
+   add metadata to log messages at the Python level prior to sending them
+   to Graylog2 that will help you more easily identify the messages for
+   different projects.
+
+   To do this, you need to use a feature of Python [13]logging filters.
+   While filters are most commonly used to filter out certain types of
+   messages from being emitted altogether (as discussed in the [14]Django
+   documentation), they can also be used to modify the log records in
+   transit and [15]impart contextual metadata to be transmitted with the
+   original message. To add this to our logging configuration, first
+   create the following filter class in a Python module accessible from
+   your project:
+class StaticFieldFilter(logging.Filter):
+    """
+    Python logging filter that adds the given static contextual information
+    in the ``fields`` dictionary to all logging records.
+    """
+    def __init__(self, fields):
+        self.static_fields = fields
+
+    def filter(self, record):
+        for k, v in self.static_fields.items():
+            setattr(record, k, v)
+        return True
+
+   Next, we need to load this filter in our logging configuration and tell
+   the gelf logger to pass records through it:
+LOGGING = {
+    # ...
+    'filters': {
+        # ...
+        'static_fields': {
+            '()': 'projectname.core.logfilters.StaticFieldFilter',
+            'fields': {
+                'project': 'projectname', # CHANGEME
+                'environment': 'staging', # can be overridden in local_settings.
+py
+            },
+        },
+    },
+    'handlers': {
+        # ...
+        'gelf': {
+            'class': 'graypy.GELFHandler',
+            'host': 'graylog2.example.com',
+            'port': 12201,
+            'filters': ['static_fields'],
+        },
+        # ...
+    },
+}
+
+   The configuration under filters instantiates the StaticFieldFilter
+   class and passes in the static fields that we want to attach to all of
+   our log records. In this case, two fields are attached, a 'project'
+   field with value 'projectname' and an 'environment' field with value
+   'staging'. The configuration for the gelf logger is the same, with the
+   addition of the static_fields filter on the last line.
+
+   With these two items in place, you should be able to create streams via
+   the Graylog2 web interface to trap and display records that match the
+   combination of project and environment names that you're looking for.
+
+   Lastly, as an optional addition to this logging configuration, it may
+   be desirable to filter out Django request objects from being sent to
+   Graylog2. The request is added to log messages created by Django's
+   exception handler and may contain sensitive information or in some
+   cases may not be capable of being pickled (which is necessary to encode
+   and send it with the log message). You can remove them from log
+   messages with the following filter:
+class RequestFilter(logging.Filter):
+    """
+    Python logging filter that removes the (non-pickable) Django ``request``
+    object from the logging record.
+    """
+    def filter(self, record):
+        if hasattr(record, 'request'):
+            del record.request
+        return True
+
+   and this corresponding filter configuration:
+LOGGING = {
+    # ...
+    'filters': {
+        # ...
+        'django_exc': {
+            '()': 'projectname.core.logfilters.RequestFilter',
+        },
+    },
+    'handlers': {
+        # ...
+        'gelf': {
+            'class': 'graypy.GELFHandler',
+            'host': 'graylog2.example.com',
+            'port': 12201,
+            'filters': ['static_fields', 'django_exc'],
+        },
+        # ...
+    },
+}
+
+   With this configuration in place, you can have log messages flowing to
+   Graylog2 from any number of project and server environment
+   combinations, limited only by the resources of the log server itself.
+
+   Related tags: [16]django, [17]logging, [18]python
+   [19]← Caktus Participates in DjangoCon 2013
+
+Comments
+
+   Please enable JavaScript to view the [20]comments powered by Disqus.
+
+   [21]blog comments powered by Disqus
+
+   [22]We're hiring! Visit our careers page to see what opportunities
+   await you.
+
+Let's be friends
+
+     * [23]Facebook
+     * [24]Twitter
+     * [25]LinkedIN
+
+Our Company
+
+     * [26]About Us
+     * [27]Careers
+
+Contact Us
+
+     * 919.951.0052
+     * Email: [28]solutions@caktusgroup.com
+
+   © 2007 - 2013 Caktus Consulting Group, LLC.
+
+References
+
+   1. file://localhost/about/
+   2. file://localhost/services/
+   3. file://localhost/portfolio/
+   4. file://localhost/
+   5. file://localhost/blog/
+   6. file://localhost/events/
+   7. file://localhost/contact/
+   8. file://localhost/
+   9. file://localhost/about/#tobias
+  10. file://localhost/about/#tobias
+  11. https://docs.djangoproject.com/en/1.5/topics/logging/
+  12. http://graylog2.org/
+  13. http://docs.python.org/2/library/logging.html#filter-objects
+  14. https://docs.djangoproject.com/en/1.5/topics/logging/#filters
+  15. http://docs.python.org/2/howto/logging-cookbook.html#using-filters-to-impart-contextual-information
+  16. file://localhost/blog/tags/django/
+  17. file://localhost/blog/tags/logging/
+  18. file://localhost/blog/tags/python/
+  19. file://localhost/blog/2013/09/02/caktus-participates-djangocon-2013/
+  20. http://disqus.com/?ref_noscript=
+  21. http://disqus.com/
+  22. file://localhost/careers/
+  23. http://www.facebook.com/CaktusGroup/
+  24. http://twitter.com/caktusgroup/
+  25. http://www.linkedin.com/company/caktus-consulting-group-llc/
+  26. file://localhost/about/
+  27. file://localhost/careers/
+  28. mailto:solutions@caktusgroup.com

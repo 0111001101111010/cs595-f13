@@ -1,0 +1,625 @@
+   #[1]Stack Overflow [2]Feed for question 'What is the need of JSF. When
+   UI can be achieved from css html javascript jQuery?'
+
+   [3]Stack Exchange
+   [4]sign up | [5]log in | [6]careers 2.0 |
+   ____________________________
+   [7]Stack Overflow
+     * [8]Questions
+     * [9]Tags
+     * [10]Tour
+     * [11]Users
+
+     * [12]Ask Question
+
+   [13]Tell me more ×
+   Stack Overflow is a question and answer site for professional and
+   enthusiast programmers. It's 100% free, no registration required.
+
+[14]What is the need of JSF. When UI can be achieved from css html javascript
+jQuery?
+
+   up vote 38 down vote [15]favorite
+   20
+
+   I was reading about JSF that its a UI framework and provides some UI
+   components. But how is it better or different from number of components
+   that can are available from extjs or jQuery or combination of css and
+   html and js. Why should someone learn JSF.
+   [16]jquery [17]html [18]jquery-ui [19]jsf [20]extjs
+
+   [21]share|[22]improve this question
+                                      asked Dec 12 '10 at 13:19
+                                      [23]sushil bharwani
+                                      8,14673170
+   advantages of server-generated html: search engine searchability, hide
+   views based on authorization. otherwise, we have abandoned it for pure
+   ajax ui. – [24]Neil McGuigan Oct 1 '12 at 17:45
+
+6 Answers
+
+   [25]active [26]oldest [27]votes
+   up vote 46 down vote accepted
+
+   JSF to plain JSP/Servlet/HTML/CSS/JS is like as jQuery to plain JS: do
+   more with less code. To take [28]PrimeFaces as an example, browse
+   through its [29]showcase to see complete code examples. [30]RichFaces
+   has also a [31]showcase with complete code examples. If you study those
+   examples closely, then you'll see that you basically need a simple
+   Javabean class as model and a XHTML file as view.
+
+   Note that you should not see JSF as replacement of alone HTML/CSS/JS,
+   you should also take the server side part into account (specifically:
+   JSP/Servlet). JSF removes the need of all the boilerplate of gathering
+   HTTP request parameters, converting/validating them, updating the model
+   values, executing the right Java method to do the business stuff and
+   generating the HTML/CSS/JS boilerplate code. With JSF you basically end
+   up with a XHTML page as view definition and a Javabean class as model
+   definition. This greatly speeds up development.
+
+   As with every component based web MVC framework, you have in JSF less
+   fine-grained control over the rendered HTML/CSS/JS. Adding custom JS
+   code isn't that easy as you have to take the JSF view state in the
+   server side into account as well (e.g. enabling a disabled button in JS
+   side won't enable the button in JSF side, which is in turn a huge
+   security advantage). If that is however a major showstopper, then
+   rather look for an action based web MVC framework like [32]Spring MVC.
+   You'll only take into account that you have to write all that
+   HTML/CSS/JS code yourself. Also if you fall back from Facelets to JSP,
+   you'll miss advanced templating capabilities as well.
+
+   On the other hand, if you have a big JSP/Servlet/HTML/CSS/JS/jQuery
+   based website and you'd like to refactor the repeated
+   JSP/Servlet/HTML/CSS/JS/jQuery boilerplate code into reusable
+   components, then one of the solutions would be JSF. Custom templates,
+   tagfiles and components can aid in this. In that perspective, JSF
+   stands above JSP/Servlet/HTML/CSS/JS/jQuery (and that's also why it's
+   pretty important to understand those basics before diving into JSF).
+
+See also:
+
+     * [33]Difference between JSP, Servlet and JSF
+     * [34]Which Java web framework to choose for jQuery?
+     * [35]What are the main disadvantages of JSF 2.0?
+     * [36]When to use <ui:include>, tag files, composite components
+       and/or custom components?
+
+
+   [37]share|[38]improve this answer
+   [39]edited Jul 22 at 22:48
+   answered Dec 12 '10 at 23:40
+   [40]BalusC
+   424k739981311
+
+   6
+     Do more with less code? But with more xml... what a tradeoff...
+     additionally, it robes you of flexibility – [41]Åukasz Lech Nov 25 '11
+     at 13:41
+
+   7
+     In JSF 2.0+, xml is not necessary. – [42]Cagatay Civici Nov 26 '12 at
+     14:23
+   up vote 12 down vote
+
+   JSF was created to make it so that java shops didn't have to learn
+   stuff like jQuery and buil complex js but instead focus on a purely
+   Java stack. In a world where time is money and lots of places already
+   focusing on Java development, one less language/piece in the stack
+   makes training and maintaining faster and thus cheaper.
+
+   I'll add that JavaScript is easy to become a maintenance nightmare on
+   large teams, especially if some of the developers on the project are
+   not highly web savy.
+
+   [43]share|[44]improve this answer
+                                    answered Dec 12 '10 at 14:05
+                                    [45]Andrew White
+                                    20.1k43265
+     So if am pretty comfortable with JQuery JS etc. I need not be
+     concentrating on JSF? – [46]sushil bharwani Dec 12 '10 at 14:10
+
+   2
+     It all depends on the problem you are trying to solved and what team
+     you are solving it with. – [47]Andrew White Dec 12 '10 at 15:15
+     I agree on team, but i am interested in learning what different
+     problems can JSF solve and js jQuery etc cannot. Just trying to buildup
+     motivation to learn JSF. – [48]sushil bharwani Dec 12 '10 at 15:33
+
+   1
+     None, it just provides a different way to solve the same problems.
+     – [49]Andrew White Dec 12 '10 at 16:18
+
+   3
+     Even if you're really comfortable with JQuery, JSF is still really
+     useful. It provides an easy way to connect server side code to client
+     side representations. Some Facelets 'composite components' are only a
+     rather thin wrapper around HTML and JS (including JQuery). They're a
+     breeze to build and in general just make the whole client-server side
+     connection way easier. – [50]Arjan Tijms Dec 13 '10 at 23:15
+   up vote 9 down vote
+
+   With Javascript and frameworks such as jQuery you have full flexibility
+   and full control . Wwith ext's etc you lose much control and must adapt
+   to the framework. With JSF you totally lose control and must totally
+   adapt to the framework. You're invoked in lifecycles etc. and finally
+   you have no control when the call to the server can be made and where
+   not. If you are to do something considered 'special', you're in very
+   hard position. And in JSF world even such basic things as multicolumn
+   table sort or fields where you can type only limited set of characters
+   (such as number field) are considered 'special'.
+
+   However, the more flexibility you have, the more errors or bad
+   practices you can made. High flexibility works only with highly
+   intelligent programmers, others will turn the project into unmanagable
+   nightmare.
+
+   But, with JSF and its limited flexibility, there's always only a few
+   (or even only one) correct way to do something. You are very limited,
+   you can't make shortcuts, you must write more XML etc. - but when
+   adapting to standard, there's better control on the code the
+   unexperienced or low-skilled programmers will produce. As a result, big
+   corporations love JSF because it is 'safer' for them.
+
+   When I moved from GWT to JSF, I was shocked, how many things, that was
+   natural to me, was considered highly untypical and how much simple
+   things were so hard to achieve. What's more, even making the smallest
+   changes, such as adding ':' sign after label, which in GWT/jQuery
+   powered app would be changing one function generating label, required
+   changing dozens of files with localized properties, which wasn't even
+   considered by anyone except me strange...
+
+   [51]share|[52]improve this answer
+                                    answered Nov 25 '11 at 14:04
+                                    [53]Åukasz Lech
+                                    6,57563461
+
+   1
+     PrimeFaces is based on jQuery so you have lots of flexibility on client
+     side, also PrimeFaces components provide many hooks on client and
+     server side as event callbacks for you to customize. Javascript APIs
+     can be overriden and CSS as well for customized look. : label can be
+     configured globally in web.xml for a more jQuery friendly character.
+     – [54]Cagatay Civici Nov 26 '12 at 14:26
+   up vote 4 down vote
+
+   I strongly disagree that jsf adds anything. It only adds overhead.
+   Doing ui stuff on the server is the most ridiculous thing ive ever
+   heard. And javascript on large teams works great - its called reusing
+   code.
+
+   Just wrap the jquery in some jsp tags, thats all you need and youre
+   done, and dont endure the.shackles and scalability issues with.jsf and
+   richfaces.
+
+   [55]share|[56]improve this answer
+                                    answered Apr 29 '12 at 15:36
+                                    [57]guwst
+                                    651
+
+   3
+     JSF is geared towards form based applications. jQuery is nice (heck,
+     lot of popular JSF component libraries like PrimeFaces, RichFaces and
+     IceFaces even use it under the covers), but jQuery doesn't simplify
+     processing form submits in the server side in any way. Using plain
+     JSP/Servlet will only result in terrible boilerplate code. Again, JSF
+     is not only HTML/CSS/JS, but also JSP/Servlet. – [58]BalusC Apr 30 '12
+     at 17:34
+   up vote 3 down vote
+
+   The benefits of using JSF are not only in generating xhtml + css + js.
+   Sometimes JSF imposes a restriction on the markup you can generate,
+   like any component based framework. But JSF is not just for that, its
+   lifecyle helps greately. After validating the input it can update the
+   model and sync your server side beans without any effort. you just say
+   "whatever the user types here, check if it's a number, if yes then
+   store it in the property YY in object XX" and JSF will do all that.
+
+   So yes, you can still use JQuery, JS, etc. But JSF provides many
+   benefits when it comes to writing server side code and saves you from a
+   lot of boiler plate.
+
+   [59]share|[60]improve this answer
+                                    answered Apr 11 '12 at 12:47
+                                    [61]arg20
+                                    772835
+   up vote 1 down vote
+
+   Having worked with JSF, Spring MVC, Struts, Grails, JQuery, and ExtJS
+   my opinion is that Grails + ExtJS is one powerful combination.
+
+   I would pick Grails over JSF any day. I like the completeness of ExtJS
+   as the client side framework and library, but it comes with a steeper
+   learning curve than JQuery.
+
+   [62]share|[63]improve this answer
+                                    answered Oct 15 '12 at 22:22
+                                    [64]dbrin
+                                    8,4831929
+
+Your Answer
+
+
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+
+   draft saved
+   draft discarded
+   ____________________
+
+Sign up or [65]login
+
+   Sign up using Google
+
+   Sign up using Facebook
+
+   Sign up using Stack Exchange
+   [BUTTON Input] (not implemented)______
+
+Post as a guest
+
+   Name ______________________________
+   Email ______________________________ required, but not shown
+
+Post as a guest
+
+   Name ______________________________
+   Email ______________________________ required, but not shown
+   Post Your Answer [66]discard
+
+   By posting your answer, you agree to the [67]privacy policy and
+   [68]terms of service.
+
+Not the answer you're looking for? Browse other questions tagged [69]jquery
+[70]html [71]jquery-ui [72]jsf [73]extjs or [74]ask your own question.
+
+   tagged
+   [75]jquery × 369071
+   [76]html × 206768
+   [77]jquery-ui × 24328
+   [78]jsf × 17341
+   [79]extjs × 11501
+
+   asked
+
+         2 years ago
+
+   viewed
+
+         10033 times
+
+   active
+
+         [80]2 months ago
+
+Linked
+
+   2
+   [81]How JSF and JSP differs client-side?
+   202
+   [82]What is the difference between JSF, Servlet and JSP?
+   100
+   [83]What are the main disadvantages of Java Server Faces 2.0?
+   31
+   [84]Include another HTML file in a HTML file
+   33
+   [85]When to use <ui:include>, tag files, composite components and/or
+   custom components?
+   13
+   [86]How to refer to a JSF component Id in jquery?
+   4
+   [87]Which Java web framework to choose for jQuery?
+   7
+   [88]Is RESTful JSF possible?
+   5
+   [89]JSF or MVC with Servlets/JSPs or other frontend frameworks?
+   7
+   [90]What should I know before learning Spring?
+   [91]see more linked questions…
+
+Related
+
+   578
+   [92]Which JavaScript framework (jQuery vs Dojo vs … )?
+   1733
+   [93]How can I make a redirect page in jQuery/JavaScript?
+   305
+   [94]Downloading jQuery CSS from Google's CDN
+   287
+   [95]Are there hosted jQuery UI themes anywhere?
+   0
+   [96]Ok to wrap JSF components generated html with own divs using jQuery
+   after page load?
+   2
+   [97]jQuery: Plain HTML/CSS with core jQuery or jQuery UI for a blog?
+   2
+   [98]Web app using jQuery standalonne vs. server-side presentation
+   framework
+   1
+   [99]What libraries do I need to import in order to use jQuery
+   Autocomplete
+   1
+   [100]Need to integrate jQuery validation plugin with jsf
+   5
+   [101]What is Component Binding in JSF ? When it is preferred to be
+   used?
+   [102]question feed
+   default
+
+   [103]about [104]help [105]badges [106]blog [107]chat [108]data
+   [109]legal [110]privacy policy [111]jobs [112]advertising info mobile
+   [113]contact us [114]feedback
+            Technology            Life / Arts Culture / Recreation Science Other
+  1. [115]Stack Overflow
+    2. [116]Server Fault
+    3. [117]Super User
+    4. [118]Web Applications
+    5. [119]Ask Ubuntu
+    6. [120]Webmasters
+    7. [121]Game Development
+    8. [122]TeX - LaTeX
+
+  1. [123]Programmers
+    2. [124]Unix & Linux
+    3. [125]Ask Different (Apple)
+    4. [126]WordPress Answers
+    5. [127]Geographic Information Systems
+    6. [128]Electrical Engineering
+    7. [129]Android Enthusiasts
+    8. [130]IT Security
+
+  1. [131]Database Administrators
+    2. [132]Drupal Answers
+    3. [133]SharePoint
+    4. [134]User Experience
+    5. [135]Mathematica
+    6. [136]more (13)
+
+  1. [137]Photography
+    2. [138]Science Fiction & Fantasy
+    3. [139]Seasoned Advice (cooking)
+    4. [140]Home Improvement
+    5. [141]more (13)
+
+  1. [142]English Language & Usage
+    2. [143]Skeptics
+    3. [144]Mi Yodeya (Judaism)
+    4. [145]Travel
+    5. [146]Christianity
+    6. [147]Arqade (gaming)
+    7. [148]Bicycles
+    8. [149]Role-playing Games
+    9. [150]more (21)
+
+  1. [151]Mathematics
+    2. [152]Cross Validated (stats)
+    3. [153]Theoretical Computer Science
+    4. [154]Physics
+    5. [155]MathOverflow
+    6. [156]more (7)
+
+  1. [157]Stack Apps
+    2. [158]Meta Stack Overflow
+    3. [159]Area 51
+    4. [160]Stack Overflow Careers
+
+   site design / logo © 2013 stack exchange inc; user contributions
+   licensed under [161]cc-wiki with [162]attribution required
+   rev 2013.10.1.1045
+
+   Stack Overflow works best with JavaScript enabled
+
+References
+
+   Visible links
+   1. file://localhost/opensearch.xml
+   2. file://localhost/feeds/question/4421839
+   3. http://stackexchange.com/
+   4. file://localhost/users/login?returnurl=%2fquestions%2f4421839%2fwhat-is-the-need-of-jsf-when-ui-can-be-achieved-from-css-html-javascript-jquery
+   5. file://localhost/users/login?returnurl=%2fquestions%2f4421839%2fwhat-is-the-need-of-jsf-when-ui-can-be-achieved-from-css-html-javascript-jquery
+   6. http://careers.stackoverflow.com/
+   7. file://localhost/
+   8. file://localhost/questions
+   9. file://localhost/tags
+  10. file://localhost/about
+  11. file://localhost/users
+  12. file://localhost/questions/ask
+  13. file://localhost/about
+  14. file://localhost/questions/4421839/what-is-the-need-of-jsf-when-ui-can-be-achieved-from-css-html-javascript-jquery
+  15. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml409.data
+  16. file://localhost/questions/tagged/jquery
+  17. file://localhost/questions/tagged/html
+  18. file://localhost/questions/tagged/jquery-ui
+  19. file://localhost/questions/tagged/jsf
+  20. file://localhost/questions/tagged/extjs
+  21. file://localhost/q/4421839
+  22. file://localhost/posts/4421839/edit
+  23. file://localhost/users/337522/sushil-bharwani
+  24. file://localhost/users/223478/neil-mcguigan
+  25. file://localhost/questions/4421839/what-is-the-need-of-jsf-when-ui-can-be-achieved-from-css-html-javascript-jquery?answertab=active#tab-top
+  26. file://localhost/questions/4421839/what-is-the-need-of-jsf-when-ui-can-be-achieved-from-css-html-javascript-jquery?answertab=oldest#tab-top
+  27. file://localhost/questions/4421839/what-is-the-need-of-jsf-when-ui-can-be-achieved-from-css-html-javascript-jquery?answertab=votes#tab-top
+  28. http://www.primefaces.org/
+  29. http://www.primefaces.org/showcase/ui/home.jsf
+  30. http://jboss.org/richfaces
+  31. http://richfaces-showcase.appspot.com/
+  32. http://static.springsource.org/spring/docs/3.0.x/reference/mvc.html
+  33. http://stackoverflow.com/questions/2095397/what-is-the-difference-between-jsf-servlet-and-jsp
+  34. http://stackoverflow.com/questions/4392721/which-java-web-frameworks-works-like-asp-net-mvc
+  35. http://stackoverflow.com/questions/3623911/what-are-the-main-disadvantages-of-java-server-faces-2-0
+  36. http://stackoverflow.com/questions/6822000/when-to-use-uiinclude-tag-files-composite-components-and-or-custom-componen/
+  37. file://localhost/a/4424775
+  38. file://localhost/posts/4424775/edit
+  39. file://localhost/posts/4424775/revisions
+  40. file://localhost/users/157882/balusc
+  41. file://localhost/users/531954/ukasz-lech
+  42. file://localhost/users/306753/cagatay-civici
+  43. file://localhost/a/4422008
+  44. file://localhost/posts/4422008/edit
+  45. file://localhost/users/278836/andrew-white
+  46. file://localhost/users/337522/sushil-bharwani
+  47. file://localhost/users/278836/andrew-white
+  48. file://localhost/users/337522/sushil-bharwani
+  49. file://localhost/users/278836/andrew-white
+  50. file://localhost/users/472792/arjan-tijms
+  51. file://localhost/a/8270223
+  52. file://localhost/posts/8270223/edit
+  53. file://localhost/users/531954/ukasz-lech
+  54. file://localhost/users/306753/cagatay-civici
+  55. file://localhost/a/10373420
+  56. file://localhost/posts/10373420/edit
+  57. file://localhost/users/1364341/guwst
+  58. file://localhost/users/157882/balusc
+  59. file://localhost/a/10106199
+  60. file://localhost/posts/10106199/edit
+  61. file://localhost/users/556730/arg20
+  62. file://localhost/a/12904889
+  63. file://localhost/posts/12904889/edit
+  64. file://localhost/users/834424/dbrin
+  65. file://localhost/users/login?returnurl=%2fquestions%2f4421839%2fwhat-is-the-need-of-jsf-when-ui-can-be-achieved-from-css-html-javascript-jquery%23new-answer
+  66. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml409.data
+  67. http://stackexchange.com/legal/privacy-policy
+  68. http://stackexchange.com/legal/terms-of-service
+  69. file://localhost/questions/tagged/jquery
+  70. file://localhost/questions/tagged/html
+  71. file://localhost/questions/tagged/jquery-ui
+  72. file://localhost/questions/tagged/jsf
+  73. file://localhost/questions/tagged/extjs
+  74. file://localhost/questions/ask
+  75. file://localhost/questions/tagged/jquery
+  76. file://localhost/questions/tagged/html
+  77. file://localhost/questions/tagged/jquery-ui
+  78. file://localhost/questions/tagged/jsf
+  79. file://localhost/questions/tagged/extjs
+  80. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml409.data?lastactivity
+  81. file://localhost/questions/10012349/how-jsf-and-jsp-differs-client-side
+  82. file://localhost/questions/2095397/what-is-the-difference-between-jsf-servlet-and-jsp
+  83. file://localhost/questions/3623911/what-are-the-main-disadvantages-of-java-server-faces-2-0
+  84. file://localhost/questions/8988855/include-another-html-file-in-a-html-file
+  85. file://localhost/questions/6822000/when-to-use-uiinclude-tag-files-composite-components-and-or-custom-componen
+  86. file://localhost/questions/7132061/how-to-refer-to-a-jsf-component-id-in-jquery
+  87. file://localhost/questions/4392721/which-java-web-framework-to-choose-for-jquery
+  88. file://localhost/questions/1428418/is-restful-jsf-possible
+  89. file://localhost/questions/5438022/jsf-or-mvc-with-servlets-jsps-or-other-frontend-frameworks
+  90. file://localhost/questions/7770837/what-should-i-know-before-learning-spring
+  91. http://stackoverflow.com/questions/linked/4421839
+  92. file://localhost/questions/394601/which-javascript-framework-jquery-vs-dojo-vs
+  93. file://localhost/questions/503093/how-can-i-make-a-redirect-page-in-jquery-javascript
+  94. file://localhost/questions/820412/downloading-jquery-css-from-googles-cdn
+  95. file://localhost/questions/1348559/are-there-hosted-jquery-ui-themes-anywhere
+  96. file://localhost/questions/3899649/ok-to-wrap-jsf-components-generated-html-with-own-divs-using-jquery-after-page-l
+  97. file://localhost/questions/5338149/jquery-plain-html-css-with-core-jquery-or-jquery-ui-for-a-blog
+  98. file://localhost/questions/6907369/web-app-using-jquery-standalonne-vs-server-side-presentation-framework
+  99. file://localhost/questions/7930308/what-libraries-do-i-need-to-import-in-order-to-use-jquery-autocomplete
+ 100. file://localhost/questions/12298386/need-to-integrate-jquery-validation-plugin-with-jsf
+ 101. file://localhost/questions/12506679/what-is-component-binding-in-jsf-when-it-is-preferred-to-be-used
+ 102. file://localhost/feeds/question/4421839
+ 103. file://localhost/about
+ 104. file://localhost/help
+ 105. file://localhost/help/badges
+ 106. http://blog.stackexchange.com/?blb=1
+ 107. http://chat.stackoverflow.com/
+ 108. http://data.stackexchange.com/
+ 109. http://stackexchange.com/legal
+ 110. http://stackexchange.com/legal/privacy-policy
+ 111. http://stackexchange.com/about/hiring
+ 112. http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6MjAsImNtIjo5NTQsImNoIjoxMTc4LCJjciI6Mjc3NiwiZG0iOjQsImZjIjoyODYyLCJmbCI6Mjc1MSwibnciOjIyLCJydiI6MCwicHIiOjExNSwic3QiOjAsInVyIjoiaHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL2Fib3V0L2NvbnRhY3QiLCJyZSI6MX0&s=hRods5B22XvRBwWIwtIMekcyNF8
+ 113. file://localhost/contact
+ 114. http://meta.stackoverflow.com/
+ 115. http://stackoverflow.com/
+ 116. http://serverfault.com/
+ 117. http://superuser.com/
+ 118. http://webapps.stackexchange.com/
+ 119. http://askubuntu.com/
+ 120. http://webmasters.stackexchange.com/
+ 121. http://gamedev.stackexchange.com/
+ 122. http://tex.stackexchange.com/
+ 123. http://programmers.stackexchange.com/
+ 124. http://unix.stackexchange.com/
+ 125. http://apple.stackexchange.com/
+ 126. http://wordpress.stackexchange.com/
+ 127. http://gis.stackexchange.com/
+ 128. http://electronics.stackexchange.com/
+ 129. http://android.stackexchange.com/
+ 130. http://security.stackexchange.com/
+ 131. http://dba.stackexchange.com/
+ 132. http://drupal.stackexchange.com/
+ 133. http://sharepoint.stackexchange.com/
+ 134. http://ux.stackexchange.com/
+ 135. http://mathematica.stackexchange.com/
+ 136. http://stackexchange.com/sites#technology
+ 137. http://photo.stackexchange.com/
+ 138. http://scifi.stackexchange.com/
+ 139. http://cooking.stackexchange.com/
+ 140. http://diy.stackexchange.com/
+ 141. http://stackexchange.com/sites#lifearts
+ 142. http://english.stackexchange.com/
+ 143. http://skeptics.stackexchange.com/
+ 144. http://judaism.stackexchange.com/
+ 145. http://travel.stackexchange.com/
+ 146. http://christianity.stackexchange.com/
+ 147. http://gaming.stackexchange.com/
+ 148. http://bicycles.stackexchange.com/
+ 149. http://rpg.stackexchange.com/
+ 150. http://stackexchange.com/sites#culturerecreation
+ 151. http://math.stackexchange.com/
+ 152. http://stats.stackexchange.com/
+ 153. http://cstheory.stackexchange.com/
+ 154. http://physics.stackexchange.com/
+ 155. http://mathoverflow.net/
+ 156. http://stackexchange.com/sites#science
+ 157. http://stackapps.com/
+ 158. http://meta.stackoverflow.com/
+ 159. http://area51.stackexchange.com/
+ 160. http://careers.stackoverflow.com/
+ 161. http://creativecommons.org/licenses/by-sa/3.0/
+ 162. http://blog.stackoverflow.com/2009/06/attribution-required/
+
+   Hidden links:
+ 164. file://localhost/users/337522/sushil-bharwani
+ 165. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml409.data
+ 166. file://localhost/users/157882/balusc
+ 167. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml409.data
+ 168. file://localhost/users/278836/andrew-white
+ 169. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml409.data
+ 170. file://localhost/users/531954/ukasz-lech
+ 171. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml409.data
+ 172. file://localhost/users/1364341/guwst
+ 173. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml409.data
+ 174. file://localhost/users/556730/arg20
+ 175. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml409.data
+ 176. file://localhost/users/834424/dbrin
+ 177. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml409.data
+ 178. file://localhost/q/10012349
+ 179. file://localhost/q/2095397
+ 180. file://localhost/q/3623911
+ 181. file://localhost/q/8988855
+ 182. file://localhost/q/6822000
+ 183. file://localhost/q/7132061
+ 184. file://localhost/q/4392721
+ 185. file://localhost/q/1428418
+ 186. file://localhost/q/5438022
+ 187. file://localhost/q/7770837
+ 188. file://localhost/q/394601
+ 189. file://localhost/q/503093
+ 190. file://localhost/q/820412
+ 191. file://localhost/q/1348559
+ 192. file://localhost/q/3899649
+ 193. file://localhost/q/5338149
+ 194. file://localhost/q/6907369
+ 195. file://localhost/q/7930308
+ 196. file://localhost/q/12298386
+ 197. file://localhost/q/12506679
+ 198. http://creativecommons.org/licenses/by-sa/3.0/

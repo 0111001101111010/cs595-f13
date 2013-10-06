@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<title>Compassの設定ファイル「config.rb」の編集方法 | 株式会社LIG</title>
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<!--[if lt IE 8]>
+<script src="https://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+<![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="http://liginc.co.jp/wp-content/themes/lig2013/js/html5shiv.js"></script><![endif]-->
+<link rel="shortcut icon" href="http://liginc.co.jp/wp-content/themes/lig2013/images/common/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="http://liginc.co.jp/wp-content/themes/lig2013/images/common/apple-touch-icon-precomposed.png">
+<link href="http://liginc.co.jp/wp-content/themes/lig2013/css/default.css?d=20130521" rel="stylesheet" media="all" id="default_css">
+<link href="http://liginc.co.jp/wp-content/themes/lig2013/css/common.css?d=20130521" rel="stylesheet" media="all">
+<link href="http://liginc.co.jp/wp-content/themes/lig2013/css/pages.css?d=20130521" rel="stylesheet" media="all">
+<link href="http://liginc.co.jp/wp-content/themes/lig2013/css/style.css?d=20130521" rel="stylesheet" media="all">
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<link rel="alternate" type="application/rss+xml" href="http://liginc.co.jp/feed">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://liginc.co.jp/wp-content/themes/lig2013/js/jquery.1.8.3.min.js"><\/script>')</script>
+<script src="http://liginc.co.jp/wp-content/themes/lig2013/js/adlpo.js"></script>
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.3.4.4 - http://yoast.com/wordpress/seo/ -->
+<meta name="description" content="こんにちは、デザイナーのサリーです。 最近買った漫画は「ウメハラ - To live is to game -」です。 さて、王くんのおかげで Sass + Compass を使えるようになりました。わーい！ 王くんのブラボーな記事はこちら↓ CSSの常識が変わる！「Compass」、基礎から応用"/>
+<meta name="keywords" content="ウェブ制作,HP,PHP,システム,ホームページ,開発,台東区,浅草,上野,CSS, HTML・CSS, Web制作"/>
+<link rel="canonical" href="http://liginc.co.jp/web/html-css/css/53075" />
+<meta property='og:locale' content='ja_JP'/>
+<meta property='fb:admins' content='100001491199291'/>
+<meta property='og:title' content='Compassの設定ファイル「config.rb」の編集方法 | 株式会社LIG'/>
+<meta property='og:description' content='こんにちは、デザイナーのサリーです。 最近買った漫画は「ウメハラ - To live is to game -」です。 さて、王くんのおかげで Sass + Compass を使えるようになりました。わーい！ 王くんのブラボーな記事はこちら↓ CSSの常識が変わる！「Compass」、基礎から応用'/>
+<meta property='og:url' content='http://liginc.co.jp/web/html-css/css/53075'/>
+<meta property='og:site_name' content='株式会社LIG'/>
+<meta property='og:type' content='article'/>
+<meta property='og:image' content='http://211.125.65.24/wp-content/uploads/2013/09/catch1-400x266.png'/>
+<meta property='og:image' content='http://211.125.65.24/wp-content/uploads/2013/09/img011.png'/>
+<meta property='og:image' content='http://211.125.65.24/wp-content/uploads/2013/09/img02.png'/>
+<!-- / Yoast WordPress SEO plugin. -->
+
+<script type='text/javascript' src='http://liginc.co.jp/wp-includes/js/comment-reply.min.js?ver=3.5.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://liginc.co.jp/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://liginc.co.jp/wp-includes/wlwmanifest.xml" /> 
+<meta id="syntaxhighlighteranchor" name="syntaxhighlighter-version" content="3.1.3" />
+<style type="text/css"></style>
+</head>
+
+<body id="special12">
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28343872-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type =
+'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<noscript>
+<div class="no_script">サイトを快適に利用するためには、JavaScriptを有効にしてください。</div>
+</noscript>
+
+<div class='ADLPODefault'>
+    <div id="dantop" class="sp1">
+            <a target="_blank" href="http://liginc.co.jp/lp/goodbye-j/" alt="最終話 退社" id="click_area"></a>
+            <input type="hidden" name="d_banner_id" id="d_banner_id" value="No_000d00" />
+            <!-- <img src="images/common/pagetop.png" width="747" height="1390" alt="PAGE TOP"> -->
+    </div>
+</div>
+<script type="text/javascript">adlpoMain('D_Banner_No_000d00','lc=os','ch=UTF-8');</script>
+<div id="dantop_hover_area">
+		<img class="msg" src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/pagetop_msg.png" height="61" width="70" alt="msg">
+</div>
+
+<div id="wrapper">
+
+	<nav id="nav">
+		<ul>
+			<li class="home current"><a href="http://liginc.co.jp" class="icon-home"><span>HOME</span></a></li>
+			<li>
+				<a href="http://liginc.co.jp/all/">LIGブログ</a>
+				<ul class="sub_menu">
+					<li class="first"><a href="http://liginc.co.jp/all/">すべて</a></li>
+					<li><a href="http://liginc.co.jp/news">ニュース</a></li>
+					<li><a href="http://liginc.co.jp/omoshiro">おもしろ</a></li>
+					<li><a href="http://liginc.co.jp/web">WEB制作</a></li>
+					<li><a href="http://liginc.co.jp/life">生活</a></li>
+					<li class="last"><a href="http://liginc.co.jp/best/">殿堂</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="http://liginc.co.jp/company/">会社案内</a>
+				<ul class="sub_menu">
+					<li class="first"><a href="http://liginc.co.jp/company/">会社概要</a></li>
+					<li><a href="http://liginc.co.jp/company/history/">沿革</a></li>
+					<li><a href="http://liginc.co.jp/company/message.php">代表あいさつ</a></li>
+					<li><a href="http://liginc.co.jp/company/philosophy/">企業理念</a></li>
+					<li><a href="http://liginc.co.jp/company/staff/">役員紹介</a></li>
+					<li class="last"><a href="http://liginc.co.jp/company/office/">オフィス紹介</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="http://liginc.co.jp/service/">サービス</a>
+				<ul class="sub_menu">
+					<li class="first"><a href="http://liginc.co.jp/service/">LIGが出来る事</a></li>
+					<li><a href="http://liginc.co.jp/service/flow/">制作の流れ</a></li>
+					<li class="last"><a href="http://liginc.co.jp/service/question/">よくある質問</a></li>
+				</ul>
+			</li>
+			<li><a href="http://liginc.co.jp/works">制作実績</a></li>
+			<li><a href="http://liginc.co.jp/recruit/">採用情報</a></li>
+			<li>
+				<a href="http://liginc.co.jp/member/">メンバー</a>
+
+				<ul class="sub_menu">
+					<li class="first"><a href="http://liginc.co.jp/member/">社員</a></li>
+					<li class="last"><a href="http://liginc.co.jp/writer/">ライター</a></li>
+				</ul>
+			</li>
+			<li><a href="http://liginc.co.jp/contact/">お問い合わせ</a></li>
+		</ul>
+	</nav><!-- /nav -->
+
+	<header id="header">
+		<div class="box_wrap">
+			<div class="box_left">
+				<div class="logo"><a href="http://liginc.co.jp"><img width="110" height="60" alt="株式会社LIG" src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/logo.png"></a></div>
+				<h1>株式会社LIG (リグ) - 東京都上野にあるWeb制作会社</h1>
+			</div>
+			<div class="box_right">
+				<div class="hiroyuki_img"><span><img width="135" height="105" alt="広報担当 ひろゆき" src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/header_hiroyuki2.png"></span></div>
+				<div class="hiroyuki_comment">
+										<p id="ota_msg">					台風が近づいとるらしい…					</p>
+										<span>
+<!--						広報担当 ひろゆき-->
+						<input type="hidden" name="ota_after" id="ota_after" value="風呂代がまた、浮くで！">
+					</span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div id="main"  class="blog_main">
+
+					<div id="pankuzu">
+				<ul>
+					<li><a class="icon-home" href="http://liginc.co.jp">&nbsp;&nbsp;HOME</a></li>
+<li><a href="http://liginc.co.jp/all/">LIGブログ</a></li>
+<li><a href="http://liginc.co.jp/web">Web制作</a></li>
+<li><a href="http://liginc.co.jp/web/html-css">HTML・CSS</a></li>
+<li><a href="http://liginc.co.jp/web/html-css/css">CSS</a></li>
+<li class="last_child"><span>Compassの設定...</span></li>				</ul>
+			</div>
+		
+					
+		<!--<div class="box_special">
+			<img width="1045" height="340" alt="ジェイ 最終話「退社」" src="http://liginc.co.jp/wp-content/themes/lig2013/images/special/taisyoku.jpg">
+			<a href="" class="btn"></a>
+		</div>-->
+		<!--
+		<div class="box_special">
+						<img width="1045" height="340" alt="嫁募集中" src="http://liginc.co.jp/wp-content/themes/lig2013/images/special/sp3-main.png">
+			<a href="http://liginc.co.jp/news/notice/other-notice/20746#single" class="btn"></a>
+		</div>-->
+
+		                <!--		<div class="box_special">
+			<img width="1045" height="340" alt="日本よ、これがLIGだ。" src="http://liginc.co.jp/wp-content/themes/lig2013/images/special/ligmember_bg_new.png">
+			<a href="http://liginc.co.jp/member/" class="btn"></a>
+		</div>-->
+<!--                <div class="box_special">
+			<img src="http://liginc.co.jp/wp-content/themes/lig2013/images/special/sp5-main.png" width="1045" height="340" alt="ブログバナー">
+			<a class="btn" href="http://liginc.co.jp/news/notice/29574#single"></a>
+		</div>-->
+<!--                <div class="box_special">
+			 <img src="images/special/sp5-main.png" width="1045" height="340" alt="ブログバナー"> 
+			<a class="btn" href="http://liginc.co.jp/news/32563#single"></a>
+		</div>-->
+<!-- /special -->
+		
+		<div class="box_special">
+			<a class="btn" target="_blank" href="http://getseesaw.com/"></a>
+		</div>
+
+		<!-- <div class="box_special">
+			<img src="images/special/sp8-main.png" width="1045" height="340" alt="ブログバナー">
+			<a class="btn" target="_blank" href="https://www.facebook.com/antonioinoki220"></a>
+			<a class="btn2" target="_blank" href="https://twitter.com/Inoki_Kanji"></a>
+		</div>-->
+<!-- /special -->
+		
+<!--		<script>
+		    _gaq.push(['_trackEvent','HAIKEIBanner','PageView','GTR']);
+		</script>
+		<div class="box_special">
+			<img src="http://liginc.co.jp/wp-content/themes/lig2013/images/special/sp8-main.png" width="1045" height="340"  alt="最小の組織で世界最高ブランドを作るプロフェッショナルマネジメント術" title="最小の組織で世界最高ブランドを作るプロフェッショナルマネジメント術">
+			<a  onclick="_gaq.push(['_trackEvent', 'HAIKEIBanner', 'Click','GTR']);" class="btn" target="_blank" href="http://www.fullthrottle.co.jp/meeting20130719/index.html"></a>
+		</div>-->
+
+
+		
+		<div class="box_wrap">
+
+			
+			<div id="sidebar">
+
+									<div id="side_cat">
+																			
+														<h1 class="side_title">HTML・CSS</h1>
+													
+						<ul>
+																								<li><a href="http://liginc.co.jp/web/html-css"><span>すべて</span><span class="count">99</span></a></li>
+																																								<li><a href="http://liginc.co.jp/web/html-css/html"><span>HTML</span><span class="count">42</span></a></li>
+																																								<li class="current"><a href="http://liginc.co.jp/web/html-css/css"><span>CSS</span><span class="count">64</span></a></li>
+																																								<li><a href="http://liginc.co.jp/web/html-css/other-html-css"><span>その他</span><span class="count">2</span></a></li>
+																													</ul>
+						<div class="search_box">
+	<form role="search" method="get" id="searchform" action="http://liginc.co.jp/" >
+		<input type="text" value="" class="search_text" name="s" id="s" placeholder="キーワードを入力" />
+		<div class="box_search_btn">
+			<span class="icon-search"></span>
+			<input type="submit" id="searchbtn" value="検索" class="search_btn">
+		</div>
+	</form>
+</div>					</div><!-- /side_cat -->
+				
+				<div class="box_wrap">
+					<div class="box_adx">
+						<!--mclude /wp-content/themes/lig2013/side_top_ad.php -->
+
+	
+			<a href="http://www.analyse-seo.jp/" target="_blank" id="side_top_banner"><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/banner/046b01_1.png" width="300" height="250" alt="ウィルゲート"></a>
+     
+</div>
+<div class="box_adx">
+	
+			<a href="http://ac.ebis.ne.jp/tr_set.php?argument=sRrG93Nh&ai=a51ad4a50429f6" target="_blank" id="side_top_banner2"><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/banner/014b01_6.png" width="300" height="250" alt="Green"></a>
+		<!--/mclude-->
+					</div><!-- /box_ad -->
+					<div class="box_sns">
+						<div class="fb">
+							<img src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/ban_fb.png" width="100" height="20" alt="facebook">
+							<!--<div class="fb-like" data-href="https://www.facebook.com/pages/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE-LIG/151284414928781" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false"></div>-->
+                                                        <iframe src="//www.facebook.com/plugins/like.php?href=https://www.facebook.com/pages/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE-LIG/151284414928781&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:130px; height:21px;" allowTransparency="true"></iframe>
+						</div>
+						<div class="tw">
+							<img src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/ban_tw.png" width="120" height="20" alt="Twitter">
+							<a href="https://twitter.com/LIG_J" class="twitter-follow-button" data-show-count="false" data-lang="ja">@LIG_Jさんをフォロー</a>
+							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+						</div>
+						<div class="rss">
+							<img src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/ban_rss.png" width="80" height="25" alt="RSS">
+							<a href="http://liginc.co.jp/feed" class="btn">RSSを登録する</a>
+						</div>
+					</div><!-- /box_sns -->
+
+																	<div id="side_ranking">
+							<h1 class="side_title">LIGブログ 人気記事ランキング</h1>
+																					<article class="entry">
+								<a href="http://liginc.co.jp/omoshiro/sutema/54293">
+									<div class="title">
+										<h1>えっ…何に使うの…!? 最大8秒で写真が消えるアプリ「SeeSaw」を使ってみた。</h1>
+										<p class="sns"><span class="fb">264</span><span class="tw">132</span><span class="hb">67</span></p>									</div>
+									<figure class="figure">
+										<p class="rank">1</p>
+										<p>
+																					<img width="80" height="53" src="http://211.125.65.24/wp-content/uploads/2013/07/1141-80x53.jpg" class="attachment-slist-img wp-post-image" alt="えっ…何に使うの…!? 最大8秒で写真が消えるアプリ「SeeSaw」を使ってみた。" title="えっ…何に使うの…!? 最大8秒で写真が消えるアプリ「SeeSaw」を使ってみた。" />																				</p>
+
+																														<div class="cat web">Web制作<span class="cat_arrow"></span></div>
+																			</figure>
+								</a>
+							</article>
+																					<article class="entry">
+								<a href="http://liginc.co.jp/web/design/material/36659">
+									<div class="title">
+										<h1>これが全部無料なの？フリー写真素材サイトまとめ15選</h1>
+										<p class="sns"><span class="fb">441</span><span class="tw">302</span><span class="hb">1074</span></p>									</div>
+									<figure class="figure">
+										<p class="rank">2</p>
+										<p>
+																					<img width="80" height="53" src="http://211.125.65.24/wp-content/uploads/2013/06/大川さん　カメラ-80x53.jpg" class="attachment-slist-img wp-post-image" alt="これが全部無料なの？フリー写真素材サイトまとめ15選" title="これが全部無料なの？フリー写真素材サイトまとめ15選" />																				</p>
+
+																														<div class="cat web">Web制作<span class="cat_arrow"></span></div>
+																			</figure>
+								</a>
+							</article>
+																					<article class="entry">
+								<a href="http://liginc.co.jp/web/tool/app/53038">
+									<div class="title">
+										<h1>作業効率化！Googleアプリを1000%活かせる「Google Apps Script」の始め方</h1>
+										<p class="sns"><span class="fb">139</span><span class="tw">82</span><span class="hb">110</span></p>									</div>
+									<figure class="figure">
+										<p class="rank">3</p>
+										<p>
+																					<img width="80" height="53" src="http://211.125.65.24/wp-content/uploads/2013/09/eyecatch5-80x53.jpg" class="attachment-slist-img wp-post-image" alt="作業効率化！Googleアプリを1000%活かせる「Google Apps Script」の始め方" title="作業効率化！Googleアプリを1000%活かせる「Google Apps Script」の始め方" />																				</p>
+
+																														<div class="cat web">Web制作<span class="cat_arrow"></span></div>
+																			</figure>
+								</a>
+							</article>
+																					<article class="entry">
+								<a href="http://liginc.co.jp/web/service/other-service/53082">
+									<div class="title">
+										<h1>引きこもり注意！◯◯し放題の月額サービスが今アツい！</h1>
+										<p class="sns"><span class="fb">0</span><span class="tw">24</span><span class="hb">28</span></p>									</div>
+									<figure class="figure">
+										<p class="rank">4</p>
+										<p>
+																					<img width="80" height="53" src="http://211.125.65.24/wp-content/uploads/2013/09/main2-80x53.png" class="attachment-slist-img wp-post-image" alt="引きこもり注意！◯◯し放題の月額サービスが今アツい！" title="引きこもり注意！◯◯し放題の月額サービスが今アツい！" />																				</p>
+
+																														<div class="cat web">Web制作<span class="cat_arrow"></span></div>
+																			</figure>
+								</a>
+							</article>
+																					<article class="entry">
+								<a href="http://liginc.co.jp/web/design/material/23689">
+									<div class="title">
+										<h1>TwitterやFacebookユーザーにオススメ！アイコン作成サイトまとめ16選</h1>
+										<p class="sns"><span class="fb">113</span><span class="tw">124</span><span class="hb">109</span></p>									</div>
+									<figure class="figure">
+										<p class="rank">5</p>
+										<p>
+																					<img width="80" height="53" src="http://211.125.65.24/wp-content/uploads/2013/04/256-80x53.png" class="attachment-slist-img wp-post-image" alt="TwitterやFacebookユーザーにオススメ！アイコン作成サイトまとめ16選" title="TwitterやFacebookユーザーにオススメ！アイコン作成サイトまとめ16選" />																				</p>
+
+																														<div class="cat web">Web制作<span class="cat_arrow"></span></div>
+																			</figure>
+								</a>
+							</article>
+																					<article class="entry">
+								<a href="http://liginc.co.jp/web/tool/app/21879">
+									<div class="title">
+										<h1>今こそ使い始めたい！人気のTwitter無料アプリTOP10</h1>
+										<p class="sns"><span class="fb">12</span><span class="tw">35</span><span class="hb">3</span></p>									</div>
+									<figure class="figure">
+										<p class="rank">6</p>
+										<p>
+																					<img width="80" height="53" src="http://211.125.65.24/wp-content/uploads/2013/06/スライド13-80x53.jpg" class="attachment-slist-img wp-post-image" alt="今こそ使い始めたい！人気のTwitter無料アプリTOP10" title="今こそ使い始めたい！人気のTwitter無料アプリTOP10" />																				</p>
+
+																														<div class="cat web">Web制作<span class="cat_arrow"></span></div>
+																			</figure>
+								</a>
+							</article>
+																					<article class="entry">
+								<a href="http://liginc.co.jp/designer/archives/6523">
+									<div class="title">
+										<h1>これが無料!?背景画像のフリー素材配布サイト 14選</h1>
+										<p class="sns"><span class="fb">38</span><span class="tw">40</span><span class="hb">95</span></p>									</div>
+									<figure class="figure">
+										<p class="rank">7</p>
+										<p>
+																					<img width="80" height="53" src="http://211.125.65.24/wp-content/uploads/2012/07/catch-80x53.jpg" class="attachment-slist-img wp-post-image" alt="これが無料!?背景画像のフリー素材配布サイト 14選" title="これが無料!?背景画像のフリー素材配布サイト 14選" />																				</p>
+
+																														<div class="cat web">Web制作<span class="cat_arrow"></span></div>
+																			</figure>
+								</a>
+							</article>
+																					<article class="entry">
+								<a href="http://liginc.co.jp/life/useful-info/43821">
+									<div class="title">
+										<h1>どれが良いの? iPad、Nexus7など人気のタブレット端末7種をレビューしてみた。</h1>
+										<p class="sns"><span class="fb">83</span><span class="tw">35</span><span class="hb">15</span></p>									</div>
+									<figure class="figure">
+										<p class="rank">8</p>
+										<p>
+																					<img width="80" height="53" src="http://211.125.65.24/wp-content/uploads/2013/07/0-80x53.jpg" class="attachment-slist-img wp-post-image" alt="どれが良いの? iPad、Nexus7など人気のタブレット端末7種をレビューしてみた。" title="どれが良いの? iPad、Nexus7など人気のタブレット端末7種をレビューしてみた。" />																				</p>
+
+																														<div class="cat life">生活<span class="cat_arrow"></span></div>
+																			</figure>
+								</a>
+							</article>
+																					<article class="entry">
+								<a href="http://liginc.co.jp/life/useful-info/51808">
+									<div class="title">
+										<h1>相手をやる気にさせる！ディレクターのためのフィードバック術！</h1>
+										<p class="sns"><span class="fb">138</span><span class="tw">18</span><span class="hb">11</span></p>									</div>
+									<figure class="figure">
+										<p class="rank">9</p>
+										<p>
+																					<img width="80" height="53" src="http://211.125.65.24/wp-content/uploads/2013/09/eyecatch4-80x53.jpg" class="attachment-slist-img wp-post-image" alt="相手をやる気にさせる！ディレクターのためのフィードバック術！" title="相手をやる気にさせる！ディレクターのためのフィードバック術！" />																				</p>
+
+																														<div class="cat life">生活<span class="cat_arrow"></span></div>
+																			</figure>
+								</a>
+							</article>
+																					<article class="entry">
+								<a href="http://liginc.co.jp/web/mobile/52717">
+									<div class="title">
+										<h1>WEBディレクター必見。ストレスのないスマホサイトを作る８つのポイント！</h1>
+										<p class="sns"><span class="fb">524</span><span class="tw">225</span><span class="hb">353</span></p>									</div>
+									<figure class="figure">
+										<p class="rank">10</p>
+										<p>
+																					<img width="80" height="53" src="http://211.125.65.24/wp-content/uploads/2013/09/p16-80x53.jpg" class="attachment-slist-img wp-post-image" alt="WEBディレクター必見。ストレスのないスマホサイトを作る８つのポイント！" title="WEBディレクター必見。ストレスのないスマホサイトを作る８つのポイント！" />																				</p>
+
+																														<div class="cat web">Web制作<span class="cat_arrow"></span></div>
+																			</figure>
+								</a>
+							</article>
+																				</div><!-- /side_ranking -->
+											
+
+					
+					<div class="box_ban">
+						<ul>
+													<li><a href="http://liginc.co.jp/recruit/legend-designer/"><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/ban_legend.jpg" width="300" height="120" alt="伝説のウェブデザイナーを探して"></a></li>
+													<li><a href="http://liginc.co.jp/magazine/regist/"><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/ban_mailmagazine.jpg" width="300" height="120" alt="LIGのメールマガジン"></a></li>
+													<li><a href="http://liginc.co.jp/lp/goodbye-j/"><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/ban_jtaisya.png" width="300" height="120" alt="ジェイ引退のお知らせ"></a></li>
+													<li><a href="http://liglis.jp/" target="_blank"><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/ban_liglis.jpg" width="300" height="120" alt="LIGのリスティング代行 LIGLIS"></a></li>
+													<li><a href="http://onsenjapan.jp/takachi" target="_blank"><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/ban_onsen.png" width="300" height="120" alt="たかちの湯めぐり日本一周 温泉JAPAN"></a></li>
+																		</ul>
+					</div><!-- /box_ban -->
+
+					<div class="box_adx_ss">
+						<!--mclude /wp-content/themes/lig2013/side_ss_ad.php --><ul>
+	
+	
+		
+		<li class="left_child">
+                                                			<a href="http://renta.its-smile.co.jp/monitor" id="side_ss_banner_No_015a01" target="_blank"><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/banner/a_015a01_1.jpg" width="145" height="145" alt="スマイルレンタカー"></a>
+			                                                		</li>
+
+                		
+		
+		<li>
+                                                			<a href="http://www.mobercial.com/" id="side_ss_banner_No_002a01" target="_blank"><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/banner/001a01_1.png" width="145" height="145" alt="モバーシャル"></a>
+			                                                		</li>
+
+                		
+		
+		<li class="left_child">
+                                                			<a href="http://skytraveler.info/" id="side_ss_banner_No_031a01" target="_blank"><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/banner/031a01_1.png" width="145" height="145" alt="スノップ"></a>
+			                                                		</li>
+
+                		
+		
+		<li>
+                                                			<a href="http://www.dsksyoya.com/" id="side_ss_banner_No_018a01" target="_blank"><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/banner/a_018a01_5.png" width="145" height="145" alt="笑屋"></a>
+			                                                		</li>
+
+                			</ul>
+<!--/mclude-->
+					</div><!-- /box_ban -->
+
+
+
+					<div class="box_adx">
+						<!--mclude /wp-content/themes/lig2013/side_bottom_ad.php -->
+	
+		<a href="http://liginc.co.jp/ad/" target="_blank" id="side_bottom_banner"><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/banner/033b01_2.jpg" width="300" height="250" alt="LIGバナー"></a>
+	
+<!--/mclude-->
+					</div>
+				</div>
+			</div><!-- /sidebar -->
+			<div id="contents">
+				<article id="single">
+					<div class="box_entry">
+						<div class="box_title">
+																					<div class="cat web">Web制作<span class="cat_arrow"></span></div>
+																					<div class="box_time">
+								<time datetime="2013-09-24" class="time">2013.09.24<span>(tue)</span></time>
+								<span class="writer"><a href="http://liginc.co.jp/author/iwazaki"><img alt='サリー' src='http://211.125.65.24/wp-content/uploads/2013/02/d97bd9ab9e7c18ec537103e6cdf28ae1_avatar-30x30.jpg' class='avatar avatar-30 photo' height='30' width='30' />サリー</a></span>
+							</div>
+
+														<ul class="tag">
+																											<li><a href="http://liginc.co.jp/web/html-css/css">CSS</a></li>
+																																				<li><a href="http://liginc.co.jp/web/html-css">HTML・CSS</a></li>
+																																									</ul>
+														<ul class="box_snsbtn">
+								<li class="fb">
+								    									<div class="fb-like" data-send="false" data-href="http://liginc.co.jp/web/html-css/css/53075" data-layout="box_count" data-width="70" data-show-faces="false" data-font="arial"></div>
+								    								</li>
+								<li class="tw"><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="vertical" data-url="http://liginc.co.jp/web/html-css/css/53075">ツイート</a>
+								<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
+								<li class="hb"><a href="http://b.hatena.ne.jp/entry/http://liginc.co.jp/web/html-css/css/53075" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+								<script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></li>
+								<li class="gl">
+									<div class="g-plusone" data-size="tall"></div>
+									<script type="text/javascript">
+									  window.___gcfg = {lang: 'ja'};
+
+									  (function() {
+										var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+										po.src = 'https://apis.google.com/js/plusone.js';
+										var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+									  })();
+									</script>
+								</li>
+								<li class="po">
+									<a data-pocket-label="pocket" data-pocket-count="vertical" class="pocket-btn" data-lang="en" data-save-url="http://liginc.co.jp/web/html-css/css/53075"></a>
+									<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+								</li>
+							</ul>
+							<h1>Compassの設定ファイル「config.rb」の編集方法</h1>
+							<p class="catch"><img width="655" height="437" src="http://211.125.65.24/wp-content/uploads/2013/09/catch1.png" class="attachment-detail-img wp-post-image" alt="catch" /></p>
+						</div><!-- /box_title -->
+
+												<div class="ad">
+							<!--mclude /wp-content/themes/lig2013/single_top_ad.php -->
+
+<ul>
+	<li>
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-6602246735709366";
+		/* LIGブログ_C_300_250 */
+		google_ad_slot = "2874190889";
+		google_ad_width = 300;
+		google_ad_height = 250;
+		//-->
+		</script>
+		<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+	</li>
+	<li>
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-6602246735709366";
+		/* LIGブログ_C_300_250 */
+		google_ad_slot = "2874190889";
+		google_ad_width = 300;
+		google_ad_height = 250;
+		//-->
+		</script>
+		<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+	</li>
+</ul>
+
+<!--/mclude-->
+						</div>
+						
+						<div class="content_entry">
+							<p>こんにちは、デザイナーのサリーです。<br />
+最近買った漫画は「ウメハラ &#8211; To live is to game -」です。</p>
+<p>さて、王くんのおかげで Sass + Compass を使えるようになりました。わーい！<br />
+王くんのブラボーな記事はこちら↓<br />
+<a href="http://liginc.co.jp/designer/archives/11623" target="_blank">CSSの常識が変わる！「Compass」、基礎から応用まで！</a></p>
+<p>Sassファイルの吐き出したCSSファイルの出力スタイルの設定は「config.rb」を書き換えることで簡単に変更出来ました。<br />
+今回はconfig.rbの基本的な編集方法についてまとめてみました。</p>
+<h2>config.rb のデフォルトの記述</h2>
+<p>config.rbの中身は何もいじらないとこんな感じになっていると思います。<br />
+（Codekitなどで吐き出すとCodekitのデフォルトの設定が入るので、またちょっと違います）</p>
+<pre class="brush: ruby; title: ; notranslate" title="">
+# Require any additional compass plugins here.
+
+# Set this to the root of your project when deployed:
+http_path = &quot;/&quot;
+css_dir = &quot;stylesheets&quot;
+sass_dir = &quot;sass&quot;
+images_dir = &quot;images&quot;
+javascripts_dir = &quot;javascripts&quot;
+
+# You can select your preferred output style here (can be overridden via the command line):
+# output_style = :expanded or :nested or :compact or :compressed
+
+# To enable relative paths to assets via compass helper functions. Uncomment:
+# relative_assets = true
+
+# To disable debugging comments that display the original location of your selectors. Uncomment:
+# line_comments = false
+
+# If you prefer the indented syntax, you might want to regenerate this
+# project again passing --syntax sass, or you can uncomment this:
+# preferred_syntax = :sass
+# and then run:
+# sass-convert -R --from scss --to sass sass scss &amp;&amp; rm -rf sass &amp;&amp; mv scss sass
+</pre>
+<p>親切にコメントを書いてくれているので分かりやすいのですが、上から順番に解説してみます。</p>
+<h2>Compassのプラグインを追加</h2>
+<p>1行目</p>
+<pre class="brush: ruby; title: ; notranslate" title="">
+# Require any additional compass plugins here.
+</pre>
+<p>これは「コンパスのプラグインを追加するならここに書いてね」ということですね。<br />
+Compassのプラグインは公式サイトにもいろいろ載っています。</p>
+<p class="link"><a href="http://compass-style.org/frameworks/" target="_blank">Plugins and frameworks | Compass Documentation</a></p>
+<p>以下のようにしてプラグインを呼び出します。</p>
+<pre class="brush: ruby; title: ; notranslate" title="">
+# Require any additional compass plugins here.
+require 'ninesixty'
+require 'susy'
+</pre>
+<h2>各ディレクトリ名の設定</h2>
+<p>3〜8行目</p>
+<pre class="brush: ruby; title: ; notranslate" title="">
+# Set this to the root of your project when deployed:
+http_path = &quot;/&quot;
+css_dir = &quot;stylesheets&quot;
+sass_dir = &quot;sass&quot;
+images_dir = &quot;images&quot;
+javascripts_dir = &quot;javascripts&quot;
+</pre>
+<p>これはそのまま、吐き出すcssファイルやjsファイルなどのディレクトリ名の設定です。<br />
+環境に合わせて適宜変更しましょう。</p>
+<pre class="brush: ruby; title: ; notranslate" title="">
+# Set this to the root of your project when deployed:
+http_path = &quot;/&quot;
+css_dir = &quot;css&quot;
+sass_dir = &quot;sass&quot;
+images_dir = &quot;images&quot;
+javascripts_dir = &quot;js&quot;
+</pre>
+<h2>CSSの出力スタイルを設定</h2>
+<p>10、11行目</p>
+<pre class="brush: ruby; title: ; notranslate" title="">
+# You can select your preferred output style here (can be overridden via the command line):
+# output_style = :expanded or :nested or :compact or :compressed
+</pre>
+<p>ここでは吐き出すCSSのスタイルを設定出来ます。<br />
+<strong>expanded</strong>、<strong>nested</strong>、<strong>compact</strong>、<strong>compressed</strong> の4パターン用意されていて、それぞれのスタイルは以下の通りです。</p>
+<p><img class="aligncenter size-full wp-image-53213" alt="CSSの出力スタイルを設定" src="http://211.125.65.24/wp-content/uploads/2013/09/img011.png" width="655" height="1310" /></p>
+<p>開発中は読みやすい「expanded」、納品時は圧縮してくれる「compressed」がおすすめです。<br />
+インデントは半角スペース2つ分ですが、こちらを変更するのは結構ややこしそうでした。</p>
+<p class="link"><a href="http://www.skyward-design.net/blog/archives/000121.html" target="_blank">Sassで出力するCSSファイルを自社のCSS記述ルールに合わせるヒント｜Blog｜Skyward Design</a></p>
+<p>例えば「expanded」で吐き出したいときは以下のようにします。</p>
+<pre class="brush: ruby; title: ; notranslate" title="">
+# You can select your preferred output style here (can be overridden via the command line):
+output_style = :expanded
+</pre>
+<h2>パスの指定方法を設定</h2>
+<p>13、14行目</p>
+<pre class="brush: ruby; title: ; notranslate" title="">
+# To enable relative paths to assets via compass helper functions. Uncomment:
+# relative_assets = true
+</pre>
+<p>CompassではデフォルトのURL指定が絶対パスになっています。<br />
+スプライト生成機能を使用する際など、相対パスを使いたい場合は以下の通りにします。</p>
+<pre class="brush: ruby; title: ; notranslate" title="">
+# To enable relative paths to assets via compass helper functions. Uncomment:
+relative_assets = true
+</pre>
+<h2>CSSファイルにlineコメントをつける</h2>
+<p>16、17行目</p>
+<pre class="brush: ruby; title: ; notranslate" title="">
+# To disable debugging comments that display the original location of your selectors. Uncomment:
+# line_comments = false
+</pre>
+<p>CSSファイルにコメントを残すかどうかの設定です。<br />
+コメントありにすると、CSSファイルを参照したとき、どのSassファイルの何行目の記述か分かるようになります。</p>
+<p><img class="aligncenter size-full wp-image-53205" alt="CSSファイルにlineコメントをつける" src="http://211.125.65.24/wp-content/uploads/2013/09/img02.png" width="655" height="860" /></p>
+<p>デフォルトではコメントがついているので、消したい場合は以下のようにします。</p>
+<pre class="brush: ruby; title: ; notranslate" title="">
+# To disable debugging comments that display the original location of your selectors. Uncomment:
+line_comments = false
+</pre>
+<p class="notice">Codekitで吐き出すと、この下に「color_output = false」という一文が追加されています。何の設定かとググってみてもあまり情報が出てこなかったのですが、どうやらターミナルの文字に色をつけるというなんとも微妙なオプションらしい。。。</p>
+<h2>Sassの記述方法を切り替える</h2>
+<p>20〜24行目</p>
+<pre class="brush: ruby; title: ; notranslate" title="">
+# If you prefer the indented syntax, you might want to regenerate this
+# project again passing --syntax sass, or you can uncomment this:
+# preferred_syntax = :sass
+# and then run:
+# sass-convert -R --from scss --to sass sass scss &amp;&amp; rm -rf sass &amp;&amp; mv scss sass
+</pre>
+<p>SassにはSCSSとSASS、二種類の記述法がありますが、どちらを使うかを設定することが出来ます。<br />
+一般的にはSCSSが使われているので、デフォルトでもSCSSになっています。<br />
+SASSで書きたいときは以下のようにします。</p>
+<pre class="brush: ruby; title: ; notranslate" title="">
+# If you prefer the indented syntax, you might want to regenerate this
+# project again passing --syntax sass, or you can uncomment this:
+preferred_syntax = :sass
+# and then run:
+# sass-convert -R --from scss --to sass sass scss &amp;&amp; rm -rf sass &amp;&amp; mv scss sass
+</pre>
+<p>また、24行目にある「sass-convert…」は、ファイルをSCSSからSASSへ変換するコマンドです（逆も可能）。<br />
+ターミナル（Mac）やコマンドプロンプト（Win）で実行します。</p>
+<h2>まとめ</h2>
+<p>普段使うように編集して以下のようになりました。</p>
+<pre class="brush: ruby; title: ; notranslate" title="">
+# Require any additional compass plugins here.
+
+# Set this to the root of your project when deployed:
+http_path = &quot;/&quot;
+css_dir = &quot;css&quot;
+sass_dir = &quot;sass&quot;
+images_dir = &quot;images&quot;
+javascripts_dir = &quot;js&quot;
+
+output_style = :expanded
+
+# To enable relative paths to assets via compass helper functions. Uncomment:
+relative_assets = true
+
+# To disable debugging comments that display the original location of your selectors. Uncomment:
+# line_comments = false
+
+# If you prefer the indented syntax, you might want to regenerate this
+# project again passing --syntax sass, or you can uncomment this:
+# preferred_syntax = :scss
+# and then run:
+# sass-convert -R --from scss --to sass sass scss &amp;&amp; rm -rf sass &amp;&amp; mv scss sass
+</pre>
+<p>最終的にoutput_styleを「compressed」に変えれば、line_commentsはtureのままでもコメントを勝手に削除してくれます。</p>
+<p>ついでに注釈のコメントを取ってすっきりさせてみます。</p>
+<pre class="brush: ruby; title: ; notranslate" title="">
+http_path = &quot;/&quot;
+css_dir = &quot;css&quot;
+sass_dir = &quot;sass&quot;
+images_dir = &quot;images&quot;
+javascripts_dir = &quot;js&quot;
+output_style = :expanded
+relative_assets = true
+</pre>
+<p>基本の設定だけ紹介しましたが、他にもテストと本番で設定を変えたりと、いろいろと出来るみたいです。<br />
+お試しあれ！</p>
+<p class="link"><a href="http://compass-style.org/help/tutorials/configuration-reference/" target="_blank">Configuration Reference | Compass Documentation</a></p>
+<p class="link"><a href="http://howtohp.com/css/compass-environment_setting.html" target="_blank">Compassで本番用と開発用で設定を振り分けてみる。 | howtohp</a></p>
+						</div><!-- /content_entry -->
+						<ul class="box_snsbtn">
+							<li class="po right">
+								<a data-pocket-label="pocket" data-pocket-count="vertical" class="pocket-btn" data-lang="en" data-save-url="http://liginc.co.jp/web/html-css/css/53075"></a>
+								<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+							</li>
+							<li class="gl right">
+								<div class="g-plusone" data-size="tall"></div>
+								<script type="text/javascript">
+								  window.___gcfg = {lang: 'ja'};
+
+								  (function() {
+									var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+									po.src = 'https://apis.google.com/js/plusone.js';
+									var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+								  })();
+								</script>
+							</li>
+							<li class="hb right"><a href="http://b.hatena.ne.jp/entry/http://liginc.co.jp/web/html-css/css/53075" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+							<script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></li>
+							<li class="tw right"><a href="https://twitter.com/share" class="twitter-share-button"  data-url="http://liginc.co.jp/web/html-css/css/53075" data-lang="ja" data-count="vertical">ツイート</a>
+							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
+							<li class="fb right">
+							    								<div class="fb-like" data-send="false"  data-href="http://liginc.co.jp/web/html-css/css/53075" data-layout="box_count" data-width="70" data-show-faces="false" data-font="arial"></div>
+							    							</li>
+
+						</ul>
+
+												<div class="ad">
+							<!--mclude /wp-content/themes/lig2013/single_bottom_ad.php -->
+
+
+			<div class='ADLPODefault'>
+			<a href="http://www.data-artist.com/atelier/20130919.html?frm=lg" target="_blank" id="single_bottom_banner"><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/banner/024c01_1.jpg" width="655" height="250" alt="データアーティスト"></a>
+		</div>
+		<script type="text/javascript">adlpoMain('bottom_C_Banner_024c01','lc=os','ch=UTF-8');</script>
+	
+<!--/mclude-->
+						</div>
+						
+						
+						<section class="box_single_profile">
+							<div class="box_profile_title">
+								<h1 class="icon-user">この記事を書いた人<span><a href="http://liginc.co.jp/member">他のメンバーを見る</a></span></h1>
+							</div>
+							<div class="box_single_profile_wrap">
+								<div class="profile">
+									<div class="content">
+										<h2>
+											<a href="http://liginc.co.jp/author/iwazaki">サリー</a>
+											<span>
+												デザイナー&nbsp;
+																																																			2011年 入社
+																																				</span>
+										</h2>
+										<p>LIGのデザイナーです。ウェブデザイナーの頂点を目指すために東京に来ました。立ちはだかる敵は全てなぎ倒します。</p>
+									</div>
+									<figure class="figure">
+																				<p><img alt='サリー' src='http://211.125.65.24/wp-content/uploads/2013/02/d97bd9ab9e7c18ec537103e6cdf28ae1_avatar-100x100.jpg' class='avatar avatar-100 photo' height='100' width='100' /></p>
+									</figure>
+								</div>
+								<div class="box_newentry">
+									<div class="box_newentry_title">
+										<h2>最近書いた記事<span><a href="http://liginc.co.jp/author/iwazaki">サリーが書いた記事一覧</a></span></h2>
+									</div>
+
+																																				<article class="entry left_child">
+										<a href="http://liginc.co.jp/web/html-css/css/53075">
+											<figure class="figure">
+												<p>
+																									<img width="145" height="100" src="http://211.125.65.24/wp-content/uploads/2013/09/catch1-145x100.png" class="attachment-mlist-img wp-post-image" alt="Compassの設定ファイル「config.rb」の編集方法" title="Compassの設定ファイル「config.rb」の編集方法" />												</p>
+											</figure>
+											<div class="title">
+												<div class="box_time">
+													<time datetime="2013-09-24" class="time">2013.09.24</time>
+																																							<span class="cat web">Web制作</span>
+																									</div>
+												<h1>Compassの設定ファイル「config.rb」の編集方法</h1>
+											</div>
+										</a>
+									</article>
+																											<article class="entry">
+										<a href="http://liginc.co.jp/web/design/47697">
+											<figure class="figure">
+												<p>
+																									<img width="145" height="100" src="http://211.125.65.24/wp-content/uploads/2013/08/catch-145x100.png" class="attachment-mlist-img wp-post-image" alt="情報がわかりやすい！インフォグラフィックのまとめサイト11選" title="情報がわかりやすい！インフォグラフィックのまとめサイト11選" />												</p>
+											</figure>
+											<div class="title">
+												<div class="box_time">
+													<time datetime="2013-08-22" class="time">2013.08.22</time>
+																																							<span class="cat web">Web制作</span>
+																									</div>
+												<h1>情報がわかりやすい！インフォグラフィックのまとめサイト11選</h1>
+											</div>
+										</a>
+									</article>
+																											<article class="entry">
+										<a href="http://liginc.co.jp/web/html-css/html/42756">
+											<figure class="figure">
+												<p>
+																									<img width="145" height="100" src="http://211.125.65.24/wp-content/uploads/2013/07/catch1-145x100.png" class="attachment-mlist-img wp-post-image" alt="HTML5で追加されたinput typeのブラウザ対応について検証してみた。" title="HTML5で追加されたinput typeのブラウザ対応について検証してみた。" />												</p>
+											</figure>
+											<div class="title">
+												<div class="box_time">
+													<time datetime="2013-07-24" class="time">2013.07.24</time>
+																																							<span class="cat web">Web制作</span>
+																									</div>
+												<h1>HTML5で追加されたinput typeのブラウザ対応について検証してみた。</h1>
+											</div>
+										</a>
+									</article>
+																											<article class="entry">
+										<a href="http://liginc.co.jp/web/html-css/html/35485">
+											<figure class="figure">
+												<p>
+																									<img width="145" height="100" src="http://211.125.65.24/wp-content/uploads/2013/06/catch1-145x100.jpg" class="attachment-mlist-img wp-post-image" alt="スマートフォンサイトのhtmlコーディングメモ12個" title="スマートフォンサイトのhtmlコーディングメモ12個" />												</p>
+											</figure>
+											<div class="title">
+												<div class="box_time">
+													<time datetime="2013-06-24" class="time">2013.06.24</time>
+																																							<span class="cat web">Web制作</span>
+																									</div>
+												<h1>スマートフォンサイトのhtmlコーディングメモ12個</h1>
+											</div>
+										</a>
+									</article>
+																																			</div>
+							</div>
+						</section><!-- /box_single_profile -->
+
+								<section class="box_single_related">
+			<div class="box_related_title">
+				<h1 class="icon-pencil">関連する記事</h1>
+			</div>
+	
+							<article class="entry first">
+					<a href="http://liginc.co.jp/web/html-css/css/50868" class=" entry_tile">
+						<div class="title">
+							<h1>立体的に動く！カッコイイ3D表現のCSS3サンプル5選</h1>
+							<time datetime="2013-09-09" class="time">2013.09.09<span>(mon)</span></time>
+						</div>
+						<figure class="figure">
+							<p>
+																	<img width="80" height="53" src="http://211.125.65.24/wp-content/uploads/2013/09/noguchi_catch-80x53.jpg" class="attachment-slist-img wp-post-image" alt="50868" title="50868" />															</p>
+																					<span class="cat web">Web制作</span>
+													</figure>
+					</a>
+				</article>
+										<article class="entry">
+					<a href="http://liginc.co.jp/web/html-css/html/45552" class=" entry_tile">
+						<div class="title">
+							<h1>CSS3だけで作れる格好良いローディングアニメーション５つ！</h1>
+							<time datetime="2013-08-07" class="time">2013.08.07<span>(wed)</span></time>
+						</div>
+						<figure class="figure">
+							<p>
+																	<img width="80" height="53" src="http://211.125.65.24/wp-content/uploads/2013/08/top1-80x53.jpg" class="attachment-slist-img wp-post-image" alt="45552" title="45552" />															</p>
+																					<span class="cat web">Web制作</span>
+													</figure>
+					</a>
+				</article>
+										<article class="entry first">
+					<a href="http://liginc.co.jp/web/js/jquery/37956" class=" entry_tile">
+						<div class="title">
+							<h1>これは凶悪……コーディングのヤバいバグ＆仕様　Best5</h1>
+							<time datetime="2013-07-10" class="time">2013.07.10<span>(wed)</span></time>
+						</div>
+						<figure class="figure">
+							<p>
+																	<img width="80" height="53" src="http://211.125.65.24/wp-content/uploads/2013/07/ohno_man-80x53.jpg" class="attachment-slist-img wp-post-image" alt="37956" title="37956" />															</p>
+																					<span class="cat web">Web制作</span>
+													</figure>
+					</a>
+				</article>
+										<article class="entry">
+					<a href="http://liginc.co.jp/web/html-css/html/35991" class=" entry_tile">
+						<div class="title">
+							<h1>たった1pxに泣きたくなる。ズレる・ハマるChromeのページ印刷トラブルへの対処法</h1>
+							<time datetime="2013-07-02" class="time">2013.07.02<span>(tue)</span></time>
+						</div>
+						<figure class="figure">
+							<p>
+																	<img width="80" height="53" src="http://211.125.65.24/wp-content/uploads/2013/06/top1-80x53.png" class="attachment-slist-img wp-post-image" alt="35991" title="35991" />															</p>
+																					<span class="cat web">Web制作</span>
+													</figure>
+					</a>
+				</article>
+										<article class="entry first">
+					<a href="http://liginc.co.jp/web/html-css/css/34219" class=" entry_tile">
+						<div class="title">
+							<h1>Androidでもキレイに表示！css3でテキストにグラデーションをかける方法！</h1>
+							<time datetime="2013-06-14" class="time">2013.06.14<span>(fri)</span></time>
+						</div>
+						<figure class="figure">
+							<p>
+																	<img width="80" height="53" src="http://211.125.65.24/wp-content/uploads/2013/06/top1-80x53.jpg" class="attachment-slist-img wp-post-image" alt="34219" title="34219" />															</p>
+																					<span class="cat web">Web制作</span>
+													</figure>
+					</a>
+				</article>
+										<article class="entry">
+					<a href="http://liginc.co.jp/web/html-css/css/33369" class=" entry_tile">
+						<div class="title">
+							<h1>「へぇー」と言ってしまうかもしれない、css3の使い方</h1>
+							<time datetime="2013-06-10" class="time">2013.06.10<span>(mon)</span></time>
+						</div>
+						<figure class="figure">
+							<p>
+																	<img width="80" height="53" src="http://211.125.65.24/wp-content/uploads/2013/06/main01-80x53.png" class="attachment-slist-img wp-post-image" alt="33369" title="33369" />															</p>
+																					<span class="cat web">Web制作</span>
+													</figure>
+					</a>
+				</article>
+			</section>
+
+
+					</div><!-- /box_entry -->
+											<div class="pankuzu_single">
+							<ul>
+								<li><a class="icon-home" href="http://liginc.co.jp">&nbsp;&nbsp;HOME</a></li>
+<li><a href="http://liginc.co.jp/all/">LIGブログ</a></li>
+<li><a href="http://liginc.co.jp/web">Web制作</a></li>
+<li><a href="http://liginc.co.jp/web/html-css">HTML・CSS</a></li>
+<li><a href="http://liginc.co.jp/web/html-css/css">CSS</a></li>
+<li class="last_child"><span>Compassの設定...</span></li>							</ul>
+						</div>
+					
+					<div class="box_paging">
+																		<article class="entry prev">
+							<a href="http://liginc.co.jp/life/useful-info/52136" class="entry_tile">
+								<div class="img_arrow"><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/single_prev.png" width="22" height="37" alt="前へ"></div>
+								<figure class="figure">
+									<p>
+																					<img width="80" height="53" src="http://211.125.65.24/wp-content/uploads/2013/09/eyecatch3-80x53.png" class="attachment-slist-img wp-post-image" alt="幹事が知っておくべき、同窓会を成功させる為のノウハウ。−笑屋の同窓会を利用しよう−" title="幹事が知っておくべき、同窓会を成功させる為のノウハウ。−笑屋の同窓会を利用しよう−" />										
+									</p>
+								</figure>
+								<h1>幹事が知っておくべき、同窓会を成功させる為のノウハウ。−笑屋の同窓会を利用しよう−</h1>
+							</a>
+						</article>
+						
+						
+												<article class="entry next">
+							<a href="http://liginc.co.jp/life/useful-info/51808" class="entry_tile">
+								<h1>相手をやる気にさせる！ディレクターのためのフィードバック術！</h1>
+								<figure class="figure">
+									<p>
+																					<img width="80" height="53" src="http://211.125.65.24/wp-content/uploads/2013/09/eyecatch4-80x53.jpg" class="attachment-slist-img wp-post-image" alt="相手をやる気にさせる！ディレクターのためのフィードバック術！" title="相手をやる気にさせる！ディレクターのためのフィードバック術！" />																			</p>
+								</figure>
+								<div class="img_arrow"><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/single_next.png" width="22" height="37" alt="次へ"></div>
+							</a>
+						</article>
+											</div>
+				</article><!-- /single -->
+				<section id="box_single_sns">
+					<div class="icon_arrow"></div>
+					<h1>LIGの2代目広報担当ひろゆきからのお知らせを受け取る方法</h1>
+					<div id="single_sns">
+						<div class="info">
+							<figure class="figure">
+								<p><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/single_sns_info.jpg" alt="ジェイ" width="99" height="100"></p>
+							</figure>
+							<div class="content">
+								<p>
+									まいどおおきに。俺の名前は大田ひろゆき。LIGの広報担当や。FacebookとかTwitterとかメルマガで、皆にメッセージを届けさせてもらうで。ほんまに。
+									あと俺の発信する情報はLIGからの公式メッセージやと思ってもらってかまへんから。ってか公式のメッセージやわな。下にある「いいね！」を押すか、twitterをフォローして俺の情報を逃さんようにしてな。
+									メールマガジンの登録もめっちゃ簡単やから、おすすめやで～
+								</p>
+							</div>
+						</div>
+						<div class="tw single_sns_tile">
+							<h2><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/single_sns_tw.png" width="135" height="30" alt="twitter"></h2>
+							<p><a href="https://twitter.com/LIG_J" class="twitter-follow-button" data-show-count="false" data-lang="ja" data-size="large">@LIG_Jさんをフォロー</a>
+							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+							<p>LIGの事つぶやいてんの見つけたら速攻でフォローするで！</p>
+						</div>
+						<div class="mail single_sns_tile">
+							<h2><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/single_sns_mail.png" width="172" height="30" alt="mail magazine"></h2>
+							<p><a href="http://liginc.co.jp/magazine/regist/">メルマガ登録はこちら</a></p>
+							<p>人類史上、例を見いひんくらいのしょうもないやつ配信するわ。</p>
+						</div>
+						<div class="rss single_sns_tile">
+							<h2><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/single_sns_rss.png" width="75" height="30" alt="RSS"></h2>
+							<p><a href="http://liginc.co.jp/feed">RSSを登録する</a></p>
+							<p>記事は毎日2本更新する予定や！RSSの登録をすると便利やで。</p>
+						</div>
+						<div class="fb">
+							<h2><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/title_fb.png" width="140" height="40" alt="facebook"></h2>
+														<div class="fb-like-box" data-href="https://www.facebook.com/pages/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE-LIG/151284414928781" data-width="615" data-show-faces="true" data-stream="false" data-border-color="#ececec" data-header="false"></div>
+													</div>
+					</div>
+				</section><!-- /box_single_sns -->
+				<section id="box_zenback">
+					<div class="icon_arrow"></div>
+					<p><div><div class="fb-like"  data-href="http://liginc.co.jp/web/html-css/css/53075" data-send="true" data-width="657" data-show-faces="true"></div></div>
+<div id="zenback-box">
+
+		
+    		<div class="fb-comments"   data-href="http://liginc.co.jp/web/html-css/css/53075" data-num-posts="5" data-width="657"></div>
+		<div style="margin-top:43pt;"></div>
+		<script type="text/javascript" src="http://liginc.co.jp/wp-content/themes/lig2013/js/iframed.min.js"></script>
+		<div id="zenback"></div>
+		<script type="text/javascript">
+		lazyLoadIframe('zenback', 'http://widget.zenback.jp/?base_uri=http%3A//liginc.co.jp/&nsid=102262067511212005%3A%3A102262080396069740&rand='+Math.ceil((new Date()*1)*Math.random()), 'width:100%; height:20px;', '9999px');
+		//lazyLoadIframe('zenback', 'http://widget.zenback.jp/?base_uri=http%3A//test.liginc.co.jp/&nsid=102262067511212005%3A%3A&rand='+Math.ceil((new Date()*1)*Math.random()), 'width:100%; height:20px;', '9999px');
+		</script>
+			<!-- X:S ZenBackWidget -->
+		<!--
+		<script type="text/javascript">document.write(unescape("%3Cscript")+" src='http://widget.zenback.jp/?base_uri=http%3A//liginc.co.jp/&nsid=102262067511212005%3A%3A102262080396069740&rand="+Math.ceil((new Date()*1)*Math.random())+"' type='text/javascript'"+unescape("%3E%3C/script%3E"));</script>
+		-->
+		<!-- X:E ZenBackWidget -->
+	</div></p>
+				</section><!-- /box_zenback -->
+			</div><!-- /contents -->
+		</div>
+
+
+	</div> <!-- /end main-->
+
+	<div id="pagetop"></div><!-- /pagetop -->
+
+	
+		
+		<section id="workslist">
+			<div class="box_wrap">
+				<div class="box_head">
+					<div class="title">
+						<h1><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/logo.png" width="63" height="33" alt="株式会社LIG">制作実績</h1>
+					</div>
+					<div class="btn">
+						<p class="link_arrow"><a href="http://liginc.co.jp/works/">制作実績一覧へ</a></p>
+					</div>
+				</div>
+
+				<div class="prev_box"><a class="workslist_prev icon-arrow-left" href="#"><span>前へ</span></a></div>
+				<ul id="workslist_carousel">
+										<li>
+						<a href="http://liginc.co.jp/works?target_id=53825#box_works_53825">
+														<p><img width="149" height="110" src="http://211.125.65.24/wp-content/uploads/2013/09/スクリーンショット-2013-09-24-19.23.26-149x110.png" class="attachment-works-footer-img wp-post-image" alt="福祉新聞WEB" title="福祉新聞WEB" /></p>
+														<h2>福祉新聞WEB</h2>
+						</a>
+					</li>
+										<li>
+						<a href="http://liginc.co.jp/works?target_id=53515#box_works_53515">
+														<p><img width="149" height="110" src="http://211.125.65.24/wp-content/uploads/2013/09/スクリーンショット-2013-09-20-11.18.05-149x110.png" class="attachment-works-footer-img wp-post-image" alt="ISUTA" title="ISUTA" /></p>
+														<h2>ISUTA</h2>
+						</a>
+					</li>
+										<li>
+						<a href="http://liginc.co.jp/works?target_id=53513#box_works_53513">
+														<p><img width="149" height="110" src="http://211.125.65.24/wp-content/uploads/2013/09/スクリーンショット-2013-09-20-11.44.26-149x110.png" class="attachment-works-footer-img wp-post-image" alt="A.I.AD" title="A.I.AD" /></p>
+														<h2>A.I.AD</h2>
+						</a>
+					</li>
+										<li>
+						<a href="http://liginc.co.jp/works?target_id=53511#box_works_53511">
+														<p><img width="149" height="110" src="http://211.125.65.24/wp-content/uploads/2013/09/スクリーンショット-2013-09-20-11.45.24-149x110.png" class="attachment-works-footer-img wp-post-image" alt="インサイト" title="インサイト" /></p>
+														<h2>インサイト</h2>
+						</a>
+					</li>
+										<li>
+						<a href="http://liginc.co.jp/works?target_id=51299#box_works_51299">
+														<p><img width="150" height="110" src="http://211.125.65.24/wp-content/uploads/2013/09/スクリーンショット（2013-09-09-18.06.25）-150x110.png" class="attachment-works-footer-img wp-post-image" alt="iKnow!ブログ" title="iKnow!ブログ" /></p>
+														<h2>iKnow!ブログ</h2>
+						</a>
+					</li>
+										<li>
+						<a href="http://liginc.co.jp/works?target_id=51288#box_works_51288">
+														<p><img width="150" height="110" src="http://211.125.65.24/wp-content/uploads/2013/09/スクリーンショット（2013-09-09-17.59.42）-150x110.png" class="attachment-works-footer-img wp-post-image" alt="ナビプラス" title="ナビプラス" /></p>
+														<h2>ナビプラス</h2>
+						</a>
+					</li>
+										<li>
+						<a href="http://liginc.co.jp/works?target_id=51302#box_works_51302">
+														<p><img width="149" height="110" src="http://211.125.65.24/wp-content/uploads/2013/09/スクリーンショット-2013-09-09-18.11.54-149x110.png" class="attachment-works-footer-img wp-post-image" alt="WordPressの教科書2" title="WordPressの教科書2" /></p>
+														<h2>WordPressの教科書2</h2>
+						</a>
+					</li>
+										<li>
+						<a href="http://liginc.co.jp/works?target_id=44842#box_works_44842">
+														<p><img width="149" height="110" src="http://211.125.65.24/wp-content/uploads/2013/08/画像-149x110.png" class="attachment-works-footer-img wp-post-image" alt="シリアルゲームズ" title="シリアルゲームズ" /></p>
+														<h2>シリアルゲームズ</h2>
+						</a>
+					</li>
+										<li>
+						<a href="http://liginc.co.jp/works?target_id=44838#box_works_44838">
+														<p><img width="149" height="110" src="http://211.125.65.24/wp-content/uploads/2013/08/京田さん完成-149x110.png" class="attachment-works-footer-img wp-post-image" alt="SO by KYODA creation" title="SO by KYODA creation" /></p>
+														<h2>SO by KYODA creation</h2>
+						</a>
+					</li>
+										<li>
+						<a href="http://liginc.co.jp/works?target_id=42303#box_works_42303">
+														<p><img width="149" height="110" src="http://211.125.65.24/wp-content/uploads/2013/07/th-149x110.png" class="attachment-works-footer-img wp-post-image" alt="ベストチーム・オブ・ザ・イヤー" title="ベストチーム・オブ・ザ・イヤー" /></p>
+														<h2>ベストチーム・オブ・ザ・イヤー</h2>
+						</a>
+					</li>
+										<li>
+						<a href="http://liginc.co.jp/works?target_id=42321#box_works_42321">
+														<p><img width="149" height="110" src="http://211.125.65.24/wp-content/uploads/2013/07/スクリーンショット-2013-07-22-20.33.54-149x110.png" class="attachment-works-footer-img wp-post-image" alt="ケアネットキャリア" title="ケアネットキャリア" /></p>
+														<h2>ケアネットキャリア</h2>
+						</a>
+					</li>
+										<li>
+						<a href="http://liginc.co.jp/works?target_id=38468#box_works_38468">
+														<p><img width="150" height="110" src="http://211.125.65.24/wp-content/uploads/2013/07/スクリーンショット（2013-07-03-14.44.47）-150x110.png" class="attachment-works-footer-img wp-post-image" alt="名刺のネタ帳" title="名刺のネタ帳" /></p>
+														<h2>名刺のネタ帳</h2>
+						</a>
+					</li>
+										<li>
+						<a href="http://liginc.co.jp/works?target_id=36009#box_works_36009">
+														<p><img width="149" height="110" src="http://211.125.65.24/wp-content/uploads/2013/06/スクリーンショット-2013-06-17-20.54.53-149x110.png" class="attachment-works-footer-img wp-post-image" alt="Gengo" title="Gengo" /></p>
+														<h2>Gengo</h2>
+						</a>
+					</li>
+										<li>
+						<a href="http://liginc.co.jp/works?target_id=33646#box_works_33646">
+														<p><img width="149" height="110" src="http://211.125.65.24/wp-content/uploads/2013/06/スクリーンショット-2013-06-07-10.38.271-149x110.png" class="attachment-works-footer-img wp-post-image" alt="エンタメウス" title="エンタメウス" /></p>
+														<h2>エンタメウス</h2>
+						</a>
+					</li>
+										<li>
+						<a href="http://liginc.co.jp/works?target_id=33187#box_works_33187">
+														<p><img width="149" height="110" src="http://211.125.65.24/wp-content/uploads/2013/06/スクリーンショット-2013-06-04-21.40.50-149x110.png" class="attachment-works-footer-img wp-post-image" alt="東映 魔女の宅急便 ティザーサイト" title="東映 魔女の宅急便 ティザーサイト" /></p>
+														<h2>東映 魔女の宅急便 ティザーサイト</h2>
+						</a>
+					</li>
+									</ul>
+				<div class="next_box"><a class="workslist_next icon-arrow-right" href="#"><span>次へ</span></a></div>
+			</div>
+		</section><!-- /workslist -->
+					
+	<footer id="footer">
+		<div class="box_wrap">
+			<nav class="sitemap">
+				<div class="sitemap_blog sitemap_tile">
+					<h1 class="title">BLOG</h1>
+					<ul>
+						<li><a href="http://liginc.co.jp/all/">すべて</a></li>
+						<li><a href="http://liginc.co.jp/news/">ニュース</a></li>
+						<li><a href="http://liginc.co.jp/omoshiro/">おもしろ</a></li>
+					</ul>
+					<ul>
+						<li><a href="http://liginc.co.jp/web/">WEB制作</a></li>
+						<li><a href="http://liginc.co.jp/life/">生活</a></li>
+						<li><a href="http://liginc.co.jp/best/">殿堂</a></li>
+					</ul>
+				</div>
+				<div class="sitemap_about sitemap_tile">
+					<h1 class="title">ABOUT US</h1>
+					<ul>
+						<li><a href="http://liginc.co.jp">HOME</a></li>
+						<li><a href="http://liginc.co.jp/works/">制作実績</a></li>
+						<li><a href="http://liginc.co.jp/recruit/">採用情報</a></li>
+						<li><a href="http://liginc.co.jp/member/">メンバー</a></li>
+						<li><a href="http://liginc.co.jp/contact/">お問い合わせ</a></li>
+					</ul>
+					<ul>
+						<li><a href="http://liginc.co.jp/company/">会社案内</a>
+							<ul>
+								<li><a href="http://liginc.co.jp/company/history/">沿革</a></li>
+								<li><a href="http://liginc.co.jp/company/message.php">代表あいさつ</a></li>
+								<li><a href="http://liginc.co.jp/company/philosophy/">企業理念</a></li>
+								<li><a href="http://liginc.co.jp/company/staff/">役員紹介</a></li>
+								<li><a href="http://liginc.co.jp/company/office/">オフィス紹介</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul>
+						<li><a href="http://liginc.co.jp/service/">サービス</a>
+							<ul>
+								<li><a href="http://liginc.co.jp/service/">LIGが出来る事</a></li>
+								<li><a href="http://liginc.co.jp/service/flow/">制作の流れ</a></li>
+								<li><a href="http://liginc.co.jp/service/question/">よくあるご質問</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav><!-- /sitemap -->
+			<div class="info">
+				<div class="box_address">
+					<div class="logo"><img src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/logo.png" width="70" height="38" alt="株式会社LIG"></div>
+					<address class="address"><strong>株式会社LIG</strong>TEL : 03-6240-1253<br>〒110-0015 東京都台東区東上野2-18-7 共同ビル 10F</address>
+				</div>
+				<nav class="copyright">
+					<ul>
+						<li><a href="http://liginc.co.jp/sitemap/">サイトマップ</a></li>
+						<li><a href="http://liginc.co.jp/ad/">広告掲載について</a></li>
+						<li><a href="http://liginc.co.jp/privacy/">プライバシーポリシー</a></li>
+					</ul>
+				    <p>© 2013 LIG inc.</p>
+				</nav>
+			</div><!-- /info -->
+		</div>
+	</footer><!-- /footer -->
+
+</div><!-- /wrapper -->
+
+<script>
+var WEBROOT = 'http://liginc.co.jp/wp-content/themes/lig2013/';
+</script>
+
+<script src="http://liginc.co.jp/wp-content/themes/lig2013/js/loadCSS.js"></script>
+<script src="http://liginc.co.jp/wp-content/themes/lig2013/js/iecheck.js"></script>
+<script src="http://liginc.co.jp/wp-content/themes/lig2013/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script src="http://liginc.co.jp/wp-content/themes/lig2013/js/jquery.easing.1.3.js"></script>
+<script src="http://liginc.co.jp/wp-content/themes/lig2013/js/jquery.tile.js"></script>
+<script src="http://liginc.co.jp/wp-content/themes/lig2013/js/jquery.carouFredSel-6.2.0.js"></script>
+<script src="http://liginc.co.jp/wp-content/themes/lig2013/js/jquery-fixedBanner.js"></script>
+<script src="http://liginc.co.jp/wp-content/themes/lig2013/js/TweenMax.min.js"></script>
+<script src="http://liginc.co.jp/wp-content/themes/lig2013/js/jquery.gsap.min.js"></script>
+<script src="http://liginc.co.jp/wp-content/themes/lig2013/js/jquery.jrumble.js"></script>
+<script src="http://liginc.co.jp/wp-content/themes/lig2013/js/jquery.cookies.2.2.0.js"></script>
+<script src="http://liginc.co.jp/wp-content/themes/lig2013/js/spritespin.js"></script>
+<script src="http://liginc.co.jp/wp-content/themes/lig2013/js/explosion.js"></script>
+<script src="http://liginc.co.jp/wp-content/themes/lig2013/js/index.js"></script>
+
+<script type='text/javascript' src='http://liginc.co.jp/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/shCore.js?ver=2.1.364'></script>
+<script type='text/javascript' src='http://liginc.co.jp/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/shBrushRuby.js?ver=2.1.364'></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://liginc.co.jp/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/styles/shCore.css?ver=2.1.364";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://liginc.co.jp/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/styles/shThemeRDark.css?ver=2.1.364";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.clipboardSwf = 'http://liginc.co.jp/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf';
+	SyntaxHighlighter.config.strings.expandSource = 'ソースを見る';
+	SyntaxHighlighter.config.strings.viewSource = 'ソースを表示';
+	SyntaxHighlighter.config.strings.copyToClipboard = 'クリップボードへコピー';
+	SyntaxHighlighter.config.strings.copyToClipboardConfirmation = 'コードをクリップボードへコピーしました';
+	SyntaxHighlighter.config.strings.print = '印刷';
+	SyntaxHighlighter.config.strings.help = 'SyntaxHighlighterについて';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = '指定のブラシが見つかりませんでした: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'HTMLスクリプトのオプションのためにブラシが構成されませんでした: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.all();
+</script>
+
+<script>
+$(function(){
+
+	_gaq.push(['_trackEvent','B_Banner','PageView','No_046b01_A']);
+_gaq.push(['_trackEvent','B_Banner','PageView','No_014b01_A']);
+_gaq.push(['_trackEvent','A_Banner','PageView','No_015a01']);
+_gaq.push(['_trackEvent','A_Banner','PageView','No_002a01_A']);
+_gaq.push(['_trackEvent','A_Banner','PageView','No_031a01_A']);
+_gaq.push(['_trackEvent','A_Banner','PageView','No_018a01_A']);
+_gaq.push(['_trackEvent','B_Banner','PageView','No_033b01_B']);
+_gaq.push(['_trackEvent','C_Banner','PageView','024c01_A']);
+
+	       
+	$('#side_top_banner').on('click' , function(e){
+		_gaq.push(['_trackEvent','B_Banner','Click', 'No_046b01_A']);
+	});
+		       
+	$('#side_top_banne2').on('click' , function(e){
+		_gaq.push(['_trackEvent','B_Banner','Click', 'No_014b01_A']);
+	});
+		       
+	$('#side_ss_banner_No_015a01').on('click' , function(e){
+		_gaq.push(['_trackEvent','A_Banner','Click', 'No_015a01']);
+	});
+		       
+	$('#side_ss_banner_No_002a01').on('click' , function(e){
+		_gaq.push(['_trackEvent','A_Banner','Click', 'No_002a01_A']);
+	});
+		       
+	$('#side_ss_banner_No_031a01').on('click' , function(e){
+		_gaq.push(['_trackEvent','A_Banner','Click', 'No_031a01_A']);
+	});
+		       
+	$('#side_ss_banner_No_018a01').on('click' , function(e){
+		_gaq.push(['_trackEvent','A_Banner','Click', 'No_018a01_A']);
+	});
+		       
+	$('#side_bottom_banner').on('click' , function(e){
+		_gaq.push(['_trackEvent','B_Banner','Click', 'No_033b01_B']);
+	});
+		       
+	$('#single_bottom_banner').on('click' , function(e){
+		_gaq.push(['_trackEvent','C_Banner','Click', '024c01_A']);
+	});
+		
+			});
+</script>
+<script type="text/javascript">
+  var _fout_queue = _fout_queue || {}; if (_fout_queue.segment === void 0) _fout_queue.segment = {};
+  if (_fout_queue.segment.queue === void 0) _fout_queue.segment.queue = [];
+
+  _fout_queue.segment.queue.push({
+    'user_id': 967
+  });
+
+  (function() {
+    var el = document.createElement('script'); el.type = 'text/javascript'; el.async = true;
+    el.src = (('https:' == document.location.protocol) ? 'https://' : 'http://') + 'js.fout.jp/segmentation.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(el, s);
+  })();
+</script>
+
+<audio id="s_flying" preload="auto">
+	<source src="http://liginc.co.jp/wp-content/themes/lig2013/audio/air.mp3" type="audio/mp3"/>
+</audio>
+<audio id="s_explosion" preload="auto">
+	<source src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/banner/Explosion_Dull.mp3" type="audio/mp3"/>
+	<source src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/banner/Explosion_Dull.ogg" type="audio/ogg"/>
+</audio>
+<audio id="s_explosion2" preload="auto">
+	<source src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/banner/Blast.mp3" type="audio/mp3"/>
+	<source src="http://liginc.co.jp/wp-content/themes/lig2013/images/common/banner/Blast.ogg" type="audio/ogg"/>
+</audio>
+<div id="myVideo" style="display: none; no-repeat left top; width: 582px; height: 532px;" ></div>
+
+</body>
+</html>

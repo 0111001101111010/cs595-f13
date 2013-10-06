@@ -1,0 +1,527 @@
+   #[1]All Blog Posts (RSS 2.0)
+
+   [2]INFRAGISTICS
+
+     * [3]Products
+
+Design
+          + [4]Indigo Studio
+          + [5]Quince
+          + [6]NetAdvantage ICONS
+
+Develop
+       [7]NetAdvantage
+          + [8]ASP.NET
+          + [9]Windows Forms
+          + [10]Silverlight
+          + [11]WPF
+          + [12]jQuery / HTML5
+          + [13]Windows Phone
+          + [14]Reporting
+          + [15]iOS
+          + [16]Android
+          + [17]Windows UI
+       [18]Bundles
+          + [19]NetAdvantage Ultimate
+          + [20]NetAdvantage for .NET
+
+Business Productivity
+          + [21]LightSwitch
+          + [22]SharePoint
+          + [23]SharePlus
+          + [24]ReportPlus
+
+Test
+          + [25]TestAdvantage for Windows Forms
+               o [26]HP QuickTest Professional software
+               o [27]IBM Rational Functional Tester
+          + [28]TestAdvantage for WPF
+               o [29]HP QuickTest Professional Software
+
+Related Links
+          + [30]Services
+          + [31]Store
+          + [32]Contact Us
+          + [33]Technology Previews
+     * [34]Services
+
+Consulting and Training
+          + [35]Infragistics D3 - Design and Development Services
+
+Related Links
+          + [36]About D3
+          + [37]D3 Blogs
+          + [38]Training
+     * [39]Community
+
+Engage
+          + [40]Forums
+          + [41]Blogs
+          + [42]Events
+
+Learn
+          + [43]Videos
+
+Related Links
+          + [44]Products
+          + [45]Contact Us
+     * [46]Help
+
+Support Resources
+          + [47]Online Documentation
+          + [48]FAQs
+          + [49]Supported Environments
+          + [50]Service Release Schedule
+          + [51]Product Lifecycle
+          + [52]Support Policies
+
+Other Resources
+          + [53]View Support Activity
+          + [54]Submit Support Request
+          + [55]Submit Feature Request
+          + [56]Register Your Product
+
+Related Links
+          + [57]Store
+          + [58]Contact Us
+     * [59]About Us
+
+About Infragistics
+          + [60]Company Information
+          + [61]Management Team
+          + [62]Strategic Alliances & Partners
+          + [63]Customers
+          + [64]Awards
+
+Newsroom
+          + [65]Press Releases
+          + [66]Media Coverage
+
+Careers
+          + [67]Career Opportunities
+
+Contact
+          + [68]Contact Us
+          + [69]Resellers
+
+Related Links
+          + [70]Products
+          + [71]Services
+          + [72]Store
+
+   ____________________
+
+   [73]D-Coding » [74]Fundamentals of Python: Functions, Formatting &
+   Assignment Statements (Week 2)
+
+Fundamentals of Python: Functions, Formatting & Assignment Statements (Week
+2)
+
+   FacebookTwitterGoogleDigg itDeliciousRedditMySpaceStumbleUponLinkedIn
+     *
+     *
+     *
+
+   Here we are at Week 2 of Fundamentals of Python! This week covered
+   Functions, Formatting & Assignment statements, which don't need much
+   explanation really, so let's get right into it!
+
+   If you need access to Week 1, [75]here it is!
+
+Lesson 1: Visualizing Assignment Statements
+
+   The most important note in this lesson is understanding that assignment
+   of variables does not mean that a variable is *equal* to the value or
+   function it is assigned to represent.
+
+   Here are the rules for Executing an Assignment Statement:
+    1. Evaluate the expression on the right side of the equals sign to
+       produce a value. This value also has a memory address. This value
+       also has a memory address.
+    2. This memory address will be stored in the right side of the = sign,
+       with the variable who is referencing it remaining on the left side.
+
+   REMEMBER! Assignment changes the value of a VARIABLE, not what is
+   stored in the memory address!
+
+   Additional Notes from this Lesson:
+
+   -          In IDLE, you can access the visualizer tool by navigating
+   through Explore > Visualize to see the state of computer memory used
+   during the execution of your code.
+
+Lesson 2: typ str
+
+   typ str is Python’s representation of the String type. In order to
+   define a string literal, which is a sequence of characters, it must
+   begin and end with either ‘ or “. Additionally, string literals can be
+   assigned to variables. It is important to note that if your string
+   literal needs to include a contraction or possessive, you can use “s to
+   define them. Additionally, you have the option of using \’ to refer to
+   your ‘ in the string, and using ‘s to define it completely.
+
+   Strings also are able to be concatenated using the + operator, but you
+   have to remember to include spaces where appropriate, as the + operator
+   simply mashes the strings together and does not take any spacing into
+   account. Additionally, you can use the * operator on strings to
+   replicate a string any number of times. However, it’s important to note
+   that order of operations still applies when using these “mathematical
+   operators” on your strings. And before you go running off to try / and
+   -, no, those operators don’t work and will only result in you achieving
+   a TypeError.
+
+Lesson 3: Input/Output & str Formatting
+
+   In order to print by passing a single function to argument call, you’ll
+   want to produce a statement something to the effect of this:
+
+   Print (“text”) => text
+
+   Print(3+7-3) => 7
+
+   Print(“hello”, “there”) => hello there
+
+   Here’s an example of how you would write functions to produce the
+   square of a number, and print it!
+
+   NOTE! If the end of a function body is reached without executing a
+   return statement, that function call produces value “None”.
+
+   Additional Notes from this Lesson:
+
+   Triple quoted strings can span several lines. Example:
+
+   Print(‘’’ How
+
+   Are
+
+   You?’’’)
+
+   In memory, this is stored as ‘How\nAre\nYou?’ (\n is the newline
+   designation)
+
+   Character Designations!
+
+   \t is an escape sequence for tabs
+
+   \\ is to print a single backslash
+
+   \’ is for ‘ in a string
+
+   \” is for “ in a string
+
+Lesson 4: Docstring & Function Help
+
+   Docstring is documentation for your own functions! Make sure that these
+   are triple quoted so they are formatted correctly. Something I thought
+   was really neat here was that the first two lines of your docstring are
+   what show up as the hint when you begin to type the function name.
+
+Lesson 5: Function Design Recipe
+
+    1. Header – includes your function name & parameters
+    2. Type contract – types for values of parameters & expected return
+       type
+    3. Description – C’mon kids! J
+    4. Examples – Function use examples.
+    5. Function Body – your code to make things happen!
+
+   Next comes the Design Recipe, which is crafted, of course, to make
+   things easier for you to execute as a developer.
+
+   1.    Write examples
+   2.    Write type contract
+             a.    What times for the parameters?
+             b.    What type needs to be returned?
+   3.    Write header
+             a.    Pick meaningful parameter names
+   4.    Write description
+             a.    Mention every parameter and describe your return value
+   5.    Write body!
+
+Lesson 6: Function Reuse
+
+   Once defined, you can use your functions over and over again! You can
+   even pass your function calls as arguments. Get. On. It.
+
+   Lesson 7: Visualizing Function Calls
+
+   Formatting note: All code belonging to a function should be indented 4
+   spaces.
+
+   Stack Frame: a region of computer memory for keeping track of
+   information about a function being executed
+
+   Locak Variable: variable created inside a function body that can only
+   be accessed within that function.
+
+Week 2 Summary:
+
+   This week was awesome because it took concepts that I’ve worked with
+   before and brought them into the Python context. I’m excited to see
+   what’s on tap for next week, especially since this course is also
+   incorporating a Design Recipe, similar to Systematic Programming.
+
+Questions/Comments?
+
+   Feel free to comment here on my blog, or find me on Twitter
+   [76]@DokiDara.
+
+   [77]By Dara Monasch
+   FacebookTwitterGoogleDigg itDeliciousRedditMySpaceStumbleUponLinkedIn
+     *
+     *
+     *
+     __________________________________________________________________
+
+Comments  (1 )
+
+   D-Coding
+   on Thu, Sep 26 2013 4:14 PM
+
+   This week’s worth of lessons is super intuitive and really sets the
+   tone for the rest of the class
+
+Add a Comment
+
+   Please [78]Login or [79]Register to add a comment.
+   [80]View our products
+
+D-Coding
+
+   [81]Dara Monasch
+   Fri, Sep 20 2013 7:20 PM
+
+Recent Blog Posts
+
+     * [82]CDC Alert! This is tour going to be sick
+       I’m hitting the road again for another awesome user group tour.
+       This time I am going to Ohio!  I am calling it the CDC tour.  As
+       you c...
+       By [83]Brian Lagunas | 10/1/2013
+     * [84]How to Get Started with the Ignite UI Layout Manager
+       Layout Manager provides a range of five different layouts for your
+       web application. This control works over HTML page, by rearranging
+       the elements&nbs...
+       By [85]Marina Stoyanova | 10/1/2013
+     * [86]Download Indigo Studio Prototyping Videos for Offline Viewing
+       We heard that some of our customers are unable to access our
+       youtube playlist for Indigo Studio related videos due to access
+       restrictions within their...
+       By [87]George Abraham | 10/1/2013
+
+     * [88]More Blogs
+
+About Us
+
+     * [89]Company Information
+     * [90]Customers
+     * [91]Careers
+     * [92]Press Releases
+     * [93]Contact Us
+
+Products
+
+     * DEVELOP : for NetAdvantage
+     * [94]ASP.NET
+     * [95]Windows Forms
+     * [96]WPF
+     * [97]Silverlight
+     * [98]jQuery / HTML5
+     * [99]Windows Phone
+     * [100]Reporting
+     * [101]iOS
+     * [102]Android
+     * [103]Windows UI
+     * Bundles
+     * [104]NetAdvantage Ultimate
+     * [105]NetAdvantage for .NET
+
+     * DESIGN
+     * [106]Indigo Studio
+     * [107]Icons
+     * [108]Quince
+     * Business Productivity
+     * [109]LightSwitch
+     * [110]SharePoint
+     * [111]SharePlus
+     * [112]ReportPlus
+     * TEST : for TestAdvantage
+     * [113]Windows Forms for HP
+     * [114]Windows Forms for IBM
+     * [115]WPF for HP
+
+Services
+
+     * [116]Consulting
+     * [117]Training
+
+Help & Community
+
+     * [118]Help & Support
+     * [119]Blogs
+     * [120]Forums
+     * [121]Events
+     * [122]Videos
+     * [123]Online Documentation
+     * [124]Submit Support Request
+
+We're Social
+
+     * Join us on Facebook
+     * Follow us on Twitter
+     * Subscribe to Events
+     * Subscribe to Blogs
+
+   DESIGN / DEVELOP / EXPERIENCE
+     __________________________________________________________________
+
+     * [125]License Agreement
+     * [126]Contact Us
+     * [127]Get Help
+     * [128]Meet Us
+     * [129]Privacy Statement
+     * [130]Site Map
+     * [131]Legal Information
+
+References
+
+   Visible links
+   1. http://www.infragistics.com/community/blogs/MainFeed.aspx
+   2. file://localhost/
+   3. file://localhost/products/
+   4. file://localhost/products/indigo-studio
+   5. file://localhost/products/quince/
+   6. file://localhost/products/icons/
+   7. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml8.data
+   8. file://localhost/products/aspnet/
+   9. file://localhost/products/windows-forms/
+  10. file://localhost/products/silverlight/
+  11. file://localhost/products/wpf/
+  12. file://localhost/products/jquery/
+  13. file://localhost/products/windows-phone/
+  14. file://localhost/products/reporting/
+  15. file://localhost/products/ios/
+  16. file://localhost/products/android/
+  17. file://localhost/products/windows-ui/
+  18. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml8.data
+  19. file://localhost/products/ultimate/
+  20. file://localhost/products/dotnet/
+  21. file://localhost/products/lightswitch/
+  22. file://localhost/products/sharepoint/
+  23. http://www.shareplusapp.com/
+  24. file://localhost/products/reportplus/
+  25. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml8.data
+  26. file://localhost/products/testadvantage-windows-forms-qhp/
+  27. file://localhost/products/testadvantage-windows-forms-ibm/
+  28. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml8.data
+  29. file://localhost/products/testadvantage-wpf-hp/
+  30. file://localhost/services/
+  31. http://store.infragistics.com/
+  32. file://localhost/about-us/contact-us/
+  33. file://localhost/products/technology-previews/
+  34. file://localhost/services/
+  35. http://d3.infragistics.com/
+  36. http://d3.infragistics.com/about/
+  37. http://d3.infragistics.com/insights/blog/
+  38. http://d3.infragistics.com/services/training/
+  39. file://localhost/community/
+  40. file://localhost/community/forums/
+  41. file://localhost/community/blogs/
+  42. file://localhost/events/
+  43. http://www.youtube.com/user/infragistics
+  44. file://localhost/products/
+  45. file://localhost/about-us/contact-us/
+  46. file://localhost/help/
+  47. file://localhost/help/online-documentation/
+  48. file://localhost/help/FAQs/
+  49. file://localhost/help/supported-environments/
+  50. file://localhost/help/service-releases/
+  51. file://localhost/help/product-lifecycle/
+  52. file://localhost/help/support-policies/
+  53. file://localhost/my-account/support-activity/
+  54. file://localhost/my-account/submit-support-request/
+  55. file://localhost/my-account/feature-request/
+  56. file://localhost/my-account/register-product/
+  57. http://store.infragistics.com/
+  58. file://localhost/about-us/contact-us/
+  59. file://localhost/about-us/
+  60. file://localhost/about-us/company-information/
+  61. file://localhost/about-us/management-team/
+  62. file://localhost/about-us/alliances-partners/
+  63. file://localhost/about-us/customers/
+  64. file://localhost/about-us/awards/
+  65. file://localhost/about-us/press-releases/
+  66. file://localhost/about-us/media-coverage/
+  67. file://localhost/about-us/career-opportunities/
+  68. file://localhost/about-us/contact-us/
+  69. file://localhost/about-us/resellers/
+  70. file://localhost/products/
+  71. file://localhost/services/
+  72. http://store.infragistics.com/
+  73. file://localhost/community/blogs/d-coding/default.aspx
+  74. file://localhost/community/blogs/d-coding/archive/2013/09/20/fundamentals-of-python-functions-formatting-amp-assignment-statements-week-2.aspx
+  75. http://www.infragistics.com/community/blogs/d-coding/archive/2013/09/10/fundamentals-of-python-functions-amp-variables-week-1.aspx
+  76. https://twitter.com/DokiDara
+  77. https://plus.google.com/102021025995449539449?rel=author
+  78. http://www.infragistics.com/membership/login?ReturnUrl=http://www.infragistics.com/community/blogs/d-coding/archive/2013/09/20/fundamentals-of-python-functions-formatting-amp-assignment-statements-week-2.aspx#comments
+  79. http://www.infragistics.com/membership/register/
+  80. file://localhost/products/ultimate/downloads
+  81. file://localhost/profile/MTMwODgy
+  82. file://localhost/community/blogs/blagunas/archive/2013/10/02/cdc-alert-this-is-tour-going-to-be-sick.aspx
+  83. file://localhost/profile/MTAzNzQ5
+  84. file://localhost/community/blogs/marina_stoyanova/archive/2013/10/01/how-to-get-started-with-the-ignite-ui-layout-manager.aspx
+  85. file://localhost/profile/MTkyMTI0
+  86. file://localhost/community/blogs/indigo-studio/archive/2013/10/01/download-indigo-studio-prototyping-videos-for-offline-viewing.aspx
+  87. file://localhost/profile/MzA2Nzg=
+  88. file://localhost/community/blogs/
+  89. file://localhost/about-us/company-information/
+  90. file://localhost/about-us/customers/
+  91. file://localhost/about-us/career-opportunities/
+  92. file://localhost/about-us/press-releases/
+  93. file://localhost/about-us/contact-us/
+  94. file://localhost/products/aspnet/
+  95. file://localhost/products/windows-forms/
+  96. file://localhost/products/wpf/
+  97. file://localhost/products/silverlight/
+  98. file://localhost/products/jquery/
+  99. file://localhost/products/windows-phone/
+ 100. file://localhost/products/reporting/
+ 101. file://localhost/products/ios/
+ 102. file://localhost/products/android/
+ 103. file://localhost/products/windows-UI
+ 104. file://localhost/products/ultimate/
+ 105. file://localhost/products/dotnet/
+ 106. file://localhost/products/indigo-studio
+ 107. file://localhost/products/icons/
+ 108. file://localhost/products/quince/
+ 109. file://localhost/products/lightswitch/
+ 110. file://localhost/products/sharepoint/
+ 111. http://www.shareplusapp.com/
+ 112. file://localhost/products/reportplus/
+ 113. file://localhost/products/testadvantage-windows-forms-qhp/
+ 114. file://localhost/products/testadvantage-windows-forms-ibm/
+ 115. file://localhost/products/testadvantage-wpf-hp/
+ 116. file://localhost/consulting/
+ 117. file://localhost/training/
+ 118. file://localhost/help/
+ 119. file://localhost/community/blogs/
+ 120. file://localhost/community/forums/
+ 121. file://localhost/events/
+ 122. file://localhost/videos/
+ 123. file://localhost/help/online-documentation/
+ 124. file://localhost/my-account/submit-support-request/
+ 125. file://localhost/legal/license/
+ 126. file://localhost/about-us/contact-us/
+ 127. file://localhost/help/
+ 128. file://localhost/about-us/
+ 129. file://localhost/legal/privacy/
+ 130. file://localhost/sitemap/
+ 131. file://localhost/legal/information/
+
+   Hidden links:
+ 133. file://localhost/profile/MTMwODgy
+ 134. http://www.facebook.com/infragistics
+ 135. http://twitter.com/infragistics
+ 136. file://localhost/rss/events/
+ 137. file://localhost/community/blogs/MainFeed.aspx?GroupID=&amp;Type=

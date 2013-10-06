@@ -1,0 +1,608 @@
+   #[1]RSS Feed
+
+     * [2]by Ideal Project Group
+
+   Menu
+
+[3]Project Idealism
+
+   1
+   by Ideal Project Group
+
+   A blog by Ideal project group about software, the web
+   and how we go about making things
+
+   Search
+
+[4]Project Idealism
+
+     * [5]by Ideal Project Group
+
+[6]This is fun: What it means to deploy
+
+   [7]September 30, 2013 [8]Derek Hopper
+
+   Releasing new code is extremely fun. Never take it for granted. The
+   moment you're bored shipping new code is the moment you should consider
+   finding a new gig.
+
+   Here's why:
+    1. Shipping new code means people can use and see it immediately.
+    2. Each time you deploy, you're shipping a NEW VERSION.
+    3. You get emails thanking you.
+    4. People notice.
+    5. If you break something, you'll know.
+
+People thank you for your work.
+
+   This is motivation alone. Your entire team, the people that
+   brainstormed, planned, designed, implemented, and shipped that new
+   version - you get to be thanked by people who love what you do. Every
+   day.
+
+   Never take that for granted.
+
+   What else can you be doing where this happens? Garbage men don't get
+   thanked every day (although they should). The mailman surely doesn't
+   get thanked every day (although he should).
+
+   Realize what you do is powerful. You're inspiring people. They care
+   about what you do.
+
+   You might be making their business better. Maybe, you're the
+   entertainment in that person's life. You might even be helping them
+   through a tough time.
+
+   Just realize you're communicating to people. You may never meet them.
+   You may never say a word to them. But they're thinking about you.
+   Trust me.
+   [9]Comment
+
+[10]Handling subdomains for Rails in your development environment
+
+   [11]September 23, 2013 [12]Derek Hopper
+
+   We built Tula with subdomains from the beginning, so we needed a nice
+   way to handle subdomains in our development environments. We used pow
+   for some time, but that wasn't the perfect solution for me. That's
+   because I wanted a few things out of a solution:
+     * Configure it once and forget about it
+     * Know exactly when my server was started and stopped
+     * Use whatever I wanted as an app server i.e. unicorn
+
+   It took us awhile to settle on this solution, so here it is. It uses a
+   combination of Apache (or nginx) and dnsmasq which I've become a huge
+   fan of.
+
+   The first part is simple. You'll want to install and use dnsmasq. It's
+   a nice, lightweight and local DNS provider that will run on your
+   machine. You can serve the names of local machines which are not part
+   of the global DNS.
+
+   It's easy to install on both Linux and Mac.
+# On Ubuntu Linux
+sudo apt-get install dnsmasq
+# On Mac with Homebrew
+brew install dnsmasq
+
+   Once installed, you'll want to add the following to your dnsmasq.conf
+   file. This will resolve any domain with a TLD of .dev to your local
+   machine. This is handy if you have a lot of projects (Rails or
+   otherwise) in the same directory.
+
+   Next, you'll want to configure Apache (or nginx) as the following. The
+   key for Apache is VirtualDocumentRoot. It allows you to set the
+   document root based on various parts of the domain name. In this case,
+   I've taken the main part of the domain name as the document root. The
+   domain name will resolve to a project in my Projects directory. This
+   will always work if I continue to use my Projects directory for Rails
+   projects.
+
+   If you set this up once for your Rails projects, you'll never have to
+   worry about adding anything to your hosts file, nor will you have to
+   worry about port numbers. It's all taken care of for you.  You can
+   access your subdomains as you would normally. It's important to note
+   that unicorn is running on port 5000 in this example.
+   [13]Comment
+
+[14]My tmux configuration with tmuxinator
+
+   [15]September 20, 2013 [16]Derek Hopper
+
+   We're a small, remote engineering team (only 3 people), so we haven't
+   developed a standard for our development machines yet.  We have 1
+   person on Mac, 1 person on Ubuntu (me), and 1 person on Manjaro
+   (Linux).
+
+   We're always experimenting with new tools and adding new ones to our
+   toolbox. The one I want to talk about today is [17]tmuxinator.
+
+   If you're familiar with tmux, it can be a bit of a pain to script your
+   tmux sessions. For example, if you want one pane to run vim, another to
+   show a log file, and a third to run the rails console, it takes a bit
+   of time to script.
+
+   The goal is this: When I turn on my machine in the morning, I want to
+   type one command to do the following:
+     * Start vim in the right directory.
+     * Give myself a command prompt in the right project directory.
+     * Start the Rails server.
+     * Start a tail of the development log.
+     * Start the Rails console.
+     * Start spork for running specs.
+
+   You can easily script all of this with [18]tmuxinator.
+
+
+   Using the script above, you end up with a tmux layout like so.
+   tmuxinator.png tmuxinator.png
+
+   When I start my terminal for the day, I run the command mux tula   and
+   I'm off and running. A tmux session is started and I end up with the
+   following:
+     * vim running in the top window
+     * a prompt on the bottom for playing with git, bundle, etc.
+     * the Rails server running on window 1
+     * the development log tail on window 2
+     * a Rails console on window 3
+
+   You're up and running for development in no time.
+
+   As a bonus if you work on multiple projects, simply detach from this
+   tmux session and run another. Your session is saved (until you restart
+   your computer), so switching between projects is a breeze.
+
+   I haven't played much with this layout and I'm sure it's not perfect.
+   It's a much better solution to what I was doing in a previous life. If
+   you have any of your own tmux layouts, I'd love to hear from you in the
+   comments below.
+
+   And, by the way, if you need a great tmux primer, I recommend  [19]TMUX
+   – The Terminal Multiplexer.
+   [20]Comment
+
+[21]Bootstrapping in America Interview
+
+   [22]September 18, 2013 [23]Andrew Wicklander
+
+   The fine folks over at the TastyTrade network had me on their
+   [24]Bootstrapping in America show last week.
+
+   We chatted for about 15 minutes about business, marketing, and building
+   software.
+
+   [tmuxinator.png]
+   [25]Comment
+
+[26]Make your Rails views easy with select
+
+   [27]September 6, 2013 [28]Derek Hopper
+
+   Recently, we were writing a new report for [29]Tula. We needed to query
+   for all users that had purchased a particular pass and when they
+   purchased it.
+
+   Here's what we came up with first:
+
+   Well, that doesn't make it very easy to display in our view. We want a
+   view as simple as this:
+
+   Now that we had the simple view code with our favorite interface, we
+   had to implement that interface. How would we do that? (By the way, you
+   may notice we have date formatting in our view. You may want to try a
+   [30]decorator so your view is even simpler.)
+
+   By adding a select to our query, we can select all of the user
+   attributes AND the pass attributes we need. We can add these attributes
+   to the user (if you're familiar with SQL, we're essentially merging the
+   join table attributes with the user being returned). You might want to
+   read more about [31]selecting specific fields.
+
+
+   Now, we've got a nice interface to work with that keeps our view super
+   simple and not doing any extra work. We can access pass_name
+   and pass_purchase_date  directly from the user.
+
+   You should notice that we have a query in the controller. For
+   simplicity, I kept it in the controller. You should really have this
+   query in your model or better yet, in a single responsibility [32]query
+   object (see #4).
+
+   If you have any questions or comments, please let us know in the
+   comments section below.
+   [33]Comment
+
+[34]Your code sucks, mine is better, and why code review doesn't have to be
+painful
+
+   [35]August 7, 2013 [36]Derek Hopper
+
+   We've been experimenting with different ways to make code review part
+   of our culture. Although we'd like to, we don't pair program regularly
+   for a variety of reasons. We're a remote team in 6 different time zones
+   and we currently have 4 different projects for only 3 engineers. As a
+   result, we try to keep context switching to a minimum, but code review
+   naturally drives context switching for us.
+
+     Code review is a great way to improve code quality!
+
+   Well, that's great, but how do you do it?  We set out to seek an answer
+   to that question.
+
+   3770782889_7778df9674_z.jpg 3770782889_7778df9674_z.jpg
+
+   Image Credit: [37]http://www.flickr.com/photos/theredproject
+
+   First of all, it's important to realize that all organizations are
+   different. The people are different, the projects are different, the
+   tools are different, etc. Sure, many of us share similarities, but for
+   the most part, everything is slightly different. Although you can read
+   and read about how other organizations do it, you have to find your own
+   way through your own experimentation.
+
+   Experimentation is fun. If we find a new tool we'd like to use or a new
+   idea we'd like to add to our workflow, we try it. We don't have a
+   formal experimentation period. We just try it. If we like it, we find a
+   way to keep it. If we don't like it, we throw it out.
+
+   For example, we recently wanted to try [38]Blossom. Up until that
+   point, we were exclusive to [39]Basecamp for project planning. We knew
+   Basecamp was missing something, but transitioning clients to Basecamp
+   has been pretty easy. Blossom has started to fill the hole in our
+   hearts and we've decided to keep it. A word of warning though: some of
+   your clients won't love your tools as much as you do. Not all of our
+   clients liked Blossom.
+
+   Like Blossom, code review is a specific piece of our workflow we're
+   actively experimenting with.  We've tried a few different things so
+   far, and we haven't been completely satisfied yet. That doesn't mean
+   we've given up. We're just adapting and changing our experiments to
+   make us happy.
+
+   Experiment #1  - Code reviews live on GitHub
+
+   This is obvious. All of our code is on GitHub. Their collaboration
+   tools and commenting system is easy and if you've worked on open
+   source, it's pretty easy to work with. We can review the code and
+   comment inline on the lines of code in question. We can open up issues
+   when we see them and suggest ways to refactor.
+
+   Long ago when we first started doing this, we knew it was a success
+   right at the start. To improve quality, this was definitely a win.
+
+   One of the advantages of using GitHub for your code reviews is the rich
+   history. If you're constantly talking about your code and using pull
+   requests to signal when code gets merged, you'll have a rich history of
+   discussions, bug fixes, and screenshots. If you practice continuous
+   deployment, you'll have a history of deployments as well.
+
+   History is invaluable. You'll be able to answer questions like, "why
+   did we do it this way?" You'll be able to see screenshots of the app as
+   its being built. The history will serve as a seed to help you recall
+   much more about the code written.
+
+   Although reviewing code on GitHub is great, code review comes with a
+   price. We're a distributed team and sometimes only one engineer is
+   online. How do you practice code review if you value the speed at which
+   you execute? This was one of the problems. If we wanted to integrate
+   code review into our organization, how do we do it in these cases? Do
+   we sit and wait until another engineer comes online? This was a problem
+   we didn't know how to address.
+
+   Experiment #2 - Assigning a code review todo on Basecamp
+
+   Reviewing code on GitHub was definitely becoming part of our
+   organization; however, we wanted to make sure we were doing it. Since
+   we were using Basecamp at the time, we decided it was a good idea to
+   create a todo on Basecamp and assign it to someone for code review.
+   That person would be notified and they would review it, right?
+
+   Much like Experiment #1, we still needed someone to be online. If one
+   of our engineers completed a bug fix and no other engineers were
+   online, what happens? The todo gets created and the code sits there
+   until that person gets online.
+
+   Another problem for us was context switching. If someone was online,
+   should they immediately switch and do a code review? It doesn't seem
+   like a good idea, does it?
+
+   Experiment #3 - Added a code review step in Blossom
+
+   As we started to use Blossom, we started to ditch our usage of
+   Basecamp. We setup our [40]kanban flow and decided to add a code review
+   stage. It seemed like a code review stage was just what we needed.
+
+   We placed our code review stage after our QA stage (we're big fans of
+   having a QA person to test the code as a user).  Over time, we started
+   to see quite a bit of friction in our workflow. Code reviews weren't
+   getting done "on time". We were ending up with code that had passed QA,
+   but wasn't reviewed by another engineer.
+
+   We had been accustomed to merging code upstream as soon as something
+   passed QA, and we were feeling pain now. The workflow wasn't working.
+
+   Experiment #4 - Continuous code review
+
+   After all of our experiments so far, we finally realized that code
+   review shouldn't be a formal part of the process. Instead, we should
+   train ourselves to do it all the time. We call this continuous code
+   review.
+
+   We review code earlier in the process. Sometimes, we'll write some
+   code, open the pull request, and pair up with another engineer to
+   review. If code is in the QA stage before the first code review, we've
+   failed.
+
+   If I had to come up with a rule, I'd say you should do your first code
+   review halfway through implementation.  We don't really like rules
+   though. Smart engineers can use their own discretion and figure out
+   when a review would help them out. This has helped as immensely so far,
+   but it's still too early to tell if this is the experiment we'll call a
+   success.
+
+   Our goal is to ingrain code review in our culture. We know it improves
+   quality. We know it makes us smarter. We know we want to do it. So do
+   it.
+
+
+   [41]4 Comments
+
+[42]Judge receiving kickbacks for imprisoning children gets 28 years
+
+   [43]August 6, 2013 [44]Andrew Wicklander
+
+     Judge Mark A. Ciavarella, 63, serves as an example of why the
+     private prison industry can do more harm than good. Ciavarella
+     worked alongside owners of private juvenile facilities to ensure
+     that the prison remained occupied. The more prisoners equated to
+     more profits for the owners of the prison.
+
+     As a result, Ciavarella would sentence offenders with small offenses
+     to months and, at times, years behind bars. He once sentenced a teen
+     to three months in jail for creating a MySpace page that mocked her
+     school’s assistant principal. Ciavarella also sentenced another teen
+     to 90 days in jail after a simple schoolyard fight.
+
+   Disgusting.
+   Source: [45]http://rollingout.com/criminal-behavior/ju...
+   [46]Comment
+
+[47]U.S. directs agents to cover up program used to investigate Americans
+
+   [48]August 5, 2013 [49]Andrew Wicklander
+
+   [50]Via Reuters:
+
+     A secretive U.S. Drug Enforcement Administration unit is funneling
+     information from intelligence intercepts, wiretaps, informants and a
+     massive database of telephone records to authorities across the
+     nation to help them launch criminal investigations of Americans.
+
+     Although these cases rarely involve national security issues,
+     documents reviewed by Reuters show that law enforcement agents have
+     been directed to conceal how such investigations truly begin - not
+     only from defense lawyers but also sometimes from prosecutors and
+     judges.
+
+     The undated documents show that federal agents are trained to
+     "recreate" the investigative trail to effectively cover up where the
+     information originated, a practice that some experts say violates a
+     defendant's Constitutional right to a fair trial. If defendants
+     don't know how an investigation began, they cannot know to ask to
+     review potential sources of exculpatory evidence - information that
+     could reveal entrapment, mistakes or biased witnesses.
+
+   Source: [51]http://www.reuters.com/article/2013/08/05/...
+   [52]Comment
+
+[53]NSA program collects 'nearly everything a user does on the internet'
+
+   [54]July 31, 2013 [55]Andrew Wicklander
+
+   The [56]latest revelations by the Guardian about the NSA spying program
+
+     US officials vehemently denied this specific claim. Mike Rogers, the
+     Republican chairman of the House intelligence committee, said of
+     Snowden's assertion: "He's lying. It's impossible for him to do what
+     he was saying he could do."
+
+     But training materials for XKeyscore detail how analysts can use it
+     and other systems to mine enormous agency databases by filling in a
+     simple on-screen form giving only a broad justification for the
+     search. The request is not reviewed by a court or any NSA personnel
+     before it is processed.
+
+   I'm shocked (shocked!) that the government was lying and not Snowden.
+   Source: [57]http://www.theguardian.com/world/2013/jul/...
+   [58]Comment
+
+[59]Not all that technology replaces is obsolete
+
+   [60]July 29, 2013 [61]Andrew Wicklander
+
+   Beautiful video on the [62]about page of Kathy Sierra's new blog:
+
+     100 years after horses were declared "obsolete", the recreational
+     horse industry in the United States alone is $40billion. Yes, that's
+     with a "b". Sometimes a technological replacement reveals a deeper
+     underlying value. From printed books to vinyl records,
+     not everything rendered obsolete vanishes.
+
+   [3770782889_7778df9674_z.jpg]
+   Source: [63]http://seriouspony.com/about/
+   [64]Comment
+   [65]Older Posts →
+
+Nullam id dolor elit
+
+   Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.
+   Maecenas sed diam eget risus varius blandit sit amet non magna. Cras
+   justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere
+   erat a ante venenatis dapibus posuere velit aliquet. Maecenas sed diam
+   eget risus varius blandit sit amet non magna.
+
+Integer posuere erat
+
+   Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis
+   lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam
+   eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac
+   consectetur ac, vestibulum at eros.
+
+   Search
+     * [66]September 2013 (5)
+     * [67]August 2013 (3)
+     * [68]July 2013 (6)
+     * [69]June 2013 (2)
+     * [70]February 2013 (2)
+     * [71]January 2013 (1)
+     * [72]December 2012 (5)
+     * [73]November 2012 (2)
+     * [74]October 2012 (1)
+     * [75]September 2012 (2)
+     * [76]August 2012 (1)
+     * [77]July 2012 (2)
+     * [78]April 2012 (2)
+     * [79]March 2012 (5)
+     * [80]February 2012 (3)
+     * [81]January 2012 (1)
+     * [82]September 2011 (2)
+     * [83]August 2011 (1)
+     * [84]July 2011 (3)
+     * [85]June 2011 (5)
+     * [86]May 2011 (7)
+     * [87]April 2011 (5)
+     * [88]March 2011 (6)
+     * [89]February 2011 (1)
+     * [90]January 2011 (5)
+     * [91]December 2010 (1)
+     * [92]November 2010 (4)
+     * [93]October 2010 (3)
+     * [94]September 2010 (3)
+     * [95]August 2010 (2)
+     * [96]July 2010 (5)
+     * [97]June 2010 (4)
+     * [98]May 2010 (5)
+     * [99]April 2010 (6)
+     * [100]March 2010 (11)
+     * [101]February 2010 (9)
+     * [102]January 2010 (11)
+     * [103]December 2009 (13)
+     * [104]November 2009 (7)
+     * [105]October 2009 (7)
+     * [106]September 2009 (8)
+     * [107]August 2009 (3)
+
+References
+
+   Visible links
+   1. http://feeds.feedburner.com/ProjectIdealism
+   2. http://idealprojectgroup.com/
+   3. file://localhost/
+   4. file://localhost/
+   5. http://idealprojectgroup.com/
+   6. file://localhost/posts/2013/9/27/this-is-fun-what-it-means-to-deploy
+   7. file://localhost/posts/2013/9/27/this-is-fun-what-it-means-to-deploy
+   8. file://localhost/?author=518af8dbe4b0b055786a07ac
+   9. file://localhost/posts/2013/9/27/this-is-fun-what-it-means-to-deploy#comments-5245ccb1e4b085b754ec8b8b
+  10. file://localhost/posts/2013/9/16/handling-subdomains-for-rails-in-your-development-environment
+  11. file://localhost/posts/2013/9/16/handling-subdomains-for-rails-in-your-development-environment
+  12. file://localhost/?author=518af8dbe4b0b055786a07ac
+  13. file://localhost/posts/2013/9/16/handling-subdomains-for-rails-in-your-development-environment#comments-523747dbe4b05991da0adb2d
+  14. file://localhost/posts/2013/9/20/my-tmux-configuration-with-tmuxinator
+  15. file://localhost/posts/2013/9/20/my-tmux-configuration-with-tmuxinator
+  16. file://localhost/?author=518af8dbe4b0b055786a07ac
+  17. https://github.com/aziz/tmuxinator
+  18. https://github.com/aziz/tmuxinator
+  19. http://blog.hawkhost.com/2010/06/28/tmux-the-terminal-multiplexer/
+  20. file://localhost/posts/2013/9/20/my-tmux-configuration-with-tmuxinator#comments-523c5730e4b0dec3ddf9f79d
+  21. file://localhost/posts/2013/9/18/bootstrapping-in-america-interview
+  22. file://localhost/posts/2013/9/18/bootstrapping-in-america-interview
+  23. file://localhost/?author=50d01cefe4b000726e548762
+  24. https://www.tastytrade.com/tt/shows/BINT
+  25. file://localhost/posts/2013/9/18/bootstrapping-in-america-interview#comments-523a1f77e4b07627bcfd7599
+  26. file://localhost/posts/2013/9/5/make-your-rails-views-easy-with-select
+  27. file://localhost/posts/2013/9/5/make-your-rails-views-easy-with-select
+  28. file://localhost/?author=518af8dbe4b0b055786a07ac
+  29. https://tulasoftware.com/
+  30. https://github.com/drapergem/draper
+  31. http://guides.rubyonrails.org/active_record_querying.html#selecting-specific-fields
+  32. http://blog.codeclimate.com/blog/2012/10/17/7-ways-to-decompose-fat-activerecord-models/
+  33. file://localhost/posts/2013/9/5/make-your-rails-views-easy-with-select#comments-5228ce27e4b046558d2bde0b
+  34. file://localhost/posts/2013/8/2/your-code-sucks-mine-is-better-and-why-code-review-doesnt-have-to-be-painful
+  35. file://localhost/posts/2013/8/2/your-code-sucks-mine-is-better-and-why-code-review-doesnt-have-to-be-painful
+  36. file://localhost/?author=518af8dbe4b0b055786a07ac
+  37. http://www.flickr.com/photos/theredproject
+  38. https://www.blossom.io/
+  39. https://basecamp.com/
+  40. http://www.kanbanblog.com/explained/
+  41. file://localhost/posts/2013/8/2/your-code-sucks-mine-is-better-and-why-code-review-doesnt-have-to-be-painful#comments-51fbfec2e4b08fc14d16b2d7
+  42. file://localhost/posts/2013/8/6/judge-receiving-kickbacks-for-imprisoning-children-gets-28-years
+  43. file://localhost/posts/2013/8/6/judge-receiving-kickbacks-for-imprisoning-children-gets-28-years
+  44. file://localhost/?author=50d01cefe4b000726e548762
+  45. http://rollingout.com/criminal-behavior/judge-must-serve-28-years-after-making-2-million-for-sending-children-to-jail/
+  46. file://localhost/posts/2013/8/6/judge-receiving-kickbacks-for-imprisoning-children-gets-28-years#comments-520158fce4b0995969b27b39
+  47. file://localhost/posts/2013/8/5/us-directs-agents-to-cover-up-program-used-to-investigate-americans
+  48. file://localhost/posts/2013/8/5/us-directs-agents-to-cover-up-program-used-to-investigate-americans
+  49. file://localhost/?author=50d01cefe4b000726e548762
+  50. http://www.reuters.com/article/2013/08/05/us-dea-sod-idUSBRE97409R20130805
+  51. http://www.reuters.com/article/2013/08/05/us-dea-sod-idUSBRE97409R20130805
+  52. file://localhost/posts/2013/8/5/us-directs-agents-to-cover-up-program-used-to-investigate-americans#comments-51ffd8b7e4b09c3928335f9b
+  53. file://localhost/posts/2013/7/31/nsa-program-collects-nearly-everything-a-user-does-on-the-internet
+  54. file://localhost/posts/2013/7/31/nsa-program-collects-nearly-everything-a-user-does-on-the-internet
+  55. file://localhost/?author=50d01cefe4b000726e548762
+  56. http://www.theguardian.com/world/2013/jul/31/nsa-top-secret-program-online-data
+  57. http://www.theguardian.com/world/2013/jul/31/nsa-top-secret-program-online-data
+  58. file://localhost/posts/2013/7/31/nsa-program-collects-nearly-everything-a-user-does-on-the-internet#comments-51f91eade4b07e1682e72f6f
+  59. file://localhost/posts/2013/7/29/not-all-that-technology-replaces-is-obsolete
+  60. file://localhost/posts/2013/7/29/not-all-that-technology-replaces-is-obsolete
+  61. file://localhost/?author=50d01cefe4b000726e548762
+  62. http://seriouspony.com/about/
+  63. http://seriouspony.com/about/
+  64. file://localhost/posts/2013/7/29/not-all-that-technology-replaces-is-obsolete#comments-51f73431e4b03d20c9b31c84
+  65. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml720.data?offset=1375155236436
+  66. file://localhost/posts/?month=september-2013
+  67. file://localhost/posts/?month=august-2013
+  68. file://localhost/posts/?month=july-2013
+  69. file://localhost/posts/?month=june-2013
+  70. file://localhost/posts/?month=february-2013
+  71. file://localhost/posts/?month=january-2013
+  72. file://localhost/posts/?month=december-2012
+  73. file://localhost/posts/?month=november-2012
+  74. file://localhost/posts/?month=october-2012
+  75. file://localhost/posts/?month=september-2012
+  76. file://localhost/posts/?month=august-2012
+  77. file://localhost/posts/?month=july-2012
+  78. file://localhost/posts/?month=april-2012
+  79. file://localhost/posts/?month=march-2012
+  80. file://localhost/posts/?month=february-2012
+  81. file://localhost/posts/?month=january-2012
+  82. file://localhost/posts/?month=september-2011
+  83. file://localhost/posts/?month=august-2011
+  84. file://localhost/posts/?month=july-2011
+  85. file://localhost/posts/?month=june-2011
+  86. file://localhost/posts/?month=may-2011
+  87. file://localhost/posts/?month=april-2011
+  88. file://localhost/posts/?month=march-2011
+  89. file://localhost/posts/?month=february-2011
+  90. file://localhost/posts/?month=january-2011
+  91. file://localhost/posts/?month=december-2010
+  92. file://localhost/posts/?month=november-2010
+  93. file://localhost/posts/?month=october-2010
+  94. file://localhost/posts/?month=september-2010
+  95. file://localhost/posts/?month=august-2010
+  96. file://localhost/posts/?month=july-2010
+  97. file://localhost/posts/?month=june-2010
+  98. file://localhost/posts/?month=may-2010
+  99. file://localhost/posts/?month=april-2010
+ 100. file://localhost/posts/?month=march-2010
+ 101. file://localhost/posts/?month=february-2010
+ 102. file://localhost/posts/?month=january-2010
+ 103. file://localhost/posts/?month=december-2009
+ 104. file://localhost/posts/?month=november-2009
+ 105. file://localhost/posts/?month=october-2009
+ 106. file://localhost/posts/?month=september-2009
+ 107. file://localhost/posts/?month=august-2009
+
+   Hidden links:
+ 109. https://twitter.com/andrewwicklandr
+ 110. http://www.facebook.com/693398087

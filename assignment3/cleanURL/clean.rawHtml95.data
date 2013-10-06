@@ -1,0 +1,210 @@
+   #[1]橋本商会 RSS Feed [2]橋本商会 » ターミナルで使うtwitterクライアント作った のコメントのフィード
+   [3]DSLでコマンドライン引数をparseできるargs_parserをアップデートした
+   [4]Herokuで同じアプリに2つ目のサーバーを登録する
+
+[5]橋本商会
+
+   なんか作ったりした記録を忘れないうちに書くblog
+     * [6]about
+
+   10月 052012
+   <<
+   [7]Herokuで同じアプリに2つ目のサーバーを登録する  ||  [8]DSLでコマンドライン引数をparseできるargs_parser
+   をアップデートした >>
+
+[9]ターミナルで使うtwitterクライアント作った
+
+   Category: [10]未分類 | Tags: [11]gem, [12]Ruby, [13]tw, [14]Twitter |
+   Author: shokai
+
+   1年以上前に作ってずっと使ってた奴を、少し直してrubygemにした。
+   くわしい使い方は[15]http://shokai.github.com/twに書いた。
+   何か要望あれば[16]twitterか[17]githubのissueかblogのコメントでください。
+   ※活用方法を[18]Twのレシピに書きました
+
+インストール
+
+   特別なライブラリは使っていないのでMacならすぐインストールできるはず
+gem install tw
+
+tw --help
+
+   [f84c9388357d11d1a1c5f0238dc28bb2.gif]
+
+機能
+
+   すぐ使えるように名前が短い、インストール・セットアップが楽
+   表示がカラフル
+   複数のユーザやリストをマージして表示できる
+   DM読み書き
+   public timelineの検索
+   user stream、filter stream読める。なんかよく切断されるので自動再接続するようにしといた
+   複数アカウント使える
+   UNIX pipeからもtweetできる
+
+作った経緯
+
+   フルスクリーンのターミナルでプログラミングしてる途中で、たまにtwitterが見たいのだがブラウザを開くと集中力が切れてしまう。
+   そこでターミナルのままtwitterを見たくなった。
+   tやtermtterでもいいんだけど複数のlistをまとめて見るのが面倒だった。
+   俺はlistが見たい。
+tw @shokai/arr @shokai/masuilab @shokai/homu @ahokai @shokai_log
+
+   のように複数のlistとユーザのtweetをマージしてぱっと見て、すぐ作業に戻るというのをやりたかった。
+   terminalだと履歴にコマンドがたまるので、ctrl+rしてtwで検索すぐ実行できる。
+   あとbotにしゃべらせるのにも使いたかった。小さなbotに毎回twitterの機能をつけるのが面倒なので、
+echo 'hoge' | tw --user=shokai_log --pipe
+
+   で、ユーザを一時的にbotに切り替えつつUNIX
+   pipeでtweetできる。pipeの場合は140文字以上だったら複数回に分けてtweetするようにした。
+   streamはむかし音声読上げさせたら面白かった（3つのイベントのハッシュタグを同時に把握できた）のでそのうち使いそうだから実装した。
+   手元だけでなくサーバーにインストールして使うことも想定しているので、インストール・セットアップ・アカウント追加が楽だと良い。
+   twitterのアプリ毎に10万アカウントしか使えないようになってるけど、一応自分でoauthのアプリ登録してconsumer_keyとsec
+   retを設定ファイルで入れ替えるのも簡単なようにしておいた。
+   （そもそもそんなに使う人がいるとも思えないけど）
+
+args_parser
+
+   複数アカウント使い分けつつもわかりやすいコマンド体系にするために[19]args_parserを作った。
+   json出力モードがあればbot作るのに汎用的に使える物になるかも。
+     * Author
+       橋本 翔(Sho Hashimoto)
+       [20]http://shokai.org
+       [21][bigger]
+       @shokai
+       (by [22]twiticon)
+     * Search
+       ____________________
+       Search
+     *
+
+関連記事
+          + 2013 年 5 月 11 日 -- [23]RubyとArduinoとTwitterで天気予報を見る (0)
+          + 2012 年 10 月 12 日 -- [24]twがインストールできない人向けドキュメントを書いた (0)
+          + 2013 年 9 月 19 日 -- [25]twで写真を付けてtweetできるようになった (0)
+          + 2012 年 10 月 11 日 -- [26]Twのレシピ (0)
+          + 2013 年 6 月 7 日 -- [27]Rapsberry PiでIPアドレスをDMする（pipeとcronで） (0)
+       [28]Zemanta
+     * Flickr
+       [29]www.flickr.com
+       This is a Flickr badge showing public photos and videos from
+       [30]shokai. Make your own badge [31]here.
+     * 最近の投稿
+          + [32]ScalaでAndroidアプリを作る
+          + [33]git commitと同時に写真を撮ってtweetする
+          + [34]rubygems.orgのauthorsとownersの違いと追加方法
+          + [35]nowコマンドを作った
+          + [36]大人のYAPCでスクリプト言語の勉強方法についてLTした
+          + [37]twで写真を付けてtweetできるようになった
+          + [38]Rack Pluginの作り方を勉強した
+          + [39]Rubyのrescueって1行で書くと値を返すのね・・
+          + [40]arduino_firmata gemの起動が速くなった
+          + [41]ArduinoとRubyで赤外線リモコン をgemにした
+     * タグ
+       [42]Android [43]Arduino [44]arduino_firmata [45]AVR
+       [46]Bibliography [47]Book [48]C# [49]cpp [50]CY8C29466
+       [51]Del.icio.us [52]Event [53]EventMachine [54]Flash [55]gem
+       [56]github [57]Java [58]JavaScript [59]KeyPlayer [60]Mac
+       [61]MovableType [62]oklab [63]OpenCV [64]orz [65]Other [66]Pileus
+       [67]Product [68]PSoC [69]PSoCDesigner [70]RaspberryPi [71]Report
+       [72]RocketIO [73]Ruby [74]Server [75]SFC [76]Sinatra [77]Tech
+       [78]Teleshadow [79]Tool&Tips [80]tw [81]Twitter [82]UART [83]Ubuntu
+       [84]Video [85]wordpress [86]工房
+     * アーカイブ
+       [月を選択______]
+
+   Theme Design by [87]Web 2.0 Themes. Supported by [88]Webmaster SEO
+   Tools, [89]LinksHeaven Directory and [90]Garden Furniture
+
+References
+
+   1. http://shokai.org/blog/feed
+   2. http://shokai.org/blog/archives/6513/feed
+   3. http://shokai.org/blog/archives/6499
+   4. http://shokai.org/blog/archives/6537
+   5. http://shokai.org/blog/
+   6. http://shokai.org/blog/about
+   7. http://shokai.org/blog/archives/6537
+   8. http://shokai.org/blog/archives/6499
+   9. http://shokai.org/blog/archives/6513
+  10. http://shokai.org/blog/archives/category/%e6%9c%aa%e5%88%86%e9%a1%9e
+  11. http://shokai.org/blog/archives/tag/gem
+  12. http://shokai.org/blog/archives/tag/ruby
+  13. http://shokai.org/blog/archives/tag/tw
+  14. http://shokai.org/blog/archives/tag/twitter
+  15. http://shokai.github.com/tw
+  16. http://twitter.com/shokai
+  17. https://github.com/shokai/tw/issues?state=open
+  18. http://shokai.org/blog/archives/6549
+  19. http://shokai.github.com/args_parser
+  20. http://shokai.org/
+  21. https://twitter.com/shokai
+  22. http://twiticon.herokuapp.com/
+  23. http://shokai.org/blog/archives/7463
+  24. http://shokai.org/blog/archives/6578
+  25. http://shokai.org/blog/archives/8245
+  26. http://shokai.org/blog/archives/6549
+  27. http://shokai.org/blog/archives/7644
+  28. http://www.zemanta.com/?wp-related-posts
+  29. http://www.flickr.com/
+  30. http://www.flickr.com/photos/51753258@N00
+  31. http://www.flickr.com/badge.gne
+  32. http://shokai.org/blog/archives/8279
+  33. http://shokai.org/blog/archives/8275
+  34. http://shokai.org/blog/archives/8266
+  35. http://shokai.org/blog/archives/8261
+  36. http://shokai.org/blog/archives/8254
+  37. http://shokai.org/blog/archives/8245
+  38. http://shokai.org/blog/archives/8233
+  39. http://shokai.org/blog/archives/8221
+  40. http://shokai.org/blog/archives/8214
+  41. http://shokai.org/blog/archives/8143
+  42. http://shokai.org/blog/archives/tag/android
+  43. http://shokai.org/blog/archives/tag/arduino
+  44. http://shokai.org/blog/archives/tag/arduino_firmata
+  45. http://shokai.org/blog/archives/tag/avr
+  46. http://shokai.org/blog/archives/tag/bibliography
+  47. http://shokai.org/blog/archives/tag/book
+  48. http://shokai.org/blog/archives/tag/csharp
+  49. http://shokai.org/blog/archives/tag/cpp
+  50. http://shokai.org/blog/archives/tag/cy8c29466
+  51. http://shokai.org/blog/archives/tag/delicious
+  52. http://shokai.org/blog/archives/tag/event
+  53. http://shokai.org/blog/archives/tag/eventmachine
+  54. http://shokai.org/blog/archives/tag/flash
+  55. http://shokai.org/blog/archives/tag/gem
+  56. http://shokai.org/blog/archives/tag/github
+  57. http://shokai.org/blog/archives/tag/java
+  58. http://shokai.org/blog/archives/tag/javascript
+  59. http://shokai.org/blog/archives/tag/keyplayer
+  60. http://shokai.org/blog/archives/tag/mac
+  61. http://shokai.org/blog/archives/tag/movabletype
+  62. http://shokai.org/blog/archives/tag/oklab
+  63. http://shokai.org/blog/archives/tag/opencv
+  64. http://shokai.org/blog/archives/tag/orz
+  65. http://shokai.org/blog/archives/tag/other
+  66. http://shokai.org/blog/archives/tag/pileus
+  67. http://shokai.org/blog/archives/tag/product
+  68. http://shokai.org/blog/archives/tag/psoc
+  69. http://shokai.org/blog/archives/tag/psocdesigner
+  70. http://shokai.org/blog/archives/tag/raspberrypi
+  71. http://shokai.org/blog/archives/tag/report
+  72. http://shokai.org/blog/archives/tag/rocketio
+  73. http://shokai.org/blog/archives/tag/ruby
+  74. http://shokai.org/blog/archives/tag/server
+  75. http://shokai.org/blog/archives/tag/sfc
+  76. http://shokai.org/blog/archives/tag/sinatra
+  77. http://shokai.org/blog/archives/tag/tech
+  78. http://shokai.org/blog/archives/tag/teleshadow
+  79. http://shokai.org/blog/archives/tag/tooltips
+  80. http://shokai.org/blog/archives/tag/tw
+  81. http://shokai.org/blog/archives/tag/twitter
+  82. http://shokai.org/blog/archives/tag/uart
+  83. http://shokai.org/blog/archives/tag/ubuntu
+  84. http://shokai.org/blog/archives/tag/video
+  85. http://shokai.org/blog/archives/tag/wordpress
+  86. http://shokai.org/blog/archives/tag/%e5%b7%a5%e6%88%bf
+  87. http://www.web2themes.com/
+  88. http://www.seotoolslist.com/
+  89. http://www.linksheaven.net/
+  90. http://www.farawayfurniture.co.uk/

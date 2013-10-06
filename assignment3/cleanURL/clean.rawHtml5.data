@@ -1,0 +1,351 @@
+[1]git -at me | discover great open source projects
+
+[2]git -at me | discover great open source projects
+
+   [3]git -at me | discover great open source projects
+   Sign up for our weekly newsletter!
+   ____________________ (BUTTON) Subscribe
+
+   Join the Discussion!
+
+   Submit new topic ideas, start a conversation, and ask questions by
+   creating a new [4]issue on GitHub. You can also use Disqus.
+
+   09/26/2013 // [5]Scrapin' Care of Business
+
+   Before the proliferation of APIs and 'open data', scraping & parsing
+   HTML were state of the art technology for compiling data from the web.
+   And although things have evolved quite a bit since then, it still comes
+   in handy.
+
+   Let's say you're Head of Strategy at ToothCo, an online toothbrush
+   retailer, and your boss just asked you to research Amazon's 'dental
+   care' vertical. You'll need a list of products, 'list' pricing, actual
+   pricing, Amazon product ids, and UPCs.
+
+   The good news is that Amazon's product pages expose all the information
+   you need. The bad news is there are 22k toothbrush SKUs and (let's just
+   pretend here) no open API. That is roof stoof.
+
+   This calls for some big iron: [6]BeautifulSoup is a Python library that
+   parses HTML/XML. It has a number of useful methods to navigate and
+   search through the DOM.
+
+   View the source for some product pages, [7](1) [8](2) [9](3), and
+   you'll see that the data is contained within uniquely defined elements.
+Product name
+<span id="btAsinTitle">Colgate Extra Clean Full Head, Medium Toothbrush, 4-Count
+ (Pack of 3)</span>
+
+Original list price
+<span id="listPriceValue" class="listprice">$13.59</span>
+
+Amazon's price
+<b class="priceLarge">$11.01</b>
+
+ASIN
+<li><b>ASIN: </b>B003U5Y2HO</li>
+
+UPC
+<li><b>UPC:</b> 035000551900</li>
+
+   Translation? We can parse that!
+from StringIO import StringIO
+import pycurl
+from bs4 import BeautifulSoup
+
+url = ['http://www.amazon.com/Colgate-Extra-Medium-Toothbrush-4-Count/dp/B003U5Y
+2HO',
+'http://www.amazon.com/Colgate-Classic-Soft-Full-Toothbrush/dp/B000053UOC',
+'http://www.amazon.com/Vitality-Prowhite-Rechargeable-Electric-Toothbrush/dp/B00
+3UKKH6O']
+
+# Download html via cURL
+for u in url:
+  s = StringIO()
+  c = pycurl.Curl()
+  c.setopt(c.URL, u)
+  c.setopt(c.WRITEFUNCTION, s.write)
+  c.perform()
+  c.close()
+  h = s.getvalue()
+
+  # Parse html with BeautifulSoup
+  p = BeautifulSoup(h, "lxml")
+
+  # Use element & class name to find matching elements and extract the target va
+lue string
+  name = p.find("span", id = "btAsinTitle").string
+  aprice = p.find("b", class_ = "priceLarge").string
+
+  # List price isn't always available
+  if (p.find("span", class_ = "listprice")):
+    oprice = p.find("span", class_ = "listprice").string
+  else:
+    oprice = "N/A"
+
+  # Find matching "b" elements and select their siblings, which are the target v
+alue strings
+  asin = p.find("b", text = "ASIN: ").next_sibling.string
+  upc = p.find("b", text = "UPC:").next_sibling.string
+
+  # Output
+  print "Product name:",name
+  print "Original price:",oprice
+  print "Amazon's price:",aprice
+  print "ASIN:",asin
+  print "UPC:",upc,"\n"
+
+# Final output (could also insert into database or export as json)
+# Product name: Colgate Extra Clean Full Head, Medium Toothbrush, 4-Count (Pack
+of 3)
+# Original price: $13.59
+# Amazon's price: $11.01
+# ASIN: B003U5Y2HO
+# UPC:  035000551900
+
+# Product name: Colgate Colgate Full Head Toothbrush Classic Soft
+# Original price: $4.84
+# Amazon's price: $0.52
+# ASIN: B000053UOC
+# UPC:  035000555007
+
+# Product name: Oral-B Vitality Prowhite Rechargeable Electric Toothbrush 1 Coun
+t
+# Original price: N/A
+# Amazon's price: $26.21
+# ASIN: B003UKKH6O
+# UPC:  069055838464 069055862360
+
+   20 minutes of coding can save you dozens of painful hours down the
+   road, overcoming the limits of poor information design and
+   closed/limited APIs. Add this to your toolbox - your wrists & sanity
+   will thank you!
+
+   [10]Install the package, read the [11]Docs, and join the [12]Discussion
+
+   09/19/2013 // [13]Time Keeps on Slippin'
+
+   Time may be infinite - but your work week and development resources
+   aren't.
+
+   In short sprints, it's fairly easy to understand the impact of a one
+   hour delay for a quick bugfix, or lost productivity due to a mid-week
+   holiday. You don't need a full featured project management suite either
+   - just fire up a console window.
+
+   [14]David Bock's Business Time Ruby gem is a handy tool for traversing
+   the calendar and doing math in terms of business hours & days. With a
+   few short statements, you can forecast start & end dates and predict
+   how potential delays will affect dependent activities.
+require 'active_support'
+require 'business_time'
+today = Time.parse("September 19th, 2013, 10:15 AM")
+
+# Jump forward two business days
+2.business_day.after(today)
+# 2013-09-23 10:15:00 -0400 -- The following Monday
+
+# Jump back a few business hours
+5.business_hour.before(today)
+# 2013-09-18 13:15:00 -0400 -- The previous afternoon
+
+# Define a non-standard work schedule
+BusinessTime::Config.work_hours = {
+  :mon=>["10:00","18:00"],
+  :tue=>["10:00","20:00"],
+  :wed=>["9:00","18:00"],
+  :thu=>["10:00","19:00"],
+  :fri=>["10:00","16:00"],
+}
+12.business_hour.after(today)
+# 2013-09-20 14:15:00 -0400
+
+# Start from the current time with .from_now and .ago
+1.business_hour.from_now
+10.business_days.ago
+
+   Business Time can account for holidays, variable schedules, and way
+   more. It's a great resource for building time aware and schedule driven
+   applications.
+
+   The only catch is that Business Time is only available in Ruby. Blerg.
+   How will your PHP, Python, or Perl app make do without?
+
+   To borrow a phrase from Patrick Bateman, Don't just stare at it, port
+   it! This is an excellent opportunity to contribute to an open source
+   project and cross-train your brain. Git started today!
+
+   [15]Fork this [16]Project and join the [17]Discussion
+
+   09/12/2013 // [18]Let's Talk About Sex!
+
+   Pop quiz hotshot! How many of the following git -at me subscribers
+   (Taylor, Sacha, Jamie, and Brooklyn) are male? Would your answer change
+   if they were British or Russian?
+
+   With the increasing number of androgynous, curiously spelled, and
+   region-specific names, gender is a touchy subject. Much like asking a
+   woman when her baby is due, it's not a detail you want to guess at
+   blindly. You're liable to walk away with a black eye.
+
+   For most applications, gender is a nice data point to have, but it
+   doesn't affect core functionality. Consequently, you may decide to
+   eliminate it, reducing [19]signup friction and concerns about [20]data
+   security.
+
+   And that's all well and good - until you get traction and want to
+   monetize your user base. Targeted ads, data mining, selling anonymized
+   data - whatever it is - gender suddenly becomes an important piece of
+   the puzzle. So now what?
+
+   Enter [21]Sex Machine. This Ruby gem from [22]Brian Muller implements
+   [23]Jörg Michael's Gender program, which uses a comprehensive
+   regionalized dictionary to determine if a name is male, female, mostly
+   male, mostly female, or too androgynous for a definitive conclusion.
+# Basic examples
+require 'sexmachine'
+d = SexMachine::Detector.new
+d.get_gender("Neal") ## Male
+d.get_gender("Sam") ## Mostly Male
+d.get_gender("Eliane") ## Female
+
+# Regional & spelling variations
+d.get_gender("Sasha") ## Mostly Male
+d.get_gender("Sasha", :great_britain) ## Female
+d.get_gender("Sacha") ## Mostly Female
+
+d.get_gender("Cam") ## Mostly Male
+d.get_gender("Cam", :great_britain) ## Mostly Female
+
+# This one is just for fun
+d.get_gender("Sterling") ## Male
+d.get_gender("Mallory") ## Mostly Female
+d.get_gender("Archer") ## Androgynous
+
+   If your app already has access to first name and location, adding
+   gender immediately transforms your app-specific data into a useful and
+   salable dataset. That alone could be the difference between a $10M and
+   $50M valuation.
+
+   Want to contribute to this project or try it out for yourself? Install
+   the gem right now and get to hacking: gem install sexmachine
+
+   [24]Fork this [25]Project and join the [26]Discussion
+
+   09/05/2013 // [27]A RegEx Fairytale
+
+   Whether you're a novice or a seasoned developer, [28]Regular
+   Expressions are notoriously tricky. It's a bit like asking
+   Rumpelstiltskin for help. Sure he can validate your form inputs - but
+   you'll need to hand over your firstborn child and make him a sandwich
+   too. Next time, try [29]VerbalExpressions.
+
+   VerbalExpressions enables you to construct RegEx statements that you
+   can actually understand. Think of it as SQL-level simplicity for
+   Regular Expressions. For example, to validate a URL in javascript:
+# Normal RegEx gobbledy gook:
+/^(http)(s)?(\:\/\/)(www\.)?([^\ ]*)$/
+
+# VerbalExpressions statement:
+VerEx().startOfLine().then( "http" ).maybe( "s" ).then( "://" ).maybe( "www." ).
+anythingBut( " " ).endOfLine()
+
+   How cool is that? RegEx you can read! VerbalExpressions ports are
+   available for Javascript, Ruby, PHP, and more. So what are you waiting
+   for?
+
+   [30]Fork this [31]Project and join the [32]Discussion
+
+
+   © 2013 [33]Neal Shyam :: [34]About :: [35]Terms & Privacy
+   (BUTTON) ×
+
+Get At Who?
+
+   [36]Hi there, I'm [37]Neal Shyam and I like to build stuff.
+
+   I started git at -me because I like hacking on open source projects,
+   and was having trouble discovering projects that could use my help &
+   interested me.
+
+   Every Thursday, git at -me highlights one handpicked oss project. I'll
+   tell you what it is and why I dig it. After that, it's up to you.
+
+   Got a tip? Email [38]tips@gitat.me or tweet [39]@git_atme
+   join our mailing list:
+   ____________________ (BUTTON) Subscribe  [40]Close
+   (BUTTON) ×
+
+Terms & Privacy
+
+   I promise not to be a dick or do the following:
+     * Send you email that you didn't ask or signup for
+     * Sell your personal information
+     * Willfully allow a security breach
+     * Punch animals
+
+   By subscribing to git at -me's mailing list, you are opting in to a
+   weekly newsletter. You may [41]unsubscribe at any time.
+
+   Did I miss something? Email [42]me and we'll address it.
+   join our mailing list:
+   ____________________ (BUTTON) Subscribe  [43]Close
+
+References
+
+   Visible links
+   1. file://localhost/
+   2. file://localhost/
+   3. file://localhost/
+   4. https://github.com/nealrs/gitatme-comments/issues
+   5. file://localhost/2013/09/26/Scrapin-Care-of-Business.html
+   6. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml5.data
+   7. http://www.amazon.com/Colgate-Extra-Medium-Toothbrush-4-Count/dp/B003U5Y2HO
+   8. http://www.amazon.com/Colgate-Classic-Soft-Full-Toothbrush/dp/B000053UOC
+   9. http://www.amazon.com/Vitality-Prowhite-Rechargeable-Electric-Toothbrush/dp/B003UKKH6O
+  10. http://www.crummy.com/software/BeautifulSoup/#Download
+  11. http://www.crummy.com/software/BeautifulSoup/bs4/doc/
+  12. https://github.com/nealrs/gitatme-comments/issues/4
+  13. file://localhost/2013/09/19/Time-Keeps-on-Slippin.html
+  14. https://github.com/bokmann/business_time
+  15. https://github.com/bokmann/business_time/fork
+  16. https://github.com/bokmann/business_time
+  17. https://github.com/nealrs/gitatme-comments/issues/3
+  18. file://localhost/2013/09/12/Lets-Talk-About-Sex.html
+  19. https://medium.com/design-startups/3c390ea15d1
+  20. http://www.theguardian.com/world/2013/sep/05/nsa-gchq-encryption-codes-security
+  21. https://github.com/bmuller/sexmachine
+  22. https://github.com/bmuller
+  23. http://www.heise.de/ct/ftp/07/17/182/
+  24. https://github.com/bmuller/sexmachine/fork
+  25. https://github.com/bmuller/sexmachine
+  26. https://github.com/nealrs/gitatme-comments/issues/2
+  27. file://localhost/2013/09/05/A-RegEx-Fairytale.html
+  28. http://en.wikipedia.org/wiki/Regular_expression
+  29. https://github.com/VerbalExpressions/JSVerbalExpressions
+  30. https://github.com/VerbalExpressions/JSVerbalExpressions/fork
+  31. https://github.com/VerbalExpressions/JSVerbalExpressions
+  32. https://github.com/nealrs/gitatme-comments/issues/1
+  33. http://nealshyam.com/
+  34. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml5.data#about
+  35. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml5.data#terms
+  36. https://plus.google.com/106729159255897575431?rel=author
+  37. http://www.nealshyam.com/
+  38. mailto:tips@gitat.me
+  39. http://twitter.com/git_atme
+  40. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml5.data
+  41. http://gitat.us7.list-manage.com/unsubscribe?u=c077cf2dc30777ab6e605c7fc&id=e65eebd6a3
+  42. mailto:neal@gitat.me
+  43. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml5.data
+
+   Hidden links:
+  45. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml5.data
+  46. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml5.data
+  47. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml5.data
+  48. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml5.data
+  49. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml5.data
+  50. mailto:tips@gitat.me
+  51. http://twitter.com/git_atme
+  52. http://feeds.feedburner.com/gitatme
+  53. https://github.com/nealrs/gitatme-comments/issues

@@ -1,0 +1,217 @@
+   #[1]Gistflow :: All RSS feed
+
+   You have not JS
+
+[2]Gistflow
+
+   ____________________ ↩
+     * [3]login
+
+[4]sandi_meter – tool for checking Sandi Metz' rules by [5]makaroni4
+
+   [6]Sandi Metz is an activist of writing well factored object-oriented
+   code. Recently a set of 4 simple rules by Sandi got publicized and
+   spread throughout the community. In this post I will introduce a gem
+   which automates scanning your code versus Sandi's rules.
+
+Introduction
+
+   First, I will highly recommend you to read the [7]Thoughbot article on
+   using Sandi's rules in their development process. Also there was a talk
+   by Sandi Metz at [8]BaRuCo 2013 couple of weeks ago and I hope that
+   some day the video will be posted.
+
+Why I found it useful
+
+   As Sandi mentioned in her talk at BaRuCo – you need some rules to
+   factor a good code. Experienced developers always have rules (and even
+   write books on them) and these 4 rules are perfect if you don't have
+   your own strong rules yet.
+
+   For many projects with a plenty of business logic these rules work just
+   great. They are indicator of how good the project is factored (but the
+   result of course should not be 100% of proper classes/method or all
+   green).
+
+   These rules are not taboos and of course you are allowed to brake them.
+   But "With great power comes great responsibility".
+
+[9]gem "sandi_meter"
+
+Description
+
+   sandi_meter gem is based on [10]Ripper (it converts code to
+   S-expressions, which are in fact nested arrays and then iterates on
+   them and check classes for the rules).
+
+CLI mode
+
+   Gem could be used in 3 modes. First – console mode which works perfect
+   when you need to check a project once.
+> sandi_meter -p ~/path/to/project
+
+# 1. 94% of classes are under 100 lines.
+# 2. 53% of methods are under 5 lines.
+# 3. 98% of methods calls accepts are less than 4 parameters.
+# 4. 21% of controllers have one instance variable per action.
+
+HTML mode
+
+   I like this one the most. In HTML mode the results of each scan are
+   logged into file. HTML file with the diagrams of the latest scan and
+   plots of projects dynamics is updated after each time you run
+   sandi_meter. SandiMeter HTML mode
+
+   To use HTML mode run sandi_meter with g option: sandi_meter -g and
+   checkout YOUR_PROJECT_PATH/sandi_meter folder for index.html and
+   sandi_meter.log.
+
+Ruby mode
+
+   This mode is useful if you need to use scan results in your own script
+   or CI. It could be done with just 3 lines of code:
+require 'sandi_meter/file_scanner'
+require 'pp'
+
+scanner = SandiMeter::FileScanner.new
+data = scanner.scan(PATH_TO_PROJECT)
+pp data
+# {:first_rule=>
+#   {:small_classes_amount=>916,
+#    :total_classes_amount=>937,
+#    :missindented_classes_amount=>1},
+#  :second_rule=>
+#   {:small_methods_amount=>1144,
+#    :total_methods_amount=>1833,
+#    :missindented_methods_amount=>0},
+#  :third_rule=>{:proper_method_calls=>5857, :total_method_calls=>5894},
+#  :fourth_rule=>{:proper_controllers_amount=>17, :total_controllers_amount=>94}
+}
+
+Some fun
+
+   The first version of gem was released in less than 24 hours after
+   Sandi's talk as lightning talk at BaRuCo:
+     * Video: [11]http://www.youtube.com/watch?v=L7HdRAut9RQ
+     * Slides:
+       [12]https://speakerdeck.com/makaroni4/gem-sandi-meter-lightning-tal
+       k-at-baruco-2013
+
+Conclusion
+
+   Check out [13]the gem, I hope you find sandi_meter useful and will have
+   some fun with that :) Please, [14]drop an issue or [15]feedback.
+
+   [16]#ruby [17]#sandi_meter [18]#static_analysis [19]#ripper
+   September 25, 20138987 pageviews
+   [20]Tweet
+   [21]8
+
+Similar posts
+
+     * [22]An alternative startup script for puma that is better than the
+       broken pumactl
+     * [23]constant lookup rules in ruby.
+     * [24]Install capybara-webkit 0.12 with Qt >= 4.8.4
+
+Comments
+
+   No comments yet
+   makaroni4
+
+About
+
+Join gistflow developers community
+
+     * Start your developer blog in a minute.
+     * Share code-related posts.
+     * Follow users, subscribe for tags.
+     * Use gist.github.com gists to write posts.
+
+   [25]Sign up through GitHub
+
+Tell friends about us
+
+Tags
+
+     * [26]#ruby
+     * [27]#rails
+     * [28]#gistflow
+     * [29]#javascript
+     * [30]#activerecord
+     * [31]#bash
+     * [32]#gem
+     * [33]#git
+     * [34]#mac
+     * [35]#html
+     * [36]#shell
+     * [37]#coffeescript
+     * [38]#rspec
+     * [39]#python
+     * [40]#postgresql
+
+     * [41]Posts leaderboard
+     * [42]Tags cloud
+     * [43]Create issue
+     * [44]Email us
+
+   [45]<g>
+
+   © 2013 [46]Gistflow with [47]Evrone
+
+References
+
+   Visible links
+   1. file://localhost/all.rss
+   2. file://localhost/
+   3. file://localhost/auth/github
+   4. file://localhost/posts/901-sandi_meter-tool-for-checking-sandi-metz-rules
+   5. file://localhost/users/makaroni4
+   6. https://speakerdeck.com/skmetz
+   7. http://robots.thoughtbot.com/post/50655960596/sandi-metz-rules-for-developers
+   8. http://www.baruco.org/speakers#sandi-metz
+   9. https://github.com/makaroni4/sandi_meter
+  10. http://www.ruby-doc.org/stdlib-1.9.3/libdoc/ripper/rdoc/Ripper.html
+  11. http://www.youtube.com/watch?v=L7HdRAut9RQ
+  12. https://speakerdeck.com/makaroni4/gem-sandi-meter-lightning-talk-at-baruco-2013
+  13. https://github.com/makaroni4/sandi_meter
+  14. https://github.com/makaroni4/sandi_meter/issues/new
+  15. email:makaroni4@gmail.com
+  16. file://localhost/tags/ruby
+  17. file://localhost/tags/sandimeter
+  18. file://localhost/tags/staticanalysis
+  19. file://localhost/tags/ripper
+  20. https://twitter.com/share?text=sandi_meter+%E2%80%93%C2%A0tool+for+checking+Sandi+Metz%27+rules&url=http%3A%2F%2Fgistflow.com%2Fposts%2F901-sandi_meter-tool-for-checking-sandi-metz-rules
+  21. file://localhost/account/likes?post_id=901
+  22. file://localhost/posts/888-an-alternative-startup-script-for-puma-that-is-better-than-the-broken-pumactl
+  23. file://localhost/posts/886-constant-lookup-rules-in-ruby
+  24. file://localhost/posts/880-install-capybara-webkit-0-12-with-qt-4-8-4
+  25. file://localhost/auth/github
+  26. file://localhost/tags/ruby
+  27. file://localhost/tags/rails
+  28. file://localhost/tags/gistflow
+  29. file://localhost/tags/javascript
+  30. file://localhost/tags/activerecord
+  31. file://localhost/tags/bash
+  32. file://localhost/tags/gem
+  33. file://localhost/tags/git
+  34. file://localhost/tags/mac
+  35. file://localhost/tags/html
+  36. file://localhost/tags/shell
+  37. file://localhost/tags/coffeescript
+  38. file://localhost/tags/rspec
+  39. file://localhost/tags/python
+  40. file://localhost/tags/postgresql
+  41. file://localhost/posts/leaderboard
+  42. file://localhost/tags/cloud
+  43. https://github.com/gistflow/gistflow/issues
+  44. mailto:%69%6e%66%6f@%67%69%73%74%66%6c%6f%77.%63%6f%6d
+  45. file://localhost/
+  46. file://localhost/
+  47. http://evrone.ru/
+
+   Hidden links:
+  49. file://localhost/map
+  50. file://localhost/account/bookmarks/901-sandi_meter-tool-for-checking-sandi-metz-rules
+  51. file://localhost/account/observings/901-sandi_meter-tool-for-checking-sandi-metz-rules
+  52. file://localhost/posts/901-sandi_meter-tool-for-checking-sandi-metz-rules/edit

@@ -1,0 +1,556 @@
+   #[1]publisher [2]YourHowTo.net » Using LESS for CSS Comments Feed
+   [3]YourHowTo.net RSS Feed
+
+     * [4]Home
+     * [5]Domain Whois
+     * [6]Generate Virtual Host
+     * [7].Htaccess tools
+     * [8]Are you a new visitor to this site?
+     * [9]Contact
+
+   [10]YourHowTo.net
+     * [11]Blogs
+     * [12]Databases
+     * [13]Free time
+     * [14]Programming
+          + [15]Ajax
+          + [16]HTML / CSS
+          + [17]JS / jQuery
+          + [18]PHP
+     * [19]Servers
+          + [20]Apache
+          + [21]Proxy
+          + [22]WHM/cPanel
+     * [23]Site optimization
+     * [24]Tutorials
+
+   ←Advertisment
+
+Using LESS for CSS
+
+   September 11, 2013   [25]HTML / CSS, [26]JS / jQuery, [27]PHP,
+   [28]Programming
+   [29]→ Are you a new visitor? Please visit the page guidance for new
+   visitors ←
+
+Using LESS for CSS
+
+   As I have said in my past articles, we live in a world where rapid
+   development of web applications is an important factor. We need to be
+   able to construct big things in short amount of time. This is why, we
+   need to learn to use tools that helps us obtain these kind of things.
+
+What is LESS ?
+
+   Think about LESS as the CSS for programmers. LESS allows you to create
+   your css in a more dynamic way. Imagine the next situation: You have
+   developed a website with 5000 lines of css. This is a huge style, right
+   ? Your website looks shiny, pixel perfect and let’s say that the theme
+   of the website is based on blue and its related colors. Everything
+   looks perfect, but the client wants to change the theme to green. BOOM
+   ! Imagine yourself in the situation of searching for blue colors in
+   that huge file, and replace them line by line with green. A very time
+   consuming task, I would say.
+
+   I will present three kinds of tools when choosing to use LESS syntax.
+   One is LESS.js, another one is SimpLESS, and the last one is PHP LESS.
+   We will talk about them separately below, but first let’s see the
+   syntax for LESS.
+
+Example of LESS code
+
+   CSS
+
+   @color-base: #2d5e8b;_______________________________________
+   ____________________________________________________________
+   .class1 {___________________________________________________
+   	background-color: @color-base;_____________________________
+   }___________________________________________________________
+   .class2 {___________________________________________________
+   	background-color: #fff;____________________________________
+   	color: @color-base;________________________________________
+   }___________________________________________________________
+   .class3 {___________________________________________________
+   	border: 1px solid @color-base;_____________________________
+   }___________________________________________________________
+   1
+   2
+   3
+   4
+   5
+   6
+   7
+   8
+   9
+   10
+   11
+   12
+     @color-base: #2d5e8b;
+
+     .class1 {
+         background-color: @color-base;
+     }
+     .class2 {
+         background-color: #fff;
+         color: @color-base;
+     }
+     .class3 {
+         border: 1px solid @color-base;
+     }
+
+   You see already something strange going on, eh ? Less is derived from
+   css syntax. Let’s take a look on the above syntax. On the first line,
+   we defined a LESS variable called “color-base” with the value of
+   “#2d5e8b”. In LESS, variables are defined with “@” in front of them.
+   Now we have a variable inside our style.less document, and we can use
+   it in later on css declarations. We see further on, that our “class1″
+   is using the variable name for setting the background-color.  You can
+   already imagine the possibilities that you have by declaring variables
+   in css. Your blue-green problematic change should take only 5 seconds
+   now if you think good from the start with LESS. This is pretty amazing,
+   right ?
+
+   LESS knows more than this. It knows about mixins also.
+
+Mixins
+
+   CSS
+
+   .round3 {___________________________________________________
+       -moz-border-radius: 3px;________________________________
+       -webkit-border-radius: 3px;_____________________________
+       -khtml-border-radius: 3px;______________________________
+       border-radius: 3px;_____________________________________
+   }___________________________________________________________
+   1
+   2
+   3
+   4
+   5
+   6
+    .round3 {
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -khtml-border-radius: 3px;
+        border-radius: 3px;
+    }
+
+   We have declared a class of “round3″ that we can apply on our elements
+   to create rounded corners. In LESS, we can use that class name, inside
+   other css’s body declaration like this:
+   CSS
+
+   div {  _____________________________________________________
+       .round3;  ______________________________________________
+       border: 1px solid #555;  _______________________________
+       border-radius: 3px;  ___________________________________
+   }___________________________________________________________
+   1
+   2
+   3
+   4
+   5
+    div {
+        .round3;
+        border: 1px solid #555;
+        border-radius: 3px;
+    }
+
+   Now, all the divs from our website will have also rounded corners,
+   because we called the .round3 class for them.
+
+LESS math
+
+   LESS knows about math too. You can declare a variable and that one you
+   can increment. Let’s see an example:
+   CSS
+
+   @the-border: 1px;___________________________________________
+   @base-color: #111;__________________________________________
+   ____________________________________________________________
+   #header {___________________________________________________
+     color: (@base-color * 3);_________________________________
+     border-left: @the-border;_________________________________
+     border-right: (@the-border * 2);__________________________
+   }___________________________________________________________
+   1
+   2
+   3
+   4
+   5
+   6
+   7
+   8
+    @the-border: 1px;
+    @base-color: #111;
+
+    #header {
+      color: (@base-color * 3);
+      border-left: @the-border;
+      border-right: (@the-border * 2);
+    }
+
+Nested Rules
+
+                                Advertisment
+
+   Rather than constructing long selector names to specify inheritance, in
+   LESS you can simply nest selectors inside other selectors. This makes
+   inheritance clear and style sheets shorter.
+   CSS
+
+   #header {___________________________________________________
+     h1 {______________________________________________________
+       font-size: 26px;________________________________________
+       font-weight: bold;______________________________________
+     }_________________________________________________________
+     p { font-size: 12px;______________________________________
+       a { text-decoration: none;______________________________
+         &:hover { border-width: 1px }_________________________
+       }_______________________________________________________
+     }_________________________________________________________
+   }___________________________________________________________
+   1
+   2
+   3
+   4
+   5
+   6
+   7
+   8
+   9
+   10
+   11
+     #header {
+       h1 {
+         font-size: 26px;
+         font-weight: bold;
+       }
+       p { font-size: 12px;
+         a { text-decoration: none;
+           &:hover { border-width: 1px }
+         }
+       }
+     }
+
+   Ok, you see all the possibilities of this wonderful LESS, and you can
+   think how many great stuff you can do with it. After you wrote your
+   code in a “style.less” file, you have to compile it, and obtain
+   “style.css” from it. Lets talk about the possible ways of obtaining
+   that.
+
+LESS.js to the rescue.
+
+   Using LESS is really easy. We only need this two lines inside
+   the head tag of your HTML document. First, the .less file then
+   the less.js library at the bottom (which you can download it
+   from [30]the official site).
+   XHTML
+
+   <link rel="stylesheet/less" type="text/css" href="style.less
+   <script src="less.js" type="text/javascript"></script>______
+   ____________________________________________________________
+   ____________________________________________________________
+   1
+   2
+    <link rel="stylesheet/less" type="text/css" href="style.less">
+    <script src="less.js" type="text/javascript"></script>
+
+   Pretty simple, the less will be compile in every client’s browser. It
+   is very fast.
+
+SimpLESS as an alternative solution.
+
+   You can download this tool from the official site [31]here, and install
+   it on your pc. You just import the “style.less” file into it, and it
+   will generate a “style.css” file that you include as a normal css in
+   your app.
+
+PHP LESS.
+
+   This solution is for server side compiling the less file. You need to
+   install LEAFO in your php app (a class for compiling less files). You
+   can take it from [32]here.
+
+   The flow is the next one:
+   PHP
+
+   <?php_______________________________________________________
+   require "lessc.inc.php";____________________________________
+   $less = new lessc;__________________________________________
+   $less->checkedCompile("input.less", "output.css");__________
+   ?>__________________________________________________________
+   1
+   2
+   3
+   4
+   5
+    <?php
+    require "lessc.inc.php";
+    $less = new lessc;
+    $less->checkedCompile("input.less", "output.css");
+    ?>
+
+   Pretty basic, usefull and fast. You can setup variables here also like
+   this:
+   PHP
+
+   <?php_______________________________________________________
+   $less = new lessc;__________________________________________
+   ____________________________________________________________
+   $less->setVariables(array(__________________________________
+     "color" => "red",_________________________________________
+     "base" => "960px"_________________________________________
+   ));_________________________________________________________
+   ____________________________________________________________
+   echo $less->compile(".magic { color: @color;  width: @base -
+   ?>__________________________________________________________
+   1
+   2
+   3
+   4
+   5
+   6
+   7
+   8
+   9
+   10
+     <?php
+     $less = new lessc;
+
+     $less->setVariables(array(
+       "color" => "red",
+       "base" => "960px"
+     ));
+
+     echo $less->compile(".magic { color: @color;  width: @base - 200; }");
+     ?>
+
+   More in the docs [33]here.
+
+Summary.
+
+   I have presented to you, some ways of dealing with LESS files, and you
+   learned the syntax and possibilities of this great thing. Hope you
+   liked it.
+
+   Bye bye ! :)
+
+Share this:
+
+     * [34]Facebook
+     * [35]Twitter
+     * [36]Google
+     * [37]StumbleUpon
+     * [38]More
+     *
+
+     * [39]Digg
+     * [40]Pinterest
+     *
+     * [41]LinkedIn
+     * [42]Reddit
+     *
+     * [43]Email
+     * [44]Print
+     *
+     *
+
+   [45]css, [46]less, [47]less css, [48]mixins, [49]php less, [50]simpless
+
+Leave a comment [51]Cancel reply
+
+   IFRAME: [52]jetpack_remote_comment
+
+     * Follow us on
+       [53]Twitter [54]Facebook [55]Google+ [56]RSS Feed [57]Email
+       Daily Email: ____________________ ok
+
+     * Search on this site
+       ___________________________________ [search.png]-Submit
+
+     * Recent articles
+          + [58]How to install node.js on Debian and CentOS linux
+          + [59]Nginx block sql injection and file injection
+          + [60]Mysql server optimization for InnoDB and MyISAM
+          + [61]Mysql sample configuration for InnoDB 4GB ram
+          + [62]Mysql sample configuration with 512M ram
+          + [63]Mysql sample configuration for less than 64M
+          + [64]Mysql sample configuration for less than 128M
+          + [65]Mysql sample configuration for 1G-2G ram
+          + [66]Remote mysql connection using cPanel and VPS server
+          + [67]Let’s laugh a bit…
+
+     * POPULAR ARTICLES
+          + [68]Increasing squid cache directory size
+          + [69]5 of the best PHP frameworks for programmers
+          + [70]How to update and install php 5.3 and php 5.2 CentOS
+            webtatic repo
+          + [71]Slow speed in prestashop 1.5
+          + [72]Slow load in prestashop
+          + [73]Reverse cache proxy using squid proxy
+          + [74]Install squid proxy with –enable-ssl for https_port
+          + [75]Let's laugh a bit…
+          + [76]jQuery autocomplete _rendeItem method
+          + [77]How to increase joomla slow speed using browser cache
+          + [78]Remote mysql connection using cPanel and VPS server
+          + [79]How to fix eth0 network interface on centos, redhat clone
+            VM
+          + [80]Mysql server optimization for InnoDB and MyISAM
+          + [81]How to check your network bandwidth usage on linux
+          + [82]Preload not working in wp-super-cache
+
+     * Random articles
+          + [83]Mysql sample configuration with 512M ram
+          + [84]Using LESS for CSS
+          + [85]Install memcached on CentOS 5 and 6
+          + [86]Mysql sample configuration for 1G-2G ram
+          + [87]Add your email account to Gmail
+          + [88]Exclude domains and paths from squid cache
+          + [89]Install flvtool2, mediainfo and neroAacEnc on centos
+            x86_64
+          + [90]Preload not working in wp-super-cache
+          + [91]How to install mybb forum board
+          + [92]Is website speed important for my visitors?
+          + [93]Apple launching the new IOS 7
+          + [94]How to install plugins in MyBB
+          + [95]Restrict access using squid proxy server
+          + [96]How to increase joomla slow speed using browser cache
+          + [97]How to create a cpanel account package
+
+     *
+
+                                Advertisment
+
+   © 2013 [98]YourHowTo.net
+   Powered by [99]WordPress
+
+   Send to Email Address ____________________ Your Name
+   ____________________ Your Email Address ____________________ loading
+   Send Email [100]Cancel
+   Post was not sent - check your email addresses!
+   Email check failed, please try again
+   Sorry, your blog cannot share posts by email.
+
+   X
+
+Subscribe for updates on your Email.
+
+   Daily Email: ____________________ I want updates!
+   *We respect privacy and you will never receive spam! Service is
+   provided by google Feedburner!
+
+Or follow us on Twitter, Facebook or Google+
+
+   [101]Follow @yourhowtonet
+
+   Daily Email: ____________________ I want updates!
+     * Or follow us on:
+     *
+     * [102]Follow @yourhowtonet
+     *
+
+References
+
+   1. https://plus.google.com/106837146420859060105
+   2. http://www.yourhowto.net/using-less-for-css/feed/
+   3. http://www.yourhowto.net/feed/
+   4. file://localhost/
+   5. http://www.yourhowto.net/domain-whois/
+   6. http://www.yourhowto.net/generate-virtual-host/
+   7. http://www.yourhowto.net/htaccess-tools/
+   8. http://www.yourhowto.net/are-you-a-new-visitor-to-this-site/
+   9. http://www.yourhowto.net/contact/
+  10. http://www.yourhowto.net/
+  11. http://www.yourhowto.net/blogs/
+  12. http://www.yourhowto.net/databases/
+  13. http://www.yourhowto.net/free-time/
+  14. http://www.yourhowto.net/programming/
+  15. http://www.yourhowto.net/programming/ajax/
+  16. http://www.yourhowto.net/programming/html-css/
+  17. http://www.yourhowto.net/programming/js-jquery/
+  18. http://www.yourhowto.net/programming/php-programming/
+  19. http://www.yourhowto.net/servers/
+  20. http://www.yourhowto.net/servers/apache-servers/
+  21. http://www.yourhowto.net/servers/proxy/
+  22. http://www.yourhowto.net/servers/whmcpanel/
+  23. http://www.yourhowto.net/site-optimization/
+  24. http://www.yourhowto.net/tutorials/
+  25. http://www.yourhowto.net/programming/html-css/
+  26. http://www.yourhowto.net/programming/js-jquery/
+  27. http://www.yourhowto.net/programming/php-programming/
+  28. http://www.yourhowto.net/programming/
+  29. http://www.yourhowto.net/are-you-a-new-visitor-to-this-site/
+  30. http://lesscss.org/
+  31. http://wearekiss.com/simpless
+  32. http://leafo.net/lessphp/
+  33. http://leafo.net/lessphp/docs/
+  34. http://www.yourhowto.net/using-less-for-css/?share=facebook
+  35. http://www.yourhowto.net/using-less-for-css/?share=twitter
+  36. http://www.yourhowto.net/using-less-for-css/?share=google-plus-1
+  37. http://www.yourhowto.net/using-less-for-css/?share=stumbleupon
+  38. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml490.data
+  39. http://www.yourhowto.net/using-less-for-css/?share=digg
+  40. http://www.yourhowto.net/using-less-for-css/?share=pinterest
+  41. http://www.yourhowto.net/using-less-for-css/?share=linkedin
+  42. http://www.yourhowto.net/using-less-for-css/?share=reddit
+  43. http://www.yourhowto.net/using-less-for-css/?share=email
+  44. http://www.yourhowto.net/using-less-for-css/#print
+  45. http://www.yourhowto.net/tags/css/
+  46. http://www.yourhowto.net/tags/less/
+  47. http://www.yourhowto.net/tags/less-css/
+  48. http://www.yourhowto.net/tags/mixins/
+  49. http://www.yourhowto.net/tags/php-less/
+  50. http://www.yourhowto.net/tags/simpless/
+  51. file://localhost/using-less-for-css/#respond
+  52. http://jetpack.wordpress.com/jetpack-comment/?blogid=41302158&postid=1735&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=0&avatar_default=blank&greeting=Leave+a+comment&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en-US&jetpack_version=2.5&sig=a7045285cbd38482c46e593bc33d338c3ac1e56c#parent=http%3A%2F%2Fwww.yourhowto.net%2Fusing-less-for-css%2F
+  53. http://twitter.com/yourhowtonet
+  54. http://facebook.com/yourhowtonet
+  55. https://plus.google.com/106837146420859060105
+  56. http://www.yourhowto.net/feed/
+  57. mailto:contact@yourhowto.net
+  58. http://www.yourhowto.net/how-to-install-node-js-on-debian-and-centos-linux/
+  59. http://www.yourhowto.net/nginx-block-sql-injection-and-file-injection/
+  60. http://www.yourhowto.net/mysql-server-optimization-innodb-myisam/
+  61. http://www.yourhowto.net/mysql-sample-configuration-innodb-4gb-ram/
+  62. http://www.yourhowto.net/mysql-sample-configuration-512m-ram/
+  63. http://www.yourhowto.net/mysql-sample-configuration-less-64m/
+  64. http://www.yourhowto.net/mysql-sample-configuration-less-128m/
+  65. http://www.yourhowto.net/mysql-sample-configuration-1g-2g-ram/
+  66. http://www.yourhowto.net/how-to-make-a-remote-mysql-connection/
+  67. http://www.yourhowto.net/lets-laugh-a-bit/
+  68. http://www.yourhowto.net/increasing-squid-cache-directory-size/
+  69. http://www.yourhowto.net/5-of-the-best-php-frameworks-for-programmers/
+  70. http://www.yourhowto.net/how-to-update-and-install-php-5-3-and-php-5-2-centos-webtatic-repo/
+  71. http://www.yourhowto.net/slow-speed-in-prestashop-1-5/
+  72. http://www.yourhowto.net/slow-load-in-prestashop/
+  73. http://www.yourhowto.net/reverse-cache-proxy-using-squid-proxy/
+  74. http://www.yourhowto.net/install-squid-proxy-with-enable-ssl-for-https_port/
+  75. http://www.yourhowto.net/lets-laugh-a-bit/
+  76. http://www.yourhowto.net/jquery-autocomplete-_rendeitem-method/
+  77. http://www.yourhowto.net/how-to-increase-joomla-slow-speed-using-browser-cache/
+  78. http://www.yourhowto.net/how-to-make-a-remote-mysql-connection/
+  79. http://www.yourhowto.net/how-to-fix-eth0-network-interface-on-centos-redhat-clone-vm/
+  80. http://www.yourhowto.net/mysql-server-optimization-innodb-myisam/
+  81. http://www.yourhowto.net/how-to-check-your-network-bandwidth-usage-on-linux/
+  82. http://www.yourhowto.net/preload-not-working-in-wp-super-cache/
+  83. http://www.yourhowto.net/mysql-sample-configuration-512m-ram/
+  84. http://www.yourhowto.net/using-less-for-css/
+  85. http://www.yourhowto.net/install-memcached-on-centos-5-and-6/
+  86. http://www.yourhowto.net/mysql-sample-configuration-1g-2g-ram/
+  87. http://www.yourhowto.net/add-your-email-account-to-gmail/
+  88. http://www.yourhowto.net/exclude-domains-and-paths-from-squid-cache/
+  89. http://www.yourhowto.net/install-flvtool2-mediainfo-and-neroaacenc-on-centos-x86_64/
+  90. http://www.yourhowto.net/preload-not-working-in-wp-super-cache/
+  91. http://www.yourhowto.net/how-to-install-mybb-forum-board/
+  92. http://www.yourhowto.net/is-website-speed-important-for-my-visitors/
+  93. http://www.yourhowto.net/apple-launching-the-new-ios-7/
+  94. http://www.yourhowto.net/how-to-install-plugins-in-mybb/
+  95. http://www.yourhowto.net/restrict-access-using-squid-proxy-server/
+  96. http://www.yourhowto.net/how-to-increase-joomla-slow-speed-using-browser-cache/
+  97. http://www.yourhowto.net/how-to-create-a-cpanel-account-package/
+  98. http://www.yourhowto.net/
+  99. http://wordpress.org/
+ 100. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml490.data#cancel
+ 101. https://twitter.com/yourhowtonet
+ 102. https://twitter.com/yourhowtonet

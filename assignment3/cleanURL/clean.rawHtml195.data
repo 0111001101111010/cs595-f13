@@ -1,0 +1,1499 @@
+   #[1]②ality – JavaScript and more - Atom [2]②ality – JavaScript and more
+   - RSS [3]②ality – JavaScript and more - Atom [4]publisher
+
+[5]②ality – JavaScript and more
+
+Pages
+
+     * [6]Home
+     * [7]About
+     * [8]Best of
+     * [9]Subscribe
+     * [10]Advertise
+
+   Upcoming: my [11]programmer’s guide to JavaScript (free online).
+
+2013-09-24
+
+Unicode and JavaScript
+
+   Labels: [12]dev, [13]javascript, [14]jslang, [15]unicode
+   Update 2013-09-29: New sections 4.1 (“Matching any code unit”) and 4.2
+   (“Libraries”).
+
+   This blog post is a brief introduction to Unicode and how it is handled
+   in JavaScript.
+
+Unicode
+
+History
+
+   Unicode was started in 1987, by Joe Becker (Xerox), Lee Collins (Apple)
+   and Mark Davis (Apple). The idea was to create a universal character
+   set, as there were many incompatible standards for encoding plain text
+   at that time: numerous variations of 8 bit ASCII, Big Five (Traditional
+   Chinese), GB 2312 (Simplified Chinese), etc. Before Unicode, no
+   standard for multi-lingual plain text existed, but there were rich text
+   systems (such as Apple’s WorldScript) that allowed one to combine
+   multiple encodings.
+
+   The first Unicode draft proposal was published in 1988. Work continued
+   afterwards and the working group expanded. The [16]Unicode Consortium
+   was incorporated on January 3, 1991:
+
+     The Unicode Consortium is a non-profit corporation devoted to
+     developing, maintaining, and promoting software internationalization
+     standards and data, particularly the Unicode Standard [...]
+
+   The first volume of the Unicode 1.0 standard was published in October
+   1991, the second one in June 1992.
+
+Important Unicode concepts
+
+   The idea of a character may seem a simple one, but there are many
+   aspects to it. That’s why Unicode is such a complex standard. The
+   following are important basic concepts:
+     * Characters and graphemes: Both terms mean something quite similar.
+       Characters are are digital entities, graphemes are atomic units of
+       written languages (alphabetic letters, typographic ligatures,
+       etc.). Sometimes, several characters are used to display a single
+       grapheme.
+     * Glyph: A concrete way of writing a grapheme. Sometimes the same
+       grapheme is written differently, depending on its context or other
+       factors. For example, the graphemes f and i can be displayed as a
+       glyph f and a glyph i, connected by a ligature glyph. Or without a
+       ligature.
+     * Code points: Unicode maps the characters it supports to numbers
+       called code points.
+     * Code units: To store or transmit code points, they are encoded as
+       code units, pieces of data with a fixed length. The length is
+       measured in bits and determined by an encoding scheme, of which
+       Unicode has several ones: UTF-8, UTF-16, etc. The number in the
+       name indicates the length of the code units, in bits. If a code
+       point is too large to fit into a single code unit, it must be
+       broken up into multiple units. That is, the number of code units
+       needed to represent a single code point can vary.
+     * BOM (byte order mark): If a code unit is larger than a single byte,
+       byte ordering matters. The BOM is a single pseudo-character
+       (possibly encoded as multiple code units) at the beginning of a
+       text that indicates whether the code units are big endian (most
+       significant bytes come first) or little endian (least significant
+       bytes come first). The default, for texts without a BOM, is big
+       endian. The BOM also indicates the encoding that is used, it is
+       different for UTF-8, UTF-16, etc. It also serves as a marker for
+       Unicode, if web browsers have no other information w.r.t. the
+       encoding of a text. However, the BOM is not used very often, for
+       several reasons:
+          + UTF-8 is by far the most popular Unicode encoding and does not
+            need a BOM, because there is only one way of ordering bytes.
+          + Several character encodings include byte ordering. Then a BOM
+            must not be used. Examples: UTF-16BE (UTF-16 big endian),
+            UTF-16LE, UTF-32BE, UTF-32LE. This is a safer way of handling
+            byte ordering, because there is no danger of mixing up
+            meta-data and data.
+     * Normalization: Sometimes the same grapheme can be represented in
+       several ways. For example, the grapheme “ö” can be represented as a
+       single code point or as an “o” followed by a combining character
+       “¨” (diaeresis, double dot). Normalization is about translating a
+       text to a canonical representation; equivalent code points and
+       sequences of code points are all translated to the same code point
+       (or sequence of code points). That is useful for text processing,
+       e.g. to search for text. Unicode specifies several normalizations.
+     * Character properties: Each Unicode character is assigned several
+       properties by the specification:
+          + Name: an English name, composed of uppercase letters A-Z,
+            digits 0-9, hypen - and <space>. Two examples:
+               o “λ” has the name “GREEK SMALL LETTER LAMBDA”
+               o “!” has the name “EXCLAMATION MARK”
+          + [17]General category: Partitions characters into categories
+            such as letter, uppercase letter, number, punctuation, etc.
+          + Age: With what version of Unicode was the character introduced
+            (1.0, 1.1., 2.0, etc.)?
+          + Deprecated: Is the use of the character discouraged?
+          + And many more.
+
+Code points
+
+   The range of the code points was initially 16 bits. With Unicode
+   version 2.0 (July 1996), it was expanded: it is now divided into 17
+   planes, numbered from 0 to 16. Each plane comprises 16 bits (in
+   hexadecimal notation: 0x0000–0xFFFF). Thus, in the hexadecimal ranges
+   shown below, digits beyond the four bottom ones contain the number of
+   the plane.
+     * Plane 0: Basic Multilingual Plane (BMP): 0x0000–​0xFFFF
+     * Plane 1: Supplementary Multilingual Plane (SMP): 0x10000–​0x1FFFF
+     * Plane 2: Supplementary Ideographic Plane (SIP): 0x20000–​0x2FFFF
+     * Planes 3–13: Unassigned
+     * Plane 14: Supplementary Special-Purpose Plane (SSP:
+       0xE0000–​0xEFFFF
+     * Planes 15–16: Supplementary Private Use Area (S PUA A/B):
+       0x0F0000–0x10FFFF
+
+   Planes 1–16 are called supplementary planes or astral planes.
+
+Unicode encodings
+
+   UTF-32 (Unicode Transformation Format 32) is a format with 32 bit code
+   units. Any code point can be encoded by a single code unit, making this
+   the only fixed-length encoding. For other encodings, the number of
+   units needed to encode a point varies.
+
+   UTF-16 is a format with 16 bit code units that needs one to two units
+   to represent a code point. BMP code points can be represented by single
+   code units. Higher code points are 20 bit, after subtracting 0x10000
+   (the range of the BMP). These bits are encoded as two code units:
+     * Lead surrogate – most significant 10 bits: stored in the range
+       0xD800–0xDBFF (four times 8 bits = 4 × two hexadecimal digits).
+     * Tail surrogate – least significant 10 bits: stored in the range
+       0xDC00–0xDFFF (four times 8 bits = 4 × two hexadecimal digits).
+
+   To enable this encoding scheme, the BMP has a hole with unused code
+   points whose range is 0xD800–0xDFFF. Therefore the ranges of lead
+   surrogates, tail surrogates and BMP code points are disjoint, making
+   decoding robust in the face of errors. The following function encodes a
+   code point as UTF-16. An example of using it is given later.
+    function toUTF16(codePoint) {
+        var TEN_BITS = parseInt('1111111111', 2);
+        function u(codeUnit) {
+            return '\\u'+codeUnit.toString(16).toUpperCase();
+        }
+
+        if (codePoint <= 0xFFFF) {
+            return u(codePoint);
+        }
+        codePoint -= 0x10000;
+
+        // Shift right to get to most significant 10 bits
+        var leadSurrogate = 0xD800 + (codePoint >> 10);
+
+        // Mask to get least significant 10 bits
+        var tailSurrogate = 0xDC00 + (codePoint & TEN_BITS);
+
+        return u(leadSurrogate) + u(tailSurrogate);
+    }
+
+   UCS-2, a deprecated format, uses 16 bit code units to represent (only!)
+   the code points of the BMP. When the range of Unicode code points
+   expanded beyond 16 bits, UTF-16 replaced UCS-2.
+
+   UTF-8. UTF-8 has 8 bit code units. It builds a bridge between the
+   legacy ASCII encoding and Unicode. ASCII only has 128 characters, whose
+   numbers are the same as the first 128 Unicode code points. UTF-8 is
+   backwards compatible, because all ASCII characters are valid code
+   units. In other words, a single code unit in the range 0–127 encodes a
+   single code point in the same range. Such code units are marked by
+   their highest bit being zero. If, on the other hand, the highest bit is
+   one then more units will follow, to provide the additional bits for the
+   higher code points. That leads to the following encoding scheme:
+     * 0000–007F: 0xxxxxxx (7 bits, stored in 1 byte)
+     * 0080–07FF: 110xxxxx, 10xxxxxx (5+6 bits = 11 bits, stored in 2
+       bytes)
+     * 0800–FFFF: 1110xxxx, 10xxxxxx, 10xxxxxx (4+6+6 bits = 16 bits,
+       stored in 3 bytes)
+     * 10000–1FFFFF: 11110xxx, 10xxxxxx, 10xxxxxx, 10xxxxxx (3+6+6+6 bits
+       = 21 bits, stored in 4 bytes)
+       (The highest code point is 10FFFF, so UTF-8 has some extra room.)
+
+   If the highest bit is not 0 then the number of ones before the zero
+   indicates how many code units there are in a sequence. All code units
+   after the initial one have the bit prefix 10. Therefore, the ranges of
+   initial code units and subsequent code units are disjoint, which helps
+   with recovering from encoding errors.
+
+   UTF-8 has become the most popular Unicode format. Initially, due to its
+   backwards compatibility with ASCII. Later, due to its broad support
+   across operating systems, programming environments and applications.
+
+JavaScript source code and Unicode
+
+Source code internally
+
+   Internally, JavaScript source code is treated as a sequence of UTF-16
+   code units. Quoting [18]Sect. 6 of the EMCAScript specification:
+
+     ECMAScript source text is represented as a sequence of characters in
+     the Unicode character encoding, version 3.0 or later. [...]
+     ECMAScript source text is assumed to be a sequence of 16-bit code
+     units for the purposes of this specification. [...] If an actual
+     source text is encoded in a form other than 16-bit code units it
+     must be processed as if it was first converted to UTF-16.
+
+   In identifiers, string literals and regular expression literals, any
+   code unit can also be expressed via a Unicode escape sequence \uHHHH,
+   where HHHH are four hexadecimal digits. For example:
+    > var f\u006F\u006F = 'abc';
+    > foo
+    'abc'
+
+    > var λ = 123;
+    > \u03BB
+    123
+
+   That means that you can use Unicode characters in literals and variable
+   names, without leaving the ASCII range in the source code.
+
+   In string literals, an additional kind of escape is available: hex
+   escape sequences with two-digit hexadecimal numbers that represent code
+   units in the range 0x00–0xFF. For example:
+    > '\xF6' === 'ö'
+    true
+    > '\xF6' === '\u00F6'
+    true
+
+Source code externally
+
+   While that format is used internally, JavaScript source code is usually
+   not stored as UTF-16. When a web browser loads a source file via a
+   script tag, it determines the encoding [19]as follows:
+     * If there is a BOM, the encoding is a UTF variant, depending on what
+       BOM is used.
+     * Otherwise, if the source code is loaded via HTTP(S) then the
+       Content-Type header can specify an encoding, via the charset
+       parameter. For example:
+    Content-Type: application/javascript; charset=utf-8
+
+       Note: the correct media type (formerly known as MIME type) for
+       JavaScript files is application/javascript. However, older browsers
+       (e.g. Internet Explorer 8 and earlier) work most reliably with
+       text/javascript. Unfortunately, the [20]default value for the
+       attribute type of <script> tags is text/javascript. At least, you
+       can omit that attribute for JavaScript; there is no benefit in
+       including it.
+     * Otherwise, if the script tag has the attribute charset then that
+       encoding is used. Even though the attribute type holds a valid
+       media type, that type must not have the parameter charset (like in
+       the Content-Type header, above).
+     * Otherwise, the encoding of the document is used, in which the
+       script tag resides. For example, this is the beginning of an HTML5
+       document, where a meta tag declares that the document is encoded as
+       UTF-8.
+    <!doctype html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+    ...
+
+       It is highly recommended to always specify an encoding. If you
+       don’t, a locale-specific [21]default encoding is used. That is,
+       people will see the file differently in different countries. Only
+       the lowest 7 bit are relatively stable across locales.
+
+   Recommendations:
+     * For your own application, you can use Unicode. But you must specify
+       the encoding of the app’s HTML page as UTF-8.
+     * For libraries, it’s safest to release code that is ASCII (7 bit).
+
+   Some minification tools can translate source with Unicode code points
+   beyond 7 bit to source that is “7 bit clean”. They do so by replacing
+   non-ASCII characters with Unicode escapes. For example, the following
+   invocation of [22]UglifyJS translates the file test.js:
+    uglifyjs -b beautify=false,ascii-only=true test.js
+
+   The file test.js looks like this:
+    var σ = 'Köln';
+
+   The output of UglifyJS looks like this:
+    var \u03c3="K\xf6ln";
+
+   Negative example: For a while, the library D3.js was published in
+   UTF-8. That caused an [23]error when it was loaded from a page whose
+   encoding was not UTF-8, because the code contained statements such as
+    var π = Math.PI, ε = 1e-6;
+
+   The identifiers π and ε were not decoded correctly and not recognized
+   as valid variable names. Additionally, some string literals with code
+   points beyond 7 bit weren’t decoded correctly, either. As a
+   work-around, the code could be loaded by adding the appropriate charset
+   attribute to the script tag:
+    <script charset="utf-8" src="d3.js"></script>
+
+JavaScript strings and Unicode
+
+   A JavaScript string is a sequence of UTF-16 code points. Quoting the
+   ECMAScript specification, [24]Sect. 8.4:
+
+     When a String contains actual textual data, each element is
+     considered to be a single UTF-16 code unit.
+
+   Escape sequences. As mentioned before, you can use Unicode escape
+   sequences and hex escape sequences in string literals. For example, you
+   can produce the character “ö” by combining an “o” with a diaeresis
+   (code point 0x0308):
+    > console.log('o\u0308')
+    ö
+
+   This works in command lines, such as web browser consoles and the
+   Node.js REPL in a terminal. You can also insert this kind of string
+   into the DOM of a web page.
+
+   Refering to astral plane characters via escapes. There are many nice
+   Unicode symbol tables on the web. Take a look at Tim Whitlock’s
+   “[25]Emoji Unicode Tables” and be amazed by how many symbols there are
+   in modern Unicode fonts. None of the symbols in the table are images,
+   they are all font glyphs. Let’s assume you want to display a character
+   via JavaScript that is in an astral plane. For example, a cow (code
+   point 0x1F404):
+
+     🐄
+
+   You can either copy the character and paste it directly into your
+   Unicode-encoded JavaScript source:
+    var str = '🐄';
+
+   JavaScript engines will decode the source (which is most often in
+   UTF-8) and create a string with two UTF-16 code units. Alternatively,
+   you can compute the two code units yourself and use Unicode escape
+   sequences. There are web apps that perform this computation:
+     * “[26]UTF Converter”
+     * “[27]JavaScript escapes” by Mathias Bynens
+
+   The previously defined function toUTF16 performs it, too:
+    > toUTF16(0x1F404)
+    '\\uD83D\\uDC04'
+
+   The UTF-16 surrogate pair (0xD83D, 0xDC04) does indeed encode the cow:
+    > console.log('\uD83D\uDC04')
+    🐄
+
+   Counting characters. If a string contains a surrogate pair (two code
+   units encoding a single code point) then the length property doesn’t
+   count characters, any more. It counts code units:
+    > var str = '🐄';
+    > str === '\uD83D\uDC04'
+    true
+    > str.length
+    2
+
+   This can be fixed via libraries, such as Mathias Bynens’
+   [28]Punycode.js, which is bundled with Node.js:
+    > var puny = require('punycode');
+    > puny.ucs2.decode(str).length
+    1
+
+   Unicode normalization. If you want to search in strings or compare them
+   then you need to normalize, e.g. via the library [29]unorm (by Bjarke
+   Walling).
+
+JavaScript regular expressions and Unicode
+
+   Support for Unicode in JavaScript’s regular expressions [1] is very
+   limited. For example, there is no way to match Unicode categories such
+   as “uppercase letter”.
+
+   Line terminators influence matching and do have a [30]Unicode
+   definition. A line terminator is either one of four characters:
+
+   Code unit Name                Character escape sequence
+   \u000A    Line feed           \n
+   \u000D    Carriage return     \r
+   \u2028    Line separator
+   \u2029    Paragraph separator
+
+   The following regular expression constructs support Unicode:
+     * Whitespace (\s) and non-whitespace (\S) have Unicode-based
+       definitions:
+    > /^\s$/.test('\uFEFF')
+    true
+
+     * The dot (.) matches all code points (not code units!) except line
+       terminators. See below how to match any code unit.
+     * In multiline mode, the assertion ^ matches at the beginning of the
+       input and after line terminators, the assertion $ matches before
+       line terminators and at the end of the input. Otherwise, they only
+       match at the beginning or end of the input, respectively.
+
+   Other important character classes have definitions that are based on
+   ASCII, not on Unicode:
+     * \d matches digits, \D matches non-digits, where a digit is
+       equivalent to [0-9]
+     * \w matches word characters, \W matches non-word characters, where a
+       word character is equivalent to [A-Za-z0-9_]
+     * \b matches at word breaks, \B matches inside words, where words are
+       sequences of word characters ([A-Za-z0-9_]). Example: In the string
+       'über', the character class escape \b sees the character “b” as
+       starting a word.
+    > /\bb/.test('über')
+    true
+
+Matching any code unit
+
+   To match any code unit, you can use [\s\S], see [1]. To match any code
+   point, you need to use:
+    ([\0-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF])
+
+   The above pattern works like this:
+    ([BMP code point]|[lead surrogate][tail surrogate])
+
+   As all of these ranges are disjoint, the pattern will correctly match
+   code units in well-formed UTF-16 strings.
+
+Libraries
+
+   [31]Regenerate helps with generating ranges like the one above, for
+   matching any code unit. It is meant to be used as part of a built tool,
+   but also works dynamically, for trying out things.
+
+   [32]XRegExp is a regular expression library that has an [33]official
+   addon for matching Unicode categories, scripts, blocks and properties
+   via one of the following three constructs:
+    \p{...} \P{...} \p{^...}
+
+   For example, \p{Letter} matches letters in various alphabets.
+
+The future of handling Unicode in JavaScript
+
+   Two new standards, one that is in the process of being implemented and
+   another one that is in the process of being designed will bring better
+   support for Unicode to JavaScript:
+     * The ECMAScript Internationalization API [2]: offers Unicode-based
+       collation (sorting and searching) and more.
+     * ECMAScript 6: The next version of JavaScript will have several
+       Unicode-related features, such as escapes for arbitrary code points
+       and a method for accessing code points in a string (as opposed to
+       code units). The blog post “[34]Supplementary Characters for
+       ECMAScript” by Norbert Lindenberg explains the plans for Unicode
+       support in ECMAScript 6.
+
+Recommended reading and sources of this post
+
+   Information on Unicode:
+     * Wikipedia has several good entries on [35]Unicode and its
+       terminology.
+     * [36]Unicode.org, the official website of the Unicode Consortium and
+       its [37]FAQ is also really good.
+     * Introductory article by Joel Spolsky: “[38]The Absolute Minimum
+       Every Software Developer Absolutely, Positively Must Know About
+       Unicode and Character Sets (No Excuses!)”
+
+   Information on Unicode support in JavaScript:
+     * “[39]JavaScript’s internal character encoding: UCS-2 or UTF-16?” by
+       Mathias Bynens
+     * ”[40]JavaScript, Regex, and Unicode“ by Steven Levithan
+
+Acknowledgements
+
+   The following people helped with this blog post: Mathias Bynens
+   ([41]@mathias), Anne van Kesteren ‏([42]@annevk), Calvin Metcalf
+   ‏([43]@CWMma).
+
+References
+
+    1. [44]JavaScript: an overview of the regular expression API
+    2. [45]The ECMAScript Internationalization API
+
+   [46]Email This[47]BlogThis![48]Share to Twitter[49]Share to Facebook
+
+6 comments:
+
+   [50]Axel Rauschmayer said...
+          “To truly match any character, you need to use `[\s\S]`.”
+          That depends on your definition of “character”. `[\s\S]` will
+          never match an astral symbol, since JavaScript considers each
+          surrogate half as a separate “character”.
+          To truly match any code point, you need to use:
+          > regenerate.fromCodePointRange(0x0, 0x10FFFF)
+          [\0-\uD7FF\uDC00-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-
+          \uDBFF]
+          Note that this matches lone surrogates too. To only match scalar
+          values, use this:
+          > regenerate().addRange(0x0, 0x10FFFF).removeRange(0xD800,
+          0xDBFF).removeRange(0xDC00, 0xDFFF)
+          [\0-\uD7FF\uDC00-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-
+          \uDBFF]
+          I’d highly recommend using a tool to generate such regular
+          expressions, as doing it by hand is a very painful process. I’m
+          using Regenerate (http://mths.be/regenerate) in these examples.
+          This library is meant to be used as part of a build process.
+
+          [51]September 24, 2013 at 11:35 AM [52][icon_delete13.gif]
+
+   [53]Axel Rauschmayer said...
+          Hmm, your cow character is displaying as two "unknown character"
+          marks for me in Aurora (Fx26) on Win8, but displays fine on the
+          Emoji site you linked. Some sort of encoding issue perhaps? It
+          looks as though that site just uses the literal characters in
+          the source, whereas it's come through as two hex entities on
+          yours... :)
+
+          [54]September 24, 2013 at 2:39 PM [55][icon_delete13.gif]
+
+   [56]Axel Rauschmayer said...
+          Same here (Chrome 29 on Windows 7 64bit)
+
+          [57]September 24, 2013 at 4:19 PM [58][icon_delete13.gif]
+
+   [59]Axel Rauschmayer said...
+          Still a couple of boxes in Chrome here :(
+
+          [60]September 27, 2013 at 10:56 AM [61][icon_delete13.gif]
+
+   [62]Axel Rauschmayer said...
+          As far as I can tell, removing the range doesn’t change
+          anything. Does the first regex really match lone surrogates?
+
+          [63]September 27, 2013 at 2:12 PM [64][icon_delete13.gif]
+
+   [65]Axel Rauschmayer said...
+          Good catch! The second regex should have said:
+          /[\0-\uD7FF\uDC00-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]/
+          I’ve corrected the comment now.
+
+          [66]September 27, 2013 at 2:33 PM [67][icon_delete13.gif]
+
+   [68]Post a Comment
+
+   [69]Newer Post [70]Older Post [71]Home
+   Subscribe to: [72]Post Comments (Atom)
+
+Most popular (last 30 days)
+
+     * [73]Data in prototype properties
+     * [74]Unicode and JavaScript
+     * [75]Protecting objects in JavaScript
+     * [76]Tips for using window in JavaScript
+     * [77]JavaScript’s type system
+     * [78]Basic JavaScript for the impatient programmer
+     * [79]The ECMAScript Internationalization API
+
+Most popular (all time)
+
+     * [80]Google Dart to “ultimately ... replace JavaScript”
+     * [81]Google’s Polymer and the future of web UI frameworks
+     * [82]Basic JavaScript for the impatient programmer
+     * [83]asm.js: closing the gap between JavaScript and native
+     * [84]Implementing bookmarklets in JavaScript
+     * [85]Arrays in JavaScript
+     * [86]Protecting objects in JavaScript
+     * [87]CoffeeScript – overrated?
+     * [88]In defense of JavaScript’s constructors
+     * [89]ECMAScript 6 modules: the future is now
+
+Blog archive
+
+     * [90]▼  [91]2013 (86)
+          + [92]►  [93]October (1)
+          + [94]▼  [95]September (6)
+               o [96]Tips for using window in JavaScript
+               o [97]Unicode and JavaScript
+               o [98]The ECMAScript Internationalization API
+               o [99]OS X: kill all Google Chrome tabs from the shell
+               o [100]Data in prototype properties
+               o [101]JavaScript’s type system
+          + [102]►  [103]August (6)
+          + [104]►  [105]July (8)
+          + [106]►  [107]June (11)
+          + [108]►  [109]May (11)
+          + [110]►  [111]April (12)
+          + [112]►  [113]March (8)
+          + [114]►  [115]February (10)
+          + [116]►  [117]January (13)
+
+     * [118]►  [119]2012 (178)
+          + [120]►  [121]December (14)
+          + [122]►  [123]November (14)
+          + [124]►  [125]October (15)
+          + [126]►  [127]September (14)
+          + [128]►  [129]August (18)
+          + [130]►  [131]July (15)
+          + [132]►  [133]June (16)
+          + [134]►  [135]May (1)
+          + [136]►  [137]April (14)
+          + [138]►  [139]March (18)
+          + [140]►  [141]February (20)
+          + [142]►  [143]January (19)
+
+     * [144]►  [145]2011 (380)
+          + [146]►  [147]December (22)
+          + [148]►  [149]November (25)
+          + [150]►  [151]October (27)
+          + [152]►  [153]September (15)
+          + [154]►  [155]August (24)
+          + [156]►  [157]July (18)
+          + [158]►  [159]June (29)
+          + [160]►  [161]May (23)
+          + [162]►  [163]April (33)
+          + [164]►  [165]March (40)
+          + [166]►  [167]February (47)
+          + [168]►  [169]January (77)
+
+     * [170]►  [171]2010 (174)
+          + [172]►  [173]December (42)
+          + [174]►  [175]November (19)
+          + [176]►  [177]October (28)
+          + [178]►  [179]September (18)
+          + [180]►  [181]August (22)
+          + [182]►  [183]July (17)
+          + [184]►  [185]June (8)
+          + [186]►  [187]May (5)
+          + [188]►  [189]April (5)
+          + [190]►  [191]March (5)
+          + [192]►  [193]February (3)
+          + [194]►  [195]January (2)
+
+     * [196]►  [197]2009 (69)
+          + [198]►  [199]December (3)
+          + [200]►  [201]November (7)
+          + [202]►  [203]October (1)
+          + [204]►  [205]September (3)
+          + [206]►  [207]August (12)
+          + [208]►  [209]July (14)
+          + [210]►  [211]June (5)
+          + [212]►  [213]May (4)
+          + [214]►  [215]April (5)
+          + [216]►  [217]March (6)
+          + [218]►  [219]February (7)
+          + [220]►  [221]January (2)
+
+     * [222]►  [223]2008 (46)
+          + [224]►  [225]December (4)
+          + [226]►  [227]November (10)
+          + [228]►  [229]October (9)
+          + [230]►  [231]June (1)
+          + [232]►  [233]May (5)
+          + [234]►  [235]April (4)
+          + [236]►  [237]March (11)
+          + [238]►  [239]February (1)
+          + [240]►  [241]January (1)
+
+     * [242]►  [243]2007 (12)
+          + [244]►  [245]November (3)
+          + [246]►  [247]August (6)
+          + [248]►  [249]July (1)
+          + [250]►  [251]May (2)
+
+     * [252]►  [253]2006 (1)
+          + [254]►  [255]June (1)
+
+     * [256]►  [257]2005 (2)
+          + [258]►  [259]August (1)
+          + [260]►  [261]March (1)
+
+Labels
+
+     * [262]dev (432)
+     * [263]computers (310)
+     * [264]javascript (248)
+     * [265]life (194)
+     * [266]jslang (154)
+     * [267]apple (106)
+     * [268]webdev (90)
+     * [269]mobile (81)
+     * [270]scitech (50)
+     * [271]esnext (49)
+     * [272]hack (48)
+     * [273]mac (45)
+     * [274]google (38)
+     * [275]java (37)
+     * [276]business (32)
+     * [277]ios (32)
+     * [278]video (28)
+     * [279]hci (27)
+     * [280]entertainment (26)
+     * [281]society (26)
+     * [282]browser (24)
+     * [283]firefox (24)
+     * [284]ipad (24)
+     * [285]movie (23)
+     * [286]html5 (22)
+     * [287]psychology (22)
+     * [288]nodejs (20)
+     * [289]clientjs (18)
+     * [290]tv (18)
+     * [291]android (17)
+     * [292]fun (17)
+     * [293]social (17)
+     * [294]chrome (16)
+     * [295]tablet (16)
+     * [296]2ality (15)
+     * [297]humor (15)
+     * [298]politics (15)
+     * [299]web (15)
+     * [300]cloud (14)
+     * [301]microsoft (14)
+     * [302]blogging (13)
+     * [303]hardware (13)
+     * [304]software engineering (13)
+     * [305]gaming (12)
+     * [306]eclipse (11)
+     * [307]gwt (11)
+     * [308]programming languages (11)
+     * [309]app store (10)
+     * [310]nature (10)
+     * [311]photo (10)
+     * [312]security (10)
+     * [313]semantic web (10)
+     * [314]software (10)
+     * [315]twitter (10)
+     * [316]webos (10)
+     * [317]12quirks (9)
+     * [318]education (9)
+     * [319]jsmodules (9)
+     * [320]media (9)
+     * [321]numbers (9)
+     * [322]windows 8 (9)
+     * [323]idea (8)
+     * [324]iphone (8)
+     * [325]itunes (8)
+     * [326]scifi-fantasy (8)
+     * [327]app (7)
+     * [328]chromeos (7)
+     * [329]english (7)
+     * [330]fringe (7)
+     * [331]jsshell (7)
+     * [332]thunderbolt (7)
+     * [333]webapp (7)
+     * [334]blogger (6)
+     * [335]bookmarklet (6)
+     * [336]crowdsourcing (6)
+     * [337]latex (6)
+     * [338]lion (6)
+     * [339]ted (6)
+     * [340]environment (5)
+     * [341]gadget (5)
+     * [342]html (5)
+     * [343]intel (5)
+     * [344]layout (5)
+     * [345]light peak (5)
+     * [346]michael j. fox (5)
+     * [347]music (5)
+     * [348]pdf (5)
+     * [349]shell (5)
+     * [350]underscorejs (5)
+     * [351]vlc (5)
+     * [352]coffeescript (4)
+     * [353]dart (4)
+     * [354]facebook (4)
+     * [355]gimp (4)
+     * [356]googleio (4)
+     * [357]googleplus (4)
+     * [358]health (4)
+     * [359]howto (4)
+     * [360]hp (4)
+     * [361]javafx (4)
+     * [362]jshistory (4)
+     * [363]jstools (4)
+     * [364]kindle (4)
+     * [365]leopard (4)
+     * [366]macbook (4)
+     * [367]motorola (4)
+     * [368]münchen (4)
+     * [369]occupy (4)
+     * [370]pl fundamentals (4)
+     * [371]series (4)
+     * [372]tc39 (4)
+     * [373]textbook (4)
+     * [374]web design (4)
+     * [375]__proto__ (3)
+     * [376]amazon (3)
+     * [377]back to the future (3)
+     * [378]book (3)
+     * [379]css (3)
+     * [380]flattr (3)
+     * [381]food (3)
+     * [382]foreign languages (3)
+     * [383]house (3)
+     * [384]icloud (3)
+     * [385]info mgmt (3)
+     * [386]jsfuture (3)
+     * [387]jsstyle (3)
+     * [388]linux (3)
+     * [389]mozilla (3)
+     * [390]polymer (3)
+     * [391]publishing (3)
+     * [392]python (3)
+     * [393]regexp (3)
+     * [394]samsung (3)
+     * [395]tizen (3)
+     * [396]traffic (3)
+     * [397]unix (3)
+     * [398]webcomponents (3)
+     * [399]adobe (2)
+     * [400]angry birds (2)
+     * [401]astronomy (2)
+     * [402]audio (2)
+     * [403]comic (2)
+     * [404]design (2)
+     * [405]dom (2)
+     * [406]ecommerce (2)
+     * [407]eval (2)
+     * [408]facets (2)
+     * [409]flash (2)
+     * [410]fluentconf (2)
+     * [411]free (2)
+     * [412]futurama (2)
+     * [413]guide (2)
+     * [414]history (2)
+     * [415]hyena (2)
+     * [416]internet explorer (2)
+     * [417]journalism (2)
+     * [418]jquery (2)
+     * [419]jsengine (2)
+     * [420]jslib (2)
+     * [421]law (2)
+     * [422]lightning (2)
+     * [423]math (2)
+     * [424]meego (2)
+     * [425]month (2)
+     * [426]nike (2)
+     * [427]nokia (2)
+     * [428]repl (2)
+     * [429]servo (2)
+     * [430]sponsor (2)
+     * [431]steve jobs (2)
+     * [432]tmplstr (2)
+     * [433]travel (2)
+     * [434]usb (2)
+     * [435]winphone (2)
+     * [436]wwdc (2)
+     * [437]airbender (1)
+     * [438]amdefine (1)
+     * [439]angularjs (1)
+     * [440]aol (1)
+     * [441]app urls (1)
+     * [442]architecture (1)
+     * [443]asmjs (1)
+     * [444]async (1)
+     * [445]basic income (1)
+     * [446]biology (1)
+     * [447]blink (1)
+     * [448]bluetooth (1)
+     * [449]canada (1)
+     * [450]community (1)
+     * [451]cross-platform (1)
+     * [452]deutsch (1)
+     * [453]diaspora (1)
+     * [454]distributed-social-network (1)
+     * [455]dsl (1)
+     * [456]dvd (1)
+     * [457]dzone (1)
+     * [458]emacs (1)
+     * [459]emberjs (1)
+     * [460]energy (1)
+     * [461]facetator (1)
+     * [462]feedback (1)
+     * [463]firefly (1)
+     * [464]firefoxos (1)
+     * [465]fritzbox (1)
+     * [466]german (1)
+     * [467]git (1)
+     * [468]guice (1)
+     * [469]h.264 (1)
+     * [470]home entertainment (1)
+     * [471]hosting (1)
+     * [472]htc (1)
+     * [473]ical (1)
+     * [474]jsdom (1)
+     * [475]jsmyth (1)
+     * [476]library (1)
+     * [477]location (1)
+     * [478]markdown (1)
+     * [479]marketing (1)
+     * [480]mars (1)
+     * [481]meta-data (1)
+     * [482]middle east (1)
+     * [483]mpaa (1)
+     * [484]msl (1)
+     * [485]mssurface (1)
+     * [486]netflix (1)
+     * [487]nsa (1)
+     * [488]obama (1)
+     * [489]openoffice (1)
+     * [490]opinion (1)
+     * [491]oracle (1)
+     * [492]organizing (1)
+     * [493]philosophy (1)
+     * [494]pixar (1)
+     * [495]pnacl (1)
+     * [496]presenting (1)
+     * [497]prism (1)
+     * [498]privacy (1)
+     * [499]programming (1)
+     * [500]puzzle (1)
+     * [501]raffle (1)
+     * [502]raspberry pi (1)
+     * [503]read (1)
+     * [504]rust (1)
+     * [505]safari (1)
+     * [506]sponsoring (1)
+     * [507]star trek (1)
+     * [508]talk (1)
+     * [509]theora (1)
+     * [510]thunderbird (1)
+     * [511]typography (1)
+     * [512]unicode (1)
+     * [513]v8 (1)
+     * [514]voice control (1)
+     * [515]webkit (1)
+     * [516]webm (1)
+     * [517]yahoo (1)
+
+Support 2ality
+
+   [518]via Ad Packs
+   [519][axel.jpg]
+   Dr. Axel Rauschmayer
+
+“My” sites
+
+     * [520]JavaScript Weekly [editor]
+     * [521]js-lang – JavaScript discussion group [founder]
+     * [522]JS Central – JavaScript news and links [creator]
+     * [523]MunichJS – JavaScript User Group Munich [organizer]
+
+   [524]Tweets by @rauschma
+   Powered by [525]Blogger.
+
+   [526]Web Analytics
+
+   Clicky
+
+References
+
+   Visible links
+   1. http://www.2ality.com/feeds/posts/default
+   2. http://www.2ality.com/feeds/posts/default?alt=rss
+   3. http://www.2ality.com/feeds/6505497306821744069/comments/default
+   4. https://plus.google.com/110516491705475800224
+   5. http://www.2ality.com/
+   6. http://www.2ality.com/
+   7. http://www.2ality.com/p/about.html
+   8. http://www.2ality.com/p/best.html
+   9. http://www.2ality.com/p/subscribe.html
+  10. http://www.2ality.com/p/advertise.html
+  11. http://www.jsguide.org/
+  12. http://www.2ality.com/search/label/dev
+  13. http://www.2ality.com/search/label/javascript
+  14. http://www.2ality.com/search/label/jslang
+  15. http://www.2ality.com/search/label/unicode
+  16. http://www.unicode.org/consortium/consort.html
+  17. http://www.unicode.org/reports/tr44/#General_Category_Values
+  18. http://ecma-international.org/ecma-262/5.1/#sec-6
+  19. http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#the-script-block%27s-source
+  20. http://www.w3.org/TR/html5/scripting-1.html#attr-script-type
+  21. http://www.whatwg.org/specs/web-apps/current-work/multipage/parsing.html#determining-the-character-encoding
+  22. https://github.com/mishoo/UglifyJS2
+  23. https://github.com/mbostock/d3/issues/1195
+  24. http://ecma-international.org/ecma-262/5.1/#sec-8.4
+  25. http://apps.timwhitlock.info/emoji/tables/unicode
+  26. http://macchiato.com/unicode/convert.html
+  27. http://mothereff.in/js-escapes
+  28. https://github.com/bestiejs/punycode.js
+  29. https://github.com/walling/unorm
+  30. http://www.ecma-international.org/ecma-262/5.1/#sec-7.3
+  31. https://github.com/mathiasbynens/regenerate
+  32. http://xregexp.com/
+  33. http://xregexp.com/plugins/#unicode
+  34. http://norbertlindenberg.com/2012/05/ecmascript-supplementary-characters/
+  35. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml195.data
+  36. http://www.unicode.org/
+  37. http://www.unicode.org/faq/
+  38. http://www.joelonsoftware.com/articles/Unicode.html
+  39. http://mathiasbynens.be/notes/javascript-encoding
+  40. http://blog.stevenlevithan.com/archives/javascript-regex-and-unicode
+  41. https://twitter.com/mathias
+  42. https://twitter.com/annevk
+  43. https://twitter.com/CWMma
+  44. http://www.2ality.com/2011/04/javascript-overview-of-regular.html
+  45. http://www.2ality.com/2013/09/ecmascript-i18n-api.html
+  46. http://www.blogger.com/share-post.g?blogID=8100407163665430627&postID=6505497306821744069&target=email
+  47. http://www.blogger.com/share-post.g?blogID=8100407163665430627&postID=6505497306821744069&target=blog
+  48. http://www.blogger.com/share-post.g?blogID=8100407163665430627&postID=6505497306821744069&target=twitter
+  49. http://www.blogger.com/share-post.g?blogID=8100407163665430627&postID=6505497306821744069&target=facebook
+  50. http://www.blogger.com/profile/05161748944927386101
+  51. http://www.2ality.com/2013/09/javascript-unicode.html?showComment=1380015334861#c7962403591379879609
+  52. http://www.blogger.com/delete-comment.g?blogID=8100407163665430627&postID=7962403591379879609
+  53. http://www.blogger.com/profile/05161748944927386101
+  54. http://www.2ality.com/2013/09/javascript-unicode.html?showComment=1380026375030#c8331201677544064252
+  55. http://www.blogger.com/delete-comment.g?blogID=8100407163665430627&postID=8331201677544064252
+  56. http://www.blogger.com/profile/05161748944927386101
+  57. http://www.2ality.com/2013/09/javascript-unicode.html?showComment=1380032379834#c4765759477088318428
+  58. http://www.blogger.com/delete-comment.g?blogID=8100407163665430627&postID=4765759477088318428
+  59. http://www.blogger.com/profile/05161748944927386101
+  60. http://www.2ality.com/2013/09/javascript-unicode.html?showComment=1380272187034#c4138522026503430558
+  61. http://www.blogger.com/delete-comment.g?blogID=8100407163665430627&postID=4138522026503430558
+  62. http://www.blogger.com/profile/05161748944927386101
+  63. http://www.2ality.com/2013/09/javascript-unicode.html?showComment=1380283936900#c4202180868578603838
+  64. http://www.blogger.com/delete-comment.g?blogID=8100407163665430627&postID=4202180868578603838
+  65. http://www.blogger.com/profile/05161748944927386101
+  66. http://www.2ality.com/2013/09/javascript-unicode.html?showComment=1380285231766#c7390106758484556791
+  67. http://www.blogger.com/delete-comment.g?blogID=8100407163665430627&postID=7390106758484556791
+  68. http://www.blogger.com/comment.g?blogID=8100407163665430627&postID=6505497306821744069
+  69. http://www.2ality.com/2013/09/window.html
+  70. http://www.2ality.com/2013/09/ecmascript-i18n-api.html
+  71. http://www.2ality.com/
+  72. http://www.2ality.com/feeds/6505497306821744069/comments/default
+  73. http://www.2ality.com/2013/09/data-in-prototypes.html
+  74. http://www.2ality.com/2013/09/javascript-unicode.html
+  75. http://www.2ality.com/2013/08/protecting-objects.html
+  76. http://www.2ality.com/2013/09/window.html
+  77. http://www.2ality.com/2013/09/types.html
+  78. http://www.2ality.com/2013/06/basic-javascript.html
+  79. http://www.2ality.com/2013/09/ecmascript-i18n-api.html
+  80. http://www.2ality.com/2011/09/google-dart.html
+  81. http://www.2ality.com/2013/05/google-polymer.html
+  82. http://www.2ality.com/2013/06/basic-javascript.html
+  83. http://www.2ality.com/2013/02/asm-js.html
+  84. http://www.2ality.com/2011/06/implementing-bookmarklets.html
+  85. http://www.2ality.com/2012/12/arrays.html
+  86. http://www.2ality.com/2013/08/protecting-objects.html
+  87. http://www.2ality.com/2011/07/coffeescript-overrated.html
+  88. http://www.2ality.com/2013/07/defending-constructors.html
+  89. http://www.2ality.com/2013/07/es6-modules.html
+  90. javascript:void(0)
+  91. http://www.2ality.com/search?updated-min=2013-01-01T00:00:00%2B01:00&updated-max=2014-01-01T00:00:00%2B01:00&max-results=50
+  92. javascript:void(0)
+  93. http://www.2ality.com/2013_10_01_archive.html
+  94. javascript:void(0)
+  95. http://www.2ality.com/2013_09_01_archive.html
+  96. http://www.2ality.com/2013/09/window.html
+  97. http://www.2ality.com/2013/09/javascript-unicode.html
+  98. http://www.2ality.com/2013/09/ecmascript-i18n-api.html
+  99. http://www.2ality.com/2013/09/osx-kill-chrome-tabs.html
+ 100. http://www.2ality.com/2013/09/data-in-prototypes.html
+ 101. http://www.2ality.com/2013/09/types.html
+ 102. javascript:void(0)
+ 103. http://www.2ality.com/2013_08_01_archive.html
+ 104. javascript:void(0)
+ 105. http://www.2ality.com/2013_07_01_archive.html
+ 106. javascript:void(0)
+ 107. http://www.2ality.com/2013_06_01_archive.html
+ 108. javascript:void(0)
+ 109. http://www.2ality.com/2013_05_01_archive.html
+ 110. javascript:void(0)
+ 111. http://www.2ality.com/2013_04_01_archive.html
+ 112. javascript:void(0)
+ 113. http://www.2ality.com/2013_03_01_archive.html
+ 114. javascript:void(0)
+ 115. http://www.2ality.com/2013_02_01_archive.html
+ 116. javascript:void(0)
+ 117. http://www.2ality.com/2013_01_01_archive.html
+ 118. javascript:void(0)
+ 119. http://www.2ality.com/search?updated-min=2012-01-01T00:00:00%2B01:00&updated-max=2013-01-01T00:00:00%2B01:00&max-results=50
+ 120. javascript:void(0)
+ 121. http://www.2ality.com/2012_12_01_archive.html
+ 122. javascript:void(0)
+ 123. http://www.2ality.com/2012_11_01_archive.html
+ 124. javascript:void(0)
+ 125. http://www.2ality.com/2012_10_01_archive.html
+ 126. javascript:void(0)
+ 127. http://www.2ality.com/2012_09_01_archive.html
+ 128. javascript:void(0)
+ 129. http://www.2ality.com/2012_08_01_archive.html
+ 130. javascript:void(0)
+ 131. http://www.2ality.com/2012_07_01_archive.html
+ 132. javascript:void(0)
+ 133. http://www.2ality.com/2012_06_01_archive.html
+ 134. javascript:void(0)
+ 135. http://www.2ality.com/2012_05_01_archive.html
+ 136. javascript:void(0)
+ 137. http://www.2ality.com/2012_04_01_archive.html
+ 138. javascript:void(0)
+ 139. http://www.2ality.com/2012_03_01_archive.html
+ 140. javascript:void(0)
+ 141. http://www.2ality.com/2012_02_01_archive.html
+ 142. javascript:void(0)
+ 143. http://www.2ality.com/2012_01_01_archive.html
+ 144. javascript:void(0)
+ 145. http://www.2ality.com/search?updated-min=2011-01-01T00:00:00%2B01:00&updated-max=2012-01-01T00:00:00%2B01:00&max-results=50
+ 146. javascript:void(0)
+ 147. http://www.2ality.com/2011_12_01_archive.html
+ 148. javascript:void(0)
+ 149. http://www.2ality.com/2011_11_01_archive.html
+ 150. javascript:void(0)
+ 151. http://www.2ality.com/2011_10_01_archive.html
+ 152. javascript:void(0)
+ 153. http://www.2ality.com/2011_09_01_archive.html
+ 154. javascript:void(0)
+ 155. http://www.2ality.com/2011_08_01_archive.html
+ 156. javascript:void(0)
+ 157. http://www.2ality.com/2011_07_01_archive.html
+ 158. javascript:void(0)
+ 159. http://www.2ality.com/2011_06_01_archive.html
+ 160. javascript:void(0)
+ 161. http://www.2ality.com/2011_05_01_archive.html
+ 162. javascript:void(0)
+ 163. http://www.2ality.com/2011_04_01_archive.html
+ 164. javascript:void(0)
+ 165. http://www.2ality.com/2011_03_01_archive.html
+ 166. javascript:void(0)
+ 167. http://www.2ality.com/2011_02_01_archive.html
+ 168. javascript:void(0)
+ 169. http://www.2ality.com/2011_01_01_archive.html
+ 170. javascript:void(0)
+ 171. http://www.2ality.com/search?updated-min=2010-01-01T00:00:00%2B01:00&updated-max=2011-01-01T00:00:00%2B01:00&max-results=50
+ 172. javascript:void(0)
+ 173. http://www.2ality.com/2010_12_01_archive.html
+ 174. javascript:void(0)
+ 175. http://www.2ality.com/2010_11_01_archive.html
+ 176. javascript:void(0)
+ 177. http://www.2ality.com/2010_10_01_archive.html
+ 178. javascript:void(0)
+ 179. http://www.2ality.com/2010_09_01_archive.html
+ 180. javascript:void(0)
+ 181. http://www.2ality.com/2010_08_01_archive.html
+ 182. javascript:void(0)
+ 183. http://www.2ality.com/2010_07_01_archive.html
+ 184. javascript:void(0)
+ 185. http://www.2ality.com/2010_06_01_archive.html
+ 186. javascript:void(0)
+ 187. http://www.2ality.com/2010_05_01_archive.html
+ 188. javascript:void(0)
+ 189. http://www.2ality.com/2010_04_01_archive.html
+ 190. javascript:void(0)
+ 191. http://www.2ality.com/2010_03_01_archive.html
+ 192. javascript:void(0)
+ 193. http://www.2ality.com/2010_02_01_archive.html
+ 194. javascript:void(0)
+ 195. http://www.2ality.com/2010_01_01_archive.html
+ 196. javascript:void(0)
+ 197. http://www.2ality.com/search?updated-min=2009-01-01T00:00:00%2B01:00&updated-max=2010-01-01T00:00:00%2B01:00&max-results=50
+ 198. javascript:void(0)
+ 199. http://www.2ality.com/2009_12_01_archive.html
+ 200. javascript:void(0)
+ 201. http://www.2ality.com/2009_11_01_archive.html
+ 202. javascript:void(0)
+ 203. http://www.2ality.com/2009_10_01_archive.html
+ 204. javascript:void(0)
+ 205. http://www.2ality.com/2009_09_01_archive.html
+ 206. javascript:void(0)
+ 207. http://www.2ality.com/2009_08_01_archive.html
+ 208. javascript:void(0)
+ 209. http://www.2ality.com/2009_07_01_archive.html
+ 210. javascript:void(0)
+ 211. http://www.2ality.com/2009_06_01_archive.html
+ 212. javascript:void(0)
+ 213. http://www.2ality.com/2009_05_01_archive.html
+ 214. javascript:void(0)
+ 215. http://www.2ality.com/2009_04_01_archive.html
+ 216. javascript:void(0)
+ 217. http://www.2ality.com/2009_03_01_archive.html
+ 218. javascript:void(0)
+ 219. http://www.2ality.com/2009_02_01_archive.html
+ 220. javascript:void(0)
+ 221. http://www.2ality.com/2009_01_01_archive.html
+ 222. javascript:void(0)
+ 223. http://www.2ality.com/search?updated-min=2008-01-01T00:00:00%2B01:00&updated-max=2009-01-01T00:00:00%2B01:00&max-results=46
+ 224. javascript:void(0)
+ 225. http://www.2ality.com/2008_12_01_archive.html
+ 226. javascript:void(0)
+ 227. http://www.2ality.com/2008_11_01_archive.html
+ 228. javascript:void(0)
+ 229. http://www.2ality.com/2008_10_01_archive.html
+ 230. javascript:void(0)
+ 231. http://www.2ality.com/2008_06_01_archive.html
+ 232. javascript:void(0)
+ 233. http://www.2ality.com/2008_05_01_archive.html
+ 234. javascript:void(0)
+ 235. http://www.2ality.com/2008_04_01_archive.html
+ 236. javascript:void(0)
+ 237. http://www.2ality.com/2008_03_01_archive.html
+ 238. javascript:void(0)
+ 239. http://www.2ality.com/2008_02_01_archive.html
+ 240. javascript:void(0)
+ 241. http://www.2ality.com/2008_01_01_archive.html
+ 242. javascript:void(0)
+ 243. http://www.2ality.com/search?updated-min=2007-01-01T00:00:00%2B01:00&updated-max=2008-01-01T00:00:00%2B01:00&max-results=12
+ 244. javascript:void(0)
+ 245. http://www.2ality.com/2007_11_01_archive.html
+ 246. javascript:void(0)
+ 247. http://www.2ality.com/2007_08_01_archive.html
+ 248. javascript:void(0)
+ 249. http://www.2ality.com/2007_07_01_archive.html
+ 250. javascript:void(0)
+ 251. http://www.2ality.com/2007_05_01_archive.html
+ 252. javascript:void(0)
+ 253. http://www.2ality.com/search?updated-min=2006-01-01T00:00:00%2B01:00&updated-max=2007-01-01T00:00:00%2B01:00&max-results=1
+ 254. javascript:void(0)
+ 255. http://www.2ality.com/2006_06_01_archive.html
+ 256. javascript:void(0)
+ 257. http://www.2ality.com/search?updated-min=2005-01-01T00:00:00%2B01:00&updated-max=2006-01-01T00:00:00%2B01:00&max-results=2
+ 258. javascript:void(0)
+ 259. http://www.2ality.com/2005_08_01_archive.html
+ 260. javascript:void(0)
+ 261. http://www.2ality.com/2005_03_01_archive.html
+ 262. http://www.2ality.com/search/label/dev
+ 263. http://www.2ality.com/search/label/computers
+ 264. http://www.2ality.com/search/label/javascript
+ 265. http://www.2ality.com/search/label/life
+ 266. http://www.2ality.com/search/label/jslang
+ 267. http://www.2ality.com/search/label/apple
+ 268. http://www.2ality.com/search/label/webdev
+ 269. http://www.2ality.com/search/label/mobile
+ 270. http://www.2ality.com/search/label/scitech
+ 271. http://www.2ality.com/search/label/esnext
+ 272. http://www.2ality.com/search/label/hack
+ 273. http://www.2ality.com/search/label/mac
+ 274. http://www.2ality.com/search/label/google
+ 275. http://www.2ality.com/search/label/java
+ 276. http://www.2ality.com/search/label/business
+ 277. http://www.2ality.com/search/label/ios
+ 278. http://www.2ality.com/search/label/video
+ 279. http://www.2ality.com/search/label/hci
+ 280. http://www.2ality.com/search/label/entertainment
+ 281. http://www.2ality.com/search/label/society
+ 282. http://www.2ality.com/search/label/browser
+ 283. http://www.2ality.com/search/label/firefox
+ 284. http://www.2ality.com/search/label/ipad
+ 285. http://www.2ality.com/search/label/movie
+ 286. http://www.2ality.com/search/label/html5
+ 287. http://www.2ality.com/search/label/psychology
+ 288. http://www.2ality.com/search/label/nodejs
+ 289. http://www.2ality.com/search/label/clientjs
+ 290. http://www.2ality.com/search/label/tv
+ 291. http://www.2ality.com/search/label/android
+ 292. http://www.2ality.com/search/label/fun
+ 293. http://www.2ality.com/search/label/social
+ 294. http://www.2ality.com/search/label/chrome
+ 295. http://www.2ality.com/search/label/tablet
+ 296. http://www.2ality.com/search/label/2ality
+ 297. http://www.2ality.com/search/label/humor
+ 298. http://www.2ality.com/search/label/politics
+ 299. http://www.2ality.com/search/label/web
+ 300. http://www.2ality.com/search/label/cloud
+ 301. http://www.2ality.com/search/label/microsoft
+ 302. http://www.2ality.com/search/label/blogging
+ 303. http://www.2ality.com/search/label/hardware
+ 304. http://www.2ality.com/search/label/software%20engineering
+ 305. http://www.2ality.com/search/label/gaming
+ 306. http://www.2ality.com/search/label/eclipse
+ 307. http://www.2ality.com/search/label/gwt
+ 308. http://www.2ality.com/search/label/programming%20languages
+ 309. http://www.2ality.com/search/label/app%20store
+ 310. http://www.2ality.com/search/label/nature
+ 311. http://www.2ality.com/search/label/photo
+ 312. http://www.2ality.com/search/label/security
+ 313. http://www.2ality.com/search/label/semantic%20web
+ 314. http://www.2ality.com/search/label/software
+ 315. http://www.2ality.com/search/label/twitter
+ 316. http://www.2ality.com/search/label/webos
+ 317. http://www.2ality.com/search/label/12quirks
+ 318. http://www.2ality.com/search/label/education
+ 319. http://www.2ality.com/search/label/jsmodules
+ 320. http://www.2ality.com/search/label/media
+ 321. http://www.2ality.com/search/label/numbers
+ 322. http://www.2ality.com/search/label/windows%208
+ 323. http://www.2ality.com/search/label/idea
+ 324. http://www.2ality.com/search/label/iphone
+ 325. http://www.2ality.com/search/label/itunes
+ 326. http://www.2ality.com/search/label/scifi-fantasy
+ 327. http://www.2ality.com/search/label/app
+ 328. http://www.2ality.com/search/label/chromeos
+ 329. http://www.2ality.com/search/label/english
+ 330. http://www.2ality.com/search/label/fringe
+ 331. http://www.2ality.com/search/label/jsshell
+ 332. http://www.2ality.com/search/label/thunderbolt
+ 333. http://www.2ality.com/search/label/webapp
+ 334. http://www.2ality.com/search/label/blogger
+ 335. http://www.2ality.com/search/label/bookmarklet
+ 336. http://www.2ality.com/search/label/crowdsourcing
+ 337. http://www.2ality.com/search/label/latex
+ 338. http://www.2ality.com/search/label/lion
+ 339. http://www.2ality.com/search/label/ted
+ 340. http://www.2ality.com/search/label/environment
+ 341. http://www.2ality.com/search/label/gadget
+ 342. http://www.2ality.com/search/label/html
+ 343. http://www.2ality.com/search/label/intel
+ 344. http://www.2ality.com/search/label/layout
+ 345. http://www.2ality.com/search/label/light%20peak
+ 346. http://www.2ality.com/search/label/michael%20j.%20fox
+ 347. http://www.2ality.com/search/label/music
+ 348. http://www.2ality.com/search/label/pdf
+ 349. http://www.2ality.com/search/label/shell
+ 350. http://www.2ality.com/search/label/underscorejs
+ 351. http://www.2ality.com/search/label/vlc
+ 352. http://www.2ality.com/search/label/coffeescript
+ 353. http://www.2ality.com/search/label/dart
+ 354. http://www.2ality.com/search/label/facebook
+ 355. http://www.2ality.com/search/label/gimp
+ 356. http://www.2ality.com/search/label/googleio
+ 357. http://www.2ality.com/search/label/googleplus
+ 358. http://www.2ality.com/search/label/health
+ 359. http://www.2ality.com/search/label/howto
+ 360. http://www.2ality.com/search/label/hp
+ 361. http://www.2ality.com/search/label/javafx
+ 362. http://www.2ality.com/search/label/jshistory
+ 363. http://www.2ality.com/search/label/jstools
+ 364. http://www.2ality.com/search/label/kindle
+ 365. http://www.2ality.com/search/label/leopard
+ 366. http://www.2ality.com/search/label/macbook
+ 367. http://www.2ality.com/search/label/motorola
+ 368. http://www.2ality.com/search/label/m%C3%BCnchen
+ 369. http://www.2ality.com/search/label/occupy
+ 370. http://www.2ality.com/search/label/pl%20fundamentals
+ 371. http://www.2ality.com/search/label/series
+ 372. http://www.2ality.com/search/label/tc39
+ 373. http://www.2ality.com/search/label/textbook
+ 374. http://www.2ality.com/search/label/web%20design
+ 375. http://www.2ality.com/search/label/__proto__
+ 376. http://www.2ality.com/search/label/amazon
+ 377. http://www.2ality.com/search/label/back%20to%20the%20future
+ 378. http://www.2ality.com/search/label/book
+ 379. http://www.2ality.com/search/label/css
+ 380. http://www.2ality.com/search/label/flattr
+ 381. http://www.2ality.com/search/label/food
+ 382. http://www.2ality.com/search/label/foreign%20languages
+ 383. http://www.2ality.com/search/label/house
+ 384. http://www.2ality.com/search/label/icloud
+ 385. http://www.2ality.com/search/label/info%20mgmt
+ 386. http://www.2ality.com/search/label/jsfuture
+ 387. http://www.2ality.com/search/label/jsstyle
+ 388. http://www.2ality.com/search/label/linux
+ 389. http://www.2ality.com/search/label/mozilla
+ 390. http://www.2ality.com/search/label/polymer
+ 391. http://www.2ality.com/search/label/publishing
+ 392. http://www.2ality.com/search/label/python
+ 393. http://www.2ality.com/search/label/regexp
+ 394. http://www.2ality.com/search/label/samsung
+ 395. http://www.2ality.com/search/label/tizen
+ 396. http://www.2ality.com/search/label/traffic
+ 397. http://www.2ality.com/search/label/unix
+ 398. http://www.2ality.com/search/label/webcomponents
+ 399. http://www.2ality.com/search/label/adobe
+ 400. http://www.2ality.com/search/label/angry%20birds
+ 401. http://www.2ality.com/search/label/astronomy
+ 402. http://www.2ality.com/search/label/audio
+ 403. http://www.2ality.com/search/label/comic
+ 404. http://www.2ality.com/search/label/design
+ 405. http://www.2ality.com/search/label/dom
+ 406. http://www.2ality.com/search/label/ecommerce
+ 407. http://www.2ality.com/search/label/eval
+ 408. http://www.2ality.com/search/label/facets
+ 409. http://www.2ality.com/search/label/flash
+ 410. http://www.2ality.com/search/label/fluentconf
+ 411. http://www.2ality.com/search/label/free
+ 412. http://www.2ality.com/search/label/futurama
+ 413. http://www.2ality.com/search/label/guide
+ 414. http://www.2ality.com/search/label/history
+ 415. http://www.2ality.com/search/label/hyena
+ 416. http://www.2ality.com/search/label/internet%20explorer
+ 417. http://www.2ality.com/search/label/journalism
+ 418. http://www.2ality.com/search/label/jquery
+ 419. http://www.2ality.com/search/label/jsengine
+ 420. http://www.2ality.com/search/label/jslib
+ 421. http://www.2ality.com/search/label/law
+ 422. http://www.2ality.com/search/label/lightning
+ 423. http://www.2ality.com/search/label/math
+ 424. http://www.2ality.com/search/label/meego
+ 425. http://www.2ality.com/search/label/month
+ 426. http://www.2ality.com/search/label/nike
+ 427. http://www.2ality.com/search/label/nokia
+ 428. http://www.2ality.com/search/label/repl
+ 429. http://www.2ality.com/search/label/servo
+ 430. http://www.2ality.com/search/label/sponsor
+ 431. http://www.2ality.com/search/label/steve%20jobs
+ 432. http://www.2ality.com/search/label/tmplstr
+ 433. http://www.2ality.com/search/label/travel
+ 434. http://www.2ality.com/search/label/usb
+ 435. http://www.2ality.com/search/label/winphone
+ 436. http://www.2ality.com/search/label/wwdc
+ 437. http://www.2ality.com/search/label/airbender
+ 438. http://www.2ality.com/search/label/amdefine
+ 439. http://www.2ality.com/search/label/angularjs
+ 440. http://www.2ality.com/search/label/aol
+ 441. http://www.2ality.com/search/label/app%20urls
+ 442. http://www.2ality.com/search/label/architecture
+ 443. http://www.2ality.com/search/label/asmjs
+ 444. http://www.2ality.com/search/label/async
+ 445. http://www.2ality.com/search/label/basic%20income
+ 446. http://www.2ality.com/search/label/biology
+ 447. http://www.2ality.com/search/label/blink
+ 448. http://www.2ality.com/search/label/bluetooth
+ 449. http://www.2ality.com/search/label/canada
+ 450. http://www.2ality.com/search/label/community
+ 451. http://www.2ality.com/search/label/cross-platform
+ 452. http://www.2ality.com/search/label/deutsch
+ 453. http://www.2ality.com/search/label/diaspora
+ 454. http://www.2ality.com/search/label/distributed-social-network
+ 455. http://www.2ality.com/search/label/dsl
+ 456. http://www.2ality.com/search/label/dvd
+ 457. http://www.2ality.com/search/label/dzone
+ 458. http://www.2ality.com/search/label/emacs
+ 459. http://www.2ality.com/search/label/emberjs
+ 460. http://www.2ality.com/search/label/energy
+ 461. http://www.2ality.com/search/label/facetator
+ 462. http://www.2ality.com/search/label/feedback
+ 463. http://www.2ality.com/search/label/firefly
+ 464. http://www.2ality.com/search/label/firefoxos
+ 465. http://www.2ality.com/search/label/fritzbox
+ 466. http://www.2ality.com/search/label/german
+ 467. http://www.2ality.com/search/label/git
+ 468. http://www.2ality.com/search/label/guice
+ 469. http://www.2ality.com/search/label/h.264
+ 470. http://www.2ality.com/search/label/home%20entertainment
+ 471. http://www.2ality.com/search/label/hosting
+ 472. http://www.2ality.com/search/label/htc
+ 473. http://www.2ality.com/search/label/ical
+ 474. http://www.2ality.com/search/label/jsdom
+ 475. http://www.2ality.com/search/label/jsmyth
+ 476. http://www.2ality.com/search/label/library
+ 477. http://www.2ality.com/search/label/location
+ 478. http://www.2ality.com/search/label/markdown
+ 479. http://www.2ality.com/search/label/marketing
+ 480. http://www.2ality.com/search/label/mars
+ 481. http://www.2ality.com/search/label/meta-data
+ 482. http://www.2ality.com/search/label/middle%20east
+ 483. http://www.2ality.com/search/label/mpaa
+ 484. http://www.2ality.com/search/label/msl
+ 485. http://www.2ality.com/search/label/mssurface
+ 486. http://www.2ality.com/search/label/netflix
+ 487. http://www.2ality.com/search/label/nsa
+ 488. http://www.2ality.com/search/label/obama
+ 489. http://www.2ality.com/search/label/openoffice
+ 490. http://www.2ality.com/search/label/opinion
+ 491. http://www.2ality.com/search/label/oracle
+ 492. http://www.2ality.com/search/label/organizing
+ 493. http://www.2ality.com/search/label/philosophy
+ 494. http://www.2ality.com/search/label/pixar
+ 495. http://www.2ality.com/search/label/pnacl
+ 496. http://www.2ality.com/search/label/presenting
+ 497. http://www.2ality.com/search/label/prism
+ 498. http://www.2ality.com/search/label/privacy
+ 499. http://www.2ality.com/search/label/programming
+ 500. http://www.2ality.com/search/label/puzzle
+ 501. http://www.2ality.com/search/label/raffle
+ 502. http://www.2ality.com/search/label/raspberry%20pi
+ 503. http://www.2ality.com/search/label/read
+ 504. http://www.2ality.com/search/label/rust
+ 505. http://www.2ality.com/search/label/safari
+ 506. http://www.2ality.com/search/label/sponsoring
+ 507. http://www.2ality.com/search/label/star%20trek
+ 508. http://www.2ality.com/search/label/talk
+ 509. http://www.2ality.com/search/label/theora
+ 510. http://www.2ality.com/search/label/thunderbird
+ 511. http://www.2ality.com/search/label/typography
+ 512. http://www.2ality.com/search/label/unicode
+ 513. http://www.2ality.com/search/label/v8
+ 514. http://www.2ality.com/search/label/voice%20control
+ 515. http://www.2ality.com/search/label/webkit
+ 516. http://www.2ality.com/search/label/webm
+ 517. http://www.2ality.com/search/label/yahoo
+ 518. http://adpacks.com/
+ 519. http://rauschma.de/
+ 520. http://javascriptweekly.com/
+ 521. https://groups.google.com/d/forum/js-lang
+ 522. http://jscentral.org/
+ 523. http://www.munichjs.org/
+ 524. https://twitter.com/rauschma
+ 525. http://www.blogger.com/
+ 526. http://clicky.com/66467360
+
+   Hidden links:
+ 528. file://www.blogger.com/rearrange?blogID=8100407163665430627&widgetType=PageList&widgetId=PageList1&action=editWidget&sectionId=crosscol
+ 529. file://www.blogger.com/rearrange?blogID=8100407163665430627&widgetType=HTML&widgetId=HTML4&action=editWidget&sectionId=crosscol-overflow
+ 530. http://www.blogger.com/post-edit.g?blogID=8100407163665430627&postID=6505497306821744069&from=pencil
+ 531. http://www.blogger.com/profile/05161748944927386101
+ 532. http://www.blogger.com/profile/05161748944927386101
+ 533. http://www.blogger.com/profile/05161748944927386101
+ 534. http://www.blogger.com/profile/05161748944927386101
+ 535. http://www.blogger.com/profile/05161748944927386101
+ 536. http://www.blogger.com/profile/05161748944927386101
+ 537. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml195.data
+ 538. file://www.blogger.com/rearrange?blogID=8100407163665430627&widgetType=PopularPosts&widgetId=PopularPosts3&action=editWidget&sectionId=sidebar-left-1
+ 539. file://www.blogger.com/rearrange?blogID=8100407163665430627&widgetType=PopularPosts&widgetId=PopularPosts1&action=editWidget&sectionId=sidebar-left-1
+ 540. file://www.blogger.com/rearrange?blogID=8100407163665430627&widgetType=BlogArchive&widgetId=BlogArchive1&action=editWidget&sectionId=sidebar-left-1
+ 541. file://www.blogger.com/rearrange?blogID=8100407163665430627&widgetType=Label&widgetId=Label1&action=editWidget&sectionId=sidebar-left-1
+ 542. file://www.blogger.com/rearrange?blogID=8100407163665430627&widgetType=HTML&widgetId=HTML5&action=editWidget&sectionId=sidebar-right-1
+ 543. file://www.blogger.com/rearrange?blogID=8100407163665430627&widgetType=HTML&widgetId=HTML2&action=editWidget&sectionId=sidebar-right-1
+ 544. file://www.blogger.com/rearrange?blogID=8100407163665430627&widgetType=HTML&widgetId=HTML6&action=editWidget&sectionId=sidebar-right-1
+ 545. file://www.blogger.com/rearrange?blogID=8100407163665430627&widgetType=HTML&widgetId=HTML7&action=editWidget&sectionId=sidebar-right-1
+ 546. file://www.blogger.com/rearrange?blogID=8100407163665430627&widgetType=Attribution&widgetId=Attribution1&action=editWidget&sectionId=footer-3

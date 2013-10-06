@@ -1,0 +1,492 @@
+   #[1]Art & Logic Blog » Feed [2]Art & Logic Blog » Comments Feed [3]Art
+   & Logic Blog » Hurdles: Jump Small Problems With Some Quick Code
+   Snippets Comments Feed [4]Designing For An International Audience
+   [5]PdbpPlease! [6]alternate [7]alternate [8]Art & Logic Blog
+   [9]WordPress.com
+
+[10]Art & Logic Blog
+
+Menu
+
+   [11]Skip to content
+     * [12]Blog Home
+     * [13]Art & Logic Corporate Site
+     * [14]Contact
+
+Hurdles: Jump Small Problems With Some Quick Code Snippets
+
+   [15]Leave a reply
+
+   [16]Hurdles
+
+   During the course of any complex project (and even many simple ones),
+   on the way to accomplish the actual goal, you’re certain to encounter
+   any number of small hurdles along the way – little problems which need
+   to be resolved for the bigger picture to come into focus.
+
+   Below, in no particular order, are some of the ‘little’ problems I’ve
+   encountered, and solutions thereto – hopefully giving you a leg up so
+   that when and if you encounter something similar, you can jump it
+   without breaking stride.
+
+Is that a Promise?
+
+   To determine whether a Javascript object implements the [17]promise
+   interface, we’ll have to rely on [18]duck typing. This is generally
+   safe (outside of a potentially hostile environment), and if you’re
+   suspicious that tested objects might return false positives, you can
+   add/change what is tested tailored to the specific implementation
+   you’re using.
+
+   For instance, you might add a test on functions like ‘promise’ and
+   ‘pipe’ being present for jQuery Deferred. This could also be stretched
+   to try and tell one implementation apart from another, if you’re mixing
+   them for whatever reason.
+    /**
+     * Determine whether object implements promises.
+     * @param object
+     * @returns {*}
+     */
+    isPromise:function(object){
+        return (typeof object.then === 'function');
+    }
+
+IE Console woes, log only in debug mode
+
+   It’s extremely common to litter your js with some console.log calls
+   while developing, in order to get a better handle on inputs, outpus,
+   variable states, etc. Some of these calls are obviated by the
+   incresingly powerful built-in browser tools, but inevitably your code
+   will pick up a few.
+
+   Suddenly, you realize that you need to port that code to an IE version
+   <= 8. The code breaks. You open up devtools. The code works. What’s
+   going on? The console object doesn’t exist until you open up devtools –
+   its tricky the first time you stumble into it. Here’s the quick fix:
+window.console = window.console || {
+        /** @param {...*} args */
+        log:function(){};
+};
+
+   Have code that needs to be tested on a production server, but want to
+   leave those console.log calls in for future debugging use – but not
+   have them output when you’re on the production server? Set a variable
+   (either global if you must, or better, in an init call to a function,
+   on the function prototype, etc.) to indicate ‘debug mode’ and call
+   console.log like so:
+this.debug && console.log("Console output.");
+
+Getting a trim, Capitals and splitting camelCase
+
+   It seems that even libraries purporting to support older browsers
+   expect the String.prototype.trim function to be present (see the Google
+   Maps v3 api, for instance). Unfortunately, IE versions <= 8 and Safari
+   <= 5 don’t. We’ll just quickly pop that in to place, then:
+if (typeof String.prototype.trim !== 'function'){
+    String.prototype.trim = function(){
+        return this.replace(/^\s+|\s+$/g, '');
+    };
+}
+
+   If you have input strings that you know will need capitalizing (say
+   database column names that will end up in the th of an html table),
+   best to wrap that in an easily callable, chainable function:
+String.prototype.capitalize = function(){
+    return this.charAt(0).toUpperCase() + this.slice(1);
+};
+
+   We can do something similar if we know we’ll need to split a string on
+   camelCaseNames:
+String.prototype.splitCamelCase = function(){
+    return this.replace(/([A-Z])/g, ' $1');
+};
+
+   If you cringe at the idea of adding to the built-in prototypes, we can
+   do something similar with, for example [19]underscore’s mixins:
+_.mixin({
+    capitalize:function(string){
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    },
+    splitCamelCase:function(string){
+        return string.replace(/([A-Z])/g, ' $1');
+    }
+});
+
+This Space Reserved
+
+   So, you’ve created an object somewhere in your code, probably something
+   with meaningful names given the function their value is expected to be
+   used for/perform, and run it, only to be met with an error: ‘Expected
+   identifier, string or number’. Chances are you’ve accidentally used a
+   reserved keyword in your object keys.
+
+   Something like this:
+var ob = {
+    for:12,
+    class:15
+};
+
+   Needs to be altered to this:
+var ob = {
+        'for':12,
+        'class':15
+};
+
+   This will keep the js engine in question from seeing a keyword where an
+   object key was intended. Another alternative is, of course, to simply
+   avoid using any of the [20]reserved keywords as object keys.
+
+Expert Timing
+
+   setTimeout/setInterval is not very accurate. It has to compete with ui
+   events and other callbacks, and really only guarantees that at least
+   the specified interval will have passed before it gets called. Usually,
+   its not an issue. If it is important that the timing be accurate,
+   however, we’ll have to work a little harder.
+
+   In modern browsers, we can rely on window.performance.now() for a
+   highly accurate (10 us) timestamp. In older browsers, we’ll have to
+   make do with ms resolution from Date(). Either way, we’ll be altering
+   our desired interval with this number in our next call for the
+   setTimeout, in order to try and keep the callbacks happening as
+   regularly as possible, accounting for delays. This is still subject to
+   variation, and very short intervals likely won’t be long enough to
+   allow for us to account for said variation, but the result should still
+   be more accurate than a simple setTimeout/setInterval call, in a way
+   that offers a similar api to the standard setInterval call.
+
+   Hopefully, one or more of the above offers you a quick solution so you
+   can get back to the real problem you were supposed to be solving… and
+   if not, at least offer you some solace as you struggle – we’ve all hit
+   a few little hurdles along the way.
+
+Share this:
+
+     *
+
+       IFRAME:
+       [21]http://platform.twitter.com/widgets/tweet_button.html?url=http%
+       3A%2F%2Fwp.me%2Fp2n97n-1z2&counturl=http%3A%2F%2Fblog.artlogic.com%
+       2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-some-quick-code
+       -snippets%2F&count=horizontal&text=Hurdles%3A%20Jump%20Small%20Prob
+       lems%20With%20Some%20Quick%20Code%20Snippets%3A&via=wordpressdotcom
+       &related=wordpressdotcom
+
+     *
+
+       IFRAME:
+       [22]http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fblog
+       .artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-s
+       ome-quick-code-snippets%2F&layout=button_count&show_faces=false&act
+       ion=like&colorscheme=light&height=21&locale=en_US&width=90
+
+     *
+     *
+
+       IFRAME:
+       [23]http://www.reddit.com/static/button/button1.html?width=120&url=
+       http%3A%2F%2Fblog.artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-smal
+       l-problems-with-some-quick-code-snippets%2F&title=Hurdles%3A%20Jump
+       %20Small%20Problems%20With%20Some%20Quick%20Code%20Snippets
+
+     * [24]More
+     *
+
+     * [25]Email
+     * [26]Print
+     *
+     * [27]Share on Tumblr
+     *
+     *
+     *
+
+       IFRAME:
+       [28]http://www.stumbleupon.com/badge/embed/1/?url=http%3A%2F%2Fblog
+       .artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-s
+       ome-quick-code-snippets%2F&title=Hurdles%3A%20Jump%20Small%20Proble
+       ms%20With%20Some%20Quick%20Code%20Snippets
+
+     * [29]Digg
+     *
+     * [30]Pin It
+     *
+
+Like this:
+
+   Like Loading...
+   This entry was posted in [31]Development on [32]September 24, 2013 by
+   [33]sanemethod.
+
+About sanemethod
+
+   Christopher Keefer is a Senior Software Engineer at Art & Logic. He
+   generally spends his spare time on the computer too, so there isn't
+   much hope for him.
+   [34]View all posts by sanemethod →
+
+Post navigation
+
+   [35]← Designing For An International Audience [36]PdbpPlease! →
+
+Leave a Reply [37]Cancel reply
+
+   Enter your comment here...
+
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+
+   Fill in your details below or click an icon to log in:
+     *
+     *
+     *
+     *
+     *
+
+       IFRAME: [38]googleplus-sign-in
+
+   [39]Gravatar
+   Email (required) (Address never made public)
+   ____________________
+   Name (required)
+   ____________________
+   Website
+   ____________________
+   WordPress.com Logo
+
+   You are commenting using your WordPress.com account.
+   ( [40]Log Out / [41]Change )
+   Twitter picture
+
+   You are commenting using your Twitter account.
+   ( [42]Log Out / [43]Change )
+   Facebook photo
+
+   You are commenting using your Facebook account.
+   ( [44]Log Out / [45]Change )
+   Google+ photo
+
+   You are commenting using your Google+ account.
+   ( [46]Log Out / [47]Change )
+   [48]Cancel
+
+   Connecting to %s
+
+   [ ] Notify me of follow-up comments via email.
+
+   Post Comment
+
+Follow Art & Logic on Twitter
+
+   My Tweets
+
+Follow the Art & Logic Blog via RSS
+
+   [49]RSS
+
+   IFRAME:
+   [50]http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.f
+   acebook.com%2Fartandlogic&width=200&height=110&colorscheme=light&show_f
+   aces=false&stream=false&show_border=false&header=false&force_wall=false
+
+Tags
+
+   [51]android [52]angular [53]angularjs [54]app [55]apple [56]audio
+   [57]AudioUnits [58]Authentication [59]backbone.js [60]Backup [61]book
+   review [62]books [63]C++ [64]cocoa [65]coffeescript [66]concurrency
+   [67]Core Data [68]cryptography [69]CSS [70]data formats [71]data
+   visualization [72]design [73]development [74]Digital audio workstation
+   [75]education [76]encryption [77]Frameworks [78]games [79]git
+   [80]github [81]HTML [82]html5 [83]ideas [84]infosec [85]internet of
+   things [86]iOS [87]javascript [88]JQuery [89]JUCE [90]language
+   [91]Learning [92]Literate Programming [93]Mac OS X [94]MIDI [95]mobile
+   [96]music [97]Objective-C [98]OS X [99]Package management system
+   [100]passwords [101]pgp [102]php [103]privacy [104]productivity
+   [105]programming [106]project management [107]proposals [108]python
+   [109]qt [110]rails [111]ruby [112]salting [113]security
+   [114]single-sign-on [115]sql injection [116]steganography [117]style
+   [118]testing [119]tools [120]ui [121]user interface [122]ux
+   [123]website [124]windows [125]XML
+
+Recent Posts
+
+     * [126]Flash Drive Makers Hate You
+     * [127]Bringing Radio to a Software Engineer’s World
+     * [128]PdbpPlease!
+     * [129]Hurdles: Jump Small Problems With Some Quick Code Snippets
+     * [130]Designing For An International Audience
+
+   Search for: ____________________ Search
+   [131]Customized Twenty Twelve Theme. [132]Blog at WordPress.com.
+
+   [133]Follow
+
+Follow “Art & Logic Blog”
+
+   Get every new post delivered to your Inbox.
+
+   Join 79 other followers
+
+   Enter your email add
+
+   Sign me up
+   [134]Powered by WordPress.com
+
+   Send to Email Address ____________________ Your Name
+   ____________________ Your Email Address ____________________
+   loading Send Email [135]Cancel
+   Post was not sent - check your email addresses!
+   Email check failed, please try again
+   Sorry, your blog cannot share posts by email.
+
+   IFRAME: [136]likes-master
+
+   %d bloggers like this:
+
+References
+
+   Visible links
+   1. http://blog.artlogic.com/feed/
+   2. http://blog.artlogic.com/comments/feed/
+   3. http://blog.artlogic.com/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/feed/
+   4. http://blog.artlogic.com/2013/09/17/designing-for-an-international-audience/
+   5. http://blog.artlogic.com/2013/09/25/pdbpplease/
+   6. http://public-api.wordpress.com/oembed/1.0/?format=json&url=http%3A%2F%2Fblog.artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-some-quick-code-snippets%2F&for=wpcom-auto-discovery
+   7. http://public-api.wordpress.com/oembed/1.0/?format=xml&url=http%3A%2F%2Fblog.artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-some-quick-code-snippets%2F&for=wpcom-auto-discovery
+   8. http://blog.artlogic.com/osd.xml
+   9. http://wordpress.com/opensearch.xml
+  10. http://blog.artlogic.com/
+  11. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml777.data#content
+  12. http://blog.artlogic.com/
+  13. http://www.artlogic.com/
+  14. http://blog.artlogic.com/contact
+  15. http://blog.artlogic.com/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/#respond
+  16. http://artlogic1991.files.wordpress.com/2013/09/cuhurdleheights.jpg
+  17. http://wiki.commonjs.org/wiki/Promises/A
+  18. http://en.wikipedia.org/wiki/Duck_typing
+  19. http://underscorejs.org/
+  20. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Reserved_Words
+  21. http://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fwp.me%2Fp2n97n-1z2&counturl=http%3A%2F%2Fblog.artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-some-quick-code-snippets%2F&count=horizontal&text=Hurdles%3A%20Jump%20Small%20Problems%20With%20Some%20Quick%20Code%20Snippets%3A&via=wordpressdotcom&related=wordpressdotcom
+  22. http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fblog.artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-some-quick-code-snippets%2F&layout=button_count&show_faces=false&action=like&colorscheme=light&height=21&locale=en_US&width=90
+  23. http://www.reddit.com/static/button/button1.html?width=120&url=http%3A%2F%2Fblog.artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-some-quick-code-snippets%2F&title=Hurdles%3A%20Jump%20Small%20Problems%20With%20Some%20Quick%20Code%20Snippets
+  24. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml777.data
+  25. http://blog.artlogic.com/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/?share=email
+  26. http://blog.artlogic.com/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/#print
+  27. http://www.tumblr.com/share/link/?url=http%3A%2F%2Fblog.artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-some-quick-code-snippets%2F&name=Hurdles%3A%20Jump%20Small%20Problems%20With%20Some%20Quick%20Code%20Snippets
+  28. http://www.stumbleupon.com/badge/embed/1/?url=http%3A%2F%2Fblog.artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-some-quick-code-snippets%2F&title=Hurdles%3A%20Jump%20Small%20Problems%20With%20Some%20Quick%20Code%20Snippets
+  29. http://digg.com/submit?url=http%3A%2F%2Fblog.artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-some-quick-code-snippets%2F&title=Hurdles%3A%20Jump%20Small%20Problems%20With%20Some%20Quick%20Code%20Snippets
+  30. http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fblog.artlogic.com%2F2013%2F09%2F24%2Fhurdles-jump-small-problems-with-some-quick-code-snippets%2F&description=Hurdles%3A%20Jump%20Small%20Problems%20With%20Some%20Quick%20Code%20Snippets&media=http%3A%2F%2Fartlogic1991.files.wordpress.com%2F2013%2F09%2Fcuhurdleheights.jpg
+  31. http://blog.artlogic.com/category/development/
+  32. http://blog.artlogic.com/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/
+  33. http://blog.artlogic.com/author/sanemethod/
+  34. http://blog.artlogic.com/author/sanemethod/
+  35. http://blog.artlogic.com/2013/09/17/designing-for-an-international-audience/
+  36. http://blog.artlogic.com/2013/09/25/pdbpplease/
+  37. file://localhost/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/#respond
+  38. https://public-api.wordpress.com/connect/?googleplus-sign-in=1
+  39. https://gravatar.com/site/signup/
+  40. javascript:HighlanderComments.doExternalLogout( 'wordpress' );
+  41. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml777.data
+  42. javascript:HighlanderComments.doExternalLogout( 'twitter' );
+  43. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml777.data
+  44. javascript:HighlanderComments.doExternalLogout( 'facebook' );
+  45. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml777.data
+  46. javascript:HighlanderComments.doExternalLogout( 'googleplus' );
+  47. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml777.data
+  48. javascript:HighlanderComments.cancelExternalWindow();
+  49. http://feeds.feedburner.com/ArtLogic
+  50. http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fartandlogic&width=200&height=110&colorscheme=light&show_faces=false&stream=false&show_border=false&header=false&force_wall=false
+  51. http://blog.artlogic.com/tag/android/
+  52. http://blog.artlogic.com/tag/angular/
+  53. http://blog.artlogic.com/tag/angularjs/
+  54. http://blog.artlogic.com/tag/app/
+  55. http://blog.artlogic.com/tag/apple/
+  56. http://blog.artlogic.com/tag/audio/
+  57. http://blog.artlogic.com/tag/audiounits/
+  58. http://blog.artlogic.com/tag/authentication/
+  59. http://blog.artlogic.com/tag/backbone-js/
+  60. http://blog.artlogic.com/tag/backup/
+  61. http://blog.artlogic.com/tag/book-review/
+  62. http://blog.artlogic.com/tag/books/
+  63. http://blog.artlogic.com/tag/c/
+  64. http://blog.artlogic.com/tag/cocoa/
+  65. http://blog.artlogic.com/tag/coffeescript/
+  66. http://blog.artlogic.com/tag/concurrency/
+  67. http://blog.artlogic.com/tag/core-data/
+  68. http://blog.artlogic.com/tag/cryptography/
+  69. http://blog.artlogic.com/tag/css/
+  70. http://blog.artlogic.com/tag/data-formats/
+  71. http://blog.artlogic.com/tag/data-visualization/
+  72. http://blog.artlogic.com/tag/design/
+  73. http://blog.artlogic.com/tag/development-2/
+  74. http://blog.artlogic.com/tag/digital-audio-workstation/
+  75. http://blog.artlogic.com/tag/education/
+  76. http://blog.artlogic.com/tag/encryption/
+  77. http://blog.artlogic.com/tag/frameworks/
+  78. http://blog.artlogic.com/tag/games/
+  79. http://blog.artlogic.com/tag/git/
+  80. http://blog.artlogic.com/tag/github/
+  81. http://blog.artlogic.com/tag/html/
+  82. http://blog.artlogic.com/tag/html5/
+  83. http://blog.artlogic.com/tag/ideas/
+  84. http://blog.artlogic.com/tag/infosec/
+  85. http://blog.artlogic.com/tag/internet-of-things/
+  86. http://blog.artlogic.com/tag/ios/
+  87. http://blog.artlogic.com/tag/javascript/
+  88. http://blog.artlogic.com/tag/jquery/
+  89. http://blog.artlogic.com/tag/juce/
+  90. http://blog.artlogic.com/tag/language/
+  91. http://blog.artlogic.com/tag/learning/
+  92. http://blog.artlogic.com/tag/literate-programming/
+  93. http://blog.artlogic.com/tag/mac-os-x/
+  94. http://blog.artlogic.com/tag/midi/
+  95. http://blog.artlogic.com/tag/mobile/
+  96. http://blog.artlogic.com/tag/music/
+  97. http://blog.artlogic.com/tag/objective-c/
+  98. http://blog.artlogic.com/tag/os-x/
+  99. http://blog.artlogic.com/tag/package-management-system/
+ 100. http://blog.artlogic.com/tag/passwords/
+ 101. http://blog.artlogic.com/tag/pgp/
+ 102. http://blog.artlogic.com/tag/php/
+ 103. http://blog.artlogic.com/tag/privacy/
+ 104. http://blog.artlogic.com/tag/productivity/
+ 105. http://blog.artlogic.com/tag/programming/
+ 106. http://blog.artlogic.com/tag/project-management/
+ 107. http://blog.artlogic.com/tag/proposals/
+ 108. http://blog.artlogic.com/tag/python/
+ 109. http://blog.artlogic.com/tag/qt/
+ 110. http://blog.artlogic.com/tag/rails/
+ 111. http://blog.artlogic.com/tag/ruby/
+ 112. http://blog.artlogic.com/tag/salting/
+ 113. http://blog.artlogic.com/tag/security/
+ 114. http://blog.artlogic.com/tag/single-sign-on/
+ 115. http://blog.artlogic.com/tag/sql-injection/
+ 116. http://blog.artlogic.com/tag/steganography/
+ 117. http://blog.artlogic.com/tag/style/
+ 118. http://blog.artlogic.com/tag/testing/
+ 119. http://blog.artlogic.com/tag/tools/
+ 120. http://blog.artlogic.com/tag/ui/
+ 121. http://blog.artlogic.com/tag/user-interface/
+ 122. http://blog.artlogic.com/tag/ux/
+ 123. http://blog.artlogic.com/tag/website/
+ 124. http://blog.artlogic.com/tag/windows/
+ 125. http://blog.artlogic.com/tag/xml/
+ 126. http://blog.artlogic.com/2013/09/30/flash-drive-makers-hate-you/
+ 127. http://blog.artlogic.com/2013/09/27/bringing-radio-to-a-software-engineers-world/
+ 128. http://blog.artlogic.com/2013/09/25/pdbpplease/
+ 129. http://blog.artlogic.com/2013/09/24/hurdles-jump-small-problems-with-some-quick-code-snippets/
+ 130. http://blog.artlogic.com/2013/09/17/designing-for-an-international-audience/
+ 131. http://theme.wordpress.com/credits/blog.artlogic.com/
+ 132. http://wordpress.com/?ref=footer
+ 133. javascript:void(0)
+ 134. http://wordpress.com/signup/?ref=lof
+ 135. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml777.data#cancel
+ 136. http://widgets.wp.com/likes/master.html?ver=20130620a#ver=20130620a&mp6=1
+
+   Hidden links:
+ 138. http://blog.artlogic.com/
+ 139. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml777.data#comment-form-guest
+ 140. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml777.data#comment-form-load-service:WordPress.com
+ 141. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml777.data#comment-form-load-service:Twitter
+ 142. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml777.data#comment-form-load-service:Facebook

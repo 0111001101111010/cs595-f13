@@ -1,0 +1,706 @@
+   #[1]publisher
+
+[2]Ordina
+
+     * Diensten en Oplossingen
+          + Business oplossingen
+          + [3]Performance management & BI
+          + [4]Customer experience & innovation
+          + [5]Finance & risk
+          + [6]Leiderschap organisatie & cultuur
+          + [7]Duurzame dienstverlening
+          + [8]Business architectuur
+          + [9]Zorg
+          + IT oplossingen
+          + [10]Applicatie-integratie & middleware
+          + [11]Requirements, testing & user adoption
+          + [12]Vernieuwing van ICT
+          + [13]Beheer, hosting & outsourcing
+          + [14]Infrastructuur
+          + [15]Pakketimplementatie
+          + [16]Grip op ICT
+          + [17]Softwareontwikkeling
+          + Technologieën
+          + [18]Microsoft
+          + [19]Oracle
+          + [20]Java
+          + [21]IBM
+          + [22]SAP
+          + [23]Salesforce
+          + [24]Proven technologies
+          + [25]TIBCO en open source
+          + Thema's
+          + [26]Big data
+          + [27]Cloud
+          + [28]Mobile
+          + [29]Security
+          + [30]SmartSourcing
+          + [31]Social media
+          + [32]Unified Communications & Collaboration
+     * Markten
+          + Industrie
+          + [33]Carriers & Mainports
+          + [34]Chemicals
+          + [35]Energy & Utilities
+          + [36]Food & Beverage
+          + [37]High Technology
+          + [38]Pharmaceuticals
+          + [39]Telecom & media
+          + Financiële dienstverlening
+          + [40]Banken
+          + [41]Pensioenen en Verzekeren
+          + Overheid
+          + [42]Binnenlands Bestuur
+          + [43]Ministerie van Economische Zaken
+          + [44]Ministerie van Infrastructuur & Milieu
+          + [45]Lokale Overheid
+          + [46]Onderwijs
+          + [47]Openbare Orde en Veiligheid
+          + [48]Werk en Inkomen
+          + Zorg
+          + [49]Volksgezondheid, Welzijn en Sport
+          + [50]Zorgaanbieders
+          + [51]Zorgverzekeraars
+
+     * [52]Blog |
+     * [53]Werken bij |
+     * [54]Over Ordina |
+     * [55]Locaties
+
+   ____________________ Submit
+   [Navigatie_____________________________]
+
+ORDINA BLOGT
+
+     * [56]Ordina
+     * > Blogs
+     * > 2013
+     * > maart
+     * > Building Windows Services with C# and Topshelf
+
+   Edo van Asseldonk, 6 maart 2013
+
+Building Windows Services with C# and Topshelf
+
+   The quickstart on the Topshelf site is only showing the real basics of
+   getting a Windows Service up and running.
+
+   [57]quickstart
+
+   There are a couple of importants details not touched, that I will write
+   about in this blog.
+
+   Create a new Solution with the Console Application Template. Because
+   Topshelf is doing the plumbing, we don't need to use the Windows
+   Service template anymore.
+
+   002
+
+
+   If you're using Visual Studio 2010, don't forget to turn off Client
+   Profile
+
+   When the solution is created it will look like this:
+
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+   namespace XmplWindowsService
+    {
+        class Program
+        {
+            static void Main(string[] args)
+            {
+            }
+        }
+    }
+
+   The Main method is the entrypoint of the Windows Service. This is where
+   we will setup Topshelf. But before we do that, we have to create a
+   class that will do the actual work that will be done inside the Windows
+   Service. So let's create a new class:
+
+   public class MyService
+
+   {
+
+   }
+
+   This class must have a Start() and a Stop() method:
+
+   public class MyService
+
+   {
+
+      public void Start()
+
+      {
+
+      }
+
+      public void Stop()
+
+      {
+
+      }
+    }
+
+   This is what we have so far:
+
+
+   using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+   namespace XmplWindowsService
+
+   {
+        class Program
+        {
+            static void Main(string[] args)
+            {
+            }
+       }
+
+              public class MyService
+        {
+            public void Start()
+            {
+            }
+            public void Stop()
+            {
+            }
+        }
+    }
+
+   Now we can install Topshelf into the project:
+
+   004
+
+
+   Let's setup Topshelf inside the Main method of the Console
+   Application:
+
+   static void Main(string[] args)
+    {
+       HostFactory.Run(hostConfigurator =>
+       {
+          hostConfigurator.Service<MyService>(serviceConfigurator =>
+          {
+             serviceConfigurator.ConstructUsing(() => new MyService());
+             serviceConfigurator.WhenStarted(myService =>
+   myService.Start());
+             serviceConfigurator.WhenStopped(myService =>
+   myService.Stop());
+          });
+
+         hostConfigurator.RunAsLocalSystem();
+
+         hostConfigurator.SetDisplayName("MyService");
+          hostConfigurator.SetDescription("MyService using Topshelf");
+          hostConfigurator.SetServiceName("MyService");
+       });
+    }
+
+   When we run the application, we will see this:
+
+   Configuration Result:
+    [Success] Name MyService
+    [Success] Description MyService using Topshelf
+    [Success] ServiceName MyService
+   Topshelf v3.1.106.0, .NET Framework v4.0.30319.18033
+   The MyService service is now running, press Control+C to exit.
+
+   It shows us its name, description and servicename, just like we
+   configured. We can see the version numbers, and the last line tells us
+   how the stop the Windows Service, when debugging or when it's running
+   as console application. Offcourse we can't press Control+C to stop it
+   when it's running as a Windows Service.
+
+   Now the MyService class isn't doing anything just yet. So now it's time
+   to give MyService some work to do. Let's for example write something to
+   screen every second:
+
+   public class MyService
+    {
+       public void Start()
+       {
+          while (true)
+          {
+             Console.WriteLine("I am working");
+             System.Threading.Thread.Sleep(1000);
+          }
+       }
+
+      public void Stop()
+       {
+       }
+    }
+
+   When we start the app we will see it write "I am working" to the screen
+   every second. However, when we press Control+C the application will not
+   stop. Topshelf will try to stop MyService, but won't succeed since
+   MyService is in a never ending while-loop.
+
+   So we have to have a signal to let the loop know when to stop.
+   Therefore we add a boolean named doWork, and set it to true when we
+   start the loop. The doWork boolean will be set to false when we press
+   Control+C and Topshelf calls the Stop() method.
+
+   public class MyService
+    {
+       private bool _doWork;
+
+      public void Start()
+       {
+          _doWork = true;
+
+         while (_doWork)
+          {
+             Console.WriteLine("I am working");
+             System.Threading.Thread.Sleep(1000);
+          }
+       }
+
+      public void Stop()
+       {
+          _doWork = false;
+       }
+    }
+
+   When we start the debugger and press Control+C, the application will
+   quit as it should.
+
+   Unfortunately the code is still nog perfect. Remember when we first
+   started the application where MyService did nothing and Topshelf wrote
+   this to the console:
+
+   Configuration Result:
+   [Success] Name MyService
+   [Success] Description MyService using Topshelf
+   [Success] ServiceName MyService
+   Topshelf v3.1.106.0, .NET Framework v4.0.30319.18033
+   The MyService service is now running, press Control+C to exit.
+
+   Now that MyService is running in a while loop, the last line is not
+   printed anymore. Well actually it is printed after we stopped the
+   service.
+
+   Configuration Result:
+    [Success] Name MyService
+    [Success] Description MyService using Topshelf
+    [Success] ServiceName MyService
+    Topshelf v3.1.106.0, .NET Framework v4.0.30319.18033
+    I am working
+    I am working
+    I am working
+    Control+C detected, attempting to stop service.
+    The MyService service is now running, press Control+C to exit.
+    The MyService service has stopped.
+
+   The message that the service is running, is printed after the Start()
+   method of MyService returns, but that only happens when we stop the
+   service. If we would use a Timer to do something every second it
+   wouldn't be a problem, because a Timer is doing it's work
+   asynchronously. And when we read messages from a queue async it
+   wouldn't be a problem either. But I think it's good to show how we can
+   make the Start() method in this example return immediately too.
+
+System.Threading.Tasks
+
+   We are going to use the System.Threading.Tasks namespace to make
+   MyService execute asynchronous work.
+
+   First let's move the content of the Start() method, to another method
+   called DoWork():
+
+   private void DoWork()
+
+   {
+       _doWork = true;
+
+      while (_doWork)
+       {
+          Console.WriteLine("I am working");
+          System.Threading.Thread.Sleep(1000);
+       }
+    }
+
+   we are going to call the DoWork() method with a Task. Let's create this
+   task in the constructor of MyService:
+
+   public class MyService
+    {
+       bool _doWork;
+       readonly Task _task;
+
+      public MyService()
+       {
+          _task = new Task(DoWork);
+       }
+
+      ...
+    }
+
+   Now we can start this Task from the Start() method of MyService:
+
+   public void Start()
+    {
+       _task.Start();
+    }
+
+   This is what MyService looks like now:
+
+    public class MyService
+    {
+       bool _doWork;
+       readonly Task _task;
+
+      public MyService()
+       {
+          _task = new Task(DoWork);
+       }
+
+      public void Start()
+       {
+          _task.Start();
+       }
+
+      public void Stop()
+       {
+          _doWork = false;
+       }
+
+      private void DoWork()
+       {
+          _doWork = true;
+
+         while (_doWork)
+          {
+             Console.WriteLine("I am working");
+             System.Threading.Thread.Sleep(1000);
+          }
+       }
+    }
+
+   When we run the application, we will see this:
+
+   Configuration Result:
+    [Success] Name MyService
+    [Success] Description MyService using Topshelf
+    [Success] ServiceName MyService
+    Topshelf v3.1.106.0, .NET Framework v4.0.30319.18033
+    The MyService service is now running, press Control+C to exit.
+    I am working
+    I am working
+
+   Exactly what we want. The message that MyService is running is coming
+   first, and then the "I am working" messages are written.
+
+   But it's still not completely right. Let me tell you why.
+
+Quit before work is finished
+
+   The problem that we have now is that the Windows Service will quit if
+   you press Control+C, but it doesn't take into account any work in
+   progress. This can be demoed quite easily.
+
+   Add some more work to the DoWork() method:
+
+   private void DoWork()
+    {
+       _doWork = true;
+
+      while (_doWork)
+       {
+         Console.WriteLine("I am working");
+
+         Console.WriteLine("   Step 1");
+         System.Threading.Thread.Sleep(1000);
+
+         Console.WriteLine("   Step 2");
+         System.Threading.Thread.Sleep(1000);
+
+         Console.WriteLine("   Step 3");
+         System.Threading.Thread.Sleep(1000);
+
+         Console.WriteLine("   Step 4");
+          System.Threading.Thread.Sleep(1000);
+
+         Console.WriteLine("   Step 5");
+          System.Threading.Thread.Sleep(1000);
+       }
+    }
+
+   If we run the application, and then press Control+C after step one, we
+   can get output like this:
+
+   Configuration Result:
+
+   [Success] Name MyService
+    [Success] Description MyService using Topshelf
+    [Success] ServiceName MyService
+    Topshelf v3.1.106.0, .NET Framework v4.0.30319.18033
+
+   The MyService service is now running, press Control+C to exit.
+    I am working
+      Step 1
+      Step 2
+      Step 3
+      Step 4
+      Step 5
+    I am working
+      Step 1
+    Control+C detected, attempting to stop service.
+    The MyService service has stopped.
+
+   The yellow marked lines are important. You can see that step 2, 3, 4
+   and 5 are not written, because the Service has stopped. However, I only
+   want the service to be stopped when step 5 is finished. The best way to
+   do this is remove the _doWork boolean, and use a Cancellationtoken.
+
+   Let's switch back to the constructor of MyService, and create a
+   CancellationToken that we can use in the Task:
+
+   public class MyService
+    {
+       readonly CancellationTokenSource _cancellationTokenSource;
+       readonly CancellationToken _cancellationToken;
+       readonly Task _task;
+
+      public MyService()
+       {
+          _cancellationTokenSource = new CancellationTokenSource();
+          _cancellationToken = _cancellationTokenSource.Token;
+
+         _task = new Task(DoWork, _cancellationToken);
+       }
+
+      ...
+    }
+
+   Now we can use the CancellationTokenSource in the DoWork() method:
+
+   private void DoWork()
+
+   {
+
+      while (!_cancellationTokenSource.IsCancellationRequested)
+
+      {
+
+         Console.WriteLine("I am working");
+
+         Console.WriteLine("   Step 1");
+          System.Threading.Thread.Sleep(1000);
+
+         Console.WriteLine("   Step 2");
+          System.Threading.Thread.Sleep(1000);
+
+         Console.WriteLine("   Step 3");
+          System.Threading.Thread.Sleep(1000);
+
+         Console.WriteLine("   Step 4");
+          System.Threading.Thread.Sleep(1000);
+
+         Console.WriteLine("   Step 5");
+          System.Threading.Thread.Sleep(1000);
+
+      }
+
+   }
+
+   And we can cancel the Task in the Stop() method:
+
+   public void Stop()
+
+   {
+
+      _cancellationTokenSource.Cancel();
+
+      _task.Wait();
+
+   }
+
+   If we run the application, and then press Control+C after step one, we
+   get exactly what we want:
+
+   Configuration Result:
+
+   [Success] Name MyService
+
+   [Success] Description MyService using Topshelf
+
+   [Success] ServiceName MyService
+
+   Topshelf v3.1.106.0, .NET Framework v4.0.30319.18033
+
+   The MyService service is now running, press Control+C to exit.
+
+   I am working
+
+     Step 1
+
+     Step 2
+
+     Step 3
+
+     Step 4
+
+     Step 5
+
+   I am working
+
+     Step 1
+
+   Control+C detected, attempting to stop service.
+
+     Step 2
+
+     Step 3
+
+     Step 4
+
+     Step 5
+
+   The MyService service has stopped.
+
+Conclusion
+
+   In this blog I've shown how easy it is to create a Windows Service in
+   C# and the Topshelf nuget package. I've also shown how you can use a
+   Task to start an asynchronous proces to do some work, and how the task
+   can be stopped in a clean way, without leaving partial executed work
+   behind.
+
+Deel deze post
+
+     * [58]Share
+     * [59]Tweet
+     * [60]Share
+     * [61]e-mail
+
+REACTIES
+
+   Er zijn nog geen reacties op deze post.
+
+   Plaats een reactie
+
+   verplicht icoon verplichte velden
+     * ____________________
+       ____________________
+     *
+       ____________________
+       ____________________
+
+   [62]Plaats mijn reactie
+
+   Uw gegevens worden niet verstrekt aan derden.
+   [edo van asseldonk.png]
+   Edo van Asseldonk Software developer +31(0)653578179
+   [63]Contact
+   Over Edo van Asseldonk
+
+   Edo is softwarearchitect en .Net developer. Houdt zich met name bezig
+   met Microsoft technologie en blogt over de dagelijkse zaken die hij
+   tijdens het bouwen van applicaties voor klanten tegenkomt.
+   [64]Meer van Edo van Asseldonk
+
+Interessant?
+
+   Lees dan meer blogs over:
+
+   [65]Microsoft
+
+     * [66]Facebook
+     * [67]LinkedIn
+     * [68]Twitter
+     * [69]YouTube
+
+     * [70]Copyright
+     * [71]Disclaimer
+     * [72]Privacy statement
+
+References
+
+   Visible links
+   1. https://plus.google.com/111411774315793936611
+   2. file://localhost/
+   3. file://localhost/nl-nl/diensten-en-oplossingen/business-oplossingen/performance-management-en-bi/
+   4. file://localhost/nl-nl/diensten-en-oplossingen/business-oplossingen/customer-experience-en-innovation/
+   5. file://localhost/nl-nl/diensten-en-oplossingen/business-oplossingen/finance-en-risk/
+   6. file://localhost/nl-nl/diensten-en-oplossingen/business-oplossingen/leiderschap-organisatie-en-cultuur/
+   7. file://localhost/nl-nl/diensten-en-oplossingen/business-oplossingen/duurzaamheid/
+   8. file://localhost/nl-nl/diensten-en-oplossingen/business-oplossingen/business-architectuur/
+   9. file://localhost/nl-nl/diensten-en-oplossingen/business-oplossingen/zorg/
+  10. file://localhost/nl-nl/diensten-en-oplossingen/it-oplossingen/applicatie-integratie-en-middleware/
+  11. file://localhost/nl-nl/diensten-en-oplossingen/it-oplossingen/requirements-testing-en-user-adoption/
+  12. file://localhost/nl-nl/diensten-en-oplossingen/it-oplossingen/vernieuwing-van-ict/
+  13. file://localhost/nl-nl/diensten-en-oplossingen/it-oplossingen/beheer-hosting-en-outsourcing/
+  14. file://localhost/nl-nl/diensten-en-oplossingen/it-oplossingen/infrastructuur/
+  15. file://localhost/nl-nl/diensten-en-oplossingen/it-oplossingen/pakketimplementatie/
+  16. file://localhost/nl-nl/diensten-en-oplossingen/it-oplossingen/grip-op-ict/
+  17. file://localhost/nl-nl/diensten-en-oplossingen/it-oplossingen/software-ontwikkeling/
+  18. file://localhost/nl-nl/diensten-en-oplossingen/technologieen/microsoft/
+  19. file://localhost/nl-nl/diensten-en-oplossingen/technologieen/oracle/
+  20. file://localhost/nl-nl/diensten-en-oplossingen/technologieen/java/
+  21. file://localhost/nl-nl/diensten-en-oplossingen/technologieen/ibm/
+  22. file://localhost/nl-nl/diensten-en-oplossingen/technologieen/sap/
+  23. file://localhost/nl-nl/diensten-en-oplossingen/technologieen/salesforce/
+  24. file://localhost/nl-nl/diensten-en-oplossingen/technologieen/proven-technologies/
+  25. file://localhost/nl-nl/diensten-en-oplossingen/technologieen/tibco-en-open-source/
+  26. file://localhost/nl-nl/diensten-en-oplossingen/themas/big-data/
+  27. file://localhost/nl-nl/diensten-en-oplossingen/themas/cloud/
+  28. file://localhost/nl-nl/diensten-en-oplossingen/themas/mobile/
+  29. file://localhost/nl-nl/diensten-en-oplossingen/themas/security/
+  30. file://localhost/nl-nl/diensten-en-oplossingen/themas/smartsourcing/
+  31. file://localhost/nl-nl/diensten-en-oplossingen/themas/social-media/
+  32. file://localhost/nl-nl/diensten-en-oplossingen/themas/ucc/
+  33. file://localhost/nl-nl/markten/industrie/carriers-en-mainports/
+  34. file://localhost/nl-nl/markten/industrie/chemicals/
+  35. file://localhost/nl-nl/markten/industrie/energy-en-utilities/
+  36. file://localhost/nl-nl/markten/industrie/food-en-beverage/
+  37. file://localhost/nl-nl/markten/industrie/high-technology/
+  38. file://localhost/nl-nl/markten/industrie/pharmaceuticals/
+  39. file://localhost/nl-nl/markten/industrie/telecom-en-media/
+  40. file://localhost/nl-nl/markten/financiele-dienstverlening/banken/
+  41. file://localhost/nl-nl/markten/financiele-dienstverlening/pensioenen-en-verzekeren/
+  42. file://localhost/nl-nl/markten/overheid/binnenlands-bestuur/
+  43. file://localhost/nl-nl/markten/overheid/economische-zaken/
+  44. file://localhost/nl-nl/markten/overheid/infrastructuur-en-milieu/
+  45. file://localhost/nl-nl/markten/overheid/lokale-overheid/
+  46. file://localhost/nl-nl/markten/overheid/onderwijs/
+  47. file://localhost/nl-nl/markten/overheid/openbare-orde-en-veiligheid/
+  48. file://localhost/nl-nl/markten/overheid/werk-en-inkomen/
+  49. file://localhost/nl-nl/markten/zorg/volksgezondheid-en-welzijn/
+  50. file://localhost/nl-nl/markten/zorg/zorgaanbieders/
+  51. file://localhost/nl-nl/markten/zorg/zorgverzekeraars/
+  52. file://localhost/nl-nl/zoekresultaten/?q=&page=0&sort=1&t=532480
+  53. http://www.werkenbijordina.nl/nl-nl/
+  54. http://www.ordina.com/nl-nl/
+  55. file://localhost/nl-nl/locaties/
+  56. file://localhost/nl-nl/
+  57. http://docs.topshelf-project.com/en/latest/configuration/quickstart.html
+  58. http://www.facebook.com/share.php?u=http%3a%2f%2fwww.ordina.nl%2fnl-nl%2fblogs%2f2013%2fmaart%2fbuilding-windows-services-with-c-and-topshelf&t=Building+Windows+Services+with+C%23+and+Topshelf
+  59. http://twitter.com/home?status=Building+Windows+Services+with+C%23+and+Topshelf%20-%20http%3a%2f%2fwww.ordina.nl%2fnl-nl%2fblogs%2f2013%2fmaart%2fbuilding-windows-services-with-c-and-topshelf
+  60. http://www.linkedin.com/shareArticle?url=http%3a%2f%2fwww.ordina.nl%2fnl-nl%2fblogs%2f2013%2fmaart%2fbuilding-windows-services-with-c-and-topshelf
+  61. mailto:?subject=Building%20Windows%20Services%20with%20C# and Topshelf&body=http%3a%2f%2fwww.ordina.nl%2fnl-nl%2fblogs%2f2013%2fmaart%2fbuilding-windows-services-with-c-and-topshelf
+  62. javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("placeholdermain_0$PlaatsReactieButton", "", true, "BlogReactie", "", false, true))
+  63. file://localhost/Pages/Contactformulier.aspx?Persoon={2CCABF89-BAB6-4AEB-8213-71F5BEF5D632}&from={3A0B7E59-9FB3-4749-A5F5-6E3A90B6DF7E}&IFrame=true
+  64. file://localhost/nl-nl/zoekresultaten/?q=&page=0&sort=1&t=-1&advquery=contactpersoonnames%3aEdo%3fvan%3fAsseldonk&advquerydesc=Edo+van+Asseldonk
+  65. file://localhost/nl-nl/zoekresultaten/?q=&page=0&sort=1&t=532480&advquery=tagsnames%3aMicrosoft&advquerydesc=Microsoft
+  66. http://www.facebook.com/ordina
+  67. http://www.linkedin.com/company/ordina
+  68. http://twitter.com/ordina
+  69. http://www.youtube.com/OrdinaNV
+  70. file://localhost/nl-nl/copyright/
+  71. file://localhost/nl-nl/disclaimer/
+  72. file://localhost/nl-nl/privacy-statement/
+
+   Hidden links:
+  74. http://nl.linkedin.com/in/edovanasseldonk

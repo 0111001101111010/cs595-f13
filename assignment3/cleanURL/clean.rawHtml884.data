@@ -1,0 +1,148 @@
+[1]Solved by Flexbox
+
+Cleaner, hack-free CSS
+
+   [2]  View Project Source [3]  Spread the Word
+
+Introduction
+
+   CSS has been lacking proper layout mechanisms for far too long.
+   Transitions, animations, filters, all of these are great and useful
+   additions to the language, but they don't address the major problems
+   that Web developers have been complaining about for what seems like an
+   eternity.
+
+   Finally, thanks to [4]Flexbox, we have a solution.
+
+   This site is not another CSS framework. Instead, its purpose is to
+   showcase problems once hard or impossible to solve with CSS alone, now
+   made trivially easy with Flexbox. And with Internet Explorer 11 and
+   Safari 6.1 now in beta, Flexbox will soon be supported in every modern
+   browser.
+
+   Check out the demos below. View the styles in the Web inspector or dive
+   into [5]the source to see just how easy CSS layout will become once
+   Flexbox becomes mainstream.
+
+Showcase
+
+     * [6]Better, Simpler Grids
+
+Better, Simpler Grids
+       Flexbox gives us most of the features we want from a grid system
+       out of the box. And sizing and alignment are just one or two
+       properties away.
+     * [7]Media Object
+
+The Media Object
+       Create media objects with fixed or varying figure sizes without
+       worrying about overflow, clearfixing, or block formatting context
+       hacks.
+     * [8]Input Add-ons
+
+Input Add-ons
+       Creating full-width, fluid input/button pairs has been impossible
+       for most of the history of CSS. With Flexbox it couldn't be easier.
+     * [9]Sticky Footer
+
+Sticky Footer
+       Getting your footer to stick to the bottom of sparsely contented
+       pages has always been tricky. And if the footer's height is
+       unknown, it's basically impossible. Not so anymore.
+     * [10]Holy Grail Layout
+
+Holy Grail Layout
+       This classic problem has been challenging CSS hackers for years,
+       yet none of the historical solutions have fully solved it. With
+       Flexbox, it's finally possible.
+     * [11]Vertical Centering
+
+Vertical Centering
+       A lack of proper vertical centering has been the butt of almost
+       every CSS joke ever told. While it's technically always been mostly
+       possible, it's never been very intuitive — until now.
+
+Flexbox Browser Support
+
+     * Chrome
+       21+
+     * Opera
+       12.1+
+     * Firefox
+       22+
+     * IE
+       11+ (beta)
+     * Safari
+       6.1+ (beta)
+
+  Caveats and Known Issues
+
+     * IE 10 has Flexbox support but for a [12]draft version of the
+       current spec: (display:flexbox).
+     * Safari 6 and earlier support the [13]original Flexbox syntax, which
+       is now obsolete: (display:box).
+     * Firefox does not support multi-line flexboxes. See [14]this bug for
+       more details.
+     * For a full browser support comparison, check out
+       [15]caniuse.com/flexbox
+
+About the Code
+
+   In addition to showcasing the power of Flexbox, this site also aims to
+   be an example of modern CSS design and architectural practices. Namely
+   modular, reusable style rules built on a predictable and testable
+   naming convention.
+
+   All of the CSS code in these examples make use of the [16]SUIT naming
+   conventions developed by [17]Nicolas Gallagher and are based on OOCSS
+   and BEM methodologies. Each example includes one or more reuseable CSS
+   components allowing you to adapt or copy these patterns in to your own
+   projects. Links are provided to their respective components on each
+   example page.
+
+   This site also uses the excellent [18]autoprefixer library by
+   [19]Andrey Sitnik, which takes care of vendor prefixing the CSS, so you
+   don't have to think about it.
+
+   If you find a mistake or would like to suggest an additional example,
+   feel free to open an issue or submit a pull request on [20]Github.
+
+   IFRAME:
+   [21]http://ghbtns.com/github-btn.html?user=philipwalton&repo=solved-by-
+   flexbox&type=watch&count=true
+
+   [22]Tweet [23]@philwalton
+
+   Created and maintained by [24]Philip Walton © 2013. Source code and
+   examples dual licensed under [25]MIT and [26]GPL. Website and
+   documentation licensed under [27]CC BY 3.0.
+
+References
+
+   1. http://philipwalton.github.io/solved-by-flexbox/
+   2. https://github.com/philipwalton/solved-by-flexbox
+   3. http://twitter.com/intent/tweet?text=A%20showcase%20of%20traditionally%20hard%20CSS%20problems,%20easily%20solved%20using%20flexbox.&url=http://philipwalton.github.com/solved-by-flexbox/&via=philwalton
+   4. http://www.w3.org/TR/css3-flexbox/
+   5. https://github.com/philipwalton/solved-by-flexbox
+   6. http://philipwalton.github.io/solved-by-flexbox/demos/grids/
+   7. http://philipwalton.github.io/solved-by-flexbox/demos/media-object/
+   8. http://philipwalton.github.io/solved-by-flexbox/demos/input-add-ons/
+   9. http://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+  10. http://philipwalton.github.io/solved-by-flexbox/demos/holy-grail/
+  11. http://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/
+  12. http://www.w3.org/TR/2012/WD-css3-flexbox-20120322/
+  13. http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/
+  14. https://bugzilla.mozilla.org/show_bug.cgi?id=702508
+  15. http://caniuse.com/flexbox
+  16. https://github.com/suitcss/suit
+  17. http://nicolasgallagher.com/
+  18. https://github.com/ai/autoprefixer
+  19. http://sitnik.ru/
+  20. https://github.com/philipwalton/solved-by-flexbox
+  21. http://ghbtns.com/github-btn.html?user=philipwalton&repo=solved-by-flexbox&type=watch&count=true
+  22. https://twitter.com/share
+  23. https://twitter.com/philwalton
+  24. http://philipwalton.com/
+  25. https://github.com/philipwalton/solved-by-flexbox/blob/master/LICENSE-MIT
+  26. https://github.com/philipwalton/solved-by-flexbox/blob/master/LICENSE-GPL
+  27. http://creativecommons.org/licenses/by/3.0/

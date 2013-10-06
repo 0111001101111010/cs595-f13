@@ -1,0 +1,528 @@
+   #[1]Stack Overflow [2]Feed for question 'How to access the first and
+   the last elements in a dictionary python?'
+
+   [3]Stack Exchange
+   [4]sign up | [5]log in | [6]careers 2.0 |
+   ____________________________
+   [7]Stack Overflow
+     * [8]Questions
+     * [9]Tags
+     * [10]Tour
+     * [11]Users
+
+     * [12]Ask Question
+
+   [13]Tell me more ×
+   Stack Overflow is a question and answer site for professional and
+   enthusiast programmers. It's 100% free, no registration required.
+
+[14]How to access the first and the last elements in a dictionary python?
+
+   up vote 1 down vote [15]favorite
+
+   Before posting, I have already gone through [16]Python access to first
+   element in dictionary, butI'm uncertain about this.
+
+   I have a long dictionary and I've to get the values of its first and
+   last keys. I can use dict[dict.keys()[0]] and dict[dict.keys()[-1]] to
+   get the first and last elements, but since the key:value pairs are
+   outputted in a random form(as in the positioning of the key:value pairs
+   is random), will the solution provided in this link always work?
+   [17]python
+
+   [18]share|[19]improve this question
+                                      asked Sep 26 at 13:51
+                                      [20]user1162512
+                                      198112
+
+5 Answers
+
+   [21]active [22]oldest [23]votes
+   up vote 6 down vote accepted
+
+   Use an [24]OrderedDict, because a normal dictionary doesn't preserve
+   the insertion order of its elements when traversing it. Here's how:
+# import the right class
+from collections import OrderedDict
+
+# create and fill the dictionary
+d = OrderedDict()
+d['first']  = 1
+d['second'] = 2
+d['third']  = 3
+
+# retrieve key/value pairs
+els = list(d.items()) # explicitly convert to a list, in case it's Python 3.x
+
+# get first inserted element
+els[0]
+=> ('first', 1)
+
+# get last inserted element
+els[-1]
+=> ('third', 3)
+
+
+   [25]share|[26]improve this answer
+   [27]edited Sep 26 at 15:05
+   answered Sep 26 at 13:59
+   [28]Óscar López
+   70.5k658112
+   up vote 1 down vote
+
+   There is no such thing as "first" or "last" key in dictionary, which
+   does not guarantee any particular ordering. So there is no possibility
+   to get "first" or "last" element. You can only create your own wrapper
+   around python dict, which will store the information about "first" and
+   "last" object
+
+   Something like
+class MyDict:
+
+  def __init__(self):
+    self.first=None
+    self.last=None
+    self.dict={}
+
+  def add( key, value ):
+    if self.first==None: self.first=key
+    self.last=key
+    self.dict[key]=value
+
+  def get( key ):
+    return self.dict[key]
+
+  def first():
+    return self.dict[ self.first ]
+
+  def last():
+    return self.dict[ self.last ]
+
+   Although as it was pointed out in the comment there is already a class
+   OrderedDict:
+   [29]http://docs.python.org/2/library/collections.html#collections.Order
+   edDict
+
+     Ordered dictionaries are just like regular dictionaries but they
+     remember the order that items were inserted. When iterating over an
+     ordered dictionary, the items are returned in the order their keys
+     were first added.
+
+
+   [30]share|[31]improve this answer
+   [32]edited Sep 26 at 13:59
+   answered Sep 26 at 13:54
+   [33]lejlot
+   4,895423
+
+   4
+     Or use collections.OrderedDict, if its definition of "first" and "last"
+     coincides with OP's. – [34]Bogdan Sep 26 at 13:55
+     And how will I create a wrapper? Any demo? – [35]user1162512 Sep 26 at
+     13:55
+   up vote 1 down vote
+
+   Python dictionaries are unordered, so "first" and "last" isn't defined.
+   Instead, you can sort your keys, and then access the element associated
+   with the first and last key in your sorted set.
+
+   EDIT:
+
+   The OP clarified that by "first" and "last" he meant the order in which
+   keys were added to the dictionary. collections.OrderedDict should work
+   for this case.
+
+   [36]share|[37]improve this answer
+   [38]edited Sep 26 at 14:03
+   answered Sep 26 at 13:53
+   [39]Codie CodeMonkey
+   3,324522
+     Thats what I said. Is there any solution for this? – [40]user1162512
+     Sep 26 at 13:54
+     @user1162512 I've added a suggestion for sorting the keys, but that's
+     the best you can do. – [41]Codie CodeMonkey Sep 26 at 13:56
+     What if I store my dictionary as dict= {"xyz":294,"a":1,"rah":129}. On
+     what basis would I sort the keys in order to get the access of xyz and
+     rah. – [42]user1162512 Sep 26 at 13:57
+     PS: I dont want to search using dict["xyz"] – [43]user1162512 Sep 26 at
+     13:57
+
+   1
+     @user1162512: the second you write {"xyz":294,"a":1,"rah":129}, you've
+     lost any information about the order, because that's a dictionary
+     literal. As mentioned elsewhere in this thread, you can use
+     collections.OrderedDict for an insertion-order variant. – [44]DSM Sep
+     26 at 13:58
+   [45]show 2 more comments
+   up vote 0 down vote
+
+     CPython implementation detail: Keys and values are listed in an
+     arbitrary order which is non-random, varies across Python
+     implementations, and depends on the dictionaryâs history of
+     insertions and deletions. -- [46]dict documentation
+
+   However I highly recommend to not rely on order of items in
+   [47]associative array data structure (dict is one of them) since
+   frequently there is no single obvious way to order keys. For example in
+   python "21" < "3" while 21 > 3.
+
+   [48]share|[49]improve this answer
+                                    answered Sep 26 at 13:56
+                                    [50]Vladimir
+                                    1,8291021
+   up vote 0 down vote
+
+   def dictionarySortingExample(yourDictionary):
+#get all the keys and store them to a list
+allKeys = yourDictionary.keys()
+
+#sort the list of keys
+allKeysSorted = sorted(allKeys)
+
+#retrieve the first and last keys in the list
+firstKey = allKeysSorted[0]
+lastKey = allKeysSorted[-1]
+
+#retrive the values from the dictionary
+firstValue = yourDictionary[firstKey]
+lastValue = yourDictionary[lastKey]
+
+print "---Sorted Dictionary---"
+print "original dictionary: " + str(yourDictionary)
+print "list of all keys: " + str(allKeys)
+print "ordered list of all keys: " + str(allKeysSorted)
+print "first item in sorted dictionary: " + str(firstKey) + ":" + str(firstValue
+)
+print "last item in sorted dictionary: " + str(lastKey) + ":" + str(lastValue)
+
+example dictionary sorting
+
+   sampleDictionary = {4:"four", "Cranberry":2, 3:"three", 2:"two",
+   "Apple":3, 1:"one", "Bananna":1}
+   dictionarySortingExample(sampleDictionary)
+
+   [51]share|[52]improve this answer
+                                    answered Sep 26 at 14:30
+                                    [53]Stonewall_Jefferson
+                                    433
+
+Your Answer
+
+
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+
+   draft saved
+   draft discarded
+   ____________________
+
+Sign up or [54]login
+
+   Sign up using Google
+
+   Sign up using Facebook
+
+   Sign up using Stack Exchange
+   [BUTTON Input] (not implemented)______
+
+Post as a guest
+
+   Name ______________________________
+   Email ______________________________ required, but not shown
+
+Post as a guest
+
+   Name ______________________________
+   Email ______________________________ required, but not shown
+   Post Your Answer [55]discard
+
+   By posting your answer, you agree to the [56]privacy policy and
+   [57]terms of service.
+
+Not the answer you're looking for? Browse other questions tagged [58]python
+or [59]ask your own question.
+
+   tagged
+   [60]python × 224668
+
+   asked
+
+         5 days ago
+
+   viewed
+
+         66 times
+
+   active
+
+         [61]5 days ago
+
+Linked
+
+   48
+   [62]Python access to first element in dictionary
+
+Related
+
+   767
+   [63]How can I represent an 'enum' in Python?
+   569
+   [64]How can I merge (union) two Python dictionaries in a single
+   expression?
+   1073
+   [65]How can I make a chain of function decorators in Python?
+   48
+   [66]Python access to first element in dictionary
+   5
+   [67]Accessing elements of python dictionary
+   1
+   [68]accessing specific elements from python dictionary
+   0
+   [69]python dictionaries and django
+   9
+   [70]Pythonic way to access arbitrary element from dictionary
+   2
+   [71]Python first and last element from array
+   2
+   [72]Last Key in Python Dictionary
+   [73]question feed
+   lang-py
+
+   [74]about [75]help [76]badges [77]blog [78]chat [79]data [80]legal
+   [81]privacy policy [82]jobs [83]advertising info mobile [84]contact us
+   [85]feedback
+            Technology            Life / Arts Culture / Recreation Science Other
+  1. [86]Stack Overflow
+  2. [87]Server Fault
+  3. [88]Super User
+  4. [89]Web Applications
+    5. [90]Ask Ubuntu
+    6. [91]Webmasters
+    7. [92]Game Development
+    8. [93]TeX - LaTeX
+
+  1. [94]Programmers
+    2. [95]Unix & Linux
+    3. [96]Ask Different (Apple)
+    4. [97]WordPress Answers
+    5. [98]Geographic Information Systems
+    6. [99]Electrical Engineering
+    7. [100]Android Enthusiasts
+    8. [101]IT Security
+
+  1. [102]Database Administrators
+    2. [103]Drupal Answers
+    3. [104]SharePoint
+    4. [105]User Experience
+    5. [106]Mathematica
+    6. [107]more (13)
+
+  1. [108]Photography
+    2. [109]Science Fiction & Fantasy
+    3. [110]Seasoned Advice (cooking)
+    4. [111]Home Improvement
+    5. [112]more (13)
+
+  1. [113]English Language & Usage
+    2. [114]Skeptics
+    3. [115]Mi Yodeya (Judaism)
+    4. [116]Travel
+    5. [117]Christianity
+    6. [118]Arqade (gaming)
+    7. [119]Bicycles
+    8. [120]Role-playing Games
+    9. [121]more (21)
+
+  1. [122]Mathematics
+    2. [123]Cross Validated (stats)
+    3. [124]Theoretical Computer Science
+    4. [125]Physics
+    5. [126]MathOverflow
+    6. [127]more (7)
+
+  1. [128]Stack Apps
+    2. [129]Meta Stack Overflow
+    3. [130]Area 51
+    4. [131]Stack Overflow Careers
+
+   site design / logo © 2013 stack exchange inc; user contributions
+   licensed under [132]cc-wiki with [133]attribution required
+   rev 2013.10.1.1045
+
+   Stack Overflow works best with JavaScript enabled
+
+References
+
+   Visible links
+   1. file://localhost/opensearch.xml
+   2. file://localhost/feeds/question/19030179
+   3. http://stackexchange.com/
+   4. file://localhost/users/login?returnurl=%2fquestions%2f19030179%2fhow-to-access-the-first-and-the-last-elements-in-a-dictionary-python
+   5. file://localhost/users/login?returnurl=%2fquestions%2f19030179%2fhow-to-access-the-first-and-the-last-elements-in-a-dictionary-python
+   6. http://careers.stackoverflow.com/
+   7. file://localhost/
+   8. file://localhost/questions
+   9. file://localhost/tags
+  10. file://localhost/about
+  11. file://localhost/users
+  12. file://localhost/questions/ask
+  13. file://localhost/about
+  14. file://localhost/questions/19030179/how-to-access-the-first-and-the-last-elements-in-a-dictionary-python
+  15. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml33.data
+  16. http://stackoverflow.com/questions/3097866/python-access-to-first-element-in-dictionary
+  17. file://localhost/questions/tagged/python
+  18. file://localhost/q/19030179
+  19. file://localhost/posts/19030179/edit
+  20. file://localhost/users/1162512/user1162512
+  21. file://localhost/questions/19030179/how-to-access-the-first-and-the-last-elements-in-a-dictionary-python?answertab=active#tab-top
+  22. file://localhost/questions/19030179/how-to-access-the-first-and-the-last-elements-in-a-dictionary-python?answertab=oldest#tab-top
+  23. file://localhost/questions/19030179/how-to-access-the-first-and-the-last-elements-in-a-dictionary-python?answertab=votes#tab-top
+  24. http://docs.python.org/2/library/collections.html#collections.OrderedDict
+  25. file://localhost/a/19030374
+  26. file://localhost/posts/19030374/edit
+  27. file://localhost/posts/19030374/revisions
+  28. file://localhost/users/201359/oscar-lopez
+  29. http://docs.python.org/2/library/collections.html#collections.OrderedDict
+  30. file://localhost/a/19030246
+  31. file://localhost/posts/19030246/edit
+  32. file://localhost/posts/19030246/revisions
+  33. file://localhost/users/2658050/lejlot
+  34. file://localhost/users/186026/bogdan
+  35. file://localhost/users/1162512/user1162512
+  36. file://localhost/a/19030236
+  37. file://localhost/posts/19030236/edit
+  38. file://localhost/posts/19030236/revisions
+  39. file://localhost/users/780719/codie-codemonkey
+  40. file://localhost/users/1162512/user1162512
+  41. file://localhost/users/780719/codie-codemonkey
+  42. file://localhost/users/1162512/user1162512
+  43. file://localhost/users/1162512/user1162512
+  44. file://localhost/users/487339/dsm
+  45. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml33.data
+  46. http://docs.python.org/2/library/stdtypes.html#dict
+  47. https://en.wikipedia.org/wiki/Associative_array
+  48. file://localhost/a/19030289
+  49. file://localhost/posts/19030289/edit
+  50. file://localhost/users/234745/vladimir
+  51. file://localhost/a/19031060
+  52. file://localhost/posts/19031060/edit
+  53. file://localhost/users/2245742/stonewall-jefferson
+  54. file://localhost/users/login?returnurl=%2fquestions%2f19030179%2fhow-to-access-the-first-and-the-last-elements-in-a-dictionary-python%23new-answer
+  55. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml33.data
+  56. http://stackexchange.com/legal/privacy-policy
+  57. http://stackexchange.com/legal/terms-of-service
+  58. file://localhost/questions/tagged/python
+  59. file://localhost/questions/ask
+  60. file://localhost/questions/tagged/python
+  61. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml33.data?lastactivity
+  62. file://localhost/questions/3097866/python-access-to-first-element-in-dictionary
+  63. file://localhost/questions/36932/how-can-i-represent-an-enum-in-python
+  64. file://localhost/questions/38987/how-can-i-merge-union-two-python-dictionaries-in-a-single-expression
+  65. file://localhost/questions/739654/how-can-i-make-a-chain-of-function-decorators-in-python
+  66. file://localhost/questions/3097866/python-access-to-first-element-in-dictionary
+  67. file://localhost/questions/5404665/accessing-elements-of-python-dictionary
+  68. file://localhost/questions/5410741/accessing-specific-elements-from-python-dictionary
+  69. file://localhost/questions/7015776/python-dictionaries-and-django
+  70. file://localhost/questions/10593651/pythonic-way-to-access-arbitrary-element-from-dictionary
+  71. file://localhost/questions/14609720/python-first-and-last-element-from-array
+  72. file://localhost/questions/16125229/last-key-in-python-dictionary
+  73. file://localhost/feeds/question/19030179
+  74. file://localhost/about
+  75. file://localhost/help
+  76. file://localhost/help/badges
+  77. http://blog.stackexchange.com/?blb=1
+  78. http://chat.stackoverflow.com/
+  79. http://data.stackexchange.com/
+  80. http://stackexchange.com/legal
+  81. http://stackexchange.com/legal/privacy-policy
+  82. http://stackexchange.com/about/hiring
+  83. http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6MjAsImNtIjo5NTQsImNoIjoxMTc4LCJjciI6Mjc3NiwiZG0iOjQsImZjIjoyODYyLCJmbCI6Mjc1MSwibnciOjIyLCJydiI6MCwicHIiOjExNSwic3QiOjAsInVyIjoiaHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL2Fib3V0L2NvbnRhY3QiLCJyZSI6MX0&s=hRods5B22XvRBwWIwtIMekcyNF8
+  84. file://localhost/contact
+  85. http://meta.stackoverflow.com/
+  86. http://stackoverflow.com/
+  87. http://serverfault.com/
+  88. http://superuser.com/
+  89. http://webapps.stackexchange.com/
+  90. http://askubuntu.com/
+  91. http://webmasters.stackexchange.com/
+  92. http://gamedev.stackexchange.com/
+  93. http://tex.stackexchange.com/
+  94. http://programmers.stackexchange.com/
+  95. http://unix.stackexchange.com/
+  96. http://apple.stackexchange.com/
+  97. http://wordpress.stackexchange.com/
+  98. http://gis.stackexchange.com/
+  99. http://electronics.stackexchange.com/
+ 100. http://android.stackexchange.com/
+ 101. http://security.stackexchange.com/
+ 102. http://dba.stackexchange.com/
+ 103. http://drupal.stackexchange.com/
+ 104. http://sharepoint.stackexchange.com/
+ 105. http://ux.stackexchange.com/
+ 106. http://mathematica.stackexchange.com/
+ 107. http://stackexchange.com/sites#technology
+ 108. http://photo.stackexchange.com/
+ 109. http://scifi.stackexchange.com/
+ 110. http://cooking.stackexchange.com/
+ 111. http://diy.stackexchange.com/
+ 112. http://stackexchange.com/sites#lifearts
+ 113. http://english.stackexchange.com/
+ 114. http://skeptics.stackexchange.com/
+ 115. http://judaism.stackexchange.com/
+ 116. http://travel.stackexchange.com/
+ 117. http://christianity.stackexchange.com/
+ 118. http://gaming.stackexchange.com/
+ 119. http://bicycles.stackexchange.com/
+ 120. http://rpg.stackexchange.com/
+ 121. http://stackexchange.com/sites#culturerecreation
+ 122. http://math.stackexchange.com/
+ 123. http://stats.stackexchange.com/
+ 124. http://cstheory.stackexchange.com/
+ 125. http://physics.stackexchange.com/
+ 126. http://mathoverflow.net/
+ 127. http://stackexchange.com/sites#science
+ 128. http://stackapps.com/
+ 129. http://meta.stackoverflow.com/
+ 130. http://area51.stackexchange.com/
+ 131. http://careers.stackoverflow.com/
+ 132. http://creativecommons.org/licenses/by-sa/3.0/
+ 133. http://blog.stackoverflow.com/2009/06/attribution-required/
+
+   Hidden links:
+ 135. file://localhost/users/1162512/user1162512
+ 136. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml33.data
+ 137. file://localhost/users/201359/oscar-lopez
+ 138. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml33.data
+ 139. file://localhost/users/2658050/lejlot
+ 140. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml33.data
+ 141. file://localhost/users/780719/codie-codemonkey
+ 142. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml33.data
+ 143. file://localhost/users/234745/vladimir
+ 144. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml33.data
+ 145. file://localhost/users/2245742/stonewall-jefferson
+ 146. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml33.data
+ 147. file://localhost/q/3097866
+ 148. file://localhost/q/36932
+ 149. file://localhost/q/38987
+ 150. file://localhost/q/739654
+ 151. file://localhost/q/3097866
+ 152. file://localhost/q/5404665
+ 153. file://localhost/q/5410741
+ 154. file://localhost/q/7015776
+ 155. file://localhost/q/10593651
+ 156. file://localhost/q/14609720
+ 157. file://localhost/q/16125229
+ 158. http://creativecommons.org/licenses/by-sa/3.0/

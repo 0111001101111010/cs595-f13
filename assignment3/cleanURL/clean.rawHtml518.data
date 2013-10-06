@@ -1,0 +1,334 @@
+   A visual guide to
+
+                                 Sass & Compass
+                                Color Functions
+
+   Sass and Compass provide a number of useful functions you can use to
+   alter and manipulate colors with ease. Most color functions operate on
+   a single color, but some can be used to combine two colors in different
+   ways. Our "base color" and "alternate color" will be used throughout
+   the examples. You can click on the swatch for either of those two
+   colors to change their values and see how the calculated colors adjust
+   accordingly.
+
+Example Colors
+
+Base Color
+
+   — The color for which all color operations are based on.
+$color
+
+Alternate Color
+
+   — The alternate color used in functions that operate on more than one
+   color.
+$color-alt
+
+RGB Functions[1]Full Documentation
+
+rgb
+
+   — Creates a color from red, green, and blue values.
+
+rgb($red, $green, $blue)
+
+rgb($r, $g, $b)
+
+rgba
+
+   — Creates a color from red, green, blue, and alpha values.
+
+rgba($red, $green, $blue, $alpha)
+
+rgba($r, $g, $b, .5)
+
+mix
+
+   — Mixes two colors together.
+
+mix($color-1, $color-2, [$weight])
+
+mix($color, $color-alt)
+
+mix($color, $color-alt, 20%)
+
+red
+
+   — Gets the red component of a color.
+
+red($color)
+
+red($color)
+
+green
+
+   — Gets the green component of a color.
+
+green($color)
+
+green($color)
+
+blue
+
+   — Gets the blue component of a color.
+
+blue($color)
+
+blue($color)
+
+HSL Functions[2]Full Documentation
+
+hsl
+
+   — Creates a color from hue, saturation, and lightness values.
+
+hsl($hue, $saturation, $lightness)
+
+hsl($h, $s, $l)
+
+hsla
+
+   — Creates a color from hue, saturation, lightness, and alpha values.
+
+hsla($hue, $saturation, $lightness, $alpha)
+
+hsla($h, $s, $l, .5)
+
+adjust-hue
+
+   — Changes the hue of a color.
+
+adjust-hue($color, $amount)
+
+adjust-hue($color, 20deg)
+
+adjust-hue($color, -20deg)
+
+lighten
+
+   — Makes a color lighter.
+
+lighten($color, $amount)
+
+lighten($color, 20%)
+
+darken
+
+   — Makes a color darker.
+
+darken($color, $amount)
+
+darken($color, 20%)
+
+saturate
+
+   — Makes a color more saturated.
+
+saturate($color, $amount)
+
+saturate($color, 20%)
+
+desaturate
+
+   — Makes a color less saturated.
+
+desaturate($color, $amount)
+
+desaturate($color, 20%)
+
+grayscale
+
+   — Converts a color to grayscale.
+
+grayscale($color)
+
+grayscale($color)
+
+complement
+
+   — Returns the complement of a color.
+
+complement($color)
+
+complement($color)
+
+invert
+
+   — Returns the inverse of a color.
+
+invert($color)
+
+invert($color)
+
+hue
+
+   — Gets the hue component of a color.
+
+hue($color)
+
+hue($color)
+
+saturation
+
+   — Gets the saturation component of a color.
+
+saturation($color)
+
+saturation($color)
+
+lightness
+
+   — Gets the lightness component of a color.
+
+lightness($color)
+
+lightness($color)
+
+Opacity Functions[3]Full Documentation
+
+rgba
+
+   — Changes the alpha component for a color.
+
+rgba($color, $alpha)
+
+rgba($color, .5)
+
+opacify / fade-in
+
+   — Makes a color more opaque.
+
+opacify($color, $amount)
+
+fade-in($color, $amount)
+
+opacify($color, .5)
+
+transparentize / fade-out
+
+   — Makes a color more transparent.
+
+transparentize($color, $amount)
+
+fade-out($color, $amount)
+
+transparentize($color, .5)
+
+alpha / opacity
+
+   — Gets the alpha component (opacity) of a color.
+
+alpha($color)
+
+opacity($color)
+
+alpha($color)
+
+Other Color Functions[4]Full Documentation
+
+adjust-color
+
+   — Increases or decreases one or more components of a color.
+
+adjust-color($color, [$red], [$green], [$blue], [$hue], [$saturation],
+[$lightness], [$alpha])
+
+adjust-color($color, $red: -50, $green: 20, $blue: 220)
+
+adjust-color($color, $hue: 120deg, $saturation: 30, $lightness: 10)
+
+scale-color
+
+   — Fluidly scales one or more properties of a color.
+
+scale-color($color, [$red], [$green], [$blue], [$saturation], [$lightness],
+[$alpha])
+
+scale-color($color, $red: 10%, $green: 90%, $blue: 20%)
+
+scale-color($color, $saturation: -30%, $lightness: 20%, $alpha: 10%)
+
+change-color
+
+   — Changes one or more properties of a color.
+
+change-color($color, [$red], [$green], [$blue], [$hue], [$saturation],
+[$lightness], [$alpha])
+
+change-color($color, $red: 255, $green: 60, $blue: 170)
+
+change-color($color, $hue: 190deg, $saturation: 50%, $lightness: 25%)
+
+Compass Color Functions[5]Full Documentation
+
+adjust-lightness
+
+   — Adds $amount to $color's lightness value. $amount can be negative.
+
+adjust-lightness($color, $amount)
+
+adjust-lightness($color, 20%)
+
+adjust-lightness($color, -20%)
+
+adjust-saturation
+
+   — Adds $amount to $color's saturation value. $amount can be negative.
+
+adjust-saturation($color, $amount)
+
+adjust-saturation($color, 20%)
+
+adjust-saturation($color, -20%)
+
+scale-lightness
+
+   — Scales $color's lightness value by $amount. $amount can be negative.
+
+scale-lightness($color, $amount)
+
+scale-lightness($color, 20%)
+
+scale-lightness($color, -20%)
+
+scale-saturation
+
+   — Scales $color's saturation value by $amount. $amount can be negative.
+
+scale-saturation($color, $amount)
+
+scale-saturation($color, 20%)
+
+scale-saturation($color, -20%)
+
+shade
+
+   — Darkens the $color by mixing it with black as specified by
+   $percentage.
+
+shade($color, $percentage)
+
+shade($color, 20%)
+
+tint
+
+   — Lightens the $color by mixing it with white as specified by
+   $percentage.
+
+tint($color, $percentage)
+
+tint($color, 20%)
+
+   A Sassy exercise by [6]Jackie Balzer
+
+   Follow me on Twitter at [7]@jackiebackwards
+
+References
+
+   1. http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#rgb_functions
+   2. http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#hsl_functions
+   3. http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#opacity_functions
+   4. http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#other_color_functions
+   5. http://compass-style.org/reference/compass/helpers/colors/
+   6. http://jackiebalzer.com/
+   7. http://twitter.com/jackiebackwards

@@ -1,0 +1,370 @@
+    #[1]Sitedeals RSS [2]Sitedeals - CSS - RSS
+
+     * [3]Sitedeals
+          + [4]Nieuw
+          + [5]Nieuw vandaag
+          + [6]Markeer alles als gelezen
+     * [7]Marktplaats
+     * [8]Ontwerpwedstrijd
+     * [9]Webmasterforum
+
+   ____________________ search
+
+     * [10]Lid worden
+     *
+
+       Accountnaa __________ Wachtwoord
+       [ ] Ingelogd blijven
+       Inloggen
+     __________________________________________________________________
+
+     * [11]Sitedeals
+     * [12]Webmasterforum
+     * [13]HTML / XHTML
+     * [14]CSS
+     * Klein CSS probleempje! Afbeelding gebruiken als border?
+     __________________________________________________________________
+
+[15]Klein CSS probleempje! Afbeelding gebruiken als border?
+
+     * [16]Onderwerpopties
+          + [17]Onderwerp afdrukken
+          + [18]Abonneren…
+     * [19]Zoek
+          + Zoek..._____________ Zoeken
+          +
+            [20]Geavanceerd zoeken
+
+    1. 26-09-2013, 15:22 [21]#1
+       [22]J. van der Meer
+       J. van der Meer is offline
+       Particulier
+         ______________________________________________________________
+
+        Berichten
+                198
+
+        Lid sinds
+                2 Jaar
+
+Standaard Klein CSS probleempje! Afbeelding gebruiken als border?
+
+     Hoe kan je een afbeelding gebruiken als border? Ik heb dit
+     geprobeerd:
+     { border-right: 1px solid #CDCDCD url("images/navbg-hover.png") }
+     Helaas werkt dit niet. Iemand een idee hoe ik dit wel werkend kan
+     krijgen?
+     De border moet 1 px dik zijn en moet de afbeelding gebruiken die de
+     kleur #CDCDCD moet hebben.
+         ______________________________________________________________
+
+    2. In de schijnwerper
+       [23]Dedicated servers vanaf 39,99 euro per maand! Hosting [24]T.K
+       resellerwebhosting.nl Domeinnamen [25]Logo*ontwerpen.eu | 12.100
+       lokaal Domeinnamen [26]Thuisbezorgd.nl Typo || 219 bezoekers in
+       september || Hoog potentieel Domeinnamen
+    3. 26-09-2013, 15:24 [27]#2
+       [28]Robin L
+       Robin L is offline
+       Roboo
+         ______________________________________________________________
+
+        Berichten
+                1.018
+
+        Lid sinds
+                5 Jaar
+
+Standaard Re: Klein CSS probleempje! Afbeelding gebruiken als border?
+
+     [29]http://www.w3schools.com/cssref/tryi...3_border-image
+     Niet compatible met IE overigens, uiteraard..
+         ______________________________________________________________
+
+    4. 26-09-2013, 15:25 [30]#3
+       [31]J. van der Meer
+       J. van der Meer is offline
+       Particulier
+         ______________________________________________________________
+
+        Berichten
+                198
+
+        Lid sinds
+                2 Jaar
+
+Standaard Re: Klein CSS probleempje! Afbeelding gebruiken als border?
+
+     @Robin L, de afbeelding hoeft maar 1 lijn te zijn van 1 px. Dit is
+     dus niet helemaal wat ik zoek.
+         ______________________________________________________________
+
+    5. 26-09-2013, 15:55 [32]#4
+       [33]Dennis de Ruiter
+       Dennis de Ruiter is offline
+       Particulier
+         ______________________________________________________________
+
+        Berichten
+                387
+
+        Lid sinds
+                2 Jaar
+
+Standaard Re: Klein CSS probleempje! Afbeelding gebruiken als border?
+
+     { border-style: none solid none none;
+     border-color: #CDCDCD url("images/navbg-hover.png");
+     border-width: 1px;
+     }
+     iets in die geest
+         ______________________________________________________________
+
+    6. 26-09-2013, 15:58 [34]#5
+       [35]Dennis de Ruiter
+       Dennis de Ruiter is offline
+       Particulier
+         ______________________________________________________________
+
+        Berichten
+                387
+
+        Lid sinds
+                2 Jaar
+
+Standaard Re: Klein CSS probleempje! Afbeelding gebruiken als border?
+
+     of lees ff: [36]http://www.vincenthofman.nl/?p=719
+         ______________________________________________________________
+
+    7. 26-09-2013, 19:46 [37]#6
+       [38]J. van der Meer
+       J. van der Meer is offline
+       Particulier
+         ______________________________________________________________
+
+        Berichten
+                198
+
+        Lid sinds
+                2 Jaar
+
+Standaard Re: Klein CSS probleempje! Afbeelding gebruiken als border?
+
+     Ik krijg het nog niet voor elkaar. Iemand nog een idee?
+         ______________________________________________________________
+
+    8. 27-09-2013, 23:23 [39]#7
+       [40]Dennis de Ruiter
+       Dennis de Ruiter is offline
+       Particulier
+         ______________________________________________________________
+
+        Berichten
+                387
+
+        Lid sinds
+                2 Jaar
+
+Standaard Re: Klein CSS probleempje! Afbeelding gebruiken als border?
+
+     Je kunt de afbeelding beter als background van je div instellen en
+     dan naar recht laten uitlijnen.
+     #div { background: url("afbeelding.png") no-repeat right; }
+         ______________________________________________________________
+
+Tags voor dit bericht
+
+   [41]afbeelding, [42]css, [43]hover, [44]moe, [45]werk
+
+   [46]Bekijk tag cloud
+
+[47][collapse_40b.png] Registreren
+
+   Omdat je niet bent ingelogd is het niet mogelijk om van alle
+   functionaliteiten gebruik maken.
+     * [48]Nu registreren
+     * Wachtwoord verloren? [49]Wachtwoord opvragen.
+
+   Plaats een
+     * + [50]Advertentie
+     * + [51]Ontwerpwedstrijd
+     * + [52]Onderwerp
+
+   Marktplaats
+     * [53]Werk
+     * [54]Websites
+     * [55]Domeinnamen
+     * [56]PHP scripts
+     * [57]Layouts
+     * [58]Hosting
+     * [59]Linkpartners
+     * [60]Hardware
+     * [61]Vacatures
+     * [62]Advertentieruimte
+     * [63]Investeringsaanvragen
+     * [64]Promotie
+     * [65]Twitter
+     * [66]Facebook
+     * [67]Overige deals
+
+   Webmasterforum
+     * [68]Websites algemeen
+     * [69]Sitechecks
+     * [70]Marketing
+     * [71]Domeinen algemeen
+     * [72]Waardebepaling
+     * [73]CMS
+     * [74]Wordpress
+     * [75]Joomla
+     * [76]Magento
+     * [77]Google algemeen
+     * [78]SEO
+     * [79]Analytics
+     * [80]Adsense
+     * [81]Adwords
+     * [82]HTML / XHTML
+     * [83]CSS
+     * [84]Programmeren
+     * [85]PHP
+     * [86]Javascript
+     * [87]JQuery
+     * [88]MySQL
+     * [89]Ondernemen algemeen
+     * [90]Belastingen
+     * [91]Juridisch
+     * [92]Grafisch ontwerp
+     * [93]Hosting Algemeen
+     * [94]Hardware Info
+     * [95]Offtopic
+
+Quick links
+
+     * [96]Contact
+     * [97]Sitedeals
+     * [98]Naar boven
+
+Sitedeals
+
+     * [99]Algemene voorwaarden
+     * [100]Regels
+     * [101]Privacy beleid
+
+Andere media
+
+     * [102]Friend us on facebook
+     * [103]Volg ons op twitter
+     * [104]Read our RSS feeds
+
+Over Sitedeals
+
+     * Met 181386 advertenties is Sitedeals.nl de grootste handelswebsite
+       voor website eigenaren. Deel kennis en participeer in 23851
+       discussies met 166307 reacties op het webmasterforum.
+
+References
+
+   1. http://www.sitedeals.nl/external.php?type=RSS2
+   2. http://www.sitedeals.nl/external.php?type=RSS2&forumids=132
+   3. http://www.sitedeals.nl/
+   4. http://www.sitedeals.nl/search.php?do=getnew&contenttype=vBForum_Post
+   5. http://www.sitedeals.nl/search.php?do=getdaily&contenttype=vBForum_Post
+   6. http://www.sitedeals.nl/forumdisplay.php?do=markread&markreadhash=guest
+   7. http://www.sitedeals.nl/marktplaats/
+   8. http://www.sitedeals.nl/ontwerpwedstrijd/
+   9. http://www.sitedeals.nl/webmasterforum/
+  10. http://www.sitedeals.nl/register.php
+  11. http://www.sitedeals.nl/
+  12. http://www.sitedeals.nl/webmasterforum/
+  13. http://www.sitedeals.nl/html-xhtml/
+  14. http://www.sitedeals.nl/css/
+  15. http://www.sitedeals.nl/css/251935-klein-css-probleempje-afbeelding-gebruiken-border.html
+  16. javascript:///
+  17. http://www.sitedeals.nl/css/251935-klein-css-probleempje-afbeelding-gebruiken-border-print.html
+  18. http://www.sitedeals.nl/subscription.php?do=addsubscription&t=251935
+  19. javascript:///
+  20. http://www.sitedeals.nl/search.php?search_type=1&searchthreadid=251935&contenttype=vBForum_Post
+  21. http://www.sitedeals.nl/css/251935-klein-css-probleempje-afbeelding-gebruiken-border.html#post1049006
+  22. http://www.sitedeals.nl/lid/j-van-der-meer-43781.html
+  23. http://www.sitedeals.nl/hosting/249758-dedicated-servers.html
+  24. http://www.sitedeals.nl/domeinnamen/252281-resellerwebhosting.html
+  25. http://www.sitedeals.nl/domeinnamen/252243-logo-ontwerpen-eu-100-lokaal.html
+  26. http://www.sitedeals.nl/domeinnamen/252321-thuisbezorgd-typo-219-september-hoog-potentieel.html
+  27. http://www.sitedeals.nl/css/251935-klein-css-probleempje-afbeelding-gebruiken-border.html#post1049007
+  28. http://www.sitedeals.nl/lid/robin-l-9751.html
+  29. http://www.w3schools.com/cssref/tryit.asp?filename=trycss3_border-image
+  30. http://www.sitedeals.nl/css/251935-klein-css-probleempje-afbeelding-gebruiken-border.html#post1049008
+  31. http://www.sitedeals.nl/lid/j-van-der-meer-43781.html
+  32. http://www.sitedeals.nl/css/251935-klein-css-probleempje-afbeelding-gebruiken-border.html#post1049014
+  33. http://www.sitedeals.nl/lid/dennis-de-ruiter-41089.html
+  34. http://www.sitedeals.nl/css/251935-klein-css-probleempje-afbeelding-gebruiken-border.html#post1049015
+  35. http://www.sitedeals.nl/lid/dennis-de-ruiter-41089.html
+  36. http://www.vincenthofman.nl/?p=719
+  37. http://www.sitedeals.nl/css/251935-klein-css-probleempje-afbeelding-gebruiken-border.html#post1049075
+  38. http://www.sitedeals.nl/lid/j-van-der-meer-43781.html
+  39. http://www.sitedeals.nl/css/251935-klein-css-probleempje-afbeelding-gebruiken-border.html#post1049275
+  40. http://www.sitedeals.nl/lid/dennis-de-ruiter-41089.html
+  41. http://www.sitedeals.nl/tags/afbeelding.html
+  42. http://www.sitedeals.nl/tags/css.html
+  43. http://www.sitedeals.nl/tags/hover.html
+  44. http://www.sitedeals.nl/tags/moe.html
+  45. http://www.sitedeals.nl/tags/werk.html
+  46. http://www.sitedeals.nl/tags/
+  47. http://www.sitedeals.nl/css/251935-klein-css-probleempje-afbeelding-gebruiken-border.html?amp;goto=newpost&utm_source=twitterfeed&utm_medium=twitter
+  48. http://www.sitedeals.nl/register.php
+  49. http://www.sitedeals.nl/login.php?do=lostpw
+  50. http://www.sitedeals.nl/wizard.php?f=40
+  51. http://www.sitedeals.nl/newthread.php?f=68
+  52. http://www.sitedeals.nl/wizard.php?f=8
+  53. http://www.sitedeals.nl/werk/
+  54. http://www.sitedeals.nl/websites/
+  55. http://www.sitedeals.nl/domeinnamen/
+  56. http://www.sitedeals.nl/php-scripts/
+  57. http://www.sitedeals.nl/layouts/
+  58. http://www.sitedeals.nl/hosting/
+  59. http://www.sitedeals.nl/linkpartners/
+  60. http://www.sitedeals.nl/hardware/
+  61. http://www.sitedeals.nl/vacatures/
+  62. http://www.sitedeals.nl/advertentieruimte/
+  63. http://www.sitedeals.nl/investeringsaanvragen/
+  64. http://www.sitedeals.nl/promotie/
+  65. http://www.sitedeals.nl/twitter/
+  66. http://www.sitedeals.nl/facebook/
+  67. http://www.sitedeals.nl/overige-deals/
+  68. http://www.sitedeals.nl/websites-algemeen/
+  69. http://www.sitedeals.nl/sitechecks/
+  70. http://www.sitedeals.nl/marketing/
+  71. http://www.sitedeals.nl/domeinen-algemeen/
+  72. http://www.sitedeals.nl/waardebepaling/
+  73. http://www.sitedeals.nl/cms/
+  74. http://www.sitedeals.nl/wordpress/
+  75. http://www.sitedeals.nl/joomla/
+  76. http://www.sitedeals.nl/magento/
+  77. http://www.sitedeals.nl/google-algemeen/
+  78. http://www.sitedeals.nl/seo/
+  79. http://www.sitedeals.nl/analytics/
+  80. http://www.sitedeals.nl/adsense/
+  81. http://www.sitedeals.nl/adwords/
+  82. http://www.sitedeals.nl/html-xhtml/
+  83. http://www.sitedeals.nl/css/
+  84. http://www.sitedeals.nl/programmeren/
+  85. http://www.sitedeals.nl/php/
+  86. http://www.sitedeals.nl/javascript/
+  87. http://www.sitedeals.nl/jquery/
+  88. http://www.sitedeals.nl/mysql/
+  89. http://www.sitedeals.nl/ondernemen-algemeen/
+  90. http://www.sitedeals.nl/belastingen/
+  91. http://www.sitedeals.nl/juridisch/
+  92. http://www.sitedeals.nl/grafisch-ontwerp/
+  93. http://www.sitedeals.nl/hosting-algemeen/
+  94. http://www.sitedeals.nl/hardware-info/
+  95. http://www.sitedeals.nl/offtopic/
+  96. http://www.sitedeals.nl/sendmessage.php
+  97. http://www.sitedeals.nl/
+  98. http://www.sitedeals.nl/css/251935-klein-css-probleempje-afbeelding-gebruiken-border.html#top
+  99. http://www.sitedeals.nl/algemene-voorwaarden.php
+ 100. http://www.sitedeals.nl/regels-sitedeals.php
+ 101. http://www.sitedeals.nl/privacy-policy.php
+ 102. http://www.sitedeals.nl/css/251935-klein-css-probleempje-afbeelding-gebruiken-border.html?amp;goto=newpost&utm_source=twitterfeed&utm_medium=twitter
+ 103. https://twitter.com/sitedealsnl
+ 104. http://www.sitedeals.nl/css/251935-klein-css-probleempje-afbeelding-gebruiken-border.html?amp;goto=newpost&utm_source=twitterfeed&utm_medium=twitter

@@ -1,0 +1,485 @@
+    #[1]RSS 2.0 [2]Josh Earl » Feed [3]Josh Earl » Comments Feed [4]Josh
+   Earl » How to Add SASS Support in Sublime Text Comments Feed
+   [5]Flatland: The best minimal theme for Sublime Text [6]Starting a New
+   WordPress Plugin with Sublime Text
+
+[7]Josh Earl
+
+     * [8]Sublime Productivity
+          + [9]Sample
+          + [10]Buy
+     * [11]Newsletters
+          + [12]Sublime Text Tips
+     * [13]Blog
+     * [14]Resources
+     * [15]About
+     * [16]Contact
+
+   Search Site_________
+   search site
+
+   Apr30
+
+[17]How to Add SASS Support in Sublime Text
+
+   [18]Sublime Handles SASS
+
+   [19]SASS, short for Syntactically Awesome Style Sheets, is a massively
+   popular tool for web developers that takes a lot of the pain out of
+   writing CSS. Unfortunately, Sublime doesn’t provide a lot of help if
+   you want to use SASS in your project.
+
+   Package Control lists a number of seemingly useful plugins, but each
+   provides just one or two SASS features–none of them gives you
+   everything you need to use SASS effectively. Then there’s the whole
+   compiling thing–messing with a separate command line tool every time
+   you want to make a CSS tweak is a royal pain.
+
+   Here’s the setup I use that makes working with SASS as seamless as
+   using plain old CSS.
+
+Install SASS
+
+   Since this isn’t a SASS 101 tutorial, I’m going to assume that you’ve
+   already installed SASS and know how to use the command line compiler.
+   If not, here’s a [20]good walkthrough.
+
+   I’m also assuming that you have Package Control set up in Sublime. If
+   you haven’t encountered it yet, Package Control lets you install
+   hundreds of plugins with just a few keystrokes—without leaving Sublime.
+   The [21]Package Control site includes setup instructions.
+
+Configure Syntax Highlighting
+
+   The first time you open a sass or scss file, Sublime just shrugs its
+   shoulders and treats it like plain text, rendering your meticulously
+   formatted style rules in monotonous black and white.
+
+   Package Control lists a handful of plugins that add syntax highlighting
+   for SASS. The runaway favorite is the [22]sass-textmate-bundle plugin,
+   called simply Sass in Package Control.
+
+   After you install the Sass plugin, when you open a scss file you’re
+   greeted with beautifully highlighted code:
+
+   But don’t celebrate yet–if you open a sass file, you’ll find it’s still
+   devoid of color. What gives?
+
+   If you look in the lower right-hand corner of the screen, you’ll see a
+   clue:
+
+   As it turns out, a line in the Data/Packages/Rails/Ruby Haml.tmLanguage
+   file is hijacking the sass extension and incorrectly setting the syntax
+   to Ruby Haml instead of Sass.
+
+   I’ve seen “fixes” for this problem that involve editing the Ruby
+   Haml.tmLanguage file itself, or one of the files in the SASS plugin.
+   That’s a bad idea because future updates to either of those packages
+   will overwrite your customization, and you’ll be back where you
+   started.
+
+   Fortunately, the simplest fix is also the best: Sublime allows you to
+   specify what syntax to use for a given file extension.
+
+   To force Sublime to correctly highlight sass files:
+   1. Open a sass file.
+   2. Click View | Syntax | Open all with current extension as … | Sass.
+
+Compiling from Sublime
+
+   Messing with the command line SASS compiler is a bit of a hassle–and
+   it’s unnecessary. With help from a couple of plugins, you can configure
+   Sublime to automatically compile your SASS stylesheets every time you
+   save a change.
+
+   Sublime’s build system feature allows you to create custom build tasks
+   and associate them with specific file types. You can do this by hand in
+   your sublime-project file, or you can let the [23]SASS Build plugin
+   handle the heavy lifting for you.
+
+   Installing the SASS Build plugin creates two new entries under Tools |
+   Build: Sass and Sass – Compressed.
+
+   Compiling your SASS files with this plugin is simple. While editing a
+   sass or scss file, just hit Ctrl+B on Windows or Linux or Command+B on
+   OS X.
+
+   By default, Sublime will use the regular Sass build option, which
+   compiles your SASS and formats the CSS output for easy readability.
+
+   To create minified CSS files for production, change the build option by
+   clicking Tools | Build | Sass – Compressed.
+
+Automating Builds
+
+   Building your SASS files straight from Sublime is convenient, but at
+   some point you’re going to spend 30 minutes debugging a crazy stubborn
+   CSS issue only to realize that you actually fixed it 25 minutes ago and
+   just forgot to recompile the scss file. Not that I’m bitter or
+   anything.
+
+   You can avoid this by installing the [24]SublimeOnSaveBuild plugin,
+   which will automatically execute the default build action whenever you
+   save changes to a file. (It’s also handy when you’re working with
+   CoffeeScript.)
+
+   SublimeOnSaveBuild supports a filename filter, and by default it’s only
+   configured to run for css, js, sass, less and scss files.
+
+   P.S. Do you love using Sublime to get more done? Drop your email
+   address in the box below to get more free tips every week. As a bonus,
+   I’ll send you a 12-page guide to Sublime’s advanced editing features so
+   you can start using Sublime more effectively—today.
+
+               Send me 12 FREE pages of advanced Sublime tips!
+
+   First Name (optional, but I won't have to say, "Hey you!")
+   ____________________ Email Address ____________________
+   Send Me My Guide!
+
+                         sublime productivity ebook
+
+   IFRAME:
+   [25]http://www.reddit.com/static/button/button2.html?width=51&url=http%
+   3A%2F%2Faspirecode.com%2Fhow-to-add-sass-support-in-sublime-text%2F&tit
+   le=How%20to%20Add%20SASS%20Support%20in%20Sublime%20Text&newwindow='1'
+
+     * autho josh
+     * date April 30, 2013
+     * [26]categories [27]Blog, [28]Featured, [29]Header Slider
+     * tags [30]SASS, [31]sublime text
+     * [32]comments 19 Comments
+
+19 Responses to “How to Add SASS Support in Sublime Text”
+
+    1. [33]Reply
+       [34]Kory Tegman
+       [35]April 30, 2013 at 11:42 am
+       hey Josh!
+       Thanks for this post! I have been looking for a better way to
+       develop with sass locally. In rails all this is setup for you
+       automatically, but I havent seemed to find a ton of help out there
+       for using sass on other projects, like wordpress, or just a quick
+       static page.
+       thanks for the share!
+          + [36]Reply
+            joshearl
+            [37]April 30, 2013 at 11:48 am
+            You’re welcome, Kory! Glad it was helpful.
+    2. [38]Reply
+       Volvox
+       [39]April 30, 2013 at 11:56 am
+       Great post, thanks a ton. On Sublime Text 3, just git clone the
+       SASS Build plugin repo and you will need to clone the sublime tree
+       from sass-textmate-bundle plugin dump them into (Mac OSX)
+       ~/Library/Application Support/Sublime Text 3/Packages/
+    3. [40]Reply
+       [41]Alexander Kazachkov
+       [42]May 12, 2013 at 6:42 am
+       I have a problem when compiling the code:
+       The console of Sublime Text says:
+       [Errno 2] No such file or directory
+       [cmd: [u'sass', u'--update',
+       u'/Users/alex/Desktop/Project/assets/styles/builtins.scss
+       :/Users/alex/Desktop/Project/assets/styles/builtins.css',
+       u'--stop-on-error', u'--no-cache', u'--style', u'compressed']]
+       [dir: /Users/alex/Desktop/Project/assets/styles]
+       [path: /usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin]
+       [Finished]
+       And no file is being compiled to css. What can I do to solve this
+       problem?
+    4. [43]Reply
+       [44]Patrick Hill
+       [45]June 13, 2013 at 8:40 pm
+       Thanks for the tips, this got me up and running in about a minute!
+    5. [46]Reply
+       eric socolofsky
+       [47]June 21, 2013 at 6:33 pm
+       I’m newish to the webdev game (tho an old hand in coding), and
+       recently was introduced to Codekit. I’ve used and loved Sublime for
+       a while. Does this workflow largely obviate Codekit, in terms of
+       its benefits for working with SASS? Codekit looks great but I feel
+       like Sublime should be able to do most of what Codekit does, via
+       plugins.
+    6. [48]Reply
+       [49]Lawrence Wang
+       [50]June 23, 2013 at 6:50 pm
+       Thanks for the fix for Ruby Haml getting in the way of Sass
+       highlighting. I never knew that Sublime Text feature existed. If
+       this were on Stack Overflow you’d have my upvote.
+          + [51]Reply
+            joshearl
+            [52]June 23, 2013 at 7:47 pm
+            Glad it helped, Lawrence!
+    7. [53]Reply
+       [54]Sass? | David Platt
+       [55]June 24, 2013 at 12:38 am
+       [...] like I’d seen used by the people evangelizing it at
+       frontendconf. Luckily, I found Josh Earl’s site that walked me
+       through every step. Seriously. Follow the links on his site and
+       it’s really easy to set [...]
+    8. [56]Reply
+       [57]Bookmarks for 26th June 2013 | Lednor.Com
+       [58]June 26, 2013 at 3:08 am
+       [...] Josh Earl » How to Add SASS Support in Sublime Text – SASS,
+       short for Syntactically Awesome Style Sheets, is a massively
+       popular tool for web developers that takes a lot of the pain out of
+       writing CSS. Unfortunately, Sublime doesn’t provide a lot of help
+       if you want to use SASS in your project. [...]
+    9. [59]Reply
+       sinled
+       [60]June 26, 2013 at 5:38 am
+       Thanks for the article.
+       Any ideas how to make work sass with Sublime text 3 “goto
+       definition” function, it works fine with LESS, but not working with
+       SASS(SCSS)
+   10. [61]Reply
+       BeryJu
+       [62]July 5, 2013 at 1:38 pm
+       How did you remove the Menu Bar in your Sublime Text?
+          + [63]Reply
+            BeryJu
+            [64]July 5, 2013 at 1:40 pm
+            View -> Hide Menu, never mind.
+   11. [65]Reply
+       s1nga
+       [66]July 8, 2013 at 6:13 pm
+       Thanks a bunch. With your instructions I’ve got my first attempt at
+       a sass tutorial up and running.
+       Have run into a major snag, however, and I’m inexperieinced enough
+       not to be able to figure out the source of my problem. Perhaps you
+       could provide a solution…
+       The tutorial requests that “@import “compass”; be placed at the top
+       of the other import statements. Sublime returns the following
+       error… “Sass::SyntaxError: File to import not found or unreadable:
+       compass.”
+       Obviously, Sublime is not finding compass. How to remedy this?
+       When I comment-out this import statement the rest of the imports
+       load and the project compiles as expected.
+       I’m totally confused. Any insights?
+          + [67]Reply
+            [68]joe
+            [69]August 15, 2013 at 4:20 pm
+            Did you find a solution for this?
+   12. [70]Reply
+       [71]Zach J
+       [72]August 9, 2013 at 1:03 pm
+       SASS package isn’t showing up in package control. Maybe it’s
+       because I already installed a package with that exact name or it
+       changed?
+       I am also not seeing an additional option to colour as scss.
+       So what’s the deal?
+   13. [73]Reply
+       [74]Zach J
+       [75]August 9, 2013 at 1:05 pm
+       Nevermind, I had a config issue. Sorry about that.
+   14. [76]Reply
+       [77]Ben Frain
+       [78]August 13, 2013 at 6:47 am
+       Switching to ST3 and couldn’t remember the name of the syntax
+       package so thanks for writing this up.
+       However, Josh, a minor point; it’s actually ‘Sass’ and not ‘SASS’.
+          + [79]Reply
+            josh
+            [80]August 13, 2013 at 10:15 am
+            Whoa, didn’t realize that. Thanks!
+
+Leave a Reply
+
+   [81]Click here to cancel reply.
+
+   Name (required)_______
+
+   Email (required)______
+
+   Website_______________
+
+
+   __________________________________________________________
+   __________________________________________________________
+   __________________________________________________________
+   __________________________________________________________
+   __________________________________________________________
+   __________________________________________________________
+   __________________________________________________________
+   __________________________________________________________
+   __________________________________________________________
+   __________________________________________________________
+
+   XHTML: You can use these tags: <a href="" title=""> <abbr title="">
+   <acronym title=""> <b> <blockquote cite=""> <cite> <code> <del
+   datetime=""> <em> <i> <q cite=""> <strike> <strong>
+
+   Submit Comment
+
+Sublime Productivity
+
+   [82]
+
+   My Sublime Text 2 ebook is available in beta. Get it today!
+   [83]sublime productivity ebook
+   Search for: ____________________ Search
+
+Recent Posts
+
+     * [84]Get unlost with Sublime’s new Jump Back and Jump Forward
+       commands
+     * [85]Quick text cleanup with Sublime’s new Invert Selection command
+     * [86]Sublime Text 3: Worth the upgrade?
+     * [87]Fix Sublime Text’s quirky PHP, SASS variable selection
+     * [88]Win a free Sublime Text license
+
+Tags
+
+   [89]ebooks [90]habits [91]productivity [92]SASS [93]self improvement
+   [94]self publishing [95]sublime-plugins [96]sublime productivity
+   [97]sublime text [98]sublime text 3
+
+Archives
+
+     * [99]August 2013
+     * [100]July 2013
+     * [101]June 2013
+     * [102]May 2013
+     * [103]April 2013
+     * [104]January 2013
+
+Meta
+
+     * [105]Log in
+     * [106]Entries RSS
+     * [107]Comments RSS
+     * [108]WordPress.org
+
+     * [109]Sublime Productivity
+     * [110]Blog
+     * [111]Resources
+     * [112]About
+     * [113]Contact
+
+   © 2013 [114]Josh Earl | All Rights Reserved
+   [115]Follow me →
+
+References
+
+   Visible links
+   1. http://feeds.feedburner.com/joshearl
+   2. http://feeds.feedburner.com/joshearl
+   3. http://aspirecode.com/comments/feed/
+   4. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/feed/
+   5. http://aspirecode.com/flatland-the-best-minimal-theme-for-sublime-text/
+   6. http://aspirecode.com/starting-a-new-wordpress-plugin-with-sublime-text/
+   7. http://aspirecode.com/
+   8. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml524.data
+   9. http://samples.leanpub.com/sublime-productivity-sample.pdf
+  10. https://leanpub.com/sublime-productivity
+  11. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml524.data
+  12. http://sublimetexttips.com/newsletter/
+  13. http://aspirecode.com/blog/
+  14. http://aspirecode.com/resources/
+  15. http://aspirecode.com/about/
+  16. http://aspirecode.com/contact/
+  17. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/
+  18. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/
+  19. http://sass-lang.com/
+  20. http://www.metropoliscreative.com/web-development/how-to-install-sass-an-easy-guide-for-developers/
+  21. http://wbond.net/sublime_packages/package_control/installation
+  22. https://github.com/nathos/sass-textmate-bundle
+  23. https://github.com/jaumefontal/SASS-Build-SublimeText2
+  24. https://github.com/alexnj/SublimeOnSaveBuild
+  25. http://www.reddit.com/static/button/button2.html?width=51&url=http%3A%2F%2Faspirecode.com%2Fhow-to-add-sass-support-in-sublime-text%2F&title=How%20to%20Add%20SASS%20Support%20in%20Sublime%20Text&newwindow='1'
+  26. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml524.data
+  27. http://aspirecode.com/category/blog/
+  28. http://aspirecode.com/category/featured/
+  29. http://aspirecode.com/category/header-slider/
+  30. http://aspirecode.com/tag/sass/
+  31. http://aspirecode.com/tag/sublime-text/
+  32. http://aspirecode.com/how-to-add-sass-support-in-sublime-text//#comments
+  33. file://localhost/how-to-add-sass-support-in-sublime-text/?replytocom=49#respond
+  34. http://www.korytegman.com/
+  35. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-49
+  36. file://localhost/how-to-add-sass-support-in-sublime-text/?replytocom=50#respond
+  37. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-50
+  38. file://localhost/how-to-add-sass-support-in-sublime-text/?replytocom=51#respond
+  39. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-51
+  40. file://localhost/how-to-add-sass-support-in-sublime-text/?replytocom=59#respond
+  41. http://twitter.com/enlifer
+  42. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-59
+  43. file://localhost/how-to-add-sass-support-in-sublime-text/?replytocom=76#respond
+  44. http://altvisions.com/
+  45. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-76
+  46. file://localhost/how-to-add-sass-support-in-sublime-text/?replytocom=86#respond
+  47. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-86
+  48. file://localhost/how-to-add-sass-support-in-sublime-text/?replytocom=87#respond
+  49. http://www.levityisland.com/
+  50. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-87
+  51. file://localhost/how-to-add-sass-support-in-sublime-text/?replytocom=88#respond
+  52. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-88
+  53. file://localhost/how-to-add-sass-support-in-sublime-text/?replytocom=89#respond
+  54. http://thedavidplatt.wordpress.com/2013/06/24/sass/
+  55. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-89
+  56. file://localhost/how-to-add-sass-support-in-sublime-text/?replytocom=92#respond
+  57. http://lednor.com/blog/bookmarks-for-26th-june-2013
+  58. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-92
+  59. file://localhost/how-to-add-sass-support-in-sublime-text/?replytocom=93#respond
+  60. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-93
+  61. file://localhost/how-to-add-sass-support-in-sublime-text/?replytocom=96#respond
+  62. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-96
+  63. file://localhost/how-to-add-sass-support-in-sublime-text/?replytocom=97#respond
+  64. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-97
+  65. file://localhost/how-to-add-sass-support-in-sublime-text/?replytocom=98#respond
+  66. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-98
+  67. file://localhost/how-to-add-sass-support-in-sublime-text/?replytocom=126#respond
+  68. http://Website/
+  69. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-126
+  70. file://localhost/how-to-add-sass-support-in-sublime-text/?replytocom=120#respond
+  71. http://www.zachjohnstondesign.com/
+  72. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-120
+  73. file://localhost/how-to-add-sass-support-in-sublime-text/?replytocom=121#respond
+  74. http://www.zachjohnstondesign.com/
+  75. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-121
+  76. file://localhost/how-to-add-sass-support-in-sublime-text/?replytocom=124#respond
+  77. http://benfrain.com/
+  78. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-124
+  79. file://localhost/how-to-add-sass-support-in-sublime-text/?replytocom=125#respond
+  80. http://aspirecode.com/how-to-add-sass-support-in-sublime-text/#comment-125
+  81. file://localhost/how-to-add-sass-support-in-sublime-text/#respond
+  82. http://www.sublimeproductivity.com/
+  83. http://www.sublimeproductivity.com/
+  84. http://aspirecode.com/sublime-text-jump-back-jump-forward/
+  85. http://aspirecode.com/format-data-with-sublime-invert-selection/
+  86. http://aspirecode.com/sublime-text-3-worth-the-upgrade/
+  87. http://aspirecode.com/fix-sublime-text-selection-php-sass-variables/
+  88. http://aspirecode.com/win-a-free-sublime-text-license/
+  89. http://aspirecode.com/tag/ebooks/
+  90. http://aspirecode.com/tag/habits/
+  91. http://aspirecode.com/tag/productivity/
+  92. http://aspirecode.com/tag/sass/
+  93. http://aspirecode.com/tag/self-improvement/
+  94. http://aspirecode.com/tag/self-publishing/
+  95. http://aspirecode.com/tag/sublime-plugins/
+  96. http://aspirecode.com/tag/sublime-productivity/
+  97. http://aspirecode.com/tag/sublime-text/
+  98. http://aspirecode.com/tag/sublime-text-3/
+  99. http://aspirecode.com/2013/08/
+ 100. http://aspirecode.com/2013/07/
+ 101. http://aspirecode.com/2013/06/
+ 102. http://aspirecode.com/2013/05/
+ 103. http://aspirecode.com/2013/04/
+ 104. http://aspirecode.com/2013/01/
+ 105. http://aspirecode.com/wp-login.php
+ 106. http://feeds.feedburner.com/joshearl
+ 107. http://aspirecode.com/comments/feed/
+ 108. http://wordpress.org/
+ 109. https://leanpub.com/sublime-productivity
+ 110. http://aspirecode.com/blog/
+ 111. http://aspirecode.com/resources/
+ 112. http://aspirecode.com/about/
+ 113. http://aspirecode.com/contact/
+ 114. http://aspirecode.com/
+ 115. http://twitter.com/@josh_earl
+
+   Hidden links:
+ 117. http://twitter.com/share
+ 118. http://bufferapp.com/add
+ 119. http://pinterest.com/pin/create/button/?url=http%3A%2F%2Faspirecode.com%2Fhow-to-add-sass-support-in-sublime-text%2F&description=How%20to%20Add%20SASS%20Support%20in%20Sublime%20Text&media=http://aspirecode.com/wp-content/uploads/2013/04/scss-with-highlighting.png

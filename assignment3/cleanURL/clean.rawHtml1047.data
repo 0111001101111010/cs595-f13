@@ -1,0 +1,491 @@
+   #[1]The Gotham Blog » Feed [2]The Gotham Blog » Comments Feed [3]The
+   Gotham Blog » vSphere 5.5 is Available for Download Comments Feed
+   [4]Reset Your Privacy Settings In iOS 7 [5]Gotham Security Daily Threat
+   Alerts [6]alternate [7]alternate [8]The Gotham Blog [9]WordPress.com
+
+   [10]Skip to content
+
+   Follow:
+          [11]RSS
+          [12]Twitter
+
+   [13]The Gotham Blog
+   The Gotham Blog
+     * [14]Main
+     * [15]Virtualization
+     * [16]Infrastructure
+     * [17]Storage
+     * [18]Security
+     * [19]AppDev
+     * [20]Training
+     * [21]Support
+     * [22]Staffing
+     * [23]Government
+
+   Tags
+
+   [24]VMware, [25]vCenter, [26]security token service, [27]single Sign
+   On, [28]vSphere 5.5, [29]Administration server, [30]vCenter Lookup
+   Service, [31]VMware Directory Service
+
+vSphere 5.5 is Available for Download
+
+   by [32]Nancy M. Rand on September 26, 2013
+
+   vSphere 5.5 is available for [33]download from the VMware web site as
+   of 9/22/13. There is a 14 MB documentation bundle of pdfs also
+   available for review in addition to an updated edoc site: [34]VMware
+   vSphere 5.5 Documentation Center.
+
+   An upgrade warning on the download site states “vCenter Server upgrade
+   to 5.5 may fail When upgrading from vSphere 5.1 to 5.5, the vCenter
+   Single Sign-On upgrade may fail. This issue affects some vCenter Server
+   5.1 systems running with default certificates that are upgrading to
+   vCenter Server 5.5 under certain specific conditions. To resolve this
+   issue, before upgrading, review [35]KB 2060511.” The Knowledge Base
+   article provides settings to check and change for the upgrade to
+   continue. Default certificates with IP addresses instead of FQDN are
+   affected.
+
+   Before upgrading, please ensure that all hardware and product
+   compatibility lists are checked. Also please check the upgrade pdf as
+   the requirements are changed in several locations.  For example they
+   are recommending 8 GB RAM minimum on an ESXi host.
+
+   The SSO architecture has also changed. The following is from the VMware
+   vSphere Upgrade vSphere 5.5 pdf and describes the new components and
+   their functionality:
+
+   STS (Security Token Service) – STS certificates enable a user who has
+   logged on through vCenter Single Sign-On to use any vCenter service
+   that vCenter Single Sign-On supports without authenticating to each
+   one. The STS service issues Security Assertion Markup Language (SAML)
+   tokens. These security tokens represent the identity of a user in one
+   of the identity source types supported by vCenter Single Sign-On.
+
+   Administration server The administration server allows users with
+   administrator privileges to vCenter Single Sign-On to configure the
+   vCenter Single Sign-On server and manage users and groups from the
+   vSphere Web Client. Initially, only the user
+   administrator@vsphere.local has these privileges.
+
+   vCenter Lookup Service vCenter Lookup Service contains topology
+   information about the vSphere infrastructure, enabling vSphere
+   components to connect to each other securely. Unless you are using
+   Simple Install, you are prompted for the Lookup Service URL when you
+   install other vSphere components. For example, the Inventory Service
+   and the vCenter Server installers ask for the Lookup Service URL and
+   then contact the Lookup Service to find vCenter Single Sign-On. After
+   installation, the Inventory Service and vCenter Server system are
+   registered in vCenter Lookup Service so other vSphere components, like
+   the vSphere Web Client, can find them.
+
+   VMware Directory Service Directory service associated with the
+   vsphere.local domain. This service is a multi-tenanted, multi-mastered
+   directory service that makes an LDAP directory available on port 11711.
+   In multisite mode, an update of VMware Directory Service content in one
+   VMware Directory Service instance results in the automatic update of
+   the VMware Directory Service instances associated with all other
+   vCenter Single Sign-On nodes.
+
+   The upgrade guide presents recommendations for HA of vCenter and SSO
+   for review to ensure availability of both as one cannot log into
+   vCenter without SSO.
+
+   Gotham Technology Group can assist with upgrade preparation with our
+   new vSphere Upgrade Assessment service offering. Please contact your
+   account manager or Gotham at 201-474-2000 to speak with one of us about
+   planning your upgrade.
+
+Share this:
+
+     * [36]Twitter
+     * [37]Facebook
+     * [38]LinkedIn
+     * [39]Google
+     *
+
+Like this:
+
+   Like Loading...
+
+   From → [40]Uncategorized
+   Leave a Comment
+
+Leave a Reply [41]Cancel reply
+
+   Enter your comment here...
+
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+
+   Fill in your details below or click an icon to log in:
+     *
+     *
+     *
+     *
+     *
+
+       IFRAME: [42]googleplus-sign-in
+
+   [43]Gravatar
+   Email (required) (Address never made public)
+   ____________________
+   Name (required)
+   ____________________
+   Website
+   ____________________
+   WordPress.com Logo
+
+   You are commenting using your WordPress.com account.
+   ( [44]Log Out / [45]Change )
+   Twitter picture
+
+   You are commenting using your Twitter account.
+   ( [46]Log Out / [47]Change )
+   Facebook photo
+
+   You are commenting using your Facebook account.
+   ( [48]Log Out / [49]Change )
+   Google+ photo
+
+   You are commenting using your Google+ account.
+   ( [50]Log Out / [51]Change )
+   [52]Cancel
+
+   Connecting to %s
+
+   [ ] Notify me of follow-up comments via email.
+
+   [ ] Notify me of new posts via email.
+
+   Post Comment
+
+   « [53]Gotham Security Daily Threat Alerts
+   [54]Reset Your Privacy Settings In iOS 7 »
+     * Website
+       [55]www.gothamtg.com
+     * Social Media
+          + [56]Gotham on Twitter
+          + [57]Gotham on Facebook
+          + [58]Gotham on LinkedIn
+     * Follow The Gotham Blog
+       ____________________
+       Follow
+     * Search
+       ____________________ Search
+     * Latest
+          + [59]Desktop Transformation Assessment
+          + [60]Gotham Security Daily Threat Alerts
+          + [61]Gotham Security Daily Threat Alerts
+          + [62]Gotham Security Daily Threat Alerts
+          + [63]Gotham Security Daily Threat Alerts
+     * [64]Infrastructure
+     * [65]Twitter Updates
+          + GigaOM: @[66]splunk is furthering its evolution beyond [67]#IT
+            search: [68]bit.ly/1c0jMDh [69]7 hours ago
+          + InfoWorld: 7 service requests that make [70]#IT support folks
+            cry: [71]bit.ly/16Eq0b4 [72]12 hours ago
+          + The Gotham Blog: Desktop Transformation Assessment:
+            [73]bit.ly/150LYl7 [74]12 hours ago
+       [75]Follow @gothamtg
+     *
+
+[76]Contributors
+
+   [77][ka.jpg] Kaysel Adrover, Technical Architect [78][la.jpg] Lauren
+   Albanese, Marketing Manager [79][cenzo-head-2012-v1bw.jpg] Vincenzo
+   Bochicchio, Data Center Advisor [80][eb.jpg] Ed Bratter, Technical
+   Architect
+   [81][tk2.jpg] Tim Karl, Technical Architect [82][sk2.jpg] Steve
+   Kilcoyne, Communications Manager [83][mk.jpg] Michele Kyle, Training
+   Director [84][cl.jpg] Chaim Landau, Technical Architect
+   [85][nl.jpg] Neil Lucey, Technical Architect [86][hp1.jpg] Hemant
+   Patel, Technical Architect [87]Ken Phelan, Chief Technology Officer Ken
+   Phelan, Chief Technology Officer [88][nra.jpg] Nancy Rand, Principal
+   Architect
+   [89][nro.jpg] Nathalie Romero, Technical Architect [90]Hank Smith,
+   Principal Architect Hank Smith, Principal Architect [91]Ben Towers,
+   Technical Architect Ben Towers, Technical Architect [92][pv.jpg] Pablo
+   Vidal, Technical Architect
+   [93]Russ Vines, Chief Security Advisor Russ Vines, Chief Security
+   Advisor [94]Brian Wagner, Principal Architect Brian Wagner, Principal
+   Architect [95][az.jpg] Alan Zatulovsky, Technical Architect
+     * [96]
+
+The Gotham Blog
+     * Tags
+       [97]Adobe [98]Android [99]Apache [100]Apple [101]ars technica
+       [102]Bitcoin [103]BlackBerry [104]Blue Coat [105]botnet [106]BYOD
+       [107]Check Point [108]Cisco [109]Cisco Systems [110]Citrix
+       [111]cloud [112]Cloud computing [113]cnet [114]computerworld
+       [115]CRN [116]cross-site scripting [117]cyberespionage [118]data
+       center [119]DDoS [120]Denial-of-service attack [121]desktop
+       virtualization [122]Dropbox [123]EMC [124]Facebook [125]Firefox
+       [126]Google [127]Google Chrome [128]InfoWorld [129]infrastructure
+       [130]Internet Explorer [131]iOS [132]iPad [133]iPhone [134]IT
+       [135]Java [136]JavaScript [137]Juniper Networks [138]malware
+       [139]McAfee [140]Microsoft [141]Microsoft Windows [142]NetApp
+       [143]NetScaler [144]Network World [145]oracle [146]passwords
+       [147]Patch Tuesday [148]phishing [149]ransomware [150]Riverbed
+       [151]RSA [152]security [153]spam [154]Symantec [155]Tech Round-up
+       [156]Tech Term of the Week [157]Twitter [158]two-factor
+       authentication [159]VDI [160]virtualization [161]VMware
+       [162]vulnerability [163]Vulnerability (computing) [164]Windows
+       [165]Windows 8 [166]Windows Azure [167]WordPress [168]XenApp
+       [169]XenDesktop [170]XSS [171]ZDNet
+     * Archives
+          + [172]September 2013
+          + [173]August 2013
+          + [174]July 2013
+          + [175]June 2013
+          + [176]May 2013
+          + [177]April 2013
+          + [178]March 2013
+          + [179]February 2013
+          + [180]January 2013
+          + [181]December 2012
+          + [182]November 2012
+          + [183]October 2012
+          + [184]September 2012
+          + [185]August 2012
+          + [186]July 2012
+          + [187]June 2012
+          + [188]May 2012
+          + [189]April 2012
+          + [190]March 2012
+          + [191]February 2012
+
+     * Gotham Technology Group
+          + [192]About Us
+          + [193]Contact Us
+          + [194]Events
+          + [195]Training
+
+     * Social Media
+          + [196]Gotham on Twitter
+          + [197]Gotham on Facebook
+          + [198]Gotham on LinkedIn
+          + [199]Gotham on Google+
+
+
+
+   [200]Blog at WordPress.com. | [201]Customized Titan Theme.
+
+   IFRAME: [202]likes-master
+
+   %d bloggers like this:
+
+References
+
+   Visible links
+   1. http://blog.gothamtg.com/feed/
+   2. http://blog.gothamtg.com/comments/feed/
+   3. http://blog.gothamtg.com/2013/09/26/vsphere-5-5-is-available-for-download/feed/
+   4. http://blog.gothamtg.com/2013/09/26/reset-your-privacy-settings-in-ios-7/
+   5. http://blog.gothamtg.com/2013/09/26/gotham-security-daily-threat-alerts-92/
+   6. http://public-api.wordpress.com/oembed/1.0/?format=json&url=http%3A%2F%2Fblog.gothamtg.com%2F2013%2F09%2F26%2Fvsphere-5-5-is-available-for-download%2F&for=wpcom-auto-discovery
+   7. http://public-api.wordpress.com/oembed/1.0/?format=xml&url=http%3A%2F%2Fblog.gothamtg.com%2F2013%2F09%2F26%2Fvsphere-5-5-is-available-for-download%2F&for=wpcom-auto-discovery
+   8. http://blog.gothamtg.com/osd.xml
+   9. http://wordpress.com/opensearch.xml
+  10. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1047.data#content
+  11. http://blog.gothamtg.com/feed/
+  12. http://twitter.com/gothamtg
+  13. http://blog.gothamtg.com/
+  14. http://gothamtg.wordpress.com/
+  15. http://blog.gothamtg.com/category/virtualization/
+  16. http://blog.gothamtg.com/category/infrastructure/
+  17. http://blog.gothamtg.com/category/storage/
+  18. http://blog.gothamtg.com/category/security/
+  19. http://blog.gothamtg.com/category/appdev/
+  20. http://blog.gothamtg.com/category/training/
+  21. http://blog.gothamtg.com/category/support/
+  22. http://blog.gothamtg.com/category/staffing/
+  23. http://blog.gothamtg.com/category/government-solutions/
+  24. http://blog.gothamtg.com/tag/vmware/
+  25. http://blog.gothamtg.com/tag/vcenter/
+  26. http://blog.gothamtg.com/tag/security-token-service/
+  27. http://blog.gothamtg.com/tag/single-sign-on/
+  28. http://blog.gothamtg.com/tag/vsphere-5-5/
+  29. http://blog.gothamtg.com/tag/administration-server/
+  30. http://blog.gothamtg.com/tag/vcenter-lookup-service/
+  31. http://blog.gothamtg.com/tag/vmware-directory-service/
+  32. http://blog.gothamtg.com/author/nymrand/
+  33. https://www.vmware.com/products/vsphere/upgrade-center/overview
+  34. http://pubs.vmware.com/vsphere-55/index.jsp?__utma=207178772.1466595609.1380205622.1380205622.1380205622.1&__utmb=207178772.1.10.1380205622&__utmc=207178772&__utmx=-&__utmz=207178772.1380205622.1.1.utmcsr=my.vmware.com|utmccn=(referral)|utmcmd=referral|utmcct=/web/vmware/info/slug/datacenter_cloud_infrastructure/vmware_vsphere/5_5&__utmv=-&__utmk=174292129
+  35. http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2060511
+  36. http://blog.gothamtg.com/2013/09/26/vsphere-5-5-is-available-for-download/?share=twitter
+  37. http://blog.gothamtg.com/2013/09/26/vsphere-5-5-is-available-for-download/?share=facebook
+  38. http://blog.gothamtg.com/2013/09/26/vsphere-5-5-is-available-for-download/?share=linkedin
+  39. http://blog.gothamtg.com/2013/09/26/vsphere-5-5-is-available-for-download/?share=google-plus-1
+  40. http://blog.gothamtg.com/category/uncategorized/
+  41. file://localhost/2013/09/26/vsphere-5-5-is-available-for-download/?utm_source=feedburner&utm_medium=twitter&utm_campaign=Feed%3A+Secureslinger+%28SecureSlinger%29#respond
+  42. https://public-api.wordpress.com/connect/?googleplus-sign-in=1
+  43. https://gravatar.com/site/signup/
+  44. javascript:HighlanderComments.doExternalLogout( 'wordpress' );
+  45. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1047.data
+  46. javascript:HighlanderComments.doExternalLogout( 'twitter' );
+  47. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1047.data
+  48. javascript:HighlanderComments.doExternalLogout( 'facebook' );
+  49. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1047.data
+  50. javascript:HighlanderComments.doExternalLogout( 'googleplus' );
+  51. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1047.data
+  52. javascript:HighlanderComments.cancelExternalWindow();
+  53. http://blog.gothamtg.com/2013/09/26/gotham-security-daily-threat-alerts-92/
+  54. http://blog.gothamtg.com/2013/09/26/reset-your-privacy-settings-in-ios-7/
+  55. http://www.gothamtg.com/
+  56. file://www.twitter.com/gothamtg
+  57. file://www.facebook.com/gothamtg
+  58. file://www.linkedin.com/company/gotham-technology-group
+  59. http://blog.gothamtg.com/2013/09/30/desktop-transformation-assessment/
+  60. http://blog.gothamtg.com/2013/09/30/gotham-security-daily-threat-alerts-118/
+  61. http://blog.gothamtg.com/2013/09/27/gotham-security-daily-threat-alerts-117/
+  62. http://blog.gothamtg.com/2013/09/26/gotham-security-daily-threat-alerts-116/
+  63. http://blog.gothamtg.com/2013/09/26/gotham-security-daily-threat-alerts-115/
+  64. https://gothamtg.com/infrastructure.html
+  65. http://twitter.com/gothamtg
+  66. http://twitter.com/splunk
+  67. http://twitter.com/search?q=%23IT
+  68. http://bit.ly/1c0jMDh
+  69. http://twitter.com/gothamtg/statuses/385132028535898112
+  70. http://twitter.com/search?q=%23IT
+  71. http://bit.ly/16Eq0b4
+  72. http://twitter.com/gothamtg/statuses/385056526961868801
+  73. http://bit.ly/150LYl7
+  74. http://twitter.com/gothamtg/statuses/385045200231333888
+  75. http://twitter.com/gothamtg
+  76. http://gothamtg.wordpress.com/contributors/
+  77. http://gothamtg.wordpress.com/contributors/#KA
+  78. http://gothamtg.wordpress.com/contributors/#LA
+  79. http://gothamtg.wordpress.com/contributors/#VB
+  80. http://gothamtg.wordpress.com/contributors/#EB
+  81. http://gothamtg.wordpress.com/contributors/#TK
+  82. http://gothamtg.wordpress.com/contributors/#SK
+  83. http://gothamtg.wordpress.com/contributors/#MK
+  84. http://gothamtg.wordpress.com/contributors/#CL
+  85. http://gothamtg.wordpress.com/contributors/#NL
+  86. http://gothamtg.wordpress.com/contributors/#HP
+  87. http://gothamtg.wordpress.com/contributors/#KP
+  88. http://gothamtg.wordpress.com/contributors/#NRA
+  89. http://gothamtg.wordpress.com/contributors/#NRO
+  90. http://gothamtg.wordpress.com/contributors/#HS
+  91. http://gothamtg.wordpress.com/contributors/#BT
+  92. http://gothamtg.wordpress.com/contributors/#PV
+  93. http://gothamtg.wordpress.com/contributors/#RV
+  94. http://gothamtg.wordpress.com/contributors/#BW
+  95. http://gothamtg.wordpress.com/contributors/#AZ
+  96. http://blog.gothamtg.com/
+  97. http://blog.gothamtg.com/tag/adobe/
+  98. http://blog.gothamtg.com/tag/android/
+  99. http://blog.gothamtg.com/tag/apache/
+ 100. http://blog.gothamtg.com/tag/apple/
+ 101. http://blog.gothamtg.com/tag/ars-technica/
+ 102. http://blog.gothamtg.com/tag/bitcoin/
+ 103. http://blog.gothamtg.com/tag/blackberry/
+ 104. http://blog.gothamtg.com/tag/blue-coat/
+ 105. http://blog.gothamtg.com/tag/botnet/
+ 106. http://blog.gothamtg.com/tag/byod/
+ 107. http://blog.gothamtg.com/tag/check-point/
+ 108. http://blog.gothamtg.com/tag/cisco/
+ 109. http://blog.gothamtg.com/tag/cisco-systems/
+ 110. http://blog.gothamtg.com/tag/citrix/
+ 111. http://blog.gothamtg.com/tag/cloud/
+ 112. http://blog.gothamtg.com/tag/cloud-computing/
+ 113. http://blog.gothamtg.com/tag/cnet/
+ 114. http://blog.gothamtg.com/tag/computerworld/
+ 115. http://blog.gothamtg.com/tag/crn/
+ 116. http://blog.gothamtg.com/tag/cross-site-scripting/
+ 117. http://blog.gothamtg.com/tag/cyberespionage/
+ 118. http://blog.gothamtg.com/tag/data-center/
+ 119. http://blog.gothamtg.com/tag/ddos/
+ 120. http://blog.gothamtg.com/tag/denial-of-service-attack/
+ 121. http://blog.gothamtg.com/tag/desktop-virtualization/
+ 122. http://blog.gothamtg.com/tag/dropbox/
+ 123. http://blog.gothamtg.com/tag/emc/
+ 124. http://blog.gothamtg.com/tag/facebook/
+ 125. http://blog.gothamtg.com/tag/firefox/
+ 126. http://blog.gothamtg.com/tag/google/
+ 127. http://blog.gothamtg.com/tag/google-chrome/
+ 128. http://blog.gothamtg.com/tag/infoworld/
+ 129. http://blog.gothamtg.com/tag/infrastructure-2/
+ 130. http://blog.gothamtg.com/tag/internet-explorer/
+ 131. http://blog.gothamtg.com/tag/ios/
+ 132. http://blog.gothamtg.com/tag/ipad/
+ 133. http://blog.gothamtg.com/tag/iphone/
+ 134. http://blog.gothamtg.com/tag/it/
+ 135. http://blog.gothamtg.com/tag/java/
+ 136. http://blog.gothamtg.com/tag/javascript/
+ 137. http://blog.gothamtg.com/tag/juniper-networks/
+ 138. http://blog.gothamtg.com/tag/malware/
+ 139. http://blog.gothamtg.com/tag/mcafee/
+ 140. http://blog.gothamtg.com/tag/microsoft/
+ 141. http://blog.gothamtg.com/tag/microsoft-windows/
+ 142. http://blog.gothamtg.com/tag/netapp/
+ 143. http://blog.gothamtg.com/tag/netscaler/
+ 144. http://blog.gothamtg.com/tag/network-world/
+ 145. http://blog.gothamtg.com/tag/oracle/
+ 146. http://blog.gothamtg.com/tag/passwords/
+ 147. http://blog.gothamtg.com/tag/patch-tuesday/
+ 148. http://blog.gothamtg.com/tag/phishing/
+ 149. http://blog.gothamtg.com/tag/ransomware/
+ 150. http://blog.gothamtg.com/tag/riverbed/
+ 151. http://blog.gothamtg.com/tag/rsa/
+ 152. http://blog.gothamtg.com/tag/security-2/
+ 153. http://blog.gothamtg.com/tag/spam/
+ 154. http://blog.gothamtg.com/tag/symantec/
+ 155. http://blog.gothamtg.com/tag/tech-round-up/
+ 156. http://blog.gothamtg.com/tag/tech-term-of-the-week/
+ 157. http://blog.gothamtg.com/tag/twitter/
+ 158. http://blog.gothamtg.com/tag/two-factor-authentication/
+ 159. http://blog.gothamtg.com/tag/vdi/
+ 160. http://blog.gothamtg.com/tag/virtualization-2/
+ 161. http://blog.gothamtg.com/tag/vmware/
+ 162. http://blog.gothamtg.com/tag/vulnerability/
+ 163. http://blog.gothamtg.com/tag/vulnerability-computing/
+ 164. http://blog.gothamtg.com/tag/windows/
+ 165. http://blog.gothamtg.com/tag/windows-8/
+ 166. http://blog.gothamtg.com/tag/windows-azure/
+ 167. http://blog.gothamtg.com/tag/wordpress/
+ 168. http://blog.gothamtg.com/tag/xenapp/
+ 169. http://blog.gothamtg.com/tag/xendesktop/
+ 170. http://blog.gothamtg.com/tag/xss/
+ 171. http://blog.gothamtg.com/tag/zdnet/
+ 172. http://blog.gothamtg.com/2013/09/
+ 173. http://blog.gothamtg.com/2013/08/
+ 174. http://blog.gothamtg.com/2013/07/
+ 175. http://blog.gothamtg.com/2013/06/
+ 176. http://blog.gothamtg.com/2013/05/
+ 177. http://blog.gothamtg.com/2013/04/
+ 178. http://blog.gothamtg.com/2013/03/
+ 179. http://blog.gothamtg.com/2013/02/
+ 180. http://blog.gothamtg.com/2013/01/
+ 181. http://blog.gothamtg.com/2012/12/
+ 182. http://blog.gothamtg.com/2012/11/
+ 183. http://blog.gothamtg.com/2012/10/
+ 184. http://blog.gothamtg.com/2012/09/
+ 185. http://blog.gothamtg.com/2012/08/
+ 186. http://blog.gothamtg.com/2012/07/
+ 187. http://blog.gothamtg.com/2012/06/
+ 188. http://blog.gothamtg.com/2012/05/
+ 189. http://blog.gothamtg.com/2012/04/
+ 190. http://blog.gothamtg.com/2012/03/
+ 191. http://blog.gothamtg.com/2012/02/
+ 192. http://gothamtg.com/aboutus.html
+ 193. http://gothamtg.com/contactus.html
+ 194. http://gothamtg.com/events
+ 195. http://gothamtg.com/training.html
+ 196. file://www.twitter.com/gothamtg
+ 197. file://www.facebook.com/gothamtg
+ 198. file://www.linkedin.com/company/gotham-technology-group
+ 199. https://plus.google.com/112424359483128387705/posts
+ 200. http://wordpress.com/?ref=footer
+ 201. http://theme.wordpress.com/credits/blog.gothamtg.com/
+ 202. http://widgets.wp.com/likes/master.html?ver=20130620a#ver=20130620a&mp6=1
+
+   Hidden links:
+ 204. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1047.data#comment-form-guest
+ 205. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1047.data#comment-form-load-service:WordPress.com
+ 206. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1047.data#comment-form-load-service:Twitter
+ 207. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1047.data#comment-form-load-service:Facebook

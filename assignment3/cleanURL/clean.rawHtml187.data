@@ -1,0 +1,443 @@
+   #[1]Дневник Блок, Элемент, Модификатор (БЭМ, BEM) [2]Дневник Блок,
+   Элемент, Модификатор (БЭМ, BEM) без импортированных записей
+
+   [3]Яндекс
+
+   [4]Поиск [5]Почта [6]Диск [7]Календарь [8]Деньги [9]Мой Круг [10]Фотки
+   [11]ещё
+
+     * [12]Авто
+     * [13]Афиша
+     * [14]Блоги
+     * [15]Видео
+     * [16]ЕГЭ
+     * [17]Картинки
+     * [18]Карты
+     * [19]Каталог
+     * [20]Маркет
+     * [21]Новости
+     * [22]Погода
+     * [23]Работа
+     * [24]Расписания
+     * [25]Словари
+     * [26]Справочник
+     * [27]Такси
+     * [28]Телепрограмма
+     * [29]Услуги
+     * [30]Я.ру
+     *
+     * [31]Мобильный
+     * [32]Программы
+     * [33]Все сервисы
+
+   [34]я.ру
+
+
+   [35]Войти ____________________ ____________________ [ ]
+   [36]Помощь
+   ____________________
+   Найти Submit
+
+
+   Чтобы получить доступ ко всем возможностям Я.ру, создайте страницу или
+   [37]войдите, если у вас она уже есть.
+   [38]Создать страницу
+
+   [39](^_^)
+
+            клуб
+
+            [40]Блок, Элемент, Модификатор (БЭМ, BEM)
+
+
+   Присоединившись к клубу, вы сможете вывешивать фотки в галерее
+   и создавать новые темы для обсуждения. Обсуждаемые темы клуба будут
+   появляться на странице «Что нового».
+   [41]Вступить в клуб
+
+   записи по
+
+      месяцам · меткам · типам
+
+   выделить все / снять выделение
+
+        *
+
+
+   [X] текстовые записи
+        *
+
+
+   [ ] новости, правила, описание клуба
+        *
+
+
+   [ ] опросы
+        *
+
+
+   [X] ссылки
+        *
+
+
+   [X] фотки
+        *
+
+
+   [X] видео
+        *
+
+      Показать Submit
+   [42]toivonens написала
+                                 [43]26 сентября, 18:40
+   [44](^_^)
+   [45]БЭМ-котик зашивается! (Нужны идеи js-блоков)
+
+   Привет!
+   Вы может быть уже в комметах видели, я пишу [46]новый кленовый туториал
+   по i-bem.js. Оно потом будет на сайте bem.info. Это уже про bem-core, с
+   модульностью и новыми возможностями. Мало того, что это про новое, так
+   наконец-то документ, по которому можно научиться писать БЭМ на
+   JavaScript. Бедные люди сейчас смотрят полуторогодовой давности доклады
+   и что-то пытаются сделать. Представляете насколько станет легче с
+   туториалом? А ведь потом можно писать реиспользуемые компоненты и
+   делиться друг с другом!
+
+   Мотивационная часть закончена, теперь к делу. Вот здесь у меня список
+   примеров в том порядке, в котором они должны иллюстрировать возможности
+   ядра [47]https://github.com/varya/bem-js-tutorial/wiki/Idea
+   s-of-examples "Зачеркнутое" сделано. Результаты вы можете видеть в
+   самом туториале. Придумывать такое очень сложно. Ведь пример должен
+   быть максимально простым и не забегать вперед, а использовать только
+   пройденный материал. И ещё важен красивый CSS, это очень мотивирует
+   "сделать такую же крутую штуку".
+
+   Примеры придумываются очень медленно. То есть код написать и описать
+   его — не проблема. А вот именно идея, что за блок должен быть и какое
+   ему придумать (а лучше — позаимствовать) оформление, она бывает часами
+   не приходит.
+
+   Я только переехала в другую страну, работаю на новой работе, ищу
+   квартиру, учу язык. Короче, никак у меня не получается больше пары
+   часов в день на эти примеры выделять, да и то невсегда. В результате
+   получается в час по чайной ложке. Видите, как мало в списке
+   "зачеркнуто"?
+
+   Помогите мне, а?
+
+   Нужны идеи. Может у вас какие-то блоки написаны, которые именно то
+   используют, про что я хочу написать? Мне даже код не нужен, а просто
+   напишите в 2х словах, что за блок, что внутри. И ссылку на CSS красивый
+   для него.
+   Или если блок ещё даже не написан, а вы только придумали. Поделитесь со
+   мной пожалуйста!
+
+   Родина BEM team и сообщество вас не забудет. Тем более что git blame
+   всё помнит.
+
+   ответить[48]14 ответов
+                                        поделиться
+   [49](^_^)
+
+   [50]abc-ua
+             [51]26 сентября, 19:37
+
+   Интересно самому пощупать bem-core и помочь готовыми наработками, на
+   следующей неделе после яка могу часа 3 уделять этому, дай знать, если
+   интересует.
+
+   ответить[52]1 ответ
+                                   поделиться
+   [53](^_^)
+
+   [54]toivonens
+                [55]26 сентября, 20:04
+
+   Да, конечно. Просто это чуток про другое.
+
+   ответить
+                   поделиться
+   [56](^_^)
+
+   [57]a.p.savin
+                [58]26 сентября, 20:25
+
+   Примеры могут быть оторванными от жизни?
+
+   Например, "live-события Показать как новые блоки (только что
+   вставленные) не нуждаются в навешивании событий" - можно, скажем,
+   сделать кнопку, которая вставляет свой клон - с одной стороны, это не
+   real world example, как говорится, с другой стороны - пример простой и,
+   кажется, не затрагивает не изученный функционал.
+
+   ответить[59]1 ответ
+                                   поделиться
+   [60](^_^)
+
+   [61]toivonens
+                [62]26 сентября, 23:05
+
+   О, это крутая идея. Спасибо! Тем более что как раз до этого кнопка
+   показана.
+
+   ответить
+                   поделиться
+   [63](^_^)
+
+   [64]Александр Баумгертнер в ответ поделился ссылкой [65]у себя
+   [66]28 сентября, 11:57
+   ответить
+                   поделиться
+   [67](^_^)
+
+   [68]Александр Баумгертнер в ответ нашёл друга, её зовут [69]toivonens
+   [70]28 сентября, 11:59
+   ответить
+                   поделиться
+   [71](^_^)
+
+   [72]dkushnikov
+                 [73]28 сентября, 12:39
+
+   обязательно нужно что-то про работу с каналами
+
+
+
+   ответить[74]2 ответа
+                                     поделиться
+   [75](^_^)
+
+            [76]toivonens
+                         [77]28 сентября, 12:40
+
+               Там в списке было
+
+            ответить[78]1 ответ
+                                            поделиться
+   [79](^_^)
+
+   [80]4ok
+          [81]28 сентября, 20:21
+   Нужны примеры, когда целесообразно использовать их, а когда контроллеры
+
+   ответить
+                   поделиться
+   [82](^_^)
+
+   [83]4ok
+          [84]изменено 28 сентября, в 20:20
+   Наследование/Переопределение блоков и их функционала
+
+   ответить[85]1 ответ
+                                   поделиться
+   [86](^_^)
+
+   [87]toivonens
+                [88]29 сентября, 23:34
+
+   Это в списке есть. Вопрос в том, какие примеры к этому сделать.
+
+   ответить
+                   поделиться
+   [89](^_^)
+
+   [90]4ok
+          [91]28 сентября, 20:23
+   Если пробежаться по моим вопросам в это блоге, то можно вычленить много
+   примеров, которые могут возникнуть у пользователей
+
+   ответить
+                   поделиться
+   [92](^_^)
+
+   [93]funca
+            [94]28 сентября, 21:27
+
+     afterCurrentEvent (или как его там переименовали)
+
+   если возникают сложности с придумыванием простых и конкретных примеров,
+   может с абстракцией что-то не так? мне кажется, если какая-то штуковина
+   появляется, значит она кому-то нужна до боли. значит и кейс должен быть
+   где-то описан, и пачка тестов, иллюстрирующих функциональные требования
+   к фиче присутствовать. подобные заморочки часто возинкают, когда
+   сначала пиштеся код в состоянии аффекта, а затем начинается попытка
+   осознать содеянное.
+
+   ответить[95]1 ответ
+                                   поделиться
+   [96](^_^)
+
+   [97]toivonens
+                [98]29 сентября, 23:35
+
+   Проблема не с придумыванием примеров, а с тем чтобы пример был
+   максимально простым и НЕ включал в себя непройденные темы. Тогда как
+   любой БЭМ-блок с большой вероятностью берет немножко ото всех
+   возможностей фреймворка.
+
+   ответить
+                   поделиться
+
+   β-версия
+   [99]Пользовательское соглашение[100]Обратная связь[101]Помощь
+   [102]Мобильная версия
+   © 2007–2013  ООО «[103]Яндекс»
+
+   IFRAME: [104]/update_session.xml?build=
+
+
+   Адрес (URL)
+   __________________________________________________
+   Текст ссылки
+   __________________________________________________
+   Изображение должно быть загружено из
+   файла или должна быть указана ссылка на
+   него
+   Логин или имя пользователя
+   ____________________
+   [BUTTON Input] (not implemented)__________
+   [BUTTON Input] (not implemented)___________________________
+   Найдены:
+
+
+
+   Что получается:    [105]изменить ____________________
+   ____________________
+   :-) :-) ;-) ;-) :-( :-( ;-( ;-( >:-) >:-) B-) B-) :-O :-O :-P :-P :-D
+   :-D :-@ :-@ :-| :-| o_O o_O :-$ :-$ (love) (love) (B) (B) (+1) (+1)
+   (-1) (-1) [:]||||[:] [:]||||[:] [:]||||||[:] [:]||||||[:]
+   [:]|||||||||[:] [:]|||||||||[:]
+   Подписаться на комментарии к записи
+
+   Получать уведомления о всех ответах в этом обсуждении.
+   Форма не заполнена
+
+   Подписаться [BUTTON Input] (not implemented)________________
+   Отписаться от комментарев к записи
+
+   Получать уведомления только о тех ответах в этом обсуждении, которые
+   адресованы лично вам.
+   Форма не заполнена
+
+   Ок [BUTTON Input] (not implemented)________________
+   [106]отписаться
+   [107]подписаться
+   К сожалению, комментарий не удалось отправить. Попробуйте ещё раз.я в
+   курсе
+
+References
+
+   Visible links
+   1. http://clubs.ya.ru/bem/rss/posts.xml
+   2. http://clubs.ya.ru/bem/rss/posts-without-imported.xml
+   3. http://www.yandex.ru/
+   4. http://www.yandex.ru/
+   5. http://mail.yandex.ru/
+   6. http://disk.yandex.ru/
+   7. http://calendar.yandex.ru/
+   8. https://money.yandex.ru/
+   9. http://moikrug.ru/
+  10. http://fotki.yandex.ru/
+  11. http://www.yandex.ru/all
+  12. http://auto.yandex.ru/
+  13. http://afisha.yandex.ru/
+  14. http://blogs.yandex.ru/
+  15. http://video.yandex.ru/
+  16. file://ege.yandex.ru/
+  17. http://images.yandex.ru/
+  18. http://maps.yandex.ru/
+  19. http://yaca.yandex.ru/
+  20. http://market.yandex.ru/
+  21. http://news.yandex.ru/
+  22. http://pogoda.yandex.ru/
+  23. http://rabota.yandex.ru/
+  24. http://rasp.yandex.ru/
+  25. http://slovari.yandex.ru/
+  26. http://sprav.yandex.ru/
+  27. https://taxi.yandex.ru/
+  28. http://tv.yandex.ru/
+  29. http://uslugi.yandex.ru/
+  30. http://my.ya.ru/
+  31. http://mobile.yandex.ru/
+  32. http://soft.yandex.ru/
+  33. http://www.yandex.ru/all
+  34. http://my.ya.ru/
+  35. https://passport.yandex.ru/passport?mode=auth&msg=friends&retpath=http%3A%2F%2Fclubs.ya.ru%2Fbem%2Freplies.xml%3Fitem_no%3D3737
+  36. http://help.yandex.ru/yaru/
+  37. https://passport.yandex.ru/passport?mode=auth&msg=friends&retpath=http%3A%2F%2Fclubs.ya.ru%2Fbem%2Freplies.xml%3Fitem_no%3D3737
+  38. file://passport.yandex.ru/passport?mode=register&from=friends&retpath=http%3A%2F%2Fmy.ya.ru%2Fregistration_simple.xml%3Fsk%3Dy55e5344fbd5569880bd11d1911bccdcb
+  39. http://clubs.ya.ru/bem/
+  40. http://clubs.ya.ru/bem/
+  41. http://my.ya.ru/posts_add_join.xml?source=4611686018427404475
+  42. http://toivonens.ya.ru/
+  43. http://clubs.ya.ru/bem/replies.xml?item_no=3737
+  44. http://toivonens.ya.ru/
+  45. http://clubs.ya.ru/bem/replies.xml?item_no=3737
+  46. https://github.com/varya/bem-js-tutorial
+  47. https://github.com/varya/bem-js-tutorial/wiki/Ideas-of-examples
+  48. http://clubs.ya.ru/bem/replies.xml?item_no=3737
+  49. http://abc-ua.ya.ru/
+  50. http://abc-ua.ya.ru/
+  51. http://clubs.ya.ru/bem/replies.xml?parent_id=3738&item_no=3737&with_parent=1#reply-bem-3738
+  52. http://clubs.ya.ru/bem/replies.xml?parent_id=3738&item_no=3737
+  53. http://toivonens.ya.ru/
+  54. http://toivonens.ya.ru/
+  55. http://clubs.ya.ru/bem/replies.xml?parent_id=3739&item_no=3737&with_parent=1#reply-bem-3739
+  56. http://a-p-savin.ya.ru/
+  57. http://a-p-savin.ya.ru/
+  58. http://clubs.ya.ru/bem/replies.xml?parent_id=3740&item_no=3737&with_parent=1#reply-bem-3740
+  59. http://clubs.ya.ru/bem/replies.xml?parent_id=3740&item_no=3737
+  60. http://toivonens.ya.ru/
+  61. http://toivonens.ya.ru/
+  62. http://clubs.ya.ru/bem/replies.xml?parent_id=3743&item_no=3737&with_parent=1#reply-bem-3743
+  63. http://alexbaumgertner.ya.ru/
+  64. http://alexbaumgertner.ya.ru/
+  65. http://alexbaumgertner.ya.ru/replies.xml?item_no=2444
+  66. http://clubs.ya.ru/bem/replies.xml?parent_id=3746&item_no=3737&with_parent=1#reply-bem-3746
+  67. http://alexbaumgertner.ya.ru/
+  68. http://alexbaumgertner.ya.ru/
+  69. http://toivonens.ya.ru/
+  70. http://clubs.ya.ru/bem/replies.xml?parent_id=3747&item_no=3737&with_parent=1#reply-bem-3747
+  71. http://dkushnikov.ya.ru/
+  72. http://dkushnikov.ya.ru/
+  73. http://clubs.ya.ru/bem/replies.xml?parent_id=3748&item_no=3737&with_parent=1#reply-bem-3748
+  74. http://clubs.ya.ru/bem/replies.xml?parent_id=3748&item_no=3737
+  75. http://toivonens.ya.ru/
+  76. http://toivonens.ya.ru/
+  77. http://clubs.ya.ru/bem/replies.xml?parent_id=3749&item_no=3737&with_parent=1#reply-bem-3749
+  78. http://clubs.ya.ru/bem/replies.xml?parent_id=3749&item_no=3737
+  79. http://aleksei-polyakoff2014.ya.ru/
+  80. http://aleksei-polyakoff2014.ya.ru/
+  81. http://clubs.ya.ru/bem/replies.xml?parent_id=3755&item_no=3737&with_parent=1#reply-bem-3755
+  82. http://aleksei-polyakoff2014.ya.ru/
+  83. http://aleksei-polyakoff2014.ya.ru/
+  84. http://clubs.ya.ru/bem/replies.xml?parent_id=3754&item_no=3737&with_parent=1#reply-bem-3754
+  85. http://clubs.ya.ru/bem/replies.xml?parent_id=3754&item_no=3737
+  86. http://toivonens.ya.ru/
+  87. http://toivonens.ya.ru/
+  88. http://clubs.ya.ru/bem/replies.xml?parent_id=3759&item_no=3737&with_parent=1#reply-bem-3759
+  89. http://aleksei-polyakoff2014.ya.ru/
+  90. http://aleksei-polyakoff2014.ya.ru/
+  91. http://clubs.ya.ru/bem/replies.xml?parent_id=3757&item_no=3737&with_parent=1#reply-bem-3757
+  92. http://funca.ya.ru/
+  93. http://funca.ya.ru/
+  94. http://clubs.ya.ru/bem/replies.xml?parent_id=3758&item_no=3737&with_parent=1#reply-bem-3758
+  95. http://clubs.ya.ru/bem/replies.xml?parent_id=3758&item_no=3737
+  96. http://toivonens.ya.ru/
+  97. http://toivonens.ya.ru/
+  98. http://clubs.ya.ru/bem/replies.xml?parent_id=3760&item_no=3737&with_parent=1#reply-bem-3760
+  99. http://legal.yandex.ru/yaru_termsofuse/
+ 100. http://feedback.yandex.ru/?from=wow
+ 101. http://help.yandex.ru/yaru/
+ 102. http://tune.yandex.ru/api/my/v1.0/my.xml?param=0&block=44&retpath=http%3A%2F%2Fmy.yandex.ru%2Fc%2Fbem%2Freplies.xml%3F%26item_no%3D3737&sk=y55e5344fbd5569880bd11d1911bccdcb
+ 103. http://www.yandex.ru/
+ 104. file://localhost/update_session.xml?build=
+ 105. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml187.data
+ 106. file://localhost/
+ 107. file://localhost/
+
+   Hidden links:
+ 109. http://share.yandex.ru/go.xml?service=vkontakte&url=http%3A%2F%2Fclubs.ya.ru%2Fbem%2F3737&title=%D0%91%D0%AD%D0%9C-%D0%BA%D0%BE%D1%82%D0%B8%D0%BA%20%D0%B7%D0%B0%D1%88%D0%B8%D0%B2%D0%B0%D0%B5%D1%82%D1%81%D1%8F!%20(%D0%9D%D1%83%D0%B6%D0%BD%D1%8B%20%D0%B8%D0%B4%D0%B5%D0%B8%20js-%D0%B1%D0%BB%D0%BE%D0%BA%D0%BE%D0%B2)
+ 110. http://share.yandex.ru/go.xml?service=twitter&url=http%3A%2F%2Fclubs.ya.ru%2Fbem%2F3737&title=%D0%91%D0%AD%D0%9C-%D0%BA%D0%BE%D1%82%D0%B8%D0%BA%20%D0%B7%D0%B0%D1%88%D0%B8%D0%B2%D0%B0%D0%B5%D1%82%D1%81%D1%8F!%20(%D0%9D%D1%83%D0%B6%D0%BD%D1%8B%20%D0%B8%D0%B4%D0%B5%D0%B8%20js-%D0%B1%D0%BB%D0%BE%D0%BA%D0%BE%D0%B2)
+ 111. http://share.yandex.ru/go.xml?service=facebook&url=http%3A%2F%2Fclubs.ya.ru%2Fbem%2F3737&title=%D0%91%D0%AD%D0%9C-%D0%BA%D0%BE%D1%82%D0%B8%D0%BA%20%D0%B7%D0%B0%D1%88%D0%B8%D0%B2%D0%B0%D0%B5%D1%82%D1%81%D1%8F!%20(%D0%9D%D1%83%D0%B6%D0%BD%D1%8B%20%D0%B8%D0%B4%D0%B5%D0%B8%20js-%D0%B1%D0%BB%D0%BE%D0%BA%D0%BE%D0%B2)
+ 112. http://share.yandex.ru/go.xml?service=lj&url=http%3A%2F%2Fclubs.ya.ru%2Fbem%2F3737&title=%D0%91%D0%AD%D0%9C-%D0%BA%D0%BE%D1%82%D0%B8%D0%BA%20%D0%B7%D0%B0%D1%88%D0%B8%D0%B2%D0%B0%D0%B5%D1%82%D1%81%D1%8F!%20(%D0%9D%D1%83%D0%B6%D0%BD%D1%8B%20%D0%B8%D0%B4%D0%B5%D0%B8%20js-%D0%B1%D0%BB%D0%BE%D0%BA%D0%BE%D0%B2)

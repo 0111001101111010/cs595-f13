@@ -1,0 +1,123 @@
+   Ruby on Rails v4.0.0
+
+Module ActionView::Helpers::RecordTagHelper
+
+     * [1]actionpack/lib/action_view/helpers/record_tag_helper.rb
+
+   Methods
+
+   C
+
+          + [2]content_tag_for
+
+   D
+
+          + [3]div_for
+
+   Included Modules
+     * [4]ActionView::RecordIdentifier
+
+   Instance Public methods
+   content_tag_for(tag_name, single_or_multiple_records, prefix = nil,
+   options = nil, &block) [5]Link
+
+   [6]#content_tag_for creates an [7]HTML element with id and class
+   parameters that relate to the specified Active Record object. For
+   example:
+<%= content_tag_for(:tr, @person) do %>
+  <td><%= @person.first_name %></td>
+  <td><%= @person.last_name %></td>
+<% end %>
+
+   would produce the following [8]HTML (assuming @person is an instance of
+   a Person object, with an id value of 123):
+<tr id="person_123" class="person">....</tr>
+
+   If you require the [9]HTML id attribute to have a prefix, you can
+   specify it:
+<%= content_tag_for(:tr, @person, :foo) do %> ...
+
+   produces:
+<tr id="foo_person_123" class="person">...
+
+   You can also pass an array of objects which this method will loop
+   through and yield the current object to the supplied block, reducing
+   the need for having to iterate through the object (using each)
+   beforehand. For example (assuming @people is an array of Person
+   objects):
+<%= content_tag_for(:tr, @people) do |person| %>
+  <td><%= person.first_name %></td>
+  <td><%= person.last_name %></td>
+<% end %>
+
+   produces:
+<tr id="person_123" class="person">...</tr>
+<tr id="person_124" class="person">...</tr>
+
+   [10]#content_tag_for also accepts a hash of options, which will be
+   converted to additional [11]HTML attributes. If you specify a :class
+   value, it will be combined with the default class name for your object.
+   For example:
+<%= content_tag_for(:li, @person, class: "bar") %>...
+
+   produces:
+<li id="person_123" class="person bar">...
+
+   Source: [12]show | [13]on GitHub
+# File actionpack/lib/action_view/helpers/record_tag_helper.rb, line 81
+def content_tag_for(tag_name, single_or_multiple_records, prefix = nil, options
+= nil, &block)
+  options, prefix = prefix, nil if prefix.is_a?(Hash)
+
+  Array(single_or_multiple_records).map do |single_record|
+    content_tag_for_single_record(tag_name, single_record, prefix, options, &blo
+ck)
+  end.join("\n").html_safe
+end
+
+   div_for(record, *args, &block) [14]Link
+
+   Produces a wrapper DIV element with id and class parameters that relate
+   to the specified Active Record object. Usage example:
+<%= div_for(@person, class: "foo") do %>
+   <%= @person.name %>
+<% end %>
+
+   produces:
+<div id="person_123" class="person foo"> Joe Bloggs </div>
+
+   You can also pass an array of Active Record objects, which will then
+   get iterated over and yield each record as an argument for the block.
+   For example:
+<%= div_for(@people, class: "foo") do |person| %>
+  <%= person.name %>
+<% end %>
+
+   produces:
+<div id="person_123" class="person foo"> Joe Bloggs </div>
+<div id="person_124" class="person foo"> Jane Bloggs </div>
+
+   Source: [15]show | [16]on GitHub
+# File actionpack/lib/action_view/helpers/record_tag_helper.rb, line 31
+def div_for(record, *args, &block)
+  content_tag_for(:div, record, *args, &block)
+end
+
+References
+
+   1. file://localhost/home/stanley/code/cs595/files/actionpack/lib/action_view/helpers/record_tag_helper_rb.html
+   2. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml687.data#method-i-content_tag_for
+   3. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml687.data#method-i-div_for
+   4. file://localhost/home/stanley/code/cs595/assignment3/q1/RecordIdentifier.html
+   5. file://localhost/home/stanley/code/cs595/classes/ActionView/Helpers/RecordTagHelper.html#method-i-content_tag_for
+   6. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/RecordTagHelper.html#method-i-content_tag_for
+   7. file://localhost/home/stanley/code/cs595/assignment3/HTML.html
+   8. file://localhost/home/stanley/code/cs595/assignment3/HTML.html
+   9. file://localhost/home/stanley/code/cs595/assignment3/HTML.html
+  10. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/RecordTagHelper.html#method-i-content_tag_for
+  11. file://localhost/home/stanley/code/cs595/assignment3/HTML.html
+  12. javascript:toggleSource('method-i-content_tag_for_source')
+  13. https://github.com/rails/rails/blob/540ebe37cd1a9551b739c552a0d4efd2adc7ff22/actionpack/lib/action_view/helpers/record_tag_helper.rb#L81
+  14. file://localhost/home/stanley/code/cs595/classes/ActionView/Helpers/RecordTagHelper.html#method-i-div_for
+  15. javascript:toggleSource('method-i-div_for_source')
+  16. https://github.com/rails/rails/blob/540ebe37cd1a9551b739c552a0d4efd2adc7ff22/actionpack/lib/action_view/helpers/record_tag_helper.rb#L31

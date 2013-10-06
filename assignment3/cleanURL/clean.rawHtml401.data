@@ -1,0 +1,93 @@
+   [1]Logo
+     * [2]Source
+     * [3]Documentation
+     * [4]Issues
+     * [5]Release History
+
+FireShell, fiercely quick front-end boilerplate and workflows
+
+   [6]Download v1.1.0
+   git clone https://gi
+
+   FireShell [7]Nightly build, unreleased. Created by [8]@toddmotto
+
+   Share:
+
+   IFRAME:
+   [9]//ghbtns.com/github-btn.html?user=toddmotto&repo=fireshell&type=watc
+   h&count=true
+
+   [10]Follow @getfireshell
+
+The opinionated FireShell framework. Built for the modern developer. For
+teams and the individual, encouraging a better workflow. JavaScript task
+running, build processes, autominification and file concatenation, wrapped
+with an enhanced HTML5 boilerplated framework.
+
+HTML5 Boilerplated
+
+   A cutting edge take on the HTML5 boilerplate with some HTML5 semantics
+   and WAI-ARIA roles for baseline semantic markup and web accessibility.
+
+Sass OOCSS setup
+
+   CSS structure for small projects and scaling big, a fantastic setup to
+   get your Object-Orientated CSS scaling. Ships with fully adaptive
+   folder hierarchies.
+
+Grunt.js
+
+   Compiling Sass/SCSS, concatenating JavaScript files, connecting to a
+   localhost server and live file reloads and injection. Auto-minification
+   for production.
+
+   IFRAME: [11]//www.youtube.com/embed/A_8w_z-Bi1o?rel=0
+
+Top Features
+
+     * HTML5 framework, WAI-ARIA roles and HTML5 semantics
+     * Baseline HTML5 features, DNS prefetching, responsive meta
+     * Encourages one-file CSS/JS in the view (HTML) for performance
+     * Includes jQuery CDN and relative fallback
+     * Includes Modernizr and HTML5 Shiv
+     * Google Universal Analytics snippet
+     * Open source workflow with Grunt.js running on Node.js
+     * A grunt.command file for double-click command-line execution
+     * Automatic Grunt dependency installation, directory relocation and
+       grunt tasks
+     * Dynamically appended copyright for JS/CSS
+     * Livereloading the browser and file injection upon changes
+     * Annotated Gruntfile.js for extending
+     * Built-in build script for auto-minification of CSS and JavaScript
+       files for production
+     * Pre-setup Sass/SCSS files and folders for baseline project
+       structure and imports
+     * Includes .editorconfig for consistent coding styles in IDEs
+     * Standard .gitignore to ignore minified files and standard
+       ignorables such as .DS_Store
+     * JSHint .jshintrc file for configuring JavaScript linting
+     * No superfluous code comments
+
+Comments
+
+   © 2013 FireShell. MIT Licensed.
+
+References
+
+   Visible links
+   1. file://localhost/
+   2. file://github.com/toddmotto/fireshell
+   3. file://github.com/toddmotto/fireshell/blob/master/docs/DOCS.md
+   4. file://github.com/toddmotto/fireshell/issues
+   5. file://github.com/toddmotto/fireshell/releases
+   6. file://github.com/toddmotto/fireshell/archive/v1.1.0.zip
+   7. file://github.com/toddmotto/fireshell
+   8. file://twitter.com/toddmotto
+   9. file://ghbtns.com/github-btn.html?user=toddmotto&repo=fireshell&type=watch&count=true
+  10. https://twitter.com/getfireshell
+  11. file://www.youtube.com/embed/A_8w_z-Bi1o?rel=0
+
+   Hidden links:
+  13. https://twitter.com/intent/tweet?text=FireShell+-+fiercely+quick+front-end+boilerplate+and+workflows.+%40getfireshell&url=http%3A%2F%2Fgetfireshell.com
+  14. https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fgetfireshell.com
+  15. https://plus.google.com/share?url=http%3A%2F%2Fgetfireshell.com

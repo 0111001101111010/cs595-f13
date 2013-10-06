@@ -1,0 +1,819 @@
+   [p?c1=2&c2=16939915&cv=2.0&cj=1]
+
+   [1]ScienceDaily: Your source for the latest research news and science
+   breakthroughs -- updated daily
+
+Science News
+
+   ... from universities, journals, and other research organizations
+    Save  Email [2] Print  Share
+
+Engineers Build Computer Using Carbon Nanotube Technology
+
+   Sep. 25, 2013  A team of Stanford engineers has built a basic computer
+   using carbon nanotubes, a semiconductor material that has the potential
+   to launch a new generation of electronic devices that run faster, while
+   using less energy, than those made from silicon chips
+     __________________________________________________________________
+
+   Share This:
+
+   This unprecedented feat culminates years of efforts by scientists
+   around the world to harness this promising material.
+
+   The achievement is reported today in an article on the cover of Nature
+   Magazine written by Max Shulaker and other doctoral students in
+   electrical engineering. The research was led by Stanford professors
+   Subhasish Mitra and H.S. Philip Wong.
+
+   "People have been talking about a new era of carbon nanotube
+   electronics moving beyond silicon," said Mitra, an electrical engineer
+   and computer scientist and Chambers Faculty Scholar of Engineering.
+   "But there have been few demonstrations of complete digital systems
+   using this exciting technology. Here is the proof."
+
+   Experts say the Stanford achievement will galvanize efforts to find
+   successors to silicon chips, which could soon encounter physical limits
+   that might prevent them from delivering smaller, faster, cheaper
+   electronic devices.
+
+   "Carbon nanotubes (CNTs) have long been considered as a potential
+   successor to the silicon transistor," said Professor Jan Rabaey, a
+   world expert on electronic circuits and systems at UC Berkeley.
+
+   But until now it hasn't been clear that CNTs could fulfill those
+   expectations.
+
+   "There is no question that this will get the attention of researchers
+   in the semiconductor community and entice them to explore how this
+   technology can lead to smaller, more energy-efficient processors in the
+   next decade," Rabaey said.
+
+   Mihail Roco, senior advisor for Nanotechnology at the National Science
+   Foundation, called the Stanford work "an important, scientific
+   breakthrough."
+
+   Max Shulaker, doctoral student in electrical engineering at Stanford
+   University, holds a wafer filled with carbon nanotube computers (CNTs).
+   To his left, a basic CNT computer utilizing this technology is
+   sandwiched beneath a probe card to input and output signals. (Norbert
+   von der Groeben)
+
+   It was roughly 15 years ago that carbon nanotubes were first fashioned
+   into transistors, the on-off switches at the heart of digital
+   electronic systems.
+
+   But a bedeviling array of imperfections in these carbon nanotubes has
+   long frustrated efforts to build complex circuits using CNTs.
+
+   Professor Giovanni De Micheli, director of the Institute of Electrical
+   Engineering at École Polytechnique Fédérale de Lausanne in Switzerland,
+   highlighted two key contributions the Stanford team has made to this
+   worldwide effort.
+
+   "First, they put in place a process for fabricating CNT-based
+   circuits," De Micheli said. "Second, they built a simple but effective
+   circuit that shows that computation is doable using CNTs."
+
+   As Mitra said: "It's not just about the CNT computer. It's about a
+   change in directions that shows you can build something real using
+   nanotechnologies that move beyond silicon and its cousins."
+
+   Why worry about a successor to silicon?
+
+   Such concerns arise from the demands that designers place upon
+   semiconductors and their fundamental workhorse unit, those on-off
+   switches known as transistors.
+
+   For decades, progress in electronics has meant shrinking the size of
+   each transistor to pack more transistors on a chip. But as transistors
+   become tinier they waste more power and generate more heat -- all in a
+   smaller and smaller space, as evidenced by the warmth emanating from
+   the bottom of a laptop.
+
+   Many researchers believe that this power-wasting phenomenon could spell
+   the end of Moore's Law, named for Intel Corp. co-founder Gordon Moore,
+   who predicted in 1965 that the density of transistors would double
+   roughly every two years, leading to smaller, faster and, as it turned
+   out, cheaper electronics.
+
+   But smaller, faster and cheaper has also meant smaller, faster and
+   hotter.
+
+   "Energy dissipation of silicon-based systems has been a major concern,"
+   said Anantha Chandrakasan, head of electrical engineering and computer
+   science at MIT and a world leader in chip research. He called the
+   Stanford work "a major benchmark" in moving CNTs toward practical use.
+
+   CNTs are long chains of carbon atoms that are extremely efficient at
+   conducting and controlling electricity. They are so thin -- thousands
+   of CNTs could fit side by side in a human hair -- that it takes very
+   little energy to switch them off, according to Wong, co-author of the
+   paper and the Williard R. and Inez Kerr Bell Professor at Stanford.
+
+   "Think of it as stepping on a garden hose," Wong said. "The thinner the
+   hose, the easier it is to shut off the flow."
+
+   In theory, this combination of efficient conductivity and low-power
+   switching make carbon nanotubes excellent candidates to serve as
+   electronic transistors.
+
+   "CNTs could take us at least an order of magnitude in performance
+   beyond where you can project silicon could take us," Wong said.
+
+   But inherent imperfections have stood in the way of putting this
+   promising material to practical use.
+
+   First, CNTs do not necessarily grow in neat parallel lines, as
+   chipmakers would like.
+
+   Over time, researchers have devised tricks to grow 99.5 percent of CNTs
+   in straight lines. But with billions of nanotubes on a chip, even a
+   tiny degree of misaligned tubes could cause errors, so that problem
+   remained.
+
+   A second type of imperfection has also stymied CNT technology.
+
+   Depending on how the CNTs grow, a fraction of these carbon nanotubes
+   can end up behaving like metallic wires that always conduct
+   electricity, instead of acting like semiconductors that can be switched
+   off.
+
+   Since mass production is the eventual goal, researchers had to find
+   ways to deal with misaligned and/or metallic CNTs without having to
+   hunt for them like needles in a haystack.
+
+   "We needed a way to design circuits without having to look for
+   imperfections or even know where they were," Mitra said.
+
+   The Stanford paper describes a two-pronged approach that the authors
+   call an "imperfection-immune design."
+
+   To eliminate the wire-like or metallic nanotubes, the Stanford team
+   switched off all the good CNTs. Then they pumped the semiconductor
+   circuit full of electricity. All of that electricity concentrated in
+   the metallic nanotubes, which grew so hot that they burned up and
+   literally vaporized into tiny puffs of carbon dioxide. This
+   sophisticated technique was able to eliminate virtually all of the
+   metallic CNTs in the circuit at once.
+
+   Bypassing the misaligned nanotubes required even greater subtlety.
+
+   So the Stanford researchers created a powerful algorithm that maps out
+   a circuit layout that is guaranteed to work no matter whether or where
+   CNTs might be askew.
+
+   "This 'imperfections-immune design' (technique) makes this discovery
+   truly exemplary," said Sankar Basu, a program director at the National
+   Science Foundation.
+
+   The Stanford team used this imperfection-immune design to assemble a
+   basic computer with 178 transistors, a limit imposed by the fact that
+   they used the university's chip-making facilities rather than an
+   industrial fabrication process.
+
+   Their CNT computer performed tasks such as counting and number sorting.
+   It runs a basic operating system that allows it to swap between these
+   processes. In a demonstration of its potential, the researchers also
+   showed that the CNT computer could run MIPS, a commercial instruction
+   set developed in the early 1980s by then Stanford engineering professor
+   and now university President John Hennessy.
+
+   Though it could take years to mature, the Stanford approach points
+   toward the possibility of industrial-scale production of carbon
+   nanotube semiconductors, according to Naresh Shanbhag, a professor at
+   the University of Illinois at Urbana-Champaign and director of SONIC, a
+   consortium for next-generation chip design research.
+
+   "The Wong/Mitra paper demonstrates the promise of CNTs in designing
+   complex computing systems," Shanbhag said, adding that this "will
+   motivate researchers elsewhere" toward greater efforts in chip design
+   beyond silicon.
+
+   "These are initial necessary steps in taking carbon nanotubes from the
+   chemistry lab to a real environment," said Supratik Guha, director of
+   physical sciences for IBM's Thomas J. Watson Research Center and a
+   world leader in CNT research.
+
+   Professor Georges Gielen, Vice Rector of Science, Engineering and
+   Technology at the Katholieke Universiteit in Leuven, Belgium, said the
+   next generation of electronics, including wireless sensor networks and
+   other tiny devices envisioned as part of the "Internet of things,"
+   require low-power, high performance chips.
+
+   "A big challenge for the massive deployment of such systems is the
+   powering: wire line supply is impossible, batteries often not practical
+   or affordable," Gielen said, adding: "CNTs are an emerging technology
+   that offer the potential to cut down significantly, by orders of
+   magnitude, on the power consumption of electronics compared to today's
+   state-of-the-art technologies. If this materializes, this will be a
+   major breakthrough for all the mentioned and future applications."
+   Share this story on Facebook, Twitter, and Google:
+
+   Other social bookmarking and sharing tools:
+   |
+     __________________________________________________________________
+
+   Story Source:
+
+     The above story is based on [3]materials provided by [4]Stanford
+     School of Engineering. The original article was written by Tom
+     Abate.
+
+     Note: Materials may be edited for content and length. For further
+     information, please contact the source cited above.
+     __________________________________________________________________
+
+   Journal Reference:
+    1. Max M. Shulaker, Gage Hills, Nishant Patil, Hai Wei, Hong-Yu Chen,
+       H.-S. Philip Wong, Subhasish Mitra. Carbon nanotube computer.
+       Nature, 2013; 501 (7468): 526 DOI: [5]10.1038/nature12502
+
+   Need to cite this story in your essay, paper, or report? Use one of the
+   following formats:
+   (*) APA
+   ( ) MLA
+
+   Note: If no author is given, the source is cited instead.
+   [6]enlarge
+   Max Shulaker, doctoral student in electrical engineering at Stanford
+   University, holds a wafer filled with carbon nanotube computers (CNTs).
+   To his left, a basic CNT computer utilizing this technology is
+   sandwiched beneath a probe card to input and output signals. (Credit:
+   Norbert von der Groeben)
+
+Related Topics
+     __________________________________________________________________
+
+   [7]Matter & Energy
+     * [8]Electronics
+     * [9]Graphene
+     * [10]Technology
+
+   [11]Computers & Math
+     * [12]Computer Science
+     * [13]Computers and Internet
+     * [14]Spintronics Research
+
+   [15]Articles
+     * [16]Nanowire
+     * [17]Integrated circuit
+     * [18]Carbon nanotube
+     * [19]Semiconductor
+     * [20]Circuit design
+     * [21]Materials science
+
+Related Stories
+     __________________________________________________________________
+
+   [22]Scientists 'Clone' Carbon Nanotubes to Unlock Their Potential for
+   Use in Electronics (Nov. 14, 2012)  Scientists have developed a method
+   of "cloning" carbon nanotubes for use as semiconductors in ...
+   > [23]read more
+   [24]Strengthening Fragile Forests of Carbon Nanotubes for New MEMS
+   Applications (Oct. 26, 2012)  By using a variety of materials not
+   commonly associated with MEMS technology, researchers have created
+   stronger microstructures that can form precise, tall and narrow 3-D
+   shapes – ...  > [25]read more
+   [26]Engineers Perfecting Carbon Nanotubes for Highly Energy-Efficient
+   Computing (June 14, 2012)  Carbon nanotubes represent a significant
+   departure from traditional silicon technologies and offer a promising
+   path to solving the challenge of energy efficiency in computer
+   circuits, but they aren't ...  > [27]read more
+   [28]Faster Computers With Nanotechnology (June 1, 2010)  The silicon
+   transistors in your computer may be replaced in ten years by
+   transistors based on carbon nanotubes. This is what scientists in
+   Sweden are hoping: they have developed a method to control ...
+   > [29]read more
+   [30]Toward A New Generation Of Paper-Thin Loudspeakers (Nov. 20, 2008)
+    In research that may redefine ear buds, earphones, stereo
+   loudspeakers, and other devices for producing sound, researchers in
+   China are reporting development of flexible loudspeakers thinner than
+   ...  > [31]read more
+
+[32]Search ScienceDaily
+
+   Number of stories in archives: 143,892
+     __________________________________________________________________
+
+   Find with keyword(s):
+   ______________________________________   Search
+   Enter a keyword or phrase to search ScienceDaily's archives for related
+   news topics,
+   the latest news stories, reference articles, science videos, images,
+   and books.
+     __________________________________________________________________
+
+   Recommend ScienceDaily on Facebook, Twitter, and Google:
+
+   Other social bookmarking and sharing services:
+   |
+
+   Interested in ad-free access? If you'd like to read ScienceDaily
+   without ads, [33]let us know!
+   Just In:
+   [34]Flowering Plants Existed 100 Million Years Earlier
+   [35]Explaining Seeds of Life in Asteroids
+   [36]Ordinary to Extraordinary Forms of Matter
+   [37]Photonics Breakthrough: Fastest Electronics?
+   [38]Caribou Affected by Sea-Ice Loss in the Arctic
+   [39]Vikings May Have Been More Social Than Savage
+   [40]First Cloud Map of an Extrasolar Planet
+   [41]Ingredient of Household Plastic Found in Space
+
+     more [42]breaking science news
+
+Social Networks
+     __________________________________________________________________
+
+   Follow ScienceDaily on Facebook, Twitter,
+   and Google:
+    Facebook     Twitter     Google+
+
+   Recommend ScienceDaily on Facebook, Twitter, and Google +1:
+
+   Other social bookmarking and sharing tools:
+   |
+
+[43]Breaking News
+
+   ... from [44]NewsDaily.com
+     __________________________________________________________________
+
+     [45]more science news
+
+In Other News ...
+
+     [46]more top news
+
+[47]Science Video News
+     __________________________________________________________________
+
+[48]Tracking Global Carbon
+
+   With the annual, steady increase of global warming and carbon
+   discharge, atmospheric chemists are gathering air samples on behalf of
+   the National. ...  > [49]full story
+
+     * [50]Physicist Explains Benefits Of Carbon Dioxide
+     * [51]Bioengineers Combine Mathematical Equations, Data to Simulate
+       Surgeries
+     * [52]Computer Scientists Create System That Gives Users A Sense Of
+       Touch
+     * [53]more science videos
+
+[54]Strange Science News
+
+
+     __________________________________________________________________
+
+     * [55]How Ants Investigate the Housing Market When Searching for
+       Their Ideal Home
+     * [56]New Theory to Explain Seeds of Life in Asteroids
+     * [57]Putting a Face On a Robot
+     * [58]Vikings May Have Been More Social Than Savage
+     * [59]Ingredient of Household Plastic Found in Space
+     * [60]more strange science news
+
+[61]Free Subscriptions
+
+   ... from [62]ScienceDaily
+     __________________________________________________________________
+
+   Get the latest science news with our free email newsletters, updated
+   daily and weekly. Or view hourly updated newsfeeds in your RSS reader:
+
+     * [63]Email Newsletters
+     * [64]RSS Newsfeeds
+
+Feedback
+
+   ... we want to hear from you!
+     __________________________________________________________________
+
+   Tell us what you think of ScienceDaily -- we welcome both positive and
+   negative comments. Have any problems using the site? Questions?
+
+     * [65]Leave Feedback
+     __________________________________________________________________
+
+    Save  Email [66] Print  Share
+
+   [67]About ScienceDaily^®  |  [68]Editorial Staff  |  [69]Awards &
+   Reviews  |  [70]Contribute News  |  [71]Advertise With Us  |
+   [72]Contact Us  |  [73]Privacy Policy  |  [74]Terms of Use
+   [75]Copyright 2013 by ScienceDaily, LLC or by third-party sources,
+   where indicated. All rights controlled by their respective owners.
+   Content on this website is for informational purposes only. It is not
+   intended to provide medical or other professional advice.
+   Views expressed on this website do not necessarily reflect those of
+   ScienceDaily, its staff, or its partners.
+
+     * [76]Health & Medicine
+          + [77]Allergy
+          + [78]Alternative Medicine
+          + [79]Birth Control
+          + [80]Cancer
+          + [81]Diabetes
+          + [82]Diseases and Conditions
+          + [83]Heart Disease
+          + [84]HIV and AIDS
+          + [85]Obesity
+          + [86]Stem Cells
+          + [87]... more topics
+     * [88]Mind & Brain
+          + [89]ADD and ADHD
+          + [90]Addiction
+          + [91]Alzheimer's
+          + [92]Autism
+          + [93]Depression
+          + [94]Headaches
+          + [95]Intelligence
+          + [96]Perception
+          + [97]Psychology
+          + [98]Relationships
+          + [99]Schizophrenia
+          + [100]... more topics
+     * [101]Plants & Animals
+          + [102]Agriculture and Food
+          + [103]Animals
+          + [104]Behavior
+          + [105]Biology
+          + [106]Biotechnology
+          + [107]Endangered Animals
+          + [108]Extinction
+          + [109]Genetically Modified
+          + [110]Microbes and More
+          + [111]New Species
+          + [112]Zoology
+          + [113]... more topics
+     * [114]Earth & Climate
+          + [115]Climate
+          + [116]Earthquakes
+          + [117]Environment
+          + [118]Geography
+          + [119]Geology
+          + [120]Global Warming
+          + [121]Hurricanes
+          + [122]Ozone Holes
+          + [123]Pollution
+          + [124]Weather
+          + [125]... more topics
+     * [126]Space & Time
+          + [127]Astronomy
+          + [128]Black Holes
+          + [129]Dark Matter
+          + [130]Extrasolar Planets
+          + [131]Mars
+          + [132]Moon
+          + [133]Solar System
+          + [134]Space Telescopes
+          + [135]Stars
+          + [136]Sun
+          + [137]... more topics
+     * [138]Matter & Energy
+          + [139]Aviation
+          + [140]Chemistry
+          + [141]Electronics
+          + [142]Fossil Fuels
+          + [143]Nanotechnology
+          + [144]Physics
+          + [145]Quantum Physics
+          + [146]Solar Energy
+          + [147]Technology
+          + [148]Wind Energy
+          + [149]... more topics
+     * [150]Computers & Math
+          + [151]Artificial Intelligence
+          + [152]Communications
+          + [153]Computer Science
+          + [154]Hacking
+          + [155]Mathematics
+          + [156]Quantum Computers
+          + [157]Robotics
+          + [158]Software
+          + [159]Video Games
+          + [160]Virtual Reality
+          + [161]... more topics
+     * [162]Fossils & Ruins
+          + [163]Ancient Civilizations
+          + [164]Anthropology
+          + [165]Archaeology
+          + [166]Dinosaurs
+          + [167]Early Humans
+          + [168]Early Mammals
+          + [169]Evolution
+          + [170]Lost Treasures
+          + [171]Origin of Life
+          + [172]Paleontology
+          + [173]... more topics
+
+   Search ...__________    Go
+     * [174]News
+          + [175]Front Page
+          + [176]Today's Summaries
+          + [177]Latest Headlines
+          + [178]Top News
+          + [179]Search Archives
+          + [180]Living Well
+          + [181]Strange Science
+          + [182]Most Popular
+          + [183]RSS Newsfeeds
+          + [184]Email Newsletters
+          + [185]News Sections
+          + [186]Health & Medicine
+          + [187]Mind & Brain
+          + [188]Plants & Animals
+          + [189]Space & Time
+          + [190]Earth & Climate
+          + [191]Matter & Energy
+          + [192]Computers & Math
+          + [193]Fossils & Ruins
+          + [194]Science & Society
+     * [195]Articles
+          + [196]Health & Medicine
+          + [197]Mind & Brain
+          + [198]Plants & Animals
+          + [199]Space & Time
+          + [200]Earth & Climate
+          + [201]Matter & Energy
+          + [202]Computers & Math
+          + [203]Fossils & Ruins
+          + [204]Science & Society
+     * [205]Videos
+          + [206]Health & Medicine
+          + [207]Mind & Brain
+          + [208]Plants & Animals
+          + [209]Space & Time
+          + [210]Earth & Climate
+          + [211]Matter & Energy
+          + [212]Computers & Math
+          + [213]Fossils & Ruins
+          + [214]Science & Society
+     * [215]Images
+          + [216]Health & Medicine
+          + [217]Mind & Brain
+          + [218]Plants & Animals
+          + [219]Space & Time
+          + [220]Earth & Climate
+          + [221]Matter & Energy
+          + [222]Computers & Math
+          + [223]Fossils & Ruins
+          + [224]Science & Society
+     * [225]Books
+          + [226]Health & Medicine
+          + [227]Mind & Brain
+          + [228]Plants & Animals
+          + [229]Space & Time
+          + [230]Earth & Climate
+          + [231]Matter & Energy
+          + [232]Computers & Math
+          + [233]Fossils & Ruins
+          + [234]Science & Society
+
+   Quantcast
+
+References
+
+   Visible links
+   1. file://localhost/
+   2. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1082.data
+   3. http://engineering.stanford.edu/news/stanford-engineers-build-first-computer-using-carbon-nanotube-technology
+   4. http://soe.stanford.edu/
+   5. http://dx.doi.org/10.1038/nature12502
+   6. http://images.sciencedaily.com/2013/09/130925132314-large.jpg
+   7. file://localhost/news/matter_energy/
+   8. file://localhost/news/matter_energy/electronics/
+   9. file://localhost/news/matter_energy/graphene/
+  10. file://localhost/news/matter_energy/technology/
+  11. file://localhost/news/computers_math/
+  12. file://localhost/news/computers_math/computer_science/
+  13. file://localhost/news/computers_math/computers_and_internet/
+  14. file://localhost/news/computers_math/spintronics/
+  15. file://localhost/articles/
+  16. file://localhost/articles/n/nanowire.htm
+  17. file://localhost/articles/i/integrated_circuit.htm
+  18. file://localhost/articles/c/carbon_nanotube.htm
+  19. file://localhost/articles/s/semiconductor.htm
+  20. file://localhost/articles/c/circuit_design.htm
+  21. file://localhost/articles/m/materials_science.htm
+  22. file://localhost/releases/2012/11/121114134702.htm
+  23. file://localhost/releases/2012/11/121114134702.htm
+  24. file://localhost/releases/2012/10/121026143227.htm
+  25. file://localhost/releases/2012/10/121026143227.htm
+  26. file://localhost/releases/2012/06/120614131202.htm
+  27. file://localhost/releases/2012/06/120614131202.htm
+  28. file://localhost/releases/2010/05/100531082857.htm
+  29. file://localhost/releases/2010/05/100531082857.htm
+  30. file://localhost/releases/2008/11/081117095032.htm
+  31. file://localhost/releases/2008/11/081117095032.htm
+  32. file://localhost/subscribe/
+  33. https://sciencedaily.wufoo.com/forms/q7x2w5/
+  34. file://localhost/releases/2013/10/131001191811.htm
+  35. file://localhost/releases/2013/10/131001151132.htm
+  36. file://localhost/releases/2013/10/131001151052.htm
+  37. file://localhost/releases/2013/10/131001115738.htm
+  38. file://localhost/releases/2013/10/131001115648.htm
+  39. file://localhost/releases/2013/10/131001091338.htm
+  40. file://localhost/releases/2013/09/130930210823.htm
+  41. file://localhost/releases/2013/09/130930200835.htm
+  42. file://localhost/news/top_news/top_science/
+  43. http://www.newsdaily.com/
+  44. http://www.newsdaily.com/
+  45. http://www.newsdaily.com/science/
+  46. http://www.newsdaily.com/world/
+  47. file://localhost/videos/
+  48. file://localhost/videos/2007/0604-tracking_global_carbon.htm
+  49. file://localhost/videos/2007/0604-tracking_global_carbon.htm
+  50. file://localhost/videos/2007/0603-can_carbon_dioxide_be_a_good_thing.htm
+  51. file://localhost/videos/2005/1207-predicting_successful_surgeries.htm
+  52. file://localhost/videos/2008/0803-feeling_through_your_computer.htm
+  53. file://localhost/videos/
+  54. file://localhost/news/strange_science/
+  55. file://localhost/releases/2013/10/131001192013.htm
+  56. file://localhost/releases/2013/10/131001151132.htm
+  57. file://localhost/releases/2013/10/131001104543.htm
+  58. file://localhost/releases/2013/10/131001091338.htm
+  59. file://localhost/releases/2013/09/130930200835.htm
+  60. file://localhost/news/strange_science/
+  61. file://localhost/subscribe/
+  62. http://www.sciencedaily.com/
+  63. file://localhost/newsletters.htm
+  64. file://localhost/newsfeeds.htm
+  65. https://sciencedaily.wufoo.com/forms/sciencedaily-feedback/
+  66. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1082.data
+  67. file://localhost/about.htm
+  68. file://localhost/staff.htm
+  69. file://localhost/awards.htm
+  70. file://localhost/contribute.htm
+  71. file://localhost/advertise.htm
+  72. file://localhost/contact.htm
+  73. file://localhost/privacy.htm
+  74. file://localhost/terms.htm
+  75. file://localhost/copyright.htm
+  76. file://localhost/news/health_medicine/
+  77. file://localhost/news/health_medicine/allergy/
+  78. file://localhost/news/health_medicine/alternative_medicine/
+  79. file://localhost/news/health_medicine/birth_control/
+  80. file://localhost/news/health_medicine/cancer/
+  81. file://localhost/news/health_medicine/diabetes/
+  82. file://localhost/news/health_medicine/diseases_and_conditions/
+  83. file://localhost/news/health_medicine/heart_disease/
+  84. file://localhost/news/health_medicine/hiv_and_aids/
+  85. file://localhost/news/health_medicine/obesity/
+  86. file://localhost/news/health_medicine/stem_cells/
+  87. file://localhost/news/health_medicine/
+  88. file://localhost/news/mind_brain/
+  89. file://localhost/news/mind_brain/add_and_adhd/
+  90. file://localhost/news/mind_brain/addiction/
+  91. file://localhost/news/mind_brain/alzheimer's/
+  92. file://localhost/news/mind_brain/autism/
+  93. file://localhost/news/mind_brain/depression/
+  94. file://localhost/news/mind_brain/headaches/
+  95. file://localhost/news/mind_brain/intelligence/
+  96. file://localhost/news/mind_brain/perception/
+  97. file://localhost/news/mind_brain/psychology/
+  98. file://localhost/news/mind_brain/relationships/
+  99. file://localhost/news/mind_brain/schizophrenia/
+ 100. file://localhost/news/mind_brain/
+ 101. file://localhost/news/plants_animals/
+ 102. file://localhost/news/plants_animals/agriculture_and_food/
+ 103. file://localhost/news/plants_animals/animals/
+ 104. file://localhost/news/plants_animals/behavior/
+ 105. file://localhost/news/plants_animals/biology/
+ 106. file://localhost/news/plants_animals/biotechnology/
+ 107. file://localhost/news/plants_animals/endangered_animals/
+ 108. file://localhost/news/plants_animals/extinction/
+ 109. file://localhost/news/plants_animals/genetically_modified/
+ 110. file://localhost/news/plants_animals/microbes_and_more/
+ 111. file://localhost/news/plants_animals/new_species/
+ 112. file://localhost/news/plants_animals/zoology/
+ 113. file://localhost/news/plants_animals/
+ 114. file://localhost/news/earth_climate/
+ 115. file://localhost/news/earth_climate/climate/
+ 116. file://localhost/news/earth_climate/earthquakes/
+ 117. file://localhost/news/earth_climate/environmental_science/
+ 118. file://localhost/news/earth_climate/geography/
+ 119. file://localhost/news/earth_climate/geology/
+ 120. file://localhost/news/earth_climate/global_warming/
+ 121. file://localhost/news/earth_climate/hurricanes_and_cyclones/
+ 122. file://localhost/news/earth_climate/ozone_holes/
+ 123. file://localhost/news/earth_climate/pollution/
+ 124. file://localhost/news/earth_climate/weather/
+ 125. file://localhost/news/earth_climate/
+ 126. file://localhost/news/space_time/
+ 127. file://localhost/news/space_time/astronomy/
+ 128. file://localhost/news/space_time/black_holes/
+ 129. file://localhost/news/space_time/dark_matter/
+ 130. file://localhost/news/space_time/extrasolar_planets/
+ 131. file://localhost/news/space_time/mars/
+ 132. file://localhost/news/space_time/moon/
+ 133. file://localhost/news/space_time/solar_system/
+ 134. file://localhost/news/space_time/space_telescopes/
+ 135. file://localhost/news/space_time/stars/
+ 136. file://localhost/news/space_time/sun/
+ 137. file://localhost/news/space_time/
+ 138. file://localhost/news/matter_energy/
+ 139. file://localhost/news/matter_energy/aviation/
+ 140. file://localhost/news/matter_energy/chemistry/
+ 141. file://localhost/news/matter_energy/electronics/
+ 142. file://localhost/news/matter_energy/fossil_fuels/
+ 143. file://localhost/news/matter_energy/nanotechnology/
+ 144. file://localhost/news/matter_energy/physics/
+ 145. file://localhost/news/matter_energy/quantum_physics/
+ 146. file://localhost/news/matter_energy/solar_energy/
+ 147. file://localhost/news/matter_energy/technology/
+ 148. file://localhost/news/matter_energy/wind_energy/
+ 149. file://localhost/news/matter_energy/
+ 150. file://localhost/news/computers_math/
+ 151. file://localhost/news/computers_math/artificial_intelligence/
+ 152. file://localhost/news/computers_math/communications/
+ 153. file://localhost/news/computers_math/computer_science/
+ 154. file://localhost/news/computers_math/hacking/
+ 155. file://localhost/news/computers_math/mathematics/
+ 156. file://localhost/news/computers_math/quantum_computers/
+ 157. file://localhost/news/computers_math/robotics/
+ 158. file://localhost/news/computers_math/software/
+ 159. file://localhost/news/computers_math/video_games/
+ 160. file://localhost/news/computers_math/virtual_reality/
+ 161. file://localhost/news/computers_math/
+ 162. file://localhost/news/fossils_ruins/
+ 163. file://localhost/news/fossils_ruins/ancient_civilizations/
+ 164. file://localhost/news/fossils_ruins/anthropology/
+ 165. file://localhost/news/fossils_ruins/archaeology/
+ 166. file://localhost/news/fossils_ruins/dinosaurs/
+ 167. file://localhost/news/fossils_ruins/early_humans/
+ 168. file://localhost/news/fossils_ruins/early_mammals/
+ 169. file://localhost/news/fossils_ruins/evolution/
+ 170. file://localhost/news/fossils_ruins/lost_treasures/
+ 171. file://localhost/news/fossils_ruins/origin_of_life/
+ 172. file://localhost/news/fossils_ruins/paleontology/
+ 173. file://localhost/news/fossils_ruins/
+ 174. file://localhost/
+ 175. file://localhost/
+ 176. file://localhost/news/
+ 177. file://localhost/news/headlines/
+ 178. file://localhost/news/top_news/
+ 179. file://localhost/search/
+ 180. file://localhost/news/living_well/
+ 181. file://localhost/news/strange_science/
+ 182. file://localhost/news/most_popular/
+ 183. file://localhost/newsfeeds.htm
+ 184. file://localhost/newsletters.htm
+ 185. file://localhost/news/
+ 186. file://localhost/news/health_medicine/
+ 187. file://localhost/news/mind_brain/
+ 188. file://localhost/news/plants_animals/
+ 189. file://localhost/news/space_time/
+ 190. file://localhost/news/earth_climate/
+ 191. file://localhost/news/matter_energy/
+ 192. file://localhost/news/computers_math/
+ 193. file://localhost/news/fossils_ruins/
+ 194. file://localhost/news/science_society/
+ 195. file://localhost/articles/
+ 196. file://localhost/articles/health_medicine/
+ 197. file://localhost/articles/mind_brain/
+ 198. file://localhost/articles/plants_animals/
+ 199. file://localhost/articles/space_time/
+ 200. file://localhost/articles/earth_climate/
+ 201. file://localhost/articles/matter_energy/
+ 202. file://localhost/articles/computers_math/
+ 203. file://localhost/articles/fossils_ruins/
+ 204. file://localhost/articles/science_society/
+ 205. file://localhost/videos/
+ 206. file://localhost/videos/health_medicine/
+ 207. file://localhost/videos/mind_brain/
+ 208. file://localhost/videos/plants_animals/
+ 209. file://localhost/videos/space_time/
+ 210. file://localhost/videos/earth_climate/
+ 211. file://localhost/videos/matter_energy/
+ 212. file://localhost/videos/computers_math/
+ 213. file://localhost/videos/fossils_ruins/
+ 214. file://localhost/videos/science_society/
+ 215. file://localhost/gallery/
+ 216. file://localhost/gallery/health_medicine/
+ 217. file://localhost/gallery/mind_brain/
+ 218. file://localhost/gallery/plants_animals/
+ 219. file://localhost/gallery/space_time/
+ 220. file://localhost/gallery/earth_climate/
+ 221. file://localhost/gallery/matter_energy/
+ 222. file://localhost/gallery/computers_math/
+ 223. file://localhost/gallery/fossils_ruins/
+ 224. file://localhost/gallery/science_society/
+ 225. file://localhost/books/
+ 226. file://localhost/books/health_medicine/
+ 227. file://localhost/books/mind_brain/
+ 228. file://localhost/books/plants_animals/
+ 229. file://localhost/books/space_time/
+ 230. file://localhost/books/earth_climate/
+ 231. file://localhost/books/matter_energy/
+ 232. file://localhost/books/computers_math/
+ 233. file://localhost/books/fossils_ruins/
+ 234. file://localhost/books/science_society/
+
+   Hidden links:
+ 236. http://images.sciencedaily.com/2013/09/130925132314-large.jpg
+ 237. file://localhost/releases/2012/11/121114134702.htm
+ 238. file://localhost/releases/2012/06/120614131202.htm
+ 239. file://localhost/releases/2008/11/081117095032.htm
+ 240. file://localhost/videos/2007/0604-tracking_global_carbon.htm

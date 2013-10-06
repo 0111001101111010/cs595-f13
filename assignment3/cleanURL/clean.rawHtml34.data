@@ -1,0 +1,282 @@
+   #[1]Stack Overflow
+
+   [2]Stack Exchange
+   [3]sign up | [4]log in | [5]careers 2.0 |
+   ____________________________
+   [6]Stack Overflow
+     * [7]Questions
+     * [8]Tags
+     * [9]Tour
+     * [10]Users
+
+     * [11]Ask Question
+
+   [12]Tell me more ×
+   Stack Overflow is a question and answer site for professional and
+   enthusiast programmers. It's 100% free, no registration required.
+
+[13]How to create words from a string in python? [closed]
+
+   up vote -1 down vote [14]favorite
+
+   I have the following string "lhafdsjhlb" and I want to create all words
+   possible from that string. For example, "half", "sad" and many more.
+   How can I do this in python.
+   [15]python
+
+   [16]share|[17]improve this question
+                                      asked Sep 26 at 13:49
+                                      [18]Hell Man
+                                      41
+
+   1
+     Possible duplicate of [19]stackoverflow.com/a/15688580/665507. You have
+     permute the string match each permutation against a English dictionary.
+     – [20]leesei Sep 26 at 13:57
+
+closed as off-topic by [21]Li-aung Yip, [22]Jon Clements, [23]Wayne Werner,
+[24]Kevin, [25]Jerry Sep 26 at 14:10
+
+   This question appears to be off-topic. The users who voted to close
+   gave this specific reason:
+     * "Questions asking for code must demonstrate a minimal understanding
+       of the problem being solved. Include attempted solutions, why they
+       didn't work, and the expected results. See also: [26]Stack Overflow
+       question checklist" – Li-aung Yip, Jon Clements, Wayne Werner,
+       Kevin, Jerry
+
+   If this question can be reworded to fit the rules in the [27]help
+   center, please [28]edit the question.
+
+   [29]active [30]oldest [31]votes
+
+Browse other questions tagged [32]python or [33]ask your own question.
+
+   tagged
+   [34]python × 224668
+
+   asked
+
+         5 days ago
+
+   viewed
+
+         40 times
+
+Linked
+
+   -1
+   [35]Permute a string to print all possible words
+
+Related
+
+   242
+   [36]Calling a function from a string with the function's name in Python
+   1033
+   [37]What IDE to use for Python?
+   1342
+   [38]What is a metaclass in Python?
+   1422
+   [39]Hidden features of Python
+   1982
+   [40]The Python yield keyword explained
+   316
+   [41]How do I check if a string is a number in Python?
+   561
+   [42]Using global variables in a function other than the one that
+   created them
+   1073
+   [43]How can I make a chain of function decorators in Python?
+   325
+   [44]How do you read from stdin in python
+   653
+   [45]Python progression path - From apprentice to guru
+   lang-py
+
+   [46]about [47]help [48]badges [49]blog [50]chat [51]data [52]legal
+   [53]privacy policy [54]jobs [55]advertising info mobile [56]contact us
+   [57]feedback
+            Technology            Life / Arts Culture / Recreation Science Other
+   1. [58]Stack Overflow
+   2. [59]Server Fault
+   3. [60]Super User
+   4. [61]Web Applications
+    5. [62]Ask Ubuntu
+    6. [63]Webmasters
+    7. [64]Game Development
+    8. [65]TeX - LaTeX
+
+   1. [66]Programmers
+    2. [67]Unix & Linux
+    3. [68]Ask Different (Apple)
+    4. [69]WordPress Answers
+    5. [70]Geographic Information Systems
+    6. [71]Electrical Engineering
+    7. [72]Android Enthusiasts
+    8. [73]IT Security
+
+   1. [74]Database Administrators
+    2. [75]Drupal Answers
+    3. [76]SharePoint
+    4. [77]User Experience
+    5. [78]Mathematica
+    6. [79]more (13)
+
+   1. [80]Photography
+    2. [81]Science Fiction & Fantasy
+    3. [82]Seasoned Advice (cooking)
+    4. [83]Home Improvement
+    5. [84]more (13)
+
+   1. [85]English Language & Usage
+    2. [86]Skeptics
+    3. [87]Mi Yodeya (Judaism)
+    4. [88]Travel
+    5. [89]Christianity
+    6. [90]Arqade (gaming)
+    7. [91]Bicycles
+    8. [92]Role-playing Games
+    9. [93]more (21)
+
+   1. [94]Mathematics
+    2. [95]Cross Validated (stats)
+    3. [96]Theoretical Computer Science
+    4. [97]Physics
+    5. [98]MathOverflow
+    6. [99]more (7)
+
+   1. [100]Stack Apps
+    2. [101]Meta Stack Overflow
+    3. [102]Area 51
+    4. [103]Stack Overflow Careers
+
+   site design / logo © 2013 stack exchange inc; user contributions
+   licensed under [104]cc-wiki with [105]attribution required
+   rev 2013.10.1.1045
+
+   Stack Overflow works best with JavaScript enabled
+
+References
+
+   Visible links
+   1. file://localhost/opensearch.xml
+   2. http://stackexchange.com/
+   3. file://localhost/users/login?returnurl=%2fquestions%2f19030134%2fhow-to-create-words-from-a-string-in-python
+   4. file://localhost/users/login?returnurl=%2fquestions%2f19030134%2fhow-to-create-words-from-a-string-in-python
+   5. http://careers.stackoverflow.com/
+   6. file://localhost/
+   7. file://localhost/questions
+   8. file://localhost/tags
+   9. file://localhost/about
+  10. file://localhost/users
+  11. file://localhost/questions/ask
+  12. file://localhost/about
+  13. file://localhost/questions/19030134/how-to-create-words-from-a-string-in-python
+  14. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml34.data
+  15. file://localhost/questions/tagged/python
+  16. file://localhost/q/19030134
+  17. file://localhost/posts/19030134/edit
+  18. file://localhost/users/2819622/hell-man
+  19. http://stackoverflow.com/a/15688580/665507
+  20. file://localhost/users/665507/leesei
+  21. file://localhost/users/1191425/li-aung-yip
+  22. file://localhost/users/1252759/jon-clements
+  23. file://localhost/users/344286/wayne-werner
+  24. file://localhost/users/953482/kevin
+  25. file://localhost/users/1578604/jerry
+  26. http://meta.stackoverflow.com/questions/156810/stack-overflow-question-checklist
+  27. file://localhost/help/closed-questions
+  28. file://localhost/posts/19030134/edit
+  29. file://localhost/questions/19030134/how-to-create-words-from-a-string-in-python?answertab=active#tab-top
+  30. file://localhost/questions/19030134/how-to-create-words-from-a-string-in-python?answertab=oldest#tab-top
+  31. file://localhost/questions/19030134/how-to-create-words-from-a-string-in-python?answertab=votes#tab-top
+  32. file://localhost/questions/tagged/python
+  33. file://localhost/questions/ask
+  34. file://localhost/questions/tagged/python
+  35. file://localhost/questions/15688530/permute-a-string-to-print-all-possible-words
+  36. file://localhost/questions/3061/calling-a-function-from-a-string-with-the-functions-name-in-python
+  37. file://localhost/questions/81584/what-ide-to-use-for-python
+  38. file://localhost/questions/100003/what-is-a-metaclass-in-python
+  39. file://localhost/questions/101268/hidden-features-of-python
+  40. file://localhost/questions/231767/the-python-yield-keyword-explained
+  41. file://localhost/questions/354038/how-do-i-check-if-a-string-is-a-number-in-python
+  42. file://localhost/questions/423379/using-global-variables-in-a-function-other-than-the-one-that-created-them
+  43. file://localhost/questions/739654/how-can-i-make-a-chain-of-function-decorators-in-python
+  44. file://localhost/questions/1450393/how-do-you-read-from-stdin-in-python
+  45. file://localhost/questions/2573135/python-progression-path-from-apprentice-to-guru
+  46. file://localhost/about
+  47. file://localhost/help
+  48. file://localhost/help/badges
+  49. http://blog.stackexchange.com/?blb=1
+  50. http://chat.stackoverflow.com/
+  51. http://data.stackexchange.com/
+  52. http://stackexchange.com/legal
+  53. http://stackexchange.com/legal/privacy-policy
+  54. http://stackexchange.com/about/hiring
+  55. http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6MjAsImNtIjo5NTQsImNoIjoxMTc4LCJjciI6Mjc3NiwiZG0iOjQsImZjIjoyODYyLCJmbCI6Mjc1MSwibnciOjIyLCJydiI6MCwicHIiOjExNSwic3QiOjAsInVyIjoiaHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL2Fib3V0L2NvbnRhY3QiLCJyZSI6MX0&s=hRods5B22XvRBwWIwtIMekcyNF8
+  56. file://localhost/contact
+  57. http://meta.stackoverflow.com/
+  58. http://stackoverflow.com/
+  59. http://serverfault.com/
+  60. http://superuser.com/
+  61. http://webapps.stackexchange.com/
+  62. http://askubuntu.com/
+  63. http://webmasters.stackexchange.com/
+  64. http://gamedev.stackexchange.com/
+  65. http://tex.stackexchange.com/
+  66. http://programmers.stackexchange.com/
+  67. http://unix.stackexchange.com/
+  68. http://apple.stackexchange.com/
+  69. http://wordpress.stackexchange.com/
+  70. http://gis.stackexchange.com/
+  71. http://electronics.stackexchange.com/
+  72. http://android.stackexchange.com/
+  73. http://security.stackexchange.com/
+  74. http://dba.stackexchange.com/
+  75. http://drupal.stackexchange.com/
+  76. http://sharepoint.stackexchange.com/
+  77. http://ux.stackexchange.com/
+  78. http://mathematica.stackexchange.com/
+  79. http://stackexchange.com/sites#technology
+  80. http://photo.stackexchange.com/
+  81. http://scifi.stackexchange.com/
+  82. http://cooking.stackexchange.com/
+  83. http://diy.stackexchange.com/
+  84. http://stackexchange.com/sites#lifearts
+  85. http://english.stackexchange.com/
+  86. http://skeptics.stackexchange.com/
+  87. http://judaism.stackexchange.com/
+  88. http://travel.stackexchange.com/
+  89. http://christianity.stackexchange.com/
+  90. http://gaming.stackexchange.com/
+  91. http://bicycles.stackexchange.com/
+  92. http://rpg.stackexchange.com/
+  93. http://stackexchange.com/sites#culturerecreation
+  94. http://math.stackexchange.com/
+  95. http://stats.stackexchange.com/
+  96. http://cstheory.stackexchange.com/
+  97. http://physics.stackexchange.com/
+  98. http://mathoverflow.net/
+  99. http://stackexchange.com/sites#science
+ 100. http://stackapps.com/
+ 101. http://meta.stackoverflow.com/
+ 102. http://area51.stackexchange.com/
+ 103. http://careers.stackoverflow.com/
+ 104. http://creativecommons.org/licenses/by-sa/3.0/
+ 105. http://blog.stackoverflow.com/2009/06/attribution-required/
+
+   Hidden links:
+ 107. file://localhost/users/2819622/hell-man
+ 108. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml34.data
+ 109. file://localhost/q/15688530
+ 110. file://localhost/q/3061
+ 111. file://localhost/q/81584
+ 112. file://localhost/q/100003
+ 113. file://localhost/q/101268
+ 114. file://localhost/q/231767
+ 115. file://localhost/q/354038
+ 116. file://localhost/q/423379
+ 117. file://localhost/q/739654
+ 118. file://localhost/q/1450393
+ 119. file://localhost/q/2573135
+ 120. http://creativecommons.org/licenses/by-sa/3.0/

@@ -1,0 +1,619 @@
+   #[1]t3n RSS Feed [2]t3n Atom Feed [3]t3n » Juvia:
+   Open-Source-Kommentarsystem als Alternative zu Disqus und IntenseDebate
+   Kommentar-Feed [4]publisher
+
+   szmtag
+
+     * [5]t3n
+     * [6]Startseite
+     * [7]Abo
+     * [8]Jobbörse
+     * [9]Marktplatz
+     * [10]Werben
+     * [11]Sponsored Post
+     * [12]Partnerprogramm
+     * [13]Gib uns einen Tipp!
+          + Dein Tipp
+            ____________________
+            Bitte wähle aus:
+            [Inhaltlich: Heißer Tipp für die Redaktion, Schreibfehler und
+            Hinweise]
+            Dein Anliegen in einem Satz zusammengefasst:
+            ____________________
+            Beschreibe deinen Tipp im Detail:
+            ____________________________________________________________
+            ____________________________________________________________
+            ____________________________________________________________
+            ____________________________________________________________
+            ____________________________________________________________
+            Dein Name: ____________________
+            E-Mail-Adresse für Rückfragen: ____________________
+            (BUTTON) Absenden [14]Abbrechen
+     * [15]Anmelden
+          + Anmeldung
+            ____________________ ____________________
+            [_] Angemeldet bleiben
+            (BUTTON) Anmelden
+          + oder anmelden mit:
+            [16]Google [17]Facebook [18]Twitter
+          + [19]Jetzt registrieren
+          + [20]Passwort vergessen?
+          + [21]Abo-Lieferadresse ändern
+          + [22]Support (Technik/Abo)
+          + [23]Support (Redaktion)
+
+   [24]t3n Magazin Das Magazin für Digitales Business | we love technology
+   Suche nach: ____________________ (BUTTON) Suchen
+     * [25]News
+     * [26]Heftartikel
+     * [27]Bilder
+     * [28]Videos
+     * [29]Jobbörse
+     * [30]Fragen
+     * [31]Shop & Abo
+     * [32]Marktplatz
+
+   [33]t3n Magazin und T-Shirt im Abo
+     * Ressorts:
+     * [34]Startups
+     * [35]E-Commerce
+     * [36]Marketing
+     * [37]Social Media
+     * [38]Karriere
+     * [39]Design
+     * [40]Entwicklung
+     * [41]Software
+     * [42]Hardware
+
+     * Topthemen:
+     * [43]iPhone 5C
+     * [44]Flat Design
+     * [45]iPhone 5s
+     * [46]Content Marketing
+     * [47]iOS 7
+     * [48]Responsive Webdesign
+     * [49]mehr »
+          + [50]Facebook
+          + [51]Firefox OS
+          + [52]IFA 2013
+          + [53]SEO
+          + [54]PRISM
+          + [55]A/B-Test
+          + [56]Webdesign
+          + [57]Windows 8.1
+          + [58]Alle Themen »
+
+     * [59]Google+
+     * [60]Twitter
+     * [61]Facebook
+     * [62]YouTube
+     * [63]RSS
+
+   [64]18 [65]4 [66]17
+   Drücke die Tasten ◄ ► für weitere Artikel   [67]◄ [68]►
+
+Juvia: Open-Source-Kommentarsystem als Alternative zu Disqus und
+IntenseDebate
+
+   Autor: [69]Monika Steinberg
+
+   Datum: 18.01.2012, 17:23 Uhr
+
+   Es gibt bereits einige Möglichkeiten wie Disqus oder IntenseDebate, um
+   Blogkommentare gesammelt und ausgelagert zu verwalten. Mit Juvia ist
+   jetzt außerdem ein Rails-basiertes Kommentarsystem am Start, das als
+   Open Source über GitHub verfügbar ist. Wir stellen euch Juvia hier kurz
+   vor.
+   Juvia: Open-Source-Kommentarsystem als Alternative zu Disqus und
+   IntenseDebate
+   [70]Juvia Dashboard Demo Juvia Demo Webfrontend: Dashboard
+
+Simples Kommentar Outsourcing
+
+   [71]Juvia stammt von der 2008 gegründeten niederländischen
+   Webentwicklungsfirma [72]Phusion. Juvia ist in [73]Rails 3 umgesetzt
+   und vom Prinzip her ähnlich wie die beiden wohl bisher bekanntesten
+   Kommentarsysteme [74]Disqus und [75]IntenseDebate. Auch bei Juvia kann
+   man bald über ein Webfrontend nach einem Login seine Kommentare mittels
+   eines Dashboards an einer Stelle gesammelt verwalten. Bisher gibt es
+   allerdings erst ein [76]Demosystem zu Juvia mit einem Testaccount als
+   a@a.com und Passwort 123456. Neuregistrierungen sind noch nicht
+   möglich.
+   [77]Juvia Kommentar%C3%BCbersicht Dashboard Demo Juvia Demo
+   Webfrontend: Kommentarübersicht
+
+   Die Einbindung einer Juvia-Kommentarseite in das eigene Blog geschieht
+   über ein anpassbares [78]JavaScript Snippet, das man in die eigene
+   Seite kopiert. Dabei sind Kommentare in zwei hierarchische Ebenen
+   unterteilt. Kommentare sind in Themen enthalten und Themen sind Teil
+   einer Kommentarseite. Nur die Kommentarseite muss manuell erstellt
+   werden – die Themen werden automatisch über gepostete Kommentare
+   erzeugt.
+   [79]Juvia JavaScript Snippet Juvia JavaScript Snippet Beispiel
+
+AJAX-Unterstützung und offener Quellcode
+
+   Auch bei IntenseDebate und Disqus kann man über Widgets als
+   JavaScript-Snippets konfigurierbare Kommentarübersichten in die eigene
+   Seite einbauen. Wie die Juvia-Entwickler [80]bei GitHub schreiben,
+   liegt der Vorteil von Juvia aber in der guten AJAX-Unterstützung. Es
+   bietet einfache Integration in AJAX-basierte Webanwendungen und
+   vermeidet bekannte Konflikte mit anderen in der Seite existierenden
+   JavaScripts. Daher wird z.B. nicht die gesamte Seite neu geladen oder
+   auf andere Seiten umgeleitet. Auch iframes werden nicht benutzt von
+   Juvia.
+   [81]Juvia Dashboard CreateNewSite Demo Juvia Demo Webfrontend: Neue
+   Seite erstellen
+
+   IntenseDebate und Disqus können als Basisversion auch kostenfrei
+   genutzt werden, sind aber nicht [82]Open Source. [83]Zusätzliche Addon
+   Packages für z.B. Disqus kosten zwischen 299 Dollar und 999 Dollar im
+   Monat – je nachdem ob das „Professional“ oder das „VIP“ Paket gewählt
+   wird. Wer an einem schlichten Kommentarsystem mit offenem Quellcode
+   oder der Entwicklung von eigenen Erweiterungen interessiert ist, ist
+   besser bei Juvia aufgehoben. Man kann sich auch gern seine eigene
+   Rails-Installation einrichten wie bei [84]GitHub ausführlich
+   dokumentiert ist.
+
+Weitere Juvia Features
+
+   Juvia bietet manuellen oder automatischen Moderationssupport über
+   Akismet, Mehrfachnutzerunterstützung für den Admin-Panel und nicht nur
+   für Kommentatoren sowie E-Mail-Benachrichtigung bei neuen Kommentaren.
+   Verschachtelte Kommentare werden derzeit von Juvia nicht unterstützt.
+   Da die Phusion Entwickler auf Einfachheit setzten, ist das auch für die
+   Zukunft nicht zu erwarten. Für die Zukunft stehen bei Juvia noch ein
+   paar Punkte auf der Todo-Liste wie z.B. ein für mobile Endgeräte
+   optimiertes Interface, Import/Export-Funktionalitäten oder
+   Unterstützung für Moderationsteams.
+
+   Allerdings merken die Entwickler an, dass sie Juvia in der aktuellen
+   Schlichtheit für ihre Bedürfnisse schon völlig ausreichend finden und
+   [85]rufen eher dazu auf, sich aktiv an der Weiterentwicklung von Juvia
+   zu beteiligen, falls jemandem etwas fehlen sollte.
+
+   Kurz gesagt: Juvia ist ein simples Kommentarsystem mit Blick aufs
+   Wesentliche dass mit AJAX Unterstützung und der Verfügbarkeit als Open
+   Source punktet.
+   [86]Nur für Frauen: Die „Rails Girls“ verändern die Programmiererwelt
+
+   Das könnte dich auch interessieren:
+
+Nur für Frauen: Die „Rails Girls“ verändern die Programmiererwelt
+
+   Weiterführende Links:
+     * [87]Juvia Demo
+     * [88]Juvia bei GitHub
+     * [89]IntenseDebate
+     * [90]Disqus
+
+   Themen: [91]Rails, [92]Open Source
+   Newsletter: Top Themen der Woche
+
+   ____________________ (BUTTON) eintragen
+
+   2x die Woche   Redaktionell bearbeitet
+
+   Jetzt lesen: [93]t3n Newsletter Nr. 372
+
+   [94]Banner jetzt buchen »
+   [95]Marktplatz
+     * [96]INETSERVICE - Internet...Wir erstellen individuelle...8042
+       Graz, Österreich
+     * [97]snowflake productions gmbhAls führende Schweizer TYPO3...8003
+       Zürich, Schweiz
+     * [98]Marktplatzeintrag schalten
+
+   39 Shares bis jetzt –
+   Dankeschön!
+
+   [99]18 [100]4 [101]17
+   Autor:
+   [102]Monika Steinberg
+
+   Professor in information management and multimedia. Media, web, coffee
+   and running lover.
+   Bewerten
+   VN:F [1.9.22_1171]
+   Bewertung: 0.0/5 (0 Bewertungen)
+   [103]Passende Stellenangebote zu Rails und Open Source [104]Jetzt
+   schalten: 30 Tage / 99 €
+     * [105]PHP- / Webentwickler (m/w) gesucht64283 Darmstadt
+     * [106]VOLONTÄR/IN im LEKTORAT80799 München
+     * [107]Adobe CQ5/AEM Developer (m/w)5061 Salzburg-Elsbethen,...
+     * [108]TYPO3 Webdeveloper (m/w)5061 Salzburg-Elsbethen,...
+
+   Weitere Stellenangebote der t3n-Jobbörse findest du in den Kategorien
+   [109]TYPO3 Jobs, [110]Magento Jobs und [111]WordPress Jobs.
+   Das interessiert dich bestimmt auch
+   [112]Open Source: Citrix lässt XenServer frei
+   Open Source: Citrix lässt XenServer frei
+   [113]Hippo: Das steckt hinter dem Open-Source-CMS
+   Hippo: Das steckt hinter dem Open-Source-CMS
+   [114]Sieben kostenlose eBooks für den Einstieg in die Web-Entwicklung
+   Sieben kostenlose eBooks für den Einstieg in die Web-Entwicklung
+   [115]Bitcast: Neuer Tutorial-Marktplatz für Entwickler
+   Bitcast: Neuer Tutorial-Marktplatz für Entwickler
+   5 Antworten
+    1. von marcel 18.01.2012 (20:38Uhr) [116]1.
+       Ich finde es gut, dass ihr euren Kommentarbereich verbessern wollt,
+       sieht immer sehr chaotisch aus hier:)
+    2. von [117]Kodak Insolvenz, Facebook, SOPA | techsl… 19.01.2012
+       (07:46Uhr) [118]2.
+       [...] Juvia ist die Open Source Alternative zu kommerziellen
+       Kommentarsystemen wie Disqus und IntenseDebate. t3n findet, dass
+       Juvia ein simples Kommentarsystem mit Blick aufs Wesentliche ist
+       und dank Verfügbarkeit als Open Source punktet. t3n [...]
+    3. von [119]Robert 19.01.2012 (09:16Uhr) [120]3.
+       Das Interface sieht aber im Vergleich zu DISQUS echt schrecklich
+       aus... OpenSource ist zwar schön und gut, aber wenn das auch
+       optisch nur was für Entwickler ist, seh ich andere Dienste klar
+       vorne.
+    4. von Sascha 19.01.2012 (13:56Uhr) [121]4.
+       Es ist nur schade, dass eben nicht jeder diese OpenSource-Lösung
+       nutzen und anpassen kann. Jedenfalls finde ich in Deutschland fast
+       nur Anbieter die nur PHP anbieten.
+       Die Idee finde ich allerdings super und ich finde es verständlich,
+       dass nicht jeder PHP programmieren will. Ich werde mir Juvia auf
+       jedenfall anschauen.
+    5. von [122]Daniel Volker 23.02.2012 (17:01Uhr) [123]5.
+       Ich finde Disqus als die beste Kommentar Platfom... wer will sich
+       immer wieder an jeder Seite neu anmelden?
+
+   Deine Meinung
+   (BUTTON) ×
+
+Bitte melde dich an!
+
+   Du musst angemeldet sein, um einen Kommentar schreiben zu können.
+
+   [124]Jetzt anmelden
+   Top-5-News
+     * [125]1 iOS 7 – 20 Tipps, Tricks und versteckte Features
+     * [126]2 Entwickler bringt einem Obdachlosen das Programmieren bei –
+       seine erste App ist fast fertig
+     * [127]3 Startups: Die 10 besten Rezepte gegen das Scheitern
+     * [128]4 LG G2 im Test: Das unterschätzte Android-Flaggschiff?
+     * [129]5 iOS 7: So erhöht ihr eure Akkulaufzeit
+
+   10 Tweets
+     * RolandWeinzierl: Juvia: Open-Source-Kommentarsystem als Alternative
+       zu Disqus und IntenseDebate http://t.co/f9EZO7fc via @yeebase_t3n
+     * facebookapi: Juvia: Open-Source-Kommentarsystem als Alternative zu
+       Disqus und IntenseDebate » t3n News http://t.co/dUZuuLb7 #facebook
+     * webrookieDE: Juvia: Open-Source-Kommentarsystem als Alternative zu
+       Disqus und IntenseDebate - http://t.co/hU3t360o
+     * NetzNirvana: Juvia: Open-Source-Kommentarsystem als Alternative zu
+       Disqus und IntenseDebate http://t.co/Q0isronx
+     * sidux_ev: #Juvia Open-Source-Kommentarsystem als Alternative zu
+       #Disqus und #IntenseDebate #oss http://t.co/L5TpjhF9
+     * buurtaal: Klingt spannend: #Juvia: Open-Source-Kommentarsystem als
+       Alternative zu Disqus und IntenseDebate? http://t.co/iTbmqZST
+     * BigHaehnchen: #bookmark Juvia: Open-Source-Kommentarsystem als
+       Alternative zu Disqus und IntenseDebate » t3n News
+       http://t.co/sIy7RN72
+     * AndyLenz: Juvia: Open-Source-Kommentarsystem als Alternative zu
+       Disqus und IntenseDebate http://t.co/ssbDHF2Z
+     * Mika417: Juvia: Open-Source-Kommentarsystem als Alternative zu
+       Disqus und IntenseDebate http://t.co/dHJioSMj via @yeebase_t3n
+     * [130]retweet
+     * Möchten Sie auch hier erscheinen?
+       Dann hier [131]Re-Tweeten
+
+   Kennst Du schon unser t3n Magazin?
+     * [132]t3n Nr. 33 – The Next Big Thing: die programmierbare Welt
+       t3n Nr. 33 – The Next Big Thing: die programmierbare Welt
+     * [133]t3n Nr. 32 - Die neuesten Trends im UI-/UX-Design
+       t3n Nr. 32 - Die neuesten Trends im UI-/UX-Design
+     * [134]t3n Nr. 31 - So funktioniert Bewegtbild im Netz
+       t3n Nr. 31 - So funktioniert Bewegtbild im Netz
+     * [135]t3n Nr. 30 - Touch me!
+       t3n Nr. 30 - Touch me!
+     * [136]t3n Nr. 29 - Digital. Produktiv. Frei.
+       t3n Nr. 29 - Digital. Produktiv. Frei.
+
+     * [137]Themen:
+     * [138]A
+     * [139]B
+     * [140]C
+     * [141]D
+     * [142]E
+     * [143]F
+     * [144]G
+     * [145]H
+     * [146]I
+     * [147]J
+     * [148]K
+     * [149]L
+     * [150]M
+     * [151]N
+     * [152]O
+     * [153]P
+     * [154]Q
+     * [155]R
+     * [156]S
+     * [157]T
+     * [158]U
+     * [159]V
+     * [160]W
+     * [161]X
+     * [162]Y
+     * [163]Z
+     * [164]#
+
+   t3n-Newsletter
+
+   Top-Themen der Woche auf einen Blick!
+   Kostenfreier Branchen-Newsletter, redaktionell überarbeitet, 2x
+   wöchtentlich direkt per E-Mail.
+
+   ____________________ (BUTTON) eintragen
+
+   [165]AGOF [166]IVW Diese Seite ist AGOF- und IVW-geprüft.
+   yeebase media
+     * [167]Unternehmen & Blog
+     * [168]Das Team
+     * [169]Werben mit yeebase media
+     * [170]Jobs bei yeebase
+     * [171]Pressebereich
+     * [172]Sitemap
+
+     * [173]Impressum
+     * [174]Nutzungsbedingungen
+     * [175]AGB
+     * [176]Datenschutz
+
+   t3n-Portale
+     * [177]Startseite
+     * [178]Newsticker
+     * [179]Heftartikel
+     * [180]Aggregator
+     * [181]Fragen-Portal
+     * [182]Marktplatz
+     * [183]Jobbörse
+     * [184]Shop
+
+   RSS-Feeds
+     * [185]Aktuelle News
+     * [186]Die neuesten Artikel
+     * [187]Die neuesten Fragen
+     * [188]Aggregator-News
+     * [189]Die neuesten Marktplatzeinträge
+     * [190]Aktuelle Jobangebote
+     * [191]weitere Feeds »
+
+   Kontakt
+     * [192]Google+
+     * [193]Twitter
+     * [194]Facebook
+     * [195]Kontaktformular
+
+   [196]t3n Magazin
+
+   [197]Mobile Seite  •  © [198]yeebase media GmbH 2005 - 2013  •  hosted
+   by [199]unbelievable machine
+
+   [200]t3n 33 jetzt kostenfrei probelesen! [201]Alle Inhalte des t3n
+   Magazins [202]Diesen Hinweis verbergen
+
+References
+
+   Visible links
+   1. http://t3n.de/news/feed/
+   2. http://t3n.de/news/feed/atom/
+   3. http://t3n.de/news/juvia-360109/feed/
+   4. https://plus.google.com/101559871572415719072
+   5. file://localhost/
+   6. file://localhost/
+   7. https://t3n.de/app/shop/
+   8. file://localhost/jobs/
+   9. file://localhost/marktplatz/
+  10. https://t3n.de/app/werben/
+  11. file://localhost/news/sponsored-post-info/
+  12. https://t3n.de/app/partnerprogramm/
+  13. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml711.data
+  14. file://localhost/
+  15. https://t3n.de/signin
+  16. https://t3n.de/connect/google
+  17. https://t3n.de/connect/facebook
+  18. https://t3n.de/connect/twitter
+  19. https://t3n.de/signup?redirect=http%3A%2F%2Ft3n.de%2Fnews%2Fjuvia-360109%2F
+  20. https://t3n.de/account/password
+  21. https://t3n.de/app/shop/abo/
+  22. http://yeebase.com/kontakt/
+  23. mailto:redaktion@t3n.de
+  24. file://localhost/
+  25. file://localhost/news/
+  26. file://localhost/magazin/
+  27. file://localhost/news/category/stream/
+  28. file://localhost/news/category/tv/
+  29. file://localhost/jobs/
+  30. file://localhost/fragen/
+  31. https://t3n.de/app/shop/
+  32. file://localhost/marktplatz/
+  33. http://t3n.de/magazin/t3n-nr-33-programmierbare-welt/
+  34. http://t3n.de/tag/startups
+  35. http://t3n.de/tag/e-commerce
+  36. http://t3n.de/tag/marketing
+  37. http://t3n.de/tag/social-media
+  38. http://t3n.de/tag/karriere
+  39. http://t3n.de/tag/design
+  40. http://t3n.de/tag/entwicklung
+  41. http://t3n.de/tag/software
+  42. http://t3n.de/tag/hardware
+  43. http://t3n.de/tag/iphone-5c
+  44. http://t3n.de/tag/flat-design
+  45. http://t3n.de/tag/iphone-5s
+  46. http://t3n.de/tag/content-marketing
+  47. http://t3n.de/tag/ios-7
+  48. http://t3n.de/tag/responsive-webdesign
+  49. file://localhost/tag
+  50. http://t3n.de/tag/facebook
+  51. http://t3n.de/tag/firefox-os
+  52. http://t3n.de/tag/ifa
+  53. http://t3n.de/tag/seo
+  54. http://t3n.de/tag/prism
+  55. http://t3n.de/tag/a-b-test
+  56. http://t3n.de/tag/webdesign
+  57. http://t3n.de/tag/windows-8-1
+  58. file://localhost/tag
+  59. https://plus.google.com/+t3nMagazin/posts
+  60. https://twitter.com/t3n
+  61. https://www.facebook.com/t3nMagazin
+  62. http://www.youtube.com/subscription_center?add_user=t3nMagazin
+  63. http://t3n.de/news/feed/
+  64. https://plus.google.com/share?url=http%3A%2F%2Ft3n.de%2Fnews%2Fjuvia-360109%2F
+  65. http://www.facebook.com/sharer.php?u=http://t3n.de/news/juvia-360109/&t=Juvia%3A+Open-Source-Kommentarsystem+als+Alternative+zu+Disqus+und+IntenseDebate
+  66. http://twitter.com/intent/tweet?related=t3n&text=Juvia%3A+Open-Source-Kommentarsystem+als+Alternative+zu+Disqus+und+IntenseDebate&url=http://t3n.de/news/juvia-360109/&via=t3n&lang=de
+  67. http://t3n.de/news/google-video-feature-360188/
+  68. http://t3n.de/news/internet-2011-zahlen-ausblick-359909/
+  69. file://localhost/profile/msteinberg
+  70. http://juvia-demo.phusion.nl/
+  71. http://juvia-demo.phusion.nl/
+  72. http://www.phusion.nl/about
+  73. http://t3n.de/tag/rails
+  74. http://www.disqus.com/welcome/
+  75. http://intensedebate.com/home
+  76. http://juvia-demo.phusion.nl/
+  77. http://juvia-demo.phusion.nl/
+  78. http://juvia-demo.phusion.nl/admin/help/embedding
+  79. http://juvia-demo.phusion.nl/admin/help/embedding
+  80. https://github.com/phusion/juvia
+  81. http://juvia-demo.phusion.nl/
+  82. http://t3n.de/tag/open-source
+  83. http://disqus.com/admin/addons/packages/
+  84. https://github.com/phusion/juvia
+  85. https://github.com/phusion/juvia
+  86. http://t3n.de/news/nur-frauen-rails-girls-verandern-461978/
+  87. http://juvia-demo.phusion.nl/admin/sites/new
+  88. https://github.com/phusion/juvia
+  89. http://intensedebate.com/home
+  90. http://www.disqus.com/welcome/
+  91. file://localhost/tag/rails/
+  92. file://localhost/tag/open-source/
+  93. http://eepurl.com/F_Ud9
+  94. https://t3n.de/app/werben/
+  95. file://localhost/marktplatz/
+  96. http://t3n.de/marktplatz/entry/inetservice-internet-service-holzer-dengg-og/
+  97. http://t3n.de/marktplatz/entry/snowflake-productions-gmbh/
+  98. http://t3n.de/marktplatz/choose/
+  99. https://plus.google.com/share?url=http%3A%2F%2Ft3n.de%2Fnews%2Fjuvia-360109%2F
+ 100. http://www.facebook.com/sharer.php?u=http://t3n.de/news/juvia-360109/&t=Juvia%3A+Open-Source-Kommentarsystem+als+Alternative+zu+Disqus+und+IntenseDebate
+ 101. http://twitter.com/intent/tweet?related=t3n&text=Juvia%3A+Open-Source-Kommentarsystem+als+Alternative+zu+Disqus+und+IntenseDebate&url=http://t3n.de/news/juvia-360109/&via=t3n&lang=de
+ 102. file://localhost/profile/msteinberg
+ 103. file://localhost/jobs/
+ 104. file://localhost/jobs/choose/
+ 105. http://t3n.de/jobs/job/php-webentwickler-mw-gesucht/
+ 106. http://t3n.de/jobs/job/volontarin-im-lektorat/
+ 107. http://t3n.de/jobs/job/adobe-cq5aem-developer-mw/
+ 108. http://t3n.de/jobs/job/typo3-webdeveloper-mw/
+ 109. http://t3n.de/jobs/tag/typo3/
+ 110. http://t3n.de/jobs/tag/magento/
+ 111. http://t3n.de/jobs/tag/wordpress/
+ 112. http://t3n.de/news/open-source-citrix-lasst-476352/
+ 113. http://t3n.de/news/hippo-steckt-open-source-cms-474139/
+ 114. http://t3n.de/news/sieben-kostenlose-ebooks-einstieg-455837/
+ 115. http://t3n.de/news/bitcast-tutorial-marktplatz-477310/
+ 116. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml711.data#comment-54720
+ 117. http://www.techslash.de/kodak-insolvenz-facebook-sopa/
+ 118. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml711.data#comment-55085
+ 119. http://www.toushenne.de/
+ 120. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml711.data#comment-55098
+ 121. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml711.data#comment-55157
+ 122. http://ausbildung-zum-heilpraktiker.net/
+ 123. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml711.data#comment-60724
+ 124. https://t3n.de/signin?redirect=http%3A%2F%2Ft3n.de%2Fnews%2Fjuvia-360109%2F
+ 125. http://t3n.de/news/ios-7-20-tipps-tricks-496383/
+ 126. http://t3n.de/news/obdachloser-programmierer-journeyman-498859/
+ 127. http://t3n.de/news/startups-scheitern-10-rezepte-497789/
+ 128. http://t3n.de/news/lg-g2-test-497459/
+ 129. http://t3n.de/news/ios-7-hoher-akkuverbrauch-496574/
+ 130. http://twitter.com/intent/tweet?related=t3n&text=Juvia%3A+Open-Source-Kommentarsystem+als+Alternative+zu+Disqus+und+IntenseDebate&url=http://t3n.de/news/juvia-360109/&via=t3n&lang=de
+ 131. http://twitter.com/intent/tweet?related=t3n&text=Juvia%3A+Open-Source-Kommentarsystem+als+Alternative+zu+Disqus+und+IntenseDebate&url=http://t3n.de/news/juvia-360109/&via=t3n&lang=de
+ 132. http://t3n.de/magazin/t3n-nr-33-programmierbare-welt/
+ 133. http://t3n.de/magazin/t3n-nr-32-neuesten-trends-ui-ux-design/
+ 134. http://t3n.de/magazin/t3n-nr-31-so-funktioniert-bewegtbild-im-netz/
+ 135. http://t3n.de/magazin/t3n-nr-30-touch-me/
+ 136. http://t3n.de/magazin/t3n-nr-29-digital-produktiv-frei/
+ 137. file://localhost/tag
+ 138. file://localhost/tag/a
+ 139. file://localhost/tag/b
+ 140. file://localhost/tag/c
+ 141. file://localhost/tag/d
+ 142. file://localhost/tag/e
+ 143. file://localhost/tag/f
+ 144. file://localhost/tag/g
+ 145. file://localhost/tag/h
+ 146. file://localhost/tag/i
+ 147. file://localhost/tag/j
+ 148. file://localhost/tag/k
+ 149. file://localhost/tag/l
+ 150. file://localhost/tag/m
+ 151. file://localhost/tag/n
+ 152. file://localhost/tag/o
+ 153. file://localhost/tag/p
+ 154. file://localhost/tag/q
+ 155. file://localhost/tag/r
+ 156. file://localhost/tag/s
+ 157. file://localhost/tag/t
+ 158. file://localhost/tag/u
+ 159. file://localhost/tag/v
+ 160. file://localhost/tag/w
+ 161. file://localhost/tag/x
+ 162. file://localhost/tag/y
+ 163. file://localhost/tag/z
+ 164. file://localhost/tag/0-9
+ 165. http://www.agof.de/
+ 166. http://www.ivw.de/
+ 167. http://yeebase.com/
+ 168. http://yeebase.com/team
+ 169. https://t3n.de/app/werben/
+ 170. http://yeebase.com/jobs/
+ 171. http://yeebase.com/presse/
+ 172. file://localhost/news/t3nsitemap/
+ 173. http://t3n.de/app/impressum/
+ 174. http://t3n.de/app/index.php?id=422
+ 175. http://t3n.de/app/index.php?id=393
+ 176. http://t3n.de/app/index.php?id=394
+ 177. file://localhost/
+ 178. file://localhost/news/
+ 179. file://localhost/magazin/
+ 180. file://localhost/aggregator/
+ 181. file://localhost/fragen/
+ 182. file://localhost/marktplatz/
+ 183. file://localhost/jobs/
+ 184. https://t3n.de/app/shop/
+ 185. file://localhost/news/feed/
+ 186. file://localhost/magazin/feed/
+ 187. file://localhost/fragen/latest.atom
+ 188. file://localhost/aggregator/feed.atom
+ 189. file://localhost/marktplatz/rss/all/
+ 190. file://localhost/jobs/rss/all/
+ 191. file://localhost/news/feeds/
+ 192. https://plus.google.com/101559871572415719072
+ 193. http://twitter.com/t3n
+ 194. https://www.facebook.com/t3nMagazin
+ 195. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml711.data
+ 196. http://t3n.de/
+ 197. file://localhost/
+ 198. http://yeebase.com/
+ 199. http://www.unbelievable-machine.com/
+ 200. http://t3n.de/magazin/t3n-nr-33-programmierbare-welt/
+ 201. http://t3n.de/magazin/t3n-nr-33-programmierbare-welt/
+ 202. http://t3n.de/magazin/t3n-nr-33-programmierbare-welt/
+
+   Hidden links:
+ 204. file://localhost/profile/msteinberg
+ 205. http://www.techslash.de/kodak-insolvenz-facebook-sopa/
+ 206. http://www.toushenne.de/
+ 207. http://ausbildung-zum-heilpraktiker.net/
+ 208. http://twitter.com/38734272/statuses/160347068878163971
+ 209. http://twitter.com/91323868/statuses/159934758695075840
+ 210. http://twitter.com/372828474/statuses/159930619915280386
+ 211. http://twitter.com/73159936/statuses/159795081002483712
+ 212. http://twitter.com/216424978/statuses/159776678854410241
+ 213. http://twitter.com/46163138/statuses/159705736627228674
+ 214. http://twitter.com/52457779/statuses/159701302786527232
+ 215. http://twitter.com/2185201/statuses/159673268503191552
+ 216. http://twitter.com/35500457/statuses/159672791820550144
+ 217. http://t3n.de/magazin/t3n-nr-33-programmierbare-welt/

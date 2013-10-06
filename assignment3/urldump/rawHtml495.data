@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Language" content="en" />
+  <meta name="viewport" content="width=device-width,
+                                 initial-scale=1,
+                                 maximum-scale=1.0,
+                                 user-scalable=0,
+                                 target-densitydpi=medium-dpi">
+  <meta name="url" content="/sassconf/2013">
+    <meta name="description" content="# Come get Sassy this October in New York City!
+
+Introducing SassConf, a two day conference devoted to modern front-end development. Prepare yourself for a fantastic two day conference; day one will be filled with talks from big players in the Sass and Front-End communities and day two will be an unconference where you will be able to break out into smaller groups to talk and work. ">
+  <meta name="author" content="Hypertiny">
+        <script src="https://js.stripe.com/v1/" type="text/javascript"></script>
+        <meta content="pk_live_IVF2EumxIMnMosqsnKNe38aS" name="stripe-key" />
+    <meta content="sassconf" name="tito-account-slug" />
+    <meta content="2013" name="tito-event-slug" />
+    <meta content="false" name="tito-paypal-only" />
+    <meta name="tito-release-id" />
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+
+  <!-- CSS for all browsers -->
+  <link href="https://d1wq9g3kasg5vy.cloudfront.net/assets/outer-1c0c0298ad3d083727c0a56a6ef370bc.css" media="screen" rel="stylesheet" type="text/css" />
+
+  <!--[if lt IE 9]>
+    <script src="https://d1wq9g3kasg5vy.cloudfront.net/assets/html5shiv-be1422132917f54aaf6ca14ff0a66a1a.js" type="text/javascript"></script>
+  <![endif]-->
+
+  <!-- The only JS to appear in the header, rest at footer -->
+    <script type="text/javascript" src="//use.typekit.net/dkk5loq.js"></script>
+    <script>
+      try{Typekit.load();}catch(e){}
+    </script>
+
+  <!-- For Nokia and Safari Desktop-->
+<link rel="shortcut icon" href="https://d1wq9g3kasg5vy.cloudfront.net/assets/favicon-298cf0bb6730e6414be0cb2b00d43c36.png">
+<!-- For everything else -->
+<link rel="shortcut icon" href="https://d1wq9g3kasg5vy.cloudfront.net/assets/favicon-d7ccf8f863aa5ac004452e5e5c8fe0db.ico">
+
+  <!--Microsoft. -->
+  <meta http-equiv="cleartype" content="on">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>
+      SassConf
+  </title>
+</head>
+
+<body 
+>
+  <div id="marching-ants">
+    <div id="loading-message">
+    </div>
+  </div>
+  <div id="main" data-role="main" class="clearfix">
+    <div id="top-animation-padding"></div>
+    <div id="main-inner">
+      
+
+
+  <div id="event-homepage" class="event-homepage-wrap
+    ">
+    <div id="admin-button" data-url="/sassconf/2013/admin-link">
+    </div>
+
+    <div class="clearfix l-card event-primary-info">
+        <div class="event-banner">
+          <img alt="Banner4" src="https://d2z6c3c3r6k4bx.cloudfront.net/uploads/event/banner/307/banner4.jpg" /></div>
+      <div class="ticket-primary">
+        <header class="clearfix logo-config-two">
+
+
+
+          <div class="event-date-location">
+            <dt>Date</dt>
+            <dd class="event-date">October 12th&ndash;13th, 2013</dd>
+              <dt>Location</dt>
+              <dd class="event-location">
+                <img alt="Location" src="https://d1wq9g3kasg5vy.cloudfront.net/assets/location-fb523cb01829dae1d18ab7f274ed25e1.png" />
+                <a href="#venue-info">
+                  New York, New York
+</a>              </dd>
+          </div>
+        </header>
+
+        <div id="main-event-details">
+
+          <dl class="event-info clearfix">
+              <dt>Description</dt>
+              <dd class="event-description"><h1>Come get Sassy this October in New York City!</h1>
+
+<p>Introducing SassConf, a two day conference devoted to modern front-end development. Prepare yourself for a fantastic two day conference; day one will be filled with talks from big players in the Sass and Front-End communities and day two will be an unconference where you will be able to break out into smaller groups to talk and work. </p>
+</dd>
+          </dl>
+        </div>
+
+        <!-- REGISTER INTEREST FORM -->
+
+      </div><!-- .ticket-primary -->
+
+      <div class="ticket-secondary">
+        <h3 class="register"><span>
+          Tickets
+        </span></h3>
+        <hr>
+
+        <div id="tito-register-form" data-url="https://tito.io/sassconf/2013/register_form"></div>
+        <noscript>
+          
+    <div class="tickets-purchase-wrap">
+      <ul id="tito-tickets" class="ticket past-tickets">
+          <li class="clearfix">
+            <label class="ticket-name">Early Bird</label>
+            <div class="ticket-status ticket-status-sold-out">Sold out</div>
+          </li>
+          <li class="clearfix">
+            <label class="ticket-name">One Month Out Surprise Discount FIRE SALE!</label>
+            <div class="ticket-status ticket-status-ended">Ended</div>
+          </li>
+      </ul>
+    </div>
+
+  <form accept-charset="UTF-8" action="https://tito.io/sassconf/2013/registrations" class="purchase-form clearfix" id="tito-register-form-fields" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="N5AbEbP4kRmKnb6oP+w0XpQvThl4RXtELUflB3Hqza4=" /></div>
+
+    <div class="tickets-purchase-wrap">
+      <div class="clearfix">
+
+
+        <ul id="tito-tickets" class="ticket">
+
+            <li class="clearfix
+                              long-currency
+            ">
+
+
+              <label for="ticket_0" class="ticket-name">
+                Regular Ticket
+              </label>
+
+                <div class="ticket-price configurable">
+                      $475
+                </div>
+
+                  <div class="ticket-quantity-wrap ">
+                      <input
+                        type="text"
+                        pattern="[0-9]*"
+                        value="1"
+                        id="ticket_0"
+                        name="registration[release_ids][pyuu3oabbfi]"
+                        class="text-field tito-quantity integer" />
+                  </div>
+
+            
+            </li>
+
+        </ul>
+      </div>
+        <span id="discount-code-field" >
+          <input class="text-field" id="discount-code-input" name="registration[discount_code]" placeholder="enter discount code" size="30" type="text" />
+        </span>
+
+
+        <fieldset class="buttons">
+            <input class="submit" type="submit" value="Purchase" name="commit">
+        </fieldset>
+
+    </div>
+</form>  <!-- Ticket Picker End -->
+  <img alt="" src="https://tito.io/notches/hits/new.gif?url=126/307" />
+
+        </noscript>
+      </div>  <!-- .ticket-secondary -->
+    </div>    <!-- .event-primary-info -->
+  </div>      <!-- #event-homepage -->
+
+    <div class="clearfix l-card event-secondary-info
+      
+
+      
+
+      ">
+      <dl class="clearfix event-info">
+
+          <h3><span>Additional Information</span></h3>
+          <dt>Additional info</dt>
+          <dd class="event-additional-info">
+            <h3>Student and Discount Ticket Pricing</h3>
+
+<p>We don&#39;t want anyone to be turned away because of cost. We&#39;ll do our best to work with you to ensure you can make it to SassConf. Please start by <a href="bit.ly/sassconfdiscounts">filling a request</a>. </p>
+
+              <h3><span>From <a href="http://lanyrd.com/2013/sassconf">Lanyrd</a>:</span></h3>
+              <div class="lanyrd-target-schedule">
+                <a href="http://lanyrd.com/2013/sassconf/schedule"
+                    class="lanyrd-schedule"
+                    data-lanyrd-speakers
+                    data-lanyrd-speakerlabels>
+                    Schedule for SassConf on Lanyrd
+                </a>
+              </div>
+              <script src="https://dfc4qdfmn07nj.cloudfront.net/badges/embed-v1.min.js"></script>
+          </dd>
+
+          <div class="map-wrapper clearfix" id="venue-info">
+              <dt>Map</dt>
+              <img alt="Paperclip" class="paperclip" src="https://d1wq9g3kasg5vy.cloudfront.net/assets/paperclip-080031470fac6d19612a7f5f29884d1d.png" />
+              <dd class="event-map clearfix">
+                <a href="http://maps.google.com/maps?q=40.7556%2C-73.9869+%28SassConf%2C+Scholastic+Auditorium%2C+557+Broadway%2C+New+York%2C+NY%29">
+                  <img alt="Staticmap?size=640x366&amp;maptype=roadmap&amp;center=40.7240072%2c-73.99822919999997&amp;markers=size:mid%7ccolor:blue%7c40.7556%2c-73" height="366" src="https://maps.googleapis.com/maps/api/staticmap?size=640x366&amp;maptype=roadmap&amp;center=40.7240072%2C-73.99822919999997&amp;markers=size:mid%7Ccolor:blue%7C40.7556%2C-73.9869&amp;sensor=false&amp;format=png32&amp;scale=2&amp;visual_refresh=true&amp;zoom=16&amp;key=AIzaSyC9qsX58pj60d-Ga_06b40fl3YGRnxArD4" width="640" />
+</a>              </dd>
+
+              <dt>Venue</dt>
+              <dd class="event-address clearfix">
+                  <a href="http://maps.google.com/maps?q=40.7556%2C-73.9869+%28SassConf%2C+Scholastic+Auditorium%2C+557+Broadway%2C+New+York%2C+NY%29">
+                    <p>SassConf, Scholastic Auditorium, 557 Broadway, New York, NY</p>
+</a>              </dd>
+          </div>
+
+          <ul class="event-links clearfix">
+              <li class="clearfix">
+                <img alt="Icon-email" src="https://d1wq9g3kasg5vy.cloudfront.net/assets/icon-email-c9bae3161fb253bbd1c54fcff53802f2.png" />
+                <a href="mailto:info@sassconf.com">
+                  info@sassconf.com
+</a>              </li>
+          </ul>
+      </dl>
+    </div>
+
+    </div>
+    <div id="bottom-animation-padding"></div>
+  </div>
+
+    <footer id="purchase-footer" class="clearfix ">
+  <a href="https://tito.io">by the power of
+    <img alt="Tito" class="tito-footer-logo" src="https://d1wq9g3kasg5vy.cloudfront.net/assets/tito_white_small-e2170901a253f6227bd99bef1f2ce87e.png" />
+</a>  <p><a href="http://hypertiny.ie">&copy; 2011&ndash;2013 Hypertiny</a></p>
+</footer>
+
+
+  <div class="loader-wrap">
+    <div>
+      <div></div>
+    </div>
+  </div>
+
+  <script src="https://d1wq9g3kasg5vy.cloudfront.net/assets/event-02196371beffb1104d38487f0dd5f4ce.js" type="text/javascript"></script>
+
+  
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+</body>
+</html>

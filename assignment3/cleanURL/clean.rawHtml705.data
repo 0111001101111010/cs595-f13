@@ -1,0 +1,689 @@
+   #[1]Railsware Blog » API with Ruby on Rails: useful tricks Comments
+   Feed [2]Mailtrap API [3]We’re Giving Away 2 Free Railsberry 2013
+   Tickets!
+
+   [4]Railsware
+     * [5]COMPANY
+     * [6]WORK
+     * [7]APPROACH
+     * [8]TEAM
+     * [9]CONTACT
+     * [10]BLOG
+
+   [11]MENU
+   [12]API ror development
+
+API with Ruby on Rails: useful tricks
+
+   April 8, 2013 by Innokenty Mihailov | [13]14 Comments
+
+   This article is about gotchas you should be aware of while building
+   your API with Ruby on Rails.
+
+Controller tricks: API on Metal
+
+   Sooner or later each [14]Rails developer come to a point when he wants
+   to build his first API.
+   Among the first things you have to take care of are your controllers.
+   If you want your API to be fast (and I bet you do) then you should
+   consider using [15]ActionController::Metal.
+   The trick is that ActionController::Base has many Middlewares that are
+   not necessary for the API, by using Metal controller with minimum
+   modules included, the one can achieve [16]up to 40% speedup.
+   Lets see what your basic metal controller may looks like:
+
+   class Api::V1::BaseController < ActionController::Metal_____
+     include ActionController::Rendering        # enables rende
+     include ActionController::MimeResponds     # enables servi
+     include AbstractController::Callbacks      # callbacks for
+   ____________________________________________________________
+     append_view_path "#{Rails.root}/app/views" # you have to s
+   end_________________________________________________________
+   1
+   2
+   3
+   4
+   5
+   6
+   7
+   8
+    class Api::V1::BaseController < ActionController::Metal
+      include ActionController::Rendering        # enables rendering
+      include ActionController::MimeResponds     # enables serving
+    different content types like :xml or :json
+      include AbstractController::Callbacks      # callbacks for your
+    authentication logic
+
+      append_view_path "#{Rails.root}/app/views" # you have to specify your
+    views location as well
+    end
+
+   Unfortunately NewRelic doesn’t support Metal by default, so you have to
+   [17]add monitoring manually.
+
+Routing: use versioning
+
+   Nobody’s perfect. So are we.
+   Your API will definitely be changed and extended multiple times in the
+   future so you better take care of your versioning at the beginning.
+   As you noticed, BaseController wrapped in V1 namespace. Use something
+   like this in your routes:
+
+   namespace :api do___________________________________________
+     namespace :v1 do__________________________________________
+       # put your routes here__________________________________
+     end_______________________________________________________
+   end_________________________________________________________
+   1
+   2
+   3
+   4
+   5
+   6
+    namespace :api do
+      namespace :v1 do
+        # put your routes here
+      end
+    end
+
+Views tricks: RABL ‘em all
+
+   You don’t want to burden your code with logic of exposing different
+   model fields for different API actions, right?
+   In this case you should use some template engine. [18]RABL is at your
+   service. Here’s an example of your view:
+
+   object @object______________________________________________
+   ____________________________________________________________
+   attribute :public_id => :id_________________________________
+   attributes :title, :created_at, :source_____________________
+   ____________________________________________________________
+   child :contacts do__________________________________________
+     attributes :title_________________________________________
+   end_________________________________________________________
+   ____________________________________________________________
+   child :files do_____________________________________________
+     attributes :filename, :content_type, :size________________
+   end_________________________________________________________
+   1
+   2
+   3
+   4
+   5
+   6
+   7
+   8
+   9
+   10
+   11
+   12
+   13
+     object @object
+
+     attribute :public_id => :id
+     attributes :title, :created_at, :source
+
+     child :contacts do
+       attributes :title
+     end
+
+     child :files do
+       attributes :filename, :content_type, :size
+     end
+
+   Also that will save you time by getting rid of ugly respond_to blocks.
+   Instead of
+
+   def show____________________________________________________
+     @object = Object.find(params[:id])________________________
+     respond_to do |f|_________________________________________
+       f.json { render json: @object.to_json }_________________
+       f.xml  { render xml: @object.to_xml }___________________
+     end_______________________________________________________
+   end_________________________________________________________
+   1
+   2
+   3
+   4
+   5
+   6
+   7
+   8
+    def show
+      @object = Object.find(params[:id])
+      respond_to do |f|
+        f.json { render json: @object.to_json }
+        f.xml  { render xml: @object.to_xml }
+      end
+    end
+
+   You can simple do literally Nothing
+
+   def show____________________________________________________
+     @object = Object.find(params[:id])________________________
+   end_________________________________________________________
+   ____________________________________________________________
+   1
+   2
+   3
+   4
+    def show
+      @object = Object.find(params[:id])
+    end
+
+   Just make sure you have a RABL view in a corresponding directory.
+
+Security
+
+   There’re plenty of articles about securing your API with OAuth. Another
+   convenient way is to simply use token passed in the query string. If
+   you ended up with token keep in mind that you can easily generate it by
+   calling SecureRandom.urlsafe_base64. To make sure token is unique you
+   can use something like this:
+
+   def build_token_____________________________________________
+     begin_____________________________________________________
+       token = SecureRandom.urlsafe_base64_____________________
+     end while User.exists?(api_token: token)__________________
+     token_____________________________________________________
+   end_________________________________________________________
+   1
+   2
+   3
+   4
+   5
+   6
+   7
+    def build_token
+      begin
+        token = SecureRandom.urlsafe_base64
+      end while User.exists?(api_token: token)
+      token
+    end
+
+Hiding your IDs with GUIDs
+
+   By default Rails uses incremental integer for primary key.
+   Common practice is not to expose these kind of IDs to the public via
+   your API because users can guess other IDs in your database and that
+   might be a potential risk.
+   To solve this you can come up with a simple algorithm that will convert
+   your IDs into some “safe” form and back.
+   But still it’s not super safe because someone can find out what the
+   algorithm is.
+   Another possible solution is to expose [19]GUIDs to the public.
+   It’s a 128 entity that typically looks like this:
+
+   a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   1
+   2
+    a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11
+
+   To generate it in Ruby use SecureRandom.uuid (generates V4 GUID).
+   You can store it as a simple string column but if you are using
+   Postgresql then you can utilize it’s built in uuid type – this can
+   [20]save you a lot of space.
+   Rails, however falls back to :string for the uuid Postgresql native
+   type.
+   To workaround this you can create column manually in your migration
+   (index should be added as well):
+
+   execute "ALTER TABLE objects add COLUMN public_id uuid NOT N
+   add_index :objects, [:public_id], name: "index_objects_on_pu
+   ____________________________________________________________
+   ____________________________________________________________
+   1
+   2
+   3
+    execute "ALTER TABLE objects add COLUMN public_id uuid NOT NULL DEFAULT
+    uuid_generate_v4()"
+    add_index :objects, [:public_id], name: "index_objects_on_public_id",
+    unique: true
+
+   To use uuid_generate_v4 function you have to add Postgresql extension:
+
+   create extension "uuid-ossp"________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   1
+   2
+    create extension "uuid-ossp"
+
+   And don’t forget to change your schema format to :sql in
+   config/application.rb
+
+   config.active_record.schema_format = :sql___________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   1
+    config.active_record.schema_format = :sql
+
+Testing your API
+
+   You definitely want to cover up your new shiny API with some sort of
+   tests. See example below that uses Rack::Test::Methods
+
+   # spec_helper_______________________________________________
+   module ApiHelper____________________________________________
+     include Rack::Test::Methods_______________________________
+   ____________________________________________________________
+     def app___________________________________________________
+       Rails.application_______________________________________
+     end_______________________________________________________
+   end_________________________________________________________
+   ____________________________________________________________
+   RSpec.configure do |config|_________________________________
+     config.include ApiHelper, api: true_______________________
+   end_________________________________________________________
+   ____________________________________________________________
+   # spec______________________________________________________
+   require 'spec_helper'_______________________________________
+   ____________________________________________________________
+   describe "api/v1/objects", api: true do_____________________
+     let(:url) { "api/v1/objects" }____________________________
+     let(:object) { Factory.create(:object) }__________________
+     let(:token) { "YOUR_SECRET_TOKEN" }_______________________
+     let(:data) { JSON.parse(last_response.body) }_____________
+   ____________________________________________________________
+     before(:each) { get url, token: token }       # here's whe
+   ____________________________________________________________
+     subject { data }__________________________________________
+   ____________________________________________________________
+     it { should have(1).object }______________________________
+   end_________________________________________________________
+   1
+   2
+   3
+   4
+   5
+   6
+   7
+   8
+   9
+   10
+   11
+   12
+   13
+   14
+   15
+   16
+   17
+   18
+   19
+   20
+   21
+   22
+   23
+   24
+   25
+   26
+   27
+   28
+   29
+     # spec_helper
+     module ApiHelper
+       include Rack::Test::Methods
+
+       def app
+         Rails.application
+       end
+     end
+
+     RSpec.configure do |config|
+       config.include ApiHelper, api: true
+     end
+
+     # spec
+     require 'spec_helper'
+
+     describe "api/v1/objects", api: true do
+       let(:url) { "api/v1/objects" }
+       let(:object) { Factory.create(:object) }
+       let(:token) { "YOUR_SECRET_TOKEN" }
+       let(:data) { JSON.parse(last_response.body) }
+
+       before(:each) { get url, token: token }       # here's where API call
+     made
+
+       subject { data }
+
+       it { should have(1).object }
+     end
+
+Conclusion
+
+   We’ve just gone through the following tricks:
+     * Minimum usable Metal controller
+     * Simple versioning
+     * Easy API views with RABL
+     * Postresql native uuid type
+     * API spec sample
+
+   Sure, you’ll face a lot more issues in the wild but these basics
+   intended to help you start up quickly.
+   The last, but not the least – don’t forget about good documentation.
+   Your API users will definitely appreciate it.
+
+   If you want to try all these tricks in the wild see recently released
+   [21]API for our [22]dummy SMTP server – Mailtrap.io
+   [23]Share
+
+   Categories: [24]Development, [25]Random
+   Tags: [26]api[27]RoR[28]Ruby on Rails
+
+Author: [29]Innokenty Mihailov
+
+   Ruby engineer at Railsware*
+
+   [30]More blog posts by Innokenty Mihailov
+   * [31]Railsware is a premium software development consulting company,
+   focused on delivering great web and mobile applications. [32]Learn more
+   about us.
+     * John Hinnegan
+       Thanks. Always cool to see how others are building api’s
+     * http://twitter.com/suaron Dmytro Piliugin
+       improved build_token function
+       def build_token
+       begin
+       token = SecureRandom.urlsafe_base64
+       end while User.exists?(api_token: token)
+       token
+       end
+          + http://twitter.com/gregolsent Innokenty Mikhailov
+            Thanks! Post updated.
+     * Alexander Korsak
+       Probably for reading purpose you can use ‘type: :api’ instead of
+       ‘api: true’. I haven’t tested this approach but it should
+       definitely work properly.
+          + http://twitter.com/gregolsent Innokenty Mikhailov
+            Specifying ‘type: :api’ for the ‘describe’ block worked for
+            me, but after updating to rspec 2.13.0 it works only if
+            specifying for each ‘it’ declaration separately. That’s why I
+            switched to ‘api: true’ which works for the wrapping
+            ‘describe’
+     * http://twitter.com/mattsolt Matt Solt
+       Any advice for generating public HTML documentation for a Rails
+       API?
+     * http://twitter.com/vassilevsky Илья Василевский
+       Rabl rendering is very slow for us. We see that it takes up to 50%
+       of total response time. Are we doing something wrong? How fast Rabl
+       is for you?
+          + Innokenty Mihailov
+            Indeed, Rabl is a bit sluggish. However I’ve tried to switch
+            to rabl-rails [33]https://github.com/ccocchi/rabl-rails which
+            is intended to improve performance and it gave me ~50% speedup
+            in rendering complex requests (for example rendering
+            collection of 30 objects takes ~100ms with Rabl and ~50ms with
+            Rabl-rails).
+     * Innokenty Mihailov
+       I think this commit is about removing Metal applications from
+       Rails.
+       Also it recommends:
+       “For the future, you can use ActionController::Metal to get
+       a very fast controller with the ability to opt-in to specific
+       controller features without paying the penalty of the full
+       controller stack.”
+       And the ActionController::Metal is still present in Ruby on Rails
+       master branch [34]http://bit.ly/114MDgN.
+     * Innokenty Mihailov
+       Thanks for pointing, I’ll give it a look.
+     * http://twitter.com/shime_rb Hrvoje Šimić
+       If you like expressiveness of Sinatra when it comes to routes, you
+       could also include Sinatrify inside your ActionController::Metal.
+       Gist with example: [35]https://gist.github.com/shime/5429106
+       [36]https://github.com/shime/sinatrify#readme
+     * denisjacquemin
+       Hi, great post thanks, do you have a sample application using those
+       tricks?
+     * alex li
+       api: ture works for me. i have tried a lots with :type=> :api seems
+       not working at all. this maybe related
+       [37]https://github.com/rspec/rspec-rails/issues/703
+     * Pingback: [38]Här är nya svenska API-katalogen! » API – Mashup.se
+
+Most recent posts
+
+     * [39]Let’s GO!
+     * [40]Getting Started with Chef Server. Part 2
+     * [41]Taming The Git-Daemon To Quickly Share Git Repository
+     * [42]Useful Google Spreadsheet Script Triggers
+     * [43]iOS Integration Tests With Appium
+
+Most popular posts
+
+     * [44]API with Ruby on Rails: useful tricks
+     * [45]Advanced server definitions in Capistrano
+     * [46]PostgreSQL most useful extensions
+     * [47]Getting Started with Chef Server. Part 1
+     * [48]Ruby 2.0 Enumerable::Lazy
+
+Want to get more of Railsware blog?
+
+   [49]RSS FEED
+
+We're always ready to help!
+
+   [50]CONTACT US
+     * [51]RSS feed RSS feed
+
+   Search for: ____________________ Search
+
+Subscribe to our mailing list
+
+   ____________________ Subscribe
+
+Categories
+
+     * [52]Business
+     * [53]Conferences
+     * [54]Design
+     * [55]Development
+     * [56]Development process
+     * [57]Front End
+     * [58]Google
+     * [59]iOS
+     * [60]Mac OSX
+     * [61]Mailtrap
+     * [62]Management
+     * [63]Marketing
+     * [64]Mobile
+     * [65]Monitoring
+     * [66]New Relic
+     * [67]Office
+     * [68]Partners
+     * [69]Performance
+     * [70]Products
+     * [71]Random
+     * [72]Scripts
+
+   [73]Railsware is a premium software development consulting company,
+   focused on delivering great web and mobile applications. [74]Learn
+   more.
+
+We're always ready to help!
+
+   [75]CONTACT US
+
+Tags
+
+   [76]api [77]capistrano [78]capybara [79]chef [80]client [81]comparison
+   [82]component [83]couchdb [84]css [85]deployment [86]Design
+   [87]development [88]email [89]extension [90]FireWorks [91]guidelines
+   [92]heroku [93]hosting [94]iOS [95]javascript [96]library [97]Mailtrap
+   [98]module [99]monitoring [100]New Relic [101]nosql [102]office-2010
+   [103]oocss [104]org [105]Photoshop [106]pivotal [107]pivotalbooster
+   [108]postgresql [109]productivity [110]Products [111]rails
+   [112]Railsware [113]RoR [114]rspec [115]ruby [116]ruby conferences
+   [117]scalability [118]sysadmin [119]testing [120]UI
+
+Products by Railsware
+
+   Mailtrap is a web service that saves software development teams from
+   accidentally spamming real customers during e-mail notifications
+   testing.
+
+   The PivotalBooster is a simple and fast Mac OS client for the popular
+   Pivotal Tracker service.
+
+   © 2006–2012
+   Railsware LLC
+
+   +1 (810) 515 8322
+
+   European HQ
+   10-A Naberezhno-Kreshchatitska
+   Kiev 04070, Ukraine
+   [121]View on map
+     * [122]COMPANY
+     * [123]WORK
+     * [124]APPROACH
+     * [125]TEAM
+     * [126]CONTACT
+     * [127]BLOG
+
+References
+
+   Visible links
+   1. http://railsware.com/blog/2013/04/08/api-with-ruby-on-rails-useful-tricks/feed/
+   2. http://railsware.com/blog/2013/04/08/mailtrap-api/
+   3. http://railsware.com/blog/2013/04/17/were-giving-away-2-free-railsberry-2013-tickets/
+   4. http://railsware.com/
+   5. http://railsware.com/company/why_railsware
+   6. http://railsware.com/work/projects
+   7. http://railsware.com/approach/whole_process/approach
+   8. http://railsware.com/team/railswarians
+   9. http://railsware.com/contact
+  10. http://railsware.com/blog
+  11. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml705.data
+  12. http://railsware.com/blog/2013/04/08/api-with-ruby-on-rails-useful-tricks/
+  13. http://railsware.com/blog/2013/04/08/api-with-ruby-on-rails-useful-tricks/#comments
+  14. http://railsware.com/team/railswarians
+  15. http://weblog.rubyonrails.org/2008/12/17/introducing-rails-metal/
+  16. https://gist.github.com/738168
+  17. https://newrelic.com/docs/ruby/adding-instrumentation-to-actioncontroller-metal
+  18. https://github.com/nesquena/rabl
+  19. http://en.wikipedia.org/wiki/Globally_unique_identifier
+  20. http://simononsoftware.com/how-to-store-uuids-in-postgresql/
+  21. http://railsware.com/blog/2013/04/08/mailtrap-api/
+  22. http://mailtrap.io/
+  23. http://www.addtoany.com/share_save
+  24. http://railsware.com/blog/category/development/
+  25. http://railsware.com/blog/category/random/
+  26. http://railsware.com/blog/tag/api/
+  27. http://railsware.com/blog/tag/ror/
+  28. http://railsware.com/blog/tag/ruby-on-rails/
+  29. http://railsware.com/blog/author/innokenty-mihailov/
+  30. http://railsware.com/blog/author/innokenty-mihailov/
+  31. http://railsware.com/
+  32. http://railsware.com/company/why_railsware
+  33. https://github.com/ccocchi/rabl-rails
+  34. http://bit.ly/114MDgN
+  35. https://gist.github.com/shime/5429106
+  36. https://github.com/shime/sinatrify#readme
+  37. https://github.com/rspec/rspec-rails/issues/703
+  38. http://www.mashup.se/nyheter/nya-svenska-api-katalogen
+  39. http://railsware.com/blog/2013/09/30/lets-go/
+  40. http://railsware.com/blog/2013/09/26/getting-started-with-chef-server-part-2/
+  41. http://railsware.com/blog/2013/09/19/taming-the-git-daemon-to-quickly-share-git-repository/
+  42. http://railsware.com/blog/2013/09/16/useful-google-spreadsheet-script-triggers/
+  43. http://railsware.com/blog/2013/09/12/ios-integration-tests-with-appium/
+  44. http://railsware.com/blog/2013/04/08/api-with-ruby-on-rails-useful-tricks/
+  45. http://railsware.com/blog/2011/11/02/advanced-server-definitions-in-capistrano/
+  46. http://railsware.com/blog/2012/04/23/postgresql-most-useful-extensions/
+  47. http://railsware.com/blog/2013/04/19/getting-started-with-chef-server-part-1/
+  48. http://railsware.com/blog/2012/03/13/ruby-2-0-enumerablelazy/
+  49. http://railsware.com/blog/feed/rss
+  50. http://railsware.com/contact
+  51. http://railsware.com/blog/feed/rss/
+  52. http://railsware.com/blog/category/business/
+  53. http://railsware.com/blog/category/conferences/
+  54. http://railsware.com/blog/category/design/
+  55. http://railsware.com/blog/category/development/
+  56. http://railsware.com/blog/category/development-process/
+  57. http://railsware.com/blog/category/frontend/
+  58. http://railsware.com/blog/category/google/
+  59. http://railsware.com/blog/category/ios/
+  60. http://railsware.com/blog/category/mac-osx/
+  61. http://railsware.com/blog/category/mailtrap/
+  62. http://railsware.com/blog/category/management/
+  63. http://railsware.com/blog/category/marketing/
+  64. http://railsware.com/blog/category/mobile-2/
+  65. http://railsware.com/blog/category/monitoring/
+  66. http://railsware.com/blog/category/new-relic/
+  67. http://railsware.com/blog/category/office/
+  68. http://railsware.com/blog/category/partners/
+  69. http://railsware.com/blog/category/performance-2/
+  70. http://railsware.com/blog/category/products/
+  71. http://railsware.com/blog/category/random/
+  72. http://railsware.com/blog/category/scripts/
+  73. http://railsware.com/
+  74. http://railsware.com/work/projects
+  75. http://railsware.com/contact
+  76. http://railsware.com/blog/tag/api/
+  77. http://railsware.com/blog/tag/capistrano/
+  78. http://railsware.com/blog/tag/capybara/
+  79. http://railsware.com/blog/tag/chef/
+  80. http://railsware.com/blog/tag/client/
+  81. http://railsware.com/blog/tag/comparison/
+  82. http://railsware.com/blog/tag/component/
+  83. http://railsware.com/blog/tag/couchdb/
+  84. http://railsware.com/blog/tag/css/
+  85. http://railsware.com/blog/tag/deployment/
+  86. http://railsware.com/blog/tag/design/
+  87. http://railsware.com/blog/tag/development-2/
+  88. http://railsware.com/blog/tag/email/
+  89. http://railsware.com/blog/tag/extension/
+  90. http://railsware.com/blog/tag/fireworks/
+  91. http://railsware.com/blog/tag/guidelines/
+  92. http://railsware.com/blog/tag/heroku/
+  93. http://railsware.com/blog/tag/hosting/
+  94. http://railsware.com/blog/tag/ios/
+  95. http://railsware.com/blog/tag/javascript/
+  96. http://railsware.com/blog/tag/library/
+  97. http://railsware.com/blog/tag/mailtrap/
+  98. http://railsware.com/blog/tag/module/
+  99. http://railsware.com/blog/tag/monitoring-2/
+ 100. http://railsware.com/blog/tag/new-relic/
+ 101. http://railsware.com/blog/tag/nosql/
+ 102. http://railsware.com/blog/tag/office-2010/
+ 103. http://railsware.com/blog/tag/oocss/
+ 104. http://railsware.com/blog/tag/org/
+ 105. http://railsware.com/blog/tag/photoshop/
+ 106. http://railsware.com/blog/tag/pivotal/
+ 107. http://railsware.com/blog/tag/pivotalbooster/
+ 108. http://railsware.com/blog/tag/postgresql/
+ 109. http://railsware.com/blog/tag/productivity/
+ 110. http://railsware.com/blog/tag/products/
+ 111. http://railsware.com/blog/tag/rails/
+ 112. http://railsware.com/blog/tag/railsware/
+ 113. http://railsware.com/blog/tag/ror/
+ 114. http://railsware.com/blog/tag/rspec/
+ 115. http://railsware.com/blog/tag/ruby/
+ 116. http://railsware.com/blog/tag/ruby-conferences/
+ 117. http://railsware.com/blog/tag/scalability/
+ 118. http://railsware.com/blog/tag/sysadmin/
+ 119. http://railsware.com/blog/tag/testing/
+ 120. http://railsware.com/blog/tag/ui/
+ 121. https://maps.google.com/maps?q=%D0%9D%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%BE-%D0%A5%D1%80%D0%B5%D1%89%D0%B0%D1%82%D0%B8%D1%86%D1%8C%D0%BA%D0%B0+%D0%B2%D1%83%D0%BB.,+10-%D0%90,+%D0%9A%D0%B8%D1%97%D0%B2,+%D0%BC%D1%96%D1%81%D1%82%D0%BE+%D0%9A%D0%B8%D1%97%D0%B2,+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0&hl=uk&ie=UTF8&sll=50.470542,30.524617&sspn=0.002298,0.005499&hnear=%D0%9D%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%BE-%D0%A5%D1%80%D0%B5%D1%89%D0%B0%D1%82%D0%B8%D1%86%D1%8C%D0%BA%D0%B0+%D0%B2%D1%83%D0%BB.,+10%D0%90,+%D0%9A%D0%B8%D1%97%D0%B2,+%D0%BC%D1%96%D1%81%D1%82%D0%BE+%D0%9A%D0%B8%D1%97%D0%B2,+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0&t=m&z=16
+ 122. http://railsware.com/company/why_railsware
+ 123. http://railsware.com/work/projects
+ 124. http://railsware.com/approach/whole_process/approach
+ 125. http://railsware.com/team/railswarians
+ 126. http://railsware.com/contact
+ 127. http://railsware.com/blog
+
+   Hidden links:
+ 129. http://mailtrap.io/
+ 130. http://pivotalbooster.com/
+ 131. mailto:contact@railsware.com
+ 132. skype:sergey.korolev?chat
+ 133. http://railsware.github.com/
+ 134. http://www.facebook.com/railsware
+ 135. https://twitter.com/#!/railsware
+ 136. https://vimeo.com/railsware
+ 137. http://www.flickr.com/photos/railsware

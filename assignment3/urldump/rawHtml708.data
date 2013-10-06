@@ -1,0 +1,122 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><meta content="sandi_meter – tool for checking Sandi Metz&#x27; rules" name="description" /><meta content="ruby, sandimeter, staticanalysis, ripper" name="keywords" /><link href="/assets/application-2708bf0e9a81d3fdcfb0452ec2288fc0.css" media="screen" rel="stylesheet" type="text/css" /><script src="/assets/application-9cda6f1a7f05a49a204970d7c93192ab.js" type="text/javascript"></script><script src="//use.typekit.net/umn4lld.js" type="text/javascript"></script><script type="text/javascript">try{Typekit.load();}catch(e){}</script><meta content="Gistflow" property="og:title" /><meta content="company" property="og:type" /><meta content="http://gistflow.com" property="og:url" /><meta content="" property="og:image" /><meta content="Gistflow" property="og:site_name" /><meta content="100001584897024" property="fb:admins" /><link href="/assets/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" /><link href="/all.rss" rel="alternate" title="Gistflow :: All RSS feed" type="application/rss+xml" /><meta content="authenticity_token" name="csrf-param" />
+<meta content="0E7urKtNeaDdqa6cmMg6HtEGUUNG0Uqc1CwrPCGF/pQ=" name="csrf-token" /><title>Gistflow :: sandi_meter – tool for checking Sandi Metz&amp;#x27; rules</title><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30489562-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script></head><body><div id="fb-root"></div><noscript id="nojs"><img alt="You have not JS" src="/assets/no_js-9e67df1a59e5161ab4704167767a91ad.jpg" /></noscript><div class="wrap group"><header class="main"><div class="group hr"><h1><a href="/">Gistflow</a></h1><div class="map"><a href="/map" title="Gistflow in the World"><i class="icon-globe"></i></a></div><div class="search"><form accept-charset="UTF-8" action="/search" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="0E7urKtNeaDdqa6cmMg6HtEGUUNG0Uqc1CwrPCGF/pQ=" /></div><input name="q" placeholder="Search.." type="search" /><input name="commit" type="submit" value="&#x21A9;" /></form></div><nav class="user"><ul class="user-menu"><li><a href="/auth/github" class="login">login</a></li></ul></nav></div></header><section class="main"><script type="text/javascript">window.posts = {
+  "901": {"comments_count":0,"id":901,"likes_count":8}
+}</script><article class="post detail" data-author="makaroni4" data-id="901"><header class="primary"><h1><a href="/posts/901-sandi_meter-tool-for-checking-sandi-metz-rules" class="">sandi_meter – tool for checking Sandi Metz&#x27; rules</a> <span>by <a href="/users/makaroni4">makaroni4</a></span></h1></header><div class="body markdown">
+
+<p><a href="https://speakerdeck.com/skmetz">Sandi Metz</a> is an activist of writing well factored  object-oriented code. Recently a set of 4 simple rules by Sandi got publicized and spread throughout the community. In this post I will introduce a gem which automates scanning your code versus Sandi's rules.</p>
+
+<h2>Introduction</h2>
+
+<p>First, I will highly recommend you to read the <a href="http://robots.thoughtbot.com/post/50655960596/sandi-metz-rules-for-developers">Thoughbot article</a> on using Sandi's rules in their development process. Also there was a talk by Sandi Metz at <a href="http://www.baruco.org/speakers#sandi-metz">BaRuCo 2013</a> couple of weeks ago and I hope that some day the video will be posted.</p>
+
+<h2>Why I found it useful</h2>
+
+<p>As Sandi mentioned in her talk at BaRuCo – you need some rules to factor a good code. Experienced developers always have rules (and even write books on them) and these 4 rules are perfect if you don't have your own strong rules yet. </p>
+
+<p>For many projects with a plenty of business logic these rules work just great. They are indicator of how good the project is factored (but the result of course should not be 100% of proper classes/method or all green).</p>
+
+<p>These rules are not taboos and of course you are allowed to brake them. But "With great power comes great responsibility".</p>
+
+<h2><a href="https://github.com/makaroni4/sandi_meter">gem "sandi_meter"</a></h2>
+
+<h3>Description</h3>
+
+<p>sandi_meter gem is based on <a href="http://www.ruby-doc.org/stdlib-1.9.3/libdoc/ripper/rdoc/Ripper.html">Ripper</a> (it converts code to S-expressions, which are in fact nested arrays and then iterates on them and check classes for the rules).</p>
+
+<h3>CLI mode</h3>
+
+<p>Gem could be used in 3 modes. First – console mode which works perfect when you need to check a project once.</p>
+
+<div class="highlight"><pre><span class="o">&gt;</span> <span class="n">sandi_meter</span> <span class="o">-</span><span class="n">p</span> <span class="o">~/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">project</span>
+
+# <span class="mf">1.</span> <span class="mi">94</span><span class="c">% of classes are under 100 lines.</span>
+# <span class="mf">2.</span> <span class="mi">53</span><span class="c">% of methods are under 5 lines.</span>
+# <span class="mf">3.</span> <span class="mi">98</span><span class="c">% of methods calls accepts are less than 4 parameters.</span>
+# <span class="mf">4.</span> <span class="mi">21</span><span class="c">% of controllers have one instance variable per action.</span>
+</pre></div>
+
+<h3>HTML mode</h3>
+
+<p>I like this one the most. In HTML mode the results of each scan are logged into file. HTML file with the diagrams of the latest scan and plots of projects dynamics is updated after each time you run sandi_meter. <img src="https://github-camo.global.ssl.fastly.net/91d39b1960976c75153a11e7866354b248eeb2eb/687474703a2f2f63733431313332352e766b2e6d652f763431313332353430312f363038392f4f6e5674426975437252512e6a7067" alt="SandiMeter HTML mode"></p>
+
+<p>To use HTML mode run sandi_meter with <code>g</code> option: <code>sandi_meter -g</code> and checkout <code>YOUR_PROJECT_PATH/sandi_meter</code> folder for <code>index.html</code> and <code>sandi_meter.log</code>.</p>
+
+<h3>Ruby mode</h3>
+
+<p>This mode is useful if you need to use scan results in your own script or CI. It could be done with just 3 lines of code:</p>
+
+<div class="highlight"><pre><span class="nb">require</span> <span class="s1">'sandi_meter/file_scanner'</span>
+<span class="nb">require</span> <span class="s1">'pp'</span>
+
+<span class="n">scanner</span> <span class="o">=</span> <span class="ss">SandiMeter</span><span class="p">:</span><span class="ss">:FileScanner</span><span class="o">.</span><span class="n">new</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="no">PATH_TO_PROJECT</span><span class="p">)</span>
+<span class="n">pp</span> <span class="n">data</span>
+<span class="c1"># {:first_rule=&gt;</span>
+<span class="c1">#   {:small_classes_amount=&gt;916,</span>
+<span class="c1">#    :total_classes_amount=&gt;937,</span>
+<span class="c1">#    :missindented_classes_amount=&gt;1},</span>
+<span class="c1">#  :second_rule=&gt;</span>
+<span class="c1">#   {:small_methods_amount=&gt;1144,</span>
+<span class="c1">#    :total_methods_amount=&gt;1833,</span>
+<span class="c1">#    :missindented_methods_amount=&gt;0},</span>
+<span class="c1">#  :third_rule=&gt;{:proper_method_calls=&gt;5857, :total_method_calls=&gt;5894},</span>
+<span class="c1">#  :fourth_rule=&gt;{:proper_controllers_amount=&gt;17, :total_controllers_amount=&gt;94}}</span>
+</pre></div>
+
+<h2>Some fun</h2>
+
+<p>The first version of gem was released in less than 24 hours after Sandi's talk as lightning talk at BaRuCo:</p>
+
+<ul>
+<li>Video: <a href="http://www.youtube.com/watch?v=L7HdRAut9RQ">http://www.youtube.com/watch?v=L7HdRAut9RQ</a>
+</li>
+<li>Slides: <a href="https://speakerdeck.com/makaroni4/gem-sandi-meter-lightning-talk-at-baruco-2013">https://speakerdeck.com/makaroni4/gem-sandi-meter-lightning-talk-at-baruco-2013</a>
+</li>
+</ul><h2>Conclusion</h2>
+
+<p>Check out <a href="https://github.com/makaroni4/sandi_meter">the gem</a>, I hope you find sandi_meter useful and will have some fun with that :) Please, <a href="https://github.com/makaroni4/sandi_meter/issues/new">drop an issue</a> or <a href="email:makaroni4@gmail.com">feedback</a>.</p>
+
+<p><a href="/tags/ruby" title="ruby">#ruby</a> <a href="/tags/sandimeter" title="sandimeter">#sandi_meter</a> <a href="/tags/staticanalysis" title="staticanalysis">#static_analysis</a> <a href="/tags/ripper" title="ripper">#ripper</a></p>
+</div><footer class="group actions"><span class="post-info"><time datetime="2013-09-25T20:17:16Z">September 25, 2013</time><span class="page-views">8987 pageviews</span></span><div class="button-groups"><div class="button-group minor-group"><a href="https://twitter.com/share?text=sandi_meter+%E2%80%93%C2%A0tool+for+checking+Sandi+Metz%27+rules&amp;url=http%3A%2F%2Fgistflow.com%2Fposts%2F901-sandi_meter-tool-for-checking-sandi-metz-rules" class="button icon-twitter" target="_blank"> <span>Tweet</span></a></div><div class="notice button-group minor-group group"><a href="/account/bookmarks/901-sandi_meter-tool-for-checking-sandi-metz-rules" class="button bookmark replaceable icon-bookmark-empty" data-method="post" data-remote="true" rel="nofollow" title="Bookmark"></a><a href="/account/observings/901-sandi_meter-tool-for-checking-sandi-metz-rules" class="button observe replaceable icon-eye-close" data-method="post" data-remote="true" rel="nofollow" title="Observe"></a><a href="/account/likes?post_id=901" class="like button replaceable" data-method="post" data-remote="true" rel="nofollow" title="Like post :)"><span>8</span> <i class="icon-heart-empty"></i></a></div><div class="button-group minor-group"><a href="/posts/901-sandi_meter-tool-for-checking-sandi-metz-rules/edit" class="button edit icon-pencil"></a></div></div></footer></article><section class="similar_posts"><header><h1>Similar posts</h1></header><ul><li><a href="/posts/888-an-alternative-startup-script-for-puma-that-is-better-than-the-broken-pumactl" class="">An alternative startup script for puma that is better than the broken pumactl</a></li><li><a href="/posts/886-constant-lookup-rules-in-ruby" class="">constant lookup rules in ruby.</a></li><li><a href="/posts/880-install-capybara-webkit-0-12-with-qt-4-8-4" class="">Install capybara-webkit 0.12 with Qt &gt;= 4.8.4</a></li></ul></section><section class="comments"><header><h1>Comments</h1></header><p class="no_comments">No comments yet</p></section><div class="at-username-container"><div class="username" href="#">makaroni4</div></div></section><section class="sidebar"><section class="about"><header><h1>About</h1></header><h2>Join <strong>gistflow </strong>developers community</h2><ul><li>Start your developer blog <strong>in a minute.</strong></li><li>Share <strong>code-related </strong>posts.</li><li><strong>Follow </strong>users, <strong>subscribe </strong>for tags.</li><li>Use <strong>gist.github.com </strong>gists to write posts.</li></ul><p><a href="/auth/github" class="login">Sign up through GitHub</a></p></section><section class="facebook"><header class="primary"><h1>Tell friends about us</h1></header><div class="fb-like" data-href="http://facebook.com/gistflow" data-send="false" data-show-faces="false" data-width="340"></div></section><section class="tags"><header><h1>Tags</h1></header><ul><li><a href="/tags/ruby">#ruby</a></li><li><a href="/tags/rails">#rails</a></li><li><a href="/tags/gistflow">#gistflow</a></li><li><a href="/tags/javascript">#javascript</a></li><li><a href="/tags/activerecord">#activerecord</a></li><li><a href="/tags/bash">#bash</a></li><li><a href="/tags/gem">#gem</a></li><li><a href="/tags/git">#git</a></li><li><a href="/tags/mac">#mac</a></li><li><a href="/tags/html">#html</a></li><li><a href="/tags/shell">#shell</a></li><li><a href="/tags/coffeescript">#coffeescript</a></li><li><a href="/tags/rspec">#rspec</a></li><li><a href="/tags/python">#python</a></li><li><a href="/tags/postgresql">#postgresql</a></li></ul></section></section></div><footer class="main"><ul class="links"><li><a href="/posts/leaderboard">Posts leaderboard</a></li><li><a href="/tags/cloud">Tags cloud</a></li><li><a href="https://github.com/gistflow/gistflow/issues">Create issue</a></li><li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%69%6e%66%6f@%67%69%73%74%66%6c%6f%77.%63%6f%6d">Email us</a></li></ul><a href="/" class="logo">&lt;g&gt;</a><p class="credentials">&copy; 2013 <a href="/">Gistflow</a> with <a href="http://evrone.ru">Evrone</a></p></footer><script type="text/javascript">
+  (function () {
+    var yaz = document.createElement("script"); yaz.type = "text/javascript"; yaz.async = true;
+    yaz.src = "http://50likes.com/tracker.js";
+    document.getElementsByTagName("head")[0].appendChild(yaz);
+  })();
+</script>
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter14774479 = new Ya.Metrika({id:14774479,
+                    clickmap:true,
+                    accurateTrackBounce:true, webvisor:true});
+        } catch(e) {}
+    });
+    
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/14774479" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+</body></html><!-- version: 45878d4 -->

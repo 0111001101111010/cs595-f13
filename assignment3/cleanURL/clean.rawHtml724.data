@@ -1,0 +1,127 @@
+   [1]Sign up for a GitHub Account [2]Sign in
+
+public
+
+   [eee27ca27e08ed5ebef08f900558233a?d=https%3A%2F%2Fidenticons.github.com
+   %2F936ecbc3d51c12a271d45f0d9440ed31.png&s=140] [3]seanarnold / [4]Rails
+   4, Ruby 2.0.0-p247 date problem
+   Last active 2013-09-25
+
+   Rails Date.today problem
+     * [5]Gist Detail
+     * [6]Revisions 3
+
+     * [7]Download Gist
+     * Clone this gist https://gist.github.
+     * Embed this gist <script src="https:/
+     * Link to this gist https://gist.github.
+
+   Rails 4, Ruby 2.0.0-p247 date problem
+     *
+     *
+
+   File suppressed. Click to show.
+   1 2 3 4 5
+
+                Loading development environment (Rails 4.0.0)
+                2.0.0-p247 :001 > Date.today
+                => Thu, 26 Sep 2013
+                2.0.0-p247 :002 > Date.tomorrow
+                => Thu, 26 Sep 2013
+   [eee27ca27e08ed5ebef08f900558233a?d=https%3A%2F%2Fidenticons.github.com
+   %2F936ecbc3d51c12a271d45f0d9440ed31.png&s=140]
+   [8]seanarnold [9]commented [10]2013-09-25
+
+   This is happening because the Ruby Time.zone is not set.
+   Date#today does not exist in ActiveSupport so it falls back to Ruby's
+   Date#today
+
+   Date#current provides the expected result. I think Date#today should be
+   added to ActiveSupport & alias Date#current
+   [eee27ca27e08ed5ebef08f900558233a?d=https%3A%2F%2Fidenticons.github.com
+   %2F936ecbc3d51c12a271d45f0d9440ed31.png&s=140]
+   [11]seanarnold [12]commented [13]2013-09-25
+
+   Problem + fix explained here
+Loading development environment (Rails 4.0.0)
+2.0.0-p247 :001 > Date.today
+ => Thu, 26 Sep 2013
+2.0.0-p247 :002 > Date.tomorrow
+ => Thu, 26 Sep 2013
+2.0.0-p247 :003 > Date.define_singleton_method(:today) do
+2.0.0-p247 :004 >     Date.current
+2.0.0-p247 :005?>   end
+ => #<Proc:0x007fd93d051720@(irb):3 (lambda)>
+2.0.0-p247 :006 > Date.today
+ => Wed, 25 Sep 2013
+2.0.0-p247 :007 > Date.tomorrow
+ => Thu, 26 Sep 2013
+2.0.0-p247 :008 > Time.zone = "Auckland"
+ => "Auckland"
+2.0.0-p247 :009 > Date.today
+ => Thu, 26 Sep 2013
+2.0.0-p247 :010 > Date.tomorrow
+ => Fri, 27 Sep 2013
+
+   [eee27ca27e08ed5ebef08f900558233a?d=https%3A%2F%2Fidenticons.github.com
+   %2F936ecbc3d51c12a271d45f0d9440ed31.png&s=140]
+   [14]seanarnold [15]commented [16]2013-09-25
+
+   This is a known 'issue' and is discussed in the Ruby on Rails guides
+   here:
+   [17]http://guides.rubyonrails.org/active_support_core_extensions.html
+15.1.1 Date.current
+
+Active Support defines Date.current to be today in the current time zone. That's
+ like Date.today, except that it honors the user time zone, if defined. It also
+defines Date.yesterday and Date.tomorrow, and the instance predicates past?, tod
+ay?, and future?, all of them relative to Date.current.
+
+When making Date comparisons using methods which honor the user time zone, make
+sure to use Date.current and not Date.today. There are cases where the user time
+ zone might be in the future compared to the system time zone, which Date.today
+uses by default. This means Date.today may equal Date.yesterday.
+
+   Please [18]sign in to comment on this gist.
+
+   Something went wrong with that request. Please try again.
+
+   © 2013 GitHub Inc. All rights reserved.
+     * [19]The GitHub Blog
+     * [20]Support
+     * [21]Contact
+
+References
+
+   Visible links
+   1. https://github.com/signup?return_to=gist
+   2. https://gist.github.com/login?return_to=/seanarnold/6698768
+   3. file://localhost/seanarnold
+   4. file://localhost/seanarnold/6698768
+   5. file://localhost/seanarnold/6698768
+   6. file://localhost/seanarnold/6698768/revisions
+   7. file://localhost/seanarnold/6698768/download
+   8. file://localhost/seanarnold
+   9. file://localhost/seanarnold/6698768/#comment-915102
+  10. file://localhost/seanarnold/6698768/#comment-915102
+  11. file://localhost/seanarnold
+  12. file://localhost/seanarnold/6698768/#comment-915103
+  13. file://localhost/seanarnold/6698768/#comment-915103
+  14. file://localhost/seanarnold
+  15. file://localhost/seanarnold/6698768/#comment-915722
+  16. file://localhost/seanarnold/6698768/#comment-915722
+  17. http://guides.rubyonrails.org/active_support_core_extensions.html
+  18. file://localhost/login?return_to=/seanarnold/6698768
+  19. https://github.com/blog
+  20. mailto:support@github.com
+  21. https://github.com/contact
+
+   Hidden links:
+  23. https://gist.github.com/
+  24. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml724.data#file-rails-4-ruby-2-0-0-p247-date-problem
+  25. file://localhost/seanarnold/6698768/raw/9cc8f5b60ae30d2b1ad816d0ebee40ce2cf74d39/Rails+4%2C+Ruby+2.0.0-p247+date+problem
+  26. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml724.data
+  27. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml724.data
+  28. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml724.data
+  29. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml724.data
+  30. file://localhost/

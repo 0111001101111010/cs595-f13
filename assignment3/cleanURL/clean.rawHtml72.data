@@ -1,0 +1,123 @@
+   #[1](think)
+
+                                   [2](think)
+
+An online novel about the Source, the Force, the real life and everything in
+between...
+
+     * [3]RSS
+
+   ____________________
+
+     * [4]Articles
+     * [5]Archives
+     * [6]About Bozhidar
+     * [7]Colophon
+
+The Elements of Style in Ruby #11: Invoking Lambdas/Procs
+
+   Sep 26th, 2013
+
+   There are whopping 4 ways to invoke a lambda (or a proc) in Ruby:
+   1
+   2
+   3
+   4
+   5
+   6
+   7
+   8
+
+    lambda.call(arg1, arg2)
+
+    lambda[arg1, arg2]
+
+    lambda.(arg1, arg2)
+
+    # works only with one argument lambdas
+    lambda === arg
+
+   The last option Proc#=== is a special case, that’s quite useful in
+   [8]case expressions, but should never the used directly.
+
+   Of the three general purpose Proc methods that are available (it’s
+   actually just one method with two aliases) I’d strongly encourage you
+   to stick withProc#call. The reasons are quite simple:
+     * lambda[arg] looks like an index access on some data structure and
+       you’d certainly have to analyze the code context to understand
+       what’s going on (especially since the lambda is unlikely to
+       actually be named lambda in actual code :–)).
+     * lambda.(arg) is a cute syntactic trick, but it’s really easy to
+       overlook the . and assume that this is a normal method call (which
+       probably was the point when this syntax was introduced). lambdas in
+       Ruby are not real lambdas (they are instances of the Proc class)
+       and we should simply embrace this fact instead of trying to hide it
+       behind awkward syntax.
+
+   I value code clarity and readability immensely and I’m not particularly
+   fond of excessive usage of operator overloading. The use of operators
+   for lambda invocations in Ruby represents the ugly side of operator
+   overloading – instead of increasing the readability of the code, the
+   operators actually decrease it.
+
+   Posted by Bozhidar Batsov Sep 26th, 2013 [9]Ruby, [10]Style
+   [11]Tweet
+
+   [12]« Lambdas/Procs in Case Expressions
+
+Comments
+
+   Please enable JavaScript to view the [13]comments powered by Disqus.
+
+About Bozhidar
+
+   My name is Bozhidar Batsov and I'm a Ruby/Clojure/Emacs hacker from
+   Sofia, Bulgaria. I love building neat stuff. In the Source I trust!
+
+Recent Posts
+
+     * [14]The Elements of Style in Ruby #11: Invoking Lambdas/Procs
+     * [15]Lambdas/Procs in Case Expressions
+     * [16]The Elements of Style in Ruby #10: In Cryptic Perlisms We Do
+       Not Trust
+     * [17]A Couple of Useful Extensions to Ruby's Enumerable Module
+     * [18]Using Ruby's Gsub With a Block
+
+Twitter
+
+   [19]Tweets by @bbatsov
+
+GitHub Repos
+
+     * Status updating...
+
+   [20]@bbatsov on GitHub
+
+[21][gprofile_button-32.png] Google+
+
+   Copyright © 2013 - Bozhidar Batsov - Powered by [22]Octopress
+
+References
+
+   1. file://localhost/atom.xml
+   2. file://localhost/
+   3. file://localhost/atom.xml
+   4. file://localhost/
+   5. file://localhost/blog/archives
+   6. file://localhost/about/
+   7. file://localhost/colophon/
+   8. http://batsov.com/articles/2013/09/24/lambdas-slash-procs-in-case-expressions/
+   9. file://localhost/articles/categories/ruby/
+  10. file://localhost/articles/categories/style/
+  11. file://twitter.com/share
+  12. file://localhost/articles/2013/09/24/lambdas-slash-procs-in-case-expressions/
+  13. http://disqus.com/?ref_noscript
+  14. file://localhost/articles/2013/09/26/the-elements-of-style-in-ruby-number-11-invoking-lambdas-slash-procs/
+  15. file://localhost/articles/2013/09/24/lambdas-slash-procs-in-case-expressions/
+  16. file://localhost/articles/2013/09/05/the-elements-of-style-in-ruby-number-10-in-cryptic-perlisms-we-do-not-trust/
+  17. file://localhost/articles/2013/09/03/a-couple-of-useful-extensions-to-rubys-enumerable-module/
+  18. file://localhost/articles/2013/08/30/using-gsub-with-a-block/
+  19. https://twitter.com/bbatsov
+  20. https://github.com/bbatsov
+  21. https://plus.google.com/108153044872779739189?rel=author
+  22. http://octopress.org/

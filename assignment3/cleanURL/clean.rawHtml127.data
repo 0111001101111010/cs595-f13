@@ -1,0 +1,125 @@
+   #[1]belongs_to :ruby
+
+   Andrius Chamentauskas / [2]andrius.chamentauskas@gmail.com / +370 678
+   40698
+     * [3]Home
+     * [4]About
+     * [5]Portfolio
+
+                              [6]belongs_to :ruby
+
+   ____________________
+
+   search
+
+Splatting in Iterators
+
+   Published on Sep 16th, 2013. Tags: [7]lessons, [8]ruby
+
+   I can’t even count how many times I’ve seen code like this:
+
+   1
+   2
+   3
+   4
+   5
+   6
+
+    arr = [[:name, 'Name'], [:location, 'Location']]
+    arr.each do |el|
+      attr = el[0]
+      label = el[1]
+      p attr, label
+    end
+
+   Ruby can automatically split arrays in iterators by simply giving more
+   than 1 parameter to a block:
+
+   1
+   2
+   3
+   4
+
+    arr = [[:name, 'Name'], [:location, 'Location']]
+    arr.each do |attr, label|
+      p attr, label # Does the same thing as code above
+    end
+
+   It works with any interator method, not just each:
+
+   1
+   2
+   3
+   4
+
+    arr = [[:name, 'Name'], [:location, 'Location']]
+    arr.select do |attr, label|
+      attr == :name
+    end
+
+   In fact ruby even allows you to nest splitting:
+
+   1
+   2
+   3
+   4
+
+    arr = [[:name, ['Name', 1]], [:location, ['Location', 2]]]
+    arr.each do |attr, (label, count)|
+      p attr, label, count
+    end
+
+   This is especially useful with Array#zip method:
+
+   1
+   2
+   3
+   4
+   5
+
+    arr1 = [:name, :location]
+    arr2 = ['Name', 'Location']
+    arr1.zip(arr2).each do |attr, label|
+      p attr, label
+    end
+
+   Please enable JavaScript to view the [9]comments powered by Disqus.
+
+Quick Links
+
+   [10]Skype Me™!
+
+   [11]View Andrius Chamentauskas's profile on LinkedIn
+
+   IFRAME:
+   [12]http://ghbtns.com/github-btn.html?user=andriusch&type=follow&size=l
+   arge
+
+Tags
+
+     * [13]lessons (1)
+     * [14]ruby (1)
+
+Recent Posts
+
+     * [15]Splatting in Iterators
+
+   2013 © Andrius Chamentauskas
+
+References
+
+   1. file://localhost/atom.xml
+   2. mailto:andrius.chamentauskas@gmail.com
+   3. file://localhost/
+   4. file://localhost/about/
+   5. file://localhost/portfolio/
+   6. file://localhost/
+   7. file://localhost/categories/lessons/
+   8. file://localhost/categories/ruby/
+   9. http://disqus.com/?ref_noscript
+  10. skype:sinsiliux
+  11. http://lt.linkedin.com/pub/andrius-chamentauskas/21/526/5aa
+  12. http://ghbtns.com/github-btn.html?user=andriusch&type=follow&size=large
+  13. file://localhost/categories/lessons/
+  14. file://localhost/categories/ruby/
+  15. file://localhost/blog/2013/09/16/splatting-in-iterators/

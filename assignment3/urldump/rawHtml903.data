@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  
+    <!--[if !IE]> -->
+    <script type="text/javascript" src="http://assets.onswipe.com/synapse/on.js?usr=nextgov" id="onswipe_synapse"></script>
+    <!-- <![endif]-->
+  
+
+
+	<meta charset="utf-8">
+	<title>It Took Hackers This Long to Crack the iPhone&#39;s Fingerprint Security - Nextgov.com</title>
+	<link media="all" rel="stylesheet" href="http://cdn.nextgov.com/nextgov/css/all.css?v=1.4.2" />
+    
+    <link rel="canonical" href="http://www.nextgov.com/cybersecurity/2013/09/it-took-hackers-long-crack-iphones-fingerprint-security/70668/" />
+    
+    <meta name="keywords" content="fingerprints, biometric and smartphone, iphone" />
+    <meta name="description" content="All you need is a photo of your fingerprint and some glue." />
+    
+	<script type="text/javascript" src="http://cdn.nextgov.com/nextgov/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="http://cdn.nextgov.com/js/jquery-ui-1.8.21.custom.min.js"></script><!-- custom download: Core, Effects Core, Effect "Fade" -->
+    <script type="text/javascript" src="http://cdn.nextgov.com/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="http://cdn.nextgov.com/nextgov/js/jquery.main.js?v=1.3.14"></script>
+    <script type="text/javascript" src="http://cdn.nextgov.com/js/newsletter.form.js?v=1.3.16"></script>
+    <script type="text/javascript" src="http://cdn.nextgov.com/js/jquery.form.js"></script>
+    <script type="text/javascript" src="http://cdn.nextgov.com/nextgov/js/omniture/s-code.js?v=1.1"></script>
+    
+    
+    <script type="text/javascript">
+      //<![CDATA[
+      
+  
+    
+        var suppressWelcomeAd = false;
+      
+  
+
+      var isiPad = navigator.userAgent.match(/iPad/i) != null;
+      // iPad detection and  check for onswipe_redirect=never in the URL
+      if (isiPad && !$.cookie("desktopPreferred")) {
+        function getUrlVar(key){
+          var result = new RegExp(key + "=([^&]*)", "i").exec(window.location.search);
+          return result && encodeURIComponent(result[1]) || "";
+        }
+        if (getUrlVar("onswipe_redirect") == "never") {
+          // set cookie to enable welcome ad for iPad
+          $.cookie("desktopPreferred", "1");
+        }
+      }
+      if (!$.cookie("welcomeAdViewed") && (!isiPad || isiPad && $.cookie("desktopPreferred"))) {
+        $.cookie("cookiesEnabled", "1");
+        if ($.cookie("cookiesEnabled"))	{
+          $.removeCookie("cookiesEnabled");
+          currentDate = new Date();
+          eod = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), 23, 59, 0, 0);
+          $.cookie("welcomeAdViewed", "1", Math.round((eod.getTime() - currentDate.getTime()) / 1000));
+
+          if (!suppressWelcomeAd) {
+            window.location = 'http://cdn.nextgov.com/nextgov/interstitial.html?rf=' + encodeURIComponent(window.location);
+          }
+        }
+      }
+      //]]>
+    </script>
+    
+	<!--[if IE]><link rel="stylesheet" type="text/css" href="http://cdn.nextgov.com/nextgov/css/ie-all.css" media="screen"/><![endif]-->
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="http://cdn.nextgov.com/nextgov/css/ie.css" media="screen"/><![endif]-->
+	<!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="http://cdn.nextgov.com/nextgov/css/ie-8.css" media="screen"/>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+  </script><![endif]-->
+
+  <script type="text/javascript">var switchTo5x=true;</script>
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+  <script type="text/javascript">
+    //<![CDATA[
+    stLight.options({
+      publisher: "3cf7ffb5-3f0d-4c31-9c9f-84d731418e4c",
+      onhover: false
+    });
+    //]]>
+  </script>
+  <script type="text/javascript">
+    //<![CDATA[
+     var adblock = true;
+     var number_of_ad_checks = 0;
+     var top_right_ad_size_check_called = false;
+     function top_right_ad_size_check() {
+       top_right_ad_size_check_called = true;
+       number_of_ad_checks++;
+       if ($("#topblock-ad").height() > 599) {
+         $("#bottomblock-ad").hide();
+       } else if ($("#topblock-ad").height() < 250 && number_of_ad_checks < 11) {
+         setTimeout("top_right_ad_size_check()", 500);
+       }
+     }
+   //]]>
+  </script>
+  <script type="text/javascript" src="http://cdn.nextgov.com/js/adframe.js"></script>
+  <script type="text/javascript" src="http://cdn.nextgov.com/js/ad-toggle.js"></script>
+  
+  <meta property="og:title" content="It Took Hackers This Long to Crack the iPhone&#39;s Fingerprint Security" />
+  <meta property="og:description" content="All you need is a photo of your fingerprint and some glue." />
+  <meta property="og:image" content="http://cdn.nextgov.com/media/img/upload/2013/09/23/092313fingerprintsecurityNG.jpg" />
+  <link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.nextgov.com/cybersecurity/2013/09/it-took-hackers-long-crack-iphones-fingerprint-security/70668/" />
+  <!-- Passes clicks through flyin. For most browsers, pointer-events:none handles this. -->
+  <!-- May need to include IE 10 later -->
+  <!--[if lte IE 9]>
+    <script type="text/javascript" src="http://cdn.nextgov.com/js/jquery.forward-clicks.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $(".flyin-container").forwardEvents(".flyin .label, .flyin .headline, .flyin .meta");
+      });
+    </script>
+  <![endif]-->
+
+  
+  
+  
+    <script type="text/javascript">
+    //<![CDATA[
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-395628-3']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    //]]>
+    </script>
+    
+
+</head>
+<body class="">
+
+
+<script type="text/javascript">
+//<![CDATA[
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+s.server="www.nextgov.com"
+s.channel="nextgov cybersecurity"
+s.pageName="it took hackers this long to crack the iphones fingerprint security - nextgov cybersecurity - connor simpson"
+s.prop1=""
+s.prop2="0"
+s.prop3="it took hackers this long to crack the iphones fingerprint security - nextgov cybersecurity - connor simpson"
+s.prop4="/cybersecurity/2013/09/it-took-hackers-long-crack-iphones-fingerprint-security/70668/"
+s.prop5=""
+s.prop6="Nextgov &gt; Cybersecurity"
+s.prop7="nextgov cybersecurity"
+s.prop8="nextgov cybersecurity - post"
+s.prop9=""
+s.prop10=""
+s.prop11="11:00"
+s.prop12="Monday"
+s.prop13="weekday"
+s.prop14="ng-channelriver"
+s.prop15="connor simpson"
+s.prop16="fingerprints, biometric and smartphone, iphone"
+s.prop17="It Took Hackers This Long to Crack the iPhone&#39;s Fingerprint Security"
+s.prop18="september 23, 2013 11:15 am"
+s.prop19="it took hackers this long to crack the iphones fingerprint security - nextgov cybersecurity - connor simpson"
+s.prop20=""
+s.prop21="it took hackers this long to crack the iphones fingerprint security - nextgov cybersecurity - connor simpson"
+s.prop22=""
+s.prop23=""
+s.prop24=""
+s.prop25=""
+s.prop26=""
+s.prop27=""
+s.prop32="False"
+s.prop34=""
+s.prop35=""
+s.prop36=""
+s.prop37=""
+s.prop38=""
+s.hier1="nextgov cybersecurity/post/it took hackers this long to crack the iphones fingerprint security"
+s.hier2=""
+s.hier3=""
+
+if ((typeof(Govexec) != "undefined") && (typeof(Govexec.get_format)=== 'function')){
+  s.prop38 = Govexec.get_format();
+}
+
+if (adblock) {
+  s.prop32 = "True";
+}
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code) document.write(s_code)
+if(navigator.appVersion.indexOf('MSIE')>=0) document.write(unescape('%3C')+'\!-'+'-');
+//]]>
+</script> 
+<noscript>
+	<div>
+		<a href="http://www.omniture.com" title="Web Analytics" ><img
+src="http://metrics.nextgov.com/b/ss/atlanticnextgov2012/1/H.17--NS/0"
+height="1" width="1" alt="" /></a>
+	</div>
+</noscript>
+<!--/DO NOT REMOVE/-->
+
+	<div id="wrapper">
+		<div class="w1">
+			<div class="w2">
+				<header id="header">
+					<div class="container_12">
+						<div class="top-block">
+							<h1 class="logo"><a href="/?oref=ng-logo">Nextgov</a></h1>
+							<div class="ads">
+                                <div class="ad ad-topleader" id="topleader-ad">
+	
+	<script type="text/javascript">
+//<![CDATA[
+if (typeof window.dart_random_ord == 'undefined') {
+	window.dart_random_ord = ('000000000' + Math.ceil(Math.random() * 1000000000).toString()).slice(-9);
+}
+
+var this_ad_link = 'http://ad.doubleclick.net/N617/adj/nextgov.com/section_cybersecurity;pos=topleader;sz=728x90;tile=1;ord=' + window.dart_random_ord + '?';
+document.write('<' + 'script type="text/javascript" src="' + this_ad_link + '">' + '<' + '/script>');
+
+//]]>
+	</script>
+  
+    <noscript>
+      <a href="http://ad.doubleclick.net/N617/jump/nextgov.com/section_cybersecurity;pos=topleader;sz=728x90;" title="">
+        <img src="http://ad.doubleclick.net/N617/ad/nextgov.com/section_cybersecurity;pos=topleader;sz=728x90;tile=1;" alt="" />
+      </a>
+      </noscript>
+  
+</div>
+							</div>
+						</div>
+
+						<div class="grid_12">
+						
+						
+							<nav class="menu-holder">
+								<span class="text">TRENDING</span>
+								<ul class="menu" id="menu">
+								
+									<li><a href="http://www.cvent.com/events/nextgov-prime-2013/event-summary-99c55baee0574c03ac36d3a04aaa0c7c.aspx">Prime</a></li>
+								
+									<li><a href="/defense/syrias-digital-conflict/69860/?oref=ng-trending">Syria</a></li>
+								
+									<li><a href="http://legislation.nextgov.com/">IT Acquisition Reform</a></li>
+								
+									<li><a href="/cio-briefing/bold-awards/61734/?oref=ng-trending">Bold Awards</a></li>
+								
+									<li><a href="/defense/broken-warriors/55403/?oref=ng-trending">Broken Warriors</a></li>
+								
+									<li class="last-child"><a href="/big-data/open-data/63211/?oref=ng-trending">Open Data</a></li>
+								
+								</ul>
+							</nav>
+						
+							
+							<ul class="images">
+								
+								  
+								<li> 
+									
+											<div>
+										
+									<a href="/defense/2013/09/va-will-cut-disability-payments-if-shutdown-lasts-month/71066/?oref=ng-skybox">
+										<img src="http://cdn.nextgov.com/media/img/upload/2013/09/30/093013VAbenefitsNG/nextgov-skybox.jpg"
+     alt=""
+     title=""
+     
+     height="108" 
+     width="235" 
+/>
+
+
+										<span class="text-holder"><span class="text-holder-inner">VA Disability Payments in Jeopardy</span></span>
+									</a>
+								</li>
+							
+								  
+								<li> 
+									
+											<div>
+										
+									<a href="/cio-briefing/2013/10/pandacam-star-shutdown/71138/?oref=ng-skybox">
+										<img src="http://cdn.nextgov.com/media/img/upload/2013/10/01/100113pandaNG/nextgov-skybox.jpg"
+     alt="Mei Xiang, the female giant panda at the Smithsonian&#39;s National Zoo and one of the stars of PandaCam."
+     title="Mei Xiang, the female giant panda at the Smithsonian&#39;s National Zoo and one of the stars of PandaCam."
+     
+     height="108" 
+     width="235" 
+/>
+
+
+										<span class="text-holder"><span class="text-holder-inner">PandaCam, the Star of the Shutdown</span></span>
+									</a>
+								</li>
+							
+								  
+								<li> 
+									
+											<div>
+										
+									<a href="/technology-news/tech-insider/2013/09/if-you-want-follow-federal-technology-news-app-you/70644/?oref=ng-skybox">
+										<img src="http://cdn.nextgov.com/media/img/upload/2013/09/23/092013ngappskyboxNG/nextgov-skybox.jpg"
+     alt=""
+     title=""
+     
+     height="108" 
+     width="235" 
+/>
+
+
+										<span class="text-holder"><span class="text-holder-inner">Get the New Nextgov iPhone App</span></span>
+									</a>
+								</li>
+							
+								  
+								<li> 
+									
+											<div>
+										
+									<a href="/mobile/2013/09/furloughed-feds-may-have-turn-cellphones-other-mobile-devices/71074/?oref=ng-skybox">
+										<img src="http://cdn.nextgov.com/media/img/upload/2013/09/30/093013fedmobiledevicesNG/nextgov-skybox.jpg"
+     alt=""
+     title=""
+     
+     height="108" 
+     width="235" 
+/>
+
+
+										<span class="text-holder"><span class="text-holder-inner">Feds Have to Shut Off BlackBerrys</span></span>
+									</a>
+								</li>
+							
+							</ul>
+
+						</div>
+					</div>
+				</header>
+				
+
+
+<nav class="main-nav">
+  <ul id="nav">
+    
+    
+      
+      
+      
+
+      <li>
+        <a href="/technology-news/?oref=ng-nav" class="technology-news">News</a>
+        <div class="drop">
+          <div class="drop-holder">
+            <div class="drop-block">
+              <a href="/health/2013/10/saddest-paragraph-youll-read-about-government-shutdown-today/71158/?oref=ng-dropdown">
+                <div class="image alignleft">
+                  <img src="http://cdn.nextgov.com/media/img/upload/2013/10/01/100113FrancisCollinsNG/thumb-large.jpg" alt="National Institutes of Health Director Francis Collins" title="National Institutes of Health Director Francis Collins" height="131" width="218" />
+                </div>
+                <header class="heading">
+                  The Saddest Paragraph You'll Read About the Government Shutdown Today
+                </header>
+              </a>
+              
+                <p>With NIH furloughs, children with cancer are being turned away from clinical trials.</p>
+              
+              <div class="meta">
+                <ul class="social">
+                  <li><a class="facebook st_facebook_custom" st_url="http://www.nextgov.com/health/2013/10/saddest-paragraph-youll-read-about-government-shutdown-today/71158/" href="javascript:Void();">facebook</a></li>
+                  <li><a class="twitter st_twitter_custom" st_url="http://www.nextgov.com/health/2013/10/saddest-paragraph-youll-read-about-government-shutdown-today/71158/" st_title="The Saddest Paragraph You&#39;ll Read About the Government Shutdown Today" st_via="nextgov" href="javascript:Void();">twitter</a></li>
+                  <li><a class="google st_googleplus_custom" st_url="http://www.nextgov.com/health/2013/10/saddest-paragraph-youll-read-about-government-shutdown-today/71158/" href="javascript:Void();">google</a></li>
+                  <li><a class="comment disqus-count" href="/health/2013/10/saddest-paragraph-youll-read-about-government-shutdown-today/71158/#disqus_thread" data-disqus-identifier="post_71158">Comments</a></li>
+                </ul>
+                <span class="date">// 5:17 PM ET</span>
+              </div>
+            </div>
+            
+            
+            
+            <div class="news-block full-width">
+              <header class="heading">
+                <strong class="title">LATEST NEWS</strong>
+              </header>
+              <ul>
+                
+                  <li><a href="/emerging-tech/emerging-tech-blog/2013/10/heres-how-furloughed-feds-did-web-rage-95/71156/?oref=ng-dropdown"><strong>Here's How Furloughed Feds Did Web Rage in '95</strong> <span class="date">// 5:38 PM ET</span></a></li>
+                
+                  <li><a href="/defense/whats-brewin/2013/10/time-essential-apparently/71152/?oref=ng-dropdown"><strong>Time Is Essential, Apparently</strong> <span class="date">// 4:55 PM ET</span></a></li>
+                
+                  <li><a href="/defense/2013/10/army-prepares-network-exercise-despite-shutdown/71150/?oref=ng-dropdown"><strong>Army Prepares for Network Exercise Despite Shutdown</strong> <span class="date">// 4:47 PM ET</span></a></li>
+                
+              </ul>
+              
+            </div>
+            
+		
+            
+            
+          </div>
+        </div>
+      </li>
+    
+      
+      
+      
+
+      <li>
+        <a href="/cio-briefing/?oref=ng-nav" class="cio-briefing">CIO Briefing</a>
+        <div class="drop">
+          <div class="drop-holder">
+            <div class="drop-block">
+              <a href="/cio-briefing/2013/10/most-federal-national-security-it-considered-essential-industry-official-says/71142/?oref=ng-dropdown">
+                <div class="image alignleft">
+                  <img src="http://cdn.nextgov.com/media/img/upload/2013/10/01/100113cybersecstaffNG/thumb-large.jpg" alt="A reflection of the Department of Homeland Security logo is seen reflected in the glasses of a cyber security analyst." title="A reflection of the Department of Homeland Security logo is seen reflected in the glasses of a cyber security analyst." height="131" width="218" />
+                </div>
+                <header class="heading">
+                  Most Federal National Security IT Considered ‘Essential,’ Industry Official Says
+                </header>
+              </a>
+              
+                <p>Some defense and law enforcement IT operations will continue amid shutdown.</p>
+              
+              <div class="meta">
+                <ul class="social">
+                  <li><a class="facebook st_facebook_custom" st_url="http://www.nextgov.com/cio-briefing/2013/10/most-federal-national-security-it-considered-essential-industry-official-says/71142/" href="javascript:Void();">facebook</a></li>
+                  <li><a class="twitter st_twitter_custom" st_url="http://www.nextgov.com/cio-briefing/2013/10/most-federal-national-security-it-considered-essential-industry-official-says/71142/" st_title="Most Federal National Security IT Considered ‘Essential,’ Industry Official Says" st_via="nextgov" href="javascript:Void();">twitter</a></li>
+                  <li><a class="google st_googleplus_custom" st_url="http://www.nextgov.com/cio-briefing/2013/10/most-federal-national-security-it-considered-essential-industry-official-says/71142/" href="javascript:Void();">google</a></li>
+                  <li><a class="comment disqus-count" href="/cio-briefing/2013/10/most-federal-national-security-it-considered-essential-industry-official-says/71142/#disqus_thread" data-disqus-identifier="post_71142">Comments</a></li>
+                </ul>
+                <span class="date">// 3:56 PM ET</span>
+              </div>
+            </div>
+            
+            
+            
+            <div class="news-block full-width">
+              <header class="heading">
+                <strong class="title">LATEST NEWS</strong>
+              </header>
+              <ul>
+                
+                  <li><a href="/emerging-tech/2013/10/gov-unplugged-heres-whats-shut-down-during-shutdown/71148/?oref=ng-dropdown"><strong>GOV Unplugged: Your Guide to What’s Shut Down During a Shutdown</strong> <span class="date">// 4:18 PM ET</span></a></li>
+                
+                  <li><a href="/cio-briefing/2013/10/why-nasagov-shut-down-while-ciagov-still-open/71146/?oref=ng-dropdown"><strong>Why is NASA.gov shut down while CIA.gov is still open?</strong> <span class="date">// 4:08 PM ET</span></a></li>
+                
+                  <li><a href="/cio-briefing/2013/10/pandacam-star-shutdown/71138/?oref=ng-dropdown"><strong>PandaCam, the Star of the Shutdown</strong> <span class="date">// 2:15 PM ET</span></a></li>
+                
+              </ul>
+              
+            </div>
+            
+		
+            
+            
+          </div>
+        </div>
+      </li>
+    
+      
+      
+      
+
+      <li>
+        <a href="/emerging-tech/?oref=ng-nav" class="emerging-tech">Emerging Tech</a>
+        <div class="drop">
+          <div class="drop-holder">
+            <div class="drop-block">
+              <a href="/emerging-tech/2013/10/gov-unplugged-heres-whats-shut-down-during-shutdown/71148/?oref=ng-dropdown">
+                <div class="image alignleft">
+                  <img src="http://cdn.nextgov.com/media/img/upload/2013/10/01/100113closedwebsitesNG/thumb-large.jpg" alt="" title="" height="131" width="218" />
+                </div>
+                <header class="heading">
+                  GOV Unplugged<span class="font-override">:</span> Your Guide to What’s Shut Down During a Shutdown
+                </header>
+              </a>
+              
+                <p>Federal websites, data feeds and social media posts have all been switched off.
+</p>
+              
+              <div class="meta">
+                <ul class="social">
+                  <li><a class="facebook st_facebook_custom" st_url="http://www.nextgov.com/emerging-tech/2013/10/gov-unplugged-heres-whats-shut-down-during-shutdown/71148/" href="javascript:Void();">facebook</a></li>
+                  <li><a class="twitter st_twitter_custom" st_url="http://www.nextgov.com/emerging-tech/2013/10/gov-unplugged-heres-whats-shut-down-during-shutdown/71148/" st_title="GOV Unplugged: Your Guide to What’s Shut Down During a Shutdown" st_via="nextgov" href="javascript:Void();">twitter</a></li>
+                  <li><a class="google st_googleplus_custom" st_url="http://www.nextgov.com/emerging-tech/2013/10/gov-unplugged-heres-whats-shut-down-during-shutdown/71148/" href="javascript:Void();">google</a></li>
+                  <li><a class="comment disqus-count" href="/emerging-tech/2013/10/gov-unplugged-heres-whats-shut-down-during-shutdown/71148/#disqus_thread" data-disqus-identifier="post_71148">Comments</a></li>
+                </ul>
+                <span class="date">// 4:18 PM ET</span>
+              </div>
+            </div>
+            
+            
+            
+            <div class="news-block full-width">
+              <header class="heading">
+                <strong class="title">LATEST NEWS</strong>
+              </header>
+              <ul>
+                
+                  <li><a href="/emerging-tech/emerging-tech-blog/2013/10/heres-how-furloughed-feds-did-web-rage-95/71156/?oref=ng-dropdown"><strong>Here's How Furloughed Feds Did Web Rage in '95</strong> <span class="date">// 5:38 PM ET</span></a></li>
+                
+                  <li><a href="/emerging-tech/2013/10/shutdown-will-be-tweeted-just-not-officially/71130/?oref=ng-dropdown"><strong>The Shutdown Will be Tweeted -- Just Not Officially </strong> <span class="date">// 2:10 PM ET</span></a></li>
+                
+                  <li><a href="/emerging-tech/2013/10/solar-panels-could-be-next-shopping-list-british-ikea-shoppers/71108/?oref=ng-dropdown"><strong>Solar Panels Could Be Next on the Shopping List for British IKEA Shoppers</strong> <span class="date">// 9:53 AM ET</span></a></li>
+                
+              </ul>
+              
+            </div>
+            
+		
+            
+            
+          </div>
+        </div>
+      </li>
+    
+      
+      
+      
+
+      <li>
+        <a href="/cloud-computing/?oref=ng-nav" class="cloud-computing">Cloud</a>
+        <div class="drop">
+          <div class="drop-holder">
+            <div class="drop-block">
+              <a href="/cloud-computing/2013/09/ibm-calls-amazon-unprepared-secure-intelligence-data/70642/?oref=ng-dropdown">
+                <div class="image alignleft">
+                  <img src="http://cdn.nextgov.com/media/img/upload/2013/09/23/092313cloudNG/thumb-large.jpg" alt="" title="" height="131" width="218" />
+                </div>
+                <header class="heading">
+                  IBM Calls Amazon Unprepared to Secure Intelligence Data
+                </header>
+              </a>
+              
+                <p>The companies are embroiled in a lawsuit over a $150 million contract to build a computer cloud for the CIA.</p>
+              
+              <div class="meta">
+                <ul class="social">
+                  <li><a class="facebook st_facebook_custom" st_url="http://www.nextgov.com/cloud-computing/2013/09/ibm-calls-amazon-unprepared-secure-intelligence-data/70642/" href="javascript:Void();">facebook</a></li>
+                  <li><a class="twitter st_twitter_custom" st_url="http://www.nextgov.com/cloud-computing/2013/09/ibm-calls-amazon-unprepared-secure-intelligence-data/70642/" st_title="IBM Calls Amazon Unprepared to Secure Intelligence Data" st_via="nextgov" href="javascript:Void();">twitter</a></li>
+                  <li><a class="google st_googleplus_custom" st_url="http://www.nextgov.com/cloud-computing/2013/09/ibm-calls-amazon-unprepared-secure-intelligence-data/70642/" href="javascript:Void();">google</a></li>
+                  <li><a class="comment disqus-count" href="/cloud-computing/2013/09/ibm-calls-amazon-unprepared-secure-intelligence-data/70642/#disqus_thread" data-disqus-identifier="post_70642">Comments</a></li>
+                </ul>
+                <span class="date">// September 23, 2013</span>
+              </div>
+            </div>
+            
+            
+            
+            <div class="news-block full-width">
+              <header class="heading">
+                <strong class="title">LATEST NEWS</strong>
+              </header>
+              <ul>
+                
+                  <li><a href="/emerging-tech/2013/09/digital-cities-are-built-ground-and-top-down/70810/?oref=ng-dropdown"><strong>Q&A: How City Governments Go Digital</strong> <span class="date">// September 25, 2013</span></a></li>
+                
+                  <li><a href="/big-data/2013/09/stimulus-tracking-site-rebooted-monitor-hurricane-sandy-spending/70584/?oref=ng-dropdown"><strong>Stimulus Tracking Site Is Rebooted to Monitor Hurricane Sandy Spending</strong> <span class="date">// September 19, 2013</span></a></li>
+                
+                  <li><a href="/cybersecurity/2013/09/mark-zuckerbergs-advice-nsa-communicate/70554/?oref=ng-dropdown"><strong>Mark Zuckerberg's Advice to the NSA: Communicate</strong> <span class="date">// September 19, 2013</span></a></li>
+                
+              </ul>
+              
+            </div>
+            
+		
+            
+            
+          </div>
+        </div>
+      </li>
+    
+      
+      
+      
+
+      <li class="active">
+        <a href="/cybersecurity/?oref=ng-nav" class="cybersecurity">Cybersecurity</a>
+        <div class="drop">
+          <div class="drop-holder">
+            <div class="drop-block">
+              <a href="/cybersecurity/2013/09/britains-new-cyberwar-strike-capabilities-may-just-be-political-posturing/71038/?oref=ng-dropdown">
+                <div class="image alignleft">
+                  <img src="http://cdn.nextgov.com/media/img/upload/2013/09/30/093013hammondNG/thumb-large.jpg" alt="Britain&#39;s Defence Secretary Philip Hammond" title="Britain&#39;s Defence Secretary Philip Hammond" height="131" width="218" />
+                </div>
+                <header class="heading">
+                  Britain’s New Cyberwar Strike Capabilities May Just Be Political Posturing
+                </header>
+              </a>
+              
+                <p>If you were envisioning a standing army of cyber-warriors, there’s reason to be skeptical. </p>
+              
+              <div class="meta">
+                <ul class="social">
+                  <li><a class="facebook st_facebook_custom" st_url="http://www.nextgov.com/cybersecurity/2013/09/britains-new-cyberwar-strike-capabilities-may-just-be-political-posturing/71038/" href="javascript:Void();">facebook</a></li>
+                  <li><a class="twitter st_twitter_custom" st_url="http://www.nextgov.com/cybersecurity/2013/09/britains-new-cyberwar-strike-capabilities-may-just-be-political-posturing/71038/" st_title="Britain’s New Cyberwar Strike Capabilities May Just Be Political Posturing" st_via="nextgov" href="javascript:Void();">twitter</a></li>
+                  <li><a class="google st_googleplus_custom" st_url="http://www.nextgov.com/cybersecurity/2013/09/britains-new-cyberwar-strike-capabilities-may-just-be-political-posturing/71038/" href="javascript:Void();">google</a></li>
+                  <li><a class="comment disqus-count" href="/cybersecurity/2013/09/britains-new-cyberwar-strike-capabilities-may-just-be-political-posturing/71038/#disqus_thread" data-disqus-identifier="post_71038">Comments</a></li>
+                </ul>
+                <span class="date">// September 30, 2013</span>
+              </div>
+            </div>
+            
+            
+            
+            <div class="news-block full-width">
+              <header class="heading">
+                <strong class="title">LATEST NEWS</strong>
+              </header>
+              <ul>
+                
+                  <li><a href="/cio-briefing/2013/10/most-federal-national-security-it-considered-essential-industry-official-says/71142/?oref=ng-dropdown"><strong>Most Federal National Security IT Considered ‘Essential,’ Industry Official Says</strong> <span class="date">// 3:56 PM ET</span></a></li>
+                
+                  <li><a href="/health/2013/10/your-body-next-frontier-cybercrime/71126/?oref=ng-dropdown"><strong>Your Body Is the Next Frontier in Cybercrime</strong> <span class="date">// 12:05 PM ET</span></a></li>
+                
+                  <li><a href="/cybersecurity/2013/09/what-world-governments-are-most-likely-snoop-your-facebook/70962/?oref=ng-dropdown"><strong>What World Governments Are Most Likely to Snoop on Your Facebook?</strong> <span class="date">// September 27, 2013</span></a></li>
+                
+              </ul>
+              
+            </div>
+            
+		
+            
+            
+          </div>
+        </div>
+      </li>
+    
+      
+      
+      
+
+      <li>
+        <a href="/mobile/?oref=ng-nav" class="mobile">Mobile</a>
+        <div class="drop">
+          <div class="drop-holder">
+            <div class="drop-block">
+              <a href="/mobile/2013/09/furloughed-feds-may-have-turn-cellphones-other-mobile-devices/71074/?oref=ng-dropdown">
+                <div class="image alignleft">
+                  <img src="http://cdn.nextgov.com/media/img/upload/2013/09/30/093013fedmobiledevicesNG/thumb-large.jpg" alt="" title="" height="131" width="218" />
+                </div>
+                <header class="heading">
+                  Furloughed Feds May Have to Turn in Cellphones, Other Mobile Devices
+                </header>
+              </a>
+              
+                <p>Law prohibits government employees from working outside the office in the event of a shutdown. </p>
+              
+              <div class="meta">
+                <ul class="social">
+                  <li><a class="facebook st_facebook_custom" st_url="http://www.nextgov.com/mobile/2013/09/furloughed-feds-may-have-turn-cellphones-other-mobile-devices/71074/" href="javascript:Void();">facebook</a></li>
+                  <li><a class="twitter st_twitter_custom" st_url="http://www.nextgov.com/mobile/2013/09/furloughed-feds-may-have-turn-cellphones-other-mobile-devices/71074/" st_title="Furloughed Feds May Have to Turn in Cellphones, Other Mobile Devices" st_via="nextgov" href="javascript:Void();">twitter</a></li>
+                  <li><a class="google st_googleplus_custom" st_url="http://www.nextgov.com/mobile/2013/09/furloughed-feds-may-have-turn-cellphones-other-mobile-devices/71074/" href="javascript:Void();">google</a></li>
+                  <li><a class="comment disqus-count" href="/mobile/2013/09/furloughed-feds-may-have-turn-cellphones-other-mobile-devices/71074/#disqus_thread" data-disqus-identifier="post_71074">Comments</a></li>
+                </ul>
+                <span class="date">// September 30, 2013</span>
+              </div>
+            </div>
+            
+            
+            
+            <div class="news-block full-width">
+              <header class="heading">
+                <strong class="title">LATEST NEWS</strong>
+              </header>
+              <ul>
+                
+                  <li><a href="/cio-briefing/2013/09/twitters-ipo-avoids-delay-sec-can-stay-open-weeks-amid-shutdown/71084/?oref=ng-dropdown"><strong>Twitter’s IPO Avoids Delay: SEC Can Stay Open for Weeks Amid Shutdown</strong> <span class="date">// September 30, 2013</span></a></li>
+                
+                  <li><a href="/cio-briefing/2013/09/government-social-media-profiles-will-go-dark-during-shutdown/71064/?oref=ng-dropdown"><strong>Government Social Media Feeds Will Go Dark During a Shutdown</strong> <span class="date">// September 30, 2013</span></a></li>
+                
+                  <li><a href="/mobile/2013/09/what-federal-gaming-app-should-and-shouldnt-look/70936/?oref=ng-dropdown"><strong>What a Government Game App Should (and Shouldn't) Look Like</strong> <span class="date">// September 27, 2013</span></a></li>
+                
+              </ul>
+              
+            </div>
+            
+		
+            
+            
+          </div>
+        </div>
+      </li>
+    
+      
+      
+      
+
+      <li>
+        <a href="/health/?oref=ng-nav" class="health">Health</a>
+        <div class="drop">
+          <div class="drop-holder">
+            <div class="drop-block">
+              <a href="/health/2013/10/saddest-paragraph-youll-read-about-government-shutdown-today/71158/?oref=ng-dropdown">
+                <div class="image alignleft">
+                  <img src="http://cdn.nextgov.com/media/img/upload/2013/10/01/100113FrancisCollinsNG/thumb-large.jpg" alt="National Institutes of Health Director Francis Collins" title="National Institutes of Health Director Francis Collins" height="131" width="218" />
+                </div>
+                <header class="heading">
+                  The Saddest Paragraph You'll Read About the Government Shutdown Today
+                </header>
+              </a>
+              
+                <p>With NIH furloughs, children with cancer are being turned away from clinical trials.</p>
+              
+              <div class="meta">
+                <ul class="social">
+                  <li><a class="facebook st_facebook_custom" st_url="http://www.nextgov.com/health/2013/10/saddest-paragraph-youll-read-about-government-shutdown-today/71158/" href="javascript:Void();">facebook</a></li>
+                  <li><a class="twitter st_twitter_custom" st_url="http://www.nextgov.com/health/2013/10/saddest-paragraph-youll-read-about-government-shutdown-today/71158/" st_title="The Saddest Paragraph You&#39;ll Read About the Government Shutdown Today" st_via="nextgov" href="javascript:Void();">twitter</a></li>
+                  <li><a class="google st_googleplus_custom" st_url="http://www.nextgov.com/health/2013/10/saddest-paragraph-youll-read-about-government-shutdown-today/71158/" href="javascript:Void();">google</a></li>
+                  <li><a class="comment disqus-count" href="/health/2013/10/saddest-paragraph-youll-read-about-government-shutdown-today/71158/#disqus_thread" data-disqus-identifier="post_71158">Comments</a></li>
+                </ul>
+                <span class="date">// 5:17 PM ET</span>
+              </div>
+            </div>
+            
+            
+            
+            <div class="news-block full-width">
+              <header class="heading">
+                <strong class="title">LATEST NEWS</strong>
+              </header>
+              <ul>
+                
+                  <li><a href="/health/2013/10/your-body-next-frontier-cybercrime/71126/?oref=ng-dropdown"><strong>Your Body Is the Next Frontier in Cybercrime</strong> <span class="date">// 12:05 PM ET</span></a></li>
+                
+                  <li><a href="/defense/2013/09/va-will-cut-disability-payments-if-shutdown-lasts-month/71066/?oref=ng-dropdown"><strong>VA Will Cut Off Disability Payments If Shutdown Lasts a Month</strong> <span class="date">// September 30, 2013</span></a></li>
+                
+                  <li><a href="/health/2013/09/medical-device-industry-trying-turn-government-shutdown-its-advantage/71040/?oref=ng-dropdown"><strong>The Medical Device Industry Is Trying to Turn the Government Shutdown to Its Advantage</strong> <span class="date">// September 30, 2013</span></a></li>
+                
+              </ul>
+              
+            </div>
+            
+		
+            
+            
+          </div>
+        </div>
+      </li>
+    
+      
+      
+      
+
+      <li>
+        <a href="/defense/?oref=ng-nav" class="defense">Defense</a>
+        <div class="drop">
+          <div class="drop-holder">
+            <div class="drop-block">
+              <a href="/defense/2013/10/crowdfunding-fuels-military-conversion-solar-power/71086/?oref=ng-dropdown">
+                <div class="image alignleft">
+                  <img src="http://cdn.nextgov.com/media/img/upload/2013/09/30/093013militarysolarNG/thumb-large.jpg" alt="The U.S. Army&#39;s solar array at White Sands, New Mexico" title="The U.S. Army&#39;s solar array at White Sands, New Mexico" height="131" width="218" />
+                </div>
+                <header class="heading">
+                  Crowdfunding Fuels Military Conversion to Solar Power
+                </header>
+              </a>
+              
+                <p>You, too, can invest.</p>
+              
+              <div class="meta">
+                <ul class="social">
+                  <li><a class="facebook st_facebook_custom" st_url="http://www.nextgov.com/defense/2013/10/crowdfunding-fuels-military-conversion-solar-power/71086/" href="javascript:Void();">facebook</a></li>
+                  <li><a class="twitter st_twitter_custom" st_url="http://www.nextgov.com/defense/2013/10/crowdfunding-fuels-military-conversion-solar-power/71086/" st_title="Crowdfunding Fuels Military Conversion to Solar Power" st_via="nextgov" href="javascript:Void();">twitter</a></li>
+                  <li><a class="google st_googleplus_custom" st_url="http://www.nextgov.com/defense/2013/10/crowdfunding-fuels-military-conversion-solar-power/71086/" href="javascript:Void();">google</a></li>
+                  <li><a class="comment disqus-count" href="/defense/2013/10/crowdfunding-fuels-military-conversion-solar-power/71086/#disqus_thread" data-disqus-identifier="post_71086">Comments</a></li>
+                </ul>
+                <span class="date">// 8:00 AM ET</span>
+              </div>
+            </div>
+            
+            
+            
+            <div class="news-block full-width">
+              <header class="heading">
+                <strong class="title">LATEST NEWS</strong>
+              </header>
+              <ul>
+                
+                  <li><a href="http://www.defenseone.com/management/2013/10/watchdog-finds-719-problems-pentagons-f-35-program/71154/?oref=ng-dropdown"><strong>Watchdog Finds 719 Problems with the Pentagon’s F-35 Program</strong> <span class="date">// 5:23 PM ET</span></a></li>
+                
+                  <li><a href="/defense/whats-brewin/2013/10/time-essential-apparently/71152/?oref=ng-dropdown"><strong>Time Is Essential, Apparently</strong> <span class="date">// 4:55 PM ET</span></a></li>
+                
+                  <li><a href="/defense/2013/10/army-prepares-network-exercise-despite-shutdown/71150/?oref=ng-dropdown"><strong>Army Prepares for Network Exercise Despite Shutdown</strong> <span class="date">// 4:47 PM ET</span></a></li>
+                
+              </ul>
+              
+            </div>
+            
+		
+            
+            
+          </div>
+        </div>
+      </li>
+    
+      
+      
+      
+
+      <li>
+        <a href="/big-data/?oref=ng-nav" class="big-data">Big Data</a>
+        <div class="drop">
+          <div class="drop-holder">
+            <div class="drop-block">
+              <a href="/big-data/2013/09/stimulus-tracking-site-rebooted-monitor-hurricane-sandy-spending/70584/?oref=ng-dropdown">
+                <div class="image alignleft">
+                  <img src="http://cdn.nextgov.com/media/img/upload/2013/09/19/091913hurricanesandyNG/thumb-large.jpg" alt="Destruction in the wake of Hurricane Sandy" title="Destruction in the wake of Hurricane Sandy" height="131" width="218" />
+                </div>
+                <header class="heading">
+                  Stimulus Tracking Site Is Rebooted to Monitor Hurricane Sandy Spending
+                </header>
+              </a>
+              
+                <p>Contract extensions will keep Recovery.gov running for two more years. </p>
+              
+              <div class="meta">
+                <ul class="social">
+                  <li><a class="facebook st_facebook_custom" st_url="http://www.nextgov.com/big-data/2013/09/stimulus-tracking-site-rebooted-monitor-hurricane-sandy-spending/70584/" href="javascript:Void();">facebook</a></li>
+                  <li><a class="twitter st_twitter_custom" st_url="http://www.nextgov.com/big-data/2013/09/stimulus-tracking-site-rebooted-monitor-hurricane-sandy-spending/70584/" st_title="Stimulus Tracking Site Is Rebooted to Monitor Hurricane Sandy Spending" st_via="nextgov" href="javascript:Void();">twitter</a></li>
+                  <li><a class="google st_googleplus_custom" st_url="http://www.nextgov.com/big-data/2013/09/stimulus-tracking-site-rebooted-monitor-hurricane-sandy-spending/70584/" href="javascript:Void();">google</a></li>
+                  <li><a class="comment disqus-count" href="/big-data/2013/09/stimulus-tracking-site-rebooted-monitor-hurricane-sandy-spending/70584/#disqus_thread" data-disqus-identifier="post_70584">Comments</a></li>
+                </ul>
+                <span class="date">// September 19, 2013</span>
+              </div>
+            </div>
+            
+            
+            
+            <div class="news-block full-width">
+              <header class="heading">
+                <strong class="title">LATEST NEWS</strong>
+              </header>
+              <ul>
+                
+                  <li><a href="/health/2013/09/hacked-data-brokers-could-spell-trouble-obamacare/70958/?oref=ng-dropdown"><strong>Hacked Data Brokers Could Spell Trouble for Obamacare</strong> <span class="date">// September 27, 2013</span></a></li>
+                
+                  <li><a href="/big-data/2013/09/take-digital-joyride-through-large-hadron-collider/70944/?oref=ng-dropdown"><strong>Take a Digital Joyride Through the Large Hadron Collider</strong> <span class="date">// September 27, 2013</span></a></li>
+                
+                  <li><a href="/cloud-computing/2013/09/ibm-calls-amazon-unprepared-secure-intelligence-data/70642/?oref=ng-dropdown"><strong>IBM Calls Amazon Unprepared to Secure Intelligence Data</strong> <span class="date">// September 23, 2013</span></a></li>
+                
+              </ul>
+              
+            </div>
+            
+		
+            
+            
+          </div>
+        </div>
+      </li>
+    
+  </ul>
+</nav>
+
+
+
+
+        <div class="ad ad-gutter" id="gutter-ad">
+	
+	<script type="text/javascript">
+//<![CDATA[
+if (typeof window.dart_random_ord == 'undefined') {
+	window.dart_random_ord = ('000000000' + Math.ceil(Math.random() * 1000000000).toString()).slice(-9);
+}
+
+var this_ad_link = 'http://ad.doubleclick.net/N617/adj/nextgov.com/section_cybersecurity;pos=gutter;sz=460x800;tile=2;ord=' + window.dart_random_ord + '?';
+document.write('<' + 'script type="text/javascript" src="' + this_ad_link + '">' + '<' + '/script>');
+
+//]]>
+	</script>
+  
+</div>
+
+        
+          
+            <img class="decor-cloud" src="http://cdn.nextgov.com/nextgov/images/sidebar-icons/cybersecurity.png" alt="Cybersecurity">
+          
+        
+				<div class="main-holder container_12">
+					<div class="tools-block">
+						<form action="/search/" method="get" class="search-form">
+							<fieldset>
+								<div class="field-holder">
+									<input type="text" class="text" name="q" value="SEARCH NEXTGOV" />
+									<input type="submit" value="SEARCH" class="btn-submit" />
+								</div>
+							</fieldset>
+						</form>
+						<ul class="social">
+							<li><a class="facebook" href="http://www.facebook.com/Nextgov">facebook</a></li>
+							<li><a class="twitter" href="http://twitter.com/#!/nextgov/">twitter</a></li>
+							<li><a class="rss" href="/rss/all/">rss</a></li>
+						</ul>
+					</div>
+          
+					<div id="content" class="grid_8">
+              
+  
+  
+  
+  
+  
+  
+  <section class="visual visual2">
+    <header class="heading with-background shortened">
+      <h2>
+        <span class="outer">
+          <span class="inner"><span class="inner-inner">It Took Hackers This Long to Crack the iPhone's Fingerprint Security</span></span>
+        </span>
+      </h2>
+    </header>
+    
+      <div class="image">
+        <img src="http://cdn.nextgov.com/media/img/upload/2013/09/23/092313fingerprintsecurityNG/nextgov-medium.jpg" alt="" title="" height="284" width="471" />
+        <p>
+          
+          
+            Maksim Kabakou/Shutterstock.com
+          
+        </p>
+      </div>
+    
+    <div class="info-column with-image">
+      
+      <div class="meta meta2">
+        
+          <span class="author">
+            By 
+  
+    <a href="/voices/connor-simpson/6716/" >
+    Connor Simpson</a>
+          </span>
+        
+        
+          <span class="author">
+            
+              <a href="http://www.theatlanticwire.com/" rel="external">Atlantic Wire</a>
+            
+          </span>
+        
+        <span class="date">September 23, 2013</span>
+        <a href="#disqus_thread" class="comments disqus-count" data-disqus-identifier="post_70668">comments</a>
+      </div>
+      <div class="tools">
+        <ul>
+          <li><a href="javascript:Void();" class="print" rel="nofollow" onclick="window.open('/cybersecurity/2013/09/it-took-hackers-long-crack-iphones-fingerprint-security/70668/print/', 'print', 'width=700, height=700, scrollbars=yes');return false;">Print this article</a></li>
+          <li><a href="javascript:Void();" class="email st_email_custom" displayText='Email'>Email this article</a></li>
+          <li>
+            <a href="#" class="decrease" id="decreaseFont">A</a>
+            <a href="#" class="reset" id="resetFont">A</a>
+            <a href="#" class="increase" id="increaseFont">A</a>
+            <span class="label">Adjust font size</span>
+          </li>
+        </ul>
+      </div>
+      
+        <a href="http://www.govexec.com/newsletters/?oref=ng-subscribe" class="subscribe-link" rel="external">
+          <strong class="title-newsletter"><span>NEXTGOV</span><br/><span>NEWSLETTER</span></strong>
+          <span class="btn-subscribe">SUBSCRIBE</span>
+        </a>
+      
+    
+      
+        <section class="stories">
+          <header>
+            <h2>
+              
+                related stories
+              
+            </h2>
+          </header>
+          
+            <div class="block">
+              <a href="/mobile/2013/09/why-cops-and-prosecutors-are-begging-iphone-users-upgrade-ios-7/70750/?oref=ng-relatedstories">Why Cops and Prosecutors Are Begging iPhone Users to Upgrade to iOS 7</a>
+              <a href="/mobile/2013/09/why-cops-and-prosecutors-are-begging-iphone-users-upgrade-ios-7/70750/?oref=ng-relatedstories#disqus_thread" class="comments disqus-count" data-disqus-identifier="post_70750">comments</a>
+            </div>
+          
+            <div class="block">
+              <a href="/cio-briefing/2013/09/blackberry-ends-terrible-week-mass-layoff/70648/?oref=ng-relatedstories">BlackBerry Ends Terrible Week With Mass Layoff</a>
+              <a href="/cio-briefing/2013/09/blackberry-ends-terrible-week-mass-layoff/70648/?oref=ng-relatedstories#disqus_thread" class="comments disqus-count" data-disqus-identifier="post_70648">comments</a>
+            </div>
+          
+            <div class="block">
+              <a href="/mobile/2013/09/apple-ceo-not-interested-cheap-iphones/70548/?oref=ng-relatedstories">Apple CEO Not Interested in Cheap iPhones</a>
+              <a href="/mobile/2013/09/apple-ceo-not-interested-cheap-iphones/70548/?oref=ng-relatedstories#disqus_thread" class="comments disqus-count" data-disqus-identifier="post_70548">comments</a>
+            </div>
+          
+            <div class="block">
+              <a href="/cybersecurity/2013/09/new-iphone-fingerprint-scanner-could-boost-byod/70262/?oref=ng-relatedstories">iPhone Fingerprint Scanner Could Boost BYOD</a>
+              <a href="/cybersecurity/2013/09/new-iphone-fingerprint-scanner-could-boost-byod/70262/?oref=ng-relatedstories#disqus_thread" class="comments disqus-count" data-disqus-identifier="post_70262">comments</a>
+            </div>
+          
+        </section>
+      
+    </div>
+    <article class="article">
+      <div class="article-holder">
+        <div class="social-plugins">
+          <div class="holder">
+            <span class='st_facebook_vcount' st_url="http://www.nextgov.com/cybersecurity/2013/09/it-took-hackers-long-crack-iphones-fingerprint-security/70668/" displayText='Facebook'></span>
+            <span class='st_twitter_vcount' st_url="http://www.nextgov.com/cybersecurity/2013/09/it-took-hackers-long-crack-iphones-fingerprint-security/70668/" st_title="It Took Hackers This Long to Crack the iPhone&#39;s Fingerprint Security" st_via="nextgov" displayText='Tweet'></span>
+            <span class='st_googleplus_vcount' st_url="http://www.nextgov.com/cybersecurity/2013/09/it-took-hackers-long-crack-iphones-fingerprint-security/70668/" displayText='Google +1'></span>
+            <span class="comments_vcount">
+              <span class="stButton" style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;">
+                <div>
+                  <div class="stBubble" style="display: block;">
+                    <div class="stBubble_count disqus-count" data-disqus-identifier="post_70668"></div>
+                  </div>
+                  <a href="#disqus_thread"><img src="http://cdn.nextgov.com/nextgov/images/comments-btn.gif" alt="Comments" /></a>
+                </div>
+              </span>
+            </span>
+          </div>
+        </div>
+        <div class="wysiwyg">
+          
+			<p>
+	The iPhone 5S was&nbsp;<a href="http://www.theatlanticwire.com/technology/2013/09/everything-you-need-know-about-iphone-5c-and-5s-reviews-one-table/69549/">released</a>&nbsp;to the general public on Friday. Little more than 48 hours later, a group of hackers found a way to bypass the device&#39;s fingerprint-based security system that doesn&#39;t involve&nbsp;<a href="http://www.theatlanticwire.com/technology/2013/09/worrying-about-stolen-fingers-old-fingerprint-scanners/69321/">messy decapitation</a>.&nbsp;</p>
+<p>
+	The&nbsp;<a href="http://www.ccc.de/en/updates/2013/ccc-breaks-apple-touchid">Chaos Computer Club&#39;s Starbug was able to get past</a>&nbsp;the iPhone&#39;s 5S TouchID security system by using a photo of your fingerprint and using glue or plastic to create a copy, like you&#39;ve seen in countless spy movies.&nbsp;He&nbsp;modified existing biometric hacking methods slightly for the iPhone&#39;s TouchID. &quot;In reality, Apple&#39;s sensor has just a higher resolution compared to the sensors so far. So we only needed to ramp up the resolution of our fake,&quot; Starbug says.</p>
+<p>
+	<iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/HM8b8d8kSNQ" width="420"></iframe></p>
+<p>
+	<strong><a href="http://www.theatlanticwire.com/technology/2013/09/it-took-hackers-long-hack-iphones-fingerprint-system/69710/">Read the full story at TheAtlanticWire.com</a>.</strong></p>
+<p>
+</p>
+<p>
+</p>
+<p>
+	(<em>Image via <a href="http://www.shutterstock.com/cat.mhtml?lang=en&amp;search_source=search_form&amp;version=llv1&amp;anyorall=all&amp;safesearch=1&amp;searchterm=fingerprint+security&amp;search_group=#id=103378850&amp;src=bFYdBLCEb1x-LrdfjqD5LA-1-34">Maksim Kabakou</a>/<a href="http://www.shutterstock.com/?cr=00&amp;pl=edit-00">Shutterstock.com</a></em>)</p>
+
+         
+        </div>
+      </div>
+      
+     
+      
+      
+      
+
+      <div class="post-threatwatch-promo">
+        
+          <a href="/cybersecurity/threatwatch/?oref=TW_article_module">
+            <h3>Threatwatch Alert</h3>
+            <div><h4>Thousands of cyber attacks occur each day</h4></div>
+            <span>See the latest threats</span>
+          </a>
+        
+      </div>
+      
+      <div class="btn-holder">
+        <a href="#disqus_thread" class="btn-green">ADD A COMMENT</a>
+      </div>
+      
+  
+      
+      
+    </article>
+  </section>
+
+  
+
+  
+
+  
+
+  <section class="featured earthbox">
+    <div class="col">
+     <ul>
+       
+         
+           <li >
+             <a href="http://www.nextgov.com/prime" target="_blank">
+               <img src="http://cdn.nextgov.com/media/img/upload/2013/08/08/20121203_NextGov_Prime_Summit_142_1/skybox.jpg"
+     alt=""
+     title=""
+     
+     height="89" 
+     width="148" 
+/>
+
+
+               <strong>Nextgov Prime - The Most Powerful Moment in Federal IT</strong>
+             </a>
+           </li>
+         
+       
+         
+           <li >
+             <a href="http://www.defenseone.com/ideas/2013/07/defense-one-today/65771/" target="_blank">
+               <img src="http://cdn.nextgov.com/media/img/upload/2013/07/25/DefenseOneSS_1/skybox.jpg"
+     alt=""
+     title=""
+     
+     height="89" 
+     width="148" 
+/>
+
+
+               <strong>Get the Future of Defense Directly In Your Inbox</strong>
+             </a>
+           </li>
+         
+       
+         
+           <li class="sponsored-box">
+             <a href="http://www.theatlantic.com/sponsored/ibm-social-business/" target="_blank">
+               <img src="http://cdn.nextgov.com/media/img/upload/2013/07/31/IBMSocialBiz/sponsored.png"
+     alt=""
+     title=""
+     
+     height="87" 
+     width="144" 
+/>
+
+
+               <em>sponsored</em>
+               <strong>Social Business: The Power of Delivering Exceptional Customer Experiences</strong>
+             </a>
+           </li>
+         
+       
+         
+           <li class="omega">
+             <a href="http://govexec.com/newsletters/" target="_blank">
+               <img src="http://cdn.nextgov.com/media/img/upload/2013/07/01/800px-Sysop_actions_of_la_cabale_camembi%C3%A8re_-_croped_1/skybox.jpg"
+     alt=""
+     title=""
+     
+     height="89" 
+     width="148" 
+/>
+
+
+               <strong>Subscribe to Nextgov's Mobility Newsletter</strong>
+             </a>
+           </li>
+         
+       
+     </ul>
+    </div>
+  </section>
+
+  
+
+
+
+  
+    <section class="sponsor-area full-width">
+      
+      <div id="sponsored-posts">
+        <header class="heading">
+          <h2 class="mark-heading">sponsored</h2>
+        </header>
+        <ul>
+        
+          <li>
+            <a href="http://www.govexec.com/newsletters/" class="link">New Mobility Newsletter <span class="arrow"></span></a> Get the Latest Updates on BYOD, Security and Apps
+          </li>
+         
+          <li>
+            <a href="http://www.nextgov.com/prime" class="link">Nextgov Prime - Oct 15+16 - Washington, D.C. <span class="arrow"></span></a> Request an Invitation
+          </li>
+         
+          <li>
+            <a href="http://www.govexec.com/reports/crossing-sustainability-chasm-strategies-and-tactics-achieve-sustainability-goals/67364/" class="link">Crossing the Sustainability Chasm <span class="arrow"></span></a> Strategies and Tactics to Achieve Sustainability Goals
+          </li>
+         
+        </ul>
+      </div>
+    </section>
+  
+  
+  <section class="comments-block">
+    <header class="heading">
+      <h2 class="mark-heading">JOIN THE DISCUSSION</h2>
+    </header>
+    <p class="legal">
+      By using this service you agree not to post material that is obscene, harassing, defamatory, or
+      otherwise objectionable. Although Nextgov does not monitor comments posted to this site (and has
+      no obligation to), it reserves the right to delete, edit, or move any material that it deems to
+      be in violation of this rule.
+    </p>
+  </section>
+  <section class="comments-area" id="disqus_thread">
+    
+
+<script type="text/javascript">
+//<![CDATA[
+    
+    
+      var disqus_category_id ='1428860';
+    
+    //]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+    var disqus_shortname = 'nextgov';
+    var disqus_identifier = 'post_70668';
+    
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    //]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+    <div id="static_comments" style="display:none;"></div>
+  </section>
+  
+
+					</div>
+					<aside id="sidebar" class="grid_4">
+                        
+                          <div class="ad ad-topblock" id="topblock-ad">
+	
+	<script type="text/javascript">
+//<![CDATA[
+if (typeof window.dart_random_ord == 'undefined') {
+	window.dart_random_ord = ('000000000' + Math.ceil(Math.random() * 1000000000).toString()).slice(-9);
+}
+
+var this_ad_link = 'http://ad.doubleclick.net/N617/adj/nextgov.com/section_cybersecurity;pos=topblock;sz=300x250,300x1000,300x600;tile=3;ord=' + window.dart_random_ord + '?';
+document.write('<' + 'script type="text/javascript" src="' + this_ad_link + '">' + '<' + '/script>');
+
+//]]>
+	</script>
+  
+    <noscript>
+      <a href="http://ad.doubleclick.net/N617/jump/nextgov.com/section_cybersecurity;pos=topblock;sz=300x250,300x1000,300x600;" title="">
+        <img src="http://ad.doubleclick.net/N617/ad/nextgov.com/section_cybersecurity;pos=topblock;sz=300x250,300x1000,300x600;tile=3;" alt="" />
+      </a>
+      </noscript>
+  
+</div>
+                        
+                        
+                        
+                        
+						<div class="side-block">
+							<h3>PROMOTIONS</h3>
+							<ul class="list">
+							
+							
+								<li>
+									<a href="http://www.govexec.com/gbc/weathering-storm-how-cloud-management-can-align-competing-federal-c-suite-priorities/62833/?oref=ng-promotions">
+										<img src="http://cdn.nextgov.com/media/img/upload/2013/07/29/A_Continuous_Lean/promoted.jpg"
+     alt=""
+     title=""
+     
+     height="50" 
+     width="80" 
+/>
+
+
+										<span class="text-holder">
+										
+											
+											<span class="sponsored">Research</span>
+											
+											
+										<strong>How the Cloud Can Enhance Collaboration</strong> // Download Now
+										
+										</span>
+									</a>
+								</li>
+							
+								<li>
+									<a href="http://www.govexec.com/gbc/need-self-service-data-tools-not-scientists/67181/?oref=ng-promotions">
+										<img src="http://cdn.nextgov.com/media/img/upload/2013/07/29/5203102317_ccccf6e8cd_b_1/promoted.jpg"
+     alt=""
+     title=""
+     
+     height="50" 
+     width="80" 
+/>
+
+
+										<span class="text-holder">
+										
+											
+											<span class="sponsored">Report</span>
+											
+											
+										<strong>The Need for Data Tools, Not Scientists</strong> // Get the Latest
+										
+										</span>
+									</a>
+								</li>
+							
+								<li>
+									<a href="http://www.govexec.com/reports/tablet-computers/70592/?oref=ng-promotions">
+										<img src="http://cdn.nextgov.com/media/img/upload/2013/09/20/tablet_2/promoted.jpg"
+     alt=""
+     title=""
+     
+     height="50" 
+     width="80" 
+/>
+
+
+										<span class="text-holder">
+										
+											
+											<span class="sponsored">Report</span>
+											
+											
+										<strong>Tablet Computers: Out of the Field and Into the Executive Suite</strong> // Learn More
+										
+										</span>
+									</a>
+								</li>
+							
+							</ul>
+						</div>
+						
+						<div class="side-block">
+							<h3>FREE NEWSLETTERS</h3>
+							<form action="/newsletters/subscribe/" method="post" id="newsletter-signup" class="newsletters-form">
+							
+							<input name="list" value="GovExec" type="hidden" />
+							<input name="subscribe_button_name:" value="Subscribe/Update" type="hidden" />
+							<input type="hidden" value="GENLDEF" name="e_prcamp" />
+							<input type="hidden" value="GENEWSLET" name="formname" />
+								<fieldset>
+									<div class="form-block">
+										<ul class="form-list">
+											<li>
+												<input type="checkbox" name="field:nextgov_today" id="field:nextgov_today" class="checkbox" value="1" >
+												<label for="field:nextgov_today">Nextgov Today</label>
+											</li>
+											<li>
+												<input type="checkbox" name="field:nextgov_healthit" id="field:nextgov_healthit" class="checkbox" value="1"  >
+												<label for="field:nextgov_healthit">Health IT</label>
+											</li>
+											<li>
+												<input type="checkbox" name="field:cloud" id="field:cloud" class="checkbox" value="1" >
+												<label for="field:cloud">Nextgov Cloud</label>
+											</li>
+											<li>
+												<input type="checkbox" name="field:data" id="field:data" class="checkbox" value="1"  >
+												<label for="field:data">Nextgov Big Data</label>
+											</li>
+                                            <li>
+                                 				<input type="checkbox" name="field:nextgov_mobility" id="field:nextgov_mobility" class="checkbox" value="1"  >
+                                 				<label for="field:eig">Nextgov Mobility</label>
+                                 			</li>
+										</ul>
+										<div class="btn-holder">
+											<a href="http://www.govexec.com/newsletters/" class="link">see all</a>
+										</div>
+										<div class="text-box">
+											<input type="text" id="email_address" name="email_address" value="Enter your email address here..." class="text">
+										</div>
+									</div>
+									<input type="submit" value="subscribe" class="btn-submit">
+								</fieldset>
+							</form>
+						</div>
+                        
+                          
+                          <div class="ad ad-bottomblock" id="bottomblock-ad">
+	
+	<script type="text/javascript">
+//<![CDATA[
+if (typeof window.dart_random_ord == 'undefined') {
+	window.dart_random_ord = ('000000000' + Math.ceil(Math.random() * 1000000000).toString()).slice(-9);
+}
+if ($('#topblock-ad script[src*="widgetserver"]').length == 0 && $('#topblock-ad script[src*="flite"]').length == 0 && top_right_ad_size_check_called == false && $("#topblock-ad").height() < 600) {
+      if ($("#topblock-ad").height() < 250) {
+          top_right_ad_size_check();
+      }
+var this_ad_link = 'http://ad.doubleclick.net/N617/adj/nextgov.com/section_cybersecurity;pos=bottomblock;sz=300x250;tile=4;ord=' + window.dart_random_ord + '?';
+document.write('<' + 'script type="text/javascript" src="' + this_ad_link + '">' + '<' + '/script>');
+}
+//]]>
+	</script>
+  
+    <noscript>
+      <a href="http://ad.doubleclick.net/N617/jump/nextgov.com/section_cybersecurity;pos=bottomblock;sz=300x250;" title="">
+        <img src="http://ad.doubleclick.net/N617/ad/nextgov.com/section_cybersecurity;pos=bottomblock;sz=300x250;tile=4;" alt="" />
+      </a>
+      </noscript>
+  
+</div>
+                          
+                        
+						
+						
+
+
+
+<div class="side-block">
+  <h3>blogs</h3>
+  <ul class="list list2">
+    
+    
+    
+      <li>
+        <a href="/defense/whats-brewin/2013/10/time-essential-apparently/71152/?oref=voicesmodule">
+          <img src="http://cdn.nextgov.com/nextgov/images/blog-sidebar-whats-brewin.jpg" alt="What&#39;s Brewin" width="142" height="54" >
+          <span class="text-holder"><strong>Time Is Essential, Apparently </strong><em class="text">What&#39;s Brewin <em class="author">by 
+  
+    
+    Bob Brewin</em></em></span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/emerging-tech/emerging-tech-blog/2013/10/heres-how-furloughed-feds-did-web-rage-95/71156/?oref=voicesmodule">
+          <img src="http://cdn.nextgov.com/nextgov/images/blog-sidebar-emerging-tech-blog.jpg" alt="Emerging Tech" width="142" height="54" >
+          <span class="text-holder"><strong>Here's How Furloughed Feds Did Web Rage in '95 </strong><em class="text">Emerging Tech <em class="author">by 
+  
+    
+    Joseph Marks</em></em></span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/technology-news/tech-insider/2013/09/if-you-want-follow-federal-technology-news-app-you/70644/?oref=voicesmodule">
+          <img src="http://cdn.nextgov.com/nextgov/images/blog-sidebar-tech-insider.jpg" alt="Tech Insider" width="142" height="54" >
+          <span class="text-holder"><strong>If You Want to Follow Federal Technology News, This App is for You </strong><em class="text">Tech Insider <em class="author">by 
+  
+    
+    Katherine McIntire Peters</em></em></span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/cio-briefing/wired-workplace/2013/09/cyber-chiefs-competing-priorities-are-often-odds-each-other/70938/?oref=voicesmodule">
+          <img src="http://cdn.nextgov.com/nextgov/images/blog-sidebar-wired-workplace.jpg" alt="Wired Workplace" width="142" height="54" >
+          <span class="text-holder"><strong>Cyber Execs' Competing Priorities Are Often at Odds With Each Other </strong><em class="text">Wired Workplace <em class="author">by 
+  
+    
+    Brittany Ballenstedt</em></em></span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/health/health-it/2013/09/commentary-obamacare-after-online-exchanges-open-tuesday/70870/?oref=voicesmodule">
+          <img src="http://cdn.nextgov.com/nextgov/images/blog-sidebar-health-it.jpg" alt="Health IT" width="142" height="54" >
+          <span class="text-holder"><strong>Commentary: Looking Ahead to Obamacare's Day 2 </strong><em class="text">Health IT <em class="author">by 
+  
+    
+    Bruce Caswell and 
+    
+    Thomas  Romeo</em></em></span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/cybersecurity/cybersecurity-report/2013/08/spy-turned-privacy-pro-mike-janke-talks-secret-codes-oct-16/69113/?oref=voicesmodule">
+          <img src="http://cdn.nextgov.com/nextgov/images/blog-sidebar-cybersecurity-report.jpg" alt="Cybersecurity Report" width="142" height="54" >
+          <span class="text-holder"><strong>Spy Turned Privacy Pro Mike Janke Talks Secret Codes Oct. 16 </strong><em class="text">Cybersecurity Report <em class="author">by 
+  
+    
+    Aliya Sternstein</em></em></span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+            
+  
+    
+              
+
+<div class="side-block">
+	<h3 class="text-links">sponsored links</h3>
+	<ul class="list list3">
+        <script type="text/javascript" src="http://jlinks.industrybrains.com/jsct?sid=885&amp;ct=GOVERNMENT_EXECUTIVE_ROS&amp;num=5&amp;layt=3&amp;fmt=simp"></script>
+	
+        
+          
+        
+		<li>
+			<span class="text-holder"><strong><a href="http://pubads.g.doubleclick.net/gampad/clk?id=66978575&amp;iu=/617/govexec.com/emailads">Solutions to Competing Cloud Demands</a></strong> Learn how Infrastructure-as-a-Service can help when migrating to the cloud <a href="http://pubads.g.doubleclick.net/gampad/clk?id=66978575&amp;iu=/617/govexec.com/emailads" rel="external">www.GovExec.com/Cloud</a></span>
+		</li>
+	
+        
+          
+        
+		<li>
+			<span class="text-holder"><strong><a href="http://pubads.g.doubleclick.net/gampad/clk?id=68026055&amp;iu=/617/govexec.com/emailads">How to Bring Value to Your Agency without Spending a Dime with Open Source BI</a></strong> BIRT can be used for FREE to create interactive reports and analytics to meet your agency’s needs <a href="http://pubads.g.doubleclick.net/gampad/clk?id=68026055&amp;iu=/617/govexec.com/emailads" rel="external">www.govexec.com/sponsored/BIRTwebcast</a></span>
+		</li>
+	
+	</ul>
+</div>
+
+            
+  
+
+					</aside>
+          
+				</div>
+        
+			</div>
+		</div>
+		<footer id="footer">
+			<div class="footer-holder">
+				<div class="footer-frame container_12">
+					<strong class="logo"><a href="/">Nextgov</a></strong>
+					<div class="menus-holder">
+						<div class="row">
+							<ul class="footer-menu">
+								<li><a href="/about/">About</a></li>
+								<li><a href="/about/contact/">Contact Us</a></li>
+								<li><a href="http://www.govexec.com/events/">Events</a></li>
+								<li><a href="http://mediakit.govexec.com/">Advertise</a></li>
+								<li><a href="/about/list-rentals/">List Rentals</a></li>
+								<li><a href="/about/site-map/">Site Map</a></li>
+								<li><a href="/about/privacy-policy/">Privacy Policy</a></li>
+								<li><a href="/about/terms-and-conditions/">Terms &amp; Conditions</a></li>
+							</ul>
+						</div>
+						<div class="row">
+							<ul class="footer-menu footer-menu2">
+								<li><a href="http://www.govexec.com/">GovExec</a></li>
+								<li><a href="http://qz.com/" rel="external">Quartz</a></li>
+								<li><a href="http://www.nationaljournal.com/" rel="external">National Journal</a></li>
+								<li><a href="http://www.theatlantic.com/" rel="external">The Atlantic</a></li>
+								<li><a href="http://www.theatlanticwire.com/" rel="external">The Atlantic Wire</a></li>
+								<li><a href="http://www.theatlanticcities.com/" rel="external">The Atlantic Cities</a></li>
+							</ul>
+						</div>
+						<p class="copyright">&copy; 2013 by National Journal Group, Inc. All rights reserved. | <a href="http://www.edgecast.com/">CDN</a> powered by Edgecast Networks
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+  
+    <!-- Newsletter modal -->
+    <div id="modal_window">
+      <div id="modal_window_content"><img src="http://cdn.nextgov.com/images/ajax-loading.gif" width="32" height="32" alt="Loading..." /></div>
+      <a href="#" class="close_button"><img src="http://cdn.nextgov.com/images/close-circle.png" alt="Close window" width="30" height="30" /></a>
+    </div>
+  
+
+  
+  <div class="flyin-container">
+    <div class="flyin" id="flyin_open">
+      <div class="label">
+        <a href="#" id="closer">Close [ x ]</a>
+        <strong>More from Nextgov</strong>
+      </div>
+      <div class="headline">
+        <a href="/emerging-tech/emerging-tech-blog/2013/10/heres-how-furloughed-feds-did-web-rage-95/71156/?oref=ng-flyin">Here's How Furloughed Feds Did Web Rage in '95</a>
+      </div>
+      <div class="meta">
+        <ul class="social">
+          <li><a class="facebook st_facebook_custom" st_url="http://www.nextgov.com/emerging-tech/emerging-tech-blog/2013/10/heres-how-furloughed-feds-did-web-rage-95/71156/" href="javascript:Void();">facebook</a></li>
+          <li><a class="twitter st_twitter_custom" st_url="http://www.nextgov.com/emerging-tech/emerging-tech-blog/2013/10/heres-how-furloughed-feds-did-web-rage-95/71156/" st_title="It Took Hackers This Long to Crack the iPhone&#39;s Fingerprint Security" st_via="nextgov" href="javascript:Void();">twitter</a></li>
+          <li><a class="google st_googleplus_custom" st_url="http://www.nextgov.com/emerging-tech/emerging-tech-blog/2013/10/heres-how-furloughed-feds-did-web-rage-95/71156/" href="javascript:Void();">google</a></li>
+          <li><a class="comment disqus-count" href="/emerging-tech/emerging-tech-blog/2013/10/heres-how-furloughed-feds-did-web-rage-95/71156/#disqus_thread" data-disqus-identifier="post_71156">Comments</a></li>
+        </ul>
+        <strong>//</strong> <span>5:38 PM ET</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="flyin-container">
+    <!-- closed flyin -->
+    <div class="flyin closed" id="flyin_closed">
+      <div class="label">
+        &nbsp;
+      </div>
+      <div class="headline">
+		    <a href="#" id="opener">Next Story</a>
+      </div>
+      <div class="meta addthis_toolbox">
+	  	  &nbsp;
+      </div>
+    </div>
+  </div>
+
+
+  
+    
+      
+      
+	<div id="parsely-root" style="display: none">
+	  <a id="parsely-cfg" data-parsely-site="nextgov.com" href="http://parsely.com">Powered by the Parse.ly Publisher Platform (P3).</a>
+	</div>
+	<script type="text/javascript">
+    //<![CDATA[
+	  (function(s, p, d) {
+	    var h=d.location.protocol, i=p+"-"+s,
+	      e=d.getElementById(i), r=d.getElementById(p+"-root"),
+	      u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+	      :"static."+p+".com";
+	    if (e) return;
+	      e = d.createElement(s); e.id = i; e.async = true;
+	      e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+	  })("script", "parsely", document);
+    //]]>
+	</script>
+      
+    <script type="text/javascript">
+    //<![CDATA[
+      var _sf_async_config={uid:17396,domain:"nextgov.com"};
+
+      _sf_async_config.title = "It Took Hackers This Long to Crack the iPhone&#39;s Fingerprint Security";
+
+      (function(){
+        function loadChartbeat() {
+          window._sf_endpt=(new Date()).getTime();
+          var e = document.createElement('script');
+          e.setAttribute('language', 'javascript');
+          e.setAttribute('type', 'text/javascript');
+          e.setAttribute('src', (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+"js/chartbeat.js");
+          document.body.appendChild(e);
+        }
+        var oldonload = window.onload;
+        window.onload = (typeof window.onload != 'function') ?
+        loadChartbeat : function() { oldonload(); loadChartbeat(); };
+      })();
+    //]]>
+    </script>
+      <script type="text/javascript">
+_bizo_data_partner_id = "1016";
+</script>
+<script type="text/javascript">
+(function() {
+var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";
+b.async = true;
+b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js") + ".bizographics.com/insight.min.js";
+s.parentNode.insertBefore(b, s);
+})();
+</script>
+<noscript>
+<img height="1" width="1" alt="" style="display:none;" src="//www.bizographics.com/collect/?pid=1016&fmt=gif" />
+</noscript>
+      <script type="text/javascript">
+//<![CDATA[
+var _ca_id=85579;
+// Additional request query data. Uncomment next line and change parameters if needed.
+// var _ca_params={ oid:ORDERID, tp:1000, curr:"USD", accid:ACCOUNTID, gid:GOOGLEID, ... };
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function (){
+var p,s;
+p = document.createElement("script");
+p.type = "text/javascript";
+p.async = true;
+p.src = (document.location.protocol != "https:" ? "http" : "https") + "://p0.raasnet.com/partners/_ca.js";
+s = document.getElementsByTagName("script"); s[s.length-1].parentNode.appendChild(p);
+})();
+//]]>
+</script>
+    
+    <script type="text/javascript">
+//<![CDATA[
+    var disqus_shortname = 'nextgov';
+    (function () {
+        var scriptElement = document.createElement('script'); scriptElement.async = true;
+        scriptElement.type = 'text/javascript';
+        scriptElement.src = 'http://cdn.nextgov.com/js/custom_disqus_count_ng.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(scriptElement);
+    }());
+    //]]>
+</script>
+  
+</body>
+</html>

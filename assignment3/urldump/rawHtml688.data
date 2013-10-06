@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Throw away Sprockets, use UNIX! - Arkency Blog</title>
+    <link rel="stylesheet" type="text/css" href="/assets/style/stylesheet.css" media="screen">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="http://feeds.feedburner.com/arkency.xml" rel="alternate" title="Arkency Blog" type="application/rss+xml" />
+
+    <meta name="generator" content="nanoc 3.5.0"> 
+    <meta property="og:title" content="Throw away Sprockets, use UNIX!">
+    <meta property="og:description" content="The Sprockets gem is the standard way to combine asset files in Rails, but it wasn&#39;t very straightforward to use in stand-alone projects, like Single Page Applications without backend, before the sprockets command was added. Few weeks ago I realized that Sprockets solve the problem that has been already solved, but in a different language and in different era of computing. Later I wanted to check whether my idea would actually work and started hacking. You can see the results below.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@arkency">
+    <meta name="twitter:creator" content="@_mlen">
+    <meta name="twitter:title" content="Throw away Sprockets, use UNIX!">
+    <meta name="twitter:description" content="The Sprockets gem is the standard way to combine asset files in Rails, but it wasn&#39;t very straightforward to use in stand-alone projects, like Single Page Applications without backend, before the sprockets command was added. Few weeks ago I realized that Sprockets solve the problem that has been already solved, but in a different language and in different era of computing. Later I wanted to check whether my idea would actually work and started hacking. You can see the results below.">
+
+    <script type="text/javascript" src="//use.typekit.net/zij6pxv.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35104719-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script>
+        (function(d, t) {
+            var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            g.src = '//hnbutton.appspot.com/static/hn.min.js';
+            s.parentNode.insertBefore(g, s);
+        }(document, 'script'));
+    </script>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <h1>You're reading a blog by <a href="/">arkency</a>, a Ruby on Rails development shop.</h1>
+    </header>
+    <div id="main">
+      
+  <section class='posts'>
+    <article class='post'>
+      <header class='post-header'>
+        <h1>Throw away Sprockets, use UNIX!</h1>
+        <p class='post-metadata'>by <a class="author" href="https://twitter.com/_mlen">Mateusz Lenik</a> <time datetime="2013-09-23T12:49:29+02:00" pubdate>September 23, 2013</time> <a href='#disqus_thread' class='comments'></a>
+<!-- Published in <a href="#sprockets" rel="tag">sprockets</a>, <a href="#unix" rel="tag">unix</a>, <a href="#coffeescript" rel="tag">coffeescript</a>, <a href="#javascript" rel="tag">javascript</a> -->
+</p>
+      </header>
+
+      <div class='post-content'>
+        <p>The Sprockets gem is the standard way to combine asset files in Rails, but it
+wasn't very straightforward to use in stand-alone projects, like Single Page
+Applications without backend, before the <code>sprockets</code> command was added.</p>
+
+<p>Few weeks ago I realized that Sprockets solve the problem that has been
+already solved, but in a different language and in different era of computing.</p>
+
+<p>Later I wanted to check whether my idea would actually work and started
+hacking. You can see the results below.</p>
+
+<!-- more -->
+
+<h3>The C Preprocessor</h3>
+
+<p>The designers of C language had to solve a similar problem, so they came up
+with a preprocessor that understands directives that allow concatenating
+multiple files into one. Additionally, it offers some macros and other stuff,
+but it isn't really important in this application.</p>
+
+<p>In most UNIX-like systems there exists a separate binary, called <code>cpp</code>, that
+can be used to invoke the preprocessor.</p>
+
+<p>Its key feature here is that it can be used with any programming language, not
+necessarily C, C++ or Objective-C.</p>
+
+<h3>Let's give it a try</h3>
+
+<p>Say I have two files, one called <code>deep_thought.coffee</code> and the other one called
+<code>answer.coffee</code>. They're listed below.</p>
+
+<p><strong>answer.coffee</strong>:</p>
+
+<pre><code class="language-coffeescript"><pre class="highlight coffeescript"><span class="nx">answer</span> <span class="o">=</span> <span class="mi">42</span></pre></code></pre>
+
+<p>I'd like to use the <code>answer</code> in the other module of my application. It's really
+simple with the <code>#import</code> directive, which includes the dependency only once.</p>
+
+<p><strong>deep_thought.coffee</strong>:</p>
+
+<pre><code class="language-coffeescript"><pre class="highlight coffeescript"><span class="c1">#import "answer.coffee"
+</span>
+<span class="nx">console</span><span class="p">.</span><span class="na">log</span> <span class="s">"The answer to the Ultimate Question is </span><span class="si">#{</span><span class="nx">answer</span><span class="si">}</span><span class="s">"</span></pre></code></pre>
+
+<p>Now let's run the preprocessor and see what happens.</p>
+
+<pre><code class="language-coffeescript"><pre class="highlight coffeescript"><span class="nx">$</span> <span class="nx">cpp</span> <span class="o">-</span><span class="nx">P</span> <span class="nx">deep_thought</span><span class="p">.</span><span class="na">coffee</span>
+<span class="nx">answer</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="nx">console</span><span class="p">.</span><span class="na">log</span> <span class="s">"The answer to the Ultimate Question is </span><span class="si">#{</span><span class="nx">answer</span><span class="si">}</span><span class="s">"</span></pre></code></pre>
+
+<p>Looks like it's what we need. The only thing that's left to do is to compile
+the file.</p>
+
+<pre><code class="language-javascript"><pre class="highlight javascript"><span class="nx">$</span> <span class="nx">cpp</span> <span class="o">-</span><span class="nx">P</span> <span class="nx">deep_thought</span><span class="p">.</span><span class="nx">coffee</span> <span class="o">|</span> <span class="nx">coffee</span> <span class="o">-</span><span class="nx">s</span> <span class="o">-</span><span class="nx">p</span>
+<span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">answer</span><span class="p">;</span>
+  <span class="nx">answer</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"The answer to the Ultimate Question is "</span> <span class="o">+</span> <span class="nx">answer</span><span class="p">);</span>
+<span class="p">}).</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">);</span></pre></code></pre>
+
+<p>As you can see from the above, there is no magic and even old UNIX tools can
+get this work done properly.</p>
+
+<h3>Is it any good in practice?</h3>
+
+<p>The short answer is yes. To prove this I resurrected the <a href="https://github.com/hexagonaljs/todomvc">hexagonal.js
+implementation of TodoMVC</a> and replaced
+<code>coffee-toaster</code> with a <code>Makefile</code> listed below.</p>
+
+<pre><code>MAIN=src/todo_app.coffee
+RELEASE_DIR=release
+RELEASE_MAIN="$(RELEASE_DIR)/todo_app.js"
+
+debug:
+    cpp $(MAIN) | coffee -s -p &gt; $(RELEASE_MAIN)
+
+release:
+    cpp $(MAIN) | coffee -s -p | uglifyjs &gt; $(RELEASE_MAIN)
+
+clean:
+    rm -f $(RELEASE_DIR)/*
+
+.PHONY: debug release clean
+</code></pre>
+
+<p>That's it. There are three targets defined: <code>debug</code>, <code>release</code> and <code>clean</code>. The
+default one is <code>debug</code>. <code>.PHONY</code> just means that there are no dependencies for
+these targets and they should be executed every time.</p>
+
+<p>You can see <a href="https://github.com/mlen/todomvc/commit/69c3c8495f3c07d40bbeb46ab5a4460ce61a1eb2">all the relevant changes in this
+commit</a>.
+To compile it, just run <code>make</code> from the command line and given you have
+<code>coffee</code> and <code>cpp</code> command line utilities installed, it just works!</p>
+
+<h3>But is it faster?</h3>
+
+<p>To check it I modified the <code>Makefile</code> to run Sprockets and performed simple
+benchmark. I ran both versions in the clean environment 50 times and took an
+average. The run time for Sprockets doesn't include the time of running <code>bundle
+exec</code>. You can <a href="https://github.com/mlen/todomvc/commit/35442c8da443ce075eccf963c3387859355fea9a">see the modifications on a separate
+branch</a>.</p>
+
+<p>The <code>cpp</code> took 0.23 seconds to compile the assets, while for Sprockets it was
+1.57 seconds, which is almost seven times slower! Looks like it is doing a lot
+more work than is needed to just compile few CoffeeScript files.</p>
+
+<p>You can easily perform similar benchmark using the <code>time</code> command if you don't
+believe the results.</p>
+
+<h3>When not to use it</h3>
+
+<p>You may have noticed some differences in the output file produced by the <code>cpp</code>
+solution. There is only one wrapping anonymous function on the top level. This
+is because it first concatenates all CoffeeScript files and then it compiles
+one big file.  Sprockets work the other way around - the files are compiled and
+then they are concatenated. That allows mixing JavaScript and CoffeeScript
+files.</p>
+
+<p>Comments in CoffeeScript files don't work either, because they are treated as
+directives for the preprocessor and are reported as errors. At Arkency we
+rarely use comments in the code - we believe that the code should be always
+readable without needing additional explanation in the comment. It isn't an
+issue if you do the same.</p>
+
+<p>The performance may be also a problem, even though the benchmarks show that
+<code>cpp</code> is clearly faster. However, when a single file is modified in the large
+project, Sprockets recompile only that file, whereas in this solution all
+imported files need to be recompiled.</p>
+
+<h3>Conclusion</h3>
+
+<p>The problem with Sprockets is that they are responsible for doing lot of tasks.
+They have to manage the dependencies, run the compiler and then concatenate all
+the resulting files. It is clearly, against the UNIX way. There should be one
+component for each task. The <code>make</code> command can be used to schedule the
+compilation, compiler should only do the compilation, another tool should
+create the dependency map and yet another one should put the resulting files
+together using the compiled results and the dependency map. That'd be the UNIX
+way to solve this problem!</p>
+
+        <section class="social">
+  <a href="https://twitter.com/arkency" class="twitter-follow-button" data-show-count="false" data-size="small">Follow @arkency</a>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="arkency" data-related="arkency" data-size="small">Tweet</a>
+  <a href="http://news.ycombinator.com/submit" class="hn-share-button" data-title="Throw away Sprockets, use UNIX!">Vote on HN</a>
+  <div class="g-plusone" data-size="medium"></div>
+</section>
+
+            <section class="newsletter newsletter-spabook">
+            <a href="http://sbx.sk/A6vP" data-event-category="newsletter" data-event-action="spabook" data-event-label="after post">
+        Learn how it's like to work on<br />a well-designed CoffeeScript Single Page Application.<br>
+        <strong>Get &ldquo;Single Page Applications introduction&rdquo; ebook and coding session screencast for only $12.00.</strong><br>
+        <div class="ns-link-foot"></div>
+      </a>
+
+    </section>
+
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'arkency-blog';
+
+  (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<script type="text/javascript">
+  var disqus_shortname = 'arkency-blog';
+
+  (function () {
+      var s = document.createElement('script'); s.async = true;
+      s.type = 'text/javascript';
+      s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  }());
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+      </div>
+    </article>
+  </section>
+
+    </div>
+    <footer></footer>
+
+    <script type="text/javascript" src="/assets/javascripts/jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var headerMaxOpacity = 0.95;
+        var headerMaxFeather = 1;
+        var headerTarget     = 50;
+
+        function styleHeader(feather, opacity) {
+          $('body > header').css({ 'box-shadow': '0 0 ' + feather + 'em rgba(153, 153, 153,' + opacity + ')' });
+        }
+
+        styleHeader(0, 0);
+
+        $(window).scroll(function() {
+          function changeValue(scrollTarget, targetValue) {
+            var newValue;
+            if ($(this).scrollTop() > scrollTarget) {
+              newValue = targetValue;
+            } else {
+              newValue = targetValue * ($(this).scrollTop() / scrollTarget);
+            }
+            return newValue;
+          }
+
+          var headerOpacity = changeValue(headerTarget, headerMaxOpacity);
+          var headerFeather = changeValue(headerTarget, headerMaxFeather);
+
+          styleHeader(headerFeather, headerOpacity);
+        });
+      });
+    </script>
+
+    <script type="text/javascript" src="/assets/javascripts/lightbox.js"></script>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <script>
+      /** jQuery.browser.mobile (http://detectmobilebrowser.com/) **/
+      (function(a){jQuery.browser.mobile=/android.+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|meego.+mobile|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(di|rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))})(navigator.userAgent||navigator.vendor||window.opera);
+      if(jQuery.browser.mobile) { $('.twitter-box').remove() }
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+    </script>
+    <script type="text/javascript" src="/assets/javascripts/analytics.js"></script>
+  </body>
+</html>
+

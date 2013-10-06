@@ -1,0 +1,1199 @@
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="nl"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="nl"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie10 lt-ie9" lang="nl"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js lt-ie10" lang="nl"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="nl">
+<!--<![endif]-->
+
+
+
+<head>
+	
+	<meta charset="utf-8" />
+	<meta name="author" content="Ordina / Clockwork" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="canonical" href="http://www.ordina.nl/nl-nl/blogs/2013/maart/building-windows-services-with-c-and-topshelf" />
+<meta name="description" content="The quickstart on the Topshelf site is only showing the real basics of getting a Windows Service up and running." />
+<meta property="og:title" content="Building Windows Services with C# and Topshelf"/>
+<meta property="og:url" content="http://www.ordina.nl/nl-nl/blogs/2013/maart/building-windows-services-with-c-and-topshelf"/>
+<meta property="og:description" content="The quickstart on the Topshelf site is only showing the real basics of getting a Windows Service up and running."/>
+<meta property="og:site_name" content="Ordina"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="http://www.ordina.nl/apple-touch-icon-114x114-precomposed.png"/>
+
+
+	
+	<title>
+		Building Windows Services with C# and Topshelf
+	</title>
+
+	<link rel="stylesheet" href="/branding/css/ord-min.css?v=160913164659" type="text/css" media="screen" />
+
+	
+			<link href="https://plus.google.com/111411774315793936611" rel="publisher" />
+		
+
+	<link rel="stylesheet" href="/branding/css/print.css?v=240613160721" type="text/css" media="print" />
+
+	
+	<link rel="shortcut icon" href="/favicon.ico?v=280113132707" type="image/x-icon" />
+
+	
+	<!--[if lt IE 9]>
+		<script src="/branding/js/html5.js?v=280113132709"></script>
+	<![endif]-->
+
+	
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+	<script>
+		
+		(window.jQuery || document.write('<script src="/branding/js/jquery-1.7.1.min.js"><\/script>'));
+	</script>
+
+	<script type="text/javascript" src="/branding/js/ord-min.js?v=160913164701"></script>
+
+	
+	
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-7501992-1']);
+	_gaq.push(['_setDomainName', 'ordina.nl']);
+	_gaq.push(['_setAllowLinker', true]);
+	_gaq.push(['_setAllowHash', false]);
+
+	_gaq.push(['_trackPageview', '/blog/Building Windows Services with C# and Topshelf']);
+
+
+	function EnableGA() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	}
+
+	
+
+	
+	function _gaLink(a) {
+		url = a.href
+		_gaq.push(function() {
+			_gaq.push(['_setAllowLinker', true]);
+			if (a.target == '_blank') {
+				window.open(_gat._getTrackers()[0]._getLinkerUrl(url));
+			} else {
+				_gaq.push(['_link', url]);
+			}
+		});
+		return false;
+	}
+
+	
+	jQuery(function($) {
+		var hasTrackedDomain = /^https?:\/\/(www\.ordina\.com|www\.werkenbijordina\.nl)/i;
+		var mailToGetterRe = /^mailto:(.*?)(&|$)/i;
+		var domainGetterRe = /^https?:\/\/(.*?)(\/|$)/i;
+		$('a').not('[onclick]').each(function() {
+			var x = $(this);
+			var href = x.attr('href');
+			if (hasTrackedDomain.test(href)) {
+				x.click(function() {
+					return _gaLink(this);
+				});
+			} else if (/^mailto:/i.test(href)) {
+				x.click(function() {
+					var to = mailToGetterRe.exec(href)[1];
+					_gaq.push(['_trackEvent', 'Mailto', 'Click', to]);
+				});
+			} else {
+				var domainMatch = domainGetterRe.exec(href);
+				var domain = domainMatch != null ? domainMatch[1].toLowerCase() : '';
+				if (domain == 'www.youtube.com') {
+					x.click(function() {
+						var h = x.find('h1').first();
+						var title = h.length ? h.text() : x.text().replace(/\s+/g, ' ');
+						_gaq.push(['_trackEvent', 'YouTube', 'Play', title]);
+					});
+				}
+			}
+		});
+	});
+</script>
+
+
+
+	
+
+</head>
+
+
+<body class="OrdinaNl">
+	
+	
+			<script type="text/javascript">var _kiq = _kiq || [];</script>
+			<script type="text/javascript" src="//s3.amazonaws.com/ki.js/39160/a2q.js" async="true"></script>
+		
+
+	<form method="post" action="/nl-nl/blogs/2013/maart/building-windows-services-with-c-and-topshelf" id="mainform" novalidate="novalidate">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTgyNjIzODQyNGQYHgUuY3RsMDckY3RsMDAkTGlzdFZpZXdHcm91cHMkY3RybDIkTGlzdFZpZXdJdGVtcw8UKwAOZGRkZGRkZDwrAAgAAghkZGRmAv////8PZAUuY3RsMDckY3RsMDAkTGlzdFZpZXdHcm91cHMkY3RybDEkTGlzdFZpZXdJdGVtcw8UKwAOZGRkZGRkZDwrAAgAAghkZGRmAv////8PZAUuY3RsMDckY3RsMDAkTGlzdFZpZXdHcm91cHMkY3RybDgkTGlzdFZpZXdJdGVtcw8UKwAOZGRkZGRkZDwrAAQAAgRkZGRmAv////8PZAVBY3RsMDQkTWFpbk1lbnUxJE1lbnVMaXN0VmlldyRjdHJsMSRCcmFuY2hMaXN0VmlldyRjdHJsMCRMaXN0VmlldzEPFCsADmRkZGRkZGQ8KwAHAAIHZGRkZgL/////D2QFQWN0bDA0JE1haW5NZW51MSRNZW51TGlzdFZpZXckY3RybDEkQnJhbmNoTGlzdFZpZXckY3RybDIkTGlzdFZpZXcxDxQrAA5kZGRkZGRkPCsABwACB2RkZGYC/////w9kBShjdGwwNSRMYW5ndWFnZVN3aXRjaGVyJExhbmd1YWdlc0xpc3RWaWV3D2dkBRJjdGwwNSRNZW51TGlzdFZpZXcPFCsADmRkZGRkZGQ8KwAEAAIEZGRkZgL/////D2QFQWN0bDA0JE1haW5NZW51MSRNZW51TGlzdFZpZXckY3RybDEkQnJhbmNoTGlzdFZpZXckY3RybDEkTGlzdFZpZXcxDxQrAA5kZGRkZGRkFCsAAmRkAgJkZGRmAv////8PZAUuY3RsMDckY3RsMDAkTGlzdFZpZXdHcm91cHMkY3RybDAkTGlzdFZpZXdJdGVtcw8UKwAOZGRkZGRkZDwrAAcAAgdkZGRmAv////8PZAUuY3RsMDckY3RsMDAkTGlzdFZpZXdHcm91cHMkY3RybDckTGlzdFZpZXdJdGVtcw8UKwAOZGRkZGRkZBQrAANkZGQCA2RkZGYC/////w9kBRpjdGwwNyRjdGwwMCRMaXN0Vmlld0dyb3Vwcw8UKwAOZGRkZGRkZDwrAAkAAglkZGRmAv////8PZAVBY3RsMDQkTWFpbk1lbnUxJE1lbnVMaXN0VmlldyRjdHJsMCRCcmFuY2hMaXN0VmlldyRjdHJsMiRMaXN0VmlldzEPFCsADmRkZGRkZGQ8KwAIAAIIZGRkZgL/////D2QFInBsYWNlaG9sZGVybWFpbl8wJFJlYWN0aWVzTGlzdFZpZXcPPCsADgMIZgxmDQL/////D2QFQWN0bDA0JE1haW5NZW51MSRNZW51TGlzdFZpZXckY3RybDAkQnJhbmNoTGlzdFZpZXckY3RybDMkTGlzdFZpZXcxDxQrAA5kZGRkZGRkPCsABwACB2RkZGYC/////w9kBS5jdGwwNyRjdGwwMCRMaXN0Vmlld0dyb3VwcyRjdHJsNSRMaXN0Vmlld0l0ZW1zDxQrAA5kZGRkZGRkFCsAAmRkAgJkZGRmAv////8PZAU1cGxhY2Vob2xkZXJtYWluXzAkY3RsMDgkR2VyZWxhdGVlcmRlQmxvZ3Bvc3RzTGlzdFZpZXcPPCsADgMIZgxmDQL/////D2QFMWN0bDA0JE1haW5NZW51MSRNZW51TGlzdFZpZXckY3RybDEkQnJhbmNoTGlzdFZpZXcPFCsADmRkZGRkZGQ8KwAEAAIEZGRkZgL/////D2QFMWN0bDA0JE1haW5NZW51MSRNZW51TGlzdFZpZXckY3RybDAkQnJhbmNoTGlzdFZpZXcPFCsADmRkZGRkZGQ8KwAEAAIEZGRkZgL/////D2QFJ3BsYWNlaG9sZGVybWFpbl8wJENhdGVnb3JpZUxpbmtMaXN0Vmlldw8UKwAOZGRkZGRkZDwrAA4AAg5kZGRmAv////8PZAUhcGxhY2Vob2xkZXJtYWluXzAkVGFnTGlua0xpc3RWaWV3DxQrAA5kZGRkZGRkFCsAAWQCAWRkZGYC/////w9kBUFjdGwwNCRNYWluTWVudTEkTWVudUxpc3RWaWV3JGN0cmwwJEJyYW5jaExpc3RWaWV3JGN0cmwwJExpc3RWaWV3MQ8UKwAOZGRkZGRkZDwrAAcAAgdkZGRmAv////8PZAVBY3RsMDQkTWFpbk1lbnUxJE1lbnVMaXN0VmlldyRjdHJsMSRCcmFuY2hMaXN0VmlldyRjdHJsMyRMaXN0VmlldzEPFCsADmRkZGRkZGQUKwADZGRkAgNkZGRmAv////8PZAVBY3RsMDQkTWFpbk1lbnUxJE1lbnVMaXN0VmlldyRjdHJsMCRCcmFuY2hMaXN0VmlldyRjdHJsMSRMaXN0VmlldzEPFCsADmRkZGRkZGQ8KwAIAAIIZGRkZgL/////D2QFEmN0bDEwJE1lbnVMaXN0Vmlldw8UKwAOZGRkZGRkZBQrAANkZGQCA2RkZGYC/////w9kBRxjdGwwNCRNYWluTWVudTEkTWVudUxpc3RWaWV3DxQrAA5kZGRkZGRkFCsAAmRkAgJkZGRmAv////8PZAUgcGxhY2Vob2xkZXJtYWluXzAkVmlkZW9zTGlzdFZpZXcPPCsADgMIZgxmDQL/////D2QFLmN0bDA3JGN0bDAwJExpc3RWaWV3R3JvdXBzJGN0cmw0JExpc3RWaWV3SXRlbXMPFCsADmRkZGRkZGQ8KwAHAAIHZGRkZgL/////D2QFKGN0bDEwJExhbmd1YWdlU3dpdGNoZXIkTGFuZ3VhZ2VzTGlzdFZpZXcPZ2QFLmN0bDA3JGN0bDAwJExpc3RWaWV3R3JvdXBzJGN0cmwzJExpc3RWaWV3SXRlbXMPFCsADmRkZGRkZGQ8KwAHAAIHZGRkZgL/////D2QFLmN0bDA3JGN0bDAwJExpc3RWaWV3R3JvdXBzJGN0cmw2JExpc3RWaWV3SXRlbXMPFCsADmRkZGRkZGQ8KwAHAAIHZGRkZgL/////D2TfjXUKXV8EUY935A0XNCP1b30rvFiXEKdJ5IlAqZrffA==" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBwL9wdmgCQKq/6eADQL26+aQDgKsz/SjBgLGhpTkCgL5o62sDgK49rTUB7KJTcoYa1rWudG88UaYr5ZI9FQn2aNyHQVLTmI1jloS" />
+</div>
+		
+		
+
+		<header id="head">
+			<div class="border"></div>
+			<div class="container">
+				<div class="wrapper">
+					<h1><a href="/">Ordina</a></h1>
+					<nav class="main">
+						<ul>
+							
+									
+		
+		<li>
+			<a class="noLink"><span class="ico arrow-d"></span>Diensten en Oplossingen</a>
+			
+					<div class="submenu br4bottom">
+						
+					<ul class="col span_3">
+						<li><span>Business oplossingen</span></li>
+						
+								
+								<li><a href='/nl-nl/diensten-en-oplossingen/business-oplossingen/performance-management-en-bi/'>Performance management &amp; BI</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/business-oplossingen/customer-experience-en-innovation/'>Customer experience &amp; innovation</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/business-oplossingen/finance-en-risk/'>Finance &amp; risk</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/business-oplossingen/leiderschap-organisatie-en-cultuur/'>Leiderschap organisatie &amp; cultuur</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/business-oplossingen/duurzaamheid/'>Duurzame dienstverlening</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/business-oplossingen/business-architectuur/'>Business architectuur</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/business-oplossingen/zorg/'>Zorg</a></li>
+							
+							
+					</ul>
+				
+					<ul class="col span_3">
+						<li><span>IT oplossingen</span></li>
+						
+								
+								<li><a href='/nl-nl/diensten-en-oplossingen/it-oplossingen/applicatie-integratie-en-middleware/'>Applicatie-integratie &amp; middleware</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/it-oplossingen/requirements-testing-en-user-adoption/'>Requirements, testing &amp; user adoption</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/it-oplossingen/vernieuwing-van-ict/'>Vernieuwing van ICT</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/it-oplossingen/beheer-hosting-en-outsourcing/'>Beheer, hosting &amp; outsourcing</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/it-oplossingen/infrastructuur/'>Infrastructuur</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/it-oplossingen/pakketimplementatie/'>Pakketimplementatie</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/it-oplossingen/grip-op-ict/'>Grip op ICT</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/it-oplossingen/software-ontwikkeling/'>Softwareontwikkeling</a></li>
+							
+							
+					</ul>
+				
+					<ul class="col span_3">
+						<li><span>Technologie&#235;n</span></li>
+						
+								
+								<li><a href='/nl-nl/diensten-en-oplossingen/technologieen/microsoft/'>Microsoft</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/technologieen/oracle/'>Oracle</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/technologieen/java/'>Java</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/technologieen/ibm/'>IBM</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/technologieen/sap/'>SAP</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/technologieen/salesforce/'>Salesforce</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/technologieen/proven-technologies/'>Proven technologies</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/technologieen/tibco-en-open-source/'>TIBCO en open source</a></li>
+							
+							
+					</ul>
+				
+					<ul class="col span_3">
+						<li><span>Thema&#39;s</span></li>
+						
+								
+								<li><a href='/nl-nl/diensten-en-oplossingen/themas/big-data/'>Big data</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/themas/cloud/'>Cloud</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/themas/mobile/'>Mobile</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/themas/security/'>Security</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/themas/smartsourcing/'>SmartSourcing</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/themas/social-media/'>Social media</a></li>
+							
+								<li><a href='/nl-nl/diensten-en-oplossingen/themas/ucc/'>Unified Communications &amp; Collaboration</a></li>
+							
+							
+					</ul>
+				
+					</div>
+				
+		</li>
+	
+		<li>
+			<a class="noLink"><span class="ico arrow-d"></span>Markten</a>
+			
+					<div class="submenu br4bottom">
+						
+					<ul class="col span_3">
+						<li><span>Industrie</span></li>
+						
+								
+								<li><a href='/nl-nl/markten/industrie/carriers-en-mainports/'>Carriers &amp; Mainports</a></li>
+							
+								<li><a href='/nl-nl/markten/industrie/chemicals/'>Chemicals</a></li>
+							
+								<li><a href='/nl-nl/markten/industrie/energy-en-utilities/'>Energy &amp; Utilities</a></li>
+							
+								<li><a href='/nl-nl/markten/industrie/food-en-beverage/'>Food &amp; Beverage</a></li>
+							
+								<li><a href='/nl-nl/markten/industrie/high-technology/'>High Technology</a></li>
+							
+								<li><a href='/nl-nl/markten/industrie/pharmaceuticals/'>Pharmaceuticals</a></li>
+							
+								<li><a href='/nl-nl/markten/industrie/telecom-en-media/'>Telecom &amp; media</a></li>
+							
+							
+					</ul>
+				
+					<ul class="col span_3">
+						<li><span>Financi&#235;le dienstverlening</span></li>
+						
+								
+								<li><a href='/nl-nl/markten/financiele-dienstverlening/banken/'>Banken</a></li>
+							
+								<li><a href='/nl-nl/markten/financiele-dienstverlening/pensioenen-en-verzekeren/'>Pensioenen en Verzekeren</a></li>
+							
+							
+					</ul>
+				
+					<ul class="col span_3">
+						<li><span>Overheid</span></li>
+						
+								
+								<li><a href='/nl-nl/markten/overheid/binnenlands-bestuur/'>Binnenlands Bestuur</a></li>
+							
+								<li><a href='/nl-nl/markten/overheid/economische-zaken/'>Ministerie van Economische Zaken</a></li>
+							
+								<li><a href='/nl-nl/markten/overheid/infrastructuur-en-milieu/'>Ministerie van Infrastructuur &amp; Milieu</a></li>
+							
+								<li><a href='/nl-nl/markten/overheid/lokale-overheid/'>Lokale Overheid</a></li>
+							
+								<li><a href='/nl-nl/markten/overheid/onderwijs/'>Onderwijs</a></li>
+							
+								<li><a href='/nl-nl/markten/overheid/openbare-orde-en-veiligheid/'>Openbare Orde en Veiligheid</a></li>
+							
+								<li><a href='/nl-nl/markten/overheid/werk-en-inkomen/'>Werk en Inkomen</a></li>
+							
+							
+					</ul>
+				
+					<ul class="col span_3">
+						<li><span>Zorg</span></li>
+						
+								
+								<li><a href='/nl-nl/markten/zorg/volksgezondheid-en-welzijn/'>Volksgezondheid, Welzijn en Sport</a></li>
+							
+								<li><a href='/nl-nl/markten/zorg/zorgaanbieders/'>Zorgaanbieders</a></li>
+							
+								<li><a href='/nl-nl/markten/zorg/zorgverzekeraars/'>Zorgverzekeraars</a></li>
+							
+							
+					</ul>
+				
+					</div>
+				
+		</li>
+	
+	
+								
+						</ul>
+					</nav>
+
+					
+
+<nav class="meta">
+	<ul>
+		
+				
+				<li>
+					
+							<a href="/nl-nl/zoekresultaten/?q=&amp;page=0&amp;sort=1&amp;t=532480">Blog</a>
+						
+					
+							<span class='sep'>|</span>
+						
+				</li>
+			
+				<li>
+					
+							<a target="_blank" href="http://www.werkenbijordina.nl/nl-nl/">Werken bij</a>
+						
+					
+							<span class='sep'>|</span>
+						
+				</li>
+			
+				<li>
+					
+							<a target="_blank" href="http://www.ordina.com/nl-nl/">Over Ordina</a>
+						
+					
+							<span class='sep'>|</span>
+						
+				</li>
+			
+				<li>
+					
+							<a href="/nl-nl/locaties/">Locaties</a>
+						
+					
+				</li>
+			
+			
+	</ul>
+
+	
+</nav>
+
+
+					
+							<div id="ctl06_ZoekBox1_ZoekPanel" class="search">
+	
+	<input name="ctl06$ZoekBox1$ZoekTekst" type="text" id="ctl06_ZoekBox1_ZoekTekst" data-watermarktext="Zoek binnen Ordina..." />
+	<input type="submit" name="ctl06$ZoekBox1$ZoekBoxButton" value="" id="ctl06_ZoekBox1_ZoekBoxButton" />
+
+</div>
+
+						
+
+					
+							
+		<div id="mobilemenu">
+			<select name="page" onChange="top.location.href = this.options[this.selectedIndex].value; return false;">
+				<option>Navigatie</option>
+				
+		<optgroup label="Business oplossingen">
+			
+					<option value="/nl-nl/diensten-en-oplossingen/business-oplossingen/performance-management-en-bi/">Performance management &amp; BI</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/business-oplossingen/customer-experience-en-innovation/">Customer experience &amp; innovation</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/business-oplossingen/finance-en-risk/">Finance &amp; risk</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/business-oplossingen/leiderschap-organisatie-en-cultuur/">Leiderschap organisatie &amp; cultuur</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/business-oplossingen/duurzaamheid/">Duurzame dienstverlening</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/business-oplossingen/business-architectuur/">Business architectuur</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/business-oplossingen/zorg/">Zorg</option>
+				
+		</optgroup>
+	
+		<optgroup label="IT oplossingen">
+			
+					<option value="/nl-nl/diensten-en-oplossingen/it-oplossingen/applicatie-integratie-en-middleware/">Applicatie-integratie &amp; middleware</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/it-oplossingen/requirements-testing-en-user-adoption/">Requirements, testing &amp; user adoption</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/it-oplossingen/vernieuwing-van-ict/">Vernieuwing van ICT</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/it-oplossingen/beheer-hosting-en-outsourcing/">Beheer, hosting &amp; outsourcing</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/it-oplossingen/infrastructuur/">Infrastructuur</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/it-oplossingen/pakketimplementatie/">Pakketimplementatie</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/it-oplossingen/grip-op-ict/">Grip op ICT</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/it-oplossingen/software-ontwikkeling/">Softwareontwikkeling</option>
+				
+		</optgroup>
+	
+		<optgroup label="Technologie&#235;n">
+			
+					<option value="/nl-nl/diensten-en-oplossingen/technologieen/microsoft/">Microsoft</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/technologieen/oracle/">Oracle</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/technologieen/java/">Java</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/technologieen/ibm/">IBM</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/technologieen/sap/">SAP</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/technologieen/salesforce/">Salesforce</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/technologieen/proven-technologies/">Proven technologies</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/technologieen/tibco-en-open-source/">TIBCO en open source</option>
+				
+		</optgroup>
+	
+		<optgroup label="Thema&#39;s">
+			
+					<option value="/nl-nl/diensten-en-oplossingen/themas/big-data/">Big data</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/themas/cloud/">Cloud</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/themas/mobile/">Mobile</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/themas/security/">Security</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/themas/smartsourcing/">SmartSourcing</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/themas/social-media/">Social media</option>
+				
+					<option value="/nl-nl/diensten-en-oplossingen/themas/ucc/">Unified Communications &amp; Collaboration</option>
+				
+		</optgroup>
+	
+		<optgroup label="Industrie">
+			
+					<option value="/nl-nl/markten/industrie/carriers-en-mainports/">Carriers &amp; Mainports</option>
+				
+					<option value="/nl-nl/markten/industrie/chemicals/">Chemicals</option>
+				
+					<option value="/nl-nl/markten/industrie/energy-en-utilities/">Energy &amp; Utilities</option>
+				
+					<option value="/nl-nl/markten/industrie/food-en-beverage/">Food &amp; Beverage</option>
+				
+					<option value="/nl-nl/markten/industrie/high-technology/">High Technology</option>
+				
+					<option value="/nl-nl/markten/industrie/pharmaceuticals/">Pharmaceuticals</option>
+				
+					<option value="/nl-nl/markten/industrie/telecom-en-media/">Telecom &amp; media</option>
+				
+		</optgroup>
+	
+		<optgroup label="Financi&#235;le dienstverlening">
+			
+					<option value="/nl-nl/markten/financiele-dienstverlening/banken/">Banken</option>
+				
+					<option value="/nl-nl/markten/financiele-dienstverlening/pensioenen-en-verzekeren/">Pensioenen en Verzekeren</option>
+				
+		</optgroup>
+	
+		<optgroup label="Overheid">
+			
+					<option value="/nl-nl/markten/overheid/binnenlands-bestuur/">Binnenlands Bestuur</option>
+				
+					<option value="/nl-nl/markten/overheid/economische-zaken/">Ministerie van Economische Zaken</option>
+				
+					<option value="/nl-nl/markten/overheid/infrastructuur-en-milieu/">Ministerie van Infrastructuur &amp; Milieu</option>
+				
+					<option value="/nl-nl/markten/overheid/lokale-overheid/">Lokale Overheid</option>
+				
+					<option value="/nl-nl/markten/overheid/onderwijs/">Onderwijs</option>
+				
+					<option value="/nl-nl/markten/overheid/openbare-orde-en-veiligheid/">Openbare Orde en Veiligheid</option>
+				
+					<option value="/nl-nl/markten/overheid/werk-en-inkomen/">Werk en Inkomen</option>
+				
+		</optgroup>
+	
+		<optgroup label="Zorg">
+			
+					<option value="/nl-nl/markten/zorg/volksgezondheid-en-welzijn/">Volksgezondheid, Welzijn en Sport</option>
+				
+					<option value="/nl-nl/markten/zorg/zorgaanbieders/">Zorgaanbieders</option>
+				
+					<option value="/nl-nl/markten/zorg/zorgverzekeraars/">Zorgverzekeraars</option>
+				
+		</optgroup>
+	
+		<optgroup label="Overige informatie">
+			
+					<option value="/nl-nl/zoekresultaten/?q=&page=0&sort=1&t=532480">Blog</option>
+				
+					<option value="http://www.werkenbijordina.nl/nl-nl/">Werken bij</option>
+				
+					<option value="http://www.ordina.com/nl-nl/">Over Ordina</option>
+				
+					<option value="/nl-nl/locaties/">Locaties</option>
+				
+		</optgroup>
+	
+			</select>
+		</div>
+	
+
+
+						
+					
+				</div>
+			</div>
+		</header>
+
+		
+
+		
+
+<div id="page_wrap">
+
+	<div id="plainTop">
+		<div class="container">
+			<section class="wrapper">
+				<header>
+					<h1><strong class="highlight">ORDINA</strong> BLOGT</h1>
+					
+
+<ul class="breadcrumb">
+	<li class=""><a href="/nl-nl/">Ordina</a></li>
+	<li class="">&gt; Blogs</li>
+	<li class="">&gt; 2013</li>
+	<li class="">&gt; maart</li>
+	<li class="active">&gt; Building Windows Services with C# and Topshelf</li>
+</ul>
+
+				</header>
+			</section>
+		</div>
+	</div>
+
+	<section id="content_page" class="has_sidebar">
+		<div class="container">
+			<div class="wrapper">
+				<div class="content">
+					<article>
+						<span class="meta_date">Edo van Asseldonk, 6 maart 2013</span>
+						<header>
+							<h1>Building Windows Services with C# and Topshelf</h1>
+						</header>
+
+						<p><strong>The quickstart on the Topshelf site is only showing the real basics of getting a Windows Service up and running. </strong></p>
+						<div class="wysiwyg">
+							<p><a href="http://docs.topshelf-project.com/en/latest/configuration/quickstart.html" target="_blank">quickstart</a> </p>
+<p>There are a couple of importants details not touched, that I will write about in this blog.</p>
+<p>Create a new Solution with the Console Application Template. Because Topshelf is doing the plumbing, we don't need to use the Windows Service template anymore.</p>
+<p><img width="400" height="276" alt="002" src="/~/media/Images/OrdinaNl/Blogs/Topshelf 01.png" /></p>
+<p>&nbsp;<br />
+If you're using Visual Studio 2010, don't forget to turn off Client Profile</p>
+<p>When the solution is created it will look like this:</p>
+<p>&nbsp;using System;<br />
+&nbsp;using System.Collections.Generic;<br />
+&nbsp;using System.Linq;<br />
+&nbsp;using System.Text;<br />
+&nbsp;using System.Threading.Tasks;<br />
+&nbsp;<br />
+namespace XmplWindowsService<br />
+&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp; class Program<br />
+&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; static void Main(string[] args)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;}<br />
+&nbsp;</p>
+<p>The Main method is the entrypoint of the Windows Service. This is where we will setup Topshelf. But before we do that, we have to create a class that will do the actual work that will be done inside the Windows Service. So let's create a new class:<br />
+&nbsp;<br />
+public class MyService<br />
+&nbsp;<br />
+{<br />
+&nbsp;<br />
+}<br />
+&nbsp;</p>
+<p>This class must have a Start() and a Stop() method:<br />
+&nbsp;</p>
+<p>public class MyService<br />
+&nbsp;<br />
+{<br />
+&nbsp;<br />
+&nbsp;&nbsp; public void Start()<br />
+&nbsp;<br />
+&nbsp;&nbsp; {<br />
+&nbsp;<br />
+&nbsp;&nbsp; }</p>
+<p>&nbsp;&nbsp; public void Stop()<br />
+&nbsp;<br />
+&nbsp;&nbsp; {<br />
+&nbsp;<br />
+&nbsp;&nbsp; }<br />
+&nbsp;}<br />
+&nbsp;</p>
+<p>This is what we have so far:</p>
+<p>&nbsp;<br />
+using System;<br />
+&nbsp;using System.Collections.Generic;<br />
+&nbsp;using System.Linq;<br />
+&nbsp;using System.Text;<br />
+&nbsp;using System.Threading.Tasks;<br />
+&nbsp;</p>
+<p>namespace XmplWindowsService<br />
+&nbsp;<br />
+{<br />
+&nbsp;&nbsp;&nbsp;&nbsp; class Program<br />
+&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; static void Main(string[] args)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; }</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public class MyService<br />
+&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public void Start()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public void Stop()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;}<br />
+&nbsp;</p>
+<p>Now we can install Topshelf into the project:</p>
+<p><img width="400" height="225" alt="004" src="/~/media/Images/OrdinaNl/Blogs/Topshelf.png" /></p>
+<p>&nbsp;</p>
+<p>Let's setup Topshelf inside the Main method of the Console Application:&nbsp;</p>
+<p>static void Main(string[] args)<br />
+&nbsp;{<br />
+&nbsp;&nbsp;&nbsp; HostFactory.Run(hostConfigurator =&gt;<br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hostConfigurator.Service&lt;MyService&gt;(serviceConfigurator =&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; serviceConfigurator.ConstructUsing(() =&gt; new MyService());<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; serviceConfigurator.WhenStarted(myService =&gt; myService.Start());<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; serviceConfigurator.WhenStopped(myService =&gt; myService.Stop());<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br />
+&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hostConfigurator.RunAsLocalSystem();<br />
+&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hostConfigurator.SetDisplayName("MyService");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hostConfigurator.SetDescription("MyService using Topshelf");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hostConfigurator.SetServiceName("MyService");<br />
+&nbsp;&nbsp;&nbsp; });<br />
+&nbsp;}<br />
+&nbsp;</p>
+<p>When we run the application, we will see this:&nbsp;</p>
+<p>Configuration Result:<br />
+&nbsp;[Success] Name MyService<br />
+&nbsp;[Success] Description MyService using Topshelf<br />
+&nbsp;[Success] ServiceName MyService<br />
+Topshelf v3.1.106.0, .NET Framework v4.0.30319.18033<br />
+The MyService service is now running, press Control+C to exit.</p>
+<p>It shows us its name, description and servicename, just like we configured. We can see the version numbers, and the last line tells us how the stop the Windows Service, when debugging or when it's running as console application. Offcourse we can't press Control+C to stop it when it's running as a Windows Service.</p>
+<p>Now the MyService class isn't doing anything just yet. So now it's time to give MyService some work to do. Let's for example write something to screen every second:</p>
+<p>public class MyService<br />
+&nbsp;{<br />
+&nbsp;&nbsp;&nbsp; public void Start()<br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while (true)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine("I am working");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Threading.Thread.Sleep(1000);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;<br />
+&nbsp;&nbsp; public void Stop()<br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;}</p>
+<p>When we start the app we will see it write "I am working" to the screen every second. However, when we press Control+C the application will not stop. Topshelf will try to stop MyService, but won't succeed since MyService is in a never ending while-loop.</p>
+<p>So we have to have a signal to let the loop know when to stop. Therefore we add a boolean named doWork, and set it to true when we start the loop. The doWork boolean will be set to false when we press Control+C and Topshelf calls the Stop() method.</p>
+<p>public class MyService<br />
+&nbsp;{<br />
+&nbsp;&nbsp;&nbsp; private bool _doWork;<br />
+&nbsp;<br />
+&nbsp;&nbsp; public void Start()<br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _doWork = true;<br />
+&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while (_doWork)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine("I am working");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Threading.Thread.Sleep(1000);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;<br />
+&nbsp;&nbsp; public void Stop()<br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _doWork = false;<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;}</p>
+<p>When we start the debugger and press Control+C, the application will quit as it should.</p>
+<p>Unfortunately the code is still nog perfect. Remember when we first started the application where MyService did nothing and Topshelf wrote this to the console:</p>
+<p>Configuration Result:<br />
+[Success] Name MyService<br />
+[Success] Description MyService using Topshelf<br />
+[Success] ServiceName MyService<br />
+Topshelf v3.1.106.0, .NET Framework v4.0.30319.18033<br />
+The MyService service is now running, press Control+C to exit.</p>
+<p>Now that MyService is running in a while loop, the last line is not printed anymore. Well actually it is printed after we stopped the service.</p>
+<p>Configuration Result:<br />
+&nbsp;[Success] Name MyService<br />
+&nbsp;[Success] Description MyService using Topshelf<br />
+&nbsp;[Success] ServiceName MyService<br />
+&nbsp;Topshelf v3.1.106.0, .NET Framework v4.0.30319.18033<br />
+&nbsp;I am working<br />
+&nbsp;I am working<br />
+&nbsp;I am working<br />
+&nbsp;Control+C detected, attempting to stop service.<br />
+&nbsp;The MyService service is now running, press Control+C to exit.<br />
+&nbsp;The MyService service has stopped.<br />
+&nbsp;<br />
+The message that the service is running, is printed after the Start() method of MyService returns, but that only happens when we stop the service. If we would use a Timer to do something every second it wouldn't be a problem, because a Timer is doing it's work asynchronously. And when we read messages from a queue async it wouldn't be a problem either. But I think it's good to show how we can make the Start() method in this example return immediately too.</p>
+<h4>System.Threading.Tasks</h4>
+<p>We are going to use the System.Threading.Tasks namespace to make MyService execute asynchronous work.<br />
+&nbsp;<br />
+First let's move the content of the Start() method, to another method called DoWork():<br />
+&nbsp;<br />
+private void DoWork()<br />
+&nbsp;<br />
+{<br />
+&nbsp;&nbsp;&nbsp; _doWork = true;<br />
+&nbsp;<br />
+&nbsp;&nbsp; while (_doWork)<br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine("I am working");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Threading.Thread.Sleep(1000);<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;}</p>
+<p>we are going to call the DoWork() method with a Task. Let's create this task in the constructor of MyService:<br />
+&nbsp;</p>
+<p>public class MyService<br />
+&nbsp;{<br />
+&nbsp;&nbsp;&nbsp; bool _doWork;<br />
+&nbsp;&nbsp;&nbsp; readonly Task _task;<br />
+&nbsp;<br />
+&nbsp;&nbsp; public MyService()<br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _task = new Task(DoWork);<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;<br />
+&nbsp;&nbsp; ...<br />
+&nbsp;} </p>
+<p>Now we can start this Task from the Start() method of MyService:</p>
+<p>public void Start()<br />
+&nbsp;{<br />
+&nbsp;&nbsp;&nbsp; _task.Start();<br />
+&nbsp;}<br />
+&nbsp;</p>
+<p>This is what MyService looks like now:</p>
+<p>&nbsp;public class MyService<br />
+&nbsp;{<br />
+&nbsp;&nbsp;&nbsp; bool _doWork;<br />
+&nbsp;&nbsp;&nbsp; readonly Task _task;<br />
+&nbsp;<br />
+&nbsp;&nbsp; public MyService()<br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _task = new Task(DoWork);<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;<br />
+&nbsp;&nbsp; public void Start()<br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _task.Start();<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;<br />
+&nbsp;&nbsp; public void Stop()<br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _doWork = false;<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;<br />
+&nbsp;&nbsp; private void DoWork()<br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _doWork = true;<br />
+&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while (_doWork)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine("I am working");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Threading.Thread.Sleep(1000);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;}<br />
+&nbsp;</p>
+<p>When we run the application, we will see this:&nbsp;</p>
+<p>Configuration Result:<br />
+&nbsp;[Success] Name MyService<br />
+&nbsp;[Success] Description MyService using Topshelf<br />
+&nbsp;[Success] ServiceName MyService<br />
+&nbsp;Topshelf v3.1.106.0, .NET Framework v4.0.30319.18033<br />
+&nbsp;The MyService service is now running, press Control+C to exit.<br />
+&nbsp;I am working<br />
+&nbsp;I am working<br />
+&nbsp;<br />
+Exactly what we want. The message that MyService is running is coming first, and then the "<em>I am working</em>" messages are written.<br />
+&nbsp;<br />
+But it's still not completely right. Let me tell you why.&nbsp;</p>
+<h4>Quit before work is finished</h4>
+<p>The problem that we have now is that the Windows Service will quit if you press Control+C, but it doesn't take into account any work in progress. This can be demoed quite easily.<br />
+&nbsp;<br />
+Add some more work to the DoWork() method:</p>
+<p>private void DoWork()<br />
+&nbsp;{<br />
+&nbsp;&nbsp;&nbsp; _doWork = true;<br />
+&nbsp;<br />
+&nbsp;&nbsp; while (_doWork)<br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("I am working");<br />
+&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine("&nbsp;&nbsp; Step 1");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.Threading.Thread.Sleep(1000);<br />
+&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine("&nbsp;&nbsp; Step 2");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.Threading.Thread.Sleep(1000);<br />
+&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine("&nbsp;&nbsp; Step 3");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.Threading.Thread.Sleep(1000);<br />
+&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine("&nbsp;&nbsp; Step 4");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Threading.Thread.Sleep(1000);<br />
+&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine("&nbsp;&nbsp; Step 5");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Threading.Thread.Sleep(1000);<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;}<br />
+&nbsp;<br />
+If we run the application, and then press Control+C after step one, we can get output like this:<br />
+&nbsp;<br />
+Configuration Result:<br />
+&nbsp;<br />
+[Success] Name MyService<br />
+&nbsp;[Success] Description MyService using Topshelf<br />
+&nbsp;[Success] ServiceName MyService<br />
+&nbsp;Topshelf v3.1.106.0, .NET Framework v4.0.30319.18033<br />
+&nbsp;</p>
+<p>The MyService service is now running, press Control+C to exit.<br />
+&nbsp;I am working<br />
+&nbsp;&nbsp; Step 1<br />
+&nbsp;&nbsp; Step 2<br />
+&nbsp;&nbsp; Step 3<br />
+&nbsp;&nbsp; Step 4<br />
+&nbsp;&nbsp; Step 5<br />
+&nbsp;I am working<br />
+&nbsp;&nbsp; Step 1<br />
+&nbsp;Control+C detected, attempting to stop service.<br />
+&nbsp;The MyService service has stopped.</p>
+<p>The yellow marked lines are important. You can see that step 2, 3, 4 and 5 are not written, because the Service has stopped. However, I only want the service to be stopped when step 5 is finished. The best way to do this is remove the _doWork boolean, and use a Cancellationtoken.<br />
+&nbsp;<br />
+Let's switch back to the constructor of MyService, and create a CancellationToken that we can use in the Task:<br />
+&nbsp;<br />
+public class MyService<br />
+&nbsp;{<br />
+&nbsp;&nbsp;&nbsp; readonly CancellationTokenSource _cancellationTokenSource;<br />
+&nbsp;&nbsp;&nbsp; readonly CancellationToken _cancellationToken;<br />
+&nbsp;&nbsp;&nbsp; readonly Task _task;<br />
+&nbsp;<br />
+&nbsp;&nbsp; public MyService()<br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _cancellationTokenSource = new CancellationTokenSource();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _cancellationToken = _cancellationTokenSource.Token;<br />
+&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _task = new Task(DoWork, _cancellationToken);<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;<br />
+&nbsp;&nbsp; ...<br />
+&nbsp;}<br />
+&nbsp;</p>
+<p>Now we can use the CancellationTokenSource in the DoWork() method:<br />
+&nbsp;<br />
+private void DoWork()<br />
+&nbsp;<br />
+{<br />
+&nbsp;<br />
+&nbsp;&nbsp; while (!_cancellationTokenSource.IsCancellationRequested)<br />
+&nbsp;<br />
+&nbsp;&nbsp; {<br />
+&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine("I am working");<br />
+&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine("&nbsp;&nbsp; Step 1");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Threading.Thread.Sleep(1000);<br />
+&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine("&nbsp;&nbsp; Step 2");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Threading.Thread.Sleep(1000);<br />
+&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine("&nbsp;&nbsp; Step 3");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Threading.Thread.Sleep(1000);<br />
+&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine("&nbsp;&nbsp; Step 4");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Threading.Thread.Sleep(1000);<br />
+&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine("&nbsp;&nbsp; Step 5");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Threading.Thread.Sleep(1000);<br />
+&nbsp;<br />
+&nbsp;&nbsp; }<br />
+&nbsp;<br />
+}<br />
+&nbsp;<br />
+And we can cancel the Task in the Stop() method:</p>
+<p>public void Stop()<br />
+&nbsp;<br />
+{<br />
+&nbsp;<br />
+&nbsp;&nbsp; _cancellationTokenSource.Cancel();<br />
+&nbsp;<br />
+&nbsp;&nbsp; _task.Wait();<br />
+&nbsp;<br />
+}<br />
+&nbsp;</p>
+<p>If we run the application, and then press Control+C after step one, we get exactly what we want:<br />
+&nbsp;</p>
+<p>Configuration Result:<br />
+&nbsp;<br />
+[Success] Name MyService<br />
+&nbsp;<br />
+[Success] Description MyService using Topshelf<br />
+&nbsp;<br />
+[Success] ServiceName MyService<br />
+&nbsp;<br />
+Topshelf v3.1.106.0, .NET Framework v4.0.30319.18033<br />
+&nbsp;<br />
+The MyService service is now running, press Control+C to exit.<br />
+&nbsp;</p>
+<p>I am working<br />
+&nbsp;<br />
+&nbsp; Step 1<br />
+&nbsp;<br />
+&nbsp; Step 2<br />
+&nbsp;<br />
+&nbsp; Step 3<br />
+&nbsp;<br />
+&nbsp; Step 4<br />
+&nbsp;<br />
+&nbsp; Step 5<br />
+&nbsp;<br />
+I am working<br />
+&nbsp;<br />
+&nbsp; Step 1<br />
+&nbsp;<br />
+Control+C detected, attempting to stop service.<br />
+&nbsp;<br />
+&nbsp; Step 2<br />
+&nbsp;<br />
+&nbsp; Step 3<br />
+&nbsp;<br />
+&nbsp; Step 4<br />
+&nbsp;<br />
+&nbsp; Step 5<br />
+&nbsp;<br />
+The MyService service has stopped.<br />
+&nbsp;</p>
+<h4>Conclusion</h4>
+<p>In this blog I've shown how easy it is to create a Windows Service in C# and the Topshelf nuget package. I've also shown how you can use a Task to start an asynchronous proces to do some work, and how the task can be stopped in a clean way, without leaving partial executed work behind.</p>
+						</div> 
+
+						
+
+						
+
+<div class="share_this">
+	<header id="placeholdermain_0_ctl06_TitleHeader">
+		<h3>Deel deze post</h3>
+	</header>
+
+	<ul>
+		<li><a href="http://www.facebook.com/share.php?u=http%3a%2f%2fwww.ordina.nl%2fnl-nl%2fblogs%2f2013%2fmaart%2fbuilding-windows-services-with-c-and-topshelf&amp;t=Building+Windows+Services+with+C%23+and+Topshelf" target="_blank" onclick="_gaq.push(['_trackSocial', 'FaceBook', 'Send', document.location ,'/blog/Building Windows Services with C# and Topshelf']);">
+			<span class="ico small facebook"></span>Share</a></li>
+		<li><a href="http://twitter.com/home?status=Building+Windows+Services+with+C%23+and+Topshelf%20-%20http%3a%2f%2fwww.ordina.nl%2fnl-nl%2fblogs%2f2013%2fmaart%2fbuilding-windows-services-with-c-and-topshelf" target="_blank" onclick="_gaq.push(['_trackSocial', 'Twitter', 'Tweet', document.location ,'/blog/Building Windows Services with C# and Topshelf']);">
+			<span class="ico small twitter"></span>Tweet</a></li>
+		<li><a href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2fwww.ordina.nl%2fnl-nl%2fblogs%2f2013%2fmaart%2fbuilding-windows-services-with-c-and-topshelf" target="_blank" onclick="_gaq.push(['_trackSocial', 'LinkedIn', 'Share', document.location ,'/blog/Building Windows Services with C# and Topshelf']);">
+			<span class="ico small linkedin"></span>Share</a></li>
+		<li><a href="mailto:?subject=Building Windows Services with C# and Topshelf&body=http%3a%2f%2fwww.ordina.nl%2fnl-nl%2fblogs%2f2013%2fmaart%2fbuilding-windows-services-with-c-and-topshelf" onclick="_gaq.push(['_trackEvent', 'Mailto', 'Share', 'Building Windows Services with C# and Topshelf']);">
+			<span class="ico small email"></span>e-mail</a></li>
+	</ul>
+</div>
+
+
+
+						<aside class="commentary">
+							<section class="view_comments">
+								<header>
+									<h3>REACTIES</h3>
+								</header>
+								
+								
+										<p>Er zijn nog geen reacties op deze post.</p>
+									
+							</section>
+
+							<section id="placeholdermain_0_Reactieformulier" class="post_comment form">
+								<fieldset class="contactform">
+									<legend>Plaats een reactie</legend>
+									
+									<span class="required_reminder">
+										<img class="contactform-aanhef-required" alt='verplicht icoon' src="/branding/images/icons/ico_verplicht_ster.png">
+										verplichte velden
+									</span>
+									<ul>
+										<li>
+											<div class="input first_half">
+												<input name="placeholdermain_0$NaamTextBox" type="text" id="placeholdermain_0_NaamTextBox" class="required" data-watermarktext="Naam" />
+												
+											</div>
+											<div class="input second_half">
+												<input name="placeholdermain_0$EmailTextBox" type="text" id="placeholdermain_0_EmailTextBox" class="required" data-watermarktext="E-mailadres" />
+												
+												
+											</div>
+										</li>
+										<li>
+											<div class="input">
+												<textarea name="placeholdermain_0$BerichtTextBox" rows="2" cols="20" id="placeholdermain_0_BerichtTextBox" class="required" data-watermarktext="Bericht">
+</textarea>
+												
+											</div>
+										</li>
+									</ul>
+								</fieldset>
+								<div class="submit">
+									<a id="placeholdermain_0_PlaatsReactieButton" class="btn read_more" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;placeholdermain_0$PlaatsReactieButton&quot;, &quot;&quot;, true, &quot;BlogReactie&quot;, &quot;&quot;, false, true))">Plaats mijn reactie</a>
+									<p><em>Uw gegevens worden niet verstrekt aan derden.</em></p>
+								</div>
+							</section>
+						</aside>
+
+					</article>
+					<aside class="sidebar">
+						
+		<div id="placeholdermain_0_ctl07_personenRepeater_PersoonInfoBlokPanel_0" class="contact">
+			<img src="/~/media/Images/OrdinaNl/Personen/E/edo van asseldonk.png" />
+			<div class="contact_in">
+				<span class="name">Edo van Asseldonk</span>
+				<span class="func">Software developer</span>
+				<span class="tel">+31(0)653578179 </span>
+				<div class="btns">
+					
+					<a id="placeholdermain_0_ctl07_personenRepeater_ContactLink_0" class="btn read_more btn fancyboxIframe contactbutton" href="/Pages/Contactformulier.aspx?Persoon={2CCABF89-BAB6-4AEB-8213-71F5BEF5D632}&amp;from={3A0B7E59-9FB3-4749-A5F5-6E3A90B6DF7E}&amp;IFrame=true">Contact</a>
+					
+					
+						<a class="linkedin" href="http://nl.linkedin.com/in/edovanasseldonk" target="_blank"><span class="ico linkedin"></span></a>
+					
+
+					
+				</div>
+			</div>
+		</div>
+	
+
+
+						<div id="placeholdermain_0_AboutContact" class="about_contact">
+							<strong>Over Edo van Asseldonk</strong>
+							<p>
+								Edo is softwarearchitect en .Net developer. Houdt zich met name bezig met Microsoft technologie en blogt over de dagelijkse zaken die hij tijdens het bouwen van applicaties voor klanten tegenkomt.
+							</p>
+							<a id="placeholdermain_0_LinkNaarMeerOver" href="/nl-nl/zoekresultaten/?q=&amp;page=0&amp;sort=1&amp;t=-1&amp;advquery=contactpersoonnames%3aEdo%3fvan%3fAsseldonk&amp;advquerydesc=Edo+van+Asseldonk">Meer van&#32;Edo van Asseldonk</a>
+						</div>
+
+						
+
+						
+						<section>
+							<div class="holder">
+								<header>
+									<h1>Interessant?</h1>
+								</header>
+								
+										<div class="tag_list">
+											<strong>Lees dan meer blogs over:</strong>
+											<p><a href='/nl-nl/zoekresultaten/?q=&page=0&sort=1&t=532480&advquery=tagsnames%3aMicrosoft&advquerydesc=Microsoft'>Microsoft</a></p>
+										</div>
+									
+								
+								
+								
+							</div>
+						</section>						
+					</aside>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+
+		<footer id="foot">
+			<div class="container">
+				<div class="wrapper">
+					<nav class="social">
+						<ul>
+							
+									
+
+
+
+<li><a href="http://www.facebook.com/ordina" target="_blank" onclick="_gaq.push(['_trackEvent', 'Button', 'Click', 'Facebook']);">
+	<span class="ico facebook"></span>Facebook</a></li>
+<li><a href="http://www.linkedin.com/company/ordina" target="_blank" onclick="_gaq.push(['_trackEvent', 'Button', 'Click', 'LinkedIn']);">
+	<span class="ico linkedin"></span>LinkedIn</a></li>
+<li><a href="http://twitter.com/ordina" target="_blank" onclick="_gaq.push(['_trackEvent', 'Button', 'Click', 'Twitter']);">
+	<span class="ico twitter"></span>Twitter</a></li>
+<li><a href="http://www.youtube.com/OrdinaNV" target="_blank" onclick="_gaq.push(['_trackEvent', 'Button', 'Click', 'YouTube']);">
+	<span class="ico youtube"></span>YouTube</a></li>
+
+								
+						</ul>
+					</nav>
+
+					
+
+<nav class="meta">
+	<ul>
+		
+				
+				<li>
+					
+							<a href="/nl-nl/copyright/">Copyright</a>
+						
+					
+							
+						
+				</li>
+			
+				<li>
+					
+							<a href="/nl-nl/disclaimer/">Disclaimer</a>
+						
+					
+							
+						
+				</li>
+			
+				<li>
+					
+							<a href="/nl-nl/privacy-statement/">Privacy statement</a>
+						
+					
+				</li>
+			
+			
+	</ul>
+
+	
+</nav>
+
+				</div>
+			</div>
+		</footer>
+
+	</form>
+	
+	
+</body>
+</html>
+

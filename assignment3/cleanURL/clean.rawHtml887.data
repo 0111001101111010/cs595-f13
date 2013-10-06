@@ -1,0 +1,401 @@
+   #[1]RSS 2.0 [2]Free Download: Long Shadow Flat UI Kit [3]Bumper Sticker
+   Quotes to Make You Smile
+
+     * [4]OXP
+     *
+          + [5]Magazine
+          + [6]Tutorials
+          + [7]Freebies
+          + [8]Comics
+          + [9]Gallery
+          + [10]Code
+          + [11]Resources
+     * [12]Sections
+          + [13]Magazine
+          + [14]Tutorials
+          + [15]Freebies
+          + [16]Comics
+          + [17]Gallery
+          + [18]Code
+          + [19]Resources
+
+     * [20]Submit
+          + [21]Submit Site
+          + [22]Submit Code
+          + [23]Submit Resources
+     * [24]Follow Us
+          + [25]Facebook
+          + [26]Twitter
+          + [27]Google+
+          + [28]Pinterest
+          + [29]RSS Feed
+     *
+          + [30]About
+          + [31]Contact
+          + [32]Write for Us
+          + [33]Advertise
+     * ____________________
+
+   [34]Onextrapixel
+     * [35]Inspiration
+     * [36]Design
+     * [37]Development
+     * [38]Graphics
+     * [39]CSS
+     * [40]WordPress
+     * [41]Articles
+     * [42]Giveaways
+     * [43]Toolkits
+     * [44]Events
+
+
+     * [45]Inspiration
+     * [46]Design
+     * [47]Development
+     * [48]Graphics
+     * [49]Freebies
+     * [50]CSS
+     * [51]WordPress
+     * [52]Articles
+     * [53]Giveaways
+     * [54]Toolkits
+     * [55]Events
+
+Creating Content Tabs with Pure CSS
+
+   by [56]Pete R. in [57]Tutorials on 31st Jul 2013 · [58]Comments
+
+   As CSS3 has started gaining more popularity and more browsers are
+   starting to support it, many common interactions that you would expect
+   from a website that were created using JavaScript are now being
+   replaced by pure CSS solutions. Today I’ll show you how to create an
+   animated content tab using only CSS.
+
+   Disclaimer: The purpose of this post is to show you the possibilities
+   of CSS3. The content may or may not be practical to use in real life.
+
+   Creating Content Tabs with Pure CSS
+
+   [59]Demo [60]Download
+
+Creating Content Tabs with Pure CSS
+
+   HTML:
+<ul class="tabs">
+        <li>
+          <input type="radio" checked name="tabs" id="tab1">
+          <label for="tab1">tab 1</label>
+          <div id="tab-content1" class="tab-content animated fadeIn">
+        ...
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="tabs" id="tab2">
+          <label for="tab2">tab 2</label>
+          <div id="tab-content2" class="tab-content animated fadeIn">
+            ...
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="tabs" id="tab3">
+          <label for="tab3">tab 3</label>
+          <div id="tab-content3" class="tab-content animated fadeIn">
+            ...
+          </div>
+        </li>
+</ul>
+
+   CSS:
+body, html {
+          height: 100%;
+          margin: 0;
+          -webkit-font-smoothing: antialiased;
+          font-weight: 100;
+          background: #aadfeb;
+          text-align: center;
+          font-family: helvetica;
+      }
+
+      .tabs input[type=radio] {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+      }
+      .tabs {
+        width: 650px;
+        float: none;
+        list-style: none;
+        position: relative;
+        padding: 0;
+        margin: 75px auto;
+      }
+      .tabs li{
+        float: left;
+      }
+      .tabs label {
+          display: block;
+          padding: 10px 20px;
+          border-radius: 2px 2px 0 0;
+          color: #08C;
+          font-size: 24px;
+          font-weight: normal;
+          font-family: 'Lily Script One', helveti;
+          background: rgba(255,255,255,0.2);
+          cursor: pointer;
+          position: relative;
+          top: 3px;
+          -webkit-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+      }
+      .tabs label:hover {
+        background: rgba(255,255,255,0.5);
+        top: 0;
+      }
+
+      [id^=tab]:checked + label {
+        background: #08C;
+        color: white;
+        top: 0;
+      }
+
+      [id^=tab]:checked ~ [id^=tab-content] {
+          display: block;
+      }
+      .tab-content{
+        z-index: 2;
+        display: none;
+        text-align: left;
+        width: 100%;
+        font-size: 20px;
+        line-height: 140%;
+        padding-top: 10px;
+        background: #08C;
+        padding: 15px;
+        color: white;
+        position: absolute;
+        top: 53px;
+        left: 0;
+        box-sizing: border-box;
+        -webkit-animation-duration: 0.5s;
+        -o-animation-duration: 0.5s;
+        -moz-animation-duration: 0.5s;
+        animation-duration: 0.5s;
+      }
+
+   First off, in order to replicate the functionality of JavaScript, we
+   need to find a way to let the CSS know that the user has clicked the
+   button. With JavaScript, we can simply add a class name on click but
+   since we are not going to use JavaScript, we need to hack our way
+   through this. What I did is I used a hidden radio button which is
+   linked to a label tag through rel attribute. The label will act as a
+   button and when you click the label, the label will trigger a “checked”
+   attribute of that linked radio button. Now we can target our styles
+   with a :checked selector.
+
+   From the HTML markup, you can see that I have the radio button, the
+   label and the container at the same level. There’s a reason for this.
+   With the help of an awesome CSS sibling combinator (~) we can have one
+   selector triggering another same-level selector without even having it
+   nested together. This allows us to have any radio button with a check
+   triggering any container to appear so that it replicates the behavior
+   of a normal content tab created with JavaScript.
+
+   In the demo, I have also included a [61]CSS animation library created
+   by Dan Eden to add some animation effects when the tab content appears.
+   [62]Demo [63]Download
+
+Conclusion
+
+   Now you have a beautiful animated tab content for your website without
+   even touching any JavaScript. Let me know what you think about this
+   approach in the comments below.
+
+[64]Pete R.
+
+   Pete is a Bangkok entrepreneur, a UI designer, and a Ruby on Rails
+   developer. He is the founder of [65]Bucketlistly.com and
+   [66]MyColorscreen.com. Other than his businesses, design and
+   development, he also loves astronomy, indie music, and blogging.
+     * [67]Visit my Website
+     * [68]Follow me on Twitter
+
+Related Articles
+
+     * [69]FancyScroll.js: Add an iOS/Android Overflow Scroll Effect
+    [70]FancyScroll.js: Add an iOS/Android Overflow Scroll Effect
+     * [71]OnePageScroll.js: Creating an Apple's iPhone 5S Website
+    [72]OnePageScroll.js: Creating an Apple’s iPhone 5S Website
+     * [73]Dynamic Favicon and Title with Notify Better.js
+    [74]Notify Better.js: Creating a Dynamic Favicon and Title
+     * [75]Adding a YouTube-Like Loading Bar to Your Website with
+       LoadingBar.js
+    [76]LoadingBar.js: Adding a YouTube-Like Loading Bar to Your Website
+
+   Click to Show Comments
+
+Get Our Latest Updates
+
+   Stay updated with the latest design and development news, products and
+   apps.
+   ____________________ Subscribe
+   Advertisement
+   [77]Advertise with us
+   [78]Future Insights
+   [79]MaxCDN [ql118z15u-yJRLOLLSNJLLNRNOSR]
+
+All Time Popular
+
+     * [80]Creating the New Google Play’s Multi-Level Navigation from
+       Scratch
+       [81]Tutorials
+
+[82]Creating the New Google Play’s Multi-Level Navigation from Scratch
+     * [83]What Kind of Designers Do You Want to Strangle?
+       [84]Articles
+
+[85]What Kind of Designers Do You Want to Strangle?
+     * [86]Create a Path-like Menu Button with WheelMenu.js
+       [87]Tutorials
+
+[88]Create a Path-like Menu Button with WheelMenu.js
+     * [89]Famous Hackers Who Made Us Admire Them as Computer Geniuses
+       [90]Articles
+
+[91]Famous Hackers Who Made Us Admire Them as Computer Geniuses
+     * [92]The Internship - Reality is Not Exactly a Movie Comedy
+       [93]Articles
+
+[94]The Internship – Reality is Not Exactly a Movie Comedy
+
+     * [95]About·
+     * [96]Contact·
+     * [97]Write·
+     * [98]Advertise·
+     * [99]Legal·
+     * [100]Terms of Use
+
+   Onextrapixel. DIY in Singapore. Copyright © 2009 - 2013. All Rights
+   Reserved.
+
+   Fonts by:
+   [101]Fontdeck
+
+   Content delivered by:
+   [102]MaxCDN [ql118z15u-yJRLOLLSNJLLNRNOSR]
+
+References
+
+   Visible links
+   1. http://www.onextrapixel.com/feed/
+   2. http://www.onextrapixel.com/2013/07/30/free-download-long-shadow-flat-ui-kit/
+   3. http://www.onextrapixel.com/2013/08/01/bumper-sticker-quotes-to-make-you-smile/
+   4. file://localhost/
+   5. file://localhost/
+   6. file://localhost/category/tutorials/
+   7. file://localhost/category/freebies/
+   8. file://localhost/comics/
+   9. http://gallery.onextrapixel.com/
+  10. http://code.onextrapixel.com/
+  11. http://resources.onextrapixel.com/
+  12. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml887.data
+  13. file://localhost/
+  14. file://localhost/category/tutorials/
+  15. file://localhost/category/freebies/
+  16. file://localhost/comics/
+  17. http://gallery.onextrapixel.com/
+  18. http://code.onextrapixel.com/
+  19. http://resources.onextrapixel.com/
+  20. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml887.data
+  21. http://gallery.onextrapixel.com/submit-site/
+  22. http://code.onextrapixel.com/submit-code/
+  23. http://resources.onextrapixel.com/submit-resources/
+  24. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml887.data
+  25. http://www.facebook.com/onextrapixel
+  26. https://twitter.com/onextrapixel
+  27. https://plus.google.com/109899088134183441441
+  28. https://pinterest.com/onextrapixel
+  29. http://feeds.feedburner.com/onextrapixel
+  30. file://localhost/about/
+  31. file://localhost/contact/
+  32. file://localhost/write-for-us/
+  33. http://buysellads.com/buy/detail/15363/
+  34. file://localhost/
+  35. http://www.onextrapixel.com/category/inspiration/
+  36. http://www.onextrapixel.com/category/design/
+  37. http://www.onextrapixel.com/category/development/
+  38. http://www.onextrapixel.com/category/graphics/
+  39. http://www.onextrapixel.com/category/css/
+  40. http://www.onextrapixel.com/category/wordpress/
+  41. http://www.onextrapixel.com/category/articles/
+  42. http://www.onextrapixel.com/category/giveaways/
+  43. http://www.onextrapixel.com/category/toolkits/
+  44. http://www.onextrapixel.com/category/events/
+  45. http://www.onextrapixel.com/category/inspiration/
+  46. http://www.onextrapixel.com/category/design/
+  47. http://www.onextrapixel.com/category/development/
+  48. http://www.onextrapixel.com/category/graphics/
+  49. http://www.onextrapixel.com/category/freebies/
+  50. http://www.onextrapixel.com/category/css/
+  51. http://www.onextrapixel.com/category/wordpress/
+  52. http://www.onextrapixel.com/category/articles/
+  53. http://www.onextrapixel.com/category/giveaways/
+  54. http://www.onextrapixel.com/category/toolkits/
+  55. http://www.onextrapixel.com/category/events/
+  56. http://www.onextrapixel.com/author/peter-r/
+  57. http://www.onextrapixel.com/category/tutorials/
+  58. http://www.onextrapixel.com/2013/07/31/creating-content-tabs-with-pure-css/#comments
+  59. http://www.onextrapixel.com/examples/pure-css-tab-with-fade-animation/
+  60. http://www.onextrapixel.com/examples/pure-css-tab-with-fade-animation/pure-css-tab-with-fade-animation.zip
+  61. http://daneden.me/animate/
+  62. http://www.onextrapixel.com/examples/pure-css-tab-with-fade-animation/
+  63. http://www.onextrapixel.com/examples/pure-css-tab-with-fade-animation/pure-css-tab-with-fade-animation.zip
+  64. http://www.onextrapixel.com/author/peter-r/
+  65. http://www.bucketlistly.com/
+  66. http://mycolorscreen.com/
+  67. http://www.thepetedesign.com/
+  68. http://www.twitter.com/peachananr
+  69. http://www.onextrapixel.com/2013/09/24/fancyscroll-js-add-an-iosandroid-overflow-scroll-effect/
+  70. http://www.onextrapixel.com/2013/09/24/fancyscroll-js-add-an-iosandroid-overflow-scroll-effect/
+  71. http://www.onextrapixel.com/2013/09/18/onepagescroll-js-creating-an-apples-iphone-5s-website/
+  72. http://www.onextrapixel.com/2013/09/18/onepagescroll-js-creating-an-apples-iphone-5s-website/
+  73. http://www.onextrapixel.com/2013/09/11/notify-better-js-creating-a-dynamic-favicon-and-title/
+  74. http://www.onextrapixel.com/2013/09/11/notify-better-js-creating-a-dynamic-favicon-and-title/
+  75. http://www.onextrapixel.com/2013/09/02/loadingbar-js-adding-a-youtube-like-loading-bar-to-your-website/
+  76. http://www.onextrapixel.com/2013/09/02/loadingbar-js-adding-a-youtube-like-loading-bar-to-your-website/
+  77. http://buysellads.com/buy/detail/15363/zone/1242583/
+  78. http://futureofwebdesign.com/nyc-2013/
+  79. http://www.onextrapixel.com/oxp/maxcdn/
+  80. http://www.onextrapixel.com/2013/08/15/creating-the-new-google-plays-multi-level-navigation-from-scratch/
+  81. http://www.onextrapixel.com/category/tutorials/
+  82. http://www.onextrapixel.com/2013/08/15/creating-the-new-google-plays-multi-level-navigation-from-scratch/
+  83. http://www.onextrapixel.com/2013/08/16/what-kind-of-designers-do-you-want-to-strangle/
+  84. http://www.onextrapixel.com/category/articles/
+  85. http://www.onextrapixel.com/2013/08/16/what-kind-of-designers-do-you-want-to-strangle/
+  86. http://www.onextrapixel.com/2013/08/21/create-a-path-like-menu-button-with-wheelmenu-js/
+  87. http://www.onextrapixel.com/category/tutorials/
+  88. http://www.onextrapixel.com/2013/08/21/create-a-path-like-menu-button-with-wheelmenu-js/
+  89. http://www.onextrapixel.com/2013/08/22/famous-hackers-who-made-us-admire-them-as-computer-geniuses/
+  90. http://www.onextrapixel.com/category/articles/
+  91. http://www.onextrapixel.com/2013/08/22/famous-hackers-who-made-us-admire-them-as-computer-geniuses/
+  92. http://www.onextrapixel.com/2013/08/28/the-internship-reality-is-not-exactly-a-movie-comedy/
+  93. http://www.onextrapixel.com/category/articles/
+  94. http://www.onextrapixel.com/2013/08/28/the-internship-reality-is-not-exactly-a-movie-comedy/
+  95. file://localhost/about/
+  96. file://localhost/contact/
+  97. file://localhost/write-for-us/
+  98. http://buysellads.com/buy/detail/15363
+  99. file://localhost/legal/
+ 100. file://localhost/terms-of-use/
+ 101. http://fontdeck.com/
+ 102. http://www.onextrapixel.com/oxp/maxcdn/
+
+   Hidden links:
+ 104. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml887.data
+ 105. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml887.data
+ 106. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml887.data
+ 107. https://twitter.com/onextrapixel
+ 108. http://twitter.com/share
+ 109. http://www.thepetedesign.com/
+ 110. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml887.data#wrap

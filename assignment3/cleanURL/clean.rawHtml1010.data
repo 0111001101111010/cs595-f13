@@ -1,0 +1,681 @@
+   #[1]Vorige Meldung [2]Naechste Meldung [3]Startseite [4]Copyright
+   [5]Suche [6]Aktuelle News von heise online [7]Aktuelle News von heise
+   online (für ältere RSS-Reader) [8]publisher
+
+   [9]Einloggen auf heise online
+   [10]heise online [11]Menü auf-/zuklappen
+     *
+          + [12]News
+          + [13]c't
+          + [14]iX
+          + [15]Technology Review
+          + [16]Mac & i
+          + [17]Telepolis
+          + [18]Hardware Hacks
+          + [19]Digitale Fotografie
+     *
+          + [20]heise Autos
+          + [21]heise Developer
+          + [22]heise Foto
+          + [23]heise Netze
+          + [24]heise Open Source
+          + [25]heise resale
+          + [26]heise Security
+          + [27]heise Video
+          + [28]TechStage
+     *
+          + [29]Download
+          + [30]Preisvergleich
+          + [31]Stellenmarkt
+          + [32]Veranstaltungen
+          + [33]IT-Markt
+          + [34]Whitepapers
+          + [35]Webcasts
+          + [36]Tarifrechner
+     *
+          + [37]heise shop
+          + [38]Artikel-Archiv
+          + [39]Zeitschriften-Abo
+          + [40]Arbeiten bei heise
+
+   ____________________ Los
+
+   [41]News
+     * [42]Newsticker
+     * [43]7-Tage-News
+     * [44]Archiv
+     * [45]Foren
+
+     * [46]RSS
+     * [47]Newsletter
+     * [48]News mobil
+     * [49]Google+
+     * [50]Facebook
+     * [51]Twitter
+
+   Topthemen:
+    1. [52]NSA
+    2. [53]Windows 8.1
+    3. [54]iPhone
+    4. [55]Smartphone
+    5. [56]Android
+    6. [57]Google Glass
+    7. [58]VDSL
+    8. [59]E-Book
+    9. [60]Nokia
+
+   [61]heise online > [62]News > [63]2013 > [64]KW 39 > Neue
+   3D-Schnittstelle: AMD Mantle als DirectX-Konkurrenz
+
+   [65]« Vorige | [66]Nächste »
+   [67]heise online
+
+   26.09.2013 16:40
+
+Neue 3D-Schnittstelle: AMD Mantle als DirectX-Konkurrenz
+
+   [68]Meldung vorlesen und MP3-Download
+
+   Die Low-Level-API Mantle ermöglicht eine hardwarenahe Programmierung
+   von GPUs. Optimiert ist Mantle auf GCN-Grafikchips. [69]Vergrößern AMD
+   hat im Zuge der Vorstellung seiner neuen Grafikkarten-Generation
+   [70]Volcanic Islands eine unabhängige 3D-Schnittstelle angekündigt:
+   [71]Mantle. Sie soll näher an der Hardware arbeiten als DirectX und
+   OpenGL (Low-Level-API statt High-Level-API) und direkt auf sämtliche
+   GPU-Funktionen zugreifen. Kompatible Spiele laufen exklusiv über Mantle
+   und sind dadurch vom derzeitigen Standard [72]Direct3D unabhängig.
+   Entwickler können PC-Spiele mit Mantle ebenso systemnah programmieren,
+   wie dies auf Konsolen bereits der Fall ist. Mantle ist zur
+   [73]Shader-Sprache HLSL von DirectX kompatibel, was Portierungen
+   erleichtern soll.
+
+   Systemnahe Programmierung wie auf Konsolen
+
+   Mantle soll die Entwicklung von Spielen für mehrere
+   Hardware-Plattformen – sprich: Konsolen und PCs – vereinfachen und
+   wesentlich mehr 3D-Leistung aus Grafikkarten und Hauptprozessoren
+   quetschen, als es Direct3D schafft. Als einen wichtigen, prominenten
+   Unterstützer zauberte AMD das schwedische Entwicklerstudio [74]DICE aus
+   dem Hut. Deren [75]Frostbite-3-Engine treibt etwa das kommende
+   Multiplayer-Actionspiel Battlefield 4 an und [76]läuft auf DirectX 11.1
+   oder Mantle. Über Letzteres konnten die Entwickler viele
+   Low-Level-Optimierungen vornehmen und bis zu acht CPU-Kerne auslasten.
+   Battlefield 4 erscheint im Oktober zunächst für DirectX. Im Dezember
+   soll ein Update die Mantle-Unterstützung bringen.
+
+   Battlefield 4 wird das wahrscheinlich erste PC-Spiel, was neben DirectX
+   11.1 auch Mantle nach einem Update im Dezember unterstützt
+   [77]Vergrößern
+
+   Damit Mantle-Spiele die Grafikkarte ansteuern können, ist außer der
+   Programmierschnittstelle selbst auch ein spezieller Treiber
+   erforderlich. Optimiert ist die Low-Level-API auf das Zusammenspiel mit
+   [78]GCN-Grafikchips (Graphics Core Next), wie [79]AMD mehrmals betonte.
+   Allerdings dürfte die API auch mit Nvidia-Hardware und Intel-IGPs
+   laufen – welche Auswirkungen das auf die Performance hat, ist unklar.
+   Dazu müssten Intel und Nvidia aber wohl außerdem Mantle-kompatible
+   Grafiktreiber bereitstellen.
+
+   Ob, wann und wie Mantle unter Linux laufen soll, ist unklar – aber
+   speziell in Bezug auf [80]Steam OS spannend. Mehr Details will AMD est
+   auf seiner Entwicklerkonferenz APU 14 verkünden. [81]Sie findet Anfang
+   November in San Jose statt.
+
+   Mehr Druck auf Microsoft
+
+   Mit Mantle macht AMD einen Schritt weg von [82]Microsofts
+   DirectX-Schnittstelle, die im Bereich der PC-Spiele praktisch
+   Monopolstellung genießt. Auf anderen Plattformen wie Mac OS oder Linux
+   steht zwar OpenGL bereit, aber das Spiele-Angebot ist mager. AMD hob
+   bei der Mantle-Ankündigung vor allem die Multiplattform-Eignung hervor.
+   Damit können Programmierer selbst neue Rendering-Techniken
+   vergleichsweise einfach realisieren. Sie sind folglich nicht mehr auf
+   DirectX-Updates – wie etwa für [83]Tiled Resources mit Direct3D 11.2 –
+   angewiesen, die in großen zeitlichen Abständen erscheinen.
+
+   Microsoft dürfte die Idee weniger gefallen, schließlich sind Spieler
+   derzeit wegen DirectX im Grunde gezwungen, zu Windows zu greifen.
+   Mantle könnte damit in die Fußstapfen des zu 3DFX-Zeiten populären
+   Low-Level-API Glide treten, das für [84]3dfx-Voodoo-Grafikkarten eine
+   3D-Beschleunigung sowohl unter Windows als auch DOS bot.
+
+   Erfolg ungewiss
+
+   Die Frostbite-Engine von DICE unterstützt Mantle. [85]Vergrößern Ob
+   Mantle zum Erfolg wird, hängt in erster Linie von den
+   Spieleprogammierern ab. Schließlich läuft die Portierung des
+   Low-Level-Codes eines Konsolenspiels auf den PC auch mit Mantle nicht
+   von selbst. Im Unterschied zur Konsole ist die PC-Spiele-Hardware durch
+   eine große Vielfalt gekennzeichnet. Schließlich müssen Spiele nicht nur
+   auf AMD-GPUs, sondern auch auf jenen von Nvidia und Intel gut laufen,
+   die sich hinsichtlich ihrer Architektur deutlich unterscheiden. Das
+   könnte Entwickler wiederum mehr Zeit kosten. Ob auch Nvidia und Intel
+   Zeit und Geld in die Bereitstellung von Tools und Leitfäden zur
+   Mantle-Programmierung ihrer GPUs investieren, ist offen. Bei den
+   kommenden Spielkonsolen wird AMD als GPU-Lieferant wiederum selbst eine
+   Monopolstellung haben. ([86]mfi)
+
+   [87]« Vorige | [88]Nächste »
+
+   [89]Kommentare lesen (242 Beiträge)
+
+   [90]Version zum Drucken | [91]Per E-Mail versenden | [92]Newsletter
+   abonnieren
+
+   Permalink: [93]http://heise.de/-1967989
+
+Auch auf heise online:
+
+     * [94]AMD verspricht: Treiber macht GCN-GPUs zu DirectX 11.2
+       kompatibel
+     * [95]DirectX 11.2 in Windows 8.1: Hochdetaillierte Spielwelten durch
+       Megatexturen
+     * [96]Lautlose Radeon HD 7850 von Powercolor
+     * [97]GTC 2013: Für Valve ist Linux-Spieleportierung Sprungbrett zu
+       Android
+     * [98]DirectX 11.1: Hat Nvidia bewusst getrickst?
+     * [99]Nvidias Kepler-GPUs nicht vollständig zu DirectX 11.1
+       kompatibel
+
+   Mehr zum Thema [100]Grafik-Hardware [101]Konsolen [102]Spiele
+   [103]DirectX [104]Schnittstelle
+   [105]Anzeige
+   [106]Anzeige
+
+Top-News
+
+     * [107]PC Fritz erwirkt einstweilige Verfügung gegen Microsoft
+     * [108]Marktforscher: Windows Phone ist iOS auf den Fersen
+     * [109]Breaking Bad: Rekord-Finale im Fernsehen und im Netz
+     * [110]NSA-Affäre: Geheimdienst analysiert umfassend soziale
+       Beziehungen
+     * [111]Facebooks Graph Search durchsucht Posts
+
+   c't 21/13
+   [112]Jetzt am Kiosk
+   iPhone 5C und 5S, Datenschutz durchsetzen, Stromkosten messen, OLED vs.
+   LCD, Urlaub im All, Treiber für alte Linux-Kernel, Intels neue Xeons,
+   Lightpainting, Foxconn in Europa
+
+   heise resale - Management
+   [113]Sicherheitsrisiko Homeoffice
+   Flexible Arbeitsmodelle erhöhen die Produktivität der Mitarbeiter aber
+   auch das Risiko von Datenverlust.
+
+   heise Security
+   [114]Tresorknacken für Anfänger
+   Wie schwer ist es, einen Hotelsafe zu knacken? heise Security hat es
+   spontan ausprobiert – mit einem überraschenden Ergebnis.
+
+   heise Developer
+   [115]Common Lisp
+   Quicklisp, Emacs, SLIME und Git – Entwicklungsumgebung für Common Lisp
+
+   [116]Anzeige
+
+   Werbung
+     * [117]20%-Aktion: Original umweltfreundliche HP Toner
+     * [118]Hier zum Ticket für die Communication World
+     * [119]Innovate2013: Der größte Technical Summit von IBM
+     * [120]it-sa 2013 – die führende Fachmesse für IT-Sicherheit
+     * [121]Multi-Link-VPN: Unternehmensvernetzung verbessern
+     * [122]Moderne E-Mail-Archivierung mit MailStore
+     * [123]Zehn Wege zu einem effektiveren Patch-Management
+     * [124]Webcast Private Cloud: Geld sparen im Data Center
+     * [125]Big Data – machen Sie mehr aus Ihren Daten!
+     * [126]Webcast: Komplexität im Rechenzentrum reduzieren
+     * [127]RZ-Betrieb so einfach wie Autofahren – so geht’s!
+     * [128]Mythos Firewall – so schützen Sie sich richtig
+
+   [129]Mac & i Heft 11
+   Mac OS X 10.9 und iOS 7 • Endlich gute Videos • Datenschnüffler
+   aussperren • Sicher ins heimische Netz mit VPN • Akkuwechsel beim
+   iPhone 3GS • VoiceOver • Kopfhörer • Twitter-Clients • MacBook Air •
+   Objektive und Mikros • Textbaustein-Tools
+
+   Hardware Hacks
+   [130]Erster Coffein Hackathon in Berlin
+   Wer hacken will, egal ob Software oder Hardware, muss manchmal länger
+   wach bleiben. Grund genug, die dafür gern genutzten Wachmacher einmal
+   selbst zum Thema einer Hacker-Nacht zu machen.
+
+   Technology Review
+   [131]Special Energie
+   Auf 148 Seiten: Fakten zur Energiewende, zu den Themenbereichen Fossile
+   Brennstoffe, Wind- und Sonnenkraft, Stromnetz und Speicher, Verkehr,
+   Energie sparen und Atommüll, Dokumentarfilm "Leben mit der
+   Energiewende"
+
+   heise Foto
+   [132]Spiegellose für Einsteiger
+   Fujifilm hat das mittlerweile vierte Modell seiner X-Serie angekündigt.
+   Die Einsteiger-X-A1 kommt mit einem 16 Megapixel APS-C-Sensor und WLAN,
+   verzichtet aber auf einen Sucher, X-Trans-Technologie und
+   Metallgehäuse. Das kommt dem Preis zu Gute.
+
+   heise Autos
+   [133]Import-Mittel
+   Seit 1963 ist Mazda in der Mittelklasse präsent - Zeit für einen
+   ausführlichen Rückblick
+
+[134]Software-Verzeichnis
+
+   [135]Delta Search aus Chrome und Firefox entfernen So wirft man die
+   Toolbar rückstandsfrei vom Rechner
+     * [136]Top-5
+     * [137]Bestbewertet
+     * [138]Updates
+     * [139]Neuzugänge
+
+   [140]Ghostscript Wandelt PostScript-, EPS- und PDF-Dateien in Bitmaps
+   um und druckt sie aus; ist Grundlage für viele weitere PDF-Konverter
+   und -Drucker
+
+   [141]Windows XP Service Pack 3 (SP3) Aktualisiert alle 32-Bit-Versionen
+   von Windows XP; Voraussetzung für die Installation ist ein bereits
+   installiertes Windows XP Service Pack 1 oder 2
+
+   [142]IrfanView Schneller Bildbetrachter für viele Foto- und
+   Videoformate; zeigt EXIF- sowie IPTC-Daten und versieht Bilder mit
+   diversen Effekten ...
+
+   [143]AdwCleaner Anti-Spam-Tool zum Suchen und Entfernen von Adware,
+   Toolbars, Hijackern und anderen unerwünschten Programmen
+
+   [144]iFruit App für GTA V App für das Videospiel Grand Theft Auto 5
+   (GTA V), mit der sich Nummernschildern reservieren und Autos aus dem
+   Spiel konfigurieren und tunen lassen ...
+
+   [145]Alle Top-Downloads
+
+   [146]IrfanView Schneller Bildbetrachter für viele Foto- und
+   Videoformate; zeigt EXIF- sowie IPTC-Daten und versieht Bilder mit
+   diversen Effekten ...
+
+   [147]Firefox Mächtiger Browser, unter anderem mit PDF-Betrachter,
+   Popup-Blocker, Malware-Schutz, Tabbed-Browsing und zahlreichen
+   optionalen Erweiterungen ...
+
+   [148]WSUS Offline Update (c't Offline Update) Skriptsammlung, die
+   sämtliche Updates für alle Windows Versionen ab XP sowie Office
+   herunterlädt und daraus Patch-Pakete auf CD, DVD oder USB-Geräten ...
+
+   [149]VLC media player Universeller Player für praktisch alle Audio- und
+   Video-Formate; bietet unter anderem Filter sowie weitere
+   Videobearbeitungs-Funktionen ...
+
+   [150]Notepad++ Leistungsfähiger Code-Editor mit Syntax-Hervorhebung und
+   Auto-Vervollständigung ...
+
+   [151]Alle am besten bewerteten Programme
+
+   [152]Greasemonkey Firefox -Erweiterung, die es mit browserseitigen
+   JavaScript-Programmen ermöglicht, die Ansicht von Webseiten fast
+   beliebig zu verändern
+
+   [153]5 Clicks - screen capture program Mit wenigen Klicks Screenshots
+   erstellen und als PNG-, JPG- oder Bitmap-Datei speichern
+
+   [154]YouTube Video Downloader (TubeDownload) Lädt Videos direkt nach
+   Eingabe der URL von der Website YouTube herunter und reduziert den
+   Download im Microsoft Internet Explorer auf einen Mausklick
+
+   [155]7-PDF Printer Virtueller Drucker, mit dem sich über die
+   Druckfunktion in Anwendungen PDF und PDF/A1-b Dokumente erstellen
+   lassen ...
+
+   [156]Forex Strategy Builder Erstellen und Testen von Handelsstrategien
+   für Devisen- und Währungsmärkte; die Parameter sowie die Logik der
+   Indikatoren können über Drop-Down-Menüs ...
+
+   [157]Alle Updates
+
+   [158]BTT Remote Companion-App für BetterTouchTool; weist Gesten auf
+   iPhone oder iPad Funktionen zu, die den Mac-OS-X -Desktop aus der Ferne
+   steuern
+
+   [159]Alien Bio Lab Niedlicher Puzzler für iOS und Android; in
+   Tetris-Manier müssen Spieler Reihen von Spielblöcken abräumen, indem
+   mindestens drei gleiche einander ...
+
+   [160]iPGMail Sendet PGP-verschlüsselte Nachrichten vom iPhone und iPad,
+   die nur der Empfänger lesen kann ...
+
+   [161]OpenPGP Keychain OpenPGP-Implementierung für Android-Geräte;
+   bietet eine Schlüsselverwaltung und umfasst die Funktionen Signieren,
+   Entschlüsseln, Verschlüsseln sowie ...
+
+   [162]Quivive File-Manager Dateimanager-Alternative zu CKEditor oder
+   TinyMCE, die sich auch als Plug-in in die genannten Editoren
+   integrieren lässt ...
+
+   [163]Alle Neuzugänge
+     * [164]Meistgelesen
+     * [165]Meistkommentiert
+
+     * [166]Marktforscher: Windows Phone ist iOS auf den Fersen
+     * [167]Avira verzichtet auf nervige Werbefenster
+     * [168]Congstar führt DSL-Drossel ein
+     * [169]NSA-Affäre: Geheimdienst analysiert umfassend soziale
+       Beziehungen
+     * [170]PC Fritz erwirkt einstweilige Verfügung gegen Microsoft
+
+     * [171]USA lassen deutschen Überwachungskritiker nicht einreisen
+     * [172]Samsungs Region-Lock kastriert wohl doch den Auslandseinsatz
+     * [173]Delta stattet seine 11.000 Piloten mit Microsoft-Tablet
+       Surface 2 aus
+     * [174]Breaking Bad: Rekord-Finale im Fernsehen und im Netz
+     * [175]Fernsehhersteller Loewe stellt Insolvenzantrag
+
+[176]Neueste Foren-Beiträge
+
+     * [177]Iran ist wesentlich entspannter
+     * [178]Wenn sog. "Investoren" anfangen die Geschicke einer Firma
+     * [179]Re: Ist der Artikel irreführend? Die Hersteller wollen doch
+       bei usb micro b blei
+     * [180]Re: Vielleicht sollten wir die nach Ungarn schicken
+     * [181]Re: Apple sollte erst mal die Steuern zahlen, wie es sich für
+       einen
+
+   [182]Anzeige
+   [183]seen.by
+   [184]Anzeige
+   [185]Anzeige
+     * [186]heise online
+     * [187]c't Magazin
+     * [188]iX Magazin
+     * [189]Technology Review
+     * [190]Mac & i
+
+     * [191]Telepolis
+     * [192]Hardware Hacks
+     * [193]Digitale Fotografie
+     * [194]heise Autos
+     * [195]heise Developer
+
+     * [196]heise Foto
+     * [197]heise Netze
+     * [198]Open Source
+     * [199]heise Resale
+     * [200]heise Security
+
+     * [201]heise Video
+     * [202]TechStage
+     * [203]Download
+     * [204]Preisvergleich
+     * [205]Stellenmarkt
+
+     * [206]Veranstaltungen
+     * [207]IT-Markt
+     * [208]heise Whitepapers
+     * [209]Tarifrechner
+     * [210]Shop
+
+     * [211]Artikel-Archiv
+     * [212]Abo
+     * [213]Loseblattwerke
+     * [214]RSS
+
+     * [215]Leserforum
+     * [216]Newsletter
+     * [217]Suche
+     * [218]iMonitor
+
+     * [219]Datenschutzhinweis
+     * [220]Impressum
+     * [221]Kontakt
+     * [222]Mediadaten
+     * 1085669
+     * [223]Content Management by InterRed
+     * [224]Hosted by Plus.line
+     * [225]Copyright © 2013 Heise Zeitschriften Verlag
+
+References
+
+   Visible links
+   1. file://localhost/newsticker/meldung/Entwickler-kaufen-FastMail-von-Opera-zurueck-1968004.html
+   2. file://localhost/newsticker/meldung/Google-Hangouts-liefert-Messages-an-falsche-Adressaten-1968038.html
+   3. file://localhost/
+   4. file://localhost/Impressum-4862.html
+   5. http://www.heise.de/suche/
+   6. http://www.heise.de/newsticker/heise-atom.xml
+   7. http://www.heise.de/newsticker/heise.rdf
+   8. https://plus.google.com/+heiseonline
+   9. https://www.heise.de/userdb/sso?rm=show_login&dirid=1&objekt=/
+  10. file://localhost/index.html/from/navi_oben_ho
+  11. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1010.data#heisetopnavi_sub_container
+  12. file://localhost/index.html/from/navi_oben_ho
+  13. file://localhost/ct/from/navi_oben_ct
+  14. file://localhost/ix/from/navi_oben_ix
+  15. file://localhost/tr/from/navi_oben_tr
+  16. file://localhost/mac-and-i/from/navi_oben_mac
+  17. file://localhost/tp/from/navi_oben_tp
+  18. file://localhost/hardware-hacks/from/navi_oben_hh
+  19. file://localhost/foto/special/from/navi_oben_df
+  20. file://localhost/autos/from/navi_oben_aut
+  21. file://localhost/developer/from/navi_oben_dev
+  22. file://localhost/foto/from/navi_oben_foto
+  23. file://localhost/netze/from/navi_oben_net
+  24. file://localhost/open/from/navi_oben_op
+  25. file://localhost/resale/from/navi_oben_res
+  26. file://localhost/security/from/navi_oben_sec
+  27. file://localhost/video/from/navi_oben_video
+  28. file://localhost/redirect-to/techstage/from/navi_oben_techstage
+  29. file://localhost/download/from/navi_oben_swv
+  30. file://localhost/preisvergleich/from/navi_oben_pvg
+  31. file://localhost/jobs/from/navi_oben_job
+  32. file://localhost/events/from/navi_oben_eve
+  33. file://localhost/itmarkt/from/navi_oben_itm
+  34. file://localhost/whitepapers/from/navi_oben_whi
+  35. file://localhost/redirect-to/webcasts/from/navi_oben_webcasts
+  36. file://localhost/redirect-to/tarifrechner/from/navi_oben_tarifr
+  37. file://localhost/redirect-to/shop/from/navi_oben_shop
+  38. file://localhost/artikel-archiv/from/navi_oben_kio
+  39. file://localhost/redirect-to/abo/from/navi_oben_abo
+  40. file://localhost/redirect-to/hmg/from/navi_oben_hmg
+  41. file://localhost/
+  42. file://localhost/newsticker/classic/
+  43. file://localhost/newsticker/
+  44. file://localhost/newsticker/archiv/
+  45. file://localhost/foren/
+  46. file://localhost/news-extern/news.html
+  47. file://localhost/newsletter/
+  48. http://m.heise.de/
+  49. https://plus.google.com/+heiseonline
+  50. https://www.facebook.com/heiseonline
+  51. https://twitter.com/heiseonline
+  52. file://localhost/thema/NSA
+  53. file://localhost/thema/Windows-8.1
+  54. file://localhost/thema/iPhone
+  55. file://localhost/thema/Smartphone
+  56. file://localhost/thema/Android
+  57. file://localhost/thema/Google-Glass
+  58. file://localhost/thema/VDSL
+  59. file://localhost/thema/E_Book
+  60. file://localhost/thema/Nokia
+  61. file://localhost/
+  62. file://localhost/newsticker/
+  63. file://localhost/newsticker/archiv/?jahr=2013
+  64. file://localhost/newsticker/archiv/?jahr=2013;woche=39
+  65. file://localhost/newsticker/meldung/Entwickler-kaufen-FastMail-von-Opera-zurueck-1968004.html
+  66. file://localhost/newsticker/meldung/Google-Hangouts-liefert-Messages-an-falsche-Adressaten-1968038.html
+  67. file://localhost/
+  68. file://localhost/newsticker/meldung/Neue-3D-Schnittstelle-AMD-Mantle-als-DirectX-Konkurrenz-1967989.html?view=audio
+  69. file://localhost/newsticker/meldung/Neue-3D-Schnittstelle-AMD-Mantle-als-DirectX-Konkurrenz-1967989.html?view=zoom;zoom=1
+  70. file://localhost/newsticker/meldung/Volcanic-Islands-AMD-enthuellt-Next-Generation-Grafikkarten-fuer-4K-1966897.html
+  71. http://www.amd.com/us/products/desktop/graphics/r9/Pages/amd-radeon-hd-r9-series.aspx
+  72. file://localhost/newsticker/meldung/DirectX-11-2-in-Windows-8-1-Hochdetaillierte-Spielwelten-durch-Megatexturen-1897910.html
+  73. http://msdn.microsoft.com/en-us/library/windows/desktop/bb509561%28v=vs.85%29.aspx
+  74. http://dice.se/
+  75. http://www.frostbite.com/
+  76. http://www.frostbite.com/connect/#battlefield-4-frostbite-mantle
+  77. file://localhost/newsticker/meldung/Neue-3D-Schnittstelle-AMD-Mantle-als-DirectX-Konkurrenz-1967989.html?view=zoom;zoom=3
+  78. file://localhost/newsticker/meldung/GPU-Architektur-AMD-will-Nvidia-das-Fuerchten-lehren-1262833.html
+  79. http://www.amd.com/
+  80. file://localhost/newsticker/meldung/Angriff-auf-Windows-Valve-enthuellt-optimiertes-Spiele-Linux-SteamOS-1965163.html
+  81. file://localhost/newsticker/meldung/AMD-verschiebt-Fusion-Konferenz-in-den-November-1804861.html
+  82. http://msdn.microsoft.com/en-us/library/windows/apps/bg182880.aspx#two
+  83. file://localhost/newsticker/meldung/DirectX-11-2-in-Windows-8-1-Hochdetaillierte-Spielwelten-durch-Megatexturen-1897910.html
+  84. file://localhost/newsticker/meldung/Erstes-Voodoo-Board-vorgestellt-8528.html
+  85. file://localhost/newsticker/meldung/Neue-3D-Schnittstelle-AMD-Mantle-als-DirectX-Konkurrenz-1967989.html?view=zoom;zoom=2
+  86. mailto:mfi@ct.de
+  87. file://localhost/newsticker/meldung/Entwickler-kaufen-FastMail-von-Opera-zurueck-1968004.html
+  88. file://localhost/newsticker/meldung/Google-Hangouts-liefert-Messages-an-falsche-Adressaten-1968038.html
+  89. file://localhost/newsticker/foren/S-Neue-3D-Schnittstelle-AMD-Mantle-als-DirectX-Konkurrenz/forum-266224/list/
+  90. file://localhost/newsticker/meldung/Neue-3D-Schnittstelle-AMD-Mantle-als-DirectX-Konkurrenz-1967989.html?view=print
+  91. file://localhost/newsticker/meldung/Neue-3D-Schnittstelle-AMD-Mantle-als-DirectX-Konkurrenz-1967989.html?view=mail
+  92. file://localhost/newsletter/
+  93. http://heise.de/-1967989
+  94. http://www.heise.de/newsticker/meldung/AMD-verspricht-Treiber-macht-GCN-GPUs-zu-DirectX-11-2-kompatibel-1940700.html/from/related
+  95. http://www.heise.de/newsticker/meldung/DirectX-11-2-in-Windows-8-1-Hochdetaillierte-Spielwelten-durch-Megatexturen-1897910.html/from/related
+  96. http://www.heise.de/newsticker/meldung/Lautlose-Radeon-HD-7850-von-Powercolor-1859292.html/from/related
+  97. http://www.heise.de/newsticker/meldung/GTC-2013-Fuer-Valve-ist-Linux-Spieleportierung-Sprungbrett-zu-Android-1827868.html/from/related
+  98. http://www.heise.de/newsticker/meldung/DirectX-11-1-Hat-Nvidia-bewusst-getrickst-1755457.html/from/related
+  99. http://www.heise.de/newsticker/meldung/Nvidias-Kepler-GPUs-nicht-vollstaendig-zu-DirectX-11-1-kompatibel-1754119.html/from/related
+ 100. file://localhost/thema/Grafik_Hardware
+ 101. file://localhost/thema/Konsolen
+ 102. file://localhost/thema/Spiele
+ 103. file://localhost/thema/DirectX
+ 104. file://localhost/thema/Schnittstelle
+ 105. http://www.heise.de/mediadaten/online/
+ 106. http://www.heise.de/mediadaten/online/
+ 107. file://localhost/meldung/PC-Fritz-erwirkt-einstweilige-Verfuegung-gegen-Microsoft-1969949.html
+ 108. file://localhost/meldung/Marktforscher-Windows-Phone-ist-iOS-auf-den-Fersen-1969830.html
+ 109. file://localhost/meldung/Breaking-Bad-Rekord-Finale-im-Fernsehen-und-im-Netz-1970113.html
+ 110. file://localhost/meldung/NSA-Affaere-Geheimdienst-analysiert-umfassend-soziale-Beziehungen-1969450.html
+ 111. file://localhost/meldung/Facebooks-Graph-Search-durchsucht-Posts-1970109.html
+ 112. http://www.ct.de/inhalt
+ 113. file://localhost/meldung/Sicherheitsrisiken-durch-Homeoffice-1962772.html
+ 114. file://localhost/security/artikel/Tresorknacken-fuer-Anfaenger-1888465.html
+ 115. file://localhost/developer/artikel/Quicklisp-und-mehr-Neues-bei-Common-Lisp-1965566.html
+ 116. file://localhost/mediadaten/online/
+ 117. http://pubads.g.doubleclick.net/gampad/clk?id=25602350&iu=/6514/microsite/hp_toner
+ 118. http://pubads.g.doubleclick.net/gampad/clk?id=25240190&iu=/6514/microsite/messe_muc
+ 119. http://pubads.g.doubleclick.net/gampad/clk?id=24509750&iu=/6514/newsticker
+ 120. http://pubads.g.doubleclick.net/gampad/clk?id=24728870&iu=/6514/microsite/messe_nuernberg
+ 121. http://pubads.g.doubleclick.net/gampad/clk?id=25532030&iu=/6514/newsticker
+ 122. http://pubads.g.doubleclick.net/gampad/clk?id=24935630&iu=/6514/microsite/mailstore
+ 123. http://www.heise.de/whitepapers/Zehn-Wege-zu-einem-effektiveren-Patch-Management--/detail/2012
+ 124. http://webcasts.heise.de/virtualisierung-cloud/private-cloud--so-nutzen-sie-ihre-rz-ressourcen-effektiv-kostensparend-und-dynamisch/?source=cisco_09_13_tl
+ 125. http://webcasts.heise.de/dellsoftware/big-data-komplexe-daten/?source=DellSW_05_09_13_TL2
+ 126. http://webcasts.heise.de/server-storage/so-reduzieren-sie-die-komplexitaet-im-modernen-rechenzentrum/?source=HP_04_12_TL
+ 127. http://webcasts.heise.de/server-storage/vollgas-fuer-ihre-it-ressourcen-automatisiert-sicher-und-mandantenorientiert-bereitstellen/h/?source=cisco_10_13_tl
+ 128. http://www.heise.de/microsites/next-generation-networking-mehr-sicherheit-fuer-unternehmen/158/390/
+ 129. file://localhost/mac-and-i/heft/
+ 130. file://localhost/meldung/Erster-Coffein-Hackathon-in-Berlin-1938451.html
+ 131. http://shop.heise.de/technology-review-energie
+ 132. file://localhost/meldung/Fujifilm-X-A1-Spiegellose-fuer-Einsteiger-1958868.html
+ 133. file://localhost/autos/artikel/50-Jahre-Mittelklasse-von-Mazda-1968634.html
+ 134. http://www.heise.de/download/
+ 135. http://www.heise.de/download/special-delta-search-aus-chrome-und-firefox-entfernen-150991.html
+ 136. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1010.data#software_tabs-1
+ 137. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1010.data#software_tabs-2
+ 138. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1010.data#software_tabs-3
+ 139. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1010.data#software_tabs-4
+ 140. http://www.heise.de/download/ghostscript.html
+ 141. http://www.heise.de/download/windows-xp-service-pack-3-sp3.html
+ 142. http://www.heise.de/download/irfanview.html
+ 143. http://www.heise.de/download/adwcleaner-1191313.html
+ 144. http://www.heise.de/download/ifruit-app-fuer-gta-v-1192600.html
+ 145. http://www.heise.de/download/top-downloads-50000505000/
+ 146. http://www.heise.de/download/irfanview.html
+ 147. http://www.heise.de/download/firefox.html
+ 148. http://www.heise.de/download/wsus-offline-update-ct.html
+ 149. http://www.heise.de/download/vlc-media-player.html
+ 150. http://www.heise.de/download/notepad.html
+ 151. http://www.heise.de/download/bestbewertet-50000606000/
+ 152. http://www.heise.de/download/greasemonkey-1138986.html
+ 153. http://www.heise.de/download/5-clicks-screen-capture-program-1123768.html
+ 154. http://www.heise.de/download/youtube-video-downloader-tubedownload-1143392.html
+ 155. http://www.heise.de/download/7-pdf-printer-1178081.html
+ 156. http://www.heise.de/download/forex-strategy-builder-1141159.html
+ 157. http://www.heise.de/download/updates-50000304000/
+ 158. http://www.heise.de/download/btt-remote-1192748.html
+ 159. http://www.heise.de/download/alien-bio-lab-1192728.html
+ 160. http://www.heise.de/download/ipgmail-1192705.html
+ 161. http://www.heise.de/download/openpgp-keychain-1192704.html
+ 162. http://www.heise.de/download/quivive-file-manager-1192607.html
+ 163. http://www.heise.de/download/neuzugaenge-50000311000/
+ 164. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1010.data#meistgelesen
+ 165. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1010.data#meistkommentiert
+ 166. file://localhost/meldung/Marktforscher-Windows-Phone-ist-iOS-auf-den-Fersen-1969830.html
+ 167. file://localhost/meldung/Avira-verzichtet-auf-nervige-Werbefenster-1969374.html
+ 168. file://localhost/meldung/Congstar-fuehrt-DSL-Drossel-ein-1969341.html
+ 169. file://localhost/meldung/NSA-Affaere-Geheimdienst-analysiert-umfassend-soziale-Beziehungen-1969450.html
+ 170. file://localhost/meldung/PC-Fritz-erwirkt-einstweilige-Verfuegung-gegen-Microsoft-1969949.html
+ 171. file://localhost/newsticker/meldung/USA-lassen-deutschen-Ueberwachungskritiker-nicht-einreisen-1970526.html
+ 172. file://localhost/newsticker/meldung/Samsungs-Region-Lock-kastriert-wohl-doch-den-Auslandseinsatz-1970422.html
+ 173. file://localhost/newsticker/meldung/Delta-stattet-seine-11-000-Piloten-mit-Microsoft-Tablet-Surface-2-aus-1970239.html
+ 174. file://localhost/newsticker/meldung/Breaking-Bad-Rekord-Finale-im-Fernsehen-und-im-Netz-1970113.html
+ 175. file://localhost/newsticker/meldung/Fernsehhersteller-Loewe-stellt-Insolvenzantrag-1970371.html
+ 176. file://localhost/foren/
+ 177. file://localhost/newsticker/foren/S-Iran-ist-wesentlich-entspannter/forum-266491/msg-24190747/read/
+ 178. file://localhost/mac-and-i/news/foren/S-Wenn-sog-Investoren-anfangen-die-Geschicke-einer-Firma/forum-266519/msg-24190746/read/
+ 179. file://localhost/newsticker/foren/S-Re-Ist-der-Artikel-irrefuehrend-Die-Hersteller-wollen-doch-bei-usb-micro-b-blei/forum-266371/msg-24190745/read/
+ 180. file://localhost/tp/foren/S-Re-Vielleicht-sollten-wir-die-nach-Ungarn-schicken/forum-266523/msg-24190744/read/
+ 181. file://localhost/mac-and-i/news/foren/S-Re-Apple-sollte-erst-mal-die-Steuern-zahlen-wie-es-sich-fuer-einen/forum-266519/msg-24190743/read/
+ 182. http://www.heise.de/mediadaten/online/
+ 183. http://www.seenby.de/
+ 184. http://www.heise.de/mediadaten/online/
+ 185. http://www.heise.de/mediadaten/online/
+ 186. file://localhost/
+ 187. file://localhost/ct/
+ 188. file://localhost/ix/
+ 189. file://localhost/tr/
+ 190. file://localhost/mac-and-i/
+ 191. file://localhost/tp/
+ 192. file://localhost/hardware-hacks/
+ 193. file://localhost/foto/inhalt/
+ 194. file://localhost/autos/
+ 195. file://localhost/developer/
+ 196. file://localhost/foto/
+ 197. file://localhost/netze/
+ 198. file://localhost/open/
+ 199. file://localhost/resale/
+ 200. file://localhost/security/
+ 201. file://localhost/video/
+ 202. http://www.techstage.de/
+ 203. file://localhost/download/
+ 204. file://localhost/preisvergleich/
+ 205. file://localhost/jobs/
+ 206. file://localhost/events/
+ 207. file://localhost/itmarkt/
+ 208. file://localhost/whitepapers/
+ 209. http://tarifrechner.heise.de/
+ 210. http://shop.heise.de/
+ 211. file://localhost/artikel-archiv/
+ 212. https://abo.heise.de/
+ 213. file://localhost/loseblattwerke/
+ 214. file://localhost/news-extern/news.html
+ 215. file://localhost/foren/
+ 216. file://localhost/newsletter/
+ 217. file://localhost/suche/
+ 218. file://localhost/netze/netzwerk-tools/imonitor-internet-stoerungen/
+ 219. file://localhost/Privacy-Policy-der-Heise-Zeitschriften-Verlag-GmbH-Co-KG-4860.html
+ 220. file://localhost/Impressum-4862.html
+ 221. file://localhost/Kontakt-4864.html
+ 222. file://localhost/mediadaten/
+ 223. http://www.interred.de/
+ 224. http://www.plusline.de/
+ 225. http://www.heise-medien.de/zeitschriften/
+
+   Hidden links:
+ 227. http://ad-emea.doubleclick.net/N6514/jump/newsticker/news-hardware;sz=500x500;kw=DirectX,Grafik-Hardware,Konsolen,Mantle,Schnittstelle,Spiele;tile=1;ord=8452145579?
+ 228. http://ad-emea.doubleclick.net/N6514/jump/newsticker/news-hardware;sz=300x250,336x280;kw=DirectX,Grafik-Hardware,Konsolen,Mantle,Schnittstelle,Spiele;tile=2;ord=8452145579?
+ 229. http://www.ct.de/inhalt
+ 230. file://localhost/meldung/Sicherheitsrisiken-durch-Homeoffice-1962772.html
+ 231. file://localhost/security/artikel/Tresorknacken-fuer-Anfaenger-1888465.html
+ 232. file://localhost/developer/artikel/Quicklisp-und-mehr-Neues-bei-Common-Lisp-1965566.html
+ 233. http://pubads.g.doubleclick.net/gampad/clk?id=25787390&iu=/6514/extras/usad
+ 234. http://ad-emea.doubleclick.net/N6514/jump/newsticker/news-hardware;sz=2x1;kw=DirectX,Grafik-Hardware,Konsolen,Mantle,Schnittstelle,Spiele;tile=3;ord=8452145579?
+ 235. file://localhost/mac-and-i/heft/
+ 236. file://localhost/meldung/Erster-Coffein-Hackathon-in-Berlin-1938451.html
+ 237. http://shop.heise.de/technology-review-energie
+ 238. file://localhost/meldung/Fujifilm-X-A1-Spiegellose-fuer-Einsteiger-1958868.html
+ 239. file://localhost/autos/artikel/50-Jahre-Mittelklasse-von-Mazda-1968634.html
+ 240. http://www.heise.de/download/special-delta-search-aus-chrome-und-firefox-entfernen-150991.html
+ 241. http://ad-emea.doubleclick.net/N6514/jump/newsticker/news-hardware;sz=336x200;kw=DirectX,Grafik-Hardware,Konsolen,Mantle,Schnittstelle,Spiele;tile=4;ord=8452145579?
+ 242. http://ad-emea.doubleclick.net/N6514/jump/newsticker/news-hardware;sz=300x200;kw=DirectX,Grafik-Hardware,Konsolen,Mantle,Schnittstelle,Spiele;tile=5;ord=8452145579?
+ 243. http://ad-emea.doubleclick.net/N6514/jump/newsticker/news-hardware;sz=300x201;kw=DirectX,Grafik-Hardware,Konsolen,Mantle,Schnittstelle,Spiele;tile=6;ord=8452145579?
+ 244. http://ad-emea.doubleclick.net/N6514/jump/newsticker/news-hardware;sz=728x90,468x60;kw=DirectX,Grafik-Hardware,Konsolen,Mantle,Schnittstelle,Spiele;tile=7;ord=8452145579?
+ 245. http://ad-emea.doubleclick.net/N6514/jump/newsticker/news-hardware;sz=120x600,120x800,160x600,160x800;kw=DirectX,Grafik-Hardware,Konsolen,Mantle,Schnittstelle,Spiele;tile=8;ord=8452145579?

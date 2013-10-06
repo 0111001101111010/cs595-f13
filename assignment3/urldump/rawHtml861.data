@@ -1,0 +1,1199 @@
+<!doctype html>
+
+<!--[if IEMobile 7 ]> <html lang="en-US"class="no-js iem7"> <![endif]-->
+<!--[if lt IE 7 ]> <html lang="en-US" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en-US" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-US" class="no-js ie8"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html lang="en-US" class="no-js"><!--<![endif]-->
+
+<head>
+    <!-- Begin Inspectlet Embed Code -->
+    <script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<script type="text/javascript" id="inspectletjs">
+        window.__insp = window.__insp || [];
+        __insp.push(['wid', 328037484]);
+        (function() {
+            function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://www.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+            if (window.attachEvent){
+                window.attachEvent('onload', __ldinsp);
+            }else{
+                window.addEventListener('load', __ldinsp, false);
+            }
+        })();
+    </script>
+    <!-- End Inspectlet Embed Code -->
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            <meta property="fb:app_id" content="121771584602003"/>
+        <meta property="fb:admins" content="576248292"/>
+        <script>
+            (function(w, d, s) {
+                function go(){
+                    var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id, cb) {
+                        if (d.getElementById(id)) {return;}
+                        js = d.createElement(s); js.src = url; js.id = id;
+                        if (cb) { fjs.addEventListener('load', function (e) { cb(null, e); }, false); }
+                        fjs.parentNode.insertBefore(js, fjs);
+                    };
+                    load('//connect.facebook.net/en_US/all.js#xfbml=1&appId=121771584602003', 'fbjssdk');
+                    load('//apis.google.com/js/plusone.js', 'gplus1js');
+                    load('//platform.twitter.com/widgets.js', 'tweetjs');
+                    load('//platform.linkedin.com/in.js', 'lnkdjs',function(){IN.init({apiKey: '2d4gwdku6vg9'});});
+                }
+                if (w.addEventListener) { w.addEventListener("load", go, false); }
+                else if (w.attachEvent) { w.attachEvent("onload",go); }
+            }(window, document, 'script'));
+        </script>
+        
+
+    <title>
+          How WordPress is Solving the &#8220;Women in Tech&#8221; Issue    </title>
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+
+    <link rel="shortcut icon" href="https://managewp.com/favicon.ico" />
+    <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/managewp" title="ManageWP Blog" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- icons & favicons -->
+    <!-- For iPhone 4 -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://managewp.com/wp-content/themes/managewp5/images/icons/favicon_114.png">
+    <!-- For iPad 1-->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://managewp.com/wp-content/themes/managewp5/images/icons/favicon_72.png">
+    <!-- For iPhone 3G, iPod Touch and Android -->
+    <link rel="apple-touch-icon-precomposed" href="https://managewp.com/wp-content/themes/managewp5/images/icons/favicon_57.png">
+    <!-- For Nokia -->
+    <link rel="shortcut icon" href="https://managewp.com/wp-content/themes/managewp5/images/icons/favicon_57.png">
+
+    <!-- new font
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:bold" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans" />-->
+
+
+    <!-- media-queries.js (fallback) -->
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <!-- html5.js -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+        <script type="text/javascript">
+        var theajaxurl = 'https://managewp.com/';
+    </script>
+    <link rel="pingback" href="https://managewp.com/xmlrpc.php">
+
+    <!--  		<link rel="stylesheet/less" type="text/css" href="--><!--/less/bootstrap.less">-->
+    <!--  		<link rel="stylesheet/less" type="text/css" href="--><!--/less/responsive.less">-->
+
+    <!-- wordpress head functions -->
+    				
+	<script type="text/javascript">//<![CDATA[
+	// Google Analytics for WordPress by Yoast v4.1.3 | http://yoast.com/wordpress/google-analytics/
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount','UA-1205481-59']);
+	_gaq.push(['_setAllowLinker',true],['_setCustomVar',2,'author','joyce-grace',3],['_setCustomVar',3,'category','wordpress-tips-tricks',3],['_setCustomVar',4,'categories','wordpress-tips-tricks',3],['_trackPageview'],['_trackPageLoadTime']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	window.onerror = function(message, file, line) {
+	var sFormattedMessage = '[' + file + ' (' + line + ')] ' + message;
+	_gaq.push(['_trackEvent', 'Exceptions', 'Application', sFormattedMessage, null, true]);
+	}
+	//]]></script>
+<link rel='stylesheet' id='bwp-syntax-css'  href='https://managewp.com/wp-content/plugins/better-wordpress-syntax-based-on-geshi/css/bwp-syntax.css?ver=3.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='https://managewp.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='https://managewp.com/wp-content/themes/managewp5/library/css/bootstrap.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-responsive-css'  href='https://managewp.com/wp-content/themes/managewp5/library/css/responsive.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-slider-css'  href='https://managewp.com/wp-content/themes/managewp5/library/css/bootstrap-slider.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-bootstrap-css'  href='https://managewp.com/wp-content/themes/managewp5/style.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='mwp-style-css'  href='https://managewp.com/wp-content/themes/managewp5/library/css/mwp-style.css?ver=5.0.87' type='text/css' media='all' />
+<link rel='stylesheet' id='mwp-style-pricing-css'  href='https://managewp.com/wp-content/themes/managewp5/library/css/mwp-style-pricing.css?ver=5.0.87' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css'  href='https://managewp.com/wp-content/plugins/tablepress/css/default.min.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='better-related-frontend-css'  href='https://managewp.com/wp-content/plugins/better-related/css/better-related.css?ver=0.3.5' type='text/css' media='all' />
+<script type='text/javascript' src='https://managewp.com/wp-content/themes/managewp5/library/js/libs/jquery-1.7.1.min.js?ver=1.7.1'></script>
+<script type='text/javascript' src='https://managewp.com/wp-content/plugins/better-wordpress-syntax-based-on-geshi/js/bwp-syntax.js?ver=3.5.2'></script>
+<script type='text/javascript' src='https://managewp.com/wp-content/plugins/pmhook/js/pricing.js?ver=3.5.2'></script>
+<script type='text/javascript' src='https://managewp.com/wp-includes/js/comment-reply.min.js?ver=3.5.2'></script>
+<link rel='canonical' href='https://managewp.com/wordpress-women-in-tech' />
+<link rel='shortlink' href='https://managewp.com/?p=605954' />
+    <script type="text/javascript">
+        var ajaxurl = 'https://managewp.com/wp-admin/admin-ajax.php';
+    </script>
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+    <!-- end of wordpress head -->
+
+    <!-- theme options from options panel -->
+    <style>
+        #main article {
+          border-bottom: none;
+        }
+        </style>
+    
+</head>
+
+<body class="single single-post postid-605954 single-format-standard">
+<!-- Qualaroo for managewp.com -->
+
+<!-- Paste this code right after the <body> tag on every page of your site. -->
+
+<script type="text/javascript">
+
+    var _kiq = _kiq || [];
+
+    (function(){
+
+        setTimeout(function(){
+
+            var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript';
+
+            s.async = true; s.src = '//s3.amazonaws.com/ki.js/48919/azz.js'; f.parentNode.insertBefore(s, f);
+
+        }, 1);
+
+    })();
+
+</script>
+
+<noscript><a href="https://qualaroo.com/">Survey by Qualaroo</a></noscript>
+
+<div id="fb-root"></div>
+
+<header role="banner">
+
+    <div id="inner-header_old" class="clearfix">
+
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid nav-container">
+                    <nav role="navigation">
+                        <a class="brand" id="logo" title="Manage WordPress Sites from One Dashboard  - ManageWP.com" href="https://managewp.com"></a>
+
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        
+                            <div class="mwp_lr-actions">
+                                <ul>
+                                    <li><a href="#login" class="btn mwp_btn" id="mwp-login-action">Sign in</a></li>
+                                    <li><a href="#register" class="btn mwp_btn btn-gold" id="mwp-register-action" data-gaction="top" data-glabel="blogpost">Sign up - it's free!</a></li>
+                                </ul>
+                            </div>
+
+                                                <span class="telephone_span"><span class="telephone"></span>SALES 1.877.891.3340</span>
+                        <div class="nav-collapse">
+                             
+                            <ul id="menu-top" class="nav">
+                                <li id="menu-item-14173" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://managewp.com/features">Learn more</a></li>
+                                <li id="menu-item-14172" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://managewp.com/plans-and-pricing">Plans</a></li>
+                            </ul>
+
+                        </div></nav>
+
+
+
+
+
+
+
+                    
+                </div>
+            </div>
+        </div>
+
+
+    </div> <!-- end #inner-header -->
+
+</header> <!-- end header -->
+
+<div id="wrap">
+
+<div class="mwp_page page-blog">
+
+    <div class="row-fluid gray-row heading">
+
+        <div class="container-fluid">
+            <h1><a href="https://managewp.com/blog">ManageWP Blog</a></h1>
+        </div>
+
+    </div> <!-- end .gray-row -->
+
+    <div class="row-fluid white-row">
+
+        <div class="container-fluid">
+            <div class="blog_navigation tips">
+
+    <ul>
+
+        <li class="hottest_class">
+            <a href="https://managewp.com/blogs/hottest">Hottest</a>
+            </li><li class="alltime_class">
+            <a href="https://managewp.com/blogs/best-of">Best of</a>
+            </li>
+        <li class="themes_class">
+            <a href="https://managewp.com/blogs/best-wordpress-themes">Themes</a>
+            </li><li class="plugins_class">
+            <a href="https://managewp.com/blogs/best-wordpress-plugins">Plugins</a>
+            </li><li class="tips_and_tricks_class">
+            <a href="https://managewp.com/blogs/wordpress-tips-tricks">Tips &amp; Tricks</a>
+            </li><li class="managewp_class">
+            <a href="https://managewp.com/blogs/managewp-news-tips">ManageWP</a>
+            </li><li class="blogging_class">
+            <a href="https://managewp.com/blogs/blogging">Blogging</a>
+            </li><li class="productivity_class">
+            <a href="https://managewp.com/blogs/productivity-tips">Productivity</a>
+            </li>    </ul>
+
+</div>
+        </div>
+
+        <div class="container-fluid mwp_relative">
+                            <div class="post_heading" id="single-post">
+                    <h1 class="entry-title">How WordPress is Solving the &#8220;Women in Tech&#8221; Issue</h1>
+                    <div class="post_meta">
+                        <h3>Written by <strong><a href="https://managewp.com/author/joyce-grace" title="Posts by Joyce Grace" rel="author">Joyce Grace</a></strong> on September 25th, 2013</h3>
+                    </div>
+                </div><!-- end .post_heading -->
+            
+            <div id="sticky-anchor">
+                <div class="sticky">
+
+                    <div class="social-box">
+                        <a href="#single-post" class="arrows_up">BACK TO TOP</a>
+                    </div>
+
+                    <div class="social-box">
+    <a class="twitter-share-button" data-count="vertical" data-url="https://managewp.com/wordpress-women-in-tech" data-via="managewp"></a>
+</div>
+
+<div class="social-box">
+    <script type="IN/Share" data-counter="top" data-url="https://managewp.com/wordpress-women-in-tech"></script>
+</div>
+
+<div class="social-box">
+    <div class="fb-like" data-send="false" data-layout="box_count" data-width="60" data-show-faces="false" data-href="https://managewp.com/wordpress-women-in-tech"></div>
+</div>
+
+<div class="social-box">
+    <g:plusone size="tall" data-href="https://managewp.com/wordpress-women-in-tech"></g:plusone>
+</div>
+
+<div class="social-box">
+    <div class="social-btn-box">
+        <span class="social-count">12</span><a href="#" class="btn mwp_btn blue social-btn sb-comment">comment</a>
+    </div>
+</div>
+                    <!--<div class="sticky-item tell-a-friend">--><!--</div>-->
+                </div><!-- end .sticky -->
+            </div><!-- end #sticky-anchor -->
+        </div>
+
+        <div class="container-fluid">
+
+            <div class="span9 main-blog" id="single">
+
+                
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var target = $('#single .entry-content').find('img:eq(0)');
+            if(target.parent().hasClass('wp-caption')) {
+                var target = target.parent();
+            }
+            if(target.size() > 0) {
+                target.wrap('<div class="single-img-focus"></div>');
+                var clone = $('.social-boxes').clone();
+                $('.social-boxes').remove();
+                $('.single-img-focus').append(clone);
+                $('.single-img-focus').find('.social-boxes').show();
+                toggleSticky();
+            } else {
+
+                    $('#sticky-anchor').show();
+
+
+            }
+
+            $(window).scroll(function() {
+                toggleSticky();
+            });
+
+            function toggleSticky() {
+
+                var sticky_anchor_bottom=document.getElementById('sticky-anchor').getBoundingClientRect().bottom;
+                var footer_top=document.getElementById('footer').getBoundingClientRect().top;
+
+                var top = $(window).scrollTop();
+                var footer_top=$(footer).position().top;
+
+                var top_fut_distance=footer_top-top;
+
+                //kad se sticky-anchor fadeOut, bottom mu postaje 0!
+                if(top>870&&(top_fut_distance>580)){
+                    $('#sticky-anchor').fadeIn(300);
+                }
+                 else
+                    {
+                    $('#sticky-anchor').fadeOut(100);
+                }
+
+            }
+        });
+    </script>
+    <div id="post-605954" class="post-605954 post type-post status-publish format-standard hentry category-wordpress-tips-tricks tag-trends tag-wordpress">
+
+        <div class="entry-content row-fluid">
+
+            <div class="social-boxes">
+
+                <div class="social-box">
+    <a class="twitter-share-button" data-count="vertical" data-url="https://managewp.com/wordpress-women-in-tech" data-via="managewp"></a>
+</div>
+
+<div class="social-box">
+    <script type="IN/Share" data-counter="top" data-url="https://managewp.com/wordpress-women-in-tech"></script>
+</div>
+
+<div class="social-box">
+    <div class="fb-like" data-send="false" data-layout="box_count" data-width="60" data-show-faces="false" data-href="https://managewp.com/wordpress-women-in-tech"></div>
+</div>
+
+<div class="social-box">
+    <g:plusone size="tall" data-href="https://managewp.com/wordpress-women-in-tech"></g:plusone>
+</div>
+
+<div class="social-box">
+    <div class="social-btn-box">
+        <span class="social-count">12</span><a href="#" class="btn mwp_btn blue social-btn sb-comment">comment</a>
+    </div>
+</div>
+                <div class="mwp_gray-box">
+                    <div class="blog-subscribe small">
+    <h3>Don't miss any stories</h3>
+
+    <form class="mwp-subscribe-frm" action="http://managewp.us5.list-manage.com/subscribe/post?u=05e8c30921fa419d01d3561c8&amp;id=179fd3bc0c" method="post">
+
+        <div class="input-append">
+            <input type="text" class="emailw" name="email" placeholder="Enter your email" />
+            <button class="btn mwp_btn btn-small btn-blue" type="submit" id="blog_search-frm">Subscribe</button>
+        </div>
+
+        <div class="subsc_suggestion" style="display:none;"></div>
+    </form>
+</div>                </div>
+
+            </div>
+
+            <img class="alignnone size-full wp-image-605982" alt="women-in-tech-photo" src="https://managewp.com/wp-content/uploads/2013/09/women-in-tech-photo.jpg" />
+<p class="lead">Before I start, I need to give some personal background on why I’m writing this article, so please excuse the long intro.</p>
+<p>You should know that I’m not a feminist. I’m far from it. But I am glad I live in a country where, as a girl, I wasn’t denied opportunities I wanted. Despite stats showing women don’t have a dominant role in tech, I feel that if a woman wants to work as a developer or be a leader in technology, she should go to school, get educated, be smart enough to get hired, and work her way up the ladder like any male would have to do. No pity parties. My <a href="http://www.forbes.com/sites/womensmedia/2013/08/24/5-rewarding-behaviors-for-women-breaking-into-tech/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.forbes.com']);">favorite statement</a> so far on this subject is by Deanna Ballew who, after giving hope-downing statistics on women in tech says, frankly:</p>
+<blockquote><p>What do the numbers mean? Well, if you’re a woman who wants to be in the tech industry, they should mean absolutely nothing… Whether you’re a woman or man, your success in the tech industry is going to come down to the same factors: Are you really good at what you do? Can you get the job done?</p></blockquote>
+<p>I couldn’t agree more.</p>
+<p>But I have to admit, in the tech world, even if the pay rate is the same, there is an insecurity I feel as a female when I walk into sales meetings or sit in on talks at WordCamp (where everyone presumes I’m a blogger or a designer). I call myself a web developer, but I don’t feel like one. I don’t have a degree in computer science; I learned my way into this field (I’ll get to that), and I always feel like I need to give out that disclaimer when speaking to people about my skillset. Not only that, I don’t look the part <i>at all.</i> I’m not just saying I’m a female web developer; I’m saying I’m a high-heel-wearing, makeup-doing, cute-skirt-flaunting princess of a web developer. I wonder if people will take me seriously when they first look at me. Before I open my mouth. I figure they’ll think, “Oh, she means she’s a web <i>designer.</i>” Or, “She’s just the client-facing sales girl” (actually, that’s half-true with me nowadays, but really off topic right now).</p>
+<p>I tried asking my clients what they thought of me when they first met me, so I could do some qualitative research for this article, but my attempt failed when I realized this is a group of people who all chose to hire me. They all said the fact I was a girl had nothing to do with whether they thought I could handle the job. Does that make my above-described insecurity go away? No. And I think writers out there are pointing this out – that women are not brave enough to accept that their skillset is valuable to a company as much as a man’s in the technology field.</p>
+<p>Like for example, an article titled, <a href="http://wpmu.org/women-in-wordpress/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://wpmu.org']);">Where are the Women in WordPress?</a> by Raelene Wilson, where she states, on behalf of only 12 women who attended a WordPress gathering:</p>
+<blockquote><p>Many women don’t think they’re smart enough and feel like outsiders despite the incredible work they do, and some women who work in development tell people they’re not a developer.</p></blockquote>
+<p>Bang on. I couldn’t have described my own experience better.</p>
+<p>Then there’s this affirmation too: <a href="http://www.huffingtonpost.com/athena-tacet/why-are-women-leaders-so-_b_3644996.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.huffingtonpost.com']);">a quote from Sheryl Sandberg</a>, COO at Facebook:</p>
+<blockquote><p>Women systematically underestimate their own abilities.</p></blockquote>
+<p>But I have to acknowledge what got me inspired to write this article: it was when I heard Morten Rand-Hendriksen (a male) of Pink and Yellow give the <a href="http://designisphilosophy.com/events/speaking-engagements-events/why-wordpress-my-wordcamp-seattle-2013-keynote/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://designisphilosophy.com']);">Keynote Speech at WordCamp Seattle 2013</a>. It was an amazing speech, packed with lots of stats on how WordPress is changing the Internet. And here’s what he says about WordPress helping women in tech (it starts around 38:30 minutes into the video):</p>
+<blockquote><p>WordPress is also chaining the Internet in one other <em>very</em> significant way. And as exemplified by <a href="http://2013.seattle.wordcamp.org/2013/05/03/wordcamp-seattle-2013-by-the-numbers/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://2013.seattle.wordcamp.org']);">this graphic</a> that was released by the good people who are running this event…There&#8217;s 60% men who registered (according to their first names)…the remaining 40% are super heroes.</p>
+<p>The WordPress community consists of a very high number of women; very proportionately, a ridiculously high number of women. And not only that, but those women are essential parts of the development of WordPress, of the forward motion of WordPress and what&#8217;s happening with it.</p>
+<p>If you go to web development conferences you will generally find like two women, and they walk around with cages, because it&#8217;s like they&#8217;re magnets. If you go to design conferences, you get a larger proportion of women but there are very few women in development in general until you come to WordPress, and then all of a sudden you have all these women.</p>
+<p>The only thing that&#8217;s missing here is more women in front of the crowd. So I want all of you women here&#8230;to go back home after the conference, and think about what you&#8217;re going to present next year. Everyone in this room has something to present at WordCamp, something of value, something that other people will learn from, and especially the women, because we don&#8217;t get your point of view because you&#8217;re not presenting. So you need to step up and present, and that will happen.</p></blockquote>
+<p>I did some research and it turns out this women in tech issue is a big one. Not only are women not studying computer sciences as much as they were in the 80s, they’re also feeling like <a href="http://www.itworld.com/it-management/366136/how-not-attract-female-developers" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.itworld.com']);">the industry treats them very poorly</a>. Sexual harassment cases and <a href="http://www.profitguide.com/industry-focus/technology/we-dont-need-more-female-tech-ceos-57300" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.profitguide.com']);">instances of sexism abound</a>. Then there are companies (<a href="http://www.newswire.ca/en/story/1219151/mastercard-canada-calling-all-female-developers-to-master-the-code" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.newswire.ca']);">like Mastercard</a>) that try to promote ‘diversity’ by purposely hiring females, just to add some mix to the pile, because they see the lack of female voice in the industry.</p>
+<h2>Why WordPress Could Be Solving the &#8220;Women in Tech&#8221; Issue</h2>
+<h3>1. WordPress is Easy and Designers Like That</h3>
+<p>I&#8217;m not saying that women are stupid, but I <em>am</em> saying that WordPress is closing the gap between the non-techy and the techy, as was discovered in other parts of Morten’s speech noted above.</p>
+<p>Right now we know that more females will enter into design-related studies than they would computer science studies, and we can presume that design is easier than coding (sorry, although I dare not ever say it does not require education and brains to be a good designer). But the thing with design nowadays is that it requires a deep understanding of the Web.</p>
+<p>I hire designers (many of whom are female) and can see that if designers don’t start learning coding basics, they are going to become paralyzed as far as their involvement in the web industry is concerned. They may be comfortable in print, since that’s what design schools teach, but it’s time for them to step up their game and learn how technology works and ‘thinks,’ so that they’re not forcing technology to work with their designs, but rather allowing their designs to fit into technology.</p>
+<p>Thus we have the theming and design tracks at WordCamps, where amazing female speakers like <a href="http://suzettefranck.com/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://suzettefranck.com']);">Suzette Franck</a> (to name only one) talk about how to <a href="http://wpforartists.org/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://wpforartists.org']);">make designs work with WordPress</a> plus other <a href="https://speakerdeck.com/suzettefranck" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://speakerdeck.com']);">WordPress topics</a> that take away the intimidation of technology for designers and the less technically-inclined.</p>
+<p>Plus, the proliferation of female-tailored themes on the WordPress theme marketplace today can testify to the fact that women want to make websites too, and WordPress is allowing them to do that very easily.</p>
+<h3>2. Theme Frameworks Are Making Developers Out of All Of Us</h3>
+<p>I really like the philosophy of <a href="http://www.studiopress.com/news/gary-jones-genesis-developer.htm" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.studiopress.com']);">Gary Jones</a>, who I remember once saying something along the lines of “I code so you don’t have to.” The amazing thing about theme frameworks, like the Genesis framework that Gary contributes to, is that it makes it super easy for anyone (boy or girl) to make a fantastic-looking custom WordPress site with little knowledge of code, because someone else has taken care of the tricky parts already.</p>
+<p>So this is where I get to the story of how I, the princess web developer, learned to make websites:</p>
+<p>I started in journalism, and then later got my degree in Communication. It was during my Communication studies that I fell in love with marketing (and almost failed a computer science class &#8212; no joke). At my first job out of college I got trained in SEO and e-marketing. When I was later no longer working for a company, I realized I had to know about web development if I was going to continue selling myself in this field effectively. Since any smart Internet marketer nowadays is going to know the power of WordPress for making moolah online, I attempted to make my first web site with WordPress.</p>
+<p>I was <i>dying</i> to know how to change the logo in the top left corner of my beauty blog, and how to make the links pink instead of gray. So the late-night Google searches commenced as well as the many, many forum posts to the StudioPress community (sorry everyone, but your help got me to where I am today!). Soon my first clients approached<i> me</i> and, after I told them I’m a ‘nothing’ in this world, they said, “I trust <em>you</em>, and I want <em>you</em> to be the one to make my website.” And that was that. A few people saw strength where I saw weakness and it got me off the ground (I’m skipping a lot out of the story).</p>
+<p>I think my story is not unique, as a woman in tech, letting WordPress and a theme framework bring me into the field.</p>
+<h3>3. WordPress is Creating Business Owners and Women Are Good at Tech Businesses</h3>
+<p>Since you&#8217;re reading this, you may well be making a living developing WordPress websites as a self-employed business owner. If you’re not, just attend one of several WordCamps to see hundreds upon hundreds of self-employed web developers using WordPress. The fact that it’s easy, powerful and financially accessible is allowing developers to go out on their own as freelancers, without the backing of large, deep-pocketed agencies who monetize enterprise level content management systems (not that those don’t have their place). What WordPress can do used to cost thousands upon thousands. Now it’s free. That makes room for more competition.</p>
+<p>So here’s the thing. I’ll bet a lot of really techy guys (and girls) would look at me and think, “Why would anyone want to hire <i>her</i>? She doesn’t know half as much as I do about coding.” And I would agree with them. But I’m learning that the thing that makes me, a woman, successful in this industry is the fact that I’m able to sell <i>myself.</i> I’m friendly, approachable, organized, learned and I have a thorough explanation for why I do certain things and how I’m going to make that work for a business. Then I deliver. I’m not bragging, I’m just saying, it makes a difference when selling <i>anything</i> that you have a character (not just a personality) to go with it.</p>
+<p>Unfortunately – though I agree with <a href="http://creativityincluded.com/opinion/women-in-wordpress/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://creativityincluded.com']);">Chris</a> it’s a stereotype with many points of falsehood – the web development industry is known for guys who dress like they’ve lost their will to live, who talk over your head with scary tech words, who say “Yes” to everything without delivering, who are never on time and make you feel stupid because you happen to not know as much about technology as they do. Add to that they know nothing about marketing or how their code is going to affect the way these websites will actually make money for a business later on.</p>
+<p>Ok, I know, not all tech guys are like that. I know many who are not. But I’m making a point. And…also saying what I’ve described above <i>does</i> exist.</p>
+<p>What can we conclude from this? Women can be the <i>human </i>key to bridging the gap between techy and non-techy, just like WordPress is a platform that is doing the same thing. And that’s pretty darn awesome for conducting business. These are not my words alone &#8212; check out <a href="http://blog.newrelic.com/wp-content/uploads/NewRelic_FiercestWomeninTech_FINAL1.png" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://blog.newrelic.com']);">this infographic</a> with stats on how women are helping tech businesses flourish. It states that, “Teams with at least one female member outperform male-only groups in collective intelligence tests.” And check out this: “Tech companies with more women in management have 34% ROI.” Finally, “Women are starting tech businesses at a rate of 1.5 times the national average.” I’m telling you, somethin’s cookin’ in the pot.</p>
+<h2>Just One Last Thing&#8230;</h2>
+<p>Now, most articles (<a href="http://www.huffingtonpost.com/athena-tacet/why-are-women-leaders-so-_b_3644996.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.huffingtonpost.com']);">like this one</a>) describing women in tech show women in high executive roles at tech <i>companies</i>. I don’t like those articles. Do you know why? Because those executive-level positions are managerial. They’re not describing a woman with un-manicured nails who sits at her computer coding all day just like one of the guys (I said I’m a princess but manicures just don’t mesh well with my job).</p>
+<p>Those women worked their way up, which is inspiring, but to truly understand the effect women are having, and can have, in the tech world <i>today, </i>we need more success stories of female <em>coders, </em>not just female women working at tech companies as the &#8220;<a href="http://www.usatoday.com/story/money/business/2013/08/13/more-women-finding-jobs-in-tech-sector/2651165/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.usatoday.com']);" target="_blank">project manager, business analyst, other IT, quality assurance tester and technical recruiter</a>.&#8221; It&#8217;s time we hear stories of women like <a href="http://www.usatoday.com/story/money/business/2013/08/13/more-women-finding-jobs-in-tech-sector/2651165/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.usatoday.com']);" target="_blank">Lisa French</a>, who who said, &#8220;with my background, I was interested but didn&#8217;t think I could do it. But I&#8217;m here to say that you can do it.&#8221; Or <a href="https://www.dashlane.com/blog/2012/08/20/what-its-like-being-a-female-developer/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.dashlane.com']);">stories like Helen’s,</a> where we learn what it’s like to be the only female developer at a software company.</p>
+<p>Like Morten said, we also need more female presenters at WordCamps and we need more <em>men</em> to encourage women to step up, to give them confidence, and to say that they admire the work they produce, because it’s pretty darn good. Then maybe we women won’t all hold back with our insecurities about working in a male dominated scene, and more amazing things can happen with WordPress and the Internet.</p>
+<p>Other resources you may want to check out:</p>
+<ul>
+<li><a href="http://www.wpexplorer.com/women-in-wordpress/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.wpexplorer.com']);" target="_blank">9 Women in WordPress You Should Be Following</a></li>
+<li><a href="http://www.forbes.com/sites/lorikozlowski/2012/03/22/women-in-tech-female-developers-by-the-numbers/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.forbes.com']);" target="_blank">Women in Tech: Female Developers By the Numbers</a></li>
+<li><a href="http://www.huffingtonpost.com/fueled/where-are-all-the-female-_1_b_3719876.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.huffingtonpost.com']);" target="_blank">Where Are All the Female Developers?</a></li>
+</ul>
+<p><em>Photo Credit: <a href="http://www.flickr.com/photos/37010090@N04/4211459357/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.flickr.com']);">Sprengben</a></em></p>
+        </div>
+        <!-- end .entry-content -->
+
+
+        <div class="row-fluid signature_area">
+                                        <img src="https://managewp.com/wp-content/themes/managewp5/images/Joyce_signature.jpg" alt=""
+                     class="alignright signature"/>
+                    </div>
+        <!--<div class="cta_after_signature">If you are managing WordPress websites, <a href="https://managewp.com/features">ManageWP</a> can make your life easier!</div>-->
+
+    </div><!-- #post-## -->
+
+                                    <div class="mwp_gray-box">
+                        <p>Access, manage, update and backup all your WordPress sites from one powerful dashboard</p>
+                        <a href="https://managewp.com/?utm_source=managewp&utm_medium=link&utm_campaign=blog-bottom-cta-1" class="btn mwp_btn btn-gold big" id="sign-up-blog" data-gaction="blog bottom" data-glabel="blogpost">Sign up - it's free!</a>
+                    </div>
+                
+                    <div class="mwp-related-posts">
+        <h4>You Might Like</h4>
+        <div class="row-fluid">
+            
+                <div class="span4">
+                                            <a href="https://managewp.com/wordpress-3-6-bug"><img src="https://managewp.com/wp-content/uploads/2013/08/wordpress-upgrade-125x125.jpg" class="attachment-post-thumbnail wp-post-image" alt="WordPress Upgrade" /></a>
+                                        <a class="related_link" href="https://managewp.com/wordpress-3-6-bug">Issues Upgrading to WordPress 3.6? Read This</a>
+                </div>
+
+            
+                <div class="span4">
+                                            <a href="https://managewp.com/awesome-free-themes-caroline-moore"><img src="https://managewp.com/wp-content/uploads/2013/01/spun2-310x165.jpg" class="attachment-post-thumbnail wp-post-image" alt="Spun" /></a>
+                                        <a class="related_link" href="https://managewp.com/awesome-free-themes-caroline-moore">5 Awesome Free Themes by Caroline Moore</a>
+                </div>
+
+            
+                <div class="span4">
+                                            <a href="https://managewp.com/how-to-contribute-to-wordpress"><img src="https://managewp.com/wp-content/uploads/2012/07/contributing-to-wordpress-205x113.jpg" class="attachment-post-thumbnail wp-post-image" alt="How to Contribute to WordPress (from Someone Who Knows)" /></a>
+                                        <a class="related_link" href="https://managewp.com/how-to-contribute-to-wordpress">How to Contribute to WordPress (from Someone Who Knows)</a>
+                </div>
+
+                                </div>
+    </div><!-- end .related-posts -->
+
+                <div id="comments-wrap">
+                    <a href="#" class="post-a-comment">post a comment</a>
+                    
+
+    <h2 id="comments">12 Comments</h2>
+    <div class="clear"></div>
+
+    <ol class="commentlist">
+        		<li class="comment even thread-even depth-1" id="comment-110309">
+				<div id="div-comment-110309" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='https://secure.gravatar.com/avatar/f43ca7bc65dd9f70d805958ccd400e3f?s=54&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D54&amp;r=G' class='avatar avatar-54 photo' height='54' width='54' />		<cite class="fn">Michelle</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="https://managewp.com/wordpress-women-in-tech/comment-page-1#comment-110309">
+			September 28, 2013 at 5:18 pm</a>		</div>
+
+		<p>Joyce, it&#039;s so difficult to write posts like this one. Thank you for sharing your experiences. I didn&#039;t enter the tech industry through WordPress but it has given me opportunities to grow in ways other systems would not. I work with two proprietary systems for one part of my job and another is focused on WordPress site development. Of the three, WordPress is the most widely used and probably most transferable skill.</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/wordpress-women-in-tech?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+managewp+%28ManageWP+Blog%29&#038;replytocom=110309#respond' onclick='return addComment.moveForm("div-comment-110309", "110309", "respond", "605954")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-110179">
+				<div id="div-comment-110179" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='https://secure.gravatar.com/avatar/33663c18e4510ab3f801de418910c663?s=54&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D54&amp;r=G' class='avatar avatar-54 photo' height='54' width='54' />		<cite class="fn"><a href="http://www.ksaugustin.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.ksaugustin.com']);"  rel='external nofollow' class='url'>Kaz Augustin</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="https://managewp.com/wordpress-women-in-tech/comment-page-1#comment-110179">
+			September 28, 2013 at 2:09 am</a>		</div>
+
+		<p>I have to say I agree with Angelique. I think you&#039;re downplaying feminism when, in fact, it is the one thing that has enabled you to say you&#039;re not a feminist! No matter your skills, Joyce, you wouldn&#039;t have even been given the opportunity at higher education if it wasn&#039;t for feminism. If it wasn&#039;t for feminism, ALL of us in the sciences would never have been allowed in, due to education being a boys&#039; club. To say that you can compete with the boys and still not be a feminist is grossly misleading because, at best, you would have been nothing more than a domestic servant or family tutor competing with a degreed developer. You may say that you don&#039;t want to get into your political beliefs but human society IS political and to think otherwise is naive.</p>
+<p>And yes, equal skills is well and good but, as someone who was in the IT industry for 20+ years, you are speaking through rose-tinted spectacles. It means nothing when you have the experience and the ability and are still not paid parity with your male counterparts. I was always paid about 75% of my male counterpart&#039;s wage, despite the fact that I was a gun project manager. We still have a long way to go.</p>
+<p>Which brings me to another point. Why belittle women like me? I have three degrees and began as a coder, albeit with C++, Databus, COBOL, LISP, Fortran, etc. rather than the HTML and CSS you&#039;re probably more used to (and which are a helluva lot easier to learn and code, as I&#039;m learning to do now). I have even taught Pascal, COBOL and Fortran at college-level. As time went on, I was given more responsibility. I was a project manager then a program manager. How does that make me &quot;less tech&quot; than you? Is there some kind of inverted snobbery going on here, where women who decide not to take on managerial roles somehow have more tech cachet than managers? Or maybe you don&#039;t understand what it means to be a good project manager. You mention selling yourself and yet, when I have done such a thing in order to advance in a corporate minefield, you dismiss stories like mine and &quot;don&#039;t like&quot; it.</p>
+<p>&quot;They&#039;re not describing a woman with un-manicured nails who sits at her computer coding all day just like one of the guys&quot;.</p>
+<p>Good grief. I&#039;ve always prided myself on my manicured nails (a total irrelevancy, tbh) and can type at 160+ words a minute. While I haven&#039;t always coded with &quot;the guys&quot;, I&#039;ve stared down Marketing departments with unrealistic release schedules and beta trials, Sales departments with pie-in-the-sky application brochures. I have initiated structured code reviews, overseen Quality Assurance, set up Training, assembled BOMs. In fact, Joyce, I have done all the things that, quite frankly, have kept you cosy and oblivious in your little cubicle, typing away at your keyboard with your chipped nails and yet you have the audacity to tell me that you &quot;don&#039;t like&quot; my story? What a shame.</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/wordpress-women-in-tech?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+managewp+%28ManageWP+Blog%29&#038;replytocom=110179#respond' onclick='return addComment.moveForm("div-comment-110179", "110179", "respond", "605954")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-110133">
+				<div id="div-comment-110133" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='https://secure.gravatar.com/avatar/1754d092d219ff78ea9c0cc909b71c7c?s=54&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D54&amp;r=G' class='avatar avatar-54 photo' height='54' width='54' />		<cite class="fn"><a href="http://staceycordoni.com/" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://staceycordoni.com']);"  rel='external nofollow' class='url'>Stacey Cordoni</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="https://managewp.com/wordpress-women-in-tech/comment-page-1#comment-110133">
+			September 27, 2013 at 9:43 pm</a>		</div>
+
+		<p>Great article, Joyce!</p>
+<p>I had a good chuckle when you mentioned you were an &quot;un-manicured princess&quot;. I am as well! I have yet to comprehend how women, in any profession that involves a lot of typing on a keyboard, can have manicured (namely, long) nails. It affects my productivity! My +100 WPM easily becomes -60 WPM when I sport the ever so popular and long french-tip nails. So, long &amp;amp; pretty nails aren&#039;t in the cards for me, but that doesn&#039;t stop me putting nail polish on my pitifully short nails.</p>
+<p>As a female developer, I can honestly say that I&#039;ve never experienced losing a job due to my gender (though I&#039;ll never truly know). However, the all of my work has been as a contractor or freelancer, working remotely from my home office. So gender (among other things) can easily be a non-existent deciding factor as it cannot be &quot;seen&quot;. As a remote contractor or freelancer it becomes less about your appearance and more about your qualifications and competence in completing the job at hand. Appearance, gender, race, etc. are deciding factors in typical jobs, and that&#039;s the sad truth. You are being interviewed by a human being with bias&#039; and prejudices. It&#039;s not just about your skillset or education. When you go in for a job interview, it&#039;s typically because you have the skillset, and the other half is you selling yourself or namely, looking the part. Of course you still need to sell yourself as a contractor/freelancer working online, but the outside appearance becomes far less of a deciding factor, if at all. So I think that&#039;s actually a large part in why I haven&#039;t faced any issue with my gender in my field, whereas I feel like I probably would have experienced some had I been applying for jobs at actual offices since there is a stereotype of the typical &quot;male&quot; developer that many females don&#039;t fit in.</p>
+<p>Of course, I have still experienced the male dominated field. When I was a developer at my first job, I was one of 2 female developers in a pool of 30 developers. Since I was so young, this was the first time I realized I was working in a male dominated field. At the time (we&#039;re talking 10 years ago), there were far fewer females in development than there were males than there are today. And there are many reasons for why that&#039;s changed, but I entirely agree with your statement that WordPress is one of these reasons. Being that WordPress is such an inviting community and one that makes getting involved so easy, I can see more woman believing that development is a career option for them as it&#039;s less &quot;scary&quot; these days, especially for females with no experience at all in the field. Without WordPress, I don&#039;t know that woman would be growing in this field as many females do start out as designers or marketers and then dabble in WordPress, which can lead to learning how to become a real developer.</p>
+<p>In any event, I&#039;m happy to see more and more females at WordCamps and other developer related conferences! And I&#039;m happy to be a female in tech &#8211; I love it!</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/wordpress-women-in-tech?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+managewp+%28ManageWP+Blog%29&#038;replytocom=110133#respond' onclick='return addComment.moveForm("div-comment-110133", "110133", "respond", "605954")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1 parent" id="comment-110018">
+				<div id="div-comment-110018" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='https://secure.gravatar.com/avatar/02769d46dd43de25c0b8a0addc08ada7?s=54&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D54&amp;r=G' class='avatar avatar-54 photo' height='54' width='54' />		<cite class="fn">Angelique</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="https://managewp.com/wordpress-women-in-tech/comment-page-1#comment-110018">
+			September 27, 2013 at 12:45 pm</a>		</div>
+
+		<p>This article was more infuriating than encouraging. The author writes off feminism, belittles design and other traditionally female-dominated jobs in the tech sector, and trots out the same myth that tech is a meritocracy and the people who get ahead are the ones who deserve it or work the hardest (see Straight White Male: The Lowest Difficulty Setting There Is for a useful metaphor:  <a href="http://whatever.scalzi.com/2012/05/15/straight-white-male-the-lowest-difficulty-setting-there-is/" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://whatever.scalzi.com']);" rel="nofollow">http://whatever.scalzi.com/2012/05/15/straight-white-male-the-lowest-difficulty-setting-there-is/</a>)</p>
+<p>I think the WordPress community is a truly outstanding and welcoming place to be a woman in tech, but this article does a shabby job at communicating that.</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/wordpress-women-in-tech?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+managewp+%28ManageWP+Blog%29&#038;replytocom=110018#respond' onclick='return addComment.moveForm("div-comment-110018", "110018", "respond", "605954")'>Reply</a>		</div>
+				</div>
+		<ul class='children'>
+		<li class="comment byuser comment-author-joyce-grace bypostauthor even depth-2 parent" id="comment-110095">
+				<div id="div-comment-110095" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='https://secure.gravatar.com/avatar/f78c1aa137efbd0028a33725f92cedcc?s=54&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D54&amp;r=G' class='avatar avatar-54 photo' height='54' width='54' />		<cite class="fn">Joyce Grace</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="https://managewp.com/wordpress-women-in-tech/comment-page-1#comment-110095">
+			September 27, 2013 at 6:59 pm</a>		</div>
+
+		<p>Hello Angelique,</p>
+<p>Thanks for your comment. It&#039;s great that the Internet is a place to exchange ideas and the purpose of blogging of course is to get a response and different viewpoints. That&#039;s why we have comments enabled <img src='https://managewp.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+<p>I don&#039;t think I belittled feminism at all. I just said I am not one. There is nothing more to be said about that, and it&#039;s not a wrong thing for me to say what I am or to chose for myself how I want to be labelled.  But no sentences were written about feminism as an ideology or movement at all, let alone negative ones. You can also read my responses to other commenters below about this and why I said what I said. </p>
+<p>I also said clearly that I don&#039;t think it doesn&#039;t require education or brains to be a designer and that I hire designers. If I wanted to put down that role, I would have said something different. The fact that I hire designers and mentioned that in the article shows that I see their expertise as being very valuable to the work I do. If I thought designers were not valuable, I would try to do their job on my own. But I can&#039;t. They are irreplaceable in web development, especially the ones that are learning the intricacies of web. I owe my success to the great designers I&#039;ve had the privilege of working with (among other roles needed in web marketing).</p>
+<p>The other traditionally female jobs were also not belittled at all. I made it clear that I myself came from that background and the point of the article was that WordPress allowed me to enter into technology in a deeper way than if it didn&#039;t exist. Also, the article says clearly that we need stories of women in tech who are not JUST in those other roles. I never said those roles are not useful. My point was that many articles of women in tech don&#039;t do justice to showcase the women who are actually coding. Running a tech business in a managerial position, or another role is not the same as being the hands that labour to produce the technology. That&#039;s the difference that was pointed out. In no way was there any belittling involved in what I said. Not at all. </p>
+<p>In short, I think you may have read too far into what I was saying, or mistook completely what I was trying to say.</p>
+<p>The hard thing about writing in this capacity is that you always have to chose what you&#039;re going to leave in an article and what you&#039;re going to leave out of the article. Both are important, and both are hard decisions to make. If you put everything in, people loose interest. I could have explained why I said every little thing I said, but at what point does the reader lose interest? The idea is to read articles in their entire context, and to gather the main point the author is trying to make, not to dissect the article, take one word out of the entire thing, and try to make out-of-context conclusions about what the author is or believes. None of the things you mentioned were my point or intention at all. Not even close. Sorry if I infuriated you or gave you the wrong impression with my words.</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/wordpress-women-in-tech?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+managewp+%28ManageWP+Blog%29&#038;replytocom=110095#respond' onclick='return addComment.moveForm("div-comment-110095", "110095", "respond", "605954")'>Reply</a>		</div>
+				</div>
+		<ul class='children'>
+		<li class="comment odd alt depth-3" id="comment-110694">
+				<div id="div-comment-110694" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='https://secure.gravatar.com/avatar/02769d46dd43de25c0b8a0addc08ada7?s=54&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D54&amp;r=G' class='avatar avatar-54 photo' height='54' width='54' />		<cite class="fn">Angelique</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="https://managewp.com/wordpress-women-in-tech/comment-page-1#comment-110694">
+			September 30, 2013 at 11:49 am</a>		</div>
+
+		<p>Hi, Joyce, and thanks for your reply.</p>
+<p>You suggest in your comment to Emma that a shift is happening in tech, but that it&#039;s not happening because of the actions of women (e.g., &quot;like the suffragettes&quot;).  Women aren&#039;t advancing in tech because of something in the air; this isn&#039;t something that&#039;s just occurring organically. Women in STEM fields are advancing because of the work of the women who came before them and because of the work of advocates and allies who promote the work of women and take to task people who discriminate, attack or belittle women.</p>
+<p>I get that you only mentioned feminism once and feel like some of our comments are derailing, but it&#039;s the second sentence in a women-in-tech article. You gave it importance and prominence. If you wrote the article without any of that info and I showed up demanding to see your feminist credentials, that would be a different story. You&#039;re right that people bring different baggage to this word, but, to my eyes, you essentially started an article about the place of women in the WordPress community with:  &quot;I don&#039;t believe in equality for women. Far from it.&quot;</p>
+<p>That&#039;s a pretty strong statement from someone who has clearly benefitted from the work and struggle of feminists and something you thought was important to provide background/context to your writing.  Given both of these things, it&#039;s a bit odd to now ask people to dismiss or look past this statement.</p>
+<p>On the issue of belittling women&#039;s traditional roles in the tech field…You imply that, on sight, people will assume that you&#039;re a web designer and/or &quot;the client-facing sales girl.&quot; You imply that these assumptions mean you&#039;re not being taken seriously. You say that design is easier than coding. Honestly, bad design is just as easy as bad coding. Good design, like good, thoughtful code, is harder. If your definition of design is something like &quot;making things pretty&quot; then you&#039;re just underestimating what good design is and the impact of a good designer. If you see being &quot;just a web designer&quot; as a put down, how is that not belittling the folks that do that job and do it marvelously?</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/wordpress-women-in-tech?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+managewp+%28ManageWP+Blog%29&#038;replytocom=110694#respond' onclick='return addComment.moveForm("div-comment-110694", "110694", "respond", "605954")'>Reply</a>		</div>
+				</div>
+		</li>
+</ul>
+</li>
+</ul>
+</li>
+		<li class="comment even thread-even depth-1 parent" id="comment-109662">
+				<div id="div-comment-109662" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='https://secure.gravatar.com/avatar/61de513ffbc44d22d7f385429ee37a22?s=54&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D54&amp;r=G' class='avatar avatar-54 photo' height='54' width='54' />		<cite class="fn"><a href="http://newlocalmedia.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://newlocalmedia.com']);"  rel='external nofollow' class='url'>Dan</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="https://managewp.com/wordpress-women-in-tech/comment-page-1#comment-109662">
+			September 26, 2013 at 12:09 pm</a>		</div>
+
+		<p>You make it sound like it&#039;s a bad thing to be a feminist! <img src='https://managewp.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />  Maybe there are really negative stereotypes associated with the word, but you may unintentionally give them credence by suggesting it&#039;s bad to be a feminist. Everyone benefits when we just say who we are and what we are for, not what we aren&#039;t and how we are afraid of being misunderstood.  </p>
+<p>I think you are right in your main points, but I would put it more like this: software like WP and &quot;frameworks&quot; like Genesis are accessible to a lot of people who don&#039;t really understand the underlying technology much or at all. This can be a problematic way to &quot;get into tech&quot;, but it can get you in, and it does expand the market for &quot;custom web development&quot; in part by increasing supply and driving prices for it down. </p>
+<p>One additional point where I hope not to be misunderstood is that I&#039;m not sure it is really being a &quot;developer&quot; as opposed to a &quot;site builder&quot; or &quot;marketing specialist who builds websites&quot; if other people code so you really *never* have to &#8212; and you couldn&#039;t if you did have to. I think it&#039;s important to acknowledge this, not to put anyone down, but to be honest and clear about where different people stand and what other rooms there are to explore. </p>
+<p>If things like WP start to get more women into software engineering in schools, that will be a big win, but if more just use accessible software to focus on the business, content and marketing side, that&#039;s a win too. And it&#039;s not like this doesn&#039;t go for guys too. I suspect a common trend is that a lot of us (men and women) with liberal arts, writing, journalism and communications backgrounds were the ones who got told we were &quot;bad at math&quot; (see what Jo Boaler at Stanford has to say about that) or just didn&#039;t get deep into things like programming for whatever reason, yet software has become ever more accessible to us as a tool for our crafts, like design and/or writing.</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/wordpress-women-in-tech?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+managewp+%28ManageWP+Blog%29&#038;replytocom=109662#respond' onclick='return addComment.moveForm("div-comment-109662", "109662", "respond", "605954")'>Reply</a>		</div>
+				</div>
+		<ul class='children'>
+		<li class="comment byuser comment-author-joyce-grace bypostauthor odd alt depth-2" id="comment-110092">
+				<div id="div-comment-110092" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='https://secure.gravatar.com/avatar/f78c1aa137efbd0028a33725f92cedcc?s=54&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D54&amp;r=G' class='avatar avatar-54 photo' height='54' width='54' />		<cite class="fn">Joyce Grace</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="https://managewp.com/wordpress-women-in-tech/comment-page-1#comment-110092">
+			September 27, 2013 at 6:40 pm</a>		</div>
+
+		<p>Hi Dan! That&#039;s some great points to add to the article! I agree with all of it. </p>
+<p>I think the hard part about going around saying &quot;I&#039;m a web site builder&quot; is that if the general, non-techy population comes to me and says, &quot;so are you a developer can you make me a web site&quot; and I say &quot;no, that is not accurate, I am a web site builder&quot; they&#039;d be like &quot;sooooo&#8230;.isn&#039;t that what I just said?&quot; I&#039;ve thought of other ways of describing what I do, but in the end I feel like simplicity is best! There are so many better things to educate people on in the technology world. Not least of which are things like how to use a search bar properly and not type in a web URL into Google to get to a website <img src='https://managewp.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />  So many people who use technology are so new to it, so if I try to clarify the usage of vocabulary to those people, well, then I&#039;m just in the same boat as the people who isolate their clients and make them feel stupid <img src='https://managewp.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />  So the term &quot;web developer&quot; it is! But between you and I, you can call me a &quot;web site builder&quot;, I&#039;d be just dandy happy with that <img src='https://managewp.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+<p>I don&#039;t think that I made it sound bad to be a feminist. I described my stance in detail to Emma which you can also read. You are right that &quot;everyone benefits when we just say who we are and what we are for, not what we aren&#039;t and how we are afraid of being misunderstood.&quot; I purposely did not want to be misunderstood for being a feminist, so I did exactly what you thought I should do &#8211; which is to be honest about what I am and what I am not. I&#039;m allowed personal beliefs <img src='https://managewp.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />  But I never said anything bad about feminism. I only told my story to show that this is an issue that does not JUST surround the cause of feminism. It&#039;s an issue that is about making things better &#8211; like better websites, better Internet, better businesses, and so on. Anyway, the reply to Emma explains this in more detail.</p>
+<p>But I wish this thread of comments would not go in this direction &#8211; a moral debate on feminism or its definition is not the goal of this post! That word was used ONCE in the whole 4900-word article. There is so much more to be said about this topic than one person&#039;s preferential way of identifying herself, especially more positive things! You brought out many of them, thank you for that <img src='https://managewp.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/wordpress-women-in-tech?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+managewp+%28ManageWP+Blog%29&#038;replytocom=110092#respond' onclick='return addComment.moveForm("div-comment-110092", "110092", "respond", "605954")'>Reply</a>		</div>
+				</div>
+		</li>
+</ul>
+</li>
+		<li class="comment even thread-odd thread-alt depth-1 parent" id="comment-109648">
+				<div id="div-comment-109648" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='https://secure.gravatar.com/avatar/172592dd61c9a1624f1c3d5b96f2a1ac?s=54&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D54&amp;r=G' class='avatar avatar-54 photo' height='54' width='54' />		<cite class="fn">Emma Burnett</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="https://managewp.com/wordpress-women-in-tech/comment-page-1#comment-109648">
+			September 26, 2013 at 11:18 am</a>		</div>
+
+		<p>Why would you say you aren&#039;t a feminist? I feel that you make your points weaker by trying to qualify your arguments like that. So, you&#039;re not a feminist? Do you not believe in equal treatment, equal opportunity and equal pay? If you are &quot;far from&quot; a feminist as you described, then it implies that you do not believe in these things. Or do you just think that the whole &quot;raging feminist&quot; image clashes with your self-described image as a high-heel-wearing professional? Do you fear that your colleagues and readers would take you less seriously if you took an incredibly benign political stance by professing your belief in equal pay and treatment? Sexism exists in tech, and I find it laughable when women who have received this treatment go out of their way to say they aren&#039;t feminists, or that they don&#039;t think women should receive special treatment. We need more feminists in tech. We need more male feminists who foster a creative and supportive work environment for their female colleagues. We need more diversity in tech.</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/wordpress-women-in-tech?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+managewp+%28ManageWP+Blog%29&#038;replytocom=109648#respond' onclick='return addComment.moveForm("div-comment-109648", "109648", "respond", "605954")'>Reply</a>		</div>
+				</div>
+		<ul class='children'>
+		<li class="comment byuser comment-author-joyce-grace bypostauthor odd alt depth-2" id="comment-110086">
+				<div id="div-comment-110086" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='https://secure.gravatar.com/avatar/f78c1aa137efbd0028a33725f92cedcc?s=54&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D54&amp;r=G' class='avatar avatar-54 photo' height='54' width='54' />		<cite class="fn">Joyce Grace</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="https://managewp.com/wordpress-women-in-tech/comment-page-1#comment-110086">
+			September 27, 2013 at 6:22 pm</a>		</div>
+
+		<p>Hello Emma, thanks for your comment.</p>
+<p>I think a few people might have read between the lines a little too far regarding the fact I&#039;m not a feminist. </p>
+<p>The reason I said I&#039;m not a feminist is because I&#039;m not a feminist. It is really quite simple. I don&#039;t want to get into my political ideological beliefs here, they are not relevant and this is not the blog for them <img src='https://managewp.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+<p>But I guess if we pursued this further we&#039;d get into a debate about the definition of what a &quot;feminist&quot; is, which I think would veer us off topic from the point I was trying to make in the article (maybe you could blog about it though!)</p>
+<p>The reason I wanted to mention that I&#039;m not a feminist is because I wanted to show that this is an article not meant to be written from that view point (on purpose). The article is an observation of the way WordPress could be changing the cultural landscape of what we traditionally associate with technology, in more ways than one. If you watch Morten&#039;s keynote speech you will see that. It is quite amazing. And so, I believe (and I&#039;m entitled to my beliefs, please respect that), it&#039;s not about women&#039;s rights, because it&#039;s not like women don&#039;t have the &#039;right&#039; to study or be in tech in. It&#039;s that they&#039;re not (probably for the reasons described in the article). But with WordPress, they are finding it easier. And that, in effect is having a positive impact on the Internet as a whole. It can make the Internet a better place and it can make businesses more successful. Have you noticed on another scale, how non-competitive the WordPress community is? I find it fascinating the developers who are technically business competitors all are willing to help each other. You don&#039;t see that a lot in other industries. The ideology and culture around WordPress is quite different than the rest of the way people use and behave on the Internet.</p>
+<p>So I said I&#039;m not a feminist because I purposely did not want to write from the viewpoint of &quot;this is just wrong and we have to fix it.&quot; But rather from the view point of, &quot;look, even I&#039;m not a feminist fighting for women&#039;s rights and trying to be as equal as a male (if you want to define feminism that way), but see how WordPress has changed my life as a female in tech.&quot; </p>
+<p>There is an ideological shift happening, and it&#039;s not necessarily because of a fight that women historically had to put up (like the suffragettes). It&#039;s just happening, and I stated the reasons why I think it&#039;s happening. That&#039;s the main thing that was meant to come across.</p>
+<p>That being said, if you want to label yourself as a feminist, that&#039;s ok <img src='https://managewp.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />  But there&#039;s no need to fight me for the way I chose to identify myself <img src='https://managewp.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />  The great thing about being me is that I get to chose what to call myself. Let&#039;s change the Internet into a positive place, please, and avoid hostile comments, which don&#039;t really advance humanity or the knowledge and sharing of mutually respected ideas. Share ideas, tell us your stories, but without attacking individuals.</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/wordpress-women-in-tech?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+managewp+%28ManageWP+Blog%29&#038;replytocom=110086#respond' onclick='return addComment.moveForm("div-comment-110086", "110086", "respond", "605954")'>Reply</a>		</div>
+				</div>
+		</li>
+</ul>
+</li>
+		<li class="comment even thread-even depth-1 parent" id="comment-109299">
+				<div id="div-comment-109299" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='https://secure.gravatar.com/avatar/72e3f4e63f33cc567d8aa1f3522103ed?s=54&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D54&amp;r=G' class='avatar avatar-54 photo' height='54' width='54' />		<cite class="fn"><a href="http://www.i4design.co.nz" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.i4design.co.nz']);"  rel='external nofollow' class='url'>Anita</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="https://managewp.com/wordpress-women-in-tech/comment-page-1#comment-109299">
+			September 25, 2013 at 11:08 pm</a>		</div>
+
+		<p>Excellent article Joyce&#8230; thanks.</p>
+<p>I&#039;m a &quot;Women in Tech&quot; and I&#039;ve been working as a freelance WordPress designer and developer for a few years now. For over 20 years I&#039;ve worked in IT &#8211; hardware and software &#8211; end user support and server management. Many years ago I completed an MCSE and I was the only woman in sight.</p>
+<p>I also enjoy the &#039;softer&#039; side of computing, such as graphic design, gaming and &#039;mucking about&#039; with software. I used to love trying to get games to work back in the days of DOS, Windows 3.1 and 95 &#8211; and then I would quickly get bored of the game itself. Making the game run was the challenge.</p>
+<p>Running a web design business suits me very well, as it involves plenty of graphical work, as well getting stuck into the more technical background stuff that I find challenging, such as HTML, CSS, PHP, MySQL, VPS Hosting, etc.</p>
+<p>I&#039;ve enjoyed, and am still enjoying, a great career in IT even though I also harbour insecurities about working in a male dominated scene. And one note to any girls out there who are just starting out: I met lots of nice, smart guys in the MCSE courses, and none in the Word courses&#8230; just a thought <img src='https://managewp.com/wp-includes/images/smilies/icon_smile.gif' alt=':-)' class='wp-smiley' /> </p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/wordpress-women-in-tech?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+managewp+%28ManageWP+Blog%29&#038;replytocom=109299#respond' onclick='return addComment.moveForm("div-comment-109299", "109299", "respond", "605954")'>Reply</a>		</div>
+				</div>
+		<ul class='children'>
+		<li class="comment byuser comment-author-joyce-grace bypostauthor odd alt depth-2" id="comment-109303">
+				<div id="div-comment-109303" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='https://secure.gravatar.com/avatar/f78c1aa137efbd0028a33725f92cedcc?s=54&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D54&amp;r=G' class='avatar avatar-54 photo' height='54' width='54' />		<cite class="fn">Joyce Grace</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="https://managewp.com/wordpress-women-in-tech/comment-page-1#comment-109303">
+			September 25, 2013 at 11:18 pm</a>		</div>
+
+		<p>Thanks Anita for the inspiration and the giggle <img src='https://managewp.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />  It is a thought to keep in mind I guess!</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/wordpress-women-in-tech?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+managewp+%28ManageWP+Blog%29&#038;replytocom=109303#respond' onclick='return addComment.moveForm("div-comment-109303", "109303", "respond", "605954")'>Reply</a>		</div>
+				</div>
+		</li>
+</ul>
+</li>
+    </ol>
+
+    
+
+
+
+
+    <div id="respond">
+
+        <h2 class="comments">
+                            Speak your mind <a class="login_link" href="https://managewp.com/wp-login.php?redirect_to=https%3A%2F%2Fmanagewp.com%2Fwordpress-women-in-tech">Login to post a comment &raquo;</a>
+                    </h2>
+
+        <div class="cancel-comment-reply">
+            <a rel="nofollow" id="cancel-comment-reply-link" href="/wordpress-women-in-tech?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+managewp+%28ManageWP+Blog%29#respond" style="display:none;">Click here to cancel reply.</a>        </div>
+
+                    <form action="https://managewp.com/wp-comments-post.php" method="post" id="commentform">
+
+                
+                    <div class="name-email marg">
+
+                        <input placeholder="Your name (required)" class="com-form span6" type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required='true' />
+                    </div>
+                    <div class="name-email">
+                        <input  placeholder="Your email(required, never published)" class="com-form span6" type="text" name="email" id="email" value="" size="22" tabindex="2" aria-required='true' />
+
+                    </div>
+
+                    <div class="name-email2">
+                        <input placeholder="Your Website" class="com-form span6" type="text" name="url" id="url" value="" size="22" tabindex="3" />
+                    </div>
+
+                
+                <!--<p>You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot; rel=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code lang=&quot;&quot;&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; &lt;pre lang=&quot;&quot; extra=&quot;&quot;&gt; </code></p>-->
+
+                <div class="name-email2">
+                    <textarea placeholder="Your Comment" name="851a0-comment" id="comment" cols="58" rows="10" tabindex="4" class="span10"></textarea><textarea name="comment" style="display:none" rows="1" cols="1"></textarea>
+                </div>
+
+                <div class="name-email2">
+                    <input name="submit" type="submit" id="submit" class="submit-form btn mwp_btn btn-blue middle lightblue comment" tabindex="5" value="Submit" />
+                    <input type='hidden' name='comment_post_ID' value='605954' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+                </div>
+
+                <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="abc8d3afd7" /></p><!-- BEGIN: subscribe to comments reloaded --><p><label for='subscribe-reloaded'><input style='width:30px' type='checkbox' name='subscribe-reloaded' id='subscribe-reloaded' value='yes' /> Notify me of followup comments via e-mail. You can also <a href='https://managewp.com/comment-subscriptions?srp=605954&amp;sra=s'>subscribe</a> without commenting.</label></p><!-- END: subscribe to comments reloaded -->
+            </form>
+
+        
+    </div>
+
+                </div>
+
+
+            </div> <!-- end .span9 -->
+
+            <div class="span3 sidebar single">
+
+                <div class="mwp_gray-box">
+
+    
+        <div class="row-fluid learn_more">
+            <a href="https://managewp.com/managewp-manifesto" title="Click here to read the ManageWP Manifesto" class="manifesto"></a>
+            <p>or have a look at<br/> <a href="https://managewp.com" title="What ManageWP is all about">what ManageWP is all about</a></p>
+        </div>
+
+        <div class="row-fluid start-here">
+            <a href="https://managewp.com/start-here">New to our blog? Start Here!</a>
+        </div>
+
+    
+    <div class="row-fluid social">
+
+        <div class="fb">
+            <iframe src="//www.facebook.com/plugins/like.php?href=https://facebook.com/ManageWP&amp;send=false&amp;layout=standard&amp;width=235&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=65&amp;appId=121771584602003" scrolling="no" frameborder="0" style="width:100%; height:65px;"></iframe>
+        </div>
+        <div class="tw">
+            <a class="twitter-follow-button" href="https://twitter.com/managewp" data-show-count="true" data-lang="en" data-url="https://managewp.com">Follow @ManageWP</a>
+        </div>
+        <div class="links">
+            <div class="row-fluid">
+                <div class="span6">
+                    <a class="soc-ico rss" href="http://feeds.feedburner.com/managewp" title="Subscribe to ManageWP RSS feed">RSS feed</a>
+                </div>
+                <div class="span6">
+                    <a class="soc-ico vimeo" href="http://vimeo.com/managewp" title="Click here to watch ManageWP on Vimeo">Vimeo</a>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <a class="soc-ico linkedin" href="http://www.linkedin.com/groups/ManageWP-4108452" title="Click here to connect with ManageWP on LinkedIn">LinkedIn</a>
+                </div>
+                <div class="span6">
+                    <a class="soc-ico idea" href="https://www.google.com/moderator/#16/e=65078" title="Suggest an idea">Ideas</a>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- end .social -->
+
+    <div class="row-fluid featured">
+
+        <div class="sidebar-box">
+            <h3>ManageWP Featured Resources</h3>
+            <ul>
+                <li><a class="feat-plugins" href="https://managewp.com/tag/plugins-of-the-month"></a></li>
+                <li><a class="feat-themes" href="https://managewp.com/tag/themes-of-the-month"></a></li>
+            </ul>
+        </div>
+
+    </div> <!-- end .featured -->
+
+    <div id="recent-comments-3" class="widget_recent_comments sidebar-box comment"><h3>Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><a href="http://iamshemul.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://iamshemul.com']);"  rel='external nofollow' class='url'>Shemul49rmc</a> on <a href="https://managewp.com/how-to-create-a-child-theme/comment-page-2#comment-110964">How to Create a Child Theme in WordPress</a></li><li class="recentcomments"><a href="http://pen9creative.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://pen9creative.com']);"  rel='external nofollow' class='url'>Nate</a> on <a href="https://managewp.com/yet-another-related-posts-plugin/comment-page-1#comment-110932">Everything You Need to Know About Related Posts for Your WordPress Blog</a></li><li class="recentcomments"><a href="http://pen9writing.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://pen9writing.com']);"  rel='external nofollow' class='url'>Nate</a> on <a href="https://managewp.com/5-reasons-why-responsive-design-is-not-worth-it/comment-page-5#comment-110917">5 Reasons Why Responsive Design Is Not Worth It</a></li><li class="recentcomments">zoran.krnetic@prelovac.com on <a href="https://managewp.com/improved-clone-migrate-wizard/comment-page-1#comment-110894">Introducing the New and Improved ManageWP Clone/Migrate Wizard!</a></li><li class="recentcomments"><a href="http://irzan2010.wordpress.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://irzan2010.wordpress.com']);"  rel='external nofollow' class='url'>Yusuf Irzan</a> on <a href="https://managewp.com/wordpress-frameworks/comment-page-1#comment-110870">The Exhaustive ManageWP Guide to WordPress Theme Frameworks</a></li></ul></div>		<div id="recent-posts-3" class="widget_recent_entries sidebar-box comment">		<h3>Latest</h3>		<ul>
+					<li>
+				<a href="https://managewp.com/favorite-free-wordpress-themes" title="My Top 10 Favorite Free WordPress Themes">My Top 10 Favorite Free WordPress Themes</a>
+						</li>
+					<li>
+				<a href="https://managewp.com/links-mashup-september-2013" title="The Best WordPress Posts Across the Blogosphere in September 2013">The Best WordPress Posts Across the Blogosphere in September 2013</a>
+						</li>
+					<li>
+				<a href="https://managewp.com/wordpress-women-in-tech" title="How WordPress is Solving the &#8220;Women in Tech&#8221; Issue">How WordPress is Solving the &#8220;Women in Tech&#8221; Issue</a>
+						</li>
+					<li>
+				<a href="https://managewp.com/free-plugin-support" title="Why Free Plugins Should Always Provide Support">Why Free Plugins Should Always Provide Support</a>
+						</li>
+					<li>
+				<a href="https://managewp.com/improved-clone-migrate-wizard" title="Introducing the New and Improved ManageWP Clone/Migrate Wizard!">Introducing the New and Improved ManageWP Clone/Migrate Wizard!</a>
+						</li>
+				</ul>
+		</div>
+    
+        <div class="row-fluid hottest-recent">
+
+            <div class="widget_hottest sidebar-box hottest" id="recent-hottest">
+
+                <div class="tab-widget-bar">
+                    <a href="#tabw-hottest" class="active">Hottest</a>
+                    <a href="#tabw-mostrecent">Most recent</a>
+                </div>
+
+                                <div class="tab-widget active" id="tabw-hottest">
+                                            <ul id="recenthottest">
+                                                                                                                            <li class="recentcomments">
+                                    <a class="url" rel="external nofollow" href="https://managewp.com/wordpress-women-in-tech">How WordPress is Solving the &#8220;Women in Tech&#8221; Issue</a>
+                                </li>
+                                                                                                                            <li class="recentcomments">
+                                    <a class="url" rel="external nofollow" href="https://managewp.com/improved-clone-migrate-wizard">Introducing the New and Improved ManageWP Clone/Migrate Wizard!</a>
+                                </li>
+                                                                                                                            <li class="recentcomments">
+                                    <a class="url" rel="external nofollow" href="https://managewp.com/free-plugin-support">Why Free Plugins Should Always Provide Support</a>
+                                </li>
+                                                                                                                            <li class="recentcomments">
+                                    <a class="url" rel="external nofollow" href="https://managewp.com/free-wordpress-themes-september-2013">Top 5 Free WordPress Themes of the Month — September 2013 Edition</a>
+                                </li>
+                                                                                                                            <li class="recentcomments">
+                                    <a class="url" rel="external nofollow" href="https://managewp.com/links-mashup-september-2013">The Best WordPress Posts Across the Blogosphere in September 2013</a>
+                                </li>
+                                                    </ul>
+                                    </div>
+                                <div class="tab-widget" id="tabw-mostrecent">
+                                            <ul id="recenthottest">
+                                                                                                                            <li class="recentcomments">
+                                    <a class="url" rel="external nofollow" href="https://managewp.com/favorite-free-wordpress-themes">My Top 10 Favorite Free WordPress Themes</a>
+                                </li>
+                                                                                                                            <li class="recentcomments">
+                                    <a class="url" rel="external nofollow" href="https://managewp.com/links-mashup-september-2013">The Best WordPress Posts Across the Blogosphere in September 2013</a>
+                                </li>
+                                                                                                                            <li class="recentcomments">
+                                    <a class="url" rel="external nofollow" href="https://managewp.com/wordpress-women-in-tech">How WordPress is Solving the &#8220;Women in Tech&#8221; Issue</a>
+                                </li>
+                                                                                                                            <li class="recentcomments">
+                                    <a class="url" rel="external nofollow" href="https://managewp.com/free-plugin-support">Why Free Plugins Should Always Provide Support</a>
+                                </li>
+                                                                                                                            <li class="recentcomments">
+                                    <a class="url" rel="external nofollow" href="https://managewp.com/improved-clone-migrate-wizard">Introducing the New and Improved ManageWP Clone/Migrate Wizard!</a>
+                                </li>
+                                                    </ul>
+                                    </div>
+            </div>
+
+        </div> <!-- end .hottest-recent -->
+
+    
+    
+        <div class="row-fluid blog-stats">
+
+            <div class="sidebar-box">
+                <p class="blog-stat">
+                                There are <span>4,538</span> comments on the ManageWP Blog.
+                                We have <span>486</span> posts about your favorite topics.                                </p>
+            </div>
+
+        </div> <!-- end .blog-stats -->
+
+    
+    
+    <div class="row-fluid search">
+
+        <form action="https://managewp.com/single-search" id="blog_search-frm" class="blog_search-frm" method="get" >
+
+            <div class="input-append">
+                <input type="search" id="w" name="q" class="single-search" placeholder="Search" />
+                <button class="btn" type="submit" id="blog_search-frm">&nbsp;</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div> <!-- end .mwp_gray-box -->
+
+<div class="mwp_gray-box" id="blog-subsc-wrap">
+
+    <div class="blog-subscribe small">
+    <h3>Don't miss any stories</h3>
+
+    <form class="mwp-subscribe-frm" action="http://managewp.us5.list-manage.com/subscribe/post?u=05e8c30921fa419d01d3561c8&amp;id=179fd3bc0c" method="post">
+
+        <div class="input-append">
+            <input type="text" class="emailw" name="email" placeholder="Enter your email" />
+            <button class="btn mwp_btn btn-small btn-blue" type="submit" id="blog_search-frm">Subscribe</button>
+        </div>
+
+        <div class="subsc_suggestion" style="display:none;"></div>
+    </form>
+</div>
+</div> <!-- end .mwp_gray-box -->
+            </div>
+
+        </div> <!-- end .container-fluid -->
+
+    </div> <!-- end .white-row -->
+
+</div> <!-- end .page-blog -->
+
+
+        </div> <!-- end #wrap -->
+
+        <!-- MODALS -->
+                    <div class="modal mwp_modal mwp_modal-login" id="modal-login" tabindex="-1" role="dialog" style="display:none;">
+    <div class="modal-header mwp_modal-header-empty">
+        <a href="#" class="close" data-dismiss="modal" aria-hidden="true">×</a>
+        <h3>Sign in</h3>
+    </div>
+    <div class="modal-body">
+
+        <div class="mwp_tab mwp_tab-login active" id="login-tab">
+            <form action="index.php" id="mwp_login-frm" method="post">
+
+                <div class="alert mwpl_response" ></div>
+
+                <div class="control-group mwpl_username-chk">
+                    <label class="control-label" for="mwpl_username">Username or Email address</label>
+                    <div class="controls">
+                        <input type="text" id="mwpl_username" name="mwpl_username" class="input-xlarge" />
+                        <span class="help-inline">Please enter a valid username or email address</span>
+                    </div>
+                </div>
+
+                <div class="control-group mwpl_password-chk">
+                    <label class="control-label" for="mwpl_password">Password</label>
+                    <div class="controls">
+                        <input type="password" id="mwpl_password" name="mwpl_password" class="input-xlarge" />
+                        <span class="help-inline">Please enter your password</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn mwp_btn btn-green middle large" id="mwp_login-btn">Sign in</button>
+                <input type="hidden" name="action" value="do_login"/>
+            </form>
+
+            <div class="other">
+                <span class="secure_server"></span>
+                <p>Forgot your password? No problem - <a href="#pwdreset-tab" class="mwp_tab-link">Reset it here</a></p>
+            </div>
+        </div> <!-- end .mwp_tab-login -->
+
+        <div class="mwp_tab mwp_tab-login" id="pwdreset-tab">
+
+            <form action="index.php" id="mwp_pwdreset-frm" method="post">
+
+                <p>Don't worry we will help you get a new password in no time. To reset your password simply enter your username or email address and hit the button!</p>
+
+                <div class="alert mwpr_response" ></div>
+
+                <div class="control-group mwpr_pwdreset-chk">
+                    <div class="controls">
+                        <input type="text" id="mwpr_pwdreset" name="mwpr_pwdreset" class="input-xlarge" placeholder="Pleaser enter your Email address" />
+                        <span class="help-inline">Please enter a valid email</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn mwp_btn btn-green middle large" id="mwp_pwdreset-btn">Reset Password</button>
+                <input type="hidden" name="action" value="do_pwdreset"/>
+
+            </form>
+
+            <div class="other">
+                <a href="#login-tab" class="mwp_tab-link">Return to login</a>
+            </div>
+
+        </div> <!-- end .mwp_tab-login -->
+
+
+
+
+    </div>
+</div>
+            <div class="modal mwp_modal mwp_modal-register" id="modal-register" tabindex="-1" role="dialog" style="display:none;">
+    <div class="modal-header mwp_modal-header-empty">
+        <a href="#" class="close" data-dismiss="modal" aria-hidden="true">×</a>
+        <h3>Get started in 10 seconds</h3>
+    </div>
+    <div class="modal-body">
+
+        <div class="row-fluid">
+
+            <div class="span12">
+                <form action="index.php" id="mwp_register-frm" method="post">
+
+                    <div class="alert mwprg_response span11"></div>
+
+                    <div class="control-group mwprg_email-chk">
+                        <div class="controls">
+                            <input type="text" style="width:100%;" id="mwprg_email" name="mwprg_email" class="span11" placeholder="Email address" />
+                            <span class="help-inline" >Please enter a valid email address</span>
+                        </div>
+                    </div>
+
+                   <!-- <div class="control-group mwprg_password-chk">
+                        <div class="controls">
+                            <input type="password" id="mwprg_password" name="mwprg_password" class="span11" placeholder="Password" />
+                            <span class="help-inline">Please enter at least 8 characters for password</span>
+                        </div>
+                    </div>-->
+
+                    <!-- <div class="control-group mwprg_passwordcnf-chk">
+                        <div class="controls">
+                            <input type="password" id="mwprg_passwordcnf" name="mwprg_passwordcnf" class="span11" placeholder="Confirm Password" />
+                            <span class="help-inline">Password mismatch</span>
+                        </div>
+                    </div>-->
+
+                    <input type="hidden" name="mwprg_mode" value="trial" />
+
+                    <div class="control-group register-btn-hld">
+                        <button type="submit" class="btn mwp_btn btn-gold middle" id="mwp_register-btn">Sign Up</button>
+                        <input type="hidden" name="action" value="do_register"/>
+                        <span class="secure_server" ></span>
+
+                        <p>A password setting link will be emailed to you.</p>
+                    </div>
+
+                </form>
+
+              <!--  <h3>How does this work?</h3>-->
+                <ul class="info">
+                    <li>Get a free account</li>
+                    <li>Try all premium features for 14 days</li>
+
+                    <li>No credit card required</li>
+                    <li>24/7 support</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+        
+        
+        <div class="modal mwp_modal auto-play" id="modal_video" tabindex="-1" role="dialog" style="display:none;">
+            <div class="modal-header mwp_modal-header-empty">
+                <a href="#" class="close" data-dismiss="modal" aria-hidden="true">×</a>
+            </div>
+            <div class="modal-body">
+                <iframe id="modal_video-player" src="https://fast.wistia.net/embed/iframe/ccxcd9wws5?controlsVisibleOnLoad=true&version=v1&videoHeight=488&videoWidth=780&volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="780" height="488"></iframe>
+            </div>
+        </div>
+
+        <div id="footer">
+
+			<div id="inner-footer" class="container-fluid clearfix">
+
+                <div class="row-fluid">
+
+                    <div class="span6 mwp-footer-nav">
+                        <div class="row-fluid">
+                            <div class="span3">
+                                <ul id="menu-theme-v5-footer-1" class="mwp_footer-nav1"><li id="menu-item-548836" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-548836"><a href="https://managewp.com/features">Features</a></li>
+<li id="menu-item-548851" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-548851"><a href="https://managewp.com/features">Overview</a></li>
+<li id="menu-item-548850" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-548850"><a href="https://managewp.com/support">First-class Support</a></li>
+<li id="menu-item-548852" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-548852"><a href="https://managewp.com/security">Security</a></li>
+</ul>                            </div>
+                            <div class="span3">
+                                <ul id="menu-theme-v5-footer-2" class="mwp_footer-nav2"><li id="menu-item-548837" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-548837"><a href="https://managewp.com/about">About</a></li>
+<li id="menu-item-548838" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-548838"><a href="https://managewp.com/about">ManageWP</a></li>
+<li id="menu-item-548839" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-548839"><a href="https://managewp.com/press">Press</a></li>
+<li id="menu-item-548840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-548840"><a href="https://managewp.com/careers">Careers</a></li>
+<li id="menu-item-548841" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-548841"><a href="https://managewp.com/contact">Contact</a></li>
+</ul>                            </div>
+                            <div class="span3">
+                                <ul id="menu-theme-v5-footer-3" class="mwp_footer-nav3"><li id="menu-item-549172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-549172"><a href="https://managewp.com/partners">Partners</a></li>
+<li id="menu-item-549173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-549173"><a href="https://managewp.com/partners">Our Partners</a></li>
+<li id="menu-item-548843" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-548843"><a href="https://managewp.com/affiliates">Affiliates</a></li>
+<li id="menu-item-548845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-548845"><a href="https://managewp.com/spread-the-love">Spread the Love</a></li>
+<li id="menu-item-548844" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-548844"><a href="https://managewp.com/api">Developer API</a></li>
+</ul>                            </div>
+                            <div class="span3">
+                                <ul id="menu-theme-v5-footer-4" class="mwp_footer-nav4"><li id="menu-item-548846" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-548846"><a href="https://managewp.com/happy-users">Happy Users</a></li>
+<li id="menu-item-549175" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-549175"><a href="https://managewp.com/happy-users#success">Success Stories</a></li>
+<li id="menu-item-549177" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-549177"><a href="https://managewp.com/happy-users#testimonials">Testimonials</a></li>
+<li id="menu-item-549178" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-549178"><a href="https://managewp.com/happy-users#press">Press Coverage</a></li>
+<li id="menu-item-591172" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-591172"><a href="http://www.printfection.com/managewp/Shirts/_s_556842">T-Shirts</a></li>
+</ul>                            </div>
+                        </div>
+                    </div>
+                    <div class="span4 mwp-footer-feat">
+                        <ul>
+                            <li>
+                                <a href="https://managewp.com/plans-and-pricing">
+                                    <span>Plans and Pricing</span><br>
+                                    Premium plans for everyone.                                </a>
+                            </li>
+                           <li>
+                                <a href="https://managewp.com/self-hosted">
+                                    <span>ManageWP for Universities</span><br>
+                                    Need to automate your WordPress management in your own environment?                                </a>
+                            </li>
+                            <li>
+                                <a href="https://managewp.com/blog">
+                                    <span>ManageWP Blog</span><br>
+                                    Discover how you can make the most out of WordPress with ManageWP.                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="span2">
+
+                        <div class="social-btns">
+                            <div class="twitter-follow">
+                                <a href="https://twitter.com/managewp" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false">Follow @managewp</a>
+                            </div>
+                            <div class="fb-like" data-href="https://www.facebook.com/ManageWP" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" data-font="arial"></div>
+                        </div>
+
+                        <p class="attribution">
+                            <span>&copy; 2013 ManageWP</span>
+                            <span>All rights reserved</span>
+                            <span>Powered by WordPress</span>
+                        </p>
+
+                        <ul class="mwp-footer-other">
+                            <li><a href="https://www.google.com/moderator/#16/e=65078">Suggest an idea</a></li>
+                            <li><a href="https://managewp.com/user-guide">User Guide</a></li>
+                            <li><a href="https://managewp.com/terms-of-service">Terms</a></li>
+                            <li><a href="https://managewp.com/privacy">Privacy</a></li>
+                        </ul>
+                    </span>
+
+                </div>
+
+
+
+			</div> <!-- end #inner-footer -->
+
+		</div> <!-- end footer -->
+
+
+
+		<!--[if lt IE 7 ]>
+  			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+  			<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+		<![endif]-->
+
+		<script type='text/javascript' src='https://managewp.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.40.0-2013.08.13'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"https:\/\/managewp.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://managewp.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.5.2'></script>
+<script type='text/javascript' src='https://managewp.com/wp-content/themes/managewp5/library/js/bootstrap.min.js?ver=5.0.87'></script>
+<script type='text/javascript' src='https://managewp.com/wp-content/themes/managewp5/library/js/bootstrap-slider.js?ver=5.0.87'></script>
+<script type='text/javascript' src='https://managewp.com/wp-content/themes/managewp5/library/js/jquery.scrollTo.min.js?ver=5.0.87'></script>
+<script type='text/javascript' src='https://managewp.com/wp-content/themes/managewp5/library/js/jquery.serialScroll.min.js?ver=5.0.87'></script>
+<script type='text/javascript' src='https://managewp.com/wp-content/themes/managewp5/library/js/scripts.js?ver=5.0.87'></script>
+<script type='text/javascript' src='https://managewp.com/wp-content/themes/managewp5/library/js/modernizr.full.min.js?ver=5.0.87'></script>
+<script type='text/javascript' src='https://managewp.com/wp-content/themes/managewp5/library/js/mwp-scripts.js?ver=5.0.87'></script>
+<script type='text/javascript' src='https://fast.wistia.com/static/iframe-api-v1.js?ver=5.0.87'></script>
+
+	<script type="text/javascript">if(!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.src=(("http:"===document.location.protocol)?"http:":"https:")+"//"+"js-agent.newrelic.com/nr-100.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","beacon-6.newrelic.com","d86feb5dbe","244174","Z1NabURWCkQAVhFYXV4ZeVpCXgtZTkYMX1VcUw==",0,529,new Date().getTime(),"","","","",""]);</script>
+</body>
+
+</html>
+
+<!-- Served from: managewp.com @ 2013-10-01 22:58:34 by W3 Total Cache -->

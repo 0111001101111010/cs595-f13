@@ -1,0 +1,359 @@
+   #[1]Bot Bench RSS Feed [2]Bot Bench Atom Feed [3]Bot Bench » Stay
+   Sharp: Monobrick for the EV3 Comments Feed
+
+   [4]Bot Bench
+
+   Search______________ Search
+
+
+     * [5]Experiments
+     * [6]Programming
+          + [7]ROBOTC Driver Suite
+          + [8]ROBOTC
+          + [9]C#
+          + [10]NXT-G
+          + [11]NXC
+     * [12]Ramblings
+     * [13]Robots
+          + [14]EV3
+          + [15]NXT
+          + [16]VEX
+          + [17]Arduino
+          + [18]RCX
+     * [19]Sensors
+          + [20]Exposed
+     * [21]Tutorials
+
+
+   Sep26
+
+[22]Stay Sharp: Monobrick for the EV3
+
+   [23]C# [24]no comments
+
+   [25]monobrick
+   If you’re a fan of C#, then you will love [26]Monobrick, a
+   communication library that works with the EV3.  It uses the EV3’s
+   direct commands to remote control the brick.  It works with both the
+   NXT and the EV3.  You can simply import the library into your project
+   and start hacking away.
+
+   A simple example:
+using System;
+using MonoBrick.EV3;
+
+public static class Program{
+  static void Main(string[] args)
+  {
+    var ev3 = new Brick<Sensor,Sensor,Sensor,Sensor>("usb");
+    try{
+        ev3.Connection.Open();
+        ev3.MotorA.On(50);
+        System.Threading.Thread.Sleep(3000);
+        ev3.MotorA.Off();
+    }
+    catch(Exception e){
+        Console.WriteLine(e.StackTrace);
+        Console.WriteLine("Error: " + e.Message);
+        Console.WriteLine("Press any key to end...");
+        Console.ReadKey();
+    }
+    finally{
+        ev3.Connection.Close();
+    }
+  }
+}
+
+   Monobrick sports the following features:
+     * Communicates with the brick using USB, Bluetooth, WiFi or a tunnel
+       connection
+     * Works with Linux, Mac OS, Windows, Windows Phone and Android
+     * Support for all LEGO sensors that comes with the Retail and
+       Educational sets
+     * Support for a wide range of Hitechnic sensors (not yet supported on
+       the EV3)
+     * Control the motors individual or as a vehicle
+     * Use the mailbox system to send messages/data to the brick
+     * Play tones and sound files
+     * Use the file system to download and upload files
+     * Start and stop on-brick programs
+     * Use exceptions to catch sensor and communication errors
+     * Open and close connections with multiple bricks
+     * and more..
+
+   You can use a variety of development environments to play with this.
+   My preference would go out to Visual Studio, but you can also use
+   [27]MonoDevelop/Xamarin Studio, if you’d like.  It works on Windows,
+   Linux and OSX.
+
+   Awesome work, Anders!  You can find the official page here: [[28]LINK],
+   which also has links to documentation and more examples.
+
+   Tags [29]C# [30]EV3 [31]Mindstorms [32]mindstorms ev3 [33]NXT
+   [34]programming
+
+   Logging In...
+
+Profile [35]cancel
+
+   [36]Sign in with Twitter [37]Sign in with Facebook
+   or
+
+   Name ____________________
+
+   Email ____________________Not published
+
+   Website ____________________
+   CAPTCHA Image
+   [38]Refresh Image
+
+   ______ CAPTCHA Code*
+
+   Comment
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+
+   Post It
+
+   [ ] Notify me of follow-up comments by email.
+
+   [ ] Notify me of new posts by email.
+
+Author
+
+   [39]Xander
+
+   Infrastructure architect by day, and robotics enthusiast by night.
+   Xander builds and programs robots and sensors. He is also one of the
+   founders of the Mindboards forums. As a member of the LEGO MCP, he
+   helps spread the word about the LEGO Mindstorms robotics platform.
+
+   [40][sidebar.png]
+
+Recent
+
+     * [41]Stay Sharp: Monobrick for the EV3 [42]Stay Sharp: Monobrick for
+       the EV3 September 26, 2013 at 7:44
+     * [43]Awesome EV3 Daisy Chain Cable [44]Awesome EV3 Daisy Chain Cable
+       September 21, 2013 at 16:33
+     * [45]Review: The LEGO Build-it Book – Volume 1 [46]Review: The LEGO
+       Build-it Book – Volume 1 September 15, 2013 at 12:41
+     * [47]New Release: ROBOTC 3.62 [48]New Release: ROBOTC 3.62 September
+       8, 2013 at 10:42
+     * [49]HiTechnic Sensor EV3 Blocks [50]HiTechnic Sensor EV3 Blocks
+       September 4, 2013 at 10:45
+
+Comments
+
+     * [51]Xander: Done, you can find them here:
+       https://github.com/botbench/robotcdriversuite
+     * [52]suzanne lecompte: FYI, I have had a problem with totally 3 new
+       battery pack on my new set of
+     * [53]Tim: Do you plan on doing any exposed articles on the new EV3
+       hardware? I would
+     * [54]Jacob B: Can the driver suite (releases only even) be posted on
+       github? (then it ca
+     * [55]Marc-André Bazergui: I also like these 2 that work great
+       http://dx.com/p/usb-male-to-mini-usb-
+
+Popular
+
+     * [56]NXT-G 2.0 available for download from LEGO
+       56 comments
+     * [57]Pan and Tilt Rig for NXTCamV3 and Firmware Tests
+       45 comments
+     * [58]Exposed: LEGO Ultrasonic Sensor
+       40 comments
+     * [59]Comparing the NXT and EV3 bricks
+       36 comments
+     * [60]ROBOTC: Using the NXT 2.0 Colour Sensor
+       24 comments
+
+Tags
+
+   [61]Android [62]Arduino [63]bug fix [64]C# [65]changelog
+   [66]competition [67]Cortex [68]Dexter Industries [69]Drivers [70]driver
+   suite [71]EV3 [72]Exposed [73]Featured [74]give-away [75]HiTechnic
+   [76]IMU [77]Kinect [78]lego [79]LEGO World [80]LINUX [81]Mindsensors
+   [82]Mindstorms [83]mindstorms ev3 [84]NXT [85]NXT-G [86]omniwheel
+   [87]programming [88]robot [89]ROBOTC [90]ROBOTC 3 [91]ROBOTC 3.5
+   [92]Robots [93]robot virtual world [94]Rotacaster [95]RS485 [96]sensor
+   [97]Sensors [98]SuperPro Prototype Board [99]tetrix [100]Tutorial
+   [101]update [102]VEX [103]video [104]WiFi [105]zwolle
+
+Pages
+
+     * [106]About Xander
+     * [107]Botmag Article Companion Page
+     * [108]ROBOTC Driver Suite
+          + [109]Setting up the Driver Suite
+     * [110]Sensor Compendium
+     * [111]Support this Site
+
+
+Get Social
+
+     * [112]RSS Feed RSS FeedSubscribe
+     * [113]ContactEmail Me
+     * [114]TwitterFollow Me
+     * [115]FacebookBe a Fan!
+     * [116]LinkedinConnect
+     * [117]YouTubeMy Channel
+
+
+
+Archives
+
+   [Select Month________]
+
+Meta
+
+     * [118]Log in
+     * [119]Entries RSS
+     * [120]Comments RSS
+     * [121]WordPress.org
+
+
+
+
+   [122]Sport WordPress Theme by [123]WPZOOM
+
+   Copyright © 2013 Bot Bench. All Rights Reserved.
+     * [124]Sensor Compendium
+     * [125]Botmag Article Companion Page
+     * [126]Support this Site
+     * [127]ROBOTC Driver Suite
+     * [128]About Xander
+
+References
+
+   1. http://botbench.com/blog/feed/
+   2. http://botbench.com/blog/feed/atom/
+   3. http://botbench.com/blog/2013/09/26/stay-sharp-monobrick-for-the-ev3/feed/
+   4. http://botbench.com/blog
+   5. http://botbench.com/blog/category/experiments/
+   6. http://botbench.com/blog/category/programming/
+   7. http://botbench.com/blog/category/programming/robotc-drivers/
+   8. http://botbench.com/blog/category/programming/robotc/
+   9. http://botbench.com/blog/category/programming/c/
+  10. http://botbench.com/blog/category/programming/nxt-g/
+  11. http://botbench.com/blog/category/programming/nxc/
+  12. http://botbench.com/blog/category/ramblings/
+  13. http://botbench.com/blog/category/robots/
+  14. http://botbench.com/blog/category/robots/ev3/
+  15. http://botbench.com/blog/category/robots/mindstorms-nxt/
+  16. http://botbench.com/blog/category/robots/vex/
+  17. http://botbench.com/blog/category/robots/arduino/
+  18. http://botbench.com/blog/category/robots/rcx/
+  19. http://botbench.com/blog/category/sensors/
+  20. http://botbench.com/blog/category/exposed/
+  21. http://botbench.com/blog/category/tutorials/
+  22. http://botbench.com/blog/2013/09/26/stay-sharp-monobrick-for-the-ev3/
+  23. http://botbench.com/blog/category/programming/c/
+  24. http://botbench.com/blog/2013/09/26/stay-sharp-monobrick-for-the-ev3/#commentspost
+  25. http://botbench.com/blog/wp-content/uploads/2013/09/monobrick.png
+  26. http://www.monobrick.dk/software/monobrick/
+  27. http://monodevelop.com/
+  28. http://www.monobrick.dk/software/monobrick/
+  29. http://botbench.com/blog/tag/c/
+  30. http://botbench.com/blog/tag/ev3/
+  31. http://botbench.com/blog/tag/mindstorms/
+  32. http://botbench.com/blog/tag/mindstorms-ev3/
+  33. http://botbench.com/blog/tag/nxt/
+  34. http://botbench.com/blog/tag/programming-2/
+  35. file://localhost/blog/2013/09/26/stay-sharp-monobrick-for-the-ev3/#respond
+  36. http://botbench.com/blog/index.php?social_controller=auth&social_action=authorize&key=twitter&post_id=4774
+  37. http://botbench.com/blog/index.php?social_controller=auth&social_action=authorize&key=facebook&post_id=4774
+  38. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml147.data
+  39. http://botbench.com/blog/author/xander/
+  40. http://secure.softwarekey.com/solo/products/info.asp?A=91555
+  41. http://botbench.com/blog/2013/09/26/stay-sharp-monobrick-for-the-ev3/
+  42. http://botbench.com/blog/2013/09/26/stay-sharp-monobrick-for-the-ev3/
+  43. http://botbench.com/blog/2013/09/21/awesome-ev3-daisy-chain-cable/
+  44. http://botbench.com/blog/2013/09/21/awesome-ev3-daisy-chain-cable/
+  45. http://botbench.com/blog/2013/09/15/review-the-lego-build-it-book-volume-1/
+  46. http://botbench.com/blog/2013/09/15/review-the-lego-build-it-book-volume-1/
+  47. http://botbench.com/blog/2013/09/08/new-release-robotc-3-62/
+  48. http://botbench.com/blog/2013/09/08/new-release-robotc-3-62/
+  49. http://botbench.com/blog/2013/09/04/hitechnic-sensor-ev3-blocks/
+  50. http://botbench.com/blog/2013/09/04/hitechnic-sensor-ev3-blocks/
+  51. http://botbench.com/blog/2013/06/03/botbench-on-github/#comment-3320
+  52. http://botbench.com/blog/2013/08/23/psa-issues-with-some-ev3-battery-packs/#comment-3319
+  53. http://botbench.com/blog/2013/09/04/hitechnic-sensor-ev3-blocks/#comment-3318
+  54. http://botbench.com/blog/2013/06/03/botbench-on-github/#comment-3317
+  55. http://botbench.com/blog/2013/09/21/awesome-ev3-daisy-chain-cable/#comment-3315
+  56. http://botbench.com/blog/2011/10/02/nxt-g-2-0-available-for-download-from-lego/
+  57. http://botbench.com/blog/2010/03/21/pan-and-tilt-rig-for-nxtcamv3-and-firmware-tests/
+  58. http://botbench.com/blog/2011/09/21/exposed-lego-ultrasonic-sensor/
+  59. http://botbench.com/blog/2013/01/08/comparing-the-nxt-and-ev3-bricks/
+  60. http://botbench.com/blog/2011/02/16/robotc-using-the-nxt-2-0-colour-sensor/
+  61. http://botbench.com/blog/tag/android/
+  62. http://botbench.com/blog/tag/arduino/
+  63. http://botbench.com/blog/tag/bug-fix/
+  64. http://botbench.com/blog/tag/c/
+  65. http://botbench.com/blog/tag/changelog/
+  66. http://botbench.com/blog/tag/competition/
+  67. http://botbench.com/blog/tag/cortex/
+  68. http://botbench.com/blog/tag/dexter-industries/
+  69. http://botbench.com/blog/tag/drivers/
+  70. http://botbench.com/blog/tag/driver-suite/
+  71. http://botbench.com/blog/tag/ev3/
+  72. http://botbench.com/blog/tag/exposed/
+  73. http://botbench.com/blog/tag/featured/
+  74. http://botbench.com/blog/tag/give-away/
+  75. http://botbench.com/blog/tag/hitechnic/
+  76. http://botbench.com/blog/tag/imu/
+  77. http://botbench.com/blog/tag/kinect/
+  78. http://botbench.com/blog/tag/lego/
+  79. http://botbench.com/blog/tag/lego-world/
+  80. http://botbench.com/blog/tag/linux/
+  81. http://botbench.com/blog/tag/mindsensors/
+  82. http://botbench.com/blog/tag/mindstorms/
+  83. http://botbench.com/blog/tag/mindstorms-ev3/
+  84. http://botbench.com/blog/tag/nxt/
+  85. http://botbench.com/blog/tag/nxt-g/
+  86. http://botbench.com/blog/tag/omniwheel/
+  87. http://botbench.com/blog/tag/programming-2/
+  88. http://botbench.com/blog/tag/robot/
+  89. http://botbench.com/blog/tag/robotc-2/
+  90. http://botbench.com/blog/tag/robotc-3/
+  91. http://botbench.com/blog/tag/robotc-3-5/
+  92. http://botbench.com/blog/tag/robots/
+  93. http://botbench.com/blog/tag/robot-virtual-world/
+  94. http://botbench.com/blog/tag/rotacaster/
+  95. http://botbench.com/blog/tag/rs485/
+  96. http://botbench.com/blog/tag/sensor/
+  97. http://botbench.com/blog/tag/sensors/
+  98. http://botbench.com/blog/tag/superpro-prototype-board/
+  99. http://botbench.com/blog/tag/tetrix/
+ 100. http://botbench.com/blog/tag/tutorial/
+ 101. http://botbench.com/blog/tag/update/
+ 102. http://botbench.com/blog/tag/vex/
+ 103. http://botbench.com/blog/tag/video/
+ 104. http://botbench.com/blog/tag/wifi/
+ 105. http://botbench.com/blog/tag/zwolle/
+ 106. http://botbench.com/blog/about/
+ 107. http://botbench.com/blog/botmag/
+ 108. http://botbench.com/blog/robotc-driver-suite/
+ 109. http://botbench.com/blog/robotc-driver-suite/setting-up-the-driver-suite/
+ 110. http://botbench.com/wiki
+ 111. http://botbench.com/blog/2012/10/04/want-to-support-this-site-2/
+ 112. http://botbench.com/blog/feed/
+ 113. mailto:xander@botbench.com
+ 114. http://twitter.com/#!/xandersoldaat
+ 115. https://www.facebook.com/pages/Bot-Bench-Id-Rather-Be-Building-Robots/193855904008195
+ 116. http://www.linkedin.com/pub/xander-soldaat/5/213/4b5
+ 117. http://www.youtube.com/xandersoldaat
+ 118. http://botbench.com/blog/wp-login.php
+ 119. http://botbench.com/blog/feed/
+ 120. http://botbench.com/blog/comments/feed/
+ 121. http://wordpress.org/
+ 122. http://www.wpzoom.com/
+ 123. http://www.wpzoom.com/
+ 124. http://botbench.com/wiki
+ 125. http://botbench.com/blog/botmag/
+ 126. http://botbench.com/blog/2012/10/04/want-to-support-this-site-2/
+ 127. http://botbench.com/blog/robotc-driver-suite/
+ 128. http://botbench.com/blog/about/

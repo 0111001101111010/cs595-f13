@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="de" class="no-js">
+	<head>
+		<meta charset="utf-8">
+
+<title>Juvia: Open-Source-Kommentarsystem als Alternative zu Disqus und IntenseDebate » t3n</title>
+<meta name="description" content="Es gibt bereits einige Möglichkeiten wie Disqus oder IntenseDebate, um Blogkommentare gesammelt und ausgelagert zu verwalten. Mit Juvia ist ..." />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="http://t3n.de/news/juvia-360109/" />
+
+		<link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono" rel="stylesheet" type="text/css">
+		
+		<link rel="stylesheet" type="text/css" media="screen,projection" href="//t3n.sc/core/compressed/desktop.css?v=246">
+		<link rel="stylesheet" type="text/css" media="screen,projection" href="//t3n.sc/core/css/desktop/sites/news.css?v=246">
+		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+		<script src="//t3n.sc/core/js/libs/modernizr.js?v=246"></script>
+		
+		<meta name="news_keywords" content="rails, opensource, ruby, frameworks, opensource, software, entwicklung">
+	<script type="text/javascript">
+		var Ads_BA_ADIDsite    = 't3n.de';
+		var Ads_BA_ADIDsection = 'software';
+		var Ads_BA_keyword     = 'rails,opensource,ruby,frameworks,software,entwicklung';
+	</script>
+	<script type="text/javascript" src="//t3n.sc/core/js/libs/adlib.js?v=114"></script>
+
+	<link rel="alternate" type="application/rss+xml" title="t3n RSS Feed" href="http://t3n.de/news/feed/" />
+	<link rel="alternate" type="application/atom+xml" title="t3n Atom Feed" href="http://t3n.de/news/feed/atom/" />
+	<link rel="pingback" href="http://t3n.de/news/xmlrpc.php" />
+	<meta name="verify-v1" content="v1bczer2TUqAQRGCBs+fpOp91t6WPdbBBWSotI21QYY=" />
+	
+	<link rel="alternate" type="application/rss+xml" title="t3n &raquo; Juvia: Open-Source-Kommentarsystem als Alternative zu Disqus und IntenseDebate Kommentar-Feed" href="http://t3n.de/news/juvia-360109/feed/" />
+<link rel='stylesheet' id='gdsr_style_main-css'  href='http://t3n.de/news/wp-content/plugins/gd-star-rating/css/gdsr.css.php?t=1378287540&#038;s=a05i05m20k20c00r05%23121620243046%23121620243240%23s1pchristmas%23s1pcrystal%23s1pdarkness%23s1poxygen%23s1goxygen_gif%23s1pplain%23s1ppumpkin%23s1psoft%23s1pstarrating%23s1pstarscape%23t1pclassical%23t1pstarrating%23t1gstarrating_gif%23lsgflower%23lsgcircle%23lsg&#038;o=off&#038;ver=1.9.22' type='text/css' media='all' />
+<link rel='stylesheet' id='wpappbox-css'  href='http://t3n.de/news/wp-content/plugins/wp-appbox/css/styles.min.css?ver=2.0.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='mediaelementjs-styles-css'  href='http://t3n.de/news/wp-content/plugins/t3nMedia/mediaelement/mediaelementplayer.css?ver=3.6.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://t3n.de/news/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='http://t3n.de/news/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://t3n.de/news/wp-content/plugins/comment-form-quicktags/quicktags.php?ver=20111227'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://t3n.de/news/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://t3n.de/news/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='http://t3n.de/news/?p=360109' />
+<script type="text/javascript">
+//<![CDATA[
+var gdsr_cnst_nonce = "0c3b190d5a";
+var gdsr_cnst_ajax = "http://t3n.de/news/wp-content/plugins/gd-star-rating/ajax.php";
+var gdsr_cnst_button = 0;
+var gdsr_cnst_cache = 0;
+// ]]>
+</script>
+
+<!--Plugin WP Missed Schedule 2013.0730.7777 Active - Tag d76ca983e4e0b1146b8511f40cd66015-->
+
+
+
+	<meta property="og:title" content="Juvia: Open-Source-Kommentarsystem als Alternative zu Disqus und IntenseDebate">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="http://t3n.de/news/juvia-360109/">
+	<meta property="og:site_name" content="t3n Magazin">
+	<meta property="og:description" content="Es gibt bereits einige Möglichkeiten wie Disqus oder IntenseDebate, um Blogkommentare gesammelt und ausgelagert zu verwalten. Mit Juvia ist jetzt außerdem ein Rails-basiertes Kommentarsystem am Start, das als Open Source über GitHub verfügbar ist. Wir stellen euch Juvia hier kurz vor.">
+	<meta property="og:image" content="http://t3n.de/news/wp-content/uploads/2012/01/Juvia_Featured.png">
+	<meta property="og:image:width" content="500">
+	<meta property="og:image:height" content="281">
+	<meta property="og:image" content="http://t3n.de/news/wp-content/uploads/2012/01/Juvia_Featured.png">
+	<meta property="og:image:width" content="300">
+	<meta property="og:image:height" content="168">
+	<meta property="og:image" content="http://t3n.de/news/wp-content/uploads/2012/01/Juvia_Featured-283x159.png">
+	<meta property="og:image:width" content="283">
+	<meta property="og:image:height" content="159">
+	<link rel="image_src" href="http://t3n.de/news/wp-content/uploads/2012/01/Juvia_Featured-283x159.png">
+<meta name="twitter:site" content="@t3n">
+	<meta name="twitter:site:id" content="11060982">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:creator" content="@mika417">
+	<meta property="article:publisher" content="https://www.facebook.com/t3nMagazin">
+	<meta property="article:author" content="https://www.facebook.com/monika.steinberg">
+	<meta property="vr:published_time" content="2012-01-18T17:23:19+01:00">
+<meta property="vr:author" content="Monika Steinberg">
+<meta property="vr:type" content="article">
+<meta property="vr:category" content="Software">
+<meta property="vr:category" content="Entwicklung">
+
+
+    
+		
+		
+		<link rel="shortcut icon" href="//t3n.sc/favicon.ico" type="image/x-icon">
+		<link rel="apple-touch-icon" href="//t3n.sc/core/images/mobile/Icon.png">
+		<link rel="apple-touch-icon-precomposed" href="//t3n.sc/core/images/mobile/Icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="//t3n.sc/core/images/mobile/Icon-72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="//t3n.sc/core/images/mobile/Icon@2x.png">
+		<link rel="apple-touch-startup-image" href="//t3n.sc/core/images/mobile/startup-320x460.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)">
+		<link rel="apple-touch-startup-image" href="//t3n.sc/core/images/mobile/startup-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
+		<link rel="apple-touch-startup-image" href="//t3n.sc/core/images/mobile/startup-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
+
+		<meta property="fb:page_id" content="100942084485">
+		<link href="https://plus.google.com/101559871572415719072" rel="publisher">
+
+					<script>var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-289892-8']);</script>
+		                  
+                        <!--Visual Revenue Reader Response Tracking Script (v6) -->
+                        <script type="text/javascript">
+                                var _vrq = _vrq || [];
+                                _vrq.push(['id', 488]);
+                                _vrq.push(['automate', false]);
+                                _vrq.push(['track', function(){}]);
+                                (function(d, a){
+                                        var s = d.createElement(a),
+                                        x = d.getElementsByTagName(a)[0];
+                                        s.async = true;
+                                        s.src = 'http://a.visualrevenue.com/vrs.js';
+                                        x.parentNode.insertBefore(s, x);
+                                })(document, 'script');
+                        </script>
+                        <!-- End of VR RR Tracking Script - All rights reserved -->
+                        
+	</head>
+
+	<body>
+
+	
+	<div id="szm">
+	<script type="text/javascript">
+		<!--
+		var IVW="http://t3n.ivwbox.de/cgi-bin/ivw/CP/t3nNews";
+		document.write("<img src=\""+IVW+"?r="+escape(document.referrer)+"&d="+(Math.random()*100000)+"\" width=\"1\" height=\"1\" alt=\"szmtag\" />");
+		//-->
+	</script>
+	<noscript><p><img src="http://t3n.ivwbox.de/cgi-bin/ivw/CP/t3nNews" width="1" height="1" alt="szmtag" /></p></noscript>
+</div>
+<script type="text/javascript">
+	<!--
+	var szmvars="t3n//CP//t3nNews";
+	// -->
+</script>
+<script type="text/javascript" src="http://t3n.ivwbox.de/2004/01/survey.js"></script>
+
+	<div id="tmb">
+		<div id="tmbw">
+			<nav class="tmbNav cf">
+				<ul>
+					<li id="tmBadge"><a href="/">t3n</a></li>
+											<li><a href="/" class="tmbl">Startseite</a>
+						<li><a href="https://t3n.de/app/shop/" class="tmbl">Abo</a>
+						<li><a href="/jobs/" class="tmbl">Jobbörse</a>
+						<li><a href="/marktplatz/" class="tmbl">Marktplatz</a>
+						<li><a href="https://t3n.de/app/werben/" class="tmbl">Werben</a>
+						<li><a href="/news/sponsored-post-info/" class="tmbl">Sponsored Post</a>
+						<li><a href="https://t3n.de/app/partnerprogramm/" class="tmbl">Partnerprogramm</a>
+						<li class="tmbNavContact">
+							<a href="#" class="tmbl">Gib uns einen Tipp!</a>
+							<ul class="flnav">
+								<li class="flnav flnavInner">
+									<section>
+										<div class="flnav-headline">Dein Tipp</div>
+
+										<form action="/tmfb" method="post">
+											<div>
+												<input type="text" name="url" value="" class="hide">
+												<input type="hidden" name="t3nurl" id="tmfbUrl" value="">
+
+												<p><label for="mfbTopic">Bitte wähle aus:</label>
+												<select name="mfbTopic" id="mfbTopic" class="flnavForm" required>
+													<option value="tip">Inhaltlich: Heißer Tipp für die Redaktion, Schreibfehler und Hinweise</option>
+													<option value="errorReport">Technisch: Irgend etwas ist kaputt auf der Seite</option>
+													<option value="question">Ich habe eine Frage, wie etwas funktioniert</option>
+													<option value="ads">Ich möchte auf t3n.de werben</option>
+													<option value="other">Etwas anderes</option>
+												</select></p>
+
+												<p><label for="tmfbSummarize">Dein Anliegen in einem Satz zusammengefasst:</label>
+												<input type="text" name="tmfbSummarize" id="tmfbSummarize" value="" class="flnavForm" required></p>
+
+												<p><label for="tmfbDescr">Beschreibe deinen Tipp im Detail:</label>
+												<textarea name="tmfbDescr" id="tmfbDescr" class="flnavForm" rows="5" required></textarea></p>
+
+												<p><label for="tmfbName">Dein Name:</label>
+												<input type="text" name="tmfbName" id="tmfbName" value="" class="flnavForm" required></p>
+
+												<p><label for="tmfbMail">E-Mail-Adresse für Rückfragen:</label>
+												<input type="email" name="tmfbMail" id="tmfbMail" value="" class="flnavForm" required></p>
+
+												<button type="submit" class="tbutton primary">Absenden</button>
+
+												<a href="/" class="tbutton simple closeSticky">Abbrechen</a>
+											</div>
+										</form>
+									</section>
+								</li>
+							</ul>
+						</li>
+										<li class="right tmbNavAccount">
+												<a href="https://t3n.de/signin" class="tmbl tmbAccOptShow">
+							Anmelden<span class="tmbAvatar"><img src="http://t3n.de/data/images/profiles/_default_small.jpg" width="26" height="26" alt=""></span>
+<span class="tmbAccOptShow"></span>
+						</a>
+
+						<ul class="flnav">
+															<li class="flnav flnavInner">
+									<section>
+										<div class="flnav-headline">Anmeldung</div>
+
+										<form action="http://t3n.de/signin?redirect=http%3A%2F%2Ft3n.de%2Fnews%2Fjuvia-360109%2F" id="signInForm" method="post">
+											<div>
+												<div>
+													<input type="email" name="signin[username]" id="loginBoxUser" value="" placeholder="E-Mail-Adresse" class="flnavForm colFull" aria-required="true" required>
+													<input type="password" name="signin[password]" id="loginBoxPass" value="" placeholder="Passwort" class="flnavForm colFull" aria-required="true" required>
+												</div>
+
+												<div class="cf">
+													<p class="col60"><input type="checkbox" name="signin[remember]" id="signin_remember"><label for="signin_remember" class="text-small inline"> Angemeldet bleiben</label></p>
+						
+													<div class="col40r r">
+														<button type="submit" class="tbutton primary">Anmelden</button>
+													</div>
+												</div>
+											</div>
+										</form>
+									</section>
+								</li>
+								<li class="flnav flnavInner">
+									<div class="line-through"><span>oder anmelden mit:</span></div>
+
+									<div class="tmbNavSocialLogin">
+										<a href="https://t3n.de/connect/google" class="color-google"><i class="icon-google-plus"></i> Google</a>
+										<a href="https://t3n.de/connect/facebook" class="color-facebook"><i class="icon-facebook"></i> Facebook</a>
+										<a href="https://t3n.de/connect/twitter" class="color-twitter"><i class="icon-twitter"></i> Twitter</a>
+									</div>
+								</li>
+								<li class="flnav flnavBreak"><a href="https://t3n.de/signup?redirect=http%3A%2F%2Ft3n.de%2Fnews%2Fjuvia-360109%2F">Jetzt registrieren</a></li>
+								<li class="flnav"><a href="https://t3n.de/account/password">Passwort vergessen?</a></li>
+														<li class="flnav flnavBreak"><a href="https://t3n.de/app/shop/abo/">Abo-Lieferadresse ändern</a></li>
+							<li class="flnav"><a href="http://yeebase.com/kontakt/">Support (Technik/Abo)</a></li>
+							<li class="flnav"><a href="mailto:redaktion@t3n.de">Support (Redaktion)</a></li>
+						</ul>
+					</li>
+
+									</ul>
+			</nav>
+		</div>
+	</div>
+
+			<div id="pageWrapper" class="hidePrev">
+			                <div id="Ads_BA_TakeOver">
+				<div id="Ads_BA_BS" class="adbLeaderboard"><script type="text/javascript">Ads_BA_AD('BS');</script></div>
+			
+			<div id="head">
+				<div id="headMain">
+					<div id="headTitle"><a href="/">t3n Magazin <span>Das Magazin für Digitales Business | we love technology</span></a></div>
+					
+					
+					<div class="headSearch">
+						<form action="http://t3n.de/search" method="get">
+							<div class="cf">
+								<label class="hidden" for="s">Suche nach:</label>
+								<input type="text" name="q" id="s" value="" placeholder="t3n-Suche">
+								<button type="submit"><i class="icon-search"></i> <span>Suchen</span></button>
+							</div>
+						</form>
+					</div>
+
+					<nav id="headNav">
+						<ul>
+							<li class="active"><a href="/news/">News</a></li>
+							<li><a href="/magazin/">Heftartikel</a></li>
+							<li><a href="/news/category/stream/">Bilder</a></li>
+							<li><a href="/news/category/tv/">Videos</a></li>
+							<li><a href="/jobs/">Jobbörse</a></li>
+							<li><a href="/fragen/">Fragen</a></li>
+							<li><a href="https://t3n.de/app/shop/">Shop &amp; Abo</a></li>
+							<li><a href="/marktplatz/">Marktplatz</a></li>
+													</ul>
+					</nav>
+
+											<div id="headCampaign">
+							<a href="http://t3n.de/magazin/t3n-nr-33-programmierbare-welt/">t3n Magazin und T-Shirt im Abo</a>
+						</div>
+									</div>
+
+									<div id="headTopics">
+													<ul class="headTopics">
+								<li class="headTopicsLabel">Ressorts:</li>
+								<li><a href="http://t3n.de/tag/startups">Startups</a></li>
+<li><a href="http://t3n.de/tag/e-commerce">E-Commerce</a></li>
+<li><a href="http://t3n.de/tag/marketing">Marketing</a></li>
+<li><a href="http://t3n.de/tag/social-media">Social Media</a></li>
+<li><a href="http://t3n.de/tag/karriere">Karriere</a></li>
+<li><a href="http://t3n.de/tag/design">Design</a></li>
+<li><a href="http://t3n.de/tag/entwicklung">Entwicklung</a></li>
+<li><a href="http://t3n.de/tag/software">Software</a></li>
+<li><a href="http://t3n.de/tag/hardware">Hardware</a></li>
+							</ul>
+						
+													<ul class="tagList">
+								<li class="headTopicsLabel">Topthemen:</li>
+								<li><a href="http://t3n.de/tag/iphone-5c">iPhone 5C</a></li>
+<li><a href="http://t3n.de/tag/flat-design">Flat Design</a></li>
+<li><a href="http://t3n.de/tag/iphone-5s">iPhone 5s</a></li>
+<li><a href="http://t3n.de/tag/content-marketing">Content Marketing</a></li>
+<li><a href="http://t3n.de/tag/ios-7">iOS 7</a></li>
+<li><a href="http://t3n.de/tag/responsive-webdesign">Responsive Webdesign</a></li>
+<li class="more">
+<a href="/tag" class="tagListMoreLabel"><b>mehr</b> &raquo;</a>
+<ul class="flnav">
+<li class="flnav"><a href="http://t3n.de/tag/facebook">Facebook</a></li>
+<li class="flnav"><a href="http://t3n.de/tag/firefox-os">Firefox OS</a></li>
+<li class="flnav"><a href="http://t3n.de/tag/ifa">IFA 2013</a></li>
+<li class="flnav"><a href="http://t3n.de/tag/seo">SEO</a></li>
+<li class="flnav"><a href="http://t3n.de/tag/prism">PRISM</a></li>
+<li class="flnav"><a href="http://t3n.de/tag/a-b-test">A/B-Test</a></li>
+<li class="flnav"><a href="http://t3n.de/tag/webdesign">Webdesign</a></li>
+<li class="flnav"><a href="http://t3n.de/tag/windows-8-1">Windows 8.1</a></li>
+								<li class="flnav flnavBreak"><a href="/tag"><b>Alle Themen</b> &raquo;</a></li>
+                                                                    </ul></li>
+                                							</ul>
+						
+						<div class="headSocial">
+							<ul>
+								<li><a href="https://plus.google.com/+t3nMagazin/posts" class="google" rel="external nofollow" title="Google+"><i class="icon-google-plus"></i><span>Google+</span></a></li>
+								<li><a href="https://twitter.com/t3n" class="twitter" rel="external nofollow" title="Twitter"><i class="icon-twitter"></i><span>Twitter</span></a></li>
+								<li><a href="https://www.facebook.com/t3nMagazin" class="facebook" rel="external nofollow" title="Facebook"><i class="icon-facebook"></i><span>Facebook</span></a></li>
+								<li><a href="http://www.youtube.com/subscription_center?add_user=t3nMagazin" class="youtube" rel="external nofollow" title="YouTube"><i class="icon-youtube-play"></i><span>YouTube</span></a></li>
+								<li><a href="http://t3n.de/news/feed/" class="feed" rel="external nofollow" title="RSS-Feed"><i class="icon-rss"></i><span>RSS</span></a></li>
+							</ul>
+						</div>
+					</div>
+							</div>
+
+							<div id="Ads_BA_FLB" class="adbContentFlash abContent"><script>Ads_BA_AD('FLB');</script></div>
+				<div id="stage" class="wide">
+	
+			<div class="articleWrapper cf">
+			
+			<div class="content">
+								<article class="post-360109 post type-post status-publish format-standard hentry category-technologie contentInnerClean" id="post-360109" itemscope itemtype="http://schema.org/Article">
+					
+											<header class="postHead cf">
+	                        <div class="postBar cf">
+	                            	                                <div class="col40 sbTop">
+	                                    <a href="https://plus.google.com/share?url=http%3A%2F%2Ft3n.de%2Fnews%2Fjuvia-360109%2F" class="btn socialBtn google" rel="popup"><i class="social-googleplus social-white"></i>18</a>
+	                                    <a href="http://www.facebook.com/sharer.php?u=http://t3n.de/news/juvia-360109/&amp;t=Juvia%3A+Open-Source-Kommentarsystem+als+Alternative+zu+Disqus+und+IntenseDebate" class="btn socialBtn facebook" rel="popup"><i class="social-facebook social-white"></i>4</a>
+	                                    <a href="http://twitter.com/intent/tweet?related=t3n&text=Juvia%3A+Open-Source-Kommentarsystem+als+Alternative+zu+Disqus+und+IntenseDebate&url=http://t3n.de/news/juvia-360109/&via=t3n&lang=de" class="btn socialBtn twitter" rel="popup"><i class="social-twitter social-white"></i>17</a>
+	                                </div>
+	                            
+	                            	                                <div class="col60r r">
+	                                    <em class="text-light text-small">Drücke die Tasten &#x25c4; &#x25ba; für weitere Artikel</em>
+	                                    &nbsp;
+	                                    	                                        <a href="http://t3n.de/news/google-video-feature-360188/" class="btn primary post-older" onclick="_gaq.push(['_trackEvent', 'SingleViewClick', 'Blaetterfunktion', 'Von '+location.href+' zu '+this.href]);">&#x25c4;</a>
+	                                    
+	                                    	                                        <a href="http://t3n.de/news/internet-2011-zahlen-ausblick-359909/" class="btn primary post-newer" onclick="_gaq.push(['_trackEvent', 'SingleViewClick', 'Blaetterfunktion', 'Von '+location.href+' zu '+this.href]);">&#x25ba;</a>
+	                                    	                                </div>
+	                            	                        </div>
+	                        
+							<h1 class="entry-title" itemprop="name">Juvia: Open-Source-Kommentarsystem als Alternative zu Disqus und IntenseDebate</h1>
+
+							<div class="postHeadMeta" data-post-older="http://t3n.de/news/google-video-feature-360188/" data-post-newer="http://t3n.de/news/internet-2011-zahlen-ausblick-359909/">
+								<p class="postMetaBlock cf"><strong>Autor:</strong> <a href="/profile/msteinberg" rel="author" itemprop="author"><span class="vcard author"><span class="fn">Monika Steinberg</span></span></a></p>
+								<p class="postMetaBlock cf updated"><strong>Datum:</strong> <time datetime="2012-01-18T17:23:19+00:00" pubdate itemprop="datePublished">18.01.2012, 17:23 Uhr</time></p>							</div>
+
+							<div class="teaser" itemprop="description"><p>Es gibt bereits einige Möglichkeiten wie Disqus oder IntenseDebate, um Blogkommentare gesammelt und ausgelagert zu verwalten. Mit Juvia ist jetzt außerdem ein Rails-basiertes Kommentarsystem am Start, das als Open Source über GitHub verfügbar ist. Wir stellen euch Juvia hier kurz vor.</div>
+							<div class="postHeadImage"><figure><img src="http://t3n.de/news/wp-content/uploads/2012/01/Juvia_Featured-290x163.png" alt="Juvia: Open-Source-Kommentarsystem als Alternative zu Disqus und IntenseDebate" title="juvia" itemprop="thumbnailUrl"></figure></div>
+						</header>
+					
+					
+<div id="Ads_BA_CAD2"><script type="text/javascript">Ads_BA_AD('CAD2');</script></div>
+
+					<div class="entry cf" itemprop="articleBody">
+												
+                                                                    
+						<span id="more-360109"></span>
+
+<figure id="attachment_360116" class="caption alignnone">
+	<a href="http://juvia-demo.phusion.nl/"><img class="size-large wp-image-360116 " src="http://t3n.de/news/wp-content/uploads/2012/01/Juvia_Dashboard_Demo-595x210.png" alt="Juvia Dashboard Demo" width="595" height="210" title="" /></a>
+	<figcaption>Juvia Demo Webfrontend: Dashboard</figcaption>
+</figure>
+
+<h2>Simples Kommentar Outsourcing</h2>
+<p><a title="Juvia Demo" href="http://juvia-demo.phusion.nl/" >Juvia</a> stammt von der 2008 gegründeten niederländischen Webentwicklungsfirma <a title="Phusion" href="http://www.phusion.nl/about" >Phusion</a>. Juvia ist in <a class="contentTagLink" title="Weitere News zu Rails" href="http://t3n.de/tag/rails">Rails</a> 3 umgesetzt und vom Prinzip her ähnlich wie die beiden wohl bisher bekanntesten Kommentarsysteme <a title="Disqus" href="http://www.disqus.com/welcome/" >Disqus</a> und <a title="IntenseDebate" href="http://intensedebate.com/home" >IntenseDebate</a>. Auch bei Juvia kann man bald über ein Webfrontend nach einem Login seine Kommentare mittels eines Dashboards an einer Stelle gesammelt verwalten. Bisher gibt es allerdings erst ein <a title="Juvia Demo" href="http://juvia-demo.phusion.nl/" >Demosystem zu Juvia </a>mit einem Testaccount als a@a.com und Passwort 123456. Neuregistrierungen sind noch nicht möglich.</p>
+
+<figure id="attachment_360120" class="caption alignnone">
+	<a href="http://juvia-demo.phusion.nl/"><img class="size-large wp-image-360120 " src="http://t3n.de/news/wp-content/uploads/2012/01/Juvia_Kommentar%C3%BCbersicht_Dashboard_Demo-595x150.png" alt="Juvia Kommentar%C3%BCbersicht Dashboard Demo" width="595" height="150" title="" /></a>
+	<figcaption>Juvia Demo Webfrontend: Kommentarübersicht</figcaption>
+</figure>
+
+<p>Die Einbindung einer Juvia-Kommentarseite in das eigene Blog geschieht über ein anpassbares <a title="Juvia JavaScript Snippet" href="http://juvia-demo.phusion.nl/admin/help/embedding" >JavaScript Snippet</a>, das man in die eigene Seite kopiert. Dabei sind Kommentare in zwei hierarchische Ebenen unterteilt. Kommentare sind in Themen enthalten und Themen sind Teil einer Kommentarseite. Nur die Kommentarseite muss manuell erstellt werden – die Themen werden automatisch über gepostete Kommentare erzeugt.</p>
+
+<figure id="attachment_360119" class="caption alignnone">
+	<a href="http://juvia-demo.phusion.nl/admin/help/embedding"><img class="size-large wp-image-360119" src="http://t3n.de/news/wp-content/uploads/2012/01/Juvia_JavaScript_Snippet-595x219.png" alt="Juvia JavaScript Snippet" width="595" height="219" title="" /></a>
+	<figcaption>Juvia JavaScript Snippet Beispiel</figcaption>
+</figure>
+
+<h2>AJAX-Unterstützung und offener Quellcode</h2>
+<p>Auch bei IntenseDebate und Disqus kann man über Widgets als JavaScript-Snippets konfigurierbare Kommentarübersichten in die eigene Seite einbauen. Wie die Juvia-Entwickler <a title="Juvia bei GitHub" href="https://github.com/phusion/juvia" >bei GitHub</a> schreiben, liegt der Vorteil von Juvia aber in der guten AJAX-Unterstützung. Es bietet einfache Integration in AJAX-basierte Webanwendungen und vermeidet bekannte Konflikte mit anderen in der Seite existierenden JavaScripts. Daher wird z.B. nicht die gesamte Seite neu geladen oder auf andere Seiten umgeleitet. Auch iframes werden nicht benutzt von Juvia.</p>
+
+<figure id="attachment_360115" class="caption aligncenter">
+	<a href="http://juvia-demo.phusion.nl/"><img class="size-large wp-image-360115 " src="http://t3n.de/news/wp-content/uploads/2012/01/Juvia_Dashboard_CreateNewSite_Demo-595x503.png" alt="Juvia Dashboard CreateNewSite Demo" width="374" height="315" title="" /></a>
+	<figcaption>Juvia Demo Webfrontend: Neue Seite erstellen</figcaption>
+</figure>
+
+<p>IntenseDebate und Disqus können als Basisversion auch kostenfrei genutzt werden, sind aber nicht <a class="contentTagLink" title="Weitere News zu Open Source" href="http://t3n.de/tag/open-source">Open Source</a>. <a title="Addons für Disqus" href="http://disqus.com/admin/addons/packages/" >Zusätzliche Addon Packages</a> für z.B. Disqus kosten zwischen 299 Dollar und 999 Dollar im Monat – je nachdem ob das „Professional“ oder das „VIP“ Paket gewählt wird. Wer an einem schlichten Kommentarsystem mit offenem Quellcode oder der Entwicklung von eigenen Erweiterungen interessiert ist, ist besser bei Juvia aufgehoben. Man kann sich auch gern seine eigene Rails-Installation einrichten wie bei <a title="Juvia bei GitHub" href="https://github.com/phusion/juvia" >GitHub</a> ausführlich dokumentiert ist.</p>
+<h2>Weitere Juvia Features</h2>
+<p>Juvia bietet manuellen oder automatischen Moderationssupport über Akismet, Mehrfachnutzerunterstützung für den Admin-Panel und nicht nur für Kommentatoren sowie E-Mail-Benachrichtigung bei neuen Kommentaren. Verschachtelte Kommentare werden derzeit von Juvia nicht unterstützt. Da die Phusion Entwickler auf Einfachheit setzten, ist das auch für die Zukunft nicht zu erwarten. Für die Zukunft stehen bei Juvia noch ein paar Punkte auf der Todo-Liste wie z.B. ein für mobile Endgeräte optimiertes Interface, Import/Export-Funktionalitäten oder Unterstützung für Moderationsteams.</p>
+<p>Allerdings merken die Entwickler an, dass sie Juvia in der aktuellen Schlichtheit für ihre Bedürfnisse schon völlig ausreichend finden und <a title="Juvia bei GitHub" href="https://github.com/phusion/juvia" >rufen eher dazu</a> auf, sich aktiv an der Weiterentwicklung von Juvia zu beteiligen, falls jemandem etwas fehlen sollte.</p>
+<p><em>Kurz gesagt: Juvia ist ein simples Kommentarsystem mit Blick aufs Wesentliche dass mit AJAX Unterstützung und der Verfügbarkeit als Open Source punktet.</em></p>
+<div><a class="relatedPost contentBox cf" href="http://t3n.de/news/nur-frauen-rails-girls-verandern-461978/" onclick="_gaq.push(['_trackEvent', 'SingleViewClick', 'Relatedbox', 'Von '+location.href+' zu '+this.href]);"><img src="http://t3n.de/uploads/t3n-news-post-461978_railsgirls_logo_small.jpg" alt="Nur für Frauen: Die „Rails Girls“ verändern die Programmiererwelt " /><p>Das könnte dich auch interessieren:</p><h2>Nur für Frauen: Die „Rails Girls“ verändern die Programmiererwelt </h2></p></a></div><p><strong>Weiterführende Links:</strong></p>
+<ul>
+<li><a title="Juvia Demo" href="http://juvia-demo.phusion.nl/admin/sites/new" >Juvia Demo</a></li>
+<li><a title="Juvia bei GitHub" href="https://github.com/phusion/juvia" >Juvia bei GitHub</a></li>
+<li><a title="IntenseDebate" href="http://intensedebate.com/home" >IntenseDebate</a></li>
+<li><a title="Disqus" href="http://www.disqus.com/welcome/" >Disqus</a></li>
+</ul>
+                        					</div>
+				</article>
+
+							</div>
+
+			<aside class="sidebar">
+				<p class="postMetaBlock cf"><strong>Themen:</strong> 
+<a href="/tag/rails/">Rails</a>, <a href="/tag/open-source/">Open Source</a></p>
+	<div id="Ads_BA_BUT" class="abContent"><script>Ads_BA_AD('BUT');</script></div>
+
+<section class="cBox newsletterBox">
+	<div class="section-headline noMarginTop">Newsletter: Top Themen der Woche</div>
+
+	<form action="http://t3n.us1.list-manage.com/subscribe/post?u=367517f69d61ffa782ba141be&amp;id=faba600569" method="post" target="_blank">
+		<div>
+			<p><input id="newsletterMailSidebar" type="text" name="EMAIL" value="E-Mail-Adresse" class="replaceValue formLeft" required><button type="submit" class="btn btnRight vat">eintragen</button></p>
+
+			<p class="small"><span class="icon16 icon16Tick"></span>2x die Woche
+			&nbsp;
+			<span class="icon16 icon16Tick"></span>Redaktionell bearbeitet</p>
+
+			<p class="noMargin small">Jetzt lesen: <a href="http://eepurl.com/F_Ud9" class="iframe" rel="nofollow">t3n Newsletter Nr. 372</a></p>
+		</div>
+	</form>
+</section>
+
+
+	<div id="Ads_BA_CAD" class="adbRectangleSidebar abContent"><script type="text/javascript">Ads_BA_AD('CAD');</script></div>
+
+<!--	<div class="section section-headline">Unsere Sponsoren</div>-->
+
+	<div class="adb sidebarInner clearfix">
+				<script src="http://guruads.de/api/view/506427d349795973020000ac,4dac0ed12834570d3d000001,4dac0f1b283457103d000002,4dac0f30283457133d000000,4dac0f432834570c3d000003,4dac0f5e2834570f3d000001,4dac0f6d283457123d000000,4dac0f822834570b3d000003,4dac0f942834570e3d000002"></script>
+
+		<p class="small clear"><a href="https://t3n.de/app/werben/">Banner jetzt buchen &raquo;</a></p>
+	</div>
+
+				<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'>
+		</script>
+		<script type='text/javascript'>
+			GS_googleAddAdSenseService("ca-pub-9099290824123989");
+			GS_googleEnableAllServices();
+		</script>
+		<script type='text/javascript'>
+			GA_googleAddSlot("ca-pub-9099290824123989", "InfoboxMesse");
+		</script>
+		<script type='text/javascript'>
+			GA_googleFetchAds();
+		</script>
+		<!-- InfoboxMesse -->
+		<script type='text/javascript'>
+			GA_googleFillSlot("InfoboxMesse");
+		</script>
+	
+
+
+<div class="section-headline"><a href="/marktplatz/">Marktplatz</a></div><ul class="thumbList"><li><a href="http://t3n.de/marktplatz/entry/inetservice-internet-service-holzer-dengg-og/"><img src="http://t3n.de/marktplatz/logos/_140_thumb.png" width="50" height="50" alt=""><strong>INETSERVICE - Internet...</strong>Wir erstellen individuelle...<span class="small">8042 Graz, Österreich</span></a></li><li><a href="http://t3n.de/marktplatz/entry/snowflake-productions-gmbh/"><img src="http://t3n.de/marktplatz/logos/_67_02bddf33_thumb.jpg" width="50" height="50" alt=""><strong>snowflake productions gmbh</strong>Als führende Schweizer TYPO3...<span class="small">8003 Zürich, Schweiz</span></a></li><li class="noImage"><a href="http://t3n.de/marktplatz/choose/" class="btn">Marktplatzeintrag schalten</a></li></ul>
+			</aside>
+		</div>
+
+				<section class="columnSet3 contentDivider cf">
+			<div class="column columnShare">
+														<div class="section-headline section-headline-large noMarginTop">39 Shares bis jetzt &ndash;<br>Dankeschön!</div>
+
+					<p class="sbBottom">
+						<a href="https://plus.google.com/share?url=http%3A%2F%2Ft3n.de%2Fnews%2Fjuvia-360109%2F" class="btn socialBtn google" rel="popup"><i class="social-googleplus social-white"></i>18</a>
+						<a href="http://www.facebook.com/sharer.php?u=http://t3n.de/news/juvia-360109/&amp;t=Juvia%3A+Open-Source-Kommentarsystem+als+Alternative+zu+Disqus+und+IntenseDebate" class="btn socialBtn facebook" rel="popup"><i class="social-facebook social-white"></i>4</a>
+						<a href="http://twitter.com/intent/tweet?related=t3n&text=Juvia%3A+Open-Source-Kommentarsystem+als+Alternative+zu+Disqus+und+IntenseDebate&url=http://t3n.de/news/juvia-360109/&via=t3n&lang=de" class="btn socialBtn twitter" rel="popup"><i class="social-twitter social-white"></i>17</a>
+					</p>
+							</div>
+			
+			<div class="column columnAuthor">
+								<div class="authorBox cf" data-social-gplus="u/0/115947688081560166611/posts" data-social-twitter="mika417" data-social-facebook="monika.steinberg" data-social-xing="Monika_Steinberg" data-homepage="mika417.posterous.com/">
+					<a href="/profile/msteinberg" title="Profil von Monika Steinberg anzeigen" rel="author"><img src="http://t3n.de/data/images/profiles/msteinberg_mid.jpg" width="40" height="40" alt=""></a> Autor:<br><a href="/profile/msteinberg" rel="author" itemprop="author"><span class="vcard author"><span class="fn">Monika Steinberg</span></span></a>				</div>
+
+				<p>Professor in information management and multimedia. Media, web, coffee and running lover.</p>
+			</div>
+
+			<div class="column columnVote">
+									<div class="section-headline section-headline-large noMarginTop">Bewerten</div>
+
+					<div style="display: none">VN:F [1.9.22_1171]</div><div class="ratingblock "><div class="ratingheader "></div><div class="ratingstars "><div id="article_rater_360109" class="ratepost gdsr-oxygen gdsr-size-24"><div class="starsbar gdsr-size-24"><div class="gdouter gdheight"><div id="gdr_vote_a360109" style="width: 0px;" class="gdinner gdheight"></div><div id="gdr_stars_a360109" class="gdsr_rating_as"><a id="gdsrX360109X5X0XaXarticle_rater_360109Xarticle_loader_360109X46X24" title="5 / 5" class="s5" rel="nofollow"></a><a id="gdsrX360109X4X0XaXarticle_rater_360109Xarticle_loader_360109X46X24" title="4 / 5" class="s4" rel="nofollow"></a><a id="gdsrX360109X3X0XaXarticle_rater_360109Xarticle_loader_360109X46X24" title="3 / 5" class="s3" rel="nofollow"></a><a id="gdsrX360109X2X0XaXarticle_rater_360109Xarticle_loader_360109X46X24" title="2 / 5" class="s2" rel="nofollow"></a><a id="gdsrX360109X1X0XaXarticle_rater_360109Xarticle_loader_360109X46X24" title="1 / 5" class="s1" rel="nofollow"></a></div></div></div></div><div id="article_loader_360109" style="display: none; width: 120px " class="ratingloaderarticle"><div class="loader circle width " style="height: 24px"></div></div></div><div class="ratingtext "><div id="gdr_text_a360109">Bewertung: 0.0</span>/<strong>5</strong> (0 Bewertungen)</div></div></div>							</div>
+		</section>
+
+		<aside class="contentInnerGray" role="complementary"><div class="columnMeta"><a href="/jobs/">Passende Stellenangebote zu Rails und Open Source</a> <span class="meta"><a href="/jobs/choose/" class="btn">Jetzt schalten: 30 Tage / 99 €</a></span></div><ul class="thumbList columnSet4"><li><a href="http://t3n.de/jobs/job/php-webentwickler-mw-gesucht/"><img src="http://t3n.de/jobs/logos/_3299_cea98b53_thumb.png" width="50" height="50" alt=""><strong>PHP- / Webentwickler (m/w) gesucht</strong><span class="small">64283 Darmstadt</span></a></li><li><a href="http://t3n.de/jobs/job/volontarin-im-lektorat/"><img src="http://t3n.de/jobs/logos/_4167_b5079dc6_thumb.png" width="50" height="50" alt=""><strong>VOLONTÄR/IN im LEKTORAT</strong><span class="small">80799 München</span></a></li><li><a href="http://t3n.de/jobs/job/adobe-cq5aem-developer-mw/"><img src="http://t3n.de/jobs/logos/_4415_a6be9ecd_thumb.png" width="50" height="50" alt=""><strong>Adobe CQ5/AEM Developer (m/w)</strong><span class="small">5061 Salzburg-Elsbethen,...</span></a></li><li><a href="http://t3n.de/jobs/job/typo3-webdeveloper-mw/"><img src="http://t3n.de/jobs/logos/_4411_a6be9ecd_thumb.png" width="50" height="50" alt=""><strong>TYPO3 Webdeveloper (m/w)</strong><span class="small">5061 Salzburg-Elsbethen,...</span></a></li></ul><p>Weitere Stellenangebote der t3n-Jobbörse findest du in den Kategorien <a href="http://t3n.de/jobs/tag/typo3/">TYPO3 Jobs</a>, <a href="http://t3n.de/jobs/tag/magento/">Magento Jobs</a> und <a href="http://t3n.de/jobs/tag/wordpress/">WordPress Jobs</a>.</p></aside><section class="columnSet4 contentDark fullColumn contentDivider2 cf"><div class="headline">Das interessiert dich bestimmt auch</div><div class="column "><header><a href="http://t3n.de/news/open-source-citrix-lasst-476352/" onclick="_gaq.push(['_trackEvent', 'SingleViewClick', 'VerwandteThemen1', 'Von '+location.href+' zu '+this.href]);"><img src="http://t3n.de/uploads/t3n-news-post-476352_Open-Source-Featured_small.jpg" width="205" height="115" alt="Open Source: Citrix lässt XenServer frei"><div class="headline"><strong>Open Source: Citrix lässt XenServer frei</strong></div></a></header></div><div class="column alt"><header><a href="http://t3n.de/news/hippo-steckt-open-source-cms-474139/" onclick="_gaq.push(['_trackEvent', 'SingleViewClick', 'VerwandteThemen2', 'Von '+location.href+' zu '+this.href]);"><img src="http://t3n.de/uploads/t3n-news-post-474139_hippo-1_small.jpg" width="205" height="115" alt="Hippo: Das steckt hinter dem Open-Source-CMS "><div class="headline"><strong>Hippo: Das steckt hinter dem Open-Source-CMS </strong></div></a></header></div><div class="column "><header><a href="http://t3n.de/news/sieben-kostenlose-ebooks-einstieg-455837/" onclick="_gaq.push(['_trackEvent', 'SingleViewClick', 'VerwandteThemen3', 'Von '+location.href+' zu '+this.href]);"><img src="http://t3n.de/uploads/t3n-news-post-455837_openbooks_small.jpg" width="205" height="115" alt="Sieben kostenlose eBooks für den Einstieg in die Web-Entwicklung"><div class="headline"><strong>Sieben kostenlose eBooks für den Einstieg in die Web-Entwicklung</strong></div></a></header></div><div class="column alt"><header><a href="http://t3n.de/news/bitcast-tutorial-marktplatz-477310/" onclick="_gaq.push(['_trackEvent', 'SingleViewClick', 'VerwandteThemen4', 'Von '+location.href+' zu '+this.href]);"><img src="http://t3n.de/uploads/t3n-news-post-477310_bitcast.io_beta_small.jpg" width="205" height="115" alt="Bitcast: Neuer Tutorial-Marktplatz für Entwickler"><div class="headline"><strong>Bitcast: Neuer Tutorial-Marktplatz für Entwickler</strong></div></a></header></div></section><div id="Ads_BA_FOOT"><script>Ads_BA_AD('FOOT');</script></div>
+
+		<div class="contentDivider cf">
+			<div class="content">
+                
+<div id="comments">
+			<div class="contentInnerClean">
+            <div class="section-headline section-headline-large noMarginTop">5 Antworten</div>
+
+			<ol class="citList">
+									<li class="cit clearfix alt" id="comment-54720">
+						<div class="citImage"><img alt='' src='http://0.gravatar.com/avatar/2b984d806252b7c27a8fe723ea18bd04?s=60&amp;d=http%3A%2F%2Ft3n.de%2Fdata%2Fimages%2Fprofiles%2Fot3b_small.jpg%3Fs%3D60&amp;r=G' class='avatar avatar-60 photo' height='60' width='60' /></div>
+						<div class="citContent">
+							<div class="citContentInner">
+								<p class="citA">von <strong>marcel</strong>
+																<span class="R small gray">18.01.2012 (20:38Uhr)
+								<a href="#comment-54720" class="citNumber">1.</a></span></p>
+
+								<p>Ich finde es gut, dass ihr euren Kommentarbereich verbessern wollt, sieht immer sehr chaotisch aus hier:)</p>
+							</div>
+						</div>
+					</li>
+														<li class="cit clearfix" id="comment-55085">
+						<div class="citImage"><a href="http://www.techslash.de/kodak-insolvenz-facebook-sopa/" rel="external nofollow"></a></div>
+						<div class="citContent">
+							<div class="citContentInner">
+								<p class="citA">von <strong><a href="http://www.techslash.de/kodak-insolvenz-facebook-sopa/" rel="external nofollow">Kodak Insolvenz, Facebook, SOPA | techsl&#8230;</a></strong>
+																<span class="R small gray">19.01.2012 (07:46Uhr)
+								<a href="#comment-55085" class="citNumber">2.</a></span></p>
+
+								<p>[...] Juvia ist die Open Source Alternative zu kommerziellen Kommentarsystemen wie Disqus und IntenseDebate. t3n findet, dass Juvia ein simples Kommentarsystem mit Blick aufs Wesentliche ist und dank Verfügbarkeit als Open Source punktet. t3n [...]</p>
+							</div>
+						</div>
+					</li>
+														<li class="cit clearfix alt" id="comment-55098">
+						<div class="citImage"><a href="http://www.toushenne.de" rel="external nofollow"><img alt='' src='http://0.gravatar.com/avatar/e3bdf6e4fc89d189778582f0249ee6cb?s=60&amp;d=http%3A%2F%2Ft3n.de%2Fdata%2Fimages%2Fprofiles%2Fot3b_small.jpg%3Fs%3D60&amp;r=G' class='avatar avatar-60 photo' height='60' width='60' /></a></div>
+						<div class="citContent">
+							<div class="citContentInner">
+								<p class="citA">von <strong><a href="http://www.toushenne.de" rel="external nofollow">Robert</a></strong>
+																<span class="R small gray">19.01.2012 (09:16Uhr)
+								<a href="#comment-55098" class="citNumber">3.</a></span></p>
+
+								<p>Das Interface sieht aber im Vergleich zu DISQUS echt schrecklich aus... OpenSource ist zwar schön und gut, aber wenn das auch optisch nur was für Entwickler ist, seh ich andere Dienste klar vorne.</p>
+							</div>
+						</div>
+					</li>
+														<li class="cit clearfix" id="comment-55157">
+						<div class="citImage"><img alt='' src='http://1.gravatar.com/avatar/10d367067840b92f5a0f514e09b4c848?s=60&amp;d=http%3A%2F%2Ft3n.de%2Fdata%2Fimages%2Fprofiles%2Fot3b_small.jpg%3Fs%3D60&amp;r=G' class='avatar avatar-60 photo' height='60' width='60' /></div>
+						<div class="citContent">
+							<div class="citContentInner">
+								<p class="citA">von <strong>Sascha</strong>
+																<span class="R small gray">19.01.2012 (13:56Uhr)
+								<a href="#comment-55157" class="citNumber">4.</a></span></p>
+
+								<p>Es ist nur schade, dass eben nicht jeder diese OpenSource-Lösung nutzen und anpassen kann. Jedenfalls finde ich in Deutschland fast nur Anbieter die nur PHP anbieten.<br />
+Die Idee finde ich allerdings super und ich finde es verständlich, dass nicht jeder PHP programmieren will. Ich werde mir Juvia auf jedenfall anschauen.</p>
+							</div>
+						</div>
+					</li>
+														<li class="cit clearfix alt" id="comment-60724">
+						<div class="citImage"><a href="http://ausbildung-zum-heilpraktiker.net/" rel="external nofollow"><img alt='' src='http://1.gravatar.com/avatar/5aab67a6ea187334cca29ec7befd2513?s=60&amp;d=http%3A%2F%2Ft3n.de%2Fdata%2Fimages%2Fprofiles%2Fot3b_small.jpg%3Fs%3D60&amp;r=G' class='avatar avatar-60 photo' height='60' width='60' /></a></div>
+						<div class="citContent">
+							<div class="citContentInner">
+								<p class="citA">von <strong><a href="http://ausbildung-zum-heilpraktiker.net/" rel="external nofollow">Daniel Volker</a></strong>
+																<span class="R small gray">23.02.2012 (17:01Uhr)
+								<a href="#comment-60724" class="citNumber">5.</a></span></p>
+
+								<p>Ich finde Disqus als die beste Kommentar Platfom... wer will sich immer wieder an jeder Seite neu anmelden?</p>
+							</div>
+						</div>
+					</li>
+												</ol>
+		</div>
+	</div>
+
+	<div id="respond" class="contentInnerClean">
+		<div class="section-headline section-headline-large noMarginTop">Deine Meinung</div>
+
+					<div class="alert">
+				<button class="close" data-dismiss="alert">×</button>
+				<h4 class="alert-heading">Bitte melde dich an!</h4>
+				Du musst angemeldet sein, um einen Kommentar schreiben zu können.
+			</div>
+
+			<p><a href="https://t3n.de/signin?redirect=http%3A%2F%2Ft3n.de%2Fnews%2Fjuvia-360109%2F" class="btn">Jetzt anmelden</a></p>
+			</div>
+			</div>
+
+			<aside class="sidebar">
+				<div class="section-headline">Top-5-News</div>
+<ul class="thumbList">
+	<li><a href="http://t3n.de/news/ios-7-20-tipps-tricks-496383/" class="cf">		<span class="counter">1</span>
+		<strong>iOS 7 – 20 Tipps, Tricks und versteckte Features</strong>
+	</a></li>
+	<li><a href="http://t3n.de/news/obdachloser-programmierer-journeyman-498859/" class="cf">		<span class="counter">2</span>
+		<strong>Entwickler bringt einem Obdachlosen das Programmieren bei – seine erste App ist fast fertig</strong>
+	</a></li>
+	<li><a href="http://t3n.de/news/startups-scheitern-10-rezepte-497789/" class="cf">		<span class="counter">3</span>
+		<strong>Startups: Die 10 besten Rezepte gegen das Scheitern</strong>
+	</a></li>
+	<li><a href="http://t3n.de/news/lg-g2-test-497459/" class="cf">		<span class="counter">4</span>
+		<strong>LG G2 im Test: Das unterschätzte Android-Flaggschiff?</strong>
+	</a></li>
+	<li><a href="http://t3n.de/news/ios-7-hoher-akkuverbrauch-496574/" class="cf">		<span class="counter">5</span>
+		<strong>iOS 7: So erhöht ihr eure Akkulaufzeit</strong>
+	</a></li>
+</ul>
+<div class="section section-headline">10 Tweets</div><ul id="tweetbacks" class="cf "><li class="first">
+	<span class="sQuote">RolandWeinzierl: Juvia: Open-Source-Kommentarsystem als Alternative zu Disqus und IntenseDebate http://t.co/f9EZO7fc via @yeebase_t3n</span>
+	<a href="http://twitter.com/38734272/statuses/160347068878163971" rel="nofollow"><img src="http://a2.twimg.com/profile_images/1301830014/twitter_normal.jpg" width="48" height="48" alt="" /></a>
+</li>
+<li>
+	<span class="sQuote">facebookapi: Juvia: Open-Source-Kommentarsystem als Alternative zu Disqus und IntenseDebate » t3n News http://t.co/dUZuuLb7 #facebook</span>
+	<a href="http://twitter.com/91323868/statuses/159934758695075840" rel="nofollow"><img src="http://a3.twimg.com/profile_images/535454001/wiki_logo_normal.png" width="48" height="48" alt="" /></a>
+</li>
+<li>
+	<span class="sQuote">webrookieDE: Juvia: Open-Source-Kommentarsystem als Alternative zu Disqus und IntenseDebate - http://t.co/hU3t360o</span>
+	<a href="http://twitter.com/372828474/statuses/159930619915280386" rel="nofollow"><img src="http://a2.twimg.com/profile_images/1726061426/901d32488aa7079e4817c91bc2b69a4d_normal.png" width="48" height="48" alt="" /></a>
+</li>
+<li>
+	<span class="sQuote">NetzNirvana: Juvia: Open-Source-Kommentarsystem als Alternative zu Disqus und IntenseDebate http://t.co/Q0isronx</span>
+	<a href="http://twitter.com/73159936/statuses/159795081002483712" rel="nofollow"><img src="http://a1.twimg.com/profile_images/408096725/778_normal.jpg" width="48" height="48" alt="" /></a>
+</li>
+<li>
+	<span class="sQuote">sidux_ev: #Juvia Open-Source-Kommentarsystem als Alternative zu #Disqus und #IntenseDebate #oss http://t.co/L5TpjhF9</span>
+	<a href="http://twitter.com/216424978/statuses/159776678854410241" rel="nofollow"><img src="http://a1.twimg.com/profile_images/1171652995/fb-ev-logo_normal.jpg" width="48" height="48" alt="" /></a>
+</li>
+<li>
+	<span class="sQuote">buurtaal: Klingt spannend: #Juvia: Open-Source-Kommentarsystem als Alternative zu Disqus und IntenseDebate? http://t.co/iTbmqZST</span>
+	<a href="http://twitter.com/46163138/statuses/159705736627228674" rel="nofollow"><img src="http://a2.twimg.com/profile_images/496552501/alex_facebook_normal.jpg" width="48" height="48" alt="" /></a>
+</li>
+<li>
+	<span class="sQuote">BigHaehnchen: #bookmark Juvia: Open-Source-Kommentarsystem als Alternative zu Disqus und IntenseDebate » t3n News http://t.co/sIy7RN72</span>
+	<a href="http://twitter.com/52457779/statuses/159701302786527232" rel="nofollow"><img src="http://a1.twimg.com/profile_images/742698808/haehnchen_normal.png" width="48" height="48" alt="" /></a>
+</li>
+<li>
+	<span class="sQuote">AndyLenz: Juvia: Open-Source-Kommentarsystem als Alternative zu Disqus und IntenseDebate http://t.co/ssbDHF2Z</span>
+	<a href="http://twitter.com/2185201/statuses/159673268503191552" rel="nofollow"><img src="http://a3.twimg.com/profile_images/386204905/a__normal.png" width="48" height="48" alt="" /></a>
+</li>
+<li>
+	<span class="sQuote">Mika417: Juvia: Open-Source-Kommentarsystem als Alternative zu Disqus und IntenseDebate http://t.co/dHJioSMj via @yeebase_t3n</span>
+	<a href="http://twitter.com/35500457/statuses/159672791820550144" rel="nofollow"><img src="http://a2.twimg.com/profile_images/1665673423/IMG_3578_normal.jpg" width="48" height="48" alt="" /></a>
+</li>
+<li class="retweet">
+	<a href="http://twitter.com/intent/tweet?related=t3n&text=Juvia%3A+Open-Source-Kommentarsystem+als+Alternative+zu+Disqus+und+IntenseDebate&url=http://t3n.de/news/juvia-360109/&via=t3n&lang=de" rel="external"><span><span>re</span>tweet</span></a>
+</li>
+<li class="retweettext">Möchten Sie auch hier erscheinen?<br>Dann hier <a href="http://twitter.com/intent/tweet?related=t3n&text=Juvia%3A+Open-Source-Kommentarsystem+als+Alternative+zu+Disqus+und+IntenseDebate&url=http://t3n.de/news/juvia-360109/&via=t3n&lang=de" rel="external">Re-Tweeten</a></li></ul>			</aside>
+		</div>
+
+							<script>
+						var _gaq = _gaq || [];
+													_gaq.push(['_trackEvent', 'RessortPageviews', 'Software', '', 50]);
+													_gaq.push(['_trackEvent', 'RessortPageviews', 'Entwicklung', '', 50]);
+											</script>
+					</div>
+				<section class="stageIssues">
+		<p class="stageIssues-headline">Kennst Du schon unser t3n Magazin?</p>
+
+		<ul class="teaerIssues cf">
+							<li class="cf">
+					<a href="http://t3n.de/magazin/t3n-nr-33-programmierbare-welt/">
+						<p><img src="http://t3n.sc/magazin/wp-content/uploads/covers/t3n_cover_33_web_small.jpg" width="120" height="169" alt="t3n Nr. 33 – The Next Big Thing: die programmierbare Welt" title=""></p>
+
+						t3n Nr. 33 – The Next Big Thing: die programmierbare Welt					</a>
+				</li>
+							<li class="cf">
+					<a href="http://t3n.de/magazin/t3n-nr-32-neuesten-trends-ui-ux-design/">
+						<p><img src="http://t3n.sc/magazin/wp-content/uploads/covers/t3n_cover_32_web_small.jpg" width="120" height="169" alt="t3n Nr. 32 - Die neuesten Trends im UI-/UX-Design" title=""></p>
+
+						t3n Nr. 32 - Die neuesten Trends im UI-/UX-Design					</a>
+				</li>
+							<li class="cf">
+					<a href="http://t3n.de/magazin/t3n-nr-31-so-funktioniert-bewegtbild-im-netz/">
+						<p><img src="http://t3n.sc/magazin/wp-content/uploads/covers/t3n_cover_31_web_small.jpg" width="120" height="169" alt="t3n Nr. 31 - So funktioniert Bewegtbild im Netz" title=""></p>
+
+						t3n Nr. 31 - So funktioniert Bewegtbild im Netz					</a>
+				</li>
+							<li class="cf">
+					<a href="http://t3n.de/magazin/t3n-nr-30-touch-me/">
+						<p><img src="http://t3n.sc/magazin/wp-content/uploads/covers/t3n_cover_30_web_small.jpg" width="120" height="169" alt="t3n Nr. 30 - Touch me!" title=""></p>
+
+						t3n Nr. 30 - Touch me!					</a>
+				</li>
+							<li class="cf last">
+					<a href="http://t3n.de/magazin/t3n-nr-29-digital-produktiv-frei/">
+						<p><img src="http://t3n.sc/magazin/wp-content/uploads/covers/t3n_cover_29_web_small.jpg" width="120" height="169" alt="t3n Nr. 29 - Digital. Produktiv. Frei." title=""></p>
+
+						t3n Nr. 29 - Digital. Produktiv. Frei.					</a>
+				</li>
+					</ul>
+	</section>
+
+			<div id="foot">
+				<div id="footInner" class="cf">
+					<ul class="footTopics">
+						<li><a href="/tag">Themen:</a></li>
+						<li><a href="/tag/a">A</a></li>
+						<li><a href="/tag/b">B</a></li>
+						<li><a href="/tag/c">C</a></li>
+						<li><a href="/tag/d">D</a></li>
+						<li><a href="/tag/e">E</a></li>
+						<li><a href="/tag/f">F</a></li>
+						<li><a href="/tag/g">G</a></li>
+						<li><a href="/tag/h">H</a></li>
+						<li><a href="/tag/i">I</a></li>
+						<li><a href="/tag/j">J</a></li>
+						<li><a href="/tag/k">K</a></li>
+						<li><a href="/tag/l">L</a></li>
+						<li><a href="/tag/m">M</a></li>
+						<li><a href="/tag/n">N</a></li>
+						<li><a href="/tag/o">O</a></li>
+						<li><a href="/tag/p">P</a></li>
+						<li><a href="/tag/q">Q</a></li>
+						<li><a href="/tag/r">R</a></li>
+						<li><a href="/tag/s">S</a></li>
+						<li><a href="/tag/t">T</a></li>
+						<li><a href="/tag/u">U</a></li>
+						<li><a href="/tag/v">V</a></li>
+						<li><a href="/tag/w">W</a></li>
+						<li><a href="/tag/x">X</a></li>
+						<li><a href="/tag/y">Y</a></li>
+						<li><a href="/tag/z">Z</a></li>
+						<li><a href="/tag/0-9">#</a></li>
+					</ul>
+					<div id="footCol1">
+						<form action="http://t3n.us1.list-manage.com/subscribe/post?u=367517f69d61ffa782ba141be&amp;id=faba600569" method="post" target="_blank">
+							<div class="foot-headline">t3n-Newsletter</div>
+
+							<p><b>Top-Themen der Woche auf einen Blick!</b><br>
+							Kostenfreier Branchen-Newsletter, redaktionell überarbeitet, 2x wöchtentlich direkt per E-Mail.</p>
+							<p><input type="email" name="EMAIL" value="" class="formLeft" placeholder="E-Mail-Adresse" required><button type="submit" class="btn btnRight vat">eintragen</button></p>
+						</form>
+
+						<p><span class="clearfix"><a href="http://www.agof.de/" id="footAgof" rel="nofollow">AGOF</a>
+						<a href="http://www.ivw.de/" id="footIvw" rel="nofollow">IVW</a></span>
+						Diese Seite ist AGOF- und IVW-geprüft.</p>
+					</div>
+
+					<div id="footCol2">
+						<div class="foot-headline">yeebase media</div>
+
+						<ul>
+							<li><a href="http://yeebase.com/">Unternehmen &amp; Blog</a></li>
+							<li><a href="http://yeebase.com/team">Das Team</a></li>
+							<li><a href="https://t3n.de/app/werben/">Werben mit yeebase media</a></li>
+							<li><a href="http://yeebase.com/jobs/">Jobs bei yeebase</a></li>
+							<li><a href="http://yeebase.com/presse/">Pressebereich</a></li>
+							<li><a href="/news/t3nsitemap/">Sitemap</a></li>
+						</ul>
+
+						<ul>
+							<li><a href="http://t3n.de/app/impressum/">Impressum</a></li>
+							<li><a href="http://t3n.de/app/index.php?id=422">Nutzungsbedingungen</a></li>
+							<li><a href="http://t3n.de/app/index.php?id=393">AGB</a></li>
+							<li><a href="http://t3n.de/app/index.php?id=394">Datenschutz</a></li>
+						</ul>
+					</div>
+
+					<div id="footCol3">
+						<div class="foot-headline">t3n-Portale</div>
+
+						<ul>
+							<li><a href="/">Startseite</a></li>
+							<li><a href="/news/">Newsticker</a></li>
+							<li><a href="/magazin/">Heftartikel</a></li>
+							<li><a href="/aggregator/">Aggregator</a></li>
+							<li><a href="/fragen/">Fragen-Portal</a></li>
+							<li><a href="/marktplatz/">Marktplatz</a></li>
+							<li><a href="/jobs/">Jobbörse</a></li>
+							<li><a href="https://t3n.de/app/shop/">Shop</a></li>
+						</ul>
+					</div>
+
+					<div id="footCol4">
+						<div class="foot-headline">RSS-Feeds</div>
+
+						<ul>
+							<li><a href="/news/feed/">Aktuelle News</a></li>
+							<li><a href="/magazin/feed/">Die neuesten Artikel</a></li>
+							<li><a href="/fragen/latest.atom">Die neuesten Fragen</a></li>
+							<li><a href="/aggregator/feed.atom">Aggregator-News</a></li>
+							<li><a href="/marktplatz/rss/all/">Die neuesten Marktplatzeinträge</a></li>
+							<li><a href="/jobs/rss/all/">Aktuelle Jobangebote</a></li>
+							<li><a href="/news/feeds/">weitere Feeds &#187;</a></li>
+						</ul>
+					</div>
+
+					<div id="footCol5">
+						<div class="foot-headline">Kontakt</div>
+
+						<ul>
+							<li><a href="https://plus.google.com/101559871572415719072" rel="nofollow">Google+</a></li>
+							<li><a href="http://twitter.com/t3n" rel="nofollow">Twitter</a></li>
+							<li><a href="https://www.facebook.com/t3nMagazin" rel="nofollow">Facebook</a></li>
+							<li><a href="#" class="openContactForm">Kontaktformular</a></li>
+						</ul>
+
+						<div itemscope itemtype="http://schema.org/Organization">
+							<a href="http://t3n.de" itemprop="url"><img src="//t3n.sc/core/images/t3n-logo-180.png" width="80" height="80" alt="t3n Magazin" itemprop="logo"></a>
+						</div>
+
+					</div>
+
+					<div class="clear">
+						<p id="footMeta"><a href="/" id="switchToMobile"><strong>Mobile Seite</strong></a> &nbsp;•&nbsp;
+						&#169; <a href="http://yeebase.com">yeebase media GmbH</a> 2005 - 2013 &nbsp;•&nbsp;
+						hosted by <a href="http://www.unbelievable-machine.com/" rel="nofollow">unbelievable machine</a></p>
+					</div>
+				</div>
+			</div>
+
+							<div id="Ads_BA_SKY" class="adbSky"><script type="text/javascript">Ads_BA_AD('SKY');</script></div>
+                </div> <!--Ads_BA_TakeOver-->
+					</div>
+
+		
+<div class="flyout mag" data-flyout="mag">
+	<a href="http://t3n.de/magazin/t3n-nr-33-programmierbare-welt/" class="flyoutIssue"><img src="http://t3n.sc/magazin/wp-content/uploads/covers/t3n_cover_33_web_small.jpg" alt=""></a>
+	<a href="http://t3n.de/magazin/t3n-nr-33-programmierbare-welt/" class="flyoutText">t3n 33 jetzt kostenfrei probelesen!</a>
+	<a href="http://t3n.de/magazin/t3n-nr-33-programmierbare-welt/" class="flyoutButton">Alle Inhalte des t3n Magazins</a>
+	<a href="http://t3n.de/magazin/t3n-nr-33-programmierbare-welt/" class="flyoutClose">Diesen Hinweis verbergen <i class="icon-remove-sign icon-xl"></i></a>
+</div>
+
+					<div id="fb-root"></div>
+
+						<script>
+				window.___gcfg = {lang: 'de'}; (function() { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);	})();
+			</script>
+			
+			<script type="text/javascript" src="//t3n.sc/core/compressed/desktop.js?v=114"></script>
+	
+	
+	<div class="hide">
+					<script> _gaq.push(['_gat._anonymizeIp']); _gaq.push(['_trackPageview']); _gaq.push(['_trackPageLoadTime']);
+			(function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
+			</script>
+
+						<script>/* <![CDATA[ */
+			var google_conversion_id = 1067378329; var google_conversion_language = "en"; var google_conversion_format = "3"; var google_conversion_color = "666666"; var google_conversion_label = "riJvCOuElgIQmc37_AM"; var google_conversion_value = 0;
+			/* ]]> */</script>
+			<script src="http://www.googleadservices.com/pagead/conversion.js"></script>
+			<noscript><img src="http://www.googleadservices.com/pagead/conversion/1067378329/?label=riJvCOuElgIQmc37_AM&amp;guid=ON&amp;script=0" width="1" height="1" alt="" ></noscript>
+					</div>
+
+
+<!--Plugin WP Missed Schedule 2013.0730.7777 Active - Tag d76ca983e4e0b1146b8511f40cd66015-->
+
+<script type='text/javascript' src='http://t3n.de/news/wp-content/plugins/gd-star-rating/js/gdsr.js?ver=3.6.1'></script>
+<script type='text/javascript' src='http://t3n.de/news/wp-content/plugins/t3nMedia/mediaelement/mediaelement-and-player.min.js?ver=3.6.1'></script>
+
+</body>
+</html>

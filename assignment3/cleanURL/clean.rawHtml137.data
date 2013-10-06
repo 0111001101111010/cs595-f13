@@ -1,0 +1,312 @@
+   #[1]EmotiCODE Search
+
+     * [2]Home
+     * [3]PHP
+     * [4]JavaScript
+     * [5]CSS
+     * [6]Bash
+     * [7]HTML
+     * [8]ActionScript 3
+     * [9]jQuery
+     * [10]C++
+     * [11]C#
+     * [12]Python
+     * [13]Java
+     * [14]SQL
+     * [15]Objective C
+     * [16]Ruby
+     * [17]ActionScript
+     * [18]All »
+
+   [19]ActionScript 379 [20]ActionScript 3 1650 [21]Apache 327
+   [22]AppleScript 148
+   [23]ASP 301 [24]Assembler 20 [25]AutoIt 10 [26]Awk 13 [27]Bash 2329
+   [28]C 363 [29]C++ 1243 [30]C# 1165 [31]Clojure 32 [32]ColdFusion 51
+   [33]CSS 2510 [34]Delphi 29 [35]Diff 7 [36]Django 47 [37]DOS Batch 131
+   [38]Emacs Lisp 37 [39]eZ Publish 21 [40]Forth 0 [41]Fortran 3
+   [42]Gnuplot 2 [43]Groovy 182 [44]HAML 12 [45]Haskell 38 [46]HTML 1848
+   [47]iPhone 66 [48]Java 848 [49]JavaScript 3875 [50]jQuery 1400
+   [51]LaTeX 28 [52]lighttpd 3 [53]Lisp 40 [54]Lua 26 [55]Makefile 8
+   [56]MatLab 21 [57]Maxscript 27 [58]Mel 4 [59]MXML 59 [60]MySQL 302
+   [61]NewtonScript 2 [62]Objective C 759 [63]Open Firmware 2 [64]Other
+   143 [65]Pascal 21 [66]Perl 299 [67]PHP 7441 [68]PicBasic 2 [69]PL/SQL
+   100 [70]Processing 32 [71]Prolog 11 [72]Pseudocode 14 [73]Python 1028
+   [74]R 78 [75]Rails 205 [76]Regular Expression 130 [77]Revolution 4
+   [78]Ruby 725 [79]SAS 134 [80]SASS 16 [81]Scala 12 [82]Scheme 15
+   [83]SmallTalk 5 [84]Smarty 26 [85]SML 0 [86]SPSS 0 [87]SQL 845 [88]SVN
+   76 [89]Symfony 12 [90]TCL 20 [91]Textpattern 20 [92]TYPO3 100
+   [93]VB.NET 196 [94]VHDL 9 [95]Visual Basic 219 [96]W-Language 2
+   [97]Windows PowerShell 66 [98]Windows Registry 50 [99]XHTML 148
+   [100]XML 254 [101]XSLT 33 [102]Android SDK 104 [103]Falcon 12 [104]Ada
+   1 [105]VIM 3 [106]CoffeeScript 4
+
+     * [107]Add Snippet
+     * •
+     * [108]Login
+     * •
+     * [109]Register
+     * •
+     * [110]Connect with Facebook
+     * •
+     * [111]Connect with GitHub
+
+   Sign In
+     * [112]Connect with Facebook
+     * [113]Connect with Github
+
+   ____________________ ____________________
+
+   [114]Password Recovery [115]Register Sign in
+
+   [116]emobot avatar. emobot Posted into [117]C#
+   7 months ago
+   2 views
+     * [118]Fav It!
+     * [119]Raw
+     * [120]Embed
+
+Validating an IP String in C#
+
+   No description :/
+/// <summary>
+        /// Check IP Address, will accept 0.0.0.0 as a valid IP
+        /// </summary>
+        /// <param name="strIP"></param>
+        /// <returns></returns>
+        public Boolean CheckIPValid(String strIP)
+        {
+            //  Split string by ".", check that array length is 3
+            char chrFullStop = '.';
+            string[] arrOctets = strIP.Split(chrFullStop);
+            if (arrOctets.Length != 4)
+            {
+                return false;
+            }
+            //  Check each substring checking that the int value is less than 25
+5 and that is char[] length is !> 2
+            Int16 MAXVALUE = 255;
+            Int32 temp; // Parse returns Int32
+            foreach (String strOctet in arrOctets)
+            {
+                if (strOctet.Length > 3)
+                {
+                    return false;
+                }
+
+                temp = int.Parse(strOctet);
+                if (temp > MAXVALUE)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+Comments
+
+   [121]Login or [122]Register to comment.
+   [123]Post a Snippet
+
+   Build up your personal collection of code snippets with ease and share
+   them with the world!
+
+Share
+
+   [124]Facebook [125]Twitter [126]Googleplus [127]Reddit
+
+Related Sources
+
+     * [128]Programmatically install an APK to the user device
+     * [129]Block incoming and outgoing phone calls programmatically.
+     * [130]How to start a phone call with the Android SDK
+     * [131]Parse json to JSONObject example
+     * [132]Interaction between Activity and Service example.
+
+Cloud
+
+   [133]chrFullStop [134]Int16 [135]maxValue [136]string [137]temp
+   [138]strIP [139]arrOctets [140]Int32 [141]Boolean [142]CheckIPValid
+   [143]parse [144]length [145]split [146]strOctet
+   Embed Me!
+
+   <script type="text/javascript" src="http://www.emoticode.net
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+
+     * Pages [147]About
+       [148]Site Map
+       [149]Contact
+     * Contacts [150]Twitter
+       [151]Google+
+       [152]Facebook
+     * Links [153]evilsocket.net
+       [154]gibson-db.in
+       [155]bisontech.net
+       [156]ajaxdomainfinder.net
+
+   [157]contatore visitatori online
+
+References
+
+   Visible links
+   1. http://www.emoticode.net/opensearch.xml
+   2. file://localhost/
+   3. http://www.emoticode.net/php
+   4. http://www.emoticode.net/javascript
+   5. http://www.emoticode.net/css
+   6. http://www.emoticode.net/bash
+   7. http://www.emoticode.net/html
+   8. http://www.emoticode.net/actionscript-3
+   9. http://www.emoticode.net/jquery
+  10. http://www.emoticode.net/c-plus-plus
+  11. http://www.emoticode.net/c-sharp
+  12. http://www.emoticode.net/python
+  13. http://www.emoticode.net/java
+  14. http://www.emoticode.net/sql
+  15. http://www.emoticode.net/objective-c
+  16. http://www.emoticode.net/ruby
+  17. http://www.emoticode.net/actionscript
+  18. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml137.data
+  19. http://www.emoticode.net/actionscript
+  20. http://www.emoticode.net/actionscript-3
+  21. http://www.emoticode.net/apache
+  22. http://www.emoticode.net/applescript
+  23. http://www.emoticode.net/asp
+  24. http://www.emoticode.net/assembler
+  25. http://www.emoticode.net/autoit
+  26. http://www.emoticode.net/awk
+  27. http://www.emoticode.net/bash
+  28. http://www.emoticode.net/c
+  29. http://www.emoticode.net/c-plus-plus
+  30. http://www.emoticode.net/c-sharp
+  31. http://www.emoticode.net/clojure
+  32. http://www.emoticode.net/cold-fusion
+  33. http://www.emoticode.net/css
+  34. http://www.emoticode.net/delphi
+  35. http://www.emoticode.net/diff
+  36. http://www.emoticode.net/django
+  37. http://www.emoticode.net/dos
+  38. http://www.emoticode.net/emacs-lisp
+  39. http://www.emoticode.net/ez-publish
+  40. http://www.emoticode.net/forth
+  41. http://www.emoticode.net/fortran
+  42. http://www.emoticode.net/gnuplot
+  43. http://www.emoticode.net/groovy
+  44. http://www.emoticode.net/haml
+  45. http://www.emoticode.net/haskell
+  46. http://www.emoticode.net/html
+  47. http://www.emoticode.net/iphone
+  48. http://www.emoticode.net/java
+  49. http://www.emoticode.net/javascript
+  50. http://www.emoticode.net/jquery
+  51. http://www.emoticode.net/latex
+  52. http://www.emoticode.net/lighttpd
+  53. http://www.emoticode.net/lisp
+  54. http://www.emoticode.net/lua
+  55. http://www.emoticode.net/make
+  56. http://www.emoticode.net/matlab
+  57. http://www.emoticode.net/maxscript
+  58. http://www.emoticode.net/mel
+  59. http://www.emoticode.net/mxml
+  60. http://www.emoticode.net/mysql
+  61. http://www.emoticode.net/newtonscript
+  62. http://www.emoticode.net/objective-c
+  63. http://www.emoticode.net/open-firmware
+  64. http://www.emoticode.net/other
+  65. http://www.emoticode.net/pascal
+  66. http://www.emoticode.net/perl
+  67. http://www.emoticode.net/php
+  68. http://www.emoticode.net/picbasic
+  69. http://www.emoticode.net/plsql
+  70. http://www.emoticode.net/processing
+  71. http://www.emoticode.net/prolog
+  72. http://www.emoticode.net/pseudocode
+  73. http://www.emoticode.net/python
+  74. http://www.emoticode.net/r
+  75. http://www.emoticode.net/rails
+  76. http://www.emoticode.net/regex
+  77. http://www.emoticode.net/revolution
+  78. http://www.emoticode.net/ruby
+  79. http://www.emoticode.net/sas
+  80. http://www.emoticode.net/sass
+  81. http://www.emoticode.net/scala
+  82. http://www.emoticode.net/scheme
+  83. http://www.emoticode.net/smalltalk
+  84. http://www.emoticode.net/smarty
+  85. http://www.emoticode.net/sml
+  86. http://www.emoticode.net/spss
+  87. http://www.emoticode.net/sql
+  88. http://www.emoticode.net/svn
+  89. http://www.emoticode.net/symfony
+  90. http://www.emoticode.net/tcl
+  91. http://www.emoticode.net/textpattern
+  92. http://www.emoticode.net/typo3
+  93. http://www.emoticode.net/vbnet
+  94. http://www.emoticode.net/vhdl
+  95. http://www.emoticode.net/visual-basic
+  96. http://www.emoticode.net/w-language
+  97. http://www.emoticode.net/windows-powershell
+  98. http://www.emoticode.net/windows-registry
+  99. http://www.emoticode.net/xhtml
+ 100. http://www.emoticode.net/xml
+ 101. http://www.emoticode.net/xslt
+ 102. http://www.emoticode.net/android-sdk
+ 103. http://www.emoticode.net/falcon
+ 104. http://www.emoticode.net/ada
+ 105. http://www.emoticode.net/vim
+ 106. http://www.emoticode.net/coffeescript
+ 107. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml137.data
+ 108. file://localhost/sign_in
+ 109. file://localhost/sign_up
+ 110. file://localhost/auth/facebook
+ 111. file://localhost/auth/github
+ 112. file://localhost/auth/facebook
+ 113. file://localhost/auth/github
+ 114. file://localhost/passwords/new
+ 115. file://localhost/sign_up
+ 116. file://localhost/profile/emobot
+ 117. http://www.emoticode.net/c-sharp
+ 118. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml137.data
+ 119. file://localhost/c-sharp/validating-an-ip-string-in-c.txt
+ 120. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml137.data
+ 121. file://localhost/sign_in
+ 122. file://localhost/sign_up
+ 123. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml137.data
+ 124. http://www.facebook.com/sharer.php?u=http://www.emoticode.net/c-sharp/validating-an-ip-string-in-c.html
+ 125. http://twitter.com/home?status=C# - Validating an IP String in C# http://www.emoticode.net/c-sharp/validating-an-ip-string-in-c.html
+ 126. https://plus.google.com/share?url=http://www.emoticode.net/c-sharp/validating-an-ip-string-in-c.html
+ 127. http://www.reddit.com/submit?url=http://www.emoticode.net/c-sharp/validating-an-ip-string-in-c.html&title=C# - Validating an IP String in C#
+ 128. http://www.emoticode.net/android-sdk/programmatically-install-an-apk-to-the-user-device.html
+ 129. http://www.emoticode.net/android-sdk/block-incoming-and-outgoing-phone-calls-programmatically.html
+ 130. http://www.emoticode.net/android-sdk/how-to-start-a-phone-call-with-the-android-sdk.html
+ 131. http://www.emoticode.net/android-sdk/parse-json-to-jsonobject-example.html
+ 132. http://www.emoticode.net/android-sdk/interaction-between-activity-and-service-example.html
+ 133. file://localhost/search/chrfullstop
+ 134. file://localhost/search/int16
+ 135. file://localhost/search/maxvalue
+ 136. file://localhost/search/string
+ 137. file://localhost/search/temp
+ 138. file://localhost/search/strip
+ 139. file://localhost/search/arroctets
+ 140. file://localhost/search/int32
+ 141. file://localhost/search/boolean
+ 142. file://localhost/search/checkipvalid
+ 143. file://localhost/search/parse
+ 144. file://localhost/search/length
+ 145. file://localhost/search/split
+ 146. file://localhost/search/stroctet
+ 147. file://localhost/about.html
+ 148. file://localhost/sitemap.html
+ 149. file://localhost/contact.html
+ 150. http://www.twitter.com/emoticodedotnet
+ 151. http://plus.google.com/105672627985088123672
+ 152. https://www.facebook.com/pages/EmotiCODE/475488679182886
+ 153. http://www.evilsocket.net/
+ 154. http://gibson-db.in/
+ 155. http://www.bisontech.net/
+ 156. http://www.ajaxdomainfinder.net/
+ 157. http://www.histats.com/
+
+   Hidden links:
+ 159. http://www.histats.com/

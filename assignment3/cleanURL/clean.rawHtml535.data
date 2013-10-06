@@ -1,0 +1,152 @@
+   [1]Sign up for a GitHub Account [2]Sign in
+
+public
+
+   [2c8f0b38e4fb35c54e2fada3f2cd4ecb?d=https%3A%2F%2Fidenticons.github.com
+   %2F884404b603ceb22a820997691753e643.png&s=140] [3]elisechant /
+   [4]_component-a.scss
+   Last active 2013-09-28
+
+   SCSS Design Patterns - Mixin Constructor
+     * [5]Gist Detail
+     * [6]Revisions 15
+     * [7]Stars 1
+
+     * [8]Download Gist
+     * Clone this gist https://gist.github.
+     * Embed this gist <script src="https:/
+     * Link to this gist https://gist.github.
+
+   _component-a.scss
+   SCSS
+     *
+     *
+
+   File suppressed. Click to show.
+   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27
+   28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51
+   52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73
+
+   /*
+   |----------------------------------------------------------------------
+   ----
+   | class ComponentA
+   |----------------------------------------------------------------------
+   ----
+   |
+   | [long description]
+   |
+   | Example
+   <div class="{{ identifier }}">
+   <div class="component-a__element">
+   //...
+   </div>
+   </div>
+   |
+   */
+
+   // output HTML?
+   $INCLUDE_COMPONENT-A_HTML: true;
+
+   // globals
+   $var: null; // should be defined in config.scss
+
+
+   @mixin ComponentA(
+   // parameters
+   $arg1: 'val',
+   $arg2: 'val'
+   ) {
+   // keep scope on the object
+   // get a handle to the module, sass doesn't provide 'this'
+   // the scope should not include '.' or '#' so we can properly
+   // leverage parent selector '&', a bug that will be resolved in
+   // sass 4.0
+   $SCOPE: "component-a";
+
+   // private, shared
+   // encapsulate placeholders and variables to keep the global
+   // clean
+   $_var: 'val';
+
+   %_example {}
+
+
+   // scope selectors
+   // use BEM syntax to communicate an element's relationship in
+   // scope
+   .#{$SCOPE}__element {
+   @extend %_example;
+   }
+
+
+   // support the Class being extended as submodule
+   @content;
+   }
+
+
+
+   // Init
+   // OOCSS utilities. Use these in DOM or include mixins in SASS
+   // partials
+   @if ($INCLUDE_COMPONENT-A_HTML == true) {
+   // default type
+   .component-a {
+   @include ComponentA;
+   }
+
+   // sub-type
+   .component-a--submodule-type {
+   @include ComponentA {
+   content: 'these properties only exist in this';
+   }
+   }
+   }
+   [2c8f0b38e4fb35c54e2fada3f2cd4ecb?d=https%3A%2F%2Fidenticons.github.com
+   %2F884404b603ceb22a820997691753e643.png&s=140]
+   [9]elisechant [10]commented [11]2013-09-28
+
+   Customisation of mixins must happen where they are declared. This is
+   because in SASS 3.2, variables have block scope.
+
+   "This means that variables local to the mixin cannot be used within the
+   passed style block and variables will resolve to the global value." -
+   [SASS_REFERENCE]{[12]http://sass-lang.com/docs/yardoc/file.SASS_REFEREN
+   CE.html#variable_scope_and_content_blocks}
+
+   Please [13]sign in to comment on this gist.
+
+   Something went wrong with that request. Please try again.
+
+   © 2013 GitHub Inc. All rights reserved.
+     * [14]The GitHub Blog
+     * [15]Support
+     * [16]Contact
+
+References
+
+   Visible links
+   1. https://github.com/signup?return_to=gist
+   2. https://gist.github.com/login?return_to=/elisechant/6693818
+   3. file://localhost/elisechant
+   4. file://localhost/elisechant/6693818
+   5. file://localhost/elisechant/6693818
+   6. file://localhost/elisechant/6693818/revisions
+   7. file://localhost/elisechant/6693818/stars
+   8. file://localhost/elisechant/6693818/download
+   9. file://localhost/elisechant
+  10. file://localhost/elisechant/6693818/#comment-917112
+  11. file://localhost/elisechant/6693818/#comment-917112
+  12. http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variable_scope_and_content_blocks
+  13. file://localhost/login?return_to=/elisechant/6693818
+  14. https://github.com/blog
+  15. mailto:support@github.com
+  16. https://github.com/contact
+
+   Hidden links:
+  18. https://gist.github.com/
+  19. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml535.data#file-_component-a-scss
+  20. file://localhost/elisechant/6693818/raw/d439d91be5f729d65e74ce34702bf64b887e1813/_component-a.scss
+  21. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml535.data
+  22. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml535.data
+  23. file://localhost/

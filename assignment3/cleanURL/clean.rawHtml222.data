@@ -1,0 +1,308 @@
+   #[1]publisher [2]YourHowTo.net » Using Javascript eval function
+   Comments Feed [3]YourHowTo.net RSS Feed
+
+     * [4]Home
+     * [5]Domain Whois
+     * [6]Generate Virtual Host
+     * [7].Htaccess tools
+     * [8]Are you a new visitor to this site?
+     * [9]Contact
+
+   [10]YourHowTo.net
+     * [11]Blogs
+     * [12]Databases
+     * [13]Free time
+     * [14]Programming
+          + [15]Ajax
+          + [16]HTML / CSS
+          + [17]JS / jQuery
+          + [18]PHP
+     * [19]Servers
+          + [20]Apache
+          + [21]Proxy
+          + [22]WHM/cPanel
+     * [23]Site optimization
+     * [24]Tutorials
+
+   ←Advertisment
+
+Using Javascript eval function
+
+   September 18, 2013   [25]JS / jQuery, [26]Programming
+   [27]→ Are you a new visitor? Please visit the page guidance for new
+   visitors ←
+
+Javascript eval function
+
+   Long, long in the past, I was trying to obtain a logical expression
+   from some different variables and concatenate them into one single
+   variable, to use that further for a jQuery plugin. Everything looked
+   great when running console.log(myVar), but then the problem came. In my
+   mind, I didn’t thought that the result would be a string, and not an
+   expression, and I cannot use that further in my validation.
+
+Function eval() to the rescue
+
+   The eval() function evaluates or executes an argument. Basically, you
+   give a string as an argument in this function, and then it is evaluated
+   as an expression.
+
+   Syntax:
+
+   eval(string);
+
+   Let’s see an example:
+   JavaScript
+
+   var myVar = "console.log('test')";__________________________
+   eval(myVar); //outputs test_________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   1
+   2
+    var myVar = "console.log('test')";
+    eval(myVar); //outputs test
+
+   This is very useful when you want to evaluate expressions, or if you
+   like more this other exposure: To transform functions, variables or
+   other things that are written as strings into javascript expression
+   that are not strings, and can be evaluated.
+
+   The eval() function is supported in all major browsers.
+
+Beware! eval can be evil
+
+   The eval function gives you access to javascript’s compiler. This can
+   be a huge security risk because it grants far too much power to the
+   passed in text. Avoid this function if you cannot trust 100% the
+   strings that you are passing to it (eg: strings from the DOM, or
+   strings passed by users, etc…).
+
+Performance
+
+   A problem with eval() is its performance. In older browsers, you
+   encountered a double interpretation from the browser, which means that
+   your code is interpreted and the code inside the eval() is interpreted
+   also. The result could be ten times slower in some browsers.
+
+Summary
+
+   Although this is a good tool for evaluating strings as expressions in
+   javascript, you should be aware of it’s performance and vulnerability
+   problems when you use it in your projects.
+
+   That’s it for now, see you in our next article!
+
+Share this:
+
+     * [28]Facebook
+     * [29]Twitter
+     * [30]Google
+     * [31]StumbleUpon
+     * [32]More
+     *
+
+     * [33]Digg
+     * [34]Pinterest
+     *
+     * [35]LinkedIn
+     * [36]Reddit
+     *
+     * [37]Email
+     * [38]Print
+     *
+     *
+
+   [39]eval, [40]evaluate, [41]expressions, [42]javascript, [43]js
+
+Leave a comment [44]Cancel reply
+
+   IFRAME: [45]jetpack_remote_comment
+
+     * Follow us on
+       [46]Twitter [47]Facebook [48]Google+ [49]RSS Feed [50]Email
+       Daily Email: ____________________ ok
+
+     * Search on this site
+       ___________________________________ [search.png]-Submit
+
+     * Recent articles
+          + [51]How to install node.js on Debian and CentOS linux
+          + [52]Nginx block sql injection and file injection
+          + [53]Mysql server optimization for InnoDB and MyISAM
+          + [54]Mysql sample configuration for InnoDB 4GB ram
+          + [55]Mysql sample configuration with 512M ram
+          + [56]Mysql sample configuration for less than 64M
+          + [57]Mysql sample configuration for less than 128M
+          + [58]Mysql sample configuration for 1G-2G ram
+          + [59]Remote mysql connection using cPanel and VPS server
+          + [60]Let’s laugh a bit…
+
+     * POPULAR ARTICLES
+          + [61]Increasing squid cache directory size
+          + [62]5 of the best PHP frameworks for programmers
+          + [63]How to update and install php 5.3 and php 5.2 CentOS
+            webtatic repo
+          + [64]Slow speed in prestashop 1.5
+          + [65]Slow load in prestashop
+          + [66]Reverse cache proxy using squid proxy
+          + [67]Install squid proxy with –enable-ssl for https_port
+          + [68]Let's laugh a bit…
+          + [69]jQuery autocomplete _rendeItem method
+          + [70]How to increase joomla slow speed using browser cache
+          + [71]Remote mysql connection using cPanel and VPS server
+          + [72]How to fix eth0 network interface on centos, redhat clone
+            VM
+          + [73]Mysql server optimization for InnoDB and MyISAM
+          + [74]How to check your network bandwidth usage on linux
+          + [75]Preload not working in wp-super-cache
+
+     * Random articles
+          + [76]How to update and install php 5.3 and php 5.2 CentOS
+            webtatic repo
+          + [77]How to use a free DNS service
+          + [78]Using the local DNS Server
+          + [79]How to fix wp-super-cache 0 Cached Pages
+          + [80]Install flvtool2, mediainfo and neroAacEnc on centos
+            x86_64
+          + [81]How to make a jQuery ajax call
+          + [82]Slow speed in prestashop 1.5
+          + [83]Remote mysql connection using cPanel and VPS server
+          + [84]How to use php with MySQL
+          + [85]Speed check when ICMP packets are disabled, hping3
+          + [86]Build responsive websites with foundation from ZURB
+          + [87]Random background image on website
+          + [88]Increasing squid cache directory size
+          + [89]Best practices to optimize code performance in php
+          + [90]How to fix eth0 network interface on centos, redhat clone
+            VM
+
+     *
+
+                                Advertisment
+
+   © 2013 [91]YourHowTo.net
+   Powered by [92]WordPress
+
+   Send to Email Address ____________________ Your Name
+   ____________________ Your Email Address ____________________ loading
+   Send Email [93]Cancel
+   Post was not sent - check your email addresses!
+   Email check failed, please try again
+   Sorry, your blog cannot share posts by email.
+
+   X
+
+Subscribe for updates on your Email.
+
+   Daily Email: ____________________ I want updates!
+   *We respect privacy and you will never receive spam! Service is
+   provided by google Feedburner!
+
+Or follow us on Twitter, Facebook or Google+
+
+   [94]Follow @yourhowtonet
+
+   Daily Email: ____________________ I want updates!
+     * Or follow us on:
+     *
+     * [95]Follow @yourhowtonet
+     *
+
+References
+
+   1. https://plus.google.com/106837146420859060105
+   2. http://www.yourhowto.net/using-javascript-eval-function/feed/
+   3. http://www.yourhowto.net/feed/
+   4. file://localhost/
+   5. http://www.yourhowto.net/domain-whois/
+   6. http://www.yourhowto.net/generate-virtual-host/
+   7. http://www.yourhowto.net/htaccess-tools/
+   8. http://www.yourhowto.net/are-you-a-new-visitor-to-this-site/
+   9. http://www.yourhowto.net/contact/
+  10. http://www.yourhowto.net/
+  11. http://www.yourhowto.net/blogs/
+  12. http://www.yourhowto.net/databases/
+  13. http://www.yourhowto.net/free-time/
+  14. http://www.yourhowto.net/programming/
+  15. http://www.yourhowto.net/programming/ajax/
+  16. http://www.yourhowto.net/programming/html-css/
+  17. http://www.yourhowto.net/programming/js-jquery/
+  18. http://www.yourhowto.net/programming/php-programming/
+  19. http://www.yourhowto.net/servers/
+  20. http://www.yourhowto.net/servers/apache-servers/
+  21. http://www.yourhowto.net/servers/proxy/
+  22. http://www.yourhowto.net/servers/whmcpanel/
+  23. http://www.yourhowto.net/site-optimization/
+  24. http://www.yourhowto.net/tutorials/
+  25. http://www.yourhowto.net/programming/js-jquery/
+  26. http://www.yourhowto.net/programming/
+  27. http://www.yourhowto.net/are-you-a-new-visitor-to-this-site/
+  28. http://www.yourhowto.net/using-javascript-eval-function/?share=facebook
+  29. http://www.yourhowto.net/using-javascript-eval-function/?share=twitter
+  30. http://www.yourhowto.net/using-javascript-eval-function/?share=google-plus-1
+  31. http://www.yourhowto.net/using-javascript-eval-function/?share=stumbleupon
+  32. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml222.data
+  33. http://www.yourhowto.net/using-javascript-eval-function/?share=digg
+  34. http://www.yourhowto.net/using-javascript-eval-function/?share=pinterest
+  35. http://www.yourhowto.net/using-javascript-eval-function/?share=linkedin
+  36. http://www.yourhowto.net/using-javascript-eval-function/?share=reddit
+  37. http://www.yourhowto.net/using-javascript-eval-function/?share=email
+  38. http://www.yourhowto.net/using-javascript-eval-function/#print
+  39. http://www.yourhowto.net/tags/eval/
+  40. http://www.yourhowto.net/tags/evaluate/
+  41. http://www.yourhowto.net/tags/expressions/
+  42. http://www.yourhowto.net/tags/javascript/
+  43. http://www.yourhowto.net/tags/js/
+  44. file://localhost/using-javascript-eval-function/#respond
+  45. http://jetpack.wordpress.com/jetpack-comment/?blogid=41302158&postid=1864&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=0&avatar_default=blank&greeting=Leave+a+comment&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en-US&jetpack_version=2.5&sig=ac2a21a6badb76582f1ea7238cdd9ee0fa9a2141#parent=http%3A%2F%2Fwww.yourhowto.net%2Fusing-javascript-eval-function%2F
+  46. http://twitter.com/yourhowtonet
+  47. http://facebook.com/yourhowtonet
+  48. https://plus.google.com/106837146420859060105
+  49. http://www.yourhowto.net/feed/
+  50. mailto:contact@yourhowto.net
+  51. http://www.yourhowto.net/how-to-install-node-js-on-debian-and-centos-linux/
+  52. http://www.yourhowto.net/nginx-block-sql-injection-and-file-injection/
+  53. http://www.yourhowto.net/mysql-server-optimization-innodb-myisam/
+  54. http://www.yourhowto.net/mysql-sample-configuration-innodb-4gb-ram/
+  55. http://www.yourhowto.net/mysql-sample-configuration-512m-ram/
+  56. http://www.yourhowto.net/mysql-sample-configuration-less-64m/
+  57. http://www.yourhowto.net/mysql-sample-configuration-less-128m/
+  58. http://www.yourhowto.net/mysql-sample-configuration-1g-2g-ram/
+  59. http://www.yourhowto.net/how-to-make-a-remote-mysql-connection/
+  60. http://www.yourhowto.net/lets-laugh-a-bit/
+  61. http://www.yourhowto.net/increasing-squid-cache-directory-size/
+  62. http://www.yourhowto.net/5-of-the-best-php-frameworks-for-programmers/
+  63. http://www.yourhowto.net/how-to-update-and-install-php-5-3-and-php-5-2-centos-webtatic-repo/
+  64. http://www.yourhowto.net/slow-speed-in-prestashop-1-5/
+  65. http://www.yourhowto.net/slow-load-in-prestashop/
+  66. http://www.yourhowto.net/reverse-cache-proxy-using-squid-proxy/
+  67. http://www.yourhowto.net/install-squid-proxy-with-enable-ssl-for-https_port/
+  68. http://www.yourhowto.net/lets-laugh-a-bit/
+  69. http://www.yourhowto.net/jquery-autocomplete-_rendeitem-method/
+  70. http://www.yourhowto.net/how-to-increase-joomla-slow-speed-using-browser-cache/
+  71. http://www.yourhowto.net/how-to-make-a-remote-mysql-connection/
+  72. http://www.yourhowto.net/how-to-fix-eth0-network-interface-on-centos-redhat-clone-vm/
+  73. http://www.yourhowto.net/mysql-server-optimization-innodb-myisam/
+  74. http://www.yourhowto.net/how-to-check-your-network-bandwidth-usage-on-linux/
+  75. http://www.yourhowto.net/preload-not-working-in-wp-super-cache/
+  76. http://www.yourhowto.net/how-to-update-and-install-php-5-3-and-php-5-2-centos-webtatic-repo/
+  77. http://www.yourhowto.net/how-to-use-a-free-dns-service/
+  78. http://www.yourhowto.net/using-the-local-dns-server/
+  79. http://www.yourhowto.net/how-to-fix-wp-super-cache-0-cached-pages/
+  80. http://www.yourhowto.net/install-flvtool2-mediainfo-and-neroaacenc-on-centos-x86_64/
+  81. http://www.yourhowto.net/how-to-make-a-jquery-ajax-call/
+  82. http://www.yourhowto.net/slow-speed-in-prestashop-1-5/
+  83. http://www.yourhowto.net/how-to-make-a-remote-mysql-connection/
+  84. http://www.yourhowto.net/how-to-use-php-with-mysql/
+  85. http://www.yourhowto.net/speed-check-when-icmp-packets-are-disabled-hping3/
+  86. http://www.yourhowto.net/build-responsive-websites-with-foundation-from-zurb/
+  87. http://www.yourhowto.net/random-background-image-on-website/
+  88. http://www.yourhowto.net/increasing-squid-cache-directory-size/
+  89. http://www.yourhowto.net/best-practices-to-optimize-code-performance-in-php/
+  90. http://www.yourhowto.net/how-to-fix-eth0-network-interface-on-centos-redhat-clone-vm/
+  91. http://www.yourhowto.net/
+  92. http://wordpress.org/
+  93. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml222.data#cancel
+  94. https://twitter.com/yourhowtonet
+  95. https://twitter.com/yourhowtonet

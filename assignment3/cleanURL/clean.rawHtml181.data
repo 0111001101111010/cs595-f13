@@ -1,0 +1,721 @@
+   #[1]Dev Blog of Martin Ivanov [2]Acid.JS Web UI Library
+
+   [3]HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device
+   Access, Graphics, 3D & Effects, Multimedia, Performance & Integration,
+   Semantics, and Offline & Storage
+     * [4]Blog
+     * [5]About
+     * [6]@wemakesitesnet
+     * [7]Contact
+     * [8]Donate
+
+[9]HTML5, CSS3 and JavaScript Insight
+
+     * [10]JavaScript
+          + [11]XML to JSON JavaScript Objectifier
+          + [12]URI to JSON Serializer
+          + [13]Coming Soon - HTML5, JavaScript and CSS3 Replacement Page
+          + [14]JavaScript iPhone Toggle Switch Button
+          + [15]HTML5 Resume Generator and Onepager Website
+          + [16]JavaScript and CSS3 Image Reflections
+          + [17]JavaScript Inheritance Without Constructors
+          + [18]IMDB Movie Data Fetcher
+          + [19]JavaScript Mapper for RESTFul Methods
+          + [20]TinyURL JavaScript API
+          + [21]Wrapper for the HTML5 WebWorkers API
+          + [22]JavaScript Class Augmenter
+          + [23]HTML5 Details Enabler YUI Class
+          + [24]JavaScript HTML Template Engine
+          + [25]JavaScript Localization Class
+          + [26]HTML5 Charts
+          + [27]HTML5 Placeholder Enabler YUI Class
+          + [28]All JavaScript Experiments and Insight
+     * [29]CSS3
+          + [30]Custom Checkboxes and Radio Buttons
+          + [31]CSS3 iPhone Toggle Buttons
+          + [32]Crossbrowser RGBA and Prevention of Opacity Propagation.
+            Starting with IE6
+          + [33]CSS3 Slides Viewer
+          + [34]Fancy CSS3 Tooltips
+          + [35]CSS3 Treeview. No JavaScript
+          + [36]CSS3 Metro Dropdown Styling
+          + [37]CSS3 Element Reflections
+          + [38]Dropdown Styling with CSS3
+          + [39]CSS3 Background Image Cropping
+          + [40]Inline Masked File Upload Form with CSS3 and HTML5
+          + [41]CSS3 Tabstrip
+          + [42]CSS3 Gaussian Blur
+          + [43]All CSS3 Experiments and Insight
+     * [44]Dev Tools
+          + [45]HTML Validation Bookmarklet
+          + [46]Builder.CSS
+          + [47]Image to Base-64 Encoder
+          + [48]HTML5 Sticky Notes App
+          + [49]JavaScript Minifier and Obfuscator
+          + [50]JSON to HTML Template Engine
+          + [51]HTML Template Engine
+          + [52]HTML5 Guitar Chords Player
+          + [53]IMDB Movie Data Fetcher
+          + [54]Message Digest Encrypter
+          + [55]RESTFul Builder and Tester
+     * [56]Web.UI
+          + [57]HTML5 Shopping Cart
+          + [58]Ribbon Bar Web UI
+          + [59]Auto Complete Widget
+          + [60]HTML5 Canvas Gauge
+          + [61]Table Painter Widget
+          + [62]CSS3 Metro Forms
+          + [63]Split Button Widget
+          + [64]HTML5 and CSS3 Progressbar
+          + [65]Tourdates and Events Scheduler
+          + [66]TabStrip Web UI
+          + [67]Hotel Booking Form
+     * [68]Tweet
+
+CSS3 Driven Slides Viewer Without any JavaScript
+
+   You can read the original blogpost on this [69]link, or you can
+   [70]download the example.
+
+   Click [71]here to [72]open the demo in a separate window.
+
+The Markup
+
+<div class="css3-slides-viewer">
+    <form name="css3-slides-viewer" method="post" action="./">
+        <fieldset>
+            <legend>CSS3 Slides Viewer</legend>
+            <ul>
+                <li><input type="radio" name="css3-slides-viewer-slides" autofoc
+us="autofocus" id="slides-00" checked="checked" />
+                    <label for="slides-00"><!-- / --></label>
+                    <section>
+                        <h2>CSS3 Slides Viewer...</h2>
+                        <p>Is an <a href="http://experiments.wemakesites.net/css
+3-slides-viewer/" target="_blank">experiment</a>, demonstrating that you
+                            can create cool slide viewer functionality
+                            without a single line of JavaScript, but only
+                            by the means of CSS3 and HTML5.</p>
+                        <p>Watch this presentation to learn how
+                            it's done and what makes it so cool. If you find it
+useful, you could <a href="http://acidmartin.wemakesites.net/DownloadAdmin/click
+.php?id=219">download it from this link</a>.</p>
+                        <p class="info">In case you click around and lose the fo
+cus of the slides, so the
+                            keyboard navigation stops working, you can <em>click
+ + tab</em> the buttons above to continue.</p>
+                        <p>Developed by <a href="http://wemakesites.net/" target
+="_blank">Martin Ivanov</a>.</p>
+                        <p class="info">Click the right arrow key (<strong>→</st
+rong>) to proceed to the
+                            next slide or the left (<strong>←</strong>) to go to
+ the previous slide or use the buttons on the top.</p>
+                    </section>
+                </li><li><input type="radio" name="css3-slides-viewer-slides" id
+="slides-01" />
+                    <label for="slides-01"><!-- / --></label>
+                    <section>
+                        <h2>The HTML...</h2>
+                        <p>...Is a simple <code><form /></code> and a radio butt
+on list:</p>
+                        <pre><code><div class="css3-slides-viewer">
+<form name="css3-slides-viewer" method="post" action="./">
+<fieldset>
+    <legend>CSS3 Slides Viewer</legend>
+    <ul>
+        <li><input type="radio" name="css3-slides-viewer-slides" autofocus="auto
+focus" id="slides-00" checked="checked" />
+            <label for="slides-00"><!-- / --></label>
+            <section>
+                <!-- slide content should go here -->
+            </section>
+        </li><li><input type="radio" name="css3-slides-viewer-slides" id="slides
+-01" />
+            <label for="slides-01"><!-- / --></label>
+            <section>
+                <!-- slide content should go here -->
+            </section>
+        </li>
+    </ul>
+</fieldset>
+</form>
+</div></code></pre>
+                        <p>Each list item represents a single slide, and
+                            is supplied with radio button and label. The content
+
+                            of the slide is a hidden <code><section /></code> el
+ement.
+                            The default slide's radio button is supplied
+                            with <code>checked="checked"</code> attribute
+                            and in order to enable the keyboard navigation,
+                            we set focus to it via the HTML5 <code>autofocus="au
+tofocus"</code> attribute.</p>
+                        <p class="info">Click the right arrow key (<strong>→</st
+rong>) to proceed to the
+                            next slide or the left (<strong>←</strong>) to go to
+ the previous slide or use the buttons on the top.</p>
+                    </section>
+                </li><li><input type="radio" name="css3-slides-viewer-slides" id
+="slides-02" />
+                    <label for="slides-02"><!-- / --></label>
+                    <section>
+                        <h2>The CSS...</h2>
+                        <p>... Is just about 200 lines (including the vednor-spe
+cific styles), and you can check it in the <a href="styles/css3-slides-viewer.cs
+s" target="_blank">styles/css3-slides-viewer.css</a> file. Below is just the coo
+lest stuff.</p>
+                        <h3>The Slides Counter...</h3>
+                        <p>... Has been implemented via <a href="https://develop
+er.mozilla.org/en-US/docs/CSS/Counters" target="_blank">CSS counters</a>:</p>
+                        <pre><code>.css3-slides-viewer > form > fieldset > ul >
+li section::before
+{
+counter-increment: slide;
+content: "Slide " counter(slide);
+}</code></pre>
+                        <h3>The Fade-in/out Animation...</h3>
+                        <p>... Is using delayed <a href="https://developer.mozil
+la.org/en-US/docs/CSS/Tutorials/Using_CSS_transitions" target="_blank">CSS3 tran
+sitions</a> and <code>visibility: visible/hidden</code>.</p>
+                        <pre><code>.css3-slides-viewer > form > fieldset > ul >
+li > section
+{
+transition: all 500ms 10ms ease-in;
+}</code></pre>
+                        <p>The delay is utilized in order to enable to opacity t
+ransition on previously hidden elements.</p>
+                        <p class="info">Click the right arrow key (<strong>→</st
+rong>) to proceed to the
+                            next slide or the left (<strong>←</strong>) to go to
+ the previous slide or use the buttons on the top.</p>
+                    </section>
+                </li><li><input type="radio" name="css3-slides-viewer-slides" id
+="slides-03" />
+                    <label for="slides-03"><!-- / --></label>
+                    <section>
+                        <h2>... And More CSS...</h2>
+                        <h3>Hide/Show Slides</h3>
+                        <pre><code>/* by default slides are hidden */
+.css3-slides-viewer > form > fieldset > ul > li > section
+{
+visibility: hidden;
+}
+
+/* the slide is visible only if it's radio button is selected */
+.css3-slides-viewer > form > fieldset > ul > li > input:checked ~ section
+{
+visibility: visible;
+}</code></pre>
+                        <p class="info">Click the right arrow key (<strong>→</st
+rong>) to proceed to the
+                            next slide or the left (<strong>←</strong>) to go to
+ the previous slide or use the buttons on the top.</p>
+                    </section>
+                </li><li><input type="radio" name="css3-slides-viewer-slides" id
+="slides-04" />
+                    <label for="slides-04"><!-- / --></label>
+                    <section>
+                        <h2>Supported Browsers</h2>
+                        <p>Mozilla Firefox, Google Chrome, Apple Safari, Opera,
+nternet Explorer 9+</p>
+                        <p>Due to the lack of support for CSS transitions, Inter
+net Explorer 9
+                            does not play the fade-in/out animation, and enablin
+g the keyboard
+                            navigation should be done by clicking the buttons on
+ top, because
+                            that browser does not support the <code>autofocus="a
+utofocus"</code> property of HTML5</p>
+                        <p class="info">Click the right arrow key (<strong>→</st
+rong>) to proceed to the
+                            next slide or the left (<strong>←</strong>) to go to
+ the previous slide or use the buttons on the top.</p>
+                    </section>
+                </li><li><input type="radio" name="css3-slides-viewer-slides" id
+="slides-05" />
+                    <label for="slides-05"><!-- / --></label>
+                    <section>
+                        <h2>Thank You!</h2>
+                        <p><a href="http://acidmartin.wemakesites.net/DownloadAd
+min/click.php?id=219">Download CSS3 Slides Viewer</a>.</p>
+                        <p>If you like this solution, you can also check my
+                        <a href="http://wemakesites.net/" target="_blank">person
+al wesbite</a>,
+                        <a href="http://acidjs.wemakesites.net/" target="_blank"
+>Acid.JS Web.UI</a>,
+                        <a href="https://acidmartin.wordpress.com/" target="_bla
+nk">my blog</a>
+                        or follow me on <a href="https://twitter.com/#!/wemakesi
+tesnet" target="_blank">Twitter</a>.</p>
+                        <p>Make sure you try my online <a href="http://buildercs
+s.wemakesites.net/" target="_blank">CSS minifier and merger</a> and <a href="htt
+p://image2base64.wemakesites.net/" target="_blank">image to base-64 encoder</a>.
+</p>
+                        <p>Developed by <a href="http://wemakesites.net/" target
+="_blank">Martin Ivanov</a>.</p>
+                    </section>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</div>
+
+The reset.css File
+
+/**
+ * @info CSS3 Slides Viewer (reset file)
+ * @author Martin Ivanov
+ * @web http://wemakesites.net
+ * @blog http://acidmartin.wordpress.com/
+ * @twitter https://twitter.com/wemakesitesnet
+ */
+
+body, html,
+h1, h2, h3, h4, h5, h6,
+ul, ol, li,
+a img,
+figure, figcaption,
+form, fieldset,
+input, button, textarea,
+dl, dt, dd,
+p, pre
+{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: normal;
+}
+
+header,
+footer,
+aside,
+nav,
+section,
+main
+{
+    display: block;
+}
+
+img,
+figure,
+output
+{
+    display: inline-block;
+}
+
+html,
+body
+{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+fieldset legend
+{
+    display: none;
+}
+
+button
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"]
+{
+    border-width: 1px;
+    border-style: solid;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"]
+{
+    background: transparent;
+    cursor: pointer;
+}
+
+button::-moz-focus-inner
+{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+input[type="button"]::-moz-focus-inner
+{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+input[type="submit"]::-moz-focus-inner
+{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+input[type="reset"]::-moz-focus-inner
+{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+@-moz-document url-prefix()
+{
+    img:-moz-loading
+    {
+        visibility: hidden;
+    }
+
+    img:-moz-broken
+    {
+        -moz-force-broken-image-icon: 0;
+    }
+
+    img::-moz-loading
+    {
+        visibility: hidden;
+    }
+
+    img::-moz-broken {
+        -moz-force-broken-image-icon: 0;
+    }
+}
+
+The css3-slides-viewer.css File
+
+/**
+ * @info CSS3 Slides Viewer (viewer styles file)
+ * @author Martin Ivanov
+ * @web http://wemakesites.net
+ * @blog http://acidmartin.wordpress.com/
+ * @twitter https://twitter.com/wemakesitesnet
+ */
+
+@font-face
+{
+    font-family: 'TeXGyreAdventorRegular';
+    src: url('fonts/texgyreadventor-regular-webfont.eot');
+    src: url('fonts/texgyreadventor-regular-webfont.eot?#iefix') format('embedde
+d-opentype'),
+         url('fonts/texgyreadventor-regular-webfont.woff') format('woff'),
+         url('fonts/texgyreadventor-regular-webfont.ttf') format('truetype'),
+         url('fonts/texgyreadventor-regular-webfont.svg#TeXGyreAdventorRegular')
+ format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.css3-slides-viewer form,
+.css3-slides-viewer > form > fieldset > ul > li > section,
+.css3-slides-viewer > form > fieldset > ul > li > input,
+.css3-slides-viewer > form > fieldset > ul > li section::before
+{
+    position: absolute;
+}
+
+.css3-slides-viewer > form > fieldset > ul > li > input,
+.css3-slides-viewer > form > fieldset > ul > li > section
+{
+    opacity: 0;
+}
+
+.css3-slides-viewer form,
+.css3-slides-viewer > form > fieldset > ul > li > section
+{
+    top: 32px;
+    right: 32px;
+    bottom: 32px;
+    left: 32px;
+}
+
+.css3-slides-viewer > form > fieldset > ul > li,
+.css3-slides-viewer > form > fieldset > ul > li > label
+{
+    width: 10px;
+    height: 10px;
+}
+
+.css3-slides-viewer > form > fieldset > ul > li > label,
+.css3-slides-viewer > form > fieldset > ul > li > label::before
+{
+    display: block;
+}
+
+.css3-slides-viewer > form > fieldset > ul > li,
+.css3-slides-viewer > form > fieldset > ul > li section::before
+{
+    display: inline-block;
+}
+
+.css3-slides-viewer > form > fieldset > ul > li > input
+{
+    z-index: -1;
+}
+
+.css3-slides-viewer > form > fieldset > ul > li > section
+{
+    visibility: hidden;
+}
+
+.css3-slides-viewer > form > fieldset > ul > li > input:checked ~ section
+{
+    visibility: visible;
+}
+
+.css3-slides-viewer > form > fieldset > ul
+{
+    text-align: center;
+}
+
+.css3-slides-viewer > form > fieldset > ul > li
+{
+    padding: 1px;
+    margin: 1px;
+}
+
+.css3-slides-viewer > form > fieldset > ul > li > label
+{
+    height: 10px;
+    border: solid 1px #3c8cd3;
+    z-index: 15;
+    cursor: pointer;
+}
+
+.css3-slides-viewer > form > fieldset > ul > li > label::before
+{
+    content: "";
+    margin: 1px;
+    height: 8px;
+    width: 8px;
+}
+
+.css3-slides-viewer > form > fieldset > ul > li > input:checked ~ label::before,
+.css3-slides-viewer > form > fieldset > ul > li > input:not(:checked) ~ label:ho
+ver::before
+{
+    background: #3c8cd3;
+}
+
+.css3-slides-viewer > form > fieldset > ul > li > input:not(:checked) ~ label:ho
+ver::before
+{
+    opacity: .6;
+}
+
+.css3-slides-viewer
+{
+    counter-reset: slide;
+    font-family: TeXGyreAdventorRegular, Arial, Sans-serif;
+}
+
+.css3-slides-viewer form
+{
+    box-shadow: 0 4px 13px 5px rgba(0, 0, 0, .2),
+                0 2px 2px rgba(0, 0, 0, .15);
+    background: #fff;
+    border-radius: 3px;
+}
+
+.css3-slides-viewer > form > fieldset > ul > li > section
+{
+    padding: 16px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: left;
+
+    -moz-transition: all 500ms 10ms ease-in;
+    -webkit-transition: all 500ms 10ms ease-in;
+    -ms-transition: all 500ms 10ms ease-in;
+    -o-transition: all 500ms 10ms ease-in;
+    transition: all 500ms 10ms ease-in;
+}
+
+/* slides counter */
+.css3-slides-viewer > form > fieldset > ul > li section::before
+{
+    counter-increment: slide;
+    content: "Slide " counter(slide);
+    top: 6px;
+    right: 6px;
+    padding: 6px;
+    font-size: 14px;
+    line-height: 14px;
+    background: #3c8cd3;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.css3-slides-viewer > form > fieldset > ul > li > section
+{
+    z-index: 5;
+}
+
+/* the slide is visible only if it's radio button is selected */
+.css3-slides-viewer > form > fieldset > ul > li > input:checked ~ section
+{
+    opacity: 1;
+}
+
+The slides.css File
+
+/**
+ * @info CSS3 Slides Viewer (slides styles file)
+ * @author Martin Ivanov
+ * @web http://wemakesites.net
+ * @blog http://acidmartin.wordpress.com/
+ * @twitter https://twitter.com/wemakesitesnet
+ */
+
+.css3-slides-viewer section p,
+.css3-slides-viewer section pre
+{
+    padding: 8px 0;
+}
+
+.css3-slides-viewer section p,
+.css3-slides-viewer section p code
+{
+    font-size: 14px;
+}
+
+.css3-slides-viewer section a
+{
+    color: #3c8cd3;
+}
+
+.css3-slides-viewer section h2
+{
+    padding: 6px 0;
+    font-size: 36px;
+    color: #666;
+}
+
+.css3-slides-viewer section h3
+{
+    font-size: 24px;
+    margin: 0 0 6px;
+    padding: 6px 0;
+    border-bottom: dotted 1px #333;
+}
+
+.css3-slides-viewer section p
+{
+    padding: 8px 0;
+}
+
+.css3-slides-viewer section code
+{
+    font: normal 11px Consolas, "Courier New", Courier;
+    color: #008200;
+}
+
+.css3-slides-viewer .info
+{
+    margin: 10px 0;
+    padding: 6px;
+    border: solid 1px #e6db55;
+    background: #ffffe0;
+    font: normal 13px Arial, Sans-serif;
+    text-align: center;
+    border-radius: 4px;
+}
+
+     * © 2001-2013 Martin Ivanov
+     * [73]Blog
+     * [74]About
+     * [75]@wemakesitesnet
+     * [76]Contact
+     * [77]Donate
+     * [78]Valid HTML5
+
+References
+
+   1. http://feeds.feedburner.com/acidmartin
+   2. http://feeds.feedburner.com/acidjs
+   3. http://www.w3.org/html/logo/
+   4. https://acidmartin.wordpress.com/
+   5. http://wemakesites.net/
+   6. https://twitter.com/wemakesitesnet
+   7. http://wemakesites.net/#!/contact
+   8. https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QFUHPWJB2JDBS
+   9. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  10. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript.html
+  11. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/xml-to-json-javascript-objectifier.html
+  12. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/uri-to-json-serializer.html
+  13. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/coming-soon.html
+  14. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-iphone-toggle-buttons.html
+  15. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/html5-resume-builder.html
+  16. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/reflections.html
+  17. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-inheritance-without-constructors.html
+  18. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-api-for-imdb.html
+  19. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-mapper-for-restful-methods.html
+  20. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-api-for-tinyurl.html
+  21. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-wrapper-for-the-html5-webworkers-api.html
+  22. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-class-augmenter.html
+  23. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/html-5-details-element-enabler.html
+  24. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-html-template-engine.html
+  25. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/quick-and-dirty-localization-with-javascript.html
+  26. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/html5-charts.html
+  27. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/html5-placeholder-enabler.html
+  28. http://acidmartin.wordpress.com/category/javascript/
+  29. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css.html
+  30. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/custom-css3-checkboxes-and-radios.html
+  31. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-iphone-toggle-buttons.html
+  32. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/using-crossbrowser-rgba-to-prevent-the-css-opacity-inheritance-from-parent-to-child-elements.html
+  33. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-slides-viewer.html
+  34. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/fancy-css3-tooltips.html
+  35. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-treeview.html
+  36. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-metro-dropdown.html
+  37. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-element-reflections.html
+  38. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-selectbox.html
+  39. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-background-image-cropping.html
+  40. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-inline-file-input.html
+  41. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-tabstrip.html
+  42. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-gaussian-blur.html
+  43. http://acidmartin.wordpress.com/category/css3/
+  44. http://acidjs.wemakesites.net/
+  45. http://acidjs.wemakesites.net/validator.html
+  46. http://buildercss.wemakesites.net/
+  47. http://image2base64.wemakesites.net/
+  48. http://stickeez.wemakesites.net/
+  49. http://acidjs.wemakesites.net/builder-js.html
+  50. http://acidjs.wemakesites.net/templatr.html
+  51. http://acidjs.wemakesites.net/pisi.html
+  52. http://acidjs.wemakesites.net/guitar-chords-js.html
+  53. http://acidjs.wemakesites.net/imdb-fetcher.html
+  54. http://hasher.wemakesites.net/
+  55. http://acidjs.wemakesites.net/rest-builder.html
+  56. http://acidjs.wemakesites.net/
+  57. http://html5-cart.com/
+  58. http://acidjs.wemakesites.net/ribbon-bar-xml.html
+  59. http://acidjs.wemakesites.net/auto-complete.html
+  60. http://acidjs.wemakesites.net/gauge.html
+  61. http://acidjs.wemakesites.net/table-painter.html
+  62. http://acidjs.wemakesites.net/forms-js.html
+  63. http://acidjs.wemakesites.net/split-button-xml.html
+  64. http://acidjs.wemakesites.net/progressbar-js.html
+  65. http://acidjs.wemakesites.net/tour-dates.html
+  66. http://acidjs.wemakesites.net/tabstrip-xml.html
+  67. http://acidjs.wemakesites.net/hotel-reservation-form-js.html
+  68. https://twitter.com/share
+  69. https://acidmartin.wordpress.com/2013/03/08/css3-driven-slides-viewer-without-any-javascript/
+  70. http://acidmartin.wemakesites.net/DownloadAdmin/click.php?id=219
+  71. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/pages/css3-slides-viewer/example/
+  72. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/pages/css3-slides-viewer/example/
+  73. https://acidmartin.wordpress.com/
+  74. http://wemakesites.net/
+  75. https://twitter.com/wemakesitesnet
+  76. http://wemakesites.net/#!/contact
+  77. https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QFUHPWJB2JDBS
+  78. http://validator.w3.org/check?uri=referer

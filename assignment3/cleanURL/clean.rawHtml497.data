@@ -1,0 +1,115 @@
+                                    HINT.css
+
+  A tooltip library in CSS for your lovely websites
+
+W H A T
+
+   Hint.css is a tooltip library written in SASS which uses only HTML/CSS
+   to create simple tooltips.
+
+   It does not rely on any JavaScript and rather uses data-* attribute,
+   pseudo elements, content property and CSS3 transitions to create the
+   tooltips. Also it uses BEM naming convention particularly for the
+   modifiers.
+
+   [1]Download Hint.css from Github (v1.3.0)
+
+E X A M P L E S
+
+Basic ones
+
+   [2]Look, there is something over me.
+
+   [3]I am always right!
+
+   [4]How about a bottoms up?
+
+   [5]What do we get now?
+
+On dimensioned elements
+
+   [6][pikachu.jpg]
+
+Color based types
+
+   [7]Oh man! You are gonna self-destruct in 5 sec.
+
+   [8]You did something wrong!
+
+   [9]You can use different classes for different types of tooltips.
+
+   [10]Hurray! You have seen all 4 context types.
+
+Extra
+
+   [11]You can also make tooltips...
+
+   Hmm...So you don't like sharp edges?
+
+Effects
+
+   [12]Adding a hint--bounce class gives you that...
+
+U S A G E
+
+   First get the library from the [13]github repo. Then in your HTML
+   include the library CSS:
+<link rel="stylesheet" href="hint.css">
+
+   Any element on your page which needs to have a tooltip has to be given
+   at least one of the position classes: hint--top, hint--bottom,
+   hint--left, hint--right to position the tooltip.
+Hello Sir, <span class="hint--bottom">hover over me.</span>
+
+   And the tooltip text has to be given using the data-hint attribute on
+   that element.
+Hello Sir, <span class="hint--bottom" data-hint="Thank you!">hover over me.</spa
+n>
+
+   Result: Hello Sir, hover over me.
+
+   [Note: The hint class is no more required and is deprecated in versions
+   >=1.2.0. Tooltip is shown on elements which have the data-hint
+   attribute instead.]
+
+   Use it with other available modifiers in various combinations.
+   Available modifiers: hint--error, hint--info, hint--warning,
+   hint--success, hint--rounded and hint--bounce.
+
+Share it if you like it!
+
+   [14]Tweet
+
+   IFRAME:
+   [15]//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fkushagragour.
+   in%2Flab%2Fhint%2F&send=false&layout=button_count&width=100&show_faces=
+   false&action=like&colorscheme=light&font&height=21
+
+   IFRAME:
+   [16]http://ghbtns.com/github-btn.html?user=chinchang&repo=hint.css&type
+   =watch&count=true
+
+   Written by [17]Kushagra Gour {chin chang} . [18]See more experiments
+   [19]Fork me on GitHub
+
+References
+
+   1. https://github.com/chinchang/hint.css
+   2. javascript:void(0)
+   3. javascript:void(0)
+   4. javascript:void(0)
+   5. javascript:void(0)
+   6. javascript:void(0)
+   7. javascript:void(0)
+   8. javascript:void(0)
+   9. javascript:void(0)
+  10. javascript:void(0)
+  11. javascript:void(0)
+  12. javascript:void(0)
+  13. https://github.com/chinchang/hint.css
+  14. https://twitter.com/share
+  15. file://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fkushagragour.in%2Flab%2Fhint%2F&send=false&layout=button_count&width=100&show_faces=false&action=like&colorscheme=light&font&height=21
+  16. http://ghbtns.com/github-btn.html?user=chinchang&repo=hint.css&type=watch&count=true
+  17. https://twitter.com/chinchang457
+  18. file://localhost/lab/
+  19. https://github.com/chinchang/hint.css

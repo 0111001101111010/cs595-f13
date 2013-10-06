@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Splatting in iterators - belongs_to :ruby</title>
+  <meta name="author" content="Andrius Chamentauskas">
+
+  
+  <meta name="description" content="Splatting in Iterators Published on Sep 16th, 2013. Tags: lessons, ruby I can&rsquo;t even count how many times I&rsquo;ve seen code like this: 1
+2 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://belongstoruby.com/blog/2013/09/16/splatting-in-iterators">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="belongs_to :ruby" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-44315279-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+<section id="pagetop"><nav role="navigation">
+    <p id="siteinfo">
+        Andrius Chamentauskas / <a href="mailto:andrius.chamentauskas@gmail.com">andrius.chamentauskas@gmail.com</a> /
+        +370 678 40698
+    </p>
+
+    <ul>
+        <li><a href="/">Home </a></li>
+        <li><a href="/about/">About </a></li>
+        <li><a href="/portfolio/">Portfolio </a></li>
+    </ul>
+</nav>
+</section>
+<section id="main">
+    <header id="banner" role="banner"><h1><a href="/">belongs_to <em>:ruby</em></a></h1>
+<form id="search" action="http://google.com/search" method="get">
+    <fieldset role="search">
+        <input type="hidden" name="q" value="site:belongstoruby.com"/>
+
+        <div class="searchfield">
+            <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </div>
+
+        <div class="searchbtn">
+            <input src="/images/searchbtn.png" alt="search" type="image">
+        </div>
+    </fieldset>
+</form>
+
+</header>
+    <section id="container">
+        <section id="content">
+    <article class="post" role="article">
+        <header>
+    
+    <h2>Splatting in Iterators</h2>
+    
+
+    <p class="meta">Published on
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-16T03:03:00+03:00" pubdate data-updated="true">Sep 16<span>th</span>, 2013</time>.
+        Tags: 
+
+<span class="categories">
+  
+    <a class='category' href='/categories/lessons/'>lessons</a>, <a class='category' href='/categories/ruby/'>ruby</a>
+  
+</span>
+
+
+    </p>
+</header>
+
+<p><p>I can&rsquo;t even count how many times I&rsquo;ve seen code like this:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">arr</span> <span class="o">=</span> <span class="o">[[</span><span class="ss">:name</span><span class="p">,</span> <span class="s1">&#39;Name&#39;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="ss">:location</span><span class="p">,</span> <span class="s1">&#39;Location&#39;</span><span class="o">]]</span>
+</span><span class='line'><span class="n">arr</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">el</span><span class="o">|</span>
+</span><span class='line'>  <span class="kp">attr</span> <span class="o">=</span> <span class="n">el</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
+</span><span class='line'>  <span class="n">label</span> <span class="o">=</span> <span class="n">el</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span>
+</span><span class='line'>  <span class="nb">p</span> <span class="kp">attr</span><span class="p">,</span> <span class="n">label</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ruby can automatically split arrays in iterators by simply giving more than 1 parameter to a block:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">arr</span> <span class="o">=</span> <span class="o">[[</span><span class="ss">:name</span><span class="p">,</span> <span class="s1">&#39;Name&#39;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="ss">:location</span><span class="p">,</span> <span class="s1">&#39;Location&#39;</span><span class="o">]]</span>
+</span><span class='line'><span class="n">arr</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="kp">attr</span><span class="p">,</span> <span class="n">label</span><span class="o">|</span>
+</span><span class='line'>  <span class="nb">p</span> <span class="kp">attr</span><span class="p">,</span> <span class="n">label</span> <span class="c1"># Does the same thing as code above</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It works with any interator method, not just each:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">arr</span> <span class="o">=</span> <span class="o">[[</span><span class="ss">:name</span><span class="p">,</span> <span class="s1">&#39;Name&#39;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="ss">:location</span><span class="p">,</span> <span class="s1">&#39;Location&#39;</span><span class="o">]]</span>
+</span><span class='line'><span class="n">arr</span><span class="o">.</span><span class="n">select</span> <span class="k">do</span> <span class="o">|</span><span class="kp">attr</span><span class="p">,</span> <span class="n">label</span><span class="o">|</span>
+</span><span class='line'>  <span class="kp">attr</span> <span class="o">==</span> <span class="ss">:name</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In fact ruby even allows you to nest splitting:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">arr</span> <span class="o">=</span> <span class="o">[[</span><span class="ss">:name</span><span class="p">,</span> <span class="o">[</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="o">]]</span><span class="p">,</span> <span class="o">[</span><span class="ss">:location</span><span class="p">,</span> <span class="o">[</span><span class="s1">&#39;Location&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="o">]]]</span>
+</span><span class='line'><span class="n">arr</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="kp">attr</span><span class="p">,</span> <span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span><span class="o">|</span>
+</span><span class='line'>  <span class="nb">p</span> <span class="kp">attr</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">count</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This is especially useful with <code>Array#zip</code> method:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">arr1</span> <span class="o">=</span> <span class="o">[</span><span class="ss">:name</span><span class="p">,</span> <span class="ss">:location</span><span class="o">]</span>
+</span><span class='line'><span class="n">arr2</span> <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Location&#39;</span><span class="o">]</span>
+</span><span class='line'><span class="n">arr1</span><span class="o">.</span><span class="n">zip</span><span class="p">(</span><span class="n">arr2</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="kp">attr</span><span class="p">,</span> <span class="n">label</span><span class="o">|</span>
+</span><span class='line'>  <span class="nb">p</span> <span class="kp">attr</span><span class="p">,</span> <span class="n">label</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</p>
+
+    
+
+    </article>
+    
+    <section>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+</section>
+        
+
+<aside id="sidebar">
+    
+    <section>
+    <h2>Quick Links</h2>
+
+    <p>
+        <a href="skype:sinsiliux"><img src="/images/skype.png" alt="Skype Me™!"/></a>
+    </p>
+
+    <p>
+        <a href="http://lt.linkedin.com/pub/andrius-chamentauskas/21/526/5aa" target="_blank">
+            <img src="http://www.linkedin.com/img/webpromo/btn_myprofile_160x33.png"
+                 alt="View Andrius Chamentauskas's profile on LinkedIn">
+        </a>
+    </p>
+
+    <p>
+        <iframe src="http://ghbtns.com/github-btn.html?user=andriusch&type=follow&size=large"
+                allowtransparency="true" frameborder="0" scrolling="0" width="200" height="30"></iframe>
+    </p>
+</section>
+<section>
+    <h2>Tags</h2>
+    <ul>
+        <li class="cat-item"><a href="/categories/lessons/">lessons</a> (1)</li><li class="cat-item"><a href="/categories/ruby/">ruby</a> (1)</li>
+    </ul>
+</section>
+<section>
+  <h2>Recent Posts</h2>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/09/16/splatting-in-iterators/">Splatting in Iterators</a>
+      </li>
+    
+  </ul>
+</section>
+
+    
+</aside>
+
+
+    </section>
+</section>
+<footer role="contentinfo"><div class="wrapper">
+    2013 &copy; Andrius Chamentauskas
+</div>
+</footer>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'belongstoruby';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://belongstoruby.com/blog/2013/09/16/splatting-in-iterators/';
+        var disqus_url = 'http://belongstoruby.com/blog/2013/09/16/splatting-in-iterators/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

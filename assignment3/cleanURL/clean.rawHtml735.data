@@ -1,0 +1,489 @@
+   [1]iJava2–Java Programming Blog
+   Love Java–coffee and Java programming.
+   [2]Skip to content
+     * [3]Home
+     * [4]iJava2 Support Page
+     * [5]Java Programming Solutions Manuals
+
+   [6]← (Obtaining more accurate results) In computing the following
+   series, you will obtain more accurate results by computing from right
+   to left rather than from left to right:
+   [7](Displaying leap years) Write a program that displays all the leap
+   years, ten per line, in the twenty-first century →
+
+(Displaying the first days of each month) Write a program that prompts the
+user to enter the year and first day of the year
+
+   Posted on [8]May 21, 2012 by [9]iJava2Admin
+
+   /*
+   * 4.28**(Displaying the first days of each month) Write a program that
+   prompts the user to
+   enter the year and first day of the year, and displays the first day of
+   each month in
+   the year on the console. For example, if the user entered the year
+   2005, and 6 for
+   Saturday, January 1, 2005, your program should display the following
+   output
+   (note that Sunday is 0):
+   January 1, 2005 is Saturday
+   …
+   December 1, 2005 is Thursday
+
+   */
+
+   import java.util.Scanner;
+   public class DetermineFirstDay
+   {
+   public static void main(String[] args)
+   {
+   Scanner input = new Scanner(System.in);
+
+   System.out.print("Enter a year: ");
+   int year = input.nextInt();
+
+   System.out.print("Enter the first day of the year: ");
+   int firstDay = input.nextInt();
+
+   int numberOfDaysInMonth = 0;
+
+   for (int month = 1; month < = 12; month++)
+   {
+   switch (month) { case 1:
+   System.out.print("January 1, " + year + " is ");
+   numberOfDaysInMonth = 31;
+   break;
+   case 2:
+   System.out.print("February 1, " + year + " is ");
+   if ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0)))
+   numberOfDaysInMonth = 29;
+   else
+   numberOfDaysInMonth = 28;
+   break;
+   case 3:
+   System.out.print("March 1, " + year + " is ");
+   numberOfDaysInMonth = 31;
+   break;
+   case 4:
+   System.out.print("April 1, " + year + " is ");
+   numberOfDaysInMonth = 30;
+   break;
+   case 5:
+   System.out.print("May 1, " + year + " is ");
+   numberOfDaysInMonth = 31;
+   break;
+   case 6:
+   System.out.print("June 1, " + year + " is ");
+   numberOfDaysInMonth = 30;
+   break;
+   case 7:
+   System.out.print("July 1, " + year + " is ");
+   numberOfDaysInMonth = 31;
+   break;
+   case 8:
+   System.out.print("August 1, " + year + " is ");
+   numberOfDaysInMonth = 31;
+   break;
+   case 9:
+   System.out.print("September 1, " + year + " is ");
+   numberOfDaysInMonth = 30;
+   break;
+   case 10:
+   System.out.print("October 1, " + year + " is ");
+   numberOfDaysInMonth = 31;
+   break;
+   case 11:
+   System.out.print("November 1, " + year + " is ");
+   numberOfDaysInMonth = 30;
+   break;
+   case 12:
+   System.out.print("December 1, " + year + " is ");
+   numberOfDaysInMonth = 31;
+   }
+
+   switch (firstDay) { case 0:
+   System.out.println("Sunday"); break;
+   case 1:
+   System.out.println("Monday"); break;
+   case 2:
+   System.out.println("Tuesday"); break;
+   case 3:
+   System.out.println("Wednesday"); break;
+   case 4:
+   System.out.println("Thursday"); break;
+   case 5:
+   System.out.println("Friday"); break;
+   case 6:
+   System.out.println("Saturday");
+   }
+
+   firstDay = (firstDay + numberOfDaysInMonth) % 7;
+   }
+   }
+   }
+
+   /***********Sample output**********
+
+   Enter a year: 2001
+   Enter the first day of the year: 1
+   January 1, 2001 is Monday
+   February 1, 2001 is Thursday
+   March 1, 2001 is Thursday
+   April 1, 2001 is Sunday
+   May 1, 2001 is Tuesday
+   June 1, 2001 is Friday
+   July 1, 2001 is Sunday
+   August 1, 2001 is Wednesday
+   September 1, 2001 is Saturday
+   October 1, 2001 is Monday
+   November 1, 2001 is Thursday
+   December 1, 2001 is Saturday
+   *********************************/
+
+   [10]Share
+
+About iJava2Admin
+
+   Please share, bookmark, and add us to your favorites! Follow us on
+   Twitter! You are welcomed to provide your own version of any of the
+   Java solutions that we have listed on our Java programming blog. You
+   are welcomed to provide any fix to any of the Java solutions. Fixing
+   Java code is a great way to become a better programmer. I'm a little
+   teapot - short and stout! Here is my handle, here is my spout.
+   [11]View all posts by iJava2Admin →
+   This entry was posted in [12]What we think!. Bookmark the
+   [13]permalink.
+   [14]← (Obtaining more accurate results) In computing the following
+   series, you will obtain more accurate results by computing from right
+   to left rather than from left to right:
+   [15](Displaying leap years) Write a program that displays all the leap
+   years, ten per line, in the twenty-first century →
+
+Leave a Reply [16]Cancel reply
+
+   IFRAME: [17]jetpack_remote_comment
+
+     * Search for: ____________________ Search
+     * Follow iJava2 on TwitterMy Tweets
+     * Recent Comments
+          + User Avatar DivyaH { @dinh9x, try this code /** * Get a diff
+            between two dates * @param date1 the oldest date * @param
+            date2 the newest date *... } – [18]Sep 24, 1:24 AM
+          + User Avatar dinh9x { Please help me solve this homework: This
+            programming assignment involves writing a Java application
+            which inputs a date from the user, and calculates how many...
+            } – [19]Sep 24, 1:09 AM
+          + User Avatar maneesh { hello. Where is the solution for this
+            program?? Can I have it immediately? Many thanks. } – [20]Sep
+            23, 3:38 PM
+          + User Avatar iJava2Admin { @Sanjeev, thank you for correcting
+            the code. Your comment is greatly appreciated. Thank you. } –
+            [21]Sep 23, 3:23 PM
+          + User Avatar Sanjeev { Hi, In getAChoice(), just remove break
+            statement, instead of that place "return choice"; and also
+            remove int choice = 0; return choice; statements. If we... } –
+            [22]Sep 23, 8:32 AM
+          + [23]Older »
+     * Topics
+          + [24]Advanced Java
+               o [25]Arrays
+                    # [26]Multidimensional Arrays
+                    # [27]Single Dimensional Arrays
+               o [28]Borders Containers Layout Managers
+               o [29]Generics
+               o [30]Graphs Applications
+               o [31]Heap Sort
+               o [32]iteration
+               o [33]Java Collections Framework
+                    # [34]Queues
+                    # [35]Stacks
+               o [36]Java Utilities Package Bit Manipulation
+               o [37]JTable JTree
+               o [38]Lists
+                    # [39]ArrayList
+                    # [40]LinkedList
+               o [41]Menus Toolbars Dialogs
+               o [42]Merge Sort
+               o [43]Quick Sort
+               o [44]Recursion
+               o [45]Trees
+                    # [46]Binary Trees
+               o [47]Web Internet Programming
+                    # [48]MVC Swing Models
+                    # [49]Servlets
+          + [50]Beginner Java
+               o [51]Beginner Java Graphics
+               o [52]Classes Objects
+               o [53]Composition
+               o [54]Control Statements
+                    # [55]Control Structures
+                         @ [56]Loops
+                              - [57]For
+                              - [58]While
+                         @ [59]Switch Statements
+               o [60]Elementary Programming
+               o [61]Graphics and Java 2D
+               o [62]How to Display a Pattern Java
+               o [63]How to Display a Table Java
+               o [64]How to Display Messages Java
+               o [65]Inheritance and Polymorphism
+               o [66]Interfaces
+               o [67]Java Applets
+               o [68]Java Applications
+               o [69]Methods
+               o [70]Object Oriented Programming
+               o [71]Programming Logic
+               o [72]Selection
+               o [73]Strings Text Input Output I/O
+               o [74]Thinking In Objects
+          + [75]C plus plus (C++)
+          + [76]Codingbat Javabat Solutions
+               o [77]Codingbat Javabat Solutions AP-1
+               o [78]Codingbat Javabat Solutions Array 1
+               o [79]Codingbat Javabat Solutions Array 2
+               o [80]Codingbat Javabat Solutions Array 3
+               o [81]Codingbat Javabat Solutions Logic 1
+               o [82]Codingbat Javabat Solutions Logic 2
+               o [83]Codingbat Javabat Solutions Recursion 1
+               o [84]Codingbat Javabat Solutions Recursion 2
+               o [85]Codingbat Javabat Solutions String 1
+               o [86]Codingbat Javabat Solutions String 2
+               o [87]Codingbat Javabat Solutions String 3
+               o [88]Codingbat Javabat Solutions Warm-Up 1
+               o [89]Codingbat Javabat Solutions Warm-up 2
+          + [90]Computer and Network Security
+               o [91]Encryption
+          + [92]Database Management
+               o [93]Advanced Java Database Programming
+               o [94]Java Database Connectivity JDBC
+               o [95]Java Database Programming
+               o [96]SQL Structured Query Language
+          + [97]Game Programming
+               o [98]Classic Games
+               o [99]How to Create a Random Color Game
+               o [100]How to Create a Slot Machine
+               o [101]How to Create Color Matching Game Java
+               o [102]Windows 8 Application Development
+          + [103]Intermediate Java
+               o [104]Applets Multimedia
+               o [105]Binary Input/Ouput I/O
+               o [106]Event Driven Programming
+               o [107]Exception Handling
+               o [108]Files And Streams
+               o [109]Graphical User Interface (GUI)
+               o [110]Graphics
+               o [111]Multimedia: Animation Images Audio Video
+               o [112]Multithreading
+               o [113]Networking
+               o [114]Strings and Characters
+          + [115]Java Math Calculations
+          + [116]Math
+               o [117]How to Compute Math Expressions Java
+               o [118]How to Perform Math Calculations Java
+               o [119]Precalculus
+          + [120]Operating Systems
+               o [121]Computer Organization Embedded Systems
+          + [122]Programming Challenges
+          + [123]Project Euler Solutions
+          + [124]Python CodingBat Solutions
+               o [125]Python List 1Codingbat Solutions
+               o [126]Python List 2 Codingbat Solutions
+               o [127]Python Logic 2 CodingBat Solutions
+               o [128]Python String 1 Codingbat Solutions
+               o [129]Python String 2 Codingbat Solutions
+               o [130]Python Warm-up 1 Codingbat Solutions
+               o [131]Python Warm-Up 2 Codingbat Solutions
+          + [132]What we think!
+               o [133]iJava2 Contact
+          + [134]Writer Directory
+               o [135]Tutorials
+                    # [136]How to Analyze Test Scores
+                    # [137]How to Calculate Sales Tax Java
+                    # [138]How to code a Countdown Timer Java
+                    # [139]How to Create a Deck of Cards Java
+                    # [140]How to Create a GuestBook
+                    # [141]How to Create Bank Account Object
+                    # [142]How to Create Game of Craps
+                    # [143]How to Create GradeBook Object Using Arrays
+                    # [144]How to Create the GradeBook Object
+                    # [145]How to Display a TicTacTo Game
+                    # [146]How to Display Current Time
+                    # [147]How to Parse Text Files Read Text Files Write
+                      Text Files
+     * Connect with:
+     * User Control Panel
+          + [148]Register
+          + [149]Log in
+          + [150]Entries RSS
+          + [151]Comments RSS
+          + [152]WordPress.org
+     * Subscribe to Blog via Email
+       Enter your email address to subscribe to this blog and receive
+       notifications of new posts by email.
+       Join 20 other subscribers
+       Email Address_______
+       Subscribe
+
+   [153]iJava2–Java Programming Blog
+   [154]Proudly powered by WordPress.
+
+   [155]Codingbat Javabat Solutions [156]Codingbat Answers Recursion 1
+
+References
+
+   1. http://www.ijava2.com/
+   2. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml735.data#content
+   3. http://www.ijava2.com/
+   4. http://www.ijava2.com/ijava2-support-page/
+   5. http://www.ijava2.com/java-programming-solutions-manuals/
+   6. http://www.ijava2.com/obtaining-accurate-results-computing-series-obtain-accurate-results-computing-left-left/
+   7. http://www.ijava2.com/displaying-leap-years-write-program-displays-leap-years-ten-line-twentyfirst-century/
+   8. http://www.ijava2.com/displaying-days-month-write-program-prompts-user-enter-year-day-year/
+   9. http://www.ijava2.com/author/ij2k/
+  10. http://www.addtoany.com/share_save
+  11. http://www.ijava2.com/author/ij2k/
+  12. http://www.ijava2.com/opinions/
+  13. http://www.ijava2.com/displaying-days-month-write-program-prompts-user-enter-year-day-year/
+  14. http://www.ijava2.com/obtaining-accurate-results-computing-series-obtain-accurate-results-computing-left-left/
+  15. http://www.ijava2.com/displaying-leap-years-write-program-displays-leap-years-ten-line-twentyfirst-century/
+  16. file://localhost/displaying-days-month-write-program-prompts-user-enter-year-day-year/#respond
+  17. http://jetpack.wordpress.com/jetpack-comment/?blogid=32548938&postid=2903&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=retro&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en-US&jetpack_version=2.5&sig=f140ca434c0939c570623f4d65bfc9d80b10598e#parent=http%3A%2F%2Fwww.ijava2.com%2Fdisplaying-days-month-write-program-prompts-user-enter-year-day-year%2F
+  18. http://www.ijava2.com/ijava2-support-page/#comment-3364
+  19. http://www.ijava2.com/ijava2-support-page/#comment-3363
+  20. http://www.ijava2.com/time-class-design-class-named-time-class-java-programming-concepts/#comment-3362
+  21. http://www.ijava2.com/game-atm-machine-account-class-created-exercise-87-simulate-atm-machine/#comment-3361
+  22. http://www.ijava2.com/game-atm-machine-account-class-created-exercise-87-simulate-atm-machine/#comment-3360
+  23. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml735.data
+  24. http://www.ijava2.com/advanced-java/
+  25. http://www.ijava2.com/advanced-java/arrays/
+  26. http://www.ijava2.com/advanced-java/arrays/multidimensional-arrays/
+  27. http://www.ijava2.com/advanced-java/arrays/single-dimensional-arrays/
+  28. http://www.ijava2.com/advanced-java/borders-containers-layout-managers/
+  29. http://www.ijava2.com/advanced-java/generics/
+  30. http://www.ijava2.com/advanced-java/graphs-applications/
+  31. http://www.ijava2.com/advanced-java/heap-sort/
+  32. http://www.ijava2.com/advanced-java/iteration/
+  33. http://www.ijava2.com/advanced-java/java-collections-framework/
+  34. http://www.ijava2.com/advanced-java/java-collections-framework/queues/
+  35. http://www.ijava2.com/advanced-java/java-collections-framework/stacks/
+  36. http://www.ijava2.com/advanced-java/java-utilities-package-bit-manipulation/
+  37. http://www.ijava2.com/advanced-java/jtable-jtree/
+  38. http://www.ijava2.com/advanced-java/list/
+  39. http://www.ijava2.com/advanced-java/list/arraylist/
+  40. http://www.ijava2.com/advanced-java/list/linkedlist/
+  41. http://www.ijava2.com/advanced-java/menus-toolbars-dialogs/
+  42. http://www.ijava2.com/advanced-java/merge-sort/
+  43. http://www.ijava2.com/advanced-java/quick-sort/
+  44. http://www.ijava2.com/advanced-java/recursion/
+  45. http://www.ijava2.com/advanced-java/trees/
+  46. http://www.ijava2.com/advanced-java/trees/binary-trees/
+  47. http://www.ijava2.com/advanced-java/web-internet-programming/
+  48. http://www.ijava2.com/advanced-java/web-internet-programming/mvc-swing-models/
+  49. http://www.ijava2.com/advanced-java/web-internet-programming/servlets/
+  50. http://www.ijava2.com/beginner-java/
+  51. http://www.ijava2.com/beginner-java/beginner-java-graphics/
+  52. http://www.ijava2.com/beginner-java/classes-objects/
+  53. http://www.ijava2.com/beginner-java/composition/
+  54. http://www.ijava2.com/beginner-java/control-statements/
+  55. http://www.ijava2.com/beginner-java/control-statements/control-structures/
+  56. http://www.ijava2.com/beginner-java/control-statements/control-structures/loops/
+  57. http://www.ijava2.com/beginner-java/control-statements/control-structures/loops/for/
+  58. http://www.ijava2.com/beginner-java/control-statements/control-structures/loops/while/
+  59. http://www.ijava2.com/beginner-java/control-statements/control-structures/switch-statements-control-structures/
+  60. http://www.ijava2.com/beginner-java/elementary-programming/
+  61. http://www.ijava2.com/beginner-java/java-2d-graphics/
+  62. http://www.ijava2.com/beginner-java/how-to-display-a-pattern-java/
+  63. http://www.ijava2.com/beginner-java/how-to-display-a-table-java/
+  64. http://www.ijava2.com/beginner-java/how-to-display-messages-java/
+  65. http://www.ijava2.com/beginner-java/inheritance-and-polymorphism/
+  66. http://www.ijava2.com/beginner-java/interfaces/
+  67. http://www.ijava2.com/beginner-java/java-applets/
+  68. http://www.ijava2.com/beginner-java/ijava-applications/
+  69. http://www.ijava2.com/beginner-java/methods/
+  70. http://www.ijava2.com/beginner-java/object-oriented-programming/
+  71. http://www.ijava2.com/beginner-java/programming-logic/
+  72. http://www.ijava2.com/beginner-java/selection/
+  73. http://www.ijava2.com/beginner-java/strings-text-input-output-io/
+  74. http://www.ijava2.com/beginner-java/thinking-in-objects/
+  75. http://www.ijava2.com/c-plus-plus-c/
+  76. http://www.ijava2.com/codingbat-javabat-solutions/
+  77. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-ap-1/
+  78. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-array-1/
+  79. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-array-2/
+  80. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-array-3/
+  81. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-logic-1/
+  82. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-logic-2/
+  83. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-solutions-java-recursion-1/
+  84. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-solutions-java-recursion-2/
+  85. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-string-1/
+  86. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-solutions-java-string-2/
+  87. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-solutions-java-string-3/
+  88. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-warm-up-1/
+  89. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-warm-up-2/
+  90. http://www.ijava2.com/computer-network-security/
+  91. http://www.ijava2.com/computer-network-security/encryption/
+  92. http://www.ijava2.com/database-management/
+  93. http://www.ijava2.com/database-management/advanced-java-database-programming/
+  94. http://www.ijava2.com/database-management/java-database-connectivity-jdbc/
+  95. http://www.ijava2.com/database-management/java-database-programming/
+  96. http://www.ijava2.com/database-management/sql-structured-query-language/
+  97. http://www.ijava2.com/game-programming/
+  98. http://www.ijava2.com/game-programming/classic-games/
+  99. http://www.ijava2.com/game-programming/how-to-create-a-random-color-game/
+ 100. http://www.ijava2.com/game-programming/how-to-create-a-slot-machine/
+ 101. http://www.ijava2.com/game-programming/how-to-create-color-matching-game-java/
+ 102. http://www.ijava2.com/game-programming/windows-8-application-development/
+ 103. http://www.ijava2.com/intermediate-java-programming/
+ 104. http://www.ijava2.com/intermediate-java-programming/applets-multimedia/
+ 105. http://www.ijava2.com/intermediate-java-programming/binary-inputouput-io/
+ 106. http://www.ijava2.com/intermediate-java-programming/event-driven-programming/
+ 107. http://www.ijava2.com/intermediate-java-programming/exception-handling/
+ 108. http://www.ijava2.com/intermediate-java-programming/files-streams/
+ 109. http://www.ijava2.com/intermediate-java-programming/graphical-user-interface/
+ 110. http://www.ijava2.com/intermediate-java-programming/graphics-intermediate-java-programming/
+ 111. http://www.ijava2.com/intermediate-java-programming/multimedia-animation-images-audio-video/
+ 112. http://www.ijava2.com/intermediate-java-programming/java-multithreading/
+ 113. http://www.ijava2.com/intermediate-java-programming/networking/
+ 114. http://www.ijava2.com/intermediate-java-programming/strings-characters/
+ 115. http://www.ijava2.com/java-math-calculations/
+ 116. http://www.ijava2.com/math/
+ 117. http://www.ijava2.com/math/how-to-compute-math-expressions-java/
+ 118. http://www.ijava2.com/math/how-to-perform-math-calculations-java/
+ 119. http://www.ijava2.com/math/precalculus/
+ 120. http://www.ijava2.com/operating-systems/
+ 121. http://www.ijava2.com/operating-systems/computer-organization-embedded-systems/
+ 122. http://www.ijava2.com/programming-challenges/
+ 123. http://www.ijava2.com/project-euler-solutions/
+ 124. http://www.ijava2.com/python-codingbat-solutions/
+ 125. http://www.ijava2.com/python-codingbat-solutions/python-list-1/
+ 126. http://www.ijava2.com/python-codingbat-solutions/python-codingbat-list-2/
+ 127. http://www.ijava2.com/python-codingbat-solutions/python-codingbat-logic-2/
+ 128. http://www.ijava2.com/python-codingbat-solutions/string-1-python-codingbat-solutions/
+ 129. http://www.ijava2.com/python-codingbat-solutions/python-codingbat-string-2/
+ 130. http://www.ijava2.com/python-codingbat-solutions/python-codingbat-warm-up-1/
+ 131. http://www.ijava2.com/python-codingbat-solutions/python-codingbat-warm-up-2/
+ 132. http://www.ijava2.com/opinions/
+ 133. http://www.ijava2.com/opinions/ijava2-contact/
+ 134. http://www.ijava2.com/writer-directory/
+ 135. http://www.ijava2.com/writer-directory/java-programming-tutorials/
+ 136. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-analyze-test-scores/
+ 137. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-calculate-sales-tax-java/
+ 138. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-code-a-countdown-timer-java/
+ 139. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-a-deck-of-cards-java/
+ 140. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-a-guestbook/
+ 141. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-bank-account-object/
+ 142. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-game-of-craps/
+ 143. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-gradebook-object-using-arrays/
+ 144. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-the-gradebook-object/
+ 145. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-display-a-tictacto-game/
+ 146. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-display-current-time/
+ 147. http://www.ijava2.com/writer-directory/java-programming-tutorials/parse-text-files-read-text-files-write-text-files/
+ 148. http://www.ijava2.com/wp-login.php?action=register
+ 149. http://www.ijava2.com/wp-login.php
+ 150. http://www.ijava2.com/feed/
+ 151. http://www.ijava2.com/comments/feed/
+ 152. http://wordpress.org/
+ 153. http://www.ijava2.com/
+ 154. http://wordpress.org/
+ 155. http://www.ijava2.com/codingbat-javabat-solutions/
+ 156. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-solutions-java-recursion-1/

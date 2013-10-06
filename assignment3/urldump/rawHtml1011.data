@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <title>Google Hangouts liefert Messages an falsche Adressaten | heise online</title>
+
+    
+
+
+
+<meta charset="utf-8">
+<meta name="publisher" content="Heise Zeitschriften Verlag" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />    <link rel="canonical" href="/security/meldung/Google-Hangouts-liefert-Messages-an-falsche-Adressaten-1968038.html" />    <link rel="prev" title="Vorige Meldung" href="/newsticker/meldung/Neue-3D-Schnittstelle-AMD-Mantle-als-DirectX-Konkurrenz-1967989.html" />    <link rel="next" title="Naechste Meldung" href="/newsticker/meldung/Microsoft-will-Licht-in-den-Volumenlizenz-Dschungel-bringen-1968060.html" /><link rel="home" type="text/html" title="Startseite" href="/" />
+<link rel="copyright" title="Copyright" href="/Impressum-4862.html" />     <meta name="date" content="2013-09-26T16:40:00" />
+    <meta name="keywords" content="Google, Google Hangout, Google Talk" />
+                <meta name="topic" content="News" />        <meta name="description" content="Googles Instant-Messaging-Dienst Hangouts liefert momentan Nachrichten an die falschen Kontakte aus. Nach eigenen Aussagen arbeitet Google daran, das Problem zu beheben." />
+        <meta name="fulltitle" content="Google Hangouts liefert Messages an falsche Adressaten" />
+        <meta name="DC.title" content="Google Hangouts liefert Messages an falsche Adressaten" />
+        <meta name="DC.description" content="Googles Instant-Messaging-Dienst Hangouts liefert momentan Nachrichten an die falschen Kontakte aus. Nach eigenen Aussagen arbeitet Google daran, das Problem zu beheben." />
+        <meta name="DC.identifier" content="http://heise.de/-1968038" scheme="DCTERMS.URI" />
+        <meta name="kill_switch" content="true" />    <!--googleoff: all-->
+        <meta name="twitter:card"   content="summary" />
+        <meta name="twitter:site"   content="@heiseonline" />
+        <meta name="twitter:domain" content="heise.de" />
+    <meta property="og:title"       content="Google Hangouts liefert Messages an falsche Adressaten" />
+    <meta property="og:type"        content="website" />
+    <meta property="og:locale"      content="de_DE" />
+    <meta property="og:url"         content="http://www.heise.de/newsticker/meldung/Google-Hangouts-liefert-Messages-an-falsche-Adressaten-1968038.html" />
+    <meta property="og:site_name"   content="heise online" />      
+    <meta property="og:image"       content="http://www.heise.de/imgs/18/1/0/8/5/7/0/8/hangouts-panic-df64582d53384f6e.png" />
+    <meta property="og:description" content="Googles Instant-Messaging-Dienst Hangouts liefert momentan Nachrichten an die falschen Kontakte aus. Nach eigenen Aussagen arbeitet Google daran, das Problem zu beheben." />
+
+    <!--googleon: all--><!--googleoff: all-->
+<meta name="generator" content="InterRed V13.0, http://www.interred.de/, InterRed GmbH" />
+<!--googleon: all-->
+
+    
+
+<script type="text/javascript" src="/js/jquery/jquery-1.7.1.min.js"></script>
+
+<script type="text/javascript" src="/js/plugins/jquery-ui-1.8.18_cycle.custom.min.js"></script>
+
+<script type="text/javascript" src="/js/plugins/jquery.equalheights.min.js"></script>
+<script type="text/javascript" src="/support/lib/social_bookmarks.js"></script>
+<script type="text/javascript" src="/support/lib/external.js"></script>
+<script type="text/javascript" src="/support/lib/teaser_linking.js"></script>
+
+<script type="text/javascript" src="/js/ho/link_inline_images.min.js"></script> 
+
+<script type="text/javascript" src="/js/ho/bilderstrecke-1.1.min.js"></script>
+
+
+<script type="text/javascript">
+jQuery(document).ready(function($){
+    
+    if($('.bilderstrecke_vorschau').length > 0 && (!$.browser.msie || ($.browser.msie && $.browser.version > 8))) {
+        $('.bilderstrecke_vorschau').bilderstrecke();
+    }
+    
+    
+});
+</script>
+<!-- view_relaunch:  -->
+
+    
+
+
+
+<link href="/stil/standard2008.css" rel="stylesheet" type="text/css" />
+<link href="/stil/navi_top2008.css" rel="stylesheet" type="text/css" />
+<link href="/stil/drucken.css" rel="stylesheet" type="text/css" media="print" />
+
+
+    <!--googleoff: all-->
+    <link href="/favicon.ico" rel="shortcut icon" />
+    <link rel="author" title="Kontakt" href="mailto:kontakt%40heise.de?subject=heise%20online" />
+    <link rel="search" title="Suche" href="http://www.heise.de/suche/" />
+    <link rel="alternate" type="application/atom+xml" title="Aktuelle News von heise online" href="http://www.heise.de/newsticker/heise-atom.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Aktuelle News von heise online (für ältere RSS-Reader)" href="http://www.heise.de/newsticker/heise.rdf" />
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57x57-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png" />
+    <meta name="application-name" content="heise online">
+    <meta name="msapplication-tooltip" content="heise online">
+    <meta name="msapplication-starturl" content="http://www.heise.de/">
+    <meta name="msapplication-TileImage" content="http://www.heise.de/icons/ho/windows-icon-144.png">
+    <meta name="msapplication-TileColor" content="#999999">
+    <meta name="msapplication-square70x70logo" content="http://www.heise.de/icons/ho/ho_windows-icon-70.png"/>
+    <meta name="msapplication-square150x150logo" content="http://www.heise.de/icons/ho/ho_windows-icon-150.png"/>
+    <meta name="msapplication-wide310x150logo" content="http://www.heise.de/icons/ho/ho_windows-icon-310-quer.png"/>
+    <meta name="msapplication-square310x310logo" content="http://www.heise.de/icons/ho/ho_windows-icon-310.png"/>
+    <meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed=http://www.heise.de/newsticker/heise-atom.xml&id=1;polling-uri2=http://notifications.buildmypinnedsite.com/?feed=http://www.heise.de/newsticker/heise-atom.xml&id=2;polling-uri3=http://notifications.buildmypinnedsite.com/?feed=http://www.heise.de/newsticker/heise-atom.xml&id=3;polling-uri4=http://notifications.buildmypinnedsite.com/?feed=http://www.heise.de/newsticker/heise-atom.xml&id=4;polling-uri5=http://notifications.buildmypinnedsite.com/?feed=http://www.heise.de/newsticker/heise-atom.xml&id=5; cycle=1"/>
+    <meta name="DC.creator" content="heise online" />
+    <link rel="publisher" href="https://plus.google.com/+heiseonline">        <link href="/stil/ho/heiseonline2012.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+
+
+
+
+
+
+<div class="heisetopnavi no-touch heisetopnavi_relaunch">
+    <div class="heisetopnavi_header">
+        <header role="banner">
+            <div class="heisetopnavi_login">
+                <script type="text/javascript" src="/js/ho/login.min.js"></script>
+                <div id="navi_login">
+                    <p><a href="https://www.heise.de/userdb/sso?rm=show_login&amp;dirid=1&amp;objekt=/">Einloggen</a> auf heise online</p>
+                </div>
+            </div>
+            <nav role="navigation">
+                <div class="heisetopnavi_hover_legacy">
+                    <a href="/index.html/from/navi_oben_ho" class="heisetopnavi_logo" title="heise online">
+                        <img src="//www.heise.de/icons/ho/heise_online_logo_top.gif" width="200" height="44" alt="heise online" />
+                    </a>
+                    <a href="#heisetopnavi_sub_container" class="heisetopnavi_button" aria-haspopup="true">Menü auf-/zuklappen</a>
+                    <div id="heisetopnavi_sub_container">
+                        <ul id="heisetopnavi_sub">
+                            <li>
+                                <ul>
+                                    <li class="heisetopnavi_ho"><a href="/index.html/from/navi_oben_ho" title="heise online – IT-News">News</a></li>
+                                    <li class="heisetopnavi_ct"><a href="/ct/from/navi_oben_ct" title="c't – Magazin für Computertechnik">c't</a></li>
+                                    <li class="heisetopnavi_ix"><a href="/ix/from/navi_oben_ix" title="iX – Magazin für professionelle Informationstechnik">iX</a></li>
+                                    <li class="heisetopnavi_tr"><a href="/tr/from/navi_oben_tr" title="Technology Review – Das M.I.T.-Magazin für Innovation">Technology Review</a></li>
+                                    <li class="heisetopnavi_mac"><a href="/mac-and-i/from/navi_oben_mac" title="Mac &amp; i – Nachrichten, Tests, Tipps und Meinungen rund um Apple">Mac &amp; i</a></li>
+                                    <li class="heisetopnavi_tp"><a href="/tp/from/navi_oben_tp" title="Telepolis">Telepolis</a></li>
+                                    <li class="heisetopnavi_hh"><a href="/hardware-hacks/from/navi_oben_hh" title="Hardware Hacks – Kreativ mit Technik">Hardware Hacks</a></li>
+                                    <li class="heisetopnavi_df"><a href="/foto/special/from/navi_oben_df" title="Digitale Fotografie">Digitale Fotografie</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li class="heisetopnavi_aut"><a href="/autos/from/navi_oben_aut" title="heise Autos – News, Tests, Technik, Service rund ums Auto">heise Autos</a></li>
+                                    <li class="heisetopnavi_dev"><a href="/developer/from/navi_oben_dev" title="heise Developer – Informationen für Entwickler">heise Developer</a></li>
+                                    <li class="heisetopnavi_foto"><a href="/foto/from/navi_oben_foto" title="heise Foto – Das Online-Magazin rund ums digitale Bild">heise Foto</a></li>
+                                    <li class="heisetopnavi_net"><a href="/netze/from/navi_oben_net" title="heise Netze – Alles über Netzwerk-Technik">heise Netze</a></li>
+                                    <li class="heisetopnavi_op"><a href="/open/from/navi_oben_op" title="heise open – Open Source im Unternehmen">heise Open Source</a></li>
+                                    <li class="heisetopnavi_res"><a href="/resale/from/navi_oben_res" title="heise resale – Fakten, Trends und Standpunkte für das ITK-Geschäft">heise resale</a></li>
+                                    <li class="heisetopnavi_sec"><a href="/security/from/navi_oben_sec" title="heise Security – News, Dienste und Foren zum Thema Computer-Sicherheit">heise Security</a></li>
+                                    <li class="heisetopnavi_video"><a href="/video/from/navi_oben_video" title="heise Video – Clips zu Nachrichten und Artikeln">heise Video</a></li>
+                                    <li class="heisetopnavi_tech"><a href="/redirect-to/techstage/from/navi_oben_techstage" title="TechStage – News, Tests &amp; Praxis zu Smartphones und Tablets mit Android, iOS, Windows Phone &amp; Co.">TechStage</a></li>
+                                </ul>
+                            </li>
+                            <li class="heisetopnavi_third">
+                                <ul>
+                                    <li class="heisetopnavi_swv"><a href="/download/from/navi_oben_swv" title="Software-Verzeichnis – Software zum Download fuer Windows, Mac, Linux, iPhone, Symbian, Android">Download</a></li>
+                                    <li class="heisetopnavi_pvg"><a href="/preisvergleich/from/navi_oben_pvg" title="Preisvergleich – Günstige Preise, Meinungen und Bewertungen zu vielen Produkten">Preisvergleich</a></li>
+                                    <li class="heisetopnavi_job"><a href="/jobs/from/navi_oben_job" title="heise jobs – Jobbörse für qualifizierte Fach- und Führungskräfte aus der IT-Branche">Stellenmarkt</a></li>
+                                    <li class="heisetopnavi_eve"><a href="/events/from/navi_oben_eve" title="heise Events – Konferenzen, Seminare, Workshops">Veranstaltungen</a></li>
+                                    <li class="heisetopnavi_itm"><a href="/itmarkt/from/navi_oben_itm" title="IT-Markt – Branchenverzeichnis der IT-Fachhändler">IT-Markt</a></li>
+                                    <li class="heisetopnavi_whi"><a href="/whitepapers/from/navi_oben_whi" title="heise Whitepapers – Kostenloser Download aktueller Praxisbeispiele, Firmeninfos, Case Studies und Webcasts zu neuen Produkten, Strategien und Lösungen namhafter IT-Hersteller">Whitepapers</a></li>
+                                    <li class="heisetopnavi_webcasts"><a href="/redirect-to/webcasts/from/navi_oben_webcasts" title="heise Webcasts – Kompakte Firmeninformationen zu komplexen IT-Sachverhalten">Webcasts</a></li>
+                                    <li class="heisetopnavi_tarifr"><a href="/redirect-to/tarifrechner/from/navi_oben_tarifr" title="Tarifrechner – DSL, Mobiles Internet, Handy, Telefon, Strom, Gas">Tarifrechner</a></li>
+                                </ul>
+                            </li>
+                            <li class="heisetopnavi_fourth">
+                                <ul>
+                                    <li class="heisetopnavi_shop"><a href="/redirect-to/shop/from/navi_oben_shop" title="heise shop – IT Fachzeitschriften, Bücher, CD/DVD/Blu-ray">heise shop</a></li>
+                                    <li class="heisetopnavi_kio"><a href="/artikel-archiv/from/navi_oben_kio" title="Artikel-Archiv – c't, iX, Technology Review, Digitale Fotografie, Mac &amp; i, Sonderhefte">Artikel-Archiv</a></li>
+                                    <li class="heisetopnavi_abo"><a href="/redirect-to/abo/from/navi_oben_abo" title="Abo – c't, iX, Technology Review, Digitale Fotografie, Mac &amp; i">Zeitschriften-Abo</a></li>
+                                    <li class="heisetopnavi_hmg"><a href="/redirect-to/hmg/from/navi_oben_hmg" title="Arbeiten bei heise – Aktuelle Stellenangebote der Heise Medien Gruppe">Arbeiten bei heise</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        
+            
+            
+                
+                    
+                    
+            
+        
+            <form accept-charset="utf-8" method="get" action="/suche/" id="heisetopnavi_search" role="search">
+                <fieldset>
+                    <input type="text" class="search_text" value="" name="q" placeholder="in heise online suchen"><input type="image" src="//www.heise.de/icons/ho/heise_online_lupe.gif" alt="Los" class="search_submit" name="search_submit">
+                    <input type="hidden" class="search_hidden" value="search" name="rm">
+                </fieldset>
+            </form>
+        </header>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<script type="text/javascript">
+if (typeof jQuery !== "undefined") {
+    jQuery(document).ready(function($) {
+        // Support Touch-Devices
+        if ('ontouchstart' in document) {
+            $('.heisetopnavi_relaunch').removeClass('no-touch');
+        }
+        $('.heisetopnavi_button').bind('touchstart', function(e) {
+            e.preventDefault();
+            if ($(e.target).is('a.heisetopnavi_button')) {
+                $(this).toggleClass('active');
+                $('.heisetopnavi header > nav').toggleClass('hover');
+            }
+        });
+
+        $('.heisetopnavi_relaunch .heisetopnavi_button').click(function(e) {
+            e.preventDefault();
+        });
+
+        // Support Keyboard
+        $('.heisetopnavi_relaunch .heisetopnavi_button').keyup(function(e) {
+            if (e.which == 13 && $(e.target).is('a.heisetopnavi_button')) {
+                $('.heisetopnavi_relaunch .heisetopnavi_button').toggleClass('active');
+                $('.heisetopnavi_relaunch header > nav').toggleClass('hover');
+            }
+        });
+
+        /*
+         * Open/Close Menu with JavaScript for more Usability
+         */
+
+        $('.heisetopnavi_relaunch').removeClass('no-touch');
+
+        // Logo + Icon
+        $('.heisetopnavi_relaunch .heisetopnavi_hover_legacy').mouseenter(function() {
+            var timeout_id = window.setTimeout(function() { 
+                $('.heisetopnavi_relaunch .heisetopnavi_button').addClass('active');
+                $('.heisetopnavi_relaunch nav').addClass('hover');
+                $('body').addClass('refreshDOM');
+                $('body').removeClass('refreshDOM');
+            }, 300);
+            $(this).data('timeout_id', timeout_id);
+        });
+        $('.heisetopnavi_relaunch .heisetopnavi_hover_legacy').mouseleave(function() {
+            var timeout_id = $(this).data('timeout_id');
+            window.clearTimeout(timeout_id);
+            timeout_id = window.setTimeout(function() { 
+                $('.heisetopnavi_relaunch .heisetopnavi_button').removeClass('active');
+                $('.heisetopnavi_relaunch nav').removeClass('hover');
+                $('body').addClass('refreshDOM');
+                $('body').removeClass('refreshDOM');
+            }, 0);
+            $(this).data('timeout_id', timeout_id);
+        });
+    });
+
+    if (typeof heiseLogin != "undefined") {
+        heiseLogin.login_fill_navigation({});
+    }
+}
+</script>
+
+
+    <div id="container">
+        <div id="container_content">
+            <div id="logo_bereich" class="socialmedia">
+                <div class="logo">
+                        <a href="/" title="heise online News" class="channel_titel">News</a>
+                </div>
+                <ul class="navigation">
+                    <li><strong><a href="/newsticker/classic/" title="Newsticker Classic">Newsticker</a></strong></li>
+                    <li><strong><a href="/newsticker/" title="7-Tage-News">7-Tage-News</a></strong></li>
+                    <li><strong><a href="/newsticker/archiv/" title="Newsticker Archiv">Archiv</a></strong></li>
+                    <li><strong><a href="/foren/" title="Leserforum">Foren</a></strong></li>
+                </ul>
+                <ul class="sub_navigation">
+                    <li class="rss"         ><a href="/news-extern/news.html"               name="header.ho.sm.rss"         title="RSS-Feeds abonnieren"><i>RSS</i></a></li>
+                    <li class="newsletter"  ><a href="/newsletter/"                         name="header.ho.sm.newsletter"  title="Newsletter abonnieren"><i>Newsletter</i></a></li>
+                    <li class="mobi"        ><a href="http://m.heise.de/"                   name="header.ho.sm.mobi"        title="Mobile Version anzeigen"><i>News mobil</i></a></li>
+                    <li class="google"      ><a href="https://plus.google.com/+heiseonline" name="header.ho.sm.google"      title="heise online auf Google+ folgen" target="_blank"><i>Google+</i></a></li>
+                    <li class="facebook"    ><a href="https://www.facebook.com/heiseonline" name="header.ho.sm.facebook"    title="heise online auf Facebook folgen" target="_blank"><i>Facebook</i></a></li>
+                    <li class="twitter"     ><a href="https://twitter.com/heiseonline"      name="header.ho.sm.twitter"     title="heise online auf Twitter folgen" target="_blank"><i>Twitter</i></a></li>
+                </ul>
+            </div>
+                            <div id="themen_aktuell" class="linear">
+                                <p>Topthemen:</p>
+                                <ol>
+                                    <li><a name="themen.ho.nsa" href="/thema/NSA">NSA</a></li>
+                                    <li><a name="themen.ho.windows_8.1" href="/thema/Windows-8.1">Windows 8.1</a></li>
+                                    <li><a name="themen.ho.iphone" href="/thema/iPhone">iPhone</a></li>
+                                    <li><a name="themen.ho.smartphone" href="/thema/Smartphone">Smartphone</a></li>
+                                    <li><a name="themen.ho.android" href="/thema/Android">Android</a></li>
+                                    <li><a name="themen.ho.google_glass" href="/thema/Google-Glass">Google Glass</a></li>
+                                    <li><a name="themen.ho.vdsl" href="/thema/VDSL">VDSL</a></li>
+                                    <li><a name="themen.ho.e-book" href="/thema/E_Book">E-Book</a></li>
+                                    <li><a name="themen.ho.nokia" href="/thema/Nokia">Nokia</a></li>
+                                </ol>
+                            </div>
+                
+	<div id="breadcrumb">
+	
+		<a href="/" title="heise online">heise online</a>
+		<span class="bread_gt">&gt;</span>
+	
+		<a href="/newsticker/" title="News">News</a>
+		<span class="bread_gt">&gt;</span>
+	
+		<a href="/newsticker/archiv/?jahr=2013" title="2013">2013</a>
+		<span class="bread_gt">&gt;</span>
+	
+		<a href="/newsticker/archiv/?jahr=2013;woche=39" title="KW 39">KW 39</a>
+		<span class="bread_gt">&gt;</span>
+	
+		<span class="titel">Google Hangouts liefert Messages an falsche Adressaten</span>
+		
+	
+	</div>
+
+
+            <div id="mitte">
+                <div id="mitte_links">
+            <!--googleon: all-->
+            <div id="mitte_news">
+    <!--googleoff: all-->
+        <p class="news_navi">
+            <a href="/newsticker/meldung/Neue-3D-Schnittstelle-AMD-Mantle-als-DirectX-Konkurrenz-1967989.html"><span class="rsaquo">«</span>&nbsp;Vorige</a>
+            |
+            <a href="/newsticker/meldung/Microsoft-will-Licht-in-den-Volumenlizenz-Dschungel-bringen-1968060.html">Nächste&nbsp;<span class="rsaquo">»</span></a>
+        </p>
+        <div class="news_logo"><a href="/security/"><img src="/security/icons/security_min.gif" alt="heise Security" width="55" height="30" /></a></div>
+    <article>
+        <p class="news_datum">26.09.2013 16:40</p>
+        <!-- RSPEAK_START -->
+        <!--googleon: all-->
+        <h1 class="clear"> Google Hangouts liefert Messages an falsche Adressaten</h1>
+        <!-- RSPEAK_STOP -->
+        <!--googleoff: all-->
+        <script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+            function openWindow() {
+                window.open('/newsticker/meldung/Google-Hangouts-liefert-Messages-an-falsche-Adressaten-1968038.html?view=audio', 'Vorlesen', 'width=492,height=400,left=100,top=100,menubar=no,status=no,scrollbars,resizable,toolbar=no,hotkeys,location=no');
+            }
+            document.write('<div class="readspeaker"><a href="javascript:openWindow()"><img src="/icons/ho/vorlesen_download.gif" alt="Meldung vorlesen und MP3-Download" width="150" height="13" class="ISI_IGNORE" /><' + '/a><' + '/div>');
+        //--><!]]>
+        </script>
+        <noscript>
+            <div class="readspeaker">
+                <a href="/newsticker/meldung/Google-Hangouts-liefert-Messages-an-falsche-Adressaten-1968038.html?view=audio"><img src="/icons/ho/vorlesen_download.gif" alt="Meldung vorlesen und MP3-Download" width="150" height="13" class="ISI_IGNORE" /></a>
+            </div>
+        </noscript>
+        <!--googleon: all-->
+        <!-- RSPEAK_START -->
+        <div class="meldung_wrapper">
+            <p>Googles Instant-Messaging-Dienst Hangouts wird momentan <a href="https://productforums.google.com/forum/#!category-topic/chat/i-found-a-bug/uOssfrVhlzU" target="_blank" rel="external">von Problemen geplagt</a>, die dazu führen, dass Nachrichten an die falschen Adressaten ausgeliefert werden. Mehrere Nutzer melden, dass beim Benutzen von älteren Google-Talk-Clients Nachrichten nicht an den eigentlichen Adressaten, sondern auch – oder nur – an andere Personen verschickt werden.</p>
+<p>Die Fehlzustellungen finden dabei augenscheinlich nur an Konten statt, die der Nutzer in der Adressliste in Google Talk oder in seinen Kreisen auf Google+ aufgenommen hat. Google hatte den Google-Talk-Dienst im Mai <a href="/newsticker/meldung/Google-I-O-Von-Android-Updates-Hardware-Aktualisierungen-und-Google-Glass-1861472.html">durch Hangouts ersetzt</a> und dabei auf ein neues Kommunikations-Protokoll <a href="/newsticker/meldung/Googles-Chat-Client-kappt-Jabber-Kompatibilitaet-1866059.html">umgestellt</a>.</p>
+<p>Nach eigenen Angaben arbeitet Google daran, das Problem zu beheben. Auf der <a href="http://www.google.com/appsstatus#hl=de" target="_blank" rel="external">Status-Seite für Google-Dienste</a> ist für Google Talk momentan von Serviceunterbrechungen die Rede. Die ersten Nutzer berichten davon, dass die Probleme mittlerweile behoben sind. Allerdings können sich andere jetzt gar nicht mehr bei dem Dienst anmelden. Bis Google Entwarnung gibt, sollten Nutzer also davon absehen, den Instant-Messaging-Dienst zu verwenden oder sich jedenfalls bewusst sein, dass Nachrichten auch mal an den Chef statt an den Partner ausgeliefert werden könnten.<!-- AUTHOR-DATA-MARKER-BEGIN -->
+
+
+<!-- RSPEAK_STOP -->
+<span class="ISI_IGNORE">(<a href="mailto:fab@heise.de" title="Fabian Scherschel">fab</a>)</span>
+<br class="clear" />
+<!-- RSPEAK_START -->
+<!-- AUTHOR-DATA-MARKER-END -->
+</p>
+            
+
+        </div>
+        <!--googleoff: all-->
+        <!-- RSPEAK_STOP -->
+    </article>
+        <p class="news_navi">
+        <a href="/newsticker/meldung/Neue-3D-Schnittstelle-AMD-Mantle-als-DirectX-Konkurrenz-1967989.html"><span class="rsaquo">«</span>&nbsp;Vorige</a>
+        |
+        <a href="/newsticker/meldung/Microsoft-will-Licht-in-den-Volumenlizenz-Dschungel-bringen-1968060.html">Nächste&nbsp;<span class="rsaquo">»</span></a>
+        </p>
+    <div class="news_foren">
+        
+  <p>
+	<a href="/security/news/foren/S-Google-Hangouts-liefert-Messages-an-falsche-Adressaten/forum-266233/list/" title="Google Hangouts liefert Messages an falsche Adressaten">
+      <b>
+		
+		  
+			Kommentare lesen (15 Beitr&#xe4;ge)
+		  
+		
+      </b>
+	</a>
+	
+  </p>
+
+
+    </div>
+        <p class="themen_foren">
+            Themen-Forum <a href="/security/foren/S-Diverses/forum-44322/list/">Diverses</a>
+        </p>
+    <p class="news_option">
+        <a href="/newsticker/meldung/Google-Hangouts-liefert-Messages-an-falsche-Adressaten-1968038.html?view=print" rel="nofollow">Version zum Drucken</a> |
+        <a href="/newsticker/meldung/Google-Hangouts-liefert-Messages-an-falsche-Adressaten-1968038.html?view=mail" rel="nofollow">Per E-Mail versenden</a> |
+        <a href="/newsletter/" title="Newsletter abonnieren">Newsletter abonnieren</a>
+    </p>
+        <p class="permalink">Permalink: <a href="http://heise.de/-1968038">http://heise.de/-1968038</a></p>
+    <div id="social_bookmarks"></div>
+    
+
+
+
+<div class="related_items">
+	<h4>Auch auf heise online:</h4>
+	<ul>
+	
+	    <li><a href="http://www.heise.de/newsticker/meldung/Google-Hangouts-weniger-offen-1869451.html/from/related" title="Google-Hangouts weniger offen ">Google-Hangouts weniger offen </a></li>
+	
+	    <li><a href="http://www.heise.de/newsticker/meldung/Googles-Chat-Client-kappt-Jabber-Kompatibilitaet-1866059.html/from/related" title="Googles Chat-Client kappt Jabber-Kompatibilität">Googles Chat-Client kappt Jabber-Kompatibilität</a></li>
+	
+	    <li><a href="http://www.heise.de/newsticker/meldung/Neuerungen-bei-Googles-App-Angebot-fuer-iPhone-und-iPad-1864260.html/from/related" title="Neuerungen bei Googles App-Angebot für iPhone und iPad">Neuerungen bei Googles App-Angebot für iPhone und iPad</a></li>
+	
+	    <li><a href="http://www.heise.de/newsticker/meldung/Google-angeblich-an-WhatsApp-interessiert-1836740.html/from/related" title="Google angeblich an WhatsApp interessiert">Google angeblich an WhatsApp interessiert</a></li>
+	
+	    <li><a href="http://www.heise.de/newsticker/meldung/Google-Hangouts-on-Air-Die-ganze-Welt-schaut-zu-1667865.html/from/related" title="Google+ Hangouts on Air: Die ganze Welt schaut zu">Google+ Hangouts on Air: Die ganze Welt schaut zu</a></li>
+	
+	    <li><a href="http://www.heise.de/ct/artikel/Instant-Messaging-statt-SMS-1432730.html/from/related" title="Instant Messaging statt SMS">Instant Messaging statt SMS</a></li>
+	
+	</ul>
+</div>
+
+
+    
+
+
+<p class="themenseiten">
+    <span class="themen_label">Mehr zum Thema </span>
+    
+        <a href="/thema/Google" title="Themenseite Google">Google</a>
+    
+</p>
+
+
+    
+
+</div>
+
+            <!--googleoff: all-->
+            <div class="adbottom">                <!--googleoff: index-->
+<!-- RSPEAK_STOP -->
+<a href="http://www.heise.de/mediadaten/online/" target="_blank" class="hinweis_anzeige">Anzeige</a><br><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var dfp_ord; if (!dfp_ord) { dfp_ord = Math.floor(Math.random()*1000000000)+1000000000; }
+document.write('<script src="http://ad-emea.doubleclick.net/N6514/adj/newsticker/news-security;sz=500x500;kw=Google,Google%20Hangout,Google%20Talk;tile=1;ord=_ORD_?" type="text/javascript"><\/script>'.replace('_ORD_', dfp_ord));
+if (typeof jQuery != 'undefined') {
+    jQuery( function() {
+        jQuery('.adbottom div[id^=google_ads_div_]').parent().prepend('<span style="font-family: Arial, Helvetica, sans-serif; color: Black; font-size:7pt; font-weight: normal; text-align: left;">Anzeige</span><br/>');
+    });
+}
+
+//--><!]]>
+</script>
+<noscript><div><a href="http://ad-emea.doubleclick.net/N6514/jump/newsticker/news-security;sz=500x500;kw=Google,Google%20Hangout,Google%20Talk;tile=1;ord=3420943969?" target="_blank"><img alt="" src="http://ad-emea.doubleclick.net/N6514/ad/newsticker/news-security;sz=500x500;kw=Google,Google%20Hangout,Google%20Talk;tile=1;ord=3420943969?" /></a></div></noscript>
+
+<!-- RSPEAK_START -->
+<!--googleon: index-->
+            </div>
+                
+                </div>
+                <div id="mitte_rechts">
+                            <!--googleoff: index-->
+<!-- RSPEAK_STOP -->
+<div  class="bcadv ISI_IGNORE"><a href="http://www.heise.de/mediadaten/online/" target="_blank" class="hinweis_anzeige">Anzeige</a><br><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var dfp_ord; if (!dfp_ord) { dfp_ord = Math.floor(Math.random()*1000000000)+1000000000; }
+document.write('<script src="http://ad-emea.doubleclick.net/N6514/adj/newsticker/news-security;sz=300x250,336x280;kw=Google,Google%20Hangout,Google%20Talk;tile=2;ord=_ORD_?" type="text/javascript"><\/script>'.replace('_ORD_', dfp_ord));
+//--><!]]>
+</script>
+<noscript><div><a href="http://ad-emea.doubleclick.net/N6514/jump/newsticker/news-security;sz=300x250,336x280;kw=Google,Google%20Hangout,Google%20Talk;tile=2;ord=3420943969?" target="_blank"><img alt="" src="http://ad-emea.doubleclick.net/N6514/ad/newsticker/news-security;sz=300x250,336x280;kw=Google,Google%20Hangout,Google%20Talk;tile=2;ord=3420943969?" /></a></div></noscript>
+</div>
+<!-- RSPEAK_START -->
+<!--googleon: index--><!--googleoff: all--><!-- RSPEAK_STOP -->
+                            <div id="channellayout" class="security">
+                                <h3>heise Security</h3>
+                                
+                                
+
+
+    
+    
+    
+	
+        <div id="artikel"> 
+        
+        <div class="teaser_linker">
+            <h3><a href="/security/artikel/Besser-mit-Touch-1965801.html" title="Besser mit Touch">Besser mit Touch</a></h3>
+            <img src="/security/imgs/07/1/0/8/4/5/1/1/touch_id-d38b7e625462124b-415d714e6064de07.png" width="100" height="92" alt="" title="" />
+            <p>
+                Der Fingerabdruck-Scanner des iPhone 5S wurde gehackt – so what? Das war zu erwarten. Trotzdem verbessert Touch ID die Sicherheit des iPhones ganz deutlich.
+            </p>
+            <div class="clear"></div>
+        </div>
+        
+         
+	
+         
+        
+        <div class="teaser_linker">
+            <h3><a href="/security/artikel/Browser-SSL-entschluesselt-1948431.html" title="Browser-SSL entschlüsselt ">Browser-SSL entschlüsselt </a></h3>
+            <img src="/security/imgs/07/1/0/7/1/0/2/5/old_keys-733b4afdb21b26c4.jpeg" width="100" height="52" alt="" title="" />
+            <p>
+                Mit einem kleinen Trick speichern Firefox und Chrome die verwendeten Schlüssel so, dass Wireshark die damit verschlüsselten Daten gleich dekodieren kann.
+            </p>
+            <div class="clear"></div>
+        </div>
+        
+         
+	
+         
+        
+        <div class="teaser_linker">
+            <h3><a href="/security/artikel/Remote-Shell-fuer-die-SD-Karte-1933994.html" title="Remote-Shell für die SD-Karte">Remote-Shell für die SD-Karte</a></h3>
+            <img src="/security/imgs/07/1/0/6/1/0/0/3/sdwifi-9f4e13f5c8e12687.png" width="100" height="76" alt="" title="" />
+            <p>
+                Kaum etwas ist zu klein, um gehackt zu werden: Einem Blogger ist es gelungen, Root-Zugriff auf das Embedded-System einer WLAN-fähigen Speicherkarte zu erlangen.
+            </p>
+            <div class="clear"></div>
+        </div>
+        
+        </div> 
+	
+
+
+
+                                
+
+
+    
+    
+        <h4>Alerts</h4>
+    
+    <ul>
+    
+        <li><a href="/meldung/Exploit-fuer-ungepatchte-Internet-Explorer-Luecke-1970621.html" title="Exploit für ungepatchte Internet-Explorer-Lücke" class="kasten_rechts">Exploit für ungepatchte Internet-Explorer-Lücke</a></li>
+    
+        <li><a href="/meldung/Luecke-im-Internet-Explorer-fuer-Angriffe-genutzt-1960256.html" title="Lücke im Internet Explorer für Angriffe genutzt" class="kasten_rechts">Lücke im Internet Explorer für Angriffe genutzt</a></li>
+    
+        <li><a href="/meldung/Verdacht-auf-Zero-Day-Luecke-in-OpenX-und-Revive-1954503.html" title="Verdacht auf Zero-Day-Lücke in OpenX und Revive" class="kasten_rechts">Verdacht auf Zero-Day-Lücke in OpenX und Revive</a></li>
+    
+        <li><a href="/meldung/Adobe-stopft-Luecken-in-Reader-Acrobat-und-Flash-1954295.html" title="Adobe stopft Lücken in Reader, Acrobat und Flash" class="kasten_rechts">Adobe stopft Lücken in Reader, Acrobat und Flash</a></li>
+    
+        <li><a href="/meldung/Microsoft-Patchday-Gefaehrliche-Mail-Vorschau-in-Outlook-1953906.html" title="Microsoft-Patchday: Gefährliche Mail-Vorschau in Outlook" class="kasten_rechts">Microsoft-Patchday: Gefährliche Mail-Vorschau in Outlook</a></li>
+    
+    </ul>
+
+
+
+                                
+
+
+    
+    
+        <h4 class="teaser_title">News</h4>
+    
+    <ul>
+    
+        <li><a href="/security/meldung/Exploit-fuer-ungepatchte-Internet-Explorer-Luecke-1970621.html" title="Exploit für ungepatchte Internet-Explorer-Lücke">Exploit für ungepatchte Internet-Explorer-Lücke</a></li>
+    
+        <li><a href="/security/meldung/PayPal-Zweiter-Faktor-optional-1970328.html" title="PayPal: Zweiter Faktor optional">PayPal: Zweiter Faktor optional</a></li>
+    
+        <li><a href="/security/meldung/Bitcoin-Mining-Botnetz-um-500-000-Bots-erleichtert-1970116.html" title="Bitcoin-Mining-Botnetz um 500.000 Bots erleichtert">Bitcoin-Mining-Botnetz um 500.000 Bots erleichtert</a></li>
+    
+        <li><a href="/security/meldung/BYOD-Eigenes-Handy-als-Notloesung-1969927.html" title="BYOD: Eigenes Handy als Notlösung">BYOD: Eigenes Handy als Notlösung</a></li>
+    
+        <li><a href="/security/meldung/Groesster-Bitcoin-Pool-von-Hackerangriffen-geplagt-1969644.html" title="Größter Bitcoin-Pool von Hackerangriffen geplagt">Größter Bitcoin-Pool von Hackerangriffen geplagt</a></li>
+    
+    </ul>
+
+
+
+                                
+    
+    
+    <p class="us_ad">
+        <span><a href="/mediadaten/online/" target="_blank">Anzeige</a></span><br>
+        <a href="http://pubads.g.doubleclick.net/gampad/clk?id=25787390&amp;iu=/6514/extras/usad" rel="external"><img src="/imgs/02/1/0/8/6/9/7/9/20130930_DeveloperGarden_Worklight_336x200_02-c576d76f006af91f.jpg" width="336" height="200" alt=""></a>
+        <script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+            (function (){
+                var AVW = '<' + 'img id="avw_pixel_intern" src="/avw-bin/ivw/CP/barfoo/ho/1970032/1968038.gif?d=_ORD_" width="1" height="1" alt="">'.replace('_ORD_', Math.floor(Math.random()*1000000000)+1000000000);
+                document.write(AVW);
+            })();
+        //--><!]]>
+        </script>
+        <noscript><img id="avw_pixel_intern" src="/avw-bin/ivw/CP/barfoo/ho/1970032/1968038.gif" width="1" height="1" alt=""></noscript>
+    </p>
+     
+
+
+
+                                
+    <div class="teaser_adliste">
+        <p>Werbung</p>
+        <ul class="microsites">
+        
+            <li><a href="http://pubads.g.doubleclick.net/gampad/clk?id=25602350&amp;iu=/6514/microsite/hp_toner" rel="nofollow">20%-Aktion: Original umweltfreundliche HP Toner</a></li>
+        
+            <li><a href="http://pubads.g.doubleclick.net/gampad/clk?id=25240190&amp;iu=/6514/microsite/messe_muc" rel="nofollow">Hier zum Ticket für die Communication World</a></li>
+        
+            <li><a href="http://pubads.g.doubleclick.net/gampad/clk?id=24509750&amp;iu=/6514/newsticker" rel="nofollow">Innovate2013: Der größte Technical Summit von IBM</a></li>
+        
+            <li><a href="http://pubads.g.doubleclick.net/gampad/clk?id=24728870&amp;iu=/6514/microsite/messe_nuernberg" rel="nofollow">it-sa 2013 – die führende Fachmesse für IT-Sicherheit</a></li>
+        
+            <li><a href="http://pubads.g.doubleclick.net/gampad/clk?id=25532030&amp;iu=/6514/newsticker" rel="nofollow">Multi-Link-VPN: Unternehmensvernetzung verbessern</a></li>
+        
+            <li><a href="http://pubads.g.doubleclick.net/gampad/clk?id=24935630&amp;iu=/6514/microsite/mailstore" rel="nofollow">Moderne E-Mail-Archivierung mit MailStore</a></li>
+        
+            <li><a href="http://www.heise.de/whitepapers/Zehn-Wege-zu-einem-effektiveren-Patch-Management--/detail/2012" rel="nofollow">Zehn Wege zu einem effektiveren Patch-Management</a></li>
+        
+            <li><a href="http://webcasts.heise.de/virtualisierung-cloud/private-cloud--so-nutzen-sie-ihre-rz-ressourcen-effektiv-kostensparend-und-dynamisch/?source=cisco_09_13_tl" rel="nofollow">Webcast Private Cloud: Geld sparen im Data Center</a></li>
+        
+            <li><a href="http://webcasts.heise.de/dellsoftware/big-data-komplexe-daten/?source=DellSW_05_09_13_TL2" rel="nofollow">Big Data – machen Sie mehr aus Ihren Daten!</a></li>
+        
+            <li><a href="http://webcasts.heise.de/server-storage/so-reduzieren-sie-die-komplexitaet-im-modernen-rechenzentrum/?source=HP_04_12_TL" rel="nofollow">Webcast: Komplexität im Rechenzentrum reduzieren</a></li>
+        
+            <li><a href="http://webcasts.heise.de/server-storage/vollgas-fuer-ihre-it-ressourcen-automatisiert-sicher-und-mandantenorientiert-bereitstellen/h/?source=cisco_10_13_tl" rel="nofollow">RZ-Betrieb so einfach wie Autofahren – so geht’s!</a></li>
+        
+            <li><a href="http://www.heise.de/microsites/next-generation-networking-mehr-sicherheit-fuer-unternehmen/158/390/" rel="nofollow">Mythos Firewall – so schützen Sie sich richtig</a></li>
+        
+        </ul>
+    </div>
+    
+
+
+                                
+                                
+                                
+                                
+                                <div class="naviad"><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var dfp_ord; if (!dfp_ord) { dfp_ord = Math.floor(Math.random()*1000000000)+1000000000; }
+document.write('<script src="http://ad-emea.doubleclick.net/N6514/adj/newsticker/news-security;sz=336x200;kw=Google,Google%20Hangout,Google%20Talk;tile=3;ord=_ORD_?" type="text/javascript"><\/script>'.replace('_ORD_', dfp_ord));
+//--><!]]>
+</script>
+<noscript><div><a href="http://ad-emea.doubleclick.net/N6514/jump/newsticker/news-security;sz=336x200;kw=Google,Google%20Hangout,Google%20Talk;tile=3;ord=3420943969?" target="_blank"><img alt="" src="http://ad-emea.doubleclick.net/N6514/ad/newsticker/news-security;sz=336x200;kw=Google,Google%20Hangout,Google%20Talk;tile=3;ord=3420943969?" /></a></div></noscript>
+</div>
+                                <div class="clear"></div>
+                                <div style="margin: 1em auto; width: 364px; text-align: center;">
+<a href="http://www.heise.de/mediadaten/online/" style="font-size: 9px; color: #151515; text-decoration: none;">Anzeige</a><br>
+<a href="http://www.seenby.de" rel="external"><img src="/icons/ho/seen_by_banner.gif" alt="seen.by" /></a>
+</div>
+                                
+    <div class="teaser_preisvergleich">
+	<h4><a href="http://www.heise.de/preisvergleich/" title="Recherche und Preisvergleich Top 10">Top-10 Preisvergleich</a></h4>
+
+
+<ol>
+
+    <li>
+	<span class="num">1.</span>
+	<a href="http://www.heise.de/preisvergleich/a987037.html" title="Symantec: Norton Internet Security 2014, 3 User, Update (deutsch) (PC)" class="top10">Symantec: Norton Internet Security 2014</a>
+	<div>
+	    <a href="http://www.heise.de/preisvergleich/?o=102"  >Sicherheit &amp; Backup</a>
+	    <span class="rsaquo">&rsaquo;</span>
+	    <a href="http://www.heise.de/preisvergleich/?m=2" >Software</a>
+	    <span class="rsaquo">&rsaquo;</span>
+	    <a href="http://www.heise.de/preisvergleich/?cat=swsec_is" >Internet Security</a>
+	</div>
+    </li>
+
+    <li>
+	<span class="num">2.</span>
+	<a href="http://www.heise.de/preisvergleich/a991125.html" title="Acronis: True Image 2014 (deutsch) (PC) (TIHTB2DES)" class="top10">Acronis: True Image 2014 (deutsch) (PC) </a>
+	<div>
+	    <a href="http://www.heise.de/preisvergleich/?o=102"  >Sicherheit &amp; Backup</a>
+	    <span class="rsaquo">&rsaquo;</span>
+	    <a href="http://www.heise.de/preisvergleich/?m=2" >Software</a>
+	    <span class="rsaquo">&rsaquo;</span>
+	    <a href="http://www.heise.de/preisvergleich/?cat=swutil_bak" >Backup</a>
+	</div>
+    </li>
+
+    <li>
+	<span class="num">3.</span>
+	<a href="http://www.heise.de/preisvergleich/a968680.html" title="Kaspersky Lab: Internet Security 2014, 3 User, 1 Jahr, Update (deutsch) (PC)" class="top10">Kaspersky Lab: Internet Security 2014</a>
+	<div>
+	    <a href="http://www.heise.de/preisvergleich/?o=102"  >Sicherheit &amp; Backup</a>
+	    <span class="rsaquo">&rsaquo;</span>
+	    <a href="http://www.heise.de/preisvergleich/?m=2" >Software</a>
+	    <span class="rsaquo">&rsaquo;</span>
+	    <a href="http://www.heise.de/preisvergleich/?cat=swsec_is" >Internet Security</a>
+	</div>
+    </li>
+
+    <li>
+	<span class="num">4.</span>
+	<a href="http://www.heise.de/preisvergleich/a968684.html" title="Kaspersky Lab: Internet Security 2014, 1 User, 1 Jahr, Update (deutsch) (PC)" class="top10">Kaspersky Lab: Internet Security 2014</a>
+	<div>
+	    <a href="http://www.heise.de/preisvergleich/?o=102"  >Sicherheit &amp; Backup</a>
+	    <span class="rsaquo">&rsaquo;</span>
+	    <a href="http://www.heise.de/preisvergleich/?m=2" >Software</a>
+	    <span class="rsaquo">&rsaquo;</span>
+	    <a href="http://www.heise.de/preisvergleich/?cat=swsec_is" >Internet Security</a>
+	</div>
+    </li>
+
+    <li>
+	<span class="num">5.</span>
+	<a href="http://www.heise.de/preisvergleich/a990301.html" title="Symantec: Norton Internet Security 2014, 3 User (deutsch) (PC)" class="top10">Symantec: Norton Internet Security 2014</a>
+	<div>
+	    <a href="http://www.heise.de/preisvergleich/?o=102"  >Sicherheit &amp; Backup</a>
+	    <span class="rsaquo">&rsaquo;</span>
+	    <a href="http://www.heise.de/preisvergleich/?m=2" >Software</a>
+	    <span class="rsaquo">&rsaquo;</span>
+	    <a href="http://www.heise.de/preisvergleich/?cat=swsec_is" >Internet Security</a>
+	</div>
+    </li>
+
+    <li>
+	<span class="num">6.</span>
+	<a href="http://www.heise.de/preisvergleich/a968678.html" title="Kaspersky Lab: Internet Security 2014, 3 User, 1 Jahr (deutsch) (PC)" class="top10">Kaspersky Lab: Internet Security 2014</a>
+	<div>
+	    <a href="http://www.heise.de/preisvergleich/?o=102"  >Sicherheit &amp; Backup</a>
+	    <span class="rsaquo">&rsaquo;</span>
+	    <a href="http://www.heise.de/preisvergleich/?m=2" >Software</a>
+	    <span class="rsaquo">&rsaquo;</span>
+	    <a href="http://www.heise.de/preisvergleich/?cat=swsec_is" >Internet Security</a>
+	</div>
+    </li>
+
+    <li>
+	<span class="num">7.</span>
+	<a href="http://www.heise.de/preisvergleich/a968690.html" title="Kaspersky Lab: Internet Security 2014, 5 User, 1 Jahr (deutsch) (PC)" class="top10">Kaspersky Lab: Internet Security 2014</a>
+	<div>
+	    <a href="http://www.heise.de/preisvergleich/?o=102"  >Sicherheit &amp; Backup</a>
+	    <span class="rsaquo">&rsaquo;</span>
+	    <a href="http://www.heise.de/preisvergleich/?m=2" >Software</a>
+	    <span class="rsaquo">&rsaquo;</span>
+	    <a href="http://www.heise.de/preisvergleich/?cat=swsec_is" >Internet Security</a>
+	</div>
+    </li>
+
+    <li>
+	<span class="num">8.</span>
+	<a href="http://www.heise.de/preisvergleich/a991075.html" title="Acronis: True Image 2014 Premium (deutsch) (PC) (TPHTB2DES)" class="top10">Acronis: True Image 2014 Premium (deutsch) (PC) </a>
+	<div>
+	    <a href="http://www.heise.de/preisvergleich/?o=102"  >Sicherheit &amp; Backup</a>
+	    <span class="rsaquo">&rsaquo;</span>
+	    <a href="http://www.heise.de/preisvergleich/?m=2" >Software</a>
+	    <span class="rsaquo">&rsaquo;</span>
+	    <a href="http://www.heise.de/preisvergleich/?cat=swutil_bak" >Backup</a>
+	</div>
+    </li>
+
+    <li>
+	<span class="num">9.</span>
+	<a href="http://www.heise.de/preisvergleich/a991386.html" title="Softwin: BitDefender Internet Security 2014, 3 User, 1 Jahr (deutsch) (PC)" class="top10">Softwin: BitDefender Internet Security 2014</a>
+	<div>
+	    <a href="http://www.heise.de/preisvergleich/?o=102"  >Sicherheit &amp; Backup</a>
+	    <span class="rsaquo">&rsaquo;</span>
+	    <a href="http://www.heise.de/preisvergleich/?m=2" >Software</a>
+	    <span class="rsaquo">&rsaquo;</span>
+	    <a href="http://www.heise.de/preisvergleich/?cat=swsec_is" >Internet Security</a>
+	</div>
+    </li>
+
+    <li>
+	<span class="num">10.</span>
+	<a href="http://www.heise.de/preisvergleich/a37622.html" title="Netgear ProSafe VPN Firewall/Router, 8-Port (FVS318)" class="top10">Netgear ProSafe VPN Firewall/Router</a>
+	<div>
+	    <a href="http://www.heise.de/preisvergleich/?o=14"  >Netzwerk LAN/Modems</a>
+	    <span class="rsaquo">&rsaquo;</span>
+	    <a href="http://www.heise.de/preisvergleich/?m=1" >Hardware</a>
+	    <span class="rsaquo">&rsaquo;</span>
+	    <a href="http://www.heise.de/preisvergleich/?cat=nwfw" >Hardware-Firewall</a>
+	</div>
+    </li>
+
+</ol>
+
+<form method="get" action="http://www.heise.de/preisvergleich/" id="sform">
+<div>
+    <input type="text" name="fs" size="15" />
+    <select name="in">
+	<option value="">in allen Kategorien</option>
+	<option value="1">in Hardware</option>
+	<option value="2">in Software</option>
+	<option value="3">in Games</option>
+	<option value="4">in Video/Foto/TV</option>
+	<option value="5">in Telefon &amp; Co</option>
+	<option value="6">in Audio/HIFI</option>
+	<option value="7">in DVD</option>
+	<option value="8">in Haushalt</option>
+    </select>
+    <input type="submit" value="Suchen" class="submit" />
+</div>
+</form>
+
+
+    </div>
+
+
+                                
+
+
+    
+    <div class="teaser_scriptinclude"><script type="text/javascript" src="http://whitepaper.heise.de/special_ads/script/51.js"></script></div>
+
+
+
+                                
+                                <div class="sales"></div>
+                                <div class="contentbanner"></div>
+                            </div>
+                </div>
+            </div>
+            <div id="sitemap">
+                <ul class="navi_top_abschnitt">
+                    <li><a href="/"                           title="heise online"            class="navi_oben_ho"    name="footer.ho.ho">heise online</a></li>
+                    <li><a href="/ct/"                        title="c't"                     class="navi_oben_ct"    name="footer.ho.ct">c't Magazin</a></li>
+                    <li><a href="/ix/"                        title="iX"                      class="navi_oben_ix"    name="footer.ho.ix">iX Magazin</a></li>
+                    <li><a href="/tr/"                        title="Technology Review"       class="navi_oben_tr"    name="footer.ho.tr">Technology&nbsp;Review</a></li>
+                    <li><a href="/mac-and-i/"                 title="Mac &amp; i"             class="navi_oben_mac"   name="footer.ho.mac-and-i">Mac &amp; i</a></li>
+                </ul>
+                <ul class="navi_top_abschnitt">
+                    <li><a href="/tp/"                        title="Telepolis"               class="navi_oben_tp"    name="footer.ho.tp">Telepolis</a></li>
+                    <li><a href="/hardware-hacks/"            title="Hardware Hacks"          class="navi_oben_hh"    name="footer.ho.hardware-hacks">Hardware Hacks</a></li>
+                    <li><a href="/foto/inhalt/"               title="Digitale Fotografie"     class="navi_oben_df"    name="footer.ho.digitale-fotografie">Digitale Fotografie</a></li>
+                    <li><a href="/autos/"                     title="heise Autos"             class="navi_oben_aut"    name="footer.ho.autos" >heise Autos</a></li>
+                    <li><a href="/developer/"                 title="heise Developer"         class="navi_oben_dev"    name="footer.ho.developer">heise Developer</a></li>
+                </ul>
+                <ul class="navi_top_abschnitt">
+                    <li><a href="/foto/"                      title="heise Foto"              class="navi_oben_foto"   name="footer.ho.foto">heise Foto</a></li>
+                    <li><a href="/netze/"                     title="heise Netze"             class="navi_oben_net"    name="footer.ho.netze">heise Netze</a></li>
+                    <li><a href="/open/"                      title="heise Open Source"       class="navi_oben_op"     name="footer.ho.open">Open Source</a></li>
+                    <li><a href="/resale/"                    title="heise resale"            class="navi_oben_res"    name="footer.ho.resale">heise Resale</a></li>
+                    <li><a href="/security/"                  title="heise Security"          class="navi_oben_sec"    name="footer.ho.security">heise Security</a></li>
+                </ul>
+                <ul class="navi_top_abschnitt">
+                    <li><a href="/video/"                     title="heise Video"             class="navi_oben_video"  name="footer.ho.video">heise Video</a></li>
+                    <li><a href="http://www.techstage.de/"    title="TechStage"               class="navi_oben_tech"   name="footer.ho.techstage">TechStage</a></li>
+                    <li><a href="/download/"                  title="Software-Verzeichnis"    class="navi_oben_swv"    name="footer.ho.download">Download</a></li>
+                    <li><a href="/preisvergleich/"            title="Preisvergleich"          class="navi_oben_pvg"    name="footer.ho.preisvergleich">Preisvergleich</a></li>
+                    <li><a href="/jobs/"                      title="heise jobs"              class="navi_oben_job"    name="footer.ho.jobs">Stellenmarkt</a></li>
+                </ul>
+                <ul class="navi_top_abschnitt">
+                    <li><a href="/events/"                    title="heise Events"            class="navi_oben_eve"    name="footer.ho.events">Veranstaltungen</a></li>
+                    <li><a href="/itmarkt/"                   title="IT-Markt"                class="navi_oben_itm"    name="footer.ho.itmarkt">IT-Markt</a></li>
+                    <li><a href="/whitepapers/"               title="heise Whitepapers"       class="navi_oben_whi"    name="footer.ho.whitepapers">heise Whitepapers</a></li>
+                    <li><a href="http://tarifrechner.heise.de/" title="Tarifrechner"          class="navi_oben_tarifr" name="footer.ho.tarifrechner">Tarifrechner</a></li>
+                    <li><a href="http://shop.heise.de/"       title="heise-shop"              class="navi_oben_shop"   name="footer.ho.shop">Shop</a></li>
+                </ul>
+                <ul class="navi_top_abschnitt">
+                    <li><a href="/artikel-archiv/"            title="Artikel-Archiv"          class="navi_oben_kio"    name="footer.ho.artikel-archiv">Artikel-Archiv</a></li>
+                    <li><a href="https://abo.heise.de/"       title="Zeitschriften-Abo"       class="navi_oben_abo"    name="footer.ho.abo">Abo</a></li>
+                    <li><a href="/loseblattwerke/"            title="Loseblattwerke"                                   name="footer.ho.loseblattwerke">Loseblattwerke</a></li>
+                    <li><a href="/news-extern/news.html"   title="RSS"                name="footer.ho.rss">RSS</a></li>
+                </ul>
+                <ul class="navi_top_abschnitt">
+                    <li><a href="/foren/"                     title="Leserforum"                                       name="footer.ho.forum">Leserforum</a></li>
+                    <li><a href="/newsletter/"                title="Newsletter"                                       name="footer.ho.newsletter">Newsletter</a></li>
+                    <li><a href="/suche/"                     title="Suche"                                            name="footer.ho.suche">Suche</a></li>
+                    <li><a href="/netze/netzwerk-tools/imonitor-internet-stoerungen/"       title="iMonitor – Internet-Störungen" name="footer.ho.imonitor">iMonitor</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="bannerzone">
+            <div class="leaderboard"><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var dfp_ord; if (!dfp_ord) { dfp_ord = Math.floor(Math.random()*1000000000)+1000000000; }
+var rb = false; document.write('<script src="http://ad-emea.doubleclick.net/N6514/adj/newsticker/news-security;sz=728x90,468x60;kw=Google,Google%20Hangout,Google%20Talk;tile=4;ord=_ORD_?" type="text/javascript"><\/script>'.replace('_ORD_', dfp_ord));
+//--><!]]>
+</script>
+<noscript><div><a href="http://ad-emea.doubleclick.net/N6514/jump/newsticker/news-security;sz=728x90,468x60;kw=Google,Google%20Hangout,Google%20Talk;tile=4;ord=3420943969?" target="_blank"><img alt="" src="http://ad-emea.doubleclick.net/N6514/ad/newsticker/news-security;sz=728x90,468x60;kw=Google,Google%20Hangout,Google%20Talk;tile=4;ord=3420943969?" /></a></div></noscript>
+</div>
+            <div class="heiseadvert"></div>
+            <div class="skyscraper" ><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var dfp_ord; if (!dfp_ord) { dfp_ord = Math.floor(Math.random()*1000000000)+1000000000; }
+if (typeof rb != "undefined" && rb != true) document.write('<script src="http://ad-emea.doubleclick.net/N6514/adj/newsticker/news-security;sz=120x600,120x800,160x600,160x800;kw=Google,Google%20Hangout,Google%20Talk;tile=5;ord=_ORD_?" type="text/javascript"><\/script>'.replace('_ORD_', dfp_ord));
+//--><!]]>
+</script>
+<noscript><div><a href="http://ad-emea.doubleclick.net/N6514/jump/newsticker/news-security;sz=120x600,120x800,160x600,160x800;kw=Google,Google%20Hangout,Google%20Talk;tile=5;ord=3420943969?" target="_blank"><img alt="" src="http://ad-emea.doubleclick.net/N6514/ad/newsticker/news-security;sz=120x600,120x800,160x600,160x800;kw=Google,Google%20Hangout,Google%20Talk;tile=5;ord=3420943969?" /></a></div></noscript>
+</div>
+            
+        </div>
+        <script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+        jQuery(document).ready( function($) {
+            $('#mitte_links, #mitte_rechts').setMinHeight($('#mitte_links, #mitte_rechts').objectMaxHeight());
+        });
+        //--><!]]>
+        </script>
+    </div>
+
+
+
+<div style="display: inline;"><img id="ivw_pixel_intern" src="/ivw-bin/ivw/CP/newsticker/meldungen/security/1968038" width="1" height="1" alt="" /></div>
+    
+    <script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+            var AVW = '<' + 'div style="display: inline;"><' + 'img id="avw_pixel_intern" src="/avw-bin/ivw/CP/mbe/newsticker/news-security" width="1" height="1" alt="" /><' + '/div>';
+            document.write(AVW);
+        //--><!]]>
+    </script>
+    
+        <script type="text/javascript">
+            <!--//--><![CDATA[//><!--
+            var IVW='<div style="display: inline;"><img id="ivw_pixel" src="http://heise.ivwbox.de/cgi-bin/ivw/CP/newstick_sec;%2Fnewsticker%2Fmeldungen%2Fsecurity%2F1968038?r=';
+            document.write(IVW + '&amp;d=' + (Math.random()*100000) + '" width="1" height="1" alt="" /><' + '/div>');
+            //--><!]]>
+        </script>
+        <script type="text/javascript" src="/support/lib/mclient/mclient-1.0.js"></script>
+        <noscript>
+            <div style="display: inline;"><img id="ivw_pixel_noscript" src="http://heise.ivwbox.de/cgi-bin/ivw/CP/newstick_sec;/newsticker/meldungen/security/1968038?r=&amp;d=" width="1" height="1" alt="" /></div>
+        </noscript>
+        <script type="text/javascript">
+            <!--//--><![CDATA[//><!--
+            window.onunload=function() {};
+            //--><!]]>
+        </script>
+        
+            <!-- SZMFRABO VERSION="1.2" -->
+            <script type="text/javascript">
+                <!--//--><![CDATA[//><!--
+                var szmvars="heise//CP//newstick_sec";
+                //--><!]]>
+            </script>
+            <script src="http://heise.ivwbox.de/2004/01/survey.js" type="text/javascript"></script>
+            <!-- /SZMFRABO -->
+        
+
+
+<!-- RL -->
+
+    
+
+<!-- /RL -->
+
+
+<!-- Webtrekk 3.2.2, (c) www.webtrekk.com -->
+    <script type="text/javascript" src="/js/ho/webtrekk-v3-bundle-heise-2013-01-21.js"></script>
+    <script type="text/javascript">
+    <!--
+    var pageConfig = {
+        linkTrack : "standard", // Activate Link Tracking    [link or standard]
+        heatmap : "0",          // Activate Heatmap Tracking [1 = on | 0 = off]
+        form : "0",             // Activate Form Tracking    [1 = on | 0 = off]
+        trackId : "288689636920174",
+        pixelSampling : "",
+        contentId: "www.heise.de.newsticker.meldung.google-hangouts-liefert-messages-an-falsche-adressaten-1968038"
+    };
+    var wt = new webtrekkV3(pageConfig);
+    wt.contentGroup = {};
+    wt.contentGroup['1']  = "www.heise.de";
+    wt.contentGroup['2']  = "newsticker";
+    wt.contentGroup['3']  = "meldung";
+    wt.contentGroup['4']  = "google-hangouts-liefert-messages-an-falsche-adressaten-1968038";
+    
+    
+    
+    
+    wt.contentGroup['9']  = "google-hangouts-liefert-messages-an-falsche-adressaten-1968038";
+    wt.contentGroup['10'] = "meldung";
+
+    wt.customParameter = {};
+    
+    wt.customParameter['2']  = "google;google hangout;google talk";
+    
+    
+    
+    wt.customParameter['6']  = "google;google hangout;google talk";
+    
+    wt.customParameter['8']  = "2013-09-26T16:40:00";
+    wt.customParameter['9']  = "security";
+    wt.customParameter['10'] = "mac-and-i;newsticker;security";
+
+    wt.heatmapRefpoint = 'container_content';
+    wt.sendinfo();
+
+    //-->
+    </script>
+    <noscript><div><img src="//prophet.heise.de/288689636920174/wt.pl?p=322,www.heise.de.newsticker.meldung.google-hangouts-liefert-messages-an-falsche-adressaten-1968038&cg1=www.heise.de&cg10=meldung&cg2=newsticker&cg3=meldung&cg4=google-hangouts-liefert-messages-an-falsche-adressaten-1968038&cg9=google-hangouts-liefert-messages-an-falsche-adressaten-1968038&cp10=mac-and-i%3Bnewsticker%3Bsecurity&cp2=google%3Bgoogle%20hangout%3Bgoogle%20talk&cp6=google%3Bgoogle%20hangout%3Bgoogle%20talk&cp8=2013-09-26T16%3A40%3A00&cp9=security" height="1" width="1" alt="" /></div></noscript>
+
+
+<!-- /Webtrekk -->
+
+    <script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+        // VGWORT-CROP-MARKER
+        var vgwort_token='c1c02f8865e14e24b9da27e7c7580794';
+                document.write('<div style="display: inline;"><img src="http://heise.met.vgwort.de/na/' +  vgwort_token);
+        document.write('" width="1" height="1" alt="" /><' + '/div>');
+        //--><!]]>
+    </script>
+
+    
+        
+
+<div style="display: inline;"><img src="/avw-bin/ivw/CP/difftest/jorge" width="1" height="1" alt="" /></div>
+<div style="display: inline;"><img src="/avw-bin/ivw/CP/difftest/casey" width="1" height="1" alt="" /></div>
+
+	<ul id="navi_bottom">
+
+	
+		<li class="left"><a href="/Privacy-Policy-der-Heise-Zeitschriften-Verlag-GmbH-Co-KG-4860.html">Datenschutzhinweis</a> </li>
+	
+
+	
+		<li class="left"><a href="/Impressum-4862.html">Impressum</a> </li>
+	
+
+	
+		<li class="left"><a href="/Kontakt-4864.html">Kontakt</a> </li>
+	
+
+	
+		<li class="left"><a href="/mediadaten/">Mediadaten</a> </li>
+	
+
+
+<li class="bid_anzeige">
+1085708
+</li>
+
+
+
+    <li class="right"><a href="http://www.interred.de/" rel="external" style="margin-right: 0;">Content Management</a> by <b style="margin-right: 0.5em;">Inter<span class="tx_red">Red</span></b></li>
+
+	
+		
+		<li class="right"><a href="http://www.plusline.de/">Hosted by Plus.line</a> </li>
+		
+		<li class="right"><a href="http://www.heise-medien.de/zeitschriften/">Copyright © 2013 Heise Zeitschriften Verlag</a> </li>
+		
+	
+
+	
+</ul>
+
+    
+</body>
+</html>
+<!-- Created with InterRed V13.0-x.x.x.x, http://www.interred.de/, by InterRed GmbH -->
+<!-- BID: 1085708, iBID: 1085754, CID: 1968038, iCID: 1968086 -->
+<!-- Link: $(LB1085708:Linktext)$ $(LC1968038:Linktext)$ -->
+<!-- Generiert: 2013-09-26 16:58:00 -->
+

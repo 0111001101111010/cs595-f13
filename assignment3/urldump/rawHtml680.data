@@ -1,0 +1,562 @@
+	
+
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lte-ie8" id="viget-com" lang="en" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" id="viget-com" lang="en" prefix="og: http://ogp.me/ns#"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+
+	<title>Rails Named Routes: Path Vs. URL | Viget</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="http://viget.com/cache/assets/13806555467346515e99c9401ba4855cd0354211ad.css">
+
+	<script src="http://viget.com/cache/assets/13690581559c8c59625e166ec3207db2bc07541221.js"></script>
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@viget">
+	<meta name="twitter:creator" content="@viget">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://viget.com/extend/rails-named-routes-path-vs-url">
+			<meta property="og:title" content="Rails Named Routes: Path Vs. URL | Viget">
+					<meta property="oq:description" content="As we all learned in Rails 101, named routes come in two varieties: path, and URL. When should we use each variety?Let's say we have this entry in a routes.rb file: map.resources :doohickeys
+ So, we can refer to doohickeys_path, which returns a">
+		<meta name="twitter:description" content="As we all learned in Rails 101, named routes come in two varieties: path, and URL. When should we use each variety?Let's say we have this entry in a routes.rb file: map.resources :doohickeys
+ So, we can refer to doohickeys_path, which returns a">
+	</head>
+
+<body class="page-blog-extend page-blog-post page-blog page-tertiary page" data-page="blog">
+
+	<div id="fb-root"></div>
+
+	<div role="main">
+		
+				<section class="content-primary content">
+					<div class="wrapper">
+						
+	<header class="content-primary-header header">
+		<h1><span class="left">Your friends at Viget present</span> <a href="/extend"><span class="visuallyhidden">Extend,</span></a> <span class="right">a Code &amp; Technology Blog</span></h1>
+	</header>
+
+						
+						<section class="section-blog-wrapper section row stickem-container">
+							<div class="col-10 col">
+								<article class="article-blog-post article hentry row">
+									<div class="article-blog-post-wrapper wrapper col-8 col right">
+										<header class="header-blog-post header">
+											<h1 class="entry-title"><a href="/extend/rails-named-routes-path-vs-url" rel="bookmark">Rails Named Routes: Path Vs. URL</a></h1>
+											<div class="blog-post-meta clear">
+												<span class="breadcrumbs">
+													<a href="/extend">Extend</a> // 
+												</span>
+												<time class="published" datetime="2009-02-20T13:05:00-05:00" pubdate>Feb 20, 2009</time>
+												<a href="/extend/rails-named-routes-path-vs-url#disqus_thread" class="comment-count" data-disqus-identifier="1463">Comments</a>
+											</div>
+										</header>
+										<div class="entry-content wysiwyg">
+											
+													<p>As we all learned in Rails 101, named routes come in two varieties: path, and URL. When should we use each variety?</p>
+													<p>Let's say we have this entry in a routes.rb file:</p> <pre>map.resources :doohickeys
+</pre> <p>So, we can refer to doohickeys_path, which returns a relative URI:</p> <pre>link_to 'index of doohickeys', doohickeys_path # =&gt; &lt;a href="/doohickeys"&gt;index of doohickeys&lt;/a&gt;
+</pre> <p>And we can refer to doohickeys_url, which returns an absolute URI:</p> <pre>link_to 'index of doohickeys', doohickeys_url  # =&gt; &lt;a href="http://www.example.com/doohickeys"&gt;index of doohickeys&lt;/a&gt;
+</pre> <p>So when do you use paths, and when do you use URLs? I had heard that there are two cases when you must use URLs:</p> <ol> <li>You need to use an absolute URI when linking to an SSL site from a non-SSL site, and vice versa. </li> <li>You need to use an absolute URI when creating a redirect (e.g. with <code>redirect_to</code>.) </li> </ol> <p>In talking with some fellow developers here at Viget, and at <a href="http://thoughtbot.com/">Thoughtbot</a> when I trained there recently, we agreed that the Rails convention seems to be to use URLs in these two cases, and paths in other cases. But why?</p> <p>The first case is pretty obvious; you need the absolute URI in order to get the <code>https://</code> prefix for a secure site (and likewise to get the <code>http://</code> prefix if you need to get back to where you were.) For the second case, you need to dig into the <a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP specification</a>, also known as RFC 2616. In particular, you need to find section 14.30, which defines the Location header that&rsquo;s returned in a redirect. Here&rsquo;s the chapter and verse:</p> <blockquote>The Location response-header field is used to redirect the recipient to a location other than the Request-URI for completion of the request or identification of a new resource. For 201 (Created) responses, the Location is that of the new resource which was created by the request. For 3xx responses, the location SHOULD indicate the server's preferred URI for automatic redirection to the resource. <em>The field value consists of a single absolute URI.</em></blockquote> <p>(Emphasis added.) So that&rsquo;s the answer: we do it this way because the specification says we have to. Since we&rsquo;re all about conventions in the Rails community, we may as well have our convention follow the spec. Is it critical to do so? Probably not; most modern HTTP clients and servers seem to figure out what you meant if you pass a relative URL in a redirect. But why take the chance when it&rsquo;s easy to do the right thing?</p>
+												
+										</div>
+																					<div class="entry-comments">
+												<div id="disqus_thread"></div>
+												<script type="text/javascript">
+												    var disqus_shortname = 'viget',
+														disqus_identifier = '1463';
+
+												    /* * * DON'T EDIT BELOW THIS LINE * * */
+												    (function() {
+												        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+												        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+												        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+												    })();
+												</script>
+												<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+											</div>
+																			</div>
+									<aside class="aside-blog-post aside col-2 col stickem">
+										
+											<section class="section-author section author vcard clear">
+																									<figure class="photo-frame-no-border photo-frame encircle">
+														<img src="/assets/images/content/alumni.jpg" alt="Mark Cornick" class="photo">
+													</figure>
+																								<div class="author-meta">
+													<span class="fn">Mark Cornick</span>
+																									</div>
+											</section>
+										
+										
+										<div class="big-screen-hide">
+											<hr class="chevrons">
+										
+																							<nav class="quick-pagination navigation">
+													<ul class="clear">
+																													<li><a href="/extend/test-drive-mod-rewrite-rules-with-testunit" class="ir arrow-prev arrow" rel="prev" data-track-event="Extend Post,Previous Post">Previous</a></li>
+																																											<li><a href="/extend/rails-nested-has-many-through-with-sql-views" class="ir arrow-next arrow" rel="next" data-track-event="Extend Post,Next Post">Next</a></li>
+																											</ul>
+																											<p><b>Next Post</b> <a href="/extend/rails-nested-has-many-through-with-sql-views" data-track-event="Extend Post,Next Post">Rails Nested has_many :through With SQL Views</a></p>
+																									</nav>
+																					</div>
+										
+										<hr class="chevrons">
+										
+										<div class="social-sharing-widget">
+	<div class="widget-header clear">
+		<span class="icon-facebook icon ir">Facebook</span>
+		<span class="icon-twitter icon ir">Twitter</span>
+		<span class="icon-googleplus icon ir">Google+</span>
+		
+	</div>
+	<div class="widget-body">
+		<ul class="vertical clear">
+			<li>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+
+				<div class="fb-like" data-href="http://viget.com/extend/rails-named-routes-path-vs-url" data-send="false" data-layout="button_count" data-width="100" data-height="21" data-show-faces="false"></div>
+			</li>
+			<li>
+				<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</li>
+			<li>
+				<g:plusone annotation="inline" size="medium" width="120"></g:plusone>
+				<script>(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = 'https://apis.google.com/js/plusone.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();</script>
+			</li>
+			
+		</ul>
+	</div>
+</div>
+										
+									</aside>
+								</article>
+							</div>
+							<aside class="aside col-2 col">
+								
+	<section class="section-blog-navigation section-blog-module section">
+		<header class="section-header header">
+			<h1>Extend is&hellip;</h1>
+			<a href="http://feeds.feedburner.com/VigetExtend" class="light-rss-button rss-button button ir" rel="alternate" type="application/rss+xml" data-track-event="Extend Post,RSS">RSS</a>
+		</header>
+		<div class="section-content section">
+			<p class="blog-description">A <b>Code &amp; Technology</b> blog&mdash;our thirty foot view. Primarily written by/for Ruby, iOS, and front-end developers.</p>
+			
+			<form id="search-form" class="search-form form" method="post" action="http://viget.com/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="ACT" value="33" />
+<input type="hidden" name="result_page" value="extend/search" />
+<input type="hidden" name="collection" value="blog" />
+<input type="hidden" name="search_mode" value="all" />
+<input type="hidden" name="loose_ends" value="yes" />
+<input type="hidden" name="site_id" value="1" />
+</div>
+
+
+				<ul>
+					<li>
+						<label for="keywords">Search</label>
+						<input type="text" class="text-field" name="keywords" id="keywords">
+					</li>
+					<li>
+						<input type="hidden" name="category[]" value="126">
+						<button type="submit" class="ir">Submit</button>
+					</li>
+				</ul>
+			</form>
+		</div>
+	</section>
+
+	<hr class="chevrons">
+
+	<section class="section-contributors section-blog-module section">
+		<header class="section-header header">
+			<h1>Contributors</h1>
+		</header>
+		<div class="section-content section">
+			<ul class="grouping-blog-links grouping">
+				
+					<li><a href="/about/team/blandau" data-track-event="Extend Post,Contributors Click,Brian Landau">Brian Landau</a></li>
+				
+					<li><a href="/about/team/bwilliams" data-track-event="Extend Post,Contributors Click,Brian W. Williams">Brian W. Williams</a></li>
+				
+					<li><a href="/about/team/cjones" data-track-event="Extend Post,Contributors Click,Chris Jones">Chris Jones</a></li>
+				
+					<li><a href="/about/team/cmanning" data-track-event="Extend Post,Contributors Click,Chris Manning">Chris Manning</a></li>
+				
+					<li><a href="/about/team/dtello" data-track-event="Extend Post,Contributors Click,Dan Tello">Dan Tello</a></li>
+				
+					<li><a href="/about/team/deisinger" data-track-event="Extend Post,Contributors Click,David Eisinger">David Eisinger</a></li>
+				
+					<li><a href="/about/team/davery" data-track-event="Extend Post,Contributors Click,Doug Avery">Doug Avery</a></li>
+				
+					<li><a href="/about/team/efatsi" data-track-event="Extend Post,Contributors Click,Eli Fatsi">Eli Fatsi</a></li>
+				
+					<li><a href="/about/team/jgarber" data-track-event="Extend Post,Contributors Click,Jason Garber">Jason Garber</a></li>
+				
+					<li><a href="/about/team/jfrank" data-track-event="Extend Post,Contributors Click,Jeremy Frank">Jeremy Frank</a></li>
+				
+					<li><a href="/about/team/jkorr" data-track-event="Extend Post,Contributors Click,Josh Korr">Josh Korr</a></li>
+				
+					<li><a href="/about/team/mackerman" data-track-event="Extend Post,Contributors Click,Mike Ackerman">Mike Ackerman</a></li>
+				
+					<li><a href="/about/team/nhunzaker" data-track-event="Extend Post,Contributors Click,Nate Hunzaker">Nate Hunzaker</a></li>
+				
+					<li><a href="/about/team/preagan" data-track-event="Extend Post,Contributors Click,Patrick Reagan">Patrick Reagan</a></li>
+				
+					<li><a href="/about/team/rfoster" data-track-event="Extend Post,Contributors Click,Ryan Foster">Ryan Foster</a></li>
+				
+					<li><a href="/about/team/tmarshall" data-track-event="Extend Post,Contributors Click,Tommy Marshall">Tommy Marshall</a></li>
+				
+					<li><a href="/about/team/tdavis" data-track-event="Extend Post,Contributors Click,Trevor Davis">Trevor Davis</a></li>
+				
+					<li><a href="/about/team/zporter" data-track-event="Extend Post,Contributors Click,Zachary Porter">Zachary Porter</a></li>
+				
+			</ul>
+		</div>
+	</section>
+
+	<hr class="chevrons">
+
+	<section class="section-more-blogs section-blog-module section">
+		<header class="section-header header">
+			<h1>More Viget Blogs</h1>
+		</header>
+		<div class="section-content section">
+			<ul class="grouping-blog-links grouping">
+				<li><a href="/advance" data-track-event="Extend Post, More Viget Blogs Click,Advance"><img src="/assets/images/content/blogs-advance/logo-dark.png" alt="Advance: Strategy &amp; Process"></a></li>
+				<li><a href="/extend" data-track-event="Extend Post, More Viget Blogs Click,Extend"><img src="/assets/images/content/blogs-extend/logo-dark.png" alt="Extend: Code &amp; Technology"></a></li>
+				<li><a href="/flourish" data-track-event="Extend Post, More Viget Blogs Click,Flourish"><img src="/assets/images/content/blogs-flourish/logo-dark.png" alt="Flourish: Viget News &amp; Culture"></a></li>
+				<li><a href="/inspire" data-track-event="Extend Post, More Viget Blogs Click,Inspire"><img src="/assets/images/content/blogs-inspire/logo-dark.png" alt="Inspire: Design &amp; Interactive"></a></li>
+			</ul>
+		</div>
+	</section>
+	
+	<hr class="chevrons">
+	
+	<section class="section-ask-viget section-blog-module section">
+		<header class="section-header header">
+			<h1>Ask Viget</h1>
+		</header>
+		<div class="section-content section">
+			<p>Have questions, suggestions, or blog ideas? <a href="/contact#get-in-touch"><strong>We'd love to hear from you</strong></a>.</p>
+		</div>
+	</section>
+	
+			<hr class="chevrons">
+
+		<section class="section-hiring section-blog-module section">
+			<header class="section-header header">
+				<h1>We&rsquo;re Hiring</h1>
+			</header>
+			<div class="section-content section">
+				<p>Check out <a href="http://www.teamviget.com/" data-track-event="Extend Post,Team Viget Click">Team Viget</a> to see the stellar adventures of our Lab Rats and tell a friend about these open positions:</p>
+				<ul class="grouping-blog-links grouping">
+					
+	
+		<li><a href="/about/careers/technical-development-project-manager">Technical/Development Project Manager</a></li>
+	
+		<li><a href="/about/careers/ruby-on-rails-developer">Ruby On Rails Developer</a></li>
+	
+		<li><a href="/about/careers/ios-developer">iOS Developer</a></li>
+	
+		<li><a href="/about/careers/development-director">Development Director</a></li>
+	
+
+				</ul>
+			</div>
+		</section>
+		
+
+							</aside>
+						</section>
+
+					</div>
+				</section>
+			
+	</div>
+
+	
+			<nav class="anchored-navigation navigation">
+			<ul>
+									<li><a href="/extend/test-drive-mod-rewrite-rules-with-testunit" class="anchor-prev anchor" rel="prev" data-track-event="Extend Post,Previous Post"><span class="title">Test Drive mod_rewrite Rules With Test::Unit</span></a></li>
+													<li><a href="/extend/rails-nested-has-many-through-with-sql-views" class="anchor-next anchor" rel="next" data-track-event="Extend Post,Next Post"><span class="title">Rails Nested has_many :through With SQL Views</span></a></li>
+							</ul>
+		</nav>
+	
+	<header class="global-header" id="global-header" role="banner">
+		<div class="wrapper clear">
+							<a href="/" class="logo ir" rel="home">Viget</a>
+				<nav class="nav-primary nav">
+					<ul class="clear">
+						<li class="nav-item-about nav-item"><a href="/about" data-track-event="Top Nav,About">About</a></li>
+						<li class="nav-item-work nav-item"><a href="/work" data-track-event="Top Nav,Work">Work</a></li>
+						<li class="nav-item-blogs nav-item-current nav-item"><a href="/blogs" data-track-event="Top Nav, Blogs">Blogs</a></li>
+						<li class="nav-item-contact nav-item"><a href="/contact" data-track-event="Top Nav, Contact">Contact</a></li>
+					</ul>
+				</nav>
+			
+			
+			<a href="#global-footer" class="button-nav-jump-link button ir">Skip to navigation</a>
+		</div>
+
+			</header>
+
+	
+	
+	<footer class="global-footer" id="global-footer">
+		
+			<nav class="nav-primary nav">
+				<div class="wrapper">
+					<ul class="row">
+						<li class="col-2 col-offset-2 col">
+							<h1><a href="/about" data-track-event="Footer,About,About">About</a></h1>
+							<ul>
+								<li><a href="/about#locations" data-track-event="Footer,About,Locations">Locations</a></li>
+								<li><a href="/about#team" data-track-event="Footer,About,Team">Team</a></li>
+								<li><a href="/about#careers" data-track-event="Footer,About,Careers">Careers</a></li>
+							</ul>
+						</li>
+						<li class="col-2 col">
+							<h1><a href="/work" data-track-event="Footer,Work,Work">Work</a></h1>
+							<ul>
+								<li><a href="/work#portfolio" data-track-event="Footer,Work,Portfolio">Portfolio</a></li>
+								<li><a href="/work#services" data-track-event="Footer,Work,Services">Services</a></li>
+							</ul>
+						</li>
+						<li class="col-2 col">
+							<h1><a href="/blogs" data-track-event="Footer,Blogs,Blogs">Blogs</a></h1>
+							<ul>
+								<li><a href="/advance" data-track-event="Footer,Blogs,Advance">Advance</a></li>
+								<li><a href="/inspire" data-track-event="Footer,Blogs,Inspire">Inspire</a></li>
+								<li><a href="/extend" data-track-event="Footer,Blogs,Extend">Extend</a></li>
+								<li><a href="/flourish" data-track-event="Footer,Blogs,Flourish">Flourish</a></li>
+							</ul>
+						</li>
+						<li class="col-2 col">
+							<h1><a href="/contact" data-track-event="Footer,Contact,Contact">Contact</a></h1>
+							<ul>
+								<li><a href="/contact#send-message" data-track-event="Footer,Contact,Send a Message">Send a Message</a></li>
+								<li><a href="/contact#find-us" data-track-event="Footer,Contact,Find Us">Find Us</a></li>
+							</ul>
+						</li>
+						<li class="col-2 col">
+							<h1><a href="/more" data-track-event="Footer,More,More">More</a></h1>
+							<ul>
+								<li><a href="http://www.pointlesscorp.com/" rel="external" data-track-event="Footer,More,Pointless Corp.">Pointless Corp.</a></li>
+								<li><a href="http://speakerrate.com/" rel="external" data-track-event="Footer,More,SpeakerRate">SpeakerRate</a></li>
+								<li><a href="http://www.teamviget.com/" rel="external" data-track-event="Footer,More,TeamViget">Team Viget</a></li>
+								<li><a href="http://www.sayviget.com/" rel="external" data-track-event="Footer,More,Say Viget">Say &ldquo;Viget&rdquo;</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class="chevrons">
+				<div class="wrapper clear">
+					<div class="row">
+						<div class="social-connections col-4 col-offset-2 col">
+							<p>Connect with us</p>
+							<ul class="clear">
+								<li><a href="http://twitter.com/viget" class="icon-twitter icon ir" rel="external" title="@viget" data-track-social="Twitter,Outbound Click,Footer">Twitter</a></li>
+								<li><a href="http://www.flickr.com/photos/viget" class="icon-flickr icon ir" rel="external" title="Flickr" data-track-social="Flickr,Outbound Click,Footer">Flickr</a></li>
+								<li><a href="http://vimeo.com/viget" class="icon-vimeo icon ir" rel="external" title="Vimeo" data-track-social="Vimeo,Outbound Click,Footer">Vimeo</a></li>
+								<li><a href="http://www.linkedin.com/company/viget-labs" class="icon-linkedin icon ir" rel="external" title="LinkedIn" data-track-social="LinkedIn,Outbound Click,Footer">LinkedIn</a></li>
+								<li><a href="http://www.facebook.com/vigetlabs" class="icon-facebook icon ir" rel="external" title="Facebook" data-track-social="Facebook,Outbound Click,Footer">Facebook</a></li>
+							</ul>
+						</div>
+
+						<form action="http://vl.createsend.com/t/r/s/bkish/" method="post" class="form-email-updates col-4 col" data-track-event="Footer,Email Subscription" data-track-email="cm-bkish-bkish">
+							<ul>
+								<li>
+									<label class="visuallyhidden" for="cm-bkish-bkish">Get Email Updates</label>
+									<input type="email" required="required" placeholder="Get Email Updates (Monthly or so)" name="cm-bkish-bkish" id="cm-bkish-bkish">
+								</li>
+								<li>
+									<button type="submit" class="ir">Submit</button>
+								</li>
+							</ul>
+						</form>
+					</div>
+				</div>
+			</div>
+		
+		<div class="vcard">
+			<div class="wrapper">
+				<div class="clear">
+					<span class="fn org"><a href="/" class="url logo ir">Viget</a></span>
+					<ul class="grouping-locations grouping">
+						<li>Falls Church, VA</li>
+						<li>Durham, NC</li>
+						<li>Boulder, CO</li>
+					</ul>
+				</div>
+				<ul class="grouping-contact grouping">
+					<li><a href="tel:+17038910670" class="tel-button bold-button button tel">703.891.0670</a></li>
+					<li><a href="tel:+17038320341" class="fax-button bold-button button fax">703.832.0341</a></li>
+					<li><a href="mailto:info&#064;viget.com" class="email-button bold-button button email">info&#064;viget.com</a></li>
+				</ul>
+				<p class="note">Strategy, Design, &amp; Development. Vigorous since 1999.</p>
+			</div>
+		</div>
+
+		<p role="contentinfo">&copy; 1999&ndash;2013 Viget Labs, LLC. <a href="/terms-conditions">Terms &amp; Conditions</a> : <a href="/privacy-policy">Privacy Policy</a></p>
+	</footer>
+
+	<script src="http://viget.com/cache/assets/13700343159b43029d041670605d59b1a62966174c.js"></script>
+
+	
+			<!-- Disqus -->
+			<script>
+				var disqus_shortname = 'viget';
+
+				(function( d, t ) {
+					var g = d.createElement( t ),
+						s = d.getElementsByTagName( t )[0];
+
+					g.src = '//' + disqus_shortname + '.disqus.com/count.js';
+					s.parentNode.insertBefore( g, s );
+				})( document, 'script' );
+			</script>
+			<!-- End Disqus -->
+		
+
+	<!-- Google Analytics -->
+	<script>
+		var _gaq = [['_setAccount', 'UA-1980766-6'], ['_trackPageview']];
+
+		(function( d, t ) {
+			var g = d.createElement( t ),
+				s = d.getElementsByTagName( t )[0];
+
+			g.src = ( 'https:' == location.protocol ? '//ssl' : '//www' ) + '.google-analytics.com/ga.js';
+			s.parentNode.insertBefore( g, s );
+		}( document, 'script' ) );
+	</script>
+	<!-- End Google Analytics -->
+
+			
+				<script>
+					_gaq.push(['_trackEvent', 'Date', '1235149500',,,true]);	
+					
+					VIGET.common.ga.bindSocialButtons();
+					
+					window.disqus_config = function () {
+						this.callbacks.onReady = [function() {
+							//Sticky left column
+							if($(window).width() >= 960) {
+								$('div[role="main"]').imagesLoaded(function() {
+									var $this = $(this);
+
+									$this.stickem({
+										offset: 75
+									});
+								});
+							}
+						}];
+						
+						this.callbacks.onNewComment = [function(comment){
+							//Track event
+							VIGET.common.ga.eventTrack('Extend Post,Comment');
+							
+							//Send author email
+							$.ajax({
+								type : "POST",
+								data : comment,
+								url : "/_functions/comment-notification/1463"
+							});
+						}];
+					};
+				</script>
+			
+	
+	<!-- KISSmetrics -->
+	<script>
+		var _kmq = _kmq || [],
+			_kmk = _kmk || 'fe27677336118591a0ec473e209a2ca0055f635b';
+
+		function _kms( u ) {
+			setTimeout( function() {
+				var d = document,
+					f = d.getElementsByTagName( 'script' )[0],
+					s = d.createElement('script');
+
+				s.src = u;
+				f.parentNode.insertBefore( s, f );
+			}, 1 );
+		}
+
+		_kms( '//i.kissmetrics.com/i.js' );
+		_kms( '//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js' );
+	</script>
+	<!-- End KISSmetrics -->
+
+	<script>
+		var heatdata_uid = 'nuYAcP9BqHob';
+	</script>
+	<script src="http://heatdata.com/heatdata.js"></script>
+
+	<!--[if lt IE 7]>
+		<script src='//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js'></script>
+		<script>
+			window.attachEvent( 'onload', function() {
+				CFInstall.check({ mode: 'overlay' });
+			});
+		</script>
+	<![endif]-->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+		
+		
+		
+			
+			
+			
+		
+		
+		
+			
+			
+			
+		
+		
+		
+		
+			
+			
+			
+			
+			
+			
+			
+		
+			
+			
+		
+	<!-- Debug: total time - 0.053784847259521 -->

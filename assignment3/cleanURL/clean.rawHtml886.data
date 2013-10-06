@@ -1,0 +1,570 @@
+   #[1]Stack Overflow [2]Feed for question 'Why do browsers match CSS
+   selectors from right to left?'
+
+   [3]Stack Exchange
+   [4]sign up | [5]log in | [6]careers 2.0 |
+   ____________________________
+   [7]Stack Overflow
+     * [8]Questions
+     * [9]Tags
+     * [10]Tour
+     * [11]Users
+
+     * [12]Ask Question
+
+   [13]Tell me more ×
+   Stack Overflow is a question and answer site for professional and
+   enthusiast programmers. It's 100% free, no registration required.
+
+[14]Why do browsers match CSS selectors from right to left?
+
+   up vote 230 down vote [15]favorite
+   138
+
+   CSS Selectors are matched by browser engines from right to left. So
+   they first find the children and then check their parents to see if
+   they match the rest of the parts of the rule.
+    1. Why is this?
+    2. Is it just because the spec says?
+    3. Does it affect the eventual layout if it was evaluated from left to
+       right?
+
+   To me the simplest way to do it would be use the selectors with the
+   least number of elements. So IDs first (as they should only return 1
+   element). Then maybe classes or an element that has the fewest number
+   of nodes â e.g. there may only be one span on the page so go directly
+   to that node with any rule that references a span.
+
+   Here are some links backing up my claims
+    1. [16]http://code.google.com/speed/page-speed/docs/rendering.html
+    2. [17]https://developer.mozilla.org/en/Writing_Efficient_CSS
+     __________________________________________________________________
+
+   It sounds like that it is done this way to avoid having to look at all
+   the children of parent (which could be many) rather than all the
+   parents of a child which must be one. Even if the DOM is deep it would
+   only look at one node per level rather than multiple in the RTL
+   matching. [18]Is it easier/faster to evaluate CSS selectors LTR or RTL?
+   [19]html [20]css [21]browser [22]css-selectors
+
+   [23]share|[24]improve this question
+   [25]edited Aug 11 '12 at 19:05
+   [26]BoltClock♦
+   190k38412665
+   asked Apr 26 '11 at 22:03
+   [27]tgandrews
+   1,97431533
+
+   2
+     3. No - no matter how you read it, the selector always matches the same
+     set of elements. – [28]Å ime Vidas Apr 26 '11 at 22:05
+
+   1
+     The parsing way you suggest wouldn't be really effecting since it
+     requires accessing the DOM a lot. I'd parse it from left to right, and
+     presumably, selectors such as jQuery's parse it from left to right too.
+     – [29]JCOC611 Apr 26 '11 at 22:06
+
+   22
+     For what it's worth, a browser can't assume that your IDs are unique.
+     You could stick the same id="foo" all over your DOM, and a #foo
+     selector would need to match all those nodes. jQuery has the option of
+     saying that $("#foo") will always return just one element, because
+     they're defining their own API with its own rules. But browsers need to
+     implement CSS, and CSS says to match everything in the document with
+     the given ID. – [30]Boris Zbarsky Apr 28 '11 at 4:41
+
+   3
+     @Quentin In a "nonconformant" (to HTML) document IDs can be non-unique,
+     and in those documents CSS requires matching all elements with that ID.
+     CSS itself places no normative requirements on IDs being unique; the
+     text you cite is informative. – [31]Boris Zbarsky Sep 11 '11 at 15:23
+
+   4
+     @Boris Zbarsky What jQuery does depends on the code path within jQuery.
+     In some cases, jQuery uses the NodeSelector API (native
+     querySelectorAll). In other cases, Sizzle is used. Sizzle doesn't match
+     multiple IDs but QSA does (AYK). The path taken depends on the
+     selector, the context, and the browser and its version. jQuery's Query
+     API uses what I have termed "Native First, Dual Approach". I wrote an
+     article on that, but it is down. Though you may find here:
+     [32]fortybelow.ca/hosted/dhtmlkitchen/JavaScript-Query-Engines.html
+     – [33]Garrett Sep 22 '11 at 4:18
+   [34]show 47 more comments
+
+2 Answers
+
+   [35]active [36]oldest [37]votes
+   up vote 438 down vote accepted
+
+   Keep in mind that when a browser is doing selector matching it has one
+   element (the one it's trying to determine style for) and all your rules
+   and their selectors and it needs to find which rules match the element.
+   This is different from the usual jQuery thing, say, where you only have
+   one selector and you need to find all the elements that match that
+   selector.
+
+   If you only had one selector and only one element to compare against
+   that selector, then left-to-right makes more sense in some cases. But
+   that's decidedly not the browser's situation. The browser is trying to
+   render Gmail or whatever and has the one <span> it's trying to style
+   and the 10,000+ rules Gmail puts in its stylesheet (I'm not making that
+   number up).
+
+   In particular, in the situation the browser is looking at most of the
+   selectors it's considering don't match the element in question. So the
+   problem becomes one of deciding that a selector doesn't match as fast
+   as possible; if that requires a bit of extra work in the cases that do
+   match you still win due to all the work you save in the cases that
+   don't match.
+
+   If you start by just matching the rightmost part of the selector
+   against your element, then chances are it won't match and you're done.
+   If it does match, you have to do more work, but only proportional to
+   your tree depth, which is not that big in most cases.
+
+   On the other hand, if you start by matching the leftmost part of the
+   selector... what do you match it against? You have to start walking the
+   DOM, looking for nodes that might match it. Just discovering that
+   there's nothing matching that leftmost part might take a while.
+
+   So browsers match from the right; it gives an obvious starting point
+   and lets you get rid of most of the candidate selectors very quickly.
+   You can see some data at
+   [38]http://groups.google.com/group/mozilla.dev.tech.layout/browse_threa
+   d/thread/b185e455a0b3562a/7db34de545c17665 (though the notation is
+   confusing), but the upshot is that for Gmail in particular two years
+   ago, for 70% of the (rule, element) pairs you could decide that the
+   rule does not match after just examining the tag/class/id parts of the
+   rightmost selector for the rule. The corresponding number for Mozilla's
+   pageload performance test suite was 72%. So it's really worth trying to
+   get rid of those 2/3 of all rules as fast as you can and then only
+   worry about matching the remaining 1/3.
+
+   Note also that there are other optimizations browsers already do to
+   avoid even trying to match rules that definitely won't match. For
+   example, if the rightmost selector has an id and that id doesn't match
+   the element's id, then there will be no attempt to match that selector
+   against that element at all in Gecko: the set of "selectors with IDs"
+   that are attempted comes from a hashtable lookup on the element's ID.
+   So this is 70% of the rules which have a pretty good chance of matching
+   that still don't match after considering just the tag/class/id of the
+   rightmost selector.
+
+   [39]share|[40]improve this answer
+   [41]edited Sep 7 '11 at 12:20
+   answered Apr 28 '11 at 4:36
+   [42]Boris Zbarsky
+   17.6k11123
+     One of the best answers on this topic, I think this should be picked up
+     as answer – [43]Arnab Aug 26 '11 at 7:11
+     +1 Great answer – [44]screenm0nkey Aug 26 '11 at 7:55
+
+   7
+     +1; and with that hundredth vote cometh a gold badge your way.
+     – [45]Chris Morgan Sep 6 '11 at 5:55
+
+   3
+     As a little bonus, it makes more sense to read it RTL than LTR even in
+     English. An example:
+     [46]stackoverflow.com/questions/3851635/css-combinator-precedence/…
+     – [47]BoltClock♦ Sep 7 '11 at 11:17
+
+   1
+     Actually, by the time you're matching selectors, at least in Gecko, the
+     tagname and namespace come first. The id (as well as the tagname and
+     classnames) is considered in a pre-filtering step that eliminates most
+     rules without really trying to match the selectors. – [48]Boris Zbarsky
+     Aug 31 '12 at 9:55
+   [49]show 4 more comments
+   up vote 7 down vote
+
+   It allows for cascading from the more specific to the less specific. It
+   also allows a short circuit in application. If the more specific rule
+   applies in all aspects that the parent rule applies to, all parent
+   rules are ignored. If there are other bits in the parent, they are
+   applied.
+
+   If you went the other way around, you would format according to parent
+   and then overwrite every time the child has something different. In the
+   long run, this is a lot more work than ignoring items in rules that are
+   already taken care of.
+
+   [50]share|[51]improve this answer
+                                    answered Apr 26 '11 at 22:13
+                                    [52]Gregory A Beamer
+                                    9,78811018
+     aka "level of specificity" – [53]Jason Apr 26 '11 at 22:17
+
+   7
+     That's a separate issue. You do the cascading by sorting the rules by
+     specificity and then matching against them in specificity order. But
+     the question here is why for a given rule you match its selectors in a
+     particular way. – [54]Boris Zbarsky Apr 28 '11 at 4:37
+
+Your Answer
+
+
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+
+   draft saved
+   draft discarded
+   ____________________
+
+Sign up or [55]login
+
+   Sign up using Google
+
+   Sign up using Facebook
+
+   Sign up using Stack Exchange
+   [BUTTON Input] (not implemented)______
+
+Post as a guest
+
+   Name ______________________________
+   Email ______________________________ required, but not shown
+
+Post as a guest
+
+   Name ______________________________
+   Email ______________________________ required, but not shown
+   Post Your Answer [56]discard
+
+   By posting your answer, you agree to the [57]privacy policy and
+   [58]terms of service.
+
+Not the answer you're looking for? Browse other questions tagged [59]html
+[60]css [61]browser [62]css-selectors or [63]ask your own question.
+
+   tagged
+   [64]html × 206768
+   [65]css × 160914
+   [66]browser × 9633
+   [67]css-selectors × 2896
+
+   asked
+
+         2 years ago
+
+   viewed
+
+         27151 times
+
+   active
+
+         [68]1 year ago
+
+Linked
+
+   0
+   [69]Do browsers read css selectors from right to left?
+   36
+   [70]Which CSS selectors or rules can significantly effect front-end
+   layout / rendering performance in the real world?
+   14
+   [71]CSS combinator precedence?
+   4
+   [72]Any way to select nth element STRAIGHT?
+   12
+   [73]CSS: #id .class VS .class performance. Which is better?
+   13
+   [74]Best way to optimize jQuery selector and why?
+   6
+   [75]CSS Selectors performance, DOM Parsing
+   2
+   [76]difference between using MULTIPLE 'id' and 'class' attributes in
+   HTML and CSS
+   6
+   [77]CSS selector engine clarification?
+   0
+   [78]:last-of-type Pseudo-Class Not Acting as Expected
+   [79]see more linked questions…
+
+Related
+
+   327
+   [80]What characters are valid in CSS class selectors?
+   2
+   [81]Speed/redundancy of selectors in CSS
+   445
+   [82]Is there a CSS parent selector?
+   5
+   [83]Efficient and inefficient CSS selectors (according to Google,
+   PageSpeed …)
+   0
+   [84]Is it easier/faster to evaluate CSS selectors LTR or RTL?
+   0
+   [85]Inefficient CSS selector suggestions
+   4
+   [86]Why can I not group browser-specific CSS-selectors for different
+   browsers?
+   0
+   [87]Why is the CSS selector :parent not working?
+   0
+   [88]HTML & CSS: “>” Greater than selector styles not applied
+   7
+   [89]CSS child selector performance vs. class bloat
+   [90]question feed
+   default
+
+   [91]about [92]help [93]badges [94]blog [95]chat [96]data [97]legal
+   [98]privacy policy [99]jobs [100]advertising info mobile [101]contact
+   us [102]feedback
+            Technology            Life / Arts Culture / Recreation Science Other
+  1. [103]Stack Overflow
+    2. [104]Server Fault
+    3. [105]Super User
+    4. [106]Web Applications
+    5. [107]Ask Ubuntu
+    6. [108]Webmasters
+    7. [109]Game Development
+    8. [110]TeX - LaTeX
+
+  1. [111]Programmers
+    2. [112]Unix & Linux
+    3. [113]Ask Different (Apple)
+    4. [114]WordPress Answers
+    5. [115]Geographic Information Systems
+    6. [116]Electrical Engineering
+    7. [117]Android Enthusiasts
+    8. [118]IT Security
+
+  1. [119]Database Administrators
+    2. [120]Drupal Answers
+    3. [121]SharePoint
+    4. [122]User Experience
+    5. [123]Mathematica
+    6. [124]more (13)
+
+  1. [125]Photography
+    2. [126]Science Fiction & Fantasy
+    3. [127]Seasoned Advice (cooking)
+    4. [128]Home Improvement
+    5. [129]more (13)
+
+  1. [130]English Language & Usage
+    2. [131]Skeptics
+    3. [132]Mi Yodeya (Judaism)
+    4. [133]Travel
+    5. [134]Christianity
+    6. [135]Arqade (gaming)
+    7. [136]Bicycles
+    8. [137]Role-playing Games
+    9. [138]more (21)
+
+  1. [139]Mathematics
+    2. [140]Cross Validated (stats)
+    3. [141]Theoretical Computer Science
+    4. [142]Physics
+    5. [143]MathOverflow
+    6. [144]more (7)
+
+  1. [145]Stack Apps
+    2. [146]Meta Stack Overflow
+    3. [147]Area 51
+    4. [148]Stack Overflow Careers
+
+   site design / logo © 2013 stack exchange inc; user contributions
+   licensed under [149]cc-wiki with [150]attribution required
+   rev 2013.10.1.1045
+
+   Stack Overflow works best with JavaScript enabled
+
+References
+
+   Visible links
+   1. file://localhost/opensearch.xml
+   2. file://localhost/feeds/question/5797014
+   3. http://stackexchange.com/
+   4. file://localhost/users/login?returnurl=%2fquestions%2f5797014%2fwhy-do-browsers-match-css-selectors-from-right-to-left
+   5. file://localhost/users/login?returnurl=%2fquestions%2f5797014%2fwhy-do-browsers-match-css-selectors-from-right-to-left
+   6. http://careers.stackoverflow.com/
+   7. file://localhost/
+   8. file://localhost/questions
+   9. file://localhost/tags
+  10. file://localhost/about
+  11. file://localhost/users
+  12. file://localhost/questions/ask
+  13. file://localhost/about
+  14. file://localhost/questions/5797014/why-do-browsers-match-css-selectors-from-right-to-left
+  15. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml886.data
+  16. http://code.google.com/speed/page-speed/docs/rendering.html
+  17. https://developer.mozilla.org/en/Writing_Efficient_CSS
+  18. http://stackoverflow.com/questions/4130045/is-it-easier-faster-to-parse-css-selectors-ltr-or-rtl
+  19. file://localhost/questions/tagged/html
+  20. file://localhost/questions/tagged/css
+  21. file://localhost/questions/tagged/browser
+  22. file://localhost/questions/tagged/css-selectors
+  23. file://localhost/q/5797014
+  24. file://localhost/posts/5797014/edit
+  25. file://localhost/posts/5797014/revisions
+  26. file://localhost/users/106224/boltclock
+  27. file://localhost/users/41709/tgandrews
+  28. file://localhost/users/425275/ime-vidas
+  29. file://localhost/users/532978/jcoc611
+  30. file://localhost/users/720912/boris-zbarsky
+  31. file://localhost/users/720912/boris-zbarsky
+  32. http://www.fortybelow.ca/hosted/dhtmlkitchen/JavaScript-Query-Engines.html
+  33. file://localhost/users/261439/garrett
+  34. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml886.data
+  35. file://localhost/questions/5797014/why-do-browsers-match-css-selectors-from-right-to-left?answertab=active#tab-top
+  36. file://localhost/questions/5797014/why-do-browsers-match-css-selectors-from-right-to-left?answertab=oldest#tab-top
+  37. file://localhost/questions/5797014/why-do-browsers-match-css-selectors-from-right-to-left?answertab=votes#tab-top
+  38. http://groups.google.com/group/mozilla.dev.tech.layout/browse_thread/thread/b185e455a0b3562a/7db34de545c17665
+  39. file://localhost/a/5813672
+  40. file://localhost/posts/5813672/edit
+  41. file://localhost/posts/5813672/revisions
+  42. file://localhost/users/720912/boris-zbarsky
+  43. file://localhost/users/387996/arnab
+  44. file://localhost/users/228049/screenm0nkey
+  45. file://localhost/users/497043/chris-morgan
+  46. http://stackoverflow.com/questions/3851635/css-combinator-precedence/3851754#3851754
+  47. file://localhost/users/106224/boltclock
+  48. file://localhost/users/720912/boris-zbarsky
+  49. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml886.data
+  50. file://localhost/a/5797092
+  51. file://localhost/posts/5797092/edit
+  52. file://localhost/users/68725/gregory-a-beamer
+  53. file://localhost/users/7173/jason
+  54. file://localhost/users/720912/boris-zbarsky
+  55. file://localhost/users/login?returnurl=%2fquestions%2f5797014%2fwhy-do-browsers-match-css-selectors-from-right-to-left%23new-answer
+  56. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml886.data
+  57. http://stackexchange.com/legal/privacy-policy
+  58. http://stackexchange.com/legal/terms-of-service
+  59. file://localhost/questions/tagged/html
+  60. file://localhost/questions/tagged/css
+  61. file://localhost/questions/tagged/browser
+  62. file://localhost/questions/tagged/css-selectors
+  63. file://localhost/questions/ask
+  64. file://localhost/questions/tagged/html
+  65. file://localhost/questions/tagged/css
+  66. file://localhost/questions/tagged/browser
+  67. file://localhost/questions/tagged/css-selectors
+  68. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml886.data?lastactivity
+  69. file://localhost/questions/13207683/do-browsers-read-css-selectors-from-right-to-left
+  70. file://localhost/questions/12279544/which-css-selectors-or-rules-can-significantly-effect-front-end-layout-renderi
+  71. file://localhost/questions/3851635/css-combinator-precedence
+  72. file://localhost/questions/4195161/any-way-to-select-nth-element-straight
+  73. file://localhost/questions/7623947/css-id-class-vs-class-performance-which-is-better
+  74. file://localhost/questions/14003873/best-way-to-optimize-jquery-selector-and-why
+  75. file://localhost/questions/10192712/css-selectors-performance-dom-parsing
+  76. file://localhost/questions/9850053/difference-between-using-multiple-id-and-class-attributes-in-html-and-css
+  77. file://localhost/questions/10106345/css-selector-engine-clarification
+  78. file://localhost/questions/10253519/last-of-type-pseudo-class-not-acting-as-expected
+  79. http://stackoverflow.com/questions/linked/5797014
+  80. file://localhost/questions/448981/what-characters-are-valid-in-css-class-selectors
+  81. file://localhost/questions/617446/speed-redundancy-of-selectors-in-css
+  82. file://localhost/questions/1014861/is-there-a-css-parent-selector
+  83. file://localhost/questions/3958627/efficient-and-inefficient-css-selectors-according-to-google-pagespeed
+  84. file://localhost/questions/4130045/is-it-easier-faster-to-evaluate-css-selectors-ltr-or-rtl
+  85. file://localhost/questions/6013178/inefficient-css-selector-suggestions
+  86. file://localhost/questions/10728360/why-can-i-not-group-browser-specific-css-selectors-for-different-browsers
+  87. file://localhost/questions/12220255/why-is-the-css-selector-parent-not-working
+  88. file://localhost/questions/12698333/html-css-greater-than-selector-styles-not-applied
+  89. file://localhost/questions/14013585/css-child-selector-performance-vs-class-bloat
+  90. file://localhost/feeds/question/5797014
+  91. file://localhost/about
+  92. file://localhost/help
+  93. file://localhost/help/badges
+  94. http://blog.stackexchange.com/?blb=1
+  95. http://chat.stackoverflow.com/
+  96. http://data.stackexchange.com/
+  97. http://stackexchange.com/legal
+  98. http://stackexchange.com/legal/privacy-policy
+  99. http://stackexchange.com/about/hiring
+ 100. http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6MjAsImNtIjo5NTQsImNoIjoxMTc4LCJjciI6Mjc3NiwiZG0iOjQsImZjIjoyODYyLCJmbCI6Mjc1MSwibnciOjIyLCJydiI6MCwicHIiOjExNSwic3QiOjAsInVyIjoiaHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL2Fib3V0L2NvbnRhY3QiLCJyZSI6MX0&s=hRods5B22XvRBwWIwtIMekcyNF8
+ 101. file://localhost/contact
+ 102. http://meta.stackoverflow.com/
+ 103. http://stackoverflow.com/
+ 104. http://serverfault.com/
+ 105. http://superuser.com/
+ 106. http://webapps.stackexchange.com/
+ 107. http://askubuntu.com/
+ 108. http://webmasters.stackexchange.com/
+ 109. http://gamedev.stackexchange.com/
+ 110. http://tex.stackexchange.com/
+ 111. http://programmers.stackexchange.com/
+ 112. http://unix.stackexchange.com/
+ 113. http://apple.stackexchange.com/
+ 114. http://wordpress.stackexchange.com/
+ 115. http://gis.stackexchange.com/
+ 116. http://electronics.stackexchange.com/
+ 117. http://android.stackexchange.com/
+ 118. http://security.stackexchange.com/
+ 119. http://dba.stackexchange.com/
+ 120. http://drupal.stackexchange.com/
+ 121. http://sharepoint.stackexchange.com/
+ 122. http://ux.stackexchange.com/
+ 123. http://mathematica.stackexchange.com/
+ 124. http://stackexchange.com/sites#technology
+ 125. http://photo.stackexchange.com/
+ 126. http://scifi.stackexchange.com/
+ 127. http://cooking.stackexchange.com/
+ 128. http://diy.stackexchange.com/
+ 129. http://stackexchange.com/sites#lifearts
+ 130. http://english.stackexchange.com/
+ 131. http://skeptics.stackexchange.com/
+ 132. http://judaism.stackexchange.com/
+ 133. http://travel.stackexchange.com/
+ 134. http://christianity.stackexchange.com/
+ 135. http://gaming.stackexchange.com/
+ 136. http://bicycles.stackexchange.com/
+ 137. http://rpg.stackexchange.com/
+ 138. http://stackexchange.com/sites#culturerecreation
+ 139. http://math.stackexchange.com/
+ 140. http://stats.stackexchange.com/
+ 141. http://cstheory.stackexchange.com/
+ 142. http://physics.stackexchange.com/
+ 143. http://mathoverflow.net/
+ 144. http://stackexchange.com/sites#science
+ 145. http://stackapps.com/
+ 146. http://meta.stackoverflow.com/
+ 147. http://area51.stackexchange.com/
+ 148. http://careers.stackoverflow.com/
+ 149. http://creativecommons.org/licenses/by-sa/3.0/
+ 150. http://blog.stackoverflow.com/2009/06/attribution-required/
+
+   Hidden links:
+ 152. file://localhost/users/106224/boltclock
+ 153. file://localhost/users/41709/tgandrews
+ 154. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml886.data
+ 155. file://localhost/users/720912/boris-zbarsky
+ 156. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml886.data
+ 157. file://localhost/users/68725/gregory-a-beamer
+ 158. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml886.data
+ 159. file://localhost/q/13207683
+ 160. file://localhost/q/12279544
+ 161. file://localhost/q/3851635
+ 162. file://localhost/q/4195161
+ 163. file://localhost/q/7623947
+ 164. file://localhost/q/14003873
+ 165. file://localhost/q/10192712
+ 166. file://localhost/q/9850053
+ 167. file://localhost/q/10106345
+ 168. file://localhost/q/10253519
+ 169. file://localhost/q/448981
+ 170. file://localhost/q/617446
+ 171. file://localhost/q/1014861
+ 172. file://localhost/q/3958627
+ 173. file://localhost/q/4130045
+ 174. file://localhost/q/6013178
+ 175. file://localhost/q/10728360
+ 176. file://localhost/q/12220255
+ 177. file://localhost/q/12698333
+ 178. file://localhost/q/14013585
+ 179. http://creativecommons.org/licenses/by-sa/3.0/

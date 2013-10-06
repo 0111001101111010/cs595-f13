@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en-US" class="ie6 ielt8"><![endif]-->
+<!--[if IE 7 ]><html lang="en-US" class="ie7 ielt8"><![endif]-->
+<!--[if IE 8 ]><html lang="en-US" class="ie8"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en-US"><!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <title>CSS Merger, Optimizer and Minifier by Martin Ivanov (@wemakesitesnet)</title>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="description" content="Stylesheet merger, optimizer and minifier using the new HTML5 file api, JavaScript and CSS3" />
+        <meta name="keywords" content="css minifier, css optimizer, merge css files, stylesheet optimizer, stylesheet minifier online" />
+        <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/acidmartin" title="Dev Blog of Martin Ivanov" />
+        <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/acidjs" title="Acid.JS Web UI Library" />
+        <script>
+        var 
+            _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-17572030-10']);
+            _gaq.push(['_trackPageview']);
+
+        (function() {
+            var 
+                ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                
+            var 
+                s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+</script>
+        <link rel="stylesheet" href="server/load-css.php?files=../styles/styles.min.css" />
+                        </head>
+    <body>
+        <noscript>This website makes heavy use of JavaScript, which seems disabled in your browser. To view site properly, please, enable JavaScript.</noscript>
+        <script src="server/load-js.php?files=../classes/buildercss.min.js"></script>
+                            <script>
+        (function() {
+             "use strict";
+            
+            // builder.css initializer
+            window.buildercss = new window.AcidJs.BuilderCss({
+                projects: {
+                        "Builder.CSS 3.0 Stylesheets": {
+                            files: [
+                                "styles/reset.css", 
+                                "styles/styles.css"
+                            ]
+                        },
+                        "Semtex.UI Stylesheets": {
+                            files: [
+                                "lib/Semtex/UI/themes/default/Forms/styles.css",
+                                "lib/Semtex/UI/themes/default/LoadingOverlay/styles.css",
+                                "lib/Semtex/UI/themes/default/Popup/styles.css",
+                                "lib/Semtex/UI/themes/default/Sysnotice/styles.css",
+                                "lib/Semtex/UI/themes/default/Tabstrip/styles.css",
+                                "lib/Semtex/UI/themes/styles.css"
+                            ]
+                        }
+                },
+                debug: false,
+                year: 2013,
+                localizer: {
+    "en-US": {
+        "alert": "Builder.CSS",
+        "confirm": "Builder.CSS",
+        "ok": "OK",
+        "cancel": "Cancel",
+        "browseDefault": "Browse..."
+    }
+},
+                defaultLanguage: "en-US",
+                lang: {
+    "keywords": "css minifier, css optimizer, merge css files, stylesheet optimizer, stylesheet minifier online",
+    "description": "Stylesheet merger, optimizer and minifier using the new HTML5 file api, JavaScript and CSS3",
+    "noscript": "This website makes heavy use of JavaScript, which seems disabled in your browser. To view site properly, please, enable JavaScript.",
+    "lang": "en-US",
+    "title": "CSS Merger, Optimizer and Minifier by Martin Ivanov (@wemakesitesnet)",
+    "mainPopup": "Builder.CSS by Acid.JS",
+    "tabProject": "Project Builder",
+    "tabSettings": "Compilation Settings",
+    "tabGetFullVersion": "Get the Full Version",
+    "tabAbout": "Help &amp; About",
+    "selectProject": "Select project or start new one from the dropdown",
+    "processProject": "Process Project",
+    "minificationFacts": "All done! Here are a few facts:<br /> - Original size: {initialLength};<br /> - Optimized size: {outputLength};<br /> - Minification ratio: {minificationRatio}%.",
+    "startNewProject": "Start new project",
+    "startNewProjectPopupTitle": "Name your New Project",
+    "startNewProjectPopupLabel": "Type project name and hit Enter",
+    "startNewProjectPopupPlaceholder": "(required)",
+    "createProjectButton": "Create Project",
+    "projectExists": "Another project with the name \"{name}\" exists. Click OK to overwrite the current data or Cancel to create project with a different name.",
+    "projectCreationSuccess": "Project created. You can drag and drop CSS files from your desktop now.",
+    "unsupportedFiletype": "The filetype you dragged is not supported. Please, drag and drop only .css files.",
+    "createProjectFirst": "There is no project selected to drag files to. Would you like to create a new project and then add files to it?",
+    "currentlySelectedProject": "Current Project",
+    "outputWriteSuccess": "Minified output of your <strong>{currentProject}</strong> has been successfully written to <strong>{name}</strong> on your server!",
+    "codeViewerTitle": "Code Viewer",
+    "buttonView": "View stylesheet contents",
+    "buttonRemove": "Remove stylesheet from compilation list",
+    "uncheckToNotInclude": "Uncheck if you don't want to include this file in the compilation",
+    "confirmItemRemove": "Are you sure you want to remove this stylesheet from the compilation list?",
+    "dragAndDropFilesFromDesktop": "Drag and drop CSS files from your desktop to include to compilation",
+    "noneSelected": "(None Selected)",
+    "alertSelectProject": "Please, select project or choose to create new one from the dropdown",
+    "alertTypeProjectName": "Please, type project name and hit enter again. You cannot create project without a name.",
+    "noFilesInProject": "There are no files, associated with this project. You can drag stylesheets from your desktop.",
+    "tabSettingsInfo": "Here you can select whether to remove whitespace and comments. If both checkboxes are unselected, Builder.CSS will just merge the files in the compilation list for the currently selected project.",
+    "optionRemoveComments": "Trim comments",
+    "optionRemoveWhitespace": "Trim whitespace",
+    "fullVersionInfo": "Although this online version is free, you may consider <a href=\"{marketplace}\" target=\"_blank\">purchasing the full version</a>, which is feature-complete. You will be able to host it on your own server, create your own projects, save output directly onto your machine and you will also get the full source code of Builder.CSS.",
+    "tabProjectInfo": "Select a predefined project or create a new one from the dropdown. Once you create a project, you will be able to drag and drop CSS files directly from your computer,. The files will be processed in your browser via HTML5 and will not be sent to server. Check the <strong>Help &amp; About</strong> tab for more information about defining projects, etc.",
+    "unsupportedBrowser": "Unfortunately your browser is not supported. Please, open this page with the latest version of <strong>Mozilla Firefox</strong> or <strong>Google Chrome</strong>.",
+    "aboutProjects": "Predefined projects are possible only in the full version of Builder.CSS, which can be <a href=\"{marketplace}\" target=\"_blank\">purchased from this link</a> and hosted on your own server. You can have as many projects as you want - for example for all of your websites.",
+    "alertServerError": "A server error has occured. Most probably you've entered a wrong path to a stylesheet file. Stack trace:<br />"
+}            });
+        })();
+        </script>
+    </body>
+</html>

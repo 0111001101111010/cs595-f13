@@ -1,0 +1,364 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head onunload=""><!-- The blank onload is for prefetcher.js, to enable events on back button pressing -dgy -->
+<!-- Hostname: ip-10-128-132-35-->
+<script type="text/javascript" src="http://wp-eng-static.washingtonpost.com/util-redirect.js"></script>
+<script>
+TWP.Util.redirect.mobile = false;
+for (site in TWP.Util.redirect.config.sites) { if(TWP.Util.redirect.config.sites[site]) { TWP.Util.redirect.mobile = true; break; } }
+if (TWP.Util.redirect.mobile == false && (window.location.href.indexOf('/settings') < 0 & window.location.href.indexOf('/offline') < 0 & navigator.cookieEnabled & document.cookie.indexOf("byeDavid")<0)){
+if (navigator.platform.substring(0,3)=="Mac"){
+var d = new Date();
+d.setTime(d.getTime()+(7*43200000));
+document.cookie= "sd=s; expires="+d.toGMTString() +"; domain=.washingtonpost.com; path=/";
+location.href="http://www.washingtonpost.com"+location.pathname;
+}
+if (navigator.platform.substring(0,3)=="Win"){
+var d = new Date();
+d.setTime(d.getTime()+(7*86400000));
+document.cookie= "sd=s; expires="+d.toGMTString() +"; domain=.washingtonpost.com; path=/";
+var request = new XMLHttpRequest();
+var url="/images/favicon.ico?w="+window.screen.width+"&h="+window.screen.height+"&r="+window.devicePixelRatio+"&a="+encodeURI(navigator.userAgent);
+request.open('GET',url,true);
+request.onreadystatechange = function() {
+if (request.readyState === 4 && request.status === 200) {
+var d = new Date();
+d.setTime(d.getTime()+(7*86400000));
+document.cookie= "sd=s; expires="+d.toGMTString() +"; domain=.washingtonpost.com; path=/";
+location.href="http://www.washingtonpost.com"+location.pathname;
+}
+};
+request.send(null);
+}
+if(document.cookie.indexOf("md=") < 0 && window.screen.width*window.screen.height/Math.pow((window.devicePixelRatio == undefined || navigator.userAgent.match(/(iPhone|iPod|iPad)/i) ? 1 : window.devicePixelRatio),2) < 480000) {
+var d = new Date();
+d.setTime(d.getTime()+31556900000);
+document.cookie= "md=1; expires="+d.toGMTString() + "; domain=.washingtonpost.com; path=/";
+}
+}
+</script>
+<link rel="canonical" href="http://www.washingtonpost.com//blogs/the-switch/wp/2013/09/23/this-hacker-might-seem-shady-but-throwing-him-in-jail-is-bad-for-everyone/"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="no">
+<title>
+This hacker might seem shady, but throwing him in jail is bad for everyone - The Washington Post
+</title>
+<link rel="shortcut icon" href="/images/favicon.ico"/>
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-57-precomposed.png">
+<style type="text/css" title="targetAudience">
+div .regionalTargetAudience { display:block };
+</style>
+<!--[if IE]> 
+<link rel="stylesheet" type="text/css" href="/styles/less/ms.less?v=844000"/>
+<![endif]--> 
+<link rel="stylesheet" type="text/css" href="/static/v/844000/styles/less/styles.less"/>
+<script type ="text/javascript">
+var TWP = window.TWP = TWP || {};
+TWP.mobile = TWP.mobile || {};
+TWP.mobile.initFunctions = [];
+TWP.mobile.changePageInitTempArray=[];
+TWP.mobile.changePageInitArray=[];
+TWP.mobile.urlUtils = TWP.mobile.urlUtils || {};
+TWP.mobile.urlUtils.redirectToDesktop = function() {
+//alert("redirecting to desktop");
+if(document.body != null) 
+document.body.style.display="none"; // Hide the content of the page so we don't see it while waiting for the desktop
+window.location = "http://www.washingtonpost.com"+window.location.pathname;
+};
+TWP.mobile.urlUtils.setOneTimeShowDesktopCookie= function() {
+document.cookie= "sd=1;domain=.washingtonpost.com;"; // Don's specify expires, making it a session cookie
+}
+var _sf_startpt=(new Date()).getTime();//chartbeat
+</script>
+</head>
+<body>
+<div id="floatAd"></div>
+<div class="page page-article" data-section="/blogs/the-switch" data-adkey="mob.wp.business/technology/blog/the_switch" data-timestamp="20131002025859">
+<header data-role="header" class="dropdown-group">
+<dl class="horiz-menu">
+<dd id="menuItem-home" class="">
+<a href="/"><label>Home</label></a>
+</dd>
+<dd id="menuItem-politics," class="">
+<a href="/politics"><label>Politics</label></a>
+</dd>
+<dd id="menuItem-opinions" class="">
+<a href="/opinions"><label>Opinions</label></a>
+</dd>
+<dd id="menuItem-local" class="">
+<a href="/local"><label>Local</label></a>
+</dd>
+<dd id="menuItem-global-menu" class="dropdown">
+<a class="submenu"><label>More</label>
+<span class="arrow"></span></a>
+</dd>
+</dl>
+<dl id="dropdown-content_menuItem-global-menu" class="dropdown-content">	
+<dl class="dual-submenu">
+<dd id="menu-sign-in" class="subMenuItem">
+<a href="">Sign In</a>
+</dd>
+<dd id="menu-sign-out" class="subMenuItem">
+<a href="">Log Out</a>
+</dd>
+<dd id="menu-subscribe" class="subMenuItem">
+<a href="https://account.washingtonpost.com/acquisition/?m=1&tid=m_nav_sub">Subscribe</a>
+</dd>
+</dl>
+<dd class="groupHeading"><span>Sections</span></dd>
+<dd id="menu-politics" class="subMenuItem">
+<a href="/politics">Politics</a>
+</dd>
+<dd id="menu-opinions" class="subMenuItem">
+<a href="/opinions">Opinions</a>
+</dd>
+<dd id="menu-local" class="subMenuItem">
+<a href="/local">Local</a>
+</dd>
+<dd id="menu-sports" class="subMenuItem">
+<a href="/sports">Sports</a>
+</dd>
+<dd id="menu-national" class="subMenuItem">
+<a href="/national">National</a>
+</dd>
+<dd id="menu-world" class="subMenuItem">
+<a href="/world">World</a>
+</dd>
+<dd id="menu-business" class="subMenuItem">
+<a href="/business">Business</a>
+</dd>
+<dd id="menu-technology" class="subMenuItem">
+<a href="/business/technology">Technology</a>
+</dd>
+<dd id="menu-lifestyle" class="subMenuItem">
+<a href="/lifestyle">Lifestyle</a>
+</dd>
+<dd id="menu-entertainment" class="subMenuItem">
+<a href="/entertainment">Entertainment</a>
+</dd>
+<dd id="menu-games" class="subMenuItem">
+<a href="http://games.washingtonpost.com/">Games</a>
+</dd>
+<dd id="menu-photography" class="subMenuItem">
+<a href="/photography">Photos</a>
+</dd>
+<dd id="menu-video" class="subMenuItem">
+<a href="http://www.washingtonpost.com/posttv">PostTV</a>
+</dd>
+<dd id="menu-classifieds" class="subMenuItem">
+<a href="/classifieds">Classifieds</a>
+</dd>
+<dd id="menu-realestate" class="subMenuItem">
+<a href="/realestate">Real Estate</a>
+</dd>
+<dd id="menu-settings" class="subMenuItem">
+<a href="/settings">Settings</a>
+</dd>
+<dd class="actionLine close"></dd>
+</dl>
+<div id="titlebar">
+<div class="section-title" data-section-url="/blogs/the-switch">
+<h1 class="sectionHeading" style="text-transform: uppercase">The Switch</h1>
+</div>
+<a class="subscribe" href="https://account.washingtonpost.com/acquisition/?promo=dgmwebbanrad&m=1&tid=m_hp_sub">SUBSCRIBE</a>
+</div>
+</header>	
+<div class ="omniture" data-omniture='{"pageName": "the-switch:blog:the-switch - foreveryone/ - 20130923 - this-hacker-might-seem-shady,-but-throwing-him-in-jail-is-bad-for-everyone","channel": "wpm - the-switch","contentSubsection": "wpm - the-switch","contentType": "blog","contentAuthor": "timothy b. lee","searchKeywords": "","pageFormat": "","DBPath": "","blogName": "the-switch","contentSource": ""}'></div>
+<article class="content story">
+<section class="intro">	
+<h2 class="headline">
+This hacker might seem shady, but throwing him in jail is bad for everyone
+</h2>
+<span class="byline">
+By Timothy B. Lee,
+</span>
+<span class="publishDate"> 
+&nbsp;Published: SEPTEMBER 23, 2:28 PM ET
+</span>	
+</section>
+<section class="share bar" >
+<hr class="sizebar">
+<script>var mobilePath="/blogs/the-switch/wp/2013/09/23/this-hacker-might-seem-shady-but-throwing-him-in-jail-is-bad-for-everyone/"</script>
+<span class="facebook">
+<a class="noUrlChange" href="http://m.facebook.com/sharer.php?u=http%3A%2F%2Fwww.washingtonpost.com%2Fblogs%2Fthe-switch%2Fwp%2F2013%2F09%2F23%2Fthis-hacker-might-seem-shady-but-throwing-him-in-jail-is-bad-for-everyone%2F" 
+target="_blank">
+<span class="shareIcon"><span class="playicon">&nbsp;</span></span></a>
+</span>
+<span class="twitter">
+<a class="noUrlChange" href="https://twitter.com/intent/tweet?text=This+hacker+might+seem+shady%2C+but+throwing+him+in+jail+is+bad+for+everyone&url=http%3A%2F%2Fwww.washingtonpost.com%2Fblogs%2Fthe-switch%2Fwp%2F2013%2F09%2F23%2Fthis-hacker-might-seem-shady-but-throwing-him-in-jail-is-bad-for-everyone%2F" target="_blank">
+<span class="shareIcon"><span class="playicon">&nbsp;</span></span></a>
+</span>
+<span class="sizectl">
+<span class="sizeless">
+<span class="sizelessInner">&nbsp;</span>
+</span>
+<span class="textSizeText">Aa</span>
+<span class="sizemore">
+<span class="sizemoreInner">&nbsp;</span>
+</span>
+</span>
+<hr class="sizebar" />
+</section>
+<section class="body fluidEmbedContainer">
+<div class="wp-caption aligncenter" id="attachment_5775">
+<div class="inline-img external">
+<img class="external" data-src="/externimage/w/h/14p-kKPm6pzvJWvAsfrWQV3l5L0OVr3vbpcfWaCEAgN0vbMkwi6OgEzvYA1wah0-kZbgRvnrKuPqRzGW2ovwqJnP4DPYCO16YocCKigxiE-8k8wovZ6XWjK2VsDdfy2l/7692322752_edf4fdf7ab_z.jpg" data-aspect-ratio="auto" original="http://www.washingtonpost.com/blogs/the-switch/files/2013/09/7692322752_edf4fdf7ab_z.jpg"></div>
+<p class="wp-caption-text">Andew Aurenheimer (Photo by <a href="http://www.flickr.com/photos/pinguino/7692322752/">pinguino k</a>)</p>
+</div><p>On Friday, the U.S. government <a href="https://m.app.box.com/view_shared/1c2i69r1x0118i68zwsv">filed its brief</a> in the appeal of Andrew "Weev" Auernheimer, who was convicted of federal hacking charges for downloading hundreds of thousands of customer e-mail addresses from AT&amp;T's Web site. The government says the conviction was proper, but many security researchers and civil liberties advocates argue that the conviction would set a dangerous precedent. Confused? Read on.</p><p>
+<strong>Who's Weev?</strong>
+</p><p>Weev's real name is Andrew Auernheimer. He's a security researcher and Internet provocateur who is facing felony hacking charges. No one, including Auernheimer himself, would <a href="http://www.theverge.com/2013/9/12/4693710/the-end-of-kindness-weev-and-the-cult-of-the-angry-young-man">describe him as a nice guy.</a> But his case raises important questions about the freedom to conduct computer security research and to use software to gather information online.</p><p>
+<strong>What is Auernheimer being prosecuted for?</strong>
+</p><p>In 2010, Auernheimer and a colleague discovered that AT&amp;T had accidentally published the private e-mail addresses of its iPad customers to an AT&amp;T-owned Web site. Auernheimer then wrote automated software to harvest the e-mail addresses of more than 100,000 iPad users. He <a href="http://gawker.com/5559346/apples-worst-security-breach-114000-ipad-owners-exposed">passed this information</a> to Gawker.</p><p>The government argues that Auernheimer should have known that AT&amp;T's Web site wasn't intended to be available to the general public and that that should have stopped him from harvesting its customers' e-mail addresses. The feds point out that Auernheimer configured his software to falsely tell the AT&amp;T server that it was running on an iPad. And the government argues that the process Auernheimer used to download the e-mail addresses involved inappropriately impersonating AT&amp;T customers.</p><p>
+<strong>Using automated software to harvest peoples' private information sounds pretty sketchy. It's good for the feds to put a stop to that kind of thing, right?</strong>
+</p><p>Most ordinary users have neither the skills nor the inclination to set up automatic harvesting of information from Web sites. But this technique, known as "scraping," is surprisingly common among technologically sophisticated users and has a number of legitimate applications.</p><p>For example, in 2006, Wired journalist Kevin Poulsen <a href="http://www.wired.com/science/discoveries/news/2006/10/71948">launched a project</a> to identify sex offenders who might be trolling MySpace for minors. Obviously, searching for every name in the sex offender registry by hand wouldn't have been practical, but Poulsen figured out he could automate the process with software.</p><p>To get a list of sex offenders, Poulsen <a href="http://www.wired.com/science/discoveries/news/2006/10/71976?currentPage=all">wrote an automated program</a> to search the Department of Justice Web site for each zip code in the United States and then save the name and address of each registered sex offender in that zip code to a file.</p><p>Unfortunately, Poulsen said, his initial search got him "temporarily blocked" from the site because the Department of Justice "doesn't like you running a lot of queries back-to-back." So he added a 30-second delay between queries. That "seemed to satisfy the server," but it lengthened the time it took to download the entire database to 71 hours.</p><p>There are some striking similarities between Poulsen's actions and Auernheimer's. Both used automated software to harvest information from a Web site. Both used the Web site in ways that probably weren't intended by their designers. Both took technical measures to avoid Web site operators' efforts to discourage their activities.</p><p>Yet most people would agree that Poulsen's actions were a legitimate journalistic project. So we might want to be careful about subjecting this kind of technique to criminal penalties.</p><p>
+<strong>Come on, Poulsen was once convicted for computer hacking before he began his career as a journalist. And this sort of thing still seems creepy. Aren't we better off without hackers poking around other peoples' Web sites?</strong>
+</p><p>Poulsen is far from the only person who has used "scraping" techniques for legitimate purposes. Academics use them to gather data sets for later analysis. Businesses use them to gather data, such as prices and product descriptions, from competitors' Web sites. That can benefit the public by making the market more competitive. The Electronic Frontier Foundation, a public interest group, <a href="http://tosback.org/">scrapes corporate Web sites</a> to detect when they make changes to their terms of service.</p><p>"Over the past fifteen years, virtually every organization, corporation, and government on the planet has published information on the web," wrote the legal scholar Paul Ohm in <a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1370411">a 2006 article.</a> "The problem with this data is it's trapped within the four corners of web pages."</p><p>Ohm believes that legal academics could do better research if they learned to write Web-scraping software. "Scraping frees data, allowing it to be used in an endless number of new ways," he argued.</p><p>
+<strong>Yeah, but Auernheimer didn't just scrape a publicly available Web site. He used shady techniques like impersonating an iPad. Isn't that wrong?</strong>
+</p><p>When a Web browser requests a Web page from a Web server, it sends something called a user agent string to tell the server what kind of browser is requesting the page. The government faults Auernheimer for sending the user agent string of an iPad even though his software wasn't running on an iPad.</p><p>This is another example of a technique that only sounds shady if you're not familiar with the conventions of the Web. This kind of user agent spoofing is extremely common online. Indeed, as security researcher <a href="http://blog.erratasec.com/2013/09/how-weevs-prosecutors-are-making-up.html#.Uj3o3-ChawF">Robert Graham points out</a>, since the 1990s, most major browsers have used a user agent string that starts with "Mozilla," the code name for the now-defunct Netscape Web browser. Microsoft began doing this because in the 1990s, Web servers would send different versions of their sites to different browsers. Netscape was viewed as the cutting-edge browser of its day, and so Internet Explorer pretended to be Netscape to trick Web servers into sending it the most sophisticated version of their site. Over the last decade, other browsers have followed suit, and now almost all browsers call themselves Mozilla even though most of them aren't derived from Mozilla software.</p><p>Changing user agent strings has other uses too. In 2012, Orbitz was <a href="http://online.wsj.com/article/SB10001424052702304458604577488822667325882.html">accused</a> of showing more expensive hotels to Mac users than PC users. Changing one's user agent (to pose as a Mac, then as a PC) is essential to investigating this kind of allegation.</p><p>A Web developer might change a user agent string to that of an iPad so he or she can debug the iPad version of the Web site from a desktop Web browser. Indeed, changing user agent strings is so useful that Google's Chrome browser allows users to do it with <a href="http://googlesystem.blogspot.com/2011/12/changing-user-agent-new-google-chrome.html">just four clicks.</a> It would be crazy to make this extremely common technique a felony.</p><p>
+<strong>What about impersonating AT&amp;T users? That's problematic, right?</strong>
+</p><p>This is probably the government's strongest argument. The AT&amp;T Web site worked like this: Every iPad has a unique 19- or 20-digit ID called an <a href="https://en.wikipedia.org/wiki/ICCID#ICCID">ICC-ID.</a> AT&amp;T set up a Web site that allowed an iPad to provide its ICC-ID and get the e-mail address of the iPad's owner in response. Auernheimer figured out that ICC-IDs come in a predictable order, and so he wrote a program to try a large number of possible ICC-IDs in sequence and ask the server for the e-mail address associated with each one.</p><p>The government characterizes this as impersonating iPad users, and that's not a crazy way to think about it. But another way to think about it is that Auernheimer was simply asking the AT&amp;T server, "What is the e-mail address associated with this ICC-ID?" And the AT&amp;T server was configured to give an answer to anyone who asked.</p><p>The Internet has a standard convention for marking a Web page off-limits: protecting it with a password. Accessing a Web page with a password that doesn't belong to you is, properly, illegal. If AT&amp;T wanted to restrict access to its Web site, it could and probably should have protected the site with a password. It didn't do that.</p><p>An ICC-ID is not a password. And while we might think Auernheimer should have had the good sense not to access data that wasn't intended for him, it's probably not reasonable to impose criminal penalties for this kind of misjudgment.</p><p>
+<strong>Aurenheimer clearly knew he was doing something he wasn't supposed to. The government says he described his own actions as "theft." Shouldn't we expect people to be respectful of other peoples' property?</strong>
+</p><p>Knowledge is power. Journalists, academics, security researchers and others work to uncover information that powerful institutions would like to keep secret. Demanding that everyone respect these institutions' right to control information about themselves is contrary to the principles of these professions.</p><p>This is obvious in the case of journalists soliciting information from confidential sources. Sources give journalists information that powerful institutions want to keep secret, helping the public understand what these institutions are doing and hold them accountable.</p><p>Precisely the same point applies to software-assisted information-gathering. The scraping that's most valuable to the public will often not be welcomed by the company or government whose Web site is being scraped. Such scraping can reveal trends or policies that the organization that runs the Web site might prefer to keep secret.</p><p>Similarly, security research is often embarrassing to the technology vendor whose technology is being exposed as insecure. Yet the public benefits from having flaws discovered by relatively ethical security researchers instead of hackers who are prepared to use the information for nefarious purposes. If the law demanded that security researchers cease research that was unwelcome by technology vendors, a great deal of beneficial research would go undone.</p><p>Matt Blaze, a computer security researcher at the University of Pennsylvania, recently <a href="/blogs/wonkblog/wp/2013/07/09/this-accused-hacker-is-a-jerk-heres-why-he-shouldnt-be-a-felon/">told me</a> that the government's position, that Auernheimer should have known its Web site was off-limits, "essentially requires anyone doing Web-scale research to not just be ethical and honest but also to be a mind-reader."</p><p>Such a vague standard isn't just unfair to journalists, security researchers and others who conduct software-aided research. It could also harm the general public by giving powerful institutions a weapon to use against researchers looking for embarrassing information about them that the public has the right to know.</p>
+</section>
+<section class="threeComments"></section>
+<section class="relatedContent"></section>
+</article>
+<nav id="bottomNav">
+<section id="moreMenu">
+<div class="title">MORE</div>
+<div id="moreContact"><a href="mailto:mobilewebfeedback@washingtonpost.com">Contact us</a></div>
+<div id="morePrivacy"><a href="/privacy-policy/2011/11/18/gIQASIiaiN_story.html">Privacy policy</a></div>
+</section><!-- moreMenu -->
+<section id="myAccount">
+<div class="title">My Account</div>
+<span class="button sign-in">Sign In</span>
+<div class="account-info">
+<img height=60 width=60 src=""/>
+<span class="display-name"></span>
+<span class="sign-out">Log Out</span>
+</div>
+<a class="subscribe" href="https://account.washingtonpost.com/acquisition/?promo=dgmwebbanrad&m=1&tid=m_footer_sub">Subscribe</a>
+</section>
+</nav>
+<footer id="footer">
+<div class="copyright">&copy; Copyright 1996-2013 The Washington Post</div>
+<a href="#" class="noUrlChange fullSiteLink">View desktop site</a>
+</footer>
+</div>
+<div class="gallery-view" style="display:none;">
+<div class="outer-nav">
+<ul class="nav">
+<li id="swipeView-button-home"><span class="inner gallery-home">&nbsp;</span></li>
+<li id="swipeView-button-prev"><span class="inner gallery-prev">&nbsp;</span></li>
+<li id="swipeView-button-next"><span class="inner gallery-next">&nbsp;</span></li>
+</ul>
+</div>
+<div class="slide-wrapper"></div>
+</div>
+<span class="paywall-overlay"></span>
+<script type="text/template" id="gallerySlideTemplate">
+<img onload="this.className = '';" class="loading"></img>
+<div class="captionBlock captionMax">
+<span class="headline">&nbsp;</span>
+<span class="subtitle">&nbsp;</span>
+<span class="captionText">&nbsp;</span>
+<span class="byline">&nbsp;</span>
+</div>
+</script>
+<div id="omniture-block"></div>
+<script type="text/javascript" src="/static/v/844000/scripts/lib/jquery-1.7.1.min.js"></script> 
+<script type="text/javascript" src="/static/v/844000/scripts/lib/modernizr.min.js"></script>
+<script type="text/javascript" src="/static/v/844000/scripts/lib/plugins/modernizr-wp-tests.js"></script>
+<!-- <script type="text/javascript" src="/scripts/lib/matchMedia.min.js?v=844000"></script> --> 
+<script type="text/javascript" src="/static/v/844000/scripts/lib/swipeview.min.js"></script>
+<script type="text/javascript" src="/static/v/844000/scripts/lib/enquire.min.js"></script>
+<script type="text/javascript" src="/static/v/844000/scripts/mobile-site.js"></script>
+<script type="text/javascript" src="/static/v/844000/scripts/cookie-util.js"></script>
+<script type="text/javascript" src="/static/v/844000/scripts/lib/embed-resize.js"></script>
+<script>
+foresight = {
+options: {
+speedTestUri: "http://img3.wpdigital.net/wp-srv/mobile/mobile-web/speedTest/50k.jpeg",
+speedTestKB: 50,
+speedTestExpireMinutes: 30
+}
+};
+</script>
+<script type="text/javascript" src="/static/v/844000/scripts/lib/foresight.min.js"></script>
+<script type="text/javascript" src="/static/v/844000/scripts/lib/writeCapture.js"></script>
+<script type="text/javascript" src="/static/v/844000/scripts/lib/plugins/jquery.writeCapture.js"></script>
+<script type='text/javascript' src='/static/v/844000/scripts/online.js'></script>
+<script type="text/javascript" src="/static/v/844000/scripts/prefetcher.js"></script>
+<script type='text/javascript' src='/static/v/844000/scripts/settings.js'></script>
+<script type='text/javascript' src='/static/v/844000/scripts/lib/fastclick.js'></script>
+<script type='text/javascript' src='/static/v/844000/scripts/comments.js'></script>
+<script type='text/javascript' src='/static/v/844000/scripts/lib/add2home.js'></script>
+<!-- 
+<script type='text/javascript' src='/static/v/844000/scripts/logg.js'></script>
+-->
+<!-- SiteCatalyst code version: H.24.4.
+Copyright 1996-2012 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script type="text/javascript">
+var s_account="wpniwpmobileprod";
+</script>
+<script language="JavaScript" type="text/javascript" src="/static/v/844000/scripts/s_code.js"></script>
+<script type="text/javascript" src="/static/v/844000/scripts/mobile-omniture.js"></script>
+<noscript><img src="http://wpni.112.2o7.net/b/ss/wpniwpmobilepp/1/H.24.4--NS/0"
+height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.24.4. -->	
+<!-- Begin comScore Tag -->
+<script>
+var _comscore = _comscore || []; _comscore.push({ c1: "2", c2: "3005617" }); (function() {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el); })();
+</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/p?c1=2&c2=3005617&c4=m.washingtonpost.com/nojs.html" /> </noscript>
+<!-- End comScore Tag -->
+<!-- Begin chartbeat code -->
+<script>
+var _sf_async_config={};
+/** CONFIGURATION START **/
+_sf_async_config.uid = 19624;
+_sf_async_config.domain = 'm.washingtonpost.com';
+_sf_async_config.useCanonical = true;
+_sf_async_config.sections = $(".sectionHeading").html();
+_sf_async_config.authors = TWP.mobile.getTargetAudience();
+/** CONFIGURATION END **/
+(function(){
+function loadChartbeat() {
+window._sf_endpt=(new Date()).getTime();
+var e = document.createElement('script');
+e.setAttribute('language', 'javascript');
+e.setAttribute('type', 'text/javascript');
+e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+document.body.appendChild(e);
+}
+var oldonload = window.onload;
+window.onload = (typeof window.onload != 'function') ?
+loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+</script>
+<!-- End chartbeat code -->
+</body></html>
+

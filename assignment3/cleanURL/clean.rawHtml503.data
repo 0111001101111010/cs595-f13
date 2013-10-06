@@ -1,0 +1,134 @@
+   [1]Logo MetroDNA [2]Home [3]Documentation
+   Logo MetroDNA
+
+   MetroDNA est une manière simple, efficace d’afficher les symboles des
+   transports en commun parisiens (RATP / SNCF)[4]* dans vos sites sans
+   effort.
+
+   Metro RER Tram Transilien
+
+Un seul fichier CSS ou SASS. C’est tout.
+
+   [5]Téléchargez-le
+
+Usage simple, markup intuitif.
+
+   MetroDNA se veut avant tout simple et facile à utiliser. Pour plus
+   d'informations concernant la manière de l'utiliser, vous pouvez
+   [6]consulter la documentation
+
+HTML :
+
+                                <p>
+                                        Accessible par la ligne
+                                        <span class=”metro symbole”>Metro</span>
+                                        <span class=”metro ligne14”>Ligne 14</sp
+an>
+                                </p>
+
+Sortie :
+
+   Accessible par la ligne Metro Ligne 14
+
+Un unique fichier, pas de dossier d’images.
+
+   MetroDNA - illustration un seul fichier
+
+   MetroDNA est une simple feuille de style, CSS ou SASS suivant votre
+   workflow, qui contient déjà tous les symboles dont vous avez besoin,
+   sous forme d’SVGs inline optimisés et directement intégrés en data-URI.
+   Intégrez le CSS à votre feuille de style principale, et rajoutez le
+   markup à votre HTML. Voilà.
+
+Des symboles redimensionnables et retina-ready
+
+   MetroDNA - illustration symboles vectoriels redimensionnables et retina
+
+   MetroDNA, en incluant des éléments vectoriels offre une qualité d’image
+   toujours parfaite, quelque soit la taille à laquelle les symboles sont
+   affichés. Même sur les écrans Haute définition.
+
+Un fichier léger et optimisé
+
+   MetroDNA - Illustration fichier léger et optimisé
+
+   Tous les éléments de MetroDNA sont des SVG allégés et optimisés, dans
+   le but de minimiser leur impact sur les performances de votre site.
+   Chaque symbole pèse en général entre 500 octets et 2 ko.
+
+   De plus, vous n’avez pas à inclure la librairie complète; Il est
+   possible de générer un fichier CSS ou SASS comprenant uniquement les
+   symboles nécessaires à votre projet.
+
+Téléchargez MetroDNA
+
+Sélectionnez les symboles nécessaires à votre projet :
+
+   [X] Lignes Metro
+
+   [X] Metro [X] Ligne 1 [X] Ligne 2 [X] Ligne 3 [X] Ligne 3bis [X] Ligne
+   4 [X] Ligne 5 [X] Ligne 6 [X] Ligne 7 [X] Ligne 7bis [X] Ligne 8 [X]
+   Ligne 9 [X] Ligne 10 [X] Ligne 11 [X] Ligne 12 [X] Ligne 13 [X] Ligne
+   14
+
+   [X] Lignes RER
+
+   [X] RER [X] Ligne A [X] Ligne B [X] Ligne C [X] Ligne D [X] Ligne E
+
+   [ ] Lignes Tram
+
+   [ ] Tram [ ] Ligne 1 [ ] Ligne 2 [ ] Ligne 3a [ ] Ligne 3b [ ] Ligne 4
+
+   [ ] Lignes Transilien
+
+   [ ] transilien [ ] Ligne H [ ] Ligne J [ ] Ligne K [ ] Ligne L [ ]
+   Ligne N [ ] Ligne P [ ] Ligne R [ ] Ligne U
+
+   (css) Logo MetroDNA Télécharger (CSS) (sass) Logo MetroDNA Télécharger
+   (SASS) [7]MetroDNA est également sur GitHub
+
+Compatibilité
+
+MetroDNA est compatible avec les navigateurs suivants :
+
+   Icone Internet Explorer IE 9+ Icone Firefox Firefox 4.0+ Icone Chrome
+   Chrome 7.0+ Icone Safari Safari 5.1+ Icone Opera Opera 11.6+
+
+   Pour les versions antérieures d’Internet Explorer, il est possible
+   d'utiliser [8]un fallback texte.
+
+   MetroDNA est un projet de Clément Oriol,
+   Webdesigner & Front-end developper.
+
+   Disponible en Freelance dès Septembre 2013
+
+   [9]clement@clementoriol.com [10]http://www.clementoriol.com [11]Suivre
+   @oriolclement
+
+   Bugs, remarques, idées, requêtes ?
+   [12]N'hésitez pas à me contacter !
+
+   Retrouvez le projet sur Github:
+   [13]github.com/clementoriol/MetroDNA
+
+   [14]Documentation de MetroDNA [15]Tweeter
+
+   Ces symboles sont la propriété exclusive de la RATP et de la SNCF
+
+References
+
+   1. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/index.html
+   2. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/index.html
+   3. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/documentation.html
+   4. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml503.data#droits
+   5. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml503.data#telecharger
+   6. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/documentation.html
+   7. https://github.com/clementoriol/MetroDNA
+   8. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/documentation.html#fallback-ie
+   9. mailto:clement@clementoriol.com
+  10. http://www.clementoriol.com/
+  11. https://twitter.com/oriolclement
+  12. mailto:clement@clementoriol.com
+  13. https://github.com/clementoriol/MetroDNA
+  14. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/documentation.html
+  15. https://twitter.com/share

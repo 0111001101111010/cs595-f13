@@ -1,0 +1,252 @@
+   #[1]Sam Relton's Blog » Feed [2]Sam Relton's Blog » Comments Feed
+   [3]Sam Relton's Blog » Emacs and Anaconda Python Comments Feed [4]Emacs
+   and Python [5]alternate [6]alternate [7]Sam Relton's Blog
+   [8]WordPress.com
+
+   [9]Sam Relton's Blog Ramblings on maths, technology and guitars
+     * [10]Blog
+     * [11]Homepage
+     * [12]About Me
+
+     * [13]Subscribe to RSS
+
+   [14]September 26, 2013
+     * in [15]Computing
+     * [16]Leave a Comment
+
+Emacs and Anaconda Python
+
+   Recently I posted a [17]blog about using Emacs and Python together. It
+   was about having setting in your .emacs file allowing Emacs to interact
+   with the default Python and SciPy/NumPy from the Ubuntu repositories,
+   which is out of date. After changing Python version to Anaconda Python
+   this broke all my Emacs setup! It was a real pain to fix so I’ve
+   collected the main ideas here.
+
+Anaconda Python
+
+   To use the latest versions of the Python packages like SciPy and NumPy
+   I downloaded the [18]Anaconda Python distribution. It includes lots of
+   the most useful Python packages for scientific computing by default
+   such as
+     * Numba and Cython for speeding up code.
+     * SymPy for symbolic computation.
+     * F2Py for converting Fortran code.
+     * IPython for a better interactive experience.
+     * mpi for parallel computing.
+     * PEP8 and PyFlakes to enforce coding standards.
+
+   I’d really recommend it as an easy way to get a good Python install.
+   You can also pay extra for upgrades like linking NumPy with MKL for
+   enhanced speed (which is free for academics).
+
+Getting a working Emacs setup
+
+   Anaconda Python was great from the command line, I’d also edited my
+   .bashrc so that typing python and ipython in bash would bring up the
+   Anaconda interpreters. This was done by adding ‘~/anaconda/bin’ to the
+   $PATH variable. However when using Emacs (which I keep on the Unity
+   launcher) it was still using the standard interpreter and the outdated
+   version of SciPy and NumPy.
+
+   After a lot of failed attempts to change the interpreter in Emacs I
+   finally tracked down the cause of the problem: the Ubuntu launch bar
+   doesn’t use the $PATH variable set in .bashrc.
+
+The solution
+
+   The way I solved this problem was to add some code at the beginning of
+   my .emacs file which sets the $PATH variable within Emacs to match that
+   from .bashrc. It is a modification of the code by sanityinc on [19]this
+   page. If you run OS X then you can get the exec-path-from-shell package
+   from [20]Marmalade or [21]GitHub.
+
+(defun set-exec-path-from-shell-PATH ()
+        (interactive)
+        (let ((path-from-shell (replace-regexp-in-string "^.*\n.*shell\n" "" (sh
+ell-command-to-string "$SHELL --login -i -c 'echo $PATH'"))))
+        (setenv "PATH" path-from-shell)
+        (setq exec-path (split-string path-from-shell path-separator))))
+
+(set-exec-path-from-shell-PATH)
+
+Share this:
+
+     * [22]Twitter
+     * [23]Facebook
+     * [24]Google
+     *
+
+Like this:
+
+   Like Loading...
+
+   Tags: [25]Linux, [26]Emacs, [27]Python, [28]Elisp, [29]IPython,
+   [30]Scientific Computing, [31]Ubuntu, [32]Anaconda
+
+About Sam Relton
+
+   PhD student at Manchester University, UK working in Numerical Linear
+   Algebra. Also an amateur guitarist.
+   [33]View all posts by Sam Relton »
+   [34]« Previous post
+
+Leave a Reply [35]Cancel reply
+
+   Enter your comment here...
+
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+
+   Fill in your details below or click an icon to log in:
+     *
+     *
+     *
+     *
+     *
+
+       IFRAME: [36]googleplus-sign-in
+
+   [37]Gravatar
+   Email (required) (Address never made public)
+   ____________________
+   Name (required)
+   ____________________
+   Website
+   ____________________
+   WordPress.com Logo
+
+   You are commenting using your WordPress.com account.
+   ( [38]Log Out / [39]Change )
+   Twitter picture
+
+   You are commenting using your Twitter account.
+   ( [40]Log Out / [41]Change )
+   Facebook photo
+
+   You are commenting using your Facebook account.
+   ( [42]Log Out / [43]Change )
+   Google+ photo
+
+   You are commenting using your Google+ account.
+   ( [44]Log Out / [45]Change )
+   [46]Cancel
+
+   Connecting to %s
+
+   [ ] Notify me of follow-up comments via email.
+
+   [ ] Notify me of new posts via email.
+
+   Post Comment
+
+   Search for: ____________________ Search
+
+Categories
+
+     * [47]Computing (3)
+     * [48]Guitar (1)
+     * [49]Maths (1)
+
+Recent Posts
+
+     * [50]Emacs and Anaconda Python
+     * [51]Emacs and Python
+     * [52]Modding the Crybaby
+     * [53]G2S3 Fudan University, Shanghai
+     * [54]Fixing the August LP107T presentation pointer in Linux.
+
+Twitter
+
+   My Tweets
+
+   [55]Sam Relton's Blog
+
+   [56]Blog at WordPress.com. [57]The Skeptical Theme.
+
+   [58]Follow
+
+Follow “Sam Relton's Blog”
+
+   Get every new post delivered to your Inbox.
+
+   Enter your email add
+
+   Sign me up
+   [59]Powered by WordPress.com
+
+   IFRAME: [60]likes-master
+
+   %d bloggers like this:
+
+References
+
+   Visible links
+   1. http://samrelton.wordpress.com/feed/
+   2. http://samrelton.wordpress.com/comments/feed/
+   3. http://samrelton.wordpress.com/2013/09/26/emacs-and-anaconda-python/feed/
+   4. http://samrelton.wordpress.com/2013/09/16/emacs-and-python/
+   5. http://public-api.wordpress.com/oembed/1.0/?format=json&url=http%3A%2F%2Fsamrelton.wordpress.com%2F2013%2F09%2F26%2Femacs-and-anaconda-python%2F&for=wpcom-auto-discovery
+   6. http://public-api.wordpress.com/oembed/1.0/?format=xml&url=http%3A%2F%2Fsamrelton.wordpress.com%2F2013%2F09%2F26%2Femacs-and-anaconda-python%2F&for=wpcom-auto-discovery
+   7. http://samrelton.wordpress.com/osd.xml
+   8. http://wordpress.com/opensearch.xml
+   9. http://samrelton.wordpress.com/
+  10. http://samrelton.wordpress.com/
+  11. http://www.maths.manchester.ac.uk/~srelton/
+  12. http://samrelton.wordpress.com/about/
+  13. http://samrelton.wordpress.com/feed/
+  14. http://samrelton.wordpress.com/2013/09/26/emacs-and-anaconda-python/
+  15. http://samrelton.wordpress.com/category/computing/
+  16. http://samrelton.wordpress.com/2013/09/26/emacs-and-anaconda-python/#respond
+  17. http://samrelton.wordpress.com/2013/09/16/emacs-and-python/
+  18. https://store.continuum.io/
+  19. http://www.stackoverflow.com/questions/6411121/how-to-make-emacs-to-use-my-bashrc-file
+  20. http://www.marmalade-repo.org/
+  21. https://github.com/purcell/exec-path-from-shell
+  22. http://samrelton.wordpress.com/2013/09/26/emacs-and-anaconda-python/?share=twitter
+  23. http://samrelton.wordpress.com/2013/09/26/emacs-and-anaconda-python/?share=facebook
+  24. http://samrelton.wordpress.com/2013/09/26/emacs-and-anaconda-python/?share=google-plus-1
+  25. http://samrelton.wordpress.com/tag/linux/
+  26. http://samrelton.wordpress.com/tag/emacs/
+  27. http://samrelton.wordpress.com/tag/python/
+  28. http://samrelton.wordpress.com/tag/elisp/
+  29. http://samrelton.wordpress.com/tag/ipython/
+  30. http://samrelton.wordpress.com/tag/scientific-computing/
+  31. http://samrelton.wordpress.com/tag/ubuntu/
+  32. http://samrelton.wordpress.com/tag/anaconda/
+  33. http://samrelton.wordpress.com/author/sdrelton/
+  34. http://samrelton.wordpress.com/2013/09/16/emacs-and-python/
+  35. file://localhost/2013/09/26/emacs-and-anaconda-python/#respond
+  36. https://public-api.wordpress.com/connect/?googleplus-sign-in=1
+  37. https://gravatar.com/site/signup/
+  38. javascript:HighlanderComments.doExternalLogout( 'wordpress' );
+  39. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml14.data
+  40. javascript:HighlanderComments.doExternalLogout( 'twitter' );
+  41. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml14.data
+  42. javascript:HighlanderComments.doExternalLogout( 'facebook' );
+  43. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml14.data
+  44. javascript:HighlanderComments.doExternalLogout( 'googleplus' );
+  45. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml14.data
+  46. javascript:HighlanderComments.cancelExternalWindow();
+  47. http://samrelton.wordpress.com/category/computing/
+  48. http://samrelton.wordpress.com/category/guitar/
+  49. http://samrelton.wordpress.com/category/maths/
+  50. http://samrelton.wordpress.com/2013/09/26/emacs-and-anaconda-python/
+  51. http://samrelton.wordpress.com/2013/09/16/emacs-and-python/
+  52. http://samrelton.wordpress.com/2013/08/29/modding-the-crybaby/
+  53. http://samrelton.wordpress.com/2013/08/03/g2s3/
+  54. http://samrelton.wordpress.com/2013/07/17/august-lp107t-driver-linux/
+  55. http://samrelton.wordpress.com/
+  56. http://wordpress.com/?ref=footer
+  57. http://theme.wordpress.com/themes/skeptical/
+  58. javascript:void(0)
+  59. http://wordpress.com/signup/?ref=lof
+  60. http://widgets.wp.com/likes/master.html?ver=20130620a#ver=20130620a&mp6=1
+
+   Hidden links:
+  62. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml14.data#comment-form-guest
+  63. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml14.data#comment-form-load-service:WordPress.com
+  64. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml14.data#comment-form-load-service:Twitter
+  65. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml14.data#comment-form-load-service:Facebook

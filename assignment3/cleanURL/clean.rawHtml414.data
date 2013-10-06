@@ -1,0 +1,387 @@
+   #[1]Disco Duro de Roer » Feed [2]Disco Duro de Roer » RSS de los
+   comentarios [3]Disco Duro de Roer » Formas de incluir CSS en un
+   documento HTML RSS de los comentarios [4]Como usar TuneUp utilities
+   2012 [5]Componentes de un estilo CSS
+
+[6]Disco Duro de Roer
+
+   Deja de golpear a tu ordenador y soluciona tus problemas aquí
+     * [7]Home
+     * [8]Acerca de mí
+     * [9]Manuales
+          + [10]Internet
+               o [11]Google
+               o [12]Redes sociales
+          + [13]Programación
+               o [14]Pseudocódigo
+          + [15]Ofimática
+               o [16]Hoja de cálculo
+               o [17]Procesador de texto
+          + [18]Sistemas operativos
+               o [19]Linux
+               o [20]Windows
+          + [21]Software
+          + [22]Web
+               o [23]CSS
+               o [24]Drupal
+               o [25]E-Commerce
+               o [26]Foro
+               o [27]HTML
+               o [28]Joomla
+               o [29]WordPress
+     * [30]Ejercicios
+          + [31]Excel
+          + [32]HTML
+          + [33]Pseudocodigo
+     * [34]Software
+          + [35]Internet
+               o [36]Correo electrónico
+               o [37]Descargas
+               o [38]Escritorio remoto
+               o [39]FTP
+               o [40]Mensajeria instantanea
+               o [41]Navegadores
+               o [42]Redes sociales
+          + [43]Multimedia
+               o [44]Codecs
+               o [45]Edicion/Creacion video
+               o [46]Reproductores
+          + [47]Ofimática
+               o [48]Editores de texto
+               o [49]PDF
+               o [50]Suite ofimática
+          + [51]Portables
+          + [52]Programación
+          + [53]Seguridad
+               o [54]Antivirus
+               o [55]Copias de seguridad
+               o [56]Firewall
+          + [57]Sistema
+               o [58]Aspecto
+               o [59]CD/DVD
+               o [60]Cifrado
+               o [61]compresores
+               o [62]Diagnóstico
+               o [63]Discos duros
+               o [64]Optimización
+               o [65]Virtualización
+          + [66]Web
+               o [67]Joomla
+                    # [68]administrador
+                    # [69]Artículos/Categorías
+                    # [70]Módulos
+               o [71]WordPress
+                    # [72]Administrador
+                    # [73]Entradas/paginas
+                    # [74]Widgets
+     * [75]Sistemas operativos
+          + [76]Linux
+          + [77]Windows
+          + [78]Otros
+     * [79]Inglés
+     * [80]Noticias
+     * [81]Contáctanos
+
+   ago 28 2012
+
+[82]Formas de incluir CSS en un documento HTML
+
+   Hola a todos, hoy os explicaré las formas de incluir CSS en un
+   documento HTML de 3 formas sencillas. También lo veremos en ejemplo
+   simples.
+
+   - 1ª forma: incluir CSS en el propio documento HTML
+
+   Mediante la etiqueta <style> dentro de la cabecera del documento.
+   Dentro de <style> ponemos los estilos que queramos incluir en el
+   documento HTML. Es importante incluir el atributo type=”text/css”.
+
+   Es usado para definir estilos especificos en una determinada página
+   HTML. Su desventaja es a la hora de modificar los estilos, ya que
+   debemos cambiar los estilos de todas las páginas donde lo hayamos
+   incluido de esta manera.
+
+   Veamos un ejemplo:
+
+   [83]codigo css desde documento html
+
+   [84]ejemplo css desde documento html
+
+   - 2ª forma: definir CSS en un archivo externo
+
+   Los estilos se incluyen en un archivo con extensión .css que las
+   páginas HTML enlazan mediante la etiqueta <link>. Los atributos que
+   deben incluir son:
+     * rel: indica el tipo de relación que tiene el recurso enlazado y la
+       página HTML. En CSS, se usa stylesheet.
+     * type: indica el tipo de recurso enlazado. En CSS, es text/css.
+     * href: indica la URL del archivo CSS que contiene los estilos. La
+       URL puede ser relativa o absoluta.
+     * media: indica el medio en el que se van a aplicar los estilos del
+       archivo CSS. En principio, para este ejemplo no es importante, lo
+       normal es poner all.
+
+   Veamos un ejemplo:
+
+   Haremos un archivo aparte del documento HTML, con una extensión .css.
+
+   [85]codigo estilos css
+
+   [86]codigo html
+
+   Como vemos, al final de la etiqueta link la cerramos.
+
+   [87]ejemplo css desde documento html
+
+   Este método es el más recomendado, ya que en un solo archivo podemos
+   incluir una multitud de páginas HTML.
+
+   - 3ª forma: incluir CSS en los elementos HTML
+
+   Se utiliza la etiqueta <style> como atributo de la etiqueta que
+   queremos personalizar.
+
+   Veamos un ejemplo:
+
+    [88] codigo html elementos
+
+   [89]ejemplo css desde documento html
+
+   Este método se usa muy poco, solo es recomendado si queremos dar un
+   formato muy especifico.
+
+   Espero que os sea de ayuda.
+
+Otras entradas interesantes:
+
+     * [90]Comentarios en CSS y HTML
+     * [91]Reset CSS
+     * [92]Posicionamiento CSS
+     * [93]Componentes de un estilo CSS
+     * [94]Unidades de medida CSS
+
+   [95]Como usar TuneUp utilities 2012 [96]Componentes de un estilo CSS
+
+Deja un comentario [97]Cancel
+
+   ______________________________Tu nombre: *
+
+   ______________________________Tu E-mail: *
+
+   ______________________________Tu sitio Web:
+   Imagen CAPTCHA
+   [98]Refrescar imagen
+
+   ______ Código CAPTCHA *
+
+
+   _____________________________________________
+   _____________________________________________
+   _____________________________________________
+   _____________________________________________
+   _____________________________________________
+   _____________________________________________
+   _____________________________________________
+   _____________________________________________
+
+   _
+
+   Enviar comentario
+
+Busca lo que necesites en la web
+
+   ____________________
+
+Calendario de entradas
+
+   CAPTION: octubre 2013
+
+   L    M    X  J  V  S  D
+   [99]« sep
+      [100]1 2  3  4  5  6
+   7  8      9  10 11 12 13
+   14 15     16 17 18 19 20
+   21 22     23 24 25 26 27
+   28 29     30 31
+
+Anuncios
+
+Traffic-Club
+
+   [101]..::YO YA PERTENEZCO AL CLUB::..DIRECTORIO WEB TRAFFIC-CLUB
+
+¡Síguenos en las redes sociales!
+
+   [102]Hazte fan de nuestra cuenta de Facebook [103]Hazte fan de nuestra
+   cuenta de Google+ [104]Hazte fan de nuestra cuenta de Twitter
+   [105]Hazte fan de nuestra cuenta de YouTube [106]Hazte fan de nuestra
+   cuenta de RSS [107]Hazte fan de nuestra cuenta de Tuenti
+
+Afiliados
+
+   [108]Deimer4.0 Program
+   [109]Blog de Vicente Jorge Adria
+   [110]Pisatec Asesoramiento Tecnológico
+
+   [111]Java Swing Tutorial
+
+   [112]Informática Empresas
+
+   [113]Tienda churrishop
+
+   [114][Cabecera Ideas4PC.png]
+
+                           [115][avatar_paris.png]
+
+Videomanual aleatorio
+
+Manuales aleatorios
+
+   [116]Instrucción de control condicional en Pseudocódigo
+   [117]Huevos de pascua
+   [118]Como usar TuneUp utilities 2012
+   [119]Como usar TestDisk
+   [120]Autorrelleno Excel
+
+Contador de visitas
+
+                             contador de visitas
+
+   Vuelve al principio
+
+   [121]Close
+   Siguenos para hacer una web mejor
+   Haciendo click, nos ayudaras a saber que nuestra web te gusta
+
+Twitter
+
+   [122]Follow Me
+
+Facebook
+
+Google+
+
+References
+
+   1. http://www.discoduroderoer.es/feed/
+   2. http://www.discoduroderoer.es/comments/feed/
+   3. http://www.discoduroderoer.es/formas-de-incluir-css-en-un-documento-html/feed/
+   4. http://www.discoduroderoer.es/como-usar-tuneup-utilities-2012/
+   5. http://www.discoduroderoer.es/componentes-de-un-estilo-css/
+   6. http://www.discoduroderoer.es/
+   7. http://www.discoduroderoer.es/
+   8. http://www.discoduroderoer.es/acerca-de-mi/
+   9. http://www.discoduroderoer.es/category/manuales/
+  10. http://www.discoduroderoer.es/category/manuales/internet-manuales/
+  11. http://www.discoduroderoer.es/category/manuales/internet-manuales/google-internet-manuales/
+  12. http://www.discoduroderoer.es/category/manuales/internet-manuales/redes-sociales/
+  13. http://www.discoduroderoer.es/category/manuales/programacion/
+  14. http://www.discoduroderoer.es/category/manuales/programacion/pseudocodigo/
+  15. http://www.discoduroderoer.es/category/manuales/ofimatica/
+  16. http://www.discoduroderoer.es/category/manuales/ofimatica/hoja-de-calculo/
+  17. http://www.discoduroderoer.es/category/manuales/ofimatica/procesador-de-texto/
+  18. http://www.discoduroderoer.es/category/manuales/sistemas-operativos-manuales/
+  19. http://www.discoduroderoer.es/category/manuales/sistemas-operativos-manuales/linux-manuales/
+  20. http://www.discoduroderoer.es/category/manuales/sistemas-operativos-manuales/windows-manuales/
+  21. http://www.discoduroderoer.es/category/manuales/software-manuales/
+  22. http://www.discoduroderoer.es/category/manuales/web-manuales/
+  23. http://www.discoduroderoer.es/category/manuales/web-manuales/css/
+  24. http://www.discoduroderoer.es/category/manuales/web-manuales/drupal-web-manuales/
+  25. http://www.discoduroderoer.es/category/manuales/web-manuales/e-commerce/
+  26. http://www.discoduroderoer.es/category/manuales/web-manuales/foro/
+  27. http://www.discoduroderoer.es/category/manuales/web-manuales/html/
+  28. http://www.discoduroderoer.es/category/manuales/web-manuales/joomla/
+  29. http://www.discoduroderoer.es/category/manuales/web-manuales/wordpress/
+  30. http://www.discoduroderoer.es/category/ejercicio/
+  31. http://www.discoduroderoer.es/category/ejercicio/ejercicios-excel/
+  32. http://www.discoduroderoer.es/category/ejercicio/ejercicios-html/
+  33. http://www.discoduroderoer.es/category/ejercicio/ejercicios-pseudocodigo/
+  34. http://www.discoduroderoer.es/category/software/
+  35. http://www.discoduroderoer.es/category/software/internet/
+  36. http://www.discoduroderoer.es/category/software/internet/correo-electronico/
+  37. http://www.discoduroderoer.es/category/software/internet/descargas/
+  38. http://www.discoduroderoer.es/category/software/internet/escritorio-remoto/
+  39. http://www.discoduroderoer.es/category/software/internet/ftp/
+  40. http://www.discoduroderoer.es/category/software/internet/mensajeria-instantanea/
+  41. http://www.discoduroderoer.es/category/software/internet/navegadores/
+  42. http://www.discoduroderoer.es/category/software/internet/redes-sociales-internet/
+  43. http://www.discoduroderoer.es/category/software/multimedia/
+  44. http://www.discoduroderoer.es/category/software/multimedia/codecs/
+  45. http://www.discoduroderoer.es/category/software/multimedia/edicioncreacion-video/
+  46. http://www.discoduroderoer.es/category/software/multimedia/reproductores/
+  47. http://www.discoduroderoer.es/category/software/ofimatica-software/
+  48. http://www.discoduroderoer.es/category/software/ofimatica-software/editores-de-texto/
+  49. http://www.discoduroderoer.es/category/software/ofimatica-software/pdf/
+  50. http://www.discoduroderoer.es/category/software/ofimatica-software/suite-ofimatica/
+  51. http://www.discoduroderoer.es/category/software/portables/
+  52. http://www.discoduroderoer.es/category/software/programacion-software-manuales/
+  53. http://www.discoduroderoer.es/category/software/seguridad/
+  54. http://www.discoduroderoer.es/category/software/seguridad/antivirus/
+  55. http://www.discoduroderoer.es/category/software/seguridad/copias-de-seguridad/
+  56. http://www.discoduroderoer.es/category/software/seguridad/firewall/
+  57. http://www.discoduroderoer.es/category/software/sistema/
+  58. http://www.discoduroderoer.es/category/software/sistema/aspecto/
+  59. http://www.discoduroderoer.es/category/software/sistema/cd-dvd/
+  60. http://www.discoduroderoer.es/category/software/seguridad/cifrado-seguridad/
+  61. http://www.discoduroderoer.es/category/software/sistema/compresores/
+  62. http://www.discoduroderoer.es/category/software/sistema/diagnostico/
+  63. http://www.discoduroderoer.es/category/software/sistema/discos-duros/
+  64. http://www.discoduroderoer.es/category/software/sistema/optimizacion/
+  65. http://www.discoduroderoer.es/category/software/sistema/virtualizacion/
+  66. http://www.discoduroderoer.es/category/software/web-software/
+  67. http://www.discoduroderoer.es/category/software/web-software/joomla-web/
+  68. http://www.discoduroderoer.es/category/software/web-software/joomla-web/administrador-joomla-web/
+  69. http://www.discoduroderoer.es/category/software/web-software/joomla-web/articulos-categorias/
+  70. http://www.discoduroderoer.es/category/software/web-software/joomla-web/modulos-joomla-web/
+  71. http://www.discoduroderoer.es/category/software/web-software/wordpress-web/
+  72. http://www.discoduroderoer.es/category/software/web-software/wordpress-web/administrador/
+  73. http://www.discoduroderoer.es/category/software/web-software/wordpress-web/entradas-paginas/
+  74. http://www.discoduroderoer.es/category/software/web-software/wordpress-web/widgets/
+  75. http://www.discoduroderoer.es/category/sistemas-operativos/
+  76. http://www.discoduroderoer.es/category/sistemas-operativos/linux-sistemas-operativos/
+  77. http://www.discoduroderoer.es/category/sistemas-operativos/windows-sistemas-operativos/
+  78. http://www.discoduroderoer.es/category/sistemas-operativos/otros/
+  79. http://www.discoduroderoer.es/category/ingles/
+  80. http://www.discoduroderoer.es/category/noticias/
+  81. http://www.discoduroderoer.es/contactanos/
+  82. http://www.discoduroderoer.es/formas-de-incluir-css-en-un-documento-html/
+  83. http://www.discoduroderoer.es/wp-content/uploads/2012/08/codigo-css-desde-documento-html.png
+  84. http://www.discoduroderoer.es/wp-content/uploads/2012/08/ejemplo-css-desde-documento-html.png
+  85. http://www.discoduroderoer.es/wp-content/uploads/2012/08/codigo-estilos-css.png
+  86. http://www.discoduroderoer.es/wp-content/uploads/2012/08/codigo-html.png
+  87. http://www.discoduroderoer.es/wp-content/uploads/2012/08/ejemplo-css-desde-documento-html1.png
+  88. http://www.discoduroderoer.es/wp-content/uploads/2012/08/codigo-html-elementos.png
+  89. http://www.discoduroderoer.es/wp-content/uploads/2012/08/ejemplo-css-desde-documento-html2.png
+  90. http://www.discoduroderoer.es/comentarios-en-css-y-html/
+  91. http://www.discoduroderoer.es/reset-css/
+  92. http://www.discoduroderoer.es/posicionamiento-css/
+  93. http://www.discoduroderoer.es/componentes-de-un-estilo-css/
+  94. http://www.discoduroderoer.es/unidades-de-medida-css/
+  95. http://www.discoduroderoer.es/como-usar-tuneup-utilities-2012/
+  96. http://www.discoduroderoer.es/componentes-de-un-estilo-css/
+  97. file://localhost/formas-de-incluir-css-en-un-documento-html/#respond
+  98. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml414.data
+  99. http://www.discoduroderoer.es/2013/09/
+ 100. http://www.discoduroderoer.es/2013/10/01/
+ 101. http://siniestrotecamera37.blogspot.com.es/
+ 102. https://www.facebook.com/pages/Disco-Duro-de-Roer/516155851734486
+ 103. https://plus.google.com/b/118327379272536388220/118327379272536388220/posts
+ 104. https://twitter.com/DiscoDurodeRoer
+ 105. http://www.youtube.com/user/DiscoDurodeRoer
+ 106. http://feeds.feedburner.com/Discoduroderoer
+ 107. http://www.tuenti.com/#m=Page&func=index&page_key=1_2733_61601683
+ 108. http://www.deimer40.blogspot.com/
+ 109. http://www.vicentejorge.com/
+ 110. http://www.pisatec.com/enlaces-web/18-enlaces-tecnicos
+ 111. http://www.swing-facil.blogspot.com/
+ 112. http://www.zzmultimedia.com/
+ 113. http://www.churrishop.info/
+ 114. http://ideasforpc.blogspot.com.es/
+ 115. http://todosqueremosfollowers.wordpress.com/
+ 116. http://www.discoduroderoer.es/instruccion-de-control-condicional-en-pseudocodigo/
+ 117. http://www.discoduroderoer.es/huevos-de-pascua/
+ 118. http://www.discoduroderoer.es/como-usar-tuneup-utilities-2012/
+ 119. http://www.discoduroderoer.es/como-usar-testdisk/
+ 120. http://www.discoduroderoer.es/autorrelleno-excel/
+ 121. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml414.data
+ 122. https://twitter.com/discoduroderoer

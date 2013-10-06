@@ -1,0 +1,740 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>The Art of Debugging: two case-studies (1/2) &laquo; </title>
+<link rel="shortcut icon" href="http://disbauxes.upc.es/wp-content/themes/atahualpa/images/favicon/fff-tux.ico" /><link rel="canonical" href="http://disbauxes.upc.es/?p=2829" /><link rel="alternate" type="application/rss+xml" title=" RSS Feed" href="http://disbauxes.upc.es/?feed=rss2" />
+<link rel="alternate" type="application/atom+xml" title=" Atom Feed" href="http://disbauxes.upc.es/?feed=atom" />
+<link rel="pingback" href="http://disbauxes.upc.es/xmlrpc.php" />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; The Art of Debugging: two case-studies (1/2) Comments Feed" href="http://disbauxes.upc.es/?feed=rss2&#038;p=2829" />
+<link rel='stylesheet' id='jetpack_likes-css'  href='http://disbauxes.upc.es/wp-content/plugins/jetpack/modules/likes/style.css?ver=2.5' type='text/css' media='all' />
+<link rel='stylesheet' id='mtw-style-css'  href='http://disbauxes.upc.es/wp-content/plugins/my-twitter-widget/css/mtw-style.css?ver=3.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='qtsndtpsStylesheet-css'  href='http://disbauxes.upc.es/wp-content/plugins/quotes-and-tips/css/style.css?ver=3.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-syntax-css-css'  href='http://disbauxes.upc.es/wp-content/plugins/wp-syntax/css/wp-syntax.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack-widgets-css'  href='http://disbauxes.upc.es/wp-content/plugins/jetpack/modules/widgets/widgets.css?ver=20121003' type='text/css' media='all' />
+<link rel='stylesheet' id='easy_table_style-css'  href='http://disbauxes.upc.es/wp-content/plugins/easy-table/themes/default/style.css?ver=1.4' type='text/css' media='all' />
+<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js?ver=1.7.1'></script>
+<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js?ver=1.9.0'></script>
+<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/effects.js?ver=1.9.0'></script>
+<script type='text/javascript' src='http://disbauxes.upc.es/wp-content/plugins/lightbox-2/lightbox.js?ver=1.8'></script>
+<script type='text/javascript' src='http://disbauxes.upc.es/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='http://disbauxes.upc.es/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://disbauxes.upc.es/wp-content/plugins/jetpack/_inc/postmessage.js?ver=2.5'></script>
+<script type='text/javascript' src='http://disbauxes.upc.es/wp-content/plugins/jetpack/_inc/jquery.inview.js?ver=2.5'></script>
+<script type='text/javascript' src='http://disbauxes.upc.es/wp-content/plugins/jetpack/_inc/jquery.jetpack-resize.js?ver=2.5'></script>
+<script type='text/javascript' src='http://disbauxes.upc.es/wp-includes/js/comment-reply.min.js?ver=3.6.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://disbauxes.upc.es/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://disbauxes.upc.es/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Pattern-finding in the maelstrom: log-analysis.' href='http://disbauxes.upc.es/?p=2812' />
+<link rel='next' title='The Art of Debugging: two case-studies (2/2)' href='http://disbauxes.upc.es/?p=2858' />
+<link rel='canonical' href='http://disbauxes.upc.es/?p=2829' />
+<link rel='shortlink' href='http://wp.me/pPHS9-JD' />
+
+	<!-- begin lightbox scripts -->
+	<script type="text/javascript">
+    //<![CDATA[
+    document.write('<link rel="stylesheet" href="http://disbauxes.upc.es/wp-content/plugins/lightbox-2/Themes/White/lightbox.css" type="text/css" media="screen" />');
+    //]]>
+    </script>
+	<!-- end lightbox scripts -->
+<style type="text/css">.mtw_footer .twitter_widget_footer_logo img{ display: none; }.mtw_twitter_username h3{ display: none; } .mtw_container{ width:198px !important; }.mtw_tweets{ height:300px !important; }.mtw_container{ background:#FFFFFF !important; }.mtw_twitter_username p a,.mtw_twitter_username h3 a,.mtw_footer .twitter_widget_footer_link a{ color:#000000 !important; }.mtw_tweets{ background:#FFFFFF !important; }.mtw_tweets li p{ color:#816666 !important; }.mtw_tweets li a,.mtw_tweets li p a{ color:#497da8 !important; }</style>		<style type="text/css">
+			/* Style for tips|quote block */
+			#quotes_box_and_tips{
+				background-color:#2484C6 !important;
+				color: #FFFFFF !important;
+									
+				background-position: left bottom;
+								background-repeat: no-repeat;
+							}
+			#quotes_box_and_tips h3 {
+				color: #FFFFFF !important;
+			}
+			#quotes_box_and_tips .signature {
+				color: #FFFFFF !important;
+			}
+			#quotes_box_and_tips .signature span {
+				color: #FFFFFF !important;
+			}
+		</style>
+		
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="The Art of Debugging: two case-studies (1/2)" />
+<meta property="og:url" content="http://disbauxes.upc.es/?p=2829" />
+<meta property="og:description" content="Preamble Debugging is more than a technique. It is, in fact, an art. But this art is hard to master, and so there are a huge amount of developers thinking it such a burden. It could be the quickest..." />
+<meta name="twitter:site" content="@jetpack" />
+<meta name="twitter:card" content="summary" />
+<style type="text/css">body{text-align:center;margin:0;padding:0;font-family:tahoma,arial,sans-serif;font-size:0.8em;color:#000000;background:#ffffff}a:link,a:visited,a:active{color:#160EED;font-weight:bold;text-decoration:none;}a:hover{color:#ED0018;font-weight:bold;text-decoration:underline}ul,ol,dl,p,h1,h2,h3,h4,h5,h6{margin-top:10px;margin-bottom:10px;padding-top:0;padding-bottom:0;}ul ul,ul ol,ol ul,ol ol{margin-top:0;margin-bottom:0}code,pre{font-family:"Courier New",Courier,monospace;font-size:1em}pre{overflow:auto;word-wrap:normal;padding-bottom:1.5em;overflow-y:hidden;width:99%}abbr[title],acronym[title]{border-bottom:1px dotted}hr{display:block;height:2px;border:none;margin:0.5em auto;color:#cccccc;background-color:#cccccc}table{font-size:1em;}div.post,ul.commentlist li,ol.commentlist li{word-wrap:break-word;}pre,.wp_syntax{word-wrap:normal;}div#wrapper{text-align:center;margin-left:auto;margin-right:auto;display:block;width:100%;min-width:800px;max-width:1280px}* html div#wrapper{<!--width:expression(((document.compatMode && document.compatMode=='CSS1Compat') ? document.documentElement.clientWidth:document.body.clientWidth) > 1281 ? "1280px":(((document.compatMode && document.compatMode=='CSS1Compat') ? document.documentElement.clientWidth:document.body.clientWidth) < 801 ? "800px":"100%"));-->}div#container{padding:0;padding-left:15px;padding-right:15px;width:auto;margin-left:auto;margin-right:auto;text-align:left;display:block}table#layout{font-size:100%;width:100%;table-layout:fixed}.colone{width:200px}.colone-inner{width:200px}.coltwo{width:100% }.colthree-inner{width:200px}.colthree{width:200px}td#header{width:auto;padding:0}table#logoarea,table#logoarea tr,table#logoarea td{margin:0;padding:0;background:none;border:0}table#logoarea{width:100%;border-spacing:0px}img.logo{display:block;margin:0 10px 0 0}td.logoarea-logo{width:1%}h1.blogtitle,h2.blogtitle{ display:block;margin:0;padding:0;letter-spacing:-1px;line-height:1.0em;font-family:tahoma,arial,sans-serif;font-size:240%;font-smooth:always}h1.blogtitle a:link,h1.blogtitle a:visited,h1.blogtitle a:active,h2.blogtitle a:link,h2.blogtitle a:visited,h2.blogtitle a:active{ text-decoration:none;color:#666666;font-weight:bold;font-smooth:always}h1.blogtitle a:hover,h2.blogtitle a:hover{ text-decoration:none;color:#000000;font-weight:bold}p.tagline{margin:0;padding:0;font-size:1.2em;font-weight:bold;color:#666666}td.feed-icons{white-space:nowrap;}div.rss-box{height:1%;display:block;padding:10px 0 10px 10px;margin:0;width:280px}a.comments-icon{height:22px;line-height:22px;margin:0 5px 0 5px;padding-left:22px;display:block;text-decoration:none;float:right;white-space:nowrap}a.comments-icon:link,a.commentss-icon:active,a.comments-icon:visited{background:transparent url(http://disbauxes.upc.es/wp-content/themes/atahualpa/images/comment-gray.png) no-repeat scroll center left}a.comments-icon:hover{background:transparent url(http://disbauxes.upc.es/wp-content/themes/atahualpa/images/comment.png) no-repeat scroll center left}a.posts-icon{height:22px;line-height:22px;margin:0 5px 0 0;padding-left:20px;display:block;text-decoration:none;float:right;white-space:nowrap}a.posts-icon:link,a.posts-icon:active,a.posts-icon:visited{background:transparent url(http://disbauxes.upc.es/wp-content/themes/atahualpa/images/rss-gray.png) no-repeat scroll center left}a.posts-icon:hover{background:transparent url(http://disbauxes.upc.es/wp-content/themes/atahualpa/images/rss.png) no-repeat scroll center left}a.email-icon{height:22px;line-height:22px;margin:0 5px 0 5px;padding-left:24px;display:block;text-decoration:none;float:right;white-space:nowrap}a.email-icon:link,a.email-icon:active,a.email-icon:visited{background:transparent url(http://disbauxes.upc.es/wp-content/themes/atahualpa/images/email-gray.png) no-repeat scroll center left}a.email-icon:hover{background:transparent url(http://disbauxes.upc.es/wp-content/themes/atahualpa/images/email.png) no-repeat scroll center left}td.search-box{height:1%}div.searchbox{height:35px;border-top:1px dashed #ccc;border-right:1px dashed #ccc;border-bottom:0;border-left:1px dashed #ccc;width:200px;margin:0;padding:0}div.searchbox-form{margin:5px 10px 5px 10px}div.horbar1,div.horbar2{font-size:1px;clear:both;display:block;position:relative;padding:0;margin:0;width:100%;}div.horbar1{height:5px;background:#ffffff;border-top:dashed 1px #cccccc}div.horbar2{height:5px;background:#ffffff;border-bottom:dashed 1px #cccccc}div.opacityleft{position:absolute;z-index:2;top:0;left:0;background-color:#ffffff;height:150px;width:200px;filter:alpha(opacity=40);-moz-opacity:.40;opacity:.40}div.opacityright{position:absolute;z-index:2;top:0;right:0;background-color:#ffffff;height:150px;width:200px;filter:alpha(opacity=40);-moz-opacity:.40;opacity:.40}a.divclick:link,a.divclick:visited,a.divclick:active,a.divclick:hover{width:100%;height:100%;display:block;text-decoration:none}td#left{vertical-align:top;border-right:dashed 1px #CCCCCC;padding:10px 10px 10px 10px;background:#ffffff}td#left-inner{vertical-align:top;border-right:dashed 1px #CCCCCC;padding:10px 10px 10px 10px;background:#ffffff}td#right{vertical-align:top;border-left:dashed 1px #CCCCCC;padding:10px 10px 10px 10px;background:#ffffff}td#right-inner{vertical-align:top;border-left:dashed 1px #CCCCCC;padding:10px 10px 10px 10px;background:#ffffff}td#middle{vertical-align:top;width:100%;padding:10px 15px}td#footer{width:auto;background-color:#ffffff;border-top:dashed 1px #cccccc;padding:10px;text-align:center;color:#777777;font-size:95%}td#footer a:link,td#footer a:visited,td#footer a:active{text-decoration:none;color:#777777;font-weight:normal}td#footer a:hover{text-decoration:none;color:#777777;font-weight:normal}div.widget{display:block;width:auto;margin:0 0 15px 0}div.widget-title{display:block;width:auto}div.widget-title h3,td#left h3.tw-widgettitle,td#right h3.tw-widgettitle,td#left ul.tw-nav-list,td#right ul.tw-nav-list{padding:0;margin:0;font-size:1.6em;font-weight:bold}div.widget ul,div.textwidget{display:block;width:auto}div.widget select{width:98%;margin-top:5px;}div.widget ul{list-style-type:none;margin:0;padding:0;width:auto}div.widget ul li{display:block;margin:2px 0 2px 0px;padding:0 0 0 5px;border-left:solid 7px #cccccc}div.widget ul li:hover,div.widget ul li.sfhover{display:block;width:auto;border-left:solid 7px #000000;}div.widget ul li ul li{margin:2px 0 2px 5px;padding:0 0 0 5px;border-left:solid 7px #cccccc;}div.widget ul li ul li:hover,div.widget ul li ul li.sfhover{border-left:solid 7px #000000;}div.widget ul li ul li ul li{margin:2px 0 2px 5px;padding:0 0 0 5px;border-left:solid 7px #cccccc;}div.widget ul li ul li ul li:hover,div.widget ul li ul li ul li.sfhover{border-left:solid 7px #000000;}div.widget ul li a:link,div.widget ul li a:visited,div.widget ul li a:active{text-decoration:none;font-weight:normal;color:#666666;font-weight:normal;}div.widget ul li ul li a:link,div.widget ul li ul li a:visited,div.widget ul li ul li a:active{color:#666666;font-weight:normal;}div.widget ul li ul li ul li a:link,div.widget ul li ul li ul li a:visited,div.widget ul li ul li ul li a:active{color:#666666;font-weight:normal;}div.widget ul li a:hover{color:#000000;}div.widget ul li ul li a:hover{color:#000000;}div.widget ul li ul li ul li a:hover{color:#000000;}div.widget ul li a:link,div.widget ul li a:visited,div.widget ul li a:active,div.widget ul li a:hover{display:inline}* html div.widget ul li a:link,* html div.widget ul li a:visited,* html div.widget ul li a:active,* html div.widget ul li a:hover{height:1%; } div.widget_pages ul li,div.widget_categories ul li{border-left:0 !important;padding:0 !important}div.widget_pages ul li a:link,div.widget_pages ul li a:visited,div.widget_pages ul li a:active,div.widget_categories ul li a:link,div.widget_categories ul li a:visited,div.widget_categories ul li a:active{padding:0 0 0 5px;border-left:solid 7px #cccccc}div.widget_pages ul li a:hover,div.widget_categories ul li a:hover{border-left:solid 7px #000000;}div.widget_pages ul li ul li a:link,div.widget_pages ul li ul li a:visited,div.widget_pages ul li ul li a:active,div.widget_categories ul li ul li a:link,div.widget_categories ul li ul li a:visited,div.widget_categories ul li ul li a:active{padding:0 0 0 5px;border-left:solid 7px #cccccc}div.widget_pages ul li ul li a:hover,div.widget_categories ul li ul li a:hover{border-left:solid 7px #000000;}div.widget_pages ul li ul li ul li a:link,div.widget_pages ul li ul li ul li a:visited,div.widget_pages ul li ul li ul li a:active,div.widget_categories ul li ul li ul li a:link,div.widget_categories ul li ul li ul li a:visited,div.widget_categories ul li ul li ul li a:active{padding:0 0 0 5px;border-left:solid 7px #cccccc}div.widget_pages ul li ul li ul li a:hover,div.widget_categories ul li ul li ul li a:hover{border-left:solid 7px #000000;}div.widget_pages ul li a:link,div.widget_pages ul li a:active,div.widget_pages ul li a:visited,div.widget_pages ul li a:hover{display:block !important}div.widget_categories ul li a:link,div.widget_categories ul li a:active,div.widget_categories ul li a:visited,div.widget_categories ul li a:hover{display:inline !important}table.subscribe{width:100%}table.subscribe td.email-text{padding:0 0 5px 0;vertical-align:top}table.subscribe td.email-field{padding:0;width:100%}table.subscribe td.email-button{padding:0 0 0 5px}table.subscribe td.post-text{padding:7px 0 0 0;vertical-align:top}table.subscribe td.comment-text{padding:7px 0 0 0;vertical-align:top}div.post,div.page{display:block;margin:0 0 30px 0}div.sticky{background:#eee url(http://amnesiac.upc.es/wp-content/themes/atahualpa/images/sticky.gif) 99% 5% no-repeat;border:dashed 1px #ccc;padding:10px}div.post-kicker{margin:0 0 5px 0}div.post-kicker a:link,div.post-kicker a:visited,div.post-kicker a:active{color:#000000;text-decoration:none;text-transform:uppercase}div.post-kicker a:hover{color:#cc0000}div.post-headline{}div.post-headline h1,div.post-headline h2{ margin:0; padding:0;padding:0;margin:0}div.post-headline h2 a:link,div.post-headline h2 a:visited,div.post-headline h2 a:active,div.post-headline h1 a:link,div.post-headline h1 a:visited,div.post-headline h1 a:active{color:#666666;text-decoration:none}div.post-headline h2 a:hover,div.post-headline h1 a:hover{color:#000000;text-decoration:none}div.post-byline{margin:5px 0 10px 0}div.post-byline a:link,div.post-byline a:visited,div.post-byline a:active{color:#94B7DA}div.post-byline a:hover{}div.post-bodycopy{}div.post-bodycopy p{margin:1em 0;padding:0;display:block}div.post-pagination{}div.post-footer{clear:both;display:block;margin:0;padding:5px;background:#FF7272;color:#666;line-height:18px}div.post-footer a:link,div.post-footer a:visited,div.post-footer a:active{color:#333;font-weight:normal;text-decoration:none}div.post-footer a:hover{color:#333;font-weight:normal;text-decoration:underline}div.post-kicker img,div.post-byline img,div.post-footer img{border:0;padding:0;margin:0 0 -1px 0;background:none}span.post-ratings{display:inline-block;width:auto;white-space:nowrap}div.navigation-top{margin:0 0 10px 0;padding:0 0 10px 0;border-bottom:dashed 1px #cccccc}div.navigation-middle{margin:10px 0 20px 0;padding:10px 0 10px 0;border-top:dashed 1px #cccccc;border-bottom:dashed 1px #cccccc}div.navigation-bottom{margin:20px 0 0 0;padding:10px 0 0 0;border-top:dashed 1px #cccccc}div.navigation-comments-above{margin:0 0 10px 0;padding:5px 0 5px 0}div.navigation-comments-below{margin:0 0 10px 0;padding:5px 0 5px 0}div.older{float:left;width:48%;text-align:left;margin:0;padding:0}div.newer{float:right;width:48%;text-align:right;margin:0;padding:0;}div.older-home{float:left;width:44%;text-align:left;margin:0;padding:0}div.newer-home{float:right;width:44%;text-align:right;margin:0;padding:0;}div.home{float:left;width:8%;text-align:center;margin:0;padding:0}form,.feedburner-email-form{margin:0;padding:0;}fieldset{border:1px solid #cccccc;width:auto;padding:0.35em 0.625em 0.75em;display:block;}legend{color:#000000;background:#f4f4f4;border:1px solid #cccccc;padding:2px 6px;margin-bottom:15px;}form p{margin:5px 0 0 0;padding:0;}div.xhtml-tags p{margin:0}label{margin-right:0.5em;font-family:arial;cursor:pointer;}input.text,input.textbox,input.password,input.file,input.TextField,textarea{padding:3px;color:#000000;border-top:solid 1px #333333;border-left:solid 1px #333333;border-right:solid 1px #999999;border-bottom:solid 1px #cccccc;background:url(http://disbauxes.upc.es/wp-content/themes/atahualpa/images/inputbackgr.gif) top left no-repeat}textarea{width:96%;}input.inputblur{color:#777777;width:95%}input.inputfocus{color:#000000;width:95%}input.highlight,textarea.highlight{background:#e8eff7;border-color:#37699f}.button,.Button{padding:0 2px;height:24px;line-height:16px;background-color:#777777;color:#ffffff;border:solid 2px #555555;font-weight:bold}.buttonhover{padding:0 2px;cursor:pointer;background-color:#6b9c6b;color:#ffffff;border:solid 2px #496d49}form#commentform input#submit{ padding:0 .25em; width:0; overflow:visible}form#commentform input#submit[class]{width:auto}form#commentform input#submit{padding:4px 10px 4px 10px;font-size:1.2em;line-height:1.5em;height:36px}table.searchform{width:100%}table.searchform td.searchfield{padding:0;width:100%}table.searchform td.searchbutton{padding:0 0 0 5px}table.searchform td.searchbutton input{padding:0 0 0 5px}blockquote{height:1%;display:block;clear:both;color:#555555;padding:1em 1em;background:#f4f4f4;border:solid 1px #e1e1e1}blockquote blockquote{height:1%;display:block;clear:both;color:#444444;padding:1em 1em;background:#e1e1e1;border:solid 1px #d3d3d3}div.post table{border-collapse:collapse;margin:10px 0}div.post table caption{width:auto;margin:0 auto;background:#eeeeee;border:#999999;padding:4px 8px;color:#666666}div.post table th{background:#888888;color:#ffffff;font-weight:bold;font-size:90%;padding:4px 8px;border:solid 1px #ffffff;text-align:left}div.post table td{padding:4px 8px;background-color:#ffffff;border-bottom:1px solid #dddddd;text-align:left}div.post table tfoot td{}div.post table tr.alt td{background:#f4f4f4}div.post table tr.over td{background:#e2e2e2}#calendar_wrap{padding:0;border:none}table#wp-calendar{width:100%;font-size:90%;border-collapse:collapse;background-color:#ffffff;margin:0 auto}table#wp-calendar caption{width:auto;background:#eeeeee;border:none;;padding:3px;margin:0 auto;font-size:1em}table#wp-calendar th{border:solid 1px #eeeeee;background-color:#999999;color:#ffffff;font-weight:bold;padding:2px;text-align:center}table#wp-calendar td{padding:0;line-height:18px;background-color:#ffffff;border:1px solid #dddddd;text-align:center}table#wp-calendar tfoot td{border:solid 1px #eeeeee;background-color:#eeeeee}table#wp-calendar td a{display:block;background-color:#eeeeee;width:100%;height:100%;padding:0}div#respond{margin:25px 0;padding:25px;background:#eee;-moz-border-radius:8px;-khtml-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;}p.thesetags{margin:10px 0}h3.reply{margin:0;padding:0 0 10px 0}ol.commentlist{margin:15px 0 25px 0;list-style-type:none;padding:0;display:block;border-top:dotted 1px #cccccc}ol.commentlist li{padding:15px 10px;display:block;height:1%;margin:0;background-color:#ffffff;border-bottom:dotted 1px #cccccc}ol.commentlist li.alt{display:block;height:1%;background-color:#eeeeee;border-bottom:dotted 1px #cccccc}ol.commentlist li.authorcomment{display:block;height:1%;background-color:#ffecec}ol.commentlist span.authorname{font-weight:bold;font-size:110%}ol.commentlist span.commentdate{color:#666666;font-size:90%;margin-bottom:5px;display:block}ol.commentlist span.editcomment{display:block}ol.commentlist li p{margin:2px 0 5px 0}div.comment-number{float:right;font-size:2em;line-height:2em;font-family:georgia,serif;font-weight:bold;color:#ddd;margin:-10px 0 0 0;position:relative;height:1%}div.comment-number a:link,div.comment-number a:visited,div.comment-number a:active{color:#ccc}textarea#comment{width:98%;margin:10px 0;display:block}ul.commentlist{margin:15px 0 15px 0;list-style-type:none;padding:0;display:block;border-top:dotted 1px #cccccc}ul.commentlist ul{margin:0;border:none;list-style-type:none;padding:0}ul.commentlist li{padding:0; margin:0;display:block;clear:both;height:1%;}ul.commentlist ul.children li{ margin-left:30px}ul.commentlist div.comment-container{padding:10px;margin:0}ul.children div.comment-container{background-color:transparent;border:dotted 1px #ccc;padding:10px;margin:0 10px 8px 0; -moz-border-radius:5px; -khtml-border-radius:5px; -webkit-border-radius:5px; border-radius:5px}ul.children div.bypostauthor{}ul.commentlist li.thread-even{background-color:#ffffff;border-bottom:dotted 1px #cccccc}ul.commentlist li.thread-odd{background-color:#eeeeee;border-bottom:dotted 1px #cccccc}ul.commentlist div.bypostauthor{background-color:#ffecec}ul.children div.bypostauthor{border:dotted 1px #ffbfbf}ul.commentlist span.authorname{font-size:110%}div.comment-meta a:link,div.comment-meta a:visited,div.comment-meta a:active,div.comment-meta a:hover{font-weight:normal}div#cancel-comment-reply{margin:-5px 0 10px 0}div.comment-number{float:right;font-size:2em;line-height:2em;font-family:georgia,serif;font-weight:bold;color:#ddd;margin:-10px 0 0 0;position:relative;height:1%}div.comment-number a:link,div.comment-number a:visited,div.comment-number a:active{color:#ccc}.page-numbers{padding:2px 6px;border:solid 1px #000000;-moz-border-radius:6px;-khtml-border-radius:6px;-webkit-border-radius:6px;border-radius:6px}span.current{background:#ddd}a.prev,a.next{border:none}a.page-numbers:link,a.page-numbers:visited,a.page-numbers:active{text-decoration:none;color:#160EED;border-color:#160EED}a.page-numbers:hover{text-decoration:none;color:#ED0018;border-color:#ED0018}div.xhtml-tags{display:none}abbr em{border:none !important;border-top:dashed 1px #aaa !important;display:-moz-inline-box !important;display:inline-block !important;background:url(http://disbauxes.upc.es/wp-content/themes/atahualpa/images/commentluv.gif) 0% 90% no-repeat;margin-top:8px;padding:5px 5px 2px 20px !important;font-style:normal}p.subscribe-to-comments{margin-bottom:10px}div#gsHeader{display:none;}div.g2_column{margin:0 !important;width:100% !important;font-size:1.2em}div#gsNavBar{border-top-width:0 !important}p.giDescription{font-size:1.2em;line-height:1 !important}p.giTitle{margin:0.3em 0 !important;font-size:1em;font-weight:normal;color:#666}div#wp-email img{border:0;padding:0}div#wp-email input,div#wp-email textarea{margin-top:5px;margin-bottom:2px}div#wp-email p{margin-bottom:10px}input#wp-email-submit{ padding:0; font-size:30px; height:50px; line-height:50px; overflow:visible;}img.WP-EmailIcon{ vertical-align:text-bottom !important}.tw-accordion .tw-widgettitle,.tw-accordion .tw-widgettitle:hover,.tw-accordion .tw-hovered,.tw-accordion .selected,.tw-accordion .selected:hover{ background:transparent !important; background-image:none !important}.tw-accordion .tw-widgettitle span{ padding-left:0 !important}.tw-accordion h3.tw-widgettitle{border-bottom:solid 1px #ccc}.tw-accordion h3.selected{border-bottom:none}td#left .without_title,td#right .without_title{ margin-top:0;margin-bottom:0}ul.tw-nav-list{border-bottom:solid 1px #999;display:block;margin-bottom:5px !important}td#left ul.tw-nav-list li,td#right ul.tw-nav-list li{padding:0 0 1px 0;margin:0 0 -1px 5px; border:solid 1px #ccc;border-bottom:none;-moz-border-radius:5px;-khtml-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;-moz-border-radius-bottomright:0;-moz-border-radius-bottomleft:0;-webkit-border-bottom-right-radius:0;-webkit-border-bottom-left-radius:0;border-bottom-right-radius:0;border-bottom-left-radius:0;background:#eee}td#left ul.tw-nav-list li.ui-tabs-selected,td#right ul.tw-nav-list li.ui-tabs-selected{ background:none;border:solid 1px #999;border-bottom:solid 1px #fff !important}ul.tw-nav-list li a:link,ul.tw-nav-list li a:visited,ul.tw-nav-list li a:active,ul.tw-nav-list li a:hover{padding:0 8px !important;background:none;border-left:none !important;outline:none}td#left ul.tw-nav-list li.ui-tabs-selected a,td#left li.ui-tabs-selected a:hover,td#right ul.tw-nav-list li.ui-tabs-selected a,td#right li.ui-tabs-selected a:hover{ color:#000000; text-decoration:none;font-weight:bold;background:none !important;outline:none}td#left .ui-tabs-panel,td#right .ui-tabs-panel{ margin:0; padding:0}img{border:0}#dbem-location-map img{ background:none !important}.post img{padding:5px;border:solid 1px #dddddd;background-color:#f3f3f3;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}.post img.size-full{max-width:96%;width:auto 100%;margin:5px 0 5px 0}div.post img[class~=size-full]{height:auto;}.post img.alignleft{float:left;margin:10px 10px 5px 0;}.post img.alignright{float:right;margin:10px 0 5px 10px;}.post img.aligncenter{display:block;margin:10px auto}.aligncenter,div.aligncenter{ display:block; margin-left:auto; margin-right:auto}.alignleft,div.alignleft{float:left;margin:10px 10px 5px 0}.alignright,div.alignright{ float:right; margin:10px 0 5px 10px}div.archives-page img{border:0;padding:0;background:none;margin-bottom:0;vertical-align:-10%}.wp-caption{max-width:96%;width:auto 100%;height:auto;display:block;border:1px solid #dddddd;text-align:center;background-color:#f3f3f3;padding-top:4px;margin:10px 0 0 0;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}* html .wp-caption{height:100%;}.wp-caption img{ margin:0 !important; padding:0 !important; border:0 none !important}.wp-caption p.wp-caption-text{font-size:0.8em;line-height:13px;padding:2px 4px 5px;margin:0;color:#666666}img.wp-post-image{float:left;border:0;padding:0;background:none;margin:0 10px 5px 0}img.wp-smiley{ float:none;border:none !important;margin:0 1px -1px 1px;padding:0 !important;background:none !important}img.avatar{float:left;display:block;margin:0 8px 1px 0;padding:3px;border:solid 1px #ddd;background-color:#f3f3f3;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}#comment_quicktags{text-align:left;padding:10px 0 2px 0;display:block}#comment_quicktags input.ed_button{background:#f4f4f4;border:2px solid #cccccc;color:#444444;margin:2px 4px 2px 0;width:auto;padding:0 4px;height:24px;line-height:16px}#comment_quicktags input.ed_button_hover{background:#dddddd;border:2px solid #666666;color:#000000;margin:2px 4px 2px 0;width:auto;padding:0 4px;height:24px;line-height:16px;cursor:pointer}#comment_quicktags #ed_strong{font-weight:bold}#comment_quicktags #ed_em{font-style:italic}@media print{body{background:white;color:black;margin:0;font-size:10pt !important;font-family:arial,sans-serif;}div.post-footer{line-height:normal !important;color:#555 !important;font-size:9pt !important}a:link,a:visited,a:active,a:hover{text-decoration:underline !important;color:#000}h2{color:#000;font-size:14pt !important;font-weight:normal !important}h3{color:#000;font-size:12pt !important;}#header,#footer,.colone,.colthree,.navigation,.navigation-top,.navigation-middle,.navigation-bottom,.wp-pagenavi-navigation,#comment,#respond,.remove-for-print{display:none}td#left,td#right,td#left-inner,td#right-inner{width:0}td#middle{width:100%}*:lang(en) td#left{ display:none}*:lang(en) td#right{ display:none}*:lang(en) td#left-inner{ display:none}*:lang(en) td#right-inner{ display:none}td#left:empty{ display:none}td#right:empty{ display:none}td#left-inner:empty{ display:none}td#right-inner:empty{ display:none}}ul.rMenu,ul.rMenu ul,ul.rMenu li,ul.rMenu a{display:block;margin:0;padding:0}ul.rMenu,ul.rMenu li,ul.rMenu ul{list-style:none}ul.rMenu ul{display:none}ul.rMenu li{position:relative;z-index:1}ul.rMenu li:hover{z-index:999}ul.rMenu li:hover > ul{display:block;position:absolute}ul.rMenu li:hover{background-position:0 0} ul.rMenu-hor li{float:left;width:auto}ul.rMenu-hRight li{float:right}ul.rMenu-ver li{float:none}div#menu1 ul.rMenu-ver,div#menu1 ul.rMenu-ver ul{width:11em}div#menu2 ul.rMenu-ver,div#menu2 ul.rMenu-ver ul{width:11em}ul.rMenu-wide{width:100%}ul.rMenu-vRight{float:right}ul.rMenu-lFloat{float:left}ul.rMenu-noFloat{float:none}div.rMenu-center ul.rMenu{float:left;position:relative;left:50%}div.rMenu-center ul.rMenu li{position:relative;left:-50%}div.rMenu-center ul.rMenu li li{left:auto}ul.rMenu-hor ul{top:auto;right:auto;left:auto;margin-top:-1px}ul.rMenu-hor ul ul{margin-top:0;margin-left:0px}ul.rMenu-ver ul{left:100%;right:auto;top:auto;top:0}ul.rMenu-vRight ul,ul.rMenu-hRight ul.rMenu-ver ul{left:-100%;right:auto;top:auto}ul.rMenu-hRight ul{left:auto;right:0;top:auto;margin-top:-1px}div#menu1 ul.rMenu{background:#FFFFFF;border:dashed 1px #cccccc}div#menu2 ul.rMenu{background:#777777;border:solid 1px #000000}div#menu1 ul.rMenu li a{border:dashed 1px #cccccc}div#menu2 ul.rMenu li a{border:solid 1px #000000}ul.rMenu-hor li{margin-bottom:-1px;margin-top:-1px;margin-left:-1px}ul#rmenu li{}ul#rmenu li ul li{}ul.rMenu-hor{padding-left:1px }ul.rMenu-ver li{margin-left:0;margin-top:-1px; }div#menu1 ul.rMenu-ver{border-top:dashed 1px #cccccc}div#menu2 ul.rMenu-ver{border-top:solid 1px #000000}div#menu1 ul.rMenu li a{padding:4px 5px}div#menu2 ul.rMenu li a{padding:4px 5px}div#menu1 ul.rMenu li a:link,div#menu1 ul.rMenu li a:hover,div#menu1 ul.rMenu li a:visited,div#menu1 ul.rMenu li a:active{text-decoration:none;margin:0;color:#757372;text-transform:uppercase;font:11px Arial,Verdana,sans-serif;}div#menu2 ul.rMenu li a:link,div#menu2 ul.rMenu li a:hover,div#menu2 ul.rMenu li a:visited,div#menu2 ul.rMenu li a:active{text-decoration:none;margin:0;color:#ffffff;text-transform:uppercase;font:11px Arial,Verdana,sans-serif;}div#menu1 ul.rMenu li{background-color:#FFFFFF}div#menu2 ul.rMenu li{background-color:#777777}div#menu1 ul.rMenu li:hover,div#menu1 ul.rMenu li.sfhover{background:#DDDDDD}div#menu2 ul.rMenu li:hover,div#menu2 ul.rMenu li.sfhover{background:#000000}div#menu1 ul.rMenu li.current_page_item > a:link,div#menu1 ul.rMenu li.current_page_item > a:active,div#menu1 ul.rMenu li.current_page_item > a:hover,div#menu1 ul.rMenu li.current_page_item > a:visited{background-color:#EE5353;color:#000000}div#menu1 ul.rMenu li.current_page_item a:link,div#menu1 ul.rMenu li.current_page_item a:active,div#menu1 ul.rMenu li.current_page_item a:hover,div#menu1 ul.rMenu li.current_page_item a:visited,div#menu1 ul.rMenu li a:hover{background-color:#EE5353;color:#000000}div#menu2 ul.rMenu li.current-cat > a:link,div#menu2 ul.rMenu li.current-cat > a:active,div#menu2 ul.rMenu li.current-cat > a:hover,div#menu2 ul.rMenu li.current-cat > a:visited{background-color:#cc0000;color:#ffffff}div#menu2 ul.rMenu li.current-cat a:link,div#menu2 ul.rMenu li.current-cat a:active,div#menu2 ul.rMenu li.current-cat a:hover,div#menu2 ul.rMenu li.current-cat a:visited,div#menu2 ul.rMenu li a:hover{background-color:#cc0000;color:#ffffff}div#menu1 ul.rMenu li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a{padding-right:15px;padding-left:5px;background-repeat:no-repeat;background-position:100% 50%;background-image:url(http://disbauxes.upc.es/wp-content/themes/atahualpa/images/expand-right.gif)}div#menu2 ul.rMenu li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a{padding-right:15px;padding-left:5px;background-repeat:no-repeat;background-position:100% 50%;background-image:url(http://disbauxes.upc.es/wp-content/themes/atahualpa/images/expand-right-white.gif)}ul.rMenu-vRight li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a{padding-right:5px;padding-left:20px;background-image:url(http://disbauxes.upc.es/wp-content/themes/atahualpa/images/expand-left.gif);background-repeat:no-repeat;background-position:-5px 50%}div#menu1 ul.rMenu-hor li.rMenu-expand a{padding-left:5px;padding-right:15px !important;background-position:100% 50%;background-image:url(http://disbauxes.upc.es/wp-content/themes/atahualpa/images/expand-down.gif)}div#menu2 ul.rMenu-hor li.rMenu-expand a{padding-left:5px;padding-right:15px !important;background-position:100% 50%;background-image:url(http://disbauxes.upc.es/wp-content/themes/atahualpa/images/expand-down-white.gif)}div#menu1 ul.rMenu li.rMenu-expand li a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li a{background-image:none;padding-right:5px;padding-left:5px}div#menu2 ul.rMenu li.rMenu-expand li a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li a{background-image:none;padding-right:5px;padding-left:5px}* html ul.rMenu{display:inline-block;display:block;position:relative;position:static}* html ul.rMenu ul{float:left;float:none}ul.rMenu ul{}* html ul.rMenu-ver li,* html ul.rMenu-hor li ul.rMenu-ver li{width:100%;float:left;clear:left}*:first-child+html ul.rMenu-ver > li{width:100%;float:left;clear:left}ul.rMenu li a{position:relative;min-width:0}* html ul.rMenu-hor li{width:11em;width:auto}* html div.rMenu-center{position:relative;z-index:1}* html ul.rMenu ul{display:block;position:absolute}* html ul.rMenu ul,* html ul.rMenu-hor ul,* html ul.rMenu-ver ul,* html ul.rMenu-vRight ul,* html ul.rMenu-hRight ul.rMenu-ver ul,* html ul.rMenu-hRight ul{left:-10000px}* html ul.rMenu li.sfhover{z-index:999}* html ul.rMenu li.sfhover ul{left:auto}* html ul.rMenu li.sfhover ul ul,* html ul.rMenu li.sfhover ul ul ul,* html ul.rMenu li.sfhover ul ul ul ul,* html ul.rMenu li.sfhover ul ul ul ul ul,* html ul.rMenu li.sfhover ul ul ul ul ul ul{display:none}* html ul.rMenu li.sfhover ul,* html ul.rMenu li li.sfhover ul,* html ul.rMenu li li li.sfhover ul,* html ul.rMenu li li li li.sfhover ul,* html ul.rMenu li li li li li.sfhover ul{display:block}* html ul.rMenu-ver li.sfhover ul{left:100%}* html ul.rMenu-vRight li.sfhover ul,* html ul.rMenu-hRight ul.rMenu-ver li.sfhover ul{left:-100%}* html ul.rMenu iframe{position:absolute;left:0;top:0;z-index:-1}* html ul.rMenu{margin-left:1px}* html ul.rMenu ul,* html ul.rMenu ul ul,* html ul.rMenu ul ul ul,* html ul.rMenu ul ul ul ul{margin-left:0}* html ul.rMenu{display:inline-block;display:block;position:relative;position:static}* html ul.rMenu ul{float:left;float:none}ul.rMenu ul{background-color:#fff}* html ul.rMenu-ver li,* html ul.rMenu-hor li ul.rMenu-ver li{width:100%;float:left;clear:left}*:first-child+html ul.rMenu-ver > li:hover ul{min-width:0}ul.rMenu li a{position:relative;min-width:0}* html ul.rMenu-hor li{width:6em;width:auto}* html div.rMenu-center{position:relative;z-index:1}html:not([lang*=""]) div.rMenu-center ul.rMenu li a:hover{height:100%}html:not([lang*=""]) div.rMenu-center ul.rMenu li a:hover{height:auto}* html ul.rMenu ul{display:block;position:absolute}* html ul.rMenu ul,* html ul.rMenu-hor ul,* html ul.rMenu-ver ul,* html ul.rMenu-vRight ul,* html ul.rMenu-hRight ul.rMenu-ver ul,* html ul.rMenu-hRight ul{left:-10000px}* html ul.rMenu li.sfhover{z-index:999}* html ul.rMenu li.sfhover ul{left:auto}* html ul.rMenu li.sfhover ul ul,* html ul.rMenu li.sfhover ul ul ul{display:none}* html ul.rMenu li.sfhover ul,* html ul.rMenu li li.sfhover ul,* html ul.rMenu li li li.sfhover ul{display:block}* html ul.rMenu-ver li.sfhover ul{left:60%}* html ul.rMenu-vRight li.sfhover ul,* html ul.rMenu-hRight ul.rMenu-ver li.sfhover ul{left:-60%}* html ul.rMenu iframe{position:absolute;left:0;top:0;z-index:-1}.clearfix:after{ content:".";display:block;height:0;clear:both;visibility:hidden}.clearfix{min-width:0;display:inline-block;display:block}* html .clearfix{height:1%;}.clearfix:after{ content:".";display:block;height:0;clear:both;visibility:hidden}.clearfix{min-width:0;display:inline-block;display:block}* html .clearfix{height:1%;}.clearboth{clear:both;height:1%;font-size:1%;line-height:1%;display:block;padding:0;margin:0}h1{font-size:34px;line-height:1.2;margin:0.3em 0 10px;}h2{font-size:28px;line-height:1.3;margin:1em 0 .2em;}h3{font-size:24px;line-height:1.3;margin:1em 0 .2em;}h4{font-size:19px;margin:1.33em 0 .2em;}h5{font-size:1.3em;margin:1.67em 0;font-weight:bold;}h6{font-size:1.15em;margin:1.67em 0;font-weight:bold;}</style>
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+/* JQUERY */
+
+jQuery(document).ready(function(){  
+
+ 
+	/* For IE6 */
+	if (jQuery.browser.msie && /MSIE 6\.0/i.test(window.navigator.userAgent) && !/MSIE 7\.0/i.test(window.navigator.userAgent) && !/MSIE 8\.0/i.test(window.navigator.userAgent)) {
+
+		/* Max-width for images in IE6 */		
+		var centerwidth = jQuery("td#middle").width(); 
+		
+		/* Images without caption */
+		jQuery(".post img").each(function() { 
+			var maxwidth = centerwidth - 10 + 'px';
+			var imgwidth = jQuery(this).width(); 
+			var imgheight = jQuery(this).height(); 
+			var newimgheight = (centerwidth / imgwidth * imgheight) + 'px';	
+			if (imgwidth > centerwidth) { 
+				jQuery(this).css({width: maxwidth}); 
+				jQuery(this).css({height: newimgheight}); 
+			}
+		});
+		
+		/* Images with caption */
+		jQuery("div.wp-caption").each(function() { 
+			var captionwidth = jQuery(this).width(); 
+			var maxcaptionwidth = centerwidth + 'px';
+			var captionheight = jQuery(this).height();
+			var captionimgwidth =  jQuery("div.wp-caption img").width();
+			var captionimgheight =  jQuery("div.wp-caption img").height();
+			if (captionwidth > centerwidth) { 
+				jQuery(this).css({width: maxcaptionwidth}); 
+				var newcaptionheight = (centerwidth / captionwidth * captionheight) + 'px';
+				var newcaptionimgheight = (centerwidth / captionimgwidth * captionimgheight) + 'px';
+				jQuery(this).css({height: newcaptionheight}); 
+				jQuery("div.wp-caption img").css({height: newcaptionimgheight}); 
+				}
+		});
+		
+		/* sfhover for LI:HOVER support in IE6: */
+		jQuery("ul li").
+			hover( function() {
+					jQuery(this).addClass("sfhover")
+				}, 
+				function() {
+					jQuery(this).removeClass("sfhover")
+				} 
+			); 
+
+	/* End IE6 */
+	}
+	
+	jQuery(".post table tr").
+		mouseover(function() {
+			jQuery(this).addClass("over");
+		}).
+		mouseout(function() {
+			jQuery(this).removeClass("over");
+		});
+
+	
+	jQuery(".post table tr:even").
+		addClass("alt");
+
+	
+	jQuery("input.text, input.TextField, input.file, input.password, textarea").
+		focus(function () {  
+			jQuery(this).addClass("highlight"); 
+		}).
+		blur(function () { 
+			jQuery(this).removeClass("highlight"); 
+		})
+	
+	jQuery("input.inputblur").
+		focus(function () {  
+			jQuery(this).addClass("inputfocus"); 
+		}).
+		blur(function () { 
+			jQuery(this).removeClass("inputfocus"); 
+		})
+
+		
+
+	
+	jQuery("input.button, input.Button").
+		mouseover(function() {
+			jQuery(this).addClass("buttonhover");
+		}).
+		mouseout(function() {
+			jQuery(this).removeClass("buttonhover");
+		});
+
+	/* toggle "you can use these xhtml tags" */
+	jQuery("a.xhtmltags").
+		click(function(){ 
+			jQuery("div.xhtml-tags").slideToggle(300); 
+		});
+
+	/* For the Tabbed Widgets plugin: */
+	jQuery("ul.tw-nav-list").
+		addClass("clearfix");
+
+		
+	
+});
+
+//]]>
+</script>
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://disbauxes.upc.es/wp-content/themes/atahualpa/js/DD_roundies.js"></script>
+<script type="text/javascript">DD_roundies.addRule('a.posts-icon, a.comments-icon, a.email-icon, img.logo');</script>
+<![endif]-->
+</head>
+<body class="single single-post postid-2829 single-format-standard">
+<div id="wrapper">
+<div id="container">
+<table id="layout" border="0" cellspacing="0" cellpadding="0">
+<colgroup>
+<col class="colone" /><col class="coltwo" />
+<col class="colthree" /></colgroup> 
+	<tr>
+
+		<!-- Header -->
+		<td id="header" colspan="3">
+
+		<table id="logoarea" cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td rowspan="2" valign="middle" class="logoarea-logo"><a href="http://disbauxes.upc.es/"><img class="logo" src="http://disbauxes.upc.es/wp-content/themes/atahualpa/images/disbauxes-3.png" alt="" /></a></td><td class="feed-icons" valign="middle" align="right"><div class="clearfix rss-box"><a class="comments-icon" href="http://disbauxes.upc.es/?feed=comments-rss2" title="Subscribe to the COMMENTS feed">Comments</a><a class="posts-icon" href="http://disbauxes.upc.es/?feed=rss2" title="Subscribe to the POSTS feed">Posts</a></div></td></tr><tr><td valign="bottom" class="search-box" align="right"><div class="searchbox">
+				<form method="get" class="searchform" action="http://disbauxes.upc.es/">
+				<div class="searchbox-form">
+					<input type="text" class="text inputblur" onfocus="this.value=''" 
+					value="" onblur="this.value=''" name="s" /></div>
+				</form>
+			</div>
+			</td></tr></table> <div id="menu1"><ul id="rmenu2" class="clearfix rMenu-hor rMenu">
+<li class="page_item"><a href="http://disbauxes.upc.es/" title="">Home</a></li>
+<li class="page_item page-item-7"><a href="http://disbauxes.upc.es/?page_id=7">Projects</a></li>
+<li class="page_item page-item-4154"><a href="http://disbauxes.upc.es/?page_id=4154">Software</a></li>
+<li class="page_item page-item-1115"><a href="http://disbauxes.upc.es/?page_id=1115">Scraps of mind</a></li>
+<li class="page_item page-item-1585"><a href="http://disbauxes.upc.es/?page_id=1585">Applied Physics Department</a></li>
+<li class="page_item page-item-1792"><a href="http://disbauxes.upc.es/?page_id=1792">Deprecated</a></li>
+<li class="page_item page-item-1842"><a href="http://disbauxes.upc.es/?page_id=1842">netForo!</a></li>
+<li class="page_item page-item-3248"><a href="http://disbauxes.upc.es/?page_id=3248">Albums</a></li>
+<li class="page_item page-item-1956"><a href="http://disbauxes.upc.es/?page_id=1956">LABs</a></li>
+<li class="page_item page-item-2"><a href="http://disbauxes.upc.es/?page_id=2">About us</a></li>
+</ul></div>
+ <div class="horbar1">&nbsp;</div> <div class="horbar2">&nbsp;</div>
+		</td>
+		<!-- / Header -->
+
+	</tr>
+
+	<!-- Main Body -->	
+	<tr id="bodyrow">
+
+				<!-- Left Sidebar -->
+		<td id="left">
+
+			<div id="calendar-2" class="widget widget_calendar"><div id="calendar_wrap"><table id="wp-calendar">
+	<caption>October 2013</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+		<th scope="col" title="Sunday">S</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://disbauxes.upc.es/?m=201309" title="View posts for September 2013">&laquo; Sep</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="1" class="pad">&nbsp;</td><td>1</td><td id="today">2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+	</tr>
+	<tr>
+		<td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td>
+	</tr>
+	<tr>
+		<td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+	</tr>
+	<tr>
+		<td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td>
+	</tr>
+	<tr>
+		<td>28</td><td>29</td><td>30</td><td>31</td>
+		<td class="pad" colspan="3">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></div><div id="categories-357190621" class="widget widget_categories"><div class="widget-title"><h3>Categories</h3></div>		<ul>
+	<li class="cat-item cat-item-124"><a href="http://disbauxes.upc.es/?cat=124" title="View all posts filed under Android">Android</a> (1)
+</li>
+	<li class="cat-item cat-item-5"><a href="http://disbauxes.upc.es/?cat=5" title="View all posts filed under Code">Code</a> (63)
+<ul class='children'>
+	<li class="cat-item cat-item-48"><a href="http://disbauxes.upc.es/?cat=48" title="View all posts filed under analysis">analysis</a> (52)
+</li>
+	<li class="cat-item cat-item-99"><a href="http://disbauxes.upc.es/?cat=99" title="View all posts filed under Applied Physics Department">Applied Physics Department</a> (30)
+</li>
+	<li class="cat-item cat-item-125"><a href="http://disbauxes.upc.es/?cat=125" title="View all posts filed under Atari 2600">Atari 2600</a> (1)
+</li>
+	<li class="cat-item cat-item-123"><a href="http://disbauxes.upc.es/?cat=123" title="View all posts filed under Context Swtiching Accounting">Context Swtiching Accounting</a> (1)
+</li>
+	<li class="cat-item cat-item-63"><a href="http://disbauxes.upc.es/?cat=63" title="All about MODEST project.">Modest</a> (8)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://disbauxes.upc.es/?cat=4" title="View all posts filed under Debian">Debian</a> (38)
+</li>
+	<li class="cat-item cat-item-101"><a href="http://disbauxes.upc.es/?cat=101" title="View all posts filed under Deprecated">Deprecated</a> (1)
+</li>
+	<li class="cat-item cat-item-103"><a href="http://disbauxes.upc.es/?cat=103" title="View all posts filed under Electronics">Electronics</a> (2)
+<ul class='children'>
+	<li class="cat-item cat-item-102"><a href="http://disbauxes.upc.es/?cat=102" title="View all posts filed under DIY">DIY</a> (2)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-116"><a href="http://disbauxes.upc.es/?cat=116" title="My trips abroad">english_journal</a> (11)
+</li>
+	<li class="cat-item cat-item-3"><a href="http://disbauxes.upc.es/?cat=3" title="View all posts filed under GNU/Linux">GNU/Linux</a> (22)
+</li>
+	<li class="cat-item cat-item-21"><a href="http://disbauxes.upc.es/?cat=21" title="View all posts filed under Google">Google</a> (1)
+</li>
+	<li class="cat-item cat-item-100"><a href="http://disbauxes.upc.es/?cat=100" title="View all posts filed under ia32sh">ia32sh</a> (1)
+</li>
+	<li class="cat-item cat-item-118"><a href="http://disbauxes.upc.es/?cat=118" title="View all posts filed under LibreOffice">LibreOffice</a> (1)
+</li>
+	<li class="cat-item cat-item-43"><a href="http://disbauxes.upc.es/?cat=43" title="View all posts filed under openoffice">openoffice</a> (7)
+</li>
+	<li class="cat-item cat-item-117"><a href="http://disbauxes.upc.es/?cat=117" title="View all posts filed under Programming for kids project">Programming for kids project</a> (8)
+</li>
+	<li class="cat-item cat-item-11"><a href="http://disbauxes.upc.es/?cat=11" title="View all posts filed under Security">Security</a> (5)
+</li>
+	<li class="cat-item cat-item-1"><a href="http://disbauxes.upc.es/?cat=1" title="View all posts filed under Uncategorized">Uncategorized</a> (2)
+</li>
+	<li class="cat-item cat-item-68"><a href="http://disbauxes.upc.es/?cat=68" title="View all posts filed under Virtualization">Virtualization</a> (10)
+<ul class='children'>
+	<li class="cat-item cat-item-12"><a href="http://disbauxes.upc.es/?cat=12" title="View all posts filed under VirtualBox">VirtualBox</a> (10)
+</li>
+</ul>
+</li>
+		</ul>
+</div>	        <div id="wp-cumulus" class="widget wp_cumulus_widget">						<!-- SWFObject embed by Geoff Stearns geoff@deconcept.com http://blog.deconcept.com/swfobject/ --><script type="text/javascript" src="http://disbauxes.upc.es/wp-content/plugins/wp-cumulus/swfobject.js"></script><div id="wpcumuluswidgetcontent4773909"><p style="display:none;"><a href='http://disbauxes.upc.es/?tag=deb' class='tag-link-31' title='2 topics' style='font-size: 10.9647058824pt;'>.deb</a>
+<a href='http://disbauxes.upc.es/?tag=arial' class='tag-link-41' title='1 topic' style='font-size: 8pt;'>arial</a>
+<a href='http://disbauxes.upc.es/?tag=ati' class='tag-link-74' title='2 topics' style='font-size: 10.9647058824pt;'>ati</a>
+<a href='http://disbauxes.upc.es/?tag=attach' class='tag-link-36' title='1 topic' style='font-size: 8pt;'>attach</a>
+<a href='http://disbauxes.upc.es/?tag=bash' class='tag-link-17' title='2 topics' style='font-size: 10.9647058824pt;'>bash</a>
+<a href='http://disbauxes.upc.es/?tag=catala' class='tag-link-45' title='3 topics' style='font-size: 12.9411764706pt;'>català</a>
+<a href='http://disbauxes.upc.es/?tag=cifrado' class='tag-link-23' title='1 topic' style='font-size: 8pt;'>cifrado</a>
+<a href='http://disbauxes.upc.es/?tag=clonar' class='tag-link-44' title='1 topic' style='font-size: 8pt;'>clonar</a>
+<a href='http://disbauxes.upc.es/?tag=config' class='tag-link-51' title='2 topics' style='font-size: 10.9647058824pt;'>config</a>
+<a href='http://disbauxes.upc.es/?tag=cups' class='tag-link-70' title='2 topics' style='font-size: 10.9647058824pt;'>cups</a>
+<a href='http://disbauxes.upc.es/?tag=debian' class='tag-link-4' title='13 topics' style='font-size: 22pt;'>Debian</a>
+<a href='http://disbauxes.upc.es/?tag=debug' class='tag-link-14' title='3 topics' style='font-size: 12.9411764706pt;'>debug</a>
+<a href='http://disbauxes.upc.es/?tag=dpkg' class='tag-link-56' title='1 topic' style='font-size: 8pt;'>dpkg</a>
+<a href='http://disbauxes.upc.es/?tag=font' class='tag-link-40' title='1 topic' style='font-size: 8pt;'>font</a>
+<a href='http://disbauxes.upc.es/?tag=fonts' class='tag-link-55' title='2 topics' style='font-size: 10.9647058824pt;'>fonts</a>
+<a href='http://disbauxes.upc.es/?tag=fsck' class='tag-link-26' title='1 topic' style='font-size: 8pt;'>fsck</a>
+<a href='http://disbauxes.upc.es/?tag=google' class='tag-link-21' title='1 topic' style='font-size: 8pt;'>Google</a>
+<a href='http://disbauxes.upc.es/?tag=gpg' class='tag-link-80' title='2 topics' style='font-size: 10.9647058824pt;'>gpg</a>
+<a href='http://disbauxes.upc.es/?tag=gpg-plugin' class='tag-link-83' title='2 topics' style='font-size: 10.9647058824pt;'>gpg plugin</a>
+<a href='http://disbauxes.upc.es/?tag=kernel' class='tag-link-30' title='2 topics' style='font-size: 10.9647058824pt;'>kernel</a>
+<a href='http://disbauxes.upc.es/?tag=key' class='tag-link-49' title='1 topic' style='font-size: 8pt;'>key</a>
+<a href='http://disbauxes.upc.es/?tag=lenny' class='tag-link-13' title='2 topics' style='font-size: 10.9647058824pt;'>lenny</a>
+<a href='http://disbauxes.upc.es/?tag=mail' class='tag-link-35' title='1 topic' style='font-size: 8pt;'>mail</a>
+<a href='http://disbauxes.upc.es/?tag=modulo' class='tag-link-33' title='1 topic' style='font-size: 8pt;'>módulo</a>
+<a href='http://disbauxes.upc.es/?tag=openoffice' class='tag-link-43' title='4 topics' style='font-size: 14.5882352941pt;'>openoffice</a>
+<a href='http://disbauxes.upc.es/?tag=openssh' class='tag-link-24' title='1 topic' style='font-size: 8pt;'>openssh</a>
+<a href='http://disbauxes.upc.es/?tag=paquet' class='tag-link-46' title='1 topic' style='font-size: 8pt;'>paquet</a>
+<a href='http://disbauxes.upc.es/?tag=paquete' class='tag-link-32' title='1 topic' style='font-size: 8pt;'>paquete</a>
+<a href='http://disbauxes.upc.es/?tag=paquets' class='tag-link-57' title='1 topic' style='font-size: 8pt;'>paquets</a>
+<a href='http://disbauxes.upc.es/?tag=plugin' class='tag-link-81' title='2 topics' style='font-size: 10.9647058824pt;'>plugin</a>
+<a href='http://disbauxes.upc.es/?tag=privacidad' class='tag-link-22' title='1 topic' style='font-size: 8pt;'>privacidad</a>
+<a href='http://disbauxes.upc.es/?tag=reboot' class='tag-link-25' title='1 topic' style='font-size: 8pt;'>reboot</a>
+<a href='http://disbauxes.upc.es/?tag=scripts' class='tag-link-15' title='1 topic' style='font-size: 8pt;'>scripts</a>
+<a href='http://disbauxes.upc.es/?tag=serialport' class='tag-link-60' title='1 topic' style='font-size: 8pt;'>serialport</a>
+<a href='http://disbauxes.upc.es/?tag=shell' class='tag-link-16' title='1 topic' style='font-size: 8pt;'>shell</a>
+<a href='http://disbauxes.upc.es/?tag=snapshots' class='tag-link-29' title='1 topic' style='font-size: 8pt;'>snapshots</a>
+<a href='http://disbauxes.upc.es/?tag=squirrelmail' class='tag-link-82' title='2 topics' style='font-size: 10.9647058824pt;'>SquirrelMail</a>
+<a href='http://disbauxes.upc.es/?tag=sshd' class='tag-link-50' title='1 topic' style='font-size: 8pt;'>sshd</a>
+<a href='http://disbauxes.upc.es/?tag=ttf' class='tag-link-39' title='2 topics' style='font-size: 10.9647058824pt;'>ttf</a>
+<a href='http://disbauxes.upc.es/?tag=ttys0' class='tag-link-58' title='1 topic' style='font-size: 8pt;'>ttyS0</a>
+<a href='http://disbauxes.upc.es/?tag=ttys1' class='tag-link-59' title='1 topic' style='font-size: 8pt;'>ttyS1</a>
+<a href='http://disbauxes.upc.es/?tag=update' class='tag-link-18' title='2 topics' style='font-size: 10.9647058824pt;'>update</a>
+<a href='http://disbauxes.upc.es/?tag=verdana' class='tag-link-42' title='1 topic' style='font-size: 8pt;'>verdana</a>
+<a href='http://disbauxes.upc.es/?tag=virtualbox' class='tag-link-9' title='7 topics' style='font-size: 17.8823529412pt;'>virtualbox</a>
+<a href='http://disbauxes.upc.es/?tag=x86_64' class='tag-link-47' title='1 topic' style='font-size: 8pt;'>x86_64</a>	<a href="http://disbauxes.upc.es/?cat=48" title="View all posts filed under analysis">analysis</a> (52)<br />
+	<a href="http://disbauxes.upc.es/?cat=124" title="View all posts filed under Android">Android</a> (1)<br />
+	<a href="http://disbauxes.upc.es/?cat=99" title="View all posts filed under Applied Physics Department">Applied Physics Department</a> (30)<br />
+	<a href="http://disbauxes.upc.es/?cat=125" title="View all posts filed under Atari 2600">Atari 2600</a> (1)<br />
+	<a href="http://disbauxes.upc.es/?cat=5" title="View all posts filed under Code">Code</a> (48)<br />
+	<a href="http://disbauxes.upc.es/?cat=123" title="View all posts filed under Context Swtiching Accounting">Context Swtiching Accounting</a> (1)<br />
+	<a href="http://disbauxes.upc.es/?cat=4" title="View all posts filed under Debian">Debian</a> (38)<br />
+	<a href="http://disbauxes.upc.es/?cat=101" title="View all posts filed under Deprecated">Deprecated</a> (1)<br />
+	<a href="http://disbauxes.upc.es/?cat=102" title="View all posts filed under DIY">DIY</a> (2)<br />
+	<a href="http://disbauxes.upc.es/?cat=103" title="View all posts filed under Electronics">Electronics</a> (2)<br />
+	<a href="http://disbauxes.upc.es/?cat=116" title="My trips abroad">english_journal</a> (11)<br />
+	<a href="http://disbauxes.upc.es/?cat=3" title="View all posts filed under GNU/Linux">GNU/Linux</a> (22)<br />
+	<a href="http://disbauxes.upc.es/?cat=21" title="View all posts filed under Google">Google</a> (1)<br />
+	<a href="http://disbauxes.upc.es/?cat=100" title="View all posts filed under ia32sh">ia32sh</a> (1)<br />
+	<a href="http://disbauxes.upc.es/?cat=118" title="View all posts filed under LibreOffice">LibreOffice</a> (1)<br />
+	<a href="http://disbauxes.upc.es/?cat=63" title="All about MODEST project.">Modest</a> (8)<br />
+	<a href="http://disbauxes.upc.es/?cat=43" title="View all posts filed under openoffice">openoffice</a> (7)<br />
+	<a href="http://disbauxes.upc.es/?cat=117" title="View all posts filed under Programming for kids project">Programming for kids project</a> (8)<br />
+	<a href="http://disbauxes.upc.es/?cat=11" title="View all posts filed under Security">Security</a> (5)<br />
+	<a href="http://disbauxes.upc.es/?cat=1" title="View all posts filed under Uncategorized">Uncategorized</a> (2)<br />
+	<a href="http://disbauxes.upc.es/?cat=12" title="View all posts filed under VirtualBox">VirtualBox</a> (10)<br />
+</p><p>WP Cumulus Flash tag cloud by <a href="http://www.roytanck.com">Roy Tanck</a> and <a href="http://lukemorton.co.uk/">Luke Morton</a> requires <a href="http://www.macromedia.com/go/getflashplayer">Flash Player</a> 9 or better.</p></div><script type="text/javascript">var widget_so6561438 = new SWFObject("http://disbauxes.upc.es/wp-content/plugins/wp-cumulus/tagcloud.swf?r=8350173", "tagcloudflash", "190", "190", "9", "#ffffff");widget_so6561438.addParam("wmode", "transparent");widget_so6561438.addParam("allowScriptAccess", "always");widget_so6561438.addVariable("tcolor", "0x333333");widget_so6561438.addVariable("tcolor2", "0x333333");widget_so6561438.addVariable("hicolor", "0x000000");widget_so6561438.addVariable("tspeed", "100");widget_so6561438.addVariable("distr", "");widget_so6561438.addVariable("mode", "both");widget_so6561438.addVariable("tagcloud", "%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Ddeb%27+class%3D%27tag-link-31%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.9647058824pt%3B%27%3E.deb%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Darial%27+class%3D%27tag-link-41%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Earial%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dati%27+class%3D%27tag-link-74%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.9647058824pt%3B%27%3Eati%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dattach%27+class%3D%27tag-link-36%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Eattach%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dbash%27+class%3D%27tag-link-17%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.9647058824pt%3B%27%3Ebash%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dcatala%27+class%3D%27tag-link-45%27+title%3D%273+topics%27+style%3D%27font-size%3A+12.9411764706pt%3B%27%3Ecatal%C3%A0%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dcifrado%27+class%3D%27tag-link-23%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Ecifrado%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dclonar%27+class%3D%27tag-link-44%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Eclonar%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dconfig%27+class%3D%27tag-link-51%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.9647058824pt%3B%27%3Econfig%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dcups%27+class%3D%27tag-link-70%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.9647058824pt%3B%27%3Ecups%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Ddebian%27+class%3D%27tag-link-4%27+title%3D%2713+topics%27+style%3D%27font-size%3A+22pt%3B%27%3EDebian%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Ddebug%27+class%3D%27tag-link-14%27+title%3D%273+topics%27+style%3D%27font-size%3A+12.9411764706pt%3B%27%3Edebug%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Ddpkg%27+class%3D%27tag-link-56%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Edpkg%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dfont%27+class%3D%27tag-link-40%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Efont%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dfonts%27+class%3D%27tag-link-55%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.9647058824pt%3B%27%3Efonts%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dfsck%27+class%3D%27tag-link-26%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Efsck%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dgoogle%27+class%3D%27tag-link-21%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EGoogle%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dgpg%27+class%3D%27tag-link-80%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.9647058824pt%3B%27%3Egpg%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dgpg-plugin%27+class%3D%27tag-link-83%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.9647058824pt%3B%27%3Egpg+plugin%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dkernel%27+class%3D%27tag-link-30%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.9647058824pt%3B%27%3Ekernel%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dkey%27+class%3D%27tag-link-49%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Ekey%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dlenny%27+class%3D%27tag-link-13%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.9647058824pt%3B%27%3Elenny%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dmail%27+class%3D%27tag-link-35%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Email%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dmodulo%27+class%3D%27tag-link-33%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Em%C3%B3dulo%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dopenoffice%27+class%3D%27tag-link-43%27+title%3D%274+topics%27+style%3D%27font-size%3A+14.5882352941pt%3B%27%3Eopenoffice%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dopenssh%27+class%3D%27tag-link-24%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Eopenssh%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dpaquet%27+class%3D%27tag-link-46%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Epaquet%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dpaquete%27+class%3D%27tag-link-32%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Epaquete%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dpaquets%27+class%3D%27tag-link-57%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Epaquets%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dplugin%27+class%3D%27tag-link-81%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.9647058824pt%3B%27%3Eplugin%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dprivacidad%27+class%3D%27tag-link-22%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Eprivacidad%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dreboot%27+class%3D%27tag-link-25%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Ereboot%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dscripts%27+class%3D%27tag-link-15%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Escripts%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dserialport%27+class%3D%27tag-link-60%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Eserialport%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dshell%27+class%3D%27tag-link-16%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Eshell%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dsnapshots%27+class%3D%27tag-link-29%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Esnapshots%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dsquirrelmail%27+class%3D%27tag-link-82%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.9647058824pt%3B%27%3ESquirrelMail%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dsshd%27+class%3D%27tag-link-50%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Esshd%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dttf%27+class%3D%27tag-link-39%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.9647058824pt%3B%27%3Ettf%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dttys0%27+class%3D%27tag-link-58%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EttyS0%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dttys1%27+class%3D%27tag-link-59%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EttyS1%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dupdate%27+class%3D%27tag-link-18%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.9647058824pt%3B%27%3Eupdate%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dverdana%27+class%3D%27tag-link-42%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Everdana%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dvirtualbox%27+class%3D%27tag-link-9%27+title%3D%277+topics%27+style%3D%27font-size%3A+17.8823529412pt%3B%27%3Evirtualbox%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fdisbauxes.upc.es%2F%3Ftag%3Dx86_64%27+class%3D%27tag-link-47%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Ex86_64%3C%2Fa%3E%3C%2Ftags%3E");widget_so6561438.addVariable("categories", "%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D48%22+title%3D%22View+all+posts+filed+under+analysis%22%3Eanalysis%3C%2Fa%3E+%2852%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D124%22+title%3D%22View+all+posts+filed+under+Android%22%3EAndroid%3C%2Fa%3E+%281%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D99%22+title%3D%22View+all+posts+filed+under+Applied+Physics+Department%22%3EApplied+Physics+Department%3C%2Fa%3E+%2830%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D125%22+title%3D%22View+all+posts+filed+under+Atari+2600%22%3EAtari+2600%3C%2Fa%3E+%281%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D5%22+title%3D%22View+all+posts+filed+under+Code%22%3ECode%3C%2Fa%3E+%2848%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D123%22+title%3D%22View+all+posts+filed+under+Context+Swtiching+Accounting%22%3EContext+Swtiching+Accounting%3C%2Fa%3E+%281%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D4%22+title%3D%22View+all+posts+filed+under+Debian%22%3EDebian%3C%2Fa%3E+%2838%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D101%22+title%3D%22View+all+posts+filed+under+Deprecated%22%3EDeprecated%3C%2Fa%3E+%281%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D102%22+title%3D%22View+all+posts+filed+under+DIY%22%3EDIY%3C%2Fa%3E+%282%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D103%22+title%3D%22View+all+posts+filed+under+Electronics%22%3EElectronics%3C%2Fa%3E+%282%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D116%22+title%3D%22My+trips+abroad%22%3Eenglish_journal%3C%2Fa%3E+%2811%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D3%22+title%3D%22View+all+posts+filed+under+GNU%2FLinux%22%3EGNU%2FLinux%3C%2Fa%3E+%2822%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D21%22+title%3D%22View+all+posts+filed+under+Google%22%3EGoogle%3C%2Fa%3E+%281%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D100%22+title%3D%22View+all+posts+filed+under+ia32sh%22%3Eia32sh%3C%2Fa%3E+%281%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D118%22+title%3D%22View+all+posts+filed+under+LibreOffice%22%3ELibreOffice%3C%2Fa%3E+%281%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D63%22+title%3D%22All+about+MODEST+project.%22%3EModest%3C%2Fa%3E+%288%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D43%22+title%3D%22View+all+posts+filed+under+openoffice%22%3Eopenoffice%3C%2Fa%3E+%287%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D117%22+title%3D%22View+all+posts+filed+under+Programming+for+kids+project%22%3EProgramming+for+kids+project%3C%2Fa%3E+%288%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D11%22+title%3D%22View+all+posts+filed+under+Security%22%3ESecurity%3C%2Fa%3E+%285%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D1%22+title%3D%22View+all+posts+filed+under+Uncategorized%22%3EUncategorized%3C%2Fa%3E+%282%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fdisbauxes.upc.es%2F%3Fcat%3D12%22+title%3D%22View+all+posts+filed+under+VirtualBox%22%3EVirtualBox%3C%2Fa%3E+%2810%29%3Cbr+%2F%3E%0A");widget_so6561438.write("wpcumuluswidgetcontent4773909");</script>	        </div>		
+		</td>
+		<!-- / Left Sidebar -->
+		
+				
+
+		<!-- Main Column -->
+		<td id="middle">
+
+	
+
+		
+		 
+
+		<div class="clearfix navigation-top">
+		<div class="older">&laquo; <a href="http://disbauxes.upc.es/?p=2858" rel="next">The Art of Debugging: two case-studies (2/2)</a> &nbsp;</div><div class="newer">&nbsp; <a href="http://disbauxes.upc.es/?p=2812" rel="prev">Pattern-finding in the maelstrom: log-analysis.</a> &raquo;</div></div>
+<div class="post-2829 post type-post status-publish format-standard hentry category-analysis category-applied-physics-department category-code" id="post-2829">
+
+
+<div class="post-headline">		<h1>The Art of Debugging: two case-studies (1/2)</h1>
+		</div>
+
+<div class="post-bodycopy clearfix"><h1>Preamble</h1>
+<p style="text-align: justify; padding-left: 30px;"><em>Debugging </em>is more than a technique. It is, in fact, an art. But this art is hard to master, and so there are a huge amount of developers thinking it such a burden. It could be the quickest way to get rid of an awful bug. But in order to do so, one has to know the basic concepts and ideas related to the almost divine art of locating defects and correct them in software. I&#8217;ve been working as a Systems Manager for more than fourteen years. Along the way, I&#8217;ve been debugging software for five years out of these fourteen. Thus, I&#8217;ve got some tricks I would like to share. I think the best way to understand the art of debugging is through some real examples. I don&#8217;t know pretty much about Fortran development, but that does not matter, as you are about to witness, for our debugging purposes. It is said, and I could not agree more, that the most common defects present on software are those ones related to memory-management, arrays, pointers, and so on. And it is true. Below, we are going to discuss two real cases concerning segmentation faults. Oh! It is not <em>that</em> bad, trust me on this one. When a segmentation fault occurs, one can take a deep breath and relax. If there is a <em>segfault</em>, we do know there&#8217;s a defect somewhere in the code. Sometimes, though, there is NO <em>segfault</em> at all, but as <a href="http://www.amazon.com/Art-Debugging-GDB-DDD-Eclipse/dp/1593271743" target="_blank"><strong>N. Matloff</strong> and <strong>P. Salzman</strong></a> put it, <em>we cannot conclude from the absence of a segfault that a memory operation is correct</em>.</p>
+<p style="text-align: justify; padding-left: 30px;">We will begin with the first case, a molecular dynamics C simulation code. To conclude, we will analyse a numeric physics simulation code written in Fortran.</p>
+<h2 style="text-align: justify;">Case study 1: A molecular dynamics C code (<em>MD</em>)</h2>
+<p style="text-align: justify; padding-left: 30px;">First of all, this program is written entirely in C. It uses the <em>math</em> library (<em>-lm</em>). So, the first thing we have to do is to compile it and run it and see what comes out:</p>
+<blockquote>
+<p style="text-align: justify; padding-left: 30px;">gcc -lm MD.c -o MD.e</p>
+<p style="text-align: justify; padding-left: 30px;">./MD.e</p>
+<p style="text-align: justify; padding-left: 30px;">(&#8230;.)</p>
+<p style="text-align: justify; padding-left: 30px;">ssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
+<p style="text-align: justify; padding-left: 30px;">ssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
+<p style="text-align: justify; padding-left: 30px;">ssssssssssssssssssss</p>
+<p style="text-align: justify; padding-left: 30px;">Segmentation fault</p>
+</blockquote>
+<p style="text-align: justify; padding-left: 30px;">Okay, now we know it crashes. But that is good, very good indeed. If we do have a segmentation fault, we do know for sure there is a defect in the code. I&#8217;m not going to deal with maths here. I don&#8217;t have to. What I do have to do is to compile the code again, this time adding the debugging symbols to the binary and then trace it down using <em>gdb</em>:</p>
+<blockquote>
+<p style="text-align: justify; padding-left: 30px;">gcc -g -lm MD.c -o MD.e</p>
+<p style="text-align: justify; padding-left: 30px;">gdb ./MD.e</p>
+</blockquote>
+<p style="text-align: justify; padding-left: 30px;">Inside gdb, I run the program. Obviously, after some iterations I&#8217;ve got the segmentation fault message, but this time I have some additional &#8211; and truly important &#8211; information:</p>
+<blockquote>
+<p style="text-align: justify; padding-left: 30px;">sssssssssssssssssssssssssssssssssssssssssssssssss(&#8230;)</p>
+<p style="text-align: justify; padding-left: 30px;">Program received signal SIGSEGV, Segmentation fault.<br />
+0&#215;0000000000402019 in Calc_vacf () at MD.c:633<br />
+633            vacf[j-i]=0;</p>
+</blockquote>
+<p style="text-align: justify; padding-left: 30px;">So, I know there is a problem with the line numbered 633 in MD.c source code file. Wow! It seems even magic, isn&#8217;t it? There are certain theories about how to debug a piece of code. Now, it seems pretty obvious we are dealing with an array called vacf[]. So we can apply here the induction technique, thinking this way: <em>&#8220;Oh, this is a vector. It is mostly common to access any vector wrongly. This issue could possibly be just the same case.&#8221;</em> Clearly, the line</p>
+<blockquote>
+<p style="text-align: justify; padding-left: 30px;">vacf[j-i] = 0;</p>
+</blockquote>
+<p style="text-align: justify; padding-left: 30px;">tries to set the <em>j-i th</em> element of the vector to zero. We need to know this access is correct before going further. To do that, we can determine the real size for <em>vectf[]</em> vector:</p>
+<blockquote>
+<p style="text-align: justify; padding-left: 30px;">print vacf<br />
+$1 = {0 &lt;repeats 1000 times&gt;}</p>
+</blockquote>
+<p style="text-align: justify; padding-left: 30px;">Well, our <em>vecf[]</em> vector has been initialized up to 1000 elements (well, this assertion is not precisely accurate, because the program has crashed doing so, that is, initializing our vector <img src='http://disbauxes.upc.es/wp-includes/images/smilies/icon_wink.gif' alt=';-)' class='wp-smiley' /> ). Don&#8217;t forget that does mean &#8220;<strong>let <em>i</em> be an element belonging to <em>vacf</em>, then it proves that</strong><em><strong> 0&lt;=i&lt;=999</strong>&#8220;</em>, We can even have a quick look at the C source code without leaving the <em>gdb</em> debugging session to be sure:</p>
+<blockquote>
+<p style="text-align: justify; padding-left: 30px;">(gdb) list vacf<br />
+64    double virial;                                    // ContribuciÃ³n del virial<br />
+65<br />
+66    int tau;                                    // PosiciÃ³n para los arrays vels_x y vels_y<br />
+67    double vels_x[(int) N][tau_max];                        // Array que guarda las velocidades x de un instante de tiempo<br />
+68    double vels_y[(int) N][tau_max];                        // Array que guarda las velocidades y de un instante de tiempo<br />
+69    double vacf[tau_max];                                // Guarda la correlaciÃ³n de velocidades</p>
+</blockquote>
+<p style="text-align: justify; padding-left: 30px;">We have to know the value for <em>tau_max</em>, which is 1000 indeed:</p>
+<blockquote>
+<p style="text-align: justify; padding-left: 30px;">30 # define tau_max    1000                            // NÃºmero de iteraciones en las que se evalÃºa la correlaciÃ³n</p>
+</blockquote>
+<p style="padding-left: 30px; text-align: justify;">Now, we need to know whether <em>j</em> or <em>i</em> are erroneous. We are using the hypothesis either <em>j</em> or <em>i</em> or both are indeed erroneous, because we are theorizing our access to the vector is not correct. Let&#8217;s have a look at their current values:</p>
+<blockquote>
+<p style="padding-left: 30px;">(gdb) print i<br />
+$2 = 0<br />
+(gdb) print j<br />
+$3 = -1583524721</p>
+</blockquote>
+<p style="padding-left: 30px; text-align: justify;">Well, as far as I know the value for<em> i</em> could be correct. But surely, the value for <em>j</em> is not! It seems it has not been initialized at all. So, we have to focus on this j variable, and go backwards, in order to determine why this variable has been infected. Could be either because it has not been correctly initialized, or because inside this code something infects it. First, we look for this <em>j</em> variable to determine whether it is local to the function where we are (<em>Calc_vacf ()</em>), or has been passed as an argument.</p>
+<blockquote>
+<p style="padding-left: 30px;">(gdb) list i<br />
+624<br />
+625    void Calc_vacf()<br />
+626    {<br />
+627<br />
+628            printf(&#8220;estic en calcul de vacf         &#8220;);<br />
+629        int i,j,k;<br />
+630        double sum,norma;<br />
+631<br />
+632        for(i=0;i&lt;tau_max;i++)<br />
+633            vacf[j-i]=0;</p>
+</blockquote>
+<p style="padding-left: 30px;">We can do that because, according to our gdb debugging session, we are still in Calc_vacf() function:</p>
+<blockquote>
+<p style="padding-left: 30px;">(gdb) frame<br />
+#0  0&#215;0000000000402019 in Calc_vacf () at MD.c:633<br />
+633            vacf[j-i]=0;</p>
+</blockquote>
+<p style="padding-left: 30px; text-align: justify;">If we have a quick look at this function, we see <em>i</em> has been correctly initialized <em>(for i=0 &#8230;.)</em>, but this is not the case when it comes to the <em>j</em> variable. It is not initialized at all, so now we&#8217;ve got this odd value of <strong>-1583524721</strong>. It has to be said this value is going to change in different executions of the same program on the very same computer in a row, obviously.</p>
+<p style="padding-left: 30px; text-align: justify;">Well,  it was not <em>that</em> hard, am I right? We have discovered our <em>j</em> variable, inside <em>Calc_vacf()</em> function, has not been initialized and this is the main cause provoking our segmentation fault. How to fix it is up to its owner and main developer. Don&#8217;t forget I know shit about molecular dynamics!!!!!! <img src='http://disbauxes.upc.es/wp-includes/images/smilies/icon_wink.gif' alt=';-)' class='wp-smiley' /> </p>
+<p style="padding-left: 30px;">
+</div>
+
+<div class="post-footer"><img src="http://disbauxes.upc.es/wp-content/themes/atahualpa/images/icons/user.gif" alt="" /> <strong>tonicas</strong> |  <img src="http://disbauxes.upc.es/wp-content/themes/atahualpa/images/icons/date.gif" alt="" /> Tuesday, 8th of February 2011 |  Category: <a href="http://disbauxes.upc.es/?cat=48" title="View all posts in analysis" rel="category">analysis</a>, <a href="http://disbauxes.upc.es/?cat=99" title="View all posts in Applied Physics Department" rel="category">Applied Physics Department</a>, <a href="http://disbauxes.upc.es/?cat=5" title="View all posts in Code" rel="category">Code</a> | <a href="http://disbauxes.upc.es/?p=2829#respond" class="comments-link"  title="Comment on The Art of Debugging: two case-studies (1/2)">Leave a comment</a>
+
+</div>
+</div><!-- / Post -->						
+	
+	
+
+
+			<!-- .... -->
+
+	
+
+
+
+			
+		<!-- Comment Form -->
+		<div id="respond">
+		
+		<a name="commentform"></a><!-- named anchor for skip links -->
+		<h3 class="reply">Leave a Reply</h3>
+	
+		<div id="cancel-comment-reply">
+		<a rel="nofollow" id="cancel-comment-reply-link" href="/?p=2829#respond" style="display:none;">Cancel</a>		</div>
+	
+		<form action="http://disbauxes.upc.es/wp-comments-post.php"
+        method="post" id="commentform">
+
+				
+			<p>
+			<input class="text author" type="text" name="author" id="author" value="" size="30" tabindex="1" />&nbsp;
+			<label for="author"> <strong>
+            Name </strong></label>
+			</p>
+
+			<p>
+			<input class="text email" type="text" name="email" id="email" value="" size="30" tabindex="2" />&nbsp;
+			<label for="email"> <strong>
+            Mail</strong> (will not be published) </label>
+			</p>
+
+			<p>
+			<input class="text url" type="text" name="url" id="url" value="" size="30" tabindex="3" />&nbsp;
+			<label for="url">
+            Website</label>
+			</p>
+			
+			
+						<p class="thesetags clearfix">
+                You can use <a class="xhtmltags" href="#" onclick="return false;">these HTML tags</a></p>
+				<div class="xhtml-tags"><p><code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt;                 </code></p></div>
+
+			
+		<!-- Comment Textarea -->
+		<p><textarea name="comment" id="comment" rows="10" cols="10" tabindex="4"></textarea></p>
+		<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="810d2906ac" /></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments" style="display: inline;">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog" style="display: inline;">Notify me of new posts by email.</label></p>		
+		<!-- Submit -->
+		<p><input name="submit" type="submit" class="button" id="submit"
+        tabindex="5" value="Submit Comment" />
+		<input type='hidden' name='comment_post_ID' value='2829' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>
+		
+		</form>
+		</div><!-- / respond -->
+		<!-- / Comment Form -->
+
+		
+
+		
+			
+
+
+
+</td>
+<!-- / Main Column -->
+
+
+<!-- Right Sidebar -->
+<td id="right">
+
+	<div id="mtw_twitter_widget-2" class="widget widget_mtw_twitter_widget"><div class="widget-title"><h3>Twitter what&#8217;s up</h3></div>    <div class="mtw_skin  ">
+        <div class="mtw_container">
+            <!-- <div class="mtw_head">
+                <div class="mtw_avatar">
+                    <a target="_blank" href=""><img src="http://a0.twimg.com/profile_images/2724347544/abb51e36868c23f7fe473f278234e23e_normal.jpeg" /></a>
+                </div>
+                <div class="mtw_twitter_username">
+                    <p><a target="_blank" href="">Disbauxes</a></p>
+                    <h3 class=""><a target="_blank" href=""> Disbauxes</a></h3>
+                </div>
+                <div style="clear:both"></div>
+            </div> -->
+            <div class="mtw_tweets">
+                <ul>
+                                 
+                        <li class="tweet">
+                            <p><a href="">Disbauxes</a> Otro script para lanzar VM de Virtualbox como servicio <a target="_blank" href=http://t.co/QtEIoZx0s4>http://t.co/QtEIoZx0s4</a>  <a target="_blank" href=https://twitter.com/search?q=%23VirtualBox&src=hash>#VirtualBox</a> </p>
+                            <p class="tweet_meta">
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/385223798070722560">53 mins</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/385223798070722560"> . reply</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/385223798070722560"> . retweet</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/385223798070722560"> . favorite</a></span>
+                            <p>
+                        </li>
+                                 
+                        <li class="tweet">
+                            <p><a href="">Disbauxes</a> Installing fonts FFF Tusj.ttf <a target="_blank" href=http://t.co/5kyqUH4R4X>http://t.co/5kyqUH4R4X</a>  <a target="_blank" href=https://twitter.com/search?q=%23Debian&src=hash>#Debian</a>  <a target="_blank" href=https://twitter.com/search?q=%23GNU&src=hash>#GNU</a> /Linux</p>
+                            <p class="tweet_meta">
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/385163272737267712">5 hours</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/385163272737267712"> . reply</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/385163272737267712"> . retweet</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/385163272737267712"> . favorite</a></span>
+                            <p>
+                        </li>
+                                 
+                        <li class="tweet">
+                            <p><a href="">Disbauxes</a> [tonic<a target="_blank" href=https://twitter.com/s>@s</a> 's journal]: The proceedings <a target="_blank" href=http://t.co/zP3e6oZKlC>http://t.co/zP3e6oZKlC</a>  <a target="_blank" href=https://twitter.com/search?q=%23english_journal&src=hash>#english_journal</a> </p>
+                            <p class="tweet_meta">
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/385102655770865664">9 hours</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/385102655770865664"> . reply</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/385102655770865664"> . retweet</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/385102655770865664"> . favorite</a></span>
+                            <p>
+                        </li>
+                                 
+                        <li class="tweet">
+                            <p><a href="">Disbauxes</a> Generate a list of installed packages and use it to reinstall packages <a target="_blank" href=http://t.co/aDWM2aqk6F>http://t.co/aDWM2aqk6F</a>  <a target="_blank" href=https://twitter.com/search?q=%23Debian&src=hash>#Debian</a>  <a target="_blank" href=https://twitter.com/search?q=%23GNU&src=hash>#GNU</a> /Linux</p>
+                            <p class="tweet_meta">
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/385042137475448832">13 hours</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/385042137475448832"> . reply</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/385042137475448832"> . retweet</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/385042137475448832"> . favorite</a></span>
+                            <p>
+                        </li>
+                                 
+                        <li class="tweet">
+                            <p><a href="">Disbauxes</a> Nou driver de ATI-3850 disponible per GNU/Linux <a target="_blank" href=http://t.co/1lU7ZwhKwF>http://t.co/1lU7ZwhKwF</a>  <a target="_blank" href=https://twitter.com/search?q=%23Debian&src=hash>#Debian</a>  <a target="_blank" href=https://twitter.com/search?q=%23GNU&src=hash>#GNU</a> /Linux</p>
+                            <p class="tweet_meta">
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/384981692395847680">17 hours</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/384981692395847680"> . reply</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/384981692395847680"> . retweet</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/384981692395847680"> . favorite</a></span>
+                            <p>
+                        </li>
+                                 
+                        <li class="tweet">
+                            <p><a href="">Disbauxes</a> Pattern-finding in the maelstrom: log-analysis. <a target="_blank" href=http://t.co/3BHbQd5y7l>http://t.co/3BHbQd5y7l</a>  <a target="_blank" href=https://twitter.com/search?q=%23analysis&src=hash>#analysis</a>  <a target="_blank" href=https://twitter.com/search?q=%23AppliedPhysicsDepartment&src=hash>#AppliedPhysicsDepartment</a> </p>
+                            <p class="tweet_meta">
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/384921068966014976">21 hours</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/384921068966014976"> . reply</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/384921068966014976"> . retweet</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/384921068966014976"> . favorite</a></span>
+                            <p>
+                        </li>
+                                 
+                        <li class="tweet">
+                            <p><a href="">Disbauxes</a> It's been kinda sort of nightmare..... <a target="_blank" href=http://t.co/Fh4RwzKpiN>http://t.co/Fh4RwzKpiN</a>  <a target="_blank" href=https://twitter.com/search?q=%23english_journal&src=hash>#english_journal</a> </p>
+                            <p class="tweet_meta">
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/384860628881801216">1 day</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/384860628881801216"> . reply</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/384860628881801216"> . retweet</a></span>
+                                <span><a target="_blank" href="https://twitter.com/Disbauxes/status/384860628881801216"> . favorite</a></span>
+                            <p>
+                        </li>
+                                </ul>
+            </div>
+            <div class="mtw_footer">
+                <div class="twitter_widget_footer_logo">
+                    <a href="htts://twitter.com/"><img src="http://disbauxes.upc.es/wp-content/plugins/my-twitter-widget/images/twitter-widget-logo.png" /></a>
+                </div>
+                <!-- <div class="twitter_widget_footer_link">
+                    <a href="">join the conversation</a>
+                </div> -->
+                <!-- <div style="clear:both"></div>										
+				<div class="designedby">By: <a href="http://www.dallasprowebdesigners.com/">Website Designers</a></div> -->
+            </div>
+        </div>
+    </div>
+</div>		<div id="recent-posts-2" class="widget widget_recent_entries">		<div class="widget-title"><h3>Recent Posts</h3></div>		<ul>
+					<li>
+				<a href="http://disbauxes.upc.es/?p=4114" title="DASM 2.20.11 on Linux fires a Segfault whenever assembling 6205/6207 code.">DASM 2.20.11 on Linux fires a Segfault whenever assembling 6205/6207 code.</a>
+						</li>
+					<li>
+				<a href="http://disbauxes.upc.es/?p=4089" title="MediaWiki 1.8.2: Connecting its auth mechanism with apache using the old HttpAuthPlugin extension">MediaWiki 1.8.2: Connecting its auth mechanism with apache using the old HttpAuthPlugin extension</a>
+						</li>
+					<li>
+				<a href="http://disbauxes.upc.es/?p=4055" title="SquirrelMail 1.4.17 / 1.4.21 &amp; G/PGP Plugin 2.1 (2): The attachments are not renamed as &#8220;.asc&#8221; and incorrect mime type associated">SquirrelMail 1.4.17 / 1.4.21 &#038; G/PGP Plugin 2.1 (2): The attachments are not renamed as &#8220;.asc&#8221; and incorrect mime type associated</a>
+						</li>
+					<li>
+				<a href="http://disbauxes.upc.es/?p=4033" title="When backporting is easier than debugging &#8230;">When backporting is easier than debugging &#8230;</a>
+						</li>
+					<li>
+				<a href="http://disbauxes.upc.es/?p=3988" title="GNU/Linux LKMS, The Art Of Adapting old-code 1/3: Understanding Kernel OOPS messages">GNU/Linux LKMS, The Art Of Adapting old-code 1/3: Understanding Kernel OOPS messages</a>
+						</li>
+				</ul>
+		</div><div id="text-3" class="widget widget_text">			<div class="textwidget"><a href="http://www.debian.org/releases/" target="_blank"><img src="http://disbauxes.upc.es/wp-content/uploads/2011/02/logo_debian.png" alt="image_mini" title="image_mini" class="center size-full wp-image-454" /></a></div>
+		</div><div id="recent-comments-2" class="widget widget_recent_comments"><div class="widget-title"><h3>Recent Comments</h3></div><ul id="recentcomments"><li class="recentcomments">tonicas on <a href="http://disbauxes.upc.es/?p=4055#comment-814">SquirrelMail 1.4.17 / 1.4.21 &#038; G/PGP Plugin 2.1 (2): The attachments are not renamed as &#8220;.asc&#8221; and incorrect mime type associated</a></li><li class="recentcomments"><a href='http://ds-pas-cher.sixsigmadss.com' rel='external nofollow' class='url'>ds nintendo prix</a> on <a href="http://disbauxes.upc.es/?p=4055#comment-813">SquirrelMail 1.4.17 / 1.4.21 &#038; G/PGP Plugin 2.1 (2): The attachments are not renamed as &#8220;.asc&#8221; and incorrect mime type associated</a></li><li class="recentcomments"><a href='https://disbauxes.upc.es/?p=4055' rel='external nofollow' class='url'>SquirrelMail 1.4.17 / 1.4.21 &amp; G/PGP Plugin 2.1 (2): The attachments are not renamed as &#8220;.asc&#8221; and incorrect mime type associated &laquo;</a> on <a href="http://disbauxes.upc.es/?p=1337#comment-752">SquirrelMail 1.4.17 &amp; G/PGP Plugin 2.1</a></li><li class="recentcomments">tonicas on <a href="http://disbauxes.upc.es/?p=1337#comment-751">SquirrelMail 1.4.17 &amp; G/PGP Plugin 2.1</a></li><li class="recentcomments"><a href='http://noflag.org.uk' rel='external nofollow' class='url'>Daniel</a> on <a href="http://disbauxes.upc.es/?p=1337#comment-750">SquirrelMail 1.4.17 &amp; G/PGP Plugin 2.1</a></li></ul></div>
+</td>
+<!-- / Right Sidebar -->
+
+</tr>
+<!-- / Main Body -->
+<tr>
+
+<!-- Footer -->
+<td id="footer" colspan="3">
+
+    <p>
+    Copyright &copy; 2013 <a href="http://disbauxes.upc.es/"></a> - All Rights Reserved
+<br>
+<a href="wp-content/themes/atahualpa/images/disbauxes-3.png">Disbauxes logo</a> created by <a href="mailto:josep.hornos AT uab.es"><b>Josep Hornos Arias</b></a> on 2011.
+<br>
+This entire website is hosted on <a href="http://fa.upc.edu" target="window"><b>Applied Physics Department</b></a> at <a href="http://www.upc.es" target="window">UPC</a>.
+<br>
+You can contact us either using our <a href="mailto:disbauxes@gmx.com"><b>email address</b></a> or through <a href="https://twitter.com/Disbauxes" target="window2"><b>Twitter</b></a>.<br />Powered by <a href="http://wordpress.org/">WordPress</a> &amp; the <a href="http://wordpress.bytesforall.com/" title="Customizable WordPress themes">Atahualpa Theme</a> by <a href="http://www.bytesforall.com/" title="BFA Webdesign">BytesForAll</a>. Discuss on our <a href="http://forum.bytesforall.com/" title="Atahualpa &amp; WordPress">WP Forum</a>    </p>
+    
+    
+    	<div style="display:none">
+	</div>
+<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201340'></script>
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2013Octaa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://disbauxes.upc.es/wp-content/plugins/jetpack/modules/wpgroho.js?ver=3.6.1'></script>
+
+	<script src="http://stats.wordpress.com/e-201340.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	st_go({v:'ext',j:'1:2.5',blog:'12323377',post:'2829',tz:'1'});
+	var load_cmc = function(){linktracker_init(12323377,2829,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script>
+</td>
+<!-- / Footer -->
+
+</tr>
+</table><!-- / layout -->
+</div><!-- / container -->
+</div><!-- / wrapper -->
+</body>
+</html>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using apc
+Database Caching 50/66 queries in 0.043 seconds using apc
+
+ Served from: disbauxes.upc.es @ 2013-10-02 03:57:38 by W3 Total Cache -->

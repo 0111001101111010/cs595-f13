@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+	<head profile="http://gmpg.org/xfn/11">
+<meta name="google-site-verification" content="xl00SKPDuTlNiiPY0lV9msEQ-ufz4nwL8K4VEnpQlG4" />
+	<link rel="shortcut icon" href="http://www.fakingfantastic.com/wp-content/themes/starkers-new-design/favicon.ico" />
+		
+		<title>
+			  Concerning Yourself with ActiveSupport::Concern		</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="description" content="Confessions of a Web Developing Phony" />
+			
+		<link rel="stylesheet" type="text/css" href="http://www.fakingfantastic.com/wp-content/themes/starkers-new-design/style.css" media="screen" />
+		<link rel="alternate" type="application/rss+xml" title="Faking Fantastic RSS Feed" href="http://www.fakingfantastic.com/feed/" />
+		<link rel="pingback" href="http://www.fakingfantastic.com/xmlrpc.php" />
+
+		<link rel="alternate" type="application/rss+xml" title="Faking Fantastic &raquo; Concerning Yourself with ActiveSupport::Concern Comments Feed" href="http://www.fakingfantastic.com/2010/09/20/concerning-yourself-with-active-support-concern/feed/" />
+<link rel='stylesheet' id='codecolorer-css'  href='http://www.fakingfantastic.com/wp-content/plugins/codecolorer/codecolorer.css?ver=0.9.9' type='text/css' media='screen' />
+<link rel='stylesheet' id='sociable-front-css-css'  href='http://www.fakingfantastic.com/wp-content/plugins/sociable/sociable.css?ver=2.9.2' type='text/css' media='' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.fakingfantastic.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.fakingfantastic.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='Faking Fantastic' href='http://www.fakingfantastic.com' />
+<link rel='start' title='Doctrine &#8211; Build DB Models faster with less headaches.' href='http://www.fakingfantastic.com/2009/04/13/doctrine-db-models-faster-with-less-headaches/' />
+<link rel='prev' title='Getting Comfortable Working With Rails Core' href='http://www.fakingfantastic.com/2010/08/15/getting-comfortable-working-with-rails-core/' />
+<link rel='next' title='Before Type Cast' href='http://www.fakingfantastic.com/2010/11/13/before-type-cast/' />
+<meta name="generator" content="WordPress 2.9.2" />
+<link rel='canonical' href='http://www.fakingfantastic.com/2010/09/20/concerning-yourself-with-active-support-concern/' />
+
+	<meta name="now-reading-version" content="4.4.3" />
+	
+<!-- Protected by WP-SpamFree v2.1.0.9 :: JS BEGIN -->
+<script type="text/javascript" src="http://www.fakingfantastic.com/wp-content/plugins/wp-spamfree/js/wpsf-js.php"></script> 
+<!-- Protected by WP-SpamFree v2.1.0.9 :: JS END -->
+
+
+
+	</head>
+
+	<body>
+		<div id="page-wrapper">
+		<div id="header">
+			<h1><a href="http://www.fakingfantastic.com/">Faking Fantastic</a></h1>
+			<p>Confessions of a Web Developing Phony</p>
+			<!-- <ul>
+				<li class="page_item page-item-2"><a href="http://www.fakingfantastic.com/bio/" title="Biography">Biography</a></li>
+<li class="page_item page-item-13"><a href="http://www.fakingfantastic.com/portfolio/" title="Portfolio">Portfolio</a></li>
+			</ul> -->
+			
+		</div><!-- #header -->
+			<form method="get" id="searchform" action="http://www.fakingfantastic.com/">
+	<label class="hidden" for="s">Search for:</label>
+	<input type="text" value="" name="s" id="s" />
+	<input type="submit" id="searchsubmit" value="Search" />
+</form>
+
+	<div id="stage" class="single">
+		
+			<div class="post" id="post-449">
+				<h1><a href="http://www.fakingfantastic.com/2010/09/20/concerning-yourself-with-active-support-concern/" rel="bookmark" title="Permanent Link to Concerning Yourself with ActiveSupport::Concern">Concerning Yourself with ActiveSupport::Concern</a></h1>
+				<time>September 20th, 2010 <!-- by Frank --></time>
+
+				<div class="body">
+					<p>Picking up on our last talk about <a href="http://www.fakingfantastic.com/2010/08/15/getting-comfortable-working-with-rails-core/">working with the Rails core</a>, I wanted to take some time to introduce you to the internals of Rails 3, in hopes to break down any fears about hacking around in Rails. We are going to talk today about ActiveSupport::Concern.</p>
+<h2>Preface</h2>
+<p>For those of you new to ActiveSupport, let&#8217;s take a step back. Have you ever worked on a codebase and had to constantly do some utility work, like encoding or decoding JSON, generate a random number, or encrypt data? Of course, we all have, and the Rails core developers are no different. ActiveSupport is a library of such utilities that you are free to use not only in Rails, but in your own standalone Ruby project! I feel that ActiveSupport is the best place to start learning Rails core code: in core libraries, it takes multiple classes and modules to see a functionality come to life. Compounded by your unfamiliarity with the idioms that the core developers use, you may quickly find yourself getting lost. In ActiveSupport, most of the modules standalone, so you can look at the one file to find out what it&#8217;s doing (many helper modules are < 200 lines of code with comments). Also, it gives you small doses of such idioms, so you can get comfortable with core design patterns before diving into heavy lifting code.</p>
+<h2>::Concern</h2>
+<p>So now that you know about ActiveSupport, you won&#8217;t be surprised to learn that ActiveSupport::Concern is just another helpful utility module. But you might not understand what it&#8217;s useful for until you learn a little bit about a common Rails metaprogramming design pattern.  </p>
+<h3>Mixing Class and Instance methods into your classes</h3>
+<p>Commonly in Rails, we use 3rd-party gems to add certain functionality to our classes; most commonly of which is ActiveRecord::Base. These gems usually add methods to instances of AR::Base, and to the class itself. For example, a tagging library might add an instance method @blog.tags, and a class method Blog.find_by_tags. If you&#8217;ve never looked under the hood to see how libraries do this, it may be look a little roundabout:</p>
+<div class="codecolorer-container ruby railscasts" style="overflow:auto;white-space:nowrap;"><table cellspacing="0" cellpadding="0"><tbody><tr><td class="line-numbers"><div>1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />10<br />11<br />12<br />13<br />14<br />15<br />16<br />17<br />18<br />19<br />20<br />21<br />22<br />23<br />24<br /></div></td><td><div class="ruby codecolorer"><span class="kw1">module</span> TagLib<br />
+&nbsp; <br />
+&nbsp; <span class="kw1">module</span> ClassMethods<br />
+&nbsp; &nbsp; <span class="kw1">def</span> find_by_tags<span class="br0">&#40;</span><span class="br0">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; <span class="co1"># ...</span><br />
+&nbsp; &nbsp; <span class="kw1">end</span><br />
+&nbsp; <span class="kw1">end</span><br />
+&nbsp;<br />
+&nbsp; <span class="kw1">module</span> InstanceMethods<br />
+&nbsp; &nbsp; <span class="kw1">def</span> tags<span class="br0">&#40;</span><span class="br0">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; <span class="co1"># ...</span><br />
+&nbsp; &nbsp; <span class="kw1">end</span><br />
+&nbsp; <span class="kw1">end</span><br />
+&nbsp;<br />
+&nbsp; <span class="kw1">def</span> <span class="kw2">self</span>.<span class="me1">included</span><span class="br0">&#40;</span>base<span class="br0">&#41;</span><br />
+&nbsp; &nbsp; base.<span class="me1">send</span> :<span class="kw1">include</span>, InstanceMethods<br />
+&nbsp; &nbsp; base.<span class="me1">send</span> <span class="re3">:extend</span>, ClassMethods<br />
+&nbsp; <span class="kw1">end</span><br />
+&nbsp;<br />
+<span class="kw1">end</span><br />
+<br />
+<span class="kw1">class</span> <span class="re2">ActiveRecord::Base</span><br />
+&nbsp; <span class="kw1">include</span> TagLib<br />
+<span class="kw1">end</span></div></td></tr></tbody></table></div>
+<p>This is a common Rails idiom that many developers are used to seeing. The system breaks down like this:</p>
+<ol>
+<li>Start on line 1, where we create a module, ours is TagLib, which will provide tagging functionality</li>
+<li>On line 23, we open up ActiveRecord::Base (AR::Base) and include our module. This will make the TagLib library available to all AR::Base classes. <em>Note: this code that opens AR::Base is not inside of our module</em></li>
+<li>On line 15, we override the
+<div class="codecolorer-container text railscasts" style="overflow:auto;white-space:nowrap;"><table cellspacing="0" cellpadding="0"><tbody><tr><td class="line-numbers"><div>1<br /></div></td><td><div class="text codecolorer">self.included()</div></td></tr></tbody></table></div>
+<p>method.</p>
+<div class="codecolorer-container text railscasts" style="overflow:auto;white-space:nowrap;"><table cellspacing="0" cellpadding="0"><tbody><tr><td class="line-numbers"><div>1<br /></div></td><td><div class="text codecolorer">self.included()</div></td></tr></tbody></table></div>
+<p>is a special &#8220;callback&#8221; method that gets automatically called when ever the module is included into something. In our case, we included TagLib into AR::Base, so this method will be called. self.included() takes a parameter, which is a reference to the class that included in it, in our case AR::Base. We can now take that reference, and use it to add methods to it. <em>Note: we use</p>
+<div class="codecolorer-container text railscasts" style="overflow:auto;white-space:nowrap;"><table cellspacing="0" cellpadding="0"><tbody><tr><td class="line-numbers"><div>1<br /></div></td><td><div class="text codecolorer">base.send :extend</div></td></tr></tbody></table></div>
+<p>, instead of the basic</p>
+<div class="codecolorer-container text railscasts" style="overflow:auto;white-space:nowrap;"><table cellspacing="0" cellpadding="0"><tbody><tr><td class="line-numbers"><div>1<br /></div></td><td><div class="text codecolorer">extend</div></td></tr></tbody></table></div>
+<p>, to get around private method hiding.</em></li>
+<li>By calling self.included() in your class, it will include all of the instance methods of the class with the methods in the InstanceMethods module, giving your @blog.tags, and it will add all of the methods in the ClassMethods module to the class, so you can do Blog.find_by_tags.</li>
+</ol>
+<p>There are many reasons why this system is a little bit hacky, and more will become apparent when you dive deepy into the Ruby language and metaprogramming. A couple standouts are:</p>
+<ul>
+<li>You are overriding the
+<div class="codecolorer-container text railscasts" style="overflow:auto;white-space:nowrap;"><table cellspacing="0" cellpadding="0"><tbody><tr><td class="line-numbers"><div>1<br /></div></td><td><div class="text codecolorer">self.included()</div></td></tr></tbody></table></div>
+<p>method to act like an extend method</li>
+<li>When you include a method into a class, the methods automatically become apart of all instances in the class. It is not always necessary to have an InstanceMethods module to include another module.</li>
+<li>It&#8217;s not readable, people have to struggle just to figure out this whole bootstrapping process.</li>
+</ul>
+<p><em>Note: <a href="http://www.yehudakatz.com" target="_blank">Smarter people</a> have <a href="http://yehudakatz.com/2009/11/12/better-ruby-idioms/" target="_blank">explained this</a> way better than me</em></p>
+<h2>ActiveSupport::Concern to the rescue</h2>
+<p>Looking for a way to keep the same design pattern, but abstract the complexities out of the code, <a href="http://www.joshpeek.com" target="_blank">Josh Peek</a> wrote ActiveSupport::Concern, which allows you to pull off our same TagLib module by doing something like this:</p>
+<div class="codecolorer-container ruby railscasts" style="overflow:auto;white-space:nowrap;"><table cellspacing="0" cellpadding="0"><tbody><tr><td class="line-numbers"><div>1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />10<br />11<br />12<br />13<br />14<br />15<br />16<br />17<br />18<br />19<br /></div></td><td><div class="ruby codecolorer"><span class="kw1">module</span> TagLib<br />
+&nbsp; extend <span class="re2">ActiveSupport::Concern</span><br />
+<br />
+&nbsp; <span class="kw1">module</span> ClassMethods<br />
+&nbsp; &nbsp; <span class="kw1">def</span> find_by_tags<span class="br0">&#40;</span><span class="br0">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; <span class="co1"># ...</span><br />
+&nbsp; &nbsp; <span class="kw1">end</span><br />
+&nbsp; <span class="kw1">end</span><br />
+&nbsp;<br />
+&nbsp; <span class="kw1">module</span> InstanceMethods<br />
+&nbsp; &nbsp; <span class="kw1">def</span> tags<span class="br0">&#40;</span><span class="br0">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; <span class="co1"># ...</span><br />
+&nbsp; &nbsp; <span class="kw1">end</span><br />
+&nbsp; <span class="kw1">end</span> <br />
+<span class="kw1">end</span><br />
+<br />
+<span class="kw1">class</span> <span class="re2">ActiveRecord::Base</span><br />
+&nbsp; <span class="kw1">include</span> TagLib<br />
+<span class="kw1">end</span></div></td></tr></tbody></table></div>
+<p>AS::Concern will look for modules named ClassMethods and InstanceMethods and bootstrap them as you normally would like. The module has some other nice benefits, for instance, sometimes you want to add other code in the</p>
+<div class="codecolorer-container text railscasts" style="overflow:auto;white-space:nowrap;"><table cellspacing="0" cellpadding="0"><tbody><tr><td class="line-numbers"><div>1<br /></div></td><td><div class="text codecolorer">self.included()</div></td></tr></tbody></table></div>
+<p>method, such as logging:</p>
+<div class="codecolorer-container ruby railscasts" style="overflow:auto;white-space:nowrap;"><table cellspacing="0" cellpadding="0"><tbody><tr><td class="line-numbers"><div>1<br />2<br />3<br /></div></td><td><div class="ruby codecolorer"><span class="kw1">def</span> <span class="kw2">self</span>.<span class="me1">included</span><span class="br0">&#40;</span>base<span class="br0">&#41;</span><br />
+&nbsp; logger.<span class="me1">warn</span><span class="br0">&#40;</span><span class="st0">&quot;Adding TabLib - this will make you class awesome. Proceed with awesomeness&quot;</span><span class="br0">&#41;</span><br />
+&nbsp; <span class="co1">#...</span></div></td></tr></tbody></table></div>
+<p>Since AS::Concern removes the need for that call, it also provides you with an</p>
+<div class="codecolorer-container text railscasts" style="overflow:auto;white-space:nowrap;"><table cellspacing="0" cellpadding="0"><tbody><tr><td class="line-numbers"><div>1<br /></div></td><td><div class="text codecolorer">included()</div></td></tr></tbody></table></div>
+<p>method that takes a block, so now you can do:</p>
+<div class="codecolorer-container ruby railscasts" style="overflow:auto;white-space:nowrap;"><table cellspacing="0" cellpadding="0"><tbody><tr><td class="line-numbers"><div>1<br />2<br />3<br /></div></td><td><div class="ruby codecolorer">included <span class="kw1">do</span><br />
+&nbsp; logger.<span class="me1">warn</span> ...<br />
+<span class="kw1">end</span></div></td></tr></tbody></table></div>
+<p>Hopefully, you&#8217;ve gotten a taste of some Rails idioms, Rails core code, and an explanation of a core module. I assure you, there are many more in ActiveSupport that are equally as straightforward to follow, so get hacking! (check out GZip, Buffered Logger, and Message Encryptor)</p>
+
+<div class="sociable">
+
+<ul>
+	<li class="sociablefirst"><a rel="nofollow"  href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.fakingfantastic.com%2F2010%2F09%2F20%2Fconcerning-yourself-with-active-support-concern%2F&amp;title=Concerning%20Yourself%20with%20ActiveSupport%3A%3AConcern&amp;bodytext=Picking%20up%20on%20our%20last%20talk%20about%20working%20with%20the%20Rails%20core%2C%20I%20wanted%20to%20take%20some%20time%20to%20introduce%20you%20to%20the%20internals%20of%20Rails%203%2C%20in%20hopes%20to%20break%20down%20any%20fears%20about%20hacking%20around%20in%20Rails.%20We%20are%20going%20to%20talk%20today%20about%20ActiveSupport%3A%3ACo" title="Digg"><img src="http://www.fakingfantastic.com/wp-content/plugins/sociable/images/services-sprite.gif" title="Digg" alt="Digg" style="width: 16px; height: 16px; background: transparent url(http://www.fakingfantastic.com/wp-content/plugins/sociable/images/services-sprite.png) no-repeat; background-position:-235px -1px" class="sociable-hovers" /></a></li>
+	<li><a rel="nofollow"  href="http://delicious.com/post?url=http%3A%2F%2Fwww.fakingfantastic.com%2F2010%2F09%2F20%2Fconcerning-yourself-with-active-support-concern%2F&amp;title=Concerning%20Yourself%20with%20ActiveSupport%3A%3AConcern&amp;notes=Picking%20up%20on%20our%20last%20talk%20about%20working%20with%20the%20Rails%20core%2C%20I%20wanted%20to%20take%20some%20time%20to%20introduce%20you%20to%20the%20internals%20of%20Rails%203%2C%20in%20hopes%20to%20break%20down%20any%20fears%20about%20hacking%20around%20in%20Rails.%20We%20are%20going%20to%20talk%20today%20about%20ActiveSupport%3A%3ACo" title="del.icio.us"><img src="http://www.fakingfantastic.com/wp-content/plugins/sociable/images/services-sprite.gif" title="del.icio.us" alt="del.icio.us" style="width: 16px; height: 16px; background: transparent url(http://www.fakingfantastic.com/wp-content/plugins/sociable/images/services-sprite.png) no-repeat; background-position:-199px -1px" class="sociable-hovers" /></a></li>
+	<li><a rel="nofollow"  href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.fakingfantastic.com%2F2010%2F09%2F20%2Fconcerning-yourself-with-active-support-concern%2F&amp;t=Concerning%20Yourself%20with%20ActiveSupport%3A%3AConcern" title="Facebook"><img src="http://www.fakingfantastic.com/wp-content/plugins/sociable/images/services-sprite.gif" title="Facebook" alt="Facebook" style="width: 16px; height: 16px; background: transparent url(http://www.fakingfantastic.com/wp-content/plugins/sociable/images/services-sprite.png) no-repeat; background-position:-343px -1px" class="sociable-hovers" /></a></li>
+	<li><a rel="nofollow"  href="http://www.google.com/bookmarks/mark?op=edit&amp;bkmk=http%3A%2F%2Fwww.fakingfantastic.com%2F2010%2F09%2F20%2Fconcerning-yourself-with-active-support-concern%2F&amp;title=Concerning%20Yourself%20with%20ActiveSupport%3A%3AConcern&amp;annotation=Picking%20up%20on%20our%20last%20talk%20about%20working%20with%20the%20Rails%20core%2C%20I%20wanted%20to%20take%20some%20time%20to%20introduce%20you%20to%20the%20internals%20of%20Rails%203%2C%20in%20hopes%20to%20break%20down%20any%20fears%20about%20hacking%20around%20in%20Rails.%20We%20are%20going%20to%20talk%20today%20about%20ActiveSupport%3A%3ACo" title="Google Bookmarks"><img src="http://www.fakingfantastic.com/wp-content/plugins/sociable/images/services-sprite.gif" title="Google Bookmarks" alt="Google Bookmarks" style="width: 16px; height: 16px; background: transparent url(http://www.fakingfantastic.com/wp-content/plugins/sociable/images/services-sprite.png) no-repeat; background-position:-91px -19px" class="sociable-hovers" /></a></li>
+	<li class="sociablelast"><a rel="nofollow"  href="http://twitter.com/home?status=Concerning%20Yourself%20with%20ActiveSupport%3A%3AConcern%20-%20http%3A%2F%2Fwww.fakingfantastic.com%2F2010%2F09%2F20%2Fconcerning-yourself-with-active-support-concern%2F" title="Twitter"><img src="http://www.fakingfantastic.com/wp-content/plugins/sociable/images/services-sprite.gif" title="Twitter" alt="Twitter" style="width: 16px; height: 16px; background: transparent url(http://www.fakingfantastic.com/wp-content/plugins/sociable/images/services-sprite.png) no-repeat; background-position:-343px -55px" class="sociable-hovers" /></a></li>
+</ul>
+</div>
+				</div><!-- .body -->
+				
+				<p class="comment-cta">
+										<a href="#respond">Comment</a> | <a href="http://www.fakingfantastic.com/2010/09/20/concerning-yourself-with-active-support-concern/trackback/" rel="trackback">Trackback</a>				</p>
+				
+				<p> <label>Posted: </label> <a href="http://www.fakingfantastic.com/category/uncategorized/" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a>  </p>
+				
+			</div>
+
+	
+<!-- You can start editing here. -->
+
+	<h3 id="comments">11 Responses to &#8220;Concerning Yourself with ActiveSupport::Concern&#8221;</h3>
+
+	<ol>
+
+	
+		<li class="alt" id="comment-185">
+			<img alt='' src='http://www.gravatar.com/avatar/71242a0ef293ea652bb11bddbdbec18d?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=X' class='avatar avatar-32 photo' height='32' width='32' />			<cite><a href='http://aarongodin.com' rel='external nofollow' class='url'>Aaron Godin</a></cite> Says:
+						<p><a href="#comment-185" title="">April 29th, 2011 at 8:27 pm</a> </p>
+			<p>Thanks for the post! I&#8217;m looking at constructing my first gem to use with ActiveRecord, and this helps me get through the tough parts. Now I can go crack open my favorite gems.</p>
+		</li>
+
+	
+	
+		<li id="comment-186">
+			<img alt='' src='http://www.gravatar.com/avatar/8115661cf9b459008c8402a270ee70f8?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=X' class='avatar avatar-32 photo' height='32' width='32' />			<cite><a href='http://www.franklakatos.com' rel='external nofollow' class='url'>Frank</a></cite> Says:
+						<p><a href="#comment-186" title="">April 30th, 2011 at 4:47 am</a> </p>
+			<p>I&#8217;m glad it helped you out</p>
+		</li>
+
+	
+	
+		<li class="alt" id="comment-187">
+			<img alt='' src='http://www.gravatar.com/avatar/0e6c0ba9935b52866fd5c54dd886cf2e?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=X' class='avatar avatar-32 photo' height='32' width='32' />			<cite><a href='http://jaimeiniesta.com' rel='external nofollow' class='url'>Jaime Iniesta</a></cite> Says:
+						<p><a href="#comment-187" title="">May 24th, 2011 at 9:46 am</a> </p>
+			<p>Thanks for the post!</p>
+<p>There&#8217;s a little typo (twice): &#8220;TabLib&#8221; instead of &#8220;TagLib&#8221;</p>
+		</li>
+
+	
+	
+		<li id="comment-188">
+			<img alt='' src='http://www.gravatar.com/avatar/8115661cf9b459008c8402a270ee70f8?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=X' class='avatar avatar-32 photo' height='32' width='32' />			<cite><a href='http://www.franklakatos.com' rel='external nofollow' class='url'>Frank</a></cite> Says:
+						<p><a href="#comment-188" title="">May 24th, 2011 at 9:50 am</a> </p>
+			<p>Glad you liked it, all fixed</p>
+		</li>
+
+	
+	
+		<li class="alt" id="comment-191">
+			<img alt='' src='http://www.gravatar.com/avatar/50a62ffbf3003f44e18058003f3a3b50?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=X' class='avatar avatar-32 photo' height='32' width='32' />			<cite><a href='http://www.deploymentzone.com' rel='external nofollow' class='url'>Charles Feduke</a></cite> Says:
+						<p><a href="#comment-191" title="">May 26th, 2011 at 10:35 am</a> </p>
+			<p>This is useful to know.  I just wrote some code where I could have used ActiveSupport::Concern yesterday (in place of the old way).  Even though you&#8217;re not losing very many LOC the purpose becomes a bit clearer and more readable.</p>
+		</li>
+
+	
+	
+		<li id="comment-192">
+			<img alt='' src='http://www.gravatar.com/avatar/8115661cf9b459008c8402a270ee70f8?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=X' class='avatar avatar-32 photo' height='32' width='32' />			<cite><a href='http://www.franklakatos.com' rel='external nofollow' class='url'>Frank</a></cite> Says:
+						<p><a href="#comment-192" title="">May 26th, 2011 at 10:39 am</a> </p>
+			<p>You&#8217;re absolutely right, Charles. The whole &#8220;Rails 3 gut&#8221; was all about cleaner, more compartmentalized code. Making this mixin process a little more auto-magic makes it clearer by standardizing a common bootstrap process that many have been hacking about.</p>
+		</li>
+
+	
+	
+		<li class="alt" id="comment-213">
+			<img alt='' src='http://www.gravatar.com/avatar/62834864f6039edde17474f61a359aa5?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=X' class='avatar avatar-32 photo' height='32' width='32' />			<cite><a href='http://giangnd.wordpress.com' rel='external nofollow' class='url'>Giang Nguyen</a></cite> Says:
+						<p><a href="#comment-213" title="">August 29th, 2011 at 12:23 pm</a> </p>
+			<p>Nice article.</p>
+<p>Suppose I have a Tag model that corresponds to a Tags table in database, in Tag model I include TagLib. Also, I put some logger messages in include callback. I notice that every time I do something with a Tag instance that calls methods in TagLib, the logger messages show up in log.</p>
+<p>That means everytime a Tag instance is accessed, the TagLib gets included again?</p>
+<p>If so, is there any other efficient way to get rid of including TagLib methods every time Tag instance is accessed?</p>
+<p>Thanks,<br />
+-Giang</p>
+		</li>
+
+	
+	
+		<li id="comment-249">
+			<img alt='' src='http://www.gravatar.com/avatar/a225bf8b063b8252344a10162c80ea00?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=X' class='avatar avatar-32 photo' height='32' width='32' />			<cite>Mark</cite> Says:
+						<p><a href="#comment-249" title="">October 10th, 2011 at 11:50 pm</a> </p>
+			<p>I had to debug someone else&#8217;s code today, and it was only able to understand it after I had read this post. Thanks!</p>
+		</li>
+
+	
+	
+		<li class="alt" id="comment-267">
+			<img alt='' src='http://www.gravatar.com/avatar/6d8a60ec037e700817356fa5ceccbd71?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=X' class='avatar avatar-32 photo' height='32' width='32' />			<cite>Dhiren Gupta</cite> Says:
+						<p><a href="#comment-267" title="">November 22nd, 2011 at 2:59 am</a> </p>
+			<p>Thanks for the post !!. It&#8217;s very helpful.</p>
+		</li>
+
+	
+	
+		<li id="comment-332">
+			<img alt='' src='http://www.gravatar.com/avatar/2b64274a52355e39ff9fe937cb117a64?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=X' class='avatar avatar-32 photo' height='32' width='32' />			<cite>Kevin Triplett</cite> Says:
+						<p><a href="#comment-332" title="">March 9th, 2012 at 1:37 am</a> </p>
+			<p>The latest Rails (3.2 I believe) is deprecating the InstanceMethods. As the deprecation warning explains, just include instance methods in the module. So the module would be:</p>
+<p>    module TagLib<br />
+      extend ActiveSupport::Concern</p>
+<p>      module ClassMethods<br />
+        def find_by_tags()<br />
+          # &#8230;<br />
+        end<br />
+      end</p>
+<p>      def tags()<br />
+        # &#8230;<br />
+      end<br />
+    end</p>
+		</li>
+
+	
+	
+		<li class="alt" id="comment-333">
+			<img alt='' src='http://www.gravatar.com/avatar/105c2635c5fe23a0d25a7e96e38163c5?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=X' class='avatar avatar-32 photo' height='32' width='32' />			<cite>apeiros</cite> Says:
+						<p><a href="#comment-333" title="">May 2nd, 2012 at 2:47 am</a> </p>
+			<p>extend is not private, only include is.</p>
+		</li>
+
+	
+	
+	</ol>
+
+ 
+
+<h3 id="respond">Leave a Reply</h3>
+
+
+<form action="http://www.fakingfantastic.com/wp-comments-post.php" method="post" id="commentform">
+
+
+
+<label for="author">Name (required)</label>
+<input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required='true' />
+
+<label for="email">Mail (will not be published) (required)</label>
+<input type="text" name="email" id="email" value="" size="22" tabindex="2" aria-required='true' />
+
+<label for="url">Website</label>
+<input type="text" name="url" id="url" value="" size="22" tabindex="3" />
+
+
+<br />
+<textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea>
+
+<br />
+<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+<input type="hidden" name="comment_post_ID" value="449" />
+	<script type='text/javascript'>
+	<!--
+	refJS = escape( document[ 'referrer' ] );
+	document.write("<input type='hidden' name='refJS' value='"+refJS+"'>");
+	// -->
+	</script>
+	<noscript><p><strong>Currently you have JavaScript disabled. In order to post comments, please make sure JavaScript and Cookies are enabled, and reload the page.</strong> <a href="http://www.google.com/support/bin/answer.py?answer=23852" rel="nofollow external" >Click here for instructions</a> on how to enable JavaScript in your browser.</p></noscript>
+
+</form>
+
+
+		
+			<ul>
+				<li>&laquo; Older Entries</li>
+				<li>Newer Entries &raquo;</li>
+			</ul>
+
+		</div><!-- #stage -->
+	<div id="side-content">
+		<ul>
+			
+			<li><li id="twitter-2" class="widget widget_twitter"><h2 class="widgettitle"><a href='http://twitter.com/fakingfantastic'>Twitter Updates</a></h2><p>Error: Twitter did not respond. Please wait a few minutes and refresh this page.</p></li></li>
+			
+			<li><li id="linkcat-2" class="linkcat"><h2>People I Follow</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://tenderlovemaking.com/">Aaron Paterson</a></li>
+<li><a href="http://www.chadfowler.com" target="_blank">Chad Fowler</a></li>
+<li><a href="http://blog.fallingsnow.net/" target="_blank">Evan Phoenix</a></li>
+<li><a href="http://www.igvita.com/">Ilya Grigorik</a></li>
+<li><a href="http://techno-weenie.net/" target="_blank">Rick Olson</a></li>
+<li><a href="http://www.yehudakatz.com" target="_blank">Yehuda Katz</a></li>
+
+	</ul>
+</li>
+</li>
+
+			<li><h2>Archives</h2>
+				<ul>
+					<li><a href='http://www.fakingfantastic.com/2013/02/' title='February 2013'>February 2013</a></li>
+	<li><a href='http://www.fakingfantastic.com/2011/09/' title='September 2011'>September 2011</a></li>
+	<li><a href='http://www.fakingfantastic.com/2011/08/' title='August 2011'>August 2011</a></li>
+	<li><a href='http://www.fakingfantastic.com/2011/02/' title='February 2011'>February 2011</a></li>
+	<li><a href='http://www.fakingfantastic.com/2011/01/' title='January 2011'>January 2011</a></li>
+	<li><a href='http://www.fakingfantastic.com/2010/11/' title='November 2010'>November 2010</a></li>
+	<li><a href='http://www.fakingfantastic.com/2010/09/' title='September 2010'>September 2010</a></li>
+	<li><a href='http://www.fakingfantastic.com/2010/08/' title='August 2010'>August 2010</a></li>
+	<li><a href='http://www.fakingfantastic.com/2010/07/' title='July 2010'>July 2010</a></li>
+	<li><a href='http://www.fakingfantastic.com/2010/06/' title='June 2010'>June 2010</a></li>
+	<li><a href='http://www.fakingfantastic.com/2010/02/' title='February 2010'>February 2010</a></li>
+	<li><a href='http://www.fakingfantastic.com/2010/01/' title='January 2010'>January 2010</a></li>
+	<li><a href='http://www.fakingfantastic.com/2009/12/' title='December 2009'>December 2009</a></li>
+	<li><a href='http://www.fakingfantastic.com/2009/11/' title='November 2009'>November 2009</a></li>
+	<li><a href='http://www.fakingfantastic.com/2009/10/' title='October 2009'>October 2009</a></li>
+	<li><a href='http://www.fakingfantastic.com/2009/07/' title='July 2009'>July 2009</a></li>
+	<li><a href='http://www.fakingfantastic.com/2009/05/' title='May 2009'>May 2009</a></li>
+	<li><a href='http://www.fakingfantastic.com/2009/04/' title='April 2009'>April 2009</a></li>
+				</ul>
+			</li>
+
+			<li class="categories"><h2>Categories</h2><ul>	<li class="cat-item cat-item-13"><a href="http://www.fakingfantastic.com/category/code/" title="View all posts filed under Code">Code</a> (16)
+</li>
+	<li class="cat-item cat-item-20"><a href="http://www.fakingfantastic.com/category/information/" title="View all posts filed under Information">Information</a> (7)
+</li>
+	<li class="cat-item cat-item-14"><a href="http://www.fakingfantastic.com/category/lecture/" title="View all posts filed under Lecture">Lecture</a> (9)
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.fakingfantastic.com/category/uncategorized/" title="View all posts filed under Uncategorized">Uncategorized</a> (7)
+</li>
+</ul></li>
+		</ul>
+	</div><!-- #side-content -->
+</div><!-- #page-wrapper -->
+	<div class="clear"></div>
+	<div id="footer">
+		<p>All of the content seen on fakingfantastic.com was produced entirely by Frank Lakatos unless otherwise noted. If you have any inquires about the work seen on this site, a future project, or just looking to talk about random web nonsense, don't hesitate to get in contact with me - I'm a pretty affable guy. Here are some quick ways you can reach me...</p>
+		<ul>
+			<li><label>E-Mail:</label> <a href="mailto:me@franklakatos.com?subject=FakingFantastic.com">me [at] fakingfantastic [dot] com</a></li>
+			<li><label>IRC:</label> fakingfantastic <span class="comment">(you can find me in #rubyonrails, #ruby, or #jquery most of the time)</li></span>
+			<li><label>Twitter:</label> <a href="http://www.twitter.com/fakingfantastic" target="_blank">fakingfantastic</a></li>
+		</ul>
+		<div class="line">&nbsp;</div>
+		<p class="copyright">&copy; 2013 fakingfantastic.com</p>
+	</div>
+
+	<script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+			</script>
+			<script type="text/javascript">
+			try {
+			var pageTracker = _gat._getTracker("UA-9806099-3");
+			pageTracker._trackPageview();
+			} catch(err) {}
+			</script>
+</body>
+
+</html>

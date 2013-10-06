@@ -1,0 +1,759 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta name="robots" content="index, follow" />
+	<meta name="blogcatalog" content="9BC9209204" /> 
+	<meta name="verify-v1" content="zd6x3bZDR/VMSaiIzWKLJJXcYLeCrxuaNOhkvJgKwM8=" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="en" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="Codepen is like dribbble but it's designed for web developers! Instead of just visual design, you can see real working implementation. Though not all examples are good, but there quite many experimental and pretty cool concepts in codepen." />	
+	<meta name="keywords" content="queness,kevin liew,ajax,browser,cms,css-html,design,flash,freebies,gadget,graphic,icon,inspiration,javascript,logo,misc,mobile,mysql,os,photography,photoshop,php,seo,template,tips,tools,trend,tutorial,typography,usability,video,wallpaper,wordpress" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale = 1.0">
+		
+		<meta name="thumbnail" content="http://www.queness.com/resources/images/14929.jpg" />		
+	<meta property="og:title" content="8 Conceptual Javascript and CSS3 Solutions for Mobile Platforms"/>
+	<meta property="og:url" content="http://www.queness.com/post/14929/8-conceptual-javascript-and-css3-solutions-for-mobile-platforms"/>
+	<meta property="og:image" content="http://www.queness.com/resources/images/14929.jpg"/>
+	<meta property="og:site_name" content="Queness"/>
+	<meta property="og:description" content="Codepen is like dribbble but it's designed for web developers! Instead of just visual design, you can see real working implementation. Though not all examples are good, but there quite many experimental and pretty cool concepts in codepen."/>
+		
+	<title>8 Conceptual Javascript and CSS3 Solutions for Mobile Platforms</title>
+	<link rel="alternate" type="application/rss+xml" title="Queness" href="http://feeds2.feedburner.com/queness" />	
+	<link rel="shortcut icon" href="/favicon.ico"/>	
+
+
+
+	<link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/assets/css/normalize.css" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/assets/js/jquery.min.js"><\/script>')</script>
+
+	<!--[if lte IE 10]>
+	  <link rel="stylesheet" href="/assets/css/ies.css" />
+	<![endif]-->  
+
+	<!--[if lte IE 8]>
+	  <script type="text/javascript" src="/assets/js/html5shiv.js"></script>
+	  <script type="text/javascript" src="/assets/js/css3-mediaqueries.js"></script>
+	  <link rel="stylesheet" href="/assets/css/ieo.css" />
+	<![endif]-->  
+  <base href="http://www.queness.com" />
+  
+	<!-- BuySellAds.com Ad Code -->
+	<script type="text/javascript">
+	(function(){
+	  var bsa = document.createElement('script');
+	     bsa.type = 'text/javascript';
+	     bsa.async = true;
+	     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+	  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+	})();
+	</script>
+	<!-- END BuySellAds.com Ad Code -->  
+	<script type="text/javascript">	
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7781887-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+	</script>  
+  
+</head>
+<body id="view-post">
+
+	<div id="header-ads">
+		<div class="header-ads-banner">
+			<a target="_blank" href="http://designmodo.com/flat/?utm_source=queness&utm_medium=QuenessFlatUI&utm_campaign=QuenessFlatUI" class="fui-link"></a>
+			<img src="/assets/img/fui/fui-logo.gif" alt="" class="fui-logo" />
+			<img src="/assets/img/fui/fui-lbl1.gif" alt="" class="fui-label1" />
+			<img src="/assets/img/fui/fui-lbl2.gif" alt="" class="fui-label2" />			
+			<img src="/assets/img/fui/fui-button.gif" alt="" class="fui-button" />
+		</div>
+	</div>
+	
+	<div id="fui-gap"></div>
+
+	<div id="nav-mobile">	
+		<ul class="nav">
+			<li class="home "><a href="/"><span><i>&#8962;</i>Home</span></a></li>
+			<li class=" "><a href="/tutorials"><span><i>&#128214;</i>Tutorials</a></span></li>
+<!-- 			<li class=" "><a href="/code-snippets"><span><i>&#128248;</i>Code Snippets</a></span></li> -->
+<!-- 			<li class=" "><a href="/services"><span><i>&#9874;</i>Services</a></span></li> -->
+			<li class=" "><a href="/category/javascript"><span><i>&#9874;</i>Javascript</a></span></li>
+			<li class=" "><a href="/advertise"><span><i>&#128227;</i>Advertise</a></span></li>	
+			<li class=" "><a href="/contact-us"><span><i>&#9993;</i>Contact Us</a></span></li>														
+		</ul>	
+	</div>
+	
+	<div id="nav-search">
+		<form action="/search" method="get">
+			<div class="search">
+				<input type="text" name="search"/>
+				<button type="submit">&#128269;</button>
+			</div>
+		</form>		
+	</div>
+	
+
+	<div id="bar">
+		<div class="wrapper">
+
+			<a href="/" class="logo"><img src="/assets/img/nav-logo.png" alt="" /></a>
+			<a href="#" class="menu button">&#9776;</a>
+			<a href="#" class="find button">&#128269;</a>			
+			<ul class="nav">
+				<li class="home "><a href="/"><span><i>&#8962;</i>Home</span></a></li>
+				<li class=" "><a href="/tutorials"><span><i>&#128214;</i>Tutorials</a></span></li>
+<!-- 				<li class=" "><a href="/code-snippets"><span><i>&#128248;</i>Code Snippets</a></span></li> -->
+<!-- 				<li class=" "><a href="/services"><span><i>&#9874;</i>Services</a></span></li> -->
+			<li class=" "><a href="/category/javascript"><span><i>&#9874;</i>Javascript</a></span></li>
+				<li class=" "><a href="/advertise"><span><i>&#128227;</i>Advertise</a></span></li>				
+				<li class=" "><a href="/contact-us"><span><i>&#9993;</i>Contact Us</a></span></li>								
+			</ul>
+			
+			<div class="search clearfix">
+				<form action="/search" method="get">
+					<input type="" name="search"/>
+					<button type="submit">&#128269;</button>
+				</form>
+			</div>
+		
+		</div>		
+	</div>
+
+	<header>
+		<div class="wrapper">
+			<a href="/" class="logo"><img src="/assets/img/logo.png" alt="Queness Wedesign and development blog" /></a>
+			<div class="ads ads728">
+				<!-- BuySellAds.com Zone Code -->
+<!-- 				<div id="bsap_1276975" class="bsarocks bsap_3961f1e3e7b83f3fd5733c0d91cc10ed"></div> -->
+				<!-- END BuySellAds.com Zone Code -->
+					<script src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&c=28&pli=7832648&PluID=0&w=728&h=90&ord=$$CacheBustingToken$$&wm=transparent&ucm=true"></script>
+					<noscript>
+					<a href="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=brd&FlightID=7832648&Page=&PluID=0&Pos=673977845" target="_blank"><img src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=bsr&FlightID=7832648&Page=&PluID=0&Pos=673977845" border=0 width=728 height=90></a>
+					</noscript>				
+				
+			</div>
+		</div>
+	</header>
+
+	<div id="container" class="clearfix">
+		
+		<div id="content-wrap">
+				
+				<div id="content">
+				
+					<div class="wrapper">
+						<a href="#" id="hide-sidebar">Hide</a>
+						
+
+
+
+<article class="shadow portal">
+			
+	<div id="heading">
+		<div class="clearfix"></div>
+		<div class="wrapper">
+						
+				<img src="/resources/images/14929.jpg" alt="8 Conceptual Javascript and CSS3 Solutions for Mobile Platforms" title="8 Conceptual Javascript and CSS3 Solutions for Mobile Platforms | 3480"/>
+
+			<div class="post-heading">
+				<h1>8 Conceptual Javascript and CSS3 Solutions for Mobile Platforms</h1>
+				<ul class="clearfix">
+					<li><i>&#128197;</i><span>25 Sep 2013</span></li>				
+					<li><i>&#9998;</i><a href="/author/kevin">Kevin Liew</a></li>
+					<li><i>&#59160;</i><a href="http://www.queness.com/post/14929/8-conceptual-javascript-and-css3-solutions-for-mobile-platforms#comments">0 Comments</a></li>						<li><i>&#128193;</i><a href="/category/web-development">Web Development</a></li>	
+				</ul>		
+				
+											
+				
+			</div>					
+		</div>
+	</div>		
+	
+	<div class="line"></div>
+			
+	<div class="article-content">
+			
+		<div class="article-inner">
+			
+		
+			
+			<div class="ads ads300">
+				<a href="" class="label">Advertisement</a>
+				<!-- BuySellAds.com Zone Code -->
+				<div id="bsap_1265993" class="bsarocks bsap_3961f1e3e7b83f3fd5733c0d91cc10ed"></div>					
+				<!-- END BuySellAds.com Zone Code -->
+			</div>
+
+			
+			
+<p class="lead">Codepen is like dribbble but it's designed for web developers! Instead of just visual design, you can see real working implementation. Though not all examples are good, but there quite many experimental and pretty cool concepts in codepen.</p>
+<p>This time, to make this post a little bit more interesting, I embedded each example so you can play with it straight away! I chose these examples because I believe they have a great potential to be implemented and used it now. Some examples are using pretty advanced technique and latest technology, so you might want to make sure it degrades gracefully.</p>
+<p><strong><a href="http://codepen.io/rikschennink/pen/zvcgx">iOS7 Blurred Header</a></strong></p>
+<p class="codepen" data-height="400" data-theme-id="0" data-slug-hash="zvcgx" data-user="rikschennink" data-default-tab="result">See the Pen <a href="http://codepen.io/anon/pen/zvcgx">iOS 7 Blurred Header</a> by Rik Schennink (<a href="http://codepen.io/rikschennink">@rikschennink</a>) on <a href="http://codepen.io">CodePen</a></p>
+<p>iOS7 definitely not the first platform that uses blurring effect. With CSS3, you can achieve that on website too.</p>
+<p> </p>
+<p><strong><a href="http://codepen.io/mariusbalaj/pen/kfbLm">Next post animation</a></strong></p>
+<p class="codepen" data-height="400" data-theme-id="0" data-slug-hash="kfbLm" data-user="mariusbalaj" data-default-tab="result">See the Pen <a href="http://codepen.io/anon/pen/kfbLm">Flat iPhone with Next Post Animation</a> by Marius Balaj (<a href="http://codepen.io/mariusbalaj">@mariusbalaj</a>) on <a href="http://codepen.io">CodePen</a></p>
+<p>A really smooth and nice page transition animation.</p>
+<p> </p>
+<p><strong><a href="http://codepen.io/SaraSoueidan/pen/ALcxq">Fold-Up Mobile Menu</a></strong></p>
+<p class="codepen" data-height="400" data-theme-id="0" data-slug-hash="ALcxq" data-user="SaraSoueidan" data-default-tab="result">See the Pen <a href="http://codepen.io/anon/pen/ALcxq">Fold-Up Mobile Menu Concept</a> by Sara Soueidan (<a href="http://codepen.io/SaraSoueidan">@SaraSoueidan</a>) on <a href="http://codepen.io">CodePen</a></p>
+<p>If you have a small nav, you can consider this fold-up mobile menu.</p>
+<p> </p>
+<p><strong><a href="http://codepen.io/BandarRaffah/pen/ibwje">iOS7 style switches with CSS</a></strong></p>
+<p class="codepen" data-height="400" data-theme-id="0" data-slug-hash="ibwje" data-user="BandarRaffah" data-default-tab="result">See the Pen <a href="http://codepen.io/anon/pen/ibwje">iOS7 style switch with CSS</a> by Bandar Raffah (<a href="http://codepen.io/BandarRaffah">@BandarRaffah</a>) on <a href="http://codepen.io">CodePen</a></p>
+<p>Of course, iOS7 style toggle switches. If you need more switches, check out this post - <a href="http://www.queness.com/post/14585/toggle-switches-in-web-development">Toggle switches in web development</a></p>
+<p> </p>
+<p><strong><a href="http://codepen.io/matthoiland/pen/vHFCk">Social App Menu</a></strong></p>
+<p class="codepen" data-height="400" data-theme-id="0" data-slug-hash="vHFCk" data-user="matthoiland" data-default-tab="result">See the Pen <a href="http://codepen.io/anon/pen/vHFCk">Social App Menu</a> by Matt Hoiland (<a href="http://codepen.io/matthoiland">@matthoiland</a>) on <a href="http://codepen.io">CodePen</a></p>
+<p>This mobile nav has became quite popular lately. A new concept.</p>
+<p> </p>
+<p><strong><a href="http://codepen.io/geoffyuen/pen/FCBEg">Responsive List to Table</a></strong></p>
+<p class="codepen" data-height="400" data-theme-id="0" data-slug-hash="FCBEg" data-user="geoffyuen" data-default-tab="result">See the Pen <a href="http://codepen.io/anon/pen/FCBEg">Responsive Table</a> by Geoff Yuen (<a href="http://codepen.io/geoffyuen">@geoffyuen</a>) on <a href="http://codepen.io">CodePen</a></p>
+<p>Usually, we hide columns, or resize the font in table to make it fit within mobile viewport. Here we have a new way to do it.</p>
+<p> </p>
+<p><strong><a href="http://codepen.io/oknoblich/pen/klnjw">Off canvas partial touch template</a></strong></p>
+<p class="codepen" data-height="400" data-theme-id="0" data-slug-hash="klnjw" data-user="oknoblich" data-default-tab="result">See the Pen <a href="http://codepen.io/anon/pen/klnjw">Off Canvas Partial Touch Template</a> by Oliver Knoblich (<a href="http://codepen.io/oknoblich">@oknoblich</a>) on <a href="http://codepen.io">CodePen</a></p>
+<p>As oppose to fold-up menu, this one you fit your large nav menu.</p>
+<p> </p>
+<p><strong><a href="http://codepen.io/dan_reid/pen/dKzow">CreativeDash iPad Mini Nav Test</a></strong></p>
+<p class="codepen" data-height="400" data-theme-id="0" data-slug-hash="dKzow" data-user="dan_reid" data-default-tab="result">See the Pen <a href="http://codepen.io/anon/pen/dKzow">CreativeDash iPad Mini Nav Test</a> by Daniel Reid (<a href="http://codepen.io/dan_reid">@dan_reid</a>) on <a href="http://codepen.io">CodePen</a></p>
+<p>This one is for ipad, but I pretty sure you can use it on mobile too!</p>
+<script type="text/javascript" src="http://codepen.io/assets/embed/ei.js"></script><p> </p>
+
+			
+		</div>
+	
+				
+		<ul class="block-tags clearfix">
+			<li class="icon">&#59148;</li>
+			<li><a href="http://www.queness.com/tag/animation">Animation</a></li><li><a href="http://www.queness.com/tag/canvas">Canvas</a></li><li><a href="http://www.queness.com/tag/css-transform">CSS Transform</a></li><li><a href="http://www.queness.com/tag/css3">CSS3</a></li><li><a href="http://www.queness.com/tag/html5">HTML5</a></li><li><a href="http://www.queness.com/tag/javascript">Javascript</a></li><li><a href="http://www.queness.com/tag/jquery">jQuery</a></li>									
+		</ul>
+		
+		<div class="line"></div>
+
+			
+	<div class="block block-author">
+		<div class="wrapper clearfix">
+			<img src="http://www.gravatar.com/avatar.php?gravatar_id=2000d4fc79a56d061c78dcaabe5b5340&amp;default=http%3A%2F%2Fwww.queness.com%2Fassets%2Fimg%2Ficon-author.png&amp;size=118" alt="" />
+			<div class="about">
+				<p class="name">Author: Kevin Liew</p>
+				<p>Kevin Liew is a web designer and developer and keen on contributing to the web development industry. He loves frontend development and absolutely amazed by jQuery. Feel free to <a target="_blank" href="http://www.queness.com/contact-us">say hi</a> to me, or follow <a target="_blank" href="http://twitter.com/quenesswebblog">@quenesswebblog</a> on twitter.</p>										
+			</div>
+		</div>
+	</div> <!-- block-author -->			
+		<div class="line"></div>
+		
+		<div class="block block-social clearfix">
+			<h3>Share the love</h3>
+			<div class="social-buttons" data-url="http://www.queness.com/post/14929/8-conceptual-javascript-and-css3-solutions-for-mobile-platforms" data-text="8 Conceptual Javascript and CSS3 Solutions for Mobile Platforms" data-title="8 Conceptual Javascript and CSS3 Solutions for Mobile Platforms">
+				<div class="button">
+					<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.queness.com%2Fpost%2F14929%2F8-conceptual-javascript-and-css3-solutions-for-mobile-platforms&amp;send=false&amp;layout=box_count&amp;width=70&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=70&amp;appId=155140134551101" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:70px; height:70px;" allowTransparency="true"></iframe>					
+				</div>				
+				
+			</div>
+		</div>	<!-- block-social -->			
+		
+		<div class="line"></div>
+		
+		
+
+	<div class="block block-related">
+		<div class="wrapper clearfix">
+				<h3>Related Posts</h3>
+
+								
+				<div class="post post-1">
+					<a href="http://www.queness.com/post/13410/5-bookmarklets-to-test-responsive-layout"><img src="/resources/images/13410.gif" alt="5 Bookmarklets to Test Responsive Layout" /></a>
+					<div class="link">
+						<a href="http://www.queness.com/post/13410/5-bookmarklets-to-test-responsive-layout">5 Bookmarklets to Test Responsive Layout</a>
+					</div>
+				</div>
+				
+								
+				<div class="post post-2">
+					<a href="http://www.queness.com/post/11507/16-essential-web-development-online-tools"><img src="/resources/images/11507.gif" alt="16 Essential Web Development Online Tools" /></a>
+					<div class="link">
+						<a href="http://www.queness.com/post/11507/16-essential-web-development-online-tools">16 Essential Web Development Online Tools</a>
+					</div>
+				</div>
+				
+								
+				<div class="post post-3">
+					<a href="http://www.queness.com/post/13033/make-cool-effect-with-css3-animation-libraries"><img src="/resources/images/13033.gif" alt="Make Cool Effect with CSS3 Animation Libraries" /></a>
+					<div class="link">
+						<a href="http://www.queness.com/post/13033/make-cool-effect-with-css3-animation-libraries">Make Cool Effect with CSS3 Animation Libraries</a>
+					</div>
+				</div>
+				
+																			
+		</div>
+	</div> <!-- block-related -->
+	
+
+	</div> <!-- article-content -->		
+
+	
+</article>
+
+<div class="comments shadow" id="comments">
+
+			
+
+			
+	<div id="comment-form-placement">
+		<div class="comment-form">
+			
+			<h4 class="header">Leave a Comment</h4>
+			
+			<div class="wrapper">
+				
+				<p>Please keep in mind that comments are moderated and <code>rel="nofollow"</code> is in use. You can use <code>[code][/code]</code> if you want to write codes. Don't spam us :) Thanks!</code></p>
+				
+				<div class="inline-msg"></div>
+				
+				<div class="form">
+					
+					<form method="post" class="clearfix">
+						<input type="hidden" name="form[pid]" value="" />
+						<input type="hidden" name="form[post_id]" value="14929" />							
+						<input type="hidden" name="action" value="comment" />
+						<input type="text" name="form[comment_fullname]" placeholder="Your name" />
+						<input type="text" name="form[comment_email]" placeholder="Your email" />					
+						<textarea name="form[comment_content]" placeholder="Your Comment"></textarea>
+						<button type="submit" class="btn comment-submit">Submit Comment</button> <button class="btn comment-cancel btn-dim">Cancel</button> 
+					</form>
+								
+					<div class="ads ads300">
+						<a href="/advertise" class="label">Advertisement</a>
+							<script type="text/javascript"><!--
+							google_ad_client = "ca-pub-2490016011782126";
+							/* Bottom Left */
+							google_ad_slot = "9605825751";
+							google_ad_width = 300;
+							google_ad_height = 250;
+							//-->
+							</script>
+							<script type="text/javascript"
+							src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+							</script>
+					</div>					
+				</div>				
+			</div>
+			
+		</div>
+	</div> <!-- comment-form-placement -->
+	
+</div> <!-- comment -->
+
+					</div>									
+					
+				</div> <!-- #content -->
+			
+		</div> <!-- #content-wrap -->
+
+				<aside>
+
+
+			<div class="ads ads150 clearfix">
+				<a href="/advertise" class="label">Advertisement</a>			
+				<div class="wrapper clearfix">
+					<div id="bsap_1288704" class="bsarocks bsap_3961f1e3e7b83f3fd5733c0d91cc10ed"></div>			
+				</div>
+			</div>
+
+			<div class="ads ads125 clearfix">
+				<div class="wrapper clearfix">
+					<!-- BuySellAds.com Zone Code -->
+					<div id="bsap_1238488" class="bsarocks bsap_3961f1e3e7b83f3fd5733c0d91cc10ed"></div>			
+					<!-- END BuySellAds.com Zone Code -->
+
+				</div>
+			</div>
+				
+			
+			
+			<div class="block block-popular">
+				<h4 class="header">Popular Posts</h4>
+	
+				<div class="rows">
+					
+	<div class="row clearfix row-1">
+		<img src="/display.php?src=/resources/images/77.gif&amp;w=80&amp;h=80" alt="Simple jQuery Modal Window Tutorial " title="Simple jQuery Modal Window Tutorial  | 178829">
+		<div class="detail">
+			<a href="http://www.queness.com/post/77/simple-jquery-modal-window-tutorial" class="heading">Simple jQuery Modal Window Tutorial </a>
+<!-- 			<p>17 Mar 2009</p> -->
+		</div>
+	</div>	
+		
+		
+	<div class="row clearfix row-2">
+		<img src="/display.php?src=/resources/images/14909.jpg&amp;w=80&amp;h=80" alt="Vex - A Modern Modal Window Library" title="Vex - A Modern Modal Window Library | 581">
+		<div class="detail">
+			<a href="http://www.queness.com/post/14909/vex-a-modern-modal-window-library" class="heading">Vex - A Modern Modal Window Library</a>
+<!-- 			<p>01 Oct 2013</p> -->
+		</div>
+	</div>	
+		
+		
+	<div class="row clearfix row-3">
+		<img src="/display.php?src=/resources/images/212.gif&amp;w=80&amp;h=80" alt="10 jQuery and non-jQuery javascript Rich Text Editors" title="10 jQuery and non-jQuery javascript Rich Text Editors | 125624">
+		<div class="detail">
+			<a href="http://www.queness.com/post/212/10-jquery-and-non-jquery-javascript-rich-text-editors" class="heading">10 jQuery and non-jQuery javascript Rich Text Editors</a>
+<!-- 			<p>21 Apr 2009</p> -->
+		</div>
+	</div>	
+		
+		
+	<div class="row clearfix row-4">
+		<img src="/display.php?src=/resources/images/356.gif&amp;w=80&amp;h=80" alt="Create a Vertical, Horizontal and Diagonal Sliding Content Website with jQuery" title="Create a Vertical, Horizontal and Diagonal Sliding Content Website with jQuery | 180394">
+		<div class="detail">
+			<a href="http://www.queness.com/post/356/create-a-vertical-horizontal-and-diagonal-sliding-content-website-with-jquery" class="heading">Create a Vertical, Horizontal and Diagonal Sliding Content Website with jQuery</a>
+<!-- 			<p>14 Jul 2009</p> -->
+		</div>
+	</div>	
+		
+		
+	<div class="row clearfix row-5">
+		<img src="/display.php?src=/resources/images/9150.gif&amp;w=80&amp;h=80" alt="9 Javascript and Animated GIF Loading Animation Solutions" title="9 Javascript and Animated GIF Loading Animation Solutions | 72658">
+		<div class="detail">
+			<a href="http://www.queness.com/post/9150/9-javascript-and-animated-gif-loading-animation-solutions" class="heading">9 Javascript and Animated GIF Loading Animation Solutions</a>
+<!-- 			<p>07 Sep 2011</p> -->
+		</div>
+	</div>	
+		
+					</div>											
+			</div>									
+			
+			<div class="ads ads300 clearfix">
+
+				<a href="/advertise" class="label">Advertisement</a>
+				<script type="text/javascript"><!--
+				google_ad_client = "ca-pub-2490016011782126";
+				/* botom right */
+				google_ad_slot = "3646605640";
+				google_ad_width = 300;
+				google_ad_height = 250;
+				//-->
+				</script>
+				<script type="text/javascript"
+				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+				</script>		
+				
+			</div>			
+											
+<!--
+			<div class="block block-tags">
+				<h4 class="header">Tags</h4>
+				<ul class="clearfix">
+				</ul>
+			</div>			
+-->
+			
+			<div class="block block-facebook">
+				<h4 class="header">Like Queness</h4>
+
+					<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fquenesswebblog&amp;width=292&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=155140134551101" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%; height:258px;" allowTransparency="true"></iframe>					
+					
+
+			</div>								
+			
+			<div class="ads ads300 clearfix">
+				<a href="/advertise" class="label">Advertisement</a>
+				<script type="text/javascript"><!--
+				google_ad_client = "ca-pub-2490016011782126";
+				/* Sidebar 300 */
+				google_ad_slot = "2282370231";
+				google_ad_width = 300;
+				google_ad_height = 250;
+				//-->
+				</script>
+			</div>				
+
+						
+						
+			
+			
+<!--
+			<div class="block block-1 clearfix">
+				<h4 class="header">CodeCanyon Popular Items</h4>
+	
+				<div class="rows">
+								</div>								
+				
+			</div>
+-->			
+																											
+			
+						
+			<div class="block block-popular" style="margin-top:20px;">
+				<h4 class="header">favbulous.com</h4>
+	
+				<div class="rows" id="fav-recent">
+					
+
+
+
+		<div class="row clearfix row-1">
+			<a href="http://favbulous.com/post/3447/adorable-animals-set-within-imaginative-adventures" rel="nofollow" class="image" target="_blank"><img src="http://favbulous.com/wp-content/uploads/2013/10/MarekFarkas11-188x135.jpg" class="attachment-bones-thumb-188 wp-post-image" alt="MarekFarkas1" /></a>
+			<div class="detail">
+				<a href="http://favbulous.com/post/3447/adorable-animals-set-within-imaginative-adventures" rel="nofollow" target="_blank" class="heading" title="Adorable Animals Set Within Imaginative Adventures 43 views">Adorable Animals Set Within Imaginative Adventures</a>
+<!-- 				<span class="category"><a href="http://favbulous.com/post/category/art-design/photography">Photography</a></span>				 -->
+			</div>
+		</div>	
+
+
+
+		<div class="row clearfix row-1">
+			<a href="http://favbulous.com/post/3394/wonderful-pop-culture-portraits-created-with-lego" rel="nofollow" class="image" target="_blank"><img src="http://favbulous.com/wp-content/uploads/2013/09/lego-tn-188x135.jpg" class="attachment-bones-thumb-188 wp-post-image" alt="lego-tn" /></a>
+			<div class="detail">
+				<a href="http://favbulous.com/post/3394/wonderful-pop-culture-portraits-created-with-lego" rel="nofollow" target="_blank" class="heading" title="Wonderful Pop-culture Portraits Created with LEGO 129 views">Wonderful Pop-culture Portraits Created with LEGO</a>
+<!-- 				<span class="category"><a href="http://favbulous.com/post/category/post">Post</a></span>				 -->
+			</div>
+		</div>	
+
+
+
+		<div class="row clearfix row-1">
+			<a href="http://favbulous.com/post/3390/beer-vs-coffee-how-beer-and-coffee-can-help-your-work" rel="nofollow" class="image" target="_blank"><img src="http://favbulous.com/wp-content/uploads/2013/09/beer-coffee-tn-188x135.jpg" class="attachment-bones-thumb-188 wp-post-image" alt="beer-coffee-tn" /></a>
+			<div class="detail">
+				<a href="http://favbulous.com/post/3390/beer-vs-coffee-how-beer-and-coffee-can-help-your-work" rel="nofollow" target="_blank" class="heading" title="Beer vs Coffee. How Beer and Coffee Can Help Your Work! 571 views">Beer vs Coffee. How Beer and Coffee Can Help Your Work!</a>
+<!-- 				<span class="category"><a href="http://favbulous.com/post/category/other/infographic">Infographic</a></span>				 -->
+			</div>
+		</div>	
+
+
+
+		<div class="row clearfix row-1">
+			<a href="http://favbulous.com/post/3347/how-to-make-sure-your-customers-dont-abandon-you-in-the-middle-of-a-purchase" rel="nofollow" class="image" target="_blank"><img src="http://favbulous.com/wp-content/uploads/2013/09/shopping-188x135.png" class="attachment-bones-thumb-188 wp-post-image" alt="shopping" /></a>
+			<div class="detail">
+				<a href="http://favbulous.com/post/3347/how-to-make-sure-your-customers-dont-abandon-you-in-the-middle-of-a-purchase" rel="nofollow" target="_blank" class="heading" title="How to Make Sure Your Customers Don’t Abandon You in the Middle of a Purchase 95 views">How to Make Sure Your Customers Don’t Abandon You in the Middle of a Purchase</a>
+<!-- 				<span class="category"><a href="http://favbulous.com/post/category/tech/web-development">Web Development</a></span>				 -->
+			</div>
+		</div>	
+
+
+
+		<div class="row clearfix row-1">
+			<a href="http://favbulous.com/post/3345/simple-but-common-mistakes-in-web-design" rel="nofollow" class="image" target="_blank"><img src="http://favbulous.com/wp-content/uploads/2013/09/tn-188x135.png" class="attachment-bones-thumb-188 wp-post-image" alt="tn" /></a>
+			<div class="detail">
+				<a href="http://favbulous.com/post/3345/simple-but-common-mistakes-in-web-design" rel="nofollow" target="_blank" class="heading" title="Simple But Common Mistakes in Web Design 339 views">Simple But Common Mistakes in Web Design</a>
+<!-- 				<span class="category"><a href="http://favbulous.com/post/category/tech/ui-web-design">UI &amp; Web Design</a></span>				 -->
+			</div>
+		</div>	
+
+
+
+		<div class="row clearfix row-1">
+			<a href="http://favbulous.com/post/3356/ios7-feature-comparison-chart-for-different-idevices" rel="nofollow" class="image" target="_blank"><img src="http://favbulous.com/wp-content/uploads/2013/09/ios-188x135.png" class="attachment-bones-thumb-188 wp-post-image" alt="ios" /></a>
+			<div class="detail">
+				<a href="http://favbulous.com/post/3356/ios7-feature-comparison-chart-for-different-idevices" rel="nofollow" target="_blank" class="heading" title="iOS7 Feature Comparison Chart For Different iDevices 475 views">iOS7 Feature Comparison Chart For Different iDevices</a>
+<!-- 				<span class="category"><a href="http://favbulous.com/post/category/tech/gadget">Gadget</a></span>				 -->
+			</div>
+		</div>	
+
+
+
+		<div class="row clearfix row-1">
+			<a href="http://favbulous.com/post/3245/absolutely-brilliant-street-arts" rel="nofollow" class="image" target="_blank"><img src="http://favbulous.com/wp-content/uploads/2013/09/Creative-Street-Art-04-188x135.jpg" class="attachment-bones-thumb-188 wp-post-image" alt="Creative-Street-Art-04" /></a>
+			<div class="detail">
+				<a href="http://favbulous.com/post/3245/absolutely-brilliant-street-arts" rel="nofollow" target="_blank" class="heading" title="Absolutely Brilliant Street Arts 399 views">Absolutely Brilliant Street Arts</a>
+<!-- 				<span class="category"><a href="http://favbulous.com/post/category/art-design/modern-art">Modern Art</a></span>				 -->
+			</div>
+		</div>	
+
+
+
+		<div class="row clearfix row-1">
+			<a href="http://favbulous.com/post/3177/41-clever-and-creative-bus-stop-advertising" rel="nofollow" class="image" target="_blank"><img src="http://favbulous.com/wp-content/uploads/2013/09/Bus-Stop-Ads-091-188x135.jpg" class="attachment-bones-thumb-188 wp-post-image" alt="Bus-Stop-Ads-091" /></a>
+			<div class="detail">
+				<a href="http://favbulous.com/post/3177/41-clever-and-creative-bus-stop-advertising" rel="nofollow" target="_blank" class="heading" title="41 Clever and Creative Bus Stop Advertising 995 views">41 Clever and Creative Bus Stop Advertising</a>
+<!-- 				<span class="category"><a href="http://favbulous.com/post/category/art-design/advertising">Advertising</a></span>				 -->
+			</div>
+		</div>	
+
+
+
+		<div class="row clearfix row-1">
+			<a href="http://favbulous.com/post/3139/what-if-girls-were-internet-browsers-fashion-editorial-by-viktorija-pashuta" rel="nofollow" class="image" target="_blank"><img src="http://favbulous.com/wp-content/uploads/2013/09/1200-188x135.jpg" class="attachment-bones-thumb-188 wp-post-image" alt="1200" /></a>
+			<div class="detail">
+				<a href="http://favbulous.com/post/3139/what-if-girls-were-internet-browsers-fashion-editorial-by-viktorija-pashuta" rel="nofollow" target="_blank" class="heading" title="What If Girls Were Internet Browsers – Fashion Editorial by Viktorija Pashuta 397 views">What If Girls Were Internet Browsers – Fashion Editorial by Viktorija Pashuta</a>
+<!-- 				<span class="category"><a href="http://favbulous.com/post/category/art-design/modern-art">Modern Art</a></span>				 -->
+			</div>
+		</div>	
+
+
+
+		<div class="row clearfix row-1">
+			<a href="http://favbulous.com/post/3128/the-evolution-of-bicycles" rel="nofollow" class="image" target="_blank"><img src="http://favbulous.com/wp-content/uploads/2013/09/tn-188x135.jpg" class="attachment-bones-thumb-188 wp-post-image" alt="tn" /></a>
+			<div class="detail">
+				<a href="http://favbulous.com/post/3128/the-evolution-of-bicycles" rel="nofollow" target="_blank" class="heading" title="The Evolution of Bicycles 231 views">The Evolution of Bicycles</a>
+<!-- 				<span class="category"><a href="http://favbulous.com/post/category/other/infographic">Infographic</a></span>				 -->
+			</div>
+		</div>	
+
+    <script type="text/javascript">
+    // <![CDATA[
+        var disqus_shortname = 'favbulous';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('rel'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + 'disqus.com/forums/' + disqus_shortname + '/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    //]]>
+    </script>
+					
+				</div>											
+			</div>							
+			
+								
+			<div class="custom-block">
+				
+				<map name="Myshopping">
+				<area href="http://www.myshopping.com.au" alt="Australian Shopping" title="Australian Shopping" shape="rect" coords="7, 10, 253, 70" >
+				<area href="http://www.myshopping.com.au/PR--419438_Ainol_Novo7_Elf_Tablet_PC" alt="Unique Ainol Novo tablet" title="Unique Ainol Novo tablet" shape="rect" coords="10, 147, 72, 227">
+				<area href="http://www.myshopping.com.au/PT--31_Mobile_Phones_Apple_iPhone__fs_48070_e__" alt="Portable 8MP Apple iPhone" title="Portable 8MP Apple iPhone" shape="rect" coords="110, 83, 162, 155">
+				<area href="http://www.myshopping.com.au/PT--76_Projectors_Sanyo__fs_1593_e__" alt="Pull down screen Sanyo projectors" title="Pull down screen Sanyo projectors" shape="rect" coords="90, 219, 175, 250">
+				<area href="http://www.myshopping.com.au/PR--402059_HP_630_Notebook" alt="High-efficiency HP Pavilion 630" title="High-efficiency HP Pavilion 630" shape="rect" coords="168, 139, 247, 214">
+				</map>	
+				
+				<img border="0" src="/resources/images/myshopping.png" width="260" height="260" usemap="#Myshopping" alt="Myshopping" title="myshopping.com.au">
+		
+			</div>						
+					
+		</aside>
+		
+	</div> <!-- #container -->
+
+	<div class="ads ads728-home">
+		<a href="/advertise" class="label">Advertisement</a>
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-2490016011782126";
+		/* Home Leader Board */
+		google_ad_slot = "1762191833";
+		google_ad_width = 728;
+		google_ad_height = 90;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>	
+	</div>	
+
+
+	<footer class="clearfix">
+		<div class="wrapper clearfix">
+					
+<!-- 			<a href="#" id="back-to-top"><i>&#59227;</i>Back to top</a>		 -->
+						
+			<div class="footer-block footer-social clearfix">
+				<ul class="clearfix">
+					<li class="fb"><a href="http://www.facebook.com/quenesswebblog">Become a fan <span>7000+ Fans</span></a></li>
+					<li class="tt"><a href="http://www.twitter.com/quenesswebblog">Follow us <span>5000+ Followers</span></a></li>
+					<li class="rss"><a href="http://feeds2.feedburner.com/queness">Subscribe RSS <span>8000+ Subscribers</span></a></li>
+					<li class="writer"><a href="/write-for-us">Guest Writers <span>Write for us</span></a></li>
+					<li class="ads"><a href="/advertise">Advertiser<span>Advertise with us</span></a></li>	
+					<li class="services"><a href="/services">Freelancing<span>I'm available!</span></a></li>	
+					<li class="contact"><a href="/contact-us">Contact Us <span>Say HI to us!</span></a></li>											
+				</ul>
+			</div>								
+						
+			<div class="footer-block footer-nav clearfix">
+				<ul class="clearfix">
+					<li><a href="/">Home</a></li>
+					<li><a href="/tutorials">Tutorials</a></li>
+<!-- 					<li><a href="/code-snippets">Code Snippets</a></li> -->
+					<li><a href="/wordpress-themes">WordPress Themes</a></li>
+					<li><a href="/community-news">Community News</a></li>
+					<li><a href="/freebies-giveaway">Freebies & Giveaway</a></li>															
+					<li><a href="/advertise">Advertise</a></li>
+					<li><a href="/services">Services</a></li>
+					<li><a href="/submit">Submit News</a></li>
+					<li class="copy">&copy; 2009 - 2013 Queness</li>
+				</ul>				
+			</div>			
+
+		</div>		
+	</footer>
+</body>
+
+
+<script src="/assets/js/main.js"></script>
+<script type="text/javascript">
+  
+$(function () {
+	   
+  	    	
+  
+});	  
+</script>
+<script type="text/javascript" src="/assets/js/jquery.snippet.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<link rel="stylesheet" type="text/css" href="/assets/css/jquery.snippet.min.css" />
+<script type="text/javascript">
+
+	$(function () {
+	
+		$('.social-buttons').sharrre({
+		  share: {
+		    twitter: true,			  
+		    googlePlus: true,
+		    linkedin: true,
+		    stumbleupon: true
+/* 		    pinterest: true			     */
+		  },
+		  buttons: {
+		    facebook: {layout: 'box_count'},
+		    twitter: {count: 'vertical', via: 'quenesswebblog'},
+		    googlePlus: {size: 'tall', annotation:'bubble'},			    
+				linkedin: {counter: 'top'},
+				stumbleupon: {layout: '5'},
+				pinterest: {media: 'http://www.queness.com/resources/images/noimage.gif', description: $('.social-buttons').data('text'), layout: 'vertical'}					
+		  },
+		  enableHover: false,
+		  enableCounter: false,
+		  enableTracking: true
+		});
+		
+		$('.comments pre').find('br').remove();
+		
+		$('pre.html, pre.xml').snippet('html', {style: 'rand01'});
+		$('pre.css').snippet('css', {style: 'rand01'});
+		$('pre.js, pre.javascript').snippet('javascript_dom', {style: 'rand01'});
+		$('pre.php').snippet('php', {style: 'rand01'});
+		$('pre.sql').snippet('sql', {style: 'rand01'});
+		
+		$("p.fitvideo iframe").fitVids();
+		
+	});
+  
+
+</script>
+
+</html>

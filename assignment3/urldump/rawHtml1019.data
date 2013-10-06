@@ -1,0 +1,985 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Page Built: Wed Oct 02 03:01:16 +0000 2013 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Computer questions: What is a serial port and how does it work? - by Eileen Eva - Helium</title>
+    <meta name="keywords" content="computer questions, serial port, Eileen Eva" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Description" content=" A serial port can simply be defined as &ldquo;A port, or interface, that can be used for serial communication, in which only 1 bit is transmitted ..., Eileen Eva" />
+              <script>
+        function heNormalizeProtocol(url) {
+            var pageProtocol = document.location.protocol;
+            if (pageProtocol.indexOf('https:') > -1) {
+                if (url.indexOf('http:') > -1 ) {
+                    url = url.replace(/http:/,'https:');
+                }
+            }
+            else {
+                if (url.indexOf('https:') > -1 ) {
+                    url = url.replace(/https:/,'http:');
+                }
+            }
+            return url;
+        }
+        function heWriteBootstrapAssetTag(url) {
+          document.write('<' + 'script ' + ' type= "text/javascript"' + ' src="' + heNormalizeProtocol(url) + '"></' + 'script' + '>');
+        }
+      
+ heWriteBootstrapAssetTag('http://assets0.helium.com/javascripts/protocol_and_browser_aware.js');</script>
+        
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <script>var tagOptions332 = new Object();  
+heWriteAbsoluteJavaScriptTag('all.js','http://assets%d.helium.com',tagOptions332) </script>
+    <script>var tagOptions347 = new Object();  
+heWriteAbsoluteJavaScriptTag('cobrand.js','http://assets%d.helium.com',tagOptions347) </script>
+    
+    <script>var tagOptions699 = new Object(); 
+tagOptions699.rel = 'Stylesheet';
+tagOptions699.type = 'text/css';
+tagOptions699.media = 'screen, projection'; 
+heWriteAbsoluteBrowserAwareStyleSheetLink('main_item','http://assets%d.helium.com',tagOptions699) </script>
+    <script>var tagOptions357 = new Object(); 
+tagOptions357.rel = 'Stylesheet';
+tagOptions357.type = 'text/css';
+tagOptions357.media = 'print'; 
+heWriteAbsoluteBrowserAwareStyleSheetLink('print_knowledge','http://assets%d.helium.com',tagOptions357) </script>
+                <script>var tagOptions825 = new Object();  
+heWriteAbsoluteJavaScriptTag('adcode.js','http://assets%d.helium.com',tagOptions825) </script>
+      
+      <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
+      <script type="text/javascript">
+        GS_googleAddAdSenseService("ca-pub-8925353227623969");
+        GS_googleEnableAllServices();
+      </script>
+      <script type="text/javascript">
+        GA_googleUseIframeRendering();
+      </script>
+
+      <script type="text/javascript">
+                          var HELAD_url_part_1 = "items";
+        var HELAD_url_part_2 = "2055233";
+                var adparams = new AdSales_pagesetup();
+                adparams.title = "Computer questions: What is a serial port and how does it work?";
+          adparams.keywords = "computer questions, serial port, Eileen Eva"
+                                adparams.setHeliumZoneIds([["519", "002"], ["55", "002"], ["11", "0114251787"]])
+                    </script>
+      
+    <script>var tagOptions857 = new Object();  
+heWriteAbsoluteJavaScriptTag('helium-beacons.js','http://assets%d.helium.com',tagOptions857) </script>
+    <script type="text/javascript">hebConfiguration.beacons.baseBeaconURL = "http://beacons.helium.com/beaconlet.js"</script>
+    <script>
+  if (typeof hebBeaconUtilities != 'undefined') {
+    hebBeaconUtilities.setSiteContext('content: 519');
+    hebBeaconUtilities.setFullSiteContext('519,55,11');
+    hebBeaconUtilities.setPageType('article')
+    hebBeaconUtilities.setPageTitle('Computer questions: What is a serial port and how does it work?')
+    hebBeaconUtilities.setPageID('2055233')
+
+  }
+</script>
+
+
+    <script>var tagOptions379 = new Object();  
+heWriteAbsoluteJavaScriptTag('jquery/jquery-1.4.2.js','http://assets%d.helium.com',tagOptions379) </script>
+    <script type="text/javascript">jQuery.noConflict();</script>
+  </head>
+  <body>
+    <div id="bigWrapper" class="browse">
+      <!-- google_ad_section_start(name=nav, weight=0.0) -->
+
+<div id="topNav" class="noRelated">
+  
+
+	<div id="utilityNav">
+        <ul class="none"> 
+      <li><a href="http://howto.helium.com" target="_top">How To Guides</a> |</li>
+      <li><a href="http://www.helium.com/content/helium-community" target="_top">Community</a></li>
+    </ul>
+    	  
+	  <span id="loginStatus">
+	    	</span>
+	</div><!-- end utilityNav -->
+
+
+  <div id="branding">
+    <a href="http://www.helium.com/" target="_top"><script>var tagOptions868 = new Object(); 
+tagOptions868.id = 'headerLogo';
+tagOptions868.alt = 'Helium - Where Knowledge Rules'; 
+heWriteAbsoluteImageTag('layout/30logo.gif','http://assets%d.helium.com',tagOptions868) </script></a>
+    <p><em>Where knowledge rules</em></p>
+  </div>
+
+  <div id="marketing">
+    
+                  <div id="leaderboardAd" class="adSpacer">
+<script type="text/javascript">
+    
+      GA_googleFillSlotWithSize(HELAD_publishercode, "ArticleATFLeaderboard728x90", 728, 90);
+    
+</script>
+</div>
+            </div>
+</div>
+<!-- google_ad_section_end(name=nav) -->
+
+      <!-- begin layout-specific content -->
+      <!-- google_ad_section_start(name=channel, weight=0.0) -->
+      <div id="channelList">
+        
+	<script type="text/javascript">
+// <!--
+function postFormUnlessEmptySearch(number)
+{
+  var search_field_value = document.forms["searchform"+number]["search_query"].value;
+  if (search_field_value.length == 0 || search_field_value == "Search Helium") {
+    document.forms["searchform"+number]["search_query"].value = "";
+  }
+  else {
+    $("searchform" + number).submit();
+  }
+}
+
+function popup_help(page) {
+  day = new Date();
+  id = day.getTime();
+  URL = '/search' + page;
+  window.open(URL, id, 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=800,height=500,left = 100,top = 100');
+}
+
+// --> 
+</script>
+<form action="http://www.helium.com/search/search" id="searchform1" method="get" target="_top">  <div>
+ 		        <input id="search_query" type="text" class="text default" name="search_query" size="40" value="Search Helium" onclick="clearTextBoxOnClick('searchform1','search_query','Search Helium')" maxlength="200" />
+        <input type="hidden" name="search_context" value="519" />
+        <a href="#" id="mainSearch" onclick="postFormUnlessEmptySearch(1);return false;" title="Search Helium">Search Helium</a>
+    </div>
+    </form>
+
+        
+  <script>var tagOptions494 = new Object(); 
+tagOptions494.size = '191X29';
+tagOptions494.alt = 'Channel Button'; 
+heWriteAbsoluteImageTag('channelNav/channel_button.gif','http://assets%d.helium.com',tagOptions494) </script>
+
+  <div id="channelNav">
+    <ul>
+          
+              
+        <li id="ComputersTechnology" >
+          <span><a href="/channels/11-Computers-Technology">Computers & Technology</a></span>
+              </li>
+        <li class='parent'>
+          <a href="/channels/55-Hardware">Hardware</a>
+      
+      <ul>
+              <li>
+          <a href="/channels/515-Computer-Buying-Tips">Computer Buying Tips</a>
+        </li>
+              <li>
+          <a href="/channels/516-Computer-Maintenance">Computer Maintenance</a>
+        </li>
+              <li>
+          <a href="/channels/517-Networking-IT-Management">Networking & IT Management</a>
+        </li>
+              <li>
+          <a href="/channels/518-Peripherals-Accessories">Peripherals & Accessories</a>
+        </li>
+              <li class='on'>
+          <a href="/channels/519-Hardware-Other">Hardware (Other)</a>
+        </li>
+              </ul>
+      </li>   
+        </ul>
+  </div>
+
+        
+
+ 
+
+      </div>
+      <!-- google_ad_section_end(name=channel) -->
+
+      <div id="contentWide" class="IE">
+        
+
+        
+  <script>if (typeof hebBeaconUtilities != 'undefined') hebBeaconUtilities.setPageOwner('583146');</script>  
+
+
+  <div id="error_message" class="error"></div>
+
+  <div id="showArticle">
+    <p><a href="http://www.helium.com/">Home</a> > <a href="http://www.helium.com/channels/11-Computers-Technology">Computers & Technology</a> > <a href="http://www.helium.com/channels/55-Hardware">Hardware</a> > <a href="http://www.helium.com/channels/519-Hardware-Other">Hardware (Other)</a></p>
+    
+    
+
+
+<h2>
+   
+    Computer questions: What is a serial port and how does it work? 
+    
+</h2>
+
+
+
+
+
+    <div class="article">
+        
+    <div class="navTabs">
+      <ul class="tabbed">
+        <li><a href="http://www.helium.com/knowledge/top_item/440706-computer-questions-what-is-a-serial-port-and-how-does-it-work">Top Article</a></li>
+        <li>
+                                <a href="/knowledge/440706-computer-questions-what-is-a-serial-port-and-how-does-it-work">All 5 Articles</a>
+                  </li>      </ul>
+    </div>
+  
+      
+<div class="paginator prevPage">
+          <div class="articleToolsV2">
+
+
+  <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="" send="false" layout="button_count" show_faces="true" font=""></fb:like>
+    
+  <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+  
+  <!-- Place this tag in your head or just before your close body tag -->
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+  <!-- Place this tag where you want the +1 button to render -->
+  <g:plusone size="medium"></g:plusone>
+</div>
+
+      
+  
+  
+  <a href="http://www.helium.com/knowledge/440706-computer-questions-what-is-a-serial-port-and-how-does-it-work/show_rank/3" class="arrow"></a>  
+      
+  
+    <a href="http://www.helium.com/items/2055233-what-is-a-serial-port-serial-cable-pinouts" class="rankIcon"><em>4</em> of 5</a>
+  
+
+    <a href="http://www.helium.com/knowledge/440706-computer-questions-what-is-a-serial-port-and-how-does-it-work/show_rank/5" class="arrow right"></a></div>
+
+
+            
+  <h3>by <a href="http://www.helium.com/users/583146/show_articles" title="About Me: Eileen Eva">Eileen Eva</a>
+  
+<ul class="userLevels none item">
+        <li>
+            <a href="http://www.heliumhelp.com/stars-and-badges"><script>var tagOptions242 = new Object(); 
+tagOptions242.alt = 'Writing Level Star'; 
+heWriteAbsoluteImageTag('starAsm.gif','http://assets%d.helium.com',tagOptions242) </script><script>var tagOptions873 = new Object(); 
+tagOptions873.alt = 'Writing Level Star'; 
+heWriteAbsoluteImageTag('starAsm.gif','http://assets%d.helium.com',tagOptions873) </script><script>var tagOptions145 = new Object(); 
+tagOptions145.alt = 'Writing Level Star'; 
+heWriteAbsoluteImageTag('starAsm.gif','http://assets%d.helium.com',tagOptions145) </script><script>var tagOptions808 = new Object(); 
+tagOptions808.alt = 'Writing Level Star'; 
+heWriteAbsoluteImageTag('starAsm.gif','http://assets%d.helium.com',tagOptions808) </script></a>
+      </li>
+    
+    </ul></h3>
+  
+
+      
+      
+      <p>
+        <strong>Created on</strong>: January 03, 2011
+        &nbsp;&nbsp;<strong>Last Updated</strong>: June 04, 2013      </p>
+
+      <!-- google_ad_section_start(name=main, weight=1.0) -->
+              
+                    
+
+      <p>A serial port can simply be defined as &ldquo;A port, or interface, that can be used for serial communication, in which only 1 bit is transmitted at a time.&rdquo;&nbsp; &ndash; Webopedia- <a href="http://www.webopedia.com/TERM/S/serial_port.html" class="embLink" rel="nofollow" target="_blank">Serial Port</a></p> <p>Serial ports were once very popular until USBs and Firewires came along. Serial ports are still in use today especially in configuring devices like servers, routers and switches. This is because the serial ports do not depend much on software support from the connecting device (host). In modern personal computers and laptops, serial ports are becoming unpopular and are slowly disappearing.</p><div class="googleArticleAd">
+    <div class="adSpacer">
+<script type="text/javascript">
+    
+      GA_googleFillSlotWithSize(HELAD_publishercode, "ArticleATFMiddleArticle300x250", 300, 250);
+    
+</script>
+</div>
+  </div> <p>The term &lsquo;serial port&rsquo; in telecommunications refers to a device compliant to RS-232 (Recommended Standard 232) and RS-232C or RS-422 in computers, although many manufactures have their own versions of serial ports.</p> <p>Examples of devices that use serial ports include serial mouse or keyboards, old printers and scanners, computer monitors and bar code scanners. In Windows, serial ports are known as COM ports (Communication ports) while on Unix-like operating systems they are referred to as TTY derived from the word &lsquo;teletypewriter&rsquo;.</p> <p><a href="http://www.tldp.org/HOWTO/Serial-HOWTO-19.html" class="embLink" rel="nofollow" target="_blank">How</a> a Serial Port Works</p> <p>In most serial communications, there will be a DCE (Data Communications Equipment) and a DTE (Data Terminal Equipment) and both work using start and stop bits to send and receive information. In a scenario where there is need for parallel to serial communication, an UART (Universal Asynchronous Receiver/Transmitter) is used to switch parallel to serial data. Most serial connectors on the market are the 9 pin and 25 pin connectors with the 25 pin having 16 unused pins in most communications. This makes the 9 pin connector more popular.</p> <p><a href="http://www.aggsoft.com/rs232-pinout-cable/pinout-and-signal.htm" class="embLink" rel="nofollow" target="_blank">9 pin</a> connector layout in a computer to serial modem connection</p> <p>&bull; Pin 1. Carrier Detect &nbsp;&bull; Pin 6. Data Set Ready &nbsp;</p> <p>&bull; Pin 2. Receive Data &nbsp;&nbsp;&bull; Pin 7. Request to Send &nbsp;</p> <p>&bull; Pin 3. Transmit Data &nbsp;&bull; Pin 8. Clear to Send</p> <p>&bull; Pin 4. Data Terminal &nbsp;&bull; Pin 9. Ring Indicator</p> <p>&bull; Pin 5. Signal Ground&nbsp; &nbsp;&nbsp;</p> <p><a href="http://www.aggsoft.com/rs232-pinout-cable/pinout-and-signal.htm" class="embLink" rel="nofollow" target="_blank">25 pin</a> connector layout</p> <p>&bull; Pin 2. Transmit Data &nbsp;&nbsp; &nbsp;&nbsp; &bull; Pin 7. Signal Ground</p> <p>&bull; Pin 3. Receive Data &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &bull; Pin 8. Data Carrier Detect</p> <p>&bull; Pin 4. Request to Send &nbsp; &bull; Pin 20. Data Terminal Ready</p> <p>&bull; Pin 5. Clear to Send &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &bull; Pin 22. Ring Indicator</p> <p>&bull; Pin 6. Data Set Ready</p> <p>Since serial connections are considered slow, they are not fit for high data transfers therefore replaced by USBs. They are also converters available to covert serial to USB, serial to parallel or serial to Ethernet and this helps in compatibility where one device has serial ports and the other does not.</p>
+      <!-- google_ad_section_end(name=main) -->
+        <p><strong>
+    <a href="http://www.helium.com/users/583146"><img alt="286586_m" class="userImg" src="http://www.helium.com/uploaded_images/5/8/3/1/4/6/286586_m.jpeg" /></a>
+    Learn more about this author, <a href="http://www.helium.com/users/583146" title="About Me: Eileen Eva">Eileen Eva</a>.<br />
+
+    
+     <a href="http://www.helium.com/messages/new?id=583146&amp;item=2055233-what-is-a-serial-port-serial-cable-pinouts" onclick="window.open(this.href,'new_window','height=665,width=410,menubar=no,toolbar=no,location=no,status=no,scrollbars=yes,resizable=no,directories=no');return false;"><script>var tagOptions670 = new Object(); 
+tagOptions670.alt = 'Contact this writer'; 
+heWriteAbsoluteImageTag('articleTools/email_user.gif','http://assets%d.helium.com',tagOptions670) </script></a>
+     Click here to send this author comments or questions.
+    
+
+  </strong></p>
+
+
+  
+
+
+      <div class="social">
+        <a href="http://twitter.com/intent/tweet?status=Currently reading http://www.helium.com/items/2055233-what-is-a-serial-port-serial-cable-pinouts" title="Tweet 'Computer questions: What is a serial port and how does it work?'"><script>var tagOptions648 = new Object();  
+heWriteAbsoluteImageTag('social/twitter.png','http://assets%d.helium.com',tagOptions648) </script></a>
+        <a href="http://del.icio.us/post?url=http://www.helium.com/items/2055233-what-is-a-serial-port-serial-cable-pinouts&amp;title=Computer questions: What is a serial port and how does it work?" onclick="window.open(this.href,'flagging','height=600,width=750,menubar=no,toolbar=no,location=no,status=no,scrollbars=yes,resizable=no,directories=no');return false;" title="Add 'Computer questions: What is a serial port and how does it work?' to del.icio.us"><script>var tagOptions799 = new Object();  
+heWriteAbsoluteImageTag('social/delicious.png','http://assets%d.helium.com',tagOptions799) </script></a>
+        <a href="http://www.digg.com/submit?phase=2&amp;url=http://www.helium.com/items/2055233-what-is-a-serial-port-serial-cable-pinouts&amp;title=Computer questions: What is a serial port and how does it work?" onclick="window.open(this.href,'flagging','height=600,width=750,menubar=no,toolbar=no,location=no,status=no,scrollbars=yes,resizable=no,directories=no');return false;" title="Digg 'Computer questions: What is a serial port and how does it work?'"><script>var tagOptions934 = new Object();  
+heWriteAbsoluteImageTag('social/digg.png','http://assets%d.helium.com',tagOptions934) </script></a>
+        <a href="http://www.facebook.com/share.php?u=http://www.helium.com/items/2055233-what-is-a-serial-port-serial-cable-pinouts" onclick="window.open(this.href,'flagging','height=600,width=750,menubar=no,toolbar=no,location=no,status=no,scrollbars=yes,resizable=no,directories=no');return false;" title="Computer questions: What is a serial port and how does it work?"><script>var tagOptions768 = new Object();  
+heWriteAbsoluteImageTag('social/facebook.png','http://assets%d.helium.com',tagOptions768) </script></a>
+        <a href="http://www.reddit.com/submit?url=http://www.helium.com/items/2055233-what-is-a-serial-port-serial-cable-pinouts&amp;title=Computer questions: What is a serial port and how does it work?" onclick="window.open(this.href,'flagging','height=600,width=750,menubar=no,toolbar=no,location=no,status=no,scrollbars=yes,resizable=no,directories=no');return false;" title="Add 'Computer questions: What is a serial port and how does it work?' to reddit"><script>var tagOptions285 = new Object();  
+heWriteAbsoluteImageTag('social/reddit.png','http://assets%d.helium.com',tagOptions285) </script></a>
+        <a href="http://www.stumbleupon.com/submit?url=http://www.helium.com/items/2055233-what-is-a-serial-port-serial-cable-pinouts&amp;title=Computer questions: What is a serial port and how does it work?" onclick="window.open(this.href,'flagging','height=600,width=750,menubar=no,toolbar=no,location=no,status=no,scrollbars=yes,resizable=no,directories=no');return false;" title="Add 'Computer questions: What is a serial port and how does it work?' to stumbleupon"><script>var tagOptions206 = new Object();  
+heWriteAbsoluteImageTag('social/stumbleupon.png','http://assets%d.helium.com',tagOptions206) </script></a>
+      </div>
+
+<div id="topFive">
+  <p>Below are the top articles rated and ranked by Helium members on:</p>
+  <p><strong>Computer questions: What is a serial port and how does it work?</strong></p>
+  <ul class="list">
+          <li>
+  <div class="donatedIcon">
+  
+          <a href="http://www.helium.com/items/2055688-computer-questions-what-is-a-serial-port-and-how-does-it-work" class="rankIcon" title="Hardware (Other) : Computer questions: What is a serial port and how does it work?"><em>1</em> of 5</a>
+          <!-- only show the image icon if this user is NOT a publisher -->
+    </div>
+  <p>by <a href="http://www.helium.com/users/425099/show_articles" title="About Me: Ann Johnstone">Ann Johnstone</a></p>
+  <a href="http://www.helium.com/items/2055688-computer-questions-what-is-a-serial-port-and-how-does-it-work" title="Hardware (Other) - Computer questions: What is a serial port and how does it work?"><p>For over two decades, the use of the serial port has been an integral part of computer technology. While there are now new</p></a>
+</li>
+          <li>
+  <div class="donatedIcon">
+  
+          <a href="http://www.helium.com/items/2055581-what-is-a-serial-port-and-how-does-it-work" class="rankIcon" title="Hardware (Other) : Computer questions: What is a serial port and how does it work?"><em>2</em> of 5</a>
+          <!-- only show the image icon if this user is NOT a publisher -->
+    </div>
+  <p>by <a href="http://www.helium.com/users/590129/show_articles" title="About Me: Gene Patterson">Gene Patterson</a></p>
+  <a href="http://www.helium.com/items/2055581-what-is-a-serial-port-and-how-does-it-work" title="Hardware (Other) - Computer questions: What is a serial port and how does it work?"><p>What is the serial port?&nbsp; How does a serial port work?&nbsp; What advantages the serial port have over a parallel port?&nbsp;</p></a>
+</li>
+          <li>
+  <div class="donatedIcon">
+  
+          <a href="http://www.helium.com/items/2054298-how-does-a-serial-port-work" class="rankIcon" title="Hardware (Other) : Computer questions: What is a serial port and how does it work?"><em>3</em> of 5</a>
+          <!-- only show the image icon if this user is NOT a publisher -->
+    </div>
+  <p>by <a href="http://www.helium.com/users/568801/show_articles" title="About Me: Rachel Alessi">Rachel Alessi</a></p>
+  <a href="http://www.helium.com/items/2054298-how-does-a-serial-port-work" title="Hardware (Other) - Computer questions: What is a serial port and how does it work?"><p>A serial port is, very simply, &nbsp;an external connection on a computer that transmits data: this can be from PC to PC,</p></a>
+</li>
+          <li>
+  <div class="donatedIcon">
+  
+          <a href="http://www.helium.com/items/2055233-what-is-a-serial-port-serial-cable-pinouts" class="rankIcon" title="Hardware (Other) : Computer questions: What is a serial port and how does it work?"><em>4</em> of 5</a>
+          <!-- only show the image icon if this user is NOT a publisher -->
+    </div>
+  <p>by <a href="http://www.helium.com/users/583146/show_articles" title="About Me: Eileen Eva">Eileen Eva</a></p>
+  <a href="http://www.helium.com/items/2055233-what-is-a-serial-port-serial-cable-pinouts" title="Hardware (Other) - Computer questions: What is a serial port and how does it work?"><p>A serial port can simply be defined as &ldquo;A port, or interface, that can be used for serial communication, in which </p></a>
+</li>
+          <li>
+  <div class="donatedIcon">
+  
+          <a href="http://www.helium.com/items/2053402-explaining-about-serial-ports-and-how-it-works-and-usage" class="rankIcon" title="Hardware (Other) : Computer questions: What is a serial port and how does it work?"><em>5</em> of 5</a>
+          <!-- only show the image icon if this user is NOT a publisher -->
+    </div>
+  <p>by <a href="http://www.helium.com/users/321271/show_articles" title="About Me: Bruce Bostwick">Bruce Bostwick</a></p>
+  <a href="http://www.helium.com/items/2053402-explaining-about-serial-ports-and-how-it-works-and-usage" title="Hardware (Other) - Computer questions: What is a serial port and how does it work?"><p>In a computer, there is a question about serial ports.&nbsp; It is more about what are they and what is the intended function.&nbsp;</p></a>
+</li>
+      </ul>           
+ 
+</div>
+
+
+      
+      <div class="adSpacer">
+<script type="text/javascript">
+    
+      GA_googleFillSlotWithSize(HELAD_publishercode, "ArticleATFEndArticle336x280", 336, 280);
+    
+</script>
+</div>
+    </div>
+  
+    <script type="text/javascript">
+  jQuery.noConflict();
+  
+  jQuery(document).ready(function($){
+    $('#footerBarToggle').click(function() {
+      $(this).text($(this).text() == 'HIDE' ? 'SHOW' : 'HIDE');
+      // $('#footerBar').slideToggle('slow', function() {});
+      var height = $('#footerBarContainer').height() == '52' ? '20' : '52';
+      $('#footerBarContainer').animate({height:height}, 600);
+    });
+  });
+</script>
+
+<div id="footerBarContainer">
+  <p id="footerBarToggle">HIDE</p>
+
+  <ul id="footerBar">
+    
+  
+      <li><div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="" send="false" layout="button_count" show_faces="false" font="arial"></fb:like></li>
+    
+      <li><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
+    
+      <!-- Place this tag in your head or just before your close body tag -->
+      <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+      <!-- Place this tag where you want the +1 button to render -->
+      <li><g:plusone size="medium"></g:plusone></li>
+        
+        
+        <li>
+      <a href="http://www.helium.com/article_email/new?id=2055233" onclick="window.open(this.href,'new_window','height=700,width=400,menubar=no,toolbar=no,location=no,status=no,scrollbars=yes,resizable=yes,directories=no');return false;"><img alt="Email Article" src="http://assets0.helium.com/images/articleTools/email_article.gif" />Email this article</a> 
+    </li>
+        
+    <li>
+              <a href="http://www.helium.com/items/2055233-what-is-a-serial-port-serial-cable-pinouts/print" onclick="window.open(this.href,'new_window','height=800,width=800,menubar=no,toolbar=no,location=no,status=no,scrollbars=yes,resizable=yes,directories=no');return false;"><img alt="Print article" src="http://assets0.helium.com/images/articleTools/print.gif" />Print article</a>          </li>
+      
+    <div id="writeNow">
+          </div>
+  </ul>
+</div>
+
+
+    <script>var tagOptions940 = new Object();  
+heWriteAbsoluteJavaScriptTag('video_add_cookie.js','http://assets%d.helium.com',tagOptions940) </script>
+
+<div id="rightGutterAds">
+      <div class="adSpacer">
+<script type="text/javascript">
+    
+      GA_googleFillSlotWithSize(HELAD_publishercode, "ArticleATF0Right300X40", 300, 40);
+    
+</script>
+</div>
+    
+    
+      <div class="adSpacer">
+<script type="text/javascript">
+    
+      GA_googleFillSlotWithSize(HELAD_publishercode, "ArticleATF1Right300x250", 300, 250);
+    
+</script>
+</div>
+  
+  <div id="relatedFive">
+  <p><strong>Related Titles:</strong></p>
+
+  <ul class="none">
+      <li><a href="/knowledge/440201-computer-questions-how-caching-works">Computer questions: How caching works</a></li>
+      <li><a href="/knowledge/441425-computer-questions-how-the-phantom-works">Computer questions: How the Phantom works</a></li>
+      <li><a href="/knowledge/440144-computer-questions-how-bios-works">Computer questions: How BIOS works</a></li>
+      <li><a href="/knowledge/448340-computer-questions-how-home-networking-works">Computer questions: How home networking works</a></li>
+      <li><a href="/knowledge/438251-computer-questions-how-computer-monitors-work">Computer questions: How computer monitors work</a></li>
+    </ul>
+</div>
+
+
+ 
+  <div id="vote">
+  <p><strong>Helium Debate</strong></p>
+  
+  <p><strong>Cast your vote!</strong></p>
+  <p><strong><a href="http://www.helium.com/debates/268622-does-registry-repair-software-work?page=1">Does registry repair software work?</a></strong></p>
+      
+  <ul class="center">
+    <li class="voteSide"><a href="http://www.helium.com/debates/268706-yes/cast_vote?url=http%3A%2F%2Fwww.helium.com%2Fdebates%2F268622-does-registry-repair-software-work%2Fside_by_side%3Fpage%3D1" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', '18eeaeffaa97b27efb6a3425c1f5f3bcd5d3e26f'); f.appendChild(s);f.submit();return false;">Yes</a></li>
+    <li class="or">or</li>
+    <li class="voteSide"><a href="http://www.helium.com/debates/268707-no/cast_vote?url=http%3A%2F%2Fwww.helium.com%2Fdebates%2F268622-does-registry-repair-software-work%2Fside_by_side%3Fpage%3D1" class="no" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', '18eeaeffaa97b27efb6a3425c1f5f3bcd5d3e26f'); f.appendChild(s);f.submit();return false;">No</a></li>
+  </ul>
+  
+  <p class="helper">Click for your side.</p>
+</div>
+
+  
+
+<div class="navTabs">
+  <ul class="tabbed">
+    <li class="on" id="tab1"><a href="#" onclick="simpleTab('promo1', 'tab1', 'on'); return false;"><!-- Loading cms slug: '/app-partials/right-gutter/promo-tab-left/' -->
+On the home page
+<!-- Loaded cms slug: '/app-partials/right-gutter/promo-tab-left/' --></a></li>
+    <li id="tab2"><a href="#" onclick="simpleTab('promo2', 'tab2','on'); return false;"><!-- Loading cms slug: '/app-partials/right-gutter/promo-tab-right/' -->
+Most popular titles
+<!-- Loaded cms slug: '/app-partials/right-gutter/promo-tab-right/' --></a></li>  </ul>
+</div>
+	
+<div class="promo">
+  <div id="promo1">
+    <ul>
+          <li><a href="/items/2487645-cloudy-with-a-chance-of-meatballs-2-gets-eaten-up-by-filmgoers" class="title">'Cloudy with a Chance of Meatballs 2' is box office hit on debut weekend</a></li>
+          <li><a href="/items/2487733-how-to-nurture-a-thankful-spirit-in-during-difficult-times" class="title">How to be thankful during hard times</a></li>
+          <li><a href="/items/2411939-october-options" class="title">Where to take a vacation in October</a></li>
+          <li><a href="/items/2487730-orchidaceae" class="title">Poetry: Haiku about orchids</a></li>
+          <li><a href="/items/2374405-an-overview-of-catholic-saints-feast-days-for-october" class="title">An overview of Catholic Saint's feast days for October</a></li>
+          <li><a href="/items/2487048-a-favorite-childrens-destination-in-the-quad-cities" class="title">Visitor's guide to the Family Museum in Bettendorf, Iowa</a></li>
+          <li><a href="/items/2487226-essentials-for-a-well-stocked-purse" class="title">Must haves for a well stocked purse</a></li>
+          <li><a href="/items/2487565-thanks-for-sharing-review" class="title">Movie reviews: Thanks For Sharing (2012)</a></li>
+          <li><a href="/items/2409934-three-different-ways-to-wear-one-cardigan-sweater" class="title">One piece, three ways: Cardigan sweater</a></li>
+          <li><a href="/items/2486923-how-to-beat-tiredness-during-the-day" class="title">How to rejuvenate when feeling tired during the day</a></li>
+          <li><a href="/items/2486915-bk-creates-a-lower-calorie-french-fry" class="title">A look at Burger King's new 'healthier' French fries</a></li>
+        </ul>
+  </div>  
+  
+    <div id="promo2">
+    <!-- Loading cms slug: '/app-partials/channel-promo/11/' -->
+<ul>
+	<li><a href="/knowledge/410517-best-websites-for-printable-thanksgiving-placecards">Best websites for printable Thanksgiving placecards</a></li>
+		<li><a href="/knowledge/290815-best-websites-for-free-thanksgiving-desktop-wallpaper">Best websites for free Thanksgiving desktop wallpaper</a></li>
+		<li><a href="/items/2021233-free-thanksgiving-screensavers-for-windows">Where to find free Thanksgiving screensavers for Windows</a></li>
+		<li><a href="/knowledge/282419-best-websites-for-free-thanksgiving-desktop-backgrounds">Best websites for free Thanksgiving desktop backgrounds</a></li>
+		<li><a href="/knowledge/354765-find-a-buddy-to-lose-weight-with">Website reviews: Weightlossbuddy.com</a></li>
+		<li><a href="/Where">Where to find free winter pictures to use for your desktop wallpaper</a> to find free winter pictures to use for your desktop wallpaper</li>
+		<li><a href="/items/2082089-the-best-mobile-apps-for-weight-tracking">The best mobile apps for weight tracking</a></li>
+		<li><a href="/knowledge/427082-10-gadgets-for-winter-fun">10 gadgets for winter fun</a></li>
+		<li><a href="/knowledge/400647-the-best-iphone-and-ipad-apps-for-losing-weight">The best iPhone and iPad apps for losing weight</a></li>
+		<li><a href="/knowledge/299668-best-websites-for-free-christmas-desktop-wallpaper">Best websites for free Christmas desktop wallpaper</a></li>
+		<li><a href="/items/1990047-angry-birds-halloween">iPhone app reviews: Angry Birds Halloween</a></li>
+		<li><a href="/items/1649186-photoshop-foliage-brushes-tutorial">Photoshop tutorials: How to make leaf brushes</a></li>
+		<li><a href="/items/1526451-Internet-Software-Utils">Can you see the moon using Google Earth</a></li>
+		<li><a href="/knowledge/346267-why-does-google-say-topeka">Why did Google change their logo to Topeka</a></li>
+		<li><a href="/debates/66160-should-cell-phone-use-be-banned-while-driving">Should cell phone use be banned while driving?</a></li>
+		<li><a href="/knowledge/9279-why-mac-is-better-than-pc">Why Mac is better than PC</a></li>
+		<li><a href="/knowledge/3025-pros-and-cons-of-the-internet-in-todays-society">Pros and cons of the Internet in today&#8217;s society</a></li>
+		<li><a href="/knowledge/75929-how-to-install-linux-on-an-intel-mac-with-boot-camp">How to install Linux on an Intel Mac with Boot Camp</a></li>
+		<li><a href="/knowledge/103188-how-to-make-a-photo-look-old-in-photoshop">How to make a photo look old in Photoshop</a></li>
+		<li><a href="/knowledge/250873-the-negative-effects-of-facebook">The negative effects of Facebook</a></li>
+		<li><a href="/knowledge/134482-how-to-know-if-your-computer-has-been-hacked">How to know if your computer has been hacked</a></li>
+		<li><a href="/items/1788814-verizon-nexus-onenexus-one-verizonsprint-htc-evo-4ghtc-evohtc-evo-4g">Phone comparisons: Sprint <span class="caps">HTC EVO 4G</span> vs. Verizon Nexus One</a></li>
+		<li><a href="/knowledge/2511-how-to-use-paypal-without-a-credit-card">How to use Paypal without a credit card</a></li>
+		<li><a href="/knowledge/130306-tips-for-knowing-when-the-cmos-battery-is-getting-weak">Tips for knowing when the <span class="caps">CMOS</span> battery is getting weak</a></li>
+		<li><a href="/knowledge/140908-comparing-macbook-air-with-macbook-pro">Comparing MacBook Air with MacBook Pro</a></li>
+		<li><a href="/knowledge/93787-how-to-cancel-an-aol-account">How to cancel an <span class="caps">AOL</span> account</a></li>
+		<li><a href="/knowledge/98015-what-are-the-differences-between-lan-and-wan">What are the differences between <span class="caps">LAN</span> and <span class="caps">WAN</span></a></li>
+		<li><a href="/knowledge/145031-ipod-touch-not-recognized-in-itunes-for-windows-how-to-fix-it">iPod Touch not recognized in iTunes for Windows: How to fix it</a></li>
+		<li><a href="/knowledge/13120-how-to-transfer-money-between-your-bank-account-and-paypal">How to transfer money between your bank account and PayPal</a></li>
+		<li><a href="/knowledge/4862-great-text-message-jokes">Great text-message jokes</a></li>
+		<li><a href="/knowledge/255127-disadvantages-of-facebook">Disadvantages of Facebook</a></li>
+		<li><a href="/knowledge/8913-scan-my-computer-online-for-viruses">Scan my computer online for viruses</a></li>
+		<li><a href="/knowledge/43823-how-to-connect-your-mp3-player-to-your-car-stereo">How to connect your <span class="caps">MP3</span> player to your car stereo</a></li>
+		<li><a href="/knowledge/53373-how-to-connect-one-computer-to-another">How to connect one computer to another</a></li>
+		<li><a href="/knowledge/111788-effects-of-computers-and-the-internet-on-society">Effects of computers and the Internet on society</a></li>
+		<li><a href="/items/21134-how-to-block-private-calls-on-your-cell-phone">How to block private calls on your cell phone</a></li>
+		<li><a href="/knowledge/323400-apple-ipod-vs-google-ipad-killer-tablet">Apple iPad vs Google &#8216;iPad killer&#8217; tablet</a></li>
+		<li><a href="/items/852768-Internet-Software-Utils">How to convert iDoser <span class="caps">DRG</span> files to <span class="caps">WAV</span> and <span class="caps">MP3</span></a></li>
+		<li><a href="/knowledge/110406-negative-effects-of-the-internet">Negative effects of the Internet</a></li>
+		<li><a href="/knowledge/130785-how-to-compress-files-with-winrar">How to compress files with WinRAR</a></li>
+		<li><a href="/knowledge/278194-best-free-android-apps">Top free android apps for the myTouch 3G</a></li>
+		<li><a href="/knowledge/145041-what-to-do-if-your-ipod-freezes">What to do if your iPod freezes</a></li>
+		<li><a href="/items/1350446-what-does-the-collatestackingsortingstapling-function-do-on-a-copier-or-printer">What does the collate feature do on a printer or copy machine</a></li>
+		<li><a href="/knowledge/87398-how-to-determine-what-kind-of-internet-connection-you-have">How to determine what kind of Internet connection you have</a></li>
+		<li><a href="/knowledge/161966-how-to-clean-up-a-computers-hard-drive">How to clean up a computer&#8217;s hard drive</a></li>
+		<li><a href="/knowledge/52664-guide-to-the-cheapest-cell-phone-service-plans-in-the-us">Guide to the cheapest cell phone service plans in the U.S.</a></li>
+		<li><a href="/knowledge/305987-the-top-free-apps-for-the-droid">The top free apps for the Droid</a></li>
+		<li><a href="/knowledge/336626-tap-fish-iphone-app-review">iPhone app reviews: Tap Fish</a></li>
+		<li><a href="/knowledge/55521-is-buying-discounted-cigarettes-online-legal-in-the-us">Is buying discounted cigarettes online legal in the U.S.?</a></li>
+		<li><a href="/knowledge/145022-how-to-erase-songs-from-your-ipod">How to erase songs from your iPod</a></li>
+		<li><a href="/knowledge/145018-how-to-get-free-videos-for-your-ipod">How to get free videos for your iPod</a></li>
+		<li><a href="/knowledge/43806-choosing-between-hd-and-sd-camcorders">Choosing between HD and SD camcorders</a></li>
+		<li><a href="/knowledge/128516-how-to-find-out-whats-running-on-your-pc-and-why-this-is-important" title="and why this is important">How to find out what&#8217;s running on your PC</a></li>
+		<li><a href="/knowledge/23501-how-to-delete-cookies-from-your-computer">How to delete cookies from your computer</a></li>
+		<li><a href="/knowledge/5653-how-to-remove-a-hard-drive">How to remove a hard drive</a></li>
+		<li><a href="/knowledge/145021-how-to-download-music-on-an-ipod-touch">How to download music on an iPod Touch</a></li>
+		<li><a href="/knowledge/153465-best-2d-animation-programs">Best 2D animation programs</a></li>
+		<li><a href="/items/763109-how-to-change-bit-rates-in-itunes">How to change bit rates in iTunes</a></li>
+		<li><a href="/knowledge/110422-things-that-may-slow-down-your-computer">Things that may slow down your computer</a></li>
+		<li><a href="/knowledge/256104-the-negative-effects-of-technology-on-kids">The negative effects of technology on kids</a></li>
+		<li><a href="/items/1787744-nexus-oneverizongoogleskypeverizon-nexus-onenexus-one-verizonnexus-one-for-verizonsprint">How to get the best deal on a Verizon Nexus One</a></li>
+		<li><a href="/knowledge/134610-best-laptops-for-high-school-students">Best laptops for high school students</a></li>
+		<li><a href="/items/1191856-is-the-free-personal-website-creation-service-weebly-any-good">Website reviews: Weebly.com</a></li>
+		<li><a href="/knowledge/3851-best-brand-laptop-to-buy">Best brand laptop to buy</a></li>
+		<li><a href="/knowledge/141743-negative-impact-of-technology-growing-too-fast">Negative impact of technology growing too fast</a></li>
+		<li><a href="/knowledge/104103-comparing-integrated-and-dedicated-graphics-cards">Comparing integrated and dedicated graphics cards</a></li>
+		<li><a href="/knowledge/161965-how-to-connect-two-home-computers-to-the-same-printer">How to connect two home computers to the same printer</a></li>
+		<li><a href="/knowledge/134611-energizer-vs-duracell-batteries">Energizer vs. Duracell batteries</a></li>
+		<li><a href="/knowledge/314138-common-problems-with-googles-nexus-one-phone">Common problems with Google&#8217;s Nexus One phone</a></li>
+		<li><a href="/items/689604-how-illegal-music-downloaders-get-caught">How illegal music downloaders get caught</a></li>
+		<li><a href="/items/917505-MP3-Players-Radio-Audio-Devices">How to put videos on your iPod classic</a></li>
+		<li><a href="/knowledge/140078-the-difference-between-object-oriented-programming-oop-and-procedure-oriented" title="POP">The difference between object-oriented programming (OOP) and procedure-oriented programming</a></li>
+		<li><a href="/knowledge/3301-the-best-way-to-play-an-ipod-through-your-car-stereo">The best way to play an IPod through your car stereo</a></li>
+		<li><a href="/items/1372750-best-online-stores-with-buy-now-pay-later-options">Best online stores with &#8216;buy now pay later&#8217; options</a></li>
+		<li><a href="/knowledge/293859-how-to-change-your-name-on-facebook">How to change your name on Facebook</a></li>
+		<li><a href="/knowledge/2204-how-to-get-more-space-on-your-computer">How to get more space on your computer</a></li>
+		<li><a href="/items/1689683-review-panasonic-lumix-dmc-tz65">Digital camera reviews: Panasonic Lumix <span class="caps">DMC</span>-TZ65</a></li>
+		<li><a href="/knowledge/123643-the-negative-side-of-facebook">The negative side of Facebook</a></li>
+		<li><a href="/knowledge/91786-what-to-do-if-your-computer-gets-hacked">What to do if your computer gets hacked</a></li>
+		<li><a href="/knowledge/23831-the-pros-and-cons-of-wikipedia">The pros and cons of Wikipedia</a></li>
+		<li><a href="/knowledge/154437-how-the-computer-has-changed-through-the-years">How the computer has changed through the years</a></li>
+		<li><a href="/knowledge/88386-how-to-install-downloaded-fonts-and-photoshop-brushes">How to install downloaded fonts and Photoshop brushes</a></li>
+		<li><a href="/knowledge/87892-how-to-view-system-information-in-windows-xp">How to view system information in Windows XP</a></li>
+		<li><a href="/knowledge/153717-pros-and-cons-of-using-microsoft-powerpoint-presentations">Pros and cons of using Microsoft PowerPoint presentations</a></li>
+		<li><a href="/items/1039903-internet-software-utils">Fastest of the three internet browsers</a></li>
+		<li><a href="/items/571652-how-to-send-sms-from-the-internet-to-a-cell-phone">How to send <span class="caps">SMS</span> from the internet to a cell phone</a></li>
+		<li><a href="/knowledge/1581-how-to-sell-your-old-computer">How to sell your old computer</a></li>
+		<li><a href="/knowledge/1620-the-pros-and-cons-of-open-source-software">The pros and cons of open source software</a></li>
+		<li><a href="/items/1281034-what-type-of-wood-should-you-use-to-make-a-subwoofer-box">What type of wood should you use to make a subwoofer box?</a></li>
+		<li><a href="/knowledge/162881-internet-connection-by-a-usb-modem">Internet connection by a <span class="caps">USB</span> modem</a></li>
+		<li><a href="/knowledge/52194-the-pros-and-cons-of-advancing-technology">The pros and cons of  advancing technology</a></li>
+		<li><a href="/knowledge/5224-imagining-a-world-without-computers">Imagining a world without computers</a></li>
+		<li><a href="/knowledge/145029-how-to-transfer-songs-from-itunes-to-your-ipod">How to transfer songs from iTunes to your iPod</a></li>
+		<li><a href="/knowledge/105356-how-computers-benefit-society">How computers benefit society</a></li>
+		<li><a href="/items/601971-functions-of-a-database-management-system">Functions of a Database Management System</a></li>
+		<li><a href="/items/589707-how-to-enable-nvidia-sli">How to enable <span class="caps">NVIDIA SLI</span></a></li>
+		<li><a href="/items/1740366-google-earth-v5-a-review-of-new-features">Google Earth V5: A review of new features</a></li>
+		<li><a href="/knowledge/144496-how-to-find-old-classmates-in-facebook">How to find old classmates in Facebook</a></li>
+		<li><a href="/knowledge/91418-pros-and-cons-of-myspace-and-facebook">Pros and cons of MySpace and Facebook</a></li>
+		<li><a href="/items/376670-Internet-Software-Utils">Microsoft Outlook tips: How to import your Hotmail messages</a></li>
+		<li><a href="/knowledge/137065-why-dual-core-is-faster-than-single-core-processors">Why dual-core is faster than single-core processors</a></li>
+		<li><a href="/knowledge/5305-comparing-matlab-and-mathematica">Comparing Matlab and Mathematica</a></li>
+		<li><a href="/knowledge/87427-the-difference-between-google-and-yahoo-search-results">The difference between Google and Yahoo search results</a></li>
+		<li><a href="/knowledge/84052-should-the-internet-be-censored">Censorship and the Internet</a></li>
+		<li><a href="/knowledge/136698-internet-service-reviews-dish-network">Internet service reviews: <span class="caps">DISH</span> Network</a></li>
+		<li><a href="/knowledge/308389-the-differences-between-an-amazon-kindle-and-a-nook">The differences between an Amazon Kindle and a Nook</a></li>
+		<li><a href="/knowledge/188309-how-to-take-quality-pictures-on-a-cell-phone-camera">How to take quality pictures on a cell phone camera</a></li>
+		<li><a href="/knowledge/95235-the-pros-and-cons-of-cellphones">The pros and cons of cellphones</a></li>
+		<li><a href="/knowledge/305982-how-to-set-up-voice-mail-on-a-droid-phone">How to set up voice mail on a Droid phone</a></li>
+		<li><a href="/knowledge/147893-the-advantages-of-the-internet">The advantages of the Internet</a></li>
+		<li><a href="/knowledge/145038-transferring-itunes-songs-to-another-computer">Transferring iTunes songs to another computer</a></li>
+		<li><a href="/knowledge/9417-alertpay-vs-paypal">AlertPay vs. PayPal</a></li>
+		<li><a href="/knowledge/253193-how-to-use-google-earth">How to use Google Earth</a></li>
+		<li><a href="/knowledge/158901-tips-to-diagnose-and-fix-a-slow-running-computer">Tips to diagnose and fix a slow running computer</a></li>
+		<li><a href="/knowledge/88971-how-to-change-your-home-page-in-firefox">How to change your home page in Firefox</a></li>
+		<li><a href="/items/153753-Internet-Software-Utils">How to create a hyperlink in an email</a></li>
+		<li><a href="/knowledge/106168-study-questions-social-effects-of-internet-communication">Social effects of Internet communication</a></li>
+		<li><a href="/knowledge/77313-the-importance-of-computer-technology-in-industry">The importance of computer technology in industry</a></li>
+		<li><a href="/debates/193982-do-headphones-damage-your-ears">Do headphones damage your hearing?</a></li>
+		<li><a href="/items/1135675-how-to-choose-the-best-centre-channel-speaker-for-your-home-theatre-system">How to choose the best center channel for your home theater system</a></li>
+		<li><a href="/knowledge/255124-how-to-send-an-event-invitation-on-facebook">How to send an event invitation on Facebook</a></li>
+		<li><a href="/knowledge/111742-microsoft-word-tips-how-to-check-the-readability-of-your-writing">Microsoft Word tips: How to check the readability of your writing</a></li>
+		<li><a href="/knowledge/90782-how-to-fix-a-network-cable-unplugged-error">How to fix a &#8216;network cable unplugged&#8217; error</a></li>
+		<li><a href="/knowledge/166929-how-to-remove-a-forgotten-windows-xp-password">How to remove a forgotten Windows XP password</a></li>
+		<li><a href="/items/1438989-dropbox-cache">How to clear your Dropbox cache</a></li>
+		<li><a href="/knowledge/11436-hottest-programming-language-trends-among-developers">Hottest programming language trends among developers</a></li>
+		<li><a href="/knowledge/306108-iphone-app-review-words-with-friends-free">iPhone app reviews: Words with Friends Free</a></li>
+		<li><a href="/knowledge/136640-facts-about-ipods">Facts about iPods</a></li>
+		<li><a href="/knowledge/139810-the-future-of-modernization-in-the-united-states">The future of modernization in the United States</a></li>
+		<li><a href="/knowledge/308932-kindles-biggest-competitors">Kindle&#8217;s biggest competitors</a></li>
+		<li><a href="/knowledge/11429-essential-software-everyone-should-have-on-their-laptop">Essential software everyone should have on their laptop</a></li>
+		<li><a href="/knowledge/130280-how-to-change-the-display-settings-in-windows-xp">How to change the display settings in Windows XP</a></li>
+		<li><a href="/items/948590-how-to-fix-ip-address-problems">How to fix IP address problems</a></li>
+		<li><a href="/knowledge/186318-how-to-use-a-micro-sd-card">How to use a micro sd card</a></li>
+		<li><a href="/knowledge/5153-what-to-do-if-your-computer-is-running-slow">What to do if your computer is running slow</a></li>
+		<li><a href="/items/1651102-logitech-wireless-mouse-m305-wireless-mouselogitech-mouse-m305">Product reviews: Logitech <span class="caps">M305</span> wireless mouse</a></li>
+		<li><a href="/knowledge/5102-at-what-age-do-you-give-a-child-a-cell-phone">At what age do you give a child a cell-phone?</a></li>
+		<li><a href="/knowledge/20890-how-to-build-your-subwoofer-enclosure">Car audio: How to build a subwoofer enclosure</a></li>
+		<li><a href="/knowledge/134604-best-mp3-players-for-kids">Best <span class="caps">MP3</span> players for kids</a></li>
+		<li><a href="/items/855691-how-to-create-a-transparent-gradient-in-adobe-illustrator">How to create a transparent gradient in Adobe Illustrator</a></li>
+		<li><a href="/items/1687658-how-to-remove-bing-from-your-browser">How to remove Bing toolbar</a></li>
+		<li><a href="/knowledge/51400-buying-a-desktop-or-laptop-pros-and-cons">Buying a desktop or laptop:  Pros and cons</a></li>
+		<li><a href="/items/388221-MP3-Players-Radio-Audio-Devices">How to remove scratches from your iPod</a></li>
+		<li><a href="/knowledge/52668-improving-your-cell-phones-call-quality">Improving your cell phone&#8217;s call quality</a></li>
+		<li><a href="/knowledge/11440-top-10-reasons-cell-phones-have-become-essential-for-modern-living">Top 10 reasons cell phones have become essential for modern living</a></li>
+		<li><a href="/knowledge/106382-advantages-and-disadvantages-of-mp3-technology">Advantages and disadvantages of mp3 technology</a></li>
+		<li><a href="/knowledge/14138-how-the-internet-changed-the-world">How the Internet changed the world</a></li>
+		<li><a href="/items/1370731-modern-technology-the-internet-demise-newspapers-the-rocky-mountain-news">Technology is making us lazy</a></li>
+		<li><a href="/knowledge/43778-using-a-lcd-monitor-as-a-tv">Using a <span class="caps">LCD</span> monitor as a TV</a></li>
+		<li><a href="/knowledge/188310-how-to-transfer-pictures-from-your-cell-phone-to-your-computer">How to transfer pictures from your cell phone to your computer</a></li>
+		<li><a href="/knowledge/130293-how-to-tell-how-much-free-hard-drive-space-is-left-on-a-computer">How to tell how much free hard-drive space is left on a computer</a></li>
+		<li><a href="/knowledge/153485-what-is-2d-animation">What is 2D animation?</a></li>
+		<li><a href="/knowledge/228724-iphone-app-reviews-google-earth">iPhone app reviews: Google Earth</a></li>
+		<li><a href="/knowledge/239821-how-to-increase-digital-tv-signal-strength">How to increase digital TV signal strength</a></li>
+		<li><a href="/knowledge/101259-how-to-change-your-wifi-channel-number">How to change your WiFi channel number</a></li>
+		<li><a href="/items/1346385-make-brochures-how-to-make-brochures-make-brochures-in-microsoft-word">How to make brochures in Microsoft Word</a></li>
+		<li><a href="/knowledge/223646-efffects-of-technology">Effects of technology in today&#8217;s business world</a></li>
+		<li><a href="/knowledge/66375-how-to-install-the-windows-vista-sidebar-and-gadgets-in-windows-xp">How to install the Windows Vista sidebar and gadgets in Windows XP</a></li>
+		<li><a href="/knowledge/34751-why-computer-games-are-not-a-waste-of-time">Why computer games are not a waste of time</a></li>
+		<li><a href="/knowledge/87429-the-meaning-of-domain-name-extensions">The meaning of domain name extensions</a></li>
+		<li><a href="/knowledge/88382-how-to-airbrush-a-photo-in-photoshop">How to airbrush a photo in Photoshop</a></li>
+		<li><a href="/debates/137027-best-computer-for-students-mac-or-pc">Best computer for students: Mac or PC?</a></li>
+		<li><a href="/knowledge/305973-the-top-10-apps-to-get-you-started-on-the-verizon-droid">The top 10 apps to get you started on the Verizon Droid</a></li>
+		<li><a href="/knowledge/250871-ways-to-get-creative-with-your-facebook-religious-views">Ways to get creative with your Facebook religious views</a></li>
+		<li><a href="/knowledge/301729-best-websites-for-free-easter-desktop-wallpaper">Best websites for free Easter desktop wallpaper</a></li>
+		<li><a href="/items/1158229-privacy-settings-in-facebook">Tips for using Facebook block or limited profile check</a></li>
+		<li><a href="/knowledge/4457-pros-and-cons-of-skype">Pros and cons of Skype</a></li>
+		<li><a href="/items/1693881-how-to-use-the-droid-multimedia-station-tips-on-using-the-droid-multimedia-station">Tips on using the Droid Multimedia Station</a></li>
+		<li><a href="/items/1990274-best-pen-pal-websites">The best pen pal sites</a></li>
+		<li><a href="/knowledge/45287-how-to-fix-a-cell-phone-after-it-gets-wet">How to fix a cell phone after it gets wet</a></li>
+		<li><a href="/knowledge/256116-the-positive-effects-of-technology-on-kids">The positive effects of technology on kids</a></li>
+		<li><a href="/knowledge/63347-how-to-connect-a-dvd-recorder-to-a-satellite-receiver">How to connect a <span class="caps">DVD</span> recorder to a satellite receiver</a></li>
+		<li><a href="/items/1515280-photoshop-silhouette">Photoshop <span class="caps">CS4</span> tutorial: How to create a silhouette</a></li>
+		<li><a href="/items/1779772-software-review-kindle-for-mac">Software reviews: Kindle for Mac</a></li>
+		<li><a href="/knowledge/98860-how-to-adjust-the-virtual-memory-paging-file-in-windows-xp">How to adjust the virtual memory paging file in Windows XP</a></li>
+		<li><a href="/knowledge/343196-the-differences-between-the-panasonic-and-samsung-3d-tvs">The differences between the Panasonic and Samsung 3D TVs</a></li>
+		<li><a href="/items/1209828-direct-tv-internet-service">Internet service reviews: Direct TV Internet</a></li>
+		<li><a href="/items/1694258-what-are-the-best-apps-to-customize-your-motorola-droid-phone">The best apps for customizing a Droid phone</a></li>
+		<li><a href="/knowledge/174322-time-management-with-technology">Does technology help us save time or waste time?</a></li>
+		<li><a href="/knowledge/123410-the-negative-side-of-the-internet">The negative side of the Internet</a></li>
+		<li><a href="/items/2176051-how-to-factory-reset-a-samsung-galaxy-s2">How to factory reset a Samsung Galaxy S2</a></li>
+		<li><a href="/knowledge/112934-names-you-cant-have-on-facebook">Names you can&#8217;t have on Facebook</a></li>
+		<li><a href="/knowledge/372113-best-websites-to-watch-free-streaming-tv-shows-online">Best websites to watch free streaming TV shows online</a></li>
+		<li><a href="/debates/102340-do-cell-phones-keep-us-more-connected-or-more-isolated">Do cell phones keep us more connected or more isolated?</a></li>
+		<li><a href="/debates/356953-should-social-networking-sites-be-regulated">Should social networking sites be regulated?</a></li>
+		<li><a href="/knowledge/378919-talking-tom-cat-iphone-app-review">iPhone app reviews: Talking Tom Cat</a></li>
+		<li><a href="/items/1159402-cell-phone-providers-in-alaska">Best cell phone providers in Alaska</a></li>
+		<li><a href="/knowledge/414706-iphone-app-reviews-me-want-bamboo">iPhone app reviews: Me Want Bamboo</a></li>
+		<li><a href="/knowledge/241815-will-computers-replace-books-in-the-future">Will computers replace books in the future?</a></li>
+		<li><a href="/knowledge/295813-what-is-google-wave">What is Google Wave?</a></li>
+		<li><a href="/knowledge/237724-printable-crossword-puzzles-jumble-word-puzzles">Best websites for printable crossword and jumble word puzzles</a></li>
+		<li><a href="/items/1363770-how-do-you-remove-a-jammed-ethernet-cable">How to remove a jammed Ethernet cable safely</a></li>
+		<li><a href="/knowledge/255126-advantages-of-facebook">Advantages of Facebook</a></li>
+		<li><a href="/knowledge/83565-are-computers-necessary-in-todays-society">Are computers necessary in today&#8217;s society?</a></li>
+		<li><a href="/items/1683337-make-how-to-triangle-gimp-tutorial">How to make triangle shapes using <span class="caps">GIMP</span> software</a></li>
+		<li><a href="/knowledge/92045-best-digital-cameras-for-teens">Best digital cameras for teens</a></li>
+		<li><a href="/knowledge/404721-how-to-use-cc-and-bcc">How to use cc and bcc effectively when sending emails</a></li>
+		<li><a href="/items/2065763-best-private-channels-roku-digital-video-player">Best private channels for the Roku Digital video player</a></li>
+		<li><a href="/items/1799916-how-to-find-ip-address-of-a-ricoh-copier">How to find the IP address of a Ricoh copier</a></li>
+		<li><a href="/knowledge/260673-best-crafts-to-sell-on-etsy">Best crafts to sell on Etsy</a></li>
+		<li><a href="/items/1185609-cell-phones-cell-phone-signal-boosters-signal-boosters-call-quality-signal-strength-cell-phone">Do cell phone signal boosters really work?</a></li>
+		<li><a href="/knowledge/5993-explaining-the-diameter-of-a-cd">Explaining the diameter of a CD</a></li>
+		<li><a href="/knowledge/69675-how-youtube-works-the-technical-aspects">How YouTube works: The technical aspects</a></li>
+		<li><a href="/knowledge/362855-how-hackers-can-steal-money-from-your-bank-account">How hackers can steal money from your bank account</a></li>
+		<li><a href="/knowledge/23560-how-to-hide-computer-files-that-you-dont-want-people-to-see">How to hide computer files that you don&#8217;t want people to see</a></li>
+		<li><a href="/items/794357-the-downside-of-card-holder-services">The downside of card-holder services</a></li>
+		<li><a href="/knowledge/269972-how-technology-has-affected-tourism">How technology has affected tourism</a></li>
+		<li><a href="/knowledge/107532-evaluating-the-environmental-impact-of-e-waste">Evaluating the environmental impact of e-waste</a></li>
+		<li><a href="/items/1739938-how-to-make-a-spinning-globe-using-gimp-software">How to make a spinning globe using <span class="caps">GIMP</span> software</a></li>
+		<li><a href="/items/2039477-MP3-Players-Radio-Audio-Devices">How to fix Zune error 5</a></li>
+		<li><a href="/knowledge/59688-how-to-install-a-gps-navigation-device-in-your-car">How to install a <span class="caps">GPS</span> navigation device in your car</a></li>
+		<li><a href="/items/2169205-cardholder-services-scam-what-consumers-need-to-know">Cardholder services scam: What consumers need to know</a></li>
+		<li><a href="/items/2097908-how-to-set-up-a-sapido-wireless-n-router-rb-1232">How to set up a Sapido wireless router</a></li>
+		<li><a href="/knowledge/128178-how-has-gps-changed-our-lives">How has <span class="caps">GPS</span> changed our lives?</a></li>
+		<li><a href="/knowledge/76223-japan-vs-us-who-is-better-in-the-field-of-technology">Japan vs. US: Who is better in the field of technology</a></li>
+		<li><a href="/items/1832214-how-to-use-blackberry-as-modem">How to use a BlackBerry Curve as a <span class="caps">USB</span> modem</a></li>
+		<li><a href="/items/1865692-create-dish-network-favorites-lists">How to create Dish Network favorites lists</a></li>
+		<li><a href="/knowledge/305977-how-to-sync-your-google-calendar-with-the-droid-phone">How to sync your Google Calendar with the Droid phone</a></li>
+		<li><a href="/items/1571015-how-technology-has-affected-the-food-industry">How technology has affected the food industry</a></li>
+		<li><a href="/items/1941173-virgin-mifi-offers-low-cost-unlimited-internet-3g-hot-spot">Virgin MiFi offers low cost, unlimited Internet, 3G hot spot</a></li>
+		<li><a href="/items/2181419-tips-on-prolonging-the-battery-life-of-a-samsung-galaxy-s2">Battery saving tips for the Samsung Galaxy S2</a></li>
+		<li><a href="/debates/137039-best-computer-for-writers-mac-or-pc">Best computer for writers: Mac or PC?</a></li>
+		<li><a href="/knowledge/386824-zombie-cookies-what-zombie-cookies-are-and-how-to-delete-them">Zombie cookies: What zombie cookies are and how to delete them</a></li>
+		<li><a href="/items/1903424-hard-reset-htc-evo">How to factory reset your <span class="caps">HTC EVO</span></a></li>
+		<li><a href="/items/1313116-ho-to-check-your-internet-signal-strength">How to check your Internet signal strength</a></li>
+		<li><a href="/items/2072690-haypi-kingdom-city-wall-strategies">Haypi Kingdom: City wall strategies</a></li>
+		<li><a href="/knowledge/107938-how-to-check-reliability-of-information-on-the-internet">How to check reliability of information on the Internet</a></li>
+		<li><a href="/knowledge/153874-why-are-cell-phones-so-popular">Why are cell phones so popular?</a></li>
+		<li><a href="/knowledge/340820-most-addicting-games-on-facebook">Most addicting games on Facebook</a></li>
+		<li><a href="/items/1975696-Tablets-Handheld-Devices">Best free apps for the Sony Dash</a></li>
+		<li><a href="/knowledge/112107-why-use-vbnet">Why use VB.Net?</a></li>
+		<li><a href="/knowledge/342094-iphone-app-review-stickwars-lite">iPhone app reviews: Stickwars Lite</a></li>
+		<li><a href="/items/761460-Internet-Software-Utils">How to import browser settings in Safari</a></li>
+		<li><a href="/items/590342-the-facts-about-cell-phone-addiction">The facts about cell phone addiction</a></li>
+		<li><a href="/items/1462099-pocket-camcorders-reviews">Product reviews: Jazz <span class="caps">DV151</span> pocket camcorder</a></li>
+		<li><a href="/knowledge/398862-best-websites-to-download-free-ebooks-online">Best websites to download free eBooks online</a></li>
+		<li><a href="/knowledge/187960-is-text-messaging-causing-the-destruction-of-the-modern-american-english-language">Is text messaging causing the destruction of the English language?</a></li>
+		<li><a href="/items/1951964-top-10-cloud-computing-service-providers">Top 10 cloud computing service providers</a></li>
+		<li><a href="/items/2145046-how-to-change-font-size-on-a-nook">Changing the font size on a Nook</a></li>
+		<li><a href="/knowledge/289108-negative-sides-of-social-networking">Negative sides of social networking</a></li>
+		<li><a href="/items/1487112-philips-shc2000-wireless-hedphones">Headphone reviews: Philips <span class="caps">SHC2000</span> wireless</a></li>
+		<li><a href="/items/2056492-c902-sony-phone-master-reset">How to factory reset a Sony Ericsson <span class="caps">C902</span></a></li>
+		<li><a href="/items/612704-comparing-link-state-algorithm-with-distance-vector-algorithm">Comparing link state algorithm with distance vector algorithm</a></li>
+		<li><a href="/knowledge/392507-how-social-networking-has-changed-the-nature-of-friends-and-friendships">How social networking has changed the nature of friends and friendships</a></li>
+		<li><a href="/items/1868439-nintendo-executive-says-nintendo-3ds-is-unfit-for-children">Nintendo executive says Nintendo 3DS is unfit for children</a></li>
+		<li><a href="/items/1812689-livedrive-vs-dropbox">Why Livedrive is better than DropBox</a></li>
+		<li><a href="/knowledge/86841-why-text-messaging-is-so-popular-even-though-its-impersonal">Why text messaging is so popular, even though it&#8217;s impersonal</a></li>
+		<li><a href="/items/1934969-how-to-find-mac-address-of-ricoh-mp-copier">How to find the <span class="caps">MAC</span> address of a Ricoh Aficio MP series copier</a></li>
+		<li><a href="/items/1872160-iphone-4-death-grip-how-to-get-better-iphone-4-reception">iPhone 4 death grip: How to get better iPhone 4 reception</a></li>
+		<li><a href="/knowledge/84414-the-role-of-information-technology-in-our-industries">The role of information technology in our industries</a></li>
+		<li><a href="/items/794649-how-to-normalize-your-database-tables">How to normalize your database tables</a></li>
+		<li><a href="/knowledge/149973-website-reviews-ikariamorg">Website reviews: Ikariam.org</a></li>
+		<li><a href="/items/2029699-mind-uploading-immortality">How to become immortal: Upload your mind</a></li>
+		<li><a href="/knowledge/408369-top-best-free-ebook-reader-apps-for-android-devices-smartphones-tablets">The best free eBook reader apps for Android</a></li>
+		<li><a href="/knowledge/12879-assessing-the-effect-of-new-technologies-on-our-lifestyle">Assessing the effect of new technologies on our lifestyle</a></li>
+		<li><a href="/knowledge/214738-understanding-how-xhtml-and-html-are-similar-yet-different">The key differences between <span class="caps">HTML</span> and <span class="caps">XHTML</span></a></li>
+		<li><a href="/knowledge/101424-why-ip-addresses-are-important-for-computer-networking">Why IP addresses are important for computer networking</a></li>
+		<li><a href="/items/1731351-how-to-make-sphere">How to make ornament ball images using <span class="caps">GIMP</span> software</a></li>
+		<li><a href="/items/950575-how-to-ink-in-gimp-without-a-tablet">How to ink in <span class="caps">GIMP</span> without a tablet</a></li>
+		<li><a href="/items/2181826-samsung-galaxy-s2-secret-tricks">Tips and tricks for using the Samsung Galaxy S2</a></li>
+		<li><a href="/knowledge/393079-factors-that-influence-website-performance">Factors that influence website performance</a></li>
+		<li><a href="/knowledge/4933-how-to-convert-a-word-document-into-pdf">How to convert a word document into <span class="caps">PDF</span></a></li>
+		<li><a href="/items/1831361-the-levels-of-doodle-jump">The different modes of Doodle Jump for the iPhone</a></li>
+		<li><a href="/knowledge/319856-have-apple-and-the-ipod-changed-the-music-industry-for-better-or-for-worse">How Apple and the iPod have changed the music industry</a></li>
+		<li><a href="/items/577467-how-to-create-a-lan-network-in-a-cyber-cafe">How to create a <span class="caps">LAN</span> network in a cyber cafe</a></li>
+		<li><a href="/items/348474-how-to-connect-speakers-to-both-a-dvd-player-and-a-tv">How to connect speakers to both a <span class="caps">DVD</span> player and a TV</a></li>
+		<li><a href="/knowledge/536926-how-to-use-your-iphone-abroad-and-avoid-unwanted-roaming-charges">How to use your iPhone abroad and avoid unwanted roaming charges</a></li>
+		<li><a href="/knowledge/45058-why-html-is-important">Why <span class="caps">HTML</span> is important</a></li>
+		<li><a href="/debates/137097-usb-vs-serial-keyboards-which-is-better"><span class="caps">USB</span> vs. serial keyboards: Which is better?</a></li>
+		<li><a href="/items/1692158-make-how-to-cube-gimp-tutorial">How to make a cube shape using <span class="caps">GIMP</span> software</a></li>
+		<li><a href="/items/1680729-how-to-delete-an-album-in-iphoto-but-not-in-facebook">How to delete an album in IPhoto but not in Facebook</a></li>
+		<li><a href="/items/2184587-the-best-astrology-apps-for-ipad">The best astrology apps for iPad</a></li>
+		<li><a href="/items/2175983-the-secret-screen-capture-function-of-a-samsung-galaxy-s2">How to do a screen capture with a Samsung Galaxy S2</a></li>
+		<li><a href="/knowledge/130309-how-to-find-out-what-is-running-during-computer-startup">How to find out what is running during computer startup</a></li>
+		<li><a href="/knowledge/134492-the-profile-of-a-typical-hacker">The profile of a typical hacker</a></li>
+		<li><a href="/knowledge/43996-why-hackers-hack">Why hackers hack</a></li>
+		<li><a href="/items/1739175-how-do-i-add-new-songs-to-my-ipod-without-deleting-old-ones">How to add songs to iPod without deleting old ones</a></li>
+		<li><a href="/items/1656987-create-how-to-trace-image-tutorial">How to create an image by tracing with <span class="caps">GIMP</span></a></li>
+		<li><a href="/items/393427-how-to-create-a-switchboard-in-microsoft-access">How to create a switchboard in Microsoft Access</a></li>
+		<li><a href="/items/1436588-how-to-block-keyword-ads">Internet browsers: How to block keyword pop-up ads</a></li>
+		<li><a href="/items/919806-the-difference-between-tcp-and-udp-in-trasferring-data">The difference between <span class="caps">TCP</span> and <span class="caps">UDP</span> in trasferring data</a></li>
+		<li><a href="/knowledge/354084-iphone-app-review-angry-birds">iPhone app reviews: Angry Birds</a></li>
+		<li><a href="/debates/280510-is-technology-making-us-lazy">Is technology making us lazy?</a></li>
+		<li><a href="/knowledge/8813-advantages-of-the-internet">Advantages of the Internet</a></li>
+		<li><a href="/debates/72916-which-computer-is-best-for-the-music-minded-mac-or-pc">Which computer is best for the music-minded: Mac or PC?</a></li>
+		<li><a href="/items/1580763-how-to-use-an-sd-card-with-macbook">How to use SD card with Macbook Pro</a></li>
+		<li><a href="/knowledge/236976-do-lithium-batteries-really-last-that-much-longer-than-alkaline">Do lithium batteries really last that much longer than alkaline?</a></li>
+		<li><a href="/knowledge/112095-the-basic-concepts-of-vbnet">The basic concepts of VB.Net</a></li>
+		<li><a href="/knowledge/225538-potential-problems-with-robots">Potential problems with robots</a></li>
+		<li><a href="/knowledge/140902-how-to-set-up-a-live-webcam">How to set up a live webcam</a></li>
+		<li><a href="/knowledge/69677-the-birth-of-youtube-how-it-started-out">The birth of YouTube: How it started out</a></li>
+		<li><a href="/items/2215211-crime-city-iphone-app-review-mafia-wars-style-game-ipad-ipod-touch-free-game-itunes-store-best-games">iPhone app reviews: Crime City</a></li>
+		<li><a href="/items/2044539-how-to-set-reminders-on-an-iphone-4">How to set reminders on an iPhone 4</a></li>
+		<li><a href="/items/1979726-best-ipad-apps-for-teachers">Best iPad apps for teachers</a></li>
+		<li><a href="/knowledge/11439-appropriate-vs-inappropriate-uses-for-text-messaging">Appropriate vs. inappropriate uses for text messaging</a></li>
+		<li><a href="/items/1283447-the-differences-between-towers-mini-towers-and-desktop-computers">The differences between towers, mini-towers and desktop computers</a></li>
+		<li><a href="/items/408716-the-history-of-the-internet-in-the-philippines">The history of the Internet in the Philippines</a></li>
+		<li><a href="/items/1983172-plantronics-explorer-bluetooth-headset">Cell phone accessory reviews: Plantronics Explorer 245 Bluetooth Headset</a></li>
+		<li><a href="/items/1749865-pros-and-cons-of-technology-for-children">Pros and cons of technology for children</a></li>
+		<li><a href="/knowledge/390294-android-app-reviews-teeter">Android app reviews: Teeter</a></li>
+		<li><a href="/items/1896009-spotify-playlist">How to use Spotify.com to organise a music playlist</a></li>
+		<li><a href="/knowledge/121897-geeky-tech-gadgets-that-make-great-stocking-stuffers">Geeky tech gadgets that make great stocking stuffers</a></li>
+		<li><a href="/items/111591-how-safe-are-webcam-sites">How safe are webcam sites?</a></li>
+		<li><a href="/knowledge/511230-how-to-turn-chat-off-on-facebook">How to turn chat off on Facebook</a></li>
+		<li><a href="/knowledge/352411-how-has-social-networking-improved-peoples-relationships-with-family-and-friends">How has social networking improved people&#8217;s relationships with family and friends?</a></li>
+		<li><a href="/knowledge/269968-how-technology-has-affected-education">How technology has affected education</a></li>
+		<li><a href="/items/1830050-what-is-near-field-communication-nfc-technology">What is near field communication (NFC) technology?</a></li>
+		<li><a href="/knowledge/82109-tips-for-buying-a-webcam">Tips for buying a webcam</a></li>
+		<li><a href="/items/1946214-how-to-use-the-android-froyo-light-sensor">How to use the Android Froyo light sensor</a></li>
+		<li><a href="/items/1943673-emachine-replacement-parts">Where to find eMachine replacement parts online</a></li>
+		<li><a href="/items/1901425-pdf-books-free-pdf-books-adobe-reader-printable-document-format-free-ebooks">Where to get free <span class="caps">PDF</span> books</a></li>
+		<li><a href="/knowledge/364403-google-android-22-release-date-and-specs">Google Android 2.2 release date and specs</a></li>
+	</ul>
+<!-- Loaded cms slug: '/app-partials/channel-promo/11/' -->
+  </div>
+    
+</div>
+
+<script>
+  $('promo2').hide();
+</script>
+
+
+ 
+  <div class="featuredBox">
+      <a href="http://www.helium.com/partners/opensecrets"><img alt="162719" src="http://www.helium.com/uploaded_images/3/3/3/2/6/0/162719.jpeg" /></a>
+    <p><strong>Featured Partner</strong></p>
+  <p class="penName"><a href="http://www.helium.com/partners/opensecrets">The Center for Responsive Politics (Open Secrets)</a></p>
+    <p>The Center for Responsive Politics (CRP) is the nation's premier research group tracking money in US politics and its effect on elections and public policy. 
+
+Founded in 1983, the nonpartisan, nonprofit Center aims to create a more edu...<a href="http://www.helium.com/partners/opensecrets">more</a></p>
+  </div>
+
+
+ 
+</div>
+    
+      
+
+  
+    
+  <div style="display:none">
+<IFRAME WIDTH="1" HEIGHT="1" MARGINWIDTH="0" MARGINHEIGHT="0" HSPACE="0" VSPACE="0" FRAMEBORDER="0" SCROLLING="no" SRC="http://pbid.pro-market.net/engine?site=118860;size=1x1;category=Hardware%20(Other);kw=what%20is%20a%20serial%20port%20serial%20cable%20pinouts%20by%20Eileen%20Eva"></IFRAME>
+  </div>
+    
+  
+
+
+
+    
+  </div>
+<div id="msgcontainer" style="display:none;" ></div>
+
+                
+                   
+          <script language='javascript' type='text/javascript'>new Ajax.Request('http://www.helium.com/page_updates_fast?original_referer=%2Fitems%2F2055233-what-is-a-serial-port-serial-cable-pinouts&toolbar=true&log_item_view_id=2055233&write_now=true&int_referer=%2Fitems%2F2055233-what-is-a-serial-port-serial-cable-pinouts','{asynchronous:true, evalScripts:true}');</script><script language='javascript' type='text/javascript'>new Ajax.Request('http://www.helium.com/page_updates_slow?original_referer=%2Fitems%2F2055233-what-is-a-serial-port-serial-cable-pinouts&toolbar=true&log_item_view_id=2055233&write_now=true&int_referer=%2Fitems%2F2055233-what-is-a-serial-port-serial-cable-pinouts','{asynchronous:true, evalScripts:true}');</script>
+              </div>
+      <!-- end layout-specific content -->
+      
+<div id="footerNav">
+	<p><!-- Loading cms slug: '/app-partials/shared/footer-links' -->
+<hr class="clear" />
+
+<div class="fatFooter clear">
+  <div>
+    <p>CONNECT WITH US</p>
+    
+    <a class="twitter" href="http://twitter.com/#!/HeliumWriter">Follow us<br /> on Twitter</a>
+    <a class="facebook" href="http://www.facebook.com/HeliumWriters">Like us on<br /> Facebook</a>
+    <a class="wordpress" href="http://heliumblog.wordpress.com">Read<br /> our blog</a>
+  </div>
+  
+  <div>
+    <a href="http://www.helium.com/registration/signup"><img src="http://assets0.helium.com/images/layout/writerLogo.gif" alt="Helum for writers" /></a>
+    
+    <p>Write and get published<br />
+    Share with other writers<br />
+    Polish your freelancing skills</p>
+       
+    <a href="http://www.helium.com/registration/signup">Join our active writing community</a>
+  </div>
+  
+  <div>
+    <a href="http://www.heliumcontentsource.com/"><img src="http://assets0.helium.com/images/layout/HCSlogo.gif" alt="Helium Content Source for Publishers" /></a>
+    
+    <p>Quality articles from proven freelancers<br />
+    Exclusive rights, fast turnaround<br />
+    Brand engagement, business blogging -- our writers do it all</p>
+   
+    <a href="http://www.heliumcontentsource.com/">Get custom content today!</a>
+  </div>
+  
+  <div>
+    <p>INFORMATION</p>
+    
+    <ul class="none">
+      <li><a href="http://www.helium.com/content/about-us">About Us</a></li>
+      <li><a href="http://www.helium.com//management">Team Helium</a></li>
+      <li><a onclick="window.open(this.href,'flagging','height=650,width=600,menubar=no,toolbar=no,location=no,status=no,scrollbars=yes,resizable=no,directories=no');return false;" href="http://www.helium.com/flagging">User Tools</a></li>
+      <li><a href="http://www.helium.com/content/tos">User Agreement</a></li>
+      <li><a href="http://www.helium.com/content/privacy">Privacy Policy</a></li>
+      <li><a href="http://www.helium.com/proprietary-rights-complaint-process-and-notification-form">DMCA</a></li>
+    </ul>
+  </div>
+</div>
+
+<hr class="clear" />
+<!-- Loaded cms slug: '/app-partials/shared/footer-links' --></p>
+<p class="copyright">
+	Copyright &copy; 2002-2013 Helium, Inc. All rights reserved.<br>Helium.com: A Service of RR Donnelley 
+</p>
+
+</div>
+
+  <!-- New Google Analytics tracking-->
+  <script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  var pageTracker = _gat._getTracker("UA-368512-1");
+  pageTracker._setDomainName(".helium.com");
+  pageTracker._trackPageview();
+  </script>
+  
+
+
+<div id="loadAnimation" style="visibility: hidden;">
+	<div class="loadAnimationContent">
+		<script>var tagOptions424 = new Object(); 
+tagOptions424.alt = 'loading'; 
+heWriteAbsoluteImageTag('loading_animation.gif','http://assets%d.helium.com',tagOptions424) </script>
+	</div>
+</div>
+
+<!-- begin hCard microformat: http://microformats.org/wiki/hCard -->
+<div id="Helium_hCard" class="vcard">
+ <span class="fn org">Helium, Inc.</span>
+ 
+ <div class="adr">
+  <span class="street-address">200 Brickstone Square</span>
+  <span class="locality">Andover</span>, 
+  <abbr class="region" title="Massachusetts">MA</abbr>
+  <span class="postal-code">01810</span>
+  <span class="country-name">USA</span>
+ </div>
+</div>
+<!-- end hCard microformat -->
+
+    </div>
+
+    
+          #<DisplayAd:0x2aefb07d3c30>
+          <!-- Loading cms slug: '/ad-network/vibrant/18859' -->
+<script type="text/javascript" src="http://helium.us.intellitxt.com/intellitxt/front.asp?ipid=18859"></script>
+<!-- Loaded cms slug: '/ad-network/vibrant/18859' -->
+      <!-- <script type="text/javascript" src="http://helium.us.intellitxt.com/intellitxt/front.asp?ipid=18874"></script> that script tag is an example of whats in the cms --> 
+      
+  </body>
+</html>

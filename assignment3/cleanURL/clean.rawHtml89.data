@@ -1,0 +1,435 @@
+   #[1]From the Frog's Mouth - Atom [2]From the Frog's Mouth - RSS [3]From
+   the Frog's Mouth - Atom
+
+     * [4]Blog
+     * [5]Open Source
+     * [6]About JFrog
+     * [7]Contact
+
+     * [8]Artifactory Pro
+          + [9]Overview
+          + [10]Pro Features
+          + [11]Evaluate
+          + [12]Buy Now
+          + [13]Renew License
+     * [14]Artifactory Cloud
+          + [15]Overview
+          + [16]Features
+          + [17]Dedicated Server
+          + [18]Free Trial
+     * [19]Bintray
+     * [20]Support & Service
+          + [21]Support
+          + [22]Training
+          + [23]Consultancy
+
+August 13, 2013
+
+Does Ruby Need a Mature Binary Repository?
+
+   At some point in time, a Ruby developer realized the need to serve gems
+   within a private network. The main reasons why:
+   [24][2013-08-01_110358.png]
+     * [25]You [26]can't [27]rely [28]on [29]RubyGems.org
+     * You need a place to host the gems is not available in RubyGems.
+       Those can be of two flavors:
+
+     * Something not hosted at RubyGems. For example, [30]Vagrant.
+     * Something internal (neither open source nor public); something you
+       want to share with your colleagues, but as a gem rather than
+       source.
+
+   Then the question arises - where can those gems be stored? Natural
+   answer: Git(Hub) or any other source control. So...
+
+Source control is the way to share files, right? No, it isn't.
+
+   [31][3sctdw.jpg] Of course, source control works just fine for sources
+   - we’ve used it for ages. But gems aren't source, they are binaries.
+   And source control is, well, for sources. So what? Why won't it fit?
+   Some reasons include:
+     * First and foremost - a version control system (VCS) is not a gem
+       repository! It can't calculate indexes on the server and it doesn't
+       support any dynamic REST API, such as the dependency resolution API
+       used by Bundler (which makes resolution much faster).
+     * Versioning mismatch. Source files are versioned by their content.
+       VCSs know how to differentiate them and understand what changed.
+       Binaries, on the other side, are usually versioned by their name.
+       From the VCS point of view, they are different entries, each one
+       without any version history.
+     * Some very popular VCSs (like Subversion) can’t obliterate files.
+       That means - once a file is added, it stays in the repository
+       forever. That’s not a big issue for small source files, but can
+       become quite a pain when it comes to obsolete, large binaries.
+     * Source control knows how to search sources. And, of course, the
+       most important type of search is by content. However, searching for
+       binaries is different: what matters most is the file metadata, the
+       location, structure of the file name and, in case of archived
+       artifact, the contents of the archive.
+     * The permissions scheme of VCSs is tailored for versioning sources
+       (again!). For example, there is no override permission. That’s
+       because overriding sources is something we do all the time in VCS -
+       it’s the same security level as, let's say, adding a new source
+       file. However, the situation is very different with binaries. While
+       adding new binaries is fine, overriding released binary is
+       something that shouldn’t be done (one should have a special
+       permission for it).
+     * Distributed VCSs (yes, Git, I am looking at you!) are awesome by
+       themselves, but particularly unsuited for handling big binary
+       files. When cloning a remote repository to your machine, [32]you
+       are bringing all the history of its files. Now just think about all
+       the huge binaries sitting there...
+
+   By now, you should be convinced that source control isn’t a good place
+   for binaries. What we actually need is an installable RubyGems server!
+   And guess what? There are a couple of options:
+
+Go get yourself a RubyGems server
+
+     * [33]Gem in a box is a Sinatra application that provides, well, a
+       gems server. It's nice, but a bit naive: no built-in
+       authentication, no authorization, no repositories separation, and
+       no other servers (i.e. RubyGems.org) proxy.
+     * [34]GemFury is a very basic, subscription-based cloud-hosted gems
+       server. You get a private repository, protected with an obscure
+       URL. Again, pretty basic stuff here - no proxy for RubyGems.org (or
+       any other repo), no authentication model for collaborators, and no
+       virtual aggregation of repositories in case you have more than one.
+
+   What can I say? The Ruby universe is not very sophisticated when it
+   comes to managing binaries - and that's OK (after all, Ruby is about
+   source, usually open source). But there’s something the Ruby community
+   can borrow from the “dark Java Enterprise” side - the proper binary
+   repository. And we have one to offer...
+
+Welcome to the dark side and see the light. Meet Artifactory, with RubyGems
+support:
+
+   [35][2013-08-01_111605.png] Let's start with the basics. The binary
+   repository serves two main goals:
+    1. Proxy of remote RubyGems repositories. First and foremost,
+       RubyGems.org; but also any instance of GemFury, Gem in a Box, etc.
+       out there. These are called “remote repositories.”
+    2. Deployment target for your gems. Everything you don't want to put
+       on RubyGems.org for any reason, and everything you need but other
+       repositories don't have. These are called “local repositories.”
+
+   On top of that we add:
+     * Virtual repositories to aggregate any number of remote, local and
+       virtual repositories under a single URL.
+     * Authentication and authorization schemes which allow controlling
+       permissions on repositories per user and/or group, including
+       integration with external authorization services.
+     * Searching and browsing hosted and remote gems.
+     * REST API with Info, Search, Dependencies list and Yank commands.
+     * Powerful user plugin framework.
+
+   You can get all of this goodness installed on [36]your servers or in
+   the cloud with [37]Artifactory Online, where JFrog will babysit it,
+   upgrade it, and keep it running.
+   How can you begin using Artifactory with RubyGems support? Simple! The
+   full documentation is available in our user guide:
+    1. Install Artifactory on your server (RPM or just an unzipped folder)
+       or get your own instance in a cloud.
+    2. Set up some repositories:
+
+    1. Set up a RubyGems.org proxy.
+    2. Create some local repositories for your gems.
+    3. Aggregate them under virtual repositories.
+
+     Set up your client to work with the virtual repository you created by
+   running the “gem source” command.
+
+     Enjoy your build using the tools you are used to, e.g. Bundler.
+   You are more than welcome to give Artifactory with RubyGems support a
+   try today -[38] download it or [39]create a cloud instance. We will
+   appreciate your feedback.
+   Welcome aboard!
+   Posted by [40]Baruch Sadogursky at [41]14:22
+   Labels: [42]artifactory, [43]gem in a box, [44]gemFury, [45]JBaruch,
+   [46]org, [47]ruby, [48]ruby gems, [49]rubygems
+
+No comments:
+
+Post a Comment
+
+   [50]Newer Post [51]Older Post [52]Home
+   Subscribe to: [53]Post Comments (Atom)
+
+Labels
+
+     * [54].net (3)
+     * [55]arquillian (1)
+     * [56]artifactory (22)
+     * [57]bamboo (1)
+     * [58]best practices (8)
+     * [59]build (5)
+     * [60]c (1)
+     * [61]c# (1)
+     * [62]c++ (1)
+     * [63]conferences (1)
+     * [64]continuous delivery (1)
+     * [65]continuous integration (5)
+     * [66]Diego Pacheco (1)
+     * [67]Fred Simon (6)
+     * [68]gem in a box (1)
+     * [69]gemFury (1)
+     * [70]github (1)
+     * [71]gradle (4)
+     * [72]guest post (1)
+     * [73]hudson (4)
+     * [74]iOS (1)
+     * [75]ivy (2)
+     * [76]javaone (1)
+     * [77]JBaruch (7)
+     * [78]jenkins (4)
+     * [79]JFrog (6)
+     * [80]liverebel (1)
+     * [81]maven (5)
+     * [82]native (1)
+     * [83]Noam Tenne (2)
+     * [84]nuget (2)
+     * [85]objective C (1)
+     * [86]org (1)
+     * [87]OSCON (1)
+     * [88]promotion (2)
+     * [89]Pyhton (1)
+     * [90]QCon (1)
+     * [91]release management (3)
+     * [92]replication (1)
+     * [93]ruby (1)
+     * [94]ruby gems (1)
+     * [95]rubygems (1)
+     * [96]selenium (1)
+     * [97]seminars (1)
+     * [98]Shiran Rubin (1)
+     * [99]sonatype nexus (1)
+     * [100]staging (2)
+     * [101]UI (1)
+     * [102]user plugins (1)
+     * [103]Yoav Landman (5)
+
+Follow by Email
+
+   ____________________ Submit
+
+Blog Archive
+
+     * [104]▼  [105]2013 (5)
+          + [106]▼  [107]August (3)
+               o [108]Taking Control of App Releases
+               o [109]Does Ruby Need a Mature Binary Repository?
+               o [110]wOwSCON 2013
+          + [111]►  [112]July (2)
+
+     * [113]►  [114]2012 (8)
+          + [115]►  [116]December (1)
+          + [117]►  [118]November (1)
+          + [119]►  [120]October (1)
+          + [121]►  [122]June (1)
+          + [123]►  [124]May (1)
+          + [125]►  [126]April (1)
+          + [127]►  [128]March (1)
+          + [129]►  [130]February (1)
+
+     * [131]►  [132]2011 (7)
+          + [133]►  [134]November (1)
+          + [135]►  [136]October (1)
+          + [137]►  [138]June (1)
+          + [139]►  [140]May (2)
+          + [141]►  [142]April (1)
+          + [143]►  [144]February (1)
+
+     * [145]►  [146]2010 (4)
+          + [147]►  [148]July (1)
+          + [149]►  [150]May (1)
+          + [151]►  [152]March (1)
+          + [153]►  [154]January (1)
+
+     * [155]►  [156]2009 (7)
+          + [157]►  [158]December (2)
+          + [159]►  [160]November (1)
+          + [161]►  [162]May (1)
+          + [163]►  [164]January (3)
+
+     * [165]►  [166]2008 (1)
+          + [167]►  [168]November (1)
+
+References
+
+   Visible links
+   1. http://blogs.jfrog.org/feeds/posts/default
+   2. http://blogs.jfrog.org/feeds/posts/default?alt=rss
+   3. http://blogs.jfrog.org/feeds/5193300943079260730/comments/default
+   4. http://blogs.jfrog.org/
+   5. http://www.jfrog.com/home/v_artifactory_opensource_overview
+   6. http://www.jfrog.com/home/v_about
+   7. http://www.jfrog.com/home/v_contact
+   8. http://www.jfrog.com/home/v_artifactorypro_overview
+   9. http://www.jfrog.com/home/v_artifactorypro_overview
+  10. http://www.jfrog.com/home/v_artifactorypro_features
+  11. https://secure.artifactoryonline.com/registration/evaluateaddons.html
+  12. https://secure.artifactoryonline.com/registration/purchaseaddons.html
+  13. https://secure.artifactoryonline.com/registration/renewaddons.html
+  14. http://www.jfrog.com/home/v_artifactorycloud_overview
+  15. http://www.jfrog.com/home/v_artifactorycloud_overview
+  16. http://www.jfrog.com/home/v_artifactorycloud_features
+  17. http://www.jfrog.com/home/v_artifactorycloud_dedicatedserver
+  18. https://secure.artifactoryonline.com/registration/registration.html
+  19. http://www.jfrog.com/home/v_bintray
+  20. http://www.jfrog.com/home/v_support
+  21. http://www.jfrog.com/home/v_support
+  22. http://www.jfrog.com/home/v_training
+  23. http://www.jfrog.com/home/v_consultancy
+  24. http://1.bp.blogspot.com/-0Ja71aWC6lQ/UfoWkGy43xI/AAAAAAAABrw/0aXc_O8Gfhc/s1600/2013-08-01_110358.png
+  25. https://status.heroku.com/incidents/489
+  26. http://venturebeat.com/2013/01/30/rubygems-org-hacked-interrupting-heroku-services-and-putting-millions-of-sites-using-rails-at-risk/
+  27. http://mitchellh.com/abandoning-rubygems
+  28. http://cristianobetta.com/blog/2013/02/02/ruby-gems-are-not-safe-to-use/
+  29. http://rubygems.org/
+  30. http://mitchellh.com/abandoning-rubygems
+  31. http://i.qkme.me/3sctdw.jpg
+  32. https://twitter.com/hlship/status/111143638163132417
+  33. https://github.com/geminabox/geminabox
+  34. http://www.gemfury.com/l/gem-server
+  35. http://3.bp.blogspot.com/-sNEpVOviRkA/UfoZVVfBv1I/AAAAAAAABsY/2tvGpkF9Xnc/s1600/2013-08-01_111605.png
+  36. https://www.jfrog.com/registration/evaluateaddons.html
+  37. https://www.jfrog.com/registration/registration.html
+  38. https://www.jfrog.com/registration/evaluateaddons.html
+  39. https://www.jfrog.com/registration/registration.html
+  40. https://plus.google.com/112280655076209917443
+  41. http://blogs.jfrog.org/2013/08/does-ruby-need-mature-binary-repository.html
+  42. http://blogs.jfrog.org/search/label/artifactory
+  43. http://blogs.jfrog.org/search/label/gem%20in%20a%20box
+  44. http://blogs.jfrog.org/search/label/gemFury
+  45. http://blogs.jfrog.org/search/label/JBaruch
+  46. http://blogs.jfrog.org/search/label/org
+  47. http://blogs.jfrog.org/search/label/ruby
+  48. http://blogs.jfrog.org/search/label/ruby%20gems
+  49. http://blogs.jfrog.org/search/label/rubygems
+  50. http://blogs.jfrog.org/2013/08/taking-control-of-app-releases.html
+  51. http://blogs.jfrog.org/2013/08/wowscon-2013.html
+  52. http://blogs.jfrog.org/
+  53. http://blogs.jfrog.org/feeds/5193300943079260730/comments/default
+  54. http://blogs.jfrog.org/search/label/.net
+  55. http://blogs.jfrog.org/search/label/arquillian
+  56. http://blogs.jfrog.org/search/label/artifactory
+  57. http://blogs.jfrog.org/search/label/bamboo
+  58. http://blogs.jfrog.org/search/label/best%20practices
+  59. http://blogs.jfrog.org/search/label/build
+  60. http://blogs.jfrog.org/search/label/c
+  61. http://blogs.jfrog.org/search/label/c%23
+  62. http://blogs.jfrog.org/search/label/c%2B%2B
+  63. http://blogs.jfrog.org/search/label/conferences
+  64. http://blogs.jfrog.org/search/label/continuous%20delivery
+  65. http://blogs.jfrog.org/search/label/continuous%20integration
+  66. http://blogs.jfrog.org/search/label/Diego%20Pacheco
+  67. http://blogs.jfrog.org/search/label/Fred%20Simon
+  68. http://blogs.jfrog.org/search/label/gem%20in%20a%20box
+  69. http://blogs.jfrog.org/search/label/gemFury
+  70. http://blogs.jfrog.org/search/label/github
+  71. http://blogs.jfrog.org/search/label/gradle
+  72. http://blogs.jfrog.org/search/label/guest%20post
+  73. http://blogs.jfrog.org/search/label/hudson
+  74. http://blogs.jfrog.org/search/label/iOS
+  75. http://blogs.jfrog.org/search/label/ivy
+  76. http://blogs.jfrog.org/search/label/javaone
+  77. http://blogs.jfrog.org/search/label/JBaruch
+  78. http://blogs.jfrog.org/search/label/jenkins
+  79. http://blogs.jfrog.org/search/label/JFrog
+  80. http://blogs.jfrog.org/search/label/liverebel
+  81. http://blogs.jfrog.org/search/label/maven
+  82. http://blogs.jfrog.org/search/label/native
+  83. http://blogs.jfrog.org/search/label/Noam%20Tenne
+  84. http://blogs.jfrog.org/search/label/nuget
+  85. http://blogs.jfrog.org/search/label/objective%20C
+  86. http://blogs.jfrog.org/search/label/org
+  87. http://blogs.jfrog.org/search/label/OSCON
+  88. http://blogs.jfrog.org/search/label/promotion
+  89. http://blogs.jfrog.org/search/label/Pyhton
+  90. http://blogs.jfrog.org/search/label/QCon
+  91. http://blogs.jfrog.org/search/label/release%20management
+  92. http://blogs.jfrog.org/search/label/replication
+  93. http://blogs.jfrog.org/search/label/ruby
+  94. http://blogs.jfrog.org/search/label/ruby%20gems
+  95. http://blogs.jfrog.org/search/label/rubygems
+  96. http://blogs.jfrog.org/search/label/selenium
+  97. http://blogs.jfrog.org/search/label/seminars
+  98. http://blogs.jfrog.org/search/label/Shiran%20Rubin
+  99. http://blogs.jfrog.org/search/label/sonatype%20nexus
+ 100. http://blogs.jfrog.org/search/label/staging
+ 101. http://blogs.jfrog.org/search/label/UI
+ 102. http://blogs.jfrog.org/search/label/user%20plugins
+ 103. http://blogs.jfrog.org/search/label/Yoav%20Landman
+ 104. javascript:void(0)
+ 105. http://blogs.jfrog.org/search?updated-min=2013-01-01T00:00:00%2B02:00&updated-max=2014-01-01T00:00:00%2B02:00&max-results=5
+ 106. javascript:void(0)
+ 107. http://blogs.jfrog.org/2013_08_01_archive.html
+ 108. http://blogs.jfrog.org/2013/08/taking-control-of-app-releases.html
+ 109. http://blogs.jfrog.org/2013/08/does-ruby-need-mature-binary-repository.html
+ 110. http://blogs.jfrog.org/2013/08/wowscon-2013.html
+ 111. javascript:void(0)
+ 112. http://blogs.jfrog.org/2013_07_01_archive.html
+ 113. javascript:void(0)
+ 114. http://blogs.jfrog.org/search?updated-min=2012-01-01T00:00:00%2B02:00&updated-max=2013-01-01T00:00:00%2B02:00&max-results=8
+ 115. javascript:void(0)
+ 116. http://blogs.jfrog.org/2012_12_01_archive.html
+ 117. javascript:void(0)
+ 118. http://blogs.jfrog.org/2012_11_01_archive.html
+ 119. javascript:void(0)
+ 120. http://blogs.jfrog.org/2012_10_01_archive.html
+ 121. javascript:void(0)
+ 122. http://blogs.jfrog.org/2012_06_01_archive.html
+ 123. javascript:void(0)
+ 124. http://blogs.jfrog.org/2012_05_01_archive.html
+ 125. javascript:void(0)
+ 126. http://blogs.jfrog.org/2012_04_01_archive.html
+ 127. javascript:void(0)
+ 128. http://blogs.jfrog.org/2012_03_01_archive.html
+ 129. javascript:void(0)
+ 130. http://blogs.jfrog.org/2012_02_01_archive.html
+ 131. javascript:void(0)
+ 132. http://blogs.jfrog.org/search?updated-min=2011-01-01T00:00:00%2B02:00&updated-max=2012-01-01T00:00:00%2B02:00&max-results=7
+ 133. javascript:void(0)
+ 134. http://blogs.jfrog.org/2011_11_01_archive.html
+ 135. javascript:void(0)
+ 136. http://blogs.jfrog.org/2011_10_01_archive.html
+ 137. javascript:void(0)
+ 138. http://blogs.jfrog.org/2011_06_01_archive.html
+ 139. javascript:void(0)
+ 140. http://blogs.jfrog.org/2011_05_01_archive.html
+ 141. javascript:void(0)
+ 142. http://blogs.jfrog.org/2011_04_01_archive.html
+ 143. javascript:void(0)
+ 144. http://blogs.jfrog.org/2011_02_01_archive.html
+ 145. javascript:void(0)
+ 146. http://blogs.jfrog.org/search?updated-min=2010-01-01T00:00:00%2B02:00&updated-max=2011-01-01T00:00:00%2B02:00&max-results=4
+ 147. javascript:void(0)
+ 148. http://blogs.jfrog.org/2010_07_01_archive.html
+ 149. javascript:void(0)
+ 150. http://blogs.jfrog.org/2010_05_01_archive.html
+ 151. javascript:void(0)
+ 152. http://blogs.jfrog.org/2010_03_01_archive.html
+ 153. javascript:void(0)
+ 154. http://blogs.jfrog.org/2010_01_01_archive.html
+ 155. javascript:void(0)
+ 156. http://blogs.jfrog.org/search?updated-min=2009-01-01T00:00:00%2B02:00&updated-max=2010-01-01T00:00:00%2B02:00&max-results=7
+ 157. javascript:void(0)
+ 158. http://blogs.jfrog.org/2009_12_01_archive.html
+ 159. javascript:void(0)
+ 160. http://blogs.jfrog.org/2009_11_01_archive.html
+ 161. javascript:void(0)
+ 162. http://blogs.jfrog.org/2009_05_01_archive.html
+ 163. javascript:void(0)
+ 164. http://blogs.jfrog.org/2009_01_01_archive.html
+ 165. javascript:void(0)
+ 166. http://blogs.jfrog.org/search?updated-min=2008-01-01T00:00:00%2B02:00&updated-max=2009-01-01T00:00:00%2B02:00&max-results=1
+ 167. javascript:void(0)
+ 168. http://blogs.jfrog.org/2008_11_01_archive.html
+
+   Hidden links:
+ 170. http://www.blogger.com/post-edit.g?blogID=1990156302547833748&postID=5193300943079260730&from=pencil
+ 171. http://www.blogger.com/comment-iframe.g?blogID=1990156302547833748&postID=5193300943079260730
+ 172. file://www.blogger.com/rearrange?blogID=1990156302547833748&widgetType=Label&widgetId=Label1&action=editWidget&sectionId=sidebar-right-1
+ 173. file://www.blogger.com/rearrange?blogID=1990156302547833748&widgetType=FollowByEmail&widgetId=FollowByEmail1&action=editWidget&sectionId=sidebar-right-1
+ 174. file://www.blogger.com/rearrange?blogID=1990156302547833748&widgetType=BlogArchive&widgetId=BlogArchive1&action=editWidget&sectionId=sidebar-right-1

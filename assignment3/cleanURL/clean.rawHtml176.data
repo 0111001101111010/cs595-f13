@@ -1,0 +1,524 @@
+   #[1]Dev Blog of Martin Ivanov [2]Acid.JS Web UI Library
+
+   [3]HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device
+   Access, Graphics, 3D & Effects, Multimedia, Performance & Integration,
+   Semantics, and Offline & Storage
+     * [4]Blog
+     * [5]About
+     * [6]@wemakesitesnet
+     * [7]Contact
+     * [8]Donate
+
+[9]HTML5, CSS3 and JavaScript Insight
+
+     * [10]JavaScript
+          + [11]XML to JSON JavaScript Objectifier
+          + [12]URI to JSON Serializer
+          + [13]Coming Soon - HTML5, JavaScript and CSS3 Replacement Page
+          + [14]JavaScript iPhone Toggle Switch Button
+          + [15]HTML5 Resume Generator and Onepager Website
+          + [16]JavaScript and CSS3 Image Reflections
+          + [17]JavaScript Inheritance Without Constructors
+          + [18]IMDB Movie Data Fetcher
+          + [19]JavaScript Mapper for RESTFul Methods
+          + [20]TinyURL JavaScript API
+          + [21]Wrapper for the HTML5 WebWorkers API
+          + [22]JavaScript Class Augmenter
+          + [23]HTML5 Details Enabler YUI Class
+          + [24]JavaScript HTML Template Engine
+          + [25]JavaScript Localization Class
+          + [26]HTML5 Charts
+          + [27]HTML5 Placeholder Enabler YUI Class
+          + [28]All JavaScript Experiments and Insight
+     * [29]CSS3
+          + [30]Custom Checkboxes and Radio Buttons
+          + [31]CSS3 iPhone Toggle Buttons
+          + [32]Crossbrowser RGBA and Prevention of Opacity Propagation.
+            Starting with IE6
+          + [33]CSS3 Slides Viewer
+          + [34]Fancy CSS3 Tooltips
+          + [35]CSS3 Treeview. No JavaScript
+          + [36]CSS3 Metro Dropdown Styling
+          + [37]CSS3 Element Reflections
+          + [38]Dropdown Styling with CSS3
+          + [39]CSS3 Background Image Cropping
+          + [40]Inline Masked File Upload Form with CSS3 and HTML5
+          + [41]CSS3 Tabstrip
+          + [42]CSS3 Gaussian Blur
+          + [43]All CSS3 Experiments and Insight
+     * [44]Dev Tools
+          + [45]HTML Validation Bookmarklet
+          + [46]Builder.CSS
+          + [47]Image to Base-64 Encoder
+          + [48]HTML5 Sticky Notes App
+          + [49]JavaScript Minifier and Obfuscator
+          + [50]JSON to HTML Template Engine
+          + [51]HTML Template Engine
+          + [52]HTML5 Guitar Chords Player
+          + [53]IMDB Movie Data Fetcher
+          + [54]Message Digest Encrypter
+          + [55]RESTFul Builder and Tester
+     * [56]Web.UI
+          + [57]HTML5 Shopping Cart
+          + [58]Ribbon Bar Web UI
+          + [59]Auto Complete Widget
+          + [60]HTML5 Canvas Gauge
+          + [61]Table Painter Widget
+          + [62]CSS3 Metro Forms
+          + [63]Split Button Widget
+          + [64]HTML5 and CSS3 Progressbar
+          + [65]Tourdates and Events Scheduler
+          + [66]TabStrip Web UI
+          + [67]Hotel Booking Form
+     * [68]Tweet
+
+CSS3 Driven Treeview Without any JavaScript
+
+   You can read the original blogpost on this [69]link, or you can
+   [70]download the example.
+
+Demo
+
+     * [ ] This Folder is Closed By Default
+          + [ ] Ooops! A Nested Folder
+               o [ ] Look Ma - No Hands!
+                    # [71]First Nested Item
+                    # [72]Second Nested Item
+                    # [73]Third Nested Item
+                    # [74]Fourth Nested Item
+               o [75]Item 1
+               o [76]Item 2
+               o [77]Item 3
+          + [ ] Yet Another One
+               o [78]item
+               o [79]item
+               o [80]item
+               o [81]item
+               o [82]item
+               o [83]item
+               o [84]item
+               o [85]item
+          + [ ] Disabled Nested Items
+               o [86]item
+               o [87]item
+               o [88]item
+               o [89]item
+               o [90]item
+               o [91]item
+               o [92]item
+               o [93]item
+          + [94]item
+          + [95]item
+          + [96]item
+          + [97]item
+     * [X] This One is Open by Default...
+          + [ ] And Contains More Nested Items...
+               o [98]Look Ma - No Hands
+               o [99]Another Item
+               o [100]And Yet Another
+          + [101]Lorem
+          + [102]Ipsum
+          + [103]Dolor
+          + [104]Sit Amet
+     * [ ] Can You Believe...
+          + [ ] That This Treeview...
+               o [ ] Does Not Use Any JavaScript...
+                    # [105]But Relies Only
+                    # [106]On the Power
+                    # [107]Of CSS3
+               o [108]Item 1
+               o [109]Item 2
+               o [110]Item 3
+          + [ ] This is a Folder With...
+               o [111]Some Nested Items...
+               o [112]Some Nested Items...
+               o [113]Some Nested Items...
+               o [114]Some Nested Items...
+               o [115]Some Nested Items...
+          + [ ] Disabled Nested Items
+               o [116]item
+               o [117]item
+               o [118]item
+               o [119]item
+               o [120]item
+               o [121]item
+               o [122]item
+               o [123]item
+
+The CSS
+
+.css-treeview ul,
+.css-treeview li
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.css-treeview input
+{
+    position: absolute;
+    opacity: 0;
+}
+
+.css-treeview
+{
+    font: normal 11px "Segoe UI", Arial, Sans-serif;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.css-treeview a
+{
+    color: #00f;
+    text-decoration: none;
+}
+
+.css-treeview a:hover
+{
+    text-decoration: underline;
+}
+
+.css-treeview input + label + ul
+{
+    margin: 0 0 0 22px;
+}
+
+.css-treeview input ~ ul
+{
+    display: none;
+}
+
+.css-treeview label,
+.css-treeview label::before
+{
+    cursor: pointer;
+}
+
+.css-treeview input:disabled + label
+{
+    cursor: default;
+    opacity: .6;
+}
+
+.css-treeview input:checked:not(:disabled) ~ ul
+{
+    display: block;
+}
+
+.css-treeview label,
+.css-treeview label::before
+{
+    background: url("../pages/css3-treeview/example/icons.png") no-repeat;
+}
+
+.css-treeview label,
+.css-treeview a,
+.css-treeview label::before
+{
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+}
+
+.css-treeview label
+{
+    background-position: 18px 0;
+}
+
+.css-treeview label::before
+{
+    content: "";
+    width: 16px;
+    margin: 0 22px 0 0;
+    vertical-align: middle;
+    background-position: 0 -32px;
+}
+
+.css-treeview input:checked + label::before
+{
+    background-position: 0 -16px;
+}
+
+/* webkit adjacent element selector bugfix */
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{
+    .css-treeview
+    {
+        -webkit-animation: webkit-adjacent-element-selector-bugfix infinite 1s;
+    }
+
+    @-webkit-keyframes webkit-adjacent-element-selector-bugfix
+    {
+        from
+        {
+            padding: 0;
+        }
+        to
+        {
+            padding: 0;
+        }
+    }
+}
+
+The Markup
+
+<div class="css-treeview">
+    <ul>
+        <li><input type="checkbox" id="item-0" /><label for="item-0">This Folder
+ is Closed By Default</label>
+            <ul>
+                <li><input type="checkbox" id="item-0-0" /><label for="item-0-0"
+>Ooops! A Nested Folder</label>
+                    <ul>
+                        <li><input type="checkbox" id="item-0-0-0" /><label for=
+"item-0-0-0">Look Ma - No Hands!</label>
+                            <ul>
+                                <li><a href="./">First Nested Item</a></li>
+                                <li><a href="./">Second Nested Item</a></li>
+                                <li><a href="./">Third Nested Item</a></li>
+                                <li><a href="./">Fourth Nested Item</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./">Item 1</a></li>
+                        <li><a href="./">Item 2</a></li>
+                        <li><a href="./">Item 3</a></li>
+                    </ul>
+                </li>
+                <li><input type="checkbox" id="item-0-1" /><label for="item-0-1"
+>Yet Another One</label>
+                    <ul>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                    </ul>
+                </li>
+                <li><input type="checkbox" id="item-0-2" disabled="disabled" /><
+label for="item-0-2">Disabled Nested Items</label>
+                    <ul>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                    </ul>
+                </li>
+                <li><a href="./">item</a></li>
+                <li><a href="./">item</a></li>
+                <li><a href="./">item</a></li>
+                <li><a href="./">item</a></li>
+        </ul>
+</li>
+<li><input type="checkbox" id="item-1" checked="checked" /><label for="item-1">T
+his One is Open by Default...</label>
+        <ul>
+            <li><input type="checkbox" id="item-1-0" /><label for="item-1-0">And
+ Contains More Nested Items...</label>
+                <ul>
+                    <li><a href="./">Look Ma - No Hands</a></li>
+                    <li><a href="./">Another Item</a></li>
+                    <li><a href="./">And Yet Another</a></li>
+                </ul>
+            </li>
+            <li><a href="./">Lorem</a></li>
+            <li><a href="./">Ipsum</a></li>
+            <li><a href="./">Dolor</a></li>
+            <li><a href="./">Sit Amet</a></li>
+        </ul>
+</li>
+<li><input type="checkbox" id="item-2" /><label for="item-2">Can You Believe...<
+/label>
+        <ul>
+                <li><input type="checkbox" id="item-2-0" /><label for="item-2-0"
+>That This Treeview...</label>
+                    <ul>
+                        <li><input type="checkbox" id="item-2-2-0" /><label for=
+"item-2-2-0">Does Not Use Any JavaScript...</label>
+                            <ul>
+                                <li><a href="./">But Relies Only</a></li>
+                                <li><a href="./">On the Power</a></li>
+                                <li><a href="./">Of CSS3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./">Item 1</a></li>
+                        <li><a href="./">Item 2</a></li>
+                        <li><a href="./">Item 3</a></li>
+                    </ul>
+                </li>
+                <li><input type="checkbox" id="item-2-1" /><label for="item-2-1"
+>This is a Folder With...</label>
+                    <ul>
+                        <li><a href="./">Some Nested Items...</a></li>
+                        <li><a href="./">Some Nested Items...</a></li>
+                        <li><a href="./">Some Nested Items...</a></li>
+                        <li><a href="./">Some Nested Items...</a></li>
+                        <li><a href="./">Some Nested Items...</a></li>
+                    </ul>
+                </li>
+                <li><input type="checkbox" id="item-2-2" disabled="disabled" /><
+label for="item-2-2">Disabled Nested Items</label>
+                    <ul>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                        <li><a href="./">item</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+     * © 2001-2013 Martin Ivanov
+     * [124]Blog
+     * [125]About
+     * [126]@wemakesitesnet
+     * [127]Contact
+     * [128]Donate
+     * [129]Valid HTML5
+
+References
+
+   1. http://feeds.feedburner.com/acidmartin
+   2. http://feeds.feedburner.com/acidjs
+   3. http://www.w3.org/html/logo/
+   4. https://acidmartin.wordpress.com/
+   5. http://wemakesites.net/
+   6. https://twitter.com/wemakesitesnet
+   7. http://wemakesites.net/#!/contact
+   8. https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QFUHPWJB2JDBS
+   9. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  10. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript.html
+  11. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/xml-to-json-javascript-objectifier.html
+  12. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/uri-to-json-serializer.html
+  13. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/coming-soon.html
+  14. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-iphone-toggle-buttons.html
+  15. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/html5-resume-builder.html
+  16. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/reflections.html
+  17. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-inheritance-without-constructors.html
+  18. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-api-for-imdb.html
+  19. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-mapper-for-restful-methods.html
+  20. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-api-for-tinyurl.html
+  21. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-wrapper-for-the-html5-webworkers-api.html
+  22. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-class-augmenter.html
+  23. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/html-5-details-element-enabler.html
+  24. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-html-template-engine.html
+  25. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/quick-and-dirty-localization-with-javascript.html
+  26. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/html5-charts.html
+  27. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/html5-placeholder-enabler.html
+  28. http://acidmartin.wordpress.com/category/javascript/
+  29. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css.html
+  30. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/custom-css3-checkboxes-and-radios.html
+  31. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-iphone-toggle-buttons.html
+  32. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/using-crossbrowser-rgba-to-prevent-the-css-opacity-inheritance-from-parent-to-child-elements.html
+  33. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-slides-viewer.html
+  34. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/fancy-css3-tooltips.html
+  35. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-treeview.html
+  36. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-metro-dropdown.html
+  37. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-element-reflections.html
+  38. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-selectbox.html
+  39. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-background-image-cropping.html
+  40. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-inline-file-input.html
+  41. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-tabstrip.html
+  42. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-gaussian-blur.html
+  43. http://acidmartin.wordpress.com/category/css3/
+  44. http://acidjs.wemakesites.net/
+  45. http://acidjs.wemakesites.net/validator.html
+  46. http://buildercss.wemakesites.net/
+  47. http://image2base64.wemakesites.net/
+  48. http://stickeez.wemakesites.net/
+  49. http://acidjs.wemakesites.net/builder-js.html
+  50. http://acidjs.wemakesites.net/templatr.html
+  51. http://acidjs.wemakesites.net/pisi.html
+  52. http://acidjs.wemakesites.net/guitar-chords-js.html
+  53. http://acidjs.wemakesites.net/imdb-fetcher.html
+  54. http://hasher.wemakesites.net/
+  55. http://acidjs.wemakesites.net/rest-builder.html
+  56. http://acidjs.wemakesites.net/
+  57. http://html5-cart.com/
+  58. http://acidjs.wemakesites.net/ribbon-bar-xml.html
+  59. http://acidjs.wemakesites.net/auto-complete.html
+  60. http://acidjs.wemakesites.net/gauge.html
+  61. http://acidjs.wemakesites.net/table-painter.html
+  62. http://acidjs.wemakesites.net/forms-js.html
+  63. http://acidjs.wemakesites.net/split-button-xml.html
+  64. http://acidjs.wemakesites.net/progressbar-js.html
+  65. http://acidjs.wemakesites.net/tour-dates.html
+  66. http://acidjs.wemakesites.net/tabstrip-xml.html
+  67. http://acidjs.wemakesites.net/hotel-reservation-form-js.html
+  68. https://twitter.com/share
+  69. http://acidmartin.wordpress.com/2011/09/26/css3-treevew-no-javascript/
+  70. http://acidmartin.wemakesites.net/DownloadAdmin/click.php?id=189
+  71. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  72. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  73. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  74. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  75. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  76. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  77. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  78. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  79. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  80. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  81. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  82. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  83. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  84. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  85. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  86. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  87. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  88. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  89. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  90. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  91. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  92. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  93. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  94. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  95. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  96. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  97. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  98. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  99. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 100. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 101. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 102. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 103. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 104. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 105. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 106. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 107. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 108. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 109. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 110. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 111. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 112. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 113. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 114. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 115. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 116. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 117. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 118. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 119. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 120. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 121. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 122. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 123. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+ 124. https://acidmartin.wordpress.com/
+ 125. http://wemakesites.net/
+ 126. https://twitter.com/wemakesitesnet
+ 127. http://wemakesites.net/#!/contact
+ 128. https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QFUHPWJB2JDBS
+ 129. http://validator.w3.org/check?uri=referer

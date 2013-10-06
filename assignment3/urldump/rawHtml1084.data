@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang='en' xmlns:fb='http://ogp.me/ns/fb#'
+>
+	<head>
+		<title>Looking for Top Law Firms' Compliance Programs</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+		<link rel="canonical" href="/corporatecounsel/PubArticleCC.jsp?id=1202598226573&Looking_for_Top_Law_Firms_Compliance_Programs"/>
+<meta name="description" content="In light of our recent looks at corporate compliance programs, CorpCounsel.com thought it would be enlightening to check out how top law firms handle compliance issues. The results were surprising." />
+		<meta name="keywords" content="compliance, DLA Piper" />
+		<!-- for mobile redirect - keep in this order -->
+		<script type="text/javascript" src="http://cdn-s.gumiyo.com/js/clientlibs/gumiyo.settings.alm.v1.js"></script>
+		<script type="text/javascript" src="http://cdn-s.gumiyo.com/js/clientlibs/gumiyo.mobileredirect.v3.min.js"></script>
+	<meta property="og:title" content="Looking for Top Law Firms' Compliance Programs"/>
+			<meta property="og:type" content="article"/>
+			<meta property="og:locale" content="en_US" />
+			<meta property="og:site_name" content="Corporate Counsel" />
+			<meta property="og:description" content="In light of our recent looks at corporate compliance programs, CorpCounsel.com thought it would be enlightening to check out how top law firms handle compliance issues. The results were surprising." />
+			<meta property="og:image" content="http://www.law.com/image/cc/128_pics/lawyers_ties.jpg"/><meta property="og:url" content="http://www.law.com/news/id=1202598226573/looking-for-top-law-firms-compliance-programs" />
+
+			<link rel="shortcut icon" href="http://www.law.com/img/law_10/favicon.ico" />
+
+		<link href="/css/cc/cc_12.css" rel="stylesheet" type="text/css" />
+		<link href="/css/global/styles.css" rel="stylesheet" type="text/css" />
+
+		<link href="/css/articlesCommon_13.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript">
+			var storeRoot = "store.law.com";
+			var siteDirectory = "cc_12";
+			var server_check = "www.law.com/corporatecounsel";
+			var hasPremiumAccess = false;
+			var hasLimitedAccess = false;
+			var isLoggedIn = false;
+			var promoList = "CC";
+			var theWarning = null;
+			var theMessage = "This article requires free registration | This article requires free registration. Please sign in or register to read the full text.";
+			var sourceSiteName = "Corporate Counsel";
+		</script>
+		<script type="text/javascript" src="/js/cc/cc.min.js">//COMPRESSED VERSION</script><script type="text/javascript" src="/js/flash/swfobject.js"></script>
+		<script type="text/javascript" src="/js/comment.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> <script type="text/javascript" src="/js/registration90.js"></script>
+		<script type="text/javascript" src="/js/header_cta.js"></script>
+
+		<!-- script for font sizes -->
+<script type="text/javascript">
+
+var fsize = 1.0;
+
+function readCookie(){
+	if (document.cookie.length>0){ 
+		var myregex = /fontSize=(\d\.\d)/;
+		var mycookie = document.cookie.match(myregex);
+		if (mycookie==null || mycookie[1]==null){
+			return -1;
+		}
+		return mycookie[1];
+	}else{
+		return -1;
+	}
+}
+
+function setFontSize(){
+	var myCookie = readCookie();
+	if(myCookie == null || myCookie == -1){
+		return;
+	}
+	var myArticle = document.getElementById("article");
+	fsize = parseFloat(myCookie);
+	myArticle.style.fontSize = fsize + "em";
+}
+
+function changeFontsize(increment) {
+	//alert("Inside the function");
+	var myArticle = document.getElementById("article");
+	var fontIncrease;
+	var n=(location.href).split("."); 
+	var t=n.indexOf("litinsider");
+	//alert(n[t]);
+	if(n[t]=="litinsider")
+	{
+	if(fsize == 1.0)
+	{
+	fsize = 0.625;
+	}
+	if (increment != "") {
+	  fontIncrease = parseInt(increment);
+	  if(fontIncrease == 1){
+	  	if(fsize < 1.425){
+	  		fsize = fsize + 0.1;
+	  	}
+	  }else{
+	  	if(fsize > 0.525){
+		  	fsize = fsize - 0.1;
+		}
+	  }
+	}else{
+		if(fsize < 1.425){
+			fsize = fsize + 0.1;
+		}
+	}
+	}
+	else
+	{
+	if (increment != "") {
+	  fontIncrease = parseInt(increment);
+	  if(fontIncrease == 1){
+	  	if(fsize < 1.8){
+	  		fsize = fsize + 0.1;
+	  	}
+	  }else{
+	  	if(fsize > 0.9){
+		  	fsize = fsize - 0.1;
+		}
+	  }
+	}else{
+		if(fsize < 1.8){
+			fsize = fsize + 0.1;
+		}
+	}
+	
+	}
+	myArticle.style.fontSize = fsize + "em";
+	document.cookie = 'fontSize=' + fsize;
+}//function
+
+
+</script>
+<!-- script for font sizes -->
+
+
+
+<!------ OAS SETUP begin ------>
+<!--Include OAS Analytics Setup Script -->
+<SCRIPT LANGUAGE="JavaScript" src="http://oasc10.247realmedia.com/Scripts/oas_analytics.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+//configuration
+//OAS_sitepage = window.location.hostname + window.location.pathname;
+
+OAS_url = 'http://oasc17.247realmedia.com/RealMedia/ads/';
+OAS_sitepage = 'alm.corporatecounsel/pubarticle';
+OAS_listpos = 'Top,Middle,Middle1,Middle2,BottomLeft,x26,x25';
+
+var OAS_taxonomy='';
+var OAS_query='id=1202598226573&section=CC-InTheNews&nsterm=lawfirmmanagement&nsterm=lawfirmprofitability';
+OAS_query == '' ? OAS_query += 'XE' + '&' + OAS_taxonomy + OAS_rdl + "&if_nt_CookieAccept=" + OAS_CA + '&XE' : OAS_query += '&XE' + '&' + OAS_taxonomy + OAS_rdl + "&if_nt_CookieAccept=" + OAS_CA + '&XE';
+
+OAS_target = '_top';
+//end of configuration
+OAS_version = 10;
+OAS_rn = '001234567890'; OAS_rns = '1234567890';
+OAS_rn = new String (Math.random()); OAS_rns = OAS_rn.substring (2, 11);
+function OAS_NORMAL(pos) {
+  document.write('<A HREF="' + OAS_url + 'click_nx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + '?' + OAS_query + '" TARGET=' + OAS_target + '>');
+  document.write('<IMG SRC="' + OAS_url + 'adstream_nx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + '?' + OAS_query + '" BORDER=0></A>');
+}
+//-->
+</SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript1.1">
+<!--
+OAS_version = 11;
+if (navigator.userAgent.indexOf('Mozilla/3') != -1 || navigator.userAgent.indexOf('Mozilla/4.0 WebTV') != -1)
+  OAS_version = 10;
+if (OAS_version >= 11)
+  document.write('<SCR' + 'IPT LANGUAGE="JavaScript1.1" SRC="' + OAS_url + 'adstream_mjx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '?' + OAS_query + '"><\/SCRIPT>');//-->
+</SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('');
+function OAS_AD(pos) {
+  if (OAS_version >= 11)
+    OAS_RICH(pos);
+  else
+    OAS_NORMAL(pos);
+}
+//-->
+</SCRIPT>
+<!------ OAS SETUP end ------>
+
+<script type="text/javascript">
+		<!--
+			function init() {
+				setFontSize();
+
+			}
+
+			//-->
+		</script>
+
+<!--[if lt IE 7]> <html class="ie6 oldie ie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie ie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie ie" lang="en"> <![endif]-->
+<!--[if gt IE 8]> <html class="ie" lang="en"> <![endif]-->
+
+
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+
+<!-- BEGIN Tynt Script -->
+<script type="text/javascript">
+if(document.location.protocol=='http:'){
+ var Tynt=Tynt||[];Tynt.push('c9vmBW40Sr4Oz8acwqm_6l');
+ (function(){var s=document.createElement('script');s.async="async";s.type="text/javascript";s.src='http://tcr.tynt.com/ti.js';var h=document.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})();
+}
+</script>
+<!-- END Tynt Script -->
+
+
+	</head>
+
+	<body onLoad="init()">
+
+<!-- Wallpaper Ad -->
+<div id="mainWrapper">
+
+       		<!-- begin siteCatalyst tag -->
+
+			<script type="text/javascript">
+			    var s_linkInternalFilters = "javascript:,corpcounsel.com,law.com/corporatecounsel,thepriorart.typepad.com,store.law.com,top500.law.com,localhost"
+			</script>
+
+			<!-- SiteCatalyst code version: H.21. Copyright 1996-2010 Adobe, Inc. All Rights Reserved More info available at http://www.omniture.com -->
+<script language="javascript" type="text/javascript">
+   var s_account = "almcc,almglobal";
+</script>
+<script language="JavaScript" type="text/javascript" src="/js/metrics/s_code.js"></script>
+<script language="JavaScript" type="text/javascript">
+   <!--
+	function get_cookie (cookie_name){
+		var results = document.cookie.match (cookie_name+ '=(.*?)(;|$)');
+		if (results)
+			return (unescape (results[1]));
+		else
+			return null;
+	}
+
+	var products = get_cookie ("prodlist");
+	var userSubstatus = "free";
+
+	if ((products=="") || (products==null)){
+		userSubstatus = "free";
+	}else{
+		var product_array=products.split(";");
+		var product=0;
+		while (product < product_array.length){
+			if(product_array[product] == "CC"){
+				userSubstatus = "premium";
+			}
+			else if(product_array[product] == "CC:LIMITED"){
+				userSubstatus = "registered";
+			}
+			product+=1;
+		}
+	}
+	//-->
+</script>
+
+<script language="JavaScript" type="text/javascript">
+   <!--
+
+	/* Strip %40 From Email - s.prop21 */
+	function _scStrip(a){
+	   var useremail = "";
+	useremail = get_cookie("useremail");
+	if(useremail == null){
+	  a = "";
+	}
+	else{
+	  a = useremail.split("%40").join("@");
+	}
+	return a;
+	}
+
+	/* check IPAuth */
+	var ipuserid = "";
+	var ipAuth = "";
+
+	ipuserid = get_cookie("ipUserId");
+	if (ipuserid!=null && ipuserid!="") {
+		ipAuth=ipuserid;
+	} else {
+		ipAuth="";
+	}
+
+
+
+	/* Share Function - s.prop29, event6 */
+	function scShare(shareType){
+	   var s = s_gi(s_account);
+	   s.linkTrackVars = "prop29,eVar29,events";
+	   s.linkTrackEvents = "event6";
+	   s.prop29 = shareType;
+	   s.eVar29 = shareType;
+	   s.events = "event6";
+	   s.tl(this,'o','social network share');
+	}
+
+	/* Email Share */
+	var scemailshare = false;
+	var scsocialshare = "";
+	if (scemailshare == true) {
+		scsocialshare = "email";
+	}
+
+	/* Jump Page Function - event86 */
+	function scJump(){
+		var s = s_gi(s_account);
+		s.linkTrackVars = "eVar20,events";
+		s.linkTrackEvents = "event86";
+		s.eVar20 = "lexis jump page";
+		s.events = "event86";
+		s.tl(this,'e','jump to lexis');
+	}
+
+	/* Login Overlay Load Function - s.prop20, event85 */
+	function scoverlay(){
+   		var s = s_gi(s_account);
+		s.linkTrackVars = "eVar20,prop20,events";
+		s.linkTrackEvents = "event85";
+		s.prop20 = "subscriber login";
+		s.eVar20 = "subscriber login";
+		s.events = "event85";
+		s.tl(this,'o','load login overlay');
+	}
+
+	/* Login Overlay Close Function - event87 */
+	function scOverlayClose(){
+	   	var s = s_gi(s_account);
+		s.linkTrackVars = "eVar20,events";
+		s.linkTrackEvents = "event87";
+		s.eVar20 = "subscriber login";
+
+		s.events = "event87";
+		s.tl(this,'o','close login overlay');
+	}
+
+	/* Tabs - s.prop18 */
+	function sctab(tabvalue){
+		var s = s_gi(s_account);
+		s.linkTrackVars = "eVar18,prop18";
+		s.prop18 = "cc:jump page:alm:"+tabvalue;
+		s.eVar18 = "cc:jump page:alm:"+tabvalue;
+		s.tl(this,'o','tab');
+	}
+
+	/* Email Sent: Forms - event33 */
+	function scEmailForm(){
+		var s = s_gi(s_account);
+		s.linkTrackVars = "events";
+		s.events = "event33";
+		s.tl(this,'o','email form');
+	}
+
+	/* Pagination - prop18 */
+	var pageparam = s.getQueryParam('thepage,page,pg');
+	var sclastpage = "";
+	var scpagination = "cc:jump page:alm" + ":page:" + pageparam;
+
+	if (pageparam > sclastpage || sclastpage == "1" || pageparam == null || pageparam == "" || sclastpage == null || sclastpage == "") {
+		scpagination = "";
+	}
+
+
+	/* Set SC Vars */
+	s.pageName="cc:jump page:alm"
+	s.server="cc"
+	s.channel="cc:jump page:alm"
+
+	s.prop1="cc:jump page"	// Site Section
+	s.prop2="cc:jump page:alm"	// Site SubSection
+	s.prop3="cc:jump page:alm"	// Site SubSection Detail
+	s.prop4="cc:jump page:alm"	// Additional SubSection Level
+
+	s.prop5=""	// Links - Page Name
+	s.prop6=""	// Links - Global Link Name
+	s.prop7=""	// Links - Page Name/Link Name
+	s.prop8=""	// Links - Link Position
+
+	s.prop9=""	// Internal Search Terms
+
+	s.prop10=""	//
+
+	s.prop11="1202598226573"	// Content ID
+	s.prop12="Looking for Top Law Firms' Compliance Programs"	// Content Title
+	s.prop13=""	// Content Type
+	s.prop14="Sue Reisinger"	// Content Byline
+	s.prop15="corporate_counsel"	// Content Source
+	s.prop16=""	// Content Subscription Status
+
+	s.prop17=""	 // Leads - Application Name
+
+	s.prop18=scpagination;	// Pagination
+
+	s.prop19=""	// Photo - Audio Title
+
+	s.prop20="alm jump page" // Tool Name
+	s.prop21=_scStrip()	// User - ID Email
+	s.prop22=userSubstatus	// User - Subscription Type
+
+	s.prop23=""	// New/Repeat Visitor (30 days)
+	s.prop24=""	// New Visitor
+	s.prop25=""	// Repeat Visitor
+	s.prop26=""	// GeoSegmentation
+	s.prop27=""	// Times Visited Per Month
+	s.prop28=""	// Days Since Last Visit
+
+	s.prop29=scsocialshare	// Share - Name
+
+	s.prop30=""
+
+	s.prop31=""	// Blog ID
+	s.prop32=""	// Blog Name
+	s.prop33=""
+	s.prop34=""	//
+	s.prop35=""	//
+
+	s.prop36=""	// Advertiser Name
+	s.prop37=""	//
+	s.prop38=""	//
+	s.prop39=""	// Playlist Name
+	s.prop40=""	// Finding Method
+
+	s.prop41=""	// Time
+	s.prop42=""	// Day
+
+	s.prop43=""	//
+	s.prop44=""	//
+	s.prop45=""	//
+
+	s.prop46=""	// Channel - Name
+	s.prop47=""	// Channel - Partner
+	s.prop48=""	// Channel - Typed Keyword
+
+	s.prop49=""	//
+	s.prop50=""	//
+	s.prop52=ipAuth // SetIPAuthentication
+
+	s.prop61=""	 // pubdate
+	s.prop62=""	 // originalID
+	s.prop63=""	 // practicearea
+
+	s.prop66="false"
+	s.prop67="NoUserState"
+	s.events="event4" // Events
+
+	/********** DO NOT ALTER ANYTHING BELOW THIS LINE ! **********/
+
+	var s_code=s.t();if(s_code)document.write(s_code)
+   //-->
+</script>
+
+<script language="JavaScript" type="text/javascript"><!--if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')//--></script>
+
+<noscript><a href="http://www.omniture.com" title="Web Analytics"><img src="http://alm.122.2o7.net/b/ss/almMainDev/1/H.21--NS/0" height="1" width="1" border="0" alt="" /></a></noscript><!--/DO NOT REMOVE/-->
+
+<!-- end siteCatalyst tag -->
+
+			<div id="lightbox_login"></div>
+
+			<div id="leaderboard">
+
+				<!------ OAS AD 'Top' begin ------>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+OAS_AD('Top');
+//-->
+</SCRIPT>
+<!------ OAS AD 'Top' end ------>
+
+</div>
+
+
+		    <div id="pub_masthead">
+
+		    	<div id="mast_left">
+		    		<a href="/corporatecounsel"><img src="/img/cc_12/cc_logo_blk.png" alt="Corporate Counsel" /></a>
+		    	</div>
+
+        <div id="mast_right">
+				<script type="text/javascript" language="javascript">
+	ctaNav();
+</script>
+
+<noscript>
+<div id="cta_bar1">
+<div class="ctaButtonSub"><a href="https://store.law.com/registration/default.aspx?promoCode=cc" class="subscribe">Subscribe</a></div>
+</div>
+</noscript>
+
+<div id="questBox_13">
+		<form name="quest" action="http://quest.law.com/Search/Search.do" id="searchForm" method="get" role="search" target="_blank" onSubmit="questPop(); return false;">
+				<input type="text" name="Ntt" title="Enter Keywords..."  id="searchField" class="defaultText"/>
+				<select id="questSelect">
+					<option selected="selected">This Website</option>
+					<option>Law.com Network</option>
+				</select>
+				<input type="hidden" name="Nty" value="1" />
+		<input type="hidden" name="site" value="cc" />
+				<input type="hidden" name="Ntk" value="SI_All" />
+				<input type="hidden" name="sortVar" value="1" />
+				<input id="cxValue" type="hidden" name="cx" value="0" />
+				<input id="nValue" type="hidden" name="N" value="8131" />
+				<button type="submit" class="button">Search</button>
+			</form>
+	    </div><!-- questBox -->
+
+    	</div>
+
+			</div><!-- pub_masthead -->
+
+<div id="navigation">
+<ul id="topnav">
+<li id="navHome"><a href="http://www.law.com/corporatecounsel">Home</a></li>
+<li id="navNews"><a href="http://www.law.com/corporatecounsel/news.jsp">News</a></li>
+<li id="navSurveys"><a href="http://www.law.com/corporatecounsel/surveys_rankings.jsp">Surveys</a></li>
+<li id="navResources"><a href="http://www.law.com/corporatecounsel/site_map.jsp#resources">Resources</a></li>
+<li id="navLawjobs"><a href="http://www.lawjobs.com" target="_blank">Lawjobs</a></li>
+<li id="navAdvertise"><a href="http://www.law.com/corporatecounsel/advertise.jsp">Advertise</a></li>
+<li id="navSubscribe"><a href="https://store.law.com/registration/default.aspx?promoCode=CC" target="_blank">Subscribe</a></li>
+<li id="navBookstore"><a href="http://www.law.com/corporatecounsel/bookstore.jsp">Bookstore</a></li>
+<li id="navContact"><a href="http://www.law.com/corporatecounsel/contact_us.jsp">Contact</a></li>
+</div><!-- navigation -->
+
+<div id="subnavigation">
+	<p><span>Topics &raquo;</span> <a href="http://www.law.com/corporatecounsel/ipinsider.jsp" name="&lpos=topics">IP Insider</a> &#124; <a href="http://www.law.com/corporatecounsel/labor_employment.jsp" name="&lpos=topics">Labor & Employment</a> &#124; <a href="http://www.law.com/corporatecounsel/from_the_experts.jsp" name="&lpos=topics">From the Experts</a> &#124; <a href="http://www.law.com/corporatecounsel/on_the_job.jsp" name="&lpos=topics">On the Job</a> &#124; <a href="http://www.law.com/corporatecounsel/moves.jsp" name="&lpos=topics">Moves</a> &#124; <a href="http://www.law.com/corporatecounsel/dc_watch.jsp" name="&lpos=topics">DC Watch</a> &#124; <a href="http://www.law.com/corporatecounsel/international.jsp" name="&lpos=topics">International</a></p>
+	</div>
+
+<div id="container">
+<!--userState in contentWithSubscriptionWall (before null check) is: emptyString-->
+<!--In contentWithSubscriptionWall and:-->
+<!--userStateString = showWelcomeWall>-->
+<p class='breadcrumb'><a href='index.jsp' title='Corporate+Counsel'>Home</a>&nbsp;>&nbspLooking for Top Law Firms' Compliance Programs</p>
+
+
+
+<div id="articleContent2">
+
+<div id="article">
+
+<div id="section_heading">
+
+<!--theSite = cc_12-->
+<nomobile>
+<p id="fontSize">Font Size: <img src="/img/articlesCommon/articleTools/fontsizePlus.gif" width="17" height="17" alt="increase font" onclick="changeFontsize('1')" /> <img src="/img/articlesCommon/articleTools/fontsizeMinus.gif" width="17" height="17" alt="decrease font" onclick="changeFontsize('-1')" /></p>
+</nomobile>
+
+<p class="kicker"></p></div>
+
+<h1>Looking for Top Law Firms' Compliance Programs</h1>
+	
+<p class="byline"><p class="byline">By&nbsp;<span itemprop="author"><a rel='author' title='View Sue Reisinger&rsquo;s Online Profile' target='_blank' href='https://plus.google.com/100969548739047556004/about'>Sue Reisinger</a></span><span id="bylineEmailArt"><a href='mailto:sreisinger@alm.com' title='Send Email to Sue Reisinger'  />Contact</a></span><span id="bylineSearch"><a href='http://quest.law.com/Search/Search.do?Ntt=&quot;Sue Reisinger&quot;&x=0&y=0&Nty=1&N=8131&site=cc&Ntk=SI_All&cx=0&sortVar=1' title='Search for more stories by Sue Reisinger ' target='_blank' />All Articles</a></p></p>
+<p class="source">Corporate Counsel</p><p class="date">May 1, 2013</p>
+
+<div id="articlebody">
+
+	<p>In light of our recent looks at corporate compliance programs, CorpCounsel.com thought it would be enlightening to check out how top law firms handle compliance issues. The results were surprising.</p>
+    
+</div><!--articlebody-->
+
+<style type="text/css">
+#article #freeRegJump #linkedInBtn.btn {
+background:none!important;
+border:0!important;
+}
+
+#article #freeRegJump #linkedInBtn.btn a {
+	color: white!important;
+	border: solid 1px #0076a3!important;
+	background: #3991c4!important;
+	background: -webkit-gradient(linear, left top, left bottom, from(#3991c4), to(#316693))!important;
+	background: -moz-linear-gradient(top,  #3991c4,  #316693)!important;
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#3991c4', endColorstr='#316693')!important;  
+	padding: 8px 0 8px 80px!important;
+	width:282px!important;
+	margin:0!important;
+	position:relative!important;
+}
+
+#article #freeRegJump #linkedInBtn.btn a:hover{
+	color: white!important;
+	background: #316693;
+	background: -webkit-gradient(linear, left top, left bottom, from(#316693), to(#2a5c83))!important;
+	background: -moz-linear-gradient(top,  #316693,  #2a5c83)!important;
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#316693', endColorstr='#2a5c83')!important;
+}
+
+#linkedinLogo {
+	background: url('/img/share/linkedin.png') 0px -2px no-repeat!important;
+	width: 38px!important;
+	height: 100%!important;
+	display: inline-block!important;
+	position: absolute!important;
+	left: 18px!important;
+	top: 0!important;
+}
+
+</style>
+
+
+
+
+
+
+<!--begin paywall messaging -->
+
+
+<script type="text/javascript">
+	var theMessage = "<h3>To continue reading, sign up for a complimentary digital membership and get great benefits, like:</h3><ul><li><span>Unlimited free access</span> to Corporate Counsel and Law Technology News online</li><li><span>5 free articles* every 30 days, </span> from other ALM publications</li><li><span>Exclusive discounts </span> on ALM events and products </li><!--<li><span>Complimentary access to award-winning legal publications </span> across the ALM network</li>--><li><span><strong><i> Corporate Counsel</i></strong> digital newsletter,</span> plus your choice of more than 30 digital newsletters </li><li><span>Access on the device of your choice:</span> smartphone, tablet, or desktop</li></ul>";
+	var notLimited = "false";
+	
+	addForm("welcome",theMessage,notLimited); 
+	scoverlay();
+	</script>
+	<!--end paywall messaging -->
+
+
+
+
+<nomobile>
+<div id="lowerAds">
+	<div id="LAstyle">&nbsp;</div>
+    <div class="adtile">
+
+    
+<!------ OAS AD 'Middle1' begin ------>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+OAS_AD('Middle1');
+//-->
+</SCRIPT>
+<!------ OAS AD 'Middle1' end ------>
+
+</div>
+    <div class="adtile">
+    
+<!------ OAS AD 'Middle2' begin ------>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+OAS_AD('Middle2');
+//-->
+</SCRIPT>
+<!------ OAS AD 'Middle2' end ------>
+
+</div>
+</div>
+</nomobile>
+
+ 
+</div>
+<div id="rightcol">
+	<nomobile>
+	<div class="adtile">
+	
+<!------ OAS AD 'Middle' begin ------>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+OAS_AD('Middle');
+//-->
+</SCRIPT>
+<!------ OAS AD 'Middle' end ------>
+
+</div>
+</nomobile>
+<div id="clear"></div>
+	<div id="accordion_area">
+	<div id="accordion_head">
+	<h5>Find similar content</h5>
+
+	</div>
+
+	<div class='accordion_sectionhead'>
+<div id='section1'>
+<h2><a>Firms mentioned</a></h2>
+<div id='accordion_arrow1' class=''><a>&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+</div>
+</div>
+<div id='firms_list'>
+<ul style='display: none;' class='zebra'>
+<li><a name='&lpos=lawfirms' target='_blank' href='http://quest.law.com/Search/Search.do?Ntt=Baker+%26+McKenzie&x=0&y=0&Nty=1&site=cc&N=8131&Ntk=SI_All&cx=1&sortVar=1'>Baker & McKenzie</a></li>
+<li><a name='&lpos=lawfirms' target='_blank' href='http://quest.law.com/Search/Search.do?Ntt=DLA+Piper&x=0&y=0&Nty=1&site=cc&N=8131&Ntk=SI_All&cx=1&sortVar=1'>DLA Piper</a></li>
+<li><a name='&lpos=lawfirms' target='_blank' href='http://quest.law.com/Search/Search.do?Ntt=Kirkland+%26+Ellis&x=0&y=0&Nty=1&site=cc&N=8131&Ntk=SI_All&cx=1&sortVar=1'>Kirkland & Ellis</a></li>
+<li><a name='&lpos=lawfirms' target='_blank' href='http://quest.law.com/Search/Search.do?Ntt=Latham+%26+Watkins&x=0&y=0&Nty=1&site=cc&N=8131&Ntk=SI_All&cx=1&sortVar=1'>Latham & Watkins</a></li>
+<li><a name='&lpos=lawfirms' target='_blank' href='http://quest.law.com/Search/Search.do?Ntt=Skadden%2C+Arps%2C+Slate%2C+Meagher+%26+Flom&x=0&y=0&Nty=1&site=cc&N=8131&Ntk=SI_All&cx=1&sortVar=1'>Skadden, Arps, Slate, Meagher & Flom</a></li>
+<li><a name='&lpos=lawfirms' target='_blank' href='http://quest.law.com/Search/Search.do?Ntt=Vorys%2C+Sater%2C+Seymour+and+Pease&x=0&y=0&Nty=1&site=cc&N=8131&Ntk=SI_All&cx=1&sortVar=1'>Vorys, Sater, Seymour and Pease</a></li>
+</ul>
+</div>
+<div class='accordion_sectionhead'>
+<div id='section2'>
+<h2><a>Companies, agencies mentioned</a></h2>
+<div id='accordion_arrow2' class=''><a>&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+</div>
+</div>
+<div id='companies_list'>
+<ul style='display: none;' class='zebra'>
+<li><a name='&lpos=companies and agencies' target='_blank' href='http://quest.law.com/Search/Search.do?Ntt=Arps%2C+Slate%2C+Meagher+%26+Flom&x=0&y=0&Nty=1&site=cc&N=8131&Ntk=SI_All&cx=1&sortVar=1'>Arps, Slate, Meagher & Flom</a></li>
+<li><a name='&lpos=companies and agencies' target='_blank' href='http://quest.law.com/Search/Search.do?Ntt=American+Insurance+Group&x=0&y=0&Nty=1&site=cc&N=8131&Ntk=SI_All&cx=1&sortVar=1'>American Insurance Group</a></li>
+<li><a name='&lpos=companies and agencies' target='_blank' href='http://quest.law.com/Search/Search.do?Ntt=American+Bar+Association&x=0&y=0&Nty=1&site=cc&N=8131&Ntk=SI_All&cx=1&sortVar=1'>American Bar Association</a></li>
+</ul>
+</div>
+<div class="accordion_sectionhead">
+			<div id="section3">
+				<h2><a>Key categories</a></h2>
+				<div class="" id="accordion_arrow3"><a>&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+			</div>
+		</div>
+		<div id="concept_list">
+			<ul style="display: none;" class="zebra">
+	
+			<li><a name='&lpos=key categories' target='_blank' href='http://quest.law.com/Search/Search.do?Ntt=Legal+Profession&x=0&y=0&Nty=1&site=cc&N=8131&Ntk=SI_All&cx=1&sortVar=1'>Legal Profession</a></li>
+<li><a name='&lpos=key categories' target='_blank' href='http://quest.law.com/Search/Search.do?Ntt=Securities+and+Federal+Corporate+Law&x=0&y=0&Nty=1&site=cc&N=8131&Ntk=SI_All&cx=1&sortVar=1'>Securities and Federal Corporate Law</a></li>
+<li><a name='&lpos=key categories' target='_blank' href='http://quest.law.com/Search/Search.do?Ntt=Corporate+Governance/Compliance&x=0&y=0&Nty=1&site=cc&N=8131&Ntk=SI_All&cx=1&sortVar=1'>Corporate Governance/Compliance</a></li>
+</ul>    
+		</div>
+
+	<div class="accordion_sectionhead">
+		<div id="section5">
+		<h2><a>Most viewed stories</a></h2>
+			<div class="accordion_arrow_down" id="accordion_arrow5"><a>&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+	    </div>
+	</div>
+	<div id="mostviewed_list">
+	        <!-- MOST VIEWED ARTICLES -->
+	        
+	        <!-- theSite is: cc_12 -->
+	        
+	        <div class="articlepod"> 
+			<!-- <ol id="mostviewed"> -->
+
+			<ol  id="mostviewed">
+			<li class='item1'><a href='/corporatecounsel/PubArticleCC.jsp?id=1202620834757&Facebook_Adds_a_New_Friend_Deputy_GC_Ashlie_Beringer' name='&lpos=most viewed'>Facebook Adds a New Friend: Deputy GC Ashlie Beringer</a>
+<div class="free"><ul id="nav"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ul><li></li></ul></li></ul></div>
+</li><li class='item2'><a href='/corporatecounsel/PubArticleCC.jsp?id=1202620961496&Five_Compliance_Lessons_from_emBreaking_Badem' name='&lpos=most viewed'>Five Compliance Lessons from <em>Breaking Bad</em></a>
+<div class="free"><ul id="nav"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ul><li></li></ul></li></ul></div>
+</li><li class='item3'><a href='/corporatecounsel/PubArticleCC.jsp?id=1202620825194&Should_Lacoste_Have_Fired_Worker_Who_Posted_Paycheck' name='&lpos=most viewed'>Should Lacoste Have Fired Worker Who Posted Paycheck?</a>
+<div class="free"><ul id="nav"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ul><li></li></ul></li></ul></div>
+</li><li class='item4'><a href='/corporatecounsel/PubArticleCC.jsp?id=1202621013789&Boston_University_Unleashes_Lawsuit_Blitz_Over_Diode_Patent' name='&lpos=most viewed'>Boston University Unleashes Lawsuit Blitz Over Diode Patent</a>
+<div class="free"><ul id="nav"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ul><li></li></ul></li></ul></div>
+</li><li class='item5'><a href='/corporatecounsel/PubArticleCC.jsp?id=1202621211670&So_You_Want_to_Go_InHouse' name='&lpos=most viewed'>So, You Want to Go In-House?</a>
+<div class="free"><ul id="nav"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ul><li></li></ul></li></ul></div>
+</li></ol>
+
+			</div>
+		</div>
+	</div>
+
+	<script>
+
+		$(document).ready(function(){
+
+			$("#section5").click(function () {
+				$("#mostviewed_list ol").slideToggle(300);
+				$("#section4 ul, #section3 ul, #section2 ul, #section1 ul").slideUp(300);
+				$("#accordion_arrow5").toggleClass("accordion_arrow_down");
+			});
+
+			$("#section4").click(function () {
+				$("#associated_list ul").slideToggle(300);
+				$("#section5 ul, #section3 ul, #section2 ul, #section1 ul").slideUp(300);
+				$("#accordion_arrow4").toggleClass("accordion_arrow_down");
+			});
+
+			$("#section3").click(function () {
+				$("#concept_list ul").slideToggle(300);
+				$("#section5 ul, #section4 ul, #section2 ul, #section1 ul").slideUp(300);
+				$("#accordion_arrow3").toggleClass("accordion_arrow_down");
+			});
+
+			$("#section2").click(function () {
+				$("#companies_list ul").slideToggle(300);
+				$("#section5 ul, #section4 ul, #section3 ul, #section1 ul").slideUp(300);
+				$("#accordion_arrow2").toggleClass("accordion_arrow_down");
+			});
+
+			$("#section1").click(function () {
+				$("#firms_list ul").slideToggle(300);
+				$("#section5 ul, #section4 ul, #section3 ul, #section2 ul").slideUp(300);
+				$("#accordion_arrow1").toggleClass("accordion_arrow_down");
+			});
+		});
+
+	</script>
+
+	<div id="clear"></div>
+	<div id='editorialAdSpot'>
+	
+<!------ OAS AD 'BottomLeft' begin ------>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+OAS_AD('BottomLeft');
+//-->
+</SCRIPT>
+<!------ OAS AD 'BottomLeft' end ------>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="localFooter">
+<ul>	
+	<li><a rel="nofollow" href="/corporatecounsel/about.jsp">About Corporate Counsel</a>&nbsp;&nbsp;&nbsp;|</li>
+	<li><a rel="nofollow" href="/corporatecounsel/contact_us.jsp">Contact Corporate Counsel</a>&nbsp;&nbsp;&nbsp;|</li>
+	<li><a rel="nofollow" href="/corporatecounsel/advertise.jsp">Advertise with Us</a>&nbsp;&nbsp;&nbsp;|</li>  
+	<li><a rel="nofollow" href="/corporatecounsel/site_map.jsp">Sitemap</a></li>
+</ul>
+</div>	
+
+</div><!--end content contained by the container-->	
+</div><!-- mainWrapper -->
+		
+<!-- EVIDON Explicit Consent for ALM -->
+<script type="text/javascript" language="javascript" src="http://www.law.com/js/uk-evidon.js"></script>  
+
+
+
+<!-- begin almFooter content -->
+<div id="almFooter2013"> 
+<div id="icfooter2013">
+
+<div class="footernav">
+
+<div class="almList">
+
+<form>
+<select id="almLinkList" onChange="window.document.location.href=this.options[this.selectedIndex].value;">
+<option value="http://www.law.com" selected="selected">The Law.com Network</option>
+<option value="http://www.law.com">Law.com</option>
+<option value="http://www.americanlawyer.com/index.jsp">The American Lawyer</option>
+<option value="http://www.law.com/corporatecounsel">Corporate Counsel</option>
+<option value="http://www.law.com/jsp/lawtechnologynews/index.jsp">Law Technology News</option>
+<option value="http://www.law.com/jsp/nlj/index.jsp">The National Law Journal</option>
+<option value="http://www.ctlawtribune.com">Connecticut Law Tribune</option>
+<option value="http://www.dailybusinessreview.com">Daily Business Review (FL)</option>
+<option value="http://www.delawarelawweekly.com">Delaware Law Weekly</option>
+<option value="http://www.delbizcourt.com">Delaware Business Court Insider</option>
+<option value="http://www.dailyreportonline.com">Daily Report (GA)</option>
+<option value="http://www.law.com/jsp/pa/index.jsp">The Legal Intelligencer (PA)</option>
+<option value="http://www.law.com/jsp/nj/index.jsp">New Jersey Law Journal</option>
+<option value="http://www.litinsider.com">New York Commerical Litigation Insider</option>
+<option value="http://www.newyorklawjournal.com">New York Law Journal</option>
+<option value="http://www.gcnewyork.com">GC New York</option>
+<option value="http://www.law.com/jsp/ca/index.jsp">The Recorder (CA)</option>
+<option value="http://www.law.com/jsp/tx/index.jsp">Texas Lawyer</option>
+
+<!--
+<option value="http://www.americanlawyer.com/litigation_daily.jsp">The Am Law Litigation Daily</option>
+<option value="http://www.americanlawyer.com/asian_lawyer/index.jsp">The Asian Lawyer</option>
+<option value="http://www.americanlawyer.com/focus_europe.jsp">Focus Europe</option>
+-->
+</select>
+</form>	
+
+
+</div>
+
+<div class="footerlinks">
+
+<ul>
+<li><a href="http://www.alm.com/" rel="nofollow">About</a> | </li>
+<li><a href="http://www.law.com/jsp/law/sitemap.jsp" rel="nofollow">ALM Properties</a> | </li>
+<li><a href="http://www.law.com/jsp/law/mobileapps.jsp" rel="nofollow">Mobile Apps</a> | </li>
+<li><a href="http://www.law.com/jsp/reprints/index.jsp" rel="nofollow">ALM Reprints</a> | </li>
+<li><a href="http://www.law.com/jsp/law/contact.jsp" rel="nofollow">Customer Support</a> | </li>
+<li><a href="http://www.law.com/jsp/law/privacy.jsp" rel="nofollow">Privacy Policy</a> | </li>
+<li><a href="http://www.law.com/jsp/law/license-agreement.jsp" rel="nofollow">ALM User License and Terms of Use</a></li>
+
+</ul>
+
+<div class="copyright">
+<script language="JavaScript" src="/global/copyright.js"></script><noscript>Copyright 2013.<br />ALM Media Properties, LLC. All rights reserved.</noscript>
+</div>
+
+</div><!--/footerlinks-->
+
+</div><!-- /footernav -->
+
+
+
+<div class="logo">
+<a href="http://www.alm.com/"><img src="http://www.law.com/img/universal/alm_footer_logo.gif" border="0" alt="ALM Media"/></a>
+</div>
+
+<div class="clear"></div>
+
+</div>
+
+</div>
+<!-- end almFooter content   -->
+
+
+
+
+<!------ OAS AD 'x26' begin ------>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+OAS_AD('x26');
+//-->
+</SCRIPT>
+<!------ OAS AD 'x26' end ------>
+
+<!------ OAS AD 'x25' begin ------>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+OAS_AD('x25');
+//-->
+</SCRIPT>
+<!------ OAS AD 'x25' end ------>
+
+<!-- Custom Channel Tag: corpcounsel.law.com -->
+<script type="text/javascript">
+    var _bizo_data_partner_id = "437";
+    var _bizo_data_partner_channel_id = "corpcounsel.law.com";
+</script>
+<script type="text/javascript">
+    var _bizo_p = (("https:" == document.location.protocol) ? "https://sjs." : "http://js.");
+    document.write(unescape("%3Cscript src='" + _bizo_p + "bizographics.com/convert_data.js?partner_id=" + _bizo_data_partner_id + "' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<!-- Marketo Tracking -->
+<script type="text/javascript">
+    document.write(unescape("%3Cscript src='" + document.location.protocol + "//munchkin.marketo.net/munchkin.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script>    Munchkin.init('359-LXX-521', { wsInfo: 'jVRS' });</script>
+<!-- /Marketo Tracking --> 
+
+<!-- Common Scripts -->
+<!-- ChartBeat START -->
+<script type="text/javascript">
+
+var _sf_async_config={};
+/** CONFIGURATION START **/
+_sf_async_config.uid = 46802;
+_sf_async_config.domain = "corporatecounsel.com";    
+_sf_async_config.useCanonical = true;
+_sf_async_config.sections = "News";
+
+/** CONFIGURATION END **/
+
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement("script");
+    e.setAttribute("language", "javascript");
+    e.setAttribute("type", "text/javascript");
+    e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != "function") ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+<!-- ChartBeat END -->
+
+<!-- Quantcast START -->
+<script type="text/javascript">
+
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-tet4NLTPxSXJn",label:"Corporate Counsel"
+
+});
+
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-tet4NLTPxSXJn.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- Quantcast END -->
+
+<!-- Sailthru Horizon -->
+<script type="text/javascript">
+    (function () {
+        function loadHorizon() {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = location.protocol + '//ak.sail-horizon.com/horizon/v1.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        }
+        loadHorizon();
+        var oldOnLoad = window.onload;
+        window.onload = function () {
+            if (typeof oldOnLoad === 'function') {
+                oldOnLoad();
+            }
+            Sailthru.setup({
+                domain: 'horizon.law.com'
+            });
+        };
+    })();
+</script>
+</body>
+</html>
+
+

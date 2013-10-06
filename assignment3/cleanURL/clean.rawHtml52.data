@@ -1,0 +1,350 @@
+   #[1]Stack Overflow [2]Feed for question 'Python: Multi variable
+   nonlinear fitting like matlabs nlinfit'
+
+   [3]Stack Exchange
+   [4]sign up | [5]log in | [6]careers 2.0 |
+   ____________________________
+   [7]Stack Overflow
+     * [8]Questions
+     * [9]Tags
+     * [10]Tour
+     * [11]Users
+
+     * [12]Ask Question
+
+   [13]Tell me more ×
+   Stack Overflow is a question and answer site for professional and
+   enthusiast programmers. It's 100% free, no registration required.
+
+[14]Python: Multi variable nonlinear fitting like matlabs nlinfit
+
+   up vote 1 down vote [15]favorite
+   1
+
+   I used to use Matlab to perform nonlinear fits using the nlinfit
+   function. This allowed me to create a fit for a vector of observed
+   responses to two predictors. Let's for arguments sake say Cu recovery
+   through a separation process based on the feed grade and feed rate.
+   When using Matlabs nlinfit(), the function accepted the Rec column of
+   data as the observed response, and then a n by 2 matrix of predictors,
+   in this case feed rate and feed grade.
+
+   I have now switched to using Python (NumPy, SciPy and MatPlotLib)
+   instead of Matlab and cannot make the minimize function perform the
+   same multiple variable nonlinear regression fitting. I have managed
+   fine with a single predictor variable with many observations, but not a
+   multiple variable predictor set.
+   [16]python [17]numpy [18]scipy [19]nonlinear-optimization
+
+   [20]share|[21]improve this question
+   [22]edited Sep 26 at 12:46
+   [23]ali_m
+   2,845626
+   asked Sep 26 at 12:39
+   [24]user2568366
+   61
+
+   2
+     could you post some code? – [25]ali_m Sep 26 at 12:42
+
+   1
+     Can you post what you have tried thus far? Matlab's nlinfit function
+     uses the Levenberg-Marquardt algorithm so you could try
+     scipy.optimize.leastsq or scipy.optimize.curve_fit (looks like Matlab
+     has a "robust" option). – [26]Joel Vroom Sep 26 at 15:17
+
+   [27]active [28]oldest [29]votes
+
+Know someone who can answer? Share a link to this [30]question via [31]email,
+[32]Google+, [33]Twitter, or [34]Facebook.
+
+Your Answer
+
+
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+
+   draft saved
+   draft discarded
+   ____________________
+
+Sign up or [35]login
+
+   Sign up using Google
+
+   Sign up using Facebook
+
+   Sign up using Stack Exchange
+   [BUTTON Input] (not implemented)______
+
+Post as a guest
+
+   Name ______________________________
+   Email ______________________________ required, but not shown
+
+Post as a guest
+
+   Name ______________________________
+   Email ______________________________ required, but not shown
+   Post Your Answer [36]discard
+
+   By posting your answer, you agree to the [37]privacy policy and
+   [38]terms of service.
+
+Browse other questions tagged [39]python [40]numpy [41]scipy
+[42]nonlinear-optimization or [43]ask your own question.
+
+   tagged
+   [44]python × 224668
+   [45]numpy × 7339
+   [46]scipy × 2472
+   [47]nonlinear-optimization × 70
+
+   asked
+
+         5 days ago
+
+   viewed
+
+         36 times
+
+Related
+
+   3
+   [48]MATLAB to Python Code conversion (NumPy, SciPy, MatplotLib?)
+   5
+   [49]Nonlinear e^(-x) regression using scipy, python, numpy
+   8
+   [50]python nonlinear least squares fitting
+   1
+   [51]Numpy, all pairwise correlations of a 3d array
+   1
+   [52]Matlab to Python Conversion
+   13
+   [53]How to solve a pair of nonlinear equations using Python?
+   0
+   [54]Fitting data to system of ODEs using Python via Scipy & Numpy
+   0
+   [55]Newton-Raphson linearization? Second-Order Nonlinear ODE
+   numpy-scipy Python
+   3
+   [56]Fourier transform / iterative deconvolution fitting in python using
+   numpy/scipy
+   2
+   [57]solving colebrook (nonlinear) equation in python
+   [58]question feed
+   lang-py
+
+   [59]about [60]help [61]badges [62]blog [63]chat [64]data [65]legal
+   [66]privacy policy [67]jobs [68]advertising info mobile [69]contact us
+   [70]feedback
+            Technology            Life / Arts Culture / Recreation Science Other
+   1. [71]Stack Overflow
+   2. [72]Server Fault
+   3. [73]Super User
+   4. [74]Web Applications
+    5. [75]Ask Ubuntu
+    6. [76]Webmasters
+    7. [77]Game Development
+    8. [78]TeX - LaTeX
+
+   1. [79]Programmers
+    2. [80]Unix & Linux
+    3. [81]Ask Different (Apple)
+    4. [82]WordPress Answers
+    5. [83]Geographic Information Systems
+    6. [84]Electrical Engineering
+    7. [85]Android Enthusiasts
+    8. [86]IT Security
+
+   1. [87]Database Administrators
+    2. [88]Drupal Answers
+    3. [89]SharePoint
+    4. [90]User Experience
+    5. [91]Mathematica
+    6. [92]more (13)
+
+   1. [93]Photography
+    2. [94]Science Fiction & Fantasy
+    3. [95]Seasoned Advice (cooking)
+    4. [96]Home Improvement
+    5. [97]more (13)
+
+   1. [98]English Language & Usage
+    2. [99]Skeptics
+    3. [100]Mi Yodeya (Judaism)
+    4. [101]Travel
+    5. [102]Christianity
+    6. [103]Arqade (gaming)
+    7. [104]Bicycles
+    8. [105]Role-playing Games
+    9. [106]more (21)
+
+   1. [107]Mathematics
+    2. [108]Cross Validated (stats)
+    3. [109]Theoretical Computer Science
+    4. [110]Physics
+    5. [111]MathOverflow
+    6. [112]more (7)
+
+   1. [113]Stack Apps
+    2. [114]Meta Stack Overflow
+    3. [115]Area 51
+    4. [116]Stack Overflow Careers
+
+   site design / logo © 2013 stack exchange inc; user contributions
+   licensed under [117]cc-wiki with [118]attribution required
+   rev 2013.10.1.1045
+
+   Stack Overflow works best with JavaScript enabled
+
+References
+
+   Visible links
+   1. file://localhost/opensearch.xml
+   2. file://localhost/feeds/question/19028550
+   3. http://stackexchange.com/
+   4. file://localhost/users/login?returnurl=%2fquestions%2f19028550%2fpython-multi-variable-nonlinear-fitting-like-matlabs-nlinfit
+   5. file://localhost/users/login?returnurl=%2fquestions%2f19028550%2fpython-multi-variable-nonlinear-fitting-like-matlabs-nlinfit
+   6. http://careers.stackoverflow.com/
+   7. file://localhost/
+   8. file://localhost/questions
+   9. file://localhost/tags
+  10. file://localhost/about
+  11. file://localhost/users
+  12. file://localhost/questions/ask
+  13. file://localhost/about
+  14. file://localhost/questions/19028550/python-multi-variable-nonlinear-fitting-like-matlabs-nlinfit
+  15. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml52.data
+  16. file://localhost/questions/tagged/python
+  17. file://localhost/questions/tagged/numpy
+  18. file://localhost/questions/tagged/scipy
+  19. file://localhost/questions/tagged/nonlinear-optimization
+  20. file://localhost/q/19028550
+  21. file://localhost/posts/19028550/edit
+  22. file://localhost/posts/19028550/revisions
+  23. file://localhost/users/1461210/ali-m
+  24. file://localhost/users/2568366/user2568366
+  25. file://localhost/users/1461210/ali-m
+  26. file://localhost/users/1538554/joel-vroom
+  27. file://localhost/questions/19028550/python-multi-variable-nonlinear-fitting-like-matlabs-nlinfit?answertab=active#tab-top
+  28. file://localhost/questions/19028550/python-multi-variable-nonlinear-fitting-like-matlabs-nlinfit?answertab=oldest#tab-top
+  29. file://localhost/questions/19028550/python-multi-variable-nonlinear-fitting-like-matlabs-nlinfit?answertab=votes#tab-top
+  30. file://localhost/q/19028550
+  31. mailto:?subject=Stack%20Overflow%20Question&body=Python%3a%20Multi%20variable%20nonlinear%20fitting%20like%20matlabs%20nlinfit%0Ahttp%3a%2f%2fstackoverflow.com%2fq%2f19028550%3fsem%3d2
+  32. https://plus.google.com/share?url=http%3a%2f%2fstackoverflow.com%2fq%2f19028550%3fsgp%3d2
+  33. http://twitter.com/share?url=http%3a%2f%2fstackoverflow.com%2fq%2f19028550%3fstw%3d2
+  34. http://www.facebook.com/sharer.php?u=http%3a%2f%2fstackoverflow.com%2fq%2f19028550%3fsfb%3d2
+  35. file://localhost/users/login?returnurl=%2fquestions%2f19028550%2fpython-multi-variable-nonlinear-fitting-like-matlabs-nlinfit%23new-answer
+  36. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml52.data
+  37. http://stackexchange.com/legal/privacy-policy
+  38. http://stackexchange.com/legal/terms-of-service
+  39. file://localhost/questions/tagged/python
+  40. file://localhost/questions/tagged/numpy
+  41. file://localhost/questions/tagged/scipy
+  42. file://localhost/questions/tagged/nonlinear-optimization
+  43. file://localhost/questions/ask
+  44. file://localhost/questions/tagged/python
+  45. file://localhost/questions/tagged/numpy
+  46. file://localhost/questions/tagged/scipy
+  47. file://localhost/questions/tagged/nonlinear-optimization
+  48. file://localhost/questions/2326786/matlab-to-python-code-conversion-numpy-scipy-matplotlib
+  49. file://localhost/questions/4495127/nonlinear-e-x-regression-using-scipy-python-numpy
+  50. file://localhost/questions/7165201/python-nonlinear-least-squares-fitting
+  51. file://localhost/questions/7689868/numpy-all-pairwise-correlations-of-a-3d-array
+  52. file://localhost/questions/7960761/matlab-to-python-conversion
+  53. file://localhost/questions/8739227/how-to-solve-a-pair-of-nonlinear-equations-using-python
+  54. file://localhost/questions/11278836/fitting-data-to-system-of-odes-using-python-via-scipy-numpy
+  55. file://localhost/questions/15542430/newton-raphson-linearization-second-order-nonlinear-ode-numpy-scipy-python
+  56. file://localhost/questions/16483990/fourier-transform-iterative-deconvolution-fitting-in-python-using-numpy-scipy
+  57. file://localhost/questions/18880134/solving-colebrook-nonlinear-equation-in-python
+  58. file://localhost/feeds/question/19028550
+  59. file://localhost/about
+  60. file://localhost/help
+  61. file://localhost/help/badges
+  62. http://blog.stackexchange.com/?blb=1
+  63. http://chat.stackoverflow.com/
+  64. http://data.stackexchange.com/
+  65. http://stackexchange.com/legal
+  66. http://stackexchange.com/legal/privacy-policy
+  67. http://stackexchange.com/about/hiring
+  68. http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6MjAsImNtIjo5NTQsImNoIjoxMTc4LCJjciI6Mjc3NiwiZG0iOjQsImZjIjoyODYyLCJmbCI6Mjc1MSwibnciOjIyLCJydiI6MCwicHIiOjExNSwic3QiOjAsInVyIjoiaHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL2Fib3V0L2NvbnRhY3QiLCJyZSI6MX0&s=hRods5B22XvRBwWIwtIMekcyNF8
+  69. file://localhost/contact
+  70. http://meta.stackoverflow.com/
+  71. http://stackoverflow.com/
+  72. http://serverfault.com/
+  73. http://superuser.com/
+  74. http://webapps.stackexchange.com/
+  75. http://askubuntu.com/
+  76. http://webmasters.stackexchange.com/
+  77. http://gamedev.stackexchange.com/
+  78. http://tex.stackexchange.com/
+  79. http://programmers.stackexchange.com/
+  80. http://unix.stackexchange.com/
+  81. http://apple.stackexchange.com/
+  82. http://wordpress.stackexchange.com/
+  83. http://gis.stackexchange.com/
+  84. http://electronics.stackexchange.com/
+  85. http://android.stackexchange.com/
+  86. http://security.stackexchange.com/
+  87. http://dba.stackexchange.com/
+  88. http://drupal.stackexchange.com/
+  89. http://sharepoint.stackexchange.com/
+  90. http://ux.stackexchange.com/
+  91. http://mathematica.stackexchange.com/
+  92. http://stackexchange.com/sites#technology
+  93. http://photo.stackexchange.com/
+  94. http://scifi.stackexchange.com/
+  95. http://cooking.stackexchange.com/
+  96. http://diy.stackexchange.com/
+  97. http://stackexchange.com/sites#lifearts
+  98. http://english.stackexchange.com/
+  99. http://skeptics.stackexchange.com/
+ 100. http://judaism.stackexchange.com/
+ 101. http://travel.stackexchange.com/
+ 102. http://christianity.stackexchange.com/
+ 103. http://gaming.stackexchange.com/
+ 104. http://bicycles.stackexchange.com/
+ 105. http://rpg.stackexchange.com/
+ 106. http://stackexchange.com/sites#culturerecreation
+ 107. http://math.stackexchange.com/
+ 108. http://stats.stackexchange.com/
+ 109. http://cstheory.stackexchange.com/
+ 110. http://physics.stackexchange.com/
+ 111. http://mathoverflow.net/
+ 112. http://stackexchange.com/sites#science
+ 113. http://stackapps.com/
+ 114. http://meta.stackoverflow.com/
+ 115. http://area51.stackexchange.com/
+ 116. http://careers.stackoverflow.com/
+ 117. http://creativecommons.org/licenses/by-sa/3.0/
+ 118. http://blog.stackoverflow.com/2009/06/attribution-required/
+
+   Hidden links:
+ 120. file://localhost/users/1461210/ali-m
+ 121. file://localhost/users/2568366/user2568366
+ 122. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml52.data
+ 123. file://localhost/q/2326786
+ 124. file://localhost/q/4495127
+ 125. file://localhost/q/7165201
+ 126. file://localhost/q/7689868
+ 127. file://localhost/q/7960761
+ 128. file://localhost/q/8739227
+ 129. file://localhost/q/11278836
+ 130. file://localhost/q/15542430
+ 131. file://localhost/q/16483990
+ 132. file://localhost/q/18880134
+ 133. http://creativecommons.org/licenses/by-sa/3.0/

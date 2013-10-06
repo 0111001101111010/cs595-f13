@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>C# - Google Chrome Remove Links Outline border | emoticode</title>
+  <link href="/assets/application-4f0c20545faf921dfa9760924e6ff663.css" media="all" rel="stylesheet" />
+  <script src="/assets/application-c36321382d2dd1bc2e6facdb809952da.js"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="GQvrcfmbVINvz/HOM3AwoXN/dlK2vKRD7oPfz0QArBc=" name="csrf-token" />
+    <meta property="og:title" content="C# - Google Chrome Remove Links Outline border | emoticode" />
+    <meta property="og:description" content="C# - Google Chrome Remove Links Outline border | emoticode" />
+    <meta name="title" content="C# - Google Chrome Remove Links Outline border | emoticode" />
+    <meta name="description" content="C# - Google Chrome Remove Links Outline border | emoticode" />
+    <meta name="keywords" content="None, focus, outline" />
+    <meta charset="utf-8" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="emoticode" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="http://www.emoticode.net/logo_2.0_200.png" />
+    <meta property="fb:app_id" content="541383999216397" />
+    <meta name="language" content="en" />
+    <meta name="robots" content="noodp,noydr" />
+    <meta name="alexaVerifyID" content="esKfarSO5NWalbJaefzTwaUzso" />
+    <meta name="msvalidate.01" content="9C2A48C8F5733D97CD13C5EB3699308D" />
+    <meta name="google-site-verification" content="Uy9LP869XtH59q7mfCgyOd4CS5XifoRgROn0wJ8d8MU" />
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="search" type="application/opensearchdescription+xml" href="http://www.emoticode.net/opensearch.xml" title="EmotiCODE Search"/>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<nav id="navbar">
+  <ul>
+    <li class="home">
+    <a href="/" title="Home">
+      Home
+    </a>
+    </li>
+          <li>
+              <a href="http://www.emoticode.net/php" title="PHP code snippets.">PHP</a>
+          </li>
+          <li>
+              <a href="http://www.emoticode.net/javascript" title="JavaScript code snippets.">JavaScript</a>
+          </li>
+          <li>
+              <a href="http://www.emoticode.net/css" title="CSS code snippets.">CSS</a>
+          </li>
+          <li>
+              <a href="http://www.emoticode.net/bash" title="Bash code snippets.">Bash</a>
+          </li>
+          <li>
+              <a href="http://www.emoticode.net/html" title="HTML code snippets.">HTML</a>
+          </li>
+          <li>
+              <a href="http://www.emoticode.net/actionscript-3" title="ActionScript 3 code snippets.">ActionScript 3</a>
+          </li>
+          <li>
+              <a href="http://www.emoticode.net/jquery" title="jQuery code snippets.">jQuery</a>
+          </li>
+          <li>
+              <a href="http://www.emoticode.net/c-plus-plus" title="C++ code snippets.">C++</a>
+          </li>
+          <li>
+              <a class="current" href="http://www.emoticode.net/c-sharp" title="C# code snippets.">C#</a>
+          </li>
+          <li>
+              <a href="http://www.emoticode.net/python" title="Python code snippets.">Python</a>
+          </li>
+          <li>
+              <a href="http://www.emoticode.net/java" title="Java code snippets.">Java</a>
+          </li>
+          <li>
+              <a href="http://www.emoticode.net/sql" title="SQL code snippets.">SQL</a>
+          </li>
+          <li>
+              <a href="http://www.emoticode.net/objective-c" title="Objective C code snippets.">Objective C</a>
+          </li>
+          <li>
+              <a href="http://www.emoticode.net/ruby" title="Ruby code snippets.">Ruby</a>
+          </li>
+          <li>
+              <a href="http://www.emoticode.net/actionscript" title="ActionScript code snippets.">ActionScript</a>
+          </li>
+      <li id="show-all-langs">
+          <a href="#" onclick="return false;">All &raquo;</a>
+          <div id="all-langs">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                  <tr>
+                          <td>
+                              <a href="http://www.emoticode.net/actionscript" title="ActionScript code snippets.">ActionScript</a>
+                              <span>379</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/actionscript-3" title="ActionScript 3 code snippets.">ActionScript 3</a>
+                              <span>1650</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/apache" title="Apache code snippets.">Apache</a>
+                              <span>327</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/applescript" title="AppleScript code snippets.">AppleScript</a>
+                              <span>148</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/asp" title="ASP code snippets.">ASP</a>
+                              <span>301</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/assembler" title="Assembler code snippets.">Assembler</a>
+                              <span>20</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/autoit" title="AutoIt code snippets.">AutoIt</a>
+                              <span>10</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/awk" title="Awk code snippets.">Awk</a>
+                              <span>13</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/bash" title="Bash code snippets.">Bash</a>
+                              <span>2329</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/c" title="C code snippets.">C</a>
+                              <span>363</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/c-plus-plus" title="C++ code snippets.">C++</a>
+                              <span>1243</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/c-sharp" title="C# code snippets.">C#</a>
+                              <span>1165</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/clojure" title="Clojure code snippets.">Clojure</a>
+                              <span>32</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/cold-fusion" title="ColdFusion code snippets.">ColdFusion</a>
+                              <span>51</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/css" title="CSS code snippets.">CSS</a>
+                              <span>2510</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/delphi" title="Delphi code snippets.">Delphi</a>
+                              <span>29</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/diff" title="Diff code snippets.">Diff</a>
+                              <span>7</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/django" title="Django code snippets.">Django</a>
+                              <span>47</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/dos" title="DOS Batch code snippets.">DOS Batch</a>
+                              <span>131</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/emacs-lisp" title="Emacs Lisp code snippets.">Emacs Lisp</a>
+                              <span>37</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/ez-publish" title="eZ Publish code snippets.">eZ Publish</a>
+                              <span>21</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/forth" title="Forth code snippets.">Forth</a>
+                              <span>0</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/fortran" title="Fortran code snippets.">Fortran</a>
+                              <span>3</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/gnuplot" title="Gnuplot code snippets.">Gnuplot</a>
+                              <span>2</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/groovy" title="Groovy code snippets.">Groovy</a>
+                              <span>182</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/haml" title="HAML code snippets.">HAML</a>
+                              <span>12</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/haskell" title="Haskell code snippets.">Haskell</a>
+                              <span>38</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/html" title="HTML code snippets.">HTML</a>
+                              <span>1848</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/iphone" title="iPhone code snippets.">iPhone</a>
+                              <span>66</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/java" title="Java code snippets.">Java</a>
+                              <span>848</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/javascript" title="JavaScript code snippets.">JavaScript</a>
+                              <span>3875</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/jquery" title="jQuery code snippets.">jQuery</a>
+                              <span>1400</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/latex" title="LaTeX code snippets.">LaTeX</a>
+                              <span>28</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/lighttpd" title="lighttpd code snippets.">lighttpd</a>
+                              <span>3</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/lisp" title="Lisp code snippets.">Lisp</a>
+                              <span>40</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/lua" title="Lua code snippets.">Lua</a>
+                              <span>26</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/make" title="Makefile code snippets.">Makefile</a>
+                              <span>8</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/matlab" title="MatLab code snippets.">MatLab</a>
+                              <span>21</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/maxscript" title="Maxscript code snippets.">Maxscript</a>
+                              <span>27</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/mel" title="Mel code snippets.">Mel</a>
+                              <span>4</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/mxml" title="MXML code snippets.">MXML</a>
+                              <span>59</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/mysql" title="MySQL code snippets.">MySQL</a>
+                              <span>302</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/newtonscript" title="NewtonScript code snippets.">NewtonScript</a>
+                              <span>2</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/objective-c" title="Objective C code snippets.">Objective C</a>
+                              <span>759</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/open-firmware" title="Open Firmware code snippets.">Open Firmware</a>
+                              <span>2</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/other" title="Other code snippets.">Other</a>
+                              <span>143</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/pascal" title="Pascal code snippets.">Pascal</a>
+                              <span>21</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/perl" title="Perl code snippets.">Perl</a>
+                              <span>299</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/php" title="PHP code snippets.">PHP</a>
+                              <span>7441</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/picbasic" title="PicBasic code snippets.">PicBasic</a>
+                              <span>2</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/plsql" title="PL/SQL code snippets.">PL/SQL</a>
+                              <span>100</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/processing" title="Processing code snippets.">Processing</a>
+                              <span>32</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/prolog" title="Prolog code snippets.">Prolog</a>
+                              <span>11</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/pseudocode" title="Pseudocode code snippets.">Pseudocode</a>
+                              <span>14</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/python" title="Python code snippets.">Python</a>
+                              <span>1028</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/r" title="R code snippets.">R</a>
+                              <span>78</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/rails" title="Rails code snippets.">Rails</a>
+                              <span>205</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/regex" title="Regular Expression code snippets.">Regular Expression</a>
+                              <span>130</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/revolution" title="Revolution code snippets.">Revolution</a>
+                              <span>4</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/ruby" title="Ruby code snippets.">Ruby</a>
+                              <span>725</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/sas" title="SAS code snippets.">SAS</a>
+                              <span>134</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/sass" title="SASS code snippets.">SASS</a>
+                              <span>16</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/scala" title="Scala code snippets.">Scala</a>
+                              <span>12</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/scheme" title="Scheme code snippets.">Scheme</a>
+                              <span>15</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/smalltalk" title="SmallTalk code snippets.">SmallTalk</a>
+                              <span>5</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/smarty" title="Smarty code snippets.">Smarty</a>
+                              <span>26</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/sml" title="SML code snippets.">SML</a>
+                              <span>0</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/spss" title="SPSS code snippets.">SPSS</a>
+                              <span>0</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/sql" title="SQL code snippets.">SQL</a>
+                              <span>845</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/svn" title="SVN code snippets.">SVN</a>
+                              <span>76</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/symfony" title="Symfony code snippets.">Symfony</a>
+                              <span>12</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/tcl" title="TCL code snippets.">TCL</a>
+                              <span>20</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/textpattern" title="Textpattern code snippets.">Textpattern</a>
+                              <span>20</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/typo3" title="TYPO3 code snippets.">TYPO3</a>
+                              <span>100</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/vbnet" title="VB.NET code snippets.">VB.NET</a>
+                              <span>196</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/vhdl" title="VHDL code snippets.">VHDL</a>
+                              <span>9</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/visual-basic" title="Visual Basic code snippets.">Visual Basic</a>
+                              <span>219</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/w-language" title="W-Language code snippets.">W-Language</a>
+                              <span>2</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/windows-powershell" title="Windows PowerShell code snippets.">Windows PowerShell</a>
+                              <span>66</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/windows-registry" title="Windows Registry code snippets.">Windows Registry</a>
+                              <span>50</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/xhtml" title="XHTML code snippets.">XHTML</a>
+                              <span>148</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/xml" title="XML code snippets.">XML</a>
+                              <span>254</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/xslt" title="XSLT code snippets.">XSLT</a>
+                              <span>33</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/android-sdk" title="Android SDK code snippets.">Android SDK</a>
+                              <span>104</span>
+                          </td>
+                              </tr>
+                          <td>
+                              <a href="http://www.emoticode.net/falcon" title="Falcon code snippets.">Falcon</a>
+                              <span>12</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/ada" title="Ada code snippets.">Ada</a>
+                              <span>1</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/vim" title="VIM code snippets.">VIM</a>
+                              <span>3</span>
+                          </td>
+                          <td>
+                              <a href="http://www.emoticode.net/coffeescript" title="CoffeeScript code snippets.">CoffeeScript</a>
+                              <span>4</span>
+                          </td>
+                              </tr>
+                      <td></td><td></td><td></td><td></td> </tr> 
+              </table>
+          </div>
+        </li>
+  </ul>
+</nav>
+<nav id="sub-navbar">
+    <div class="inner">
+        <ul>
+
+            <li><a href="#" onclick="showLoginModal(); return false;">Add Snippet</a></li><li>&bull;</li><li><a href="/sign_in" title="Login">Login</a></li><li>&bull;</li><li><a href="/sign_up" title="Register">Register</a></li><li>&bull;</li><li><a class="iconic" href="/auth/facebook" title="Login with your Facebook account."><i class="icon-facebook"></i> Connect with Facebook</a></li><li>&bull;</li><li><a class="iconic" href="/auth/github" title="Login with your Github account."><i class="icon-github"></i> Connect with GitHub</a></li>
+        </ul>
+    </div>
+</nav>
+
+  <div class="dialog" id="login"><div class="title">Sign In</div><div class="content">
+  
+
+  <ul class="connect">
+      <li>
+        <a class="facebook-button pure-button pure-button-primary" href="/auth/facebook" title="Login with your Facebook account."><i class="icon-facebook"></i> Connect with Facebook</a>
+      </li>
+      <li>
+        <a class="github-button pure-button pure-button-primary" href="/auth/github" title="Login with your Github account."><i class="icon-github"></i> Connect with Github</a>
+      </li>
+</ul>
+
+  
+  <form accept-charset="UTF-8" action="/sign_in" class="pure-form pure-form-aligned" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="GQvrcfmbVINvz/HOM3AwoXN/dlK2vKRD7oPfz0QArBc=" /></div>
+    <fieldset class="pure-group">
+      <input id="session_who" name="session[who]" placeholder="Username / Email" type="text" />
+      <input id="session_password" name="session[password]" placeholder="Password" type="password" />
+    </fieldset>
+
+    <a href="/passwords/new" title="Password Recovery">Password Recovery</a>
+      <a href="/sign_up" title="Register">Register</a>
+    <input class="pure-button pure-button-primary" name="commit" type="submit" value="Sign in" />
+</form></div></div>
+
+
+<div id="wrapper">
+<section id="source">
+  <div class="small-column">
+    <div id="publisher">
+      <span class="author">
+        <a href="/profile/emobot" title="emobot profile">
+          <figure class="avatar"><img alt="emobot avatar." height="50" onerror="this.src=&#39;http://www.emoticode.net/avatars/default.png&#39;;" src="http://www.emoticode.net/avatars/5.png" width="50" /></figure>
+          emobot
+        </a>
+      </span>
+
+      <span class="info">
+        Posted into <a class="language" href="http://www.emoticode.net/c-sharp" title="C# code snippets.">C#</a> 
+        <br/>
+        7 months ago
+        <br/> 
+        2 views 
+      </span>
+      
+      <ul class="buttons">
+          <li>
+            <a class="iconic" href="#" onclick="showLoginModal(); return false;"><i class="icon-thumbs-up"></i> Fav It!</a>
+          </li>
+        </li>
+        <li>
+          <a class="iconic" href="/c-sharp/google-chrome-remove-links-outline-border.txt" title="Raw"><i class="icon-file-text"></i> Raw</a> 
+        </li>
+
+        <li>
+          <a class="iconic" href="#" onclick="$(&#39;#embed&#39;).modal();; return false;"><i class="icon-expand"></i> Embed</a>
+        </li>
+      </ul>
+    </div>
+
+    <div style="width:120px;height:600px;"><script>
+//<![CDATA[
+google_ad_client = "ca-pub-5373888916618771";
+google_ad_slot   = "6322822178";
+google_ad_width  = 120;
+google_ad_height = 600;
+
+//]]>
+</script><script src="//pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+
+  </div>  
+
+  <div class="medium-column">
+    <h1>Google Chrome Remove Links Outline border</h1>
+    <center>
+      <div style="width:728px;height:90px;"><script>
+//<![CDATA[
+google_ad_client = "ca-pub-5373888916618771";
+google_ad_slot   = "2691371377";
+google_ad_width  = 728;
+google_ad_height = 90;
+
+//]]>
+</script><script src="//pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+    </center>
+    <p class="description"><em>No description :/</em></p>
+    <div class="highlight"><pre><span class="p">*:</span><span class="n">focus</span>  
+<span class="p">{</span>  
+     <span class="n">outline</span><span class="p">:</span> <span class="n">none</span><span class="p">;</span>  
+<span class="p">}</span>
+</pre>
+</div>
+
+
+    <div id="comments">
+  <h2><i class="icon-comments"></i> Comments</h2>
+
+  <div class="create">
+    <span class="errors"></span>
+
+      <a href="/sign_in" title="Login">Login</a> or <a href="/sign_up" title="Register">Register</a> to comment.
+  </div>
+
+
+  <br style="clear:both"/>
+</div>
+
+  </div>
+
+  <div id="sidebar">
+      <a class="pure-button pure-button-green post-button" href="#" onclick="showLoginModal(); return false;"><i class="icon-plus-sign"></i> Post a Snippet</a>
+      <p>
+        Build up your personal collection of code snippets with ease and share them with the world!
+      </p>
+
+    <div class="heading orange">
+      <h3>Share</h3>
+    </div>
+    <div class="share">
+      <a href="http://www.facebook.com/sharer.php?u=http://www.emoticode.net/c-sharp/google-chrome-remove-links-outline-border.html" target="_blank" title="Share on Facebook"><img alt="Facebook" src="/assets/icons/facebook-bd3269db5777b2ba2155317cb5a94f53.png" /></a>
+      <a href="http://twitter.com/home?status=C# - Google Chrome Remove Links Outline border http://www.emoticode.net/c-sharp/google-chrome-remove-links-outline-border.html" target="_blank" title="Post to Twitter"><img alt="Twitter" src="/assets/icons/twitter-f7e150d86598d78a3d5b5c9248c28452.png" /></a>
+      <a href="https://plus.google.com/share?url=http://www.emoticode.net/c-sharp/google-chrome-remove-links-outline-border.html" target="_blank" title="Post to Google+"><img alt="Googleplus" src="/assets/icons/googleplus-fa4bd8c6296ea3bd24d82caddab75e0f.png" /></a>
+      <a href="http://www.reddit.com/submit?url=http://www.emoticode.net/c-sharp/google-chrome-remove-links-outline-border.html&amp;title=C# - Google Chrome Remove Links Outline border" target="_blank" title="Post to Reddit"><img alt="Reddit" src="/assets/icons/reddit-6658bedbc2ae472478eb80f9e892880a.png" /></a>
+    </div>
+
+
+
+
+  <br style="clear:both"/>
+
+        <div class="heading orange">
+          <h3>Related Sources</h3>
+        </div>
+        <ul class="related">
+          <li>
+            <a href="http://www.emoticode.net/jquery/simple-responsive-slider.html" title="jQuery - Simple responsive slider">Simple responsive slider</a>
+          </li>
+          <li>
+            <a href="http://www.emoticode.net/python/optparse-es.html" title="Python - OptParse Es">OptParse Es</a>
+          </li>
+          <li>
+            <a href="http://www.emoticode.net/css/normalize-css-more-then-a-css-reset.html" title="CSS - Normalize.css, more then a css Reset.">Normalize.css, more then a css Reset.</a>
+          </li>
+          <li>
+            <a href="http://www.emoticode.net/javascript/place-cursor-at-end-of-contenteditable.html" title="JavaScript - Place cursor at end of contenteditable">Place cursor at end of contenteditable</a>
+          </li>
+          <li>
+            <a href="http://www.emoticode.net/jquery/placeholder-replacement.html" title="jQuery - Placeholder replacement">Placeholder replacement</a>
+          </li>
+        </ul>
+
+  <div class="heading red">
+    <h3>Cloud</h3>
+  </div>
+  <div class="cloud">
+      <a href="/search/focus" style="font-size: 20px" title="The keyword focus has 385 elements.">focus</a>
+      <a href="/search/outline" style="font-size: 9px" title="The keyword outline has 18 elements.">outline</a>
+      <a href="/search/none" style="font-size: 16px" title="The keyword None has 123 elements.">None</a>
+  </div>
+</div>
+
+</section>
+
+<div class="dialog" id="embed"><div class="title">Embed Me!</div><div class="content">
+  <textarea><script type="text/javascript" src="http://www.emoticode.net/c-sharp/google-chrome-remove-links-outline-border.js"></script></textarea>
+</div></div>
+</div>
+
+<footer id="footer">
+  <div id="fwrapper">
+    <ul>
+      <li>
+        <h3>Pages</h3>
+        <a href="/about.html" title="About">About</a><br/>
+        <a href="/sitemap.html" title="Site Map">Site Map</a><br/>
+        <a href="/contact.html" title="Contact">Contact</a><br/>
+      </li>
+
+      <li>
+        <h3>Contacts</h3>
+        <a href="http://www.twitter.com/emoticodedotnet" target="_blank" title="EmotiCODE on Twitter">Twitter</a><br/>
+        <a href="http://plus.google.com/105672627985088123672" target="_blank" title="EmotiCODE on Google+">Google+</a><br/>
+        <a href="https://www.facebook.com/pages/EmotiCODE/475488679182886" target="_blank" title="EmotiCODE on Facebook">Facebook</a><br/>
+      </li>
+
+      <li>
+        <h3>Links</h3>
+        <a href="http://www.evilsocket.net" target="_blank" title="The author personal website">evilsocket.net</a><br/>
+        <a href="http://gibson-db.in/" target="_blank" title="Gibson Cache Server">gibson-db.in</a><br/>
+        <a href="http://www.bisontech.net/" target="_blank" title="BisonTech">bisontech.net</a><br/>
+        <a href="http://www.ajaxdomainfinder.net/" target="_blank" title="Ajax Domain Finder">ajaxdomainfinder.net</a></br/>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1&appId=541383999216397";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38685018-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<!-- Histats.com  START (hidden counter)-->
+<script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script>
+<a href="http://www.histats.com" target="_blank" title="contatore visitatori online" ><script  type="text/javascript" >
+try {Histats.start(1,2459155,4,0,0,0,"");
+Histats.track_hits();} catch(err){};
+</script></a>
+<noscript><a href="http://www.histats.com" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?2459155&101" alt="contatore visitatori online" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+
+
+</body>
+</html>

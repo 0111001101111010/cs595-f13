@@ -1,0 +1,122 @@
+   [1]Sign up for a GitHub Account [2]Sign in
+
+public
+
+   [fd3c22894fd7c7c9d20e4876bf8c3028?d=https%3A%2F%2Fidenticons.github.com
+   %2Fd5525c5c2c66e1c75fbd7bfe599e299e.png&s=140] [3]rogeruiz /
+   [4]post-receive
+   Last active 2013-09-28
+
+   Gitolite Post-Receive Hook for Node.js
+     * [5]Gist Detail
+     * [6]Revisions 2
+     * [7]Stars 1
+
+     * [8]Download Gist
+     * Clone this gist https://gist.github.
+     * Embed this gist <script src="https:/
+     * Link to this gist https://gist.github.
+
+   post-receive
+   JavaScript
+     *
+     *
+
+   File suppressed. Click to show.
+   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27
+   28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51
+   52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69
+
+   #!/usr/bin/env node
+   var deployable = process.env['GL_OPTION_DEPLOYABLE'];
+   if (deployable) {
+   var fs = require('fs');
+   var spawn = require('child_process').spawn;
+   var exec = require('child_process').exec;
+   var repoName = process.env['GL_REPO'];
+   var repoBase = process.env['GL_REPO_BASE'] + '/' + repoName + '.git';
+   var workTree = '/var/www/' + repoName;
+   function createDirectory () {
+   console.log('=> Creating ' + workTree + ' directory...');
+   exec('sudo mkdir -p ' + workTree + '', function (error, stdout, stderr)
+   {
+   if (!error) {
+   console.log('=> ' + workTree + ' created successfully...')
+   updatePermissions();
+   }
+   });
+   }
+   function updateDirectory () {
+   console.log('=> Updating ' + workTree + ' with latest commit...');
+   var git = spawn('git', ['checkout', '-f'], {
+   env: {
+   'GIT_WORK_TREE': workTree,
+   'GIT_DIR': repoBase
+   }
+   });
+   git.on('close', function (code) {
+   if (code === 0) {
+   console.log('=> ' + workTree + ' updated successfully...');
+   }
+   });
+   }
+   function updatePermissions () {
+   exec('sudo chown -R git:www-data ' + workTree + '', function (error,
+   stdout, stderror) {
+   if (!error) {
+   console.log('=> Permissions recursively resolved to git:www-data...');
+   updateDirectory();
+   }
+   });
+   }
+   console.log('=> Deploying ' + repoName + '...');
+   fs.exists(workTree, function (exists) {
+   if (exists) {
+   console.log('=> ' + workTree + ' exists...');
+   updatePermissions();
+   } else {
+   console.log('=> ' + workTree + ' doesn\'t exist.');
+   createDirectory();
+   }
+   });
+   process.on('exit', function (code) {
+   if (code === 0) {
+   console.log('==========================================================
+   ======================');
+   console.log('=> Your site is available @ http://rogeruiz.com/' +
+   repoName + '');
+   }
+   });
+   }
+
+   Please [9]sign in to comment on this gist.
+
+   Something went wrong with that request. Please try again.
+
+   © 2013 GitHub Inc. All rights reserved.
+     * [10]The GitHub Blog
+     * [11]Support
+     * [12]Contact
+
+References
+
+   Visible links
+   1. https://github.com/signup?return_to=gist
+   2. https://gist.github.com/login?return_to=/rogeruiz/6715103
+   3. file://localhost/rogeruiz
+   4. file://localhost/rogeruiz/6715103
+   5. file://localhost/rogeruiz/6715103
+   6. file://localhost/rogeruiz/6715103/revisions
+   7. file://localhost/rogeruiz/6715103/stars
+   8. file://localhost/rogeruiz/6715103/download
+   9. file://localhost/login?return_to=/rogeruiz/6715103
+  10. https://github.com/blog
+  11. mailto:support@github.com
+  12. https://github.com/contact
+
+   Hidden links:
+  14. https://gist.github.com/
+  15. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml204.data#file-post-receive
+  16. file://localhost/rogeruiz/6715103/raw/68d06bf3529d87192a4a5aeb1df660f038353dd2/post-receive
+  17. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml204.data
+  18. file://localhost/

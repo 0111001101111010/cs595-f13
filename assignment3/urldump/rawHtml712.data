@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<meta charset="utf-8">
+<html>
+<head>
+<script type="text/javascript">
+//<![CDATA[
+window.__CF=window.__CF||{};window.__CF.AJS={"abetterbrowser":{"ie":"8"},"ga_key":{"ua":"UA-33736483-1","ga_bs":"2"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:0,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/abv=2210362828/"},atok:"64343d805ad1390e987e702787cdef39",zone:"discourse.org",rocket:"0",apps:{"abetterbrowser":{"ie":"8"},"ga_key":{"ua":"UA-33736483-1","ga_bs":"2"}}}];var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0;a.src="//ajax.cloudflare.com/cdn-cgi/nexp/abv=2545410587/cloudflare.min.js";b.parentNode.insertBefore(a,b);}}catch(e){};
+//]]>
+</script>
+<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+<!--[if IE]><link rel="shortcut icon" href="/favicon.ico"><![endif]-->
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="icon" href="../images/favicon.png"/>
+<link rel="apple-touch-icon" href="../images/favicon.png"/>
+<title>Discourse</title>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-33736483-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+/* ]]> */
+</script>
+</head>
+<body>
+<nav id="bar">
+<div>
+<a class="nav-link selected" href="http://www.discourse.org">
+<img width="64" height="45" src="../images/nav-icon-gray.png" alt="logo"/>
+</a>
+<a class="nav-link red" href="/about/">About</a>
+<a class="nav-link orange" href="/faq/">FAQ</a>
+<a class="nav-link yellow" href="http://blog.discourse.org">Blog</a>
+<a class="nav-link green" href="http://try.discourse.org">Try It</a>
+<a class="nav-link blue" href="http://discourse.org/buy">Buy It</a>
+<a class="nav-link grey" href="http://meta.discourse.org">Meta</a>
+<a class="fork-us" href="http://github.com/discourse/discourse"><i class="icon-github-alt"></i>&nbsp;Fork Us</a>
+</div>
+</nav>
+<header>
+<img src="../images/logo.png" alt="logo"/>
+<div id="tabs">
+<a href="/about/">
+<span>FREE</span>
+<span>OPEN</span>
+<span>SIMPLE</span>
+</a>
+</div>
+<div id="try">
+<h1>Ready for a new discussion platform?</h1>
+<a href="http://try.discourse.org" class="btn-big">Try Discourse!</a>
+</div>
+</header>
+<article>
+<section id="solution">
+<div class="row">
+<div class="box">
+<img src="../images/homepage-loading.png" width="320" height="200" alt="screenshot"/>
+</div>
+<h2>Conversations, not pages</h2>
+<p>Why break conversations into awkward and arbitrary pages, where you have to constantly find the Next Page button?</p>
+<p>We've replaced all that with the power of just-in-time loading. Want to read more? Just keep scrolling down.</p>
+</div>
+<div class="row">
+<div class="box">
+<img src="../images/homepage-notifications.png" width="320" height="200" alt="screenshot"/>
+</div>
+<h2>Get notifications when mentioned</h2>
+<p>It's difficult to have a conversation when you can't hear anyone.</p>
+<p>
+When someone quotes your post, we'll notify you. When someone mentions your @name, we'll notify you. When someone replies to your post &hellip; well, you get the idea.
+</p>
+</div>
+<div class="row">
+<div class="box">
+<img src="../images/homepage-context.png" width="320" height="200" alt="screenshot"/>
+</div>
+<h2>Simple, but with context</h2>
+<p>
+Discourse is a simple, flat forum, where replies flow down the page in a line.
+</p>
+<p>Replies are attached to the bottom and top of each post, so you can optionally expand the context of the conversation &ndash; without breaking your flow.
+</p>
+</div>
+<div class="row">
+<div class="box">
+<img src="../images/homepage-remember-place.png" width="320" height="200" alt="screenshot"/>
+</div>
+<h2>Remembers your place</h2>
+<p>
+Don't worry about reading an entire topic in one sitting &ndash; we'll always save your place for you.
+</p>
+<p>
+When you get back to it you'll start right where you left off.
+</p>
+</div>
+<div class="row">
+<div class="box">
+<img src="../images/homepage-reply.png" width="320" height="200" alt="screenshot"/>
+</div>
+<h2>Reply while you read</h2>
+<p>
+Do you respond before you've read the whole topic, risking duplication and ridicule, or do you read to the end, possibly forgetting the post you specifically wanted to reply to?
+</p>
+<p>
+With Discourse you can respond and continue to read, altering your reply and adding new quotes from others as you delve into the topic! You can even jump around to other topics, quoting other posts. We'll save your spot &ndash; and your response &ndash; even if you finish on a different computer.
+</p>
+</div>
+<div class="row">
+<div class="box">
+<img src="../images/homepage-reply-new-topic.png" width="320" height="200" alt="screenshot"/>
+</div>
+<h2>Reply as a linked topic</h2>
+<p>
+You don't want to interrupt this scintillating conversation, but a post just triggered your memory about an upcoming event you think others should know about.
+</p>
+<p>
+No problem! Use "Reply as new topic" to keep everyone up to date without derailing the topic &ndash; and both topics will be visibly connected together.
+</p>
+</div>
+<div class="row">
+<div class="box">
+<img src="../images/homepage-oneboxing.png" width="320" height="200" alt="screenshot"/>
+</div>
+<h2>Links automatically expand</h2>
+<p>
+Want to share a cool link you found? Just paste it in on a single line and we'll do all the hard work to automatically make it <i>awesome</i>.
+</p>
+<p>
+Links to Wikipedia, YouTube, Amazon, GitHub, Twitter, Flickr and dozens of other popular web sites will automatically expand to provide additional context and information.
+</p>
+</div>
+<div class="row">
+<div class="box">
+<img src="../images/homepage-new-topics.png" width="320" height="200" alt="screenshot"/>
+</div>
+<h2>Real time updates</h2>
+<p>
+If a topic changes while you are reading or responding to it, new replies will appear automatically without refreshing the page. And as new topics arrive, they appear at the top of the list.
+</p>
+<p>
+The conversation never leaves you behind!
+</p>
+</div>
+<div class="row">
+<div class="box">
+<img src="../images/homepage-invite-friends.png" width="320" height="200" alt="screenshot"/>
+</div>
+<h2>Bring your friends</h2>
+<p>
+Hate nagging your friends to sign up for Yet Another Site just to contribute their thoughts on a discussion?
+</p>
+<p>
+Once you're trusted, you can click a button to invite your friends via email and they can reply to your topic with a single click.
+</p>
+</div>
+<div class="row">
+<div class="box">
+<img src="../images/homepage-drag-image.png" width="320" height="200" alt="screenshot"/>
+</div>
+<h2>Paste to share images</h2>
+<p>
+Want to share an image? Just copy and paste it in. Or drag and drop it in!
+</p>
+<p>
+Posting LOLCats has never been this easy.
+</p>
+</div>
+<div class="row">
+<div class="box">
+<img src="../images/homepage-login.png" width="320" height="200" alt="screenshot"/>
+</div>
+<h2>Log in with &hellip; anything</h2>
+<p>
+Tired of creating another user name and password on every web site? So are we.
+</p>
+<p>
+Use your existing Twitter, Facebook, Google, Yahoo, GitHub, or Persona credentials to log in. Or create a traditional username and password, too.
+</p>
+</div>
+<div class="row">
+<div class="box">
+<img src="../images/homepage-flag.png" width="320" height="200" alt="screenshot"/>
+</div>
+<h2>Moderation that scales with the community</h2>
+<p>
+As users participate on Discourse by reading and posting, they gain trust.
+</p>
+<p>
+With that trust, they can help maintain the forum to prevent trolls, spammers, and bad actors from taking over.
+</p>
+</div>
+<div class="row">
+<div class="box">
+<img src="../images/homepage-categories.png" width="320" height="200" alt="screenshot"/>
+</div>
+<h2>Categories that grow with you</h2>
+<p>
+The massive, obligatory list of subcategories that every new forum user is presented with when they visit the forum homepage is an obstacle.
+</p>
+<p>
+Categories are optional at Discourse; you can either opt to make categories mandatory and the category page the default homepage of your forum, or you can go with the simple, default list of topics and let categories naturally evolve as your forum grows.
+</p>
+</div>
+<div class="row">
+<div class="box">
+<img src="../images/homepage-search.png" width="320" height="200" alt="screenshot"/>
+</div>
+<h2>Search that actually works</h2>
+<p>
+Discourse offers a unified search on every page: just start typing and get results instantly as you type.
+</p>
+<p>
+Our search matches posts, categories, and users &ndash; and automatically prioritizes matches on the page you're on right now.
+</p>
+</div>
+<div class="row">
+<div class="box">
+<img src="../images/homepage-link-counts.png" width="320" height="200" alt="screenshot"/>
+</div>
+<h2>Simple metrics</h2>
+<p>
+The goal of every link is to be clicked &ndash; so every link in Discourse shows a click count. Including links to other topics.
+</p>
+<p>
+We also track incoming links, so if a post you made becomes super popular, we'll tell you how on a line directly under the post.
+</p>
+</div>
+<div class="row">
+<div class="box">
+<img src="../images/homepage-licensing.png" width="320" height="200" alt="screenshot"/>
+</div>
+<h2>Your stuff belongs to you</h2>
+<p>
+We have built in robust import and export tools, both for the site owner and for individual users. Your content belongs to you; take it with you wherever you want to go.
+</p>
+<p>
+Our default discussion license is <a href="http://creativecommons.org/">Creative Commons</a>, but you can choose to maximize rights for the site owner, or the users.
+</p>
+</div>
+<div class="row">
+<div class="box">
+<img src="../images/homepage-api.png" width="320" height="200" alt="screenshot"/>
+</div>
+<h2>Comprehensive API</h2>
+<p>
+Discourse has an excellent API. How do we know? Because our JavaScript application is built on top of it.
+</p>
+<p>
+Just about anything you can do in a web browser is accessible via REST.
+</p>
+</div>
+<div class="row">
+<div class="box">
+<img src="../images/homepage-no-app.jpg" width="320" height="200" alt="screenshot"/>
+</div>
+<h2>No app required</h2>
+<p>
+Discourse is designed from the beginning for high resolution touch devices.
+</p>
+<p>
+Move back and forth freely between your laptop and your tablet, without the constant irritation of being told <i>this forum has an app, do you want it?</i>
+</p>
+</div>
+</section>
+<a href="http://try.discourse.org" class="btn-big">Try Discourse!</a>
+</article>
+<footer>
+<section id="foot">
+<div class="links">
+<a href="/">
+<img src="../images/icon-tiny.png" width="24" height="24"></a> <a href="/about/">About</a> | <a href="/faq/">FAQ</a> | <a href="http://blog.discourse.org">Blog</a> | <a href="http://try.discourse.org">Try It</a> | <a href="/buy/">Buy It</a> | <a href="http://meta.discourse.org">Meta</a> | <a href="http://www.discourse.org/privacy-policy">Privacy</a> | <a href="http://twitter.com/discourse">@discourse</a>
+</div>
+<p>Content is <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">by-nc-sa</a>, Discourse logo and &ldquo;Discourse Forum&rdquo; &reg;, Civilized Discourse Construction Kit, Inc.</p>
+<p><a href="http://www.youtube.com/watch?v=Xe1TZaElTAs">Built with love, Internet style</a></p>
+</section>
+</footer>
+</body>
+<script type="text/javascript">/* CloudFlare analytics upgrade */
+</script>
+</html>

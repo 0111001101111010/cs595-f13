@@ -1,0 +1,180 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>alJazeera Jobs - Business Continuity Management Unit Head</TITLE>
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-STORE">
+<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+<META HTTP-EQUIV="Expires" CONTENT="1">
+<META NAME="keywords" CONTENT="Aljazeera Jobs">
+<META name="description" content="alJazeera Jobs - Omar v1.2Business Continuity Management Unit Head - Operations and Technology Tweet !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if">
+<META NAME="author" CONTENT="ALJAZEERA">
+<META NAME="ROBOTS" CONTENT="ALL">
+<META NAME="distribution" CONTENT="global">
+<META NAME="copyright" CONTENT="All contents copyright of ALJAZEERA Jobs">
+<META NAME="rating" CONTENT="General">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="http://www.aljazeerajobs.com/templates/aljazeerajobs/css/style.css" rel="stylesheet" type="text/css">
+<script src="http://www.aljazeerajobs.com/templates/aljazeerajobs/js/ajax_func.js" type="text/javascript"></script>
+<script language='JavaScript' type='text/javascript' src='http://www.aljazeerajobs.com/templates/aljazeerajobs/js/advertisments.js'></script>
+<script language='JavaScript' type='text/javascript' src='http://admin.alclick.com/adx.js'></script>
+</head>
+<BODY onbeforeunload ="" >
+<div id="wrapper">
+	<div id="header">
+		<div class="masthead">
+			<div class="top-row cf">
+				<div class="site-title">
+					<a class="home" href="http://www.aljazeerajobs.com/">Home</a>
+					<h1>Jobs in Qatar, Saudi Arabia, Kuwait, Oman, Bahrain, Dubai, Abu Dhabi by alJazeera Jobs</h1>
+				</div>
+				<div class="topbar">
+				<form action="http://www.aljazeerajobs.com/index.php" method="post" name="language_dropdown" >
+					<label>Select Language</label>
+					<select name="language" onchange="this.form.submit();">
+						<option value="en"selected>English</option>
+						<option value="francais">Francais</option>
+						<option value="german">Deutsch</option>
+						<option value="arabic">عربي</option>
+						<option value="espanol">Español</option>
+						<option value="portugues"}>Português</option>
+						<option value="russian">Русский</option>
+						<option value="dutch">Nederlands</option>
+						<option value="turkish">Türkçe</option>
+						<option value="urdu" >اردو</option>
+					</select>
+					<a href="http://www.aljazeerajobs.com/comp/index.php?op=register">Employers</a>
+				</form>
+				</div>
+			</div>
+			
+			<div id="div_flags"></div><script type="text/javascript">show_flags();</script>
+		
+		</div>
+		<div id="branding">
+			<div class="branding-top">
+				<a href="http://www.aljazeerajobs.com/"><img class="logo" src="http://www.aljazeerajobs.com/templates/aljazeerajobs/images/logo.jpg" width="236px" height="47px" alt="aljazeera Jobs" /></a>
+				<div class="top-right">
+					<div class="date-time" id="div_date_time"><script type="text/javascript">show_date_time();</script></div>
+					<div class="tel">Contact alJazeera Jobs Bahrain: (+973) 16199-113</div>
+				</div>
+			</div>
+			<div class="branding-middle">
+				<div class="textbox">
+					<p>Serving Arabian Gulf Job Seekers since 2007, alJazeera Jobs
+					is the established, trusted and leading provider of Jobs in
+					<a href="http://www.aljazeerajobs.com/jobs/jobs-in-dubai-uae.html">Dubai, Abu Dhabi, UAE</a>, <a href="http://www.aljazeerajobs.com/jobs/jobs-in-qatar.html">Qatar</a>, <a href="http://www.aljazeerajobs.com/jobs/jobs-in-saudiarabia.html">Saudi Arabia</a>, <a href="http://www.aljazeerajobs.com/jobs/jobs-in-kuwait.html">Kuwait</a>, <a href="http://www.aljazeerajobs.com/jobs/jobs-in-oman.html">Oman</a> and <a href="http://www.aljazeerajobs.com/jobs/jobs-in-bahrain.html">Bahrain</a>.</p>
+					<p class="noPaddingBottom">Subscribe to our custom developed Candidate 
+					Management Service to proactively place your details in Arabic
+					and English into the HR systems of the leading employers in
+					the Gulf. Jump to the head of the queue and get hired, sign-up
+					<a href="http://www.aljazeerajobs.com/users/users.php?op=register">here</a>.</p>
+				</div>
+				<div class="searchbox">
+					<h2>JOB SEARCH</h2>
+					
+					<form action="http://www.aljazeerajobs.com/jobs/search.php" method="get">
+						<fieldset>
+							<div class="fieldrow cf">
+								<div class="field">
+									<label for="job-keyword">I'm looking for...</label>
+									<input type="hidden" value="search" name="op">
+									<input id="job-keyword" type="text" name="textkeyword"  placeholder="Enter a Job Keyword or Skill" />
+								</div>
+								<div class="field rfield">
+									<label for="select-location">In location</label>
+									<select id="select-location" name="countid">
+										<option value="0">Select Country</option>
+										<option value="1">Saudi Arabia</option>
+										<option value="2">UAE</option>
+										<option value="3">Kuwait</option>
+										<option value="4">Qatar</option>
+										<option value="5">Bahrain</option>
+										<option value="6">Oman</option>
+										<option value="7">other</option>
+									</select>
+								</div>
+							</div>
+							<div class="buttonpane">
+								<input type="submit" name="searchsubmit" value="SEARCH" />
+							</div>
+						</fieldset>
+					</form>
+				
+					<div class="text-links">
+						<strong>ACCOUNT MANAGEMENT:</strong> <a href="http://www.aljazeerajobs.com/users/users.php?op=register">Create Account</a> | <a href="http://www.aljazeerajobs.com/users/users.php?op=login">Account Login</a>
+					</div>
+				</div><!--#searchbox-->
+			</div>
+		</div><!--#branding-->
+	</div><!-- #header -->
+	
+		<div id="main" class="cf">
+		<table class="full job-table">
+			<tr>
+				<td>
+					<div class="widecolumn">
+						<div class="top-content cf">
+							<div class="head" style="font-size:23px;">
+								<h1>Business Continuity Management Unit Head</h1>
+								<div class="postmeta" style="font-size:13px;">26 Sep 2013 02:49 PM - Saudi Arabia</div>
+							</div>
+							<div class="toolbox">
+							<div id="div_login_box"></div>
+							</div><script type="text/javascript">show_login_box(669137);</script>
+					
+						</div>
+						<div style="font-size:13px;">
+						<p>Omar v1.2<p><p>Business Continuity Management Unit Head - Operations and Technology Tweet !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs"); window.___gcfg = { lang: 'en-US' }; (function() { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })(); [IMG] <ul class="list"> Job Summary <li> Posted on : 2013-09-26 <li> Expiry Date : 2013-12-26 <li> Functional Area : Operations and Technology <li> Job Role : Business Continuity Management Unit Head <li> Location : Saudi Arabia <li> Nationality : N/A <ul class="list"> Job Specification <li> Job Code : JB0013539 <li> Job Type : Permanent <li> Experience : 10 to 15Years <li> Qualification : Any Graduates <li> Offered Salary : Unspecified Job Details Job Description <p><p style="text-align: justify;">Responsibilities &amp; Key Deliverables <ul style="text-align: justify;"><li>To ensure a comprehensive end-to-end, Business-As-Usual Business Continuity processing capability for the bank during any Contingency <li>To mitigate the risk associated with a business interruption, irrespective of root cause <li>To standardize policies and procedures connected with Business Continuity, where appropriate across all Groups. <li>Continuous business operations in spite of potentially disruptive natural causes and man-made disruptions <li>Limited risk of financial losses on a/c of disruptive natural causes and man-made disruptions and of penalties on a/c of non-compliance&nbsp; <li>Improved practices and processes for Business Continuity and disruption response <li>Loss mitigation thru insurance claims <li>Disruption response-readiness of employees <li>Highly effective and motivated Business Continuity team&nbsp; <p style="text-align: justify;">Specific Knowledge: <ul style="text-align: justify;"><li>Facilitating the process of ensuring that business continuity plans have been established for all businesses and tested for all business locations. <li>Creating and distributing Business Continuity policies and standards to be followed by all business. <li>Ensure that all the functions of the bank have an approved BCP&nbsp; <li>Ensure that all the functions of the bank are aware of the BCM policies and procedures <li>Ensure Staff Training on Business continuity aspects&nbsp; <li>Ensure that the DR site is available all the time with proper arrangements <p style="text-align: justify;">Specific Domain Experience/ Exposure: <ul><li style="text-align: justify;">Ensure that all BCPs are as per standards and have clearly documented the evacuation / safety of all employees during Contingencies <li style="text-align: justify;">Ensure a comprehensive end-to-end, Business-As-Usual BCM processing capability for front offices, technology, operations and businesses as a whole. <li style="text-align: justify;">To minimize the risk associated with a business interruption, irrespective of cause, both internal and external. <li style="text-align: justify;">Provide feed Back to Senior Management on Business Continuity issues <li style="text-align: justify;">Evaluate creation of dedicated DR / Business Continuity Sites <li style="text-align: justify;">To identify the best in class Disaster Recovery process for the bank especially for High Risk business entities <li style="text-align: justify;">Ensure full Governance Structure is defined for Crisis Management <li style="text-align: justify;">Ownership of Business Continuity Management Policy / Standards <li style="text-align: justify;">Maintaining BCP Standards and BCP templates â providing detailed documentation guidelines and requirements, to fit business continuity needs. <li style="text-align: justify;">Ensure maintenance of Master Business Continuity Plan (MBCP). <li style="text-align: justify;">Ensure maintenance of Tadawul Master Business Continuity Plan (Tadawul-MBCP). Desired Profile <p><ul><li style="text-align: justify;">Bachelors Degree/Masters Degree&nbsp; <li style="text-align: justify;">candidate should have at least 7-10 years of experience in the Banking / Financial industry with a strong grounding on Business continuity <li style="text-align: justify;">Should be having in-depth knowledge in BCP Products <li style="text-align: justify;">Saudi candidate would be preferable, however if not available with the requisite skill set, an Expat can be hired <li style="text-align: justify;">Arabic language knowledge would be highly preferred <li style="text-align: justify;">Working in a Multi-Country / Multi-legal environment would be be an advantage <li style="text-align: justify;">Should be well aware of BCP principles as well as international standards on Business Continuity / disaster recovery <li style="text-align: justify;">The candidate should have experience in Banks / Financial Industry in a similar role Key Skills <p><ul><li style="text-align: justify;">Analytical skills, specifically, the ability to assess and perform a root cause analysis <li style="text-align: justify;">Should have strong English communication / written skills so that each BCP can be reviewed and comments provided to the areas for its rectification <li style="text-align: justify;">Good interp-ersonal and Communication Skills <li style="text-align: justify;">Ability to coordinate and work with different businesses within / outside the bank <li style="text-align: justify;">Ability to coordinate with Technology <li style="text-align: justify;">Action Plans / Task oriented <li style="text-align: justify;">Flexible multi-tasking personality </p>
+						</div>
+					</div>
+				</td>
+				<td class="right" rowspan="2">
+					<div class="advert advert-160">
+						<small>Advertisement</small>
+						<div class="advert-block advert-first">
+							<iframe id='a61d5bb8' name='a61d5bb8' src='http://admin.alclick.com/adframe.php?n=a61d5bb8&amp;what=zone:2243' framespacing='0' frameborder='no' scrolling='no' width='210' height='540'><a href='http://admin.alclick.com/adclick.php?n=a61d5bb8' target='_blank'><img src='http://admin.alclick.com/adview.php?what=zone:2243&amp;n=a61d5bb8' border='0' alt=''></a></iframe>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="v-bottom ">
+				
+					<div class="toolbox toolbox-bottom">
+					<span id="div_login_box2"></span>
+					</div><script type="text/javascript">show_login_box2(669137);</script>
+			
+				</td>
+			</tr>
+		</table>
+	</div><!-- #main -->
+
+	
+		<div id="footer">
+		<div class="footer-top">
+			<p><a href="http://www.aljazeerajobs.com/util/pages.php?pageid=2">Contact Us</a> | <a href="#">Extended Job Categories</a> | <a href="http://www.aljazeerajobs.com/util/pages.php?pageid=8">Media Coverage</a> | <a href="sitemap.html">Sitemap</a> | <a href="#">Privacy</a> | <a href="#">Terms of Use</a></p>
+			<ul class="social">
+				<li class="link-rss"><a href="http://www.aljazeerajobs.com/util/pages.php?pageid=9">RSS Web Feed</a></li>
+				<li class="link-blog"><a href="http://www.aljazeerajobs-blog.com">Blog</a></li>
+				<li class="link-fb"><a href="http://www.facebook.com/pages/AlJazeera-Jobs/207074249317005">Facebook</a></li>
+				<li class="link-twitter"><a href="http://www.twitter.com/aljazeerajobs">Twitter</a></li>
+				<li class="link-linkedin"><a href="http://www.linkedin.com/company/aljazeerajobs.com_3">LinkedIn</a></li>
+			</ul>
+		</div>
+		<p>All rights reserved &#45; AlJazeeraJobs &reg; is a registered trade mark and unauthorised usage is strictly prohibited.</p>
+		<p><a href="http://www.aljazeerajobs.com/users/users.php?op=register">Create Job Seeker Account</a> | <a href="http://www.aljazeerajobs.com/comp/index.php?op=register">Create Employer Account</a></p>
+		<p><a href="http://www.aljazeerajobs.com/jobs/jobs-in-dubai-uae.html">Jobs in UAE</a>, <a href="http://www.aljazeerajobs.com/jobs/jobs-in-saudiarabia.html">Jobs in Saudi Arabia</a>, <a href="http://www.aljazeerajobs.com/jobs/jobs-in-qatar.html">Jobs in Qatar</a>, <a href="http://www.aljazeerajobs.com/jobs/jobs-in-kuwait.html">Jobs in Kuwait</a>, <a href="http://www.aljazeerajobs.com/jobs/jobs-in-oman.html">Jobs in Oman</a>, <a href="http://www.aljazeerajobs.com/jobs/jobs-in-bahrain.html">Jobs in Bahrain</a></p>
+	</div><!-- #footer -->
+</div><!-- #wrapper -->
+
+  <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2159580-3";
+urchinTracker();
+</script>
+
+</BODY>
+</HTML>

@@ -1,0 +1,297 @@
+   #[1]Atom [2]RSS2.0
+
+   [3]スマートフォン用の表示で見る
+
+   引用スターをつける 引用スターをつける
+
+   スターをつけました
+
+[4]ばくのエンジニア日誌
+
+技術的なメモなどを書いていきます。
+
+   [5]2013-05-23
+
+[6]そろそろ整理しておきたい、Gemコマンドの使い方
+
+   [7]RubyGems
+
+   [8]Rubyのパッケージ管理システムであるGemを使う機会も増えてきたので、そろそろコマンドをまとめておくことにしました。
+
+[9]RubyGemsとは?
+
+[10]Wikipediaより引用
+
+     [11]RubyGemsは、[12]Ruby言語用のパッケージ管理システムであり、[13]Rubyのプログラムと（"gem"
+     と呼ばれる）ライブラリの配布用標準フォーマットを提供している。gemを容易に管理でき、gemを配布するサーバの機能も持つ。[14]Rub
+     yバージョン1.9以降では標準ライブラリの一部となっている。
+
+   便利なGemパッケージが世の中には沢山配布されているので、有効に活用していきたいですね！
+   Gemの公式マニュアルは以下になります。
+   [15]RubyGems Manuals
+
+   それでは、よく使うGemコマンドを用途別にまとめていきます。
+
+Gemを探す
+
+   listまたはsearchは、ローカルもしくはリモートにあるGemパッケージを検索します。
+   2つのコマンドはほぼ同じ動作をします。違いは以下の点です。
+
+   list： Gemパッケージ名の頭から文字列を指定して検索
+   search： Gemパッケージ名を[16]正規表現で検索
+   コマンド                                   機能
+   gem [list / search] [String] [options] Stringで始まるGemを表示する
+
+   以下のオプションを指定することができます。
+   オプション                機能
+   -i, --[no-]installed インストール済み[でない]Gemに限定する
+   -d, --[no-]details   詳細を併せて表示する
+   -l, --local          localを対象とする
+   -r, --remote         remoteを対象とする
+   -b, --both           local, remoteどちらも対象とする
+
+デフォルトで指定されているオプション
+
+--local --no-details
+
+   デフォルトでは--localが指定されているので、外部のを探したい時は-r指定しないとダメですね〜。
+
+   また、インストールしてあったけどこれ何だっけ？って時には
+gem list GEMNAME -d
+
+   で中身を確認します。便利ですね！
+
+   なお、Gemパッケージは以下のWebサイトでも探すことができます。
+   [17]RubyGems.org
+   [18]The Ruby Toolbox
+
+Gemをインストールする
+
+   Gemパッケージをインストールするコマンドです。
+   コマンド                            機能
+   gem install [GEMNAME] [options] localまたはremoteからGemパッケージをインストール
+
+   以下のオプションを指定することができます。
+   オプション         機能
+   -v, --version バージョン指定 ex) -v "= 1.0.0"
+   --[no-]rdoc   Rdocドキュメントをダウンロードする[しない]
+   --[no-]ri     riドキュメントをダウンロードする[しない]
+   -l, --local   localからインストール
+   -r, --remote  remoteからインストール
+   -b, --both    local, remoteどちらからでも
+
+デフォルトで指定されているオプション
+
+--both --version '>= 0' --rdoc --ri --no-force
+--install-dir /my/gems/directory
+
+   個人的に使ったことが無いですが、ローカルからインストールする時は、.gemファイルのある場所に移動してからコマンドを実行するみたいです。
+
+アンインストール
+
+   コマンド                    機能
+   gem uninstall [GEMNAME] Gemパッケージをアンインストール
+
+   versionが違うやつとかはややこしいのでこれで除いたりしますね。
+
+インストールしたGemファイル（の場所）を探す
+
+   コマンド                機能
+   gem which [GEMNAME] localにあるGEMNAMEのPathを表示する
+
+   gemファイルが置いてある場所の階層が深かったりするので、地味に便利です。
+   ちなみに、
+   コマンド                 機能
+   gem unpack [GEMNAME] GEMFILEをカレントディレクトリにコピーする
+
+   Gemの中身を見たい時にはこちらの方が便利かもしれません。
+
+Gem自身の管理
+
+   コマンド                機能
+   gem update --system Gem自身をupdateする
+   gem -v              Gemのバージョンを表示する
+
+   あんまりやったことが無いです（汗）
+
+ヘルプ
+
+   コマンド               機能
+   gem help commands  使用できるコマンドの一覧を表示する
+   gem help [command] commandのヘルプを表示する
+   gem server         サーバーを立ててgemのマニュアルを表示する
+
+   分からなくなったらとりあえずgem help commandです！
+
+ビルド関連
+
+   自作したGemをビルドするときに使います。 こちらはまだ試していないので、、いずれ更新します！
+
+参考になるサイト
+
+   [19]RubyGemsの使い方 - ayaketanのプログラミング勉強日記
+   [20]RubyGems Manuals
+   [21]Ruby/Rubygems使い方まとめ
+
+   bakunyo [22]2013-05-23 23:57
+   [23][delete.gif]
+   [24]この記事をはてなブックマークに追加
+
+   IFRAME:
+   [25]http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fbakunyo.
+   hatenablog.com%2Fentry%2F2013%2F05%2F23%2F%25E3%2581%259D%25E3%2582%258
+   D%25E3%2581%259D%25E3%2582%258D%25E6%2595%25B4%25E7%2590%2586%25E3%2581
+   %2597%25E3%2581%25A6%25E3%2581%258A%25E3%2581%258D%25E3%2581%259F%25E3%
+   2581%2584%25E3%2580%2581Gem%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B
+   3%25E3%2583%2589%25E3%2581%25AE%25E4%25BD%25BF%25E3%2581%2584%25E6%2596
+   %25B9&layout=button_count&show_faces=false&width=100&action=like&height
+   =21
+
+   IFRAME:
+   [26]https://platform.twitter.com/widgets/tweet_button.html?url=http%3A%
+   2F%2Fbakunyo.hatenablog.com%2Fentry%2F2013%2F05%2F23%2F%25E3%2581%259D%
+   25E3%2582%258D%25E3%2581%259D%25E3%2582%258D%25E6%2595%25B4%25E7%2590%2
+   586%25E3%2581%2597%25E3%2581%25A6%25E3%2581%258A%25E3%2581%258D%25E3%25
+   81%259F%25E3%2581%2584%25E3%2580%2581Gem%25E3%2582%25B3%25E3%2583%259E%
+   25E3%2583%25B3%25E3%2583%2589%25E3%2581%25AE%25E4%25BD%25BF%25E3%2581%2
+   584%25E6%2596%25B9&text=%E3%81%9D%E3%82%8D%E3%81%9D%E3%82%8D%E6%95%B4%E
+   7%90%86%E3%81%97%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E3%80%81G
+   em%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AE%E4%BD%BF%E3%81%84%E6%96
+   %B9%20-%20%E3%81%B0%E3%81%8F%E3%81%AE%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%
+   8B%E3%82%A2%E6%97%A5%E8%AA%8C&lang=ja
+
+   コメントを書く
+   [27]次の記事 [28]前の記事
+   Profile
+   [29]id:bakunyo [30]id:bakunyo
+   [31]購読中です 読者をやめる 読者になる 読者になる
+   [32]Recent Entries
+     * [33]Windowsでファイル名の一覧を取得する
+     * [34]Sublime Text 3のPackage Controlがインストールしやすくなっていた
+     * [35]複数ファイルのuploadができる「Uploadify」を使ってみた
+     * [36]クラスメソッドをundefする
+     * [37]jQueryでcheckboxを扱う
+
+   [38]Archive
+   Category
+     * [39]Apache (1)
+     * [40]CakePHP (1)
+     * [41]CoffeeMeeting (1)
+     * [42]Command (2)
+     * [43]CSS (2)
+     * [44]dotinstall (2)
+     * [45]Encoding (2)
+     * [46]git (1)
+     * [47]Google Chrome (1)
+     * [48]iPhone (3)
+     * [49]ITパスポート (8)
+     * [50]Java (2)
+     * [51]JavaScript (1)
+     * [52]jQuery (2)
+     * [53]Linux (1)
+     * [54]Mac (2)
+     * [55]Network (1)
+     * [56]Option (1)
+     * [57]RegExp (1)
+     * [58]Ruby (6)
+     * [59]Ruby on Rails (5)
+     * [60]RubyGems (3)
+     * [61]Sass (1)
+     * [62]Shortcut (5)
+     * [63]SQL (1)
+     * [64]Sublime Text (3)
+     * [65]Tips (6)
+     * [66]vim (1)
+     * [67]web service (1)
+     * [68]Windows (5)
+     * [69]Xampp (1)
+     * [70]レポート (4)
+     * [71]本の感想 (2)
+
+   Recent Comments
+
+   参加グループ
+     * [72]新しい技術大好き
+
+
+    [73]bakunyo
+
+   [74]Hatena Blog / [75]Hatena::Diary
+
+References
+
+   1. file://localhost/feed
+   2. file://localhost/rss
+   3. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml101.data
+   4. file://localhost/
+   5. file://localhost/entries/2013/05/23
+   6. file://localhost/entry/2013/05/23/%E3%81%9D%E3%82%8D%E3%81%9D%E3%82%8D%E6%95%B4%E7%90%86%E3%81%97%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E3%80%81Gem%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9
+   7. file://localhost/category/RubyGems
+   8. http://d.hatena.ne.jp/keyword/Ruby
+   9. http://d.hatena.ne.jp/keyword/RubyGems
+  10. http://d.hatena.ne.jp/keyword/Wikipedia
+  11. http://d.hatena.ne.jp/keyword/RubyGems
+  12. http://d.hatena.ne.jp/keyword/Ruby
+  13. http://d.hatena.ne.jp/keyword/Ruby
+  14. http://d.hatena.ne.jp/keyword/Ruby
+  15. http://docs.rubygems.org/
+  16. http://d.hatena.ne.jp/keyword/%C0%B5%B5%AC%C9%BD%B8%BD
+  17. http://rubygems.org/
+  18. https://www.ruby-toolbox.com/
+  19. http://ayaketan.hatenablog.com/entry/20111214/1323833813
+  20. http://docs.rubygems.org/
+  21. http://yakinikunotare.boo.jp/orebase/index.php?Ruby%2FRubygems%BB%C8%A4%A4%CA%FD%A4%DE%A4%C8%A4%E1
+  22. file://localhost/entry/2013/05/23/%E3%81%9D%E3%82%8D%E3%81%9D%E3%82%8D%E6%95%B4%E7%90%86%E3%81%97%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E3%80%81Gem%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9
+  23. http://blog.hatena.ne.jp/guide/pro
+  24. http://b.hatena.ne.jp/entry/http://bakunyo.hatenablog.com/entry/2013/05/23/%E3%81%9D%E3%82%8D%E3%81%9D%E3%82%8D%E6%95%B4%E7%90%86%E3%81%97%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E3%80%81Gem%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9
+  25. http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fbakunyo.hatenablog.com%2Fentry%2F2013%2F05%2F23%2F%25E3%2581%259D%25E3%2582%258D%25E3%2581%259D%25E3%2582%258D%25E6%2595%25B4%25E7%2590%2586%25E3%2581%2597%25E3%2581%25A6%25E3%2581%258A%25E3%2581%258D%25E3%2581%259F%25E3%2581%2584%25E3%2580%2581Gem%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%25E3%2581%25AE%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9&layout=button_count&show_faces=false&width=100&action=like&height=21
+  26. https://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fbakunyo.hatenablog.com%2Fentry%2F2013%2F05%2F23%2F%25E3%2581%259D%25E3%2582%258D%25E3%2581%259D%25E3%2582%258D%25E6%2595%25B4%25E7%2590%2586%25E3%2581%2597%25E3%2581%25A6%25E3%2581%258A%25E3%2581%258D%25E3%2581%259F%25E3%2581%2584%25E3%2580%2581Gem%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%25E3%2581%25AE%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9&text=%E3%81%9D%E3%82%8D%E3%81%9D%E3%82%8D%E6%95%B4%E7%90%86%E3%81%97%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E3%80%81Gem%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%20-%20%E3%81%B0%E3%81%8F%E3%81%AE%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E6%97%A5%E8%AA%8C&lang=ja
+  27. file://localhost/entry/2013/05/25/git_log%E3%81%A7%E6%97%A5%E5%A0%B1%E3%82%92%E6%9B%B8%E3%81%8F
+  28. file://localhost/entry/2013/05/21/netstat%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9
+  29. file://localhost/about
+  30. file://localhost/about
+  31. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml101.data
+  32. http://bakunyo.hatenablog.com/archive
+  33. file://localhost/entry/2013/09/04/Windows%E3%81%A7%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D%E3%81%AE%E4%B8%80%E8%A6%A7%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B
+  34. file://localhost/entry/2013/09/03/Sublime_Text_3%E3%81%AEPackage_Control%E3%81%8C%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%82%84%E3%81%99%E3%81%8F%E3%81%AA%E3%81%A3%E3%81%A6%E3%81%84%E3%81%9F
+  35. file://localhost/entry/2013/08/27/%E8%A4%87%E6%95%B0%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AEupload%E3%81%8C%E3%81%A7%E3%81%8D%E3%82%8B%E3%80%8CUploadify%E3%80%8D%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F
+  36. file://localhost/entry/2013/08/26/%E3%82%AF%E3%83%A9%E3%82%B9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%82%92undef%E3%81%99%E3%82%8B
+  37. file://localhost/entry/2013/07/30/jQuery%E3%81%A7checkbox%E3%82%92%E6%89%B1%E3%81%86
+  38. http://bakunyo.hatenablog.com/archive
+  39. http://bakunyo.hatenablog.com/archive/category/Apache
+  40. http://bakunyo.hatenablog.com/archive/category/CakePHP
+  41. http://bakunyo.hatenablog.com/archive/category/CoffeeMeeting
+  42. http://bakunyo.hatenablog.com/archive/category/Command
+  43. http://bakunyo.hatenablog.com/archive/category/CSS
+  44. http://bakunyo.hatenablog.com/archive/category/dotinstall
+  45. http://bakunyo.hatenablog.com/archive/category/Encoding
+  46. http://bakunyo.hatenablog.com/archive/category/git
+  47. http://bakunyo.hatenablog.com/archive/category/Google%20Chrome
+  48. http://bakunyo.hatenablog.com/archive/category/iPhone
+  49. http://bakunyo.hatenablog.com/archive/category/IT%E3%83%91%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88
+  50. http://bakunyo.hatenablog.com/archive/category/Java
+  51. http://bakunyo.hatenablog.com/archive/category/JavaScript
+  52. http://bakunyo.hatenablog.com/archive/category/jQuery
+  53. http://bakunyo.hatenablog.com/archive/category/Linux
+  54. http://bakunyo.hatenablog.com/archive/category/Mac
+  55. http://bakunyo.hatenablog.com/archive/category/Network
+  56. http://bakunyo.hatenablog.com/archive/category/Option
+  57. http://bakunyo.hatenablog.com/archive/category/RegExp
+  58. http://bakunyo.hatenablog.com/archive/category/Ruby
+  59. http://bakunyo.hatenablog.com/archive/category/Ruby%20on%20Rails
+  60. http://bakunyo.hatenablog.com/archive/category/RubyGems
+  61. http://bakunyo.hatenablog.com/archive/category/Sass
+  62. http://bakunyo.hatenablog.com/archive/category/Shortcut
+  63. http://bakunyo.hatenablog.com/archive/category/SQL
+  64. http://bakunyo.hatenablog.com/archive/category/Sublime%20Text
+  65. http://bakunyo.hatenablog.com/archive/category/Tips
+  66. http://bakunyo.hatenablog.com/archive/category/vim
+  67. http://bakunyo.hatenablog.com/archive/category/web%20service
+  68. http://bakunyo.hatenablog.com/archive/category/Windows
+  69. http://bakunyo.hatenablog.com/archive/category/Xampp
+  70. http://bakunyo.hatenablog.com/archive/category/%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88
+  71. http://bakunyo.hatenablog.com/archive/category/%E6%9C%AC%E3%81%AE%E6%84%9F%E6%83%B3
+  72. http://hatenablog.com/g/11696248318754693546
+  73. file://localhost/about
+  74. http://hatenablog.com/
+  75. http://d.hatena.ne.jp/

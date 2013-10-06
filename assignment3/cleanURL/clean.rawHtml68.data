@@ -1,0 +1,345 @@
+   #[1]Stack Overflow [2]Feed for question 'Supervisor won't see RabitMQ
+   Running When updating configuration file'
+
+   [3]Stack Exchange
+   [4]sign up | [5]log in | [6]careers 2.0 |
+   ____________________________
+   [7]Stack Overflow
+     * [8]Questions
+     * [9]Tags
+     * [10]Tour
+     * [11]Users
+
+     * [12]Ask Question
+
+   [13]Tell me more ×
+   Stack Overflow is a question and answer site for professional and
+   enthusiast programmers. It's 100% free, no registration required.
+
+[14]Supervisor won't see RabitMQ Running When updating configuration file
+
+   up vote 0 down vote [15]favorite
+
+   Supervisord seems to work fine with RabbitMQ in the beginning, however,
+   when I do modifications to Supervisord configuration file, and issue
+   update command (throught supervisord control utility), it shows this
+   message FATAL Exited too quickly (process log may have details), albeit
+   the RabbitMQ is already running and handling messages normally.
+
+   This is my configuration of Rabbit in supervisor:
+[program:RabbitMQ]
+command = /usr/sbin/rabbitmq-server
+autostart=true
+autorestart=true
+stopwaitsecs=15
+redirect_stderr=true
+stopasgroup=true  ;; Stops all the subprocesses using TERM system signal
+stderr_logfile = /path/to/log/Rabbit_supervisor_error.log
+stdout_logfile = /path/to/log/Rabbit_supervisor_output.log
+
+   What could be wrong?
+
+   __ EDIT __
+
+   Supervisord as well doesn't stop the services (I have celery workers
+   instances running). Do I miss something I don't understand?!
+   [16]python [17]rabbitmq [18]celery [19]supervisord
+
+   [20]share|[21]improve this question
+   [22]edited Sep 26 at 12:02
+   asked Sep 26 at 11:44
+   [23]securecurve
+   359211
+
+   [24]active [25]oldest [26]votes
+
+Know someone who can answer? Share a link to this [27]question via [28]email,
+[29]Google+, [30]Twitter, or [31]Facebook.
+
+Your Answer
+
+
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+
+   draft saved
+   draft discarded
+   ____________________
+
+Sign up or [32]login
+
+   Sign up using Google
+
+   Sign up using Facebook
+
+   Sign up using Stack Exchange
+   [BUTTON Input] (not implemented)______
+
+Post as a guest
+
+   Name ______________________________
+   Email ______________________________ required, but not shown
+
+Post as a guest
+
+   Name ______________________________
+   Email ______________________________ required, but not shown
+   Post Your Answer [33]discard
+
+   By posting your answer, you agree to the [34]privacy policy and
+   [35]terms of service.
+
+Browse other questions tagged [36]python [37]rabbitmq [38]celery
+[39]supervisord or [40]ask your own question.
+
+   tagged
+   [41]python × 224668
+   [42]rabbitmq × 1658
+   [43]celery × 1303
+   [44]supervisord × 186
+
+   asked
+
+         5 days ago
+
+   viewed
+
+         16 times
+
+Related
+
+   0
+   [45]Supervisor - Running a python script PYTHONPATH issue
+   3
+   [46]Incorrect user for supervisor'd celeryd
+   2
+   [47]Route celery task to specific queue
+   4
+   [48]running celeyd_multi with supervisor
+   0
+   [49]Starting Celery with supervisord: AttributeError: 'module' object
+   has no attribute 'celery'
+   0
+   [50]Abnormal termination error running supervisor
+   1
+   [51]Starting celeryd & celerycam in production using supervisor failing
+   on AWS
+   0
+   [52]Supervisord seems to die when using virtualenv python in command
+   configuration
+   0
+   [53]Slow Celery Task Times
+   0
+   [54]Supervising celerybeat with supervisor and virtualenv
+   [55]question feed
+   lang-py
+
+   [56]about [57]help [58]badges [59]blog [60]chat [61]data [62]legal
+   [63]privacy policy [64]jobs [65]advertising info mobile [66]contact us
+   [67]feedback
+            Technology            Life / Arts Culture / Recreation Science Other
+   1. [68]Stack Overflow
+   2. [69]Server Fault
+   3. [70]Super User
+   4. [71]Web Applications
+    5. [72]Ask Ubuntu
+    6. [73]Webmasters
+    7. [74]Game Development
+    8. [75]TeX - LaTeX
+
+   1. [76]Programmers
+    2. [77]Unix & Linux
+    3. [78]Ask Different (Apple)
+    4. [79]WordPress Answers
+    5. [80]Geographic Information Systems
+    6. [81]Electrical Engineering
+    7. [82]Android Enthusiasts
+    8. [83]IT Security
+
+   1. [84]Database Administrators
+    2. [85]Drupal Answers
+    3. [86]SharePoint
+    4. [87]User Experience
+    5. [88]Mathematica
+    6. [89]more (13)
+
+   1. [90]Photography
+    2. [91]Science Fiction & Fantasy
+    3. [92]Seasoned Advice (cooking)
+    4. [93]Home Improvement
+    5. [94]more (13)
+
+   1. [95]English Language & Usage
+    2. [96]Skeptics
+    3. [97]Mi Yodeya (Judaism)
+    4. [98]Travel
+    5. [99]Christianity
+    6. [100]Arqade (gaming)
+    7. [101]Bicycles
+    8. [102]Role-playing Games
+    9. [103]more (21)
+
+   1. [104]Mathematics
+    2. [105]Cross Validated (stats)
+    3. [106]Theoretical Computer Science
+    4. [107]Physics
+    5. [108]MathOverflow
+    6. [109]more (7)
+
+   1. [110]Stack Apps
+    2. [111]Meta Stack Overflow
+    3. [112]Area 51
+    4. [113]Stack Overflow Careers
+
+   site design / logo © 2013 stack exchange inc; user contributions
+   licensed under [114]cc-wiki with [115]attribution required
+   rev 2013.10.1.1045
+
+   Stack Overflow works best with JavaScript enabled
+
+References
+
+   Visible links
+   1. file://localhost/opensearch.xml
+   2. file://localhost/feeds/question/19027340
+   3. http://stackexchange.com/
+   4. file://localhost/users/login?returnurl=%2fquestions%2f19027340%2fsupervisor-wont-see-rabitmq-running-when-updating-configuration-file
+   5. file://localhost/users/login?returnurl=%2fquestions%2f19027340%2fsupervisor-wont-see-rabitmq-running-when-updating-configuration-file
+   6. http://careers.stackoverflow.com/
+   7. file://localhost/
+   8. file://localhost/questions
+   9. file://localhost/tags
+  10. file://localhost/about
+  11. file://localhost/users
+  12. file://localhost/questions/ask
+  13. file://localhost/about
+  14. file://localhost/questions/19027340/supervisor-wont-see-rabitmq-running-when-updating-configuration-file
+  15. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml68.data
+  16. file://localhost/questions/tagged/python
+  17. file://localhost/questions/tagged/rabbitmq
+  18. file://localhost/questions/tagged/celery
+  19. file://localhost/questions/tagged/supervisord
+  20. file://localhost/q/19027340
+  21. file://localhost/posts/19027340/edit
+  22. file://localhost/posts/19027340/revisions
+  23. file://localhost/users/829796/securecurve
+  24. file://localhost/questions/19027340/supervisor-wont-see-rabitmq-running-when-updating-configuration-file?answertab=active#tab-top
+  25. file://localhost/questions/19027340/supervisor-wont-see-rabitmq-running-when-updating-configuration-file?answertab=oldest#tab-top
+  26. file://localhost/questions/19027340/supervisor-wont-see-rabitmq-running-when-updating-configuration-file?answertab=votes#tab-top
+  27. file://localhost/q/19027340
+  28. mailto:?subject=Stack%20Overflow%20Question&body=Supervisor%20won%27t%20see%20RabitMQ%20Running%20When%20updating%20configuration%20file%0Ahttp%3a%2f%2fstackoverflow.com%2fq%2f19027340%3fsem%3d2
+  29. https://plus.google.com/share?url=http%3a%2f%2fstackoverflow.com%2fq%2f19027340%3fsgp%3d2
+  30. http://twitter.com/share?url=http%3a%2f%2fstackoverflow.com%2fq%2f19027340%3fstw%3d2
+  31. http://www.facebook.com/sharer.php?u=http%3a%2f%2fstackoverflow.com%2fq%2f19027340%3fsfb%3d2
+  32. file://localhost/users/login?returnurl=%2fquestions%2f19027340%2fsupervisor-wont-see-rabitmq-running-when-updating-configuration-file%23new-answer
+  33. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml68.data
+  34. http://stackexchange.com/legal/privacy-policy
+  35. http://stackexchange.com/legal/terms-of-service
+  36. file://localhost/questions/tagged/python
+  37. file://localhost/questions/tagged/rabbitmq
+  38. file://localhost/questions/tagged/celery
+  39. file://localhost/questions/tagged/supervisord
+  40. file://localhost/questions/ask
+  41. file://localhost/questions/tagged/python
+  42. file://localhost/questions/tagged/rabbitmq
+  43. file://localhost/questions/tagged/celery
+  44. file://localhost/questions/tagged/supervisord
+  45. file://localhost/questions/7930259/supervisor-running-a-python-script-pythonpath-issue
+  46. file://localhost/questions/9034709/incorrect-user-for-supervisord-celeryd
+  47. file://localhost/questions/10079816/route-celery-task-to-specific-queue
+  48. file://localhost/questions/15558875/running-celeyd-multi-with-supervisor
+  49. file://localhost/questions/17007101/starting-celery-with-supervisord-attributeerror-module-object-has-no-attribu
+  50. file://localhost/questions/17285210/abnormal-termination-error-running-supervisor
+  51. file://localhost/questions/17304486/starting-celeryd-celerycam-in-production-using-supervisor-failing-on-aws
+  52. file://localhost/questions/17543025/supervisord-seems-to-die-when-using-virtualenv-python-in-command-configuration
+  53. file://localhost/questions/18339487/slow-celery-task-times
+  54. file://localhost/questions/18580423/supervising-celerybeat-with-supervisor-and-virtualenv
+  55. file://localhost/feeds/question/19027340
+  56. file://localhost/about
+  57. file://localhost/help
+  58. file://localhost/help/badges
+  59. http://blog.stackexchange.com/?blb=1
+  60. http://chat.stackoverflow.com/
+  61. http://data.stackexchange.com/
+  62. http://stackexchange.com/legal
+  63. http://stackexchange.com/legal/privacy-policy
+  64. http://stackexchange.com/about/hiring
+  65. http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6MjAsImNtIjo5NTQsImNoIjoxMTc4LCJjciI6Mjc3NiwiZG0iOjQsImZjIjoyODYyLCJmbCI6Mjc1MSwibnciOjIyLCJydiI6MCwicHIiOjExNSwic3QiOjAsInVyIjoiaHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL2Fib3V0L2NvbnRhY3QiLCJyZSI6MX0&s=hRods5B22XvRBwWIwtIMekcyNF8
+  66. file://localhost/contact
+  67. http://meta.stackoverflow.com/
+  68. http://stackoverflow.com/
+  69. http://serverfault.com/
+  70. http://superuser.com/
+  71. http://webapps.stackexchange.com/
+  72. http://askubuntu.com/
+  73. http://webmasters.stackexchange.com/
+  74. http://gamedev.stackexchange.com/
+  75. http://tex.stackexchange.com/
+  76. http://programmers.stackexchange.com/
+  77. http://unix.stackexchange.com/
+  78. http://apple.stackexchange.com/
+  79. http://wordpress.stackexchange.com/
+  80. http://gis.stackexchange.com/
+  81. http://electronics.stackexchange.com/
+  82. http://android.stackexchange.com/
+  83. http://security.stackexchange.com/
+  84. http://dba.stackexchange.com/
+  85. http://drupal.stackexchange.com/
+  86. http://sharepoint.stackexchange.com/
+  87. http://ux.stackexchange.com/
+  88. http://mathematica.stackexchange.com/
+  89. http://stackexchange.com/sites#technology
+  90. http://photo.stackexchange.com/
+  91. http://scifi.stackexchange.com/
+  92. http://cooking.stackexchange.com/
+  93. http://diy.stackexchange.com/
+  94. http://stackexchange.com/sites#lifearts
+  95. http://english.stackexchange.com/
+  96. http://skeptics.stackexchange.com/
+  97. http://judaism.stackexchange.com/
+  98. http://travel.stackexchange.com/
+  99. http://christianity.stackexchange.com/
+ 100. http://gaming.stackexchange.com/
+ 101. http://bicycles.stackexchange.com/
+ 102. http://rpg.stackexchange.com/
+ 103. http://stackexchange.com/sites#culturerecreation
+ 104. http://math.stackexchange.com/
+ 105. http://stats.stackexchange.com/
+ 106. http://cstheory.stackexchange.com/
+ 107. http://physics.stackexchange.com/
+ 108. http://mathoverflow.net/
+ 109. http://stackexchange.com/sites#science
+ 110. http://stackapps.com/
+ 111. http://meta.stackoverflow.com/
+ 112. http://area51.stackexchange.com/
+ 113. http://careers.stackoverflow.com/
+ 114. http://creativecommons.org/licenses/by-sa/3.0/
+ 115. http://blog.stackoverflow.com/2009/06/attribution-required/
+
+   Hidden links:
+ 117. file://localhost/users/829796/securecurve
+ 118. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml68.data
+ 119. file://localhost/q/7930259
+ 120. file://localhost/q/9034709
+ 121. file://localhost/q/10079816
+ 122. file://localhost/q/15558875
+ 123. file://localhost/q/17007101
+ 124. file://localhost/q/17285210
+ 125. file://localhost/q/17304486
+ 126. file://localhost/q/17543025
+ 127. file://localhost/q/18339487
+ 128. file://localhost/q/18580423
+ 129. http://creativecommons.org/licenses/by-sa/3.0/

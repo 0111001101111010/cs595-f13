@@ -1,0 +1,331 @@
+   #[1]RSS
+
+                              [2]python sweetness
+
+     * [3]ask me anything
+
+     * [4]rss
+     * [5]archive
+
+     * [6]Thoughts on a better memory abstraction for Python (2)
+       [This is a followup to [7]Thoughts on a better memory abstraction
+       for Python. I’ll aim to keep this post better structured and to the
+       point compared to last, however such traits don’t quite come
+       naturally!]
+       [8]Acid is a prototype design for a Python library that sits on top
+       of a key/value store to provide important high-level primitives
+       from a traditional database, that typically drive developers to use
+       more complex database systems.
+       Its raison d’être is a magical bytestring↔tuple encoding used to
+       provide intuitive secondary index management (thus immediately
+       covering 90% of common DBMS use), however also included are a
+       grab-bag of features applicable to any program consuming a
+       key/value store: an [9]ORM-alike that transparently [10]manages its
+       record encoding, a novel [11]transparent batch compression scheme,
+       subdivision of storage into distinct collections (aka “tables”),
+       [12]event listeners, and so on, all while obviating the need for a
+       query language, stored procedures, [13]40kLOC ORM or [14]400kLOC
+       server, heuristics-driven query planner, or a [15]restrictive data
+       model.
+       A particular emphasis is being made on performance, with many parts
+       of the library implemented in C, and being designed from the ground
+       up to minimize redundant work common to basically every existing
+       ORM/DBMS solution. Two sources of redundant work are memory copies
+       and unnecessary deserialization; in the current design, both are
+       closely related and the fundamental problem to be discussed in
+       these posts.
+       The focus on efficiency is motivated in large part by
+       dissatisfaction with the current state of the Python tooling
+       universe, where it is commonplace to be content in squeezing ~100
+       requests/sec out of a $5,000 server. High level interpreted
+       languages are not inherently “slow”, and a Python-based solution
+       need not be so excessively wasteful: there is no reason why 40kLOC
+       of boilerplate Python code should exist for an ORM, when the
+       majority of its users will never dare venture beneath its covers.
+       An HTTP parser or WSGI library need not be written in bytecode, and
+       there is little benefit in doing so, when their corresponding
+       specifications haven’t changed meaningfully in decades.
+       Many motivating examples of high performance bytecode are in use
+       every day, including quite probably between your reading this post
+       and the machine it was served from: iptables. Here we have network
+       filtering programs represented as linked lists of individual
+       instructions(!), and yet few would argue that this dinosaur of
+       Linux networking were overly slow, inflexible or unproductive. It
+       succeeds because the right primitives were provided, allowing high
+       level business logic to express arbitrary domain rules yet execute
+       at Gbit/sec filtering rates. And so Acid is an exploration of how a
+       Python storage primitive might look from this seemingly contrarian
+       and increasingly underappreciated perspective.
+       There are farther reaching motivations to explore this area: we are
+       somewhere between 5 and 20 years away from seeing machines with L4
+       cache (RAM) and mass storage (hard disk/SSD) becoming unified. When
+       “hitting disk” is no longer a source of latency, inefficiencies
+       will increasingly be identified in the ever-shortening path between
+       a consumer and the data store: system call overhead, context
+       switches, cache pollution due to copies, unnecessary serialization.
+       When such a day comes, and if CPU designs, OS designs, or the laws
+       of physics don’t change radically beforehand, the order of
+       magnitude architectural performance differences may cause the
+       traditional barrier between DBMS and application to look
+       increasingly untenable.
+       The goal of developing this library is not to produce a standalone
+       solution that will replace every DBMS for every use case tomorrow,
+       but to form the basis for experimenting with a new set of
+       principles for designing software, that might be made palatable to
+       even the most novice of programmers. The ultimate goal is to write
+       interesting network software that doesn’t suck; for illustration’s
+       sake I’ll define the standard unit of Doesn’t Suck (DSU) as
+       multiples of 100 HTTP requests/second capable of being served over
+       Ethernet by a [16]perfectly conventional looking CPython 2.7
+       transactional database/web application running on an 800Mhz
+       Raspberry Pi. As of a few weeks ago Acid was somewhere around 1.46
+       DSUs, however recent changes have pushed it back to 0.6-0.8.
+         ______________________________________________________________
+
+       Since the last post I’ve more or less been working full-time on
+       trying to bring Acid into a functional state. It’s beginning to
+       look like I’m not going to get everything I want completed before
+       the dawn of 2014, since reality is beckoning, and in the coming
+       weeks I must focus on picking up contract work, so it is going on
+       the back-burner yet again.
+       Despite that, what I have is starting to feel useful and
+       increasingly solid. For testing I’ve moved from random data to
+       something more practical, focusing on a real database of [17]15.5
+       million Reddit comments scraped over a 15 day period at the end of
+       August. Importing this dump using the (incomplete) [18]redcache
+       demo produces a 41 million entry 5.4GiB [19]LMDB database,
+       containing Comment, Link, User, and Subreddit records (presently
+       encoded as JSON) along with a plethora of secondary indices.
+       Despite its unoptimized state, performance is already quite
+       reasonable: an index scan from this database, including the index
+       range scan itself, and one random lookup and full JSON decode for
+       each target record value, already yields >55k records/sec on a
+       single Core i7 thread, while key-only index scans yield over 750k
+       keys/sec.
+       The itertools abuse mess from the previous post [20]was cleaned up,
+       with the core iterator logic now expressed as two easily maintained
+       [21]Python classes, although more work is needed. The new
+       implementation is testable, defers the aforementioned
+       bytestring/tuple domain dilemma to Key/KeyList classes, and is
+       modular enough to be replaced with C code when the time comes
+       (which itself promises at least a doubling in throughput).
+       The unintentional topic of the previous post, immediate decoding of
+       key tuples, has all but been addressed. Acid now includes a [22]Key
+       type that behaves just like a tuple, except in the C implementation
+       elements are lazily decoded as __getitem__ is invoked, and
+       comparisons occur uniformly in the bytestring domain. The remaining
+       work is to finish KeyList, a bigger brother to Key which will
+       repeat the lazy decode process except for sequences of keys. This
+       is used to realize index entries and batch keys.
+       I intend to massage the redcache demo into some lightweight clone
+       of the Reddit site, since while not a perfect demonstration, the
+       hierarchical layout of a thread is particularly amenable to
+       clustering and range scans, and the localized redundancy of
+       context-specific discussion compresses well. This makes a
+       reasonable example of how Acid’s batch compression could be applied
+       in a real world application: scanning any sub-thread requires a
+       minimal set of decompressions, so throughput remains impressive,
+       while realizing a 3-5x storage (i.e. RAM) savings over a
+       traditional DBMS.
+       A better demonstration of the benefits of compression requires a
+       dataset with even more redundancy: system logs and financial time
+       series both demonstrate these traits, but getting hold of a
+       reasonable chunk of free, public data in either domain is much more
+       difficult.
+         ______________________________________________________________
+
+       Now that the scene is set, finally memory sharing can be described.
+       It’s worth repeating why such an interface is useful to begin with:
+       the primary storage engine Acid is being designed for, [23]LMDB, is
+       implemented as a read-only memory mapping exposed directly to
+       consumer code, such that performing a lookup or a scan requires
+       zero copies. Complementing this, [24]py-lmdb has been designed from
+       scratch to ensure these properties are preserved even from within
+       Python code.
+       One fabulous trait of LMDB is that all pointers returned to the
+       user are guaranteed to remain stable until the end of a read
+       transaction, or within a write transaction until the next mutation
+       occurs. This means that given the right primitives surrounding
+       LMDB, it need never be necessary to explicitly copy data while
+       performing lookups or scans. This is interesting since from within
+       CPython using py-lmdb, random lookup rates exceeding 1 million
+       keys/sec are possible along with scan rates exceeding 11 millions
+       keys/sec (assuming a hot-cached database, of course).
+       To save time and space, it is enough to say that the C
+       implementation of Key, KeyList (and eventually Struct) optionally
+       manage their own buffer, but what they really want to do is
+       *borrow* that buffer until they are forced to copy it, since the
+       original bytes are already sitting there in memory up for grabs.
+       With lazy decoding, borrowed buffers and a set of freelists for
+       Key, KeyList, and [25]Struct, joins, range scans and lookups could
+       be translated into little more than pointer manipulation.
+       Given today’s index scan rate of 750k keys/second, already
+       providing powerful query tools such as [26]hash joins look
+       possible, but with the promise of at least a further doubling of
+       this rate I’m certain large joins will be practical on a
+       per-request basis directly from Python code.
+       The problem with exposing raw pointers in Python is the single
+       abstraction available for them, the [27]buffer interface, is
+       simultaneously too liberating and too restrictive. On the one hand
+       a freestanding buffer object may be created, whose lifetime is
+       uncontrolled and unobservable. On the other hand using the “locking
+       buffers” interface, the ability for the producer object to change
+       state in any way is utterly prohibited while any buffer exists.
+       Using the standard buffer interface, a choice must be made between
+       requiring the developer to *know* (as if we ever do) not to modify
+       or abort a transaction while holding any live object dependent on a
+       buffer, or use the locking interface and cause the developer deep
+       surprise and indignation to discover s/he *can’t abort or write to
+       the database* since somewhere in memory is a live reference to a
+       locked buffer, and s/he hasn’t a clue where it is.
+       Even if the standard interface could somehow communicate lifetimes,
+       more problems rear their heads: for each bytestring yielded from
+       LMDB, a 90ish byte heap allocated buffer object needs to exist,
+       simply to contain a 16 byte (ptr, length) pair, for yet another
+       type (our Key, KeyList and Struct) to indirectly point into them.
+       Finally we’re not just interested in exposing crash/corruption-safe
+       buffers, the result should also be “pythonic” (ugh) in that memory
+       management, including the sudden disappearence of a buffer, should
+       be made transparent to the user.
+       What we really want is some kind of “reverse buffer protocol”, one
+       where instead of the consumers informing the producer when it is
+       okay to die, the producer informs consumers of their imminent
+       demise. This way distinct C object implementations could secretly
+       conspire to manage buffers on the developer’s behalf, meanwhile the
+       developer remaining innocent to the duplicitous schemes of the
+       seemingly innocent Python objects s/he is freely manipulating.
+       Of course using some custom package-internal type these affairs
+       could managed privately, but the consumer of the buffer is Acid,
+       and the producer of the buffer is py-lmdb. Even if we make both
+       packages depend on a third library providing some magical new
+       UberBuffer type, the utterly abhorrent (IMHO) type leakage occurs,
+       since now any consumer of py-lmdb might possibly be forced or
+       encouraged to consume some custom type designed only for internal
+       use by the C implementation.
+       Ideally py-lmdb and Acid could communicate somehow, and in such a
+       way as no novel types are introduced, thus preventing further
+       downstream pollution (I wish more people would understand this
+       while designing libraries!). Since almost the entirety of the
+       Python C-API and its dependents support buffer objects anywhere a
+       string is accepted, ideally the buffer object interface to py-lmdb
+       should be preserved, since it already has excellent compatibility
+       with the existing ecosystem, and ideally communication of buffer
+       lifetimes need not involve a separate heap allocation for every
+       buffer shared (using an object that in all likelihood is double or
+       more the size of the string being shared).
+       Enter the [28]MemSink protocol ([29]described here).
+       This is basically where I’m at today, and I hate it, even though it
+       ticks the boxes: buffers are transported across the Python
+       interface as a pair of (plain old buffer object, source object),
+       where “source object” is any type (in this case a py-lmdb
+       Transaction object) that sports a magical __memsource__ class
+       attribute. That attribute contains a PyCapsule wrapping a struct
+       that describes the location of a doubly-linked list head in the
+       source object’s PyObject.
+       When a C type (in this case Key.from_raw(buf, source)) receives one
+       of these pairs, it asks the memsink module’s C API to hook it up to
+       the source’ notification list. The memsink module in turn looks up
+       a __memsink__ class attribute on the consumer type, which describes
+       the location of a doubly-linked list node in the sink’s PyObject
+       structure along with a (C) invalidation callback function.
+       The memsink C implementation then stiches the sink object onto the
+       source’s invalidation list. Now if the sink dies first, it asks the
+       memsink module to unlink it. If the source wants to die first (e.g.
+       due to transaction commit or mutation), the memsink module instead
+       walks the source’s invalidation list, invoking the C invalidation
+       callback for each sink. In the case of Key, KeyList, and Struct,
+       the invalidation callback will attempt to copy the borrowed buffer
+       into their own PyObject, or if it won’t fit, allocate a new heap
+       buffer and copy it there instead.
+       This way within a transaction, no memory copies occur, large scans
+       and joins are as close to free as they’ll ever be, and if the user
+       decides to keep a huge list of dependent objects around while
+       terminating the transaction, those objects will transparently be
+       preserved after the transaction ends.
+       Key and [30]py-lmdb are the first entities to get an experimental
+       implementation of this protocol, disabled when the memsink module
+       isn’t installed. Basically it sucks and I hate it, not least
+       because some intermediary Python code needs to introduce the
+       producer to the consumer, but yet again I’ve run out of time to
+       explain all the problems with this scheme, just that so far it’s
+       the best one I’ve got.
+       [To be continued]
+         ______________________________________________________________
+
+       Comments on a postcard to [31]@edeadlk.
+          + [32]September 26, 2013 (6:18 am)
+
+   IFRAME:
+   [33]http://assets.tumblr.com/assets/html/iframe/o.html?_v=0f8339d83792f
+   50916ca29c1a64ddfa0#src=http%3A%2F%2Fpythonsweetness.tumblr.com%2Fpost%
+   2F62321291712%2Fthoughts-on-a-better-memory-abstraction-for-python-2&pi
+   d=62321291712&rk=aNSrdFzz&lang=en_US&name=pythonsweetness&brag=false&av
+   atar=http%3A%2F%2Fassets.tumblr.com%2Fimages%2Fdefault_avatar_64.png&ti
+   tle=python+sweetness&url=http%3A%2F%2Fpythonsweetness.tumblr.com%2F&pag
+   e_slide=slide
+
+   IFRAME:
+   [34]http://www.tumblr.com/assets/html/iframe/teaser.html#src=http%3A%2F
+   %2Fpythonsweetness.tumblr.com%2Fpost%2F62321291712%2Fthoughts-on-a-bett
+   er-memory-abstraction-for-python-2&pid=62321291712&rk=aNSrdFzz&lang=en_
+   US&name=pythonsweetness&brag=false&avatar=http%3A%2F%2Fassets.tumblr.co
+   m%2Fimages%2Fdefault_avatar_64.png&title=python+sweetness&url=http%3A%2
+   F%2Fpythonsweetness.tumblr.com%2F&page_slide=slide
+
+   IFRAME:
+   [35]http://assets.tumblr.com/analytics.html?63fae489732da54993e4a941e42
+   dcf5e
+
+   Quantcast
+
+   [impixu?T=1380681901&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvcHl0aG9u
+   c3dlZXRuZXNzLnR1bWJsci5jb21cL3Bvc3RcLzYyMzIxMjkxNzEyXC90aG91Z2h0cy1vbi1
+   hLWJldHRlci1tZW1vcnktYWJzdHJhY3Rpb24tZm9yLXB5dGhvbi0yIiwicmVxdHlwZSI6MC
+   wicm91dGUiOiJcL3Bvc3RcLzppZFwvOnN1bW1hcnkiLCJub3NjcmlwdCI6MX0=&U=BEFNBD
+   HJIM&K=dcbc401b341284e03de66ded31f77543b920fd62c8cc0f7e1bf8739b8e6f1c77
+   &R=]
+   [impixu?T=1380681901&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL3B5dGhv
+   bnN3ZWV0bmVzcy50dW1ibHIuY29tXC9wb3N0XC82MjMyMTI5MTcxMlwvdGhvdWdodHMtb24
+   tYS1iZXR0ZXItbWVtb3J5LWFic3RyYWN0aW9uLWZvci1weXRob24tMiIsInJlcXR5cGUiOj
+   AsInJvdXRlIjoiXC9wb3N0XC86aWRcLzpzdW1tYXJ5IiwicG9zdHMiOlt7InBvc3RpZCI6N
+   jIzMjEyOTE3MTIsImJsb2dpZCI6Ijk3ODkzOTczIiwic291cmNlIjozM31dLCJub3Njcmlw
+   dCI6MX0=&U=CDGJOJLMIE&K=10027458c393baef08d1a17436fcf26617275f63cd8dd3f
+   2f646f44daf1a4857&R=]
+
+References
+
+   1. http://pythonsweetness.tumblr.com/rss
+   2. file://localhost/
+   3. file://localhost/ask
+   4. http://pythonsweetness.tumblr.com/rss
+   5. file://localhost/archive
+   6. http://pythonsweetness.tumblr.com/post/62321291712/thoughts-on-a-better-memory-abstraction-for-python-2
+   7. http://pythonsweetness.tumblr.com/post/58148801190/thoughts-on-a-better-memory-abstraction-for-python
+   8. http://acid.readthedocs.org/
+   9. http://acid.readthedocs.org/en/latest/meta.html
+  10. https://github.com/dw/acid/issues/41
+  11. http://acid.readthedocs.org/en/latest/intro.html#batch-compression
+  12. http://acid.readthedocs.org/en/latest/events.html
+  13. http://www.sqlalchemy.org/
+  14. http://www.mongodb.org/
+  15. http://www.sqlite.org/
+  16. https://github.com/dw/acid/tree/master/demo/cheeseboard/
+  17. https://mega.co.nz/#F!VxoGVCKJ!ZKmwSR4VU3sXBxibGBvtRg
+  18. https://github.com/dw/acid/tree/master/demo/redcache/
+  19. http://symas.com/mdb/
+  20. https://github.com/dw/acid/commit/f53dde2993b1fe5866749fc4092d590d24339b2f
+  21. https://github.com/dw/acid/blob/master/acid/iterators.py#L27
+  22. http://acid.readthedocs.org/en/latest/core.html#acid.keylib.Key
+  23. http://symas.com/mdb/
+  24. http://lmdb.readthedocs.org/
+  25. https://github.com/dw/acid/issues/41
+  26. http://en.wikipedia.org/wiki/Hash_join
+  27. http://docs.python.org/2/library/functions.html#buffer
+  28. http://github.com/dw/memsink/
+  29. https://github.com/dw/acid/issues/23
+  30. http://lmdb.readthedocs.org/
+  31. http://twitter.com/edeadlk
+  32. http://pythonsweetness.tumblr.com/post/62321291712/thoughts-on-a-better-memory-abstraction-for-python-2
+  33. http://assets.tumblr.com/assets/html/iframe/o.html?_v=0f8339d83792f50916ca29c1a64ddfa0#src=http%3A%2F%2Fpythonsweetness.tumblr.com%2Fpost%2F62321291712%2Fthoughts-on-a-better-memory-abstraction-for-python-2&pid=62321291712&rk=aNSrdFzz&lang=en_US&name=pythonsweetness&brag=false&avatar=http%3A%2F%2Fassets.tumblr.com%2Fimages%2Fdefault_avatar_64.png&title=python+sweetness&url=http%3A%2F%2Fpythonsweetness.tumblr.com%2F&page_slide=slide
+  34. http://www.tumblr.com/assets/html/iframe/teaser.html#src=http%3A%2F%2Fpythonsweetness.tumblr.com%2Fpost%2F62321291712%2Fthoughts-on-a-better-memory-abstraction-for-python-2&pid=62321291712&rk=aNSrdFzz&lang=en_US&name=pythonsweetness&brag=false&avatar=http%3A%2F%2Fassets.tumblr.com%2Fimages%2Fdefault_avatar_64.png&title=python+sweetness&url=http%3A%2F%2Fpythonsweetness.tumblr.com%2F&page_slide=slide
+  35. http://assets.tumblr.com/analytics.html?63fae489732da54993e4a941e42dcf5e

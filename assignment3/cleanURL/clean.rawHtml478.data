@@ -1,0 +1,217 @@
+    #[1]Leo's Blog » Feed [2]Leo's Blog » Comments Feed [3]Leo's Blog »
+   CSS3 transform property: A LESS mixin improvement Comments Feed [4]GPU
+   Hardware-Accelerated CSS LESS-mixin [5]Starting a Responsive Web
+   Project
+
+   Leo's Blog
+
+Leo's Blog
+
+Leo Lanese Developer Blog
+
+     * [6]Activate
+     * [7]Members
+     * [8]Page 1
+     * [9]Register
+
+   Search for: ____________________ Search
+     * [10]Facebook
+     * [11]Twitter
+
+Post navigation
+
+   [12]← Previous
+   [13]Next →
+   css3
+
+CSS3 transform property: A LESS mixin improvement
+
+   Author[14]Leo Lanese
+   Published on[15]September 25, 2013
+   Categories [16]CSS, [17]Design, [18]javascript, [19]LESS, [20]mobileweb
+   [21]0
+
+   [22]css3
+
+   Based on the article from [23]http://css-tricks.com/. I desided update
+   it, so I’m inluding: “CSS3 perspective”, “CSS3 backface-visiblity” and
+   a “legacy transform” to the mixin.less file.
+
+The result:
+
+.transform(@arguments) {
+  -webkit-transform: rotateY(@arguments);
+  -moz-transform: rotateY(@arguments);
+  -o-transform: rotateY(@arguments);
+  -ms-transform: @arguments;
+  transform: rotateY(@arguments);
+
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+}
+
+How to use it
+
+   You can use it as any other LESS element.
+  .transform(180deg);
+
+   This is a tiny improvement, but I hope it can help you.
+
+   [24]Want to chat about this?…
+   [25]Share
+
+Leave a Reply [26]Cancel reply
+
+   Your email address will not be published. Required fields are marked *
+
+   Name * ______________________________
+
+   Email * ______________________________
+
+   Website ______________________________
+
+   Comment
+   _____________________________________________
+   _____________________________________________
+   _____________________________________________
+   _____________________________________________
+   _____________________________________________
+   _____________________________________________
+   _____________________________________________
+   _____________________________________________
+
+   You may use these HTML tags and attributes: <a href="" title=""> <abbr
+   title=""> <acronym title=""> <b> <blockquote cite=""> <cite> <code>
+   <del datetime=""> <em> <i> <q cite=""> <strike> <strong>
+
+   Post Comment
+
+   Most Popular
+     * [27]Detect your viewport using “widthDetector”
+     * [28]Responsive Web Design Chrome Extension Testing Tools
+     * [29]My Personal Test Suite
+     * [30]Remote Debugging
+     * [31]It’s not pixel-perfect it’s proportion-perfect
+
+   Categories
+     * [32]AutomaticTest
+     * [33]Conference
+     * [34]Continuous integration
+     * [35]CSS
+     * [36]Design
+     * [37]Framework
+     * [38]GIT
+     * [39]HMTL5
+     * [40]javascript
+     * [41]LESS
+     * [42]Mobile
+     * [43]mobileweb
+     * [44]Responsive Web Design
+     * [45]TDD
+     * [46]TEST
+     * [47]Uncategorized
+     * [48]Unit-test
+
+   Archive
+     * [49]September 2013
+     * [50]August 2013
+     * [51]July 2013
+     * [52]June 2013
+     * [53]May 2013
+     * [54]April 2013
+     * [55]February 2013
+     * [56]January 2013
+     * [57]December 2012
+     * [58]October 2012
+     * [59]August 2012
+     * [60]July 2012
+     * [61]June 2012
+     * [62]February 2012
+     * [63]January 2012
+     * [64]December 2011
+     * [65]July 2011
+     * [66]February 2011
+
+   Copyright © 2013 "Leo's Blog".
+   Proudly powered by: [67]WordPress
+   Theme by: [68]Sampression
+   [69]Goto Top
+
+   [70]\\\\\\\"Share
+
+References
+
+   Visible links
+   1. http://leolanese.com/blog/feed/
+   2. http://leolanese.com/blog/comments/feed/
+   3. http://leolanese.com/blog/2013/09/25/less-transform/feed/
+   4. http://leolanese.com/blog/2013/09/13/hardware-accelerated-css-less-mixin/
+   5. http://leolanese.com/blog/2013/09/26/startrwd/
+   6. http://leolanese.com/blog/activate/
+   7. http://leolanese.com/blog/members/
+   8. http://leolanese.com/blog/sample-page/
+   9. http://leolanese.com/blog/register/
+  10. http://www.facebook.com/LeoLaneseltd
+  11. http://www.twitter.com/LeoLaneseltd
+  12. http://leolanese.com/blog/2013/09/13/hardware-accelerated-css-less-mixin/
+  13. http://leolanese.com/blog/2013/09/26/startrwd/
+  14. http://leolanese.com/blog/author/lllanese/
+  15. http://leolanese.com/blog/2013/09/25/less-transform/
+  16. http://leolanese.com/blog/category/css/
+  17. http://leolanese.com/blog/category/design/
+  18. http://leolanese.com/blog/category/javascript/
+  19. http://leolanese.com/blog/category/less/
+  20. http://leolanese.com/blog/category/mobileweb/
+  21. http://leolanese.com/blog/2013/09/25/less-transform/#respond
+  22. http://leolanese.com/blog/wp-content/uploads/2013/09/css3-e1380114644835.jpg
+  23. http://css-tricks.com/
+  24. http://www.twitter.com/leolaneseltd/
+  25. http://www.hupso.com/share/
+  26. file://localhost/blog/2013/09/25/less-transform/#respond
+  27. http://leolanese.com/blog/2013/02/18/wd/
+  28. http://leolanese.com/blog/2013/04/07/testrwd/
+  29. http://leolanese.com/blog/2013/01/18/my-test-suite/
+  30. http://leolanese.com/blog/2012/12/02/remote/
+  31. http://leolanese.com/blog/2013/06/04/proportional-perfect/
+  32. http://leolanese.com/blog/category/automatictest/
+  33. http://leolanese.com/blog/category/conference/
+  34. http://leolanese.com/blog/category/continuous-integration/
+  35. http://leolanese.com/blog/category/css/
+  36. http://leolanese.com/blog/category/design/
+  37. http://leolanese.com/blog/category/framework/
+  38. http://leolanese.com/blog/category/git/
+  39. http://leolanese.com/blog/category/hmtl5/
+  40. http://leolanese.com/blog/category/javascript/
+  41. http://leolanese.com/blog/category/less/
+  42. http://leolanese.com/blog/category/mobile/
+  43. http://leolanese.com/blog/category/mobileweb/
+  44. http://leolanese.com/blog/category/responsive-web-design/
+  45. http://leolanese.com/blog/category/tdd/
+  46. http://leolanese.com/blog/category/test-2/
+  47. http://leolanese.com/blog/category/uncategorized/
+  48. http://leolanese.com/blog/category/unit-test/
+  49. http://leolanese.com/blog/2013/09/
+  50. http://leolanese.com/blog/2013/08/
+  51. http://leolanese.com/blog/2013/07/
+  52. http://leolanese.com/blog/2013/06/
+  53. http://leolanese.com/blog/2013/05/
+  54. http://leolanese.com/blog/2013/04/
+  55. http://leolanese.com/blog/2013/02/
+  56. http://leolanese.com/blog/2013/01/
+  57. http://leolanese.com/blog/2012/12/
+  58. http://leolanese.com/blog/2012/10/
+  59. http://leolanese.com/blog/2012/08/
+  60. http://leolanese.com/blog/2012/07/
+  61. http://leolanese.com/blog/2012/06/
+  62. http://leolanese.com/blog/2012/02/
+  63. http://leolanese.com/blog/2012/01/
+  64. http://leolanese.com/blog/2011/12/
+  65. http://leolanese.com/blog/2011/07/
+  66. http://leolanese.com/blog/2011/02/
+  67. http://wordpress.org/
+  68. http://sampression.com/
+  69. javascript:pageScroll('.top');
+  70. \\\\\\\"http://www.hupso.com/share/\\\\\\\"
+
+   Hidden links:
+  72. http://leolanese.com/blog/

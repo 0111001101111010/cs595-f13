@@ -1,0 +1,553 @@
+   #[1]next
+
+   [2]Skip the navigation
+
+   [3]Computerworld
+     * [4]White Papers
+     * [5]Webcasts
+     * [6]Newsletters
+     * Research Centers
+          + Communities
+          + [7]BlackBerry's Enterprise Mobile Hub
+          + [8]Capitalizing on Desktop Virtualization
+          + [9]Bring Mobile Innovation to your Enterprise
+          + [10]Citrix's Mobile Enterprise 360
+          + [11]Cloud Powered Work
+          + [12]Dispelling Myths About Cloud-based Archiving
+            KnowledgeVault Exchange
+          + [13]It's All About Recovery
+          + [14]A Smarter Approach to Data Protection
+          + [15]Your IT Journey — Your Way
+          + Research
+          + [16]BlackBerry: Build up yourBlackBerry© 10 knowledge
+          + [17]Citrix XenMobile
+          + [18]HP Enterprise Mobile App Solution Center
+          + [19]IBM SmartCloud Solutions
+          + [20]Webroot - Internet Security Resource Center
+          + [21]View all Solution Centers
+     * [22]Events
+     * Magazine
+          + [23]Latest Issue
+          + [24]Magazine Index
+          + [25]Subscribe
+          + [26]Subscriber Services
+     * [27]Twitter
+     * [28]Facebook
+     * [29]Google+
+     * [30]LinkedIn
+     * [31]RSS
+
+   ____________________ Submit
+     * [32]Topics
+          + [33]Applications
+          + [34]Cloud Computing
+          + [35]Consumerization of IT
+          + [36]Data Center
+          + [37]Data Storage
+          + [38]Government/Industries
+          + [39]Hardware
+          + [40]Internet
+          + [41]Management
+          + [42]Mobile/Wireless
+          + [43]Networking
+          + [44]Operating Systems
+          + [45]Security
+          + [46]All Topics
+     * [47]News
+     * [48]In Depth
+     * [49]Reviews
+     * [50]Blogs
+          + [51]Featured Blogs
+          + [52]Antone Gonsalves
+          + [53]IT Blogwatch
+          + [54]Jonny Evans
+          + [55]JR Raphael
+          + [56]Preston Gralla
+          + [57]Richi Jennings
+          + [58]Robert L. Mitchell
+          + [59]Shark Tank
+          + [60]All Bloggers
+     * [61]Opinion
+     * [62]Shark Tank
+     * [63]IT Jobs
+     * More
+          + [64]Enterprise IT
+          + [65]Hot Topics
+          + [66]IDGE CEO Interviews
+          + [67]Insider Articles
+          + [68]QuickPoll Center
+          + [69]Slideshows
+          + [70]Video
+     * IT Verticals
+          + [71]Financial IT
+          + [72]Government IT
+          + [73]Healthcare IT
+
+   [74]Security
+     * [75]Application Security|
+     * [76]Cybercrime and Hacking|
+     * [77]Cyberwarfare|
+     * [78]Data Security|
+     * [79]Encryption|
+     * [80]Endpoint Security
+     * [81]Malware and Vulnerabilities|
+     * [82]Mobile Security
+     * [83]Privacy|
+
+   [84]Home > [85]Security > [86]Cyberwarfare
+   News
+
+Malicious browser extensions pose a serious threat and defenses are lacking
+
+Many security products offer inadequate protection against malicious browser
+extensions, a researcher has found
+
+   By Lucian Constantin
+   September 26, 2013 08:44 AM ET
+
+   IDG News Service - The number of malicious browser extensions has
+   significantly increased in the past year but  many security products
+   fail to offer adequate protection against them, while others are simply
+   not designed to do so, according to a security researcher.
+
+   Attackers have already used such extensions to perform click fraud by
+   inserting rogue advertisements into websites or by hijacking search
+   queries, but research has shown that this type of malware has the
+   potential to cause much more damage.
+
+   Last year Zoltan Balazs, an IT security consultant with professional
+   services firm Deloitte in Hungary, [87]created a proof-of-concept
+   malicious extension that could be controlled remotely by an attacker
+   and could steal authentication credentials, hijack accounts, modify
+   locally displayed Web pages, take screenshots through the computer's
+   webcam, bypass two-factor authentication systems and even download and
+   execute malicious files on a victim's computer.
+
+   And last week the European Union Agency for Network and Information
+   Security (ENISA) [88]warned in its midyear report: "An increase in
+   malicious browser extensions has been registered, aimed at taking over
+   social network accounts."
+
+   Earlier this year Balazs investigated how various security products
+   protect users against malicious browser extensions and presented his
+   findings at the OHM2013 security conference near Amsterdam in August.
+   He performed tests against browser security extensions, sandboxing
+   software, Internet security suites, anti-keylogging applications and
+   financial fraud prevention programs recommended by some banks.
+
+   Many of these products either don't detect and block malicious
+   extensions at all, or their protection can be bypassed, sometimes very
+   easily, he found.
+
+   Not all of the tested products claim to protect against malicious
+   extensions, but Balazs said he tested them because some users might
+   believe they do.
+
+   For example, the NoScript security extension for Mozilla Firefox is
+   designed to block plug-in content from executing without user
+   authorization, and also blocks some Web-based attacks such as
+   cross-site scripting or clickjacking. However, it doesn't protect
+   against malicious browser extensions or local malware, Balazs said.
+
+   BrowserProtect, another Firefox extension, claims to protect the
+   browser against "homepage, search provider, extension, add-on, BHO and
+   other hijacks." This extension also fails to protect against malicious
+   extensions, the researcher said.
+
+   Browser security extensions are not really trying to protect against
+   malicious extensions and they wouldn't be able to because by design
+   they run with the same privileges as those extensions, Balazs said.
+
+   Balazs also tested Internet security suites from five top antivirus
+   vendors that he declined to name. The level of protection they offered
+   against malicious browser extensions varied from none to good.
+
+   One of the tested products detected and removed the researcher's
+   malicious Firefox extension, but he was able to bypass the detection
+   signature by adding a single space character at a specific location in
+   the extension's code.
+   [89]1
+   [90]2
+   [91]3
+   [92]4
+   [93]Next page
+   [94]Comments ()
+   [95]Print
+   Reprinted with permission from IDG.net. Story copyright 2012
+   International Data Group. All rights reserved.
+   Today's Top Stories
+     * [96]Shutdown could test IT security at federal agencies
+     * [97]Windows 8 nears 10% user share mark
+     * [98]Utility cuts IT workforce, hires Indian outsourcers
+     * [99]Millions flood healthcare insurance sites as feds grapple with
+       glitches
+     * [100]Few use tablets to replace laptops
+     * [101]Apple's 64-bit A7 chip is a 'marketing gimmick'
+     * [102]Icahn presses Apple CEO Cook for $150B stock buyback
+
+   From [103]CIO.com | [104]CSOonline
+     * [105]iOS 7 Must Know Tips and Tricks
+     * [106]Apple iPhone 5S vs. Nokia Lumia 1020: Which Camera is Better?
+     * [107]How Tech Companies Can Succeed by Going Private
+     * [108]CIOs Share How They Made the Leap to CEO
+     * [109]Slideshow: 7 ways users drive IT support crazy
+     * [110]How to spot a phishing email
+     * [111]Social engineering: The basics
+     * [112]20 security and privacy apps for Android and iPhone
+
+   Additional Resources
+   How Cloud Communications Reduce Costs and Increase Productivity
+   WHITE PAPER
+   [113]How Cloud Communications Reduce Costs and Increase Productivity
+   Small and midsize businesses are moving to the cloud to host their
+   communications capabilities. Learn how enterprise-quality phone
+   benefits, online management, conferencing, auto attendant, and ease of
+   use are built into a system that is half the cost of a PBX.
+
+   [114]Read now.
+   Computerworld - Insider Free Insider Guide
+
+   [115]IT Certification Study Tips
+          Register for this Computerworld Insider Study Tip guide and gain
+          access to hundreds of premium content articles, cheat sheets,
+          product reviews and more.
+
+   [116]Register for FREE now! »
+   Cyberwarfare Resources
+     * [117]Improving Legal Compliance Through Security Awareness Training
+       A "big picture" understanding of legal and regulatory compliance
+       obligations and mitigating the security threat posed by an
+       organization's own employees- the weak link...
+     * [118]How Effective is Security Awareness Training? Anti-phishing
+       solutions are critical in protecting an organization from the
+       infiltration Web-based attacks. A technology-based solution is not
+       enough.
+     * [119]Take a Holistic Approach to Your Cloud Implementation Cloud is
+       not simply a new technology platform, it's a new way of running
+       your IT processes. Success changes relationships with users,
+       with...
+     * [120]EMA Radar for Private Cloud Platforms: Q1 2013 Read Enterprise
+       Management Associates' 2013 Private Cloud Platforms Radar Report to
+       see how EMA evaluated BMC's cloud management solutions.
+
+     * [121]Accelerate Your Journey to the Cloud with EMC VSPEX Proven
+       Infrastructure Watch to discover why EMC VSPEX offers the
+       simplicity, efficiency, and flexibility for organizations to scale
+       as their businesses grow.
+     * [122]Move Beyond Point Solutions to Enterprise Mobility Management
+       Mobile Minute: Moving to enterprise mobility management. [123]All
+       Cyberwarfare White Papers | [124]Webcasts
+
+   Cyberwarfare White Papers | [125]All Cyberwarfare White Papers
+     * [126]Improving Legal Compliance Through Security Awareness Training
+     * [127]Take a Holistic Approach to Your Cloud Implementation
+     * [128]Frost & Sullivan: Leveraging Technology for Innovation and
+       Success: Embracing IaaS to Bridge the Divide between IT and the
+       Lines of Business
+     * [129]Top Five Things You Need to Know about Backup Transformation
+       and VMware
+     * [130]Leveraging EMC VSPEX for Rapid ROI
+     * [131]ESG Analyzes EMC's Flash Strategy
+     * [132]Gartner Magic Quadrant for Mobile Device Management Software
+     * [133]Critical Capabilities for Mobile Device Management Software
+     * [134]Embracing BYOD Through Secure App and Data Delivery
+     * [135]Service and Support as a Strategic Imperative
+
+     * [136]How Effective is Security Awareness Training?
+     * [137]EMA Radar for Private Cloud Platforms: Q1 2013
+     * [138]Taking Your Enterprise Mobile: The Executive Checklist
+     * [139]Save Time and Money with Savvy Use of Flash in Automated
+       Storage Tiering
+     * [140]Top 5 Reasons Why Customers Deploy a Flash 1st Strategy on EMC
+       VNX
+     * [141]The 10 "Must-Haves" for Secure Enterprise Mobility.
+     * [142]Wake Up From Your Mobile Email Nightmare!
+     * [143]5 Easy Steps to Adopting an Enterprise App Store
+     * [144]How to Select the Right Remote Support Tool: A Practical Guide
+       for the Support Desk Owner
+     * [145]Measuring Customer Satisfaction with Support Services
+
+   Sponsored Links
+     * [146]It's uptime all the time with Panasonic Toughbook® services.
+     * [147]Get the Facts about EMC ViPR Software-Defined Storage
+     * [148]Redefine Mobility Mgmt at Enterprise Mobile Hub
+     * [149]Drive business transformation now at Enterprise CIO Forum
+     * [150]Download Microsoft's latest Data Protection Management tool
+     * [151]Not All QSAs Are Created Equal: What You Should Know Before
+       You Buy
+     * [152]The arrival of Serial Attached SCSI (SAS) marks a new era in
+       storage scalability
+     * [153]The AMD Virtual Experience Virtual Trade Show
+     * [154]"The Definitive Guide to Security Management" Chapter 1:
+       Introduction to Security Management
+
+     * [155]Short courses, big impact: 30+ programs for executives @ MIT
+     * [156]Learn more about BlackBerry Balance
+     * [157]Connect with global CIOs now at Enterprise CIO Forum
+     * [158]Share best practices and drive change at Enterprise CIO Forum
+     * [159]ITwhitepapers.com - Access thousands of white papers on 300+
+       technical topics.
+     * [160]Leverage Your Cisco infrastructure for Superior Application
+       Performance
+     * [161]Learn about the AMD Virtual Experience
+     * [162]"The Definitive Guide to Security Management" Chapter 1:
+       Introduction to Security Management
+     * [163]Introducing: Project Icebreaker
+
+   Resource Center
+   [164]Ads by TechWords
+   [165]See your link here
+   [166]Skip to top
+     * [167]About Us
+     * [168]Advertise
+     * [169]Contacts
+     * [170]Editorial Calendar
+     * [171]Subscribe to Computerworld Magazine
+     * [172]Help Desk
+     * [173]Newsletters
+     * [174]Careers at IDG
+     * [175]Privacy Policy
+     * [176]Reprints
+     * [177]Site Map
+     * [178]Ad Choices
+
+   The IDG Network:
+     * [179]CFOworld
+     * [180]CIO
+     * [181]CITEworld
+     * [182]Computerworld
+     * [183]CSO
+     * [184]DEMO
+     * [185]IDC
+     * [186]IDG
+     * [187]IDG Connect
+     * [188]IDG Knowledge Hub
+     * [189]IDG TechNetwork
+     * [190]IDG Ventures
+     * [191]InfoWorld
+     * [192]ITwhitepapers
+     * [193]ITworld
+     * [194]JavaWorld
+     * [195]LinuxWorld
+     * [196]Macworld
+     * [197]Network World
+     * [198]PC World
+     * [199]TechHive
+     * [200]Technology Briefcase
+
+   Copyright © 1994 - 2013 Computerworld Inc. All rights reserved.
+   Reproduction in whole or in part in any form or medium without express
+   written permission of Computerworld Inc. is prohibited. Computerworld
+   and Computerworld.com and the respective logos are trademarks of
+   International Data Group Inc.
+
+   IFRAME: [201]__bkframe
+
+References
+
+   Visible links
+   1. file://localhost/s/article/9242699/Malicious_browser_extensions_pose_a_serious_threat_and_defenses_are_lacking?taxonomyId=244&pageNumber=2
+   2. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1049.data#page_wrapper
+   3. file://localhost/
+   4. file://localhost/s/whitepapers/1
+   5. file://localhost/s/webcasts/1
+   6. file://localhost/s/newsletters?source=nlt_nav
+   7. http://www.enterprisemobilehub.com/
+   8. http://resources.computerworld.com/show/200018275/00726240097921CTW1LTCE76TAU/
+   9. http://resources.computerworld.com/show/200017104/00723320090327CTWQXBKD7T8W2/
+  10. http://www.mobileenterprise360.com/
+  11. http://cloudpoweredwork.com/
+  12. http://resources.computerworld.com/ccd/show/200017578/00701110093703CTWY255ADKZ4Y/
+  13. http://www.improvedatarecovery.com/
+  14. http://resources.computerworld.com/show/200018159/00776540095430CTWZA5RJ0VTRP/
+  15. http://resources.computerworld.com/show/200015328/00621610082902CTW2WPL8QUNNL/?email=%25%25emailaddr%25%25
+  16. http://solutioncenters.computerworld.com/everything_you_need_to_become_blackberry_10_ready/?from=cw&src=ctwzne
+  17. http://solutioncenters.computerworld.com/citrix_xenmobile/
+  18. http://solutioncenters.computerworld.com/hp_enterprise_mobile_app_solution_center/?from=cw&src=ctwzne
+  19. http://solutioncenters.cio.com/ibm_smartcloud/?from=cw&src=ctwzne
+  20. http://solutioncenters.computerworld.com/internet_security_resource_center/?from=cw&src=ctwzne
+  21. http://solutioncenters.computerworld.com/cw_sc_home/
+  22. http://events.computerworld.com/
+  23. file://localhost/s/print/current
+  24. file://localhost/s/article/9197218/Computerworld_s_2010_12_magazine_index
+  25. http://www.cwsubscribe.com/cgi-win/cw.cgi?ADD
+  26. http://www.cwsubscribe.com/cgi-win/cw.cgi?main3
+  27. http://twitter.com/computerworld
+  28. http://www.facebook.com/Computerworld
+  29. http://plus.google.com/+computerworld
+  30. http://www.linkedin.com/company/computerworld
+  31. file://localhost/s/feeds/rss
+  32. file://localhost/s/topic/home
+  33. file://localhost/s/topic/18/Applications
+  34. file://localhost/s/topic/158/Cloud+Computing
+  35. file://localhost/s/topic/220/Consumerization+of+IT
+  36. file://localhost/s/topic/154/Data+Center
+  37. file://localhost/s/topic/19/Data+Storage
+  38. file://localhost/s/topic/126/Government_Industries
+  39. file://localhost/s/topic/12/Hardware
+  40. file://localhost/s/topic/167/Internet
+  41. file://localhost/s/topic/14/Management
+  42. file://localhost/s/topic/15/Mobile_Wireless
+  43. file://localhost/s/topic/16/Networking
+  44. file://localhost/s/topic/89/Operating+Systems
+  45. file://localhost/s/topic/17/Security
+  46. file://localhost/s/topic/home
+  47. file://localhost/s/news
+  48. file://localhost/s/article/9139561/In_Depth
+  49. file://localhost/s/article/9039700/Computerworld_s_Reviews_Database
+  50. http://blogs.computerworld.com/
+  51. http://blogs.computerworld.com/
+  52. http://blogs.computerworld.com/blog/22629
+  53. http://blogs.computerworld.com/blog/it-blogwatch
+  54. http://blogs.computerworld.com/blog/apple-holic
+  55. http://blogs.computerworld.com/blog/android-power
+  56. http://blogs.computerworld.com/blog/seeing-through-windows
+  57. http://blogs.computerworld.com/blog/the-long-view
+  58. http://blogs.computerworld.com/blog/reality-check
+  59. http://blogs.computerworld.com/blog/shark-tank
+  60. http://blogs.computerworld.com/all-bloggers
+  61. file://localhost/s/blogs/opinion
+  62. http://blogs.computerworld.com/sharky
+  63. http://itjobs.computerworld.com/
+  64. file://localhost/s/article/9140456/Enterprise_IT_Update
+  65. file://localhost/s/article/9140776/Technology_hot_topics
+  66. http://www.computerworld.com/s/article/9210300/IDG_Enterprise_CEO_Interviews
+  67. file://localhost/s/insiders
+  68. file://localhost/s/article/9190998/Computerworld_QuickPoll_Center
+  69. file://localhost/slideshow/index
+  70. file://localhost/video
+  71. file://localhost/s/topic/130/Financial+IT
+  72. file://localhost/s/topic/13/Government+IT
+  73. file://localhost/s/topic/132/Healthcare+IT
+  74. file://localhost/s/topic/17/Security
+  75. file://localhost/s/topic/208/Application+Security
+  76. file://localhost/s/topic/82/Cybercrime+and+Hacking
+  77. file://localhost/s/topic/244/Cyberwarfare
+  78. file://localhost/s/topic/203/Data+Security
+  79. file://localhost/s/topic/245/Encryption
+  80. file://localhost/s/topic/145/Endpoint+Security
+  81. file://localhost/s/topic/85/Malware+and+Vulnerabilities
+  82. file://localhost/s/topic/246/Mobile+Security
+  83. file://localhost/s/topic/84/Privacy
+  84. file://localhost/
+  85. file://localhost/s/topic/17/Security
+  86. file://localhost/s/topic/244/Cyberwarfare
+  87. http://www.computerworld.com/s/article/9232848/Researcher_to_demonstrate_feature_rich_malware_that_works_as_a_browser_extension?pageNumber=1
+  88. http://www.enisa.europa.eu/activities/risk-management/evolving-threat-environment/enisa-threat-landscape-mid-year-2013
+  89. file://localhost/s/article/9242699/Malicious_browser_extensions_pose_a_serious_threat_and_defenses_are_lacking?taxonomyId=244&pageNumber=1
+  90. file://localhost/s/article/9242699/Malicious_browser_extensions_pose_a_serious_threat_and_defenses_are_lacking?taxonomyId=244&pageNumber=2
+  91. file://localhost/s/article/9242699/Malicious_browser_extensions_pose_a_serious_threat_and_defenses_are_lacking?taxonomyId=244&pageNumber=3
+  92. file://localhost/s/article/9242699/Malicious_browser_extensions_pose_a_serious_threat_and_defenses_are_lacking?taxonomyId=244&pageNumber=4
+  93. file://localhost/s/article/9242699/Malicious_browser_extensions_pose_a_serious_threat_and_defenses_are_lacking?taxonomyId=244&pageNumber=2
+  94. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1049.data#comments
+  95. javascript:void(0);
+  96. file://localhost/s/article/9242837/Shutdown_could_test_IT_security_at_federal_agencies_
+  97. file://localhost/s/article/9242863/Windows_8_nears_10_user_share_mark_
+  98. file://localhost/s/article/9242880/Utility_cuts_IT_workforce_hires_Indian_outsourcers_
+  99. file://localhost/s/article/9242881/Millions_flood_healthcare_insurance_sites_as_feds_grapple_with_glitches_
+ 100. file://localhost/s/article/9242867/Few_use_tablets_to_replace_laptops_
+ 101. file://localhost/s/article/9242879/Apple_39_s_64_bit_A7_chip_is_a_39_marketing_gimmick_39_
+ 102. file://localhost/s/article/9242868/Icahn_presses_Apple_CEO_Cook_for_150B_stock_buyback_
+ 103. http://www.cio.com/?source=ctwartcio_hdr
+ 104. http://www.csoonline.com/?source=ctwartcso_hdr
+ 105. http://www.cio.com/slideshow/detail/121028/iOS-7--Must-Know-Tips-and-Tricks-?source=ctwartcio
+ 106. http://www.cio.com/article/740194/Apple_iPhone_5S_vs._Nokia_Lumia_1020_Which_Camera_is_Better_?source=ctwartcio
+ 107. http://www.cio.com/article/740426/How_Tech_Companies_Can_Succeed_by_Going_Private?source=ctwartcio
+ 108. http://www.cio.com/article/740099/CIOs_Share_How_They_Made_the_Leap_to_CEO?source=ctwartcio
+ 109. http://www.csoonline.com/slideshow/detail/121253/7-service-requests-that-make-IT-support-folks-cry?source=ctwartcso
+ 110. http://www.csoonline.com/slideshow/detail/118916/How-to-spot-a-phishing-email?source=csoartcso?source=ctwartcso
+ 111. http://www.csoonline.com/article/514063/social-engineering-the-basics?source=ctwartcso
+ 112. http://www.csoonline.com/slideshow/detail/66493?source=ctwartcso
+ 113. http://resources.computerworld.com/show/200014207/00623430077818CTWPRJ0UHXTC9/?email=%%emailaddr%%
+ 114. http://resources.computerworld.com/show/200014207/00623430077818CTWPRJ0UHXTC9/?email=%%emailaddr%%
+ 115. http://reg.idgenterprise.com/insider.html?url=http://www.computerworld.com/s/article/9229370/Free_and_cheap_ways_to_study_for_IT_certifications?source=ctwrhn_itcert_reg
+ 116. http://reg.idgenterprise.com/insider.html?url=http://www.computerworld.com/s/article/9229370/Free_and_cheap_ways_to_study_for_IT_certifications?source=ctwrhn_itcert_reg
+ 117. http://resources.computerworld.com/ccd/assets/42844/detail
+ 118. http://resources.computerworld.com/ccd/assets/42832/detail
+ 119. http://resources.computerworld.com/ccd/assets/43352/detail
+ 120. http://resources.computerworld.com/ccd/assets/43346/detail
+ 121. http://resources.computerworld.com/ccd/assets/43317/detail
+ 122. http://resources.computerworld.com/ccd/assets/43303/detail
+ 123. file://localhost/s/whitepapers/topic/244/Cyberwarfare/1
+ 124. file://localhost/s/webcasts/topic/244/Cyberwarfare/1
+ 125. file://localhost/s/whitepapers/topic/244/Cyberwarfare/1
+ 126. http://resources.computerworld.com/ccd/assets/42844/detail
+ 127. http://resources.computerworld.com/ccd/assets/43352/detail
+ 128. http://resources.computerworld.com/ccd/assets/43327/detail
+ 129. http://resources.computerworld.com/ccd/assets/43318/detail
+ 130. http://resources.computerworld.com/ccd/assets/43315/detail
+ 131. http://resources.computerworld.com/ccd/assets/43313/detail
+ 132. http://solutioncenters.computerworld.com/citrix_xenmobile/registration/11802.html?source=00843190101345CTWQPRGKMANW1__ctwlib?SOURCE=00843190101345CTWQPRGKMANW1
+ 133. http://solutioncenters.computerworld.com/citrix_xenmobile/registration/11803.html?source=00843190101348CTW5CX6M2B5DP__ctwlib?SOURCE=00843190101348CTW5CX6M2B5DP
+ 134. http://solutioncenters.computerworld.com/citrix_xenmobile/registration/11814.html?source=00843190101351CTW6CQLN9VR5H__ctwlib?SOURCE=00843190101351CTW6CQLN9VR5H
+ 135. http://resources.computerworld.com/ccd/assets/42004/detail
+ 136. http://resources.computerworld.com/ccd/assets/42832/detail
+ 137. http://resources.computerworld.com/ccd/assets/43346/detail
+ 138. http://solutioncenters.computerworld.com/citrix_xenmobile/registration/11811.html?source=00843190101349CTWCKGRAPGL0Y__ctwlib?SOURCE=00843190101349CTWCKGRAPGL0Y
+ 139. http://resources.computerworld.com/ccd/assets/43316/detail
+ 140. http://resources.computerworld.com/ccd/assets/43314/detail
+ 141. http://solutioncenters.computerworld.com/citrix_xenmobile/registration/11810.html?source=00843190101343CTWBPSLOG2T3W__ctwlib?SOURCE=00843190101343CTWBPSLOG2T3W
+ 142. http://solutioncenters.computerworld.com/citrix_xenmobile/registration/11812.html?source=00843190101346CTWPAZDQ4QZIB__ctwlib?SOURCE=00843190101346CTWPAZDQ4QZIB
+ 143. http://solutioncenters.computerworld.com/citrix_xenmobile/registration/11813.html?source=00843190101350CTWC1YHV5AHX7__ctwlib?SOURCE=00843190101350CTWC1YHV5AHX7
+ 144. http://resources.computerworld.com/ccd/assets/42010/detail
+ 145. http://resources.computerworld.com/ccd/assets/41998/detail
+ 146. http://pubads.g.doubleclick.net/gampad/clk?id=45206816&iu=/8456/IDG.Computerworld_Enterprise
+ 147. http://pubads.g.doubleclick.net/gampad/clk?id=43159856&iu=/8456/IDG.Computerworld_Enterprise
+ 148. http://pubads.g.doubleclick.net/gampad/clk?id=38507576&iu=/8456/IDG.Computerworld_Enterprise
+ 149. http://ad.doubleclick.net/clk;274316129;44243109;b?http://www.enterprisecioforum.com/?utm_source=IDGE&utm_medium=TEXTLINK&utm_campaign=ecf
+ 150. http://ad.doubleclick.net/clk%3b33749358%3b7163019%3bq?http://www.microsoft.com/DPM
+ 151. http://reg.computerworld.com/?acc=80507586&src=textlink
+ 152. http://zones.computerworld.com/sas/index.php?intsrc=zoneshp
+ 153. http://a1448.g.akamai.net/7/1448/25138/v0001/compworld.download.akamai.com/25137/computerworld/podcasts/bruce_shaw_amd_ave.mp3
+ 154. http://www.accelacomm.com/jlp/cwtl/11/3202/
+ 155. http://pubads.g.doubleclick.net/gampad/clk?id=45188216&iu=/8456/IDG.Computerworld_Enterprise
+ 156. http://pubads.g.doubleclick.net/gampad/clk?id=40270016&iu=/8456/IDG.Computerworld_Enterprise
+ 157. http://ad.doubleclick.net/clk;274312947;44243109;f?http://www.enterprisecioforum.com/?utm_source=IDGE&utm_medium=TEXTLINK&utm_campaign=ecf
+ 158. http://ad.doubleclick.net/clk;274317042;44243109;w?http://www.enterprisecioforum.com/?utm_source=IDGE&utm_medium=TEXTLINK&utm_campaign=ecf
+ 159. http://www.itwhitepapers.com/
+ 160. http://zones.computerworld.com/fluke_networks/
+ 161. http://a1448.g.akamai.net/7/1448/25138/v0001/compworld.download.akamai.com/25137/computerworld/podcasts/amd_ave_novell.mp3
+ 162. http://www.accelacomm.com/jlp/cwtl/11/3202/
+ 163. http://w.on24.com/r.htm?e=31415&s=1&k=3406E15112046E2379FF4A1A9D3BF168&partnerref=cwtl
+ 164. http://www.techwords.com/
+ 165. http://www.techwords.com/
+ 166. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1049.data#container
+ 167. file://localhost/s/pages/about_cw
+ 168. http://www.computerworldmediakit.com/
+ 169. file://localhost/s/pages/contacts/contacts_all
+ 170. http://marketing.computerworld.com/cw_edit_cal_2013_with_close.pdf
+ 171. http://www.cwsubscribe.com/cgi-win/cw.cgi?ADD
+ 172. file://localhost/s/help-desk
+ 173. file://localhost/s/newsletters?source=ctwnla_footer
+ 174. http://careers.idg.com/
+ 175. file://localhost/s/pages/about_policies
+ 176. file://localhost/s/pages/about_order_reprints
+ 177. file://localhost/s/pages/site_map
+ 178. file://localhost/s/pages/ad_choices
+ 179. http://www.cfoworld.com/?source=ctwfooter
+ 180. http://www.cio.com/?source=ctwfooter
+ 181. http://www.citeworld.com/?source=ctwfooter
+ 182. http://www.computerworld.com/?source=ctwfooter
+ 183. http://www.csoonline.com/?source=ctwfooter
+ 184. http://www.demo.com/
+ 185. http://www.idc.com/
+ 186. http://www.IDG.com/
+ 187. http://www.idgconnect.com/
+ 188. http://www.idgknowledgehub.com/
+ 189. http://www.idgtechnetwork.com/
+ 190. http://www.idgventures.com/
+ 191. http://www.infoworld.com/?source=ctwfooter
+ 192. http://www.itwhitepapers.com/index.php?source=ctwfooter
+ 193. http://www.itworld.com/?source=ctwfooter
+ 194. http://www.javaworld.com/?source=ctwfooter
+ 195. http://www.linuxworld.com/?source=ctwfooter
+ 196. http://www.macworld.com/
+ 197. http://www.networkworld.com/?source=ctwfooter
+ 198. http://www.pcworld.com/
+ 199. http://www.techhive.com/?source=ctwfooter
+ 200. http://technologybriefcase.com/allCategories
+ 201. javascript:void(0)
+
+   Hidden links:
+ 203. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1049.data#disqus_thread
+ 204. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1049.data#disqus_thread

@@ -1,0 +1,178 @@
+   #[1]Morag Brand » How to use a custom font in your WordPress website
+   Comments Feed
+
+     * [2]Home
+     * [3]Services
+     * [4]Rates
+     * [5]FAQ
+     * [6]Blog
+     * [7]Contact
+
+
+Latest thoughts
+
+
+How to use a custom font in your WordPress website
+
+   Posted by: Morag Brand    Tags:  [8]CSS, [9]fonts, [10]HTML,
+   [11]WordPress    Posted date:  September 10, 2013  |  No comment
+   September 10, 2013
+
+Fed up of Arial and Verdana?  Using a custom font on your WordPress blog is a
+great way to get a unique look that encompasses your brand’s style.
+
+There are several plugins that claim to help you install a custom font, but
+to be honest most of them are harder work than setting it up yourself!
+
+   Below is a step-by-step guide to embedding a new font.  To keep things
+   simple, I’ll be using a fresh install of WordPress using the default
+   Twenty Thirteen theme.
+
+   Below is a screenshot of what the site looks like before any changes
+   have been made:
+   [12]BEFORE: WordPress Twenty Thirteen theme
+
+   BEFORE: WordPress Twenty Thirteen theme
+
+1. Select a font
+
+   I will be using [13]FuturaLT.  Before installing any font on your
+   website check the licensing documentation to ensure that you have the
+   right to use it online.   You will need to have the font as either a
+   TrueTypeFile (TTF) or OpenTypeFile (OTF) in order to convert for web
+   use.
+   [14]FuturaLT font
+
+   FuturaLT font
+
+2. Convert the font to an @ face
+
+   Whilst it’s possible to create the different formats yourself, the
+   easiest way is using a great tool called [15]Font Squirrel.
+
+   Click on Add Font and upload your selected font.  Click the ‘Optimal’
+   setting and check the box to confirm that your chosen font is eligible
+   for web embedding.  Then click on ‘Get your kit’.
+   [16]Font Squirrel - convert your font
+
+   Font Squirrel – convert your font
+
+   Extract the files contained within the zipped folder.  You will notice
+   that there are several file types.  The first one to open is
+   Stylesheet.css which should look similar to this:
+   [17]Font Stylesheet.css
+
+   Font Style.css
+
+   Copy the code into the top of the Stylesheet.css of your chosen
+   template (this is found in the WordPress Dashboard – Appearance –
+   Editor – Style.css).
+
+3.  Upload your font files
+
+   The four files you need to upload are the eot, svg, ttf and woff
+   formats.  Copy these to the base directory of your chosen theme.
+   [18]Copy fonts via FTP to the base directory of your theme
+
+   Copy fonts via FTP to the base directory of your theme
+
+4. Define your fonts in Style.css
+
+   [19]specify-fonts
+
+   Look out for my forthcoming video in which we’ll go one step further by
+   creating a dedicated fonts folder and setting up several different
+   fonts (useful for headings / captions / body text).
+
+   I hope you’ve found this post useful and informative.  Do try it and
+   let me know how you get on in the comments below.
+
+
+
+About the author
+
+   Morag Brand
+   Morag is a fast-moving, forward-thinking executive VA with over 15
+   years' experience who started out in the VA industry in 2007 and is
+   featured in the bestselling Virtual Assistant Handbook.
+     * [20][linkedin.png] [21][facebook.png] [22][pinterest.png]
+       [23][twitter.png] [24][skype.png] [25][email.png]
+
+
+     * Recent Posts
+          + [26]How to share your desktop screen over the internetIn the
+            old days, one of the potential drawbacks associated with
+            outsourcing was felt...
+          + [27]Does your personal assistant have to be 'present'?It is
+            apparent that when it comes to a personal assistant some small
+            business owners...
+          + [28]Facebook image sizes and dimensionsUsing images in your
+            Facebook posts can drive engagement; use the guide below to
+            find...
+     * Tags
+       [29]Dropbox [30]SEO [31]file sharing [32]life [33]balance
+       [34]website [35]work [36]social media[37]WordPress [38]Business
+       [39]Website [40]Organisation [41]How To's [42]Marketing
+     * [43][linkedin.png] [44][facebook.png] [45][pinterest.png]
+       [46][twitter.png] [47][skype.png] [48][email.png]
+
+
+   (c) Morag Brand 2013. All rights reserved
+
+References
+
+   Visible links
+   1. http://moragbrand.com/custom-font/feed/
+   2. http://moragbrand.com/
+   3. http://moragbrand.com/services/
+   4. http://moragbrand.com/rates/
+   5. http://moragbrand.com/faq/
+   6. http://moragbrand.com/blog/
+   7. http://moragbrand.com/contact/
+   8. http://moragbrand.com/tag/css/
+   9. http://moragbrand.com/tag/fonts/
+  10. http://moragbrand.com/tag/html/
+  11. http://moragbrand.com/tag/wordpress/
+  12. http://moragbrand.com/wp-content/uploads/2013/09/Morag-Brand-Professional-Virtual-Assistance-website1.png
+  13. http://www.fonts.com/font/linotype/futura/complete-family-pack
+  14. http://moragbrand.com/wp-content/uploads/2013/09/futura.png
+  15. http://www.fontsquirrel.com/tools/webfont-generator
+  16. http://moragbrand.com/wp-content/uploads/2013/09/font-squirrel.png
+  17. http://moragbrand.com/wp-content/uploads/2013/09/font.png
+  18. http://moragbrand.com/wp-content/uploads/2013/09/ftp.png
+  19. http://moragbrand.com/wp-content/uploads/2013/09/specify-fonts.png
+  20. http://linkedin.com/in/moragbrand
+  21. http://facebook.com/MoragBrandVA
+  22. http://pinterest.com/moragbrand
+  23. http://twitter.com/moragbrand
+  24. skype:moragbrand?call
+  25. mailto:morag@moragbrand.com
+  26. http://moragbrand.com/sharedesktop/
+  27. http://moragbrand.com/why-your-personal-assistant-doesnt-have-to-be-present/
+  28. http://moragbrand.com/facebook-image-sizes-and-dimensions/
+  29. http://moragbrand.com/tag/dropbox/
+  30. http://moragbrand.com/tag/seo/
+  31. http://moragbrand.com/tag/file-sharing/
+  32. http://moragbrand.com/tag/life/
+  33. http://moragbrand.com/tag/balance/
+  34. http://moragbrand.com/tag/website-2/
+  35. http://moragbrand.com/tag/work/
+  36. http://moragbrand.com/tag/social-media/
+  37. http://moragbrand.com/category/wordpress/
+  38. http://moragbrand.com/category/business/
+  39. http://moragbrand.com/category/website/
+  40. http://moragbrand.com/category/organisation/
+  41. http://moragbrand.com/category/how-tos/
+  42. http://moragbrand.com/category/marketing/
+  43. http://linkedin.com/in/moragbrand
+  44. http://facebook.com/MoragBrandVA
+  45. http://pinterest.com/moragbrand
+  46. http://twitter.com/moragbrand
+  47. skype:moragbrand?call
+  48. mailto:morag@moragbrand.com
+
+   Hidden links:
+  50. http://moragbrand.com/
+  51. http://moragbrand.com/sharedesktop/
+  52. http://moragbrand.com/why-your-personal-assistant-doesnt-have-to-be-present/
+  53. http://moragbrand.com/facebook-image-sizes-and-dimensions/

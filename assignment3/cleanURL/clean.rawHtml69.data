@@ -1,0 +1,405 @@
+   #[1]Stack Overflow [2]Feed for question 'pip fails to install numpy
+   error code 1'
+
+   [3]Stack Exchange
+   [4]sign up | [5]log in | [6]careers 2.0 |
+   ____________________________
+   [7]Stack Overflow
+     * [8]Questions
+     * [9]Tags
+     * [10]Tour
+     * [11]Users
+
+     * [12]Ask Question
+
+   [13]Tell me more ×
+   Stack Overflow is a question and answer site for professional and
+   enthusiast programmers. It's 100% free, no registration required.
+
+[14]pip fails to install numpy error code 1
+
+   up vote 0 down vote [15]favorite
+
+   I'm trying to install numpy using pip. When I type pip install numpy in
+   the command prompt it goes to work but won't install the file and
+   returns an error code 1. I am using windows 8 64-Bit and python
+   2.7.This is the final bit of the error message
+Cleaning up...
+
+Removing temporary dir c:\users\pim\appdata\local\temp\pip_build_Pim...
+Command python setup.py egg_info failed with error code 1 in c:\users\pim\appdat
+a\local\temp\pip_build_Pim\numpy
+
+Exception information:
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\pip-1.4.1-py2.7.egg\pip\basecommand.py", l
+ine 134, in main
+    status = self.run(options, args)
+  File "C:\Python27\lib\site-packages\pip-1.4.1-py2.7.egg\pip\commands\install.p
+y", line 236, in run
+    requirement_set.prepare_files(finder, force_root_egg_info=self.bundle, bundl
+e=self.bundle)
+  File "C:\Python27\lib\site-packages\pip-1.4.1-py2.7.egg\pip\req.py", line 1134
+, in prepare_files
+    req_to_install.run_egg_info()
+  File "C:\Python27\lib\site-packages\pip-1.4.1-py2.7.egg\pip\req.py", line 259,
+ in run_egg_info
+    command_desc='python setup.py egg_info')
+  File "C:\Python27\lib\site-packages\pip-1.4.1-py2.7.egg\pip\util.py", line 670
+, in call_subprocess
+    % (command_desc, proc.returncode, cwd))
+InstallationError: Command python setup.py egg_info failed with error code 1 in
+c:\users\pim\appdata\local\temp\pip_build_Pim\numpy
+
+   [16]python [17]python-2.7 [18]numpy [19]pip
+
+   [20]share|[21]improve this question
+   [22]edited Sep 26 at 11:53
+   [23]K DawG
+   610216
+   asked Sep 26 at 11:44
+   [24]Pim
+   51
+
+2 Answers
+
+   [25]active [26]oldest [27]votes
+   up vote 0 down vote accepted
+
+   Installing extension modules can be an issue with pip. This is why
+   conda exists. conda is an open-source BSD-licensed cross-platform
+   package manager. It can easily install NumPy.
+
+   Two options:
+     * Install Anaconda ([28]http://www.continuum.io/downloads)
+     * Install Miniconda
+       ([29]http://repo.continuum.io/miniconda/index.html) and then go to
+       a command-line and type conda install numpy (make sure your PATH
+       includes the location conda was installed to).
+
+
+   [30]share|[31]improve this answer
+                                    answered Sep 26 at 13:35
+                                    [32]Travis Oliphant
+                                    33112
+   Thanks, Anaconda solved the problem! – [33]Pim yesterday
+   up vote 0 down vote
+
+   Have you tried installing numpy using setuptools? Do you get the same
+   error? (easy_install numpy)
+
+   Do you have [34]MinGW Compiler installed and configured?
+
+   Please let me know it, so maybe I can help you.
+
+   [35]share|[36]improve this answer
+                                    answered Sep 26 at 13:29
+                                    [37]maccinza
+                                    203
+   I tried it with easy_install before, i even installed pip with
+   easy_install. I've used Anaconda like Travis suggested which fixed the
+   problem. Thanks for the help though – [38]Pim yesterday
+
+Your Answer
+
+
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+
+   draft saved
+   draft discarded
+   ____________________
+
+Sign up or [39]login
+
+   Sign up using Google
+
+   Sign up using Facebook
+
+   Sign up using Stack Exchange
+   [BUTTON Input] (not implemented)______
+
+Post as a guest
+
+   Name ______________________________
+   Email ______________________________ required, but not shown
+
+Post as a guest
+
+   Name ______________________________
+   Email ______________________________ required, but not shown
+   Post Your Answer [40]discard
+
+   By posting your answer, you agree to the [41]privacy policy and
+   [42]terms of service.
+
+Not the answer you're looking for? Browse other questions tagged [43]python
+[44]python-2.7 [45]numpy [46]pip or [47]ask your own question.
+
+   tagged
+   [48]python × 224668
+   [49]python-2.7 × 10766
+   [50]numpy × 7339
+   [51]pip × 1145
+
+   asked
+
+         5 days ago
+
+   viewed
+
+         40 times
+
+   active
+
+         [52]5 days ago
+
+Related
+
+   2
+   [53]Registry error when installing MySQL-python into virtualenv using
+   pip and easy_install
+   12
+   [54]windows + virtualenv + pip + numpy (problems when installing numpy)
+   1
+   [55]Trying to install Scrapy - error: Could not find 'openssl.exe'
+   1
+   [56]pip error while installing package in Cygwin/Python2.7
+   0
+   [57]why i failed to install django, should i run pip install for more
+   times?
+   1
+   [58]virtualenv pip install for matplotlib fails on numpy
+   3
+   [59]easy_install and pip giving errors when trying to install numpy
+   4
+   [60]Can't install via pip because of egg_info error
+   0
+   [61]Pip install error. Setuptools.command not found
+   1
+   [62]Error while installing numpy in venv
+   [63]question feed
+   lang-py
+
+   [64]about [65]help [66]badges [67]blog [68]chat [69]data [70]legal
+   [71]privacy policy [72]jobs [73]advertising info mobile [74]contact us
+   [75]feedback
+            Technology            Life / Arts Culture / Recreation Science Other
+  1. [76]Stack Overflow
+  2. [77]Server Fault
+  3. [78]Super User
+  4. [79]Web Applications
+    5. [80]Ask Ubuntu
+    6. [81]Webmasters
+    7. [82]Game Development
+    8. [83]TeX - LaTeX
+
+  1. [84]Programmers
+    2. [85]Unix & Linux
+    3. [86]Ask Different (Apple)
+    4. [87]WordPress Answers
+    5. [88]Geographic Information Systems
+    6. [89]Electrical Engineering
+    7. [90]Android Enthusiasts
+    8. [91]IT Security
+
+  1. [92]Database Administrators
+    2. [93]Drupal Answers
+    3. [94]SharePoint
+    4. [95]User Experience
+    5. [96]Mathematica
+    6. [97]more (13)
+
+  1. [98]Photography
+    2. [99]Science Fiction & Fantasy
+    3. [100]Seasoned Advice (cooking)
+    4. [101]Home Improvement
+    5. [102]more (13)
+
+  1. [103]English Language & Usage
+    2. [104]Skeptics
+    3. [105]Mi Yodeya (Judaism)
+    4. [106]Travel
+    5. [107]Christianity
+    6. [108]Arqade (gaming)
+    7. [109]Bicycles
+    8. [110]Role-playing Games
+    9. [111]more (21)
+
+  1. [112]Mathematics
+    2. [113]Cross Validated (stats)
+    3. [114]Theoretical Computer Science
+    4. [115]Physics
+    5. [116]MathOverflow
+    6. [117]more (7)
+
+  1. [118]Stack Apps
+    2. [119]Meta Stack Overflow
+    3. [120]Area 51
+    4. [121]Stack Overflow Careers
+
+   site design / logo © 2013 stack exchange inc; user contributions
+   licensed under [122]cc-wiki with [123]attribution required
+   rev 2013.10.1.1045
+
+   Stack Overflow works best with JavaScript enabled
+
+References
+
+   Visible links
+   1. file://localhost/opensearch.xml
+   2. file://localhost/feeds/question/19027324
+   3. http://stackexchange.com/
+   4. file://localhost/users/login?returnurl=%2fquestions%2f19027324%2fpip-fails-to-install-numpy-error-code-1
+   5. file://localhost/users/login?returnurl=%2fquestions%2f19027324%2fpip-fails-to-install-numpy-error-code-1
+   6. http://careers.stackoverflow.com/
+   7. file://localhost/
+   8. file://localhost/questions
+   9. file://localhost/tags
+  10. file://localhost/about
+  11. file://localhost/users
+  12. file://localhost/questions/ask
+  13. file://localhost/about
+  14. file://localhost/questions/19027324/pip-fails-to-install-numpy-error-code-1
+  15. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml69.data
+  16. file://localhost/questions/tagged/python
+  17. file://localhost/questions/tagged/python-2.7
+  18. file://localhost/questions/tagged/numpy
+  19. file://localhost/questions/tagged/pip
+  20. file://localhost/q/19027324
+  21. file://localhost/posts/19027324/edit
+  22. file://localhost/posts/19027324/revisions
+  23. file://localhost/users/2425215/k-dawg
+  24. file://localhost/users/2747359/pim
+  25. file://localhost/questions/19027324/pip-fails-to-install-numpy-error-code-1?answertab=active#tab-top
+  26. file://localhost/questions/19027324/pip-fails-to-install-numpy-error-code-1?answertab=oldest#tab-top
+  27. file://localhost/questions/19027324/pip-fails-to-install-numpy-error-code-1?answertab=votes#tab-top
+  28. http://www.continuum.io/downloads
+  29. http://repo.continuum.io/miniconda/index.html
+  30. file://localhost/a/19029835
+  31. file://localhost/posts/19029835/edit
+  32. file://localhost/users/2180801/travis-oliphant
+  33. file://localhost/users/2747359/pim
+  34. http://www.mingw.org/
+  35. file://localhost/a/19029700
+  36. file://localhost/posts/19029700/edit
+  37. file://localhost/users/1050167/maccinza
+  38. file://localhost/users/2747359/pim
+  39. file://localhost/users/login?returnurl=%2fquestions%2f19027324%2fpip-fails-to-install-numpy-error-code-1%23new-answer
+  40. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml69.data
+  41. http://stackexchange.com/legal/privacy-policy
+  42. http://stackexchange.com/legal/terms-of-service
+  43. file://localhost/questions/tagged/python
+  44. file://localhost/questions/tagged/python-2.7
+  45. file://localhost/questions/tagged/numpy
+  46. file://localhost/questions/tagged/pip
+  47. file://localhost/questions/ask
+  48. file://localhost/questions/tagged/python
+  49. file://localhost/questions/tagged/python-2.7
+  50. file://localhost/questions/tagged/numpy
+  51. file://localhost/questions/tagged/pip
+  52. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml69.data?lastactivity
+  53. file://localhost/questions/5652027/registry-error-when-installing-mysql-python-into-virtualenv-using-pip-and-easy-i
+  54. file://localhost/questions/6114115/windows-virtualenv-pip-numpy-problems-when-installing-numpy
+  55. file://localhost/questions/10688843/trying-to-install-scrapy-error-could-not-find-openssl-exe
+  56. file://localhost/questions/11990350/pip-error-while-installing-package-in-cygwin-python2-7
+  57. file://localhost/questions/12553428/why-i-failed-to-install-django-should-i-run-pip-install-for-more-times
+  58. file://localhost/questions/14666385/virtualenv-pip-install-for-matplotlib-fails-on-numpy
+  59. file://localhost/questions/15957071/easy-install-and-pip-giving-errors-when-trying-to-install-numpy
+  60. file://localhost/questions/17886647/cant-install-via-pip-because-of-egg-info-error
+  61. file://localhost/questions/17892071/pip-install-error-setuptools-command-not-found
+  62. file://localhost/questions/17956740/error-while-installing-numpy-in-venv
+  63. file://localhost/feeds/question/19027324
+  64. file://localhost/about
+  65. file://localhost/help
+  66. file://localhost/help/badges
+  67. http://blog.stackexchange.com/?blb=1
+  68. http://chat.stackoverflow.com/
+  69. http://data.stackexchange.com/
+  70. http://stackexchange.com/legal
+  71. http://stackexchange.com/legal/privacy-policy
+  72. http://stackexchange.com/about/hiring
+  73. http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6MjAsImNtIjo5NTQsImNoIjoxMTc4LCJjciI6Mjc3NiwiZG0iOjQsImZjIjoyODYyLCJmbCI6Mjc1MSwibnciOjIyLCJydiI6MCwicHIiOjExNSwic3QiOjAsInVyIjoiaHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL2Fib3V0L2NvbnRhY3QiLCJyZSI6MX0&s=hRods5B22XvRBwWIwtIMekcyNF8
+  74. file://localhost/contact
+  75. http://meta.stackoverflow.com/
+  76. http://stackoverflow.com/
+  77. http://serverfault.com/
+  78. http://superuser.com/
+  79. http://webapps.stackexchange.com/
+  80. http://askubuntu.com/
+  81. http://webmasters.stackexchange.com/
+  82. http://gamedev.stackexchange.com/
+  83. http://tex.stackexchange.com/
+  84. http://programmers.stackexchange.com/
+  85. http://unix.stackexchange.com/
+  86. http://apple.stackexchange.com/
+  87. http://wordpress.stackexchange.com/
+  88. http://gis.stackexchange.com/
+  89. http://electronics.stackexchange.com/
+  90. http://android.stackexchange.com/
+  91. http://security.stackexchange.com/
+  92. http://dba.stackexchange.com/
+  93. http://drupal.stackexchange.com/
+  94. http://sharepoint.stackexchange.com/
+  95. http://ux.stackexchange.com/
+  96. http://mathematica.stackexchange.com/
+  97. http://stackexchange.com/sites#technology
+  98. http://photo.stackexchange.com/
+  99. http://scifi.stackexchange.com/
+ 100. http://cooking.stackexchange.com/
+ 101. http://diy.stackexchange.com/
+ 102. http://stackexchange.com/sites#lifearts
+ 103. http://english.stackexchange.com/
+ 104. http://skeptics.stackexchange.com/
+ 105. http://judaism.stackexchange.com/
+ 106. http://travel.stackexchange.com/
+ 107. http://christianity.stackexchange.com/
+ 108. http://gaming.stackexchange.com/
+ 109. http://bicycles.stackexchange.com/
+ 110. http://rpg.stackexchange.com/
+ 111. http://stackexchange.com/sites#culturerecreation
+ 112. http://math.stackexchange.com/
+ 113. http://stats.stackexchange.com/
+ 114. http://cstheory.stackexchange.com/
+ 115. http://physics.stackexchange.com/
+ 116. http://mathoverflow.net/
+ 117. http://stackexchange.com/sites#science
+ 118. http://stackapps.com/
+ 119. http://meta.stackoverflow.com/
+ 120. http://area51.stackexchange.com/
+ 121. http://careers.stackoverflow.com/
+ 122. http://creativecommons.org/licenses/by-sa/3.0/
+ 123. http://blog.stackoverflow.com/2009/06/attribution-required/
+
+   Hidden links:
+ 125. file://localhost/users/2425215/k-dawg
+ 126. file://localhost/users/2747359/pim
+ 127. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml69.data
+ 128. file://localhost/users/2180801/travis-oliphant
+ 129. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml69.data
+ 130. file://localhost/users/1050167/maccinza
+ 131. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml69.data
+ 132. file://localhost/q/5652027
+ 133. file://localhost/q/6114115
+ 134. file://localhost/q/10688843
+ 135. file://localhost/q/11990350
+ 136. file://localhost/q/12553428
+ 137. file://localhost/q/14666385
+ 138. file://localhost/q/15957071
+ 139. file://localhost/q/17886647
+ 140. file://localhost/q/17892071
+ 141. file://localhost/q/17956740
+ 142. http://creativecommons.org/licenses/by-sa/3.0/

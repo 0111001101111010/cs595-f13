@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta property="fb:admins" content="1513364736"/>
+<meta name="description" content="Ryan Dang Website. A personal website that provides more information about Ryan Dang - Web developer. Please contact me for more information">
+<!--
+<meta name="viewport" content="width=device-width">
+-->
+<meta name="keywords" content="Ryan Dang Web Developer proficient in PHP Ajax Jquery HTML5 HTML CSS MySql JavaScript JSON C C++ Java asp.net">
+<title>Ryan Dang</title>
+<link rel="stylesheet" type="text/css" href="http://www.ryandang.com/css/style.css" />
+<link rel="stylesheet" type="text/css" href="http://www.ryandang.com/css/nivo-slider.css" />
+<link rel="stylesheet" type="text/css" href="http://www.ryandang.com/css/animate_nav.css" />
+<link rel="stylesheet" href="http://www.ryandang.com/css/themes/default/default.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://www.ryandang.com/css/themes/light/light.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://www.ryandang.com/css/themes/dark/dark.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://www.ryandang.com/css/themes/bar/bar.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://www.ryandang.com/css/dealornodeal.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://www.ryandang.com/css/math.css" type="text/css" media="screen" />
+<script type='text/javascript' src='http://www.ryandang.com/js/jquery-1.10.1.min.js'></script>
+<script src="http://www.ryandang.com/js/jquery-css-transform.js" type="text/javascript"></script>
+<script src="http://www.ryandang.com/js/jquery-animate-css-rotate-scale.js" type="text/javascript"></script>
+<script src="http://www.ryandang.com/js/jquery.nivo.slider.js" type="text/javascript"></script>
+<script src="http://www.ryandang.com/js/jquery.pluginLoader.js" type="text/javascript"></script>
+<script src="http://www.ryandang.com/roncioso-Flip/jquery.flippy.min.js" type="text/javascript"></script>
+<script type='text/javascript' src='http://www.ryandang.com/jqzoom_ev-2.3/js/jquery.jqzoom-core.js'></script>
+<script src="http://www.ryandang.com/js/jquery-form.js"></script>
+<script type='text/javascript' src='http://www.ryandang.com/js/jquery-ui-1.8.18.custom.js'></script>
+<link rel="stylesheet" type="text/css" href="http://www.ryandang.com/jqzoom_ev-2.3/css/jquery.jqzoom.css"> 
+
+<script>
+
+
+
+var arraymusicnotes = ["&#9834;","&#9836;","&#9836;","&#9833;"];
+var arraysongs = new Array();
+arraysongs[0] = ["Treasure,", "that is what you are","Honey,","you're my golden star"];
+arraysongs[1] = ["You know our love", "was meant to be", "The kind of love","that lasts forever"];
+arraysongs[2] = ["'Cause if one day", "you wake up","and find that", "you're missing me"];
+arraysongs[3] = ["What day is it?"," And in what month?","This clock","never seemed so alive"];
+arraysongs[4] = ["But if I fall for you,","I'll never recover","If I fall for you,","I'll never be the same"];
+arraysongs[5] = ["I really wanna", "love somebody","I really wanna", "dance the night away"];
+arraysongs[6] = ["Tonight. Take me","to the other side","Sparks fly", "like the Fourth of July"];
+arraysongs[7] = ["When I get older","I will be stronger","They'll call me freedom","Just like a wavin flag"];
+arraysongs[8] = ["Out of the doubt", "that fills my mind", "I somehow find","You and I collide"];
+arraysongs[9] = ["I don't want my love", "to go to waste","I want you and", "your beautiful soul"];
+arraysongs[10] = ["Right from the start","You were a thief","You stole my heart","And I your willing victim"];
+arraysongs[11] = ["'Cause I'm only a crack","in this castle of glass","Hardly anything there", "for you to see"];
+arraysongs[12] = ["Share my life,", "take me for what","I am", "'Cause I'll never change"];
+arraysongs[13] = ["I'm the one who wants", "to be with you","Deep inside I hope", "you'll feel it too"];
+arraysongs[14] = ["I'll be your hope","I'll be your love","Be everything","that you need"];
+arraysongs[15] = ["When I'm feeling blue,","all I have to do","Is take a look","at you"];
+arraysongs[16] = ["Cause you had a","bad day","You're taking one down","You sing a sad song"];
+arraysongs[17] = ["Hey, it's me again.","Plain, you see again.","Please, can I see you","ev'ry day?"];
+arraysongs[18] = ["Hey Jude,","don't make it bad.","Take a sad song","and make it better."];
+arraysongs[19] = ["You think I'd","leave your side baby","You know me","better than that"];
+arraysongs[20] = ["You're so scared","to fall in love","Cuz you end in the dust","Everytime everytime..."];
+arraysongs[21] = ["And when the daylight","comes I'll have to go","But tonight I'm gonna","hold you so close"];
+arraysongs[22] = ["Shot me out of the sky","You're my kryptonite","Ya keep making me weak","frozen and can't breathe"];
+arraysongs[23] = ["You don't know","you're beautiful,","That's what makes","you beautiful"];
+arraysongs[24] = ["I just want you","to know who I am","I just want you","to know who I am"];
+arraysongs[25] = ["Many nights"," we've prayed","With no proof","anyone could hear"];
+arraysongs[26] = ["And I...","will always love you,","Will always love you","You"];
+
+var notplaying = true;
+var hiddensidebar = true;
+var globalcounter = 0;
+var globalcounter2 = 0;
+var globalcounter3 = 0;
+var globalcounter4 = 0;
+$(document).ready(function() {
+playmusic();
+$(document).ajaxStart(function() {
+    $("body").addClass("loading");
+	//$("body").css("overflow", "hidden");
+});
+
+$(document).ajaxStop(function() {
+    $("body").removeClass("loading");
+	//$("body").css("overflow", "auto");
+});
+$('#headerNote').removeClass("growtext");
+$('#headerNote').css("font-size","24px");
+$('#headerNote').addClass("growtext");
+$('#headerNote').delay(2000).fadeOut(2500);
+
+$("#header_profile_image").mouseenter(function(){
+	//alert("YEA");
+playmusic();
+});
+$("#header_profile_image").click(function(){
+	//alert("YEA");
+playmusic();
+});
+
+
+$("#overlaysidebar").click(function(){
+	if(hiddensidebar)
+	{
+	$("#sidebar").animate({left: "-10px"});
+	$("#overlaysidebar").animate({left: "-10px"});
+		hiddensidebar = false;
+	}
+	else
+	{
+	$("#sidebar").animate({left: "-75px"});
+	$("#overlaysidebar").animate({left: "-75px"});
+		hiddensidebar = true;
+	}
+});
+$("#overlaysidebar").mouseenter(function(){
+	//alert("ASDAS");
+	$("#sidebar").animate({left: "-10px"});
+	$("#overlaysidebar").animate({left: "-10px"});
+	
+});
+
+$("#overlaysidebar").mouseleave(function(){
+	//alert("ASDAS");
+	$("#sidebar").animate({left: "-75px"});
+	$("#overlaysidebar").animate({left: "-75px"});
+	
+});
+
+/*
+	$("#phone").hide();
+	$("#desk").hide();
+	$(".speech1").hide();
+	$(".speech1").html("");
+	$("#mac").hide();
+	$("#lamp").hide();
+	$("#lamp").css("left","50px");
+	$("#lamp").css("opacity","0.1");
+	$("#chair").hide();
+	$("#chair").css("top","50px");
+	$("#chair").css("opacity","0.1");
+	$("#me").hide();
+	$("#pen").hide();
+	$("#pen").css("left","250px");
+	$("#pen").css("opacity","0.1");	
+	$("#me").css("opacity","0.1");		
+	var animatetime = 500;
+	var starttime =5000;
+		setTimeout(function(){
+		$("#desk").fadeIn();
+		//$("#desk").animate({width: "400px"},1000);  //animate({fontSize: "70px"}, 500);
+		},starttime += animatetime);	
+		setTimeout(function(){
+		$("#mac").fadeIn();
+		},starttime += animatetime);
+		setTimeout(function(){
+		$("#phone").fadeIn();
+		},starttime += animatetime);
+		setTimeout(function(){
+		$("#pen").show();
+		$("#pen").animate({left: "220px",opacity : "1"},500);	
+		},starttime += animatetime);
+		setTimeout(function(){
+		$("#lamp").show();
+		$("#lamp").animate({left: "80px",opacity : "1"},500);	
+		},starttime += animatetime);
+		setTimeout(function(){
+		$("#chair").show();	
+		$("#chair").animate({top: "133px",opacity : "1"},1000);			
+		},starttime += animatetime);
+		setTimeout(function(){
+		$("#me").show();
+		$("#me").animate({opacity : "1"},1000);			
+		},starttime += animatetime*3);
+
+			  var waittime = 100;
+			  
+
+			 var message = "Check Out My Work...";
+			  for (x=0; x<message.length; x++)
+			  {
+				setTimeout(function(){
+				    $(".speech1").fadeIn();
+					$(".speech1").append(message[globalcounter]);
+					globalcounter++;
+				},starttime + waittime*x);					
+			  }
+
+//let's move number 2 top:100px; left: 140px;
+
+	$(".Three-Dee3").hide();
+	$(".Three-Dee2").hide();
+	$(".Three-Dee").hide();
+	$(".Three-Dee4").hide();
+	$(".Three-Dee").css("top","20px");
+	$(".Three-Dee3").css("left","-50px");
+	$(".Three-Dee3").css("opacity","0.1");
+	$(".Three-Dee4").css("opacity","0.1");	
+	$(".Three-Dee2").css("opacity","0.1");	
+	$(".Three-Dee").css("opacity","0.1");	
+	$(".Three-Dee4").css("font-size","1000px");
+	$("#menu").hide();
+	
+	
+		setTimeout(function(){
+		$(".Three-Dee3").show();	
+		$(".Three-Dee3").animate({left: "160px",opacity : "1"},0);			
+		},500);	
+								
+		setTimeout(function(){
+		$(".Three-Dee4").show();
+		$(".Three-Dee4").animate({"font-size": "100px",opacity : "1"},0);
+		},1500);
+		
+		setTimeout(function(){
+		$(".Three-Dee2").show();
+		$(".Three-Dee2").animate({opacity : "1"},0);
+		},2500);
+		
+		setTimeout(function(){
+		$(".Three-Dee").show();
+		$(".Three-Dee").animate({top: "100px",opacity : "1"},0);
+		},3500);	
+		setTimeout(function(){
+		$("#menu").fadeIn();
+		},4500);
+	
+*/
+
+
+	$("#phone").hide();
+	$("#desk").hide();
+	$(".speech1").hide();
+	$(".speech1").html("");
+	$("#mac").hide();
+	$("#lamp").hide();
+	$("#lamp").css("left","50px");
+	$("#lamp").css("opacity","0.1");
+	$("#chair").hide();
+	$("#chair").css("top","50px");
+	$("#chair").css("opacity","0.1");
+	$("#me").hide();
+	$("#pen").hide();
+	$("#pen").css("left","250px");
+	$("#pen").css("opacity","0.1");	
+	$("#me").css("opacity","0.1");		
+	var animatetime = 500;
+	var starttime =100;
+		setTimeout(function(){
+		$("#desk").fadeIn();
+		//$("#desk").animate({width: "400px"},1000);  //animate({fontSize: "70px"}, 500);
+		},starttime += animatetime);	
+		setTimeout(function(){
+		$("#mac").fadeIn();
+		},starttime += animatetime);
+		setTimeout(function(){
+		$("#phone").fadeIn();
+		},starttime += animatetime);
+		setTimeout(function(){
+		$("#pen").show();
+		$("#pen").animate({left: "220px",opacity : "1"},500);	
+		},starttime += animatetime);
+		setTimeout(function(){
+		$("#lamp").show();
+		$("#lamp").animate({left: "80px",opacity : "1"},500);	
+		},starttime += animatetime);
+		setTimeout(function(){
+		$("#chair").show();	
+		$("#chair").animate({top: "133px",opacity : "1"},1000);			
+		},starttime += animatetime);
+		setTimeout(function(){
+		$("#me").show();
+		$("#me").animate({opacity : "1"},1000);			
+		},starttime += animatetime*3);
+
+
+						var message = "Check Out My Work";
+						$(".speech1").html("");
+			 var waittime = 100;			 
+			 starttime += 500;
+			  for (x=0; x<message.length; x++)
+			  {
+				setTimeout(function(){
+				    $(".speech1").fadeIn();
+					$(".speech1").append(message[globalcounter]);
+					globalcounter++;
+				},starttime+ waittime*x);					
+			  }
+			  
+
+	
+});
+
+function playmusic()
+{
+	if(notplaying)
+	{
+		notplaying = false;
+			for (var i = 0, ar = []; i < arraysongs.length; i++) {
+				ar[i] = i;
+			}		
+			  // randomize the array
+			  ar.sort(function () {
+				  return Math.random() - 0.5;
+			  });
+			for (var i = 0, ar2 = []; i < 4; i++) {
+				ar2[i] = i;
+			}		
+			  // randomize the array
+			  ar2.sort(function () {
+				  return Math.random() - 0.5;
+			  });
+			  /*
+
+			  */
+			  
+/*			  
+		
+		
+		var waittime = 2000;
+		//alert(arraysongs[ar[0]][0]);
+
+		
+		setTimeout(function(){
+			$(".speech1").html(arraysongs[ar[0]][0]);
+		},waittime*1);			
+			
+		setTimeout(function(){
+			$(".speech1").html(arraysongs[ar[0]][1]);
+		},waittime*2);				
+*/		
+		
+/*	
+	$(".speech2").html(arraymusicnotes[ar2[0]] + " " +arraysongs[ar[0]][1]);
+	$(".speech1").html(arraymusicnotes[ar2[1]] + " " +arraysongs[ar[0]][0]);
+	$(".speech3").html(arraymusicnotes[ar2[2]] + " " +arraysongs[ar[0]][2]);
+	$(".speech4").html(arraymusicnotes[ar2[3]] + " " +arraysongs[ar[0]][3]);	
+	
+	$(".speech1").fadeIn();	
+	$('.speech1').delay(2000).fadeOut();
+	$('.speech2').delay(3000).fadeIn();	
+	$('.speech2').delay(2000).fadeOut();	
+	$('.speech3').delay(6000).fadeIn();	
+	$('.speech3').delay(2000).fadeOut();
+	$('.speech4').delay(9000).fadeIn();	
+	$('.speech4').delay(2000).fadeOut();
+*/	
+		setTimeout(function(){
+		notplaying = true;
+		},11000);
+	}
+}
+</script>
+</head>
+
+<body >
+<div class="modal"></div>
+<div id='headerNoteContainer'><div id='headerNote'></div></div>
+<div id='headerNoteContainer2'><div id='headerNote2'></div></div>
+<div id='top_header' class="coolbackground2">
+
+<div id="menucontainer" style="position: relative; top: -80px; width:900px; min-width: 900px; margin: auto; height: 300px;">
+<div id="menuitems">
+<p class="speech1" style="text-align: left; left: 850px; top: 70px;"> Check Out My Work... </p>
+
+
+<p class="speech2"> </p>
+<p class="speech3"> </p>
+<p class="speech4"> </p>
+<span class="Three-Dee3" style="position: absolute; top:100px; left: 150px; z-index: -10;">2</span>
+<!--<img id="header_profile_image" src="http://www.ryandang.com/images/profile1.jpg" width="200" height="200" alt="Profile Image"/>-->
+<span class="Three-Dee4" style="position: absolute; top:100px; left: 210px;z-index: -10;">0</span>
+<span class="Three-Dee2" style="position: absolute; top:100px; left: 270px;z-index: -10;">1</span>
+<span class="Three-Dee" style="position: absolute; top:100px; left:330px;z-index: -10;">3</span>
+<!--
+<a href="http://www.ryandang.com/works?language=PHP"><span class="php smalltext">PHP </span></a>
+<a href="http://www.ryandang.com/works?language=jQuery"><span class="jQuery smalltext">jQuery </span> </a>
+<a href="http://www.ryandang.com/works?language=Ajax"><span class="Ajax smalltext">Ajax </span> </a>
+<a href="http://www.ryandang.com/works?language=Javascript"><span class="javascript smalltext">JavaScript </span> </a>
+<a href="http://www.ryandang.com/works?language=CSS"><span class="css smalltext">CSS </span> </a>
+<a href="http://www.ryandang.com/works?language=MySQL"><span class="mysql smalltext">MySQL </span> </a>
+<a href="http://www.ryandang.com/works?language=HTML"><span class="html smalltext">HTML</span> </a>
+<a href="http://www.ryandang.com/works?language=HTML5"><span class="html5 smalltext">HTML5 </span></a>
+<a href="http://www.ryandang.com/works?language=Processing.js"><span class="processing smallertext">Processing.js </span> </a> 
+-->
+<ul id="menu" class="menu">
+<li class="menu-1-portfolio ">
+<a href="http://www.ryandang.com/aboutme">FBI</a>
+</li>
+<li class="menu-2-cv ">
+<a href="http://www.ryandang.com/works">MyWork</a>
+</li>
+<!--
+<li class="menu-3-articles ">
+<a href="http://www.ryandang.com/social_network">SocialNetwork</a>
+</li>
+-->
+<li class="" style="margin-left: 240px;">
+<a href="http://www.ryandang.com/games">Games</a>
+</li>
+<li class="">
+<a href="http://www.ryandang.com/contact">Contact</a>
+</li>
+</ul>
+</div>
+
+<div id="mycorner">
+<img id="chair" src ="http://www.ryandang.com/images/chair.png" alt="chair"/>
+<img id="me" src ="http://www.ryandang.com/images/me.png" alt="Ryan"/>
+<img id="desk" src ="http://www.ryandang.com/images/desk.png" alt="desk"/>
+<img id="mac" src="http://www.ryandang.com/images/Mac.png" alt="mac" />
+<img id="pen" src="http://www.ryandang.com/images/penholder.png" alt="pen" />
+<img id="lamp" src="http://www.ryandang.com/images/lamp.png" alt="lamp" />
+<img id="phone" src="http://www.ryandang.com/images/s4.png" alt="phone" />
+</div>
+</div>
+
+</div>
+<div id="overlaysidebar">
+<!--<a href="http://www.ryandang.com/aboutme"><img class="sidebaricon" src= "http://www.ryandang.com/images/case.png" style="margin-top:20px;"/></a>-->
+<!--true -->
+<a href="http://www.ryandang.com/works"><img class="sidebaricon" src= "http://www.ryandang.com/images/work.png" alt="work"/></a>
+<a href="http://www.ryandang.com/contact"><img class="sidebaricon" src= "http://www.ryandang.com/images/email.png" alt="contact"/></a>
+<a href="http://www.ryandang.com/assembling_game/puzzle"><img class="sidebaricon" src= "http://www.ryandang.com/images/puzzle.png" alt="puzzle"/></a>
+<a href="http://www.ryandang.com/hangman"><img class="sidebaricon" src= "http://www.ryandang.com/images/hangicon.png" alt="hang game"/></a>
+<a href="http://www.ryandang.com/dealornodeal"><img class="sidebaricon" src= "http://www.ryandang.com/images/nodeal.png" alt="nodeal"/></a>
+<a href="http://www.ryandang.com/math"><img class="sidebaricon" src= "http://www.ryandang.com/images/math.png" alt="math"/></a>
+<a href="http://www.ryandang.com/works?language=PHP"><img class="sidebaricon" src= "http://www.ryandang.com/images/php.png" alt="php"/></a>
+<a href="http://www.ryandang.com/works?language=ajax"><img class="sidebaricon" src= "http://www.ryandang.com/images/ajax.png" alt="ajax"/></a>
+<a href="http://www.ryandang.com/works?language=html"><img class="sidebaricon" src= "http://www.ryandang.com/images/html.png" alt="html"/></a>
+<a href="http://www.ryandang.com/works?language=css"><img class="sidebaricon" src= "http://www.ryandang.com/images/css.png" alt="css"/></a>
+<a href="http://www.ryandang.com/works?language=javascript"><img class="sidebaricon" src= "http://www.ryandang.com/images/javascript.png" alt="javascript"/></a>
+<a href="http://www.ryandang.com/works?language=jquery"><img class="sidebaricon" src= "http://www.ryandang.com/images/jquery.png" alt="jquery"/></a>
+<a href="http://www.ryandang.com/works?language=mysql"><img class="sidebaricon" src= "http://www.ryandang.com/images/mysql.png" alt="mysql"/></a>
+<!--<span class="infopopup" style="position: relative;" alt="YAY"><img class="sidebaricon" src= "http://www.ryandang.com/images/puzzle_game.jpg" /></span>-->
+</div>
+<div id="sidebar"> 
+</div>
+<div id="rightpannel" style=" ">
+<div class='viewcount'>  Played: 1370 times</div>
+<script>
+var gofirst = true;
+var result = 0;
+var gamestarted = false;
+var playforprize = false;
+var move = 0;
+
+
+function letsplay()
+{
+	result = $("#usernum").val();
+	
+	if($("#firstturn .selectedfirstturn").attr("alt") == 1)
+		gofirst = true;
+	else
+		gofirst = false;
+	if(result >1)
+	{
+	$("#mathkeyboard").hide();
+	$("#mathcover").fadeIn();
+
+	
+	if(!gofirst)
+	{
+		
+		$("#meinmath").append("<div> I started with: " + result + "</div>");
+		$("#youinmath").append("<div> &nbsp;</div>");
+		mymove(result);
+	}
+	else
+	{
+		$("#youinmath").append("<div>You started with: " + result + "</div>");
+		$("#meinmath").append("<div> &nbsp;</div>");
+		$("#yournumber").html(result);
+		
+	}
+	
+	}
+	else
+	alert("Please enter a valid number");
+}
+
+$.fn.numberOnly = function () {
+  $(this).keydown(function(e){
+    var k = (e.which) ? e.which : e.keyCode;
+    if (e.altKey || e.ctrlKey || e.shiftKey) return false;
+    else if ((k >= 48 && k <= 57) || // 0~9
+      (k >= 96 && k <= 105) ||  // numpad 0~9
+      k == 8 || k == 9 ||       // bksp, tab
+      k == 37 || k == 39 ||     // left, right
+      k == 45 || k == 46 ||     // insert, delete
+      k == 144 ||               // num lock
+      k == 190                  // period
+    ) return true;
+    else return false;
+  })
+}
+
+function win(n)
+{
+	if(n==1)
+		return true;
+	else if (!win(n-1) || !win(Math.floor(n/2)))
+		return true;
+	else 
+		return false;
+		
+}
+
+
+function mymove(n)
+{
+	move++;	
+	var x = move%4;
+	
+
+	
+	if(playforprize || n < 15)
+	{
+		if(!win(Math.floor(n/2)))
+		{
+			result = Math.floor(n/2);
+			$("#youinmath").append("<div class='movebackground"+ x +"' > I divide the number by 2 now you have: " + result + "</div>");
+			$("#yournumber").html(result);
+		}
+		else 
+		{
+			result = n - 1;
+			$("#youinmath").append("<div class='movebackground"+ x +"' > I substract the number by 1 now you have: " + result + "</div>");
+			$("#yournumber").html(result);		
+			if(result ==1)
+			{
+				//alert("You win!");
+				$("#message").fadeIn();
+				document.getElementById('tada').play();	
+			}
+		}
+	}
+	else
+	{
+		result = Math.floor(n/2); // just do this for big number :)
+			$("#youinmath").append("<div class='movebackground"+ x +"' > I divide the number by 2 now you have: " + result + "</div>");
+			$("#yournumber").html(result);
+	}
+}
+
+
+function pressbutton(ev)
+{
+	result = $(ev).attr("alt");
+	$("#randomnumbers .letter3").removeClass("selectednumber");
+	$(ev).addClass("selectednumber");
+}
+
+$(document).ready(function() {
+	$("#usernum").numberOnly();
+
+	$("#randomnumbers .letter3").click(function(){
+		result = $(this).attr("alt");
+		$("#randomnumbers .letter3").removeClass("selectednumber");
+		$(this).addClass("selectednumber");
+		
+	});
+	$("#mathkeyboard .letter2").click(function(){
+	//alert($(this).attr("alt"));
+		//$("#usernum").append($(this).attr("alt"));
+		$("#usernum").val($("#usernum").val() + $(this).attr("alt"));
+	});
+	
+	$("#firstturn .button2").click(function(){
+	result = 0;
+	//alert($(this).attr("alt"));
+	$(".button2").removeClass("selectedfirstturn");
+	$(this).addClass("selectedfirstturn");
+		$("#randomnumbers").html("");
+		
+		
+		if($(this).attr("alt") ==2)
+		{
+			for(x=0; x< javascript_array.length; x++)			
+			{
+				$("#randomnumbers").append("<span onclick='pressbutton(this)' class='letter3' alt='"+javascript_array[x]+"'>"+ javascript_array[x] +"</span>");
+			}	
+		}
+		else
+		{
+			for(x=0; x< javascript_array2.length; x++)			
+			{
+				$("#randomnumbers").append("<span onclick='pressbutton(this)' class='letter3' alt='"+javascript_array2[x]+"'>"+ javascript_array2[x] +"</span>");
+			}		
+		}
+		
+	
+	});
+	
+	$("#substract").click(function(){
+		if(result >1)
+		{
+		move++;
+		result = result - 1;
+		
+		var x = move%4;
+		
+		$("#meinmath").append("<div class='movebackground"+ x +"' > You substract the number by 1 now I have: " + result + "</div>");
+		if(result ==1)
+		{
+			$("#yournumber").html("Sorry. You lost.");
+			$("#youinmath").append("<div> &nbsp;</div>");
+			
+			document.getElementById('over').play();	
+			alert("I win!!");
+		}
+		mymove(result);
+		$("#mathgamecover").css("height", "+=20");
+		}
+	});
+	
+	$("#divide").click(function(){
+		if(result >1)
+		{
+		move ++;
+		var x = move%4;
+		result = Math.floor(result/2);
+		$("#meinmath").append("<div class='movebackground"+ x +"' > You divide the number by 2 now I have: " + result + "</div>");
+		if(result ==1)
+		{
+			$("#yournumber").html("Sorry. You lost.");	
+			$("#youinmath").append("<div> &nbsp;</div>");			
+			
+			document.getElementById('over').play();	
+			alert("I win!!");
+		}
+		mymove(result);
+		$("#mathgamecover").css("height", "+=20");
+		}
+	});	
+	$("#close").click(function(){
+		$("#message").fadeOut();
+	});
+});
+
+</script>
+
+<a href='../games'><img id='back' src='../images/back2.png' width='60px' height='60px' style="position: absolute;" /></a>
+<h1>Math Game </h1>
+<div id="message"> 
+You Won!: <br/> 
+<span class="button" id="close" style="position: absolute; top: 220px; left:30px">Close </span> 
+<a onClick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Ryan+Dang+Math+Game&amp;p[summary]=I+have+won+in+a+Math+game.&amp;p[url]=http%3A%2F%2Fwww.ryandang.com%2Fmath&amp;p[images][0]=http%3A%2F%2Fwww.ryandang.com%2Fimages%2Fmath.png','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)">
+<span class="button" id="fb" style="width: 150px; position: absolute; top: 220px; right: 30px;">Share on Facebook </span></a>
+</div>
+<div style="width: 100%; height: 50px;">
+<a href="math"><div class="selectedtab">Play For Fun</div></a>
+<a href="math?moneygame=1"><div class="tab">Play For Prize </div></a>
+</div>
+
+<div id="mathgamecover" style="border: solid 1px green; height: 800px;">
+<br/>
+<div style="padding: 10px;">
+<b>The rule:</b>
+<br/>
+The rule is very simple. Pick any number. A player can either substract the number by one or divide the number by 2 and round it down. The other player will have to use the result from the previous user as his or her number. 
+Take turn to do this until a player reach number 1. The player end up with number one will win.
+</div>
+<br/><br/>
+<div id="mathcover">
+<div style="border: solid 2px green;">
+<div style="text-align: center"><h2> Move history </h2> </div>
+	<div id="meinmath"> 
+		<div style="text-align: center"><h3> Me </h3> </div>
+	</div>
+	<div id="youinmath"> 
+		<div style="text-align: center"><h3> You </h3> </div>
+	</div>
+</div>
+
+<div id="substract"> <span class='letter3' style="margin-left:40px;" >-1</span></div>
+<div id="divide"> <span class='letter3' style="margin-left:40px;">&divide;2</span></div>
+<div id="yournumbertitle"><b>Your Current Number: </b> </div>
+<div id="yournumber"> Waiting </div>
+
+<button class="button" style="position: relative; left: 400px; top:-200px;" onclick="window.location.reload()"> Play Again</button>
+
+</div>
+<br/><br/>
+<div id="mathkeyboard">
+
+<br/><br/>
+<div id="firstturn">
+<div class="button2 selectedfirstturn" alt="1"> Go First</div> <div class="button2" alt="2"> Go Second </div>
+</div>
+<br/><br/>Please enter a number: <input type="text" id="usernum" /><br/><br/>
+<span class='letter2' alt='1'> 1 </span><span class='letter2' alt='2'> 2 </span><span class='letter2' alt='3'> 3 </span><span class='letter2' alt='4'> 4 </span><span class='letter2' alt='5'> 5 </span><span class='letter2' alt='6'> 6 </span><span class='letter2' alt='7'> 7 </span><span class='letter2' alt='8'> 8 </span><span class='letter2' alt='9'> 9 </span><span class='letter2' alt='0'> 0 </span>
+
+<audio id="tada" controls >
+
+  <source  src="audio/tada.mp3" type="audio/mpeg">
+
+</audio> 
+<audio id="over" controls >
+
+  <source  src="audio/over.mp3" type="audio/mpeg">
+
+</audio> 
+
+
+<button class="button" style="position: absolute;top: 320px; left: 380px;" onclick="letsplay()"> Play</button>
+</div>
+
+</div>
+<br/><br/><br/><br/>
+Please let me know if there are any bugs.
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1374567659445390";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-comments" data-href="http://ryanprojects.zxq.net" data-colorscheme="dark" data-width="900"></div></div>
+<br/><br/><br/><br/>
+<div id="footer">
+	<div id="footercontent">
+	<div class="copyright" ><br/><br/><br/><br/><br/><br/><br/>&copy; Ryan Dang 2013.<br/> All rights reserved.</div>
+	<div class="footerline"></div>
+	
+	<div class="footerTweet">
+<div style="margin-left: 5px; width: 400px; height:200px">
+<a class="twitter-timeline"  data-dnt="true" data-chrome="nofooter noheader noscrollbar transparent" href="https://twitter.com/Old_Fashion_Guy"  data-widget-id="377607560053813248">Tweets by @Old_Fashion_Guy</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>	
+	
+	
+	</div>
+	<div class="footerline"></div>
+<div class="footerdiv"><span class="footertext" > Social Network </span><br/><br/>
+<a href="http://www.linkedin.com/pub/ryan-dang/73/a93/799" target="_blank"><img class="image" alt="linkin" src="http://www.ryandang.com/images/linkedin.png" width="60" height="60" style="margin-right: 30px;"/></a>
+<a href="https://www.facebook.com/ryandang.cga" target="_blank"><img class="image" alt="facebook" src="http://www.ryandang.com/images/facebook.png" width="60" height="60"  style="margin-right: 30px;"/></a>	
+<a href="https://plus.google.com/u/0/101403827593442798390/posts" target="_blank"><img alt="google" class="image" src="http://www.ryandang.com/images/google.png" width="60" height="60"  style="margin-right: 30px;"/></a>
+<a href="https://twitter.com/Old_Fashion_Guy" target="_blank" ><img class="image" alt="twitter" src="http://www.ryandang.com/images/twitter.png" width="60" height="60"  style="margin-right: 30px;"/></a>
+<a href="https://instagram.com/byebyebyezzz" target="_blank"><img class="image" alt="instagram" src="http://www.ryandang.com/images/instagram.png" width="60" height="60"  style="margin-right: 30px;"/></a>
+<a href="http://www.youtube.com/channel/UCHZU0-G8ZscfXjQIySA5KOg" target="_blank"><img alt="youtube" class="image" src="http://www.ryandang.com/images/youtube.png" width="60" height="60"  style="margin-right: 30px;"/></a>	
+		</div>
+	</div>
+</div>
+</body>
+</html>

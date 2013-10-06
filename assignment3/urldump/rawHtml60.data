@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html  class="ie6"> <![endif]-->
+<!--[if IE 7]>    <html  class="ie7"> <![endif]-->
+<!--[if IE 8]>    <html  class="ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html  > <!--<![endif]-->
+<head>
+    <title>Job Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    
+    <link href="https://jcstatic.com/Content/_layout.min.css?2cfd11a3" rel="stylesheet" type="text/css" />
+    <script>var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-19553079-1']);_gaq.push(['_trackPageview']);_gaq.push(['_trackPageLoadTime']);(function () {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);}());</script><script>
+    document.onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement;
+        if (window._gaq && target.getAttribute('data-log'))
+            window._gaq.push(['_trackEvent', 'App', 'Click', target.getAttribute('data-log')]);
+    };
+</script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="content_header">
+			<div class="header_logo_height_restrictor">
+				<div class="header_logo_wrapper">
+						 <a href="/"><img class="header_logo" src="https://jcstatic.com/Content/themes/img/logo_jobcast.png?5e551897" /></a>
+				</div>
+			</div>
+        </div>
+        
+
+        
+
+        
+        <div class="content_wrapper background_fresh">
+        	<div class="content">
+                    
+                    <h2 class="mobile_centered">Job Not Found</h2>
+                
+
+Job was recently closed.
+
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

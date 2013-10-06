@@ -1,0 +1,462 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    
+
+    <head>
+        <title>All jobs | Eluta.ca</title>
+        <meta name="Description" content="Start your job search at Eluta.ca. Find thousands of new jobs every day on the official job search engine of the Canada's Top 100 Employers project.">
+        <meta http-equiv="Keywords" content="jobs, job search, Eluta, Canada, job search engine, search engine for jobs, job listings, search jobs, career, employment, work, find jobs, top employers">
+             
+        <link rel="shortcut icon" href="/++resource++img/favicon.ico" />
+        <link rel="stylesheet" type="text/css"
+              href="http://www.eluta.ca/mediacorp.css">
+        
+        
+        
+    <meta property="og:title" content="Eluta.ca" /> 
+    <meta property="og:type" content="website" /> 
+    <meta property="og:url" content="http://www.eluta.ca" /> 
+    <meta property="og:image" content="/++resource++img/small_logo.gif" /> 
+    <meta property="og:site_name" content="Eluta.ca - Official Job Search Engine of Canada&#039;s Top 100 Employers" /> 
+    <meta property="fb:admins" content="100001291156066" /> 
+
+    <script type="text/javascript">
+    
+        var loadScriptsOnDomReady = new Array();
+        var executeScriptsOnDomReady = new Array();
+        var loadIFramesOnDomReady= new Array();
+        
+        function queueAsyncIFrame(width, height, style, targetId, url) {
+            params = new Array()
+            params[0] = width;
+            params[1] = height;
+            params[2] = style;
+            params[3] = targetId;
+            params[4] = url;
+            loadIFramesOnDomReady.push(params);
+            }
+        
+        function pageInit() {
+            for(count = 0; count < loadScriptsOnDomReady.length; count++) {
+                var resource = document.createElement('script'); 
+                resource.src = loadScriptsOnDomReady[count];
+                var script = document.getElementsByTagName('script')[0];
+                script.parentNode.insertBefore(resource, script);
+                }
+            
+            for(count = 0; count < loadIFramesOnDomReady.length; count++) {
+                var iframe = document.createElement('iframe');
+                iframe.setAttribute("frameborder", "0");
+                // Required only by IE6, of course
+                iframe.setAttribute("frameBorder", "0");
+                iframe.setAttribute("marginheight",  "0"); 
+                iframe.setAttribute("marginwidth", "0"); 
+                iframe.setAttribute("scrolling", "no");
+                iframe.setAttribute("width", loadIFramesOnDomReady[count][0]);
+                iframe.setAttribute("height", loadIFramesOnDomReady[count][1]);
+                iframe.setAttribute("style", loadIFramesOnDomReady[count][2]);
+                document.getElementById(loadIFramesOnDomReady[count][3]).appendChild(iframe);
+                iframe.src = loadIFramesOnDomReady[count][4]
+                }
+
+            for(count = 0; count < executeScriptsOnDomReady.length; count++) {
+                (new Function(executeScriptsOnDomReady[count]))();
+                }
+            
+            }
+
+        // Check for browser support of event handling capability
+        if (window.addEventListener)
+            window.addEventListener("load", pageInit, false);
+        else if (window.attachEvent)
+            window.attachEvent("onload", pageInit);
+            else 
+                window.onload = pageInit;
+    </script>
+    
+    <!--  Javascript / CSS for more... dropdown    -->
+    <script type="text/javascript">
+        function toggle(divid)  { 
+            if(document.getElementById(divid).style.display == 'none') { 
+                document.getElementById(divid).style.display = 'block'; 
+            }    
+            else { 
+                document.getElementById(divid).style.display = 'none'; 
+            } 
+        }
+    </script>
+    
+    <!-- Begin comScore Tag -->
+    <script type='text/javascript'>
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: "2", c2: "3005686" });
+
+    (function() {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+        el.parentNode.insertBefore(s, el);
+    })();
+    </script>
+    <noscript>
+    <img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=3005686&amp;cv=2.0&amp;cj=1" />
+    </noscript>
+    <!-- End comScore Tag -->
+
+        
+        
+    <script type="text/javascript">
+        function showRichElutaBar() {
+            if (typeof(richElutaBarId) == 'undefined') {
+                return;
+                }
+            try {
+                document.getElementById(richElutaBarId).style.display = "block";
+                }
+            finally {
+                }
+            }
+	function enav(url){
+	    window.location = url;
+	}
+
+    var DDSPEED = 10;
+    var DDTIMER = 15;
+
+    // main function to handle the mouse events //
+    function ddMenu(id,d){
+    var h = document.getElementById(id + '-ddheader');
+    var c = document.getElementById(id + '-ddcontent');
+    clearInterval(c.timer);
+    if(d == 1){
+        clearTimeout(h.timer);
+        if(c.maxh && c.maxh <= c.offsetHeight){return}
+        else if(!c.maxh){
+        c.style.display = 'block';
+        c.style.height = 'auto';
+        c.maxh = c.offsetHeight;
+        c.style.height = '0px';
+        }
+        c.timer = setInterval(function(){ddSlide(c,1)},DDTIMER);
+    }else{
+        h.timer = setTimeout(function(){ddCollapse(c)},50);
+    }
+    }
+
+    // collapse the menu //
+    function ddCollapse(c){
+    c.timer = setInterval(function(){ddSlide(c,-1)},DDTIMER);
+    }
+
+    // cancel the collapse if a user rolls over the dropdown //
+    function cancelHide(id){
+    var h = document.getElementById(id + '-ddheader');
+    var c = document.getElementById(id + '-ddcontent');
+    clearTimeout(h.timer);
+    clearInterval(c.timer);
+    if(c.offsetHeight < c.maxh){
+        c.timer = setInterval(function(){ddSlide(c,1)},DDTIMER);
+    }
+    }
+
+    // incrementally expand/contract the dropdown and change the opacity //
+    function ddSlide(c,d){
+    var currh = c.offsetHeight;
+    var dist;
+    if(d == 1){
+        dist = (Math.round((c.maxh - currh) / DDSPEED));
+    }else{
+        dist = (Math.round(currh / DDSPEED));
+    }
+    if(dist <= 1 && d == 1){
+        dist = 1;
+    }
+    c.style.height = currh + (dist * d) + 'px';
+    c.style.opacity = currh / c.maxh;
+    c.style.filter = 'alpha(opacity=' + (currh * 100 / c.maxh) + ')';
+    if((currh < 2 && d != 1) || (currh > (c.maxh - 2) && d == 1)){
+        clearInterval(c.timer);
+    }
+    }
+    </script>
+
+        
+        
+    <script type="text/javascript"
+            src="http://www.eluta.ca/eluta.js">
+    </script>
+    
+
+    <!-- Can't load AFS asynchonously at this time -->
+    
+        
+    
+
+
+    <![if (gte IE 9)]>
+        
+    <![endif]>
+    
+    <script type="text/javascript">
+        // Google Analytics
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-669420-1']);
+        _gaq.push(['_trackPageview']);
+        (
+            function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                }
+            )();
+
+        executeScriptsOnDomReady.unshift("showRichElutaBar()");
+    </script>
+        
+    </head>
+
+    <body class="body">
+    
+    <div id="bodyHeader">
+        
+    
+
+    </div>
+    <!--BEGIN: bodyContent-->
+    <div id="bodyContent">
+
+            <!-- ########################## HEADER ########################## -->
+            <div align="center">
+            <div>
+                    <!-- Defintion of defaultBanner solves odd bug using default -->  
+                    <img name="test"
+                         src="/++resource++img/banner_logo.gif"
+                         border="0" width="338" height="100"
+                         alt="New Jobs in Canada Search Engine" />
+            </div>
+            <h1 style="font-weight: 600; color: #B05F08; padding: 0px; margin: 0px">The Search Engine for New Jobs in Canada</h1><br>
+            </div>
+            <!-- ########################## TOP BAR ########################## -->
+
+            <div align="center"></div>
+
+            <div>
+            <br>
+            <div align="center">
+                <b>
+                    <span>Position not found. It may have expired.</span>
+                </b>
+                <p>Try another <a href="http://www.eluta.ca">search</a>.</p>
+            </div>
+        </div>
+
+            <div align="center">
+            <br>
+            <div class="cInputLabel" style="font-size: 9pt">
+<!--             path('useSSL | nothing'), -->
+    <table cellpadding="10" border="0" class="footing">
+        <tr>
+            <td align="center"><a
+    href="http://www.eluta.ca/browse"
+    title="Browse Eluta for jobs">Browse Jobs</a></td>
+            <td align="center"><span class="lk"
+    href="/about" title="Learn about the Eluta project"
+    onclick="enav('http://www.eluta.ca/about')">About</span></td>
+            <td align="center">
+
+            <![if (gte IE 9)]>
+                
+                
+            <![endif]>
+            <!--[if (lt IE 9)]>
+                
+            <![endif]-->
+            </td>
+        </tr>
+    </table>
+</div>
+            <div align="center" class="cInputLabel"
+                 style="font-size: 8pt">&copy;2013 Mediacorp Canada Inc.</div>
+            </div>
+        
+
+    </div>
+    <!--END: bodyContent-->
+    <div id="bodyFooter">
+        
+        <div id="richElutaHeader">
+            <!--BEGIN: richElutaHeader -->
+            <script type="text/javascript">
+                richElutaBarId = "richElutaHeader";
+            </script>    
+            <div id="header" class="section">
+                
+    <div id="search-winners">
+        <dl class="dropdown">
+            <dt id="one-ddheader" onmouseover="ddMenu('one',1)" onmouseout="ddMenu('one',-1)">
+                Search <strong>Top Employers</strong><span style="color:#bbb;position:relative;top:1px;left:6px;font-size:smaller;">&#x25BC;</span>
+            </dt>
+            <dd id="one-ddcontent" onmouseover="cancelHide('one')" onmouseout="ddMenu('one',-1)">
+                <ul>
+                    <li>
+                        <span class="underline">
+                            <span
+    onclick="enav('http://www.eluta.ca/search_top_employers')"
+    title="Jobs at Canada's Top 100 Employers">Canada's Top 100 Employers</span><span
+    class="reg">&reg;</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="underline">
+                            <span
+    onclick="enav('http://www.eluta.ca/search-diversity')"
+    title="Jobs at Canada's Best Diversity Employers">Canada's Best Diversity Employers</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="underline">
+                            <span
+    onclick="enav('http://www.eluta.ca/search-new-canadians')"
+    title="Best Employers for New Canadians">Best Employers for New Canadians</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="underline">
+                            <span
+    onclick="enav('http://www.eluta.ca/search-greenest')"
+    title="Jobs at Canada's Greenest Employers">Canada's Greenest Employers</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="underline">
+                            <span
+    onclick="enav('http://www.eluta.ca/search-family')"
+    title="Jobs at Canada's Top Family-Friendly Employers">Canada's Top Family-Friendly Employers</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="underline">
+                            <span
+    onclick="enav('http://www.eluta.ca/search-young-people')"
+    title="Jobs at Canada's Top Employers for Young People">Canada's Top Employers for Young People</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="underline">
+                            <span
+    onclick="enav('http://www.eluta.ca/search-over-forty')"
+    title="Jobs at Top Employers for Canadians Over 40">Top Employers for Canadians Over 40</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="underline">
+                            <span
+    onclick="enav('http://www.eluta.ca/search-top-ten-employers')"
+    title="Jobs at the Ten Best Companies to Work For">Ten Best Companies to Work For</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="underline">
+                            <span
+    onclick="enav('http://www.eluta.ca/search-new-grad')"
+    title="Search employers looking for new graduates">The Career Directory - New Grads</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="underline">
+                            <span
+    onclick="enav('http://www.eluta.ca/search-british-columbia-top-employers')"
+    title="Jobs at BC's Top Employers">BC's Top Employers</span><span
+    class="reg">&reg;</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="underline">
+                            <span
+    onclick="enav('http://www.eluta.ca/search-alberta-top-employers')"
+    title="Jobs at Alberta's Top Employers">Alberta's Top Employers</span><span
+    class="reg">&reg;</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="underline">
+                            <span
+    onclick="enav('http://www.eluta.ca/search-saskatchewan-top-employers')"
+    title="Jobs at Saskatchewan's Top Employers">Saskatchewan's Top Employers</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="underline">
+                            <span
+    onclick="enav('http://www.eluta.ca/search-manitoba-top-employers')"
+    title="Jobs at Manitoba's Top Employers">Manitoba's Top Employers</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="underline">
+                            <span
+    onclick="enav('http://www.eluta.ca/search-waterloo-area-top-employers')"
+    title="Jobs at Waterloo Area's Top Employers">Waterloo Area's Top Employers</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="underline">
+                            <span
+    onclick="enav('http://www.eluta.ca/search-hamilton-niagara-top-employers')"
+    title="Jobs at Hamilton-Niagara's Top Employers">Hamilton-Niagara's Top Employers</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="underline">
+                            <span
+    onclick="enav('http://www.eluta.ca/search-gta-top-employers')"
+    title="Jobs at Greater Toronto's Top Employers">Greater Toronto's Top Employers</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="underline">
+                            <span
+    onclick="enav('http://www.eluta.ca/search-national-capital-region-top-employers')"
+    title="Jobs at National Capital Region's Top Employers">National Capital Region's Top Employers</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="underline">
+                            <span
+    onclick="enav('http://www.eluta.ca/search-montreal-top-employers')"
+    title="Jobs at Montreal's Top Employers">Montr&eacute;al's Top Employers</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="underline">
+                            <span
+    onclick="enav('http://www.eluta.ca/search-nova-scotia-top-employers')"
+    title="Jobs at Nova Scotia's Top Employers">Nova Scotia's Top Employers</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="underline">
+                            <span
+    onclick="enav('http://www.eluta.ca/search-atlantic-canada-top-employers')"
+    title="Jobs at Atlantic Canada's Top Employers">Atlantic Canada's Top Employers</span>
+                        </span>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+    <span class="lk" id="lk-globe" onclick="enav('http://www.theglobeandmail.com/report-on-business/careers/');">
+        <span id="lk-globe-a">Globe</span><span id="lk-globe-b">Careers</span>
+    </span>
+    <span id="lk-advertise" onclick="enav('http://www.eluta.ca/postjobs');">
+        <span id="lk-a">Employers: </span><span id="lk-b">Post Jobs</span>
+    </span>
+
+            </div>
+            <!--END: richElutaHeader -->
+        </div>
+
+
+    </div>
+
+  </body>
+</html>

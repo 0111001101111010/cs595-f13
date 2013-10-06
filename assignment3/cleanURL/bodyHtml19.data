@@ -1,0 +1,443 @@
+
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+
+
+&lt;meta name="viewport" content="width=device-width,initial-scale=1.0"&gt;
+
+&lt;link href="//get.pictos.cc/fonts/1835/6" rel="stylesheet" type="text/css"&gt;
+
+&lt;link rel="stylesheet" type="text/css" href="http://cdn.codevisually.com/wp-content/themes/codevisually_light/style.css?v=30" media="screen"/&gt;
+
+&lt;link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://codevisually.com/feed/"/&gt;
+&lt;link rel="alternate" type="text/xml" title="RSS .92" href="http://codevisually.com/feed/"/&gt;
+&lt;link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://codevisually.com/feed/"/&gt;
+&lt;link rel="pingback" href="http://codevisually.com/xmlrpc.php"/&gt;
+&lt;link rel="shortcut icon" href="http://cdn.codevisually.com/wp-content/themes/codevisually_light/favicon.ico"/&gt;
+&lt;link rel="icon" href="http://cdn.codevisually.com/wp-content/themes/codevisually_light/favicon.ico" type="image/x-icon"/&gt;
+
+&lt;script type="text/javascript" src="//use.typekit.net/vnr2mjn.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;try{Typekit.load();}catch(e){}&lt;/script&gt;
+
+
+
+&lt;title&gt;Pandas: A Python data analysis library - CodeVisually.com&lt;/title&gt;
+&lt;link rel="canonical" href="http://codevisually.com/pandas-a-python-data-analysis-library/"/&gt;
+
+
+&lt;link rel="alternate" type="application/rss+xml" title="CodeVisually » Pandas: A Python data analysis library Comments Feed" href="http://codevisually.com/pandas-a-python-data-analysis-library/feed/"/&gt;
+&lt;link rel="stylesheet" id="contact-form-7-css" href="http://cdn.codevisually.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.4.1" type="text/css" media="all"/&gt;
+&lt;script type="text/javascript" src="http://cdn.codevisually.com/wp-includes/js/jquery/jquery.js?ver=1.8.3"&gt;&lt;/script&gt;
+&lt;link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://codevisually.com/xmlrpc.php?rsd"/&gt;
+&lt;link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cdn.codevisually.com/wp-includes/wlwmanifest.xml"/&gt; 
+&lt;meta name="generator" content="WordPress 3.5.1"/&gt;
+&lt;link rel="shortlink" href="http://codevisually.com/?p=6201"/&gt;
+
+
+&lt;script type="text/javascript"&gt;
+/*  */
+&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body class="main-body"&gt;
+
+
+&lt;script type="text/javascript"&gt;
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+&lt;/script&gt;
+
+
+
+
+
+
+&lt;div id="top-strip"&gt;&lt;/div&gt;
+&lt;div id="top-white-strip"&gt;&lt;/div&gt;
+
+&lt;div id="wrapper"&gt;
+
+&lt;div id="header"&gt;
+
+&lt;div id="header-nav"&gt;
+&lt;div id="top-nav"&gt;
+<ul>
+<li><a href="http://codevisually.com/" title="Home">&lt;span&gt;Home&lt;/span&gt;</a></li>
+<li>/</li>
+<li><a href="http://codevisually.com/about/" title="About">&lt;span&gt;About&lt;/span&gt;</a></li>
+
+<li>/</li>
+<li><a href="http://codevisually.com/submit-a-resource/" title="Submit a Resource">&lt;span&gt;Submit a Resource&lt;/span&gt;</a></li>
+<li>/</li>
+<li><a href="http://buysellads.com/buy/detail/173732" title="Advertising">&lt;span&gt;Advertising&lt;/span&gt;</a></li>
+
+<li>/</li>
+<li><a href="http://codevisually.com/contact/" title="Contact">&lt;span&gt;Contact&lt;/span&gt;</a></li>
+
+
+
+</ul>&lt;/div&gt;
+
+
+  
+<ul>
+<li><a href="http://feeds.feedburner.com/CodeVisually.com" title="Follow us via RSS">&lt;img src="http://cdn.codevisually.com/wp-content/themes/codevisually_light/images/rss-icon.png" alt="Subscribe via RSS"/&gt;</a></li>
+<li><a href="http://feedburner.google.com/fb/a/mailverify?uri=CodeVisually" title="Receive our daily updates via Email">&lt;img src="http://cdn.codevisually.com/wp-content/themes/codevisually_light/images/mail-icon.png" alt="Subscribe via RSS"/&gt;</a></li>
+<li><a href="http://twitter.com/codevisually" title="Follow us on Twitter">&lt;img src="http://cdn.codevisually.com/wp-content/themes/codevisually_light/images/tw-icon.png"/&gt;</a></li>
+<li><a href="http://www.facebook.com/pages/CodeVisually/214641498591147" title="Follow us on Facebook">&lt;img src="http://cdn.codevisually.com/wp-content/themes/codevisually_light/images/fb-icon.png" alt="Follow us on Facebook"/&gt;</a></li>
+
+</ul>
+
+&lt;div id="header-shares"&gt;
+  &lt;span class="tw-like"&gt;
+    <a href="https://twitter.com/share">Tweet</a>
+  &lt;/span&gt;
+  &lt;div class="fb-like" data-send="false" data-href="http://codevisually.com" data-layout="button_count" data-width="450" data-show-faces="false"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="clr"&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+
+&lt;div class="logo"&gt;
+  <a href="http://codevisually.com/" title="Return to the Frontpage">
+    &lt;img src="http://cdn.codevisually.com/wp-content/themes/codevisually_light/images/logo_r.png" width="210" height="39" alt="Return to homepage"/&gt;</a>
+  &lt;/div&gt;
+&lt;div class="topad"&gt;
+  
+  &lt;div id="bsap_1284396" class="bsarocks bsap_5f24e05bb60dc4a73485fc46a8185ee5"&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt; 
+
+&lt;div id="tabs-container"&gt;
+  <ul>
+    
+        
+          <li>Browsing Resources</li>
+        
+          <li><a href="http://codevisually.com/">Latest Resources</a></li>
+            
+    
+        <li><a href="/popular/">Most Popular</a></li>
+        
+        
+          <li><a href="http://codevisually.com/favorites">Favorites</a></li>
+        
+    
+          <li><a href="http://codevisually.com/deals">Deals</a></li>
+        
+  </ul>
+  
+  
+&lt;/div&gt;&lt;div id="content-wrapper" class="home-wrapper"&gt;
+&lt;div class="main-nav clear"&gt;
+
+&lt;div id="search-drop-nav"&gt;
+&lt;div class="search-nav"&gt;
+  &lt;form id="searchform" method="get" action="/"&gt;
+    &lt;input type="text" onblur="if (this.value == '') {this.value = 'Search...';}" value="Search..." name="s" class="searchtext" onfocus="this.value=''" size="27"/&gt;
+    
+    <a></a>
+    &lt;button type="submit" value="" id="search-button" data-icon="1"&gt;&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+
+
+  &lt;div class="cat-drop2"&gt;
+<ul>
+<li><a href="#">
+      &lt;span class="brows-by"&gt;Browse by&lt;/span&gt; Technology
+  </a>
+<ul>
+<li><a href="http://codevisually.com/category/css-resources/">CSS</a></li>
+<li><a href="http://codevisually.com/category/html5-2/">HTML5</a></li>
+<li><a href="http://codevisually.com/category/javascript-resources/">Javascript</a></li>
+<li><a href="http://codevisually.com/category/jquery/">jQuery</a></li>
+<li><a href="http://codevisually.com/category/php/">PHP</a></li>
+</ul>
+</li>
+</ul>
+&lt;noscript&gt;&lt;div&gt;&lt;input type="submit" value="View"/&gt;&lt;/div&gt;&lt;/noscript&gt;
+&lt;/div&gt;
+
+&lt;div class="cat-drop"&gt;
+<ul>
+<li><a href="#">
+      &lt;span class="brows-by"&gt;Browse by&lt;/span&gt; Category
+  </a>
+<ul>
+<li><a href="http://codevisually.com/category/browser-tools/">Browser Extensions</a></li>
+<li><a href="http://codevisually.com/category/templatesthemes/">Templates/Themes</a></li>
+<li><a href="http://codevisually.com/category/forms/">Form Resources</a></li>
+<li><a href="http://codevisually.com/category/ecommerce/">Ecommerce</a></li>
+<li><a href="http://codevisually.com/category/framework/">Frameworks</a></li>
+<li><a href="http://codevisually.com/category/mobile-dev/">Mobile Dev</a></li>
+<li><a href="http://codevisually.com/category/responsive/">Responsive</a></li>
+<li><a href="http://codevisually.com/category/ui/">UI Resources</a></li>
+<li><a href="http://codevisually.com/category/web-application/">Web Apps</a></li>
+<li><a href="http://codevisually.com/category/typography/">Web Typography</a></li>
+<li><a href="http://codevisually.com/category/wireframe-app/">Wireframe Apps</a></li>
+<li><a href="http://codevisually.com/category/wordpress-2/">Wordpress</a></li>
+</ul>
+</li>
+</ul>
+&lt;noscript&gt;&lt;div&gt;&lt;input type="submit" value="View"/&gt;&lt;/div&gt;&lt;/noscript&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+&lt;/div&gt;
+&lt;div class="middle clear" id="single-inner-content"&gt;
+
+&lt;div id="single-wrap"&gt;
+
+
+&lt;div id="single"&gt;
+
+
+
+
+&lt;h1&gt;Pandas: A Python data analysis library&lt;/h1&gt;
+
+&lt;div id="postinfo"&gt;
+  &lt;span class="pcats"&gt;<a href="http://codevisually.com/python/" title="View all posts in Python">Python</a>&lt;/span&gt;
+  &lt;span class="pin-sep"&gt;/&lt;/span&gt;
+    &lt;span class="pdate"&gt;Added on September 18, 2013&lt;/span&gt;
+    &lt;span class="pin-sep"&gt;/&lt;/span&gt;
+    <a href="/favorites?fav_post_id=6201">Add to favorites</a>
+    
+    
+&lt;div id="next-prev-single-links"&gt;
+ Use
+ 
+
+<a href="http://codevisually.com/spark-a-micro-framework-for-creating-web-apps/" title="Spark: A micro framework for creating web apps">←</a>
+<a href="http://codevisually.com/harp-a-static-web-server-with-pre-processing-built-in/" title="Harp: A static web server with pre-processing built in">→</a>
+keys to navigate
+&lt;/div&gt;
+  
+  &lt;div class="clr"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+&lt;p&gt;<a href="http://pandas.pydata.org/">Pandas</a> is a BSD-licensed Python library that provides easy-to-use data structures and data analysis tools. It helps fill the gaps where Python is weakest when it comes to handling data (analysis and modeling).&lt;/p&gt;
+&lt;p&gt;<a href="http://pandas.pydata.org/">&lt;img class="alignnone size-full wp-image-6202" alt="pandas" src="http://cdn.codevisually.com/wp-content/uploads/2013/09/pandas.jpg" width="644" height="327"/&gt;</a>&lt;/p&gt;
+&lt;div class="greybox"&gt;Homepage: <a href="http://pandas.pydata.org/">http://pandas.pydata.org/</a>&lt;br/&gt;GitHub: <a href="http://github.com/pydata/pandas">http://github.com/pydata/pandas</a>&lt;br/&gt;Docs: <a href="http://pandas.pydata.org/pandas-docs/stable/">http://pandas.pydata.org/pandas-docs/stable/</a>&lt;div id="inner-socials"&gt;
+  &lt;span class="tw-like"&gt;
+    <a href="https://twitter.com/share">Tweet</a>
+  &lt;/span&gt;
+  &lt;div class="fb-like" data-send="false" data-href="http://codevisually.com/pandas-a-python-data-analysis-library/" data-layout="button_count" data-width="450" data-show-faces="false"&gt;&lt;/div&gt;
+  &lt;div class="gplus-like"&gt;
+    &lt;div class="g-plusone" data-href="http://codevisually.com/pandas-a-python-data-analysis-library/" data-size="tall" data-annotation="none"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="linkedin-like"&gt;
+    &lt;script src="//platform.linkedin.com/in.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;script type="IN/Share" data-url="http://codevisually.com/pandas-a-python-data-analysis-library/" data-counter="right"&gt;&lt;/script&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="wprp_wrapper"&gt;
+	&lt;div class="wprp_report_link" id="wprp_report_link"&gt;
+    If you have found any issues with this resource please tell us about it → <a href="/contact/?report-post=pandas-a-python-data-analysis-library">Report Resource</a>
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="comments"&gt;
+
+&lt;div id="disqus_thread"&gt;
+    &lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;
+/*  */
+&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+/*  */
+&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+/*  */
+&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;div class="clr"&gt;&lt;/div&gt;
+
+
+
+&lt;/div&gt; 
+
+&lt;/div&gt;
+
+&lt;div id="sidebar-line"&gt;&lt;/div&gt;
+&lt;div id="sidebar"&gt;
+  &lt;div class="sidebar-ads"&gt;
+        
+   
+  
+  
+&lt;div id="md-large-widget-content" style="width:300px;"&gt;
+<a href="http://www.mightydeals.com/deal/korposans.html?ref=codevisuallyad">
+  &lt;img alt="" class="md-wg-deal-image" style="width:300px;" src="http://mightydeals.s3.amazonaws.com/teaser-images/1236/Korposans.jpg"&gt;
+</a>
+<a href="http://www.mightydeals.com/deal/korposans.html?ref=codevisuallyad">
+  &lt;span&gt;Korpo Sans (full font family) - only $24!&lt;/span&gt;
+</a>
+&lt;div id="md-wg-timer-block" class="md-wg-timer-block"&gt;Ends:  	
+&lt;span id="md-wg-time-left-label" class="md-wg-time-left-label"&gt;
+
+&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;script&gt;
+var mdWidgetTimeEnd = 1380949199;
+var mdWidgetServerTime = 1380678270;
+&lt;/script&gt;	
+     &lt;/div&gt;
+  &lt;div clas="clr"&gt;&lt;/div&gt;
+
+&lt;h3 class="sidebar-title"&gt;More Resources&lt;/h3&gt;
+&lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;div class="clr"&gt;&lt;/div&gt;
+&lt;div id="footer-nl-box"&gt;
+  
+   &lt;span class="nl-wording"&gt;Subscribe to our free weekly newsletter (no spam)&lt;/span&gt;
+ 
+ 
+  &lt;form class="af-form-wrapper nl-form" method="post" action="http://www.aweber.com/scripts/addlead.pl" target="nl_iframe"&gt;
+    
+&lt;div style="display: none;"&gt;
+&lt;input type="hidden" name="meta_web_form_id" value="653587826"/&gt;
+&lt;input type="hidden" name="meta_split_id" value=""/&gt;
+&lt;input type="hidden" name="listname" value="cv-news"/&gt;
+&lt;input type="hidden" name="redirect" value="http://www.aweber.com/thankyou-coi.htm?m=text" id="redirect_09427aa8ea71e79ab0954b59af6fe948"/&gt;
+
+&lt;input type="hidden" name="meta_adtracking" value="Subscribe_Form"/&gt;
+&lt;input type="hidden" name="meta_message" value="1"/&gt;
+&lt;input type="hidden" name="meta_required" value="email"/&gt;
+
+&lt;input type="hidden" name="meta_tooltip" value=""/&gt;
+&lt;/div&gt;
+
+  &lt;input class="text nl-email-input" id="awf_field-46912558" type="text" name="email" value="" placeholder="Your email address" tabindex="500"/&gt;
+
+  &lt;input name="submit" class="submit nl-submit" type="submit" value="Subscribe" tabindex="501"/&gt;
+
+&lt;div style="display: none;"&gt;&lt;img src="http://forms.aweber.com/form/displays.htm?id=jMzMzBxMHIyMLA==" alt=""/&gt;&lt;/div&gt;
+&lt;/form&gt;
+
+&lt;iframe name="nl_iframe" id="nl_iframe" width="1" height="1" style="display:none"&gt;&lt;/iframe&gt;
+
+  
+  &lt;div class="clr"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+  
+&lt;/div&gt;
+&lt;div class="clr"&gt;&lt;/div&gt;
+&lt;div class="footer"&gt;
+  &lt;div id="footer-menu"&gt;
+    <ul>
+<li><a href="http://codevisually.com/" title="Home">&lt;span&gt;Home&lt;/span&gt;</a></li>
+<li>/</li>
+<li><a href="http://codevisually.com/about/" title="About">&lt;span&gt;About&lt;/span&gt;</a></li>
+
+<li>/</li>
+<li><a href="http://codevisually.com/submit-a-resource/" title="Submit a Resource">&lt;span&gt;Submit a Resource&lt;/span&gt;</a></li>
+<li>/</li>
+<li><a href="http://buysellads.com/buy/detail/173732" title="Advertising">&lt;span&gt;Advertising&lt;/span&gt;</a></li>
+<li>/</li>
+<li><a href="http://codevisually.com/widget/" title="Widget">&lt;span&gt;Widget&lt;/span&gt;</a></li>
+<li>/</li>
+<li><a href="http://codevisually.com/contact/" title="Contact">&lt;span&gt;Contact&lt;/span&gt;</a></li>
+
+
+
+</ul>  &lt;/div&gt;
+  &lt;div class="copyright"&gt;
+   © 2013 All Rights Reserved
+  &lt;/div&gt;
+  
+  &lt;div id="footer-shares"&gt;
+      &lt;span class="tw-like"&gt;
+        <a href="https://twitter.com/share">Tweet</a>
+      &lt;/span&gt;
+      &lt;div class="fb-like" data-send="false" data-href="http://codevisually.com" data-layout="button_count" data-width="450" data-show-faces="false"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script src="http://cdn.codevisually.com/wp-content/themes/codevisually_light/js/jquery-1.4.2.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="http://cdn.codevisually.com/wp-content/themes/codevisually_light/js/speckyboyscripts.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="http://cdn.codevisually.com/wp-content/themes/codevisually_light/js/jquery.fade.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="http://cdn.codevisually.com/wp-content/themes/codevisually_light/js/scrolltop.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="http://cdn.codevisually.com/wp-content/themes/codevisually_light/js/main.js?v=47" type="text/javascript"&gt;&lt;/script&gt;
+
+&lt;script src="http://cdn.codevisually.com/wp-content/plugins/cv-favorite-posts/js/cv-favorites.js"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="http://cdn.codevisually.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.32.0-2013.04.03"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+/*  */
+&lt;/script&gt;
+&lt;script type="text/javascript" src="http://cdn.codevisually.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.4.1"&gt;&lt;/script&gt;
+
+&lt;div id="cv-preload-container"&gt;
+&lt;/div&gt;
+
+&lt;div id="fb-root"&gt;&lt;/div&gt;
+&lt;script&gt;(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));&lt;/script&gt;
+
+
+&lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+&lt;/script&gt;
+
+
+&lt;script type="text/javascript"&gt;
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-331696-21']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt; 
+
+
+

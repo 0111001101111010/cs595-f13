@@ -1,0 +1,323 @@
+   #[1]Dev Blog of Martin Ivanov [2]Acid.JS Web UI Library
+
+   [3]HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device
+   Access, Graphics, 3D & Effects, Multimedia, Performance & Integration,
+   Semantics, and Offline & Storage
+     * [4]Blog
+     * [5]About
+     * [6]@wemakesitesnet
+     * [7]Contact
+     * [8]Donate
+
+[9]HTML5, CSS3 and JavaScript Insight
+
+     * [10]JavaScript
+          + [11]XML to JSON JavaScript Objectifier
+          + [12]URI to JSON Serializer
+          + [13]Coming Soon - HTML5, JavaScript and CSS3 Replacement Page
+          + [14]JavaScript iPhone Toggle Switch Button
+          + [15]HTML5 Resume Generator and Onepager Website
+          + [16]JavaScript and CSS3 Image Reflections
+          + [17]JavaScript Inheritance Without Constructors
+          + [18]IMDB Movie Data Fetcher
+          + [19]JavaScript Mapper for RESTFul Methods
+          + [20]TinyURL JavaScript API
+          + [21]Wrapper for the HTML5 WebWorkers API
+          + [22]JavaScript Class Augmenter
+          + [23]HTML5 Details Enabler YUI Class
+          + [24]JavaScript HTML Template Engine
+          + [25]JavaScript Localization Class
+          + [26]HTML5 Charts
+          + [27]HTML5 Placeholder Enabler YUI Class
+          + [28]All JavaScript Experiments and Insight
+     * [29]CSS3
+          + [30]Custom Checkboxes and Radio Buttons
+          + [31]CSS3 iPhone Toggle Buttons
+          + [32]Crossbrowser RGBA and Prevention of Opacity Propagation.
+            Starting with IE6
+          + [33]CSS3 Slides Viewer
+          + [34]Fancy CSS3 Tooltips
+          + [35]CSS3 Treeview. No JavaScript
+          + [36]CSS3 Metro Dropdown Styling
+          + [37]CSS3 Element Reflections
+          + [38]Dropdown Styling with CSS3
+          + [39]CSS3 Background Image Cropping
+          + [40]Inline Masked File Upload Form with CSS3 and HTML5
+          + [41]CSS3 Tabstrip
+          + [42]CSS3 Gaussian Blur
+          + [43]All CSS3 Experiments and Insight
+     * [44]Dev Tools
+          + [45]HTML Validation Bookmarklet
+          + [46]Builder.CSS
+          + [47]Image to Base-64 Encoder
+          + [48]HTML5 Sticky Notes App
+          + [49]JavaScript Minifier and Obfuscator
+          + [50]JSON to HTML Template Engine
+          + [51]HTML Template Engine
+          + [52]HTML5 Guitar Chords Player
+          + [53]IMDB Movie Data Fetcher
+          + [54]Message Digest Encrypter
+          + [55]RESTFul Builder and Tester
+     * [56]Web.UI
+          + [57]HTML5 Shopping Cart
+          + [58]Ribbon Bar Web UI
+          + [59]Auto Complete Widget
+          + [60]HTML5 Canvas Gauge
+          + [61]Table Painter Widget
+          + [62]CSS3 Metro Forms
+          + [63]Split Button Widget
+          + [64]HTML5 and CSS3 Progressbar
+          + [65]Tourdates and Events Scheduler
+          + [66]TabStrip Web UI
+          + [67]Hotel Booking Form
+     * [68]Tweet
+
+Imageless Custom Checkboxes and Radio Buttons with CSS3
+
+   You can read the original blogpost on this [69]link, or you can
+   [70]download the example.
+
+Demo
+
+     * (*) checked radio button
+     * ( ) unchecked radio button
+     * ( ) disabled radio button
+
+     * [X] selected checkbox
+     * [ ] unselected checkbox
+     * [ ] disabled checkbox
+
+
+   For complete form styling solution, you could give a try to
+   [71]AcidJs.Forms.
+
+The CSS
+
+/**
+ * @info Custom Imageless CSS Skinning for Checkboxes and Radiobuttons
+ * @author Martin Ivanov
+ * @web http://wemakesites.net
+ * @blog http://acidmartin.wordpress.com/
+ * @twitter https://twitter.com/wemakesitesnet
+ */
+
+:root .css3-radios label,
+:root .css3-radios input[type="radio"] + span,
+:root .css3-radios input[type="radio"] + span::before,
+:root .css3-checkboxes label,
+:root .css3-checkboxes input[type="checkbox"] + span,
+:root .css3-checkboxes input[type="checkbox"] + span::before
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+:root .css3-radios,
+:root .css3-checkboxes
+{
+    position: relative;
+}
+
+:root .css3-radios label *,
+:root .css3-checkboxes label *
+{
+    cursor: pointer;
+}
+
+:root .css3-radios input[type="radio"],
+:root .css3-checkboxes input[type="checkbox"]
+{
+    opacity: 0;
+    position: absolute;
+}
+
+:root .css3-radios input[type="radio"] + span,
+:root .css3-checkboxes input[type="checkbox"] + span
+{
+    font: normal 11px/14px Arial, Sans-serif;
+    color: #333;
+}
+
+:root .css3-radios label:hover span::before,
+:root .css3-checkboxes label:hover span::before
+{
+    -moz-box-shadow: 0 0 2px #ccc;
+    -webkit-box-shadow: 0 0 2px #ccc;
+    box-shadow: 0 0 2px #ccc;
+}
+
+:root .css3-radios label:hover span,
+:root .css3-checkboxes label:hover span
+{
+    color: #000;
+}
+
+:root .css3-radios input[type="radio"] + span::before,
+:root .css3-checkboxes input[type="checkbox"] + span::before
+{
+    content: "";
+    width: 12px;
+    height: 12px;
+    margin: 0 4px 0 0;
+    border: solid 1px #a8a8a8;
+    line-height: 14px;
+    text-align: center;
+
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+
+    background: #f6f6f6;
+    background: -moz-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -webkit-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -ms-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -o-radial-gradient(#f6f6f6, #dfdfdf);
+    background: radial-gradient(#f6f6f6, #dfdfdf);
+}
+
+:root .css3-radios input[type="radio"]:checked + span::before,
+:root .css3-checkboxes input[type="checkbox"]:checked + span::before
+{
+    color: #666;
+}
+
+:root .css3-radios input[type="radio"]:disabled + span,
+:root .css3-checkboxes input[type="checkbox"]:disabled + span
+{
+    cursor: default;
+
+    -moz-opacity: .4;
+    -webkit-opacity: .4;
+    opacity: .4;
+}
+
+:root .css3-checkboxes input[type="checkbox"] + span::before
+{
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+:root .css3-radios input[type="radio"]:checked + span::before
+{
+    content: "\2022";
+    font-size: 24px;
+}
+
+:root .css3-checkboxes input[type="checkbox"]:checked + span::before
+{
+    content: "\2714";
+    font-size: 12px;
+}
+
+The Markup
+
+<ul class="css3-radios">
+    <li><label><input type="radio" checked="checked" name="radios-01" /><span>ch
+ecked radio button</span></label></li>
+    <li><label><input type="radio" name="radios-01" /><span>unchecked radio butt
+on</span></label></li>
+    <li><label><input type="radio" name="radios-01" disabled="disabled" /><span>
+disabled radio button</span></label></li>
+</ul>
+
+<ul class="css3-checkboxes">
+    <li><label><input type="checkbox" checked="checked" name="checkbox-01" /><sp
+an>selected checkbox</span></label></li>
+    <li><label><input type="checkbox" name="checkbox-02" /><span>unselected chec
+kbox</span></label></li>
+    <li><label><input type="checkbox" name="checkbox-03" disabled="disabled" /><
+span>disabled checkbox</span></label></li>
+</ul>
+<p> </p>
+<p>For complete form styling solution, you could give a try to <a href="http://w
+emakesites.net/#!/details?component=forms-js" target="_blank">AcidJs.Forms</a>.<
+/p>
+
+     * © 2001-2013 Martin Ivanov
+     * [72]Blog
+     * [73]About
+     * [74]@wemakesitesnet
+     * [75]Contact
+     * [76]Donate
+     * [77]Valid HTML5
+
+References
+
+   1. http://feeds.feedburner.com/acidmartin
+   2. http://feeds.feedburner.com/acidjs
+   3. http://www.w3.org/html/logo/
+   4. https://acidmartin.wordpress.com/
+   5. http://wemakesites.net/
+   6. https://twitter.com/wemakesitesnet
+   7. http://wemakesites.net/#!/contact
+   8. https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QFUHPWJB2JDBS
+   9. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  10. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript.html
+  11. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/xml-to-json-javascript-objectifier.html
+  12. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/uri-to-json-serializer.html
+  13. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/coming-soon.html
+  14. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-iphone-toggle-buttons.html
+  15. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/html5-resume-builder.html
+  16. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/reflections.html
+  17. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-inheritance-without-constructors.html
+  18. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-api-for-imdb.html
+  19. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-mapper-for-restful-methods.html
+  20. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-api-for-tinyurl.html
+  21. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-wrapper-for-the-html5-webworkers-api.html
+  22. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-class-augmenter.html
+  23. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/html-5-details-element-enabler.html
+  24. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-html-template-engine.html
+  25. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/quick-and-dirty-localization-with-javascript.html
+  26. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/html5-charts.html
+  27. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/html5-placeholder-enabler.html
+  28. http://acidmartin.wordpress.com/category/javascript/
+  29. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css.html
+  30. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/custom-css3-checkboxes-and-radios.html
+  31. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-iphone-toggle-buttons.html
+  32. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/using-crossbrowser-rgba-to-prevent-the-css-opacity-inheritance-from-parent-to-child-elements.html
+  33. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-slides-viewer.html
+  34. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/fancy-css3-tooltips.html
+  35. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-treeview.html
+  36. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-metro-dropdown.html
+  37. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-element-reflections.html
+  38. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-selectbox.html
+  39. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-background-image-cropping.html
+  40. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-inline-file-input.html
+  41. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-tabstrip.html
+  42. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-gaussian-blur.html
+  43. http://acidmartin.wordpress.com/category/css3/
+  44. http://acidjs.wemakesites.net/
+  45. http://acidjs.wemakesites.net/validator.html
+  46. http://buildercss.wemakesites.net/
+  47. http://image2base64.wemakesites.net/
+  48. http://stickeez.wemakesites.net/
+  49. http://acidjs.wemakesites.net/builder-js.html
+  50. http://acidjs.wemakesites.net/templatr.html
+  51. http://acidjs.wemakesites.net/pisi.html
+  52. http://acidjs.wemakesites.net/guitar-chords-js.html
+  53. http://acidjs.wemakesites.net/imdb-fetcher.html
+  54. http://hasher.wemakesites.net/
+  55. http://acidjs.wemakesites.net/rest-builder.html
+  56. http://acidjs.wemakesites.net/
+  57. http://html5-cart.com/
+  58. http://acidjs.wemakesites.net/ribbon-bar-xml.html
+  59. http://acidjs.wemakesites.net/auto-complete.html
+  60. http://acidjs.wemakesites.net/gauge.html
+  61. http://acidjs.wemakesites.net/table-painter.html
+  62. http://acidjs.wemakesites.net/forms-js.html
+  63. http://acidjs.wemakesites.net/split-button-xml.html
+  64. http://acidjs.wemakesites.net/progressbar-js.html
+  65. http://acidjs.wemakesites.net/tour-dates.html
+  66. http://acidjs.wemakesites.net/tabstrip-xml.html
+  67. http://acidjs.wemakesites.net/hotel-reservation-form-js.html
+  68. https://twitter.com/share
+  69. https://acidmartin.wordpress.com/2012/12/21/imageless-custom-checkboxes-and-radio-buttons-with-css3-revisited/
+  70. http://acidmartin.wemakesites.net/DownloadAdmin/click.php?id=187
+  71. http://wemakesites.net/#!/details?component=forms-js
+  72. https://acidmartin.wordpress.com/
+  73. http://wemakesites.net/
+  74. https://twitter.com/wemakesitesnet
+  75. http://wemakesites.net/#!/contact
+  76. https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QFUHPWJB2JDBS
+  77. http://validator.w3.org/check?uri=referer

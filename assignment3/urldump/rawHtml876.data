@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="script.js"></script>
+		<link href="reset.css" rel="stylesheet" />
+		<link href="style.css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Oxygen|Bree+Serif' rel='stylesheet' type='text/css'>
+		<title>Learn CSS Selectors interactively</title>
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-37224725-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+	</head>
+<body>
+
+<div id="wrap">
+	<h1>CSS Selectors <span class="tidbit">* more to come {<a href="https://twitter.com/#!/benhowdle" target="_blank">suggest</a>?}</span></h1>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-via="benhowdle">Tweet</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	<div class="clearfix"></div>
+	<div id="controls">
+
+		<ul id="selectors">
+			<li data-id="first-of-type">first-of-type</li>
+			<li data-id="first-child">first-child</li>
+			<li data-id="descendant">descendant</li>
+			<li data-id="child">child</li>
+			<li data-id="nth-child">nth-child</li>
+			<li data-id="adjacent-sibling">adjacent sibling</li>
+			<li data-id="general-sibling">general sibling</li>
+			<li data-id="first-line">first-line</li>
+			<li data-id="nth-of-type">nth-of-type</li>
+			<li data-id="last-of-type">last-of-type</li>
+
+		</ul>
+		
+		<div class="breathe ceiling" id="browser-support">
+			<p class="italic">Browser Support</p>
+			<ul>
+				
+			</ul>
+		</div>
+		
+		<div class="breathe ceiling" id="description">
+			<p class="italic">CSS Selector Description</p>
+			<p></p>
+		</div>
+
+	</div>
+
+	<div id="target">
+		<div class="breathe">Currently applied CSS: <span id="css-active" class="breathe code-alpha">none</span></div>
+		<span class="code">&lt;div id="target"&gt;</span>
+
+		<style type="text/css" id="dyn-style"></style>
+
+		<h2 class="indent code">&lt;h2&gt;Where the Buggalo Roam&lt;/h2&gt;</h2>
+		<p class="indent code">&lt;p&gt;Alright, let's mafia things up a bit. Joey, burn down the ship. Clamps, burn down the crew. No! Don't jump! Dr. Zoidberg, that doesn't make sense.&lt;/p&gt;</p>
+		<div class="indent code">&lt;div&gt;
+			<p class="indent code">&lt;p&gt;Does anybody else feel jealous and aroused and worried?&lt;/p&gt;</p>
+			&lt;/div&gt;
+		</div>
+
+		<h2 class="indent code">&lt;h2&gt;The Mutants Are Revolting&lt;/h2&gt;</h2>
+		<p class="indent code">&lt;p&gt;But, okay! I just want to talk. It has nothing to do with mating. Fry, that doesn't make sense.&lt;/p&gt; </p>
+
+		<h2 class="indent code">&lt;h2&gt;Space Pilot 3000&lt;/h2&gt;</h2>
+		<p class="indent code">&lt;p&gt;Now, now. Perfectly symmetrical violence never solved anything.&lt;/p&gt;</p>
+		<span class="code">&lt;/div&gt;</span>
+	</div>
+	<div class="clearfix"></div>
+	<div id="footer">
+		<p class="code-alpha">Made by <a href="http://benhowdle.im" target="_blank">Ben Howdle</a><a href="https://twitter.com/benhowdle" class="twitter-follow-button" data-show-count="false">Follow @benhowdle</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+	</div>
+</div>
+
+</body>
+</html>

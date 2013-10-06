@@ -1,0 +1,226 @@
+
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        
+        &lt;link rel="shortcut icon" href="/static/favicon.ico"&gt;
+        
+        &lt;link rel="alternate" type="application/rss+xml" title="RSS" href="/posts.rss"&gt;
+        &lt;link href="/static/css/bootstrap.min.css" rel="stylesheet" media="screen"&gt;
+        &lt;link href="/static/css/prettify.css" rel="stylesheet" type="text/css"&gt;
+        &lt;link href="/static/css/layout.css" rel="stylesheet" media="screen"&gt;
+        &lt;link href="/static/css/code_styles.css" rel="stylesheet" type="text/css"&gt;
+        &lt;link href="//fonts.googleapis.com/css?family=Open+Sans:400,900" rel="stylesheet" type="text/css"&gt;
+        
+        &lt;style&gt;
+            body {
+                padding-top: 20px;
+            }
+
+            .sidebar-nav-fixed {
+                position:fixed;
+            }
+            
+            .post_container &gt; p {
+                left: 15%;
+                font-family: "Open Sans", sans-serif;
+                line-height: 1.8em;
+                font-size: 15px;
+                font-weight: 400;
+            }
+            
+            body, pre, input {
+                font-family: "Open Sans", sans-serif;
+                line-height: 1.8em;
+                font-size: 15px;
+                font-weight: 400; }
+        &lt;/style&gt;
+        
+        &lt;script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript" src="/static/js/bootstrap-modal.js"&gt;&lt;/script&gt;
+        &lt;script src="/static/js/prettify.js" type="text/javascript"&gt;&lt;/script&gt;
+        &lt;title&gt;Breaking out of secured Python environments - Toms corner of the internet&lt;/title&gt;
+        
+    &lt;script type="text/javascript"&gt;
+    function refreshPreviewPage(){
+        window.location.reload();
+    }
+    &lt;/script&gt;
+
+    &lt;/head&gt;
+    &lt;body onload="prettyPrint()"&gt;
+        &lt;div class="container-fluid"&gt;
+
+            &lt;div class="span2 sidebar-nav-fixed"&gt;
+                &lt;div class="hidden-phone"&gt;
+                    &lt;header&gt;
+                        &lt;h1&gt;<a href="/">Toms corner of the internet</a>&lt;/h1&gt;
+                        &lt;br/&gt;
+                        &lt;span&gt;Just another blog&lt;/span&gt;
+                        <ul>
+                            
+                                <li>&lt;p&gt;<a href="https://github.com/orf/">Github</a>&lt;/p&gt;</li>
+                            
+                            
+                                <li>&lt;p&gt;&lt;p&gt;<a href="mailto:tom@tomforb.es?subject:Howdy">Email me</a>&lt;/p&gt;</li>
+                            
+                            
+                            
+                            <li>
+                            
+                            </li>
+			    <li>&lt;p&gt;<a href="https://www.vps-forge.com">Awesome virtual servers</a>&lt;/p&gt;</li>
+                            <li>
+                                &lt;p&gt;<a href="/posts.rss">View feed</a>&lt;/p&gt;
+                            </li>
+
+                            
+
+                            
+    
+
+                        </ul>
+                        &lt;span class="powered-by"&gt;
+                          Powered by <a href="http://github.com/orf/simple">Simple</a>,
+                            inspired by <a href="https://github.com/NateW/obtvse">Obtvse</a>
+                        &lt;/span&gt;
+                    &lt;/header&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+
+            &lt;div class="hidden-phone"&gt;
+                &lt;div class="span2"&gt;&lt;/div&gt;
+                
+            &lt;/div&gt;
+
+            &lt;div class="hidden-phone"&gt;
+                &lt;div class="span1"&gt;
+                    
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class="span8"&gt;
+                &lt;div class="row-fluid"&gt;
+                    &lt;div class="span12"&gt;
+                        &lt;time&gt;
+                            
+                                Posted September 25, 2013
+                                
+                                    , Updated September 26, 2013
+                                
+                            
+                        &lt;/time&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="row-fluid"&gt;
+                    &lt;div class="span12"&gt;
+                        &lt;div class="visible-phone"&gt;&lt;br/&gt;&lt;/div&gt;
+                        &lt;div class="hidden-phone"&gt;&lt;hr/&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="row-fluid"&gt;
+                    &lt;div class="span12"&gt;
+                        
+    &lt;section id="post-26"&gt;
+        &lt;div class="post_container"&gt;
+            &lt;div class="post_header"&gt;
+                &lt;h1&gt;Breaking out of secured Python environments&lt;/h1&gt;
+            &lt;/div&gt;
+            &lt;br/&gt;
+            &lt;p&gt;A week or so ago I was browsing <a href="http://reddit.com/r/python">/r/Python</a> and I saw a link to a website called <a href="http://rise4fun.com">rise4fun.com</a>, which is a Microsoft Research project that contains a lot of cool demos and tools that you can run in your browser. The demo I was linked to was a restricted Python shell that could be used to experiment with a "high performance theorem prover" called <a href="https://research.microsoft.com/en-us/um/redmond/projects/z3/z3.html">Z3</a>. Python is a highly dynamic language and so it is pretty hard to secure correctly, and I found numerous ways around the restrictions they put in place which I have detailed in this post. Due to these issues the z3py section was removed shortly after I made contact so you can't see it for yourself, however the plain z3 section is still there so <a href="http://rise4fun.com/Z3">take a look here</a> for reference (just imagine it took Python code as input).&lt;/p&gt;
+&lt;h4 id="the-restrictions"&gt;The restrictions&lt;/h4&gt;
+&lt;p&gt;The first thing I did was to explore what restrictions they had in place to prevent malicious activity. I found they had the following restrictions on code being executed:&lt;/p&gt;
+<ul>
+<li>Any use of the import statement</li>
+<li>Use of any attribute prefixed with a double underscore (which rules out all Python special methods like __getattr__)</li>
+<li>Use of any attribute name in a blacklist (open, getattr, setattr, locals, globals etc)</li>
+</ul>
+&lt;p&gt;They implemented these restrictions by parsing the Python code into an AST representation and looking for <em>any</em> attribute access prefixed with a double underscore, any use of the import statement or any name in a blacklist.&lt;/p&gt;
+&lt;h4 id="breaking-out"&gt;Breaking out&lt;/h4&gt;
+&lt;p&gt;In Python exception's have a defined hierarchy. The following code is a common way to catch all exceptions while executing some_func():&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+   &lt;span class="n"&gt;some_func&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;Exception&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+   &lt;span class="k"&gt;pass&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This works in most cases as almost all exceptions have Exception as a parent somewhere. However there are a few (MemoryError for one) that inherit only from BaseException and not Exception, and so would not get caught by that code. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="/uploads/baseException_HSWTOI32.png"&gt;&lt;/p&gt;
+&lt;p&gt;Raising a BaseException() escaped the try/except block they had in place and gave me a nice traceback with some the path to the executing script.&lt;/p&gt;
+&lt;h3 id="enumerating-attributes"&gt;Enumerating attributes&lt;/h3&gt;
+&lt;p&gt;There are a few ways to enumerate attributes in Python, you could use the __dict__ attribute on any class but this was obviously restricted. The other more common way is to use the dir() function, which was not restricted. I found that "print dir(x)" didn't work and returned no output, however "print exit(dir(x))" did (str was restricted, but exit() turns its parameters into a string):&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="/uploads/dir_int_43L6QLZ2.png"&gt;&lt;/p&gt;
+&lt;h4 id="accessing-restricted-functions"&gt;Accessing restricted functions&lt;/h4&gt;
+&lt;p&gt;By enumerating the attributes I found an interesting one called "ctx". This wasn't interesting by itself, but it had an attribute called "lib" that was a reference to the <a href="https://research.microsoft.com/en-us/um/redmond/projects/z3/z3.html">z3 module</a>, which had some interesting sounding functions.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="/uploads/dir_z3_api_NBPD3RZU.png"&gt;&lt;/p&gt;
+&lt;h4 id="writing-files"&gt;Writing files&lt;/h4&gt;
+&lt;p&gt;The one that stood out in the z3 module were the logfile functions, Z3_open_log and Z3_append_log. This allowed me a simple way to write files, helped in part by the path I acquired using the BaseException method above:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="/uploads/write_file_MUUWX4FM.png"&gt;&lt;/p&gt;
+&lt;p&gt;And the resulting file:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="/uploads/file_result_MMIDK7TX.png"&gt;&lt;/p&gt;
+&lt;h4 id="getting-a-reference-to-the-sys-module"&gt;Getting a reference to the sys module&lt;/h4&gt;
+&lt;p&gt;The sys module in Python is a goldmine, if you can get a reference to that in a restricted environment then you will be able to get a reference to any imported module by using the sys.modules dictionary. After a while of getting nowhere I hit myself, I forgot about <em>func_globals</em>. Any Python function has an attribute called func_globals which according to the Python docs is a "reference to the dictionary that holds the function’s global variables — the global namespace of the module in which the function was defined". Using this we could easily get a reference to the sys module and therefore any imported module:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="/uploads/get_sys_reference_QX35INCR.png"&gt;&lt;/p&gt;
+&lt;p&gt;And then we could use the io module to read and write arbitrary files:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="/uploads/read_any_file_2N4Q23D4.png"&gt;&lt;/p&gt;
+&lt;h4 id="bonus-marks"&gt;Bonus marks&lt;/h4&gt;
+&lt;p&gt;None of the output was escaped, and while it's not too serious as there are no user accounts (as far as I know) and so nothing to steal it's still a bit funny:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="/uploads/stored_XSS_TD25VLLY.png"&gt;&lt;/p&gt;
+&lt;h4 id="securing-python"&gt;Securing Python&lt;/h4&gt;
+&lt;p&gt;Python is hard to secure. The best way is to execute it in a temporary environment (like a temporary docker instance) so that if someone did manage to escape they would not be able to wreak havoc on anything important. That being said the blacklist AST parsing method that rise4fun used was clever and worked to a degree, improvements could be made to make it more viable. &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;br/&gt;
+        <a href="/?page=0">Back to Blog</a>
+        &lt;br/&gt;
+
+        
+            &lt;br/&gt;&lt;br/&gt;
+
+            &lt;div id="disqus_thread"&gt;&lt;/div&gt;
+            &lt;script type="text/javascript"&gt;
+                var disqus_shortname = 'tomforbes';
+                var disqus_identifier = '26';
+                var disqus_url = 'http://tomforb.es/26';
+                
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            &lt;/script&gt;
+            &lt;noscript&gt;Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>&lt;/noscript&gt;
+            <a href="http://disqus.com">comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;</a>
+        
+
+    &lt;/section&gt;
+
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        
+            &lt;script&gt;
+                var _gaq=[['_setAccount','UA-7457807-7'],['_trackPageview']];
+                (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+                    s.parentNode.insertBefore(g,s)}(document,'script'));
+                // Track page view times more accurately
+                (function (tos) {
+                  window.setInterval(function () {
+                    tos = (function (t) {
+                      return t[0] == 50 ? (parseInt(t[1]) + 1) + ':00' : (t[1] || '0') + ':' + (parseInt(t[0]) + 30);
+                    })(tos.split(':').reverse());
+                    window.pageTracker ? pageTracker._trackEvent('Time', 'Log', tos) : _gaq.push(['_trackEvent', 'Time', 'Log', tos]);
+                  }, 30000);
+                })('00');
+            &lt;/script&gt;
+        
+    &lt;/body&gt;
+&lt;/html&gt;

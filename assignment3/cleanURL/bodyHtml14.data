@@ -1,0 +1,771 @@
+
+
+
+
+
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+&lt;meta charset="UTF-8"/&gt;
+&lt;title&gt;Emacs and Anaconda Python | Sam Relton's Blog&lt;/title&gt;
+&lt;link rel="profile" href="http://gmpg.org/xfn/11"/&gt;
+&lt;link rel="pingback" href="http://samrelton.wordpress.com/xmlrpc.php"/&gt;
+&lt;link rel="alternate" type="application/rss+xml" title="Sam Relton's Blog » Feed" href="http://samrelton.wordpress.com/feed/"/&gt;
+&lt;link rel="alternate" type="application/rss+xml" title="Sam Relton's Blog » Comments Feed" href="http://samrelton.wordpress.com/comments/feed/"/&gt;
+&lt;link rel="alternate" type="application/rss+xml" title="Sam Relton's Blog » Emacs and Anaconda Python Comments Feed" href="http://samrelton.wordpress.com/2013/09/26/emacs-and-anaconda-python/feed/"/&gt;
+&lt;script type="text/javascript"&gt;
+/*  */
+&lt;/script&gt;
+&lt;link rel="stylesheet" id="all-css-0" href="http://s0.wp.com/_static/??-eJyVztEKwjAMBdAfsgbtUHwQv6XrYtctbcqaUvx7pyIOhqBPIXAu90JNynIUjAKhqETF+ZiB/IgZBpRk7Kie39bmvIEFb4ndJ8DOYcdF1JWJuEL1nUNZhRYdifOsyfgJstwIV1Z6DPOKVFrIIybx1tA/1Ef74qomy+HXLb2ZfHTv+62qb8ARt4Ye4BLOO3086WZ/0Hq4A/yUfuk=" type="text/css" media="all"/&gt;
+&lt;link rel="stylesheet" id="print-css-0" href="http://s0.wp.com/wp-content/mu-plugins/global-print/global-print.css?m=1335386953g" type="text/css" media="print"/&gt;
+&lt;script type="text/javascript"&gt;
+/*  */
+&lt;/script&gt;
+&lt;script type="text/javascript" src="http://s2.wp.com/_static/??-eJyFkN0KwjAMRl/IrviDxQvxWbYuK6ltU5vWMZ/eDiYoDnaVkBxy+CLHKDSFDCFLy9JThw5EYUitqTOBYaDG8k5WDoN2pQeeQfsokKalbALCo0lthsZj+MBf1kicPTBX5cr2V4XhiTBuYhZybPVdJGB8/V3tHBkRXTEYWNbeQE8li4Gco1GO2BvIa6E0eT9/JUF00xLm5q/7o1KHs7qok30DqLN9jA=="&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" id="all-css-0" href="http://s2.wp.com/wp-content/mu-plugins/highlander-comments/style.css?m=1377793621g" type="text/css" media="all"/&gt;
+
+&lt;link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://samrelton.wordpress.com/xmlrpc.php?rsd"/&gt;
+&lt;link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://samrelton.wordpress.com/wp-includes/wlwmanifest.xml"/&gt; 
+&lt;link rel="prev" title="Emacs and Python" href="http://samrelton.wordpress.com/2013/09/16/emacs-and-python/"/&gt;
+&lt;meta name="generator" content="WordPress.com"/&gt;
+&lt;link rel="canonical" href="http://samrelton.wordpress.com/2013/09/26/emacs-and-anaconda-python/"/&gt;
+&lt;link rel="shortlink" href="http://wp.me/p3Js4a-1f"/&gt;
+&lt;link rel="alternate" type="application/json+oembed" href="http://public-api.wordpress.com/oembed/1.0/?format=json&amp;amp;url=http%3A%2F%2Fsamrelton.wordpress.com%2F2013%2F09%2F26%2Femacs-and-anaconda-python%2F&amp;amp;for=wpcom-auto-discovery"/&gt;&lt;link rel="alternate" type="application/xml+oembed" href="http://public-api.wordpress.com/oembed/1.0/?format=xml&amp;amp;url=http%3A%2F%2Fsamrelton.wordpress.com%2F2013%2F09%2F26%2Femacs-and-anaconda-python%2F&amp;amp;for=wpcom-auto-discovery"/&gt;
+
+&lt;meta property="og:type" content="article"/&gt;
+&lt;meta property="og:title" content="Emacs and Anaconda Python"/&gt;
+&lt;meta property="og:url" content="http://samrelton.wordpress.com/2013/09/26/emacs-and-anaconda-python/"/&gt;
+&lt;meta property="og:description" content="Making Emacs play nicely with Anaconda Python in Ubuntu."/&gt;
+&lt;meta property="og:site_name" content="Sam Relton's Blog"/&gt;
+&lt;meta name="twitter:site" content="@wordpressdotcom"/&gt;
+&lt;meta name="twitter:card" content="summary"/&gt;
+&lt;meta name="twitter:creator" content="@wordpressdotcom"/&gt;
+&lt;meta property="fb:app_id" content="249643311490"/&gt;
+&lt;meta property="article:publisher" content="https://www.facebook.com/WordPresscom"/&gt;
+&lt;link rel="shortcut icon" type="image/x-icon" href="http://s2.wp.com/i/favicon.ico?m=1311975824g" sizes="16x16 24x24 32x32 48x48"/&gt;
+&lt;link rel="icon" type="image/x-icon" href="http://s2.wp.com/i/favicon.ico?m=1311975824g" sizes="16x16 24x24 32x32 48x48"/&gt;
+&lt;link rel="apple-touch-icon-precomposed" href="http://s0.wp.com/i/webclip.png?m=1355642671g"/&gt;
+&lt;link rel="openid.server" href="http://samrelton.wordpress.com/?openidserver=1"/&gt;
+&lt;link rel="openid.delegate" href="http://samrelton.wordpress.com/"/&gt;
+&lt;link rel="search" type="application/opensearchdescription+xml" href="http://samrelton.wordpress.com/osd.xml" title="Sam Relton's Blog"/&gt;
+&lt;link rel="search" type="application/opensearchdescription+xml" href="http://wordpress.com/opensearch.xml" title="WordPress.com"/&gt;
+		&lt;style&gt;
+		/*  */
+		&lt;/style&gt;
+		&lt;meta name="application-name" content="Sam Relton's Blog"/&gt;&lt;meta name="msapplication-window" content="width=device-width;height=device-height"/&gt;&lt;meta name="msapplication-tooltip" content="Ramblings on maths, technology and guitars"/&gt;&lt;meta name="msapplication-task" content="name=Subscribe;action-uri=http://samrelton.wordpress.com/feed/;icon-uri=http://s2.wp.com/i/favicon.ico"/&gt;&lt;meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=http://s2.wp.com/i/favicon.ico"/&gt;&lt;meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico"/&gt;&lt;meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico"/&gt;&lt;meta name="title" content="Emacs and Anaconda Python | Sam Relton's Blog on WordPress.com"/&gt;
+&lt;meta name="description" content="Making Emacs play nicely with Anaconda Python in Ubuntu."/&gt;
+
+&lt;script type="text/javascript"&gt;/**/&lt;/script&gt;
+&lt;style id="syntaxhighlighteranchor"&gt;&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body class="single single-post postid-77 single-format-standard mp6 highlander-enabled highlander-light"&gt;
+&lt;div id="wrapper"&gt;
+		&lt;div id="header"&gt;
+ 		&lt;div class="col-full"&gt;
+			&lt;div id="logo"&gt;
+								&lt;span class="site-title"&gt;
+					<a href="http://samrelton.wordpress.com/" title="Sam Relton's Blog">Sam Relton's Blog</a>
+				&lt;/span&gt;
+				&lt;span class="site-description"&gt;Ramblings on maths, technology and guitars&lt;/span&gt;
+			&lt;/div&gt;
+
+			&lt;div id="navigation"&gt;
+				<ul><li><a href="http://samrelton.wordpress.com/">Blog</a></li>
+<li><a href="http://www.maths.manchester.ac.uk/~srelton/">Homepage</a></li>
+<li><a href="http://samrelton.wordpress.com/about/">About Me</a></li>
+</ul>								<ul>
+					<li><a href="http://samrelton.wordpress.com/feed/">Subscribe to RSS</a></li>
+				</ul>
+							&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;div id="content" class="col-full"&gt;
+		&lt;div id="main" class="col-left"&gt;
+		
+			&lt;div id="post-77" class="post-77 post type-post status-publish format-standard hentry category-computing tag-linux tag-emacs tag-python tag-elisp tag-ipython tag-scientific-computing tag-ubuntu tag-anaconda"&gt;
+
+	&lt;div class="post-meta col-left"&gt;
+			<a href="http://samrelton.wordpress.com/2013/09/26/emacs-and-anaconda-python/" title="Permalink to Emacs and Anaconda Python">
+		&lt;span class="post-date"&gt;
+			September 26, 2013			&lt;span class="bg"&gt; &lt;/span&gt;
+		&lt;/span&gt;
+	</a>
+	<ul>
+		
+					<li>in <a href="http://samrelton.wordpress.com/category/computing/" title="View all posts in Computing">Computing</a></li>
+		
+					<li><a href="http://samrelton.wordpress.com/2013/09/26/emacs-and-anaconda-python/#respond" title="Comment on Emacs and Anaconda Python">Leave a Comment</a></li>
+		
+			</ul>
+	&lt;/div&gt;
+
+	&lt;div class="middle col-left clearfix"&gt;
+		&lt;h1 class="title"&gt;
+					Emacs and Anaconda Python				&lt;/h1&gt;
+
+		
+		&lt;div class="entry clearfix"&gt;
+			&lt;p&gt; Recently I posted a <a href="http://samrelton.wordpress.com/2013/09/16/emacs-and-python/">blog</a> about using Emacs and Python together. It was about having setting in your .emacs file allowing Emacs to interact with the default Python and SciPy/NumPy from the Ubuntu repositories, which is <b>out of date</b>. After changing Python version to Anaconda Python this <b>broke all my Emacs setup!</b> It was a real pain to fix so I’ve collected the main ideas here. &lt;/p&gt;
+&lt;div id="outline-container-sec-1" class="outline-2"&gt;
+&lt;h2 id="sec-1"&gt;Anaconda Python&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-1"&gt;
+&lt;p&gt; To use the latest versions of the Python packages like SciPy and NumPy I downloaded the <a href="https://store.continuum.io/">Anaconda Python</a> distribution. It includes lots of the most useful Python packages for scientific computing by default such as &lt;/p&gt;
+<ul>
+<li>Numba and Cython for speeding up code. </li>
+<li>SymPy for symbolic computation. </li>
+<li>F2Py for converting Fortran code. </li>
+<li>IPython for a better interactive experience. </li>
+<li>mpi for parallel computing. </li>
+<li>PEP8 and PyFlakes to enforce coding standards. </li>
+</ul>
+&lt;p&gt; I’d really recommend it as an easy way to get a good Python install. You can also pay extra for upgrades like linking NumPy with MKL for enhanced speed (which is free for academics). &lt;/p&gt;
+&lt;p&gt;  &lt;span id="more-77"&gt;&lt;/span&gt; &lt;/div&gt;
+&lt;/p&gt;&lt;/div&gt;
+&lt;div id="outline-container-sec-2" class="outline-2"&gt;
+&lt;h2 id="sec-2"&gt;Getting a working Emacs setup&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-2"&gt;
+&lt;p&gt; Anaconda Python was great from the command line, I’d also edited my <i>.bashrc</i> so that typing <i>python</i> and <i>ipython</i> in bash would bring up the Anaconda interpreters. This was done by adding ‘~/anaconda/bin’ to the <i>$PATH</i> variable. However when using Emacs (which I keep on the Unity launcher) it was still using the <b>standard</b> interpreter and the outdated version of SciPy and NumPy. &lt;/p&gt;
+&lt;p&gt; After a lot of failed attempts to change the interpreter in Emacs I finally tracked down the cause of the problem: the Ubuntu launch bar doesn’t use the <i>$PATH</i> variable set in <i>.bashrc</i>. &lt;/p&gt;
+&lt;/p&gt;&lt;/div&gt;
+&lt;/p&gt;&lt;/div&gt;
+&lt;div id="outline-container-sec-3" class="outline-2"&gt;
+&lt;h2 id="sec-3"&gt;The solution&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-3"&gt;
+&lt;p&gt; The way I solved this problem was to add some code at the beginning of my <i>.emacs</i> file which sets the <i>$PATH</i> variable within Emacs to match that from <i>.bashrc</i>. It is a modification of the code by <b>sanityinc</b> on <a href="http://www.stackoverflow.com/questions/6411121/how-to-make-emacs-to-use-my-bashrc-file">this</a> page. If you run OS X then you can get the <i>exec-path-from-shell</i> package from <a href="http://www.marmalade-repo.org">Marmalade</a> or <a href="https://github.com/purcell/exec-path-from-shell">GitHub</a>. &lt;/p&gt;
+&lt;pre class="brush: plain; title: ; notranslate" title=""&gt;
+
+(defun set-exec-path-from-shell-PATH ()
+        (interactive)
+        (let ((path-from-shell (replace-regexp-in-string "^.*\n.*shell\n" "" (shell-command-to-string "$SHELL --login -i -c 'echo $PATH'"))))
+        (setenv "PATH" path-from-shell)
+        (setq exec-path (split-string path-from-shell path-separator))))
+
+(set-exec-path-from-shell-PATH)
+&lt;/pre&gt;
+&lt;/p&gt;&lt;/div&gt;
+&lt;/p&gt;&lt;/div&gt;
+&lt;div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"&gt;&lt;div class="sharedaddy sd-sharing-enabled"&gt;&lt;div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"&gt;&lt;h3 class="sd-title"&gt;Share this:&lt;/h3&gt;&lt;div class="sd-content"&gt;<ul><li><a href="http://samrelton.wordpress.com/2013/09/26/emacs-and-anaconda-python/?share=twitter" title="Click to share on Twitter">&lt;span&gt;Twitter&lt;/span&gt;</a></li><li><a href="http://samrelton.wordpress.com/2013/09/26/emacs-and-anaconda-python/?share=facebook" title="Share on Facebook">&lt;span&gt;Facebook&lt;/span&gt;</a></li><li><a href="http://samrelton.wordpress.com/2013/09/26/emacs-and-anaconda-python/?share=google-plus-1" title="Click to share on Google+">&lt;span&gt;Google&lt;/span&gt;</a></li><li></li></ul>&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded" id="like-post-wrapper-55161658-77-524b88a3a8175" data-src="//widgets.wp.com/likes/#blog_id=55161658&amp;amp;post_id=77&amp;amp;origin=samrelton.wordpress.com&amp;amp;obj_id=55161658-77-524b88a3a8175" data-name="like-post-frame-55161658-77-524b88a3a8175"&gt;&lt;h3 class="sd-title"&gt;Like this:&lt;/h3&gt;&lt;div class="post-likes-widget-placeholder" style="height:55px"&gt;&lt;span class="button"&gt;&lt;span&gt;Like&lt;/span&gt;&lt;/span&gt; &lt;span class="loading"&gt;Loading...&lt;/span&gt;&lt;/div&gt;&lt;span class="sd-text-color"&gt;&lt;/span&gt;<a></a>&lt;/div&gt;&lt;/div&gt;					&lt;/div&gt;
+		&lt;p class="tags"&gt;Tags: <a href="http://samrelton.wordpress.com/tag/linux/">Linux</a>, <a href="http://samrelton.wordpress.com/tag/emacs/">Emacs</a>, <a href="http://samrelton.wordpress.com/tag/python/">Python</a>, <a href="http://samrelton.wordpress.com/tag/elisp/">Elisp</a>, <a href="http://samrelton.wordpress.com/tag/ipython/">IPython</a>, <a href="http://samrelton.wordpress.com/tag/scientific-computing/">Scientific Computing</a>, <a href="http://samrelton.wordpress.com/tag/ubuntu/">Ubuntu</a>, <a href="http://samrelton.wordpress.com/tag/anaconda/">Anaconda</a>&lt;/p&gt;			&lt;div id="author-info" class="clearfix"&gt;
+		&lt;div id="author-avatar"&gt;
+			&lt;img alt="" src="http://1.gravatar.com/avatar/1b4930979a90117f81574d48e6cd420c?s=65&amp;amp;d=identicon&amp;amp;r=G" class="avatar avatar-65" height="65" width="65"/&gt;		&lt;/div&gt;
+		&lt;div id="author-description"&gt;
+			&lt;h4&gt;About Sam Relton&lt;/h4&gt;
+			PhD student at Manchester University, UK working in Numerical Linear Algebra. Also an amateur guitarist.			&lt;div id="author-link"&gt;
+				<a href="http://samrelton.wordpress.com/author/sdrelton/">
+					View all posts by Sam Relton &lt;span class="meta-nav"&gt;»&lt;/span&gt;				</a>
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="fix"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="fix"&gt;&lt;/div&gt;
+&lt;/div&gt;
+			&lt;div class="nav-entries"&gt;
+				&lt;div class="nav-prev fl"&gt;<a href="http://samrelton.wordpress.com/2013/09/16/emacs-and-python/">« Previous post</a>&lt;/div&gt;
+				&lt;div class="nav-next fr"&gt;&lt;/div&gt;
+				&lt;div class="fix"&gt;&lt;/div&gt;
+			&lt;/div&gt;
+
+				&lt;div id="comments"&gt;
+	
+	
+									&lt;div id="respond" class="comment-respond"&gt;
+				&lt;h3 id="reply-title" class="comment-reply-title"&gt;Leave a Reply &lt;small&gt;<a href="/2013/09/26/emacs-and-anaconda-python/#respond">Cancel reply</a>&lt;/small&gt;&lt;/h3&gt;
+									&lt;form action="http://samrelton.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form"&gt;
+																										
+
+
+												&lt;input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="52974e150c"/&gt;&lt;input type="hidden" name="_wp_http_referer" value="/2013/09/26/emacs-and-anaconda-python/"/&gt;
+&lt;input type="hidden" name="hc_post_as" id="hc_post_as" value="guest"/&gt;
+
+&lt;div class="comment-form-field comment-textarea"&gt;
+	&lt;label for="comment"&gt;Enter your comment here...&lt;/label&gt;
+	&lt;div id="comment-form-comment"&gt;&lt;textarea id="comment" name="comment" title="Enter your comment here..."&gt;&lt;/textarea&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="comment-form-identity"&gt;
+
+	&lt;div id="comment-form-nascar"&gt;
+		&lt;p&gt;Fill in your details below or click an icon to log in:&lt;/p&gt;
+		<ul>
+			<li>
+				<a href="#comment-form-guest" title="Guest">
+					&lt;span&gt;&lt;/span&gt;
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:WordPress.com" title="WordPress.com">
+					&lt;span&gt;&lt;/span&gt;
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Twitter" title="Twitter">
+					&lt;span&gt;&lt;/span&gt;
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Facebook" title="Facebook">
+					&lt;span&gt;&lt;/span&gt;
+				</a>
+			</li>
+			<li>
+			&lt;iframe id="googleplus-sign-in" name="googleplus-sign-in" src="https://public-api.wordpress.com/connect/?googleplus-sign-in=1" width="24" height="24" scrolling="no" allowtransparency="true" seamless="seamless" frameborder="0"&gt;&lt;/iframe&gt;
+			</li>
+		</ul>
+	&lt;/div&gt;
+
+	&lt;div id="comment-form-guest" class="comment-form-service selected"&gt;
+		&lt;div class="comment-form-padder"&gt;
+			&lt;div class="comment-form-avatar"&gt;
+<a href="https://gravatar.com/site/signup/">				&lt;img src="http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;amp;d=identicon&amp;amp;forcedefault=y&amp;amp;r=G" alt="Gravatar" width="25" class="no-grav"/&gt;
+</a>			&lt;/div&gt;
+
+				&lt;div class="comment-form-fields"&gt;
+				&lt;div class="comment-form-field comment-form-email"&gt;
+					&lt;label for="email"&gt;Email &lt;span class="required"&gt;(required)&lt;/span&gt; &lt;span class="nopublish"&gt;(Address never made public)&lt;/span&gt;&lt;/label&gt;
+					&lt;div class="comment-form-input"&gt;&lt;input id="email" name="email" type="email" value=""/&gt;&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class="comment-form-field comment-form-author"&gt;
+					&lt;label for="author"&gt;Name &lt;span class="required"&gt;(required)&lt;/span&gt;&lt;/label&gt;
+					&lt;div class="comment-form-input"&gt;&lt;input id="author" name="author" type="text" value=""/&gt;&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class="comment-form-field comment-form-url"&gt;
+					&lt;label for="url"&gt;Website&lt;/label&gt;
+					&lt;div class="comment-form-input"&gt;&lt;input id="url" name="url" type="text" value=""/&gt;&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+	
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div id="comment-form-wordpress" class="comment-form-service"&gt;
+		&lt;div class="comment-form-padder"&gt;
+			&lt;div class="comment-form-avatar"&gt;
+				&lt;img src="http://s2.wp.com/wp-content/mu-plugins/highlander-comments/images/wplogo.png?m=1289230950g" alt="WordPress.com Logo" width="25" class="no-grav"/&gt;
+			&lt;/div&gt;
+
+				&lt;div class="comment-form-fields"&gt;
+				&lt;input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value=""/&gt;
+				&lt;input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value=""/&gt;
+				&lt;input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value=""/&gt;
+				&lt;p class="comment-form-posting-as pa-wordpress"&gt;<strong></strong> You are commenting using your WordPress.com account. &lt;span class="comment-form-log-out"&gt;( <a>Log Out</a> / <a href="#">Change</a> )&lt;/span&gt;&lt;/p&gt;
+			&lt;/div&gt;
+	
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div id="comment-form-twitter" class="comment-form-service"&gt;
+		&lt;div class="comment-form-padder"&gt;
+			&lt;div class="comment-form-avatar"&gt;
+				&lt;img src="http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;amp;d=identicon&amp;amp;forcedefault=y&amp;amp;r=G" alt="Twitter picture" width="25" class="no-grav"/&gt;
+			&lt;/div&gt;
+
+				&lt;div class="comment-form-fields"&gt;
+				&lt;input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value=""/&gt;
+				&lt;input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value=""/&gt;
+				&lt;input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value=""/&gt;
+				&lt;p class="comment-form-posting-as pa-twitter"&gt;<strong></strong> You are commenting using your Twitter account. &lt;span class="comment-form-log-out"&gt;( <a>Log Out</a> / <a href="#">Change</a> )&lt;/span&gt;&lt;/p&gt;
+			&lt;/div&gt;
+	
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div id="comment-form-facebook" class="comment-form-service"&gt;
+		&lt;div class="comment-form-padder"&gt;
+			&lt;div class="comment-form-avatar"&gt;
+				&lt;img src="http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;amp;d=identicon&amp;amp;forcedefault=y&amp;amp;r=G" alt="Facebook photo" width="25" class="no-grav"/&gt;
+			&lt;/div&gt;
+
+				&lt;div class="comment-form-fields"&gt;
+				&lt;input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value=""/&gt;
+				&lt;input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value=""/&gt;
+				&lt;input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value=""/&gt;
+				&lt;p class="comment-form-posting-as pa-facebook"&gt;<strong></strong> You are commenting using your Facebook account. &lt;span class="comment-form-log-out"&gt;( <a>Log Out</a> / <a href="#">Change</a> )&lt;/span&gt;&lt;/p&gt;
+			&lt;/div&gt;
+	
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div id="comment-form-googleplus" class="comment-form-service"&gt;
+		&lt;div class="comment-form-padder"&gt;
+			&lt;div class="comment-form-avatar"&gt;
+				&lt;img src="http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;amp;d=identicon&amp;amp;forcedefault=y&amp;amp;r=G" alt="Google+ photo" width="25" class="no-grav"/&gt;
+			&lt;/div&gt;
+
+				&lt;div class="comment-form-fields"&gt;
+				&lt;input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value=""/&gt;
+				&lt;input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value=""/&gt;
+				&lt;input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value=""/&gt;
+				&lt;p class="comment-form-posting-as pa-googleplus"&gt;<strong></strong> You are commenting using your Google+ account. &lt;span class="comment-form-log-out"&gt;( <a>Log Out</a> / <a href="#">Change</a> )&lt;/span&gt;&lt;/p&gt;
+			&lt;/div&gt;
+	
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+
+	&lt;div id="comment-form-load-service" class="comment-form-service"&gt;
+		&lt;div class="comment-form-posting-as-cancel"&gt;<a>Cancel</a>&lt;/div&gt;
+		&lt;p&gt;Connecting to %s&lt;/p&gt;
+	&lt;/div&gt;
+
+	
+&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+&lt;/script&gt;
+
+&lt;div id="comment-form-subscribe"&gt;
+	&lt;p class="comment-subscription-form"&gt;&lt;input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" tabindex="6"/&gt; &lt;label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;"&gt;Notify me of follow-up comments via email.&lt;/label&gt;&lt;/p&gt;&lt;p class="post-subscription-form"&gt;&lt;input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto;" tabindex="7"/&gt; &lt;label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog" style="display: inline;"&gt;Notify me of new posts via email.&lt;/label&gt;&lt;/p&gt;&lt;/div&gt;
+
+												&lt;p class="form-submit"&gt;
+							&lt;input name="submit" type="submit" id="comment-submit" value="Post Comment"/&gt;
+							&lt;input type="hidden" name="comment_post_ID" value="77" id="comment_post_ID"/&gt;
+&lt;input type="hidden" name="comment_parent" id="comment_parent" value="0"/&gt;
+						&lt;/p&gt;
+						
+&lt;input type="hidden" name="genseq" value="1380681891"/&gt;
+&lt;p style="display: none;"&gt;&lt;input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="b41dd1118d"/&gt;&lt;/p&gt;&lt;script type="text/javascript" src="http://s2.wp.com/wp-content/mu-plugins/akismet-2.5/form.js?m=1308783962g"&gt;&lt;/script&gt;
+&lt;p style="display: none;"&gt;&lt;input type="hidden" id="ak_js" name="ak_js" value="175"/&gt;&lt;/p&gt;					&lt;/form&gt;
+							&lt;/div&gt;
+			&lt;div style="clear: both"&gt;&lt;/div&gt;			
+&lt;/div&gt;
+				&lt;/div&gt;
+
+	&lt;div id="sidebar" class="col-right"&gt;
+		&lt;div id="search-2" class="widget widget_search"&gt;&lt;form role="search" method="get" id="searchform" class="searchform" action="http://samrelton.wordpress.com/"&gt;
+				&lt;div&gt;
+					&lt;label class="screen-reader-text" for="s"&gt;Search for:&lt;/label&gt;
+					&lt;input type="text" value="" name="s" id="s"/&gt;
+					&lt;input type="submit" id="searchsubmit" value="Search"/&gt;
+				&lt;/div&gt;
+			&lt;/form&gt;&lt;/div&gt;&lt;div id="categories-4" class="widget widget_categories"&gt;&lt;h3&gt;Categories&lt;/h3&gt;		<ul>
+	<li><a href="http://samrelton.wordpress.com/category/computing/" title="Posts on programming, linux and related things.">Computing</a> (3)
+</li>
+	<li><a href="http://samrelton.wordpress.com/category/guitar/" title="Posts relating to guitars, pedals, amps and music software.">Guitar</a> (1)
+</li>
+	<li><a href="http://samrelton.wordpress.com/category/maths/" title="Interesting formulae and discussion of conferences, papers etc.">Maths</a> (1)
+</li>
+		</ul>
+&lt;/div&gt;		&lt;div id="recent-posts-2" class="widget widget_recent_entries"&gt;		&lt;h3&gt;Recent Posts&lt;/h3&gt;		<ul>
+					<li>
+				<a href="http://samrelton.wordpress.com/2013/09/26/emacs-and-anaconda-python/" title="Emacs and Anaconda Python">Emacs and Anaconda Python</a>
+						</li>
+					<li>
+				<a href="http://samrelton.wordpress.com/2013/09/16/emacs-and-python/" title="Emacs and Python">Emacs and Python</a>
+						</li>
+					<li>
+				<a href="http://samrelton.wordpress.com/2013/08/29/modding-the-crybaby/" title="Modding the Crybaby">Modding the Crybaby</a>
+						</li>
+					<li>
+				<a href="http://samrelton.wordpress.com/2013/08/03/g2s3/" title="G2S3 Fudan University, Shanghai">G2S3 Fudan University, Shanghai</a>
+						</li>
+					<li>
+				<a href="http://samrelton.wordpress.com/2013/07/17/august-lp107t-driver-linux/" title="Fixing the August LP107T presentation pointer in Linux.">Fixing the August LP107T presentation pointer in Linux.</a>
+						</li>
+				</ul>
+		&lt;/div&gt;&lt;div id="twitter_timeline-2" class="widget widget_twitter_timeline"&gt;&lt;h3&gt;Twitter&lt;/h3&gt;<a>My Tweets</a>&lt;/div&gt;&lt;/div&gt;
+	&lt;/div&gt;
+
+
+	
+	&lt;div id="footer"&gt;
+		&lt;div class="footer-inside"&gt;
+			&lt;div id="copyright" class="col-left"&gt;
+				&lt;p&gt;<a href="http://samrelton.wordpress.com/" title="Sam Relton's Blog">Sam Relton's Blog</a>&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div id="credit" class="col-right"&gt;
+				&lt;p&gt;<a href="http://wordpress.com/?ref=footer">Blog at WordPress.com</a>. <a href="http://theme.wordpress.com/themes/skeptical/" title="Learn more about this theme">The Skeptical Theme</a>. &lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class="fix"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;
+var _qevents = _qevents || [], wpcomQuantcastData = {"qacct":"p-18-mFEk4J448M","labels":",language.en,type.wpcom,posttag.linux,posttag.emacs,posttag.python,posttag.elisp,posttag.ipython,posttag.scientific-computing,posttag.ubuntu,posttag.anaconda"};
+function wpcomQuantcastPixel( labels, options ) {
+	var i, defaults = wpcomQuantcastData, data = { event: 'ajax' };
+
+	labels  = labels  || '';
+	options = options || {};
+
+	if ( typeof labels != 'string' )
+		options = labels;
+
+	for ( i in defaults ) {
+		data[i] = defaults[i];
+	}
+
+	for ( i in options ) {
+		data[i] = options[i];
+	}
+
+	if ( data.labels ) {
+		data.labels += ',' + labels;
+	} else {
+		data.labels = labels;
+	}
+
+	_qevents.push( data );
+};
+(function() {var elem = document.createElement('script');elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";elem.async = true;elem.type = "text/javascript";var scpt = document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem, scpt);  })();
+_qevents.push( wpcomQuantcastData );
+&lt;/script&gt;
+&lt;noscript&gt;&lt;div style="display: none;"&gt;&lt;img src="//pixel.quantserve.com/pixel/p-18-mFEk4J448M.gif?labels=%2Clanguage.en%2Ctype.wpcom%2Cposttag.linux%2Cposttag.emacs%2Cposttag.python%2Cposttag.elisp%2Cposttag.ipython%2Cposttag.scientific-computing%2Cposttag.ubuntu%2Cposttag.anaconda" height="1" width="1" alt=""/&gt;&lt;/div&gt;&lt;/noscript&gt;
+
+&lt;script type="text/javascript" src="//0.gravatar.com/js/gprofiles.js?ver=201340ae"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+/*  */
+&lt;/script&gt;
+&lt;script type="text/javascript" src="http://s2.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781g"&gt;&lt;/script&gt;
+
+	&lt;script&gt;
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	&lt;/script&gt;
+
+		&lt;div style="display:none"&gt;
+	&lt;div class="grofile-hash-map-1b4930979a90117f81574d48e6cd420c"&gt;
+	&lt;/div&gt;
+	&lt;/div&gt;
+&lt;script type="text/javascript"&gt;
+/*  */
+&lt;/script&gt;
+&lt;script type="text/javascript" src="http://s1.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1379020420j"&gt;&lt;/script&gt;
+
+	&lt;div id="bit" class="loggedout-follow-normal"&gt;
+		<a>&lt;span id="bsub-text"&gt;Follow&lt;/span&gt;</a>
+		&lt;div id="bitsubscribe"&gt;
+
+					&lt;h3&gt;&lt;label for="loggedout-follow-field"&gt;Follow “Sam Relton's Blog”&lt;/label&gt;&lt;/h3&gt;
+
+			&lt;form action="https://subscribe.wordpress.com" method="post" accept-charset="utf-8" id="loggedout-follow"&gt;
+			&lt;p&gt;Get every new post delivered to your Inbox.&lt;/p&gt;
+
+			&lt;p id="loggedout-follow-error" style="display: none;"&gt;&lt;/p&gt;
+
+			
+			&lt;p&gt;&lt;input type="email" name="email" style="width: 95%; padding: 1px 2px" value="Enter your email address" onfocus="this.value=(this.value=="Enter your email address") ? "" : this.value;" onblur="this.value=(this.value=="") ? "Enter email address" : this.value;" id="loggedout-follow-field"/&gt;&lt;/p&gt;
+
+			&lt;input type="hidden" name="action" value="subscribe"/&gt;
+			&lt;input type="hidden" name="blog_id" value="55161658"/&gt;
+			&lt;input type="hidden" name="source" value="http://samrelton.wordpress.com/2013/09/26/emacs-and-anaconda-python/"/&gt;
+			&lt;input type="hidden" name="sub-type" value="loggedout-follow"/&gt;
+
+			&lt;input type="hidden" id="_wpnonce" name="_wpnonce" value="f5b6706fd6"/&gt;&lt;input type="hidden" name="_wp_http_referer" value="/2013/09/26/emacs-and-anaconda-python/"/&gt;
+			&lt;p id="bsub-subscribe-button"&gt;&lt;input type="submit" value="Sign me up"/&gt;&lt;/p&gt;
+			&lt;/form&gt;
+					&lt;div id="bsub-credit"&gt;<a href="http://wordpress.com/signup/?ref=lof">Powered by WordPress.com</a>&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;script type="text/javascript"&gt;
+		WPCOM_sharing_counts = {"http:\/\/samrelton.wordpress.com\/2013\/09\/26\/emacs-and-anaconda-python\/":77}	&lt;/script&gt;
+		&lt;script type="text/javascript"&gt;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		&lt;/script&gt;
+				&lt;script type="text/javascript"&gt;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		&lt;/script&gt;
+				&lt;script type="text/javascript"&gt;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-google-plus-1' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+		});
+		&lt;/script&gt;
+				&lt;iframe src="http://widgets.wp.com/likes/master.html?ver=20130620a#ver=20130620a&amp;amp;mp6=1" scrolling="no" id="likes-master" name="likes-master" style="display:none;"&gt;&lt;/iframe&gt;
+		&lt;div id="likes-other-gravatars"&gt;&lt;div class="likes-text"&gt;&lt;span&gt;%d&lt;/span&gt; bloggers like this:&lt;/div&gt;<ul></ul>&lt;/div&gt;
+		&lt;script type="text/javascript"&gt;
+		// 0 ) {
+							JetpackLikespostMessage( { event: 'adminBarEnabled' }, window.frames[ 'likes-master' ] );
+
+							stylesData.adminBarStyles = {
+								background: jQuery( '#wpadminbar .quicklinks li#wp-admin-bar-wpl-like &gt; a' ).css( 'background' )
+							};
+						}
+
+						if ( !window.addEventListener )
+							jQuery( '#wp-admin-bar-admin-bar-likes-widget' ).hide();
+
+						stylesData.textStyles = {
+							color: jQuery( '.sd-text-color').css( 'color' ),
+							fontFamily: jQuery( '.sd-text-color' ).css( 'font-family' ),
+							fontSize: jQuery( '.sd-text-color' ).css( 'font-size' ),
+							direction: jQuery( '.sd-text-color' ).css( 'direction' ),
+							fontWeight: jQuery( '.sd-text-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-text-color' ).css( 'font-style' ),
+							textDecoration: jQuery( '.sd-text-color' ).css('text-decoration')
+						};
+
+						stylesData.linkStyles = {
+							color: jQuery( '.sd-link-color' ).css('color'),
+							fontFamily: jQuery( '.sd-link-color' ).css('font-family'),
+							fontSize: jQuery( '.sd-link-color' ).css('font-size'),
+							textDecoration: jQuery( '.sd-link-color' ).css('text-decoration'),
+							fontWeight: jQuery( '.sd-link-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-link-color' ).css( 'font-style' )
+						};
+
+						JetpackLikespostMessage( stylesData, window.frames[ 'likes-master' ] );
+
+						var requests = [];
+						jQuery( '.jetpack-likes-widget-wrapper' ).each( function( i ) {
+							var regex = /like-(post|comment)-wrapper-(\d+)-(\d+)-(\w+)/;
+							var match = regex.exec( this.id );
+							if ( ! match || match.length != 5 )
+								return;
+
+							var info = {
+								blog_id: match[2],
+								width:   this.width
+							};
+
+							if ( 'post' == match[1] ) {
+								info.post_id = match[3];
+							} else if ( 'comment' == match[1] ) {
+								info.comment_id = match[3];
+							}
+
+							info.obj_id = match[4];
+
+							requests.push( info );
+						});
+
+						JetpackLikespostMessage( { event: 'initialBatch', requests: requests }, window.frames['likes-master'] );
+
+						jQuery( document ).on( 'inview', 'div.jetpack-likes-widget-unloaded', function() {
+							jetpackLikesWidgetQueue.push( this.id );
+						});
+					});
+				}
+
+				if ( 'showLikeWidget' == event.event ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 10 );
+					jQuery( '#' + event.id + ' .post-likes-widget-placeholder'  ).fadeOut( 'fast', function() {
+						jQuery( '#' + event.id + ' .post-likes-widget' ).fadeIn( 'fast', function() {
+							JetpackLikespostMessage( { event: 'likeWidgetDisplayed', blog_id: event.blog_id, post_id: event.post_id, obj_id: event.obj_id }, window.frames['likes-master'] );
+						});
+					});
+				}
+
+				if ( 'showOtherGravatars' == event.event ) {
+					var $container = jQuery( '#likes-other-gravatars' );
+					var $list = $container.find( 'ul' );
+
+					$container.hide();
+					$list.html( '' );
+
+					$container.find( '.likes-text span' ).text( event.total );
+
+					jQuery.each( event.likers, function( i, liker ) {
+						$list.append( '<li><a href="' + liker.profile_URL + '">&lt;img src="' + liker.avatar_URL + '" alt="' + liker.name + '" width="30" height="30" style="padding-right: 3px;"/&gt;</a></li>');
+					} );
+
+					var offset = jQuery( "[name='" + event.parent + "']" ).offset();
+
+					$container.css( 'left', offset.left + event.position.left - 10 + 'px' );
+					$container.css( 'top', offset.top + event.position.top - 33 + 'px' );
+
+					var rowLength = Math.floor( event.width / 37 );
+					var height = ( Math.ceil( event.likers.length / rowLength ) * 37 ) + 13;
+					if ( height &gt; 204 ) {
+						height = 204;
+					}
+
+					$container.css( 'height', height + 'px' );
+					$container.css( 'width', rowLength * 37 - 7 + 'px' );
+
+					$list.css( 'width', rowLength * 37 + 'px' );
+
+					$container.fadeIn( 'slow' );
+
+					var scrollbarWidth = $list[0].offsetWidth - $list[0].clientWidth;
+					if ( scrollbarWidth &gt; 0 ) {
+						$container.width( $container.width() + scrollbarWidth );
+						$list.width( $list.width() + scrollbarWidth );
+					}
+				}
+			}
+
+			pm.bind( 'likesMessage', function(e) { JetpackLikesMessageListener(e); } );
+
+			jQuery( document ).click( function( e ) {
+				var $container = jQuery( '#likes-other-gravatars' );
+
+				if ( $container.has( e.target ).length === 0 ) {
+					$container.fadeOut( 'slow' );
+				}
+			});
+
+			function JetpackLikesWidgetQueueHandler() {
+				var wrapperID;
+				if ( ! jetpackLikesMasterReady ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+					return;
+				}
+
+				if ( jetpackLikesWidgetQueue.length &gt; 0 ) {
+					// We may have a widget that needs creating now
+					var found = false;
+					while( jetpackLikesWidgetQueue.length &gt; 0 ) {
+						// Grab the first member of the queue that isn't already loading.
+						wrapperID = jetpackLikesWidgetQueue.splice( 0, 1 )[0];
+						if ( jQuery( '#' + wrapperID ).hasClass( 'jetpack-likes-widget-unloaded' ) ) {
+							found = true;
+							break;
+						}
+					}
+					if ( ! found ) {
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				} else if ( jQuery( 'div.jetpack-likes-widget-unloaded' ).length &gt; 0 ) {
+					// Get the next unloaded widget
+					wrapperID = jQuery( 'div.jetpack-likes-widget-unloaded' ).first()[0].id;
+					if ( ! wrapperID ) {
+						// Everything is currently loaded
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				}
+
+				var $wrapper = jQuery( '#' + wrapperID );
+				$wrapper.find( 'iframe' ).remove();
+
+				if ( $wrapper.hasClass( 'slim-likes-widget' ) ) {
+					$wrapper.find( '.post-likes-widget-placeholder' ).after( "&lt;iframe class="post-likes-widget jetpack-likes-widget" name="" + $wrapper.data( " name'="" )="" +="" "'="" height="22px" width="68px" frameborder="0" scrolling="no" src="" + $wrapper.data( " src'="" )="" +="" "'=""&gt;&lt;/iframe&gt;" );
+				} else {
+					$wrapper.find( '.post-likes-widget-placeholder' ).after( "&lt;iframe class="post-likes-widget jetpack-likes-widget" name="" + $wrapper.data( " name'="" )="" +="" "'="" height="55px" width="100%" frameborder="0" src="" + $wrapper.data( " src'="" )="" +="" "'=""&gt;&lt;/iframe&gt;" );
+				}
+
+				$wrapper.removeClass( 'jetpack-likes-widget-unloaded' ).addClass( 'jetpack-likes-widget-loading' );
+
+				$wrapper.find( 'iframe' ).load( function( e ) {
+					var $iframe = jQuery( e.target );
+					$wrapper.removeClass( 'jetpack-likes-widget-loading' ).addClass( 'jetpack-likes-widget-loaded' );
+
+					JetpackLikespostMessage( { event: 'loadLikeWidget', name: $iframe.attr( 'name' ), width: $iframe.width() }, window.frames[ 'likes-master' ] );
+
+					if ( $wrapper.hasClass( 'slim-likes-widget' ) ) {
+						$wrapper.find( 'iframe' ).Jetpack( 'resizeable' );
+					}
+				});
+				setTimeout( JetpackLikesWidgetQueueHandler, 250 );
+			}
+			JetpackLikesWidgetQueueHandler();
+		//]]&gt;
+		&lt;/script&gt;
+&lt;script type="text/javascript" src="http://s2.wp.com/_static/??-eJzTLy/QTc7PK0nNK9EvyClNz8wr1i+uzCtJrMjITM/IAeKS1CJMEWP94uSizIISoOIM5/yiVL2sYh19yo1yKiotzgjISczMAxpon2traGxmbGxgYmJokgUAFJNAbg=="&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://s0.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?m=1370811927g&amp;ver=3.0.83c";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://s0.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?m=1363304414g&amp;ver=3.0.83c";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+&lt;/script&gt;
+&lt;script type="text/javascript" src="//platform.twitter.com/widgets.js?ver=3.7-alpha-25157"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+/*  */
+&lt;/script&gt;
+&lt;script type="text/javascript" src="http://s2.wp.com/_static/??/wp-content/js/devicepx.js,/wp-content/mu-plugins/post-flair/sharing/sharing.js?m=1373391538j"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+// 
+&lt;/script&gt;&lt;script src="http://s.stats.wordpress.com/w.js?21" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+st_go({'blog':'55161658','v':'wpcom','tz':'1','user_id':'0','post':'77','subd':'samrelton'});
+ex_go({'crypt':'UE40eW5QN0p8M2Y/RE1mJVY3bm9aR3VCbS9mWm1pRyZuJS1LX1t5QmRXZzE3RC9rQWZHK1FjbDltdWdaMVFFZTcxUGVHLWR0WTJodCw/S1B1akF0alsrT09+OVRxZ0V3fDIzRF1La35QWzRUZnJGdDVfaTcmPUN5WTg2WVc9X180Ky8wM2x0Jm1WJmdTUXxdcDk/VktzP1FVZFtVZU1rMjFlaD1RQkFubT9ZdTNZTTBzYltldFRvdGJbSDZZcF1JLCtlT3VuTUhwMWhRbmZmOC02LE9BeVNocFQ4U0dyMzZTbG81VUpsQWlNei1bJjdBd2hMeWVqQ3pFWS41bjAvQS5PYWNheDNv'});
+addLoadEvent(function(){linktracker_init('55161658',77);});
+	&lt;/script&gt;
+&lt;noscript&gt;&lt;img src="http://stats.wordpress.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt=""/&gt;&lt;/noscript&gt;
+&lt;script&gt;
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&amp;x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&amp;x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&amp;x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//stats.wordpress.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&amp;baba=' + Math.random();
+	}
+	
+}
+&lt;/script&gt;&lt;/body&gt;
+&lt;/html&gt;

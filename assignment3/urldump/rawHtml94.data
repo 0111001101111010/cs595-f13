@@ -1,0 +1,888 @@
+
+
+
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>makaroni4/sandi_meter · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <link rel="logo" type="image/svg" href="https://github-media-downloads.s3.amazonaws.com/github-logo.svg" />
+    <meta property="og:image" content="https://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png">
+    <meta name="hostname" content="github-fe126-cp1-prd.iad.github.net">
+    <meta name="ruby" content="ruby 1.9.3p194-tcs-github-tcmalloc (2012-05-25, TCS patched 2012-05-27, GitHub v1.0.36) [x86_64-linux]">
+    <link rel="assets" href="https://github.global.ssl.fastly.net/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035/">
+    <link rel="xhr-socket" href="/_sockets" />
+    
+
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="selected-link" value="repo_source" data-pjax-transient />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="62B7E559:34F2:273C718:524B88D0" name="octolytics-dimension-request_id" />
+    
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="/1ZCC8oJEUTMBo8gD5TpqI+wplPhe94QHx+Xk65CKkU=" name="csrf-token" />
+
+    <link href="https://github.global.ssl.fastly.net/assets/github-ae794206d0e4e8a84619ca476b2b906ec038d487.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://github.global.ssl.fastly.net/assets/github2-4e9347ae8f53d7710a27ba7dfdfb83229471a306.css" media="all" rel="stylesheet" type="text/css" />
+    
+
+    
+
+      <script src="https://github.global.ssl.fastly.net/assets/frameworks-4e5aeedcc7a86dcff8294cb84644a333b46202a2.js" type="text/javascript"></script>
+      <script src="https://github.global.ssl.fastly.net/assets/github-d7ac31eea49e88b740350eb21b88f43c6d4762e4.js" type="text/javascript"></script>
+      
+      <meta http-equiv="x-pjax-version" content="ccb4657696f961d39751d7d8046a072a">
+
+        <meta property="og:title" content="sandi_meter"/>
+  <meta property="og:type" content="githubog:gitrepository"/>
+  <meta property="og:url" content="https://github.com/makaroni4/sandi_meter"/>
+  <meta property="og:image" content="https://github.global.ssl.fastly.net/images/gravatars/gravatar-user-420.png"/>
+  <meta property="og:site_name" content="GitHub"/>
+  <meta property="og:description" content="sandi_meter - Static analysis tool for checking Ruby code for Sandi Metz&#39; rules."/>
+
+  <meta name="description" content="sandi_meter - Static analysis tool for checking Ruby code for Sandi Metz&#39; rules." />
+
+  <meta content="768070" name="octolytics-dimension-user_id" /><meta content="makaroni4" name="octolytics-dimension-user_login" /><meta content="12837929" name="octolytics-dimension-repository_id" /><meta content="makaroni4/sandi_meter" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="12837929" name="octolytics-dimension-repository_network_root_id" /><meta content="makaroni4/sandi_meter" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/makaroni4/sandi_meter/commits/master.atom" rel="alternate" title="Recent Commits to sandi_meter:master" type="application/atom+xml" />
+
+  </head>
+
+
+  <body class="logged_out  env-production  vis-public">
+    <div class="wrapper">
+      
+      
+      
+
+
+      
+      <div class="header header-logged-out">
+  <div class="container clearfix">
+
+    <a class="header-logo-wordmark" href="https://github.com/">
+      <span class="mega-octicon octicon-logo-github"></span>
+    </a>
+
+    <div class="header-actions">
+        <a class="button primary" href="/signup">Sign up</a>
+      <a class="button signin" href="/login?return_to=%2Fmakaroni4%2Fsandi_meter">Sign in</a>
+    </div>
+
+    <div class="command-bar js-command-bar  in-repository">
+
+      <ul class="top-nav">
+          <li class="explore"><a href="/explore">Explore</a></li>
+        <li class="features"><a href="/features">Features</a></li>
+          <li class="enterprise"><a href="https://enterprise.github.com/">Enterprise</a></li>
+          <li class="blog"><a href="/blog">Blog</a></li>
+      </ul>
+        <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
+
+<input type="text" data-hotkey="/ s" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
+    
+    
+      data-repo="makaroni4/sandi_meter"
+      data-branch="master"
+      data-sha="6111715e563fb0be52b551f539affb8608ab958a"
+  >
+
+    <input type="hidden" name="nwo" value="makaroni4/sandi_meter" />
+
+    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
+      <span class="minibutton select-menu-button js-menu-target">
+        <span class="js-select-button">This repository</span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container">
+        <div class="select-menu-modal">
+
+          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked" />
+            <div class="select-menu-item-text js-select-button-text">This repository</div>
+          </div> <!-- /.select-menu-item -->
+
+          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" name="search_target" value="global" />
+            <div class="select-menu-item-text js-select-button-text">All repositories</div>
+          </div> <!-- /.select-menu-item -->
+
+        </div>
+      </div>
+    </div>
+
+  <span class="octicon help tooltipped downwards" title="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+
+  <input type="hidden" name="ref" value="cmdform">
+
+</form>
+    </div>
+
+  </div>
+</div>
+
+
+      
+
+
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+
+<ul class="pagehead-actions">
+
+
+  <li>
+  <a href="/login?return_to=%2Fmakaroni4%2Fsandi_meter"
+  class="minibutton with-count js-toggler-target star-button entice tooltipped upwards"
+  title="You must be signed in to use this feature" rel="nofollow">
+  <span class="octicon octicon-star"></span>Star
+</a>
+<a class="social-count js-social-count" href="/makaroni4/sandi_meter/stargazers">
+  148
+</a>
+
+  </li>
+
+    <li>
+      <a href="/login?return_to=%2Fmakaroni4%2Fsandi_meter"
+        class="minibutton with-count js-toggler-target fork-button entice tooltipped upwards"
+        title="You must be signed in to fork a repository" rel="nofollow">
+        <span class="octicon octicon-git-branch"></span>Fork
+      </a>
+      <a href="/makaroni4/sandi_meter/network" class="social-count">
+        8
+      </a>
+    </li>
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="repo-label"><span>public</span></span>
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author">
+            <a href="/makaroni4" class="url fn" itemprop="url" rel="author"><span itemprop="title">makaroni4</span></a></span
+          ><span class="repohead-name-divider">/</span><strong
+          ><a href="/makaroni4/sandi_meter" class="js-current-repository js-repo-home-link">sandi_meter</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="Octocat-spinner-32" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+
+      <div class="repository-with-sidebar repo-container with-full-navigation">
+
+        <div class="repository-sidebar">
+            
+
+<div class="repo-nav repo-nav-full js-repository-container-pjax js-octicon-loaders">
+  <div class="repo-nav-contents">
+    <ul class="repo-menu">
+      <li class="tooltipped leftwards" title="Code">
+        <a href="/makaroni4/sandi_meter" aria-label="Code" class="js-selected-navigation-item selected" data-gotokey="c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_tags repo_branches /makaroni4/sandi_meter">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+        <li class="tooltipped leftwards" title="Issues">
+          <a href="/makaroni4/sandi_meter/issues" aria-label="Issues" class="js-selected-navigation-item js-disable-pjax" data-gotokey="i" data-selected-links="repo_issues /makaroni4/sandi_meter/issues">
+            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+            <span class='counter'>3</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+
+      <li class="tooltipped leftwards" title="Pull Requests"><a href="/makaroni4/sandi_meter/pulls" aria-label="Pull Requests" class="js-selected-navigation-item js-disable-pjax" data-gotokey="p" data-selected-links="repo_pulls /makaroni4/sandi_meter/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class='counter'>1</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+
+    </ul>
+    <div class="repo-menu-separator"></div>
+    <ul class="repo-menu">
+
+      <li class="tooltipped leftwards" title="Pulse">
+        <a href="/makaroni4/sandi_meter/pulse" aria-label="Pulse" class="js-selected-navigation-item " data-pjax="true" data-selected-links="pulse /makaroni4/sandi_meter/pulse">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" title="Graphs">
+        <a href="/makaroni4/sandi_meter/graphs" aria-label="Graphs" class="js-selected-navigation-item " data-pjax="true" data-selected-links="repo_graphs repo_contributors /makaroni4/sandi_meter/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" title="Network">
+        <a href="/makaroni4/sandi_meter/network" aria-label="Network" class="js-selected-navigation-item js-disable-pjax" data-selected-links="repo_network /makaroni4/sandi_meter/network">
+          <span class="octicon octicon-git-branch"></span> <span class="full-word">Network</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+            <div class="only-with-full-nav">
+              
+
+  
+
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/makaroni4/sandi_meter.git" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/makaroni4/sandi_meter.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><strong>Subversion</strong> checkout URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/makaroni4/sandi_meter" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/makaroni4/sandi_meter" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>,
+      or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <span class="octicon help tooltipped upwards" title="Get help on which URL is right for you.">
+    <a href="https://help.github.com/articles/which-remote-url-should-i-use">
+    <span class="octicon octicon-question"></span>
+    </a>
+  </span>
+</p>
+
+
+
+              <a href="/makaroni4/sandi_meter/archive/master.zip"
+                 class="minibutton sidebar-button"
+                 title="Download this repository as a zip file"
+                 rel="nofollow">
+                <span class="octicon octicon-cloud-download"></span>
+                Download ZIP
+              </a>
+            </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+          
+<div class="js-info-carrier" data-show-full-navigation="yes"></div>
+
+<div class="repository-meta js-details-container ">
+    <div class="repository-description js-details-show">
+      <p>Static analysis tool for checking Ruby code for Sandi Metz' rules.</p>
+    </div>
+
+    <div class="repository-website js-details-show">
+      <p><a href="https://rubygems.org/gems/sandi_meter" rel="nofollow">https://rubygems.org/gems/sandi_meter</a></p>
+    </div>
+
+
+</div>
+
+<div class="capped-box overall-summary ">
+
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax href="/makaroni4/sandi_meter/commits/master">
+          <span class="num">
+            <span class="octicon octicon-history"></span>
+            55
+          </span>
+          commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax href="/makaroni4/sandi_meter/branches">
+          <span class="num">
+            <span class="octicon octicon-git-branch"></span>
+            2
+          </span>
+          branches
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax href="/makaroni4/sandi_meter/releases">
+          <span class="num">
+            <span class="octicon octicon-tag"></span>
+            6
+          </span>
+          releases
+        </a>
+      </li>
+
+      <li>
+          <a href="/makaroni4/sandi_meter/contributors" class="js-deferred-content" data-url="/makaroni4/sandi_meter/contributors_size">
+            <span class="num">
+              <span class="octicon octicon-organization"></span>
+            </span>
+            Fetching contributors
+          </a>
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="/makaroni4/sandi_meter/search?l=ruby">
+                <span class="color-block language-color" style="background-color:#701516;"></span>
+                <span class="lang">Ruby</span>
+                <span class="percent">74.9%</span>
+              </a>
+          </li>
+          <li>
+              <a href="/makaroni4/sandi_meter/search?l=css">
+                <span class="color-block language-color" style="background-color:#1f085e;"></span>
+                <span class="lang">CSS</span>
+                <span class="percent">20.1%</span>
+              </a>
+          </li>
+          <li>
+              <a href="/makaroni4/sandi_meter/search?l=javascript">
+                <span class="color-block language-color" style="background-color:#f15501;"></span>
+                <span class="lang">JavaScript</span>
+                <span class="percent">5.0%</span>
+              </a>
+          </li>
+        </ol>
+      </div>
+  </div>
+
+</div>
+
+  <a href="#"
+     class="repository-lang-stats-graph js-toggle-lang-stats tooltipped downwards"
+     title="Show language statistics"
+     style="background-color:#f15501">
+  <span class="language-color" style="width:74.9%; background-color:#701516;" itemprop="keywords">Ruby</span><span class="language-color" style="width:20.1%; background-color:#1f085e;" itemprop="keywords">CSS</span><span class="language-color" style="width:5.0%; background-color:#f15501;" itemprop="keywords">JavaScript</span>
+  </a>
+
+
+
+<div class="file-navigation in-mid-page">
+    <a href="/makaroni4/sandi_meter/compare" aria-label="Compare, review, create a pull request" class="minibutton compact primary tooltipped downwards" title="Compare &amp; review" data-pjax>
+      <span class="octicon octicon-git-compare"></span>
+    </a>
+
+  
+
+
+<div class="select-menu js-menu-container js-select-menu" >
+  <span class="minibutton select-menu-button js-menu-target" data-hotkey="w"
+    data-master-branch="master"
+    data-ref="master"
+    role="button" aria-label="Switch branches or tags" tabindex="0">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-remove-close js-menu-close"></span>
+      </div> <!-- /.select-menu-header -->
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div><!-- /.select-menu-tabs -->
+      </div><!-- /.select-menu-filters -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/makaroni4/sandi_meter/tree/feature/details"
+                 data-name="feature/details"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="feature/details">feature/details</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item selected">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/makaroni4/sandi_meter/tree/master"
+                 data-name="master"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="master">master</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/makaroni4/sandi_meter/tree/v0.0.6"
+                 data-name="v0.0.6"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.0.6">v0.0.6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/makaroni4/sandi_meter/tree/v0.0.5"
+                 data-name="v0.0.5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.0.5">v0.0.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/makaroni4/sandi_meter/tree/v0.0.4"
+                 data-name="v0.0.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.0.4">v0.0.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/makaroni4/sandi_meter/tree/v0.0.3"
+                 data-name="v0.0.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.0.3">v0.0.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/makaroni4/sandi_meter/tree/v0.0.2"
+                 data-name="v0.0.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.0.2">v0.0.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/makaroni4/sandi_meter/tree/v0.0.1"
+                 data-name="v0.0.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.0.1">v0.0.1</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+    </div> <!-- /.select-menu-modal -->
+  </div> <!-- /.select-menu-modal-holder -->
+</div> <!-- /.select-menu -->
+
+
+  <div class="breadcrumb"><span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/makaroni4/sandi_meter" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">sandi_meter</span></a></span></span><span class="separator"> / </span><form action="/login?return_to=%2Fmakaroni4%2Fsandi_meter" class="js-new-blob-form tooltipped rightwards new-file-link" method="post" title="Sign in to make or propose changes"><span aria-label="Sign in to make or propose changes" class="js-new-blob-submit octicon octicon-file-add" data-test-id="create-new-git-file" role="button"></span></form></div>
+</div>
+
+
+
+<a href="/makaroni4/sandi_meter/find/master"
+  data-hotkey="t" class="js-show-file-finder" style="display:none" data-pjax>Show File Finder</a>
+<div class="bubble files-bubble">
+  <table class="files" data-pjax>
+    <thead>
+
+
+  <div class="commit commit-tease js-details-container" >
+    <p class="commit-title ">
+        <a href="/makaroni4/sandi_meter/commit/2018ce713460999bbb30b7010d85ce726af09e2e" class="message" data-pjax="true" title="Merge pull request #11 from DNNX/master
+
+Fixing a typo: missindented -&gt; misindented">Merge pull request</a> <a href="https://github.com/makaroni4/sandi_meter/pull/11" class="issue-link" title="Fixing a typo: missindented -&gt; misindented">#11</a> <a href="/makaroni4/sandi_meter/commit/2018ce713460999bbb30b7010d85ce726af09e2e" class="message" data-pjax="true" title="Merge pull request #11 from DNNX/master
+
+Fixing a typo: missindented -&gt; misindented">from DNNX/master</a>
+        <span class="hidden-text-expander inline"><a href="#" class="js-details-target">…</a></span>
+    </p>
+      <div class="commit-desc"><pre>Fixing a typo: missindented -&gt; misindented</pre></div>
+    <div class="commit-meta">
+      <span class="js-zeroclipboard zeroclipboard-link" data-clipboard-text="2018ce713460999bbb30b7010d85ce726af09e2e" data-copied-hint="copied!" title="Copy SHA"><span class="octicon octicon-clippy"></span></span>
+      <a href="/makaroni4/sandi_meter/commit/2018ce713460999bbb30b7010d85ce726af09e2e" class="sha-block" data-pjax>latest commit <span class="sha">2018ce7134</span></a>
+
+      <div class="authorship">
+        <img class="gravatar" height="20" src="https://1.gravatar.com/avatar/e302c3320cd14b02cbe237b479d7f884?d=https%3A%2F%2Fidenticons.github.com%2F59f6c86ebe1eb6e6b645806e2265ecaa.png&amp;s=140" width="20" />
+        <span class="author-name"><a href="/makaroni4" data-skip-pjax="true" rel="author">makaroni4</a></span>
+        authored <time class="js-relative-date updated" datetime="2013-09-28T00:07:25-07:00" title="2013-09-28 00:07:25">September 28, 2013</time>
+
+      </div>
+    </div>
+  </div>
+    </thead>
+
+    
+<tbody class=""
+  data-url="/makaroni4/sandi_meter/file-list/master">
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/tree/master/bin" class="js-directory-link" id="c1111bd512b29e821b120b86446026b8-bdc2a70eed1ac36eff618ad721f15b116d743ee2" title="bin">bin</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/commit/f9fada794e7a07a73e72bff80335f8411aab317b" class="message" data-pjax="true" title="Refactor CLI and bin">Refactor CLI and bin</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-26T03:28:18-07:00" title="2013-09-26 03:28:18">September 26, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/tree/master/html" class="js-directory-link" id="fc35fdc70d5fc69d269883a822c7a53e-cce772e7d81cb0f0818ac137c8ca95d698ba401c" title="html">html</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/commit/349de692bf874479b259ca8ba681a61f22bbc311" class="message" data-pjax="true" title="fix mailto">fix mailto</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-26T04:08:29-07:00" title="2013-09-26 04:08:29">September 26, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/tree/master/lib" class="js-directory-link" id="e8acc63b1e238f3255c900eed37254b8-dcaa111d8ade7e8e02252991d7688b2846346441" title="lib">lib</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/commit/d9a6632975ee16de13fcf95e4c242551605406d6" class="message" data-pjax="true" title="Fixing a typo: missindented -&gt; misindented">Fixing a typo: missindented -&gt; misindented</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-27T12:06:26-07:00" title="2013-09-27 12:06:26">September 27, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/tree/master/spec" class="js-directory-link" id="b979c2934ac0b4ba3f08dabfdd1b2299-17def5bd44fbec47186cd47bd2453ae91795e363" title="spec">spec</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/commit/d9a6632975ee16de13fcf95e4c242551605406d6" class="message" data-pjax="true" title="Fixing a typo: missindented -&gt; misindented">Fixing a typo: missindented -&gt; misindented</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-27T12:06:26-07:00" title="2013-09-27 12:06:26">September 27, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/blob/master/.gitignore" class="js-directory-link" id="a084b794bc0759e7a6b77810e01874f2-8bfdf9689ff509fa078ab9ce36c40b910d64babd" title=".gitignore">.gitignore</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/commit/6ff89f082935207ffade93bd5b37f52aa57ec1a9" class="message" data-pjax="true" title="Added html generator">Added html generator</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-24T13:34:57-07:00" title="2013-09-24 13:34:57">September 24, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/blob/master/.rspec" class="js-directory-link" id="f5deb99143d9a1be756e16d12073da6e-4e1e0d2f722485c7d284fb5cd7da855826e39b5a" title=".rspec">.rspec</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/commit/f0562766449a73a309564113c0641e7ee450ae66" class="message" data-pjax="true" title="FIX typo, added .rspec file">FIX typo, added .rspec file</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-22T21:32:28-07:00" title="2013-09-22 21:32:28">September 22, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/blob/master/.travis.yml" class="js-directory-link" id="354f30a63fb0907d4ad57269548329e3-222078e126082a32a3e72cd94e297ec8d3542602" title=".travis.yml">.travis.yml</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/commit/ee584478d0b14ea4bf2cb9a2767da2254a4b963c" class="message" data-pjax="true" title="Travis CI yml">Travis CI yml</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-23T08:26:27-07:00" title="2013-09-23 08:26:27">September 23, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/blob/master/Gemfile" class="js-directory-link" id="8b7db4d5cc4b8f6dc8feb7030baa2478-7af75d311d31b9c30238fa5eac62036aaecda128" title="Gemfile">Gemfile</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/commit/bc5b9755ae2bd4a3ee963086e61baf8a5f1e7a97" class="message" data-pjax="true" title="Added CLI interface">Added CLI interface</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-22T22:46:21-07:00" title="2013-09-22 22:46:21">September 22, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/blob/master/Gemfile.lock" class="js-directory-link" id="e79a60dc6b85309ae70a6ea8261eaf95-cfa560b7c6ec078befdad997dda0ea5420854b41" title="Gemfile.lock">Gemfile.lock</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/commit/78b04cf34b0e6d598b657db77e487f38dde0a523" class="message" data-pjax="true" title="Bump to new version">Bump to new version</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-26T04:03:03-07:00" title="2013-09-26 04:03:03">September 26, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/blob/master/LICENSE" class="js-directory-link" id="9879d6db96fd29134fc802214163b95a-46329d70264a30fad944eb09b2454321b3fab917" title="LICENSE">LICENSE</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/commit/4f1ffb3561fa7c0d90508452857a41ac064d92a5" class="message" data-pjax="true" title="Added gem stuff and executable">Added gem stuff and executable</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-14T07:08:16-07:00" title="2013-09-14 07:08:16">September 14, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/blob/master/README.md" class="js-directory-link" id="04c6e90faac2675aa89e2176d2eec7d8-3c502d90aceecdcf600aace5fc4b40ebdfd26f2c" title="README.md">README.md</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/commit/d9a6632975ee16de13fcf95e4c242551605406d6" class="message" data-pjax="true" title="Fixing a typo: missindented -&gt; misindented">Fixing a typo: missindented -&gt; misindented</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-27T12:06:26-07:00" title="2013-09-27 12:06:26">September 27, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/blob/master/Rakefile" class="js-directory-link" id="52c976fc38ed2b4e3b1192f8a8e24cff-c9b48e7a4acb21625f8bfd938518c3592a7c139b" title="Rakefile">Rakefile</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/commit/5b6ab367f6e9731bf2565325a8428c58373a7a1a" class="message" data-pjax="true" title="Gemspec added files">Gemspec added files</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-14T16:07:08-07:00" title="2013-09-14 16:07:08">September 14, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/blob/master/sandi_meter.gemspec" class="js-directory-link" id="b30649908f82dd5e938304e9a1824b53-d6e678850fee1f6ee14a32fae04b02e04401175a" title="sandi_meter.gemspec">sandi_meter.gemspec</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/makaroni4/sandi_meter/commit/e3f4a12abfd24eed7e4bcd2b7a06117fc8c1c34c" class="message" data-pjax="true" title="Ruby version specified in gemspec">Ruby version specified in gemspec</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-09-25T22:24:35-07:00" title="2013-09-25 22:24:35">September 25, 2013</time></span></td>
+    </tr>
+</tbody>
+
+  </table>
+</div>
+
+  <div id="readme" class="clearfix announce instapaper_body md">
+    <span class="name"><span class="octicon octicon-book"></span> README.md</span><article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
+<a name="sandimeter" class="anchor" href="#sandimeter"><span class="octicon octicon-link"></span></a>SandiMeter</h1>
+
+<p><a href="https://travis-ci.org/makaroni4/sandi_meter"><img src="https://travis-ci.org/makaroni4/sandi_meter.png?branch=master" alt="Build Status" style="max-width:100%;"></a>
+<a href="http://badge.fury.io/rb/sandi_meter"><img src="https://badge.fury.io/rb/sandi_meter.png" alt="Gem Version" style="max-width:100%;"></a></p>
+
+<p>Static analysis tool for checking your Ruby code for <a href="http://robots.thoughtbot.com/post/50655960596/sandi-metz-rules-for-developers">Sandi Metz' four rules</a>.</p>
+
+<ul>
+<li>100 lines per class</li>
+<li>5 lines per method</li>
+<li>4 params per method call (and don't even try cheating with hash params)</li>
+<li>1 instance variables per controller' action</li>
+</ul><h2>
+<a name="cli-mode" class="anchor" href="#cli-mode"><span class="octicon octicon-link"></span></a>CLI mode</h2>
+
+<pre><code>gem install sandi_meter
+
+sandi_meter --help
+-g, --graph                      Create folder and log data to graph
+-l, --log                        Show syntax error and indentation log output
+-p, --path PATH                  Path to folder or file to analyze
+-r, --rules                      Show rules
+-h, --help                       Help
+
+sandi_meter -p ~/your/ruby/or/rails/project
+
+1. 94% of classes are under 100 lines.
+2. 53% of methods are under 5 lines.
+3. 98% of methods calls accepts are less than 4 parameters.
+4. 21% of controllers have one instance variable per action.
+</code></pre>
+
+<h2>
+<a name="html-mode" class="anchor" href="#html-mode"><span class="octicon octicon-link"></span></a>HTML mode</h2>
+
+<p>Try using gem with <code>-g (--graph)</code> option, so it will create a folder with beautiful html output and log file with results of any scan.</p>
+
+<p><a href="https://github-camo.global.ssl.fastly.net/73bdc7675603bf3df5873f3cc6efb6b4dfd1032c/687474703a2f2f696d673534352e696d616765736861636b2e75732f696d673534352f353630312f7438716b2e706e67" target="_blank"><img src="https://github-camo.global.ssl.fastly.net/73bdc7675603bf3df5873f3cc6efb6b4dfd1032c/687474703a2f2f696d673534352e696d616765736861636b2e75732f696d673534352f353630312f7438716b2e706e67" alt="SandiMeter HTML mode" style="max-width:100%;"></a></p>
+
+<h2>
+<a name="ruby-script-mode" class="anchor" href="#ruby-script-mode"><span class="octicon octicon-link"></span></a>Ruby script mode</h2>
+
+<div class="highlight highlight-ruby"><pre><span class="nb">require</span> <span class="s1">'sandi_meter/file_scanner'</span>
+<span class="nb">require</span> <span class="s1">'pp'</span>
+
+<span class="n">scanner</span> <span class="o">=</span> <span class="ss">SandiMeter</span><span class="p">:</span><span class="ss">:FileScanner</span><span class="o">.</span><span class="n">new</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="no">PATH_TO_PROJECT</span><span class="p">)</span>
+<span class="n">pp</span> <span class="n">data</span>
+<span class="c1"># {:first_rule=&gt;</span>
+<span class="c1">#   {:small_classes_amount=&gt;916,</span>
+<span class="c1">#    :total_classes_amount=&gt;937,</span>
+<span class="c1">#    :misindented_classes_amount=&gt;1},</span>
+<span class="c1">#  :second_rule=&gt;</span>
+<span class="c1">#   {:small_methods_amount=&gt;1144,</span>
+<span class="c1">#    :total_methods_amount=&gt;1833,</span>
+<span class="c1">#    :misindented_methods_amount=&gt;0},</span>
+<span class="c1">#  :third_rule=&gt;{:proper_method_calls=&gt;5857, :total_method_calls=&gt;5894},</span>
+<span class="c1">#  :fourth_rule=&gt;{:proper_controllers_amount=&gt;17, :total_controllers_amount=&gt;94}}</span>
+</pre></div></article>
+  </div>
+
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com">API</a></li>
+      <li><a href="http://training.github.com">Training</a></li>
+      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+
+    </ul>
+
+    <a href="/">
+      <span class="mega-octicon octicon-mark-github"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2013 <span title="0.03061s from github-fe126-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+          <div class="suggester-container">
+              <div class="suggester fullscreen-suggester js-navigation-container" id="fullscreen_suggester"
+                 data-url="/makaroni4/sandi_meter/suggestions/commit">
+              </div>
+          </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped leftwards" title="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped leftwards"
+      title="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-remove-close close ajax-error-dismiss"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+  </body>
+</html>
+

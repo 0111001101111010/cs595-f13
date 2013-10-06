@@ -1,0 +1,264 @@
+
+Your friends at Viget present [1]Extend, a Code & Technology Blog
+
+[2]Rails Named Routes: Path Vs. URL
+
+   [3]Extend // Feb 20, 2009 [4]Comments
+
+   As we all learned in Rails 101, named routes come in two varieties:
+   path, and URL. When should we use each variety?
+
+   Let's say we have this entry in a routes.rb file:
+map.resources :doohickeys
+
+   So, we can refer to doohickeys_path, which returns a relative URI:
+link_to 'index of doohickeys', doohickeys_path # => <a href="/doohickeys">index
+of doohickeys</a>
+
+   And we can refer to doohickeys_url, which returns an absolute URI:
+link_to 'index of doohickeys', doohickeys_url  # => <a href="http://www.example.
+com/doohickeys">index of doohickeys</a>
+
+   So when do you use paths, and when do you use URLs? I had heard that
+   there are two cases when you must use URLs:
+    1. You need to use an absolute URI when linking to an SSL site from a
+       non-SSL site, and vice versa.
+    2. You need to use an absolute URI when creating a redirect (e.g. with
+       redirect_to.)
+
+   In talking with some fellow developers here at Viget, and at
+   [5]Thoughtbot when I trained there recently, we agreed that the Rails
+   convention seems to be to use URLs in these two cases, and paths in
+   other cases. But why?
+
+   The first case is pretty obvious; you need the absolute URI in order to
+   get the https:// prefix for a secure site (and likewise to get the
+   http:// prefix if you need to get back to where you were.) For the
+   second case, you need to dig into the [6]HTTP specification, also known
+   as RFC 2616. In particular, you need to find section 14.30, which
+   defines the Location header that’s returned in a redirect. Here’s the
+   chapter and verse:
+
+     The Location response-header field is used to redirect the recipient
+     to a location other than the Request-URI for completion of the
+     request or identification of a new resource. For 201 (Created)
+     responses, the Location is that of the new resource which was
+     created by the request. For 3xx responses, the location SHOULD
+     indicate the server's preferred URI for automatic redirection to the
+     resource. The field value consists of a single absolute URI.
+
+   (Emphasis added.) So that’s the answer: we do it this way because the
+   specification says we have to. Since we’re all about conventions in the
+   Rails community, we may as well have our convention follow the spec. Is
+   it critical to do so? Probably not; most modern HTTP clients and
+   servers seem to figure out what you meant if you pass a relative URL in
+   a redirect. But why take the chance when it’s easy to do the right
+   thing?
+   Please enable JavaScript to view the [7]comments powered by Disqus.
+   Mark Cornick
+   Mark Cornick
+     __________________________________________________________________
+
+     * [8]Previous
+     * [9]Next
+
+   Next Post [10]Rails Nested has_many :through With SQL Views
+     __________________________________________________________________
+
+   Facebook Twitter Google+
+     *
+     * [11]Tweet
+     *
+
+Extend is…
+
+   [12]RSS
+
+   A Code & Technology blog—our thirty foot view. Primarily written by/for
+   Ruby, iOS, and front-end developers.
+     * Search ____________________
+     * (BUTTON) Submit
+     __________________________________________________________________
+
+Contributors
+
+     * [13]Brian Landau
+     * [14]Brian W. Williams
+     * [15]Chris Jones
+     * [16]Chris Manning
+     * [17]Dan Tello
+     * [18]David Eisinger
+     * [19]Doug Avery
+     * [20]Eli Fatsi
+     * [21]Jason Garber
+     * [22]Jeremy Frank
+     * [23]Josh Korr
+     * [24]Mike Ackerman
+     * [25]Nate Hunzaker
+     * [26]Patrick Reagan
+     * [27]Ryan Foster
+     * [28]Tommy Marshall
+     * [29]Trevor Davis
+     * [30]Zachary Porter
+     __________________________________________________________________
+
+More Viget Blogs
+
+     * [31]Advance: Strategy & Process
+     * [32]Extend: Code & Technology
+     * [33]Flourish: Viget News & Culture
+     * [34]Inspire: Design & Interactive
+     __________________________________________________________________
+
+Ask Viget
+
+   Have questions, suggestions, or blog ideas? [35]We'd love to hear from
+   you.
+     __________________________________________________________________
+
+We’re Hiring
+
+   Check out [36]Team Viget to see the stellar adventures of our Lab Rats
+   and tell a friend about these open positions:
+     * [37]Technical/Development Project Manager
+     * [38]Ruby On Rails Developer
+     * [39]iOS Developer
+     * [40]Development Director
+
+     * [41]Test Drive mod_rewrite Rules With Test::Unit
+     * [42]Rails Nested has_many :through With SQL Views
+
+   [43]Viget
+     * [44]About
+     * [45]Work
+     * [46]Blogs
+     * [47]Contact
+
+   [48]Skip to navigation
+
+     * [49]About
+          + [50]Locations
+          + [51]Team
+          + [52]Careers
+     * [53]Work
+          + [54]Portfolio
+          + [55]Services
+     * [56]Blogs
+          + [57]Advance
+          + [58]Inspire
+          + [59]Extend
+          + [60]Flourish
+     * [61]Contact
+          + [62]Send a Message
+          + [63]Find Us
+     * [64]More
+          + [65]Pointless Corp.
+          + [66]SpeakerRate
+          + [67]Team Viget
+          + [68]Say “Viget”
+
+   Connect with us
+     * [69]Twitter
+     * [70]Flickr
+     * [71]Vimeo
+     * [72]LinkedIn
+     * [73]Facebook
+
+     * Get Email Updates ____________________
+     * (BUTTON) Submit
+
+   [74]Viget
+     * Falls Church, VA
+     * Durham, NC
+     * Boulder, CO
+
+     * [75]703.891.0670
+     * [76]703.832.0341
+     * [77]info@viget.com
+
+   Strategy, Design, & Development. Vigorous since 1999.
+
+   © 1999–2013 Viget Labs, LLC. [78]Terms & Conditions : [79]Privacy
+   Policy
+
+References
+
+   1. file://localhost/extend
+   2. file://localhost/extend/rails-named-routes-path-vs-url
+   3. file://localhost/extend
+   4. file://localhost/extend/rails-named-routes-path-vs-url#disqus_thread
+   5. http://thoughtbot.com/
+   6. http://www.w3.org/Protocols/rfc2616/rfc2616.html
+   7. http://disqus.com/?ref_noscript
+   8. file://localhost/extend/test-drive-mod-rewrite-rules-with-testunit
+   9. file://localhost/extend/rails-nested-has-many-through-with-sql-views
+  10. file://localhost/extend/rails-nested-has-many-through-with-sql-views
+  11. https://twitter.com/share
+  12. http://feeds.feedburner.com/VigetExtend
+  13. file://localhost/about/team/blandau
+  14. file://localhost/about/team/bwilliams
+  15. file://localhost/about/team/cjones
+  16. file://localhost/about/team/cmanning
+  17. file://localhost/about/team/dtello
+  18. file://localhost/about/team/deisinger
+  19. file://localhost/about/team/davery
+  20. file://localhost/about/team/efatsi
+  21. file://localhost/about/team/jgarber
+  22. file://localhost/about/team/jfrank
+  23. file://localhost/about/team/jkorr
+  24. file://localhost/about/team/mackerman
+  25. file://localhost/about/team/nhunzaker
+  26. file://localhost/about/team/preagan
+  27. file://localhost/about/team/rfoster
+  28. file://localhost/about/team/tmarshall
+  29. file://localhost/about/team/tdavis
+  30. file://localhost/about/team/zporter
+  31. file://localhost/advance
+  32. file://localhost/extend
+  33. file://localhost/flourish
+  34. file://localhost/inspire
+  35. file://localhost/contact#get-in-touch
+  36. http://www.teamviget.com/
+  37. file://localhost/about/careers/technical-development-project-manager
+  38. file://localhost/about/careers/ruby-on-rails-developer
+  39. file://localhost/about/careers/ios-developer
+  40. file://localhost/about/careers/development-director
+  41. file://localhost/extend/test-drive-mod-rewrite-rules-with-testunit
+  42. file://localhost/extend/rails-nested-has-many-through-with-sql-views
+  43. file://localhost/
+  44. file://localhost/about
+  45. file://localhost/work
+  46. file://localhost/blogs
+  47. file://localhost/contact
+  48. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml680.data#global-footer
+  49. file://localhost/about
+  50. file://localhost/about#locations
+  51. file://localhost/about#team
+  52. file://localhost/about#careers
+  53. file://localhost/work
+  54. file://localhost/work#portfolio
+  55. file://localhost/work#services
+  56. file://localhost/blogs
+  57. file://localhost/advance
+  58. file://localhost/inspire
+  59. file://localhost/extend
+  60. file://localhost/flourish
+  61. file://localhost/contact
+  62. file://localhost/contact#send-message
+  63. file://localhost/contact#find-us
+  64. file://localhost/more
+  65. http://www.pointlesscorp.com/
+  66. http://speakerrate.com/
+  67. http://www.teamviget.com/
+  68. http://www.sayviget.com/
+  69. http://twitter.com/viget
+  70. http://www.flickr.com/photos/viget
+  71. http://vimeo.com/viget
+  72. http://www.linkedin.com/company/viget-labs
+  73. http://www.facebook.com/vigetlabs
+  74. file://localhost/
+  75. tel:+17038910670
+  76. tel:+17038320341
+  77. mailto:info@viget.com
+  78. file://localhost/terms-conditions
+  79. file://localhost/privacy-policy

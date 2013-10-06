@@ -1,0 +1,499 @@
+   #[1]rss [2]Line25 Sites of the Week for September 20th 2013 [3]Line25
+   Sites of the Week for September 27th 2013
+
+[4]Line25
+
+     * [5]Articles
+     * [6]Inspiration
+     * [7]Tutorials
+     * [8]About
+     * [9]Archives
+     * [10]Contact
+
+How To Create Flat Style Breadcrumb Links with CSS
+
+   [11]Read the full post
+
+   With all the progressions of CSS and CSS3 over recent years we’ve
+   reached a point where many of the old coding techniques that involved
+   background images can now be created entirely with CSS. In this
+   tutorial we’ll look at creating a series of breadcrumb navigation links
+   in a flat design style without the need for the previously popular
+   “sliding doors background image” method.
+
+   [12]CSS breadcrumb links
+
+   The breadcrumb links we’ll be creating are styled with chevron shapes
+   to support the idea of drilled down content. Previously a background
+   PNG image would be used to create this chevron shape, but with the help
+   of clever border techniques the same effect can be created purely with
+   CSS.
+
+   [13]View the CSS breadcrumb links demo
+<div id="crumbs">
+        <ul>
+                <li><a href="#">Breadcrumb</a></li>
+        </ul>
+</div>
+
+   We’ll begin by quickly fleshing out the breadcrumb navigation links as
+   an unordered list. Each breadcrumb link will appear as an <li> with a
+   nested anchor element.
+
+#crumbs ul li a {
+        display: block;
+        float: left;
+        height: 50px;
+        background: #3498db;
+        text-align: center;
+        padding: 30px 40px 0 40px;
+        position: relative;
+        margin: 0 10px 0 0;
+
+        font-size: 20px;
+        text-decoration: none;
+        color: #fff;
+}
+
+   The initial CSS code styles up each list item anchor as a neat blue
+   rectangle. The text is positioned centrally within the space and equal
+   padding is added to either side. In order to position elements
+   absolutely later, position: relative; is added so those absolutely
+   positioned objects will display relative to this parent element.
+
+#crumbs ul li a:after {
+        content: "";
+        border-top: 40px solid red;
+        border-bottom: 40px solid red;
+        border-left: 40px solid blue;
+        position: absolute; right: -40px; top: 0;
+}
+
+   We’ll now recreate the chevron effect in CSS that would previously only
+   be achievable with a background image. Use the :after selector to
+   create an extra element that can be styled up individually. The
+   triangle shape is generated through the use of various CSS borders, so
+   as you can see in the initial demo a single blue triangle can be
+   created by applying top and bottom borders to intersect the overlap.
+   These are currently coloured red for demonstration, but making these
+   transparent will produce a single blue triangle. This border effect is
+   then moved into place through absolute positioning.
+
+border-top: 40px solid transparent;
+border-bottom: 40px solid transparent;
+border-left: 40px solid #3498db;
+
+   The border effect with the correct colour values will produce the
+   desired triangle which gives the breadcrumb link the popular chevron
+   shape.
+
+#crumbs ul li a:before {
+        content: "";
+        border-top: 40px solid transparent;
+        border-bottom: 40px solid transparent;
+        border-left: 40px solid #d4f2ff;
+        position: absolute; left: 0; top: 0;
+}
+
+   Using the same principle another triangle shape can be applied to the
+   left of the breadcrumb link. This time the border colour is set the
+   same as the page background to disguise parts of the blue link
+   background colour.
+
+padding: 30px 40px 0 80px;
+
+   This additional triangle before the link affects the appearance of the
+   text, but a simple padding adjustment will quickly rectify its
+   appearance.
+
+<div id="crumbs">
+        <ul>
+                <li><a href="#1">One</a></li>
+                <li><a href="#2">Two</a></li>
+                <li><a href="#3">Three</a></li>
+                <li><a href="#4">Four</a></li>
+                <li><a href="#5">Five</a></li>
+        </ul>
+</div>
+
+   As more links are added to the HTML the series of breadcrumbs
+   increases, each separated by the cool chevron shape thanks to the CSS
+   border triangle effect and a touch of right margin.
+
+#crumbs ul li:first-child a {
+        border-top-left-radius: 10px; border-bottom-left-radius: 10px;
+}
+#crumbs ul li:first-child a:before {
+        display: none;
+}
+
+#crumbs ul li:last-child a {
+        padding-right: 80px;
+        border-top-right-radius: 10px; border-bottom-right-radius: 10px;
+}
+#crumbs ul li:last-child a:after {
+        display: none;
+}
+
+   The full breadcrumb navigation list can be further styled by removing
+   the triangle effect on the first and last items with the help of the
+   :first-child and :last-child selectors, then given subtle rounded
+   corners with border-radius.
+
+   [14]CSS breadcrumb links
+#crumbs ul li a:hover {
+        background: #fa5ba5;
+}
+        #crumbs ul li a:hover:after {
+                border-left-color: #fa5ba5;
+        }
+
+   All that’s left is to apply a hover effect to the links. Don’t forget
+   to change the border-left-color on the hover state of the triangle
+   effect so the whole breadcrumb link changes colour.
+
+   [15]View the CSS breadcrumb links demo
+     * [16]Tweet
+     *
+     *
+
+       IFRAME:
+       [17]http://www.facebook.com/plugins/like.php?app_id=186979054705867
+       &href=http://line25.com/tutorials/how-to-create-flat-style-breadcru
+       mb-links-with-css&send=false&layout=box_count&show_faces=false&acti
+       on=like&colorscheme=light&font
+
+     *
+     *
+     *
+
+   [18]Free web shadows pack for every subscriber
+
+   Join the mailing list to have new content delivered straight to your
+   email inbox. Every subscriber gets a free pack of [19]realistic web
+   shadows.
+
+Written by [20]Chris Spooner
+
+   [21]Chris Spooner is a designer who loves experimenting with new web
+   design techniques collating creative website designs. Check out Chris'
+   design tutorials and articles at [22]Blog.SpoonGraphics or follow his
+   daily findings on [23]Twitter.
+
+More posts like this
+
+     * [24]How To Create a Trendy Flat Style Nav Menu in CSS
+     * [25]Create a Responsive Web Design with Media Queries
+     * [26]How To Create a Slick Features Table in HTML & CSS
+     * [27]Create a Grid Based Web Design in HTML5 & CSS3
+     * [28]Create a Stylish Contact Form with HTML5 & CSS3
+     * [29]Code a Stylish Portfolio Site Design in HTML & CSS
+
+24 Comments
+
+    1. [30]karachi web design says:
+       [31]September 23, 2013 at 9:24 am
+       Its really awesome for upcoming peoples and great efforts.
+       [32]Reply
+    2. Timoveld says:
+       [33]September 23, 2013 at 2:07 pm
+       I tried something similar to this once, but couldn’t figure out how
+       to compensate for the offset difference in Firefox and Chrome.
+       Your demo appears to have the same issue.
+       When viewing the demo in firefox, the triangles are offset by 1
+       pixel.
+       [34]Reply
+          + Timoveld says:
+            [35]September 23, 2013 at 2:14 pm
+            How embarrassing, my browser wasn’t zoomed at 100% but was 1
+            click off, that created the offset in firefox.
+            Your demo appears to be working fine now.
+            [36]Reply
+    3. [37]Jon Ewing says:
+       [38]September 23, 2013 at 3:15 pm
+       Looks great and your step-by-step instructions are excellent.
+       In the past, coming from the old school, I’ve done menus like this,
+       but with image maps. Haven’t attempted it lately and obviously if I
+       do I’ll be returning to this tutorial to “borrow” your code ;-)
+       [39]Reply
+    4. Derek Nutile says:
+       [40]September 23, 2013 at 7:48 pm
+       The next step would be handling the crumbs responsively…
+       [41]Reply
+    5. [42]Henri D says:
+       [43]September 23, 2013 at 8:04 pm
+       tried this but the navigation tabs are not aligning to the top of
+       the page and instead cascades down like a row of steps?
+       [44]Reply
+          + Vinay says:
+            [45]September 24, 2013 at 8:54 am
+            add this in css
+            #crumbs ul li {
+            display: inline;
+            }
+            [46]Reply
+               o [47]Jelle P says:
+                 [48]September 24, 2013 at 10:17 am
+                 That worked!
+                 Thank you
+                 [49]Reply
+          + kevin says:
+            [50]September 24, 2013 at 2:32 pm
+            add this
+            #crumbs ul
+            {
+            list-style:none;
+            }
+            [51]Reply
+          + Andrea says:
+            [52]September 27, 2013 at 3:50 am
+            #crumbs ul{list-style:none;}
+            [53]Reply
+    6. [54]Jelle P says:
+       [55]September 24, 2013 at 9:02 am
+       I’ve got the same problem as Henri D. Everything looks good, but
+       the tabs are not aligned to each other…
+       [56]Reply
+          + [57]HenriD says:
+            [58]September 24, 2013 at 11:12 pm
+            check out my jsfiddle.net/henriduong/gEn3M/
+            I now have it inline but its missing the tip of the button?
+            [59]Reply
+    7. [60]Amit says:
+       [61]September 25, 2013 at 7:42 am
+       Superb tutorial.. Its help me!
+       Thanx!!
+       :)
+       [62]Reply
+    8. [63]Leanne says:
+       [64]September 26, 2013 at 4:42 am
+       I am having a problem where the :after element tips are hidden
+       behind the :before elements. It is almost like the layering order
+       needs to be reversed somehow.
+       Can anyone help, it sounds like the same problem HenriD is having?
+       [65]Reply
+    9. Donto says:
+       [66]September 26, 2013 at 5:43 pm
+       To solve the missing point with the :after problem, add
+       “z-index: 1;”
+       at the end of
+       #crumbs ul li a:after {
+       …
+       }
+       [67]Reply
+          + Fernando says:
+            [68]September 30, 2013 at 7:29 am
+            Thank you, Donto! I fall in the same problem.
+            [69]Reply
+   10. [70]battlefield 4 beta keys says:
+       [71]September 26, 2013 at 7:32 pm
+       Hello, this weekend is pleasant in support of me, for the reason
+       that this point in time i am reading this enormous educational
+       piece of
+       writing here at my house.
+       [72]Reply
+   11. [73]Leanne says:
+       [74]September 27, 2013 at 7:12 pm
+       Thanks Donto, that worked perfectly!
+       [75]Reply
+   12. [76]Jonas says:
+       [77]September 27, 2013 at 10:50 pm
+       Great tutorial! I have been using this technique for a while now,
+       on several websites, so I created a kind of automated generator for
+       it to make it raiser to change sizes and colors (on Codepen):
+       [78]http://codepen.io/pocketjoso/pen/foLAd
+       [79]Reply
+   13. Fisnik says:
+       [80]September 28, 2013 at 6:30 pm
+       You sir deserve a medal ! Thanks
+       [81]Reply
+   14. tomasz stryjewski says:
+       [82]September 29, 2013 at 5:27 pm
+       i had my take on this concept:
+       [83]http://codepen.io/stryju/pen/kHrAE
+       differences:
+       - transparent “border” between the blocks
+       - inline-block blocks, not floating, so can be centered
+       - animated transition
+       let me know what you think.
+       cheers
+       [84]Reply
+   15. tomasz stryjewski says:
+       [85]September 29, 2013 at 6:16 pm
+       um… any reason why my comment got removed?
+       [86]Reply
+          + tomasz stryjewski says:
+            [87]September 30, 2013 at 11:22 pm
+            never mind – weird cache hick-up
+            [88]Reply
+   16. Fernando says:
+       [89]September 30, 2013 at 7:30 am
+       Amazing tuto, as always. Thank you very much, Chris!
+       [90]Reply
+
+     *
+     *
+
+Leave a response
+
+   Name: ____________________ Email: ____________________ Website:
+   ____________________
+   Comment:
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   Submit Comment
+
+   [91]Cancel Reply
+     * [92]Subscribe by RSS
+     * [93]Subscribe by Email
+     * [94]Follow Line25 on Twitter
+
+   ____________________ Search
+
+Subscribe for email updates
+
+   Don't miss a post! Sign up for monthly digests of the top content from
+   Line25. Every subscriber gets a free handy pack of [95]web shadows.
+   [96]Free realistic web shadows pack for every subscriber
+
+About Line25
+
+   Line25 was built in March 2009 by [97]Chris Spooner, a designer with a
+   passion for all things creative. Line25 aims to provide web design
+   ideas and inspiration through articles, tutorials and examples of
+   stunning site designs. Keep up to date by subscribing by [98]RSS,
+   [99]Email, or join Line25 on [100]Twitter.
+
+Most popular posts
+
+     * [101]How To Design a Custom YouTube Background
+     * [102]Rounding Up the Top 10 jQuery Lightbox Scripts
+     * [103]How To Create a Pure CSS Dropdown Menu
+     * [104]15 Tutorials To Help You Build WordPress Themes
+     * [105]Create a Stylish Contact Form with HTML5 & CSS3
+
+   [106]Back to top
+     * Copyright © [107]Chris Spooner. All rights reserved
+     * [108]Privacy policy
+     * [109]Advertise on Line25
+     * 64467 Subscribers
+     * Page loaded in 0.403 seconds
+
+References
+
+   Visible links
+   1. http://feeds2.feedburner.com/Line25
+   2. http://line25.com/inspiration/line25-sites-of-the-week-for-september-20th-2013
+   3. http://line25.com/inspiration/line25-sites-of-the-week-for-september-27th-2013
+   4. file://localhost/
+   5. file://localhost/category/articles
+   6. file://localhost/category/inspiration
+   7. file://localhost/category/tutorials
+   8. file://localhost/about
+   9. file://localhost/archives
+  10. file://localhost/contact
+  11. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css
+  12. http://line25.com/wp-content/uploads/2013/breadcrumbs/demo/demo.html
+  13. http://line25.com/wp-content/uploads/2013/breadcrumbs/demo/demo.html
+  14. http://line25.com/wp-content/uploads/2013/breadcrumbs/demo/demo.html
+  15. http://line25.com/wp-content/uploads/2013/breadcrumbs/demo/demo.html
+  16. http://twitter.com/share
+  17. http://www.facebook.com/plugins/like.php?app_id=186979054705867&href=http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css&send=false&layout=box_count&show_faces=false&action=like&colorscheme=light&font
+  18. file://localhost/subscribe
+  19. file://localhost/subscribe
+  20. http://line25.com/about
+  21. file://localhost/about
+  22. http://blog.spoongraphics.co.uk/
+  23. http://twitter.com/chrisspooner
+  24. http://line25.com/tutorials/how-to-create-a-trendy-flat-style-nav-menu-in-css
+  25. http://line25.com/tutorials/create-a-responsive-web-design-with-media-queries
+  26. http://line25.com/tutorials/how-to-create-a-slick-features-table-in-html-css
+  27. http://line25.com/tutorials/create-a-grid-based-web-design-in-html5-css3
+  28. http://line25.com/tutorials/create-a-stylish-contact-form-with-html5-css3
+  29. http://line25.com/tutorials/code-a-stylish-portfolio-site-design-in-html-css
+  30. http://www.adwebstudio.com.pk/
+  31. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26851
+  32. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26851#respond
+  33. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26856
+  34. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26856#respond
+  35. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26857
+  36. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26857#respond
+  37. http://www.inframes.com/
+  38. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26858
+  39. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26858#respond
+  40. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26865
+  41. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26865#respond
+  42. http://www.vizio.com/
+  43. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26866
+  44. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26866#respond
+  45. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26876
+  46. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26876#respond
+  47. http://www.est1987.org/
+  48. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26879
+  49. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26879#respond
+  50. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26882
+  51. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26882#respond
+  52. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26929
+  53. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26929#respond
+  54. http://www.est1987.org/
+  55. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26877
+  56. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26877#respond
+  57. http://www.vizio.com/
+  58. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26887
+  59. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26887#respond
+  60. http://www.pixl.co.in/
+  61. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26895
+  62. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26895#respond
+  63. http://leannethng.com/
+  64. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26909
+  65. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26909#respond
+  66. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26920
+  67. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26920#respond
+  68. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26976
+  69. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26976#respond
+  70. http://battlefield4betakeys.net/
+  71. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26923
+  72. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26923#respond
+  73. http://leannethng.com/
+  74. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26942
+  75. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26942#respond
+  76. http://jonassebastianohlsson.com/
+  77. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26948
+  78. http://codepen.io/pocketjoso/pen/foLAd
+  79. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26948#respond
+  80. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26957
+  81. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26957#respond
+  82. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26968
+  83. http://codepen.io/stryju/pen/kHrAE
+  84. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26968#respond
+  85. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26970
+  86. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26970#respond
+  87. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26991
+  88. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26991#respond
+  89. http://line25.com/tutorials/how-to-create-flat-style-breadcrumb-links-with-css/comment-page-1#comment-26977
+  90. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css?replytocom=26977#respond
+  91. file://localhost/tutorials/how-to-create-flat-style-breadcrumb-links-with-css#respond
+  92. http://feeds2.feedburner.com/Line25
+  93. file://localhost/subscribe
+  94. http://twitter.com/line25blog
+  95. file://localhost/subscribe
+  96. file://localhost/subscribe
+  97. http://twitter.com/chrisspooner
+  98. http://feeds2.feedburner.com/Line25
+  99. file://localhost/subscribe
+ 100. http://twitter.com/line25blog
+ 101. http://line25.com/tutorials/how-to-design-a-custom-youtube-background
+ 102. http://line25.com/articles/rounding-up-the-top-10-jquery-lightbox-scripts
+ 103. http://line25.com/tutorials/how-to-create-a-pure-css-dropdown-menu
+ 104. http://line25.com/articles/15-tutorials-to-help-you-build-wordpress-themes
+ 105. http://line25.com/tutorials/create-a-stylish-contact-form-with-html5-css3
+ 106. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml870.data
+ 107. http://www.chrisspooner.com/
+ 108. file://localhost/privacy-policy
+ 109. file://localhost/advertise
+
+   Hidden links:
+ 111. http://line25.com/about
+ 112. http://line25.com/about

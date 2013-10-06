@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+<meta charset="UTF-8" />
+<title>How to use a custom font in your WordPress website &lsaquo; Morag BrandMorag Brand</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://moragbrand.com/wp-content/themes/Pai/style.css" />
+<link rel="pingback" href="http://moragbrand.com/xmlrpc.php" />
+
+		<link rel="shortcut icon" href="http://moragbrand.com/wp-content/uploads/2013/06/mb.ico" />
+
+<!-- Template stylesheet -->
+<link rel="stylesheet" href="http://moragbrand.com/wp-content/themes/Pai/css/jqueryui/custom.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="http://moragbrand.com/wp-content/themes/Pai/css/screen.css" type="text/css" media="all"/>
+<link rel="stylesheet" type="text/css" href="http://moragbrand.com/wp-content/themes/Pai/js/fancybox/jquery.fancybox-1.3.0.css" media="screen"/>
+
+
+<link rel="stylesheet" href="http://moragbrand.com/wp-content/themes/Pai/css/skins/red.css" type="text/css" media="all"/>
+
+
+<!--[if IE]>
+<link rel="stylesheet" href="http://moragbrand.com/wp-content/themes/Pai/css/ie.css" type="text/css" media="all"/>
+<![endif]-->
+
+<!--[if IE 7]>
+<link rel="stylesheet" href="http://moragbrand.com/wp-content/themes/Pai/css/ie7.css" type="text/css" media="all"/>
+<![endif]-->
+
+ 
+
+<!-- Jquery and plugins -->
+<script type="text/javascript" src="http://moragbrand.com/wp-content/themes/Pai/js/jquery.js"></script>
+<script type="text/javascript" src="http://moragbrand.com/wp-content/themes/Pai/js/jquery-ui.js"></script>
+<script type="text/javascript" src="http://moragbrand.com/wp-content/themes/Pai/js/fancybox/jquery.fancybox-1.3.0.js"></script>
+<script type="text/javascript" src="http://moragbrand.com/wp-content/themes/Pai/js/jquery.easing.js"></script>
+<script type="text/javascript" src="http://moragbrand.com/wp-content/themes/Pai/js/anythingSlider.js"></script>
+<script type="text/javascript" src="http://moragbrand.com/wp-content/themes/Pai/js/jquery.nivo.slider.js"></script>
+<script type="text/javascript" src="http://moragbrand.com/wp-content/themes/Pai/js/jquery.roundabout.js"></script>
+<script type="text/javascript" src="http://moragbrand.com/wp-content/themes/Pai/js/jquery.validate.js"></script>
+<script type="text/javascript" src="http://moragbrand.com/wp-content/themes/Pai/js/cufon.js"></script>
+
+<script type="text/javascript" src="http://moragbrand.com/wp-content/themes/Pai/fonts/Aaargh_400.font.js"></script>
+
+
+<script type="text/javascript" src="http://moragbrand.com/wp-content/themes/Pai/js/hint.js"></script>
+<script type="text/javascript" src="http://moragbrand.com/wp-content/themes/Pai/js/browser.js"></script>
+<script type="text/javascript" src="http://moragbrand.com/wp-content/themes/Pai/js/custom.js"></script>
+
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.18 - http://yoast.com/wordpress/seo/ -->
+<link rel="canonical" href="http://moragbrand.com/custom-font/" />
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="How to use a custom font in your WordPress website - Morag Brand"/>
+<meta property="og:description" content="Fed up of Arial and Verdana?  Using a custom font on your WordPress blog is a great way to get a unique look that encompasses your brand&#8217;s style. There are several plugins that claim to help you install a custom font, but to be honest most of them are harder work than setting it up [&hellip;]"/>
+<meta property="og:url" content="http://moragbrand.com/custom-font/"/>
+<meta property="og:site_name" content="Morag Brand"/>
+<meta property="article:publisher" content="http://www.facebook.com/MoragBrandVA"/>
+<meta property="og:image" content="http://moragbrand.com/wp-content/uploads/2013/09/Morag-Brand-Professional-Virtual-Assistance-website1.png"/>
+<meta property="og:image" content="http://moragbrand.com/wp-content/uploads/2013/09/futura.png"/>
+<meta property="og:image" content="http://moragbrand.com/wp-content/uploads/2013/09/font-squirrel.png"/>
+<meta property="og:image" content="http://moragbrand.com/wp-content/uploads/2013/09/font.png"/>
+<meta property="og:image" content="http://moragbrand.com/wp-content/uploads/2013/09/ftp.png"/>
+<meta property="og:image" content="http://moragbrand.com/wp-content/uploads/2013/09/specify-fonts.png"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@moragbrand"/>
+<meta name="twitter:domain" content="Morag Brand"/>
+<meta name="twitter:creator" content="@moragbrand"/>
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Morag Brand &raquo; How to use a custom font in your WordPress website Comments Feed" href="http://moragbrand.com/custom-font/feed/" />
+<link rel='stylesheet' id='wpcirrus-cloudStyle-css'  href='http://moragbrand.com/wp-content/plugins/wp-cirrus/cirrusCloud.css?ver=0.6.11' type='text/css' media='all' />
+<script type='text/javascript' src='http://moragbrand.com/wp-content/plugins/wp-cirrus/wp_cirrus_gwt/wp_cirrus_gwt.nocache.js?ver=0.6.11'></script>
+<script type='text/javascript' src='http://moragbrand.com/wp-includes/js/comment-reply.min.js?ver=3.6.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://moragbrand.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://moragbrand.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6.1" />
+<link rel='shortlink' href='http://moragbrand.com/?p=298' />
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-41970967-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script type='text/javascript'>
+  //<![CDATA[
+    (function() {
+      var shr = document.createElement('script');
+      shr.setAttribute('data-cfasync', 'false');
+      shr.src = 'https://dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js?ver=7.0.4.1';
+      shr.type = 'text/javascript'; shr.async = 'true';
+      shr.onload = shr.onreadystatechange = function() {
+        var rs = this.readyState;
+        if (rs && rs != 'complete' && rs != 'loaded') return;
+        var apikey = '240dc93d6ee7cb15d9ed18148d397e6a';
+        try { Shareaholic.init(apikey); } catch (e) {}
+      };
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(shr, s);
+    })();
+  //]]>
+</script>
+
+<!-- Shareaholic Content Tags -->
+<meta name='shareaholic:site_name' content='Morag Brand' />
+<meta name='shareaholic:language' content='en-US' />
+<meta name='shareaholic:url' content='http://moragbrand.com/custom-font/' />
+<meta name='shareaholic:wp_version' content='7.0.4.1' />
+<meta name='shareaholic:image' content='http://moragbrand.com/wp-content/uploads/2013/09/Morag-Brand-Professional-Virtual-Assistance-website1.png' />
+<!-- Shareaholic Content Tags End -->
+
+<!-- Shareaholic Open Graph Tags -->
+<meta property='og:image' content='http://moragbrand.com/wp-content/uploads/2013/09/Morag-Brand-Professional-Virtual-Assistance-website1.png' />
+<!-- Shareaholic Open Graph Tags End -->
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #d6d6d6; }
+</style>
+
+
+
+
+</head>
+
+
+<body class="single single-post postid-298 single-format-standard custom-background">
+	
+	<!-- Begin template wrapper -->
+	<div id="wrapper">
+			
+		<!-- Begin header -->
+		<div id="header_wrapper">
+			<div id="top_bar">
+					<div class="logo">
+						<!-- Begin logo -->
+					
+												
+						<a id="custom_logo" href="http://moragbrand.com"><img src="http://moragbrand.com/wp-content/uploads/2013/06/mb-logo.png" alt=""/></a>
+						
+						<!-- End logo -->
+					</div>
+					
+					<!-- Begin main nav -->
+					
+					<div id="menu_wrapper">
+
+					    <div class="menu-main-menu-container"><ul id="main_menu" class="nav"><li id="menu-item-237" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-237"><a href="http://moragbrand.com/">Home</a></li>
+<li id="menu-item-233" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-233"><a href="http://moragbrand.com/services/">Services</a></li>
+<li id="menu-item-234" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-234"><a href="http://moragbrand.com/rates/">Rates</a></li>
+<li id="menu-item-235" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-235"><a href="http://moragbrand.com/faq/">FAQ</a></li>
+<li id="menu-item-236" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-236"><a href="http://moragbrand.com/blog/">Blog</a></li>
+<li id="menu-item-232" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-232"><a href="http://moragbrand.com/contact/">Contact</a></li>
+</ul></div>
+					</div>
+					<!-- End main nav -->
+				
+				</div>
+		</div>
+		<!-- End header -->
+		<div class="line_shadow_header">&nbsp;</div>
+		
+		<br class="clear"/>
+		<!-- Begin content -->
+		<div id="content_wrapper">
+		
+			<br class="clear"/>
+		
+			<div class="page_caption">
+				<div class="caption_inner">
+					<h1 class="cufon">Latest thoughts</h1>
+				</div>
+			</div>
+			
+			<div class="line_shadow">&nbsp;</div>
+			
+			<div class="inner">
+			
+				<!-- Begin main content -->
+				<div class="inner_wrapper">
+				
+					<div class="sidebar_content">
+					
+
+						<!-- Begin each blog post -->
+						<div class="post_wrapper">
+							<div class="post_header">
+								<h3 class="cufon">
+									How to use a custom font in your WordPress website								</h3>
+								<div class="post_detail">
+									Posted by:&nbsp;Morag Brand&nbsp;&nbsp;&nbsp;
+									Tags:&nbsp;
+									<a href="http://moragbrand.com/tag/css/" rel="tag">CSS</a>, <a href="http://moragbrand.com/tag/fonts/" rel="tag">fonts</a>, <a href="http://moragbrand.com/tag/html/" rel="tag">HTML</a>, <a href="http://moragbrand.com/tag/wordpress/" rel="tag">WordPress</a>&nbsp;&nbsp;&nbsp;
+									Posted date:&nbsp;
+									September 10, 2013 									&nbsp;|&nbsp;
+									<span class="dsq-postid" rel="298 http://moragbrand.com/?p=298">No comment</span>								</div>
+							</div>
+							
+														<br class="clear"/><br/>
+							
+							<div class="post_img">
+								<img src="http://moragbrand.com/wp-content/themes/Pai/timthumb.php?src=http://www.moragbrand.com/images/Morag-Brand-Professional-Virtual-Assistant---How-to-Embed-Font.png&h=200&w=590&zc=1" alt=""/>
+							
+								<div class="post_img_date">
+									September 10, 2013								</div>
+							</div>
+														
+							<br class="clear"/>
+							
+							<h2>Fed up of Arial and Verdana?  Using a custom font on your WordPress blog is a great way to get a unique look that encompasses your brand&#8217;s style.</h2>
+<h3>There are several plugins that claim to help you install a custom font, but to be honest most of them are <em>harder</em> work than setting it up yourself!</h3>
+<p><strong>Below is a step-by-step guide to embedding a new font.  To keep things simple, I&#8217;ll be using a fresh install of WordPress using the default Twenty Thirteen theme. </strong></p>
+<p>Below is a screenshot of what the site looks like before any changes have been made:</p>
+<div id="attachment_300" class="wp-caption alignnone" style="width: 610px"><a href="http://moragbrand.com/wp-content/uploads/2013/09/Morag-Brand-Professional-Virtual-Assistance-website1.png"><img class="size-full wp-image-300" alt="BEFORE: WordPress Twenty Thirteen theme" src="http://moragbrand.com/wp-content/uploads/2013/09/Morag-Brand-Professional-Virtual-Assistance-website1.png" width="600" height="365" /></a><p class="wp-caption-text">BEFORE: WordPress Twenty Thirteen theme</p></div>
+<h1>1. Select a font</h1>
+<p>I will be using <a href="http://www.fonts.com/font/linotype/futura/complete-family-pack" target="_blank">FuturaLT</a>.  Before installing any font on your website check the licensing documentation to ensure that you have the right to use it online.   You will need to have the font as either a TrueTypeFile (TTF) or OpenTypeFile (OTF) in order to convert for web use.</p>
+<div id="attachment_301" class="wp-caption alignnone" style="width: 610px"><a href="http://moragbrand.com/wp-content/uploads/2013/09/futura.png"><img class="size-full wp-image-301" alt="FuturaLT font" src="http://moragbrand.com/wp-content/uploads/2013/09/futura.png" width="600" height="383" /></a><p class="wp-caption-text">FuturaLT font</p></div>
+<h1>2. Convert the font to an @ face</h1>
+<p>Whilst it&#8217;s possible to create the different formats yourself, the easiest way is using a great tool called <a href="http://www.fontsquirrel.com/tools/webfont-generator" target="_blank">Font Squirrel</a>.</p>
+<p>Click on Add Font and upload your selected font.  Click the &#8216;Optimal&#8217; setting and check the box to confirm that your chosen font is eligible for web embedding.  Then click on &#8216;Get your kit&#8217;.</p>
+<div id="attachment_302" class="wp-caption alignnone" style="width: 610px"><a href="http://moragbrand.com/wp-content/uploads/2013/09/font-squirrel.png"><img class="size-full wp-image-302" alt="Font Squirrel - convert your font" src="http://moragbrand.com/wp-content/uploads/2013/09/font-squirrel.png" width="600" height="238" /></a><p class="wp-caption-text">Font Squirrel &#8211; convert your font</p></div>
+<p>Extract the files contained within the zipped folder.  You will notice that there are several file types.  The first one to open is Stylesheet.css which should look similar to this:</p>
+<div id="attachment_303" class="wp-caption alignnone" style="width: 610px"><a href="http://moragbrand.com/wp-content/uploads/2013/09/font.png"><img class="size-full wp-image-303" alt="Font Stylesheet.css" src="http://moragbrand.com/wp-content/uploads/2013/09/font.png" width="600" height="318" /></a><p class="wp-caption-text">Font Style.css</p></div>
+<p>Copy the code into the top of the Stylesheet.css of your chosen template (this is found in the WordPress Dashboard &#8211; Appearance &#8211; Editor &#8211; Style.css).</p>
+<h1>3.  Upload your font files</h1>
+<p>The four files you need to upload are the <strong>eot</strong>, <strong>svg</strong>, <strong>ttf</strong> and <strong>woff</strong> formats.  Copy these to the base directory of your chosen theme.</p>
+<div id="attachment_304" class="wp-caption alignnone" style="width: 610px"><a href="http://moragbrand.com/wp-content/uploads/2013/09/ftp.png"><img class="size-full wp-image-304" alt="Copy fonts via FTP to the base directory of your theme" src="http://moragbrand.com/wp-content/uploads/2013/09/ftp.png" width="600" height="380" /></a><p class="wp-caption-text">Copy fonts via FTP to the base directory of your theme</p></div>
+<h1>4. Define your fonts in Style.css</h1>
+<p><a href="http://moragbrand.com/wp-content/uploads/2013/09/specify-fonts.png"><img class="alignnone size-full wp-image-305" alt="specify-fonts" src="http://moragbrand.com/wp-content/uploads/2013/09/specify-fonts.png" width="600" height="181" /></a></p>
+<p>Look out for my forthcoming video in which we&#8217;ll go one step further by creating a dedicated fonts folder and setting up several different fonts (useful for headings / captions / body text).</p>
+<p>I hope you&#8217;ve found this post useful and informative.  Do try it and let me know how you get on in the comments below.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class='shareaholic-canvas' data-app-id='343760' data-app='share_buttons' data-title='How to use a custom font in your WordPress website' data-link='http://moragbrand.com/custom-font/' data-summary=''></div><div class='shareaholic-canvas' data-app-id='343764' data-app='recommendations' data-title='How to use a custom font in your WordPress website' data-link='http://moragbrand.com/custom-font/' data-summary=''></div>							
+						</div>
+						<!-- End each blog post -->
+						
+						<h4 class="cufon">About the author</h4>
+							
+						<div id="about_the_author">
+							<div class="thumb"><img alt='' src='http://0.gravatar.com/avatar/ea957a80f3a4e1626833f00296355689?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=G' class='avatar avatar-50 photo' height='50' width='50' /></div>
+							<div class="description">
+								<strong>Morag Brand</strong><br/>
+								Morag is a fast-moving, forward-thinking executive VA with over 15 years' experience who started out in the VA industry in 2007 and is featured in the bestselling Virtual Assistant Handbook.							</div>
+						</div>
+						
+												
+						<br class="clear"/><br/><br/>
+
+
+						
+<div id="disqus_thread">
+    </div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var disqus_url = 'http://moragbrand.com/custom-font/';
+    var disqus_identifier = '298 http://moragbrand.com/?p=298';
+    var disqus_container_id = 'disqus_thread';
+    var disqus_domain = 'disqus.com';
+    var disqus_shortname = 'moragbrand';
+    var disqus_title = "How to use a custom font in your WordPress website";
+        var disqus_config = function () {
+        var config = this; // Access to the config object
+        config.language = '';
+
+        /*
+           All currently supported events:
+            * preData — fires just before we request for initial data
+            * preInit - fires after we get initial data but before we load any dependencies
+            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
+            * afterRender - fires when template is rendered but before we show it
+            * onReady - everything is done
+         */
+
+        config.callbacks.preData.push(function() {
+            // clear out the container (its filled for SEO/legacy purposes)
+            document.getElementById(disqus_container_id).innerHTML = '';
+        });
+                config.callbacks.onReady.push(function() {
+            // sync comments in the background so we don't block the page
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = '?cf_action=sync_comments&post_id=298';
+
+            var firstScript = document.getElementsByTagName( "script" )[0];
+            firstScript.parentNode.insertBefore(script, firstScript);
+        });
+                    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var DsqLocal = {
+        'trackbacks': [
+        ],
+        'trackback_url': "http:\/\/moragbrand.com\/custom-font\/trackback\/"    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.' + 'disqus.com' + '/embed.js?pname=wordpress&pver=2.74';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+/* ]]> */
+</script>
+						
+
+
+						</div>
+					
+					<div class="sidebar_wrapper">
+						<div class="sidebar">
+							
+							<div class="content">
+							
+								<ul class="sidebar_widget">
+									<li id="social_stickers_widget-4" class="widget social_stickers_widget"><a href="http://linkedin.com/in/moragbrand" target="_blank" title="Linkedin"><img src="http://moragbrand.com/wp-content/plugins/social-stickers/themes/default/linkedin.png"  width="32" height="32" /></a> <a href="http://facebook.com/MoragBrandVA" target="_blank" title="Facebook"><img src="http://moragbrand.com/wp-content/plugins/social-stickers/themes/default/facebook.png"  width="32" height="32" /></a> <a href="http://pinterest.com/moragbrand" target="_blank" title="Pinterest"><img src="http://moragbrand.com/wp-content/plugins/social-stickers/themes/default/pinterest.png"  width="32" height="32" /></a> <a href="http://twitter.com/moragbrand" target="_blank" title="Twitter"><img src="http://moragbrand.com/wp-content/plugins/social-stickers/themes/default/twitter.png"  width="32" height="32" /></a> <a href="skype:moragbrand?call" target="_blank" title="Skype"><img src="http://moragbrand.com/wp-content/plugins/social-stickers/themes/default/skype.png"  width="32" height="32" /></a> <a href="mailto:morag@moragbrand.com" target="_blank" title="Email"><img src="http://moragbrand.com/wp-content/plugins/social-stickers/themes/default/email.png"  width="32" height="32" /></a> </li>
+								</ul>
+								
+							</div>
+						
+						</div>
+						<br class="clear"/>
+					
+						<div class="sidebar_bottom"></div>
+					</div>
+					
+				</div>
+				<!-- End main content -->
+				
+				<br class="clear"/>
+			</div>
+			
+			<div class="bottom"></div>
+			
+		</div>
+		<!-- End content -->
+
+				
+
+
+		<br class="clear"/>
+
+		<div class="line_shadow_footer">&nbsp;</div>
+
+		<!-- Begin footer -->
+		<div id="footer" style="margin-top:-2px">
+			<ul class="sidebar_widget">
+				<li id="pai_recent_posts-2" class="widget Pai_Recent_Posts"><h2 class="widgettitle">Recent Posts</h2><ul class="posts blog black_wrapper"><li><a href="http://moragbrand.com/sharedesktop/"><img src="http://moragbrand.com/wp-content/themes/Pai/timthumb.php?src=/images/Morag Brand Professional Virtual Assistance Share Your Desktop.jpg&h=75&w=75&zc=1" alt="" /></a><h6><a href="http://moragbrand.com/sharedesktop/">How to share your desktop screen over the internet</a></h6>In the old days, one of the potential drawbacks associated with outsourcing was felt...</li><li><a href="http://moragbrand.com/why-your-personal-assistant-doesnt-have-to-be-present/"><img src="http://moragbrand.com/wp-content/themes/Pai/timthumb.php?src=/images/morag brand executive virtual assistant remote working.jpg&h=75&w=75&zc=1" alt="" /></a><h6><a href="http://moragbrand.com/why-your-personal-assistant-doesnt-have-to-be-present/">Does your personal assistant have to be 'present'?</a></h6>It is apparent that when it comes to a personal assistant some small business owners...</li><li><a href="http://moragbrand.com/facebook-image-sizes-and-dimensions/"><img src="http://moragbrand.com/wp-content/themes/Pai/timthumb.php?src=images/Morag Brand Virtual Assistant Photo Sizes.jpg&h=75&w=75&zc=1" alt="" /></a><h6><a href="http://moragbrand.com/facebook-image-sizes-and-dimensions/">Facebook image sizes and dimensions</a></h6>Using images in your Facebook posts can drive engagement; use the guide below to find...</li></ul></li>
+<li id="wpcirrus" class="widget wpcirrusWidgetInit"><h2 class="widgettitle">Tags</h2>
+	<script type="text/javascript">
+		var wpcirrusRadiuscirrusCloudWidget = 0;
+		var wpcirrusRefreshratecirrusCloudWidget = 80;
+		var wpcirrusFontColorcirrusCloudWidget = '#A90000';var wpcirrusBackgroundColorcirrusCloudWidget;	</script>
+	<div style="position: relative; height: 160px; width: 250px;"  id="cirrusCloudWidget">
+		<a href='http://moragbrand.com/tag/dropbox/' class='tag-link-15' title='1 topic' style='font-size: 8pt;'>Dropbox</a>
+<a href='http://moragbrand.com/tag/seo/' class='tag-link-7' title='1 topic' style='font-size: 8pt;'>SEO</a>
+<a href='http://moragbrand.com/tag/file-sharing/' class='tag-link-16' title='1 topic' style='font-size: 8pt;'>file sharing</a>
+<a href='http://moragbrand.com/tag/life/' class='tag-link-12' title='1 topic' style='font-size: 8pt;'>life</a>
+<a href='http://moragbrand.com/tag/balance/' class='tag-link-13' title='1 topic' style='font-size: 8pt;'>balance</a>
+<a href='http://moragbrand.com/tag/website-2/' class='tag-link-8' title='1 topic' style='font-size: 8pt;'>website</a>
+<a href='http://moragbrand.com/tag/work/' class='tag-link-11' title='1 topic' style='font-size: 8pt;'>work</a>
+<a href='http://moragbrand.com/tag/social-media/' class='tag-link-10' title='1 topic' style='font-size: 8pt;'>social media</a><a href='http://moragbrand.com/category/wordpress/' class='tag-link-18' title='1 topic' style='font-size: 8pt;'>WordPress</a>
+<a href='http://moragbrand.com/category/business/' class='tag-link-2' title='7 topics' style='font-size: 24pt;'>Business</a>
+<a href='http://moragbrand.com/category/website/' class='tag-link-6' title='3 topics' style='font-size: 16pt;'>Website</a>
+<a href='http://moragbrand.com/category/organisation/' class='tag-link-14' title='3 topics' style='font-size: 16pt;'>Organisation</a>
+<a href='http://moragbrand.com/category/how-tos/' class='tag-link-19' title='3 topics' style='font-size: 16pt;'>How To's</a>
+<a href='http://moragbrand.com/category/marketing/' class='tag-link-9' title='2 topics' style='font-size: 12.8pt;'>Marketing</a> 	</div>
+	</li>
+<li id="social_stickers_widget-5" class="widget social_stickers_widget"><a href="http://linkedin.com/in/moragbrand" target="_blank" title="Linkedin"><img src="http://moragbrand.com/wp-content/plugins/social-stickers/themes/default/linkedin.png"  width="32" height="32" /></a> <a href="http://facebook.com/MoragBrandVA" target="_blank" title="Facebook"><img src="http://moragbrand.com/wp-content/plugins/social-stickers/themes/default/facebook.png"  width="32" height="32" /></a> <a href="http://pinterest.com/moragbrand" target="_blank" title="Pinterest"><img src="http://moragbrand.com/wp-content/plugins/social-stickers/themes/default/pinterest.png"  width="32" height="32" /></a> <a href="http://twitter.com/moragbrand" target="_blank" title="Twitter"><img src="http://moragbrand.com/wp-content/plugins/social-stickers/themes/default/twitter.png"  width="32" height="32" /></a> <a href="skype:moragbrand?call" target="_blank" title="Skype"><img src="http://moragbrand.com/wp-content/plugins/social-stickers/themes/default/skype.png"  width="32" height="32" /></a> <a href="mailto:morag@moragbrand.com" target="_blank" title="Email"><img src="http://moragbrand.com/wp-content/plugins/social-stickers/themes/default/email.png"  width="32" height="32" /></a> </li>
+			</ul>
+			
+			<br class="clear"/>
+		
+			<div class="line_shadow">&nbsp;</div>
+		
+			<div id="copyright">
+				(c) Morag Brand 2013. All rights reserved			</div>
+			
+		</div>
+		<!-- End footer -->
+		
+	</div>
+	<!-- End template wrapper -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-41970967-1']);
+  _gaq.push(['_setDomainName', 'none']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

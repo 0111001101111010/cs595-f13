@@ -1,0 +1,162 @@
+   #[1]Stickyworld Tech Blog Full Atom Feed
+
+   [2]logo
+
+[3]Stickyworld Tech Team
+
+   Our working practices
+     * [4]Stickyworld
+
+   Posted on Mon 16 September 2013
+
+[5]Abandoning PHP for Python
+
+   I was always told to use the right tool for the job. After 12 years of
+   working with PHP I'm still trying to understand what it's well-suited
+   for.
+
+   Back in early 2011 I was working for a financial data provider in
+   London. I was working on a large, LAMP-based, client-facing project. In
+   any file of the codebase you could find HTML, PHP, SQL, some ORM usage,
+   JavaScript and in some directories you'd find large amounts of files
+   with no content at all.
+
+   A lot of hands had created a lot of code. The technical architecture of
+   the code could change with a developer simply deciding to do things in
+   a different way from the rest of the team. I quickly grew tired of
+   cherry-picked design patterns being sprinkled over what was already
+   very inconsistent code. With 3-4 programming languages in a single file
+   formatting and good syntax were often thrown out the window.
+
+   I sat by a few developers who were into using Python in their spare
+   time and really liked it's simplicity. At the same time I was seeing a
+   lot of Ruby on Rails and Django projects being open-sourced. Everything
+   had it's place and there was a place for everything. The syntax of the
+   code was incredibly clear in both frameworks. There was magic to help
+   remove complexity. I felt like I was missing something in life. I
+   wanted to be able to feel like I was in control of a clean and
+   well-thought out codebase.
+
+   This is the story of what key learnings I came across that helped me
+   become a Pythonist.
+
+Python Essential Reference
+
+   The first book I picked up was [6]Python Essential Reference. It was
+   written for people who already know how to write software. The content
+   density and noise-to-signal ratio of this book is incredible. When I
+   became a Python contractor this book sat next to my MacBook Pro every
+   day for some time.
+
+Community-wide style guidelines
+
+   I quickly found myself reading through [7]PEP-8 which is a
+   widely-adopted style guide in the Python community. I could see the
+   effect this guide had when I attended a two-day Python conference and
+   everyone's code looked like one another's. There wasn't a context
+   switch every time I saw a new codebase because the styling used was
+   consistent with the community at large.
+
+Package Management
+
+   There is package management in PHP but I never found any code bases in
+   the wild using it to the same extent as [8]PIP. Being able to install,
+   uninstall, upgrade and use a wide variety of sources for external and
+   internal libraries was fantastic. When was the last time you looked at
+   a PHP project and saw a list of all the third-party libraries and
+   respective version numbers being used written in a single file?
+
+   It was around this point that I decided I'd rather be an unemployed
+   Pythonist than an employed LAMP developer.
+
+Django's first tutorial
+
+   The first [9]tutorial the Django project introduces you to on their
+   website is golden. I can't say it was very easy the first time around
+   as I was learning a lot as I was going through it. It probably took me
+   two separate, four-hour sessions to get the example poll app up, create
+   an admin and re-do the process in order to reasonably understand each
+   step. This is probably the most career-enhancing tutorial I've ever
+   completed.
+
+RESTful and DRY
+
+   Building RESTful client libraries in Python was a real treat. Instagram
+   came out with Python bindings around the time I was beginning to use
+   the language. They used a very dry method of describing [10]each
+   endpoint which this [11]piece of magic would take as parameters. It
+   wraps up so much complexity into simple interfaces and made their
+   service calls feel very Pythonic.
+
+Evented Codebases
+
+   I never came across anything in the evented space in PHP in the years I
+   worked as a LAMP developer. I knew node.js did a good job in this area
+   but when I came across [12]Tornado's Asynchronous HTTP client and
+   [13]Redis bindings for tornado I knew I could build some very
+   low-latency, low-line count backends in Python that worked in an
+   asynchronous fashion.
+
+   I've built backends that do authentication, query a few million rows in
+   Solr and return JSON in a couple of milliseconds thanks to Python.
+
+Get started and get code out the door
+
+   If you're getting started with Django today I'd recommend building your
+   first project on [14]Cloud9. They've done a good job of putting
+   together an online text editor, command line and virtual environment.
+   It'll save you a lot of time doing installs and setups on your own
+   machine.
+
+   Once your project is ready to go out [15]Linode and [16]Digital Ocean
+   are pretty solid places to host your code. You can spin up an Ubuntu 13
+   instance and run the following to get your environment up:
+$ sudo apt-get update
+$ sudo apt-get install build-essential curl git-core \
+  libevent-2.0-5 libevent-dev libmysqlclient-dev libssl-dev \
+  libtool libxslt-dev linux-kernel-headers lsof mysql-server \
+  nginx python-dev python-pip python-virtualenv rabbitmq-server \
+  redis-server s3cmd screen supervisor unzip uuid-dev \
+  virtualenvwrapper zip zlib1g-dev
+
+   The details around deployments, configuration and security settings
+   I'll save for another blog post.
+
+   If any of the above resonates please do [17]get in touch, we're always
+   on the lookout for passionate Pythonists.
+
+Signup for our low-traffic newsletter:
+
+   Email Address ____________________
+
+   Powered by [18]MailChimp
+   Subscribe
+
+   [19]← Back to Index
+
+   © Giulio Fidente. Built using [20]Pelican. You can fork the theme on
+   [21]github. .
+
+References
+
+   1. http://techblog.stickyworld.com/feeds/all.atom.xml
+   2. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+   3. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+   4. http://www.stickyworld.com/
+   5. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/abandoning-php-for-python.html
+   6. http://www.amazon.co.uk/gp/product/B002EF2AQ6/ref=as_li_qf_sp_asin_il?ie=UTF8&camp=1634&creative=6738&creativeASIN=B002EF2AQ6&linkCode=as2&tag=apertututori-21
+   7. http://www.python.org/dev/peps/pep-0008/
+   8. http://www.pip-installer.org/en/latest/
+   9. https://docs.djangoproject.com/en/1.5/intro/tutorial01/
+  10. https://github.com/Instagram/python-instagram/blob/master/instagram/client.py#L29-L197
+  11. https://github.com/Instagram/python-instagram/blob/master/instagram/bind.py#L33-L153
+  12. http://www.tornadoweb.org/en/stable/httpclient.html
+  13. https://github.com/leporo/tornado-redis
+  14. https://c9.io/
+  15. http://www.linode.com/?r=809d49d06eaeaf519113f598517d7884393d26c2
+  16. https://www.digitalocean.com/?refcode=074ce6598105
+  17. http://uk.linkedin.com/in/marklitwintschik
+  18. http://eepurl.com/BGM_X
+  19. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  20. http://getpelican.com/
+  21. https://github.com/giulivo/pelican-svbhack

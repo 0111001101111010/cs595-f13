@@ -1,0 +1,524 @@
+   #[1]CSO® | Customer Service.
+
+   [2]CSO
+     * [3]Newsletters
+     * [4]Dashboard
+     * [5]RSS
+     * Research Centers
+          + Communities
+          + [6]A Smarter Approach to Data Protection
+          + [7]Your IT Journey — Your Way
+          + Research
+          + [8]Citrix XenMobile
+          + [9]IBM SmartCloud Solutions
+          + [10]View all Solution Centers
+     * [11]White Papers
+     * [12]Webcasts
+     * [13]Video
+     * [14]Events
+     * Magazine
+          + [15]Latest Issue
+          + [16]Subscribe
+          + [17]Subscriber Services
+     * [18]Twitter
+       [19]LinkedIn
+       [20]Facebook
+
+   ____________________ go
+
+     * [21]News
+     * [22]Blogs
+     * [23]Tools & Templates
+     * [24]Security Jobs
+     * [25]Basics
+     * [26]Data Protection
+          + [27]Application Security
+          + [28]Network Security
+          + [29]Cloud Security
+          + [30]Social Networking Security
+          + [31]Wireless/Mobile Security
+          + [32]Malware/Cybercrime
+          + [33]Data Privacy
+          + [34]PCI and Compliance
+          + [35]IT Audit
+          + [36]Social Engineering
+     * [37]Identity & Access
+          + [38]Access Control
+          + [39]Identity Management
+          + [40]Federated Identity
+          + [41]Identity Theft Prevention
+     * [42]Business Continuity
+          + [43]Emergency Preparedness
+          + [44]Disaster Recovery
+          + [45]Supply Chain Security
+          + [46]Pandemic Preparedness
+     * [47]Physical Security
+          + [48]Video Surveillance
+          + [49]Employee Protection
+          + [50]Fraud Prevention
+          + [51]Loss Prevention
+          + [52]Investigations/Forensics
+          + [53]Critical Infrastructure
+     * [54]Security Leadership
+          + [55]Compliance
+          + [56]Executive Communication
+          + [57]Security Awareness
+          + [58]Strategic Planning/ERM
+          + [59]Metrics/Budgets
+          + [60]Security Industry
+          + [61]Global Security
+          + [62]Security Career/Staffing
+
+   [63]Home » [64]Data Protection » [65]Social Networking Security
+   [66]News
+
+Social media, mobile phones top attack targets
+
+Hackers exploiting lack of security basics, finds IBM X-Force analysis
+
+   »
+
+By John P. Mello, Jr.
+
+   September 25, 2013 — [67]CSO — Social media has become a top target of
+   hackers and mobile devices are expanding that target, IBM reported on
+   Tuesday in its X-Force 2013 Mid-Year Trend and Risk Report.
+
+   Attacks on enterprises are getting increasingly sophisticated, [68]the
+   report said.Â  Some attacks studied by IBM researchers were
+   opportunistic -- exploiting unpatched and untested web applications
+   vulnerable to basic SQL injection or cross-site scripting.
+
+   Others were successful, the report continued, because they violated the
+   basic trust between end user and sites or social media personalities
+   thought to be safe and legitimate.
+
+   "Social media has become a new playground for attackers," said Kevin
+   Skapinetz, program director for product strategy for IBM Security
+   Systems.
+
+   The report noted that a growing trend this year is the takeover of
+   social media profiles that have a large number of followers. The trend
+   continues to play a pivotal role in the way attackers are reaching
+   their targets.
+
+   "It's one thing to get an email or spam from someone you've never heard
+   of," Skapinetz said in an interview. "It's another thing to have one of
+   your friends have their account compromised and send you a link that
+   might interest you."
+
+   Traditional sources of online aggravation can't resist the siren call
+   of social media, either. "Even if email is used in an attack, it will
+   be under guise of coming from a social media account," he said.
+   "Attackers are becoming more operationally sophisticated."
+
+   Social media attacks can affect more than the usual suspects, too.
+   Social media exploits affect more than individuals; they can negatively
+   impact enterprise brand reputation and cause financial losses, the
+   report said.
+
+   Mobile devices are also becoming a hacker magnet. "Although mobile
+   vulnerabilities continue to grow at a rapid pace, we still see them as
+   a small percentage of overall vulnerabilities reported in the year,"
+   the report said.
+
+   What may be making matters worse is the proliferation of mobile devices
+   in the workplace under Bring Your Own Device Programs. "BYOD -- what a
+   nightmare that can be for any organization," HBGary's Threat
+   Intelligence Director, Matthew Standart, said in an interview.
+
+   "It's difficult to protect your data even when you own all your devices
+   and getting visibility into all your devices is a challenge in itself,"
+   Standard said. "Allowing users to bring their own devices increases the
+   complexity tenfold."
+
+   The IBM report also noted that Distributed Denial of Service (DDoS)
+   attacks are being used for more than just disrupting service at target
+   sites. The attacks are being used as a distraction, allowing attackers
+   to breach other systems in the enterprise.
+
+   [Also see: [69]Targeted social media attacks said to be underreported]
+
+   "Both attacks and attack threats are being used as decoys," Marc
+   Gaffan, co-founder of Incapsula, said in an interview.
+
+   "The attackers will bring down a website, get the IT people focused in
+   a certain direction, tie up their resources on the DDoS attack while a
+   more sophisticated breach is performed with no one paying attention,"
+   Gaffan said.
+
+   A decoy attack could also be used in conjunction with a phishing
+   attack, he added. For example, a phishing message could be sent to a
+   bank's customers asking them to use an alternative URL because the bank
+   is having trouble with its common web address. A recipient may follow
+   good security practices and paste the common URL for the bank in his
+   browser.
+
+   Because the bank is under a DDoS attack, however, they can't connect to
+   the institution, he said. So, in desperation, they click on the URL in
+   the phishing message and get infected.
+
+   Those kinds of misdirection DDoS attacks, though, haven't become
+   mainstream. "They are occurring, but they're relatively rare," said
+   Daniel Peck, a research scientist at Barracuda Networks.
+
+   The IBM report also questioned the dedication of many organizations to
+   sound security basics. "Many of the breaches reported in the last year
+   were a result of poorly applied security fundamentals and policies and
+   could have been mitigated by putting some basic security hygiene into
+   practice," the researchers wrote.
+
+   "Attackers seem to be capitalizing on this 'lack of security basics' by
+   using a model of operational sophistication that allows them to
+   increase their return on exploit," they wrote.
+
+   "The idea that even basic security hygiene is not upheld in
+   organizations, leads us to believe that, for a variety of reasons,
+   companies are struggling with a commitment to apply basic security
+   fundamentals," the researchers wrote.
+
+   Barry Shteiman, senior security strategist with Imperva, said in an
+   interviewÂ that the lack of adherence to basics could be due to a
+   fundamental misunderstanding of security by companies. "They don't
+   understand the difference between a safety belt and auto insurance," he
+   said. "They don't understand that it's more important to protect
+   themselves than to preserve their reputation after a breach has been
+   made."
+
+   [70]Read more about social networking security in CSOonline's Social
+   Networking Security section.
+
+     * [71]Print
+     *
+
+   [72]Editor's Picks
+     * [73]Slideshow: 7 ways users drive IT support crazy
+     * [74]How to spot a phishing email
+     * [75]Social engineering: The basics
+     * [76]20 security and privacy apps for Android and iPhone
+
+   SOCIAL NETWORKING SECURITY
+   ESSENTIAL READING
+
+   Social networks create new security risks to both corporate and
+   individual data. These resources help clarify threats, create
+   awareness, and find potential solutions.
+
+[77]Q&A with Facebook CSO Joe Sullivan
+
+[78]Basic social media risks
+
+[79]7 deadly sins of social networking
+
+[80]Facebook, Twitter scams to avoid
+
+[81]Writing a social media security policy
+
+   Social Networking Security Webcasts
+     * [82]Step Up to the IT Security Challenge
+     * [83]Webinar: IBM IIM for Fraud, Abuse and Waste in Government
+     * [84]Fighting Fraud Videos: IBM Intelligent Investigation Manager
+     * [85]IBM Intelligent Investigation Manager: Online Product Demo
+     * [86]Face-off: Speed vs. Security in Application Development
+     * [87]Tapping Big Data Security Analytics to Detect Breaches &
+       Advanced Threats
+
+   » [88]View All Social Networking Security Webcasts
+   Social Networking Security White Papers
+     * [89]Phishing Attacks: Are Your Organization's Email Addresses a
+       Target?
+     * [90]Improving Legal Compliance Through Security Awareness Training
+     * [91]MDM and beyond: Rethinking mobile security in a BYOD world
+     * [92]Software Lifecycle Management
+     * [93]Adding WOW to the WAN
+     * [94]Hyper-Mobility Meets Security in the Corporate Environment
+
+   » [95]View All Social Networking Security White Papers
+     * [96]Hack of data brokers highlights weakness of knowledge-based
+       authentication
+       Security blogger Brian Krebs broke a story this week about a cyber
+       underground identity theft service in the business of selling
+       Social Security numbers, birth records, credit and and background
+       reports, and other pertinent, sensitive details of millions of
+       Americans.
+     * [97]Online transactions over Tor 30 times more likely to be
+       fraudulent
+     * [98]Why Appleâs Touch ID fingerprint authentication is good for
+       iPhone security
+
+   [99][salted_hash_coffee.gif] More Salted Hash with Tony Bradley
+   White Papers
+
+   [100]Phishing Attacks: Are Your Organization's Email Addresses a
+   Target?
+
+   [101]Improving Legal Compliance Through Security Awareness Training
+
+   [102]MDM and beyond: Rethinking mobile security in a BYOD world
+
+   [103]Software Lifecycle Management
+
+   [104]Adding WOW to the WAN
+
+   [105]Hyper-Mobility Meets Security in the Corporate Environment
+
+   [106]Take a Holistic Approach to Your Cloud Implementation
+
+   [107]EMA Radar for Private Cloud Platforms: Q1 2013
+
+   [108]Wake Up From Your Mobile Email Nightmare!
+
+   [109]Top Security Threats for 2013
+
+   [110]Cloud Storage and Backup
+
+   [111]Power of Convergence
+
+   [112]ESG: Dell PowerEdge VRTX - Meets SMB and Office Demands
+
+   [113]VRTX Exchange Server 2013 Deployment Guide
+
+   [114]Failover Cluster VRTX Deployment Guide
+
+   [115]SQL Server VRTX Deployment Guide
+
+   [116]Software Lifecycle Management: Managing Essential tools for
+   greater productivity and cost savings
+
+   [117]Software Asset Management: Getting Started
+
+   [118]Server Refreshes: Timing is Everything
+
+   [119]Protect Your Business & Simplify IT with Symantec VMware
+
+   [120]More White Papers [121]»
+   Sponsored Links
+
+   [122]Apply intelligence to your identity and access equation with
+   Courion.
+
+   [123]Share best practices and drive change at Enterprise CIO Forum
+
+   [124]Connect with global CIOs now at Enterprise CIO Forum
+
+   [125]SANS Securing The Human Security Awareness Training - Get Free
+   Demo Today
+
+   [126]Drive business transformation now at Enterprise CIO Forum
+   RESOURCE CENTER
+   [127]buy a link [128]»
+   [129]Ads by TechWords
+   [DFPAudiencePixel;retargeting_pixel=IDGE_Security;ord=1?]
+     * [130]Home |
+     * [131]About |
+     * [132]Privacy Policy |
+     * [133]Terms of Service |
+     * [134]Subscribe to CSO Magazine |
+     * [135]Advertising |
+     * [136]Careers at IDG |
+     * [137]Events |
+     * [138]Site Map |
+     * [139]AdChoices
+
+   IDG logo
+
+   THE IDG NETWORK
+     * [140]CFOworld |
+     * [141]CIO |
+     * [142]CITEworld |
+     * [143]Computerworld |
+     * [144]CSO |
+     * [145]DEMO |
+     * [146]IDC |
+     * [147]IDG |
+     * [148]IDG Connect |
+     * [149]IDG Knowledge Hub |
+     * [150]IDG TechNetwork |
+     * [151]IDG Ventures |
+     * [152]InfoWorld |
+     * [153]ITwhitepapers |
+     * [154]ITworld |
+     * [155]JavaWorld |
+     * [156]LinuxWorld |
+     * [157]Macworld |
+     * [158]Network World |
+     * [159]PC World |
+     * [160]TechHive |
+     * [161]Technology Briefcase
+
+   © 1994 - 2013 CXO Media Inc. a subsidiary of [162]IDG Enterprise
+
+   IFRAME: [163]__bkframe
+
+References
+
+   Visible links
+   1. http://www.csoonline/help/
+   2. file://localhost/
+   3. file://localhost/newsletters?source=csonla_topnav
+   4. http://dashboard.csoonline.com/
+   5. file://localhost/feeds
+   6. http://resources.csoonline.com/show/200018159/00776540095430CSONBFPOX60UB/
+   7. http://resources.csoonline.com/show/200015328/00621610082902CSOK2K0LMYH54/?email=%25%25emailaddr%25%25
+   8. http://solutioncenters.csoonline.com/citrix_xenmobile/
+   9. http://solutioncenters.cio.com/ibm_smartcloud/
+  10. http://solutioncenters.csoonline.com/cso_sc_home/
+  11. file://localhost/white-papers
+  12. file://localhost/webcasts
+  13. file://localhost/video
+  14. file://localhost/events
+  15. file://localhost/magazine
+  16. http://www.omeda.com/cgi-win/cso.cgi?add
+  17. http://www.omeda.com/custsrv/cso/
+  18. https://twitter.com/#!/csoonline
+  19. http://www.linkedin.com/today/csoonline.com
+  20. https://www.facebook.com/CSOonline
+  21. file://localhost/attributes/index/41014/news/1
+  22. http://blogs.csoonline.com/
+  23. file://localhost/article/486324
+  24. file://localhost/security/jobs/1
+  25. file://localhost/article/486621
+  26. file://localhost/topic/41193/data-protection
+  27. file://localhost/topic/41516/application-security
+  28. file://localhost/topic/41199/network-security
+  29. file://localhost/topic/587702/cloud-security
+  30. file://localhost/topic/587704/social-networking-security
+  31. file://localhost/topic/41517/wireless-mobile-security
+  32. file://localhost/topic/43400/malware-cybercrime
+  33. file://localhost/topic/43401/data-privacy
+  34. file://localhost/topic/43402/pci-and-compliance
+  35. file://localhost/topic/221497/it-audit
+  36. file://localhost/topic/587703/social-engineering
+  37. file://localhost/topic/41247/identity-access
+  38. file://localhost/topic/41251/access-control
+  39. file://localhost/topic/43403/identity-management
+  40. file://localhost/topic/41518/federated-identity
+  41. file://localhost/topic/43404/identity-theft-prevention
+  42. file://localhost/topic/41248/business-continuity
+  43. file://localhost/topic/43408/emergency-preparedness
+  44. file://localhost/topic/43409/disaster-recovery
+  45. file://localhost/topic/41252/supply-chain-security
+  46. file://localhost/topic/43406/pandemic-preparedness
+  47. file://localhost/topic/221490/physical-security
+  48. file://localhost/topic/221491/video-surveillance
+  49. file://localhost/topic/221493/employee-protection
+  50. file://localhost/topic/221494/fraud-prevention
+  51. file://localhost/topic/221495/loss-prevention
+  52. file://localhost/topic/221496/investigations-forensics
+  53. file://localhost/topic/221498/critical-infrastructure
+  54. file://localhost/topic/41249/security-leadership
+  55. file://localhost/topic/41521/compliance
+  56. file://localhost/topic/43410/executive-communication
+  57. file://localhost/topic/43411/security-awareness
+  58. file://localhost/topic/43412/strategic-planning-erm
+  59. file://localhost/topic/43413/metrics-budgets
+  60. file://localhost/topic/43414/security-industry
+  61. file://localhost/topic/43415/global-security
+  62. file://localhost/topic/41515/security-career-staffing
+  63. file://localhost/
+  64. file://localhost/topic/41193/data-protection
+  65. file://localhost/topic/587704/social-networking-security
+  66. file://localhost/attributes/index/41014/news/1
+  67. http://www.csoonline.com/
+  68. http://securityintelligence.com/news/press/attackers-sharpen-skills-what-that-really-means-for-cisos/
+  69. http://www.csoonline.com/article/731608/targeted-social-media-attacks-said-to-be-underreported
+  70. http://www.csoonline.com/topic/587704/social-networking-security
+  71. file://localhost/article/print/740311
+  72. http://www.csoonline.com/?source=csoartcso_hdr
+  73. http://www.csoonline.com/slideshow/detail/121253/7-service-requests-that-make-IT-support-folks-cry?source=csoartcso
+  74. http://www.csoonline.com/slideshow/detail/118916/How-to-spot-a-phishing-email?source=csoartcso?source=csoartcso
+  75. http://www.csoonline.com/article/514063/social-engineering-the-basics?source=csoartcso
+  76. http://www.csoonline.com/slideshow/detail/66493?source=csoartcso
+  77. file://localhost/article/701382
+  78. file://localhost/article/529764/Social_Media_Risks_The_Basics
+  79. file://localhost/article/496314/Seven_Deadly_Sins_of_Social_Networking_Security
+  80. file://localhost/article/500998/5_More_Facebook_Twitter_Scams_to_Avoid
+  81. file://localhost/article/505593/4_Tips_for_Writing_a_Great_Social_Media_Security_Policy
+  82. file://localhost/webcast/740517/?source=csolib
+  83. file://localhost/webcast/740285/?source=csolib
+  84. file://localhost/webcast/740287/?source=csolib
+  85. file://localhost/webcast/740286/?source=csolib
+  86. file://localhost/webcast/736788/?source=csolib
+  87. file://localhost/webcast/737952/?source=csolib
+  88. file://localhost/webcasts/topic/587704/social-networking-security
+  89. file://localhost/white-paper/740314/?source=csolib
+  90. file://localhost/white-paper/740315/?source=csolib
+  91. file://localhost/white-paper/739878/?source=csolib
+  92. file://localhost/white-paper/732405/?source=csolib
+  93. file://localhost/white-paper/731996/?source=csolib
+  94. file://localhost/white-paper/731330/?source=csolib
+  95. file://localhost/white-papers/topic/587704/social-networking-security
+  96. http://blogs.csoonline.com/access-control/2791/hack-data-brokers-highlights-weakness-knowledge-based-authentication
+  97. http://blogs.csoonline.com/fraud-prevention/2789/online-transactions-over-tor-30-times-more-likely-be-fraudulent
+  98. http://blogs.csoonline.com/wirelessmobile-security/2788/why-apples-touch-id-fingerprint-authentication-good-iphone-security
+  99. http://blogs.csoonline.com/blog/cso
+ 100. file://localhost/white-paper/740314/?source=csolib
+ 101. file://localhost/white-paper/740315/?source=csolib
+ 102. file://localhost/white-paper/739878/?source=csolib
+ 103. file://localhost/white-paper/732405/?source=csolib
+ 104. file://localhost/white-paper/731996/?source=csolib
+ 105. file://localhost/white-paper/731330/?source=csolib
+ 106. file://localhost/white-paper/740750/?source=csolib
+ 107. file://localhost/white-paper/740748/?source=csolib
+ 108. file://localhost/white-paper/740705/?source=csolib
+ 109. file://localhost/white-paper/740648/?source=csolib
+ 110. file://localhost/white-paper/740620/?source=csolib
+ 111. file://localhost/white-paper/738396/?source=csolib
+ 112. file://localhost/white-paper/738393/?source=csolib
+ 113. file://localhost/white-paper/738390/?source=csolib
+ 114. file://localhost/white-paper/738381/?source=csolib
+ 115. file://localhost/white-paper/738377/?source=csolib
+ 116. file://localhost/white-paper/740563/?source=csolib
+ 117. file://localhost/white-paper/740561/?source=csolib
+ 118. file://localhost/white-paper/740558/?source=csolib
+ 119. file://localhost/white-paper/740550/?source=csolib
+ 120. file://localhost/white-papers
+ 121. file://localhost/white-papers
+ 122. http://pubads.g.doubleclick.net/gampad/clk?id=45157136&iu=/8456/IDG.CSO_Enterprise
+ 123. http://ad.doubleclick.net/clk;274316991;44746346;t?http://www.enterprisecioforum.com/?utm_source=IDGE&utm_medium=TEXTLINK&utm_campaign=ecf
+ 124. http://ad.doubleclick.net/clk;274312228;44746346;i?http://www.enterprisecioforum.com/?utm_source=IDGE&utm_medium=TEXTLINK&utm_campaign=ecf
+ 125. http://pubads.g.doubleclick.net/gampad/clk?id=38995136&iu=/8456/IDG.CSO_Enterprise
+ 126. http://ad.doubleclick.net/clk;274316103;44746346;e?http://www.enterprisecioforum.com/?utm_source=IDGE&utm_medium=TEXTLINK&utm_campaign=ecf
+ 127. http://www.techwords.com/
+ 128. http://www.techwords.com/
+ 129. http://www.techwords.com/
+ 130. file://localhost/
+ 131. file://localhost/about-cso
+ 132. file://localhost/privacy-policy
+ 133. file://localhost/terms-of-service
+ 134. http://www.omeda.com/cgi-win/cso.cgi?add
+ 135. file://localhost/marketing/
+ 136. http://careers.idg.com/
+ 137. file://localhost/events
+ 138. file://localhost/sitemap
+ 139. file://localhost/about-adchoices
+ 140. http://www.cfoworld.com/?source=csofooter
+ 141. http://www.cio.com/?source=csofooter
+ 142. http://www.citeworld.com/?source=csofooter
+ 143. http://www.computerworld.com/?source=csofooter
+ 144. http://www.csoonline.com/?source=csofooter
+ 145. http://www.demo.com/
+ 146. http://www.idc.com/
+ 147. http://www.idg.com/
+ 148. http://www.idgconnect.com/
+ 149. http://www.idgknowledgehub.com/
+ 150. http://www.idgtechnetwork.com/
+ 151. http://www.idgventures.com/
+ 152. http://www.infoworld.com/?source=csofooter
+ 153. http://www.itwhitepapers.com/index.php?source=csofooter
+ 154. http://www.itworld.com/?source=csofooter
+ 155. http://www.javaworld.com/?source=csofooter
+ 156. http://www.linuxworld.com/?source=csofooter
+ 157. http://www.macworld.com/
+ 158. http://www.nwfusion.com/?source=csofooter
+ 159. http://www.pcworld.com/
+ 160. http://www.techhive.com/?source=csofooter
+ 161. http://technologybriefcase.com/allCategories
+ 162. http://www.idgenterprise.com/
+ 163. javascript:void(0)
+
+   Hidden links:
+ 165. http://ad.doubleclick.net/jump/idgt.data.cso/data_collection_cso;sz=1x1;ord=123456789?
+ 166. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml897.data#disqus_thread
+ 167. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml897.data#disqus_thread
+ 168. http://blogs.csoonline.com/blog/cso

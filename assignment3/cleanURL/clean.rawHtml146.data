@@ -1,0 +1,219 @@
+   [1]
+
+alois dg
+
+   [2]25 September 2013
+   Faire un Slider XAML complet en 5 petites étapes
+   Si vous êtes à l’aise avec le XAML, passez directement à [3]l’etape 4.
+
+   Introduction
+
+   Le slider est un control XAML des plus basique. Il est très simple à
+   mettre en place. Cependant, je lui reproche son manque de
+   personnalisation. Si il est aisé de changer sa couleur de fond ou sa
+   largeur, nous sommes vite limités. Naturellement, si nous souhaitons
+   augmenter la hauteur de notre Slider, nous pensons à augmenter la
+   valeur de l’attribut Height. Essayons.
+
+                              [4]slider border
+   Le premier Slider a la Height par défaut. Le second possède une Height
+                                   à 200.
+
+   Décevant n’est-ce pas ? Nous avons agrandi la taille du control mais le
+   slider en lui-même n’a pas bougé.
+
+   Habituellement pour toute personnalisation d’un Slider, il est de
+   rigueur d’en éditer le template.
+
+   Je vais vous proposer une autre solution. Nous remarquons un léger
+   problème. Si nous glissons le doigt le [5]long du bas du control, nous
+   prennons la main sur le slider sans vraiment le toucher. C’est grâce à
+   cette feature que l’astuce que je vais vous présenter fonctionne.
+   N’hésitez pas à tester chaque snippet tout au long de l’article.
+
+   1^ère Etape
+
+   Dans un StackPanel, nous allons placer une Grid et un Slider. Nous
+   nommons le StackPanel “ContainerSlider”, la Grid “FakeSlider1” et le
+   Slider “Slider1”. Ensuite, bindons l’attribut Maximum à l’ActualWidth
+   de ContainerSlider1 et bindons la Width de la Grid à la Value de
+   Slider1
+
+                              [6]slider border
+
+<StackPanel x:Name="ContainerSlider1">
+    <Grid x:Name="FakeSlider1" HorizontalAlignment="Left" Background="Orange" He
+ight="24" Width="{Binding ElementName=Slider1, Path=Value }" />
+    <Slider x:Name="Slider1" Minimum="0" Maximum="{Binding ActualWidth, ElementN
+ame=ContainerSlider1}" Value="50" />
+</StackPanel>
+
+   2^e Etape
+
+   Dans notre code, remplaçons le StackPanel par une Grid. Ajoutons à
+   ContainerSlider1 un Background BlueViolet. Ce qui nous intéresse ici,
+   c’est la superposition propre à l’élément Grid. ContainerSlider1 prend
+   la taille de Slider1. Slider1 qui est le dernier élément de
+   ContainerSlider1 se trouve au premier plan.
+
+                              [7]slider border
+
+<Grid x:Name="ContainerSlider1" Background="BlueViolet">
+    <Grid x:Name="FakeSlider1"  Background="Orange" HorizontalAlignment="Left" W
+idth="{Binding Value, ElementName=Slider1}"></Grid>
+    <Slider x:Name="Slider1" Height="100" Minimum="0" Maximum="{Binding ActualWi
+dth, ElementName=ContainerSlider1}" Value="50" />
+</Grid>
+
+   3^e Etape
+
+   A présent nous allons régler l’opacité de Slider1 à 0 et changer les
+   couleurs de nos Grid. Je trouve qu’à ce stade nous avons déjà un rendu
+   plutôt intéressant. Qu’en pensez-vous ?
+
+                              [8]slider border
+
+<Grid x:Name="ContainerSlider1" Background="{StaticResource PhoneChromeBrush}">
+    <Grid x:Name="FakeSlider1" Background="{StaticResource PhoneAccentBrush}" Ho
+rizontalAlignment="Left" Width="{Binding Value, ElementName=Slider1}"></Grid>
+    <Slider x:Name="Slider3" Opacity="0" Height="100" Minimum="0" Maximum="{Bind
+ing ActualWidth, ElementName=ContainerSlider1}" Value="50" />
+</Grid>
+
+   4^e Etape
+
+   Nous allons créer un curseur. Insérons une nouvelle Grid entre Slider1
+   et FakeSlider1. Nous nommons cette Grid “Cursor1”. Sa largeur est de
+   20. Afin que notre curseur soit toujours à droite de FakeSlider, nous
+   allons les placer dans un StackPanel horizontale. Pour centrer le
+   curseur, il suffit de lui ajouter une marge négative à gauche
+   équivalente à la moitié de sa largeur. Avec une largeur de 20, nous
+   obtenons une marge de -10.
+
+                              [9]slider border
+
+<Grid x:Name="ContainerSlider1" Background="{StaticResource PhoneChromeBrush}">
+    <StackPanel Orientation="Horizontal">
+        <Grid x:Name="FakeSlider1" Background="{StaticResource PhoneAccentBrush}
+" Width="{Binding Value, ElementName=Slider1}"></Grid>
+        <Grid x:Name="Cursor1" Width="20" Margin="-10,0,0,0" Background="{Static
+Resource PhoneForegroundBrush}"/>
+    </StackPanel>
+    <Slider x:Name="Slider1" Opacity="0" Height="100" Minimum="0" Maximum="{Bind
+ing ActualWidth, ElementName=ContainerSlider1}" Value="50" />
+</Grid>
+
+   5^e Etape
+
+   Cette étape sert à rendre le comportement du curseur plus réaliste. En
+   fonction de la localisation du curseur, nous modifierons la valeur de
+   la marge.
+private void Slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<
+double> e)
+{
+    if (Slider1 != null)
+        Cursor1.Margin = SetCursorMargin(ContainerSlider1.ActualWidth, Cursor1.W
+idth, e.NewValue);
+}
+
+private Thickness SetCursorMargin(double containerWidth, double thumbWidth, doub
+le sliderValue)
+{
+    Thickness marginCursor = new Thickness();
+    double cursorWidthHalf = thumbWidth / 2;
+    if (sliderValue < cursorWidthHalf)
+        marginCursor.Left = -sliderValue;
+    else if (sliderValue > containerWidth - cursorWidthHalf)
+        marginCursor.Left = -(thumbWidth + sliderValue - containerWidth);
+    else
+        marginCursor.Left = -thumbWidth / 2;
+    return marginCursor;
+}
+
+   J’ai fait en sorte de rendre le code ci-dessus le plus compréhensible
+   possible, quitte à mettre de côté des questions de performance. Il n’en
+   est pas sujet ici.
+
+   Aller plus loin
+
+   Ce slider n’est rien d’autre qu’un ensemble de Grid. On peut mettre
+   absolument tout et n’importe quoi dedans. Vous pouvez parfaitement
+   remplacer le curseur par une image, du texte, une vidéo, un calendrier,
+   etc.
+
+                           [10]slider border bonus
+
+   tl;dr
+
+   Il est possible de créer un slider facilement manipulable et modifiable
+   avec deux Binding et un slider classique. Il suffit de rendre le slider
+   invisible et de compter sur sa large zone tactile.
+
+   Retrouvez l’ensemble des sources de cet article sur [11]mon GitHub
+   [12]Tweet
+   Please enable JavaScript to view the [13]comments powered by Disqus.
+   [14]← Read More
+
+   IFRAME:
+   [15]http://assets.tumblr.com/assets/html/iframe/o.html?_v=0f8339d83792f
+   50916ca29c1a64ddfa0#src=http%3A%2F%2Faloisdg.tumblr.com%2Fpost%2F622011
+   79204%2Ffaire-un-slider-xaml-complet-en-5-petites-etapes&pid=6220117920
+   4&rk=9fl8vG8F&lang=en_US&name=aloisdg&brag=false&avatar=http%3A%2F%2F25
+   .media.tumblr.com%2Favatar_aab91af5343a_64.png&title=alois+dg&url=http%
+   3A%2F%2Faloisdg.tumblr.com%2F&page_slide=slide
+
+   IFRAME:
+   [16]http://www.tumblr.com/assets/html/iframe/teaser.html#src=http%3A%2F
+   %2Faloisdg.tumblr.com%2Fpost%2F62201179204%2Ffaire-un-slider-xaml-compl
+   et-en-5-petites-etapes&pid=62201179204&rk=9fl8vG8F&lang=en_US&name=aloi
+   sdg&brag=false&avatar=http%3A%2F%2F25.media.tumblr.com%2Favatar_aab91af
+   5343a_64.png&title=alois+dg&url=http%3A%2F%2Faloisdg.tumblr.com%2F&page
+   _slide=slide
+
+   IFRAME:
+   [17]http://assets.tumblr.com/analytics.html?63fae489732da54993e4a941e42
+   dcf5e
+
+   Quantcast
+
+   [impixu?T=1380681973&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvYWxvaXNk
+   Zy50dW1ibHIuY29tXC9wb3N0XC82MjIwMTE3OTIwNFwvZmFpcmUtdW4tc2xpZGVyLXhhbWw
+   tY29tcGxldC1lbi01LXBldGl0ZXMtZXRhcGVzIiwicmVxdHlwZSI6MCwicm91dGUiOiJcL3
+   Bvc3RcLzppZFwvOnN1bW1hcnkiLCJub3NjcmlwdCI6MX0=&U=MDPABGHKKK&K=ef8a22e0f
+   eb6cccfcb8fdb0f2401dc0239ec13773ee34c2d57d8a5d8c3a0fd22&R=]
+   [impixu?T=1380681973&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Fsb2lz
+   ZGcudHVtYmxyLmNvbVwvcG9zdFwvNjIyMDExNzkyMDRcL2ZhaXJlLXVuLXNsaWRlci14YW1
+   sLWNvbXBsZXQtZW4tNS1wZXRpdGVzLWV0YXBlcyIsInJlcXR5cGUiOjAsInJvdXRlIjoiXC
+   9wb3N0XC86aWRcLzpzdW1tYXJ5IiwicG9zdHMiOlt7InBvc3RpZCI6IjYyMjAxMTc5MjA0I
+   iwiYmxvZ2lkIjoiMTM3NDkwNTU0Iiwic291cmNlIjozM31dLCJub3NjcmlwdCI6MX0=&U=A
+   HAOJCCOPG&K=d3477ab2eb70bb9e6151a80edb439d8c4aa02984c67ea36b0c8d2ada5ee
+   516c4&R=]
+
+References
+
+   Visible links
+   1. file://localhost/
+   2. http://aloisdg.tumblr.com/post/62201179204/faire-un-slider-xaml-complet-en-5-petites-etapes
+   3. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml146.data#step4
+   4. http://media.tumblr.com/188cc00eed6cf58341b76cb484220cfe/tumblr_inline_mtnkvty38g1sn9pf9.jpg
+   5. http://3.bp.blogspot.com/_lXVrTUeY2SQ/TOctDbp4zyI/AAAAAAAACcc/ACjefJZddw4/s1600/NevilleYR1.jpg
+   6. http://i.imgur.com/uP0rSP1.jpg
+   7. http://i.imgur.com/dw7swzX.jpg
+   8. http://i.imgur.com/xIK8FxW.jpg
+   9. http://i.imgur.com/lf8pUzd.jpg
+  10. http://i.imgur.com/19Lg38X.jpg
+  11. https://github.com/aloisdg/Slider
+  12. https://twitter.com/share
+  13. http://disqus.com/
+  14. file://localhost/
+  15. http://assets.tumblr.com/assets/html/iframe/o.html?_v=0f8339d83792f50916ca29c1a64ddfa0#src=http%3A%2F%2Faloisdg.tumblr.com%2Fpost%2F62201179204%2Ffaire-un-slider-xaml-complet-en-5-petites-etapes&pid=62201179204&rk=9fl8vG8F&lang=en_US&name=aloisdg&brag=false&avatar=http%3A%2F%2F25.media.tumblr.com%2Favatar_aab91af5343a_64.png&title=alois+dg&url=http%3A%2F%2Faloisdg.tumblr.com%2F&page_slide=slide
+  16. http://www.tumblr.com/assets/html/iframe/teaser.html#src=http%3A%2F%2Faloisdg.tumblr.com%2Fpost%2F62201179204%2Ffaire-un-slider-xaml-complet-en-5-petites-etapes&pid=62201179204&rk=9fl8vG8F&lang=en_US&name=aloisdg&brag=false&avatar=http%3A%2F%2F25.media.tumblr.com%2Favatar_aab91af5343a_64.png&title=alois+dg&url=http%3A%2F%2Faloisdg.tumblr.com%2F&page_slide=slide
+  17. http://assets.tumblr.com/analytics.html?63fae489732da54993e4a941e42dcf5e
+
+   Hidden links:
+  19. file://localhost/
+  20. http://facebook.com/aloisdg
+  21. http://twitter.com/aloisdg
+  22. http://github.com/aloisdg
+  23. http://fr.linkedin.com/in/aloisdg
+  24. http://aloisdg.tumblr.com/post/62201179204/faire-un-slider-xaml-complet-en-5-petites-etapes

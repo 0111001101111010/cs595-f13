@@ -1,0 +1,842 @@
+   #[1]David Walsh Blog [2]David Walsh Blog Atom Feed [3]David Walsh Blog
+   RSS 2.0 Feed [4]David Walsh Blog Comments RSS 2.0 Feed [5]David Walsh
+   Blog RSS 1.0 [6]David Walsh Blog RSS 0.92 Feed [7]David Walsh Blog
+   Search [8]David Walsh Blog » Write Your CSS with JavaScript Comments
+   Feed [9]Git Hooks and CSS Preprocessors [10]Eliminating Distractions
+
+     * [11]David Walsh Blog
+     * [12]articles
+          + [13]Latest Posts
+          + [14]Features
+          + [15]Quick Tips
+          + [16]Script & Style
+          +
+          + [17]HTML5
+          + [18]CSS Animations
+          + [19]Firefox OS
+          + [20]jQuery
+          + [21]MooTools
+          + [22]PHP
+          +
+          + [23]Submit Guest Post
+     * [24]demos
+          + [25]All Demos
+          + [26]jQuery Demos
+          + [27]MooTools Demos
+          + [28]CSS Demos
+          + [29]HTML5 Demos
+     * [30]forums
+          + [31]MooTools 1.x
+          + [32]MooTools 2
+          + [33]CSS
+          + [34]HTML5 & Mobile
+          + [35]jQuery
+          + [36]Firefox OS
+     * [37]deals
+     * [38]david walsh
+          + [39]About Me
+          + [40]Contact Me
+          + [41]Mozilla
+          +
+          + [42]RSS Feed
+          + [43]Twitter
+          + [44]Facebook
+          + [45]Google +
+          + [46]LinkedIn
+          + [47]App.Net
+          + [48]GitHub
+          + [49]CodePen
+          + [50]Chat
+
+   ____________________
+   [51]The David Walsh Blog
+
+Write Your CSS with JavaScript
+
+   Written by [52]Krasimir Tsonev on September 25, 2013 · [53]33 Comments
+
+   Sometimes programming is just using the right tool. This may be a
+   framework, library or as it happens in my case CSS preprocessor. You
+   probably don't realize it, but LESS or SASS have a lot of constraints.
+   I managed to change that by writing my own CSS preprocessor. I stopped
+   writing CSS and moved everything into the JavaScript world. This
+   article is about [54]AbsurdJS: a small Node.js module, which changed my
+   workflow completely.
+
+The Concept
+
+   Write your CSS with JavaScript
+
+   If you write a lot of CSS you probably use preprocessor. There are two
+   popular - LESS and SASS. Both tools accept something, which looks like
+   CSS, do some magic and export normal, pure CSS. What I did is just to
+   replace the instrument and the input format. I didn't want to invent a
+   new language or syntax, because this is connected with a lot of things
+   like parsing and compiling. Thankfully, Node.js is here and I decided
+   to use it. Also, I had a lot of LESS type projects, which means that I
+   already use Node.js to compile my styles. It was much easier to replace
+   a module instead of adding something completely new.
+   \
+
+The Input
+
+   Write your CSS with JavaScript
+
+   I think that the closest thing to the CSS format is JSON -- that's what
+   AbsurdJS accepts. Of course there are some cons of this transformation.
+   You have to put some properties in quotes and of course the values.
+   This needs a little bit more time during the writing, but as you will
+   see below it's worth it.
+
+In the Beginning was ... a JavaScript File
+
+   Here is how a simple LESS file looks like:
+.main-nav {
+    background: #333;
+    color: #000;
+    font-weight: bold;
+    p {
+        font-size: 20px;
+    }
+}
+
+   And here is its AbsurdJS equivalent. It's a simple Node.js module:
+module.exports = function(api) {
+    api.add({
+        ".main-nav": {
+            background: "#333",
+            color: "#000",
+            "font-weight": "bold",
+            p: {
+                "font-size": "20px"
+            }
+        }
+    })
+}
+
+   You should assign a function to module.exports. It accepts a reference
+   to the API, which has several methods, but the most important one is
+   add. Simply pass a JSON object and it will be converted to CSS.
+
+   To compile the less file we need install LESS's compiler via npm
+   install -g less and run
+lessc .\css.less > styles.less.css
+
+   It's the almost the same with AbsurdJS. Installation is again via node
+   package manager - npm install -g absurd.
+absurd -s css.js -o styles.absurd.css
+
+   It accepts source and output; the result is the same.
+
+The Truth
+
+   You may have really beautiful and nice-looking LESS or SASS files, but
+   what matters is the final compiled CSS. Unfortunately the result is not
+   always the best one.
+
+Combining
+
+   Let's get the following example:
+.main-nav {
+    background: #333;
+}
+.main-content {
+    background: #333;
+}
+
+   If you pass this to the current preprocessors you will get the same
+   thing in the end. However if you use AbsurdJS like that:
+module.exports = function(api) {
+    api.add({
+        ".main-nav": {
+            background: "#333"
+        },
+        ".main-content": {
+            background: "#333"
+        }
+    })
+}
+
+   After the compilation you will get
+.main-nav, .main-content {
+    background: #333;
+}
+
+   SASS has a feature called placeholders which does the same thing.
+   However, it comes with its own problems. Placeholders can't accept
+   parameters and you should repeat them in every selector which you want
+   to combine. My solution just parses the rules and combine them. Let's
+   get a little bit more complex example:
+{
+    ".main-nav": {
+        background: "#333",
+        ".logo": {
+            color: "#9f0000",
+            margin: 0
+        }
+    },
+    ".main-content": {
+        background: "#333"
+    },
+    section: {
+        color: "#9f0000",
+        ".box": {
+            margin: 0
+        }
+    }
+}
+
+   The result is
+.main-nav, .main-content {
+    background: #333;
+}
+.main-nav .logo, section {
+    color: #9f0000;
+}
+.main-nav .logo, section .box {
+    margin: 0;
+}
+section .box {
+    padding: 10px;
+    font-size: 24px;
+}
+
+   All identical styles are combined into one single definition. I know
+   that the browsers are really fast nowadays and this is not exactly the
+   most important optimization, but it could decrease the file size.
+
+Overwriting
+
+   You know that if you have two identical selectors and they contain
+   definition of the same style the second one overwrites the first. The
+   following code passed through LESS/SASS stays the same:
+.main-nav {
+   font-size: 20px;
+}
+.main-nav {
+   font-size: 30px;
+}
+
+   However I think that this leaves one more operation for the browser: it
+   has to find out that there is another definition with the same selector
+   and style and compute the correct value. Isn't it better to avoid this,
+   so send that directly:
+.main-nav {
+    font-size: 30px;
+}
+
+   AbsurdJS takes care about this and produces only one definition. The
+   input may look like that:
+{
+    ".main-nav": {
+        "font-size": "20px"
+    },
+    ".main-nav": {
+        "font-size": "30px"
+    }
+}
+
+   It also makes your debugging processes easier, because there is no so
+   long chain of overwrites.
+
+Flexibility
+
+   Ok, we have mixins, variables, placeholders, functions, but once you
+   start using them to write a little bit more complex things you are
+   stuck. Let's get the mixins. I want to create a mixin, which defines
+   another mixin. That's currently not possible in LESS, because you can't
+   use a mixin defined in another mixin. I guess it's a scope problem.
+   SASS has some [55]imperfections regarding the interpolation of the
+   variables. Overall, it's hard to produce good architecture with less
+   code. You have to write a lot and even then, you can't really achieve
+   your goals. The main reason behind these problems is the fact that
+   both, LESS and SASS, have to deal with new syntax, new rules and
+   basically invent a new compiler. However, if we use JavaScript we don't
+   have to think about these issues.
+
+   AbsurdJS has something called storage. It could save whatever you want
+   and make it available in other files. For example:
+// B.js
+module.exports = function(api) {
+    api.storage("theme", function(type) {
+        switch(type) {
+            case "dark": return { color: "#333", "font-size": "20px" }; break;
+            case "light": return { color: "#FFF", "font-size": "22px" }; break;
+            default: return { color: "#999", "font-size": "18px" };
+        }
+    });
+}
+
+// A.js
+module.exports = function(api) {
+    api
+    .import(__dirname + "/B.js")
+    .add({
+        ".main-nav": [
+            {
+                "font-size": "16px",
+                padding: 0,
+                margin: 0
+            },
+            api.storage("theme")("dark")
+        ]
+    });
+}
+
+   At the end you get:
+.main-nav {
+    color: #333;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+   Using the storage may be a little bit ugly. I mean, you need an array
+   assigned to the selector and then call api.storage. I used that for a
+   while, but later decided to implement something much nicer. It's a
+   feature which I always wanted - the ability to create your own
+   properties and save tons lines. For example, let's create a new
+   property called theme and process its value.
+// B.js - definition of the plugin
+module.exports = function(api) {
+    api.plugin('theme', function(api, type) {
+        switch(type) {
+            case "dark": return { color: "#333", "font-size": "20px" }; break;
+            case "light": return { color: "#FFF", "font-size": "22px" }; break;
+            default: return { color: "#999", "font-size": "18px" };
+        }
+    });
+}
+
+// A.js - its usage
+module.exports = function(api) {
+    api
+    .import(__dirname + "/B.js")
+    .add({
+        ".header": {
+            theme: "light"
+        }
+    })
+}
+
+   Again, the result is similar:
+.header {
+    color: #FFF;
+    font-size: 22px;
+}
+
+Conclusion
+
+   [56]AbsurdJS is something really simple, but avoids the usage of
+   popular CSS preprocessors. It still has the same feature like nested
+   selectors, media queries bubbling, file import, variables, mixins and
+   so one. However, it brings more flexibility, because it is a pure
+   JavaScript. It has even a [57]GruntJS support. I'd like to get some
+   feedback and will be happy if you take a part in the project. The
+   official repository is available here
+   [58]https://github.com/krasimir/absurd.
+
+About Krasimir Tsonev
+
+   Krasimir Tsonev
+
+   Krasimir Tsonev is a coder with over ten years of experience in web
+   development. With a strong focus on quality and usability, he is
+   interested in delivering cutting edge applications. Currently, with the
+   rise of the mobile development, Krasimir is enthusiastic to work on
+   responsive applications targeted to various devices. Living and working
+   in Bulgaria, he graduated at the Technical University of Varna with a
+   bachelor and master degree in computer science. If you'd like to stay
+   up to date on his activities, refer to his blog or follow him on
+   Twitter.
+
+   [59]krasimirtsonev.com/blog [60]@KrasimirTsonev
+     * [61]
+
+Introducing MooTools Templated
+     * [62]
+
+CSS Gradients
+     * [63]
+
+Convert XML to JSON with JavaScript
+
+Related Posts
+
+    1. [64]Starting to Write CSS
+    2. [65]Script & Style Exclusive: Add Custom Values To Your WordPress
+       RSS Feed
+    3. [66]Basic PHP File Handling — Create, Open, Read, Write, Append,
+       Close, and Delete
+    4. [67]Upgrade Node.js via NPM
+    5. [68]Highlighter: A MooTools Search & Highlight Plugin
+
+Comments
+
+    1. [69]Mikhail Larchanka [70]September 25, 2013
+       Nice. But Yandex created BEM few years ago with the same
+       functionality.
+    2. [71]Krasimir Tsonev [72]September 25, 2013
+       AbsurdJS is more like a CSS preprocessor. BEM is a methodology, a
+       concept like OOCSS or Atomic design.
+          + [73]Varya [74]September 26, 2013
+            Kasimir, BEM also provides a JavaScript solution for coding
+            independent components. The idea is similar to what you
+            present in this article. The freshest piece of info about it
+            is the tutorial I am working on right now. Here it is
+            [75]https://github.com/varya/bem-js-tutorial Please, check it
+            out, you might be interested.
+            Once been finished this tutorial will be a part of bem.info
+            web site. Although it already has one older article presenting
+            this JavaScript solution
+            [76]http://bem.info/articles/bem-js-main-terms/
+            I personally like developing web components as individuals,
+            when we describe the component states in JavaScript and CSS
+            serves for rendering this states in a proper way. Your
+            solution looks pretty similar in its concept and that is
+            great! Nice to see the ideas of modular web extending the
+            world :-)
+          + Varvara Stepanova [77]September 26, 2013
+            Krasimir, I wrote here about BEM JavaScript solution twice but
+            every time my comment disappears after a few minutes. Can it
+            be because I try to provide a link?
+            How can I write you the staff?
+    3. David Chase [78]September 25, 2013
+       This is definitely something I would like to take for a spin!
+       Thank you :)
+    4. [79]Nico [80]September 25, 2013
+       Why would you ever want to use this over Stylus, LESS, SASS, or the
+       like?
+    5. [81]Krasimir Tsonev [82]September 25, 2013
+       @Nico: because with AbsurdJS you have the flexibility of JavaScript
+       language. You may create complex architectures. With Stylus, LESS
+       or SASS you are bounded to specific syntax and functionalities. As
+       I said in the article you can’t really create/use a mixin which
+       generates other mixins. You can’t also define your own properties.
+       It just fits better in my workflow and projects.
+          + [83]Nico [84]September 27, 2013
+            What do you mean you can’t? with Stylus you can do all of
+            that, and you don’t get any of the typing overhead of using
+            JavaScript.
+    6. Capaj [85]September 25, 2013
+       I would consider it only if I would have the same luxury of
+       autocomplete as I have with LESS/CSS in Webstorm. I just hope all
+       preprocessors will be obsolete when CSS4 hits mainstream.
+    7. [86]andrej [87]September 26, 2013
+       The more and more I read and think about css frameworks,
+       preprocessors, etc. the more I come to the conclusion, that a lot
+       of it is not productive. I mean css is such an easy and straight
+       forward language. You can write some rules, use them, throw them
+       away, write new ones. Simple, fast, productive.
+       The farther you remove yourself from core css writing, the more
+       time you spend on making decisions, which framework to use and how,
+       learning the framework you have chosen, or even writing your own
+       framework and preprocessor.
+       You are actually not producing or contributing to a product.
+       And as you mentioned, your css output might me shorter and cleaner,
+       but who cares, if you didn’t deploy a feature, milestone, product
+       to your customers? Don’t get me wrong, frontend performance is
+       huge, however there are better stones to turn, if you look at time
+       invested.
+       Still, I enjoyed your post and hope you are more productive using
+       absurdjs. cheers :)
+    8. Adam [88]September 26, 2013
+       I like the idea of generating CSS through code (and JS is as good
+       as any). In complex situations, being able to use computation can
+       simplify things greatly. A couple of problems come to mind,
+       however.
+       First. You’re right that having “background-color”: “#fff333″ next
+       to width: “32px” is odd. So why not simply use the JavaScript
+       notations? backgroundColor, fontSize and so on. The script to
+       convert them to their proper values is actually minimal.
+       Second. The terminology “plugin” could probably be “property”
+       because that’s what you are defining. The fact that you get some
+       number of CSS properties (or even more rules) is immaterial. It
+       also means that all the “native” css properties are written as
+       “plugins” and it would be trivial to have them generate browser
+       prefixes and values as necessary.
+       Third. You need to account for multiple values. Backgrounds, for
+       example can take multiple values. However, if were to pass them all
+       in as a string, you will end up with a lot of boiler plate
+       value.split(‘,’) and so on (and it doesn’t work if you have
+       gradients). Instead its probably ok to have myProperty: ['value
+       number 1', 'value number 2']. In the inner workings, you simply
+       call the plugin using apply() so that I get an number of arguments,
+       rather than a single argument that has an array value one time and
+       a single value the next. This allows me to simply iterate through
+       all the items in arguments regardless of the number of values
+       passed in.
+       Fourth. A utility function to break a compound value into its parts
+       (like background) would be useful. A simple string split on
+       whitespace will not work because sometimes the whitespace is
+       important. a simple split on whitespace could fail, for example, if
+       the value for background included a gradient.
+       Such a function could also, if you were ambitious, look for number
+       values, color values and so on and return objects for those (so
+       when you get a color object, you can trivially call .darken(0.54)
+       or some other color function on it).
+       Fifth. The combination of selectors without author intervention
+       will lead to problems. The problem is that in CSS order matters. So
+       changing the order changes the meaning of the CSS. Its not an
+       innocuous change. You could argue that one aught to always write
+       code that can withstand reordering. Unfortunately, that’s very
+       difficult to do. It basically forces you to never have classes that
+       are used on the same element at the same time that define the same
+       properties. Colors are easy to do (Bootstrap3 eliminated all the
+       default colors from things like buttons and labels probably for a
+       reason like this) but for other things it becomes problematic.
+       Consider the following:
+{
+ '.subtitle': { 'font-size': '23px'},
+ '.btn' : { 'font-size': '16px'},
+ '.btn-lrg' : { 'font-size': '23px'},
+'.prose': : { 'font-size': '16px'}
+}
+
+       If I understand you correctly this should result in:
+ .subtitle, .btn-large: { font-size: 23px},
+ .btn, .prose: { font-size: 16px},
+
+       Now if we expect to see then the font size will always be 16px, not
+       23px as the author intended. This becomes complicated when in one
+       place you define a shortcut property (say background) and in
+       another you define a specific property like background-color. If
+       your specific property gets reordered before the shortcut, the
+       short cut always wins, even if all it did was background:
+       url(/my-pic.png); because people always forget that omitting parts
+       of the shortcut is explicitly defining the default. And that’s
+       going to be a PITA to debug.
+    9. Samuel Allen [89]September 26, 2013
+       I would submit that Stylus is a JS based pre-processor that can do
+       most, if not all of what you are achieving with AbsurdJS (though it
+       defers to more CSSy syntax instead of JSON), and is also a Node
+       module which allows for all kinds of advanced scripting and
+       middleware. Not saying there isn’t room for something else, just
+       that you shouldn’t lump Stylus in with SASS and LESS as ‘not being
+       a JS solution’.
+   10. [90]Krasimir Tsonev [91]September 26, 2013
+       @Adam: good points. A lot of think to think about. Thanks.
+       @Samuel Allen: I agree with you
+   11. [92]Dezayo [93]September 27, 2013
+       Cool! Thanks for sharing!
+   12. [94]Simonced [95]September 27, 2013
+       I always wondered why should we have to compile CSS? I mean, it’s
+       supported natively and compiling it adds a useless step in our
+       development workflow.
+       Not for me I’m afraid. I use PHP and JS for a reason, because
+       scripts are cool and fast enough for common projects. Compiling
+       takes time I don’t have, and I do write a lot of CSS.
+   13. [96]Krasimir Tsonev [97]September 27, 2013
+       @Simonced: compiling is necessary for serving only one minified css
+       file. I believe that this is the core concept of the preprocessors.
+       Beside that, you save a lot of time because you group properties in
+       blocks and reuse them. The variables are also very useful because
+       you make changes on only one place. Yes, I agree that compilation
+       takes time and it’s one more thing in your ecosystem, but it’s
+       worth it. In my case was just one more module in my Gruntjs setup.
+   14. [98]Krasimir Tsonev [99]September 27, 2013
+       @Varya: I saw your post.
+       [100]https://github.com/varya/bem-js-tutorial looks really
+       interesting. I’ll try to find some time next week to take a look.
+   15. [101]Jeff [102]September 27, 2013
+       Thanks for the write up.
+       While I appreciate the attempt of what it’s trying to do, its just
+       a step too far away from EXPRESSIVELY writing CSS or SASS or LESS
+       etc. I have to think about the architecture I’m working against
+       before I even start writing my code. With enough practice I’m sure
+       it wouldn’t be too painful, but even writing the css itself is
+       verbose with quoting the CSS rule.
+       I love pure SASS (not SCSS).
+       That plus Jade + Coffeescript = heaven
+   16. [103]Krasimir Tsonev [104]September 27, 2013
+       @Jeff: yep, quoting the properties is really bad idea. I’m
+       considering changing that. I’ll follow the advice of Adam and will
+       make shortcuts for every css property.
+   17. [105]Krasimir Tsonev [106]September 28, 2013
+       Hi guys, there is no need to quote the CSS properties anymore
+       ([107]https://github.com/krasimir/absurd/commit/6a3ad356464e12b06f6
+       a82753ba670f414553468#L1L4). AbsurdJS converts every uppercase
+       letter to a dash followed by the lowercase version of the letter.
+       For example: WebkitTransform -> -webkit-transformOf course this is
+       valid only for the CSS properties.
+   18. [108]9code [109]September 28, 2013
+       for more programming tutorial visit [110]http://www.9code.in
+   19. Troland [111]September 28, 2013
+       There is a problem that what about the abbreviation when you type
+       in js.I mean howto quickly type the css abbreviation when you edit
+       the css in a js file?
+   20. [112]Krasimir Tsonev [113]September 28, 2013
+       @Troland: can you please give an example.
+   21. Zoomclub [114]September 28, 2013
+       This is great!
+       As we know the JSON format dovetails with JS and doing what your
+       doing is in the spirit of NoSQL DB’s like Mongo, where the JSON
+       format maps much better to the actual code than SQL does/did.
+       Also, now that we are starting to see the Path Object implemented
+       for the Canvas element AbsurdJS might be the handy way to provide
+       CSS like styling values to the Path Contexts, very rad indeed!
+       I have struggled with this whole CSS file format and pre-processor
+       issue because I have architected so much of my app into JSON
+       configurations. I’m certainly in favour of using a unifying file
+       format like JSON for as much as possible. This also allows me to
+       lockdown JSON style and layout in Firebase with their very nice
+       security rules.
+       Lets keep going with this… I write my “CSS” in JSON now, then I
+       store the JSON on Firebase, then I load JSON from Firebase with its
+       refURLs into the fast local cache Firebase provides, then I use
+       AdsurdJS at runtime to apply specific cached JSON documents to app
+       widgets or Path Objects, etc. Is there any reason this would not
+       work?
+       Other than that my choice in pre-processors is Stylus, however I
+       want to use JSON and JS as the most universal solution possible.
+   22. [115]soroush [116]September 28, 2013
+       as a security researcher by reading the title I was shocked.
+       there are plugins like no script and more that allow users to block
+       javascript to sites that
+       they don’t know. so if you rely on javascript and you have a new
+       user, they may never come
+       back to site. It’s best to to use javascript when needed.
+       also if you can do the same thing with php or other sever side
+       scripting, it’s better to do it
+       that way
+   23. [117]Krasimir Tsonev [118]September 29, 2013
+       @Zoomclub: everything sounds awesome. Please keep me informed how
+       are the things working. If something goes wrong email me or post an
+       issue to the girhub repo. I’ll be glad to help. I believe that the
+       only one way to improve the module is to using it. Your use case
+       sounds like the most complex so far and it is interesting for me to
+       see how AbsurdJS will react.
+       @soroush: AbsurdJS is a Nodejs module. It is not meant to be used
+       client-side. It’s working at the back-end side of the things. I
+       also recommend using it only in development mode and serve the
+       compiled CSS in production.
+   24. [119]Krasimir Tsonev [120]September 29, 2013
+       @Zoomclub: You my find the latest released helpful. AbsurdJS now
+       supports importing of pure JSON. I.e. you don’t need to write
+       JavaScript. You may send directly your .json files.
+       [121]https://github.com/krasimir/absurd/commit/931151acdd13d0eb5580
+       1d5ebe33245c281380c0
+   25. Zoomclub [122]September 29, 2013
+       @Krasimir: I’ll need AbsurdJS to work on the client-side for sure.
+       Most of my use of JSON configurations is on the client where I let
+       users hotswap them to change the way the app behaves, looks, etc.
+       Your solution is to good for only Node.js, we Hybrid App guys want
+       cool stuff too :-)
+   26. [123]Krasimir Tsonev [124]September 29, 2013
+       @Zoomclub: using AbsurdJS in the client side sounds absurdly :) of
+       course it makes sense for you and I’m sure that there is cases
+       where you need something like this.
+   27. Zoomclub [125]September 29, 2013
+       @Krasimir: I’m not sure your saying that it is possible or not?
+       Please do let me know. For example, something like AsyncJS runs in
+       Node or on the client. My server side is essentially Firebase,
+       which I use with its client-side API. Then from the client-side
+       local cache I would use a specific JSON configuration to apply its
+       data to a given function. Since my app must dynamically respond to
+       user events doing this on the client is required.
+       If it is not possible to use AbsurdJS on the client then CSS stays
+       as it was, fit for its one task. Using AbsurdJS I am hoping to
+       break that limit and extend styling to more than just HTML, to the
+       Canvas element and beyond is where I’m looking at. Otherwise,
+       AbsurdJS is not to much more than another pre-processor for HTML,
+       caught up in an argument over format with other pre-processors and
+       limiting its potential, right?
+   28. [126]Krasimir Tsonev [127]September 29, 2013
+       @Zoomclub: I already started thinking about porting AbsurdJS for
+       the client-side. It will be possible very soon. What will do there
+       is the same. Accept javascript or json code, compile it to CSS and
+       append it to the DOM. However, I think that such approach is kinda
+       wrong, because the CSS should be one of the first things delivered
+       to the users. Waiting to get the html and javascript, compile the
+       CSS and then display something sounds like a bad thing. Anyway, I’m
+       not sure exactly how you are going to use it.
+   29. Zoomclub [128]September 29, 2013
+       @Krasimir: The port to client-side is wonderful news because I see
+       AbsurdJS as both a solution for HTML and also the Canvas.
+       For HTML, In modern apps built with frameworks like AngularJS the
+       use of HTML partials is becoming mainstream. In my app I would have
+       these partials already downloaded to the client-side (also as keyed
+       values in a JSON file). I would then want to generate CSS
+       on-the-fly from values that might have been adjusted by a user and
+       then apply that to the HTML partials, all without a trip back to a
+       server.
+       For the Canvas (which can currently not be styled by CSS), the JSON
+       files managed by AdsurdJS would be directly applied as layout and
+       style values for anything rendered by the 2D context of the Canvas.
+       You could say that the JSON (without conversion to CSS) would then
+       act as a memento or snapshot of the state of the 2D context. Such a
+       snapshot could be used to set the 2D context differently and
+       according to the need of each possible thing rendered on the
+       Canvas.
+       One way to use this is by fetching a given SVG glyph from a
+       pre-loaded webfont and then applying a JSON snaphot configuration
+       to the 2D context and then on step three drawing the glyph (which
+       could also be scaled, etc by the snapshot too) to the Canvas.
+       In this way AbsurdJS would allow the JSON to act as a new type/form
+       of CSS for the Canvas. And with the extra step you already do, the
+       JSON can also be converted to true CSS for use on a HTML or a SVG
+       partial. The popular D3.js library is an example of something that
+       produces SVG partials, in most cases these partials are produced
+       dynamically right on the client.
+   30. Artur [129]October 1, 2013
+       JavaScript will rule us all.
+       AbsurdJS joined with DOMO.js can transform the way we all construct
+       code in the web right now.
+
+Be Heard
+
+   Tip: Wrap your code in <pre> tags or link to a GitHub Gist!
+   Name: ____________________ Email: ____________________ Website:
+   ____________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+
+   [ ] Notify me of followup comments via e-mail
+   Post Comment! [130]Use Code Editor
+   Older
+   Git Hooks and CSS Preprocessors
+   [131]Newer
+   Eliminating Distractions
+   © [132]David Walsh  2007-2013. [133]Feedback
+
+References
+
+   Visible links
+   1. http://davidwalsh.name/
+   2. http://davidwalsh.name/feed/atom
+   3. http://davidwalsh.name/feed
+   4. http://davidwalsh.name/comments/feed
+   5. http://davidwalsh.name/feed/rdf
+   6. http://davidwalsh.name/feed/rss
+   7. file://localhost/opensearch.xml
+   8. http://davidwalsh.name/write-css-javascript/feed
+   9. http://davidwalsh.name/git-hooks
+  10. http://davidwalsh.name/eliminating-distractions
+  11. file://localhost/
+  12. file://localhost/page/1
+  13. file://localhost/page/1
+  14. file://localhost/tutorials/features
+  15. file://localhost/tutorials/tips
+  16. file://localhost/s
+  17. file://localhost/tutorials/html5
+  18. file://localhost/tutorials/css/animations
+  19. file://localhost/tutorials/firefoxos
+  20. file://localhost/tutorials/jquery
+  21. file://localhost/tutorials/mootools
+  22. file://localhost/tutorials/php
+  23. file://localhost/guest-post
+  24. file://localhost/demos
+  25. file://localhost/demos
+  26. file://localhost/demos/jquery
+  27. file://localhost/demos/mootools
+  28. file://localhost/demos/css
+  29. file://localhost/demos/html5
+  30. file://localhost/forums
+  31. file://localhost/forums/forum/mootools
+  32. file://localhost/forums/forum/mootools-2
+  33. file://localhost/forums/forum/css
+  34. file://localhost/forums/forum/html5-mobile
+  35. file://localhost/forums/forum/jquery
+  36. file://localhost/forums/forum/firefox-os
+  37. file://localhost/deals
+  38. file://localhost/about
+  39. file://localhost/about-david-walsh
+  40. file://localhost/contact
+  41. file://localhost/mozilla
+  42. file://localhost/feed
+  43. file://twitter.com/davidwalshblog
+  44. file://facebook.com/davidwalshblog
+  45. file://plus.google.com/114538814489633467974
+  46. file://linkedin.com/in/davidjameswalsh
+  47. file://alpha.app.net/davidwalsh
+  48. file://github.com/darkwing
+  49. file://codepen.io/darkwing
+  50. file://localhost/chat
+  51. file://localhost/
+  52. http://krasimirtsonev.com/blog
+  53. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comments
+  54. https://github.com/krasimir/absurd
+  55. http://krasimirtsonev.com/blog/article/Two-handy-and-advanced-SASS-features-and-their-limitations
+  56. https://github.com/krasimir/absurd#usage
+  57. https://github.com/krasimir/absurd#using-with-grunt
+  58. https://github.com/krasimir/absurd
+  59. http://krasimirtsonev.com/blog
+  60. file://twitter.com/KrasimirTsonev
+  61. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/templated
+  62. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css-gradients
+  63. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/convert-xml-json
+  64. http://davidwalsh.name/starting-css
+  65. http://davidwalsh.name/script-style-exclusive-add-custom-values-wordpress-rss-feed
+  66. http://davidwalsh.name/basic-php-file-handling-create-open-read-write-append-close-delete
+  67. http://davidwalsh.name/upgrade-nodejs
+  68. http://davidwalsh.name/mootools-highlighter-search
+  69. http://mobila.name/
+  70. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62567
+  71. http://krasimirtsonev.com/blog
+  72. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62568
+  73. http://varya.me/
+  74. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62646
+  75. https://github.com/varya/bem-js-tutorial
+  76. http://bem.info/articles/bem-js-main-terms/
+  77. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62647
+  78. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62571
+  79. http://blog.ponyfoo.com/
+  80. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62572
+  81. http://krasimirtsonev.com/blog
+  82. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62574
+  83. http://blog.ponyfoo.com/
+  84. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62688
+  85. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62575
+  86. http://www.teamaton.com/
+  87. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62612
+  88. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62628
+  89. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62638
+  90. http://krasimirtsonev.com/
+  91. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62643
+  92. http://dezayo.com/
+  93. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62665
+  94. http://cedric.dragoncorp.co.jp/
+  95. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62680
+  96. http://krasimirtsonev.com/blog
+  97. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62682
+  98. http://krasimirtsonev.com/blog
+  99. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62689
+ 100. https://github.com/varya/bem-js-tutorial
+ 101. http://jeffscottward.github.io/
+ 102. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62693
+ 103. http://krasimirtsonev.com/
+ 104. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62695
+ 105. http://krasimirtsonev.com/blog
+ 106. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62716
+ 107. https://github.com/krasimir/absurd/commit/6a3ad356464e12b06f6a82753ba670f414553468#L1L4
+ 108. http://www.9code.in/
+ 109. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62729
+ 110. http://www.9code.in/
+ 111. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62731
+ 112. http://krasimirtsonev.com/blog
+ 113. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62751
+ 114. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62754
+ 115. http://wirelessarmy.com/
+ 116. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62755
+ 117. http://krasimirtsonev.com/blog
+ 118. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62767
+ 119. http://krasimirtsonev.com/blog
+ 120. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62768
+ 121. https://github.com/krasimir/absurd/commit/931151acdd13d0eb55801d5ebe33245c281380c0
+ 122. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62771
+ 123. http://krasimirtsonev.com/blog
+ 124. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62774
+ 125. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62776
+ 126. http://krasimirtsonev.com/blog
+ 127. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62777
+ 128. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62779
+ 129. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml182.data#comment-62905
+ 130. javascript:;
+ 131. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/eliminating-distractions
+ 132. file://localhost/
+ 133. file://localhost/contact
+
+   Hidden links:
+ 135. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/git-hooks

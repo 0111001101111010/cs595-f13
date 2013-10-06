@@ -1,0 +1,187 @@
+   #[1]Shelly Cloud Blog
+
+     * [2]Shelly Cloud
+     * [3]Pricing
+     * [4]Support
+     * [5]Docs
+     * [6]Blog
+
+     * [7]Sign up
+     * [8]Log in
+
+     * [9]Shelly Cloud
+
+     * Navigation
+          + [10]Pricing
+          + [11]Support
+          + [12]Docs
+          + [13]Blog
+          + [14]Sign up
+          + [15]Log in
+
+     * [16]Subscribe RSS
+     * [17]Follow on Twitter
+
+[18]How to manage front-end packages in Rails with Bower
+
+   Posted on September 24, 2013 by [19]Bartłomiej Kozal and has
+
+   [20]Bower is an open source software created by Twitter, which
+   simplifies dependencies management and updating of front-end packages
+   (like [21]gridism or [22]normalize). In general it is the same thing
+   for HTML/CSS/JS what Bundler is for Ruby. Not so long time ago version
+   1.0 has been released and the current stable version is 1.2. Let's take
+   a look at how to use it and integrate with a Rails app.
+
+Workflow
+
+   The easiest way to install Bower on your local machine is to use the
+   [23]NPM manager distributed with Node.js. Just run in terminal npm
+   install -g bower.
+
+   Basic workflow is really simple. In the application directory create
+   bower.json file. Next, add name key with your application code name and
+   dependencies key with hash as a value which is used to list packages to
+   install. Example file could look like this:
+{
+  "name": "example",
+  "dependencies": {
+    "normalize-css": "*"
+  }
+}
+
+   Run bower install.
+
+   By default Bower downloads all packages to bower_components in the main
+   directory. If you want to add another one - edit bower.json and once
+   again run bower install or use shorthand and just run bower install
+   --save package_name, which will update the bower.json as well.
+
+   The second most used command is bower update, which updates all
+   packages to versions specified in the bower.json (or to the newest
+   available if you use * as a version indicator).
+
+   Last but not least, a command worth mentioning is bower search. Like
+   its name suggest it is used to find packages in the Bower registry. You
+   can also search the whole registry from [24]the web index.
+
+Integration with Rails
+
+   Before you start using Bower in a Rails application you have to set up
+   two things.
+
+   Firstly, you have to change the default path where packages are
+   installed to vendor/assets. To do this add in the application directory
+   a .bowerrc file with:
+{
+  "directory": "vendor/assets/bower_components"
+}
+
+   Secondly, you have to add this path to Rails configuration so packages
+   will be properly compiled. Modify your application.rb to contain the
+   following line:
+config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
+
+   Finally, you are able to require packages in sprockets manifests. For
+   example for normalize it will look like this:
+/*
+ *= require normalize-css/normalize
+ */
+
+   The same thing can be achieved with [25]bower-rails gem, which
+   additionally allows to install packages in different paths and uses
+   very similar DSL to Bundler to generate bower.json.
+
+Summary
+
+   There is one problematic thing with libraries which are not Bower
+   ready. You can still use it, but Bower just clone the whole package
+   repository and store it with your code. It can be fixed by adding
+   bower_components to .gitignore and installing packages during the
+   deployment.
+
+   Another annoying fact is that JavaScript packages are mixed with CSS
+   packages in one directory. This can be solved using the bower-rails gem
+   described above.
+
+   Bower simplifies day to day usage of external front-end packages in
+   your application. Managing them is a lot easier than performing it by
+   hand. It is also a cleaner solution than using Ruby gems only to wrap
+   front-end files which are often outdated.
+     *
+     * [26]Tweet
+     *
+     * [27]Vote on HN
+
+     * [28]Subscribe RSS
+     * [29]Follow on Twitter
+
+   Shelly Cloud is a platform for hosting Ruby and Ruby on Rails
+   applications. You can focus on development without getting distracted
+   by deployment, optimization and maintenance issues.
+
+   Get most interesting Ruby and DevOps articles curated by our team
+   delivered to your email once a month.
+   ____________________
+   (BUTTON) Join our newsletter
+   ×
+
+Want to be up-to-date with Shelly?
+
+   Follow us on Twitter and get latest news about platform, ongoing issues
+   and blog posts.
+   [30]Follow @shellycloud
+
+     * © 2013 Shelly Cloud
+     * [31]Terms of Service
+     * [32]Privacy Policy
+
+     * [33]Status
+     * [34]Blog
+     * [35]Twitter
+     * [36]About Us
+     * [37]Contact
+
+References
+
+   Visible links
+   1. file://localhost/blog/feed.xml
+   2. file://localhost/
+   3. file://localhost/pricing
+   4. file://localhost/support
+   5. file://localhost/documentation/quick_start
+   6. file://localhost/blog
+   7. https://shellycloud.com/sign_up
+   8. file://localhost/login
+   9. file://localhost/
+  10. file://localhost/pricing
+  11. file://localhost/support
+  12. file://localhost/documentation/quick_start
+  13. file://localhost/blog
+  14. file://localhost/sign_up
+  15. file://localhost/login
+  16. file://localhost/blog/feed.xml
+  17. https://twitter.com/shellycloud
+  18. file://localhost/blog/2013/09/how-to-manage-front-end-packages-in-rails-with-bower
+  19. https://twitter.com/_bkzl
+  20. http://bower.io/
+  21. http://cobyism.com/gridism/
+  22. http://necolas.github.io/normalize.css/
+  23. http://nodejs.org/download/
+  24. http://sindresorhus.com/bower-components/
+  25. https://github.com/42dev/bower-rails/
+  26. https://twitter.com/share
+  27. http://news.ycombinator.com/submit
+  28. file://localhost/blog/feed.xml
+  29. https://twitter.com/shellycloud
+  30. https://twitter.com/shellycloud
+  31. file://localhost/terms_of_service
+  32. file://localhost/privacy_policy
+  33. http://status.shellycloud.com/
+  34. file://localhost/blog
+  35. https://twitter.com/ShellyCloud
+  36. file://localhost/about
+  37. file://localhost/contact
+
+   Hidden links:
+  39. file://localhost/blog/2013/09/how-to-manage-front-end-packages-in-rails-with-bower#disqus_thread

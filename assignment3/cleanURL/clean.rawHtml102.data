@@ -1,0 +1,495 @@
+   #[1]8th color » Feed [2]8th color » Comments Feed [3]8th color »
+   PullReview: Reach your Ruby Code Skill Walhalla Comments Feed [4]We
+   don’t do code reviews to improve the code
+
+   [5]Try PullReview - Automated Code Reviews for Ruby Developers
+   __________ Subscribe!
+
+[6]8th color
+
+Code, Development and Startup Praxis
+
+Menu
+
+   [7]Skip to content
+     * [8]Home
+     * [9]Contact
+     * [10]Privacy
+     * [11]Team
+     * [12]Thanks!
+
+PullReview: Reach your Ruby Code Skill Walhalla
+
+   [13]5 Replies
+
+   TL;DR: PullReview is close to Beta now. In this post we’ll show you the
+   ease of use, the code reviews, and how PullReview guides you to become
+   a better Ruby developer.
+
+   Some weeks ago, we [14]lifted a small part of the veil on PullReview,
+   our automated code review tool for Ruby on Rails in Github. We told you
+   why we are in this game: you’re a programming hero, and we want to
+   provide everything to be the most magnificent one you can be.
+
+   [15]Valhalla
+
+   We think Code Review is [16]essential – programming life blood. That is
+   why we are developing PullReview. As [17]our Alpha testers have driven
+   us to a design we’re very comfortable with, we’re ready to show you
+   some snippets of our Alpha version.
+
+   This post has two goals: we want to show to you how PullReview is
+   moving along, and we want to get you so curious that you’ll [18]sign up
+   to the mailing list: you’ll be on the front row when we go into Beta ,
+   we’ll have a shot at convincing you how PullReview is your new
+   bestfriend for Ruby on Rails Code Review.
+
+   Now that we’ve been completely open about that, let’s get to
+   business. What will PullReview be doing for you? Two hints:
+
+   • A Hero should be a Hero
+   • Every Hero’s got a Learning Curve.
+
+   A Hero should be a Hero
+
+   What do we mean by that?
+
+   You should focus on your core: delivering great – smooth functioning –
+   features to your users. Not setting up servers and installing a
+   plethora of tools. Your time – and your [19]flow – is too precious.
+
+   The God Thor does not wait for the next train to get to his adventures.
+
+   Equally, in programming, being the best you can be does nòt mean
+   wasting time on coding activities that have nothing to do with your
+   core competencies. That’s why PullReview is [20]SaaS – that’s why we
+   have tried incorporating all relevant analysis in one tool.
+
+   Simplicity starts at the sign up/login level:
+     * Sign Up to PullReview
+     * Log in to PullReview using your [21]Github account
+     * Sync with your Github account
+     * Pull your Branches and click “review”
+
+   Simple.
+
+   [22]PullReview Review Screen
+
+   For the same reason, we put the most relevant Static Code Analysis
+   tools under one hood. Once you pull a branch from Github to PullReview,
+   PullReview analyzes your code for the following threats:
+     * General Code Smell
+     * Duplication
+     * Complexity
+     * Design
+     * Style
+     * Documentation
+     * Test Infection
+
+   [23]PullReview Analytics
+
+   PullReview separates the issues encountered in alternative categories,
+   looking at different aspects:
+     * the ease of fixing a problem
+     * the gravity of a problem
+     * how you have progressed in fixing previous problems
+
+   This way you get a good overview of the road you’ve travelled, the
+   direction you’re taking now, and the one you should take.
+
+   Every Hero’s got a Learning Curve
+
+   Everyone needs to learn, and Everyone needs to Learn at his or her own
+   pace.
+
+   That’s why PullReview – for starters – doesn’t just tell you what is
+   wrong in your code: it tells you what to do to make your code better.
+   Every time you have pulled a review, you can click each problem and see
+   explained what is wrong exactly, and what fix PullReview proposes.
+
+   [24]PullReview expanded review and code guidance
+
+   Not the what, but the how and the why. That’s how we all learn best.
+
+   Secondly, everyone has his or her very own flow. It is exactly this
+   flow that makes it a real pain in the *#$ to find a reviewer you can
+   trust at a moment in time that suits your way of working. PullReview is
+   ready when you are. Not only does PullReview’s availability help you
+   improve more constantly, you can focus your time with your Peers for
+   the larger challenges at hand: for the details that render your project
+   truly magnificent.
+
+   [25]PullReview Github Repositories Overview
+
+   Cutting a long story short, this is PullReview:
+     * [26]Code Reviews, right away
+     * The most relevant static analysis, all in one place
+     * True Code Reviews, guiding you to improve your coding
+     * Reviews at your pace, making room for True Peer Review when
+       necessary
+
+   We are ready to help you in becoming a truly great programmer. Are you?
+
+   Yes? Only one answer: [27]subscribe to the Beta!
+
+   As a final – important – note: we have everything to thank [28]our
+   Alpha testers for. They challenge us – day after day – to come up with
+   the best Ruby Code Review we can deliver. Thank you all, it’s been –
+   and still is – an exhilarating ride!
+
+   We hope this post has tickled you to be the best you can be, we can
+   only hope that PullReview will play a part in your journey!
+
+
+   [29]Enhanced by Zemanta
+   Keep up to date on GitHub, Ruby and [30]PullReview, our Automated Code
+   Review Tool:
+   ____________________ Subscribe Now!
+
+   IFRAME:
+   [31]http://www.reddit.com/static/button/button2.html?width=51&url=http%
+   3A%2F%2Fblog.8thcolor.com%2F2013%2F09%2Fpullreview-reach-your-ruby-code
+   -skill-walhalla%2F&title=PullReview%3A%20Reach%20your%20Ruby%20Code%20S
+   kill%20Walhalla&newwindow='1'
+
+   IFRAME:
+   [32]http://widgets.dzone.com/links/widgets/zoneit.html?url=http%3A%2F%2
+   Fblog.8thcolor.com%2F2013%2F09%2Fpullreview-reach-your-ruby-code-skill-
+   walhalla%2F&title=PullReview%3A%20Reach%20your%20Ruby%20Code%20Skill%20
+   Walhalla&t=1
+
+   This entry was posted in [33]product, [34]PullReview, [35]skills
+   management and tagged [36]Automated code review, [37]code advice,
+   [38]code analysis, [39]CodeReview, [40]coding, [41]GitHub,
+   [42]programming, [43]PullReview, [44]rails, [45]ruby, [46]Ruby on
+   Rails, [47]Saas, [48]Software as a service on [49]September 26, 2013 by
+   [50]Martin.
+
+About Martin
+
+   I am Martin, a software engineer and team leader with a degree in
+   economics. After some years spent in teaching future programmers, I did
+   work as a programmer, customer contact, team leader, architect and
+   sometimes a mix of those. I am now spending most of my time on our new
+   product aiming to help [51]Ruby developers to improve their coding
+   practices.
+   [52]View all posts by Martin →
+
+Post navigation
+
+   [53]← We don’t do code reviews to improve the code
+
+5 thoughts on “PullReview: Reach your Ruby Code Skill Walhalla”
+
+    1. [54]Selenium Script [55]September 26, 2013 at 3:35 pm
+       Code review mean you guys going to do unit testing of code ? If yes
+       than you need programming in any standard level or just any kind of
+       ROR code you can review and give feedback.
+       [56]Reply ↓
+         1. [57]Martin Post author[58]September 26, 2013 at 4:17 pm
+            Hi. We do not run your unit tests, we’re doing static analysis
+            of the code. Some of our checks are specific to Rails, but not
+            that much. We evaluate various kind of problems like style,
+            security, code smells or even some design bad practices.
+            Martin
+            [59]Reply ↓
+    2. [60]Andrew Pennebaker [61]September 26, 2013 at 8:16 pm
+       That’s pretty cool continuous integration. I tend to also use a
+       form of local continuous integration with guard, automatically
+       running unit tests and linters when my code changes, before I even
+       commit and push.
+       [62]https://github.com/mcandre/rubycheck/blob/master/Guardfile
+       This example runs Rake tasks, but could be easily modified to run
+       Reek, Flay, and other Ruby code linters.
+       [63]Reply ↓
+         1. [64]Martin Post author[65]September 27, 2013 at 8:44 am
+            Hi Andrew,
+            This is a part of what we want to achieve: group tools and
+            practices that we (as a community) know and like, and make
+            them better together. I like as much as any developer to tweak
+            my own settings, but at the end of the day, I want to spend my
+            time delivering features and value – not installing tools.
+            Having this kind of tools centralized also means that our
+            whole (three persons) team use them the same way, and that no
+            one forget to run them.
+            Martin
+            [66]Reply ↓
+    3. [67]Andrew Pennebaker [68]September 26, 2013 at 8:17 pm
+       I even use guard in nonRuby projects, switching out *.rb for *.js,
+       and reek for jshint, for example.
+       [69]Reply ↓
+
+Leave a Reply [70]Cancel reply
+
+   Your email address will not be published. Required fields are marked *
+
+   Name * ______________________________
+
+   Email * ______________________________
+
+   Website ______________________________
+
+   Comment
+   _____________________________________________
+   _____________________________________________
+   _____________________________________________
+   _____________________________________________
+   _____________________________________________
+   _____________________________________________
+   _____________________________________________
+   _____________________________________________
+
+   _
+
+   You may use these HTML tags and attributes: <a href="" title=""> <abbr
+   title=""> <acronym title=""> <b> <blockquote cite=""> <cite> <code>
+   <del datetime=""> <em> <i> <q cite=""> <strike> <strong>
+
+   Post Comment
+
+About
+
+   We - [71]Christophe and [72]Martin - have founded 8th color because we
+   want to improve the software development. We believe that the key to
+   this improvement is the developer - not the project: Better Developers
+   develop Better Software.
+
+   That is why we are developing an Automated code review tool - for Ruby
+   developers using Github, [73]discover how you can become a better Ruby
+   developer.
+
+Follow us
+
+   [74]Subscribe to the blog by Email
+   [75]Subscribe to the blog by RSS [76]@8th_color
+   [77]8th color
+
+Top Posts
+
+   [78]We don’t do code reviews to improve the code
+   [79]Confession of a Java Anonymous – Ruby is so brittle, and I like it
+   [80]Introducing PullReview – Your Ruby Batmobile for Automated Code
+   Review
+   [81]Duplication is a Rampant Disease
+   [82]Style Matters
+   [83]How our own workflow is driving PullReview
+
+Recently
+
+     * [84]PullReview: Reach your Ruby Code Skill Walhalla
+     * [85]We don’t do code reviews to improve the code
+     * [86]How our own workflow is driving PullReview
+     * [87]Confession of a Java Anonymous – Ruby is so brittle, and I like
+       it
+     * [88]DRY in views
+     * [89]Introducing PullReview – Your Ruby Batmobile for Automated Code
+       Review
+     * [90]Managing nil in JSON and Hashes
+     * [91]Spring cleanup for object creation in Rails
+     * [92]Partials: Abuse of them, don’t abuse them
+     * [93]Did you say Complexity, eh?
+
+Recent Comments
+
+     * [94]toch on [95]Contact
+     * Jay Kan on [96]Contact
+     * [97]Martin on [98]PullReview: Reach your Ruby Code Skill Walhalla
+     * [99]Andrew Pennebaker on [100]PullReview: Reach your Ruby Code
+       Skill Walhalla
+     * [101]Andrew Pennebaker on [102]PullReview: Reach your Ruby Code
+       Skill Walhalla
+     * [103]Martin on [104]PullReview: Reach your Ruby Code Skill Walhalla
+     * [105]Selenium Script on [106]PullReview: Reach your Ruby Code Skill
+       Walhalla
+     * [107]PullReview: Reach your Ruby Code Skill Walhalla | 8th color on
+       [108]Thanks!
+     * [109]PullReview: Reach your Ruby Code Skill Walhalla | 8th color on
+       [110]We don’t do code reviews to improve the code
+     * [111]PullReview: Reach your Ruby Code Skill Walhalla | 8th color on
+       [112]Introducing PullReview – Your Ruby Batmobile for Automated
+       Code Review
+
+Archives
+
+     * [113]September 2013 (3)
+     * [114]August 2013 (2)
+     * [115]July 2013 (4)
+     * [116]June 2013 (3)
+     * [117]May 2013 (4)
+     * [118]April 2013 (2)
+     * [119]March 2013 (4)
+     * [120]February 2013 (3)
+     * [121]January 2013 (2)
+     * [122]December 2012 (3)
+     * [123]November 2012 (7)
+     * [124]October 2012 (9)
+     * [125]September 2012 (7)
+     * [126]August 2012 (6)
+     * [127]July 2012 (7)
+     * [128]June 2012 (3)
+     * [129]May 2012 (4)
+     * [130]April 2012 (3)
+     * [131]March 2012 (1)
+     * [132]February 2012 (1)
+     * [133]January 2012 (4)
+     * [134]December 2011 (3)
+     * [135]November 2011 (3)
+     * [136]October 2011 (11)
+     * [137]September 2011 (4)
+     * [138]August 2011 (6)
+     * [139]July 2011 (4)
+     * [140]June 2011 (6)
+     * [141]May 2011 (1)
+
+   [142]Proudly powered by WordPress
+
+References
+
+   Visible links
+   1. http://blog.8thcolor.com/feed/
+   2. http://blog.8thcolor.com/comments/feed/
+   3. http://blog.8thcolor.com/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/feed/
+   4. http://blog.8thcolor.com/2013/09/we-dont-do-code-reviews-to-improve-the-code/
+   5. http://try.pullreview.com/
+   6. http://blog.8thcolor.com/
+   7. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml102.data#content
+   8. http://blog.8thcolor.com/
+   9. http://blog.8thcolor.com/contact/
+  10. http://blog.8thcolor.com/privacy/
+  11. http://blog.8thcolor.com/team/
+  12. http://blog.8thcolor.com/thanks/
+  13. http://blog.8thcolor.com/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/#comments
+  14. http://blog.8thcolor.com/2013/07/introducing-pullreview-your-ruby-batmobile-for-automated-code-review/
+  15. http://blog.8thcolor.com/wp-content/uploads/2013/09/Valhalla.jpg
+  16. http://blog.8thcolor.com/2013/09/we-dont-do-code-reviews-to-improve-the-code/
+  17. http://blog.8thcolor.com/thanks/
+  18. http://pullreview.com/?utm_source=blog&utm_medium=post&utm_campaign=walhalla_start
+  19. http://blog.8thcolor.com/2013/03/fixing-the-marriage-between-flow-code-review/
+  20. http://en.wikipedia.org/wiki/Software_as_a_service
+  21. https://github.com/login
+  22. http://pullreview.com/?utm_source=blog&utm_medium=post&utm_campaign=walhalla_pic
+  23. http://pullreview.com/?utm_source=blog&utm_medium=post&utm_campaign=walhalla_pic
+  24. http://pullreview.com/?utm_source=blog&utm_medium=post&utm_campaign=walhalla_pic
+  25. http://pullreview.com/?utm_source=blog&utm_medium=post&utm_campaign=walhalla_pic
+  26. http://en.wikipedia.org/wiki/Code_review
+  27. http://pullreview.com/?utm_source=blog&utm_medium=post&utm_campaign=walhalla_end
+  28. http://blog.8thcolor.com/thanks/
+  29. http://www.zemanta.com/?px
+  30. http://try.pullreview.com/
+  31. http://www.reddit.com/static/button/button2.html?width=51&url=http%3A%2F%2Fblog.8thcolor.com%2F2013%2F09%2Fpullreview-reach-your-ruby-code-skill-walhalla%2F&title=PullReview%3A%20Reach%20your%20Ruby%20Code%20Skill%20Walhalla&newwindow='1'
+  32. http://widgets.dzone.com/links/widgets/zoneit.html?url=http%3A%2F%2Fblog.8thcolor.com%2F2013%2F09%2Fpullreview-reach-your-ruby-code-skill-walhalla%2F&title=PullReview%3A%20Reach%20your%20Ruby%20Code%20Skill%20Walhalla&t=1
+  33. http://blog.8thcolor.com/category/product/
+  34. http://blog.8thcolor.com/category/pullreview/
+  35. http://blog.8thcolor.com/category/skills-management/
+  36. http://blog.8thcolor.com/tag/automated-code-review/
+  37. http://blog.8thcolor.com/tag/code-advice/
+  38. http://blog.8thcolor.com/tag/code-analysis/
+  39. http://blog.8thcolor.com/tag/codereview/
+  40. http://blog.8thcolor.com/tag/coding/
+  41. http://blog.8thcolor.com/tag/github/
+  42. http://blog.8thcolor.com/tag/programming/
+  43. http://blog.8thcolor.com/tag/pullreview/
+  44. http://blog.8thcolor.com/tag/rails/
+  45. http://blog.8thcolor.com/tag/ruby/
+  46. http://blog.8thcolor.com/tag/ruby-on-rails/
+  47. http://blog.8thcolor.com/tag/saas/
+  48. http://blog.8thcolor.com/tag/software-as-a-service/
+  49. http://blog.8thcolor.com/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/
+  50. http://blog.8thcolor.com/author/martin/
+  51. http://try.pullreview.com/
+  52. http://blog.8thcolor.com/author/martin/
+  53. http://blog.8thcolor.com/2013/09/we-dont-do-code-reviews-to-improve-the-code/
+  54. http://seleniumscript.com/
+  55. http://blog.8thcolor.com/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/#comment-4673
+  56. file://localhost/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/?replytocom=4673#respond
+  57. http://8thcolor.com/
+  58. http://blog.8thcolor.com/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/#comment-4674
+  59. file://localhost/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/?replytocom=4674#respond
+  60. https://github.com/mcandre
+  61. http://blog.8thcolor.com/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/#comment-4675
+  62. https://github.com/mcandre/rubycheck/blob/master/Guardfile
+  63. file://localhost/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/?replytocom=4675#respond
+  64. http://8thcolor.com/
+  65. http://blog.8thcolor.com/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/#comment-4678
+  66. file://localhost/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/?replytocom=4678#respond
+  67. https://github.com/mcandre
+  68. http://blog.8thcolor.com/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/#comment-4676
+  69. file://localhost/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/?replytocom=4676#respond
+  70. file://localhost/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/#respond
+  71. http://blog.8thcolor.com/author/toch
+  72. http://blog.8thcolor.com/author/martin
+  73. http://try.pullreview.com/
+  74. http://feedburner.google.com/fb/a/mailverify?uri=8thcolor/blog&loc=en_US
+  75. http://feeds.feedburner.com/8thcolor/blog
+  76. http://twitter.com/8th_color
+  77. http://8thcolor.com/
+  78. http://blog.8thcolor.com/2013/09/we-dont-do-code-reviews-to-improve-the-code/
+  79. http://blog.8thcolor.com/2013/08/confession-of-a-java-anonymous-ruby-is-so-brittle-and-i-like-it/
+  80. http://blog.8thcolor.com/2013/07/introducing-pullreview-your-ruby-batmobile-for-automated-code-review/
+  81. http://blog.8thcolor.com/2013/06/duplication-is-a-rampant-disease/
+  82. http://blog.8thcolor.com/2013/05/style-matters/
+  83. http://blog.8thcolor.com/2013/09/how-our-own-workflow-is-driving-pullreview/
+  84. http://blog.8thcolor.com/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/
+  85. http://blog.8thcolor.com/2013/09/we-dont-do-code-reviews-to-improve-the-code/
+  86. http://blog.8thcolor.com/2013/09/how-our-own-workflow-is-driving-pullreview/
+  87. http://blog.8thcolor.com/2013/08/confession-of-a-java-anonymous-ruby-is-so-brittle-and-i-like-it/
+  88. http://blog.8thcolor.com/2013/08/dry-in-views/
+  89. http://blog.8thcolor.com/2013/07/introducing-pullreview-your-ruby-batmobile-for-automated-code-review/
+  90. http://blog.8thcolor.com/2013/07/managing-nil-in-json-and-hashes/
+  91. http://blog.8thcolor.com/2013/07/spring-cleanup-for-object-creation-in-rails/
+  92. http://blog.8thcolor.com/2013/07/partials-abuse-of-them-dont-abuse-them/
+  93. http://blog.8thcolor.com/2013/06/did-you-say-complexity-eh/
+  94. http://blog.8thcolor.com/
+  95. http://blog.8thcolor.com/contact/#comment-4685
+  96. http://blog.8thcolor.com/contact/#comment-4683
+  97. http://8thcolor.com/
+  98. http://blog.8thcolor.com/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/#comment-4678
+  99. https://github.com/mcandre
+ 100. http://blog.8thcolor.com/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/#comment-4676
+ 101. https://github.com/mcandre
+ 102. http://blog.8thcolor.com/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/#comment-4675
+ 103. http://8thcolor.com/
+ 104. http://blog.8thcolor.com/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/#comment-4674
+ 105. http://seleniumscript.com/
+ 106. http://blog.8thcolor.com/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/#comment-4673
+ 107. http://blog.8thcolor.com/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/
+ 108. http://blog.8thcolor.com/thanks/#comment-4672
+ 109. http://blog.8thcolor.com/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/
+ 110. http://blog.8thcolor.com/2013/09/we-dont-do-code-reviews-to-improve-the-code/#comment-4671
+ 111. http://blog.8thcolor.com/2013/09/pullreview-reach-your-ruby-code-skill-walhalla/
+ 112. http://blog.8thcolor.com/2013/07/introducing-pullreview-your-ruby-batmobile-for-automated-code-review/#comment-4669
+ 113. http://blog.8thcolor.com/2013/09/
+ 114. http://blog.8thcolor.com/2013/08/
+ 115. http://blog.8thcolor.com/2013/07/
+ 116. http://blog.8thcolor.com/2013/06/
+ 117. http://blog.8thcolor.com/2013/05/
+ 118. http://blog.8thcolor.com/2013/04/
+ 119. http://blog.8thcolor.com/2013/03/
+ 120. http://blog.8thcolor.com/2013/02/
+ 121. http://blog.8thcolor.com/2013/01/
+ 122. http://blog.8thcolor.com/2012/12/
+ 123. http://blog.8thcolor.com/2012/11/
+ 124. http://blog.8thcolor.com/2012/10/
+ 125. http://blog.8thcolor.com/2012/09/
+ 126. http://blog.8thcolor.com/2012/08/
+ 127. http://blog.8thcolor.com/2012/07/
+ 128. http://blog.8thcolor.com/2012/06/
+ 129. http://blog.8thcolor.com/2012/05/
+ 130. http://blog.8thcolor.com/2012/04/
+ 131. http://blog.8thcolor.com/2012/03/
+ 132. http://blog.8thcolor.com/2012/02/
+ 133. http://blog.8thcolor.com/2012/01/
+ 134. http://blog.8thcolor.com/2011/12/
+ 135. http://blog.8thcolor.com/2011/11/
+ 136. http://blog.8thcolor.com/2011/10/
+ 137. http://blog.8thcolor.com/2011/09/
+ 138. http://blog.8thcolor.com/2011/08/
+ 139. http://blog.8thcolor.com/2011/07/
+ 140. http://blog.8thcolor.com/2011/06/
+ 141. http://blog.8thcolor.com/2011/05/
+ 142. http://wordpress.org/
+
+   Hidden links:
+ 144. http://pullreview.com/?utm_source=blog&utm_medium=post&utm_campaign=walhalla_pic
+ 145. http://twitter.com/share
+ 146. http://bufferapp.com/add
