@@ -1,0 +1,219 @@
+
+   #[1]Tristan Jahier
+
+   [2]
+
+Tristan Jahier
+
+   Grumpy dev' (╯°□°）╯彡┻━┻git clone git@github.com:git/git.gituntil
+   shit.changes {visit same_page; expect {shit}.to change}
+     * [3]Blog
+     * [4]Portfolio
+     * [5]A propos
+     * [6]Contact
+
+   [7]home_black.png  »  [8]Blog »  [9]Développement web »  Chosen : gérer
+   l'ordre de sélection d'un select multiple
+   [10]← Retour
+
+Chosen : gérer l'ordre de sélection d'un select multiple
+
+   Posted 25/09/2013  •  Written by [11]Tristan Jahier  •
+   Category : [12]Développement web
+   tag.png [13]chosen [14]coffeescript [15]javascript [16]jquery [17]order
+   [18]prototype
+   Chosen multiple select Chosen est une librairie Javascript qui permet
+   d'améliorer le rendu visuel des listes de sélection HTML select par
+   défaut, et de leur ajouter des fonctionnalités. Cependant, Chosen ne
+   propose pas de notion d'ordre ou de séquence de sélection lorsque l'on
+   manipule un élément select multiple. J'ai donc créé un script pour
+   palier à ce manque.
+
+   En fait, lorsque l'on utilise un select multiple Chosen, les éléments
+   s'enfilent dans l'ordre où l'on les sélectionne. Cependant, il n'y a
+   aucun moyen de récupérer cette séquence de sélection. Chosen ne fournit
+   pas de fonction pour ça et il n'y a aucun attribut, ni dans l'élément
+   Select original, ni dans le Select Chosen, qui décrit l'ordre dans
+   lequel les options ont été sélectionnées.
+
+   En fait, l'ordre de sélection est purement visuel.
+
+   Chosen multiple order
+
+   Mais il y a une raison à cela. Les développeurs de Chosen n'ont pas
+   souhaité apporter cette notion d'ordre à leur plugin car cette notion
+   est également absente de l'élément select multiple basique en HTML. Une
+   discussion autour du sujet résume bien la situation dans une tentative
+   de pull request sur leur dépôt Github : [19]Sort for multiple selects.
+   Je suis d'ailleurs plutôt d'accord avec eux.
+
+   Cependant, pouvoir récupérer et définir l'ordre de sélection me parait
+   être une requête raisonnable, surtout vu le nombre de demandes et de
+   questions à ce propos. Que ce ne soit pas géré par Chosen lui-même,
+   soit. Qu'à cela ne tienne, je me suis retroussé les manches et j'ai
+   écrit 2 fonctions. La première pour récupérer les valeurs sélectionnées
+   dans l'ordre sous forme de tableau. La seconde pour ré-ordonner les
+   éléments dans l'interface de Chosen selon un tableau passé en
+   paramètres.
+
+   A la base j'avais écrit ces 2 fonctions à [20]« la rache » (une
+   méthodologie qui a fait ses preuves). Elles étaient complètement liées
+   au framework jQuery, et ne faisait aucune vérification sur les valeurs
+   passées en paramètres. Puisque la librairie Chosen dispose d'un plugin
+   pour le framework PrototypeJS, il fallait que mon script soit également
+   compatible avec, pour que tout le monde puisse en profiter. J'ai alors
+   entièrement ré-écrit le code, en m'inspirant des pratiques de
+   développement de la librairie Chosen elle-même, et en écrivant 90% des
+   sources en Javascript pur, non-lié à une framework spécifique. Seules
+   quelques parties sont spécifiques à jQuery ou Prototype, par exemple
+   les plugins qui permettent une bonne intégration à ces librairies.
+
+   J'ai également utilisé le pré-processeur [21]CoffeeScript, et le
+   gestionnaire de tâches [22]Grunt pour faciliter la compilation des
+   scripts. J'ai publié le résultat final sous licence MIT sur Github :
+   [23]https://github.com/tristanjahier/chosen-order.
+
+   Le plugin s'utilise très facilement. Par exemple, avec jQuery, c'est
+   aussi trivial que ça :
+// Récupération
+var selection = $("#my-list").getSelectionOrder();
+// selection #=> ["plop", "coucou", "tvvmb"]
+
+// Définition de l'ordre
+var order = ["nioup", "plop", "fianle"];
+$("#my-list").setSelectionOrder(order);
+
+   #my-list est ici l'élément select de base. Le script fait quelques
+   vérifications basiques telles que si l'élément est bien un select
+   multiple, ou si le paramètre d'ordre passé est bien un tableau. Vous
+   trouverez une documentation beaucoup plus complète (en anglais) dans le
+   README.md sur Github.
+     * [24]Démonstration
+     * [25]Chosen Order v1.0.0
+     * [26]Dépôt Github
+     __________________________________________________________________
+
+   Si vous avez apprécié cet article, n'hésitez pas à le partager !
+   [27]Tweeter
+
+Comments
+
+   Gravatar
+   Jojo
+   27/09/2013
+
+   Très bon billet :) Et le "fianle" dans l'exemple c'est
+   l'accomplissement de ton blog ^^
+   ____________________
+
+Post a comment
+
+   ____________________
+   ____________________
+   ____________________
+
+   ______________________________
+   ______________________________
+   ______________________________
+   ______________________________
+   ______________________________
+   Comment
+
+Connexion
+
+     * ____________________
+     * ____________________
+     * Login  [ ] Remember Me
+
+Catégories
+
+     * [28]Développement web
+     * [29]Divers
+     * [30]Jeux vidéo
+     * [31]Site
+
+Archives
+
+     * [32]September 2013 (2)
+     * [33]August 2013 (6)
+     * [34]June 2013 (8)
+     * [35]May 2013 (2)
+     * [36]April 2013 (3)
+     * [37]March 2013 (5)
+     * [38]February 2013 (6)
+     * [39]January 2013 (3)
+     * [40]December 2012 (1)
+     * [41]November 2012 (2)
+     * [42]October 2012 (4)
+     * [43]September 2012 (2)
+     * [44]August 2012 (1)
+     * [45]July 2012 (1)
+     * [46]June 2012 (4)
+     * [47]May 2012 (1)
+     * [48]April 2012 (2)
+     * [49]February 2012 (2)
+
+   [50]Powered by PyroCMS   Powered by PyroCMS
+     * [51]Top ↑
+
+   ©2013 Tristan Jahier - All Rights Reserved.
+
+K0N4M1 C0D3
+
+References
+
+   Visible links
+   1. http://tristan-jahier.fr/blog/rss/all.rss
+   2. http://tristan-jahier.fr/
+   3. http://tristan-jahier.fr/blog
+   4. http://tristan-jahier.fr/portfolio
+   5. http://tristan-jahier.fr/a-propos
+   6. http://tristan-jahier.fr/contact
+   7. http://tristan-jahier.fr/
+   8. http://tristan-jahier.fr/blog
+   9. http://tristan-jahier.fr/blog/category/developpement-web
+  10. http://tristan-jahier.fr/blog#chosen--gerer-lordre-de-selection-dun-select-multiple
+  11. http://tristan-jahier.fr/user/1
+  12. http://tristan-jahier.fr/blog/category/developpement-web
+  13. http://tristan-jahier.fr/blog/tagged/chosen
+  14. http://tristan-jahier.fr/blog/tagged/coffeescript
+  15. http://tristan-jahier.fr/blog/tagged/javascript
+  16. http://tristan-jahier.fr/blog/tagged/jquery
+  17. http://tristan-jahier.fr/blog/tagged/order
+  18. http://tristan-jahier.fr/blog/tagged/prototype
+  19. https://github.com/harvesthq/chosen/pull/197
+  20. http://byatoo.com/la-rache
+  21. http://coffeescript.org/
+  22. http://gruntjs.com/
+  23. https://github.com/tristanjahier/chosen-order
+  24. http://labo.tristan-jahier.fr/chosen_order
+  25. https://github.com/tristanjahier/chosen-order/releases/download/v1.0.0/chosen_order_v1.0.0.zip
+  26. https://github.com/tristanjahier/chosen-order
+  27. https://twitter.com/share
+  28. http://tristan-jahier.fr/blog/category/developpement-web
+  29. http://tristan-jahier.fr/blog/category/divers
+  30. http://tristan-jahier.fr/blog/category/jeux-video
+  31. http://tristan-jahier.fr/blog/category/site
+  32. http://tristan-jahier.fr/blog/archive/2013/09
+  33. http://tristan-jahier.fr/blog/archive/2013/08
+  34. http://tristan-jahier.fr/blog/archive/2013/06
+  35. http://tristan-jahier.fr/blog/archive/2013/05
+  36. http://tristan-jahier.fr/blog/archive/2013/04
+  37. http://tristan-jahier.fr/blog/archive/2013/03
+  38. http://tristan-jahier.fr/blog/archive/2013/02
+  39. http://tristan-jahier.fr/blog/archive/2013/01
+  40. http://tristan-jahier.fr/blog/archive/2012/12
+  41. http://tristan-jahier.fr/blog/archive/2012/11
+  42. http://tristan-jahier.fr/blog/archive/2012/10
+  43. http://tristan-jahier.fr/blog/archive/2012/09
+  44. http://tristan-jahier.fr/blog/archive/2012/08
+  45. http://tristan-jahier.fr/blog/archive/2012/07
+  46. http://tristan-jahier.fr/blog/archive/2012/06
+  47. http://tristan-jahier.fr/blog/archive/2012/05
+  48. http://tristan-jahier.fr/blog/archive/2012/04
+  49. http://tristan-jahier.fr/blog/archive/2012/02
+  50. http://pyrocms.com/
+  51. http://tristan-jahier.fr/blog/2013/09/chosen--gerer-lordre-de-selection-dun-select-multiple#top
+
+   Hidden links:
+  53. http://tristan-jahier.fr/register

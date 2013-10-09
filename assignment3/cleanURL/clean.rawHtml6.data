@@ -1,0 +1,178 @@
+   #[1]RSS 2.0
+
+   [2]Schockwellenreiter
+     * [3]Archiv
+     * [4]Galerie
+     * [5]Essays
+     * [6]TV
+     *
+     * [7]Wiki
+     * [8]Über
+     *
+     * [9]Shop
+     * ____________________
+
+   [10]Schockwellenreiter → [11]Essays → Basemap für Anaconda installieren
+
+   [12]image  [13] image
+
+Worknote: Basemap für Anaconda installieren
+
+   image
+
+   [14]Matplotlib besitzt ein Toolkit namens Basemap, das es ermöglicht,
+   geospatiale Daten zu zeichnen. Weder bei der
+   Standard-Matplotlib-Installation noch bei [15]Anaconda wird das Toolkit
+   per Default installiert. Daher habe ich es für meine Anaconda-Umgebung
+   nachinstalliert, was mir nach einigen Fehlversuchen auch gelang. Neben
+   den üblichen, in Anaconda enthaltenen Bibliotheken müssen vorab noch
+   zwei weitere installiert werden:
+    1. [16]GEOS, ein C++-Port der [17]Java Topology Suite.
+    2. [18]PROJ.4, eine Bibliothek, die die Projektionsberechnungen
+       vornimmt.
+
+   Beide Bibliotheken sind im [19]Download der Basemap enthalten, doch
+   während sich die (gepatchte) Version von PROJ.4 automatisch
+   installiert, muß die Installation von GEOS manuell vorgenommen werden.
+   Da ich diese scheute und GEOS sowieso auch für andere Projekte und
+   Programme benötigte, half mir der bewährte [20]KyngChaos weiter: Auf
+   seiner Seite gab es das [21]GEOS Framework in der Version 3.4.2.-1 als
+   .dmg mit einem one click package installer zum Download.
+
+   Danach habe ich versucht, mir Basemap von SourceForge als .tar.gz
+   [22]herunterzuladen. Die aktuellen Versionen (>= 1.0) scheinen aber
+   einen Fehler zu haben, der das Dekomprimieren des gepackten Tarballs
+   auf meinem Mac (MacOS X 10.6.8) verhinderte. Auf [23]dieser Seite fand
+   ich jedoch einen [24]Link zu einer älteren Version (0.99.4), die sich
+   problemlos entpacken ließ.
+
+   Trotz des Setzens der Variable GEOS_DIR fand das Setup-Script aber das
+   GEOS-Framework nicht. Daher habe ich in der setup.py (in Zeile 44) den
+   Pfad zu GEOS manuell eingetragen:
+# set GEOS_dir manually here if automatic detection fails.
+    GEOS_dir = '/Library/Frameworks/GEOS.framework/unix'
+
+   Danach wechselte ich im Terminal in das Downloadverzeichnis von Basemap
+   und habe dort das übliche
+sudo python setup.py install
+
+   eingetippt. Da auf meinem Rechner das Anaconda-Python das
+   Default-Python ist, fühlte sich dieses auch angesprochen und führte die
+   Installation aus. Und obwohl die Anzahl der Warnungen beträchtlich war,
+   lief die Installation dann problemlos durch.
+
+   Das Beispiel, mit dem ich die Installation getestet habe (siehe
+   Screenhot an Anfang dieser Worknote), habe ich von [25]dieser Seite.
+   Ich weiß zwar nur ansatzweise, was da gezeichnet wird, aber es sieht
+   doch schon ganz nett aus. Und da ich [26]IPython im pylab-Mode
+   [27]aufgerufen hatte, war es faszinierend zu beobachten, wie sich die
+   Graphik Programmzeile für Programmzeile aufbaute. In den nächsten Tagen
+   werde ich weiter mit Basemap experimentieren und berichten. Still
+   diggin’!
+     __________________________________________________________________
+
+   IFRAME:
+   [28]http://rcm-eu.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&
+   bg1=FFFFFF&fc1=000000&lc1=0000FF&t=derschockwell-21&o=3&p=8&l=as4&m=ama
+   zon&f=ifr&ref=ss_til&asins=1847197906
+
+
+
+   IFRAME:
+   [29]http://rcm-eu.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&
+   bg1=FFFFFF&fc1=000000&lc1=0000FF&t=derschockwell-21&o=3&p=8&l=as4&m=ama
+   zon&f=ifr&ref=ss_til&asins=1449319793
+
+
+
+   IFRAME:
+   [30]http://rcm-eu.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&
+   bg1=FFFFFF&fc1=000000&lc1=0000FF&t=derschockwell-21&o=3&p=8&l=as4&m=ama
+   zon&f=ifr&ref=ss_til&asins=1782169938
+     __________________________________________________________________
+
+   ([31]Kommentieren)  [32]Basemap für Anaconda installieren bitte flattrn
+     __________________________________________________________________
+
+   Über …
+
+   Der Schockwellenreiter ist seit dem 24. April 2000 das [DEL: Weblog
+   :DEL] digitale Kritzelheft von [33]Jörg Kantel (Neuköllner, EDV-Leiter,
+   Autor, Netzaktivist und [34]Hundesportler — Reihenfolge rein zufällig).
+   Hier steht, was mir gefällt. Wem es nicht gefällt, der braucht ja nicht
+   mitzulesen. Wer aber mitliest, ist herzlich willkommen und eingeladen,
+   mitzudiskutieren!
+
+   Alle eigenen Inhalte des Schockwellenreiters stehen unter einer
+   [35]Creative-Commons-Lizenz, jedoch können fremde Inhalte (speziell
+   Videos, Photos und sonstige Bilder) unter einer anderen Lizenz stehen.
+     __________________________________________________________________
+
+   Werbung
+     __________________________________________________________________
+
+   Werbung
+
+   IFRAME: [36]http://www.schockwellenreiter.de/banner_small.html
+   Netscape4.x-Nutzer, die auch in den Genuß der Werbebanner kommen
+   wollen, klicken bitte [37]hier.
+     __________________________________________________________________
+
+   [38]image   [39]image   [40]image
+   [41]image   [42]image   [43]image
+
+   ([44]cc) 2000-2013 | Some Rights Reserved | Letzte Änderung:
+   30.09.2013, 15:07 Uhr | [45]Impressum | [46]RSS-Feed
+
+   [47]RubyFrontier Badge   [48]CC Logo
+
+References
+
+   1. http://blog.schockwellenreiter.de/feed/rss.xml
+   2. file://localhost/home/stanley/code/cs595/assignment3/q1/index.html
+   3. file://localhost/home/stanley/code/cs595/assignment3/q1/archiv.html
+   4. file://localhost/home/stanley/code/cs595/assignment3/q1/galerie.html
+   5. file://localhost/home/stanley/code/cs595/assignment3/q1/essays.html
+   6. file://localhost/home/stanley/code/cs595/assignment3/q1/schockwellenreitertv.html
+   7. http://cognitiones.kantel-chaos-team.de/
+   8. http://cognitiones.kantel-chaos-team.de/cv.html
+   9. file://localhost/home/stanley/code/cs595/assignment3/q1/shop/shop.html
+  10. file://localhost/home/stanley/code/cs595/assignment3/q1/index.html
+  11. file://localhost/home/stanley/code/cs595/assignment3/q1/essays.html
+  12. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/currybuch.html
+  13. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/pycharm01.html
+  14. http://cognitiones.kantel-chaos-team.de/programmierung/python/matplotlib.html
+  15. http://cognitiones.kantel-chaos-team.de/programmierung/python/anaconda.html
+  16. http://trac.osgeo.org/geos/
+  17. http://tsusiatsoftware.net/jts/main.html
+  18. http://trac.osgeo.org/proj/
+  19. http://sourceforge.net/projects/matplotlib/files/matplotlib-toolkits/
+  20. http://www.kyngchaos.com/
+  21. http://www.kyngchaos.com/software:frameworks
+  22. http://sourceforge.net/projects/matplotlib/files/matplotlib-toolkits/
+  23. https://modelingguru.nasa.gov/docs/DOC-1847
+  24. http://sourceforge.net/projects/matplotlib/files/matplotlib-toolkits/basemap-0.99.4/basemap-0.99.4.tar.gz/download
+  25. http://matplotlib.org/basemap/users/examples.html
+  26. http://cognitiones.kantel-chaos-team.de/programmierung/python/ipython.html
+  27. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/ipython01.html
+  28. http://rcm-eu.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=derschockwell-21&o=3&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=1847197906
+  29. http://rcm-eu.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=derschockwell-21&o=3&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=1449319793
+  30. http://rcm-eu.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=derschockwell-21&o=3&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=1782169938
+  31. mailto:der@schockwellenreiter.de?subject=Basemap%20f%C3%BCr%20Anaconda%20installieren
+  32. https://flattr.com/submit/auto?user_id=kantel&url=http://blog.schockwellenreiter.de/essays/basemap01.html&title=Basemap%20f%C3%BCr%20Anaconda%20installieren&category=text
+  33. http://cognitiones.kantel-chaos-team.de/cv.html
+  34. http://cognitiones.kantel-chaos-team.de/notizblock/agility.html
+  35. http://creativecommons.org/licenses/by-nc-sa/3.0/de/
+  36. http://www.schockwellenreiter.de/banner_small.html
+  37. http://www.schockwellenreiter.de/banner.html
+  38. https://www.facebook.com/joerg.kantel
+  39. http://twitter.com/jkantel
+  40. http://www.flickr.com/photos/schockwellenreiter/?details=1
+  41. http://www.youtube.com/kantel
+  42. http://www.qype.com/people/kantel
+  43. https://www.xing.com/app/profile/?name=Joerg_Kantel&tab=4
+  44. http://creativecommons.org/licenses/by-nc-sa/3.0/de/
+  45. file://localhost/home/stanley/code/cs595/assignment3/q1/impressum.html
+  46. file://localhost/home/stanley/code/cs595/assignment3/q1/feed/rss.xml
+  47. http://www.apeth.com/RubyFrontierDocs/default.html
+  48. http://creativecommons.org/licenses/by-nc-sa/3.0/de/

@@ -1,0 +1,249 @@
+   #[1]GitHub [2]Recent Commits to rails_admin_place_field:master
+
+   [3]Sign up [4]Sign in
+     * [5]Explore
+     * [6]Features
+     * [7]Enterprise
+     * [8]Blog
+
+   ____________________
+   This repository
+   (*)
+   This repository
+   ( )
+   All repositories
+     * [9]Star [10]1
+     * [11]Fork [12]1
+
+public [13]thinkclay/[14]rails_admin_place_field Octocat-spinner-32
+
+     * [15]Code Octocat-spinner-32
+     * [16]Issues 3 Octocat-spinner-32
+     * [17]Pull Requests 0 Octocat-spinner-32
+
+     * [18]Pulse Octocat-spinner-32
+     * [19]Graphs Octocat-spinner-32
+     * [20]Network Octocat-spinner-32
+
+HTTPS clone URL
+
+   https://github.com/t
+
+Subversion checkout URL
+
+   https://github.com/t
+
+   You can clone with [21]HTTPS, or [22]Subversion.
+   [23]Download ZIP
+
+   RailsAdmin field supporting Geo location and linking to Foursquare
+   Venues and Google Places
+     * [24]7 commits
+     * [25]1 branch
+     * [26]3 releases
+     * [27]Fetching contributors
+
+    1. [28]Ruby 100%
+
+   [29]Ruby
+   branch: master
+   Switch branches/tags
+   ____________________
+     * [30]Branches
+     * [31]Tags
+
+   [32]master
+   Nothing to show
+   [33]v0.0.13
+   [34]v0.0.12
+   [35]v0.0.8
+   Nothing to show
+   [36]rails_admin_place_field /
+   [37]Show File Finder
+
+   Fetching latest commit…
+
+   Octocat-spinner-32-eaf2f5
+
+   Cannot retrieve the latest commit at this time
+   Octocat-spinner-32 [38]app
+   Octocat-spinner-32 [39]lib
+   Octocat-spinner-32 [40].gitignore
+   Octocat-spinner-32 [41]README.md
+   Octocat-spinner-32 [42]gem.gemspec
+   README.md
+
+Rails Admin Place Field
+
+   rails_admin_place_field is a gem that works with [43]rails_admin to
+   provide an easy to use Google Maps interface for displaying and setting
+   geographic coordinates in a model and then performing lookups for
+   associations to a nearby Google Place or Foursquare Venue
+
+   Where a latitude and longitude is set on the model, it is indicated by
+   a marker shown on a Google map centered at the marker. The
+   administrator can change the value of these fields by clicking on the
+   desired new location on the map.
+
+Usage
+
+   rails_admin_place_field expects that the model will have two
+   attributes, one for latitude and one for longitude of the point
+   represented. To enable rails_admin_place_field, add the gem to your
+   Gemfile. I recommend using the git repo until I release a 1.0.0 version
+   of the gem, however, you can add the [44]RupyGems version if you feel
+   so inclined.
+gem "rails_admin_place_field", :git => "git://github.com/thinkclay/rails_admin_p
+lace_field.git"
+
+   Then, add in your config/initializers/rails_admin.rb initializer:
+RailsAdmin.config do |config|
+  config.model Place do
+    edit do
+      label "Geo and Place Info"
+      field :latitude, :place
+      field :longitude, :hidden
+    end
+  end
+end
+
+   Note: The field which is set as a :place field must be the latitude
+   field, not the longitude.
+
+Configuration
+
+   For different configurations, rails_admin_place_field can be configured
+   with the following:
+     * longitude_field - the name of the longitude field that forms the
+       the co-ordinate with the latitude field specified. Defaults to
+       "longitude"
+     * google_api_key - if you use a Google Maps API Key, it can be
+       specified here, otherwise the maps will do limited lookups without
+       a key
+     * foursquare_api_key - this api will be disabled until a valid key is
+       provided
+     * places_api_key - this api will be disabled until a valid key is
+       provided
+     * default_latitude - the latitude to center the map shown on if the
+       latitude field is blank. Defaults to 51.5, the latitude of London,
+       UK.
+     * default_longitude - the longitude used if the longitude field is
+       blank. Defaults to -0.126, the longitude of London, UK.
+
+   A more complicated configuration example:
+RailsAdmin.config do |config|
+  config.model Place do
+    edit do
+      field :latitude, :place do
+        label "Geo and Place Info"
+        longitude_field :longitude
+        foursquare_field :foursquare
+        gplace_field :gplace
+        google_api_key "a1b2c3d4e5f6deadbeef"
+        places_api_key "a1b2c3d4e5f6deadbeef"
+        foursquare_api_key "a1b2c3d4e5f6deadbeef"
+        default_latitude -34.0
+        default_longitude 151.0
+      end
+    end
+  end
+end
+     __________________________________________________________________
+
+   rails_admin_place_field is licensed under the [45]MIT license.
+
+   Kudos and credit to [46]beyondthestory for the map_field which gave me
+   the starting point to learn how to make this
+
+     * [47]Status
+     * [48]API
+     * [49]Training
+     * [50]Shop
+     * [51]Blog
+     * [52]About
+
+     * © 2013 GitHub, Inc.
+     * [53]Terms
+     * [54]Privacy
+     * [55]Security
+     * [56]Contact
+
+
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+
+   Something went wrong with that request. Please try again.
+
+References
+
+   Visible links
+   1. file://localhost/opensearch.xml
+   2. https://github.com/thinkclay/rails_admin_place_field/commits/master.atom
+   3. file://localhost/signup
+   4. file://localhost/login?return_to=%2Fthinkclay%2Frails_admin_place_field
+   5. file://localhost/explore
+   6. file://localhost/features
+   7. https://enterprise.github.com/
+   8. file://localhost/blog
+   9. file://localhost/login?return_to=%2Fthinkclay%2Frails_admin_place_field
+  10. file://localhost/thinkclay/rails_admin_place_field/stargazers
+  11. file://localhost/login?return_to=%2Fthinkclay%2Frails_admin_place_field
+  12. file://localhost/thinkclay/rails_admin_place_field/network
+  13. file://localhost/thinkclay
+  14. file://localhost/thinkclay/rails_admin_place_field
+  15. file://localhost/thinkclay/rails_admin_place_field
+  16. file://localhost/thinkclay/rails_admin_place_field/issues
+  17. file://localhost/thinkclay/rails_admin_place_field/pulls
+  18. file://localhost/thinkclay/rails_admin_place_field/pulse
+  19. file://localhost/thinkclay/rails_admin_place_field/graphs
+  20. file://localhost/thinkclay/rails_admin_place_field/network
+  21. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml696.data
+  22. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml696.data
+  23. file://localhost/thinkclay/rails_admin_place_field/archive/master.zip
+  24. file://localhost/thinkclay/rails_admin_place_field/commits/master
+  25. file://localhost/thinkclay/rails_admin_place_field/branches
+  26. file://localhost/thinkclay/rails_admin_place_field/releases
+  27. file://localhost/thinkclay/rails_admin_place_field/contributors
+  28. file://localhost/thinkclay/rails_admin_place_field/search?l=ruby
+  29. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml696.data
+  30. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml696.data
+  31. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml696.data
+  32. file://localhost/thinkclay/rails_admin_place_field/tree/master
+  33. file://localhost/thinkclay/rails_admin_place_field/tree/v0.0.13
+  34. file://localhost/thinkclay/rails_admin_place_field/tree/v0.0.12
+  35. file://localhost/thinkclay/rails_admin_place_field/tree/v0.0.8
+  36. file://localhost/thinkclay/rails_admin_place_field
+  37. file://localhost/thinkclay/rails_admin_place_field/find/master
+  38. file://localhost/thinkclay/rails_admin_place_field/tree/master/app
+  39. file://localhost/thinkclay/rails_admin_place_field/tree/master/lib
+  40. file://localhost/thinkclay/rails_admin_place_field/blob/master/.gitignore
+  41. file://localhost/thinkclay/rails_admin_place_field/blob/master/README.md
+  42. file://localhost/thinkclay/rails_admin_place_field/blob/master/gem.gemspec
+  43. https://github.com/sferik/rails_admin
+  44. https://rubygems.org/gems/rails_admin_place_field
+  45. http://opensource.org/licenses/MIT
+  46. https://github.com/beyondthestory/rails_admin_map_field
+  47. https://status.github.com/
+  48. http://developer.github.com/
+  49. http://training.github.com/
+  50. http://shop.github.com/
+  51. file://localhost/blog
+  52. file://localhost/about
+  53. file://localhost/site/terms
+  54. file://localhost/site/privacy
+  55. file://localhost/security
+  56. file://localhost/contact
+
+   Hidden links:
+  58. https://github.com/
+  59. https://help.github.com/articles/which-remote-url-should-i-use
+  60. file://localhost/thinkclay/rails_admin_place_field/compare
+  61. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml696.data#rails-admin-place-field
+  62. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml696.data#usage
+  63. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml696.data#configuration
+  64. file://localhost/
+  65. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml696.data
+  66. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml696.data
+  67. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml696.data

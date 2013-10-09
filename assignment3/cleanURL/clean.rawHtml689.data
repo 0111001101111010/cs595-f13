@@ -1,0 +1,118 @@
+     * PeepCode PDF
+          + [1]ActiveMerchant PeepCode PDF
+     * Triple D
+          + [2]Download
+          + [3]Discussion
+          + [4]Documentation
+     * Development
+          + [5]GitHub
+          + [6]Issues
+     * Maintainers
+          + [7]Cody Fauser
+          + [8]John Duff
+          + [9]Nathaniel Talbott
+     * Sponsors
+          + [10]Shopify
+          + [11]Spreedly
+
+Active Merchant
+
+A Ruby library for dealing with credit cards and payment processors.
+
+   Active Merchant is an extraction from the [12]e-commerce software
+   solution Shopify. Shopify's requirements for a simple and unified API
+   to access dozens of different payment gateways with very different
+   internal APIs was the chief principle in designing the library.
+
+   Active Merchant has been in production use since June 2006 and is now
+   used in most modern Ruby applications which deal with financial
+   transactions. It is maintained by the [13]Shopify and [14]Spreedly
+   teams, with much help from an ever-growing set of contributors.
+
+   It was developed to for usage in Ruby on Rails web applications and
+   integrates seamlessly as a plugin but it also works excellently as a
+   stand alone library.
+
+What does it look like?
+
+   # Send requests to the gateway's test servers
+   ActiveMerchant::Billing::Base.mode = :test
+
+   # Create a new credit card object
+   credit_card = ActiveMerchant::Billing::CreditCard.new(
+     :number     => '4111111111111111',
+     :month      => '8',
+     :year       => '2009',
+     :first_name => 'Tobias',
+     :last_name  => 'Luetke',
+     :verification_value  => '123'
+   )
+
+   if credit_card.valid?
+     # Create a gateway object to the TrustCommerce service
+     gateway = ActiveMerchant::Billing::TrustCommerceGateway.new(
+       :login    => 'TestMerchant',
+       :password => 'password'
+     )
+
+     # Authorize for $10 dollars (1000 cents)
+     response = gateway.authorize(1000, credit_card)
+
+     if response.success?
+       # Capture the money
+       gateway.capture(1000, response.authorization)
+     else
+       raise StandardError, response.message
+     end
+   end
+
+How do I get it?
+
+   Rubygems
+
+RubyGems
+
+   gem install activemerchant
+
+   If you want to install this gem on a High Security setup you need to
+   gem cert --add [15]gem-public_cert.pem
+   Ruby on Rails
+
+Ruby on Rails
+
+   Add gem 'activemerchant' to your Gemfile.
+   Ruby
+
+Download Release
+
+   [16]from RubyGems
+   Ruby
+
+Git Clone
+
+   [17]from GitHub
+   ActiveMerchant is a sponsored and made possible by constant development
+   from [18]Shopify and [19]Spreedly.
+   © 2012
+
+References
+
+   1. https://peepcode.com/products/activemerchant-pdf
+   2. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml689.data#download
+   3. https://groups.google.com/forum/#!forum/activemerchant
+   4. http://rdoc.info/github/Shopify/active_merchant/master/frames
+   5. https://github.com/Shopify/active_merchant
+   6. https://github.com/Shopify/active_merchant/issues
+   7. http://www.codyfauser.com/
+   8. https://github.com/jduff
+   9. https://github.com/ntalbott
+  10. http://shopify.com/
+  11. https://spreedly.com/
+  12. http://shopify.com/
+  13. http://www.shopify.com/
+  14. https://spreedly.com/
+  15. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/gem-public_cert.pem
+  16. http://rubygems.org/gems/active_merchant
+  17. https://github.com/Shopify/active_merchant
+  18. http://shopify.com/
+  19. http://spreedly.com/

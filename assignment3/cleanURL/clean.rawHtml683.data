@@ -1,0 +1,457 @@
+   #[1]justin appears
+
+                               [2]justin appears
+
+online
+
+     * [3]RSS
+
+   ____________________
+
+     * [4]Blog
+     * [5]Archives
+
+No-downtime deploys with Unicorn
+
+   Jan 18th, 2013
+
+   As mentioned in my [6]last post, a surprising number of Unicorn users
+   do not take advantage of one of its best features, no-downtime deploys.
+   Why? There are some common pitfalls that can make this difficult to
+   setup. I want to help address these issues so that more people can make
+   use of this amazing feature.
+
+What are no-downtime deploys?
+
+   There does not have to be a service interruption whenever you:
+     * deploy a new version of your app
+     * rollback to a previous version of your app
+     * upgrade the version of Unicorn you are using
+     * upgrade the version of Ruby you are using
+
+   And when I say “does not have to” I mean “should not”.
+
+   No-downtime deploys need not be an out-of-band upgrade process
+   requiring you to log into production servers and monkey around with
+   live config files using [7]your favourite text editor. Even for a
+   deploy that changes application code, updates Unicorn, and also
+   upgrades to the latest Ruby, I just run $ cap deploy as I would with
+   any other deploy.
+
+Why isn’t everyone using this?
+
+   I suspect many people read about no-downtime deploys, try them out, and
+   then give up soon after once something goes wrong. Something often goes
+   wrong, at least initially, because this feature does not (and cannot)
+   work out-of-the box in all environments.
+
+   Successfully running no-downtime deploys depends on a number of factors
+   including (but not limited to):
+     * how Ruby is installed
+     * whether you are using a sandboxing system (e.g. RVM or rbenv)
+     * how you are using Bundler
+     * how you automate deploys (e.g. with Capistrano, Vlad, Puppet or
+       Chef)
+     * what the resource utilization on your production servers looks like
+       (e.g. if you are pegging CPUs or close to the memory limit)
+
+   So unfortunately, just using the unicorn.rb config file from
+   [8]Github’s Unicorn blog post will likely fail. You will need to learn
+   a bit about how Unicorn works and then configure it to work with your
+   setup.
+
+TL;DR
+
+   This is a fairly long post and there is a fair chance you will get
+   bored reading it.
+
+   If you don’t want to figure things out yourself but don’t want to read
+   about all of the ways that things can fail, just skip to the [9]What I
+   do section and adapt my code to your environment.
+
+   If you find my explanation verbose and/or confusing you can read
+   [10]SIGNALS along with [11]Tips for using Unicorn with Sandbox
+   installation tools and figure out something that works for you and your
+   production environment.
+
+   If you just want a high-level overview of the Unicorn upgrade process
+   read [12]SIGNALS, especially the “Procedure to replace a running
+   unicorn executable” section.
+
+Unicorn’s reexec API
+
+   Unicorn facilitates no-downtime deploys by means of a simple reexec
+   API^[13]1:
+    1. send the original Unicorn master process the USR2 signal
+    2. original master forks itself and then execs in the original working
+       directory, with the exact same command and arguments that were used
+       to create the original master process^[14]2
+    3. at this point, there will be two master processes. if the new
+       master process has spawned workers, both original workers and new
+       workers will be responding to requests
+    4. shut down the original workers^[15]3
+    5. shut down the original master
+    6. new workers and master remain running and are responding to
+       requests
+
+   Now, this is how a successful reexec goes. If there was a problem with
+   the new code, you can of course shut down the new master and workers
+   instead, leaving the original master and workers to continue serving
+   requests.
+
+The simplest thing that will work
+
+   Let’s start off with a clean slate. We will assume the following setup:
+     * system-wide install of Ruby and rubygems somewhere general like
+       /usr/bin/ruby
+     * Ruby binary has no version-related suffix (e.g. /usr/bin/ruby1.8)
+     * Ruby binary isn’t a symlink to a binary with a version-related
+       suffix
+     * no Bundler, RVM, rbenv, Capistrano, Vlad, etc.
+     * application code is a simple checkout or even just a bunch of files
+       in a fixed directory
+     * deploy consists of somehow updating code in place (not making a new
+       directory and changing a symlink), and manually installing more
+       recent versions of gems using rubygems cli directly
+
+   This is the simplest configuration imaginable. So simple in fact that I
+   would be surprised if many people actually run something like this in
+   production. However, it is useful as a starting point for our purposes.
+
+   If this is what your environment looks like, then the upgrade process
+   described above will likely work without issue. However, almost any
+   change you make will break it. I’m going to walk through some examples
+   of environment modifications and the corresponding configuration
+   changes needed to handle them.
+
+Changing the source location on deploy
+
+   This is most commonly encountered in setups where a new directory
+   containing app code is created on each deploy. For example,
+   Capistrano’s default configuration creates a new
+   /path/to/app/releases/123456789 directory on each deploy and then
+   updates the /path/to/app/current symlink to point to it.
+
+   Unicorn remembers the exact path you originally deployed from and
+   subsequently attempts to cd to it before each reexec. If you are
+   deploying from a new directory each time you will have to tell Unicorn:
+   config/unicorn.rb
+   1
+   2
+
+    app_root = "/path/to/app/current"
+    working_directory app_root
+
+   If you don’t do this, your first few deploys will appear to work
+   (although you will be repeatedly restarting the original version). You
+   will be made painfully aware that something is wrong once Capistrano
+   prunes the oldest release dir and your next deploy fails because
+   Unicorn can no longer cd to it.
+
+   You can alternatively do something like:
+   config/unicorn.rb
+   1
+   2
+
+    app_root = File.expand_path(File.join(File.dirname(__FILE__), '..'))
+    working_directory app_root
+
+   instead of hard-coding the path so that you can run your setup in your
+   development or staging environment as well.
+
+Changing the source location on deploy AND using Bundler
+
+   There is another issue that results from source location changes. As of
+   Bundler 1.0.3 the executable template fully resolves all symlinks when
+   determining the Gemfile path. So when using Capistrano this will be
+   something like /path/to/app/releases/123456789/Gemfile when it should
+   be /path/to/app/current/Gemfile. This means Bundler will always try to
+   load the gem environment from your original deploy instead of the
+   current one. The solution is adding the following to your config:
+   config/unicorn.rb
+   1
+   2
+   3
+
+    before_exec do |server|
+      ENV["BUNDLE_GEMFILE"] = "#{app_root}/Gemfile"
+    end
+
+Changing the location of the Unicorn executable
+
+   Installing the Unicorn gem puts a unicorn executable somewhere on your
+   $PATH. Depending on your setup, this could end up in a lot of different
+   places from a system-wide gems installation to something local to your
+   app managed by RVM and/or Bundler. Now, because Unicorn remembers the
+   exact path to this executable, you want it to remember something
+   generic, not something specific.
+
+   For example, if it is something like /var/lib/gems/1.8/bin/unicorn or
+   /home/deployuser/.rvm/gems/ruby-1.9.2-pXYZ/bin/unicorn then you are
+   tied to a specific version of Ruby, and if you try to do a reexec
+   deploy that upgrades the version of Ruby you are using, you will end up
+   trying to run the old version.
+
+   The low-tech way of solving this is symlinking the real executable to
+   /usr/local/bin/unicorn (or somewhere on your path), and then adding:
+   config/unicorn.rb
+   1
+
+    Unicorn::HttpServer::START_CTX[0] = "/usr/local/bin/unicorn"
+
+   to your unicorn.rb config file. Then, when you want to change the
+   version of Ruby you are deploying to, you point that symlink somewhere
+   else.
+
+   I don’t like this method for a few reasons. First, it requires that you
+   remember to do something out of band when you want to deploy to a new
+   ruby version. Second, it couples your Unicorn executable to a
+   particular version of Ruby. If your deploy to a new version of Ruby
+   fails badly for some reason, you must revert the symlink before you can
+   restart the old version and recover.
+
+   Copying the executable contents and creating a file in your app at
+   bin/unicorn is slightly better. You can then do:
+   config/unicorn.rb
+   1
+
+    Unicorn::HttpServer::START_CTX[0] = "#{app_root}/bin/unicorn"
+
+   and remember to update this file when you want your app to run on a
+   different version of Ruby. However, this isn’t foolproof–upgrades still
+   might not work due to ENV pollution.
+
+ENV Pollution / using sandboxing tools like RVM or rbenv
+
+   Even if your unicorn executable can be updated before each deploy, you
+   are liable to have problems because your new master process inherits
+   the environment that the original master was created in. This leads to
+   all sorts of problems.
+
+   Additionally, things like $PATH, $GEM_PATH, $GEM_HOME, $RUBY_VERSION
+   and $RUBYOPT are all going to be what they originally were when you
+   first started the original master process. That means when the reexec
+   looks up which Ruby to use and which version of the gem to use, you are
+   going to get the original versions.
+
+   In principle, this can be fixed by adding additional entries to the
+   before_exec block as above. If you are using RVM or rbenv, there are
+   probably a number of other ENV variables you have to set as well. For
+   me, figuring out all of the ENV variables RVM or rbenv is setting and
+   resetting them on deploy is too much effort and too error prone.
+
+What I do
+
+   I create a special executable that bootstraps the environment it needs
+   and then execs the unicorn executable in that environment. This
+   executable gets checked into my application source so that I do not
+   have to modify anything on my production server before a deploy (or
+   rollback). It has the additional benefit of allowing the application to
+   select the specific version of Ruby it needs to run. Here is what I use
+   with RVM^[16]4:
+   bin/unicorn
+   1
+   2
+   3
+   4
+   5
+
+    #!/bin/bash
+
+    source $HOME/.rvm/scripts/rvm
+    rvm use 1.9.3-p194 &> /dev/null
+    exec bundle exec unicorn "$@"
+
+   This file gets committed to [app root]/bin/unicorn. It is also
+   necessary to add its path to the unicorn.rb config file because the
+   exec at the end of the executable wrapper causes Unicorn to remember
+   the fully qualified path to the actual Unicorn executable^[17]5.
+   config/unicorn.rb
+   1
+
+    Unicorn::HttpServer::START_CTX[0] = "#{app_root}/bin/unicorn"
+
+Troubleshooting
+
+   While you are setting up and testing your no-downtime Unicorn setup,
+   you will want to be sure that everything you expect to change is
+   actually changing. Two useful tools for this are adding logging
+   statements into the config and reloading it, and using lsof -p.
+
+   You can, for example, modify your currently loaded config file to print
+   Unicorn::HttpServer::START_CTX[0] or ENV to STDERR, and then reload it
+   by sending the HUP signal to the unicorn master process. This will
+   cause your logging info to be written (by default) to
+   log/unicorn.stderr.log. Having a look into ENV is especially useful.
+   There are often variables set that you aren’t aware of or else had
+   expected to be cleared or updated but were not. If you did not setup
+   your deploy properly and still want to do a no-downtime restart, you
+   can employ this config reload strategy to make modifications to both
+   ENV and internal Unicorn variables.
+
+   lsof -p [unicorn master PID] will show you which version of Ruby and
+   Unicorn you are running, the current working directory of the master
+   process, and additionally all of the shared libraries linked to your
+   running process.
+
+Upgrade strategies
+
+   There are two main update strategies I have used:
+
+Start new workers all at once
+
+   Start new workers all at once[18]source
+   1
+   2
+   3
+   4
+   5
+   6
+   7
+   8
+   9
+   10
+   11
+
+     # adapted from http://codelevy.com/2010/02/09/getting-started-with-unicorn
+     before_fork do |server, worker|
+       old_pid = app_root + '/log/unicorn.pid.oldbin'
+       if File.exists?(old_pid) && server.pid != old_pid
+         begin
+           Process.kill("QUIT", File.read(old_pid).to_i)
+         rescue Errno::ENOENT, Errno::ESRCH
+           # someone else did our job for us
+         end
+       end
+     end
+
+   As soon as the first new worker is spun up, it will send old master
+   QUIT which causes it to wait for all old workers to finish processing
+   in progress requests and then shut down once everything is complete.
+   While this is happening, the newly spawned workers can respond to
+   incoming requests (old worker cannot accept new requests). So while the
+   old requests are winding down, you will actually have both old and new
+   version of the application responding to requests. This works well if
+   you have some memory headroom (ideally you should be able to run two
+   full sets of workers). However, if that’s not the case, a more
+   incremetal approach might be more appropriate.
+
+Replace workers one at a time:
+
+   Replace workers one at a time[19]source
+   1
+   2
+   3
+   4
+   5
+   6
+   7
+   8
+   9
+   10
+   11
+   12
+   13
+   14
+
+     # adapted from http://unicorn.bogomips.org/examples/unicorn.conf.rb
+     before_fork do |server, worker|
+       old_pid = "#{server.config[:pid]}.oldbin"
+       if old_pid != server.pid
+         begin
+           sig = (worker.nr + 1) >= server.worker_processes ? :QUIT : :TTOU
+           Process.kill(sig, File.read(old_pid).to_i)
+         rescue Errno::ENOENT, Errno::ESRCH
+         end
+       end
+
+       # Throttle the master from forking too quickly by sleeping.
+       sleep 1
+     end
+
+   Unicorn supports signals for increasing and decreasing the number of
+   workers handling requests. You can use these signals to have each new
+   worker spawned ask the old master to decrement the existing worker
+   count by one. Finally, once all of the new workers have been spawned
+   you can ask the old master to shut down.
+
+Summary
+
+   I hope this has helped to clarify some of the details involved in
+   setting up a robust no-downtime Unicorn configuration. It is certainly
+   not as simple as a lot of sources suggest. However, I think it is well
+   worth the effort for the stability and flexibility you end up with. I
+   like to deploy my apps frequently and as such do not want to worry
+   about causing signfificant slowdowns or unnecessary downtime.
+     __________________________________________________________________
+
+    1. this is actually the same reexec API Nginx provides (for the most
+       part)[20]↩
+    2. [21]exec is a *nix command that evaluates a script and replaces the
+       current process with a new one.[22]↩
+    3. see Unicorn worker [23]upgrade strategies[24]↩
+    4. I don’t have equivalent code for rbenv. I spent some time trying to
+       find a way to reset changes rbenv makes to the original process
+       environment but was unsuccessful.[25]↩
+    5. that is, the unicorn in exec bundle exec unicorn "$@" will resolve
+       to something like /path/to/app/shared/bundle/ruby/1.9.1/bin/unicorn
+       if you are using Capistrano and Bundler with the default
+       options.[26]↩
+
+   Posted by Justin Giancola Jan 18th, 2013
+
+   [27]No-downtime deploys with Unicorn »
+
+Recent Posts
+
+     * [28]Use Unicorn
+     * [29]No-downtime deploys with Unicorn
+     * [30]Queue your async updates
+
+GitHub
+
+   [31]@elucid on GitHub
+
+Latest Tweets
+
+     * Status updating...
+
+   [32]Follow @elucid
+
+   Copyright © 2013 - Justin Giancola - Powered by [33]Octopress
+
+References
+
+   1. http://feeds.feedburner.com/justinappears
+   2. file://localhost/
+   3. http://feeds.feedburner.com/justinappears
+   4. file://localhost/
+   5. file://localhost/blog/archives
+   6. file://localhost/blog/1-use-unicorn/
+   7. http://www.gnu.org/software/emacs/
+   8. https://github.com/blog/517-unicorn
+   9. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml683.data#what-i-do
+  10. http://unicorn.bogomips.org/SIGNALS.html
+  11. http://unicorn.bogomips.org/Sandbox.html
+  12. http://unicorn.bogomips.org/SIGNALS.html
+  13. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml683.data#fn:1
+  14. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml683.data#fn:2
+  15. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml683.data#fn:3
+  16. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml683.data#fn:4
+  17. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml683.data#fn:5
+  18. http://codelevy.com/2010/02/09/getting-started-with-unicorn
+  19. http://unicorn.bogomips.org/examples/unicorn.conf.rb
+  20. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml683.data#fnref:1
+  21. http://linux.die.net/man/3/exec
+  22. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml683.data#fnref:2
+  23. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml683.data#upgrade-strategies
+  24. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml683.data#fnref:3
+  25. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml683.data#fnref:4
+  26. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml683.data#fnref:5
+  27. file://localhost/blog/2-no-downtime-deploys-with-unicorn/
+  28. file://localhost/blog/1-use-unicorn/
+  29. file://localhost/blog/2-no-downtime-deploys-with-unicorn/
+  30. file://localhost/blog/3-queue-your-async-updates/
+  31. https://github.com/elucid
+  32. http://twitter.com/elucid
+  33. http://octopress.org/

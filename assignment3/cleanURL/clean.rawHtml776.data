@@ -1,0 +1,560 @@
+   #[1]RSS Feed [2]Atom Feed [3]» The Art of Debugging: two case-studies
+   (1/2) Comments Feed [4]Pattern-finding in the maelstrom: log-analysis.
+   [5]The Art of Debugging: two case-studies (2/2)
+
+
+    [6]Comments[7]Posts
+   ____________________
+        * [8]Home
+        * [9]Projects
+        * [10]Software
+        * [11]Scraps of mind
+        * [12]Applied Physics Department
+        * [13]Deprecated
+        * [14]netForo!
+        * [15]Albums
+        * [16]LABs
+        * [17]About us
+
+
+
+
+   CAPTION: October 2013
+
+   M  T    W   T  F  S  S
+   [18]« Sep
+      1  2     3  4  5  6
+   7  8  9     10 11 12 13
+   14 15 16    17 18 19 20
+   21 22 23    24 25 26 27
+   28 29 30    31
+
+   Categories
+
+        * [19]Android (1)
+        * [20]Code (63)
+             + [21]analysis (52)
+             + [22]Applied Physics Department (30)
+             + [23]Atari 2600 (1)
+             + [24]Context Swtiching Accounting (1)
+          + [25]Modest (8)
+     * [26]Debian (38)
+     * [27]Deprecated (1)
+     * [28]Electronics (2)
+          + [29]DIY (2)
+     * [30]english_journal (11)
+     * [31]GNU/Linux (22)
+     * [32]Google (1)
+     * [33]ia32sh (1)
+     * [34]LibreOffice (1)
+     * [35]openoffice (7)
+     * [36]Programming for kids project (8)
+     * [37]Security (5)
+     * [38]Uncategorized (2)
+     * [39]Virtualization (10)
+          + [40]VirtualBox (10)
+
+   [41].deb [42]arial [43]ati [44]attach [45]bash [46]català [47]cifrado
+   [48]clonar [49]config [50]cups [51]Debian [52]debug [53]dpkg [54]font
+   [55]fonts [56]fsck [57]Google [58]gpg [59]gpg plugin [60]kernel [61]key
+   [62]lenny [63]mail [64]módulo [65]openoffice [66]openssh [67]paquet
+   [68]paquete [69]paquets [70]plugin [71]privacidad [72]reboot
+   [73]scripts [74]serialport [75]shell [76]snapshots [77]SquirrelMail
+   [78]sshd [79]ttf [80]ttyS0 [81]ttyS1 [82]update [83]verdana
+   [84]virtualbox [85]x86_64 [86]analysis (52)
+   [87]Android (1)
+   [88]Applied Physics Department (30)
+   [89]Atari 2600 (1)
+   [90]Code (48)
+   [91]Context Swtiching Accounting (1)
+   [92]Debian (38)
+   [93]Deprecated (1)
+   [94]DIY (2)
+   [95]Electronics (2)
+   [96]english_journal (11)
+   [97]GNU/Linux (22)
+   [98]Google (1)
+   [99]ia32sh (1)
+   [100]LibreOffice (1)
+   [101]Modest (8)
+   [102]openoffice (7)
+   [103]Programming for kids project (8)
+   [104]Security (5)
+   [105]Uncategorized (2)
+   [106]VirtualBox (10)
+
+   WP Cumulus Flash tag cloud by [107]Roy Tanck and [108]Luke Morton
+   requires [109]Flash Player 9 or better.
+   « [110]The Art of Debugging: two case-studies (2/2)
+     [111]Pattern-finding in the maelstrom: log-analysis. »
+
+The Art of Debugging: two case-studies (1/2)
+
+Preamble
+
+   Debugging is more than a technique. It is, in fact, an art. But this
+   art is hard to master, and so there are a huge amount of developers
+   thinking it such a burden. It could be the quickest way to get rid of
+   an awful bug. But in order to do so, one has to know the basic concepts
+   and ideas related to the almost divine art of locating defects and
+   correct them in software. I’ve been working as a Systems Manager for
+   more than fourteen years. Along the way, I’ve been debugging software
+   for five years out of these fourteen. Thus, I’ve got some tricks I
+   would like to share. I think the best way to understand the art of
+   debugging is through some real examples. I don’t know pretty much about
+   Fortran development, but that does not matter, as you are about to
+   witness, for our debugging purposes. It is said, and I could not agree
+   more, that the most common defects present on software are those ones
+   related to memory-management, arrays, pointers, and so on. And it is
+   true. Below, we are going to discuss two real cases concerning
+   segmentation faults. Oh! It is not that bad, trust me on this one. When
+   a segmentation fault occurs, one can take a deep breath and relax. If
+   there is a segfault, we do know there’s a defect somewhere in the code.
+   Sometimes, though, there is NO segfault at all, but as [112]N. Matloff
+   and P. Salzman put it, we cannot conclude from the absence of a
+   segfault that a memory operation is correct.
+
+   We will begin with the first case, a molecular dynamics C simulation
+   code. To conclude, we will analyse a numeric physics simulation code
+   written in Fortran.
+
+Case study 1: A molecular dynamics C code (MD)
+
+   First of all, this program is written entirely in C. It uses the math
+   library (-lm). So, the first thing we have to do is to compile it and
+   run it and see what comes out:
+
+     gcc -lm MD.c -o MD.e
+
+     ./MD.e
+
+     (….)
+
+     ssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+
+     ssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+
+     ssssssssssssssssssss
+
+     Segmentation fault
+
+   Okay, now we know it crashes. But that is good, very good indeed. If we
+   do have a segmentation fault, we do know for sure there is a defect in
+   the code. I’m not going to deal with maths here. I don’t have to. What
+   I do have to do is to compile the code again, this time adding the
+   debugging symbols to the binary and then trace it down using gdb:
+
+     gcc -g -lm MD.c -o MD.e
+
+     gdb ./MD.e
+
+   Inside gdb, I run the program. Obviously, after some iterations I’ve
+   got the segmentation fault message, but this time I have some
+   additional – and truly important – information:
+
+     sssssssssssssssssssssssssssssssssssssssssssssssss(…)
+
+     Program received signal SIGSEGV, Segmentation fault.
+     0×0000000000402019 in Calc_vacf () at MD.c:633
+     633            vacf[j-i]=0;
+
+   So, I know there is a problem with the line numbered 633 in MD.c source
+   code file. Wow! It seems even magic, isn’t it? There are certain
+   theories about how to debug a piece of code. Now, it seems pretty
+   obvious we are dealing with an array called vacf[]. So we can apply
+   here the induction technique, thinking this way: “Oh, this is a vector.
+   It is mostly common to access any vector wrongly. This issue could
+   possibly be just the same case.” Clearly, the line
+
+     vacf[j-i] = 0;
+
+   tries to set the j-i th element of the vector to zero. We need to know
+   this access is correct before going further. To do that, we can
+   determine the real size for vectf[] vector:
+
+     print vacf
+     $1 = {0 <repeats 1000 times>}
+
+   Well, our vecf[] vector has been initialized up to 1000 elements (well,
+   this assertion is not precisely accurate, because the program has
+   crashed doing so, that is, initializing our vector ;-) ). Don’t forget
+   that does mean “let i be an element belonging to vacf, then it proves
+   that 0<=i<=999“, We can even have a quick look at the C source code
+   without leaving the gdb debugging session to be sure:
+
+     (gdb) list vacf
+     64    double virial;                                    //
+     ContribuciÃ³n del virial
+     65
+     66    int tau;                                    // PosiciÃ³n para
+     los arrays vels_x y vels_y
+     67    double vels_x[(int) N][tau_max];                        //
+     Array que guarda las velocidades x de un instante de tiempo
+     68    double vels_y[(int) N][tau_max];                        //
+     Array que guarda las velocidades y de un instante de tiempo
+     69    double vacf[tau_max];                                // Guarda
+     la correlaciÃ³n de velocidades
+
+   We have to know the value for tau_max, which is 1000 indeed:
+
+     30 # define tau_max    1000                            // NÃºmero de
+     iteraciones en las que se evalÃºa la correlaciÃ³n
+
+   Now, we need to know whether j or i are erroneous. We are using the
+   hypothesis either j or i or both are indeed erroneous, because we are
+   theorizing our access to the vector is not correct. Let’s have a look
+   at their current values:
+
+     (gdb) print i
+     $2 = 0
+     (gdb) print j
+     $3 = -1583524721
+
+   Well, as far as I know the value for i could be correct. But surely,
+   the value for j is not! It seems it has not been initialized at all.
+   So, we have to focus on this j variable, and go backwards, in order to
+   determine why this variable has been infected. Could be either because
+   it has not been correctly initialized, or because inside this code
+   something infects it. First, we look for this j variable to determine
+   whether it is local to the function where we are (Calc_vacf ()), or has
+   been passed as an argument.
+
+     (gdb) list i
+     624
+     625    void Calc_vacf()
+     626    {
+     627
+     628            printf(“estic en calcul de vacf         “);
+     629        int i,j,k;
+     630        double sum,norma;
+     631
+     632        for(i=0;i<tau_max;i++)
+     633            vacf[j-i]=0;
+
+   We can do that because, according to our gdb debugging session, we are
+   still in Calc_vacf() function:
+
+     (gdb) frame
+     #0  0×0000000000402019 in Calc_vacf () at MD.c:633
+     633            vacf[j-i]=0;
+
+   If we have a quick look at this function, we see i has been correctly
+   initialized (for i=0 ….), but this is not the case when it comes to the
+   j variable. It is not initialized at all, so now we’ve got this odd
+   value of -1583524721. It has to be said this value is going to change
+   in different executions of the same program on the very same computer
+   in a row, obviously.
+
+   Well,  it was not that hard, am I right? We have discovered our j
+   variable, inside Calc_vacf() function, has not been initialized and
+   this is the main cause provoking our segmentation fault. How to fix it
+   is up to its owner and main developer. Don’t forget I know shit about
+   molecular dynamics!!!!!! ;-)
+
+   tonicas | Tuesday, 8th of February 2011 | Category: [113]analysis,
+   [114]Applied Physics Department, [115]Code | [116]Leave a comment
+
+Leave a Reply
+
+   [117]Cancel
+
+   ______________________________  Name
+
+   ______________________________  Mail (will not be published)
+
+   ______________________________  Website
+
+   You can use [118]these HTML tags
+
+   <a href="" title=""> <abbr title=""> <acronym title=""> <b> <blockquote
+   cite=""> <cite> <code> <del datetime=""> <em> <i> <q cite=""> <strike>
+   <strong>
+
+
+   __________
+   __________
+   __________
+   __________
+   __________
+   __________
+   __________
+   __________
+   __________
+   __________
+
+   [ ] Notify me of follow-up comments by email.
+
+   [ ] Notify me of new posts by email.
+
+   Submit Comment
+
+Twitter what’s up
+
+     * [119]Disbauxes Otro script para lanzar VM de Virtualbox como
+       servicio [120]http://t.co/QtEIoZx0s4 [121]#VirtualBox
+       [122]53 mins [123]. reply [124]. retweet [125]. favorite
+     * [126]Disbauxes Installing fonts FFF Tusj.ttf
+       [127]http://t.co/5kyqUH4R4X [128]#Debian [129]#GNU /Linux
+       [130]5 hours [131]. reply [132]. retweet [133]. favorite
+     * [134]Disbauxes [tonic[135]@s 's journal]: The proceedings
+       [136]http://t.co/zP3e6oZKlC [137]#english_journal
+       [138]9 hours [139]. reply [140]. retweet [141]. favorite
+     * [142]Disbauxes Generate a list of installed packages and use it to
+       reinstall packages [143]http://t.co/aDWM2aqk6F [144]#Debian
+       [145]#GNU /Linux
+       [146]13 hours [147]. reply [148]. retweet [149]. favorite
+     * [150]Disbauxes Nou driver de ATI-3850 disponible per GNU/Linux
+       [151]http://t.co/1lU7ZwhKwF [152]#Debian [153]#GNU /Linux
+       [154]17 hours [155]. reply [156]. retweet [157]. favorite
+     * [158]Disbauxes Pattern-finding in the maelstrom: log-analysis.
+       [159]http://t.co/3BHbQd5y7l [160]#analysis
+       [161]#AppliedPhysicsDepartment
+       [162]21 hours [163]. reply [164]. retweet [165]. favorite
+     * [166]Disbauxes It's been kinda sort of nightmare.....
+       [167]http://t.co/Fh4RwzKpiN [168]#english_journal
+       [169]1 day [170]. reply [171]. retweet [172]. favorite
+
+   [173][twitter-widget-logo.png]
+
+Recent Posts
+
+     * [174]DASM 2.20.11 on Linux fires a Segfault whenever assembling
+       6205/6207 code.
+     * [175]MediaWiki 1.8.2: Connecting its auth mechanism with apache
+       using the old HttpAuthPlugin extension
+     * [176]SquirrelMail 1.4.17 / 1.4.21 & G/PGP Plugin 2.1 (2): The
+       attachments are not renamed as “.asc” and incorrect mime type
+       associated
+     * [177]When backporting is easier than debugging …
+     * [178]GNU/Linux LKMS, The Art Of Adapting old-code 1/3:
+       Understanding Kernel OOPS messages
+
+   [179]image_mini
+
+Recent Comments
+
+     * tonicas on [180]SquirrelMail 1.4.17 / 1.4.21 & G/PGP Plugin 2.1
+       (2): The attachments are not renamed as “.asc” and incorrect mime
+       type associated
+     * [181]ds nintendo prix on [182]SquirrelMail 1.4.17 / 1.4.21 & G/PGP
+       Plugin 2.1 (2): The attachments are not renamed as “.asc” and
+       incorrect mime type associated
+     * [183]SquirrelMail 1.4.17 / 1.4.21 & G/PGP Plugin 2.1 (2): The
+       attachments are not renamed as “.asc” and incorrect mime type
+       associated « on [184]SquirrelMail 1.4.17 & G/PGP Plugin 2.1
+     * tonicas on [185]SquirrelMail 1.4.17 & G/PGP Plugin 2.1
+     * [186]Daniel on [187]SquirrelMail 1.4.17 & G/PGP Plugin 2.1
+
+   Copyright © 2013 - All Rights Reserved
+   [188]Disbauxes logo created by [189]Josep Hornos Arias on 2011.
+   This entire website is hosted on [190]Applied Physics Department at
+   [191]UPC.
+   You can contact us either using our [192]email address or through
+   [193]Twitter.
+   Powered by [194]WordPress & the [195]Atahualpa Theme by
+   [196]BytesForAll. Discuss on our [197]WP Forum
+
+References
+
+   Visible links
+   1. http://disbauxes.upc.es/?feed=rss2
+   2. http://disbauxes.upc.es/?feed=atom
+   3. http://disbauxes.upc.es/?feed=rss2&p=2829
+   4. http://disbauxes.upc.es/?p=2812
+   5. http://disbauxes.upc.es/?p=2858
+   6. http://disbauxes.upc.es/?feed=comments-rss2
+   7. http://disbauxes.upc.es/?feed=rss2
+   8. http://disbauxes.upc.es/
+   9. http://disbauxes.upc.es/?page_id=7
+  10. http://disbauxes.upc.es/?page_id=4154
+  11. http://disbauxes.upc.es/?page_id=1115
+  12. http://disbauxes.upc.es/?page_id=1585
+  13. http://disbauxes.upc.es/?page_id=1792
+  14. http://disbauxes.upc.es/?page_id=1842
+  15. http://disbauxes.upc.es/?page_id=3248
+  16. http://disbauxes.upc.es/?page_id=1956
+  17. http://disbauxes.upc.es/?page_id=2
+  18. http://disbauxes.upc.es/?m=201309
+  19. http://disbauxes.upc.es/?cat=124
+  20. http://disbauxes.upc.es/?cat=5
+  21. http://disbauxes.upc.es/?cat=48
+  22. http://disbauxes.upc.es/?cat=99
+  23. http://disbauxes.upc.es/?cat=125
+  24. http://disbauxes.upc.es/?cat=123
+  25. http://disbauxes.upc.es/?cat=63
+  26. http://disbauxes.upc.es/?cat=4
+  27. http://disbauxes.upc.es/?cat=101
+  28. http://disbauxes.upc.es/?cat=103
+  29. http://disbauxes.upc.es/?cat=102
+  30. http://disbauxes.upc.es/?cat=116
+  31. http://disbauxes.upc.es/?cat=3
+  32. http://disbauxes.upc.es/?cat=21
+  33. http://disbauxes.upc.es/?cat=100
+  34. http://disbauxes.upc.es/?cat=118
+  35. http://disbauxes.upc.es/?cat=43
+  36. http://disbauxes.upc.es/?cat=117
+  37. http://disbauxes.upc.es/?cat=11
+  38. http://disbauxes.upc.es/?cat=1
+  39. http://disbauxes.upc.es/?cat=68
+  40. http://disbauxes.upc.es/?cat=12
+  41. http://disbauxes.upc.es/?tag=deb
+  42. http://disbauxes.upc.es/?tag=arial
+  43. http://disbauxes.upc.es/?tag=ati
+  44. http://disbauxes.upc.es/?tag=attach
+  45. http://disbauxes.upc.es/?tag=bash
+  46. http://disbauxes.upc.es/?tag=catala
+  47. http://disbauxes.upc.es/?tag=cifrado
+  48. http://disbauxes.upc.es/?tag=clonar
+  49. http://disbauxes.upc.es/?tag=config
+  50. http://disbauxes.upc.es/?tag=cups
+  51. http://disbauxes.upc.es/?tag=debian
+  52. http://disbauxes.upc.es/?tag=debug
+  53. http://disbauxes.upc.es/?tag=dpkg
+  54. http://disbauxes.upc.es/?tag=font
+  55. http://disbauxes.upc.es/?tag=fonts
+  56. http://disbauxes.upc.es/?tag=fsck
+  57. http://disbauxes.upc.es/?tag=google
+  58. http://disbauxes.upc.es/?tag=gpg
+  59. http://disbauxes.upc.es/?tag=gpg-plugin
+  60. http://disbauxes.upc.es/?tag=kernel
+  61. http://disbauxes.upc.es/?tag=key
+  62. http://disbauxes.upc.es/?tag=lenny
+  63. http://disbauxes.upc.es/?tag=mail
+  64. http://disbauxes.upc.es/?tag=modulo
+  65. http://disbauxes.upc.es/?tag=openoffice
+  66. http://disbauxes.upc.es/?tag=openssh
+  67. http://disbauxes.upc.es/?tag=paquet
+  68. http://disbauxes.upc.es/?tag=paquete
+  69. http://disbauxes.upc.es/?tag=paquets
+  70. http://disbauxes.upc.es/?tag=plugin
+  71. http://disbauxes.upc.es/?tag=privacidad
+  72. http://disbauxes.upc.es/?tag=reboot
+  73. http://disbauxes.upc.es/?tag=scripts
+  74. http://disbauxes.upc.es/?tag=serialport
+  75. http://disbauxes.upc.es/?tag=shell
+  76. http://disbauxes.upc.es/?tag=snapshots
+  77. http://disbauxes.upc.es/?tag=squirrelmail
+  78. http://disbauxes.upc.es/?tag=sshd
+  79. http://disbauxes.upc.es/?tag=ttf
+  80. http://disbauxes.upc.es/?tag=ttys0
+  81. http://disbauxes.upc.es/?tag=ttys1
+  82. http://disbauxes.upc.es/?tag=update
+  83. http://disbauxes.upc.es/?tag=verdana
+  84. http://disbauxes.upc.es/?tag=virtualbox
+  85. http://disbauxes.upc.es/?tag=x86_64
+  86. http://disbauxes.upc.es/?cat=48
+  87. http://disbauxes.upc.es/?cat=124
+  88. http://disbauxes.upc.es/?cat=99
+  89. http://disbauxes.upc.es/?cat=125
+  90. http://disbauxes.upc.es/?cat=5
+  91. http://disbauxes.upc.es/?cat=123
+  92. http://disbauxes.upc.es/?cat=4
+  93. http://disbauxes.upc.es/?cat=101
+  94. http://disbauxes.upc.es/?cat=102
+  95. http://disbauxes.upc.es/?cat=103
+  96. http://disbauxes.upc.es/?cat=116
+  97. http://disbauxes.upc.es/?cat=3
+  98. http://disbauxes.upc.es/?cat=21
+  99. http://disbauxes.upc.es/?cat=100
+ 100. http://disbauxes.upc.es/?cat=118
+ 101. http://disbauxes.upc.es/?cat=63
+ 102. http://disbauxes.upc.es/?cat=43
+ 103. http://disbauxes.upc.es/?cat=117
+ 104. http://disbauxes.upc.es/?cat=11
+ 105. http://disbauxes.upc.es/?cat=1
+ 106. http://disbauxes.upc.es/?cat=12
+ 107. http://www.roytanck.com/
+ 108. http://lukemorton.co.uk/
+ 109. http://www.macromedia.com/go/getflashplayer
+ 110. http://disbauxes.upc.es/?p=2858
+ 111. http://disbauxes.upc.es/?p=2812
+ 112. http://www.amazon.com/Art-Debugging-GDB-DDD-Eclipse/dp/1593271743
+ 113. http://disbauxes.upc.es/?cat=48
+ 114. http://disbauxes.upc.es/?cat=99
+ 115. http://disbauxes.upc.es/?cat=5
+ 116. http://disbauxes.upc.es/?p=2829#respond
+ 117. file://localhost/?p=2829#respond
+ 118. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml776.data
+ 119. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml776.data
+ 120. http://t.co/QtEIoZx0s4
+ 121. https://twitter.com/search?q=%23VirtualBox&src=hash
+ 122. https://twitter.com/Disbauxes/status/385223798070722560
+ 123. https://twitter.com/Disbauxes/status/385223798070722560
+ 124. https://twitter.com/Disbauxes/status/385223798070722560
+ 125. https://twitter.com/Disbauxes/status/385223798070722560
+ 126. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml776.data
+ 127. http://t.co/5kyqUH4R4X
+ 128. https://twitter.com/search?q=%23Debian&src=hash
+ 129. https://twitter.com/search?q=%23GNU&src=hash
+ 130. https://twitter.com/Disbauxes/status/385163272737267712
+ 131. https://twitter.com/Disbauxes/status/385163272737267712
+ 132. https://twitter.com/Disbauxes/status/385163272737267712
+ 133. https://twitter.com/Disbauxes/status/385163272737267712
+ 134. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml776.data
+ 135. https://twitter.com/s
+ 136. http://t.co/zP3e6oZKlC
+ 137. https://twitter.com/search?q=%23english_journal&src=hash
+ 138. https://twitter.com/Disbauxes/status/385102655770865664
+ 139. https://twitter.com/Disbauxes/status/385102655770865664
+ 140. https://twitter.com/Disbauxes/status/385102655770865664
+ 141. https://twitter.com/Disbauxes/status/385102655770865664
+ 142. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml776.data
+ 143. http://t.co/aDWM2aqk6F
+ 144. https://twitter.com/search?q=%23Debian&src=hash
+ 145. https://twitter.com/search?q=%23GNU&src=hash
+ 146. https://twitter.com/Disbauxes/status/385042137475448832
+ 147. https://twitter.com/Disbauxes/status/385042137475448832
+ 148. https://twitter.com/Disbauxes/status/385042137475448832
+ 149. https://twitter.com/Disbauxes/status/385042137475448832
+ 150. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml776.data
+ 151. http://t.co/1lU7ZwhKwF
+ 152. https://twitter.com/search?q=%23Debian&src=hash
+ 153. https://twitter.com/search?q=%23GNU&src=hash
+ 154. https://twitter.com/Disbauxes/status/384981692395847680
+ 155. https://twitter.com/Disbauxes/status/384981692395847680
+ 156. https://twitter.com/Disbauxes/status/384981692395847680
+ 157. https://twitter.com/Disbauxes/status/384981692395847680
+ 158. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml776.data
+ 159. http://t.co/3BHbQd5y7l
+ 160. https://twitter.com/search?q=%23analysis&src=hash
+ 161. https://twitter.com/search?q=%23AppliedPhysicsDepartment&src=hash
+ 162. https://twitter.com/Disbauxes/status/384921068966014976
+ 163. https://twitter.com/Disbauxes/status/384921068966014976
+ 164. https://twitter.com/Disbauxes/status/384921068966014976
+ 165. https://twitter.com/Disbauxes/status/384921068966014976
+ 166. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml776.data
+ 167. http://t.co/Fh4RwzKpiN
+ 168. https://twitter.com/search?q=%23english_journal&src=hash
+ 169. https://twitter.com/Disbauxes/status/384860628881801216
+ 170. https://twitter.com/Disbauxes/status/384860628881801216
+ 171. https://twitter.com/Disbauxes/status/384860628881801216
+ 172. https://twitter.com/Disbauxes/status/384860628881801216
+ 173. htts://twitter.com/
+ 174. http://disbauxes.upc.es/?p=4114
+ 175. http://disbauxes.upc.es/?p=4089
+ 176. http://disbauxes.upc.es/?p=4055
+ 177. http://disbauxes.upc.es/?p=4033
+ 178. http://disbauxes.upc.es/?p=3988
+ 179. http://www.debian.org/releases/
+ 180. http://disbauxes.upc.es/?p=4055#comment-814
+ 181. http://ds-pas-cher.sixsigmadss.com/
+ 182. http://disbauxes.upc.es/?p=4055#comment-813
+ 183. https://disbauxes.upc.es/?p=4055
+ 184. http://disbauxes.upc.es/?p=1337#comment-752
+ 185. http://disbauxes.upc.es/?p=1337#comment-751
+ 186. http://noflag.org.uk/
+ 187. http://disbauxes.upc.es/?p=1337#comment-750
+ 188. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/wp-content/themes/atahualpa/images/disbauxes-3.png
+ 189. mailto:josep.hornos%20AT%20uab.es
+ 190. http://fa.upc.edu/
+ 191. http://www.upc.es/
+ 192. mailto:disbauxes@gmx.com
+ 193. https://twitter.com/Disbauxes
+ 194. http://wordpress.org/
+ 195. http://wordpress.bytesforall.com/
+ 196. http://www.bytesforall.com/
+ 197. http://forum.bytesforall.com/
+
+   Hidden links:
+ 199. http://disbauxes.upc.es/
+ 200. http://disbauxes.upc.es/

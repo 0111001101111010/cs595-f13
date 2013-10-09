@@ -1,0 +1,300 @@
+   #[1]GitHub [2]Recent Commits to metamagic:master
+
+   [3]Sign up [4]Sign in
+     * [5]Explore
+     * [6]Features
+     * [7]Enterprise
+     * [8]Blog
+
+   ____________________
+   This repository
+   (*)
+   This repository
+   ( )
+   All repositories
+     * [9]Star [10]51
+     * [11]Fork [12]9
+
+public [13]lassebunk/[14]metamagic Octocat-spinner-32
+
+     * [15]Code Octocat-spinner-32
+     * [16]Issues 1 Octocat-spinner-32
+     * [17]Pull Requests 0 Octocat-spinner-32
+
+     * [18]Pulse Octocat-spinner-32
+     * [19]Graphs Octocat-spinner-32
+     * [20]Network Octocat-spinner-32
+
+HTTPS clone URL
+
+   https://github.com/l
+
+Subversion checkout URL
+
+   https://github.com/l
+
+   You can clone with [21]HTTPS, or [22]Subversion.
+   [23]Download ZIP
+
+   Simple Ruby on Rails plugin for creating meta tags.
+     * [24]62 commits
+     * [25]1 branch
+     * [26]2 releases
+     * [27]Fetching contributors
+
+    1. [28]Ruby 100%
+
+   [29]Ruby
+   branch: master
+   Switch branches/tags
+   ____________________
+     * [30]Branches
+     * [31]Tags
+
+   [32]master
+   Nothing to show
+   [33]v2.0.5
+   [34]v1.0.0
+   Nothing to show
+   [35]metamagic /
+   [36]Show File Finder
+
+   [37]Clean up tests
+   [38]latest commit 67037e57c1
+   [041cf1f9a7fc3e0a13b46b6142a7f695?d=https%3A%2F%2Fidenticons.github.com
+   %2F5df32967161b35e7b0c0665297176b0f.png&amp;s=140] [39]lassebunk
+   authored September 26, 2013
+   Octocat-spinner-32 [40]lib [41]Move to new gem structure September 26,
+   2013
+   Octocat-spinner-32 [42]test [43]Clean up tests September 26, 2013
+   Octocat-spinner-32 [44].gitignore [45]Ignore logs September 26, 2013
+   Octocat-spinner-32 [46].travis.yml [47]Add Travis September 26, 2013
+   Octocat-spinner-32 [48]Gemfile [49]Move to new gem structure September
+   26, 2013
+   Octocat-spinner-32 [50]LICENSE.txt [51]Move to new gem structure
+   September 26, 2013
+   Octocat-spinner-32 [52]README.md [53]Add Travis September 26, 2013
+   Octocat-spinner-32 [54]Rakefile [55]Move to new gem structure September
+   26, 2013
+   Octocat-spinner-32 [56]metamagic.gemspec [57]Move to new gem structure
+   September 26, 2013
+   README.md
+
+   [58]Build Status
+
+Metamagic
+
+   Metamagic is a simple [59]Ruby on Rails plugin for creating meta tags.
+
+Installation
+
+   In your Gemfile:
+gem 'metamagic'
+
+   Then run bundle install.
+
+Examples
+
+Basic usage
+
+   In your app/views/layouts/application.html.erb:
+<head>
+  <%= metamagic %>
+  ...
+</head>
+
+   Then, at the top of your view, e.g. app/views/posts/show.html.erb:
+<%
+meta :title => "My title",
+     :description => "My description",
+     :keywords => %w(keyword1 keyword2 keyword3)
+%>
+
+   This will generate the following:
+<head>
+  <title>My title</title>
+  <meta content="My description" name="description" />
+  <meta content="keyword1, keyword2, keyword3" name="keywords" />
+  ...
+</head>
+
+Specifying default meta tag values
+
+   It's possible to specify default values to be shown if a view doesn't
+   specify its own values. In your app/views/layouts/application.html.erb:
+<head>
+  <%= metamagic :title => "My default title", :description => "My default descri
+ption.", :keywords => %w(keyword1 keyword2 keyword3) %>
+  ...
+</head>
+
+   These values are then inserted if a view doesn't set others.
+
+Custom meta tags
+
+   For custom meta tags, just call it like this in the top of your view:
+<%
+meta :my_custom_tag => "My custom value"
+%>
+
+   This will generate the following:
+<head>
+  ...
+  <meta content="My custom value" name="my_custom_tag" />
+  ...
+</head>
+
+Custom properties (like Open Graph)
+
+   With custom properties:
+<%
+meta [:property => "og:image", :content => "http://mydomain.com/images/my_image.
+jpg"]
+%>
+
+   This will generate the following:
+<head>
+  ...
+  <meta content="http://mydomain.com/images/my_image.jpg" property="og:image" />
+  ...
+</head>
+
+Requirements
+
+     * Rails 3.0 or above
+     * Ruby 1.9 or above
+
+Versioning
+
+   Follows [60]semantic versioning.
+
+Contributing
+
+    1. Fork the project
+    2. Create your feature branch (git checkout -b my-new-feature)
+    3. Commit your changes (git commit -am 'Add new feature')
+    4. Push to the branch (git push origin my-new-feature)
+    5. Create new pull r equest
+
+Contributors
+
+     * [61]See the list of contributors
+
+   Copyright (c) 2010-2013 [62]Lasse Bunk, released under the MIT license
+
+     * [63]Status
+     * [64]API
+     * [65]Training
+     * [66]Shop
+     * [67]Blog
+     * [68]About
+
+     * © 2013 GitHub, Inc.
+     * [69]Terms
+     * [70]Privacy
+     * [71]Security
+     * [72]Contact
+
+
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+
+   Something went wrong with that request. Please try again.
+
+References
+
+   Visible links
+   1. file://localhost/opensearch.xml
+   2. https://github.com/lassebunk/metamagic/commits/master.atom
+   3. file://localhost/signup
+   4. file://localhost/login?return_to=%2Flassebunk%2Fmetamagic%3Futm_content%3Dbuffer4ba92%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+   5. file://localhost/explore
+   6. file://localhost/features
+   7. https://enterprise.github.com/
+   8. file://localhost/blog
+   9. file://localhost/login?return_to=%2Flassebunk%2Fmetamagic
+  10. file://localhost/lassebunk/metamagic/stargazers
+  11. file://localhost/login?return_to=%2Flassebunk%2Fmetamagic
+  12. file://localhost/lassebunk/metamagic/network
+  13. file://localhost/lassebunk
+  14. file://localhost/lassebunk/metamagic
+  15. file://localhost/lassebunk/metamagic
+  16. file://localhost/lassebunk/metamagic/issues
+  17. file://localhost/lassebunk/metamagic/pulls
+  18. file://localhost/lassebunk/metamagic/pulse
+  19. file://localhost/lassebunk/metamagic/graphs
+  20. file://localhost/lassebunk/metamagic/network
+  21. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml691.data
+  22. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml691.data
+  23. file://localhost/lassebunk/metamagic/archive/master.zip
+  24. file://localhost/lassebunk/metamagic/commits/master
+  25. file://localhost/lassebunk/metamagic/branches
+  26. file://localhost/lassebunk/metamagic/releases
+  27. file://localhost/lassebunk/metamagic/contributors
+  28. file://localhost/lassebunk/metamagic/search?l=ruby
+  29. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml691.data
+  30. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml691.data
+  31. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml691.data
+  32. file://localhost/lassebunk/metamagic/tree/master
+  33. file://localhost/lassebunk/metamagic/tree/v2.0.5
+  34. file://localhost/lassebunk/metamagic/tree/v1.0.0
+  35. file://localhost/lassebunk/metamagic
+  36. file://localhost/lassebunk/metamagic/find/master
+  37. file://localhost/lassebunk/metamagic/commit/67037e57c183928d7c5634062e9067ea416250ec
+  38. file://localhost/lassebunk/metamagic/commit/67037e57c183928d7c5634062e9067ea416250ec
+  39. file://localhost/lassebunk
+  40. file://localhost/lassebunk/metamagic/tree/master/lib
+  41. file://localhost/lassebunk/metamagic/commit/32d93b5a0b34ff745d7ff2d101565018e8182d42
+  42. file://localhost/lassebunk/metamagic/tree/master/test
+  43. file://localhost/lassebunk/metamagic/commit/67037e57c183928d7c5634062e9067ea416250ec
+  44. file://localhost/lassebunk/metamagic/blob/master/.gitignore
+  45. file://localhost/lassebunk/metamagic/commit/245c156565b99ca26b9294fb89d06c95f97c332b
+  46. file://localhost/lassebunk/metamagic/blob/master/.travis.yml
+  47. file://localhost/lassebunk/metamagic/commit/b20e5c14853151a43b91b66382e976a6b795b6bc
+  48. file://localhost/lassebunk/metamagic/blob/master/Gemfile
+  49. file://localhost/lassebunk/metamagic/commit/32d93b5a0b34ff745d7ff2d101565018e8182d42
+  50. file://localhost/lassebunk/metamagic/blob/master/LICENSE.txt
+  51. file://localhost/lassebunk/metamagic/commit/32d93b5a0b34ff745d7ff2d101565018e8182d42
+  52. file://localhost/lassebunk/metamagic/blob/master/README.md
+  53. file://localhost/lassebunk/metamagic/commit/b20e5c14853151a43b91b66382e976a6b795b6bc
+  54. file://localhost/lassebunk/metamagic/blob/master/Rakefile
+  55. file://localhost/lassebunk/metamagic/commit/32d93b5a0b34ff745d7ff2d101565018e8182d42
+  56. file://localhost/lassebunk/metamagic/blob/master/metamagic.gemspec
+  57. file://localhost/lassebunk/metamagic/commit/32d93b5a0b34ff745d7ff2d101565018e8182d42
+  58. http://travis-ci.org/lassebunk/metamagic
+  59. http://rubyonrails.org/
+  60. http://semver.org/
+  61. https://github.com/lassebunk/metamagic/graphs/contributors
+  62. http://lassebunk.dk/
+  63. https://status.github.com/
+  64. http://developer.github.com/
+  65. http://training.github.com/
+  66. http://shop.github.com/
+  67. file://localhost/blog
+  68. file://localhost/about
+  69. file://localhost/site/terms
+  70. file://localhost/site/privacy
+  71. file://localhost/security
+  72. file://localhost/contact
+
+   Hidden links:
+  74. https://github.com/
+  75. https://help.github.com/articles/which-remote-url-should-i-use
+  76. file://localhost/lassebunk/metamagic/compare
+  77. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml691.data#metamagic
+  78. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml691.data#installation
+  79. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml691.data#examples
+  80. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml691.data#basic-usage
+  81. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml691.data#specifying-default-meta-tag-values
+  82. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml691.data#custom-meta-tags
+  83. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml691.data#custom-properties-like-open-graph
+  84. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml691.data#requirements
+  85. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml691.data#versioning
+  86. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml691.data#contributing
+  87. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml691.data#contributors
+  88. file://localhost/
+  89. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml691.data
+  90. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml691.data
+  91. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml691.data

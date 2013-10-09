@@ -1,0 +1,317 @@
+   #[1]i3lance » Feed [2]i3lance » Comments Feed [3]i3lance » CSS – The
+   basics – Box Model Comments Feed [4]HTML5 – The basics – Layout
+   [5]JQuery .AJAX Error handling and capturing [6]publisher
+
+   [7]i3lance
+   The musings of a scuba diving web standards programming creative organ
+   grinder
+
+CSS – The basics – Box Model
+
+   August 22, 2013 · by [8]Desi Reuben-Sealey · in [9]CSS, [10]HTML
+
+   When I’ve helped people in the past to get to grips with HTML & CSS,
+   I’ve often referred to the Box Model.  This is probably the easiest way
+   to understand how HTML and CSS work together.
+
+   To quote directly from [11]W3C “Each box has a content area (e.g.,
+   text, an image, etc.) and optional surrounding padding, border, and
+   margin areas; the size of each area is specified by properties defined
+   below. The following diagram shows how these areas relate and the
+   terminology used to refer to pieces of margin, border, and padding.”
+   [12]The CSS Box Model Firebug displays
+
+   The CSS Box Model Firebug displays
+
+   This being said, every element in web design is a rectangular box, yes
+   everything.
+
+The maths
+
+   The outer dashed line of the box illustrated above represents the
+   margin, which is transparent and does not affect the actual size of the
+   box, however it can affect the position of elements around it.
+
+   And this is how you would calculate the box dimensions based on the CSS
+   Box Model:
+   Width   = width + padding-left + padding-right + border-left +
+           border-right
+   Height  = height + padding-top + padding-bottom + border-top +
+           border-bottom
+
+   Every element has an inherited height and width. Depending on the
+   purpose of the element the default height and width may be all you
+   need. However, if an element is key to the layout and design of a page
+   it may require a specified height and width. In this case it’s best
+   that you override the default values for block level element in
+   question.
+
+Practical consideration
+
+   [13]Different Web Browsers Most browsers released in the last few years
+   have no problem with boxes and render boxes correctly.  However, it’s
+   worth noting that the box model for a long time has never been pixel
+   perfect for ALL browsers and this is one of my pet hates, (“it is what
+   it is [14]for now” I tell myself).
+
+   For example, let’s say you don’t declare a width on an element, and the
+   box has static or relative positioning, the width will remain 100% in
+   width and the padding and border will push inwards instead of outward.
+
+   But if you explicitly set the width of the box to be 100%, the padding
+   will push the box outward. You’ll come across a difference more so,
+   with text area elements.  To overcome this, many developer simply set
+   specific widths on these elements in order to obtain cross-browser
+   pixel perfect visuals.
+
+   Many also use CSS-Reset rules within their CSS files in order to
+   further add to the visual pixel perfection.
+
+Is this as good as it gets?
+
+   Actually no, there are so many frameworks and resources out there that
+   are making it easier for developers to create beautiful websites that
+   look the same in most browsers.
+
+   And frameworks provide a way to rapidly build a website based on a set
+   of predetermined standards. Depending on the project, frameworks can
+   provide a great starting point or even a complete solution.
+
+   However, sometimes, they can also cause more trouble than they’re
+   worth. So research the framework you want to use, look at the pros and
+   cons then decide whether it is worth using it as a base for your web
+   application.
+
+   It will get better in the future and like many developers, we wait for
+   the moment when we can cry “Browser Unification!”.
+
+   But until then, happy coding.
+
+About Desi Reuben-Sealey
+
+   Desi is a Web Standards Interaction Warrior for the Web and Mobile, an
+   enthusiastic PADI diver, retired pro UK basketball player, Neo Soul
+   music lover, an enthusiastic charity worker who likes to give to others
+   is various ways. Desi is also a business coach / mentor and co-owner of
+   [15]returntoyouth.
+     * [16]View all posts by Desi Reuben-Sealey →
+     * [17]Blog
+     * [18]Twitter
+     * [19]Facebook
+     * [20]Google+
+
+   Short URL: [21]http://bit.ly/19zLTFU
+   QR Code:
+
+Share this:
+
+     * [22]Twitter
+     * [23]LinkedIn
+     * [24]Facebook
+     * [25]Google
+     * [26]More
+     *
+
+     * [27]StumbleUpon
+     * [28]Digg
+     *
+     * [29]Reddit
+     * [30]Email
+     *
+     * [31]Print
+     *
+
+Like this:
+
+   Like Loading...
+   Tags: [32]box model, [33]css, [34]html, [35]tutorial
+
+Leave a Reply [36]Cancel reply
+
+   IFRAME: [37]jetpack_remote_comment
+
+   [38]« Previous [39]Next »
+
+Search
+
+   Search this site..._ Search
+     * [40]The reason
+     * [41]The person
+     * [42]The Work
+     * [43]The resume
+     * [44]The Thinktank
+     * [45]The contact
+          + [46]Get a Quote
+
+   Hey, I'm Desi Reuben-Sealey. I currently work at [47]MyFamilyClub as
+   the Creative and Technical Lead in London, UK.
+
+   This blog a chance for me to pay forward what I've learned in my
+   working career. These musings are my own...
+   [48]Follow @i3lance
+
+Socialise much?
+
+   [49]Follow me on Facebook [50]Follow me on Google+ [51]Follow me on
+   Twitter [52]Follow me on LinkedIn [53]Follow me on Flickr [54]Follow me
+   on YouTube [55]Follow me on Vimeo [56]Follow me on Last.fm [57]Follow
+   me on RSS [58]Follow me on E-mail [59]Follow me on Wordpress
+
+Tag cloud
+
+   [60]@media queries [61]advice [62]API [63]basketball [64]contracts
+   [65]css [66]developer toolbox [67]file compression [68]Funchal [69]GIT
+   [70]good practice [71]html [72]html templates [73]http:// [74]http
+   headers [75]infographic [76]Ital Tek [77]JavaScript [78]jQuery
+   [79]Lebron James [80]Madeira [81]Miami Heat [82]Movie Trailer [83]musc
+   [84]NBA [85]nba finals 2012 [86]office [87]PADI [88]Regular Expressions
+   [89]resume [90]sans [91]scuba [92]scuba diving [93]Sesame Street
+   [94]staging [95]St Maarten [96]St Thomas [97]Taken [98]Taken 2
+   [99]tutorial [100]version control [101]Video [102]winzip [103]WordPress
+   [104]YouTube
+   Twitter Logo
+   [105]Refresh
+   [106]i3lance Desi Reuben-Sealey
+   [107]@i3lance: Do not push the button... - [108]#in
+   [109]http://t.co/cLk2dVaAw2 [110]#Idiocracy [111]#Life
+   [112]2 days ago
+   [113]reply | [114]follow i3lance
+   [115]View more »
+
+   Copyright © 2013 [116]i3lance
+
+   Send to Email Address ____________________ Your Name
+   ____________________ Your Email Address ____________________ loading
+   Send Email [117]Cancel
+   Post was not sent - check your email addresses!
+   Email check failed, please try again
+   Sorry, your blog cannot share posts by email.
+
+   IFRAME: [118]likes-master
+
+   %d bloggers like this:
+
+References
+
+   Visible links
+   1. http://www.i3lance.co.uk/feed/
+   2. http://www.i3lance.co.uk/comments/feed/
+   3. http://www.i3lance.co.uk/2013/08/css-the-basics-box-model/feed/
+   4. http://www.i3lance.co.uk/2013/08/html5-the-basics-layout/
+   5. http://www.i3lance.co.uk/2013/09/jquery-ajax-error-handling-and-capturing/
+   6. https://plus.google.com/u/0/108448882287589101137/about
+   7. http://www.i3lance.co.uk/
+   8. http://www.i3lance.co.uk/author/desi/
+   9. http://www.i3lance.co.uk/category/thinktank/css-thinktank/
+  10. http://www.i3lance.co.uk/category/thinktank/html-thinktank/
+  11. http://www.w3.org/TR/CSS2/box.html
+  12. http://www.i3lance.co.uk/wp-content/uploads/2013/08/Screen-Shot-2013-08-22-at-16.06.28-.png
+  13. http://www.i3lance.co.uk/wp-content/uploads/2013/08/different-web-browser-icons-.jpg
+  14. http://www.ie6countdown.com/
+  15. http://www.returntoyouth.co.uk/
+  16. http://www.i3lance.co.uk/author/desi/
+  17. http://www.i3lance.co.uk/
+  18. http://www.twitter.com/#!/i3lance
+  19. http://www.facebook.com/desi.reubensealey
+  20. https://plus.google.com/108448882287589101137
+  21. http://bit.ly/19zLTFU
+  22. http://www.i3lance.co.uk/2013/08/css-the-basics-box-model/?share=twitter
+  23. http://www.i3lance.co.uk/2013/08/css-the-basics-box-model/?share=linkedin
+  24. http://www.i3lance.co.uk/2013/08/css-the-basics-box-model/?share=facebook
+  25. http://www.i3lance.co.uk/2013/08/css-the-basics-box-model/?share=google-plus-1
+  26. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml378.data
+  27. http://www.i3lance.co.uk/2013/08/css-the-basics-box-model/?share=stumbleupon
+  28. http://www.i3lance.co.uk/2013/08/css-the-basics-box-model/?share=digg
+  29. http://www.i3lance.co.uk/2013/08/css-the-basics-box-model/?share=reddit
+  30. http://www.i3lance.co.uk/2013/08/css-the-basics-box-model/?share=email
+  31. http://www.i3lance.co.uk/2013/08/css-the-basics-box-model/#print
+  32. http://www.i3lance.co.uk/tag/box-model/
+  33. http://www.i3lance.co.uk/tag/css/
+  34. http://www.i3lance.co.uk/tag/html/
+  35. http://www.i3lance.co.uk/tag/tutorial/
+  36. file://localhost/2013/08/css-the-basics-box-model/#respond
+  37. http://jetpack.wordpress.com/jetpack-comment/?blogid=36719529&postid=659&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=mystery&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en-US&jetpack_version=2.5&sig=bf0591bbe10172b0f4d2227390dcb4373463f725#parent=http%3A%2F%2Fwww.i3lance.co.uk%2F2013%2F08%2Fcss-the-basics-box-model%2F
+  38. http://www.i3lance.co.uk/2013/08/html5-the-basics-layout/
+  39. http://www.i3lance.co.uk/2013/09/jquery-ajax-error-handling-and-capturing/
+  40. http://www.i3lance.co.uk/the-reason/
+  41. http://www.i3lance.co.uk/the-person/
+  42. http://www.i3lance.co.uk/the-work/
+  43. http://www.i3lance.co.uk/the-resume/
+  44. http://www.i3lance.co.uk/category/thinktank/
+  45. http://www.i3lance.co.uk/the-contact/
+  46. http://www.i3lance.co.uk/the-contact/get-a-quote/
+  47. http://www.myfamilyclub.co.uk/
+  48. https://twitter.com/i3lance
+  49. http://www.facebook.com/desi.reubensealey
+  50. https://plus.google.com/u/0/108448882287589101137/posts//p/pub
+  51. http://twitter.com/i3lance
+  52. http://www.linkedin.com/in/desireubensealey
+  53. http://www.flickr.com/photos/i3lance/
+  54. http://www.youtube.com/i3lance
+  55. http://vimeo.com/i3lance
+  56. http://www.last.fm/user/i3lance
+  57. http://www.i3lance.co.uk/?feed=rss2
+  58. mailto:desi@i3lance.co.uk
+  59. http://www.i3lance.co.uk/
+  60. http://www.i3lance.co.uk/tag/media-queries/
+  61. http://www.i3lance.co.uk/tag/advice/
+  62. http://www.i3lance.co.uk/tag/api/
+  63. http://www.i3lance.co.uk/tag/basketball-2/
+  64. http://www.i3lance.co.uk/tag/contracts/
+  65. http://www.i3lance.co.uk/tag/css/
+  66. http://www.i3lance.co.uk/tag/developer-toolbox/
+  67. http://www.i3lance.co.uk/tag/file-compression/
+  68. http://www.i3lance.co.uk/tag/funchal/
+  69. http://www.i3lance.co.uk/tag/git/
+  70. http://www.i3lance.co.uk/tag/good-practice/
+  71. http://www.i3lance.co.uk/tag/html/
+  72. http://www.i3lance.co.uk/tag/html-templates/
+  73. http://www.i3lance.co.uk/tag/http/
+  74. http://www.i3lance.co.uk/tag/http-headers/
+  75. http://www.i3lance.co.uk/tag/infographic/
+  76. http://www.i3lance.co.uk/tag/ital-tek/
+  77. http://www.i3lance.co.uk/tag/javascript/
+  78. http://www.i3lance.co.uk/tag/jquery/
+  79. http://www.i3lance.co.uk/tag/lebron-james/
+  80. http://www.i3lance.co.uk/tag/madeira/
+  81. http://www.i3lance.co.uk/tag/miami-heat/
+  82. http://www.i3lance.co.uk/tag/movie-trailer/
+  83. http://www.i3lance.co.uk/tag/musc/
+  84. http://www.i3lance.co.uk/tag/nba/
+  85. http://www.i3lance.co.uk/tag/nba-finals-2012/
+  86. http://www.i3lance.co.uk/tag/office/
+  87. http://www.i3lance.co.uk/tag/padi/
+  88. http://www.i3lance.co.uk/tag/regular-expressions/
+  89. http://www.i3lance.co.uk/tag/resume/
+  90. http://www.i3lance.co.uk/tag/sans/
+  91. http://www.i3lance.co.uk/tag/scuba/
+  92. http://www.i3lance.co.uk/tag/scuba-diving-2/
+  93. http://www.i3lance.co.uk/tag/sesame-street/
+  94. http://www.i3lance.co.uk/tag/staging/
+  95. http://www.i3lance.co.uk/tag/st-maarten/
+  96. http://www.i3lance.co.uk/tag/st-thomas/
+  97. http://www.i3lance.co.uk/tag/taken/
+  98. http://www.i3lance.co.uk/tag/taken-2/
+  99. http://www.i3lance.co.uk/tag/tutorial/
+ 100. http://www.i3lance.co.uk/tag/version-control/
+ 101. http://www.i3lance.co.uk/tag/video/
+ 102. http://www.i3lance.co.uk/tag/winzip/
+ 103. http://www.i3lance.co.uk/tag/wordpress/
+ 104. http://www.i3lance.co.uk/tag/youtube/
+ 105. javascript:TB_blend('tweetblender-2');
+ 106. http://twitter.com/i3lance
+ 107. http://twitter.com/i3lance
+ 108. http://twitter.com/search?q=%23in
+ 109. http://t.co/cLk2dVaAw2
+ 110. http://twitter.com/search?q=%23Idiocracy
+ 111. http://twitter.com/search?q=%23Life
+ 112. http://twitter.com/i3lance/statuses/384336826842251264
+ 113. http://twitter.com/home?status=@i3lance%20&in_reply_to_status_id=384336826842251264&in_reply_to=i3lance
+ 114. http://twitter.com/i3lance
+ 115. http://www.twitter.com/i3lance
+ 116. http://www.i3lance.co.uk/
+ 117. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml378.data#cancel
+ 118. http://widgets.wp.com/likes/master.html?ver=20130620a#ver=20130620a&lang=en&mp6=0
+
+   Hidden links:
+ 120. http://kirill-novitchenko.com/

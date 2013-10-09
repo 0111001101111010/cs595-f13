@@ -1,0 +1,697 @@
+   #[1]Dev Blog of Martin Ivanov [2]Acid.JS Web UI Library
+
+   [3]HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device
+   Access, Graphics, 3D & Effects, Multimedia, Performance & Integration,
+   Semantics, and Offline & Storage
+     * [4]Blog
+     * [5]About
+     * [6]@wemakesitesnet
+     * [7]Contact
+     * [8]Donate
+
+[9]HTML5, CSS3 and JavaScript Insight
+
+     * [10]JavaScript
+          + [11]XML to JSON JavaScript Objectifier
+          + [12]URI to JSON Serializer
+          + [13]Coming Soon - HTML5, JavaScript and CSS3 Replacement Page
+          + [14]JavaScript iPhone Toggle Switch Button
+          + [15]HTML5 Resume Generator and Onepager Website
+          + [16]JavaScript and CSS3 Image Reflections
+          + [17]JavaScript Inheritance Without Constructors
+          + [18]IMDB Movie Data Fetcher
+          + [19]JavaScript Mapper for RESTFul Methods
+          + [20]TinyURL JavaScript API
+          + [21]Wrapper for the HTML5 WebWorkers API
+          + [22]JavaScript Class Augmenter
+          + [23]HTML5 Details Enabler YUI Class
+          + [24]JavaScript HTML Template Engine
+          + [25]JavaScript Localization Class
+          + [26]HTML5 Charts
+          + [27]HTML5 Placeholder Enabler YUI Class
+          + [28]All JavaScript Experiments and Insight
+     * [29]CSS3
+          + [30]Custom Checkboxes and Radio Buttons
+          + [31]CSS3 iPhone Toggle Buttons
+          + [32]Crossbrowser RGBA and Prevention of Opacity Propagation.
+            Starting with IE6
+          + [33]CSS3 Slides Viewer
+          + [34]Fancy CSS3 Tooltips
+          + [35]CSS3 Treeview. No JavaScript
+          + [36]CSS3 Metro Dropdown Styling
+          + [37]CSS3 Element Reflections
+          + [38]Dropdown Styling with CSS3
+          + [39]CSS3 Background Image Cropping
+          + [40]Inline Masked File Upload Form with CSS3 and HTML5
+          + [41]CSS3 Tabstrip
+          + [42]CSS3 Gaussian Blur
+          + [43]All CSS3 Experiments and Insight
+     * [44]Dev Tools
+          + [45]HTML Validation Bookmarklet
+          + [46]Builder.CSS
+          + [47]Image to Base-64 Encoder
+          + [48]HTML5 Sticky Notes App
+          + [49]JavaScript Minifier and Obfuscator
+          + [50]JSON to HTML Template Engine
+          + [51]HTML Template Engine
+          + [52]HTML5 Guitar Chords Player
+          + [53]IMDB Movie Data Fetcher
+          + [54]Message Digest Encrypter
+          + [55]RESTFul Builder and Tester
+     * [56]Web.UI
+          + [57]HTML5 Shopping Cart
+          + [58]Ribbon Bar Web UI
+          + [59]Auto Complete Widget
+          + [60]HTML5 Canvas Gauge
+          + [61]Table Painter Widget
+          + [62]CSS3 Metro Forms
+          + [63]Split Button Widget
+          + [64]HTML5 and CSS3 Progressbar
+          + [65]Tourdates and Events Scheduler
+          + [66]TabStrip Web UI
+          + [67]Hotel Booking Form
+     * [68]Tweet
+
+HTML5, CSS3 and JavaScript iPhone Toggle Switch Button
+
+   You can read the original blogpost on this [69]link, or you can
+   [70]download the example.
+
+Demo
+
+Checkboxes
+
+Toggle Buttons
+
+A Few Disabled Buttons
+
+Radios
+
+Mutually Exclusive Buttons
+
+A Few Disabled Mutually Exclusive Buttons
+
+Localized "ON" and "OFF" States
+
+Register the Class
+
+<script src="AcidJs.ToggleSwitch/lib/jQuery/jquery-1.10.1.min.js"></script>
+<script src="AcidJs.ToggleSwitch/classes/ToggleSwitch.js"></script>
+
+The Charts Class
+
+/*
+ * @namespace window.AcidJs
+ * @class ToggleSwitch
+ * @javascript
+ * @author Martin Ivanov
+ * @web http://wemakesites.net
+ **/
+
+(function() {
+    "use strict";
+
+    /*
+     * @namespace window.AcidJs
+     **/
+    if(undefined === window.AcidJs) {
+        window.AcidJs = {};
+    }
+
+    /*
+     * @class ToggleSwitch
+     * @constructor
+     * @config (Object)
+     * {
+     *  appRoot: (String) [optional] path to the AcidJs.ToggleSwitch/ folder; de
+fault: ""
+     * }
+     * @return Object
+     **/
+    function ToggleSwitch(config) {
+
+        config = config || {};
+
+        var
+            appRoot = config.appRoot || "";
+
+        this._stylesheet(appRoot + this.URLS.stylesheet);
+    }
+
+    ToggleSwitch.prototype = {
+        /*
+         * @member MANIFEST
+         * @public
+         * @desc developer information and credits
+         **/
+        MANIFEST: {
+            version: "1.0",
+            name: "ToggleSwitch",
+            developer: "Martin Ivanov",
+            websites: {
+                page: "http://experiments.wemakesites.net/javascript-iphone-togg
+le-buttons.html",
+                personal: "http://wemakesites.net",
+                portfolio: "http://acidjs.wemakesites.net",
+                blog: "http://acidmartin.wordpress.com/",
+                rss: "http://feeds.feedburner.com/acidmartin",
+                twitter: "https://twitter.com/#!/wemakesitesnet"
+            },
+            email: "acid_martin@yahoo.com"
+        },
+
+        /*
+         * @member URLS
+         * @public
+         * @desc URLS used in the class
+         **/
+        URLS: {
+            stylesheet: "AcidJs.ToggleSwitch/styles/ToggleSwitch.css"
+        },
+
+        /*
+         * @member EVENTS
+         * @public
+         * @desc custom events
+         **/
+        EVENTS: [
+            "acidjs-toggle-switch"
+        ],
+
+        /*
+         * @member TEMPLATES
+         * @public
+         * @desc HTML templates used in the class
+         **/
+        TEMPLATES: {
+            item: ['
+
+     ', '', ' {{value}}___________', '', '', '{{label}}', '', ''],
+   wrapper: ['', '
+   {{itemsHtml}}
+
+   ', '
+   '] }, /* * @member CSS_CLASSES * @public * @desc CSS classes used in
+   the app **/ CSS_CLASSES: { base: "acidjs-toggle-switch" }, /* * @method
+   render * @public * @param config (Object) [required] * { * type:
+   (String) "checkbox"|"radio" [optional] default: "checkbox" * name:
+   (String) [required] * defaultCheckedNode: (Number) [optional] default:
+   undefined * cssClasses: (Array) [optional] * boundingBox:
+   (JQueryDomNode) [required] * on: (String) [optional] default: "on" *
+   off: (String) [optional] default: "off" * items: (Array) * [{ * value:
+   (String) [optional] default: "" * cssClasses: (Array) optional default:
+   "" * label: (String) optional default: "" * enabled: (Boolean)
+   [optional] default: true * }] * } **/ render: function(config) {
+   if(!config.boundingBox || !config.boundingBox.length || !config.name) {
+   return; } var that = this, boundingBox = config.boundingBox, cssClasses
+   = [this.CSS_CLASSES.base], items = config.items, defaultCheckedNode =
+   config.defaultCheckedNode, html, itemsHtml = [], type = config.type ||
+   "checkbox", on = config.on || "on", off = config.off || "off",
+   _setInputChecked = function(defaultCheckedNode) {
+   boundingBox.find('li:eq(' + defaultCheckedNode + ')
+   input').prop("checked", true); }; if(config.cssClasses) { cssClasses =
+   cssClasses.concat(config.cssClasses); } if(items) { $.each(items,
+   function(i) { var item = items[i], itemCssClasses = item.cssClasses ||
+   [], enabled = item.enabled === false ? false : true, templateData = {
+   itemCssClasses: itemCssClasses.join(" "), enabled: enabled ? "" :
+   'disabled="disabled"', value: item.value || "", type: type, label:
+   item.label || "", on: on, off: off, name: type === "radio" ?
+   config.name : config.name + "-" + i };
+   itemsHtml.push(that._template("item", templateData)); }); } cssClasses
+   = cssClasses.join(" "); itemsHtml = itemsHtml.join(""); html =
+   this._template("wrapper", { itemsHtml: itemsHtml });
+   boundingBox.addClass(cssClasses) .html(html); if("number" ===
+   typeof(defaultCheckedNode)) { _setInputChecked.call(this,
+   defaultCheckedNode); } else if (defaultCheckedNode instanceof Array) {
+   $.each(defaultCheckedNode, function(i) { _setInputChecked.call(this,
+   defaultCheckedNode[i]); }); } this._bind(boundingBox);
+   boundingBox.delegate("input", "change", function() { var input =
+   $(this), data = { value: input.val(), checked: input.prop("checked"),
+   name: input.attr("name"), type: input.attr("type"), boundingBox:
+   input.parents("." + that.CSS_CLASSES.base) };
+   boundingBox.trigger(that.EVENTS[0], data); }); }, /* * @method destroy
+   * @public * @param boundingBox (jQueryDomNode) * @return void * @desc
+   remove widget by specified bounding box **/ destroy:
+   function(boundingBox) { if(boundingBox) { boundingBox.empty()
+   .removeClass(this.CSS_CLASSES.base); } }, /* * @method _bind * @private
+   * @param name (String) * @param data (Object) * @return (DOMNode) *
+   @desc handle the "acidjs-toggle-switch" custom event of the class *
+   @return (Object) * { * boundingBox: (jQueryDomNode) * checked:
+   (Boolean) the "checked" state of the selected node * name: (String) the
+   "name" attribute of the selected node * value: (String) the "value"
+   attribute of the selected node * type: (String) "checkbox"|"radio" * }
+   **/ _bind: function(boundingBox) { boundingBox.on(this.EVENTS[0],
+   function(data) { return data; }); }, /* * @method _template * @public *
+   @param name (String) * @param data (Object) * @return (DOMNode) * @desc
+   compile a template from the TEMPLATES object **/ _template:
+   function(name, data) { var html = this.TEMPLATES[name] || []; data =
+   data || {}; html = html.join(""); for(var key in data) {
+   if(data.hasOwnProperty(key)) { var value = data[key], regexp = new
+   RegExp("{{" + key + "}}", "g"); html = html.replace(regexp, value); } }
+   return html; }, /* * @method _stylesheet * @param url (String) *
+   @public * @return void * @desc asynchronously load a CSS file from the
+   server **/ _stylesheet: function(url) { var css =
+   document.createElement("link"), id = this.CSS_CLASSES.base +
+   "-stylesheet"; css.setAttribute("rel", "stylesheet");
+   css.setAttribute("href", url); css.setAttribute("id", id); if($("#" +
+   id).length <= 0) {
+   document.getElementsByTagName("head")[0].appendChild(css); } } };
+   window.AcidJs.ToggleSwitch = ToggleSwitch; })();
+
+Using the Class
+
+(function() {
+    window.switcher = new AcidJs.ToggleSwitch({
+        // (String) [optional] path to the AcidJs.ToggleSwitch/ folder; default:
+ ""
+        appRoot: "pages/javascript-iphone-toggle-buttons/example/"
+    });
+
+    window.switcher.render({
+        type: "checkbox",
+        name: "switcher-01",
+        defaultCheckedNode: [1, 2],
+        boundingBox: $("#switcher-01"),
+        items: [{
+            value: "en-US",
+            label: "English"
+        },{
+            value: "de-DE",
+            label: "German"
+        },{
+            value: "ru-RU",
+            label: "Russian"
+        },{
+            value: "es-ES",
+            label: "Spanish"
+        }]
+    });
+
+    // all properties are set here; check documentation in the code for more ins
+ight
+    window.switcher.render({
+        type: "radio", // (String) "checkbox"|"radio" [optional] default: "check
+box"
+        name: "guitars", // (String) [required]
+        on: "on", // (String) [optional] default: "on"
+        off: "off", // (String) [optional] default: "off"
+        defaultCheckedNode: 0, // (Number for type "radio"|Array for type "check
+box") [optional] default: 0
+        cssClasses: ["class-a", "class-b", "class-c"], // (Array) [optional]
+        boundingBox: $("#switcher-02"), // (JQueryDomNode) [required]
+        items: [{
+            value: "B.C. Rich", // (String) optional
+            cssClasses: ["class-d", "class-e", "class-f"], // (Array) optional,
+            label: "B.C. Rich Guitars" // (String) optional
+        },{
+            value: "ESP",
+            cssClasses: ["class-g", "class-h", "class-i"],
+            label: "ESP Guitars"
+        },{
+            value: "Fender",
+            cssClasses: ["class-j", "class-k", "class-l"],
+            label: "Ibanez Guitars"
+        },{
+            value: "Gibson",
+            cssClasses: ["class-m", "class-n", "class-o"],
+            label: "Gibson Guitars"
+        },{
+            value: "Jackson",
+            cssClasses: ["class-p", "class-q", "class-r"],
+            label: "Jackson Guitars"
+        }]
+    });
+
+    window.switcher.render({
+        type: "checkbox",
+        name: "switcher-03",
+        defaultCheckedNode: [0, 1, 2],
+        boundingBox: $("#switcher-03"),
+        items: [{
+            value: "HTML5",
+            label: "HTML5"
+        },{
+            value: "CSS3",
+            label: "CSS3"
+        },{
+            value: "JavaScript",
+            label: "JavaScript"
+        },{
+            value: "JSON",
+            label: "JSON"
+        },{
+            value: "XML",
+            label: "XML"
+        },{
+            value: "PHP",
+            label: "PHP",
+            enabled: false
+        },{
+            value: ".NET",
+            label: ".NET",
+            enabled: false
+        }]
+    });
+
+    window.switcher.render({
+        type: "radio",
+        name: "switcher-04",
+        boundingBox: $("#switcher-04"),
+        items: [{
+            value: "John Steinbeck",
+            label: "John Steinbeck"
+        },{
+            value: "George Orwell",
+            label: "George Orwell"
+        },{
+            value: "Clive Barker",
+            label: "Clive Barker",
+            enabled: false
+        },{
+            value: "Stephen King",
+            label: "Stephen King",
+            enabled: false
+        },{
+            value: "Anthony Burgess",
+            label: "Anthony Burgess"
+        }]
+    });
+
+    window.switcher.render({
+        type: "checkbox",
+        name: "switcher-05",
+        on: "ein",
+        off: "aus",
+        defaultCheckedNode: [0, 2],
+        boundingBox: $("#switcher-05"),
+        items: [{
+            value: "en-US",
+            label: "English"
+        },{
+            value: "de-DE",
+            label: "German"
+        },{
+            value: "ru-RU",
+            label: "Russian"
+        },{
+            value: "es-ES",
+            label: "Spanish"
+        }]
+    });
+
+    // event bindings
+    $("#switcher-01").on("acidjs-toggle-switch", function(e, data) {
+        window.console.log(e.type, data);
+    });
+
+    $("#switcher-02").on("acidjs-toggle-switch", function(e, data) {
+        window.console.log(e.type, data);
+    });
+
+    $("#switcher-03").on("acidjs-toggle-switch", function(e, data) {
+        window.console.log(e.type, data);
+    });
+
+    $("#switcher-04").on("acidjs-toggle-switch", function(e, data) {
+        window.console.log(e.type, data);
+    });
+
+    $("#switcher-05").on("acidjs-toggle-switch", function(e, data) {
+        window.console.log(e.type, data);
+    });
+
+    // test the destroy method
+    //window.switcher.destroy($("#switcher-01"));
+    //window.switcher.destroy($("#switcher-02"));
+    //window.switcher.destroy($("#switcher-03"));
+    //window.switcher.destroy($("#switcher-04"));
+    //window.switcher.destroy($("#switcher-05"));
+})();
+
+The CSS
+
+/*
+ * @namespace window.AcidJs
+ * @class ToggleSwitch
+ * @stylesheet
+ * @author Martin Ivanov
+ * @web http://wemakesites.net
+ **/
+
+:root .acidjs-toggle-switch input,
+:root .acidjs-toggle-switch b,
+:root .acidjs-toggle-switch span::before,
+:root .acidjs-toggle-switch span::after
+{
+    position: absolute;
+}
+
+:root .acidjs-toggle-switch b,
+:root .acidjs-toggle-switch span::before,
+:root .acidjs-toggle-switch span::after
+{
+    width: 41px;
+    height: 30px;
+}
+
+:root .acidjs-toggle-switch span::before,
+:root .acidjs-toggle-switch span::after
+{
+    text-align: center;
+}
+
+:root .acidjs-toggle-switch span::before,
+:root .acidjs-toggle-switch span::after
+{
+    color: #8c8c8c;
+    text-transform: uppercase;
+    -webkit-pointer-events: none;
+    -moz-pointer-events: none;
+    pointer-events: none;
+}
+
+:root .acidjs-toggle-switch *
+{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    vertical-align: middle;
+    outline: none;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+:root .acidjs-toggle-switch li
+{
+    display: block;
+    margin: 4px;
+}
+
+:root .acidjs-toggle-switch
+{
+    font: bold 16px/30px Arial, Helvetica, Sans-serif;
+}
+
+:root .acidjs-toggle-switch span
+{
+    position: relative;
+    width: 82px;
+    height: 30px;
+}
+
+:root .acidjs-toggle-switch strong
+{
+    margin: 0 0 0 4px;
+    font-size: 12px;
+    color: #666;
+}
+
+:root .acidjs-toggle-switch strong:empty
+{
+    display: none;
+}
+
+:root .acidjs-toggle-switch input:checked ~ strong
+{
+    color: #333;
+}
+
+:root .acidjs-toggle-switch label
+{
+    cursor: pointer;
+}
+
+:root .acidjs-toggle-switch input
+{
+    opacity: 0;
+}
+
+:root .acidjs-toggle-switch b
+{
+    z-index: 5;
+    border-radius: 2px;
+    box-shadow: 1px 0 1px rgba(0, 0, 0, .25),
+                1px 0 1px rgba(255, 255, 255, .75) inset;
+    background: #f9f9f9;
+    background: -webkit-linear-gradient(#cfcfcf, #f9f9f9);
+    background: -moz-linear-gradient(#cfcfcf, #f9f9f9);
+    background: -ms-linear-gradient(#cfcfcf, #f9f9f9);
+    background: -o-linear-gradient(#cfcfcf, #f9f9f9);
+    background: linear-gradient(#cfcfcf, #f9f9f9);
+
+    -moz-transition: all 250ms cubic-bezier(.09, .11, .24, .91);
+    -webkit-transition: all 250ms cubic-bezier(.09, .11, .24, .91);
+    -ms-transition: all 250ms cubic-bezier(.09, .11, .24, .91);
+    -o-transition: all 250ms cubic-bezier(.09, .11, .24, .91);
+    transition: all 250ms cubic-bezier(.09, .11, .24, .91);
+}
+
+:root .acidjs-toggle-switch input:checked ~ span b
+{
+    -webkit-transform: translatex(100%);
+    -moz-transform: translatex(100%);
+    -ms-transform: translatex(100%);
+    -o-transform: translatex(100%);
+    transform: translatex(100%);
+}
+
+:root .acidjs-toggle-switch span
+{
+    border: solid 1px #bcbbbb;
+    border-radius: 3px;
+    box-shadow: 0 0 2px #ccc;
+    background: #f3f3f3;
+    background: -webkit-linear-gradient(#c8c8c8, #f3f3f3);
+    background: -moz-linear-gradient(#c8c8c8, #f3f3f3);
+    background: -ms-linear-gradient(#c8c8c8, #f3f3f3);
+    background: -o-linear-gradient(#c8c8c8, #f3f3f3);
+    background: linear-gradient(#c8c8c8, #f3f3f3);
+}
+
+:root .acidjs-toggle-switch span::before
+{
+    left: 0;
+    content: attr(data-on);
+    color: #fff;
+    text-shadow: 0 -1px #0d2046;
+}
+
+:root .acidjs-toggle-switch span::after
+{
+    right: 0;
+    content: attr(data-off);
+}
+
+:root .acidjs-toggle-switch input:checked ~ span
+{
+    border-color: #0f2a4f;
+    background: #5d96ea;
+    background: -webkit-linear-gradient(#1b45bd, #5d96ea);
+    background: -moz-linear-gradient(#1b45bd, #5d96ea);
+    background: -ms-linear-gradient(#1b45bd, #5d96ea);
+    background: -o-linear-gradient(#1b45bd, #5d96ea);
+    background: linear-gradient(#1b45bd, #5d96ea);
+}
+
+:root .acidjs-toggle-switch input:disabled ~ *
+{
+    opacity: .5;
+    cursor: no-drop;
+}
+
+.acidjs-toggle-switch
+{
+    display: block !important;
+}
+
+     * © 2001-2013 Martin Ivanov
+     * [71]Blog
+     * [72]About
+     * [73]@wemakesitesnet
+     * [74]Contact
+     * [75]Donate
+     * [76]Valid HTML5
+
+References
+
+   1. http://feeds.feedburner.com/acidmartin
+   2. http://feeds.feedburner.com/acidjs
+   3. http://www.w3.org/html/logo/
+   4. https://acidmartin.wordpress.com/
+   5. http://wemakesites.net/
+   6. https://twitter.com/wemakesitesnet
+   7. http://wemakesites.net/#!/contact
+   8. https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QFUHPWJB2JDBS
+   9. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  10. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript.html
+  11. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/xml-to-json-javascript-objectifier.html
+  12. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/uri-to-json-serializer.html
+  13. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/coming-soon.html
+  14. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-iphone-toggle-buttons.html
+  15. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/html5-resume-builder.html
+  16. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/reflections.html
+  17. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-inheritance-without-constructors.html
+  18. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-api-for-imdb.html
+  19. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-mapper-for-restful-methods.html
+  20. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-api-for-tinyurl.html
+  21. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-wrapper-for-the-html5-webworkers-api.html
+  22. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-class-augmenter.html
+  23. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/html-5-details-element-enabler.html
+  24. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-html-template-engine.html
+  25. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/quick-and-dirty-localization-with-javascript.html
+  26. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/html5-charts.html
+  27. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/html5-placeholder-enabler.html
+  28. http://acidmartin.wordpress.com/category/javascript/
+  29. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css.html
+  30. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/custom-css3-checkboxes-and-radios.html
+  31. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-iphone-toggle-buttons.html
+  32. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/using-crossbrowser-rgba-to-prevent-the-css-opacity-inheritance-from-parent-to-child-elements.html
+  33. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-slides-viewer.html
+  34. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/fancy-css3-tooltips.html
+  35. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-treeview.html
+  36. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-metro-dropdown.html
+  37. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-element-reflections.html
+  38. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-selectbox.html
+  39. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-background-image-cropping.html
+  40. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-inline-file-input.html
+  41. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-tabstrip.html
+  42. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-gaussian-blur.html
+  43. http://acidmartin.wordpress.com/category/css3/
+  44. http://acidjs.wemakesites.net/
+  45. http://acidjs.wemakesites.net/validator.html
+  46. http://buildercss.wemakesites.net/
+  47. http://image2base64.wemakesites.net/
+  48. http://stickeez.wemakesites.net/
+  49. http://acidjs.wemakesites.net/builder-js.html
+  50. http://acidjs.wemakesites.net/templatr.html
+  51. http://acidjs.wemakesites.net/pisi.html
+  52. http://acidjs.wemakesites.net/guitar-chords-js.html
+  53. http://acidjs.wemakesites.net/imdb-fetcher.html
+  54. http://hasher.wemakesites.net/
+  55. http://acidjs.wemakesites.net/rest-builder.html
+  56. http://acidjs.wemakesites.net/
+  57. http://html5-cart.com/
+  58. http://acidjs.wemakesites.net/ribbon-bar-xml.html
+  59. http://acidjs.wemakesites.net/auto-complete.html
+  60. http://acidjs.wemakesites.net/gauge.html
+  61. http://acidjs.wemakesites.net/table-painter.html
+  62. http://acidjs.wemakesites.net/forms-js.html
+  63. http://acidjs.wemakesites.net/split-button-xml.html
+  64. http://acidjs.wemakesites.net/progressbar-js.html
+  65. http://acidjs.wemakesites.net/tour-dates.html
+  66. http://acidjs.wemakesites.net/tabstrip-xml.html
+  67. http://acidjs.wemakesites.net/hotel-reservation-form-js.html
+  68. https://twitter.com/share
+  69. http://acidmartin.wordpress.com/2013/06/22/html5-css3-and-javascript-iphone-toggle-switch-button/
+  70. http://acidmartin.wemakesites.net/DownloadAdmin/click.php?id=227
+  71. https://acidmartin.wordpress.com/
+  72. http://wemakesites.net/
+  73. https://twitter.com/wemakesitesnet
+  74. http://wemakesites.net/#!/contact
+  75. https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QFUHPWJB2JDBS
+  76. http://validator.w3.org/check?uri=referer

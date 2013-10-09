@@ -1,0 +1,61 @@
+Popular Coding Convention on Github
+
+   [1]Tweet
+
+   IFRAME:
+   [2]http://ghbtns.com/github-btn.html?user=outsideris&repo=popularconven
+   tion&type=watch&count=true
+
+Analyze Github commits to know which convention is popular.
+
+Choose language.
+
+   JavaScript
+
+   Java
+
+   Python
+
+   Scala
+
+   Ruby
+
+   C#
+   Sep 20, 2013added coding convention for C#.
+   [3]Phil Haack help to add this convention by writing [4]C# convention
+   guide. Thanks Phil. Aug 12, 2013added coding convention for Ruby.
+   If there are something wrong in ruby convention or you want to see
+   another coding convention Please leave issues on [5]Github Issues.
+   Because I'm not the rubist. July 21, 2013added "single quote vs double
+   quotes" convention for JavaScript. July 17, 2013I made this site for
+   proof of my concept at [6]The GitHub Data Challenge II.
+   Amazing thing happened. This project placed in second on [7]Data
+   Challenge II Results and a lot of people like my idea.
+   So, I decided to serve as a service and aggregate more convention data
+   continuously.
+   I reseted convention data at all and aggregate newly since old data
+   structure isn't efficient and has some bugs.
+   And convention data can be reset sometimes when I found some bugs.
+   Please leave issues on [8]Github if you have some problems or opinion.
+   Thank you for your interest.
+
+   last update: 2013-09-28-14Analyzed period: 2013-07-13 - 2013-09-28
+
+   Built by Outsider ([9]Blog, [10]Twitter)
+   Code licenced under [11]MIT license, Source code is hosted on
+   [12]Github
+
+References
+
+   1. https://twitter.com/share
+   2. http://ghbtns.com/github-btn.html?user=outsideris&repo=popularconvention&type=watch&count=true
+   3. https://github.com/Haacked
+   4. https://gist.github.com/Haacked/6601104
+   5. https://github.com/outsideris/popularconvention/issues
+   6. https://github.com/blog/1450-the-github-data-challenge-ii
+   7. https://github.com/blog/1544-data-challenge-ii-results
+   8. https://github.com/outsideris/popularconvention/issues
+   9. http://blog.outsider.ne.kr/
+  10. https://twitter.com/outsideris
+  11. http://opensource.org/licenses/MIT
+  12. https://github.com/outsideris/popularconvention

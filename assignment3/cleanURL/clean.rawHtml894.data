@@ -1,0 +1,303 @@
+          [1]Home
+          [2]Politics
+          [3]Opinions
+          [4]Local
+          More
+
+                [5]Sign In
+                [6]Log Out
+                [7]Subscribe
+
+          Sections
+          [8]Politics
+          [9]Opinions
+          [10]Local
+          [11]Sports
+          [12]National
+          [13]World
+          [14]Business
+          [15]Technology
+          [16]Lifestyle
+          [17]Entertainment
+          [18]Games
+          [19]Photos
+          [20]PostTV
+          [21]Classifieds
+          [22]Real Estate
+          [23]Settings
+
+The Switch
+
+   [24]SUBSCRIBE
+
+This hacker might seem shady, but throwing him in jail is bad for everyone
+
+   By Timothy B. Lee,  Published: SEPTEMBER 23, 2:28 PM ET
+     __________________________________________________________________
+
+         Aa
+     __________________________________________________________________
+
+   [javascript]
+
+   Andew Aurenheimer (Photo by [25]pinguino k)
+
+   On Friday, the U.S. government [26]filed its brief in the appeal of
+   Andrew "Weev" Auernheimer, who was convicted of federal hacking charges
+   for downloading hundreds of thousands of customer e-mail addresses from
+   AT&T's Web site. The government says the conviction was proper, but
+   many security researchers and civil liberties advocates argue that the
+   conviction would set a dangerous precedent. Confused? Read on.
+
+   Who's Weev?
+
+   Weev's real name is Andrew Auernheimer. He's a security researcher and
+   Internet provocateur who is facing felony hacking charges. No one,
+   including Auernheimer himself, would [27]describe him as a nice guy.
+   But his case raises important questions about the freedom to conduct
+   computer security research and to use software to gather information
+   online.
+
+   What is Auernheimer being prosecuted for?
+
+   In 2010, Auernheimer and a colleague discovered that AT&T had
+   accidentally published the private e-mail addresses of its iPad
+   customers to an AT&T-owned Web site. Auernheimer then wrote automated
+   software to harvest the e-mail addresses of more than 100,000 iPad
+   users. He [28]passed this information to Gawker.
+
+   The government argues that Auernheimer should have known that AT&T's
+   Web site wasn't intended to be available to the general public and that
+   that should have stopped him from harvesting its customers' e-mail
+   addresses. The feds point out that Auernheimer configured his software
+   to falsely tell the AT&T server that it was running on an iPad. And the
+   government argues that the process Auernheimer used to download the
+   e-mail addresses involved inappropriately impersonating AT&T customers.
+
+   Using automated software to harvest peoples' private information sounds
+   pretty sketchy. It's good for the feds to put a stop to that kind of
+   thing, right?
+
+   Most ordinary users have neither the skills nor the inclination to set
+   up automatic harvesting of information from Web sites. But this
+   technique, known as "scraping," is surprisingly common among
+   technologically sophisticated users and has a number of legitimate
+   applications.
+
+   For example, in 2006, Wired journalist Kevin Poulsen [29]launched a
+   project to identify sex offenders who might be trolling MySpace for
+   minors. Obviously, searching for every name in the sex offender
+   registry by hand wouldn't have been practical, but Poulsen figured out
+   he could automate the process with software.
+
+   To get a list of sex offenders, Poulsen [30]wrote an automated program
+   to search the Department of Justice Web site for each zip code in the
+   United States and then save the name and address of each registered sex
+   offender in that zip code to a file.
+
+   Unfortunately, Poulsen said, his initial search got him "temporarily
+   blocked" from the site because the Department of Justice "doesn't like
+   you running a lot of queries back-to-back." So he added a 30-second
+   delay between queries. That "seemed to satisfy the server," but it
+   lengthened the time it took to download the entire database to 71
+   hours.
+
+   There are some striking similarities between Poulsen's actions and
+   Auernheimer's. Both used automated software to harvest information from
+   a Web site. Both used the Web site in ways that probably weren't
+   intended by their designers. Both took technical measures to avoid Web
+   site operators' efforts to discourage their activities.
+
+   Yet most people would agree that Poulsen's actions were a legitimate
+   journalistic project. So we might want to be careful about subjecting
+   this kind of technique to criminal penalties.
+
+   Come on, Poulsen was once convicted for computer hacking before he
+   began his career as a journalist. And this sort of thing still seems
+   creepy. Aren't we better off without hackers poking around other
+   peoples' Web sites?
+
+   Poulsen is far from the only person who has used "scraping" techniques
+   for legitimate purposes. Academics use them to gather data sets for
+   later analysis. Businesses use them to gather data, such as prices and
+   product descriptions, from competitors' Web sites. That can benefit the
+   public by making the market more competitive. The Electronic Frontier
+   Foundation, a public interest group, [31]scrapes corporate Web sites to
+   detect when they make changes to their terms of service.
+
+   "Over the past fifteen years, virtually every organization,
+   corporation, and government on the planet has published information on
+   the web," wrote the legal scholar Paul Ohm in [32]a 2006 article. "The
+   problem with this data is it's trapped within the four corners of web
+   pages."
+
+   Ohm believes that legal academics could do better research if they
+   learned to write Web-scraping software. "Scraping frees data, allowing
+   it to be used in an endless number of new ways," he argued.
+
+   Yeah, but Auernheimer didn't just scrape a publicly available Web site.
+   He used shady techniques like impersonating an iPad. Isn't that wrong?
+
+   When a Web browser requests a Web page from a Web server, it sends
+   something called a user agent string to tell the server what kind of
+   browser is requesting the page. The government faults Auernheimer for
+   sending the user agent string of an iPad even though his software
+   wasn't running on an iPad.
+
+   This is another example of a technique that only sounds shady if you're
+   not familiar with the conventions of the Web. This kind of user agent
+   spoofing is extremely common online. Indeed, as security researcher
+   [33]Robert Graham points out, since the 1990s, most major browsers have
+   used a user agent string that starts with "Mozilla," the code name for
+   the now-defunct Netscape Web browser. Microsoft began doing this
+   because in the 1990s, Web servers would send different versions of
+   their sites to different browsers. Netscape was viewed as the
+   cutting-edge browser of its day, and so Internet Explorer pretended to
+   be Netscape to trick Web servers into sending it the most sophisticated
+   version of their site. Over the last decade, other browsers have
+   followed suit, and now almost all browsers call themselves Mozilla even
+   though most of them aren't derived from Mozilla software.
+
+   Changing user agent strings has other uses too. In 2012, Orbitz was
+   [34]accused of showing more expensive hotels to Mac users than PC
+   users. Changing one's user agent (to pose as a Mac, then as a PC) is
+   essential to investigating this kind of allegation.
+
+   A Web developer might change a user agent string to that of an iPad so
+   he or she can debug the iPad version of the Web site from a desktop Web
+   browser. Indeed, changing user agent strings is so useful that Google's
+   Chrome browser allows users to do it with [35]just four clicks. It
+   would be crazy to make this extremely common technique a felony.
+
+   What about impersonating AT&T users? That's problematic, right?
+
+   This is probably the government's strongest argument. The AT&T Web site
+   worked like this: Every iPad has a unique 19- or 20-digit ID called an
+   [36]ICC-ID. AT&T set up a Web site that allowed an iPad to provide its
+   ICC-ID and get the e-mail address of the iPad's owner in response.
+   Auernheimer figured out that ICC-IDs come in a predictable order, and
+   so he wrote a program to try a large number of possible ICC-IDs in
+   sequence and ask the server for the e-mail address associated with each
+   one.
+
+   The government characterizes this as impersonating iPad users, and
+   that's not a crazy way to think about it. But another way to think
+   about it is that Auernheimer was simply asking the AT&T server, "What
+   is the e-mail address associated with this ICC-ID?" And the AT&T server
+   was configured to give an answer to anyone who asked.
+
+   The Internet has a standard convention for marking a Web page
+   off-limits: protecting it with a password. Accessing a Web page with a
+   password that doesn't belong to you is, properly, illegal. If AT&T
+   wanted to restrict access to its Web site, it could and probably should
+   have protected the site with a password. It didn't do that.
+
+   An ICC-ID is not a password. And while we might think Auernheimer
+   should have had the good sense not to access data that wasn't intended
+   for him, it's probably not reasonable to impose criminal penalties for
+   this kind of misjudgment.
+
+   Aurenheimer clearly knew he was doing something he wasn't supposed to.
+   The government says he described his own actions as "theft." Shouldn't
+   we expect people to be respectful of other peoples' property?
+
+   Knowledge is power. Journalists, academics, security researchers and
+   others work to uncover information that powerful institutions would
+   like to keep secret. Demanding that everyone respect these
+   institutions' right to control information about themselves is contrary
+   to the principles of these professions.
+
+   This is obvious in the case of journalists soliciting information from
+   confidential sources. Sources give journalists information that
+   powerful institutions want to keep secret, helping the public
+   understand what these institutions are doing and hold them accountable.
+
+   Precisely the same point applies to software-assisted
+   information-gathering. The scraping that's most valuable to the public
+   will often not be welcomed by the company or government whose Web site
+   is being scraped. Such scraping can reveal trends or policies that the
+   organization that runs the Web site might prefer to keep secret.
+
+   Similarly, security research is often embarrassing to the technology
+   vendor whose technology is being exposed as insecure. Yet the public
+   benefits from having flaws discovered by relatively ethical security
+   researchers instead of hackers who are prepared to use the information
+   for nefarious purposes. If the law demanded that security researchers
+   cease research that was unwelcome by technology vendors, a great deal
+   of beneficial research would go undone.
+
+   Matt Blaze, a computer security researcher at the University of
+   Pennsylvania, recently [37]told me that the government's position, that
+   Auernheimer should have known its Web site was off-limits, "essentially
+   requires anyone doing Web-scale research to not just be ethical and
+   honest but also to be a mind-reader."
+
+   Such a vague standard isn't just unfair to journalists, security
+   researchers and others who conduct software-aided research. It could
+   also harm the general public by giving powerful institutions a weapon
+   to use against researchers looking for embarrassing information about
+   them that the public has the right to know.
+   MORE
+   [38]Contact us
+   [39]Privacy policy
+   My Account
+   Sign In
+   [] Log Out
+   [40]Subscribe
+   © Copyright 1996-2013 The Washington Post
+   [41]View desktop site
+
+     *
+     *
+     *
+
+   [nojs.html]
+
+References
+
+   Visible links
+   1. file://localhost/
+   2. file://localhost/politics
+   3. file://localhost/opinions
+   4. file://localhost/local
+   5. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml894.data
+   6. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml894.data
+   7. https://account.washingtonpost.com/acquisition/?m=1&tid=m_nav_sub
+   8. file://localhost/politics
+   9. file://localhost/opinions
+  10. file://localhost/local
+  11. file://localhost/sports
+  12. file://localhost/national
+  13. file://localhost/world
+  14. file://localhost/business
+  15. file://localhost/business/technology
+  16. file://localhost/lifestyle
+  17. file://localhost/entertainment
+  18. http://games.washingtonpost.com/
+  19. file://localhost/photography
+  20. http://www.washingtonpost.com/posttv
+  21. file://localhost/classifieds
+  22. file://localhost/realestate
+  23. file://localhost/settings
+  24. https://account.washingtonpost.com/acquisition/?promo=dgmwebbanrad&m=1&tid=m_hp_sub
+  25. http://www.flickr.com/photos/pinguino/7692322752/
+  26. https://m.app.box.com/view_shared/1c2i69r1x0118i68zwsv
+  27. http://www.theverge.com/2013/9/12/4693710/the-end-of-kindness-weev-and-the-cult-of-the-angry-young-man
+  28. http://gawker.com/5559346/apples-worst-security-breach-114000-ipad-owners-exposed
+  29. http://www.wired.com/science/discoveries/news/2006/10/71948
+  30. http://www.wired.com/science/discoveries/news/2006/10/71976?currentPage=all
+  31. http://tosback.org/
+  32. http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1370411
+  33. http://blog.erratasec.com/2013/09/how-weevs-prosecutors-are-making-up.html#.Uj3o3-ChawF
+  34. http://online.wsj.com/article/SB10001424052702304458604577488822667325882.html
+  35. http://googlesystem.blogspot.com/2011/12/changing-user-agent-new-google-chrome.html
+  36. https://en.wikipedia.org/wiki/ICCID#ICCID
+  37. file://localhost/blogs/wonkblog/wp/2013/07/09/this-accused-hacker-is-a-jerk-heres-why-he-shouldnt-be-a-felon/
+  38. mailto:mobilewebfeedback@washingtonpost.com
+  39. file://localhost/privacy-policy/2011/11/18/gIQASIiaiN_story.html
+  40. https://account.washingtonpost.com/acquisition/?promo=dgmwebbanrad&m=1&tid=m_footer_sub
+  41. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml894.data
+
+   Hidden links:
+  43. http://m.facebook.com/sharer.php?u=http%3A%2F%2Fwww.washingtonpost.com%2Fblogs%2Fthe-switch%2Fwp%2F2013%2F09%2F23%2Fthis-hacker-might-seem-shady-but-throwing-him-in-jail-is-bad-for-everyone%2F
+  44. https://twitter.com/intent/tweet?text=This+hacker+might+seem+shady%2C+but+throwing+him+in+jail+is+bad+for+everyone&url=http%3A%2F%2Fwww.washingtonpost.com%2Fblogs%2Fthe-switch%2Fwp%2F2013%2F09%2F23%2Fthis-hacker-might-seem-shady-but-throwing-him-in-jail-is-bad-for-everyone%2F

@@ -1,0 +1,462 @@
+   [1]iJava2–Java Programming Blog
+   Love Java–coffee and Java programming.
+   [2]Skip to content
+     * [3]Home
+     * [4]iJava2 Support Page
+     * [5]Java Programming Solutions Manuals
+
+   [6]← (Displaying the mouse position) Write two programs, such that one
+   displays the mouse position when the mouse is activated (see Figure
+   16.21(b))
+   [7]Button Panel Elevator Class Java Elevator Simulation →
+
+Code for Elevator Class Java Simulate an Elevator
+
+   Posted on [8]December 28, 2012 by [9]iJava2Admin
+
+   Here is the class to simulate an elevator. This is a separate Java file
+   that will be “called” from the Java file containing the main method.
+
+   import java.awt.Color;
+   import java.awt.Dimension;
+   import java.awt.Graphics;
+   import javax.swing.JPanel;
+
+   class Elevator extends JPanel
+   implements Runnable
+   {
+   private Exercise18_13 app;
+   private boolean left;
+   private int destinationFloor = 6;
+   private int width = 30;
+   private int height = 30;
+   private int x = 50;
+   private int currentY = this.height * 6;
+   private int dy = 4;
+   private Thread thread = null;
+
+   public Elevator(Exercise18_13 app) {
+   this.app = app;
+   setBackground(Color.yellow);
+   this.thread = new Thread(this);
+   this.thread.start();
+   }
+
+   public void setColor(Color color)
+   {
+   setForeground(color);
+   }
+
+   public void move(int toFloor, boolean left)
+   {
+   this.destinationFloor = toFloor;
+   this.left = left;
+   this.thread = new Thread(this);
+   this.thread.start();
+   }
+
+   public synchronized void run()
+   {
+   if (this.left) {
+   this.app.setStatus("getting passengers", Color.black);
+   setColor(Color.green);
+   }
+   else {
+   this.app.setStatus("sending passengers", Color.red);
+   setColor(Color.red);
+   }
+
+   int newY = (8 - this.destinationFloor) * this.height;
+
+   if (newY < this.currentY) {
+   while (this.currentY > newY) {
+   try {
+   Thread.sleep(200L);
+   } catch (InterruptedException localInterruptedException) {
+   }
+   this.currentY -= this.dy;
+   repaint();
+   }
+   }
+   else
+   while (this.currentY < newY) {
+   try {
+   Thread.sleep(200L);
+   } catch (InterruptedException localInterruptedException1) {
+   }
+   this.currentY += this.dy;
+   repaint();
+   }
+   }
+
+   public void paintComponent(Graphics g)
+   {
+   super.paintComponent(g);
+
+   this.height = (getSize().height / 8);
+
+   for (int i = 0; i < 9; i++) {
+   g.drawLine(0, i * this.height, getSize().width, i * this.height);
+   }
+
+   g.fillRect(this.x, this.currentY, this.width, this.height);
+   }
+   }
+
+   [10]Main Method Elevator File
+   [11]Button Panel Elevator Simulation
+   [12]Share
+
+About iJava2Admin
+
+   Please share, bookmark, and add us to your favorites! Follow us on
+   Twitter! You are welcomed to provide your own version of any of the
+   Java solutions that we have listed on our Java programming blog. You
+   are welcomed to provide any fix to any of the Java solutions. Fixing
+   Java code is a great way to become a better programmer. I'm a little
+   teapot - short and stout! Here is my handle, here is my spout.
+   [13]View all posts by iJava2Admin →
+   This entry was posted in [14]Applets Multimedia. Bookmark the
+   [15]permalink.
+   [16]← (Displaying the mouse position) Write two programs, such that one
+   displays the mouse position when the mouse is activated (see Figure
+   16.21(b))
+   [17]Button Panel Elevator Class Java Elevator Simulation →
+
+One Response to Code for Elevator Class Java Simulate an Elevator
+
+    1. Pingback: [18](Creating an elevator simulator) Write an applet that
+       simulates an elevator going up and down (see Figure 18.21).iJava2 —
+       Java! Like the Coffee
+
+Leave a Reply [19]Cancel reply
+
+   IFRAME: [20]jetpack_remote_comment
+
+     * Search for: ____________________ Search
+     * Follow iJava2 on TwitterMy Tweets
+     * Recent Comments
+          + User Avatar DivyaH { @dinh9x, try this code /** * Get a diff
+            between two dates * @param date1 the oldest date * @param
+            date2 the newest date *... } – [21]Sep 24, 1:24 AM
+          + User Avatar dinh9x { Please help me solve this homework: This
+            programming assignment involves writing a Java application
+            which inputs a date from the user, and calculates how many...
+            } – [22]Sep 24, 1:09 AM
+          + User Avatar maneesh { hello. Where is the solution for this
+            program?? Can I have it immediately? Many thanks. } – [23]Sep
+            23, 3:38 PM
+          + User Avatar iJava2Admin { @Sanjeev, thank you for correcting
+            the code. Your comment is greatly appreciated. Thank you. } –
+            [24]Sep 23, 3:23 PM
+          + User Avatar Sanjeev { Hi, In getAChoice(), just remove break
+            statement, instead of that place "return choice"; and also
+            remove int choice = 0; return choice; statements. If we... } –
+            [25]Sep 23, 8:32 AM
+          + [26]Older »
+     * Topics
+          + [27]Advanced Java
+               o [28]Arrays
+                    # [29]Multidimensional Arrays
+                    # [30]Single Dimensional Arrays
+               o [31]Borders Containers Layout Managers
+               o [32]Generics
+               o [33]Graphs Applications
+               o [34]Heap Sort
+               o [35]iteration
+               o [36]Java Collections Framework
+                    # [37]Queues
+                    # [38]Stacks
+               o [39]Java Utilities Package Bit Manipulation
+               o [40]JTable JTree
+               o [41]Lists
+                    # [42]ArrayList
+                    # [43]LinkedList
+               o [44]Menus Toolbars Dialogs
+               o [45]Merge Sort
+               o [46]Quick Sort
+               o [47]Recursion
+               o [48]Trees
+                    # [49]Binary Trees
+               o [50]Web Internet Programming
+                    # [51]MVC Swing Models
+                    # [52]Servlets
+          + [53]Beginner Java
+               o [54]Beginner Java Graphics
+               o [55]Classes Objects
+               o [56]Composition
+               o [57]Control Statements
+                    # [58]Control Structures
+                         @ [59]Loops
+                              - [60]For
+                              - [61]While
+                         @ [62]Switch Statements
+               o [63]Elementary Programming
+               o [64]Graphics and Java 2D
+               o [65]How to Display a Pattern Java
+               o [66]How to Display a Table Java
+               o [67]How to Display Messages Java
+               o [68]Inheritance and Polymorphism
+               o [69]Interfaces
+               o [70]Java Applets
+               o [71]Java Applications
+               o [72]Methods
+               o [73]Object Oriented Programming
+               o [74]Programming Logic
+               o [75]Selection
+               o [76]Strings Text Input Output I/O
+               o [77]Thinking In Objects
+          + [78]C plus plus (C++)
+          + [79]Codingbat Javabat Solutions
+               o [80]Codingbat Javabat Solutions AP-1
+               o [81]Codingbat Javabat Solutions Array 1
+               o [82]Codingbat Javabat Solutions Array 2
+               o [83]Codingbat Javabat Solutions Array 3
+               o [84]Codingbat Javabat Solutions Logic 1
+               o [85]Codingbat Javabat Solutions Logic 2
+               o [86]Codingbat Javabat Solutions Recursion 1
+               o [87]Codingbat Javabat Solutions Recursion 2
+               o [88]Codingbat Javabat Solutions String 1
+               o [89]Codingbat Javabat Solutions String 2
+               o [90]Codingbat Javabat Solutions String 3
+               o [91]Codingbat Javabat Solutions Warm-Up 1
+               o [92]Codingbat Javabat Solutions Warm-up 2
+          + [93]Computer and Network Security
+               o [94]Encryption
+          + [95]Database Management
+               o [96]Advanced Java Database Programming
+               o [97]Java Database Connectivity JDBC
+               o [98]Java Database Programming
+               o [99]SQL Structured Query Language
+          + [100]Game Programming
+               o [101]Classic Games
+               o [102]How to Create a Random Color Game
+               o [103]How to Create a Slot Machine
+               o [104]How to Create Color Matching Game Java
+               o [105]Windows 8 Application Development
+          + [106]Intermediate Java
+               o [107]Applets Multimedia
+               o [108]Binary Input/Ouput I/O
+               o [109]Event Driven Programming
+               o [110]Exception Handling
+               o [111]Files And Streams
+               o [112]Graphical User Interface (GUI)
+               o [113]Graphics
+               o [114]Multimedia: Animation Images Audio Video
+               o [115]Multithreading
+               o [116]Networking
+               o [117]Strings and Characters
+          + [118]Java Math Calculations
+          + [119]Math
+               o [120]How to Compute Math Expressions Java
+               o [121]How to Perform Math Calculations Java
+               o [122]Precalculus
+          + [123]Operating Systems
+               o [124]Computer Organization Embedded Systems
+          + [125]Programming Challenges
+          + [126]Project Euler Solutions
+          + [127]Python CodingBat Solutions
+               o [128]Python List 1Codingbat Solutions
+               o [129]Python List 2 Codingbat Solutions
+               o [130]Python Logic 2 CodingBat Solutions
+               o [131]Python String 1 Codingbat Solutions
+               o [132]Python String 2 Codingbat Solutions
+               o [133]Python Warm-up 1 Codingbat Solutions
+               o [134]Python Warm-Up 2 Codingbat Solutions
+          + [135]What we think!
+               o [136]iJava2 Contact
+          + [137]Writer Directory
+               o [138]Tutorials
+                    # [139]How to Analyze Test Scores
+                    # [140]How to Calculate Sales Tax Java
+                    # [141]How to code a Countdown Timer Java
+                    # [142]How to Create a Deck of Cards Java
+                    # [143]How to Create a GuestBook
+                    # [144]How to Create Bank Account Object
+                    # [145]How to Create Game of Craps
+                    # [146]How to Create GradeBook Object Using Arrays
+                    # [147]How to Create the GradeBook Object
+                    # [148]How to Display a TicTacTo Game
+                    # [149]How to Display Current Time
+                    # [150]How to Parse Text Files Read Text Files Write
+                      Text Files
+     * Connect with:
+     * User Control Panel
+          + [151]Register
+          + [152]Log in
+          + [153]Entries RSS
+          + [154]Comments RSS
+          + [155]WordPress.org
+     * Subscribe to Blog via Email
+       Enter your email address to subscribe to this blog and receive
+       notifications of new posts by email.
+       Join 20 other subscribers
+       Email Address_______
+       Subscribe
+
+   [156]iJava2–Java Programming Blog
+   [157]Proudly powered by WordPress.
+
+   [158]Codingbat Javabat Solutions [159]Codingbat Answers Recursion 1
+
+References
+
+   1. http://www.ijava2.com/
+   2. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml772.data#content
+   3. http://www.ijava2.com/
+   4. http://www.ijava2.com/ijava2-support-page/
+   5. http://www.ijava2.com/java-programming-solutions-manuals/
+   6. http://www.ijava2.com/displaying-mouse-position-write-programs-displays-mouse-position-mouse-activated-figure-1621b/
+   7. http://www.ijava2.com/button-panel-elevator-class-java-elevator-simulation/
+   8. http://www.ijava2.com/code-elevator-class-java-simulate-elevator/
+   9. http://www.ijava2.com/author/ij2k/
+  10. http://www.ijava2.com/creating-elevator-simulator-write-applet-simulates-elevator-figure-1821/
+  11. http://www.ijava2.com/button-panel-elevator-class-java-elevator-simulation/
+  12. http://www.addtoany.com/share_save
+  13. http://www.ijava2.com/author/ij2k/
+  14. http://www.ijava2.com/intermediate-java-programming/applets-multimedia/
+  15. http://www.ijava2.com/code-elevator-class-java-simulate-elevator/
+  16. http://www.ijava2.com/displaying-mouse-position-write-programs-displays-mouse-position-mouse-activated-figure-1621b/
+  17. http://www.ijava2.com/button-panel-elevator-class-java-elevator-simulation/
+  18. http://www.ijava2.com/creating-elevator-simulator-write-applet-simulates-elevator-figure-1821/
+  19. file://localhost/code-elevator-class-java-simulate-elevator/#respond
+  20. http://jetpack.wordpress.com/jetpack-comment/?blogid=32548938&postid=4261&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=retro&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en-US&jetpack_version=2.5&sig=e177e75e237c91365a7454522fbcd588d0d9fa7b#parent=http%3A%2F%2Fwww.ijava2.com%2Fcode-elevator-class-java-simulate-elevator%2F
+  21. http://www.ijava2.com/ijava2-support-page/#comment-3364
+  22. http://www.ijava2.com/ijava2-support-page/#comment-3363
+  23. http://www.ijava2.com/time-class-design-class-named-time-class-java-programming-concepts/#comment-3362
+  24. http://www.ijava2.com/game-atm-machine-account-class-created-exercise-87-simulate-atm-machine/#comment-3361
+  25. http://www.ijava2.com/game-atm-machine-account-class-created-exercise-87-simulate-atm-machine/#comment-3360
+  26. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml772.data
+  27. http://www.ijava2.com/advanced-java/
+  28. http://www.ijava2.com/advanced-java/arrays/
+  29. http://www.ijava2.com/advanced-java/arrays/multidimensional-arrays/
+  30. http://www.ijava2.com/advanced-java/arrays/single-dimensional-arrays/
+  31. http://www.ijava2.com/advanced-java/borders-containers-layout-managers/
+  32. http://www.ijava2.com/advanced-java/generics/
+  33. http://www.ijava2.com/advanced-java/graphs-applications/
+  34. http://www.ijava2.com/advanced-java/heap-sort/
+  35. http://www.ijava2.com/advanced-java/iteration/
+  36. http://www.ijava2.com/advanced-java/java-collections-framework/
+  37. http://www.ijava2.com/advanced-java/java-collections-framework/queues/
+  38. http://www.ijava2.com/advanced-java/java-collections-framework/stacks/
+  39. http://www.ijava2.com/advanced-java/java-utilities-package-bit-manipulation/
+  40. http://www.ijava2.com/advanced-java/jtable-jtree/
+  41. http://www.ijava2.com/advanced-java/list/
+  42. http://www.ijava2.com/advanced-java/list/arraylist/
+  43. http://www.ijava2.com/advanced-java/list/linkedlist/
+  44. http://www.ijava2.com/advanced-java/menus-toolbars-dialogs/
+  45. http://www.ijava2.com/advanced-java/merge-sort/
+  46. http://www.ijava2.com/advanced-java/quick-sort/
+  47. http://www.ijava2.com/advanced-java/recursion/
+  48. http://www.ijava2.com/advanced-java/trees/
+  49. http://www.ijava2.com/advanced-java/trees/binary-trees/
+  50. http://www.ijava2.com/advanced-java/web-internet-programming/
+  51. http://www.ijava2.com/advanced-java/web-internet-programming/mvc-swing-models/
+  52. http://www.ijava2.com/advanced-java/web-internet-programming/servlets/
+  53. http://www.ijava2.com/beginner-java/
+  54. http://www.ijava2.com/beginner-java/beginner-java-graphics/
+  55. http://www.ijava2.com/beginner-java/classes-objects/
+  56. http://www.ijava2.com/beginner-java/composition/
+  57. http://www.ijava2.com/beginner-java/control-statements/
+  58. http://www.ijava2.com/beginner-java/control-statements/control-structures/
+  59. http://www.ijava2.com/beginner-java/control-statements/control-structures/loops/
+  60. http://www.ijava2.com/beginner-java/control-statements/control-structures/loops/for/
+  61. http://www.ijava2.com/beginner-java/control-statements/control-structures/loops/while/
+  62. http://www.ijava2.com/beginner-java/control-statements/control-structures/switch-statements-control-structures/
+  63. http://www.ijava2.com/beginner-java/elementary-programming/
+  64. http://www.ijava2.com/beginner-java/java-2d-graphics/
+  65. http://www.ijava2.com/beginner-java/how-to-display-a-pattern-java/
+  66. http://www.ijava2.com/beginner-java/how-to-display-a-table-java/
+  67. http://www.ijava2.com/beginner-java/how-to-display-messages-java/
+  68. http://www.ijava2.com/beginner-java/inheritance-and-polymorphism/
+  69. http://www.ijava2.com/beginner-java/interfaces/
+  70. http://www.ijava2.com/beginner-java/java-applets/
+  71. http://www.ijava2.com/beginner-java/ijava-applications/
+  72. http://www.ijava2.com/beginner-java/methods/
+  73. http://www.ijava2.com/beginner-java/object-oriented-programming/
+  74. http://www.ijava2.com/beginner-java/programming-logic/
+  75. http://www.ijava2.com/beginner-java/selection/
+  76. http://www.ijava2.com/beginner-java/strings-text-input-output-io/
+  77. http://www.ijava2.com/beginner-java/thinking-in-objects/
+  78. http://www.ijava2.com/c-plus-plus-c/
+  79. http://www.ijava2.com/codingbat-javabat-solutions/
+  80. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-ap-1/
+  81. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-array-1/
+  82. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-array-2/
+  83. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-array-3/
+  84. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-logic-1/
+  85. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-logic-2/
+  86. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-solutions-java-recursion-1/
+  87. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-solutions-java-recursion-2/
+  88. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-string-1/
+  89. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-solutions-java-string-2/
+  90. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-solutions-java-string-3/
+  91. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-warm-up-1/
+  92. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-warm-up-2/
+  93. http://www.ijava2.com/computer-network-security/
+  94. http://www.ijava2.com/computer-network-security/encryption/
+  95. http://www.ijava2.com/database-management/
+  96. http://www.ijava2.com/database-management/advanced-java-database-programming/
+  97. http://www.ijava2.com/database-management/java-database-connectivity-jdbc/
+  98. http://www.ijava2.com/database-management/java-database-programming/
+  99. http://www.ijava2.com/database-management/sql-structured-query-language/
+ 100. http://www.ijava2.com/game-programming/
+ 101. http://www.ijava2.com/game-programming/classic-games/
+ 102. http://www.ijava2.com/game-programming/how-to-create-a-random-color-game/
+ 103. http://www.ijava2.com/game-programming/how-to-create-a-slot-machine/
+ 104. http://www.ijava2.com/game-programming/how-to-create-color-matching-game-java/
+ 105. http://www.ijava2.com/game-programming/windows-8-application-development/
+ 106. http://www.ijava2.com/intermediate-java-programming/
+ 107. http://www.ijava2.com/intermediate-java-programming/applets-multimedia/
+ 108. http://www.ijava2.com/intermediate-java-programming/binary-inputouput-io/
+ 109. http://www.ijava2.com/intermediate-java-programming/event-driven-programming/
+ 110. http://www.ijava2.com/intermediate-java-programming/exception-handling/
+ 111. http://www.ijava2.com/intermediate-java-programming/files-streams/
+ 112. http://www.ijava2.com/intermediate-java-programming/graphical-user-interface/
+ 113. http://www.ijava2.com/intermediate-java-programming/graphics-intermediate-java-programming/
+ 114. http://www.ijava2.com/intermediate-java-programming/multimedia-animation-images-audio-video/
+ 115. http://www.ijava2.com/intermediate-java-programming/java-multithreading/
+ 116. http://www.ijava2.com/intermediate-java-programming/networking/
+ 117. http://www.ijava2.com/intermediate-java-programming/strings-characters/
+ 118. http://www.ijava2.com/java-math-calculations/
+ 119. http://www.ijava2.com/math/
+ 120. http://www.ijava2.com/math/how-to-compute-math-expressions-java/
+ 121. http://www.ijava2.com/math/how-to-perform-math-calculations-java/
+ 122. http://www.ijava2.com/math/precalculus/
+ 123. http://www.ijava2.com/operating-systems/
+ 124. http://www.ijava2.com/operating-systems/computer-organization-embedded-systems/
+ 125. http://www.ijava2.com/programming-challenges/
+ 126. http://www.ijava2.com/project-euler-solutions/
+ 127. http://www.ijava2.com/python-codingbat-solutions/
+ 128. http://www.ijava2.com/python-codingbat-solutions/python-list-1/
+ 129. http://www.ijava2.com/python-codingbat-solutions/python-codingbat-list-2/
+ 130. http://www.ijava2.com/python-codingbat-solutions/python-codingbat-logic-2/
+ 131. http://www.ijava2.com/python-codingbat-solutions/string-1-python-codingbat-solutions/
+ 132. http://www.ijava2.com/python-codingbat-solutions/python-codingbat-string-2/
+ 133. http://www.ijava2.com/python-codingbat-solutions/python-codingbat-warm-up-1/
+ 134. http://www.ijava2.com/python-codingbat-solutions/python-codingbat-warm-up-2/
+ 135. http://www.ijava2.com/opinions/
+ 136. http://www.ijava2.com/opinions/ijava2-contact/
+ 137. http://www.ijava2.com/writer-directory/
+ 138. http://www.ijava2.com/writer-directory/java-programming-tutorials/
+ 139. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-analyze-test-scores/
+ 140. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-calculate-sales-tax-java/
+ 141. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-code-a-countdown-timer-java/
+ 142. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-a-deck-of-cards-java/
+ 143. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-a-guestbook/
+ 144. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-bank-account-object/
+ 145. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-game-of-craps/
+ 146. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-gradebook-object-using-arrays/
+ 147. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-the-gradebook-object/
+ 148. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-display-a-tictacto-game/
+ 149. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-display-current-time/
+ 150. http://www.ijava2.com/writer-directory/java-programming-tutorials/parse-text-files-read-text-files-write-text-files/
+ 151. http://www.ijava2.com/wp-login.php?action=register
+ 152. http://www.ijava2.com/wp-login.php
+ 153. http://www.ijava2.com/feed/
+ 154. http://www.ijava2.com/comments/feed/
+ 155. http://wordpress.org/
+ 156. http://www.ijava2.com/
+ 157. http://wordpress.org/
+ 158. http://www.ijava2.com/codingbat-javabat-solutions/
+ 159. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-solutions-java-recursion-1/

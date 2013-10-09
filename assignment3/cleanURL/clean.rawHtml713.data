@@ -1,0 +1,357 @@
+   #[1]Honeybadger.io
+
+   [2][logo.png]
+     * [3]Academy
+     * [4]Plans & Pricing
+     * [5]Our Team
+     * [6]Blog
+     * [7]Newsletter
+
+     * [8]Create Account
+     * [9]Sign In
+
+Zero downtime migrations: 500 million rows
+
+   ...when your data is bigger than your hardware
+
+Data makes things hard
+
+   In this article I'm going to go over some of the tricks we use to
+   handle large data migrations at Honeybadger. Check out the video for a
+   quick overview.
+
+   When you have a lot of data, your life gets harder. When you only have
+   1000 rows, you can make DB-wide changes in IRB. With millions of rows,
+   it's not that easy.
+
+   If you don't believe me, just try it. RAM will spike. Your app will get
+   slow. It might even stop working alltogether.
+
+   Of couse it depends on your hardware. If you happen to be running on an
+   underpowered EC2 instance, you might start having problems at 10,000
+   rows.
+
+Forget about Rails migrations
+
+   When I say "migration" here, I'm not talking about Rails migrations.
+
+   Don't get me wrong. I love 'em. Use 'em all the time. But they're not
+   what I'm talking about.
+
+What is a migration then?
+
+   It's a big change to your database.
+
+   Imagine that you have a database of mailing addresses. 5 million of
+   them.
+
+   The data entry people have been sloppy, and so the addresses are in all
+   kinds of formats. But you really need them to be in strict USPS format.
+
+   Fortunately, there's an API you can use for that. Unfortunately, you
+   need to make an API call for each of the 5 million addresses.
+
+   ...and you can't have any downtime.
+
+   That's what I call a migration. You may have another word for it. Maybe
+   a four-letter word. But that's just semantics.
+
+There's no magic bullet
+
+   I'm going to be talking about postgres here, but mongo users have the
+   same problems.
+
+   No matter what we do, computers stubbornly refuse to be infinitely
+   fast. For any computer, there's is a greater or equal dataset.
+
+   I think that the understanding of this is a kind of turning point in
+   the training of young developers. I had to learn it the hard way.
+
+Why Facebook gamers hate me, personally.
+
+   I remember when I learned the lesson that big datasets are
+   fundamentally different from small datasets.
+
+   Back when I was just starting out, I did some contract work for a
+   facebook gaming company. Not a big one. There was just one other dev.
+   But the game was pretty popular, and this was the height of
+   mafia/jewel/farm game mania.
+
+   The database was mysql. But all the data was stored as json inside a
+   text field on the user model. This of course, meant that instead of
+   ugly SQL
+UPDATE users set something=true;
+
+   ...you could use elegant ruby
+Users.find_each do |u|
+  u.update(:data => JSON.decode(u.data).merge( :something => true ).to_json)
+end
+
+   One time I had to write a rake task that tweaked a data structure for
+   every user. It took about 30 minutes to run.
+
+   That wouldn't have been a problem, except I hadn't planned for the
+   "in-between" state. The application was still expecting the old data
+   structure, but not everybody had that anymore.
+
+   The result was a small UI bug, and a lot of pissed off facebook users.
+   Fortunately, they had an in-game forum that they could use to yell at
+   me.
+
+How do you plan for big migrations?
+
+Problems are simple
+
+   Luckily, you've only got two problems to worry about:
+     * The app breaking
+     * The app slowing down
+
+   Yay!
+
+Solutions are more complex
+
+   To avoid these, you need to start thinking differenly about changes to
+   your app and your data.
+     * Embrace multi-step deploys
+     * Expect database-wide changes to take an indefinite amount of time
+     * Expect the scripts you wrote to do the DB migration to break
+     * Plan ahead for pegged CPU, RAM and disk IO
+     * Map out an escape route: You may need it
+
+Code!
+
+Battle-tested
+
+   A lot of people write blog posts about things they've never done. But
+   this isn't one of those.
+
+   Here at Honeybadger HQ, we've used all the tricks I'm about to show you
+   IRL.
+
+Prepare your app to handle in-between time
+
+   If a migration takes a day, then for that day part of your data is
+   "pending" and part is "processed"
+
+   Your app needs to be able to handle both pending and processed data.
+
+   Suppose you're spitting a single name field into first_name and
+   last_name. Your code might look like this:
+class User
+  before_save :split_name
+
+  def to_s
+    pending? ? name : [first_name, last_name].join(" ")
+  end
+
+  def split_name
+    self.first_name, self.last_name = name.split(" ", 2)
+  end
+end
+
+   Now that you have 2 representations of a user's name you need to
+     * Make sure you update both representations when new records are
+       saved
+     * Use the new data when possible, but fall back to the old data
+     * Remove this ASAP. It's ugly as sin.
+
+Know which data have been migrated
+
+   If your migration script fails, you need to be able to re-start it and
+   pick up where you left off.
+
+   It can be as simple as saving ids to a flat file. But we like to use
+   the rollout gem.
+
+Rollout
+
+   The rollout gem is built to make incremental releases easier. It lets
+   you set a "feature available" flag on any model and gives you an easy
+   way to see if the flag is set.
+
+For the back end
+
+   We recently did a migration for all of our Projects. After each project
+   was done, we set a flag like so:
+$rollout.activate_user(:done, project)
+
+For the front end
+
+   Then in our front-end code, we could invoke either the new or old
+   behavior based on that flag.
+render($rollout.active?(:done, project) ? "new_thing" : "old_thing")
+
+   Granted, the rollout method names are a little out of sync with the
+   use-case. But it works nicely.
+
+Log all the things...separately
+
+   Chances are, you'll want to keep an eye on your migration. But if the
+   output from your migration is mixed in with production data, it can be
+   hard to tell what's happening.
+
+   And it'd be nice to have debug-level logging too, just in case your
+   rake task aborts.
+
+Use Rails environments
+
+   Here's a cool trick. Just use a separate "migration" Rails environment.
+   All you need to do is add a few lines to your config/database.yml
+migration:
+  adapter: postgresql
+  database: ...
+  username: ...
+  password: ...
+
+   Now all of your logs will be saved to log/migration.log. And if you're
+   reporting errors to Honeybadger, they'll be flagged as migration
+   errors. pretty nifty, eh?
+
+Keep an eye on your database
+
+   Large datasets tend to distort space and time. A totally innocent
+   select count(*) from users will work fine with 1000 users, but take
+   forever with 10,000,000 users.
+
+   Also, large datasets tend to accumulate strangeness. Did you forget to
+   limit the user's name to 1000 chars? You're likely to find at least one
+   user with a 2Mb name.
+
+Monitor long-running queries
+
+   It's important to check your database for queries taking an abnormally
+   long time to run.
+
+   In postgres this is easy. The following command will update once per
+   second and show you current queries, as well as how long they’ve been
+   running.
+watch -n1 "psql -c \"select substring(query from 0 for 120) q,  now() - query_st
+art from pg_stat_activity where state='active' order by query_start limit 20\""
+
+Limit all the things
+
+   If you do find that queries are taking longer than they should, chances
+   are that you forgot to put a limit somewhere.
+
+   Suppose that you know a user never has more than 100 items in their
+   shopping cart. Nobody has ever bought more than 100 items.
+
+   Well, you’re going to find someone who’s put 100,000 items in their
+   cart. And when you do, all of those items are going to be loaded into
+   ram.
+
+Limit all the strings
+
+   The same thing goes for string lengths. Sometimes you'll find
+   abnormally long strings in your DB. You can truncate those right in
+   sql.
+select substring(message from 0 for 140) from tweets;
+
+Be careful with ActiveRecord
+
+   And with that in mind, it's clear that you should prefer Rails'
+   find_each over all. And that you should do as much processing as
+   possible in postgres.
+
+Avoid using production systems
+
+   Here at Honeybadger, we have servers who’s only job in life is to
+   mirror the production database, and be available if they happen to die.
+
+   These replicants are darn handy if you happen to be doing a
+   read-intensive migration. In our elastic search switch, we had to run
+   some queries that took 30 minutes to complete. By running them against
+   the replicant we were able to avoid slowing down production.
+
+   Doing this is pretty simple. Just create a new environment, and point
+   it at your replicant in the database.yml file
+migration:
+  adapter: postgresql
+  database: replicant_hostname
+  username: ...
+  password: ...
+
+Hot swap systems
+
+   You can take this one step further if you like. Just do the migration
+   completely on the replicant then cut over to it. The replicant becomes
+   the new master and the master becomes the new replicant.
+
+And paranoia
+
+   Of course there’s no reason that your changes on server A should affect
+   server Z, but it never hurts to keep an eye on server Z. Surprising
+   things can happen when you network computers together.
+
+A closing meditation
+
+   In closing, I'd like to share a quote:
+
+     "There have been joys too great to be described in words, and there
+     have been griefs upon which I have not dared to dwell, and with
+     these in mind I say, climb if you will, but remember that courage
+     and strength are naught without prudence, and that a momentary
+     negligence may destroy the happiness of a lifetime. Do nothing in
+     haste, look well to each step, and from the beginning think what may
+     be the end." - Edward Whymper
+     __________________________________________________________________
+
+     * [10]Tweet to @honeybadgerapp
+     *
+     __________________________________________________________________
+
+   [6eb5a4e87bd69489d0a531d489f90552]
+
+   Starr Horne is the driving force behind Honeybadger's single-page UI.
+   He works around the clock to find better ways for you to slice through
+   mountains of debug data and get to the heart of your issues in record
+   time.
+     * [11]Github
+     * [12]Twitter
+     * [13]Google+
+     __________________________________________________________________
+
+     * [14]← Previous
+     * [15]Archive
+     * [16]Next →
+     __________________________________________________________________
+
+   [sidebar_bolt.png]
+
+   [17]Honeybadger is the modern error monitoring service for Ruby and
+   Rails.
+
+   [18]Follow @honeybadgerapp
+   Get monthly DevOps Tips: ____________________
+   Subscribe
+
+Published
+
+   06 August 2013
+
+   © 2012 Honeybadger Industries LLC
+
+References
+
+   Visible links
+   1. file://localhost/blog/atom.xml
+   2. file://localhost/
+   3. file://localhost/documentation/project_setup
+   4. file://localhost/pages/plans
+   5. file://localhost/pages/about
+   6. file://localhost/blog
+   7. http://eepurl.com/pNHY1
+   8. file://localhost/users/sign_up
+   9. file://localhost/users/sign_in
+  10. https://twitter.com/intent/tweet?screen_name=honeybadgerapp
+  11. https://github.com/starrhorne
+  12. https://twitter.com/StarrHorne
+  13. https://plus.google.com/116880398648173252931?rel=author
+  14. file://localhost/blog/2013/06/25/stop-using-rubygemsorg-in-production
+  15. file://localhost/blog/archive.html
+  16. file://localhost/blog/2013/08/30/alerts-and-integrations-just-leveled-up
+  17. https://www.honeybadger.io/
+  18. https://twitter.com/honeybadgerapp
+
+   Hidden links:
+  20. https://fast.wistia.net/embed/iframe/sq5tbu0itg?autoPlay=true&controlsVisibleOnLoad=true&playerColor=5cada6&plugin%5Bsocialbar-v1%5D%5Bbuttons%5D=embed-twitter-facebook&popover=true&version=v1&videoHeight=540&videoWidth=960&volumeControl=true

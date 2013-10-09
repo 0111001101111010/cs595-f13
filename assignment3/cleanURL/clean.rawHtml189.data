@@ -1,0 +1,187 @@
+   #[1]Recent Blog Posts
+
+   Michele Spagnuolo
+     * [2]home
+     * [3]blog
+     * [4]archive
+     * [5]tags
+
+Mailbox.app Javascript execution
+
+   [6]Vote on HN
+   [7]Share on Facebook
+   [8]Tweet
+
+   written on Tuesday, September 24, 2013
+
+   [9]Mailbox.app is a free email management application for iOS that
+   offers very cool features to achieve Inbox Zero.
+
+The vulnerability
+
+   Mailbox.app up to version 1.6.2 (current version at date, Sept. 25
+   2013) executes any Javascript which is present in the body of HTML
+   emails.
+
+   This is bad for security and privacy, because it allows advanced spam
+   techniques, tracking of user actions, hijacking the user by just
+   opening an email, and potentially much worse things, especially for
+   jailbroken devices. The app also loads external images without offering
+   an option to disable this behavior.
+
+   In this very short video I demonstrate some use cases of the Javascript
+   execution vulnerability on iOS. Proof of concepts are intentionally
+   innocuous, such as opening apps (Music, Photos, Videos...), Facebook
+   profiles, tweeting and texting an arbitrary number (user confirmation
+   needed). Even if the JS code runs in a sandboxed environment and it is
+   short-lived, this is not a good thing.
+
+   Update 2013-09-25 20:00 CEST: It has come to my knowledge that the
+   problem has been previously [10]reported via Twitter to Mailbox on May
+   30, 2013 by [11]@bp_ . So the original credit goes to him.
+
+   Update 2013-09-25 20:11 CEST: About 90 minutes after Ars Technica
+   published [12]this, Mailbox.app representatives acknowledged the bug
+   but downplayed the severity of attacks that might exploit it. A
+   spokeswoman said a patch would most likely be available before the end
+   of Wednesday.
+
+   Update 2013-09-26 09:00 CEST: Mailbox published [13]this statement on
+   their blog. They state:
+
+     Today we implemented a process that strips javascript from messages
+     before delivering them to mobile devices. This feature is now live
+     on Mailbox servers and filtering new mail. This will be particularly
+     important as we develop for other platforms, where javascript
+     vulnerabilities could be more of an issue.
+
+     As always, thanks for joining us on the road to build the world’s
+     best inbox.
+
+   While I verified that they now strip some Javascript and no longer load
+   external images, I quickly found a way to bypass it, and Javascript is
+   currently still executed without any user interaction. I will not
+   publicly disclose details - I privately reported details to Mailbox.app
+   and am waiting for a reply. now fixed.
+
+   Update 2013-09-26 10:20 CEST: I posted a [14]comment on Ars Technica
+   expressing my opinion on the impact of this vulnerability.
+
+   Here is my comment:
+
+     First of all I would like to thank Dan for the article, and the Ars
+     community for such a great reaction. I really like this kind of
+     informed and civilized discussions, and am considering to join the
+     community for the near future.
+
+     In my original report, now updated, I didn't mean to sound
+     "sensational" at all, and I personally do not think this article is
+     "sensational" either.
+
+     I just highlighted that Mailbox.app blindly executes Javascript in
+     HTML email bodies, and that this is bad, especially for jailbroken
+     devices. I am perfectly aware of the fact vanilla iOS sandboxes
+     applications, and that this limits the impact, but this should not
+     excuse the design choice, which is poor from both a privacy and
+     security point of view.
+
+     Mailbox.app has gained a considerable user base, and it was not
+     acceptable that it used to load external images without asking the
+     user for permission and, worse, execute Javascript code, which
+     allows even more information leakage.
+
+     For unjailbroken devices, the sandboxing model, as everything where
+     it comes to security, is not perfect. There is a history of sandbox
+     bypass exploits. It is very likely that a vulnerability that allows
+     malicious attackers to inject actual code using a Javascript vector
+     inside an app to start the attack exists in current iOS versions and
+     will be published in the future. After all, this has happened in the
+     past. I am thinking of Pwn2Own 2010, where Vincenzo Iozzo and
+     Weinmann exploited a vulnerability in MobileSafari to silently
+     transmit the SMS database to a remote server, or the JailbreakMe
+     "Saffron" exploit, that exploited a FreeType parsing vulnerability
+     in the browser to read/write memory past buffer, bypass all
+     restrictions in place in iOS and ultimately jailbreak the phone. In
+     general, Javascript is used as a convenient tool for heap spraying
+     attacks targeting the browser - I am not an iOS expert (my field is
+     web application security), but I can't see why it should be allowed
+     in a such untrusted channel as email.
+
+     Some commenters say that this is not different from a normal webview
+     or Safari itself. In my opinion, it is different because while users
+     expect to execute Javascript on a webpage, they do not expect
+     Javascript to be executed by simply opening emails, and emails can
+     be spoofed. I'm also not aware of any other major mail app that runs
+     sender-supplied JavaScript included in the body of emails.
+
+     Mailbox.app now claims to filter JS server-side before delivering
+     mails to the client. While I verified that they now strip some
+     Javascript and no longer load external images, I quickly found a way
+     to bypass it, and Javascript is currently still executed without any
+     user interaction. I will not publicly disclose details - I privately
+     reported details to Mailbox.app and am currently waiting for a
+     reply.
+
+     Have a (slightly) safer day!
+
+   Update 2013-09-26 17:36 CEST: Mailbox support replied - they are
+   working on a fix for my bypass.
+
+   Update 2013-09-27 06:28 CEST: Mailbox support confirms the fix for the
+   bypass.
+
+     Thanks again for your email, Michele. We've updated the servers to
+     also remove object tags.
+
+     We are continually evolving how Mailbox handles messages, and
+     appreciate you passing on this information.
+
+   IFRAME: [15]http://www.youtube.com/embed/mDOgBLYi8Q0
+
+   This has been featured on [16]The Guardian, [17]Ars Technica,
+   [18]Gizmodo, [19]Macworld, [20]Lifehacker, [21]iClarified, [22]Graham
+   Cluley, [23]Threatpost, [24]Info Security and more.
+
+   This vulnerability report raised some debate in the security world
+   about executing Javascript in emails. Nice insight in [25]this Naked
+   Security post.
+
+   Tags: [26]javascript, [27]mailbox.app and [28]proof of concept
+   Please enable JavaScript to view the [29]comments powered by Disqus.
+   [30]blog comments powered by Disqus
+
+   © Copyright 2013 by [31]Michele Spagnuolo
+
+References
+
+   1. http://miki.it/blog/feed.atom
+   2. file://localhost/
+   3. file://localhost/blog
+   4. file://localhost/blog/archive/
+   5. file://localhost/blog/tags/
+   6. http://news.ycombinator.com/submit
+   7. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml189.data
+   8. https://twitter.com/share
+   9. http://www.mailboxapp.com/
+  10. https://twitter.com/bp_/status/339650116497588224
+  11. https://twitter.com/bp_
+  12. http://arstechnica.com/security/2013/09/popular-ios-e-mail-app-acquired-by-dropbox-has-serious-bug-researcher-warns/
+  13. http://www.mailboxapp.com/blog/?p=1#javascript-now-filtered-from-mailbox-messages
+  14. http://arstechnica.com/security/2013/09/popular-ios-e-mail-app-acquired-by-dropbox-has-serious-bug-researcher-warns/?comments=1&post=25369959#comment-25369959
+  15. http://www.youtube.com/embed/mDOgBLYi8Q0
+  16. http://www.theguardian.com/technology/2013/sep/27/mailbox-javascript-security-off
+  17. http://arstechnica.com/security/2013/09/popular-ios-e-mail-app-acquired-by-dropbox-has-serious-bug-researcher-warns/
+  18. http://gizmodo.com/mailbox-for-ios-has-a-huge-security-flaw-1385847324
+  19. http://www.macworld.com/article/2049389/security-flaw-allows-unwanted-code-execution-in-mailbox-app.html
+  20. http://lifehacker.com/mailbox-for-ios-has-been-found-to-have-a-major-security-1385265646
+  21. http://www.iclarified.com/34180/mailbox-app-allows-html-emails-to-execute-javascript-video
+  22. http://grahamcluley.com/2013/09/mailbox-iphone-app-javascript-flaw/
+  23. http://threatpost.com/javascript-issue-plagues-mailbox-app-for-ios
+  24. http://www.infosecurity-us.com/view/34731/vulnerability-javascript-allowed-to-run-in-the-mailbox-ios-app/
+  25. http://nakedsecurity.sophos.com/2013/09/26/mailbox-app-on-ipads-and-iphones-runs-javascript-from-emails-vulnerability-or-feature/
+  26. file://localhost/blog/tags/javascript/
+  27. file://localhost/blog/tags/mailbox.app/
+  28. file://localhost/blog/tags/proof%20of%20concept/
+  29. http://disqus.com/?ref_noscript
+  30. http://disqus.com/
+  31. file://localhost/

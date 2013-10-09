@@ -1,0 +1,362 @@
+   #[1]Geographic Information Systems Stack Exchange [2]Feed for question
+   'No plugin installer, no vector tools - QGIS 2'
+
+   [3]Stack Exchange
+   [4]sign up | [5]log in |
+   ____________________________
+   [6]Geographic Information Systems
+     * [7]Questions
+     * [8]Tags
+     * [9]Tour
+     * [10]Users
+
+     * [11]Ask Question
+
+   [12]Tell me more ×
+   Geographic Information Systems Stack Exchange is a question and answer
+   site for cartographers, geographers and GIS professionals. It's 100%
+   free, no registration required.
+
+[13]No plugin installer, no vector tools - QGIS 2
+
+   up vote 1 down vote [14]favorite
+   1
+
+   Trying to use QGIS 2.0 on Mint 15 (based on Ubuntu 13)
+
+   I installed, uninstalled and re-installed QGIS from various
+   repositories (ubuntugis-unstable, then qgis.org/debian raring - not
+   clear for me which one I should use). I don't seem to have any python
+   support. Any help appreciated!
+
+   If I try apt-get install python-qgis I get the message that the
+   packages libgdal1 libqgis2.0.1 qgis qgis-providers are going to be
+   uninstalled.
+   [15]qgis [16]python [17]qgis-plugins
+
+   [18]share|[19]improve this question
+   [20]edited Sep 26 at 13:58
+   asked Sep 26 at 13:44
+   [21]Alice
+   62
+
+   1
+     check the [22]qgis.org/debian/dists/raring/main and
+     [23]ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu/dists/…
+     – [24]Mapperz♦ Sep 26 at 13:56
+     Thanks a lot for your answer. But which one of the two should I use?
+     And should I first disable the repository I have used before
+     ([25]qgis.org/debian raring main)? Should I uninstall QGIS and then
+     re-install it? – [26]Alice Sep 26 at 14:05
+
+   1
+     I had a similar problem 2 years ago with QGIS 1.7, which I solved by
+     downgrading my PyQT4 library. The library had been updated and became
+     incompatible with python-qgis. Link to my original error message and
+     solution, in case that helps: [27]northwestspatial.com/wp/?p=302
+     – [28]L_Holcombe Sep 26 at 14:09
+     @Alice check the dates on both 24th September 2013. Would try the
+     qgis.org first. – [29]Mapperz♦ Sep 26 at 14:15
+     Mapperz thank you but I don't understand much. Should I add deb
+     qgis.org/debian/dists/raring/main in the file source.list? – [30]Alice
+     Sep 26 at 14:40
+   [31]show 4 more comments
+
+   [32]active [33]oldest [34]votes
+
+Know someone who can answer? Share a link to this [35]question via [36]email,
+[37]Google+, [38]Twitter, or [39]Facebook.
+
+Your Answer
+
+
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+
+   draft saved
+   draft discarded
+   ____________________
+
+Sign up or [40]login
+
+   Sign up using Google
+
+   Sign up using Facebook
+
+   Sign up using Stack Exchange
+   [BUTTON Input] (not implemented)______
+
+Post as a guest
+
+   Name ______________________________
+   Email ______________________________ required, but not shown
+
+Post as a guest
+
+   Name ______________________________
+   Email ______________________________ required, but not shown
+   Post Your Answer [41]discard
+
+   By posting your answer, you agree to the [42]privacy policy and
+   [43]terms of service.
+
+Browse other questions tagged [44]qgis [45]python [46]qgis-plugins or [47]ask
+your own question.
+
+   tagged
+   [48]qgis × 4094
+   [49]python × 2246
+   [50]qgis-plugins × 333
+
+   asked
+
+         5 days ago
+
+   viewed
+
+         55 times
+
+Related Jobs
+
+Related
+
+   4
+   [51]Plugins are not installed in qgis 1.8.0 Lisboa
+   1
+   [52]ReportLab integration into QGIS returns error message “no module
+   named reportlab”
+   2
+   [53]How to remove a vector QgsVectorLayer from QGis python plugin
+   3
+   [54]How to install the QGIS Statist plugin in Mac OS X?
+   2
+   [55]How to install statist plugin in QGIS / OS X
+   0
+   [56]What could I do to make QGIS find all the plugins?
+   3
+   [57]Unable to install QGIS 1.8 on Ubuntu
+   1
+   [58]Install shapely for QGIS on Mac
+   1
+   [59]Fetch Python Plugins missing
+   0
+   [60]Opengeostack /qgis nightly/ opengeo/ suite-qgis-plugin
+   [61]question feed
+   lang-py
+
+   [62]about [63]help [64]badges [65]blog [66]chat [67]data [68]legal
+   [69]privacy policy [70]jobs [71]advertising info mobile [72]contact us
+   [73]feedback
+            Technology            Life / Arts Culture / Recreation Science Other
+  1. [74]Stack Overflow
+  2. [75]Server Fault
+  3. [76]Super User
+  4. [77]Web Applications
+    5. [78]Ask Ubuntu
+    6. [79]Webmasters
+    7. [80]Game Development
+    8. [81]TeX - LaTeX
+
+  1. [82]Programmers
+    2. [83]Unix & Linux
+    3. [84]Ask Different (Apple)
+    4. [85]WordPress Answers
+    5. [86]Geographic Information Systems
+    6. [87]Electrical Engineering
+    7. [88]Android Enthusiasts
+    8. [89]IT Security
+
+  1. [90]Database Administrators
+    2. [91]Drupal Answers
+    3. [92]SharePoint
+    4. [93]User Experience
+    5. [94]Mathematica
+    6. [95]more (13)
+
+  1. [96]Photography
+    2. [97]Science Fiction & Fantasy
+    3. [98]Seasoned Advice (cooking)
+    4. [99]Home Improvement
+    5. [100]more (13)
+
+  1. [101]English Language & Usage
+    2. [102]Skeptics
+    3. [103]Mi Yodeya (Judaism)
+    4. [104]Travel
+    5. [105]Christianity
+    6. [106]Arqade (gaming)
+    7. [107]Bicycles
+    8. [108]Role-playing Games
+    9. [109]more (21)
+
+  1. [110]Mathematics
+    2. [111]Cross Validated (stats)
+    3. [112]Theoretical Computer Science
+    4. [113]Physics
+    5. [114]MathOverflow
+    6. [115]more (7)
+
+  1. [116]Stack Apps
+    2. [117]Meta Stack Overflow
+    3. [118]Area 51
+    4. [119]Stack Overflow Careers
+
+   site design / logo © 2013 stack exchange inc; user contributions
+   licensed under [120]cc-wiki with [121]attribution required
+   rev 2013.10.1.1045
+
+   Geographic Information Systems Stack Exchange works best with
+   JavaScript enabled
+
+References
+
+   Visible links
+   1. file://localhost/opensearch.xml
+   2. file://localhost/feeds/question/72588
+   3. http://stackexchange.com/
+   4. file://localhost/users/login?returnurl=%2fquestions%2f72588%2fno-plugin-installer-no-vector-tools-qgis-2%3futm_source%3dtwitterfeed%26utm_medium%3dtwitter
+   5. file://localhost/users/login?returnurl=%2fquestions%2f72588%2fno-plugin-installer-no-vector-tools-qgis-2%3futm_source%3dtwitterfeed%26utm_medium%3dtwitter
+   6. file://localhost/
+   7. file://localhost/questions
+   8. file://localhost/tags
+   9. file://localhost/about
+  10. file://localhost/users
+  11. file://localhost/questions/ask
+  12. file://localhost/about
+  13. file://localhost/questions/72588/no-plugin-installer-no-vector-tools-qgis-2
+  14. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml36.data
+  15. file://localhost/questions/tagged/qgis
+  16. file://localhost/questions/tagged/python
+  17. file://localhost/questions/tagged/qgis-plugins
+  18. file://localhost/q/72588
+  19. file://localhost/posts/72588/edit
+  20. file://localhost/posts/72588/revisions
+  21. file://localhost/users/22363/alice
+  22. http://qgis.org/debian/dists/raring/main/
+  23. http://ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu/dists/raring/main/
+  24. file://localhost/users/276/mapperz
+  25. http://qgis.org/debian
+  26. file://localhost/users/22363/alice
+  27. http://northwestspatial.com/wp/?p=302
+  28. file://localhost/users/10676/l-holcombe
+  29. file://localhost/users/276/mapperz
+  30. file://localhost/users/22363/alice
+  31. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml36.data
+  32. file://localhost/questions/72588/no-plugin-installer-no-vector-tools-qgis-2?answertab=active#tab-top
+  33. file://localhost/questions/72588/no-plugin-installer-no-vector-tools-qgis-2?answertab=oldest#tab-top
+  34. file://localhost/questions/72588/no-plugin-installer-no-vector-tools-qgis-2?answertab=votes#tab-top
+  35. file://localhost/q/72588
+  36. mailto:?subject=Geographic%20Information%20Systems%20Stack%20Exchange%20Question&body=No%20plugin%20installer%2c%20no%20vector%20tools%20-%20QGIS%202%0Ahttp%3a%2f%2fgis.stackexchange.com%2fq%2f72588%3fsem%3d2
+  37. https://plus.google.com/share?url=http%3a%2f%2fgis.stackexchange.com%2fq%2f72588%3fsgp%3d2
+  38. http://twitter.com/share?url=http%3a%2f%2fgis.stackexchange.com%2fq%2f72588%3fstw%3d2
+  39. http://www.facebook.com/sharer.php?u=http%3a%2f%2fgis.stackexchange.com%2fq%2f72588%3fsfb%3d2
+  40. file://localhost/users/login?returnurl=%2fquestions%2f72588%2fno-plugin-installer-no-vector-tools-qgis-2%23new-answer
+  41. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml36.data
+  42. http://stackexchange.com/legal/privacy-policy
+  43. http://stackexchange.com/legal/terms-of-service
+  44. file://localhost/questions/tagged/qgis
+  45. file://localhost/questions/tagged/python
+  46. file://localhost/questions/tagged/qgis-plugins
+  47. file://localhost/questions/ask
+  48. file://localhost/questions/tagged/qgis
+  49. file://localhost/questions/tagged/python
+  50. file://localhost/questions/tagged/qgis-plugins
+  51. file://localhost/questions/28587/plugins-are-not-installed-in-qgis-1-8-0-lisboa
+  52. file://localhost/questions/31141/reportlab-integration-into-qgis-returns-error-message-no-module-named-reportlab
+  53. file://localhost/questions/42363/how-to-remove-a-vector-qgsvectorlayer-from-qgis-python-plugin
+  54. file://localhost/questions/44393/how-to-install-the-qgis-statist-plugin-in-mac-os-x
+  55. file://localhost/questions/49496/how-to-install-statist-plugin-in-qgis-os-x
+  56. file://localhost/questions/54716/what-could-i-do-to-make-qgis-find-all-the-plugins
+  57. file://localhost/questions/62442/unable-to-install-qgis-1-8-on-ubuntu
+  58. file://localhost/questions/64323/install-shapely-for-qgis-on-mac
+  59. file://localhost/questions/65210/fetch-python-plugins-missing
+  60. file://localhost/questions/71663/opengeostack-qgis-nightly-opengeo-suite-qgis-plugin
+  61. file://localhost/feeds/question/72588
+  62. file://localhost/about
+  63. file://localhost/help
+  64. file://localhost/help/badges
+  65. http://gis.blogoverflow.com/?blb=1
+  66. http://chat.stackexchange.com/
+  67. http://data.stackexchange.com/
+  68. http://stackexchange.com/legal
+  69. http://stackexchange.com/legal/privacy-policy
+  70. http://stackexchange.com/about/hiring
+  71. http://stackexchange.com/about/contact
+  72. file://localhost/contact
+  73. http://meta.gis.stackexchange.com/
+  74. http://stackoverflow.com/
+  75. http://serverfault.com/
+  76. http://superuser.com/
+  77. http://webapps.stackexchange.com/
+  78. http://askubuntu.com/
+  79. http://webmasters.stackexchange.com/
+  80. http://gamedev.stackexchange.com/
+  81. http://tex.stackexchange.com/
+  82. http://programmers.stackexchange.com/
+  83. http://unix.stackexchange.com/
+  84. http://apple.stackexchange.com/
+  85. http://wordpress.stackexchange.com/
+  86. http://gis.stackexchange.com/
+  87. http://electronics.stackexchange.com/
+  88. http://android.stackexchange.com/
+  89. http://security.stackexchange.com/
+  90. http://dba.stackexchange.com/
+  91. http://drupal.stackexchange.com/
+  92. http://sharepoint.stackexchange.com/
+  93. http://ux.stackexchange.com/
+  94. http://mathematica.stackexchange.com/
+  95. http://stackexchange.com/sites#technology
+  96. http://photo.stackexchange.com/
+  97. http://scifi.stackexchange.com/
+  98. http://cooking.stackexchange.com/
+  99. http://diy.stackexchange.com/
+ 100. http://stackexchange.com/sites#lifearts
+ 101. http://english.stackexchange.com/
+ 102. http://skeptics.stackexchange.com/
+ 103. http://judaism.stackexchange.com/
+ 104. http://travel.stackexchange.com/
+ 105. http://christianity.stackexchange.com/
+ 106. http://gaming.stackexchange.com/
+ 107. http://bicycles.stackexchange.com/
+ 108. http://rpg.stackexchange.com/
+ 109. http://stackexchange.com/sites#culturerecreation
+ 110. http://math.stackexchange.com/
+ 111. http://stats.stackexchange.com/
+ 112. http://cstheory.stackexchange.com/
+ 113. http://physics.stackexchange.com/
+ 114. http://mathoverflow.net/
+ 115. http://stackexchange.com/sites#science
+ 116. http://stackapps.com/
+ 117. http://meta.stackoverflow.com/
+ 118. http://area51.stackexchange.com/
+ 119. http://careers.stackoverflow.com/
+ 120. http://creativecommons.org/licenses/by-sa/3.0/
+ 121. http://blog.stackoverflow.com/2009/06/attribution-required/
+
+   Hidden links:
+ 123. file://localhost/users/22363/alice
+ 124. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml36.data
+ 125. file://localhost/q/28587
+ 126. file://localhost/q/31141
+ 127. file://localhost/q/42363
+ 128. file://localhost/q/44393
+ 129. file://localhost/q/49496
+ 130. file://localhost/q/54716
+ 131. file://localhost/q/62442
+ 132. file://localhost/q/64323
+ 133. file://localhost/q/65210
+ 134. file://localhost/q/71663
+ 135. http://creativecommons.org/licenses/by-sa/3.0/

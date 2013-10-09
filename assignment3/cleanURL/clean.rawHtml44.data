@@ -1,0 +1,95 @@
+Ginga
+
+   The Ginga astronomical FITS file viewer
+     * [1]Download ZIP
+     * [2]Download TAR
+     * [3]View On GitHub
+
+   This project is maintained by [4]ejeschke
+
+   Ginga screenshot
+
+About Ginga
+
+   Ginga is a viewer for astronomical data FITS (Flexible Image Transport
+   System) files.
+
+   The Ginga viewer centers around a new FITS display widget which
+   supports zooming and panning, color and intensity mapping, a choice of
+   several automatic cut levels algorithms and canvases for plotting
+   scalable geometric forms. In addition to this widget, the fits viewer
+   provides a flexible plugin framework for extending the viewer with many
+   different features. A fairly complete set of "standard" plugins are
+   provided for features that we expect from a modern viewer: panning and
+   zooming windows, star catalog access, cuts, star pick/fwhm, thumbnails,
+   etc.
+
+Copyright and License
+
+   Copyright (c) 2011-2013 Eric R. Jeschke. All rights reserved. Ginga is
+   distributed under an open-source BSD licence. Please see the file
+   LICENSE.txt in the top-level directory for details.
+
+Getting the source
+
+$ git clone https://github.com/ejeschke/ginga.git
+
+   Or use one of the links above to get a zip or tar ball.
+
+Building and Installation
+
+   Ginga uses a standard distutils based install, e.g.
+$ python setup.py build
+
+   or
+$ python setup.py install
+
+   The program can then be run using the command "ginga"
+
+   For more information on installation, please see the file
+   [5]doc/INSTALL.txt
+
+How do I run this thing?
+
+   PDF versions of the manual and training videos are available in the
+   [6]downloads. Be sure to also check out the [7]wiki and [8]FAQ.
+
+Bug reports?
+
+   Check out the [9]issue tracker.
+
+Developers
+
+   See scripts/example{1,2}_gtk.py and scripts/example{1,2}_qt.py . There
+   is more information for developers in the manual.
+
+Etymology
+
+   "Ginga" is the romanized spelling of the Japanese word "銀河" (hiragana:
+   ぎんが), meaning "galaxy" (in general) and, more familiarly, the Milky
+   Way. This viewer was written by software engineers at [10]Subaru
+   Telescope, National Astronomical Observatory of Japan--thus the
+   connection.
+
+Pronunciation
+
+   Ginga the viewer may be pronounced "ging-ga" (proper japanese) or
+   "jing-ga" (perhaps easier for western tongues). The latter
+   pronunciation has meaning in the Brazilian dance/martial art capoeira:
+   a fundamental rocking or back and forth swinging motion.
+
+   Hosted on [11]GitHub Pages using the Dinky theme
+
+References
+
+   1. https://github.com/ejeschke/ginga/zipball/master
+   2. https://github.com/ejeschke/ginga/tarball/master
+   3. https://github.com/ejeschke/ginga
+   4. https://github.com/ejeschke
+   5. https://github.com/ejeschke/ginga/blob/master/ginga/doc/INSTALL.txt
+   6. https://github.com/ejeschke/ginga/downloads
+   7. https://github.com/ejeschke/ginga/wiki
+   8. https://github.com/ejeschke/ginga/wiki/FAQ
+   9. https://github.com/ejeschke/ginga/issues
+  10. http://subarutelescope.org/
+  11. https://pages.github.com/

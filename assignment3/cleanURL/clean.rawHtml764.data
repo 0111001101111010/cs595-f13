@@ -1,0 +1,434 @@
+   #[1]CodeProject Latest articles - All Topics [2]CodeProject Latest
+   articles - MFC/C++ [3]CodeProject Latest articles - C# [4]CodeProject
+   Latest articles - VB.NET [5]CodeProject Latest articles - Mobile
+   [6]CodeProject Latest articles - ASP.NET [7]CodeProject Lounge Postings
+   [8]CodeProject
+
+   [9]Click here to Skip to main content
+
+   [10]Home
+            10,118,810 members (40,628 online)
+            [11]Visit CodeProject.TV
+            [12]Discuss CodeProject.TV
+            [13]Sign in
+            Email
+            ____________________
+            Password
+            ____________________
+            Sign in
+              [14]Forgot your password?
+              __________________________________________________________________
+
+            Sign in using [15][facebook.png] [16][google-plus.png]
+            [17][linkedin.png]
+
+
+
+   [18]Click here to Skip to main content
+     * [19]home
+     * [20]articles
+          + [21]Chapters and Sections>
+               o loading
+          + [22]Search
+          + [23]Latest Articles
+          + [24]Latest Tips/Tricks
+          + [25]Top Articles
+          + [26]Beginner Articles
+          + [27]Technical Blogs
+          + [28]Posting/Update Guidelines
+          + [29]Article Help Forum
+          + [30]Article Competition
+          + [31][write-gr.png] Submit an article or tip
+          + [32][write-or.png] Post your Blog
+          +
+     * [33]quick answers
+          + [34][write-or.png] Ask a Question
+          + [35]View Unanswered Questions
+          + [36]View All Questions...
+          + [37]C# questions
+          + [38]ASP.NET questions
+          + [39]VB.NET questions
+          + [40]C#4.0 questions
+          + [41]C++ questions
+          +
+     * [42]discussions
+          + [43]All Message Boards...
+          + [44]Application Lifecycle>
+               o [45]Running a Business
+               o [46]Sales / Marketing
+               o [47]Collaboration / Beta Testing
+               o [48]Work & Training Issues
+          + [49]Design and Architecture
+          + [50]ASP.NET
+          + [51]JavaScript
+          + [52]C / C++ / MFC>
+               o [53]ATL / WTL / STL
+               o [54]Managed C++/CLI
+          + [55]Adobe Technologies
+          + [56]C#
+          + [57]Free Tools
+          + [58]Objective-C
+          + [59]Ruby On Rails
+          + [60]Database
+          + [61]Hardware & Devices>
+               o [62]System Admin
+          + [63]Hosting and Servers
+          + [64]Java
+          + [65].NET Framework
+          + [66]Mobile
+          + [67]VS 2012/2013 & .NET 4.5.1
+          + [68]Sharepoint
+          + [69]Silverlight / WPF
+          + [70]Visual Basic
+          + [71]Web Development
+          + [72]Site Bugs / Suggestions
+          +
+     * [73]features
+          + [74]CP.TV CodeProject.TV
+          + [75]Component & Service Catalog
+          + [76]Competitions
+          + [77]News
+          + [78]The Insider Newsletter
+          + [79]Newsletter archive
+          + [80]Surveys
+          + [81]Product Showcase
+          + [82]Research Library
+          + [83]CodeProject Stuff
+          +
+     * [84]community
+          + [85]The Insider News
+          + [86]The Lounge
+          + [87]The Weird & The Wonderful
+          + [88]The Soapbox
+          + [89]Press Releases
+          + [90]Who's Who
+          + [91]Most Valuable Professionals
+          + [92]Company Listings
+          + [93]Non-English Language >
+               o [94]General Indian Topics
+               o [95]General Chinese Topics
+          +
+     * [96]help
+          + [97]What is 'CodeProject'?
+          + [98]General FAQ
+          + [99]Ask a Question
+          + [100]Bugs and Suggestions
+          + [101]Article Help Forum
+          + [102]Site Map
+          + [103]Advertise with us
+          + [104]Employment Opportunities
+          + [105]About Us
+          +
+
+
+   ____________________ [search.gif]-Submit
+   Search within:
+   (*) Articles
+   ( ) Videos
+   ( ) Quick Answers
+   ( ) Messages
+   ( ) Product Catalog
+   [106]Articles » [107]Development Lifecycle » [108]Installation »
+   [109]General
+
+   [110]Next Next
+   Tip
+   [111]Browse Code
+   [112]Stats
+   [113]Revisions (5)
+   [114]Alternatives
+   [115]Comments & Discussions
+
+Password Dialog for Visual Studio Deployment Projects
+
+   By [116]meraydin, 26 Sep 2013
+
+
+   [stars-empty-lg.png]
+                          0.00 (No votes)
+
+   loading...
+              [117]Sign Up to vote (*) ( ) ( ) ( ) ( ) Vote!
+   Add a reason or comment to your vote: [118]x
+
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   Votes of 3 or less require a comment
+   [119]Tweet
+     * [120]Download attachment - 4 KB
+
+Introduction
+
+   If you've worked with Visual Studio Deployment projects, you know that
+   it's not possible to have a password field in built-in dialogs.
+   Although there are workarounds like editing the MSI file with ORCA or
+   having a custom form displayed at the end of the installation, these
+   methods require additional work.
+
+   After searching for a solution, I found Mr. Mohammed M. Malek's
+   [121]article. After following the instructions, I created the template
+   file to be used for this purpose.
+
+Using the Code
+
+    1. Download the zip file and extract VsdUsernamePasswordDlg.wid file
+       to a temporary location
+    2. Close Visual Studio instances (if any)
+    3. Copy the extracted file to C:\Program Files (x86)\Microsoft Visual
+       Studio 10.0\Common7\Tools\Deployment\VsdDialogs\1033 folder
+
+   After completing the steps, create a Visual Studio setup project and
+   try adding a dialog to it. You should see something like this:
+   [AddDialog.png]
+
+   Let's hope future Visual Studio versions won't need this tweak. :)
+
+License
+
+   This article, along with any associated source code and files, is
+   licensed under [122]The Code Project Open License (CPOL)
+
+About the Author
+
+   [member_unknown.gif]
+   [123]meraydin
+   Turkey Turkey
+   No Biography provided
+   [124]Article Top
+
+Comments and Discussions
+
+
+   You must [125]Sign In to use this message board.
+
+   Search this forum ____________________  Go
+
+                                                               [X] Profile
+   popups    Spacing[Relaxed]  Noise[Very High]  Layout[Open All_____]  Pe
+                                                      r page[10]    Update
+
+
+
+
+   -- There are no messages in this forum --
+   About Article
+   A custom dialog that has a password textbox for your VS2012 projects
+   Type          [126]Tip/Trick
+   Licence       [127]CPOL
+   First Posted  26 Sep 2013
+   Views         1,831
+   Downloads     25
+   Bookmarked    2 times
+   [128]setup[129]VisualStudio
+   [130]Deployment
+   [131][print.gif] [132][email.gif]
+   Top News
+
+   [133]Tim Cook slams Android, citing low usage
+   Get the [134]Insider News free each morning.
+   Related Videos
+   [135][introducing-visual-studio-lightswitch-100x88.png]
+   [136][cptv100x80ms.jpg]
+   Related Articles
+   [137]Create custom dialogs for use in your Visual Studio Setup projects
+   [138]How to create custom dialog boxes using the Web Setup Project in
+   Visual Studio 2010
+   [139]HiUpdate tools - Automatic application updates
+   [140]Setup-Dialogs - Own BannerBitmap and SplashBitmap
+   [141]Extending Visual Studio Setup Project
+   [142]Simple Windows Service Sample
+   [143]Project Template in Visual Studio 2012
+   [144]Create a Vista Gadget Using Visual Studio IDE (updated)
+   [145]WSE 3 Deployment: MSI and ClickOnce
+   [146]Deploying Controls to VS.NET ToolBox Programatically
+   [147]Developing extension packages for Visual Studio
+   2005/2008/2010/2012 using C# with real-life samples (1/6)
+   [148]Windows Mobile App Development Part 1: Creating your first
+   application
+   [149]Visual Studio Deployment Setup: Disable Installation Folder
+   Selection Dialog
+   [150]How to deploy ASP.NET Web Application on server
+   [151]Deploying MFC applications via ClickOnce
+   [152]Create a Debugger Visualizer in 10 Lines of Code
+   [153]Deploying CAB Files Using ClickOnce Deployment
+   [154]Silverlight Web Part sandboxed Deployment in SharePoint 2010 using
+   VS2010
+   [155]Click Once Deployment Configuration
+   [156]HOWTO: Combine Managed and Unmanaged Projects into a Single Visual
+   Studio Solution
+   [157]Permalink | [158]Advertise | [159]Privacy | [160]Mobile
+   Web04 | 2.6.1309030.1 | Last Updated 26 Sep 2013
+   Article Copyright 2013 by meraydin
+   Everything else Copyright © [161]CodeProject, 1999-2013
+   [162]Terms of Use
+   Layout: [163]fixed | [164]fluid
+
+References
+
+   1. http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=1
+   2. http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=2
+   3. http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=3
+   4. http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=6
+   5. http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=18
+   6. http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=4
+   7. http://www.codeproject.com/webservices/LoungeRSS.aspx
+   8. http://www.codeproject.com/info/OpenSearch.xml
+   9. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml764.data#Main
+  10. file://localhost/
+  11. http://codeproject.TV/
+  12. file://localhost/Forums/1829610/CodeProject-TV.aspx
+  13. https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fTips%2f659367%2fPassword-Dialog-for-Visual-Studio-Deployment-Proje%3futm_source%3d54j33dh4%26utm_medium%3dtwitter
+  14. file://localhost/script/Membership/SendPassword.aspx?rp=%2fTips%2f659367%2fPassword-Dialog-for-Visual-Studio-Deployment-Proje%3futm_source%3d54j33dh4%26utm_medium%3dtwitter
+  15. file://localhost/script/Membership/OAuthLogOn.aspx?auth=Facebook
+  16. file://localhost/script/Membership/OAuthLogOn.aspx?auth=Google
+  17. file://localhost/script/Membership/OAuthLogOn.aspx?auth=LinkedIn
+  18. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml764.data#Main
+  19. http://www.codeproject.com/
+  20. file://localhost/script/Articles/Latest.aspx
+  21. file://localhost/script/Content/SiteMap.aspx
+  22. file://localhost/search.aspx
+  23. file://localhost/script/Articles/Latest.aspx?at=1,3,7
+  24. file://localhost/script/Articles/Latest.aspx?at=6
+  25. file://localhost/script/Articles/TopArticles.aspx?ta_so=5
+  26. file://localhost/search.aspx?aidlst=152&sa_us=True
+  27. file://localhost/script/Articles/BlogArticleList.aspx
+  28. file://localhost/info/Submit.aspx
+  29. file://localhost/Forums/1641/Article-Writing.aspx
+  30. file://localhost/script/Awards/CurrentCompetitions.aspx?cmpTpId=1
+  31. file://localhost/script/Articles/Submit.aspx
+  32. file://localhost/script/Articles/BlogFeed.aspx
+  33. file://localhost/script/Answers/List.aspx?tab=active
+  34. file://localhost/Questions/ask.aspx
+  35. file://localhost/script/Answers/List.aspx?tab=unanswered
+  36. file://localhost/script/Answers/List.aspx?tab=active
+  37. file://localhost/script/Answers/List.aspx?tab=active&alltags=true&tags=81
+  38. file://localhost/script/Answers/List.aspx?tab=active&alltags=true&tags=85
+  39. file://localhost/script/Answers/List.aspx?tab=active&alltags=true&tags=842
+  40. file://localhost/script/Answers/List.aspx?tab=active&alltags=true&tags=308
+  41. file://localhost/script/Answers/List.aspx?tab=active&alltags=true&tags=78
+  42. file://localhost/script/Forums/List.aspx
+  43. file://localhost/script/Forums/List.aspx
+  44. file://localhost/Forums/1580997/Application-Lifecycle.aspx
+  45. file://localhost/Forums/1533717/Running-a-Business.aspx
+  46. file://localhost/Forums/1533716/Sales-Marketing.aspx
+  47. file://localhost/Forums/1651/Collaboration-Beta-Testing.aspx
+  48. file://localhost/Forums/3304/Work-Training-Issues.aspx
+  49. file://localhost/Forums/369270/Design-and-Architecture.aspx
+  50. file://localhost/Forums/12076/ASP-NET.aspx
+  51. file://localhost/Forums/1580226/JavaScript.aspx
+  52. file://localhost/Forums/1647/C-Cplusplus-MFC.aspx
+  53. file://localhost/Forums/4486/ATL-WTL-STL.aspx
+  54. file://localhost/Forums/3785/Managed-Cplusplus-CLI.aspx
+  55. file://localhost/Forums/1827459/Adobe-Technologies.aspx
+  56. file://localhost/Forums/1649/Csharp.aspx
+  57. file://localhost/Forums/1627782/Free-Tools.aspx
+  58. file://localhost/Forums/1827460/Objective-C.aspx
+  59. file://localhost/Forums/1832431/Ruby-On-Rails.aspx
+  60. file://localhost/Forums/1725/Database.aspx
+  61. file://localhost/Forums/186301/Hardware-Devices.aspx
+  62. file://localhost/Forums/1644/System-Admin.aspx
+  63. file://localhost/Forums/1606152/Hosting-and-Servers.aspx
+  64. file://localhost/Forums/1643/Java.aspx
+  65. file://localhost/Forums/1650/NET-Framework.aspx
+  66. file://localhost/Forums/13695/Mobile.aspx
+  67. file://localhost/Forums/1653293/VS-2012-2013-NET-4-5-1.aspx
+  68. file://localhost/Forums/1540733/Sharepoint.aspx
+  69. file://localhost/Forums/1004257/Silverlight-WPF.aspx
+  70. file://localhost/Forums/1646/Visual-Basic.aspx
+  71. file://localhost/Forums/1640/Web-Development.aspx
+  72. file://localhost/Forums/1645/Site-Bugs-Suggestions.aspx
+  73. file://localhost/Feature/
+  74. http://CodeProject.TV/
+  75. file://localhost/script/Catalog/List.aspx
+  76. file://localhost/script/Awards/CurrentCompetitions.aspx?cmpTpId=1&awsac=true
+  77. file://localhost/script/News/List.aspx
+  78. file://localhost/Feature/Insider/
+  79. file://localhost/script/Mailouts/Archive.aspx?mtpid=1
+  80. file://localhost/script/Surveys/List.aspx
+  81. file://localhost/KB/showcase/
+  82. file://localhost/script/ResearchLibrary/Index.aspx
+  83. file://localhost/Info/Stuff.aspx
+  84. file://localhost/Lounge.aspx
+  85. file://localhost/Insider.aspx
+  86. file://localhost/Lounge.aspx
+  87. file://localhost/Feature/WeirdAndWonderful.aspx
+  88. file://localhost/Forums/1536756/The-Soapbox.aspx
+  89. file://localhost/Forums/1738007/Press-Releases.aspx
+  90. file://localhost/script/Membership/Profiles.aspx
+  91. file://localhost/script/Awards/MVPWinners.aspx
+  92. file://localhost/script/Membership/Profiles.aspx?mgtid=1&mgm=True
+  93. file://localhost/Forums/1580229/Hindi.aspx
+  94. file://localhost/Forums/1580229/Hindi.aspx
+  95. file://localhost/Forums/1580230/Chinese.aspx
+  96. file://localhost/KB/FAQs/
+  97. file://localhost/info/guide.aspx
+  98. file://localhost/KB/FAQs/
+  99. file://localhost/Questions/ask.aspx
+ 100. file://localhost/Forums/1645/Site-Bugs-Suggestions.aspx
+ 101. file://localhost/Forums/1641/Article-Writing.aspx
+ 102. file://localhost/script/Content/SiteMap.aspx
+ 103. http://developermedia.com/
+ 104. file://localhost/info/Jobs/
+ 105. file://localhost/info/about.aspx
+ 106. file://localhost/script/Content/SiteMap.aspx
+ 107. file://localhost/Chapters/11/Development-Lifecycle.aspx
+ 108. file://localhost/KB/install/
+ 109. file://localhost/KB/install/#General
+ 110. file://localhost/script/Articles/PrevNextLookup.aspx?aid=659367&at=6&secId=112
+ 111. file://localhost/script/Articles/ViewDownloads.aspx?aid=659367
+ 112. file://localhost/script/Articles/Statistics.aspx?aid=659367
+ 113. file://localhost/script/Articles/ListVersions.aspx?aid=659367
+ 114. file://localhost/script/Articles/ListAlternatives.aspx?aid=659367
+ 115. file://localhost/home/stanley/code/cs595/assignment3/MasterPages/#_comments
+ 116. file://localhost/script/Membership/View.aspx?mid=1058870
+ 117. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml764.data#SignUp
+ 118. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml764.data
+ 119. https://twitter.com/share
+ 120. file://localhost/KB/install/659367/VsdUsernamePasswordDlg.zip
+ 121. http://blogs.msdn.com/b/momalek/archive/2012/09/19/create-a-password-dialog-for-visual-studio-deployment-project.aspx
+ 122. http://www.codeproject.com/info/cpol10.aspx
+ 123. file://localhost/Members/meraydin
+ 124. file://localhost/Tips/659367/Password-Dialog-for-Visual-Studio-Deployment-Proje?utm_source=54j33dh4&utm_medium=twitter#_articleTop
+ 125. https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fTips%2f659367%2fPassword-Dialog-for-Visual-Studio-Deployment-Proje%3futm_source%3d54j33dh4%26utm_medium%3dtwitter%26fid%3d1843329%26df%3d90%26mpp%3d10%26noise%3d1%26prof%3dTrue%26sort%3dPosition%26view%3dQuick%26spc%3dRelaxed
+ 126. file://localhost/script/Articles/Types.aspx?#Tip/Trick
+ 127. http://www.codeproject.com/info/cpol10.aspx
+ 128. file://localhost/Tags/setup
+ 129. file://localhost/Tags/VisualStudio
+ 130. file://localhost/Tags/Deployment
+ 131. file://localhost/Tips/659367/Password-Dialog-for-Visual-Studio-Deployment-Proje?display=Print
+ 132. file://localhost/script/common/TellFriend.aspx?obtid=2&obid=659367
+ 133. http://mashable.com/2013/09/19/tim-cook-android-low-usage/
+ 134. file://localhost/Feature/Insider/
+ 135. http://codeproject.tv/video/6891466/introducing_visual_studio_lightswitch
+ 136. http://codeproject.tv/video/5021123/visual_c_2012_compatibility_profiles
+ 137. file://localhost/Articles/18834/Create-custom-dialogs-for-use-in-your-Visual-Studi
+ 138. file://localhost/Articles/181395/How-to-create-custom-dialog-boxes-using-the-Web-Se
+ 139. file://localhost/Articles/613645/HiUpdate-tools-Automatic-application-updates
+ 140. file://localhost/Articles/34086/Setup-Dialogs-Own-BannerBitmap-and-SplashBitmap
+ 141. file://localhost/Articles/146626/Extending-Visual-Studio-Setup-Project
+ 142. file://localhost/Articles/3990/Simple-Windows-Service-Sample
+ 143. file://localhost/Articles/657765/Project-Template-in-Visual-Studio-2012
+ 144. file://localhost/Articles/31409/Create-a-Vista-Gadget-Using-Visual-Studio-IDE-upda
+ 145. file://localhost/Articles/19482/WSE-3-Deployment-MSI-and-ClickOnce
+ 146. file://localhost/Articles/8434/Deploying-Controls-to-VS-NET-ToolBox-Programatical
+ 147. file://localhost/Articles/477550/Developing-extension-packages-for-Visual-Studio-20
+ 148. file://localhost/Articles/43357/Windows-Mobile-App-Development-Part-1-Creating-you
+ 149. file://localhost/Tips/437285/Visual-Studio-Deployment-Setup-Disable-Installatio
+ 150. file://localhost/Articles/53075/How-to-deploy-ASP-NET-Web-Application-on-server
+ 151. file://localhost/Articles/22905/Deploying-MFC-applications-via-ClickOnce
+ 152. file://localhost/Articles/13127/Create-a-Debugger-Visualizer-in-10-Lines-of-Code
+ 153. file://localhost/Articles/29687/Deploying-CAB-Files-Using-ClickOnce-Deployment
+ 154. file://localhost/Articles/314375/Silverlight-Web-Part-sandboxed-Deployment-in-Share
+ 155. file://localhost/Articles/38608/Click-Once-Deployment-Configuration
+ 156. file://localhost/Articles/6643/HOWTO-Combine-Managed-and-Unmanaged-Projects-into-
+ 157. file://localhost/Tips/659367/Password-Dialog-for-Visual-Studio-Deployment-Proje
+ 158. http://developermedia.com/
+ 159. file://localhost/info/privacy.aspx
+ 160. file://localhost/Tips/659367/Password-Dialog-for-Visual-Studio-Deployment-Proje?utm_source=54j33dh4&utm_medium=twitter&display=Mobile
+ 161. mailto:webmaster@codeproject.com
+ 162. file://localhost/info/TermsOfUse.aspx
+ 163. file://localhost/Tips/659367/Password-Dialog-for-Visual-Studio-Deployment-Proje?utm_source=54j33dh4&utm_medium=twitter&PageFlow=FixedWidth
+ 164. file://localhost/Tips/659367/Password-Dialog-for-Visual-Studio-Deployment-Proje?utm_source=54j33dh4&utm_medium=twitter&PageFlow=Fluid

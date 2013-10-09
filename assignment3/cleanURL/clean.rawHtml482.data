@@ -1,0 +1,391 @@
+   #[1]Wszystke wiadmości [2]Najnowsze artykuły [3]Newsflash [4]Najnowsze
+   recenzje
+
+    Menu
+     * [5] Start
+          + [6]Wiadomości - Strona główna
+          + [7]Akademia
+          + [8]Newsflash
+     * [9]  Pomoc
+     * [10] Recenzje
+          + [11]Wszystkie
+     * [12] Katalog Stron
+          + [13]Wszystkie Strony
+          + [14]Dodaj Stronę
+     * [15] Team
+          + [16]Redakcja
+          + [17]Dołącz do redakcji
+     * [18]  Strona Demo
+     * [19]Logowanie
+
+     *
+          + [20]Szukaj
+
+
+
+   [21]Polska strona społeczności Joomla!
+
+[22]Aktualizacje rozszerzeń z domu Akeeba
+
+   Programiści Akeeba oferujący popularne komponenty typu Akeeba Backup,
+   Admin Tools i wiele innych doskonałych rozszerzeń właśnie opublikowali
+   aktualizacje.
+   [23]Czytaj dalej...
+
+[24]redSHOP 1.3.1 został właśnie wydany
+
+   Jak informuje załoga redCOMPONENT, właśnie ukazała się nowa wersja
+   popularnego rozszerzenia redSHOP oznaczona numerem 1.3.1
+   [25]Czytaj dalej...
+
+[26][WAŻNE] Jeśli masz problemy po aktualizacji do Joomla! 3.1.4
+
+   Jeśli masz problemy z rozszerzeniami po aktualizacji do Joomla! 3.1.4
+   tutaj znajdziesz tak zwany "hotfix". Zespół PLT pracuje nad kompletnym
+   rozwiązaniem
+   [27]Czytaj dalej...
+
+[28][WAŻNE] Prosimy nie dokonywać aktualizacji do Joomla! 2.5.12 oraz 3.1.2
+
+   Do wszystkich użytkowników Akeeba Admin Tools: Admin Tools zgłasza
+   dostępność jeszcze niepublikowanych wersji Joomla! 2.5.12 i 3.1.2.
+   [29]Czytaj dalej...
+
+[30]AlphaUserPoints 1.9.0 beta dla Joomla 3.1.x wydane
+
+   Ukazała się pierwsza wersja beta popularnego rozszerzenia
+   AlphaUserPoints dla Joomla! 3.1
+   [31]Czytaj dalej...
+
+[32]Ukazała się wersja 1.1(.1) komponentu SobiPro
+
+   SobiPro jest znanym i popularnym komponentem między innymi
+   przeznaczonym do tworzenia różnego rodzaju katalogów. 28 czerwca
+   została wydana najnowsza wersja
+   [33]Czytaj dalej...
+
+[34]Komento 1.6 zostało wydane.
+
+   Wersja 1.6 wprowadza wiele nowości, choć głównie kosmetyczne
+   [35]Czytaj dalej...
+
+[36]Stabilna wersja DJ-Catalog 3.2.10 została wydana
+
+   Komponent DJ-Catalog v. 3.2.10 jest już dostępny dla wszystkich
+   aktywnych abonentów. Ta wersja przynosi zasadniczą zmianę w obsłudze
+   rozszerzenia
+   [37]Czytaj dalej...
+
+[38]Ukazała się Phoca Gallery 3.2.5
+
+   Ukazała się nowa wersja popularnego komponentu Phoca Gallery. Wersja ta
+   jest oznaczona numerem 3.2.5
+   [39]Czytaj dalej...
+
+[40]Joomla! Day Polska 2013 - Termin i miejsce ogłoszone
+
+   Fundacja PCJ oficjalnie ogłosiła datę i miejsce organizacji tegorocznej
+   konferencji Joomla! Day. Impreza odbędzie się w Łodzi w 5 i 6
+   października
+   [41]Czytaj dalej...
+   [42]‹ [43]›
+   (BUTTON) ×
+
+Modal header
+
+   [44]Zamknij
+
+[45]Najnowsze recenzje
+
+[46]Simplechat.pl rozmawiaj ze swoimi klientami ( 1.2 ) - Ocena: 9/10
+
+   Prowadząc biznes w internecie, niezmiernie ważna jest komunikacja z
+   klientami. Nie wyobrażam sobie sklepu internetowego bez możliwości
+   zapytania konsultanta w czasie rzeczywistym o szczegóły towaru, który
+   mnie interesuje. W tej recenzji przyjrzymy się serwisowi simplechat.pl.
+
+[47]Komento ( 1.6.3712 ) - Ocena: 9/10
+
+   Komento jest zaawansowanym systemem komentarzy, który pozwala
+   odwiedzającym Twoją stronę komentować artykuły, blogi i katalogi
+   produktów. Integracja z wieloma popularnymi komponentami (m.in.
+   EasyBlog, JomSocial, K2) sprawia że Komento staje się na tle
+   konkurencji bezapelacyjnym liderem.
+
+Less w Joomla! Część 1 – Narzędzia
+
+   Dodano: środa, 25 wrz 2013
+   Kategoria: [48]akademia-j3
+   less-joomla
+
+   W Joomla! 3.x jedną z nowości jest dodanie obsługi i wykorzystanie
+   nowego języka do tworzenia stylów. LESS pozwala nam robić ze stylami
+   to, czego CSS do tej pory nie pozwalał. Myślę, że jest to jedna z
+   ciekawszych nowości w świecie Joomla! Warto więc zaznajomić się z tym
+   nowym i wielce pomocnym preprocesorem.
+
+   Jako, że LESS jest właśnie preprocesorem a nie nowym językiem, nie
+   będziemy musieli się uczyć od nowa wszystkiego, lecz będziemy musieli
+   zmienić niektóre przyzwyczajenia.
+
+
+Edytory obsługujące LESS
+
+   [obsluga-less-w-netbeans.jpg]
+
+
+   [49]NetBeans - do tej pory sam, z lenistwa i przyzwyczajenia,
+   korzystałem z tego IDE w wersji 7.3, który nie wspierał LESS. Na
+   szczęście dla mnie i dla wielu innych korzystających z tego darmowego
+   „kombajnu” niedawno pojawiła się wersja 7.4RC z pełnym wsparciem nie
+   tylko dla LESS ale i HTML5. To chyba jedyny, darmowy i w pełni
+   obsługujący nową składnię edytor (bez potrzeby instalacji dodatkowych
+   pluginów i dostępny na platformie Windows, Linux oraz iOS). Oczywiście
+   musimy ściągnąć właściwą wersję, jeśli już go posiadasz lecz do np.
+   C/C++ możesz dograć odpowiedni plugin. Do uruchomienia potrzebuje
+   środowiska JAVA.
+
+   [50]Crunch! - edytor dedykowany dla LESS. Aby go uruchomić będziemy
+   potrzebowali środowiska Adobe AIR. Środowisko te działa zarówno na
+   Windowsie jak i Mac'u.
+
+   [51]SimpleLess – jak sama nazwa mówi, tak jak i Crunch!, jest to edytor
+   stworzony specjalnie na potrzeby LESS. Dostępny jest na platformie
+   Windows oraz Mac.
+
+   To tyle, jeśli chodzi o darmowe, znane mi edytory obsługujące LESS.
+   Oczywiście każdy, bardziej rozbudowany edytor posiada możliwość
+   dowolnej konfiguracji kolorowania składni, nie jest to jednak jedyna
+   rzecz, potrzebna do sprawnego pisania kodu.
+
+   [52]Mixture – jest to płatna aplikacja w pełni obsługująca LESS. Oprócz
+   tego posiada masę innych, ciekawych możliwości.
+
+   [53]Coda 2 – płatny lecz dość popularny edytor dostępny dla
+   użytkowników systemu spod znaku nadgryzionego jabłka.
+
+   [54]PHPstorm – również płatne środowisko, tak samo jak NetBeans
+   dostępny jest na Mac'a, Windowsa oraz Linux. Osoby które profesjonalnie
+   zajmują się kodowaniem na pewno znają i korzystają z tego bardzo dobrze
+   zaopatrzonego IDE ze stajni JetBrains.
+
+
+Kompilatory/debuggery
+
+   Mając już napisany swój kod LESS, potrzebujemy kompilatora ponieważ,
+   jak już wcześniej wspomniałem, jest to tylko preprocesor, potrzebujemy
+   aplikacji która przekształci nam składnie LESS na zrozumiały dla
+   przeglądarek arkusz stylów. Niektóre frameworki Joomla! (np. [55]T3v3
+   lub [56]Gantry) mają wbudowaną możliwość generowania CSS w locie, wraz
+   z możliwością debugowania. Istnieje również plugin Joomla! dla wersji
+   2.5 oraz 3.x. Możemy użyć również kompilatora po stronie klienta,
+   więcej o tym znajdziecie na oficjalnej stronie [57]lesscss.org.
+
+   Są jednak aplikacje o których warto wspomnieć, jeżeli chcemy kompilować
+   pliki u siebie na komputerze.
+
+   [58]NetBeans – tak jest:) instalując kilka dni temu najnowsze wydanie
+   kandydujące do finalnej wersji tego zintegrowanego środowiska
+   programistycznego szeroko się uśmiechnąłem, gdy po zaimportowaniu moich
+   projektów z wcześniejszej wersji, program zapytał mnie, czy chcę używać
+   kompilatora w aplikacji. Jednak aby z niego skorzystać potrzebujemy
+   podać w ustawieniach ścieżke dostępu do pliku kompilatora (lessc lub
+   lessc.cmd, zależy od systemu).
+
+   [59]Crunch! - tak samo jak NetBeans, jest to zarówno edytor z
+   kolorowaniem składni, podpowiedziami jak i kompilator, który
+   automatycznie po zapisaniu pliku, 'wypluwa' nam gotowy kod CSS.
+
+   [60]SimpleLess – bez rozpisywania się - podobne funkcjonalności jak
+   wyżej. Edytor i kompilator w jednym.
+
+   [61]WinLess – GUI tylko dla systemu Widnows, pozwala nam dodawać pliki,
+   które chcemy skompilować, wraz z możliwością ustawienia odpowiednich
+   opcji kompilacji. Tu jednak drobna ciekawostka, do dyspozycji mamy
+   [62]kompilator online na którym swobodnie możemy sobie poćwiczyć.
+
+   Kompilator online znajdziemy również na oficjalnej
+   stronie [63]http://less2css.org/
+
+   To nie wszystko, podałem tylko kilka ważniejszych przykładów,
+   rozszerzoną listę znajdziecie [64]tutaj. Jeśli jednak znacie jakieś
+   narzędzie, którego nie ma na tej liście, piszcie w komentarzach. Wrócę
+   jednak do tego co nas najbardziej interesuje, czyli rozwiązań dla
+   naszej ulubionej platformy CMS.
+
+
+   Miałem okazję dość poważnie przetestować framework oraz szablon od T3,
+   posiada on opcję włączenia trybu deweloperskiego, dzięki czemu, mimo
+   importowania wszystkich plików LESS do jednego pliku, mamy w swoim
+   ulubionym inspektorze możliwość podejrzenia w którym dokładnie pliku
+   znajduje się kawałek kodu, który szukamy. Jest to bardzo duże
+   ułatwienie, ponieważ bez większych problemów możemy zlokalizować plik,
+   który chcemy edytować. Problem polega na tym, że kompilator jest
+   ustawiony na usuwanie komentarzy, a co za tym idzie, patrząc w
+   inspektorze na numer linii zobaczymy kompletnie inny numer niż
+   powinniśmy.
+   [t3-kompilator.jpg]
+
+
+   Zarówno w Joomla! 2.5 jak i 3.x możemy zainstalować [65]plugin, który
+   skompiluje nam w locie plik LESS do CSS. W pluginie tym mamy kilka
+   opcji do ustawienia.
+   [plugin.jpg]
+    1. Ścieżka dostępu do pliku .less który chcemy skompilować w naszym
+       szablonie. Domyślnie ustawione jest
+       /templates/domyślny_szablon/less/template.less
+    2. Ścieżka do pliku wyjściowego, już skompilowanego w naszym
+       szablonie. Domyślnie ustawione jest
+       /templates/domyślny_szablon/css/template.css
+    3. ...
+    4. jak wyżej, tylko chodzi o pliki znajdujące się w domyślnym
+       szablonie administratora
+    5. wymusza kompilację przy każdorazowym odświeżeniu strony
+    6. ta opcja pozwala nam wyłączyć usuwanie komentarzy przez kompilator
+    7. po załączeniu tej opcji otrzymamy skompresowany plik CSS
+    8. ciekawa opcja ułatwiająca debugowanie, niestety na razie w pełni
+       dostępna dla użytkowników Firefoxa(na Chrome nie zobaczymy w
+       inspektorze pliku w którym znajduje się kod). Aby móc jej użyć
+       potrzebujemy dodatku do przeglądarki o nazwie [66]FireLESS.
+
+   Możemy też skorzystać z generatora napisanego w php dla Joomla!, który
+   znajdziemy [67]tutaj.
+
+
+
+   Słowa Kluczowe: [68]CSS , [69]edytor , [70]kompilator , [71]LESS ,
+   [72]narzędzia , [73]preprocesor
+   [74]autor
+
+     Z wykształcenia informatyk, z zamiłowania informatyk. Od sprzętu, do
+     programowania. Od niedawna miłośnik dobrej książki gatunku fantasy.
+     Uwielbia koty i technologiczne gadżety.
+
+   [75]Krzysztof Wacławiak
+   [76]Comments powered by Disqus Please enable JavaScript to view the
+   [77]comments powered by Disqus.
+   Powered by [78]Sigsiu.NET
+     *
+     * [79]Home
+     * [80]Akademia
+     * Instalacja Joomla! 3.0
+     __________________________________________________________________
+
+   © Joomla! 2013. Joomla.net.pl is not affiliated with or endorsed by the
+   [81]Joomla!® Project or [82]Open Source Matters. The Joomla!® logo is
+   used under a limited license granted by [83]Open Source Matters the
+   trademark holder in the United States and other countries.
+   [84]Imprint |  Strony Partnerskie: [85]WEBroad.pl |
+   [86]joomlapl.com |  [87]SobiPro |
+
+   (BUTTON) ×
+
+Logowanie
+
+   Użytkownik ______________________________
+   Hasło ______________________________
+   Zapamiętaj [ ]
+   (BUTTON) Zaloguj
+     * [88]Załóż swoje konto!
+     * [89]Nie pamiętasz nazwy?
+     * [90]Nie pamiętasz hasła?
+
+References
+
+   Visible links
+   1. http://www.joomla.net.pl/view,rss
+   2. http://www.joomla.net.pl/view,rss2
+   3. http://www.joomla.net.pl/newsflash/view,rss2
+   4. http://www.joomla.net.pl/recenzje/view,rss
+   5. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml482.data
+   6. http://www.joomla.net.pl/
+   7. http://www.joomla.net.pl/akademia
+   8. http://www.joomla.net.pl/newsflash
+   9. http://www.joomla.net.pl/pomoc
+  10. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml482.data
+  11. http://www.joomla.net.pl/recenzje
+  12. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml482.data
+  13. http://www.joomla.net.pl/katalog-stron
+  14. http://www.joomla.net.pl/katalog-stron/dodaj-stron%C4%99
+  15. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml482.data
+  16. http://www.joomla.net.pl/team
+  17. http://www.joomla.net.pl/news/zosta%C5%84-autorem
+  18. http://www.joomla.net.pl/strona-demonstracyjna-joomla
+  19. http://www.joomla.net.pl/logowanie
+  20. http://www.joomla.net.pl/szukaj
+  21. http://www.joomla.net.pl/
+  22. http://www.joomla.net.pl/newsflash/403-Aktualizacje-rozszerze%C5%84-z-domu-Akeeba
+  23. http://www.joomla.net.pl/newsflash/403-Aktualizacje-rozszerze%C5%84-z-domu-Akeeba
+  24. http://www.joomla.net.pl/newsflash/379-redSHOP-1-3-1-zosta%C5%82-w%C5%82a%C5%9Bnie-wydany
+  25. http://www.joomla.net.pl/newsflash/379-redSHOP-1-3-1-zosta%C5%82-w%C5%82a%C5%9Bnie-wydany
+  26. http://www.joomla.net.pl/newsflash/370-WA%C5%BBNE-Je%C5%9Bli-masz-problemy-po-aktualizacji-do-Joomla-3-1-4
+  27. http://www.joomla.net.pl/newsflash/370-WA%C5%BBNE-Je%C5%9Bli-masz-problemy-po-aktualizacji-do-Joomla-3-1-4
+  28. http://www.joomla.net.pl/newsflash/362-WA%C5%BBNE-Prosimy-nie-dokonywa%C4%87-aktualizacji-do-Joomla-2-5-12-oraz-3-1-2
+  29. http://www.joomla.net.pl/newsflash/362-WA%C5%BBNE-Prosimy-nie-dokonywa%C4%87-aktualizacji-do-Joomla-2-5-12-oraz-3-1-2
+  30. http://www.joomla.net.pl/newsflash/351-AlphaUserPoints-1-9-0-beta-dla-Joomla-3-1-x-wydane
+  31. http://www.joomla.net.pl/newsflash/351-AlphaUserPoints-1-9-0-beta-dla-Joomla-3-1-x-wydane
+  32. http://www.joomla.net.pl/newsflash/150-Ukaza%C5%82a-si%C4%99-wersja-1-1-1-komponentu-SobiPro
+  33. http://www.joomla.net.pl/newsflash/150-Ukaza%C5%82a-si%C4%99-wersja-1-1-1-komponentu-SobiPro
+  34. http://www.joomla.net.pl/newsflash/147-Komento-1-6-zosta%C5%82o-wydane
+  35. http://www.joomla.net.pl/newsflash/147-Komento-1-6-zosta%C5%82o-wydane
+  36. http://www.joomla.net.pl/newsflash/146-Stabilna-wersja-DJ-Catalog-3-2-10-zosy-wydana
+  37. http://www.joomla.net.pl/newsflash/146-Stabilna-wersja-DJ-Catalog-3-2-10-zosy-wydana
+  38. http://www.joomla.net.pl/newsflash/145-Ukaza%C5%82a-si%C4%99-Phoca-Gallery-3-2-4
+  39. http://www.joomla.net.pl/newsflash/145-Ukaza%C5%82a-si%C4%99-Phoca-Gallery-3-2-4
+  40. http://www.joomla.net.pl/newsflash/144-Joomla-Day-Polska-2013-Termin-i-miejsce-og%C5%82oszone
+  41. http://www.joomla.net.pl/newsflash/144-Joomla-Day-Polska-2013-Termin-i-miejsce-og%C5%82oszone
+  42. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml482.data#newsflash
+  43. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml482.data#newsflash
+  44. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml482.data
+  45. http://www.joomla.net.pl/recenzje
+  46. http://www.joomla.net.pl/recenzje/401-Simplechat-pl-rozmawiaj-ze-swoimi-klientami
+  47. http://www.joomla.net.pl/recenzje/361-Komento
+  48. http://www.joomla.net.pl/akademia
+  49. http://dlc.sun.com.edgesuite.net/netbeans/7.4/rc/
+  50. http://crunchapp.net/
+  51. http://wearekiss.com/simpless
+  52. http://mixture.io/
+  53. http://panic.com/coda/
+  54. http://www.jetbrains.com/phpstorm/
+  55. http://t3-framework.com/
+  56. http://www.gantry-framework.org/
+  57. http://lesscss.org/
+  58. http://dlc.sun.com.edgesuite.net/netbeans/7.4/rc/
+  59. http://crunchapp.net/
+  60. http://wearekiss.com/simpless
+  61. http://winless.org/
+  62. http://winless.org/online-less-compiler
+  63. http://less2css.org/
+  64. https://github.com/less/less.js/wiki/GUI-compilers-that-use-LESS.js
+  65. http://extensions.joomla.org/extensions/miscellaneous/development/22424
+  66. https://addons.mozilla.org/pl/firefox/addon/fireless/
+  67. https://github.com/joomla/joomla-cms/blob/master/build/generatecss.php
+  68. http://www.joomla.net.pl/keyword/in,CSS
+  69. http://www.joomla.net.pl/keyword/in,edytor
+  70. http://www.joomla.net.pl/keyword/in,kompilator
+  71. http://www.joomla.net.pl/keyword/in,LESS
+  72. http://www.joomla.net.pl/keyword/in,narz%C4%99dzia
+  73. http://www.joomla.net.pl/keyword/in,preprocesor
+  74. http://www.joomla.net.pl/team/366-Krzysztof-Wac%C5%82awiak
+  75. http://www.joomla.net.pl/team/366-Krzysztof-Wac%C5%82awiak
+  76. http://disqus.com/
+  77. http://disqus.com/?ref_noscript=joomlapolska
+  78. http://www.sigsiu.net/
+  79. http://www.joomla.net.pl/
+  80. http://www.joomla.net.pl/akademia
+  81. http://www.joomla.org/
+  82. http://opensourcematters.org/
+  83. http://opensourcematters.org/
+  84. http://radek.suski.eu/imprint
+  85. http://webroad.pl/
+  86. http://joomlapl.com/
+  87. http://sobipro.sigsiu.net/
+  88. http://www.joomla.net.pl/rejestracja
+  89. http://www.joomla.net.pl/rejestracja?view=remind
+  90. http://www.joomla.net.pl/rejestracja?view=reset
+
+   Hidden links:
+  92. https://www.facebook.com/Joomla.Polska
+  93. https://plus.google.com/u/0/116766713289460651588
+  94. http://twitter.com/Joomla_Polska
+  95. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml482.data

@@ -1,0 +1,370 @@
+   [1]iJava2–Java Programming Blog
+   Love Java–coffee and Java programming.
+   [2]Skip to content
+     * [3]Home
+     * [4]iJava2 Support Page
+     * [5]Java Programming Solutions Manuals
+
+   [6]← Python CodingBat Solution Logic 2 round_sum
+   [7]SQL Lab 2 Lyrics Database →
+
+Python CodingBat Answers String 2 double_char
+
+   Posted on [8]April 10, 2012 by [9]iJava2Admin
+
+   Python CodingBat solution for Python section called String 2. The name
+   of this Python CodingBat puzzle is double_char. Be sure to properly
+   indent the Python code or you will receive a compilation error.
+
+   def double_char(str):
+   result = ''
+   for i in str:
+   result += i
+   result += i
+   return result
+
+   [10]Share
+
+About iJava2Admin
+
+   Please share, bookmark, and add us to your favorites! Follow us on
+   Twitter! You are welcomed to provide your own version of any of the
+   Java solutions that we have listed on our Java programming blog. You
+   are welcomed to provide any fix to any of the Java solutions. Fixing
+   Java code is a great way to become a better programmer. I'm a little
+   teapot - short and stout! Here is my handle, here is my spout.
+   [11]View all posts by iJava2Admin →
+   This entry was posted in [12]Python String 2 Codingbat Solutions.
+   Bookmark the [13]permalink.
+   [14]← Python CodingBat Solution Logic 2 round_sum
+   [15]SQL Lab 2 Lyrics Database →
+
+Leave a Reply [16]Cancel reply
+
+   IFRAME: [17]jetpack_remote_comment
+
+     * Search for: ____________________ Search
+     * Follow iJava2 on TwitterMy Tweets
+     * Recent Comments
+          + User Avatar iJava2Admin { @Sergej, thank you for sharing your
+            Codingbat Solution to Logic 1 Java problem titled in1to10. } –
+            [18]Sep 26, 12:21 AM
+          + User Avatar LindaQ { What is the correct or a better, a good
+            definition of an algorithm? } – [19]Sep 24, 3:33 PM
+          + User Avatar iJava2Admin { Thank you for sharing your Codingbat
+            Javabat solution to makeChocolate from the Logic 2 section of
+            Codingbat. makeChocolate is one of the more difficult logic...
+            } – [20]Sep 24, 3:08 PM
+          + User Avatar TsunderLuv { This is the simplest thing I could
+            come up with, after seen how Nick Parlante solved the problem
+            makeBricks: public int makeChocolate(int small, int big,... }
+            – [21]Sep 24, 1:22 PM
+          + User Avatar DivyaH { @dinh9x, try this code /** * Get a diff
+            between two dates * @param date1 the oldest date * @param
+            date2 the newest date *... } – [22]Sep 24, 1:24 AM
+          + [23]Older »
+     * Topics
+          + [24]Advanced Java
+               o [25]Algorithms
+               o [26]Arrays
+                    # [27]Multidimensional Arrays
+                    # [28]Single Dimensional Arrays
+               o [29]Borders Containers Layout Managers
+               o [30]Generics
+               o [31]Graphs Applications
+               o [32]Heap Sort
+               o [33]iteration
+               o [34]Java Collections Framework
+                    # [35]Queues
+                    # [36]Stacks
+               o [37]Java Utilities Package Bit Manipulation
+               o [38]JTable JTree
+               o [39]Lists
+                    # [40]ArrayList
+                    # [41]LinkedList
+               o [42]Menus Toolbars Dialogs
+               o [43]Merge Sort
+               o [44]Quick Sort
+               o [45]Recursion
+               o [46]Trees
+                    # [47]Binary Trees
+               o [48]Web Internet Programming
+                    # [49]MVC Swing Models
+                    # [50]Servlets
+          + [51]Beginner Java
+               o [52]Beginner Java Graphics
+               o [53]Classes Objects
+               o [54]Composition
+               o [55]Control Statements
+                    # [56]Control Structures
+                         @ [57]Loops
+                              - [58]For
+                              - [59]While
+                         @ [60]Switch Statements
+               o [61]Elementary Programming
+               o [62]Graphics and Java 2D
+               o [63]How to Display a Pattern Java
+               o [64]How to Display a Table Java
+               o [65]How to Display Messages Java
+               o [66]Inheritance and Polymorphism
+               o [67]Interfaces
+               o [68]Java Applets
+               o [69]Java Applications
+               o [70]Methods
+               o [71]Object Oriented Programming
+               o [72]Programming Logic
+               o [73]Selection
+               o [74]Strings Text Input Output I/O
+               o [75]Thinking In Objects
+          + [76]C plus plus (C++)
+          + [77]Codingbat Javabat Solutions
+               o [78]Codingbat Javabat Solutions AP-1
+               o [79]Codingbat Javabat Solutions Array 1
+               o [80]Codingbat Javabat Solutions Array 2
+               o [81]Codingbat Javabat Solutions Array 3
+               o [82]Codingbat Javabat Solutions Logic 1
+               o [83]Codingbat Javabat Solutions Logic 2
+               o [84]Codingbat Javabat Solutions Recursion 1
+               o [85]Codingbat Javabat Solutions Recursion 2
+               o [86]Codingbat Javabat Solutions String 1
+               o [87]Codingbat Javabat Solutions String 2
+               o [88]Codingbat Javabat Solutions String 3
+               o [89]Codingbat Javabat Solutions Warm-Up 1
+               o [90]Codingbat Javabat Solutions Warm-up 2
+          + [91]Computer and Network Security
+               o [92]Encryption
+          + [93]Database Management
+               o [94]Advanced Java Database Programming
+               o [95]Java Database Connectivity JDBC
+               o [96]Java Database Programming
+               o [97]SQL Structured Query Language
+          + [98]Game Programming
+               o [99]Classic Games
+               o [100]How to Create a Random Color Game
+               o [101]How to Create a Slot Machine
+               o [102]How to Create Color Matching Game Java
+               o [103]Windows 8 Application Development
+          + [104]Intermediate Java
+               o [105]Applets Multimedia
+               o [106]Binary Input/Ouput I/O
+               o [107]Event Driven Programming
+               o [108]Exception Handling
+               o [109]Files And Streams
+               o [110]Graphical User Interface (GUI)
+               o [111]Graphics
+               o [112]Multimedia: Animation Images Audio Video
+               o [113]Multithreading
+               o [114]Networking
+               o [115]Strings and Characters
+          + [116]Java Math Calculations
+          + [117]Math
+               o [118]How to Compute Math Expressions Java
+               o [119]How to Perform Math Calculations Java
+               o [120]Precalculus
+          + [121]Operating Systems
+               o [122]Computer Organization Embedded Systems
+          + [123]Programming Challenges
+          + [124]Project Euler Solutions
+          + [125]Python CodingBat Solutions
+               o [126]Python List 1Codingbat Solutions
+               o [127]Python List 2 Codingbat Solutions
+               o [128]Python Logic 2 CodingBat Solutions
+               o [129]Python String 1 Codingbat Solutions
+               o [130]Python String 2 Codingbat Solutions
+               o [131]Python Warm-up 1 Codingbat Solutions
+               o [132]Python Warm-Up 2 Codingbat Solutions
+          + [133]What we think!
+               o [134]iJava2 Contact
+          + [135]Writer Directory
+               o [136]Tutorials
+                    # [137]How to Analyze Test Scores
+                    # [138]How to Calculate Sales Tax Java
+                    # [139]How to code a Countdown Timer Java
+                    # [140]How to Create a Deck of Cards Java
+                    # [141]How to Create a GuestBook
+                    # [142]How to Create Bank Account Object
+                    # [143]How to Create Game of Craps
+                    # [144]How to Create GradeBook Object Using Arrays
+                    # [145]How to Create the GradeBook Object
+                    # [146]How to Display a TicTacTo Game
+                    # [147]How to Display Current Time
+                    # [148]How to Parse Text Files Read Text Files Write
+                      Text Files
+     * Connect with:
+     * User Control Panel
+          + [149]Register
+          + [150]Log in
+          + [151]Entries RSS
+          + [152]Comments RSS
+          + [153]WordPress.org
+     * Subscribe to Blog via Email
+       Enter your email address to subscribe to this blog and receive
+       notifications of new posts by email.
+       Join 20 other subscribers
+       Email Address_______
+       Subscribe
+
+   [154]iJava2–Java Programming Blog
+   [155]Proudly powered by WordPress.
+
+   [156]Codingbat Javabat Solutions [157]Codingbat Answers Recursion 1
+
+References
+
+   1. http://www.ijava2.com/
+   2. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml753.data#content
+   3. http://www.ijava2.com/
+   4. http://www.ijava2.com/ijava2-support-page/
+   5. http://www.ijava2.com/java-programming-solutions-manuals/
+   6. http://www.ijava2.com/python-codingbat-solution-logic-2-roundsum/
+   7. http://www.ijava2.com/sql-lab-2-lyrics-database/
+   8. http://www.ijava2.com/python-codingbat-answers-string-2-doublechar/
+   9. http://www.ijava2.com/author/ij2k/
+  10. http://www.addtoany.com/share_save
+  11. http://www.ijava2.com/author/ij2k/
+  12. http://www.ijava2.com/python-codingbat-solutions/python-codingbat-string-2/
+  13. http://www.ijava2.com/python-codingbat-answers-string-2-doublechar/
+  14. http://www.ijava2.com/python-codingbat-solution-logic-2-roundsum/
+  15. http://www.ijava2.com/sql-lab-2-lyrics-database/
+  16. file://localhost/python-codingbat-answers-string-2-doublechar/#respond
+  17. http://jetpack.wordpress.com/jetpack-comment/?blogid=32548938&postid=2030&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=retro&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en-US&jetpack_version=2.5&sig=881a653d2f12a52abcb6f53a8166790259da79de#parent=http%3A%2F%2Fwww.ijava2.com%2Fpython-codingbat-answers-string-2-doublechar%2F
+  18. http://www.ijava2.com/codingbat-javabat-solutions-logic-1-in1to10/#comment-3368
+  19. http://www.ijava2.com/ijava2-support-page/#comment-3367
+  20. http://www.ijava2.com/codingbat-javabat-solutions-logic-2-makechocolate/#comment-3366
+  21. http://www.ijava2.com/codingbat-javabat-solutions-logic-2-makechocolate/#comment-3365
+  22. http://www.ijava2.com/ijava2-support-page/#comment-3364
+  23. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml753.data
+  24. http://www.ijava2.com/advanced-java/
+  25. http://www.ijava2.com/advanced-java/algorithms/
+  26. http://www.ijava2.com/advanced-java/arrays/
+  27. http://www.ijava2.com/advanced-java/arrays/multidimensional-arrays/
+  28. http://www.ijava2.com/advanced-java/arrays/single-dimensional-arrays/
+  29. http://www.ijava2.com/advanced-java/borders-containers-layout-managers/
+  30. http://www.ijava2.com/advanced-java/generics/
+  31. http://www.ijava2.com/advanced-java/graphs-applications/
+  32. http://www.ijava2.com/advanced-java/heap-sort/
+  33. http://www.ijava2.com/advanced-java/iteration/
+  34. http://www.ijava2.com/advanced-java/java-collections-framework/
+  35. http://www.ijava2.com/advanced-java/java-collections-framework/queues/
+  36. http://www.ijava2.com/advanced-java/java-collections-framework/stacks/
+  37. http://www.ijava2.com/advanced-java/java-utilities-package-bit-manipulation/
+  38. http://www.ijava2.com/advanced-java/jtable-jtree/
+  39. http://www.ijava2.com/advanced-java/list/
+  40. http://www.ijava2.com/advanced-java/list/arraylist/
+  41. http://www.ijava2.com/advanced-java/list/linkedlist/
+  42. http://www.ijava2.com/advanced-java/menus-toolbars-dialogs/
+  43. http://www.ijava2.com/advanced-java/merge-sort/
+  44. http://www.ijava2.com/advanced-java/quick-sort/
+  45. http://www.ijava2.com/advanced-java/recursion/
+  46. http://www.ijava2.com/advanced-java/trees/
+  47. http://www.ijava2.com/advanced-java/trees/binary-trees/
+  48. http://www.ijava2.com/advanced-java/web-internet-programming/
+  49. http://www.ijava2.com/advanced-java/web-internet-programming/mvc-swing-models/
+  50. http://www.ijava2.com/advanced-java/web-internet-programming/servlets/
+  51. http://www.ijava2.com/beginner-java/
+  52. http://www.ijava2.com/beginner-java/beginner-java-graphics/
+  53. http://www.ijava2.com/beginner-java/classes-objects/
+  54. http://www.ijava2.com/beginner-java/composition/
+  55. http://www.ijava2.com/beginner-java/control-statements/
+  56. http://www.ijava2.com/beginner-java/control-statements/control-structures/
+  57. http://www.ijava2.com/beginner-java/control-statements/control-structures/loops/
+  58. http://www.ijava2.com/beginner-java/control-statements/control-structures/loops/for/
+  59. http://www.ijava2.com/beginner-java/control-statements/control-structures/loops/while/
+  60. http://www.ijava2.com/beginner-java/control-statements/control-structures/switch-statements-control-structures/
+  61. http://www.ijava2.com/beginner-java/elementary-programming/
+  62. http://www.ijava2.com/beginner-java/java-2d-graphics/
+  63. http://www.ijava2.com/beginner-java/how-to-display-a-pattern-java/
+  64. http://www.ijava2.com/beginner-java/how-to-display-a-table-java/
+  65. http://www.ijava2.com/beginner-java/how-to-display-messages-java/
+  66. http://www.ijava2.com/beginner-java/inheritance-and-polymorphism/
+  67. http://www.ijava2.com/beginner-java/interfaces/
+  68. http://www.ijava2.com/beginner-java/java-applets/
+  69. http://www.ijava2.com/beginner-java/ijava-applications/
+  70. http://www.ijava2.com/beginner-java/methods/
+  71. http://www.ijava2.com/beginner-java/object-oriented-programming/
+  72. http://www.ijava2.com/beginner-java/programming-logic/
+  73. http://www.ijava2.com/beginner-java/selection/
+  74. http://www.ijava2.com/beginner-java/strings-text-input-output-io/
+  75. http://www.ijava2.com/beginner-java/thinking-in-objects/
+  76. http://www.ijava2.com/c-plus-plus-c/
+  77. http://www.ijava2.com/codingbat-javabat-solutions/
+  78. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-ap-1/
+  79. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-array-1/
+  80. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-array-2/
+  81. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-array-3/
+  82. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-logic-1/
+  83. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-logic-2/
+  84. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-solutions-java-recursion-1/
+  85. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-solutions-java-recursion-2/
+  86. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-string-1/
+  87. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-solutions-java-string-2/
+  88. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-solutions-java-string-3/
+  89. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-warm-up-1/
+  90. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-javabat-solutions-warm-up-2/
+  91. http://www.ijava2.com/computer-network-security/
+  92. http://www.ijava2.com/computer-network-security/encryption/
+  93. http://www.ijava2.com/database-management/
+  94. http://www.ijava2.com/database-management/advanced-java-database-programming/
+  95. http://www.ijava2.com/database-management/java-database-connectivity-jdbc/
+  96. http://www.ijava2.com/database-management/java-database-programming/
+  97. http://www.ijava2.com/database-management/sql-structured-query-language/
+  98. http://www.ijava2.com/game-programming/
+  99. http://www.ijava2.com/game-programming/classic-games/
+ 100. http://www.ijava2.com/game-programming/how-to-create-a-random-color-game/
+ 101. http://www.ijava2.com/game-programming/how-to-create-a-slot-machine/
+ 102. http://www.ijava2.com/game-programming/how-to-create-color-matching-game-java/
+ 103. http://www.ijava2.com/game-programming/windows-8-application-development/
+ 104. http://www.ijava2.com/intermediate-java-programming/
+ 105. http://www.ijava2.com/intermediate-java-programming/applets-multimedia/
+ 106. http://www.ijava2.com/intermediate-java-programming/binary-inputouput-io/
+ 107. http://www.ijava2.com/intermediate-java-programming/event-driven-programming/
+ 108. http://www.ijava2.com/intermediate-java-programming/exception-handling/
+ 109. http://www.ijava2.com/intermediate-java-programming/files-streams/
+ 110. http://www.ijava2.com/intermediate-java-programming/graphical-user-interface/
+ 111. http://www.ijava2.com/intermediate-java-programming/graphics-intermediate-java-programming/
+ 112. http://www.ijava2.com/intermediate-java-programming/multimedia-animation-images-audio-video/
+ 113. http://www.ijava2.com/intermediate-java-programming/java-multithreading/
+ 114. http://www.ijava2.com/intermediate-java-programming/networking/
+ 115. http://www.ijava2.com/intermediate-java-programming/strings-characters/
+ 116. http://www.ijava2.com/java-math-calculations/
+ 117. http://www.ijava2.com/math/
+ 118. http://www.ijava2.com/math/how-to-compute-math-expressions-java/
+ 119. http://www.ijava2.com/math/how-to-perform-math-calculations-java/
+ 120. http://www.ijava2.com/math/precalculus/
+ 121. http://www.ijava2.com/operating-systems/
+ 122. http://www.ijava2.com/operating-systems/computer-organization-embedded-systems/
+ 123. http://www.ijava2.com/programming-challenges/
+ 124. http://www.ijava2.com/project-euler-solutions/
+ 125. http://www.ijava2.com/python-codingbat-solutions/
+ 126. http://www.ijava2.com/python-codingbat-solutions/python-list-1/
+ 127. http://www.ijava2.com/python-codingbat-solutions/python-codingbat-list-2/
+ 128. http://www.ijava2.com/python-codingbat-solutions/python-codingbat-logic-2/
+ 129. http://www.ijava2.com/python-codingbat-solutions/string-1-python-codingbat-solutions/
+ 130. http://www.ijava2.com/python-codingbat-solutions/python-codingbat-string-2/
+ 131. http://www.ijava2.com/python-codingbat-solutions/python-codingbat-warm-up-1/
+ 132. http://www.ijava2.com/python-codingbat-solutions/python-codingbat-warm-up-2/
+ 133. http://www.ijava2.com/opinions/
+ 134. http://www.ijava2.com/opinions/ijava2-contact/
+ 135. http://www.ijava2.com/writer-directory/
+ 136. http://www.ijava2.com/writer-directory/java-programming-tutorials/
+ 137. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-analyze-test-scores/
+ 138. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-calculate-sales-tax-java/
+ 139. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-code-a-countdown-timer-java/
+ 140. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-a-deck-of-cards-java/
+ 141. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-a-guestbook/
+ 142. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-bank-account-object/
+ 143. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-game-of-craps/
+ 144. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-gradebook-object-using-arrays/
+ 145. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-create-the-gradebook-object/
+ 146. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-display-a-tictacto-game/
+ 147. http://www.ijava2.com/writer-directory/java-programming-tutorials/how-to-display-current-time/
+ 148. http://www.ijava2.com/writer-directory/java-programming-tutorials/parse-text-files-read-text-files-write-text-files/
+ 149. http://www.ijava2.com/wp-login.php?action=register
+ 150. http://www.ijava2.com/wp-login.php
+ 151. http://www.ijava2.com/feed/
+ 152. http://www.ijava2.com/comments/feed/
+ 153. http://wordpress.org/
+ 154. http://www.ijava2.com/
+ 155. http://wordpress.org/
+ 156. http://www.ijava2.com/codingbat-javabat-solutions/
+ 157. http://www.ijava2.com/codingbat-javabat-solutions/codingbat-solutions-java-recursion-1/

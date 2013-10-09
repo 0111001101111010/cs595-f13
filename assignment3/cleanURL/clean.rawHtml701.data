@@ -1,0 +1,241 @@
+   #[1]GitHub [2]Recent Commits to turbolinks_transitions:master
+
+   [3]Sign up [4]Sign in
+     * [5]Explore
+     * [6]Features
+     * [7]Enterprise
+     * [8]Blog
+
+   ____________________
+   This repository
+   (*)
+   This repository
+   ( )
+   All repositories
+     * [9]Star [10]21
+     * [11]Fork [12]4
+
+public [13]caarlos0/[14]turbolinks_transitions Octocat-spinner-32
+
+     * [15]Code Octocat-spinner-32
+     * [16]Issues 0 Octocat-spinner-32
+     * [17]Pull Requests 0 Octocat-spinner-32
+
+     * [18]Pulse Octocat-spinner-32
+     * [19]Graphs Octocat-spinner-32
+     * [20]Network Octocat-spinner-32
+
+HTTPS clone URL
+
+   https://github.com/c
+
+Subversion checkout URL
+
+   https://github.com/c
+
+   You can clone with [21]HTTPS, or [22]Subversion.
+   [23]Download ZIP
+
+   Easily add an awesome fade effect to turbolinks page changes.
+
+   [24]http://caarlos0.github.com/posts/animating-page-transitions-in-turb
+   olinks/
+     * [25]18 commits
+     * [26]1 branch
+     * [27]5 releases
+     * [28]1 contributor
+
+    1. [29]Ruby 87.5%
+    2. [30]CoffeeScript 12.5%
+
+   [31]RubyCoffeeScript
+   branch: master
+   Switch branches/tags
+   ____________________
+     * [32]Branches
+     * [33]Tags
+
+   [34]master
+   Nothing to show
+   [35]v0.0.5
+   [36]v0.0.4
+   [37]v0.0.3
+   [38]v0.0.2
+   [39]v0.0.1
+   Nothing to show
+   [40]turbolinks_transitions /
+   [41]Show File Finder
+
+   [42]Update README.md
+   [43]latest commit 026d866921
+   [7ef3cd04888c6d17f34d43e29ec3d46f?d=https%3A%2F%2Fidenticons.github.com
+   %2F28903544929337be93eae568695cd85e.png&amp;s=140] [44]caarlos0
+   authored July 04, 2013
+   Octocat-spinner-32 [45]lib [46]fixed [47]#1 [48]again February 03, 2013
+   Octocat-spinner-32 [49].gitignore [50]first version January 21, 2013
+   Octocat-spinner-32 [51]Gemfile [52]first version January 21, 2013
+   Octocat-spinner-32 [53]LICENSE.txt [54]first version January 21, 2013
+   Octocat-spinner-32 [55]README.md [56]Update README.md July 04, 2013
+   Octocat-spinner-32 [57]Rakefile [58]first version January 21, 2013
+   Octocat-spinner-32 [59]turbolinks_transitions.gemspec [60]fixed [61]#1
+   [62]again February 03, 2013
+   README.md
+
+TurbolinksTransition
+
+   Just read [63]this.
+
+   [64]live example
+
+     notice the really fast fade!
+
+   [65]Live example.
+
+Installation
+
+   Add this line to your application's Gemfile:
+gem 'turbolinks_transitions'
+
+   And then execute:
+$ bundle
+
+   Or install it yourself as:
+$ gem install turbolinks_transitions
+
+Usage
+
+   Just add the id content to your 'master div', for example, in your
+   application.html.erb:
+<div class="container" id="content">
+  <%= yield %>
+</div>
+
+   And import the JS:
+#= require jquery
+#= require jquery_ujs
+#= require turbolinks
+#= require turbolinks_transitions
+#= require_tree .
+
+   Thats it, you're now ready to roll.
+
+Contributing
+
+    1. Fork it
+    2. Create your feature branch (git checkout -b my-new-feature)
+    3. Commit your changes (git commit -am 'Add some feature')
+    4. Push to the branch (git push origin my-new-feature)
+    5. Create new Pull Request
+
+     * [66]Status
+     * [67]API
+     * [68]Training
+     * [69]Shop
+     * [70]Blog
+     * [71]About
+
+     * © 2013 GitHub, Inc.
+     * [72]Terms
+     * [73]Privacy
+     * [74]Security
+     * [75]Contact
+
+
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+
+   Something went wrong with that request. Please try again.
+
+References
+
+   Visible links
+   1. file://localhost/opensearch.xml
+   2. https://github.com/caarlos0/turbolinks_transitions/commits/master.atom
+   3. file://localhost/signup
+   4. file://localhost/login?return_to=%2Fcaarlos0%2Fturbolinks_transitions%3Futm_source%3Dbuffer%26utm_campaign%3DBuffer%26utm_content%3Dbufferdad1b%26utm_medium%3Dtwitter
+   5. file://localhost/explore
+   6. file://localhost/features
+   7. https://enterprise.github.com/
+   8. file://localhost/blog
+   9. file://localhost/login?return_to=%2Fcaarlos0%2Fturbolinks_transitions
+  10. file://localhost/caarlos0/turbolinks_transitions/stargazers
+  11. file://localhost/login?return_to=%2Fcaarlos0%2Fturbolinks_transitions
+  12. file://localhost/caarlos0/turbolinks_transitions/network
+  13. file://localhost/caarlos0
+  14. file://localhost/caarlos0/turbolinks_transitions
+  15. file://localhost/caarlos0/turbolinks_transitions
+  16. file://localhost/caarlos0/turbolinks_transitions/issues
+  17. file://localhost/caarlos0/turbolinks_transitions/pulls
+  18. file://localhost/caarlos0/turbolinks_transitions/pulse
+  19. file://localhost/caarlos0/turbolinks_transitions/graphs
+  20. file://localhost/caarlos0/turbolinks_transitions/network
+  21. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml701.data
+  22. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml701.data
+  23. file://localhost/caarlos0/turbolinks_transitions/archive/master.zip
+  24. http://caarlos0.github.com/posts/animating-page-transitions-in-turbolinks/
+  25. file://localhost/caarlos0/turbolinks_transitions/commits/master
+  26. file://localhost/caarlos0/turbolinks_transitions/branches
+  27. file://localhost/caarlos0/turbolinks_transitions/releases
+  28. file://localhost/caarlos0/turbolinks_transitions/contributors
+  29. file://localhost/caarlos0/turbolinks_transitions/search?l=ruby
+  30. file://localhost/caarlos0/turbolinks_transitions/search?l=coffeescript
+  31. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml701.data
+  32. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml701.data
+  33. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml701.data
+  34. file://localhost/caarlos0/turbolinks_transitions/tree/master
+  35. file://localhost/caarlos0/turbolinks_transitions/tree/v0.0.5
+  36. file://localhost/caarlos0/turbolinks_transitions/tree/v0.0.4
+  37. file://localhost/caarlos0/turbolinks_transitions/tree/v0.0.3
+  38. file://localhost/caarlos0/turbolinks_transitions/tree/v0.0.2
+  39. file://localhost/caarlos0/turbolinks_transitions/tree/v0.0.1
+  40. file://localhost/caarlos0/turbolinks_transitions
+  41. file://localhost/caarlos0/turbolinks_transitions/find/master
+  42. file://localhost/caarlos0/turbolinks_transitions/commit/026d866921183ba1e73ef1ece8a13029a19fd295
+  43. file://localhost/caarlos0/turbolinks_transitions/commit/026d866921183ba1e73ef1ece8a13029a19fd295
+  44. file://localhost/caarlos0
+  45. file://localhost/caarlos0/turbolinks_transitions/tree/master/lib
+  46. file://localhost/caarlos0/turbolinks_transitions/commit/34c71f5936341abd237fda638f2c95313ec81e06
+  47. https://github.com/caarlos0/turbolinks_transitions/issues/1
+  48. file://localhost/caarlos0/turbolinks_transitions/commit/34c71f5936341abd237fda638f2c95313ec81e06
+  49. file://localhost/caarlos0/turbolinks_transitions/blob/master/.gitignore
+  50. file://localhost/caarlos0/turbolinks_transitions/commit/e2a26f4b59c994bbc757efc5115ec86602ee6593
+  51. file://localhost/caarlos0/turbolinks_transitions/blob/master/Gemfile
+  52. file://localhost/caarlos0/turbolinks_transitions/commit/e2a26f4b59c994bbc757efc5115ec86602ee6593
+  53. file://localhost/caarlos0/turbolinks_transitions/blob/master/LICENSE.txt
+  54. file://localhost/caarlos0/turbolinks_transitions/commit/e2a26f4b59c994bbc757efc5115ec86602ee6593
+  55. file://localhost/caarlos0/turbolinks_transitions/blob/master/README.md
+  56. file://localhost/caarlos0/turbolinks_transitions/commit/026d866921183ba1e73ef1ece8a13029a19fd295
+  57. file://localhost/caarlos0/turbolinks_transitions/blob/master/Rakefile
+  58. file://localhost/caarlos0/turbolinks_transitions/commit/e2a26f4b59c994bbc757efc5115ec86602ee6593
+  59. file://localhost/caarlos0/turbolinks_transitions/blob/master/turbolinks_transitions.gemspec
+  60. file://localhost/caarlos0/turbolinks_transitions/commit/34c71f5936341abd237fda638f2c95313ec81e06
+  61. https://github.com/caarlos0/turbolinks_transitions/issues/1
+  62. file://localhost/caarlos0/turbolinks_transitions/commit/34c71f5936341abd237fda638f2c95313ec81e06
+  63. http://caarlos0.github.com/posts/animating-page-transitions-in-turbolinks/
+  64. https://github-camo.global.ssl.fastly.net/fabb9442228b2776b2116e2a02868b8189d7df4f/687474703a2f2f646c2e64726f70626f782e636f6d2f752f3234373134322f626c6f672f6c6f6c2f747572626f6c696e6b735f7472616e736974696f6e2e676966
+  65. http://wealcash.com/
+  66. https://status.github.com/
+  67. http://developer.github.com/
+  68. http://training.github.com/
+  69. http://shop.github.com/
+  70. file://localhost/blog
+  71. file://localhost/about
+  72. file://localhost/site/terms
+  73. file://localhost/site/privacy
+  74. file://localhost/security
+  75. file://localhost/contact
+
+   Hidden links:
+  77. https://github.com/
+  78. https://help.github.com/articles/which-remote-url-should-i-use
+  79. file://localhost/caarlos0/turbolinks_transitions/compare
+  80. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml701.data#turbolinkstransition
+  81. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml701.data#installation
+  82. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml701.data#usage
+  83. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml701.data#contributing
+  84. file://localhost/
+  85. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml701.data
+  86. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml701.data
+  87. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml701.data

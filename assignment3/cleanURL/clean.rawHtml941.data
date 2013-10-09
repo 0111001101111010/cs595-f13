@@ -1,0 +1,400 @@
+   Because you are not running JavaScript or allowing active scripting,
+   some features on this page my not work.  >> [1]Enable Javascript <<
+
+Site Navigation
+
+General Information
+
+   [2]search [3]Menu [4]BNL Home
+   [5]Top of Page
+
+Scientific Departments
+
+     * [6]Basic Energy Sciences
+     * [7]Center for Functional Nanomaterials
+     * [8]Chemistry
+     * [9]Condensed Matter Physics & Materials Science
+
+     * [10]Env., Bio. & Computation
+     * [11]Biosciences
+     * [12]Computational Science Center
+     * [13]Environmental Sciences
+
+     * [14]Global & Regional Solutions
+     * [15]Nonproliferation & National Security
+     * [16]Nuclear Science & Technology
+     * [17]Technology Commercialization & Partnerships
+     * [18]Sustainable Energy Technologies
+
+     * [19]Nuclear & Particle Physics
+     * [20]Collider-Accelerator
+     * [21]Instrumentation
+     * [22]Physics
+     * [23]Superconducting Magnet
+
+     * [24]Photon Sciences
+
+     * [25]Support Organizations
+
+
+     * [26]Close ↑
+
+     * [27]Our Science
+     * [28]About
+     * [29]Departments
+     * [30]Partner With Us
+     * [31]Careers
+     * [32]News
+     * [33]Visit
+     * [34]Contact
+     * [35]Staff Directory
+
+   ____________________ (*) BNL ( ) People
+   [36]BNL Homepage
+   FeaturesMedia & Communications Office
+   [37]DOE Office of Science
+     * [38]Newsroom
+     * [39]Photos
+          + [40]Image Library
+          + [41]Historic Images
+          + [42]Photo Permissions
+     * [43]Videos
+     * [44]Fact Sheets
+     * [45]Lab History
+     * [46]News Categories
+     * [47]Contacts
+
+   By [48]Karen McNulty Walsh   |   September 26, 2013 [49]printer icon
+   Print
+
+Supercomputers Help Solve a 50-Year Homework Assignment
+
+Calculation related to question of why the universe is made of matter
+
+   [50]high-energy physics theory group
+
+   [51]Click on the image to download a high-resolution version. Members
+   of Brookhaven Lab's high-energy physics theory group who were involved
+   in the kaon decay calculations Sitting, left to right: Christoph
+   Lehner, Amarjit Soni, Taku Izubuchi, Christopher Kelly, Chulwoo Jung.
+   Standing, left to right: Eigo Shintani, Hyung-Jin Kim, Ethan Neil,
+   Taichi Kawanai, Tomomi Ishikawa
+
+   Kids everywhere grumble about homework. But their complaints will hold
+   no water with a group of theoretical physicists who’ve spent almost 50
+   years solving one homework problem—a calculation of one type of
+   subatomic particle decay aimed at helping to answer the question of why
+   the early universe ended up with an excess of matter.
+
+   Without that excess, the matter and antimatter created in equal amounts
+   in the Big Bang would have completely annihilated one another. Our
+   universe would contain nothing but light—no homework, no schools…but
+   also no people, or planets, or stars!
+
+   Physicists long ago figured out something must have happened to explain
+   the imbalance—and our very existence.
+
+   "Our results will serve as a tough test for our current understanding
+   of particle physics.”
+
+   — Brookhaven theoretical physicist Taku Izubuchi
+
+   “The fact that we have a universe made of matter strongly suggests that
+   there is some violation of symmetry,” said Taku Izubuchi, a theoretical
+   physicist at the U.S. Department of Energy’s (DOE) Brookhaven National
+   Laboratory.
+
+   The physicists call it charge conjugation-parity (CP) violation.
+   Instead of everything in the universe behaving perfectly symmetrically,
+   certain subatomic interactions happen differently if viewed in a mirror
+   (violating parity) or when particles and their oppositely charged
+   antiparticles swap each other (violating charge conjugation symmetry).
+   Scientists at Brookhaven—James Cronin and Val Fitch—were the first to
+   find evidence of such a symmetry “switch-up” in experiments conducted
+   in 1964 at the Alternating Gradient Synchrotron, with additional
+   evidence coming from experiments at CERN, the European Laboratory for
+   Nuclear Research. Cronin and Fitch received the 1980 Nobel Prize in
+   physics for this work.
+
+   [52]one rack of the QCDOC supercomputer
+
+   [53]Click on the image to download a high-resolution version.
+   Theoretical physicists and kaon-decay calculators Norman Christ, Robert
+   Mawhinney (both of Columbia University), and Taku Izubuchi (of
+   Brookhaven), holding one rack of the QCDOC supercomputer at Brookhaven,
+   which was used for many of the earlier kaon calculations. It was
+   replaced by QCDCQ in 2012.
+
+   What was observed was the decay of a subatomic particle known as a kaon
+   into two other particles called pions. Kaons and pions (and many other
+   particles as well) are composed of quarks. Understanding kaon decay in
+   terms of its quark composition has posed a difficult problem for
+   theoretical physicists.
+
+   “That was the homework assignment handed to theoretical physicists, to
+   develop a theory to explain this kaon decay process—a mathematical
+   description we could use to calculate how frequently it happens and
+   whether or how much it could account for the matter-antimatter
+   imbalance in the universe. Our results will serve as a tough test for
+   our current understanding of particle physics,” Izubuchi said.
+
+Sophisticated computational tools
+
+   The mathematical equations of Quantum Chromodynamics, or QCD—the theory
+   that describes how quarks and gluons interact—have a multitude of
+   variables and possible values for those variables. So the scientists
+   needed to wait for supercomputing capabilities to evolve before they
+   could actually solve them. The physicists invented the complex
+   algorithms and wrote nifty software packages that some of the world’s
+   most powerful supercomputers used to describe the quarks’ behavior and
+   solve the problem.
+
+   In the physicists’ software, the particles are “placed” on an imaginary
+   four-dimensional space-time lattice consisting of three spatial
+   dimensions plus time. At one end of the time dimension lies the kaon,
+   made of two kinds of quarks—a “strange” quark and an “anti-down”
+   quark—held together by gluons. At the opposite end, they place the end
+   products, the four quarks that make up the two pions. Then the
+   supercomputer computes how the kaon transforms into two pions as it
+   flies through space and time. Conducting these computations on the
+   lattice greatly simplifies the problem.
+
+   [54]QCDCQ supercomputer
+
+   [55]Click on the image to download a high-resolution version. IBM Blue
+   Gene supercomputers at Brookhaven, the machines used for the kaon
+   calculations
+
+   “We use the supercomputers to look at how each quark is flying—its
+   velocity, direction—in other words, the dynamics of the strong QCD
+   interaction,” Izubuchi said.
+
+   Somewhere in the middle of this complicated space-time grid, with some
+   degree of probability, the strange quark of the kaon—which the strong
+   force keeps strongly bound with its anti-down quark partner—suddenly
+   starts to change into a down quark by the so-called electroweak
+   interaction. Since a kaon is heavier than two pions, the energy
+   released creates a new quark/anti-quark pair—an “up” and an “anti-up”
+   quark—from the vacuum. These quarks then combine with the new down
+   quark and the leftover anti-down quark to make the two pions.
+
+   “The experiments showed how frequently these ‘K→ππ’ processes happen,
+   but the part that violates CP symmetry is the strange quark converting
+   into a down quark through the weak interaction,” Izubuchi said. “That’s
+   the part we really wanted to know more about to understand the strength
+   of this CP violation. That information will give us a hint of why the
+   universe is matter-rich, and/or confirm the correctness of our current
+   understanding of particle physics.”
+
+   The supercomputers crunched tens of billions of numbers into the
+   equation that describes this part of the process to find the result
+   that should reproduce the decaying particle patterns and frequencies
+   observed by the experiments.
+
+   “The result of the calculation tells us how frequently this
+   CP-violating weak interaction occurs and the strength of the CP
+   violation at the quark level,” Izubuchi said. “It’s a kind of
+   reverse-engineering what experimenters have seen in kaon decays to
+   solve the problem.”
+
+New algorithm, higher precision
+
+   After publishing their [56]initial results in 2012, the physicists
+   further improved their calculation to more closely simulate what
+   happens with these particles in Nature. These new calculations allow
+   them to directly compare their numbers with the experimental results
+   more accurately, but they also increase the computational “cost”
+   considerably—requiring more computing power/time. Even with the newest
+   supercomputers, the homework would have taken many years if not for a
+   new efficient algorithm developed by the Brookhaven group in late 2012.
+
+   “This new algorithm, called all-mode averaging (AMA), divides the whole
+   calculation into a ‘difficult’ but small piece and an ‘easier’ large
+   piece, and devotes more computation time to the latter part to save the
+   total computation required,” Izubuchi said. “It accelerates the speed
+   of the computations by a factor of ten or more. This very simple idea
+   of dividing the calculation into two pieces actually helped to reduce
+   the statistical error of the computation by a lot.”
+
+Do the numbers add up?
+
+   Is the calculated strength of the weak interaction strong enough to
+   account for the matter antimatter asymmetry in the early universe?
+
+   “That’s the million-dollar question,” said Izubuchi. “So far people
+   think this is not the full answer. We cannot explain why the universe
+   is matter-rich based solely on the amount of CP violation that this
+   kaon decay accounts for. So there may be other sources of CP violation
+   other than the weak interaction that would be revealed if a discrepancy
+   were found between our calculation and the experimental results.”
+
+   Then Izubuchi confessed that the theorists have only solved half of
+   their homework problem.
+
+   “When we say we theoretically understood this process, it is only half
+   true. There are two different ways the two end-result pions can combine
+   with each other (called isospin states), and we’ve only solved the
+   problem for one combination, the isospin 2 channel.”
+
+   The experiments have measurements for both isospin states, so the
+   theorists are working on calculating the second process as well.
+
+   “The other, isospin 0, is more challenging, and we are getting there by
+   employing the faster supercomputers and new theoretical ideas and
+   computation algorithms. But, for now, we have finished half of 50
+   years’ homework.”
+
+   This research is part of DOE’s Scientific Discovery through Advanced
+   Computing (SciDAC-3) program “Searching for Physics Beyond the Standard
+   Model: Strongly-Coupled Field Theories at the Intensity and Energy
+   Frontiers,” supported by the DOE Office of Science.
+
+   The supercomputing resources used for this research included: QCDCQ, a
+   pre-commercial version of the IBM Blue Gene supercomputers, located at
+   the RIKEN/BNL Research Center—a center funded by the Japanese RIKEN
+   laboratory in a cooperative agreement with Brookhaven Lab; a Blue
+   Gene/Q supercomputer of the New York State Center for Computational
+   Science, hosted by Brookhaven; half a rack of an additional Blue Gene/Q
+   funded by DOE through the US based lattice QCD consortium, USQCD; a
+   Blue Gene/Q machine at the Edinburgh Parallel Computing Centre; the
+   large installation of BlueGene/P (Intrepid) and Blue Gene/Q (Mira)
+   machines at Argonne National Laboratory funded by the DOE Office of
+   Science; and PC cluster machines at Fermi National Accelerator
+   Laboratory and at RIKEN.
+
+   DOE’s Office of Science is the single largest supporter of basic
+   research in the physical sciences in the United States, and is working
+   to address some of the most pressing challenges of our time. For more
+   information, please visit [57]science.energy.gov
+   Tags: [58]computing, [59]physics
+
+   2013-4280  INT/EXT  |  [60]Media & Communications Office
+   [61]Facebook Icon [62]YouTube Icon [63]Twitter Icon [64]Flickr Icon
+   [65]Tumblr Icon [66]ScienceBlogs Icon
+
+   _________________________
+   [67]See all
+
+Other Features...
+
+    1. [68]nanoparticles
+
+New Kind of 'X-Ray/CT Vision' Reveals Objects' Internal Nanoscale Structure,
+Chemistry
+    2. [69]LHC magnets
+
+Backup Magnets Ready to Ship to LHC
+    3. [70]quark-gluon plasma
+
+Supercomputing the Transition from Ordinary to Extraordinary Forms of Matter
+    4. [71]Applebee's mural
+
+Brookhaven Lab Photos Featured at Local Applebee's
+    5. [72]MLL microscope prototype
+
+Imaging with Nanoscale Resolution at NSLS-II
+
+Brookhaven National Laboratory
+
+   Brookhaven National Laboratory is a multipurpose research institution
+   funded by the U.S. Department of Energy. Located on Long Island, NY,
+   Brookhaven operates large-scale facilities for studies in physics,
+   chemistry, biology, medicine, applied science, and advanced technology.
+   The Laboratory's almost 3,000 scientists, engineers, and support staff
+   are joined each year by more than 5,000 visiting researchers from
+   around the world.
+
+   One of ten national laboratories overseen and primarily funded by the
+   Office of Science of the U.S. Department of Energy (DOE), Brookhaven
+   National Laboratory conducts research in the physical, biomedical, and
+   environmental sciences, as well as in energy technologies and national
+   security. Brookhaven Lab also builds and operates major scientific
+   facilities available to university, industry and government
+   researchers. Brookhaven is operated and managed for DOE's Office of
+   Science by Brookhaven Science Associates, a limited-liability company
+   founded by the Research Foundation for the State University of New York
+   on behalf of Stony Brook University, the largest academic user of
+   Laboratory facilities, and Battelle, a nonprofit applied science and
+   technology organization.
+
+   [73]Site Index  |  [74]Privacy and Security Notice  |  [75]Report a
+   Problem With This Page
+   BSA logos
+
+References
+
+   1. http://www.bnl.gov/itd/webapps/javascript_help.asp
+   2. javascript:void();
+   3. javascript:void();
+   4. http://www.bnl.gov/
+   5. javascript:void();
+   6. http://www.bnl.gov/bes/
+   7. http://www.bnl.gov/cfn/
+   8. http://www.bnl.gov/chemistry/
+   9. http://www.bnl.gov/cmpmsd/
+  10. http://www.bnl.gov/els/
+  11. http://www.bnl.gov/biosciences/
+  12. http://www.bnl.gov/csc/
+  13. http://www.bnl.gov/envsci/
+  14. http://www.bnl.gov/gars/
+  15. http://www.bnl.gov/gars/NNS/
+  16. http://www.bnl.gov/gars/NST/
+  17. http://www.bnl.gov/tcp/
+  18. http://www.bnl.gov/gars/SET/
+  19. http://www.bnl.gov/henp
+  20. http://www.bnl.gov/cad
+  21. http://www.inst.bnl.gov/
+  22. http://www.bnl.gov/physics
+  23. http://www.bnl.gov/magnets/
+  24. http://www.bnl.gov/ps/
+  25. http://www.bnl.gov/bnlweb/Admin/support.asp
+  26. javascript:void(0);
+  27. http://www.bnl.gov/science/
+  28. http://www.bnl.gov/about/
+  29. javascript:void();
+  30. http://www.bnl.gov/partner/
+  31. http://www.bnl.gov/HR/careers/
+  32. http://www.bnl.gov/newsroom/
+  33. http://www.bnl.gov/visiting/
+  34. http://www.bnl.gov/common/templates/feedback/
+  35. http://www.bnl.gov/directory/
+  36. http://www.bnl.gov/
+  37. http://science.energy.gov/
+  38. file://localhost/newsroom/
+  39. http://www.flickr.com/photos/brookhavenlab/
+  40. http://www.flickr.com/photos/brookhavenlab/
+  41. http://www.flickr.com/photos/brookhavenlab/sets/72157611796003039/
+  42. http://www.bnl.gov/bnlweb/images_legal.asp
+  43. file://localhost/video/
+  44. file://localhost/bnlweb/pubaf/factsheets.php
+  45. file://localhost/bnlweb/history/
+  46. file://localhost/newsroom/tags/
+  47. file://localhost/bnlweb/pubaf/medcom.php
+  48. mailto:kmcnulty@bnl.gov
+  49. http://www.bnl.gov/newsroom/print/friendly.php?a=24280
+  50. http://www.bnl.gov/today/body_pics/2013/09/d2430913-theory-group-hr.jpg
+  51. http://www.bnl.gov/today/body_pics/2013/09/d2430913-theory-group-hr.jpg
+  52. http://www.bnl.gov/today/body_pics/2013/09/d3320911-qcdoc-rack-hr.jpg
+  53. http://www.bnl.gov/today/body_pics/2013/09/d3320911-qcdoc-rack-hr.jpg
+  54. http://www.bnl.gov/today/body_pics/2013/09/qcdcq0-supercomputer-hr.jpg
+  55. http://www.bnl.gov/today/body_pics/2013/09/qcdcq0-supercomputer-hr.jpg
+  56. http://www.bnl.gov/newsroom/news.php?a=11402
+  57. http://science.energy.gov/
+  58. http://www.bnl.gov/newsroom/tags/tags.php?tag=computing
+  59. http://www.bnl.gov/newsroom/tags/tags.php?tag=physics
+  60. http://www.bnl.gov/bnlweb/pubaf/medcom.asp
+  61. http://www.facebook.com/brookhavenlab
+  62. http://www.youtube.com/BrookhavenLab
+  63. http://twitter.com/BrookhavenLab
+  64. http://www.flickr.com/brookhavenlab/
+  65. http://brookhavenlab.tumblr.com/
+  66. http://scienceblogs.com/brookhaven/
+  67. file://localhost/newsroom/
+  68. file://localhost/newsroom/news.php?a=24314
+  69. file://localhost/newsroom/news.php?a=24313
+  70. file://localhost/newsroom/news.php?a=24281
+  71. file://localhost/newsroom/news.php?a=24279
+  72. file://localhost/newsroom/news.php?a=24277
+  73. http://www.bnl.gov/siteIndex/
+  74. http://www.bnl.gov/bnlweb/security_notice.asp
+  75. http://www.bnl.gov/common/templates/feedback/

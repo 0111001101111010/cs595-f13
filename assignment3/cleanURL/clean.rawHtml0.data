@@ -1,0 +1,313 @@
+
+   Short URL http://eepurl.com/FT Copy
+     * [1]Facebook 0 likes
+     * [2]Twitter 0 tweets
+     * [3]Google +1
+
+     * [4]Subscribe
+     * [5]Share
+     * [6]Past Issues
+     * [7]RSS
+     * [8]Translate
+          + [9]English
+          + [10]العربية
+          + [11]Afrikaans
+          + [12]беларуская мова
+          + [13]български
+          + [14]català
+          + [15]中文（简体）
+          + [16]中文（繁體）
+          + [17]Hrvatski
+          + [18]Česky
+          + [19]Dansk
+          + [20]eesti keel
+          + [21]Nederlands
+          + [22]Suomi
+          + [23]Français
+          + [24]Deutsch
+          + [25]Ελληνική
+          + [26]हिन्दी
+          + [27]Magyar
+          + [28]Gaeilge
+          + [29]Indonesia
+          + [30]íslenska
+          + [31]Italiano
+          + [32]日本語
+          + [33]한국어
+          + [34]македонски јазик
+          + [35]بهاس ملايو
+          + [36]Malti
+          + [37]Norsk
+          + [38]Polski
+          + [39]Português
+          + [40]Português - Portugal
+          + [41]Română
+          + [42]Русский
+          + [43]Español
+          + [44]Kiswahili
+          + [45]Svenska
+          + [46]עברית
+          + [47]Lietuvių
+          + [48]latviešu
+          + [49]slovenčina
+          + [50]slovenščina
+          + [51]српски
+          + [52]ภาษาไทย
+          + [53]Türkçe
+          + [54]Filipino
+          + [55]украї́нська
+          + [56]Tiếng Việt
+
+
+
+
+   Welcome to issue 106 of Python Weekly. Let's get straight to the links
+   this week.
+   News
+   [57]PyTennessee 2014 CFP
+   PyTennessee 2014, taking place for the first time in Nashville, will be
+   accepting all types of proposals starting Oct 1st, 2013 through Nov
+   1st, 2013. Due to the competitive nature of the selection process, we
+   encourage prospective speakers to submit their proposals as early as
+   possible. We're looking forward to receiving your best proposals for
+   tutorials and talks. Lightning talk sign ups will be available at the
+   registration desk the day of the event.
+
+   [58]JetBrains Delights the Python Community with a Free Edition of its
+   PyCharm IDE
+   JetBrains has announced the general availability of PyCharm 3.0, a
+   major new version of their renowned Python IDE, now distributed in
+   Community and Professional editions.
+
+   Articles, Tutorials and Talks
+   [59]Why Are There So Many Pythons?
+   This post starts from scratch and move through the various Python
+   implementations, concluding with a thorough introduction to PyPy.
+
+   [60]Build Your App on OpenShift Using Flask, SQLAlchemy, and PostgreSQL
+   9.2
+   In this post, we will write a todo application using Flask ,
+   Flask-SQLAlchemy , PostgreSQL , and Twitter Bootstrap. The purpose of
+   this post is not just to help developers write Python Flask web
+   applications but to also help them deploy their application in the
+   Cloud.
+
+   [61]Integration testing with pyVows and Django
+   This article explores how pyVows can be used for integration testing
+   django and testing of django models.
+
+   [62]How-to: Use the HBase Thrift Interface, Part 1
+   In this series of how-to's you'll learn your way around the Thrift
+   interface and explore Python code samples for doing that. This first
+   post will cover HBase Thrift, working with Thrift, and some boilerplate
+   code for connecting to Thrift.
+   [63]Debugging and Decrypting an HTTPS API: Rackspace Cloudfiles
+   This is the story of our experience with a low-level, intermittent bug
+   in the Rackspace Cloudfiles API, and the steps we took to help root
+   cause the problem. While the bug itself may be unique to Rackspace, our
+   approach to debugging it is general and should be helpful to anyone
+   looking to decrypt an HTTPS API from the darkness of the client side.
+
+   [64]Scaling Django to 8 Billion Page Views
+
+   [65]prettyplotlib: Painlessly create beautiful matplotlib plots
+
+   [66]Bioinformatic pipelines in Python with Leaf
+
+   [67]NumbaPro: High-Performance Python with CUDA Acceleration
+
+   [68]Requests 2.0 Changelog Explained
+   [69]Breaking out of secured Python environments
+
+
+   Interesting Projects, Tools and Libraries
+   [70]Centrifuge
+   Simple platform for real-time message broadcasting in web applications.
+   [71]Telemeta
+   Telemeta is a free and open source web audio content management system
+   which introduces useful and secure methods to backup, index, transcode,
+   analyse and publish any digitalized audio file with its metadata. It is
+   dedicated to professionnals who wants to easily organize, backup,
+   archive and publish documented sound collections of audio files, CDs,
+   digitalized vinyls and magnetic tapes over a strong database, in
+   accordance with open web standards.
+
+   [72]Kvasir
+   Penetration tests can be data management nightmares because of the
+   large amounts of information that is generally obtained. Vulnerability
+   scanners return lots of actual and potential vulnerabilitites to
+   review. Port scanners can return thousands of ports for just a few
+   hosts. How easy is it to share all this data with your co-workers?
+   That's what Kvasir is here to help you with
+
+   [73]python-raster-stats
+   The rasterstats python module provides a fast, flexible and robust tool
+   to summarize geospatial raster datasets based on vector geometries.
+
+   [74]Flask Foundation
+   Flask Foundation is a solid foundation for flask applications, built
+   with best practices, that you can easily construct your website/webapp
+   off of.
+
+   [75]Universal Analytics for Python
+   This library provides a Python interface for the Universal Analytics
+   Measurement Protocol, with an interface modeled (loosely) after
+   Google's analytics.js.
+
+   [76]Nimfa
+   Nimfa is an open-source Python library that provides a unified
+   interface to nonnegative matrix factorization algorithms. It includes
+   implementations of state-of-the-art factorization methods,
+   initialization approaches, and quality scoring. Both dense and sparse
+   matrix representation are supported.
+
+   [77]cubr
+   Rubik's Cube Solver -- Uses OpenCV
+   Python Jobs of the Week
+   [78]Open-Source System Developer at Datadog
+   Have you been running and contributing to open-source tools and OSes
+   for as long as you can remember? Do you enjoy working on github with a
+   community of end-users? Have you felt first-hand the pain of running
+   and optimizing production systems? Let's talk... We're on a mission to
+   bring sanity to Dev & Ops and we need you to connect Datadog with the
+   vast ecosystem our customers use. Join us to instrument everything from
+   OS counters to programming languages to databases to cloud providers.
+
+   [79]Back End Developer at Datadog
+   Do you eat data pipelines for breakfast, distributed databases for
+   lunch and numerical processing for dinner? Did you read the Sparks,
+   Dynamo or Dremel papers and wish you could put those to good use? Stay
+   with us... We're on a mission to bring sanity to Dev & Ops and we need
+   you to build the data pipelines to ingest, store, analyze and query
+   hundreds of billions of events a day. Join us to build powerful and
+   resilient data systems using Redis, Cassandra, Kafka, Elasticsearch and
+   Postgres.
+
+   New Releases
+   [80]web2py 2.6.4
+   This release includes bug fixes including a problem with sessions in
+   2.6.x.
+   Upcoming Events and Webinars
+   [81]Duck Typing and testing - two halves of the same coin - Mountain
+   View, CA
+   Duck typing revolutionized the software world and enabled Python, among
+   many other languages. While making it easy to start projects and
+   produce working code very quickly, maintenance of large code bases was
+   made more difficult. Testing solved this, at a price. A philosophical
+   discussion about software, testing, typing, and Python.
+   [82]PYPTUG September 2013 Meetup - Winston-Salem, NC
+   Learn about a computer's clock, time, timekeeping and scheduling with a
+   little automation thrown in for good measure with Francois Dion. The
+   next Piedmont Triad Python Users Group meeting is on Monday, September
+   30th starts at 5:30.
+   Share Python Weekly  [83]Facebook [84]Twitter [85]Reddit
+   [86]StumbleUpon [87]DZone [88]LinkedIn [89]Digg [90]Delicious
+   [91]Slashdot
+   You are receiving our weekly newsletter because you signed up at
+   http://www.PythonWeekly.com.
+   [92]Unsubscribe <<Email Address>> from this list | [93]Forward to a
+   friend | [94]Update your profile
+   Our mailing address is:
+   Python Weekly
+   Brooklyn
+   Brooklyn, NY 11209
+   [95]Add us to your address book
+   Copyright (C) 2013 Python Weekly All rights reserved.
+
+References
+
+   1. file://localhost/?socialproxy=http%3A%2F%2Fus2.campaign-archive2.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26url%3Dhttp%253A%252F%252Fus2.campaign-archive1.com%252F%253Fu%253De2e180baf855ac797ef407fc7%2526id%253Dc4a3a2ab87%26title%3DPython%2520Weekly%2520-%2520Issue%2520%2520106
+   2. http://twitter.com/share?url=http%3A%2F%2Feepurl.com%2FFTEKn
+   3. http://us2.campaign-archive1.com/?u=e2e180baf855ac797ef407fc7&id=c4a3a2ab87&socialproxy=http%3A%2F%2Fus2.campaign-archive2.com%2Fsocial-proxy%2Fgoogle-plus-one%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26url%3Dhttp%253A%252F%252Fus2.campaign-archive2.com%252F%253Fu%253De2e180baf855ac797ef407fc7%2526id%253Dc4a3a2ab87%26title%3DPython%2520Weekly%2520-%2520Issue%2520%2520106
+   4. http://eepurl.com/fPpcb
+   5. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml0.data#awesomeshare
+   6. http://us2.campaign-archive2.com/home/?u=e2e180baf855ac797ef407fc7&id=9e26887fc5
+   7. http://us2.campaign-archive2.com/feed?u=e2e180baf855ac797ef407fc7&id=9e26887fc5
+   8. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml0.data#translate
+   9. http://translate.google.com/translate?hl=auto&langpair=auto|en&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  10. http://translate.google.com/translate?hl=auto&langpair=auto|ar&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  11. http://translate.google.com/translate?hl=auto&langpair=auto|af&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  12. http://translate.google.com/translate?hl=auto&langpair=auto|be&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  13. http://translate.google.com/translate?hl=auto&langpair=auto|bg&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  14. http://translate.google.com/translate?hl=auto&langpair=auto|ca&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  15. http://translate.google.com/translate?hl=auto&langpair=auto|zh-CN&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  16. http://translate.google.com/translate?hl=auto&langpair=auto|zh-TW&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  17. http://translate.google.com/translate?hl=auto&langpair=auto|hr&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  18. http://translate.google.com/translate?hl=auto&langpair=auto|cs&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  19. http://translate.google.com/translate?hl=auto&langpair=auto|da&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  20. http://translate.google.com/translate?hl=auto&langpair=auto|et&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  21. http://translate.google.com/translate?hl=auto&langpair=auto|nl&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  22. http://translate.google.com/translate?hl=auto&langpair=auto|fi&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  23. http://translate.google.com/translate?hl=auto&langpair=auto|fr&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  24. http://translate.google.com/translate?hl=auto&langpair=auto|de&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  25. http://translate.google.com/translate?hl=auto&langpair=auto|el&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  26. http://translate.google.com/translate?hl=auto&langpair=auto|hi&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  27. http://translate.google.com/translate?hl=auto&langpair=auto|hu&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  28. http://translate.google.com/translate?hl=auto&langpair=auto|ga&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  29. http://translate.google.com/translate?hl=auto&langpair=auto|id&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  30. http://translate.google.com/translate?hl=auto&langpair=auto|is&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  31. http://translate.google.com/translate?hl=auto&langpair=auto|it&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  32. http://translate.google.com/translate?hl=auto&langpair=auto|ja&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  33. http://translate.google.com/translate?hl=auto&langpair=auto|ko&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  34. http://translate.google.com/translate?hl=auto&langpair=auto|mk&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  35. http://translate.google.com/translate?hl=auto&langpair=auto|ms&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  36. http://translate.google.com/translate?hl=auto&langpair=auto|mt&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  37. http://translate.google.com/translate?hl=auto&langpair=auto|no&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  38. http://translate.google.com/translate?hl=auto&langpair=auto|pl&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  39. http://translate.google.com/translate?hl=auto&langpair=auto|pt&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  40. http://translate.google.com/translate?hl=auto&langpair=auto|pt-PT&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  41. http://translate.google.com/translate?hl=auto&langpair=auto|ro&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  42. http://translate.google.com/translate?hl=auto&langpair=auto|ru&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  43. http://translate.google.com/translate?hl=auto&langpair=auto|es&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  44. http://translate.google.com/translate?hl=auto&langpair=auto|sw&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  45. http://translate.google.com/translate?hl=auto&langpair=auto|sv&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  46. http://translate.google.com/translate?hl=auto&langpair=auto|iw&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  47. http://translate.google.com/translate?hl=auto&langpair=auto|lt&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  48. http://translate.google.com/translate?hl=auto&langpair=auto|lv&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  49. http://translate.google.com/translate?hl=auto&langpair=auto|sk&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  50. http://translate.google.com/translate?hl=auto&langpair=auto|sl&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  51. http://translate.google.com/translate?hl=auto&langpair=auto|sr&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  52. http://translate.google.com/translate?hl=auto&langpair=auto|th&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  53. http://translate.google.com/translate?hl=auto&langpair=auto|tr&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  54. http://translate.google.com/translate?hl=auto&langpair=auto|tl&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  55. http://translate.google.com/translate?hl=auto&langpair=auto|uk&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  56. http://translate.google.com/translate?hl=auto&langpair=auto|vi&u=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87%26utm_content%3Dbuffere8f30%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+  57. http://www.pytennessee.org/
+  58. http://www.jetbrains.com/pycharm/
+  59. http://www.toptal.com/python/why-are-there-so-many-pythons
+  60. https://www.openshift.com/blogs/build-your-app-on-openshift-using-flask-sqlalchemy-and-postgresql-92
+  61. http://www.realpython.com/blog/python/integration-testing-with-pyvows-and-django/
+  62. http://blog.cloudera.com/blog/2013/09/how-to-use-the-hbase-thrift-interface-part-1/
+  63. http://blog.techresidents.com/post/62242774205
+  64. http://blog.disqus.com/post/62187806135/scaling-django-to-8-billion-page-views
+  65. http://blog.olgabotvinnik.com/post/58941062205/prettyplotlib-painlessly-create-beautiful-matplotlib
+  66. http://www.biomedcentral.com/1471-2105/14/201
+  67. https://developer.nvidia.com/content/numbapro-high-performance-python-cuda-acceleration
+  68. https://lukasa.co.uk/2013/09/Requests_20/
+  69. http://tomforb.es/breaking-out-of-secured-python-environments
+  70. https://github.com/FZambia/centrifuge
+  71. http://telemeta.org/
+  72. https://github.com/KvasirSecurity/Kvasir
+  73. https://github.com/perrygeo/python-raster-stats
+  74. https://github.com/JackStouffer/Flask-Foundation
+  75. https://github.com/analytics-pros/universal-analytics-python
+  76. http://nimfa.biolab.si/
+  77. https://github.com/bluquar/cubr
+  78. http://jobs.pythonweekly.com/jobs/open-source-system-developer/
+  79. http://jobs.pythonweekly.com/jobs/back-end-developer/
+  80. http://www.mail-archive.com/web2py@googlegroups.com/msg120558.html
+  81. http://baypiggies.net/
+  82. http://www.pyptug.org/2013/09/pyptug-meeting-september-30th.html
+  83. http://www.facebook.com/share.php?u=http%3A%2F%2Fus2.campaign-archive1.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87&t=Python%20Weekly%20-%20Issue%20%20106
+  84. http://twitter.com/?status=Python%20Weekly%20-%20Issue%20%20106%20-%20http%3A%2F%2Feepurl.com%2FFTEKn
+  85. http://reddit.com/submit?url=http%3A%2F%2Fus2.campaign-archive1.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87&title=Python%20Weekly%20-%20Issue%20%20106
+  86. http://www.stumbleupon.com/submit?url=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87&title=Python%20Weekly%20-%20Issue%20%20106
+  87. http://www.dzone.com/links/add.html?url=http%3A%2F%2Fus2.campaign-archive1.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87&title=Python%20Weekly%20-%20Issue%20%20106
+  88. http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87&title=Python%20Weekly%20-%20Issue%20%20106
+  89. http://digg.com/submit?phase=2&url=http%3A%2F%2Fus2.campaign-archive1.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87&title=Python%20Weekly%20-%20Issue%20%20106
+  90. http://del.icio.us/post?url=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87&title=Python%20Weekly%20-%20Issue%20%20106
+  91. http://slashdot.org/bookmark.pl?title=Python%20Weekly%20-%20Issue%20%20106&url=http%3A%2F%2Fus2.campaign-archive2.com%2F%3Fu%3De2e180baf855ac797ef407fc7%26id%3Dc4a3a2ab87
+  92. http://pythonweekly.us2.list-manage1.com/unsubscribe?u=e2e180baf855ac797ef407fc7&id=9e26887fc5&e=[UNIQID]&c=c4a3a2ab87
+  93. http://us2.forward-to-friend1.com/forward?u=e2e180baf855ac797ef407fc7&id=c4a3a2ab87&e=[UNIQID]
+  94. http://pythonweekly.us2.list-manage.com/profile?u=e2e180baf855ac797ef407fc7&id=9e26887fc5&e=[UNIQID]
+  95. http://pythonweekly.us2.list-manage2.com/vcard?u=e2e180baf855ac797ef407fc7&id=9e26887fc5

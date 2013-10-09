@@ -1,0 +1,219 @@
+   #[1]GitHub [2]Recent Commits to pyMporter:master
+
+   [3]Sign up [4]Sign in
+     * [5]Explore
+     * [6]Features
+     * [7]Enterprise
+     * [8]Blog
+
+   ____________________
+   This repository
+   (*)
+   This repository
+   ( )
+   All repositories
+     * [9]Star [10]1
+     * [11]Fork [12]0
+
+public [13]pintux/[14]pyMporter Octocat-spinner-32
+
+     * [15]Code Octocat-spinner-32
+     * [16]Issues 0 Octocat-spinner-32
+     * [17]Pull Requests 0 Octocat-spinner-32
+
+     * [18]Pulse Octocat-spinner-32
+     * [19]Graphs Octocat-spinner-32
+     * [20]Network Octocat-spinner-32
+
+HTTPS clone URL
+
+   https://github.com/p
+
+Subversion checkout URL
+
+   https://github.com/p
+
+   You can clone with [21]HTTPS, or [22]Subversion.
+   [23]Download ZIP
+
+   A minimalist tool that allows to import a CSV (comma separated) file to
+   a MongoDB database with headers and simple types specification. Types
+   are reflected to specified database collection.
+     * [24]5 commits
+     * [25]1 branch
+     * [26]0 releases
+     * [27]Fetching contributors
+
+    1. [28]Python 100%
+
+   [29]Python
+   branch: master
+   Switch branches/tags
+   ____________________
+     * [30]Branches
+     * [31]Tags
+
+   [32]master
+   Nothing to show
+   Nothing to show
+   [33]pyMporter /
+   [34]Show File Finder
+
+   Fetching latest commit…
+
+   Octocat-spinner-32-eaf2f5
+
+   Cannot retrieve the latest commit at this time
+   Octocat-spinner-32 [35]README.md
+   Octocat-spinner-32 [36]pyMporter.py
+   README.md
+
+pyMporter, a python CSV to MongoDB importer
+
+   This minimalist tool allows to import a CSV (comma separated) file to a
+   MongoDB database with headers and simple types specification. Types are
+   reflected to the specified database collection. The mongoimport tool
+   distributed with MongoDB (vers. <= 2.4.6) doesn't allow to specify data
+   values types.
+
+Prerequisites
+
+   In order to launch the tool the following python modules are needed:
+     * pymongo
+     * python-dateutil
+
+Usage
+
+python pyMporter.py [-h] [--dbname DBNAME] [--collection COLLECTION] [--headers
+HEADERS] csv_file
+
+   positional arguments: csv_file
+
+   optional arguments:
+-h, --help:            show this help message and exit
+
+--dbname DBNAME:       MongoDB database name to use, default is NewDB;
+
+--collection COLLECTION:   MongoDB collection name to import data to;
+
+--headers HEADERS:  comma separated names of CVS headers with (optional)types in
+ the form of <header_name:type>, if headers are omitted, first row of the CSV fi
+le is assumed to contain the headers and all types are set to string.
+                    Available types are "string","float", "integer" and "date";
+
+   Example of valid headers:
+name:string,age:integer,city:string
+
+id:integer,descr:string,date:date
+
+   If type is omitted type is string by default.
+
+Notes and limitations (v.1.0)
+
+     * it connects only to local MongoDB databases, at default port;
+     * compared to mongoimport tool, distributed with MongoDB, it's quite
+       slow, but mongoimport doesn't support values type specification;
+     * the number of headers must match the number of comma-separated
+       values in the CSV file;
+
+Examples
+
+1
+
+   With types specification:
+python pyMporter.py --dbname MyDB --collection people --headers id:string,firstn
+ame:string,secondname:string,music:string,age:integer,date:date people.csv
+
+2
+
+   Only headers without types specification, all values are set to
+   "string":
+python pyMporter.py --dbname MyDB --collection people --headers id,firstname,sec
+ondname,music,age,date people.csv
+
+     * [37]Status
+     * [38]API
+     * [39]Training
+     * [40]Shop
+     * [41]Blog
+     * [42]About
+
+     * © 2013 GitHub, Inc.
+     * [43]Terms
+     * [44]Privacy
+     * [45]Security
+     * [46]Contact
+
+
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+
+   Something went wrong with that request. Please try again.
+
+References
+
+   Visible links
+   1. file://localhost/opensearch.xml
+   2. https://github.com/pintux/pyMporter/commits/master.atom
+   3. file://localhost/signup
+   4. file://localhost/login?return_to=%2Fpintux%2FpyMporter
+   5. file://localhost/explore
+   6. file://localhost/features
+   7. https://enterprise.github.com/
+   8. file://localhost/blog
+   9. file://localhost/login?return_to=%2Fpintux%2FpyMporter
+  10. file://localhost/pintux/pyMporter/stargazers
+  11. file://localhost/login?return_to=%2Fpintux%2FpyMporter
+  12. file://localhost/pintux/pyMporter/network
+  13. file://localhost/pintux
+  14. file://localhost/pintux/pyMporter
+  15. file://localhost/pintux/pyMporter
+  16. file://localhost/pintux/pyMporter/issues
+  17. file://localhost/pintux/pyMporter/pulls
+  18. file://localhost/pintux/pyMporter/pulse
+  19. file://localhost/pintux/pyMporter/graphs
+  20. file://localhost/pintux/pyMporter/network
+  21. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml67.data
+  22. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml67.data
+  23. file://localhost/pintux/pyMporter/archive/master.zip
+  24. file://localhost/pintux/pyMporter/commits/master
+  25. file://localhost/pintux/pyMporter/branches
+  26. file://localhost/pintux/pyMporter/releases
+  27. file://localhost/pintux/pyMporter/contributors
+  28. file://localhost/pintux/pyMporter/search?l=python
+  29. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml67.data
+  30. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml67.data
+  31. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml67.data
+  32. file://localhost/pintux/pyMporter/tree/master
+  33. file://localhost/pintux/pyMporter
+  34. file://localhost/pintux/pyMporter/find/master
+  35. file://localhost/pintux/pyMporter/blob/master/README.md
+  36. file://localhost/pintux/pyMporter/blob/master/pyMporter.py
+  37. https://status.github.com/
+  38. http://developer.github.com/
+  39. http://training.github.com/
+  40. http://shop.github.com/
+  41. file://localhost/blog
+  42. file://localhost/about
+  43. file://localhost/site/terms
+  44. file://localhost/site/privacy
+  45. file://localhost/security
+  46. file://localhost/contact
+
+   Hidden links:
+  48. https://github.com/
+  49. https://help.github.com/articles/which-remote-url-should-i-use
+  50. file://localhost/pintux/pyMporter/compare
+  51. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml67.data#pymporter-a-python-csv-to-mongodb-importer
+  52. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml67.data#prerequisites
+  53. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml67.data#usage
+  54. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml67.data#notes-and-limitations-v10
+  55. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml67.data#examples
+  56. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml67.data#1
+  57. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml67.data#2
+  58. file://localhost/
+  59. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml67.data
+  60. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml67.data
+  61. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml67.data

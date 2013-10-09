@@ -1,0 +1,306 @@
+   #[1]RSS [2]RSS 2.0 [3]RSS .92 [4]Atom 0.3 [5]Effective Agile Software
+   Development and IT Outsourcing - Acceptic Blog » Async / Await Feature
+   in .NET 4.5 Task Parallel Library (TPL) Comments Feed [6]Java: To Learn
+   or Not to Learn?
+
+[7]Software development outsourcing company Acceptic, Ukraine
+
+   +1 800 990 4370
+   info@acceptic.com
+   [8]Subscribe to Acceptic blog RSS [9]Follow us on LinkedIn [10]Follow
+   us on Twitter [11]Follow us on Google+ [12]Follow us on Facebook
+   [13]Skip to Content
+   [14]Request a Quote
+     * [15]Home
+     * [16]Company
+          + [17]Management team
+          + [18]Core business principles
+          + [19]News
+     * [20]Services
+          + [21]Software and web development
+          + [22].NET development
+          + [23]PHP development
+          + [24]Java development
+          + [25]Dedicated developer teams
+          + [26].NET developers
+          + [27]PHP developers
+          + [28]iPhone developers
+          + [29]Java developers
+          + [30]C++ developers
+          + [31]Integrated outsourcing services
+     * [32]Expertise
+          + [33]Technical expertise & domains
+          + [34]Case Studies
+          + [35]Testimonials
+     * [36]Careers
+          + [37]Vacancies
+          + [38]Trainings & seminars
+          + [39]Language courses
+          + [40]Corporate events
+          + [41]Football team
+     * [42]Blog
+     * [43]Contacts
+
+Recent Posts
+
+     * [44]Async / Await Feature in .NET 4.5 Task Parallel Library (TPL)
+     * [45]Java: To Learn or Not to Learn?
+     * [46]A Brief Introduction into Behavior-Driven Development (BDD)
+     * [47]What’s New in SSIS 2012: Parameters, Build Configurations,
+       Catalog and Environments
+     * [48]New Trends in IT Outsourcing Service and Pricing Models
+     * [49]Cloud Staffing and IT Outsourcing Evolution
+     * [50]Agile Dedicated Teams, or How to Make Outsourcing Software
+       Development More Reliable
+     * [51]How to Select a Facebook Application Development Provider
+     * [52]Developing Facebook Applications – Tips for FB Apps Owners and
+       Designers
+
+Categories
+
+     * [53].NET Development
+     * [54]Agile Development
+     * [55]Dedicated Developer Teams
+     * [56]Effective Outsourcing
+     * [57]Facebook Applications
+     * [58]Java Development
+
+   Sep
+   25
+
+   [59]Async / Await Feature in .NET 4.5 Task Parallel Library (TPL)
+   Posted by editor. [60]Comment (0).
+
+   [61]Async / Await feature in .NET 4.5 Task Parallel Library (TPL)
+   Current trends in the software development require the application to
+   demonstrate fast reaction in response to the user’s actions. A modern
+   application cannot just ‘hang’ when performing any complex operation
+   and forces the user to wait. Moreover, the question of rational use of
+   computing resources is still important. Since modern PCs are
+   multi-core, it is possible to speed up the complex calculation
+   processes by running them on multiple cores simultaneously. As a
+   result, it is difficult to imagine up-to-date software applications
+   that doesn’t use async operations.
+
+   Using async operations imposes some overhead on the programmer, as
+   previously such operations were used only in the exceptional cases.
+
+   The Task Parallel Library (TPL) for .NET 4.5 immensely simplifies the
+   programming of async operations by using keywords async and await. Due
+   to this the developer doesn’t need to worry about:
+     * Creating a new thread
+     * Thread synchronization
+     * Calls to UI thread
+     * The implementation of safe cross-thread calls
+     * Catch insidious bugs related to multi-threaded operations
+
+   TPL library effectively takes care of all those tasks.
+
+   Also async / await increases the readability of the code, because the
+   code looks as if all operations were performed synchronously, i.e.,
+   easy to keep track of the sequence of operations.
+
+   Here is an example of the async / await usage:
+
+   // Three things to note in the signature: // – The method has an async
+   modifier.
+
+   // – The return type is Task or Task<T>. (See “Return Types” section.)
+
+   // Here, it is Task<int> because the return statement returns an
+   integer.
+
+   // – The method name ends in “Async.”
+
+   async Task<int> AccessTheWebAsync()
+
+   {
+
+   // You need to add a reference to System.Net.Http to declare client.
+
+   HttpClient client = new HttpClient();
+
+   // GetStringAsync returns a Task<string>. That means that when you
+   await the
+
+   // task you’ll get a string (urlContents).
+
+   Task<string> getStringTask =
+   client.GetStringAsync(“http://msdn.microsoft.com”);
+
+   // You can do work here that doesn’t rely on the string from
+   GetStringAsync.
+
+   DoIndependentWork();
+
+   // The await operator suspends AccessTheWebAsync.
+
+   // – AccessTheWebAsync can’t continue until getStringTask is complete.
+
+   // – Meanwhile, control returns to the caller of AccessTheWebAsync.
+
+   // – Control resumes here when getStringTask is complete.
+
+   // – The await operator then retrieves the string result from
+   getStringTask.
+
+   string urlContents = await getStringTask;
+
+   // The return statement specifies an integer result.
+
+   // Any methods that are awaiting AccessTheWebAsync retrieve the length
+   value.
+
+   return urlContents.Length;
+
+   }
+
+
+   See also
+     * [62]Asynchronous Programming with Async and Await (C# and Visual
+       Basic)
+     * [63]Async/Await FAQ
+
+   About the Author
+   Artem Groshevoi
+
+   [64]Artem Groshevoi: “I was always interested in technical things. My
+   first programming languages was Pascal, Delphi, and FoxPro. At the
+   University I learned C# development and started to work as a
+   freelancer. I always liked back-end programming tasks with high-load
+   and complex requirements. Optimization of legacy applications is also
+   one of my strong sides. Currently I’m working with C#, WPF,
+   Silvelright, SQL, ASP.NET, WinRT, VB.NET.
+   As a software engineer, I try to keep learning new things: languages
+   (Ruby, JS), methodologies (TDD, BDD, Lean), and frameworks (Rails,
+   SignalR). I’m a founder and contributor of several open-source
+   projects. My hobby is learning computer algorithms on coursera.org,
+   riding bicycle, and photography.”
+
+Leave a comment
+
+   [65]Click here to cancel reply.
+   Name: ______________________
+   E-mail: ______________________
+
+   ______________________ Website
+   Comment:
+
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+   _______________________________________________________________________
+
+   Submit Comment
+     * [66]Home
+     * |
+     * [67]Company
+     * |
+     * [68]Services
+     * |
+     * [69]Expertise
+     * |
+     * [70]Careers
+     * |
+     * [71]Blog
+     * |
+     * [72]Privacy Policy
+     * |
+     * [73]Sitemap
+
+   Copyright © 2008 - 2013 Software outsourcing company Acceptic Ltd -
+   custom application development in .Net, Java, C++, PHP,
+   and dedicated developer teams. All rights reserved worldwide
+     * [74]info@acceptic.com
+     * +1 800 990 4370
+     * [75]Skype
+     * [76]Free quote
+
+References
+
+   Visible links
+   1. http://www.acceptic.com/blog/feed/rdf
+   2. http://www.acceptic.com/blog/feed
+   3. http://www.acceptic.com/blog/feed/rss
+   4. http://www.acceptic.com/blog/feed/atom
+   5. http://www.acceptic.com/blog/async-await-feature-in-dotnet-4-5-task-parallel-library.html/feed
+   6. http://www.acceptic.com/blog/java-development-to-learn-or-not-to-learn.html
+   7. http://www.acceptic.com/
+   8. http://www.acceptic.com/blog/feed/
+   9. http://www.linkedin.com/company/acceptic-ltd.
+  10. http://www.twitter.com/acceptic
+  11. https://plus.google.com/111348611891476954415
+  12. http://www.facebook.com/acceptic
+  13. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml139.data#site-content
+  14. http://www.acceptic.com/contacts.html
+  15. http://www.acceptic.com/
+  16. http://www.acceptic.com/company.html
+  17. http://www.acceptic.com/management-team.html
+  18. http://www.acceptic.com/company.html#business_principles
+  19. http://www.acceptic.com/news/all.html
+  20. http://www.acceptic.com/dev_services.html
+  21. http://www.acceptic.com/application-development.html
+  22. http://www.acceptic.com/c-dot-net-development-programming.html
+  23. http://www.acceptic.com/php-developers-web-development-company.html
+  24. http://www.acceptic.com/java-application-development.html
+  25. http://www.acceptic.com/dedicated-team-service.html
+  26. http://www.acceptic.com/hire-c-dot-net-developers.html
+  27. http://www.acceptic.com/hire-php-developers.html
+  28. http://www.acceptic.com/hire-iphone-objective-c-developers.html
+  29. http://www.acceptic.com/hire-java-developers-at-acceptic.html
+  30. http://www.acceptic.com/c-developers-programmers-for-hire.html
+  31. http://www.acceptic.com/integrated-outsourcing-services.html
+  32. http://www.acceptic.com/expertise.html
+  33. http://www.acceptic.com/expertise.html
+  34. http://www.acceptic.com/case-studies.html
+  35. http://www.acceptic.com/testimonials.html
+  36. http://www.acceptic.com/careers.html
+  37. http://www.acceptic.com/careers.html#careers
+  38. http://www.acceptic.com/gallery/seminars.html
+  39. http://www.acceptic.com/gallery/english-courses.html
+  40. http://www.acceptic.com/gallery/corporate-events.html
+  41. http://www.acceptic.com/gallery/football.html
+  42. http://www.acceptic.com/blog/
+  43. http://www.acceptic.com/contacts.html
+  44. http://www.acceptic.com/blog/async-await-feature-in-dotnet-4-5-task-parallel-library.html
+  45. http://www.acceptic.com/blog/java-development-to-learn-or-not-to-learn.html
+  46. http://www.acceptic.com/blog/introduction-in-behavior-driven-development.html
+  47. http://www.acceptic.com/blog/what-is-new-in-ssis-2012.html
+  48. http://www.acceptic.com/blog/new-trends-in-it-outsourcing-service-and-pricing-models.html
+  49. http://www.acceptic.com/blog/cloud-staffing-and-it-outsourcing-evolution.html
+  50. http://www.acceptic.com/blog/agile-dedicated-development-teams.html
+  51. http://www.acceptic.com/blog/selecting-facebook-application-development-team.html
+  52. http://www.acceptic.com/blog/facebook-application-development-tips.html
+  53. http://www.acceptic.com/blog/category/net-development
+  54. http://www.acceptic.com/blog/category/agile-development
+  55. http://www.acceptic.com/blog/category/dedicated-developer-teams
+  56. http://www.acceptic.com/blog/category/effective-outsourcing
+  57. http://www.acceptic.com/blog/category/facebook
+  58. http://www.acceptic.com/blog/category/java-development
+  59. http://www.acceptic.com/blog/async-await-feature-in-dotnet-4-5-task-parallel-library.html
+  60. http://www.acceptic.com/blog/async-await-feature-in-dotnet-4-5-task-parallel-library.html#respond
+  61. http://www.acceptic.com/blog/async-await-feature-in-dotnet-4-5-task-parallel-library.html
+  62. http://msdn.microsoft.com/en-us/library/vstudio/hh191443.aspx
+  63. http://blogs.msdn.com/b/pfxteam/archive/2012/04/12/10293335.aspx
+  64. https://plus.google.com/u/0/109341401588182734444
+  65. file://localhost/blog/async-await-feature-in-dotnet-4-5-task-parallel-library.html#respond
+  66. http://www.acceptic.com/
+  67. http://www.acceptic.com/company.html
+  68. http://www.acceptic.com/dev_services.html
+  69. http://www.acceptic.com/expertise.html
+  70. http://www.acceptic.com/careers.html
+  71. http://www.acceptic.com/blog/
+  72. http://www.acceptic.com/
+  73. http://www.acceptic.com/sitemap.html
+  74. mailto:info@acceptic.com
+  75. skype:liuba.acceptic?chat
+  76. http://www.acceptic.lcl/contacts.html
+
+   Hidden links:
+  78. https://twitter.com/share

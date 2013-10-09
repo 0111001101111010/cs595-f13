@@ -1,0 +1,307 @@
+   #[1]Hongkiat.com RSS Feed [2]hongkiat.com » A Look Into: CSS Border
+   Corner Shape Comments Feed [3]25 Fantasy Wallpapers For Your Desktop
+   [4]35 Collage Photoshop Tutorials for Beginners (and Experts)
+
+     * [5]Back to Home, top
+     * [6]prev
+       [7]next
+     * Share this post -
+     *
+
+       IFRAME:
+       [8]//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.hongki
+       at.com%2Fblog%2Fcss3-border-shape%2F&send=false&layout=button_count
+       &width=100&show_faces=true&action=like&colorscheme=light&font&heigh
+       t=21&appId=314604755231445
+
+     * [9]Tweet
+     *
+     *
+
+     * ____________________
+     * [10]↑
+
+   IFRAME: [11]/blog/wp-content/themes/v5/ads/230x90.html
+
+[12]hongkiat.com
+
+   IFRAME: [13]/blog/wp-content/themes/v5/ads/468x60.html
+
+     * [14]Home
+          + [15]About Us
+          + [16]Advertise
+          + [17]Contact us
+          + [18]Become an author
+          + [19]Submit tips
+     * [20]Photoshop
+     * [21]Icons
+     * [22]Design
+     * [23]Wordpress
+     * [24]Tools
+     * [25]Inspiration
+     * [26]Graphics
+     * [27]Wallpapers
+     * [28]How-to
+     * [29]Web 2.0
+     * [30]Deals
+
+   ____________________
+
+A Look Into: CSS Border Corner Shape
+
+   By [31]Hongkiat Lim. Filed in [32]Web Design
+   [33]This article is part of our "HTML5/CSS3 Tutorials series" -
+   dedicated to help make you a better designer and/or developer. Click
+   here to see more articles from the same series.
+
+   We have been seeing several new [34]CSS3 features that are widely
+   implemented, such as Rounded Corner, [35]Box Shadow, and Text Shadow,
+   just to name a few. Still, there are several features that are
+   experimental, such as what we are going to discuss in this post:
+   [36]Border Corner Shape.
+
+   Border Corner Shape allows us to manipulate element corners further.
+   While we can create rounded corners by using border-radius, the Border
+   Corner Shape allows us to form beveled corners, scoop-style corners,
+   and rectangle-notch corners.
+
+   [cover.jpg]
+
+How to Use it
+
+   We use border-corner-shape to define the shape. At the time of the
+   writing, it accepts four predefined shapes with the following values:
+   curve, scoop, bevel, and notch – it is also proposed that we use
+   cubic-bezier for forming custom shape ([37]see the proposal here).
+
+   It is worth noting that the border-corner-shape only declares the
+   shape, while the length of the shape is specified using the
+   border-radius property. So, to be able to see the result, when forming
+   the shape these two properties should be declared together.
+.box {
+        background-color: #3498DB;
+        border-corner-shape: scoop;
+        border-radius: 30px;
+        width: 200px;
+        height: 200px;
+}
+
+   Given the example of the above style rules, we will get a result as
+   shown in the following screenshot.
+
+   [scoop.jpg]
+
+   Let’s take a look at one more example. This time we specify the corner
+   shape to bevel, and set the border radius for 50% except in the bottom
+   right corner, as follows.
+.box {
+        background-color: #3498DB;
+        border-corner-shape: bevel;
+        border-radius: 50% 50% 0% 50%;
+        width: 200px;
+        height: 200px;
+}
+
+   The above style rules will give us the following result.
+
+   [bevel.jpg]
+
+   It is quite fascinating, isn’t it?
+
+Thing to Note
+
+   Sadly, as I said earlier, the border-corner-shape property is
+   experimental, and has not been implemented in any of the current
+   browsers. So, it is not (yet) applicable. But, you can preview the
+   demo, and play with the property syntax from [38]this app, created by
+   Lea Verou.
+
+   What do you thing of this CSS feature? Do you want to see it
+   implemented in the future? Are there any cases that this property can
+   be very useful? Share your thoughts in the comment box below.
+
+You might like:
+
+    1. [39]Web Design: Clipping and Masking With CSS Web Design: Clipping
+       and Masking With CSS
+    2. [40]CSS3 Border-Image Property: Making Photos Really Cool! CSS3
+       Border-Image Property: Making Photos Really Cool!
+    3. [41]How to Create RSS Feed Logo with CSS3 How to Create RSS Feed
+       Logo with CSS3
+    4. [42]Creating a Stitched Effect Using CSS Creating a Stitched Effect
+       Using CSS
+
+   [hongkiat.jpg]
+
+Author: [43]Hongkiat Lim
+
+   Founder and Chief Editor of Hongkiat.com, a designer, developer and
+   hardcore fan of Apple. Follow him on [44]Twitter, or befriend him on
+   [45]Facebook.
+   Tags:
+     * [46]border-corner-shape
+     * [47]coding
+     * [48]css
+
+   Advertisement
+
+   IFRAME: [49]/blog/wp-content/themes/v5/ads/500x100.html
+
+   Get the latest in your Inbox for free. ____________________
+   Subscribe!
+
+   IFRAME:
+   [50]http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.face
+   book.com%2Fhongkiatcom&send=false&layout=button_count&width=95&show_fac
+   es=false&action=like&colorscheme=light&font&height=21
+
+   [51]Follow @hongkiat
+
+Popular Now
+
+   IFRAME:
+   [52]//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebo
+   ok.com%2Fhongkiatcom&width=300&height=258&colorscheme=light&show_faces=
+   true&border_color=%23ffffff&stream=false&header=false
+
+   IFRAME:
+   [53]http://www.facebook.com/plugins/activity.php?site=hongkiat.com&widt
+   h=298&height=580&header=true&colorscheme=light&font&border_color=%23fff
+   fff&large_thumbations=true
+
+   IFRAME: [54]/blog/wp-content/themes/v5/ads/300x250-02.html
+
+Readers' Fav
+
+     * [55]Wallpapers
+     * [56]Social Media
+     * [57]Photography
+     * [58]Photo Manipulation
+     * [59]Freebie
+     * [60]Photoshop
+     * [61]Freelance
+
+About Us
+
+   Hongkiat.com is a design weblog dedicated to designers and bloggers. We
+   constantly publish useful tricks, tools, tutorials and inspirational
+   artworks. [62]Read more...
+
+Navigate
+
+     * [63]About Us
+     * [64]Advertise
+     * [65]Contact Us
+     * [66]Write for Us
+     * [67]Submit Tips
+     * [68]Privacy Policy
+     * [69]Publishing Policy
+
+We're Social
+
+     * [70]Facebook
+     * [71]Twitter
+     * [72]Google +
+     * [73]RSS
+     * [74]Digg
+     * [75]Deviant Art
+     * [76]FriendFeed
+
+Our Partners
+
+     * [77]NetDNA
+     * [78]WPWebhost
+
+   © 2012 Hongkiat.com. Designed by Hongkiat Lim. [79]Sitemap
+   Reproduction without explicit permission is prohibited. All Rights
+   Reserved.
+   Disclaimer: The editor(s) reserve the right to edit any comments that
+   are found to be abusive, offensive, contain profanity, serves as spam,
+   is largely self-promotional, or displaying attempts to harbour
+   irrelevant text links for any purpose.
+
+   [80]↑ Back to Top
+   Quantcast
+
+References
+
+   1. http://feeds2.feedburner.com/24thfloor
+   2. http://www.hongkiat.com/blog/css3-border-shape/feed/
+   3. http://www.hongkiat.com/blog/ww-fantasy-wallpapers/
+   4. http://www.hongkiat.com/blog/collage-photoshop-tutorials/
+   5. file://localhost/blog/#top
+   6. http://www.hongkiat.com/blog/collage-photoshop-tutorials/
+   7. http://www.hongkiat.com/blog/ww-fantasy-wallpapers/
+   8. file://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.hongkiat.com%2Fblog%2Fcss3-border-shape%2F&send=false&layout=button_count&width=100&show_faces=true&action=like&colorscheme=light&font&height=21&appId=314604755231445
+   9. https://twitter.com/share
+  10. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml868.data#top
+  11. file://localhost/blog/wp-content/themes/v5/ads/230x90.html
+  12. http://www.hongkiat.com/blog/
+  13. file://localhost/blog/wp-content/themes/v5/ads/468x60.html
+  14. file://localhost/blog/
+  15. file://localhost/blog/about-us/
+  16. file://localhost/blog/advertise/
+  17. file://localhost/blog/contact/
+  18. file://localhost/blog/write-for-us/
+  19. file://localhost/blog/submit-news-tips/
+  20. file://localhost/blog/category/photoshop/
+  21. file://localhost/blog/category/free-icons/
+  22. file://localhost/blog/category/design/
+  23. file://localhost/blog/category/wordpress/
+  24. file://localhost/blog/category/tools/
+  25. file://localhost/blog/category/inspiration/
+  26. file://localhost/blog/category/graphics/
+  27. file://localhost/blog/category/free-wallpapers/
+  28. file://localhost/blog/category/how-to/
+  29. file://localhost/blog/category/web-20/
+  30. http://hongki.at/deals/
+  31. http://www.hongkiat.com/blog/author/hongkiat/
+  32. http://www.hongkiat.com/blog/category/design/
+  33. http://www.hongkiat.com/blog/tag/series-html5-css3-tuts/
+  34. http://www.hongkiat.com/blog/beginners-guide-to-css3/
+  35. http://www.hongkiat.com/blog/css3-box-shadows-effects/
+  36. http://dev.w3.org/csswg/css-backgrounds-4/#border-corner-shape0
+  37. http://lists.w3.org/Archives/Public/www-style/2013Mar/0495.html
+  38. http://leaverou.github.io/border-corner-shape/
+  39. http://www.hongkiat.com/blog/css-masking/
+  40. http://www.hongkiat.com/blog/css3-border-image/
+  41. http://www.hongkiat.com/blog/rss-feed-logo-with-css3/
+  42. http://www.hongkiat.com/blog/css-stitched-effect/
+  43. http://www.hongkiat.com/blog/author/hongkiat/
+  44. http://www.twitter.com/hongkiat
+  45. http://www.facebook.com/hongkiat
+  46. http://www.hongkiat.com/blog/tag/border-corner-shape/
+  47. http://www.hongkiat.com/blog/tag/coding/
+  48. http://www.hongkiat.com/blog/tag/css/
+  49. file://localhost/blog/wp-content/themes/v5/ads/500x100.html
+  50. http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fhongkiatcom&send=false&layout=button_count&width=95&show_faces=false&action=like&colorscheme=light&font&height=21
+  51. https://twitter.com/hongkiat
+  52. file://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fhongkiatcom&width=300&height=258&colorscheme=light&show_faces=true&border_color=%23ffffff&stream=false&header=false
+  53. http://www.facebook.com/plugins/activity.php?site=hongkiat.com&width=298&height=580&header=true&colorscheme=light&font&border_color=%23ffffff&large_thumbations=true
+  54. file://localhost/blog/wp-content/themes/v5/ads/300x250-02.html
+  55. file://localhost/blog/category/freebies-online/free-wallpapers/
+  56. file://localhost/blog/tag/social-media/
+  57. file://localhost/blog/tag/photography/
+  58. file://localhost/blog/tag/photo-manipulation/
+  59. file://localhost/blog/tag/freebie/
+  60. file://localhost/blog/category/photoshop-tutorial/
+  61. file://localhost/blog/tag/freelance/
+  62. file://localhost/blog/about-us/
+  63. file://localhost/blog/about-us/
+  64. file://localhost/blog/advertise/
+  65. file://localhost/blog/contact/
+  66. file://localhost/blog/write-for-us/
+  67. file://localhost/blog/submit-news-tips/
+  68. file://localhost/blog/privacy-policy-for-hongkiatcom/
+  69. file://localhost/blog/publishing-policy/
+  70. http://www.facebook.com/hongkiatcom
+  71. http://www.twitter.com/hongkiat
+  72. https://plus.google.com/102816829103930695344
+  73. http://feeds2.feedburner.com/24thfloor
+  74. http://digg.com/hongkiat
+  75. http://hongkiat.deviantart.com/
+  76. http://friendfeed.com/hongkiat
+  77. http://www.netdna.com/
+  78. http://www.wpwebhost.com/
+  79. file://localhost/blog/sitemap.xml
+  80. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml868.data#top

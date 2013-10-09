@@ -1,0 +1,518 @@
+   #[1]Python For Beginners » Feed [2]Python For Beginners » Comments Feed
+   [3]Python For Beginners » Scraping Wunderground Comments Feed
+
+[4]Python For Beginners
+
+     * [5]Basics (Start)
+     * [6]Dictionary
+     * [7]Functions
+     * [8]Lists
+     * [9]Loops
+     * [10]Modules
+     * [11]Strings
+     * [12]Sitemap
+
+    1.
+    2. [13]Web & Internet
+    3. Scraping Wunderground
+
+   « [14]List of Python API’s
+
+[15]Scraping Wunderground 1
+
+   26 Sep 2013   | [16]Web & Internet
+
+   Tags: [17]Scraping
+
+Overview
+
+Working with APIs is both fun and educational.
+
+Many companies like Google, Reddit and Twitter releases it's API to the public
+so that developers can develop products that are powered by its service.
+
+Working with APIs learns you the nuts and bolts beneath the hood.
+
+In this post, we will work the Weather Underground API.
+
+Weather Underground (Wunderground)
+
+We will build an app that will connect to '[18]Wunderground' and retrieve.
+Weather Forecasts etc.
+
+Wunderground provides local & long range Weather Forecast, weather reports,
+maps & tropical weather conditions for locations worldwide.
+
+API
+
+An API is a protocol intended to be used as an interface by software components
+to communicate with each other. An API is a set of  programming instructions and
+standards for accessing web based software applications (such as above).
+
+With API's applications talk to each other without any user knowledge or
+intervention.
+
+Getting Started
+
+The first thing that we need to do when we want to use an API, is to see if the
+company provides any API documentation. Since we want to write an application fo
+r
+Wunderground, we will go to Wundergrounds [19]website
+
+At the bottom of the page, you should see the "Weather API for Developers".
+
+   [20]api-dev
+
+The API Documentation
+
+Most of the API features require an API key, so let's go ahead and sign up for
+a key before we start to use the Weather API.
+
+In the documentation we can also read that the API requests are made over HTTP
+and that Data features return JSON or XML.
+
+To read the full API documentation, see this [21]link.
+
+Before we get the key, we need to first create a free account.
+
+The API Key
+
+Next step is to sign up for the API key. Just fill in your name, email address,
+project name and website and you should be ready to go.
+
+Many services on the Internet (such as Twitter, Facebook..) requires that you
+have an "API Key".
+
+An application programming interface key (API key) is a code passed in by
+computer programs calling an API to identify the calling program, its developer,
+or its user to the Web site.
+
+API keys are used to track and control how the API is being used, for example
+to prevent malicious use or abuse of the API.
+
+The API key often acts as both a unique identifier and a secret token for
+authentication, and will generally have a set of access rights on the API
+associated with it.
+
+Current Conditions in US City
+
+Wunderground provides an example for us in their API documentation.
+
+Current Conditions in US City
+
+
+http://api.wunderground.com/api/0def10027afaebb7/conditions/q/CA/San_Francisco.j
+son
+
+
+If you click on the "Show response" button or copy and paste that URL into your
+browser, you should something similar to this:
+
+{
+        "response": {
+                "version": "0.1"
+                ,"termsofService": "http://www.wunderground.com/weather/api/d/te
+rms.html"
+                ,"features": {
+                "conditions": 1
+                }
+        }
+                ,       "current_observation": {
+                "image": {
+                "url":"http://icons-ak.wxug.com/graphics/wu2/logo_130x80.png",
+                "title":"Weather Underground",
+                "link":"http://www.wunderground.com"
+                },
+                "display_location": {
+                "full":"San Francisco, CA",
+                "city":"San Francisco",
+                "state":"CA",
+                "state_name":"California",
+                "country":"US",
+                "country_iso3166":"US",
+                "zip":"94101",
+                "magic":"1",
+                "wmo":"99999",
+                "latitude":"37.77500916",
+                "longitude":"-122.41825867",
+                "elevation":"47.00000000"
+                },
+                .....
+
+Current Conditions in Cedar Rapids
+
+On the "Code Samples" [22]page we can see the whole Python code to retrieve the
+current temperature in Cedar Rapids.
+
+Copy and paste this into your favorite editor and save it as anything you like.
+
+Note, that you have to replace "0def10027afaebb7" with your own API key.
+
+import urllib2
+import json
+f = urllib2.urlopen('http://api.wunderground.com/api/0def10027afaebb7/geolookup/
+conditions/q/IA/Cedar_Rapids.json')
+json_string = f.read()
+
+parsed_json = json.loads(json_string)
+
+location = parsed_json['location']['city']
+
+temp_f = parsed_json['current_observation']['temp_f']
+
+print "Current temperature in %s is: %s" % (location, temp_f)
+
+f.close()
+
+To run the program in your terminal:
+
+python get_current_temp.py
+
+Your program will return the current temperature in Cedar Rapids:
+
+Current temperature in Cedar Rapids is: 68.9
+
+What is next?
+
+Now that we have looked at and tested the examples provided by Wunderground,
+let's create a program by ourselves.
+
+The Weather Underground provides us with a whole bunch of "[23]Data Features" th
+at
+we can use.
+
+It is important that you read through the information there, to understand how
+the different features can be accessed.
+
+Standard Request URL Format
+
+"Most API features can be accessed using the following format.
+
+Note that several features can be combined into a single request."
+
+[24]http://api.wunderground.com/api/0def10027afaebb7/features/settings/q/query.f
+ormat
+
+where:
+
+0def10027afaebb7:       Your API key
+
+features:               One or more of the following data features
+
+settings (optional):    Example: lang:FR/pws:0
+
+query:                  The location for which you want weather information
+
+format:         json, or xml
+
+What I want to do is to retrieve the forecast for Paris.
+
+The forecast feature returns a summary of the weather for the next 3 days.
+
+This includes high and low temperatures, a string text forecast and the conditio
+ns.
+
+Forecast for Paris
+
+To retrieve the forecast for Paris, I will first have to find out the country
+code for France, which I can find here:
+
+[25]Weather by country
+
+Next step is to look for the "Feature: forecast" in the API documentation.
+
+The string that we need can be found here:
+
+[26]http://www.wunderground.com/weather/api/d/docs?d=data/forecast
+
+By reading the documentation, we should be able to construct an URL.
+
+In our case, the URL looks like this:
+[27]http://api.wunderground.com/api/your_api_key/forecast/q/France/Paris.json
+
+Making the API call
+
+We now have the URL that we need and we can start with our program.
+
+Now its time to make the API call to Weather Underground.
+
+Note: Instead of using the urllib2 module as we did in the examples above,
+we will in this program use the "[28]requests" module.
+
+Making the API call is very easy with the "requests" module.
+
+r = requests.get("http://api.wunderground.com/api/your_api_key/forecast/q/France
+/
+Paris.json")
+
+Now, we have a Response object called "r". We can get all the information we nee
+d
+from this object.
+
+Creating our Application
+
+Open your editor of choice, at the first line, import the requests module.
+
+Note, the requests module comes with a built-in JSON decoder, which we can use
+for the JSON data. That also means, that we don't have to import the JSON
+module (like we did in the previous example when we used the urllib2 module)
+
+import requests
+
+To begin extracting the information that we need, we first have to see
+what keys that the "r" object returns to us.
+
+The code below will return the keys and should return [u'response', u'forecast']
+
+import requests
+
+r = requests.get("http://api.wunderground.com/api/your_api_key/forecast/q/France
+/
+Paris.json")
+
+data = r.json()
+
+print data.keys()
+
+Getting the data that we want
+
+Copy and paste the URL (from above) into a JSON editor.
+
+I use [29]http://jsoneditoronline.org/ but any JSON editor should do the work.
+
+This will show an easier overview of all the data.
+
+[30]http://api.wunderground.com/api/your_api_key/forecast/q/France/Paris.json
+
+Note, the same information can be gained via the terminal, by typing:
+
+r = requests.get("http://api.wunderground.com/api/your_api_key/forecast/q/France
+/
+Paris.json")
+print r.text
+
+After inspecting the output given to us, we can see that the data that we are
+interested in, is in the "forecast" key. Back to our program, and print out the
+data from that key.
+
+import requests
+
+r = requests.get("http://api.wunderground.com/api/your_api_key/forecast/q/France
+/
+Paris.json")
+
+data = r.json()
+
+print data['forecast']
+
+The result is stored in the variable "data".
+
+To access our JSON data, we simple use the bracket notation, like this:
+data['key'].
+
+Let's navigate a bit more through the data, by adding 'simpleforecast'
+
+   [31]forecast
+import requests
+
+r = requests.get("http://api.wunderground.com/api/your_api_key/forecast/q/France
+/
+Paris.json")
+
+data = r.json()
+
+print data['forecast']['simpleforecast']
+
+We are still getting a bit to much output, but hold on, we are almost there.
+
+The last step in our program is to add ['forecastday'] and instead of printing
+out each and every entry, we will use a for loop to iterate through the dictiona
+ry.
+
+   [32]forecast2
+We can access anything we want like this, just look up what data you are
+interested in.
+
+In this program I wanted to get the forecast for Paris.
+
+Let's see how the code looks like.
+
+import requests
+
+r = requests.get("http://api.wunderground.com/api/0def10027afaebb7/forecast/q/Fr
+ance/Paris.json")
+data = r.json()
+
+for day in data['forecast']['simpleforecast']['forecastday']:
+    print day['date']['weekday'] + ":"
+    print "Conditions: ", day['conditions']
+    print "High: ", day['high']['celsius'] + "C", "Low: ", day['low']['celsius']
+ + "C", '\n'
+
+Run the program.
+
+$ python get_temp_paris.py
+
+   [33]wundergroundLogo_blue_horz
+Monday:
+Conditions:  Partly Cloudy
+High:  23C Low:  10C
+
+Tuesday:
+Conditions:  Partly Cloudy
+High:  23C Low:  10C
+
+Wednesday:
+Conditions:  Partly Cloudy
+High:  24C Low:  14C
+
+Thursday:
+Conditions:  Mostly Cloudy
+High:  26C Low:  15C
+
+The forecast feature is just one of many. I will leave it up to you to explore
+the rest.
+
+Once you get the understanding of an API and it's output in JSON, you understand
+how most of them work.
+
+More Reading
+
+[34]A comprehensive list of Python APIs
+[35]Weather Underground
+
+   [36]http://www.pythonforbeginners.com/wp-content/uploads/2013/09/api-de
+   v.png [37]+1 [38]Pin it on Pinterest [39]Submit to reddit [40]Submit to
+   StumbleUpon [41]Share on Tumblr [42]Share on Twitter
+     * rjames86
+       Great article!
+       I wrote something very similar using the Wunderground API to
+       display weather in GeekTool for Mac:
+       [43]https://github.com/rjames86/My-Geek-Weather/blob/master/geekwea
+       ther.py
+       The end result is this:
+       [44]https://www.dropbox.com/s/lhuad4efb34o573/Screenshot%202013-09-
+       26%2007.59.59.png
+
+   « [45]List of Python API’s
+
+Search
+
+   ____________________ Submit
+
+Follow us on Twitter
+
+   [46]pythonbeginners
+   [47]pythonbeginners on Twitter
+   [48]Follow @pythonbeginners
+   643 people follow pythonbeginners
+   [49]rcharant rcharant [50]NerdgrrlGarvey Nerdgrrl [51]wyorgb wyorgb
+   [52]minthac minthac [53]cassiobotaro cassiobo [54]include include
+   [55]leandromouta leandrom [56]LeandroTk_ LeandroT [57]RwandaLinux
+   RwandaLi [58]alexeuzebio alexeuze
+
+Categories
+
+     * [59]Basics
+     * [60]Cheatsheet
+     * [61]Code snippets
+     * [62]Development
+     * [63]Dictionary
+     * [64]Error Handling
+     * [65]Lists
+     * [66]Loops
+     * [67]Modules
+     * [68]Strings
+     * [69]System & OS
+     * [70]Web & Internet
+
+Related Posts
+
+     * [71]Scraping websites with Python
+
+   © 2013 Python For Beginners — All Rights Reserved.
+
+Thank you
+
+   Your feedback has been received.
+   [72]Close
+
+References
+
+   Visible links
+   1. http://www.pythonforbeginners.com/feed/
+   2. http://www.pythonforbeginners.com/comments/feed/
+   3. http://www.pythonforbeginners.com/python-on-the-web/scraping-wunderground/feed/
+   4. http://www.pythonforbeginners.com/
+   5. http://www.pythonforbeginners.com/python-overview-start-here/
+   6. http://www.pythonforbeginners.com/dictionary/
+   7. http://www.pythonforbeginners.com/python-functions-cheat-sheet/
+   8. http://www.pythonforbeginners.com/python-lists-cheat-sheet/
+   9. http://www.pythonforbeginners.com/loops/
+  10. http://www.pythonforbeginners.com/python-modules/
+  11. http://www.pythonforbeginners.com/strings/
+  12. http://www.pythonforbeginners.com/sitemap/
+  13. http://www.pythonforbeginners.com/category/python-on-the-web/
+  14. http://www.pythonforbeginners.com/development/list-of-python-apis/
+  15. http://www.pythonforbeginners.com/python-on-the-web/scraping-wunderground/
+  16. http://www.pythonforbeginners.com/category/python-on-the-web/
+  17. http://www.pythonforbeginners.com/tag/scraping/
+  18. http://www.wunderground.com/
+  19. http://www.wunderground.com/
+  20. http://www.pythonforbeginners.com/wp-content/uploads/2013/09/api-dev.png
+  21. http://www.wunderground.com/weather/api/d/docs?MR=1
+  22. http://www.wunderground.com/weather/api/d/docs?d=resources/code-samples&MR=1
+  23. http://www.wunderground.com/weather/api/d/docs?d=data/index&MR=1
+  24. http://api.wunderground.com/api/0def10027afaebb7/features/settings/q/query.format
+  25. http://www.wunderground.com/weather-by-country.asp
+  26. http://www.wunderground.com/weather/api/d/docs?d=data/forecast
+  27. http://api.wunderground.com/api/your_api_key/forecast/q/France/Paris.json
+  28. http://docs.python-requests.org/en/latest/
+  29. http://jsoneditoronline.org/
+  30. http://api.wunderground.com/api/your_api_key/forecast/q/France/Paris.json
+  31. http://www.pythonforbeginners.com/wp-content/uploads/2013/09/forecast.png
+  32. http://www.pythonforbeginners.com/wp-content/uploads/2013/09/forecast2.png
+  33. http://www.wunderground.com/
+  34. http://www.pythonapi.com/
+  35. http://www.wunderground.com/
+  36. http://del.icio.us/post?url=http%3A%2F%2Fwww.pythonforbeginners.com%2Fpython-on-the-web%2Fscraping-wunderground%2F&title=Scraping+Wunderground
+  37. https://plusone.google.com/_/+1/confirm?hl=en&url=http%3A%2F%2Fwww.pythonforbeginners.com%2Fpython-on-the-web%2Fscraping-wunderground%2F&title=Scraping+Wunderground
+  38. http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.pythonforbeginners.com%2Fpython-on-the-web%2Fscraping-wunderground%2F&media=http%3A%2F%2Fwww.pythonforbeginners.com%2Fwp-content%2Fuploads%2F2013%2F09%2Fapi-dev.png&description=Scraping+Wunderground
+  39. http://www.reddit.com/submit?url=http%3A%2F%2Fwww.pythonforbeginners.com%2Fpython-on-the-web%2Fscraping-wunderground%2F
+  40. http://www.stumbleupon.com/submit?url=http%3A%2F%2Fwww.pythonforbeginners.com%2Fpython-on-the-web%2Fscraping-wunderground%2F
+  41. http://www.tumblr.com/share/link?url=http%3A%2F%2Fwww.pythonforbeginners.com%2Fpython-on-the-web%2Fscraping-wunderground%2F&name=Scraping+Wunderground
+  42. https://twitter.com/share?url=http%3A%2F%2Fwww.pythonforbeginners.com%2Fpython-on-the-web%2Fscraping-wunderground%2F&text=Scraping+Wunderground
+  43. https://github.com/rjames86/My-Geek-Weather/blob/master/geekweather.py
+  44. https://www.dropbox.com/s/lhuad4efb34o573/Screenshot%202013-09-26%2007.59.59.png
+  45. http://www.pythonforbeginners.com/development/list-of-python-apis/
+  46. http://twitter.com/pythonbeginners
+  47. http://twitter.com/pythonbeginners
+  48. https://twitter.com/pythonbeginners
+  49. http://twitter.com/rcharant
+  50. http://twitter.com/NerdgrrlGarvey
+  51. http://twitter.com/wyorgb
+  52. http://twitter.com/minthac
+  53. http://twitter.com/cassiobotaro
+  54. http://twitter.com/include
+  55. http://twitter.com/leandromouta
+  56. http://twitter.com/LeandroTk_
+  57. http://twitter.com/RwandaLinux
+  58. http://twitter.com/alexeuzebio
+  59. http://www.pythonforbeginners.com/category/basics/
+  60. http://www.pythonforbeginners.com/category/cheatsheet/
+  61. http://www.pythonforbeginners.com/category/code-snippets-source-code/
+  62. http://www.pythonforbeginners.com/category/development/
+  63. http://www.pythonforbeginners.com/category/dictionary-data-structure-in-python/
+  64. http://www.pythonforbeginners.com/category/error-handling/
+  65. http://www.pythonforbeginners.com/category/lists/
+  66. http://www.pythonforbeginners.com/category/loops/
+  67. http://www.pythonforbeginners.com/category/modules-in-python/
+  68. http://www.pythonforbeginners.com/category/python-strings/
+  69. http://www.pythonforbeginners.com/category/systems-programming/
+  70. http://www.pythonforbeginners.com/category/python-on-the-web/
+  71. http://www.pythonforbeginners.com/python-on-the-web/scraping-websites-with-beautifulsoup/
+  72. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml47.data
+
+   Hidden links:
+  74. http://www.pythonforbeginners.com/feed/
+  75. http://www.pythonforbeginners.com/

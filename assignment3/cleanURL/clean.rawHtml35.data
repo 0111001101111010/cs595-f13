@@ -1,0 +1,597 @@
+   #[1]The Agiliq Blog - Django Web Development RSS Feed
+
+   [2]Agiliq Solutions
+
+We are a small, intelligent App development studio. We love "Building Amazing
+Apps", solving problems and cultivating strong relationships with our
+clients.
+
+     * [3]Home
+     * [4]Blog
+     * [5]Sept. 2013
+     * Understanding Threads in Python
+
+   akshar
+   [6]17th Sept., 2013
+   [7]5
+   Comments
+   [8]
+
+Understanding Threads in Python
+
+By : [9]Akshar Raaj
+
+   We will see some examples of using threads in Python and how to avoid
+   race conditions:
+
+   You should run each example several times to notice that threads are
+   unpredictable and that your results differ every time.
+
+   Disclaimer: Forget anything you heard about GIL for now, because GIL is
+   not going to mess up with scenarios I want to show.
+
+Example 1:
+
+   We want to fetch five different urls:
+
+Single threaded way:
+
+def get_responses():
+    urls = ['http://www.google.com', 'http://www.amazon.com', 'http://www.ebay.c
+om', 'http://www.alibaba.com', 'http://www.reddit.com']
+    start = time.time()
+    for url in urls:
+        print url
+        resp = urllib2.urlopen(url)
+        print resp.getcode()
+    print "Elapsed time: %s" % (time.time()-start)
+
+get_response()
+
+   Output is:
+http://www.google.com 200
+http://www.amazon.com 200
+http://www.ebay.com 200
+http://www.alibaba.com 200
+http://www.reddit.com 200
+Elapsed time: 3.0814409256
+
+Explanation:
+
+     * All the urls are fetched in sequence.
+     * Unless the processor got response from a url, it didn't fetch the
+       next url.
+     * Network operations are time taking, so processor was idle during
+       the time it was expecting the response from a url.
+
+   Even in a single threaded program, there is one thread of execution.
+   Let's call it main thread. So, last example had only one thread, i.e
+   main thread.
+
+Multi threaded way:
+
+   You need to create a class which subclasses Thread:
+from threading import Thread
+
+class GetUrlThread(Thread):
+    def __init__(self, url):
+        self.url = url
+        super(GetUrlThread, self).__init__()
+
+    def run(self):
+        resp = urllib2.urlopen(self.url)
+        print self.url, resp.getcode()
+
+def get_responses():
+    urls = ['http://www.google.com', 'http://www.amazon.com', 'http://www.ebay.c
+om', 'http://www.alibaba.com', 'http://www.reddit.com']
+    start = time.time()
+    threads = []
+    for url in urls:
+        t = GetUrlThread(url)
+        threads.append(t)
+        t.start()
+    for t in threads:
+        t.join()
+    print "Elapsed time: %s" % (time.time()-start)
+
+get_responses()
+
+   Output is:
+http://www.reddit.com 200
+http://www.google.com 200
+http://www.amazon.com 200
+http://www.alibaba.com 200
+http://www.ebay.com 200
+Elapsed time: 0.689890861511
+
+Explanation:
+
+     * Appreciate the improvement in running time of this program.
+     * We wrote a multi threaded program to decrease processor's idle
+       time. While waiting for response of a particular thread's url,
+       processor can work on some other thread and fetch the other
+       thread's url.
+     * We wanted one thread to act on one url, so overridden the
+       constructor of thread class to pass it a url.
+     * Execution of a thread means execution of a thread's run().
+     * So, whatever we want the thread to do must go in its run().
+     * Created one thread for each url and called start() on it. This
+       tells the processor that it can execute the particular thread i.e
+       the run() of thread.
+     * We don't want the elapsed time to be evaluated until all the
+       threads have executed, join() comes in picture here.
+     * Calling join() on a thread tells the main thread to wait for this
+       particular thread to finish before the main thread can execute the
+       next instruction.
+     * We call join() on all the threads, so elapsed time will be printed
+       only after all the threads have run.
+
+Few things about threads
+
+     * Processor might not execute run() of a thread immediately after
+       start().
+     * You can't say in which order run() of different threads will be
+       called.
+     * For a specific thread, it's guaranteed that the statements inside
+       run() will be executed sequentially.
+     * It means that first the the url associated with the thread will be
+       fetched and only then the recieved response will be printed.
+
+Example 2:
+
+   We will demonstrate race condition with a program and then fix it:
+
+   Read [10]wikipedia example to understand what race condition means.
+#define a global variable
+some_var = 0
+
+class IncrementThread(Thread):
+    def run(self):
+        #we want to read a global variable
+        #and then increment it
+        global some_var
+        read_value = some_var
+        print "some_var in %s is %d" % (self.name, read_value)
+        some_var = read_value + 1
+        print "some_var in %s after increment is %d" % (self.name, some_var)
+
+def use_increment_thread():
+    threads = []
+    for i in range(50):
+        t = IncrementThread()
+        threads.append(t)
+        t.start()
+    for t in threads:
+        t.join()
+    print "After 50 modifications, some_var should have become 50"
+    print "After 50 modifications, some_var is %d" % (some_var,)
+
+use_increment_thread()
+
+   Run this and you will find different result every time.
+
+Explanation:
+
+     * There is a global variable and all the threads will modify it.
+     * All threads should add 1 to the existing value of the variable.
+     * There are 50 threads, so at end the value of some_var should become
+       50, but it doesn't.
+
+Why some_var didn't reach 50?
+
+     * At some point thread t1 read the value of some_var as 15 and then
+       processor took the control from this thread and gave it to thread
+       t2.
+     * t2 also reads some_var as 15.
+     * Both t1 and t2 reset the value of some_var to 15+1 i.e 16.
+     * But when two threads act on some_var we expected it's value to be
+       increased by 2.
+     * So, we have a race condition here.
+     * A similar race condition might have occurred few more times and so
+       value of some_var at end remains something like 41 or 42 or
+       anything less than 50.
+
+Fix this race condition
+
+   Change the run() of IncrementThread to:
+from threading import Lock
+lock = Lock()
+
+class IncrementThread(Thread):
+    def run(self):
+        #we want to read a global variable
+        #and then increment it
+        global some_var
+        lock.acquire()
+        read_value = some_var
+        print "some_var in %s is %d" % (self.name, read_value)
+        some_var = read_value + 1
+        print "some_var in %s after increment is %d" % (self.name, some_var)
+        lock.release()
+
+   You should run use_increment_thread again and the result will match
+   your expectation.
+
+Explanation:
+
+     * Lock is used to guard against race condition.
+     * If thread t1 has acquired the lock before performing a set of
+       operations, no other thread can perform the same set of operation
+       until t1 releases the lock.
+     * We want to make sure that once t1 has read some_var, no other
+       thread can read some_var until t1 is done with modifying the value
+       of some_var.
+     * So reading some_var and modifying it are logically related
+       operations here.
+     * And that is why we keep read and modify part of some_var guarded by
+       a Lock instance.
+     * Lock is a separate object and it will be acquired by the thread
+       from whose context it is called.
+
+Example 3
+
+   In last example we saw how a global variable gets affected in
+   multithreading. Let's see an example to verify that one thread cannot
+   affect the instance variable of some other thread.
+
+   Let's introduce time.sleep() in this example. It will make sure that a
+   thread goes in suspended state and hence enforces thread switching to
+   occur.
+import time
+
+class CreateListThread(Thread):
+    def run(self):
+        self.entries = []
+        for i in range(10):
+            time.sleep(1)
+            self.entries.append(i)
+        print self.entries
+
+def use_create_list_thread():
+    for i in range(3):
+        t = CreateListThread()
+        t.start()
+
+use_create_list_thread()
+
+   Run it few times and you will notice that the list do not get printed
+   properly.
+
+   Possibly the entries of one thread was getting printed and during this
+   operation, processor switched to some other thread and started printing
+   the entries for other thread. We want to ensure that entries get
+   printed one after another for separate threads.
+
+   Change run() of CreateListThread to use lock.
+class CreateListThread(Thread):
+    def run(self):
+        self.entries = []
+        for i in range(10):
+            time.sleep(1)
+            self.entries.append(i)
+        lock.acquire()
+        print self.entries
+        lock.release()
+
+   So, we put the print operation inside a lock. When one thread has
+   acquired the lock and printing its entries, no other thread can print
+   its entries. And so you will see entries of different threads printed
+   on separate lines.
+
+   This will show that all threads' entries, which is an instance
+   variable, is a list with numbers from 0 to 9. So, thread switching
+   doesn't affect the instance variable of a thread.
+
+Related Posts
+
+     * [11]Basics of WSGI
+     * [12]Accept bitcoins using python
+     * [13]Writing thread-safe django - get_or_create
+     * [14]Process and Threads for Beginners
+     __________________________________________________________________
+
+   Can we help you build amazing apps? [15]Contact us today.
+   Topics : [16]python [17]threads
+
+Comments
+
+   [18]Shawn Milochik [19]19th Sept., 2013
+
+   Thanks for the great introduction. It was very easy to follow.
+   commmenttor
+   Kiss György [20]22nd Sept., 2013
+
+   Nice article, thanks!
+   commmenttor
+   Ilias [21]24th Sept., 2013
+
+   I think you have a bug on your last example. This is what works for me
+   synchronizing the threads:
+
+   lock=Lock()
+   class CreateListThread(Thread):
+   def run(self):
+   global lock
+   self.entries = []
+   for i in range(10):
+   time.sleep(.01)
+   self.entries.append(i)
+   lock.acquire()
+   print self.entries
+   lock.release()
+   commmenttor
+   Akshar Raaj [22]28th Sept., 2013
+
+   @Ilias:
+   Can you be more specific about the bug, the example works fine for me.
+   commmenttor
+   berkay [23]29th Sept., 2013
+
+   great examples, in second example if we add time.sleep(.01) after
+   read_value = some_var it's better to see the some_var does not add to
+   50 otherwise depending on processor's scheduler it's mostly 50.
+
+   @Ilias the code is correct self.entries = [] is not a global variable.
+   Only when started printing the entries of each thread, the others may
+   print too, then it's not seen correctly printed out if lock is not
+   used.
+   commmenttor
+   20th Sept., 2013, pingback from
+   [24]http://www.scoop.it/t/python-es/p/400...
+   20th Sept., 2013, pingback from
+   [25]http://www.scoop.it/t/opexxx/p/400793...
+
+   Post a comment
+
+   Name :
+   ____________________
+   Email :
+   ____________________
+   Your site url:
+   ____________________
+   Comment :
+
+   ________________________________________
+   ________________________________________
+   ________________________________________
+   ________________________________________
+   ________________________________________
+   ________________________________________
+   ________________________________________
+   ________________________________________
+   ________________________________________
+   ________________________________________
+   Comment
+
+   Recent Articles
+     * [26]Understanding Threads in Python
+     * [27]Process and Threads for Beginners
+     * [28]Minimal Nginx and Gunicorn configuration for Django projects
+     * [29]Writing thread-safe django - get_or_create
+     * [30]Accept bitcoins using python
+     * [31]Basics of WSGI
+     * [32]Self-testing fabfile using docker
+     * [33]Deploying django using docker
+     * [34]Common testing scenarios for Django app.
+     * [35]Logging in Django
+
+   About Agiliq
+     * [36]Agiliq - Building Amazing Apps
+     * [37]Our Open Source Code
+     * [38]Contact Us
+
+   Topics
+     * [39]rails
+     * [40]django
+     * [41]linkroundup
+     * [42]API
+     * [43]appengine
+     * [44]python
+     * [45]startup
+     * [46]Uncategorized
+     * [47]google
+     * [48]marketing
+     * [49]rambling
+     * [50]search
+     * [51]interviews
+     * [52]5startupideas
+     * [53]ideas
+     * [54]seo
+     * [55]tips
+     * [56]forms
+     * [57]utilities
+     * [58]web2.0
+     * [59]algorithms
+     * [60]presentations
+     * [61]book
+     * [62]tutorial
+     * [63]meta
+     * [64]apps
+     * [65]reviews
+     * [66]iphone
+     * [67]android
+     * [68]mobile
+     * [69]deploy
+     * [70]mysql
+     * [71]java
+     * [72]open-source
+     * [73]threads
+
+   Archives
+     * [74]September 2013
+     * [75]August 2013
+     * [76]July 2013
+     * [77]June 2013
+     * [78]April 2013
+     * [79]March 2013
+     * [80]February 2013
+     * [81]January 2013
+     * [82]November 2012
+     * [83]October 2012
+     * [84]September 2012
+     * [85]July 2012
+     * [86]June 2012
+     * [87]May 2012
+     * [88]April 2012
+     * [89]March 2012
+     * [90]February 2012
+     * [91]January 2012
+     * [92]December 2011
+     * [93]October 2011
+     * [94]September 2011
+     * [95]July 2011
+     * [96]June 2011
+     * [97]April 2011
+     * [98]February 2011
+     * [99]January 2011
+     * [100]December 2010
+     * [101]November 2010
+     * [102]October 2010
+     * [103]September 2010
+     * [104]June 2010
+     * [105]April 2010
+     * [106]March 2010
+     * [107]January 2010
+     * [108]December 2009
+     * [109]November 2009
+     * [110]October 2009
+     * [111]September 2009
+     * [112]August 2009
+     * [113]July 2009
+     * [114]June 2009
+     * [115]April 2009
+     * [116]March 2009
+     * [117]February 2009
+     * [118]November 2008
+     * [119]October 2008
+     * [120]June 2008
+     * [121]May 2008
+     * [122]April 2008
+
+   © Agiliq, 2009-2012
+
+References
+
+   1. file://localhost/blog/rss/latest/
+   2. file://localhost/
+   3. file://localhost/
+   4. file://localhost/blog/
+   5. file://localhost/blog/archive/2013/sep/
+   6. file://localhost/blog/archive/2013/sep/
+   7. file://localhost/blog/2013/09/understanding-threads-in-python/#comments
+   8. file://localhost/blog/2013/09/understanding-threads-in-python/
+   9. file://localhost/blog/author/akshar/
+  10. http://en.wikipedia.org/wiki/Race_condition#Example
+  11. file://localhost/blog/2013/07/basics-wsgi/
+  12. file://localhost/blog/2013/07/accept-bitcoins-using-python/
+  13. file://localhost/blog/2013/08/writing-thread-safe-django-code/
+  14. file://localhost/blog/2013/09/process-and-threads-for-beginners/
+  15. file://localhost/contactus
+  16. file://localhost/blog/tag/python/
+  17. file://localhost/blog/tag/threads/
+  18. http://milocast.com/
+  19. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml35.data#comment-241489
+  20. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml35.data#comment-244293
+  21. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml35.data#comment-246445
+  22. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml35.data#comment-249872
+  23. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml35.data#comment-250748
+  24. http://www.scoop.it/t/python-es/p/4007942773/understanding-threads-in-python-agiliq-blog-django-web-app-development
+  25. http://www.scoop.it/t/opexxx/p/4007937475/understanding-threads-in-python-agiliq-blog-django-web-app-development
+  26. file://localhost/blog/2013/09/understanding-threads-in-python/
+  27. file://localhost/blog/2013/09/process-and-threads-for-beginners/
+  28. file://localhost/blog/2013/08/minimal-nginx-and-gunicorn-configuration-for-djang/
+  29. file://localhost/blog/2013/08/writing-thread-safe-django-code/
+  30. file://localhost/blog/2013/07/accept-bitcoins-using-python/
+  31. file://localhost/blog/2013/07/basics-wsgi/
+  32. file://localhost/blog/2013/06/self-testing-fabfile-using-docker/
+  33. file://localhost/blog/2013/06/deploying-django-using-docker/
+  34. file://localhost/blog/2013/04/common-testing-scenarios-for-django-app/
+  35. file://localhost/blog/2013/03/logging-in-django/
+  36. http://agiliq.com/
+  37. https://github.com/agiliq
+  38. http://agiliq.com/contactus
+  39. file://localhost/blog/tag/rails/
+  40. file://localhost/blog/tag/django/
+  41. file://localhost/blog/tag/linkroundup/
+  42. file://localhost/blog/tag/api/
+  43. file://localhost/blog/tag/appengine/
+  44. file://localhost/blog/tag/python/
+  45. file://localhost/blog/tag/startup/
+  46. file://localhost/blog/tag/uncategorized/
+  47. file://localhost/blog/tag/google/
+  48. file://localhost/blog/tag/marketing/
+  49. file://localhost/blog/tag/rambling/
+  50. file://localhost/blog/tag/search/
+  51. file://localhost/blog/tag/interviews/
+  52. file://localhost/blog/tag/5startupideas/
+  53. file://localhost/blog/tag/ideas/
+  54. file://localhost/blog/tag/seo/
+  55. file://localhost/blog/tag/tips/
+  56. file://localhost/blog/tag/forms/
+  57. file://localhost/blog/tag/utilities/
+  58. file://localhost/blog/tag/web20/
+  59. file://localhost/blog/tag/algorithms/
+  60. file://localhost/blog/tag/presentations/
+  61. file://localhost/blog/tag/book/
+  62. file://localhost/blog/tag/tutorial/
+  63. file://localhost/blog/tag/meta/
+  64. file://localhost/blog/tag/apps/
+  65. file://localhost/blog/tag/reviews/
+  66. file://localhost/blog/tag/iphone/
+  67. file://localhost/blog/tag/android/
+  68. file://localhost/blog/tag/mobile/
+  69. file://localhost/blog/tag/deploy/
+  70. file://localhost/blog/tag/mysql/
+  71. file://localhost/blog/tag/java/
+  72. file://localhost/blog/tag/open-source/
+  73. file://localhost/blog/tag/threads/
+  74. file://localhost/blog/archive/2013/sep/
+  75. file://localhost/blog/archive/2013/aug/
+  76. file://localhost/blog/archive/2013/jul/
+  77. file://localhost/blog/archive/2013/jun/
+  78. file://localhost/blog/archive/2013/apr/
+  79. file://localhost/blog/archive/2013/mar/
+  80. file://localhost/blog/archive/2013/feb/
+  81. file://localhost/blog/archive/2013/jan/
+  82. file://localhost/blog/archive/2012/nov/
+  83. file://localhost/blog/archive/2012/oct/
+  84. file://localhost/blog/archive/2012/sep/
+  85. file://localhost/blog/archive/2012/jul/
+  86. file://localhost/blog/archive/2012/jun/
+  87. file://localhost/blog/archive/2012/may/
+  88. file://localhost/blog/archive/2012/apr/
+  89. file://localhost/blog/archive/2012/mar/
+  90. file://localhost/blog/archive/2012/feb/
+  91. file://localhost/blog/archive/2012/jan/
+  92. file://localhost/blog/archive/2011/dec/
+  93. file://localhost/blog/archive/2011/oct/
+  94. file://localhost/blog/archive/2011/sep/
+  95. file://localhost/blog/archive/2011/jul/
+  96. file://localhost/blog/archive/2011/jun/
+  97. file://localhost/blog/archive/2011/apr/
+  98. file://localhost/blog/archive/2011/feb/
+  99. file://localhost/blog/archive/2011/jan/
+ 100. file://localhost/blog/archive/2010/dec/
+ 101. file://localhost/blog/archive/2010/nov/
+ 102. file://localhost/blog/archive/2010/oct/
+ 103. file://localhost/blog/archive/2010/sep/
+ 104. file://localhost/blog/archive/2010/jun/
+ 105. file://localhost/blog/archive/2010/apr/
+ 106. file://localhost/blog/archive/2010/mar/
+ 107. file://localhost/blog/archive/2010/jan/
+ 108. file://localhost/blog/archive/2009/dec/
+ 109. file://localhost/blog/archive/2009/nov/
+ 110. file://localhost/blog/archive/2009/oct/
+ 111. file://localhost/blog/archive/2009/sep/
+ 112. file://localhost/blog/archive/2009/aug/
+ 113. file://localhost/blog/archive/2009/jul/
+ 114. file://localhost/blog/archive/2009/jun/
+ 115. file://localhost/blog/archive/2009/apr/
+ 116. file://localhost/blog/archive/2009/mar/
+ 117. file://localhost/blog/archive/2009/feb/
+ 118. file://localhost/blog/archive/2008/nov/
+ 119. file://localhost/blog/archive/2008/oct/
+ 120. file://localhost/blog/archive/2008/jun/
+ 121. file://localhost/blog/archive/2008/may/
+ 122. file://localhost/blog/archive/2008/apr/

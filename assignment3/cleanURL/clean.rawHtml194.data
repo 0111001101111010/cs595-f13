@@ -1,0 +1,527 @@
+   #[1]Startseite [2]Copyright [3]Suche [4]Neueste Meldungen von heise
+   Developer [5]Developer-Blog: Babel-Bulletin [6]Developer-Blog:
+   Babel-Bulletin (für ältere RSS-Reader) [7]Developer-Blog: Der
+   Dotnet-Doktor [8]Developer-Blog: Der Dotnet-Doktor (für ältere
+   RSS-Reader) [9]Developer-Blog: Kais bewegtes Web [10]Developer-Blog:
+   Kais bewegtes Web (für ältere RSS-Reader) [11]Developer-Blog: Bernds
+   Management-Welt [12]Developer-Blog: Bernds Management-Welt (für ältere
+   RSS-Reader) [13]Developer-Blog: The World of IT [14]Developer-Blog: The
+   World of IT (für ältere RSS-Reader) [15]Developer-Podcast:
+   SoftwareArchitekTOUR
+
+   [16]Einloggen auf heise online
+   [17]heise online [18]Menü auf-/zuklappen
+     *
+          + [19]News
+          + [20]c't
+          + [21]iX
+          + [22]Technology Review
+          + [23]Mac & i
+          + [24]Telepolis
+          + [25]Hardware Hacks
+          + [26]Digitale Fotografie
+     *
+          + [27]heise Autos
+          + [28]heise Developer
+          + [29]heise Foto
+          + [30]heise Netze
+          + [31]heise Open Source
+          + [32]heise resale
+          + [33]heise Security
+          + [34]heise Video
+          + [35]TechStage
+     *
+          + [36]Download
+          + [37]Preisvergleich
+          + [38]Stellenmarkt
+          + [39]Veranstaltungen
+          + [40]IT-Markt
+          + [41]Whitepapers
+          + [42]Webcasts
+          + [43]Tarifrechner
+     *
+          + [44]heise shop
+          + [45]Artikel-Archiv
+          + [46]Zeitschriften-Abo
+          + [47]Arbeiten bei heise
+
+   ____________________ Los
+
+   [48]heise Developer
+     * [49]Foren
+     * [50]Newsletter
+     * [51]Kontakt
+
+     * [52]News
+     * [53]Rubriken
+     * [54]Blogs
+       [55]Babel-Bulletin [56]Der Dotnet-Doktor [57]The World of IT
+       [58]Embedded-Blogger [59]the next big thing [60]Die mobile
+       Denkfabrik [61]Neuigkeiten von der Insel
+     * [62]Podcast
+     * [63]Szene
+     * [64]Software
+     * [65]FAQ-Liste
+     * [66]heise Developer RSS-Feeds
+     * [67]heise Developer mobil
+     * [68]heise Developer Twitter
+
+   [69]Babel-Bulletin [70]Der Dotnet-Doktor [71]The World of IT
+   [72]Embedded-Blogger [73]the next big thing [74]Die mobile Denkfabrik
+   [75]Neuigkeiten von der Insel
+   [76]heise Developer > [77]Blogs > [78]the next big thing > Zeitversetzt
+   und fehlerfrei: Wie man Callbacks richtig schreibt
+
+   the next big thing 26.09.13
+
+Zeitversetzt und fehlerfrei: Wie man Callbacks richtig schreibt
+
+   Der Blog-Eintrag "[79]Callbacks, synchronous and asynchronous"
+   beschreibt zwei Arten von Rückruffunktionen, die sich grundlegend
+   voneinander unterscheiden: synchrone und asynchrone Callbacks. Während
+   Node.js die synchrone Variante im Kontext der aufrufenden Funktion
+   ausführt, gilt das für die asynchrone nicht.
+
+   Ein gutes Beispiel für einen synchronen Callback ist die in JavaScript
+   integrierte [80]reduce-Funktion, die ein Array mit einer als Parameter
+   übergebenen Funktion auf einen einzigen Wert reduziert. Man kann sie
+   beispielsweise verwenden, um ein verschachteltes Array zu ebnen:
+var flattened = [[0, 1], [2, 3], [4, 5]].reduce(function (a, b) {
+  return a.concat(b);
+});
+console.log(flattened); // => [0, 1, 2, 3, 4, 5]
+
+   In diesem Beispiel wird deutlich, warum die reduce-Funktion die ihr
+   übergebene Funktion synchron aufrufen muss: Fände der Aufruf asynchron
+   statt, könnte Node.js das Ergebnis nicht der Variablen flattened
+   zuweisen.
+
+Synchrone und asynchrone Callbacks
+
+   Allerdings gibt es durchaus auch Funktionen, in denen anstelle eines
+   synchronen Aufrufs ein asynchroner Aufruf des angegebenen Callbacks
+   sinnvoll ist. Das gilt unter anderem dann, wenn eine Funktion auf eine
+   externe Ressource warten muss, wie eine Netzwerkverbindung oder das
+   Dateisystem:
+http.get('http://www.thenativeweb.io', function (res) {
+  console.log(res.statusCode); // => 200
+});
+console.log('Requesting...');
+
+   In diesem Beispiel gibt Node.js daher zunächst die Meldung
+   Requesting... aus, bevor es auf den Statuscode des Netzwerk-Streams
+   zugreifen kann. Das Verhalten spiegelt den von Node.js propagierten
+   asynchronen, nichtblockierenden Zugriff auf I/O-Ressourcen wider.
+
+   Entscheidend für die Konsistenz und Verlässlichkeit einer API ist nun,
+   dass sich eine Funktion stets gleichartig verhält: Wenn eine Funktion
+   eine Rückruffunktion entgegennimmt, muss sie diese daher entweder stets
+   synchron oder stets asynchron aufrufen – aber nicht von Fall zu Fall
+   verschieden.
+
+   Der eingangs erwähnte Blog-Eintrag fasst das in der einfachen Regel
+   Choose sync or async, but not both zusammen und begründet dies wie
+   folgt:
+
+   "Because sync and async callbacks have different rules, they create
+   different bugs. It’s very typical that the test suite only triggers the
+   callback asynchronously, but then some less-common case in production
+   runs it synchronously and breaks. (Or vice versa.) Requiring
+   application developers to plan for and test both sync and async cases
+   is just too hard, and it’s simple to solve in the library: If the
+   callback must be deferred in any situation, always defer it."
+
+process.nextTick und setImmediate
+
+   Zu diesem Zweck kennt Node.js zwei Funktionen, die auf den ersten Blick
+   austauschbar zu sein scheinen: [81]process.nextTick und
+   [82]setImmediate. Beide erwarten einen Callback als Parameter und
+   führen diesen zu einem späteren Zeitpunkt aus. Daher scheinen der
+   Aufruf von
+process.nextTick(function () {
+  // Do something ...
+});
+
+   und der Aufruf von
+setImmediate(function () {
+  // Do something ...
+});
+
+   äquivalent zu sein. Intern unterscheiden sich die beiden Varianten
+   allerdings deutlich voneinander. process.nextTick verzögert die
+   Ausführung auf einen späteren Zeitpunkt, führt die Funktion aber aus,
+   bevor Node.js I/O-Zugriffe durchführt und schließlich die Kontrolle
+   wieder an die Eventloop übergibt.
+
+   Daher können rekursive Aufrufe von process.nextTick dazu führen, dass
+   man diese Übergabe immer weiter hinauszögert und die Eventloop effektiv
+   verhungern lässt. Das bezeichnet man dementsprechend auch als event
+   loop starvation.
+
+   Die Funktion setImmediate umgeht dieses Problem, indem sie die
+   Ausführung der angegebenen Funktion auf die nächste Runde der Eventloop
+   verschiebt. Der Blog-Eintrag zur Veröffentlichung von Node.js 0.10.0
+   beschreibt die [83]Unterschiede zwischen diesen beiden Funktionen
+   nochmals in detaillierter Form.
+
+Im Zweifel asynchron
+
+   In der Regel genügt allerdings der Aufruf von process.nextTick, um eine
+   Rückruffunktion asynchron statt synchron aufzurufen. Auf diesem Weg
+   kann man den teilweise synchron, teilweise asynchron arbeitenden Code
+var cache = {};
+var load = function (filename, callback) {
+  var data = cache[filename];
+  if (data) {
+    return callback(null, data); // Synchronous
+  }
+  fs.readFile(filename, function (err, data) {
+    if (err) { return callback(err); }
+    cache[filename] = data;
+    callback(null, data); // Asynchronous
+  });
+};
+
+   in eine vollständig asynchrone Form bringen, was die Verwendung der
+   load-Funktion konsistent und verlässlich macht:
+var cache = {};
+var load = function (filename, callback) {
+  var data = cache[filename];
+  if (data) {
+    return process.nextTick(function () {
+      callback(null, data); // Asynchronous
+    });
+  }
+  fs.readFile(filename, function (err, data) {
+    if (err) { return callback(err); }
+    cache[filename] = data;
+    callback(null, data); // Asynchronous
+  });
+};
+
+   Auf diesem Weg umgeht man die eingangs thematisierten Probleme und
+   erhält eine Funktion, die sich im Test- und im Produktivbetrieb
+   einheitlich verhält. Allen Skeptikern sei abschließend der Blog-Eintrag
+   "[84]Designing APIs for Asynchrony" und dessen Warnung eindringlich ans
+   Herz gelegt: Do Not Release Zalgo!
+
+   tl;dr: Funktionen sollten Callbacks stets entweder synchron oder
+   asynchron aufrufen, andernfalls verhalten sich APIs weder konsistent
+   noch verlässlich. Im Zweifelsfall muss man einen synchronen Aufruf
+   daher künstlich in einen asynchronen umwandeln. Für diesen Zweck kennt
+   Node.js die beiden Funktionen process.nextTick und setImmediate.
+
+   [85]Kommentare lesen (1 Beitrag)
+     * [86]Drucken
+     * [87]Senden
+     * [88]Newsletter
+     * [89]http://heise.de/-1966423
+
+[90]Golo Roden
+
+   [91]Golo Roden
+
+   Golo Roden ist Gründer und technologischer Visionär der [92]the native
+   web UG (haftungsbeschränkt), eines auf native Webtechnologien
+   spezialisierten Unternehmens.
+
+   [93]Vita lesen »
+   [94]Anzeige
+   [95]Anzeige
+   [96]Veranstaltungskalender
+
+   Fehlt ein wichtiger Termin? [97]Hier können Sie eine neue Veranstaltung
+   eintragen.
+
+Workshop
+
+[98]Programmieren mit Android
+
+   Bei der von iX und dpunkt.verlag am 10. und 11. Oktober in Heidelberg
+   durchgeführten Schulung befinden sich alle durchexerzierten Projekte
+   auf dem Stand von Android 4.3.
+
+[99]Topartikel
+
+[100]Die wichtigsten Fragen und Antworten zur PaaS-Einführung
+
+   Die Nutzung der Cloud ist für viele Unternehmen selbstverständlich, sie
+   beschränken den Einsatz allerdings zumeist auf SaaS und IaaS. Die
+   Nutzung von PaaS kommt erst langsam in Schwung. Doch was müssen
+   Unternehmen bedenken, bevor sie sich dafür entscheiden? Antworten auf
+   fünf wichtige Fragen zur PaaS-Einführung. Mehr…
+
+[101]Federlesen #14: Mehr Sicherheit bei und mit Apache-Produkten
+
+   Da Open-Source-Software der Apache Software Foundation bei Entwicklern
+   und Administratoren beliebt ist, stellt sich die Frage, wie sicher
+   diese Produkte sind und welche Möglichkeiten es gibt, ihr
+   Sicherheitsniveau zu erhöhen. Mehr…
+
+[102]Quicklisp und mehr: Neues bei Common Lisp
+
+   Die Familie der Programmiersprache Lisp ist mit Clojure erweitert und
+   wieder etwas prominenter geworden. Doch auch für das Arbeiten mit dem
+   Klassiker Common Lisp gab es mit der Bibliotheksverwaltung Quicklisp
+   eine wesentliche Neuerung. Mit dem Gespann Quicklisp, Emacs, SLIME und
+   Git steht eine leistungsfähige Entwicklungsumgebung für Common Lisp zur
+   Verfügung. Mehr…
+
+[103]Dependency Management unter iOS mit CocoaPods
+
+   Eine Software für das Management von Abhängigkeiten fehlte
+   iOS-Entwicklern lange Zeit. Das dafür vorgesehene Projekt CocoaPods
+   erleichtert einem Entwicklungsteam die tägliche Arbeit deutlich und
+   erhöht die Build-Geschwindigkeit drastisch. Mehr…
+
+[104]Source Reflection #3: Über spekulierende Softwareentwickler
+
+   Softwaresysteme verändern die Welt – den Satz konnte man in den letzten
+   Jahrzehnten wohl schon so oft hören oder lesen, dass er fast trivial
+   erscheint. Aber über seine Konsequenzen denkt man nur selten nach.
+   Mehr…
+
+[105]Webanwendungen mit AngularJS
+
+   Die HTML ursprünglich zugrunde liegende Idee war der schnelle und
+   strukturierte Austausch wissenschaftlicher Dokumente. Seither wurde die
+   Sprache zwar weiterentwickelt, jedoch nie an die Bedürfnisse komplexer
+   Webanwendungen angepasst. Die Entwickler von AngularJS versuchen zu
+   helfen. Mehr…
+
+[106]Developer Blogs
+
+   [107]Jutta Eckstein [108]Nicolai Josuttis [109]Dr. Holger
+   Schwichtenberg [110]Andreas Graf [111]Michael Wiedeking [112]Tam Hanna
+   [113]Golo Roden [114]Markus Eisele
+
+[115]Dies und das – Neuigkeiten für Entwickler
+
+   Im Mobilmarkt ist nie Ruhe – auch letzte Woche gab es jede Menge
+   interessanter Ereignisse. Mehr…
+
+[116]Die Situation von BlackBerry als Parabel
+
+   Für den Smartphone-Hersteller sind Marktanteile vergleichsweise
+   insignifikant – leider verstehen das nur wenige Marktteilnehmer. Manche
+   Zusammenhänge lassen sich am einfachsten anhand einer kleinen Parabel
+   erklären. Mehr…
+
+[117]Vodoo im Handymarkt
+
+   Menschen neigen dazu, ihnen nicht einleuchtende Vorgänge zu
+   "mytholigisieren". Dabei entstehen Fehlkorrelationen, die aus dem
+   Gehirn des Nutzers nicht ohne Weiteres zu tilgen sind. Ein Beispiel aus
+   dem Unternehmen des Bloggers Mehr…
+
+[118]Zeitversetzt und fehlerfrei: Wie man Callbacks richtig schreibt
+
+   Callbacks sind nicht nur in der funktionalen Programmierung im
+   Allgemeinen, sondern auch in JavaScript und Node.js im Speziellen von
+   essenzieller Bedeutung. Daher ist es enorm wichtig, sie richtig zu
+   schreiben. Das scheint auf den ersten Blick nicht schwierig zu sein,
+   doch wie so oft lauert der Teufel im Detail … Mehr…
+
+[119]SoftwareArchitekTOUR-Podcast
+
+[120]Episode 40: Mobile Multiplattform-Anwendungen am Beispiel von jQuery
+Mobile
+
+   [121]Developer-Podcast Eine Episode über die Entwicklung
+   plattformübergreifender Apps mit dem Framework jQuery Mobile. Mehr…
+
+Sonderheft
+
+[122]iX Developer Bessere Software
+
+   Das neue Sonderheft zum Status quo zur Qualitätssicherung in der
+   Softwareentwicklung mit dem Fokus auf Agile ALM, Continuous Delivery
+   und DevOps. Jetzt am Kiosk, im heise Shop und als PDF-Version.
+     * [123]News [124]7-Tage-News [125]News-Archiv [126]News mobil
+     * [127]Rubriken [128]Sprachen [129]Architektur/Methoden
+       [130]Werkzeuge [131]Know-how [132]Standards [133]Literatur
+     * [134]Blogs [135]Babel-Bulletin [136]Der Dotnet-Doktor [137]The
+       World of IT [138]Embedded-Blogger [139]the next big thing [140]Die
+       mobile Denkfabrik [141]Neuigkeiten von der Insel
+     * [142]Podcast
+     * [143]Szene [144]Veranstaltungsberichte [145]Termine [146]Newsgroups
+     * [147]Software
+     * [148]FAQ-Liste
+
+     * [149]Datenschutzhinweis
+     * [150]Impressum
+     * [151]Kontakt
+     * [152]Mediadaten
+     * 1084787
+     * [153]Content Management by InterRed
+     * [154]Copyright © 2013 Heise Zeitschriften Verlag
+
+References
+
+   Visible links
+   1. file://localhost/developer/
+   2. file://localhost/developer/Impressum-5196.html
+   3. http://www.heise.de/developer/suche/
+   4. http://www.heise.de/developer/rss/news-atom.xml
+   5. http://www.heise.de/developer/rss/babel-bulletin/blog-atom.xml
+   6. http://www.heise.de/developer/rss/babel-bulletin/blog.rdf
+   7. http://www.heise.de/developer/rss/dotnet-doktor/blog-atom.xml
+   8. http://www.heise.de/developer/rss/dotnet-doktor/blog.rdf
+   9. http://www.heise.de/developer/rss/kais-bewegtes-web/blog-atom.xml
+  10. http://www.heise.de/developer/rss/kais-bewegtes-web/blog.rdf
+  11. http://www.heise.de/developer/rss/bernds-management-welt/blog-atom.xml
+  12. http://www.heise.de/developer/rss/bernds-management-welt/blog.rdf
+  13. http://www.heise.de/developer/rss/world-of-it/blog-atom.xml
+  14. http://www.heise.de/developer/rss/world-of-it/blog.rdf
+  15. http://www.heise.de/developer/podcast/itunes/heise-developer-podcast-softwarearchitektour.rss
+  16. https://www.heise.de/userdb/sso?rm=show_login&dirid=1&objekt=/
+  17. file://localhost/index.html/from/navi_oben_ho
+  18. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml194.data#heisetopnavi_sub_container
+  19. file://localhost/index.html/from/navi_oben_ho
+  20. file://localhost/ct/from/navi_oben_ct
+  21. file://localhost/ix/from/navi_oben_ix
+  22. file://localhost/tr/from/navi_oben_tr
+  23. file://localhost/mac-and-i/from/navi_oben_mac
+  24. file://localhost/tp/from/navi_oben_tp
+  25. file://localhost/hardware-hacks/from/navi_oben_hh
+  26. file://localhost/foto/special/from/navi_oben_df
+  27. file://localhost/autos/from/navi_oben_aut
+  28. file://localhost/developer/from/navi_oben_dev
+  29. file://localhost/foto/from/navi_oben_foto
+  30. file://localhost/netze/from/navi_oben_net
+  31. file://localhost/open/from/navi_oben_op
+  32. file://localhost/resale/from/navi_oben_res
+  33. file://localhost/security/from/navi_oben_sec
+  34. file://localhost/video/from/navi_oben_video
+  35. file://localhost/redirect-to/techstage/from/navi_oben_techstage
+  36. file://localhost/download/from/navi_oben_swv
+  37. file://localhost/preisvergleich/from/navi_oben_pvg
+  38. file://localhost/jobs/from/navi_oben_job
+  39. file://localhost/events/from/navi_oben_eve
+  40. file://localhost/itmarkt/from/navi_oben_itm
+  41. file://localhost/whitepapers/from/navi_oben_whi
+  42. file://localhost/redirect-to/webcasts/from/navi_oben_webcasts
+  43. file://localhost/redirect-to/tarifrechner/from/navi_oben_tarifr
+  44. file://localhost/redirect-to/shop/from/navi_oben_shop
+  45. file://localhost/artikel-archiv/from/navi_oben_kio
+  46. file://localhost/redirect-to/abo/from/navi_oben_abo
+  47. file://localhost/redirect-to/hmg/from/navi_oben_hmg
+  48. file://localhost/developer/
+  49. file://localhost/developer/forum/
+  50. file://localhost/newsletter/manage/developer
+  51. file://localhost/developer/kontakt/
+  52. file://localhost/developer/
+  53. file://localhost/developer/rubriken/
+  54. file://localhost/developer/blog/
+  55. file://localhost/developer/babel-bulletin-980714.html
+  56. file://localhost/developer/der-dotnet-doktor-1292.html
+  57. file://localhost/developer/the-world-of-it-1296.html
+  58. file://localhost/developer/Embedded-Blogger-1392952.html
+  59. file://localhost/developer/the-next-big-thing-1790061.html
+  60. file://localhost/developer/Die-mobile-Denkfabrik-1790085.html
+  61. file://localhost/developer/neuigkeiten-von-der-insel-1920360.html
+  62. file://localhost/developer/podcast/
+  63. file://localhost/developer/veranstaltungsberichte/
+  64. file://localhost/developer/software/
+  65. file://localhost/developer/FAQ-Liste-2442.html
+  66. file://localhost/developer/rss/news-atom.xml
+  67. http://m.heise.de/developer/
+  68. http://twitter.com/#!/heisedc
+  69. file://localhost/developer/babel-bulletin-980714.html
+  70. file://localhost/developer/der-dotnet-doktor-1292.html
+  71. file://localhost/developer/the-world-of-it-1296.html
+  72. file://localhost/developer/Embedded-Blogger-1392952.html
+  73. file://localhost/developer/the-next-big-thing-1790061.html
+  74. file://localhost/developer/Die-mobile-Denkfabrik-1790085.html
+  75. file://localhost/developer/neuigkeiten-von-der-insel-1920360.html
+  76. file://localhost/developer/
+  77. file://localhost/developer/blog/
+  78. file://localhost/developer/the-next-big-thing-1790061.html
+  79. http://blog.ometer.com/2011/07/24/callbacks-synchronous-and-asynchronous/
+  80. file://localhost/developer/artikel/Konsole-Funktionen-hoeherer-Ordnung-1958717.html
+  81. http://nodejs.org/api/process.html#process_process_nexttick_callback
+  82. http://nodejs.org/api/timers.html#timers_setimmediate_callback_arg
+  83. http://blog.nodejs.org/2013/03/11/node-v0-10-0-stable/
+  84. http://blog.izs.me/post/59142742143/designing-apis-for-asynchrony
+  85. file://localhost/developer/blog/foren/S-Zeitversetzt-und-fehlerfrei-Wie-man-Callbacks-richtig-schreibt/forum-266128/list/
+  86. file://localhost/developer/artikel/Zeitversetzt-und-fehlerfrei-Wie-man-Callbacks-richtig-schreibt-1966423.html?view=print
+  87. file://localhost/developer/artikel/Zeitversetzt-und-fehlerfrei-Wie-man-Callbacks-richtig-schreibt-1966423.html?view=mail
+  88. file://localhost/newsletter/manage/developer
+  89. http://heise.de/-1966423
+  90. file://localhost/developer/developer_redakteur_1789745.html
+  91. file://localhost/developer/developer_redakteur_1789745.html
+  92. http://www.thenativeweb.io/
+  93. file://localhost/developer/developer_redakteur_1789745.html
+  94. http://www.heise.de/mediadaten/online/
+  95. http://www.heise.de/mediadaten/online/
+  96. file://localhost/developer/termine/
+  97. file://localhost/developer/termine/new_event/
+  98. http://www.dpunkt.de/veranstaltungen/3154/
+  99. file://localhost/developer/rubriken/
+ 100. file://localhost/developer/artikel/Die-wichtigsten-Fragen-und-Antworten-zur-PaaS-Einfuehrung-1969849.html
+ 101. file://localhost/developer/artikel/Federlesen-14-Mehr-Sicherheit-bei-und-mit-Apache-Produkten-1968647.html
+ 102. file://localhost/developer/artikel/Quicklisp-und-mehr-Neues-bei-Common-Lisp-1965566.html
+ 103. file://localhost/developer/artikel/Dependency-Management-unter-iOS-mit-CocoaPods-1960513.html
+ 104. file://localhost/developer/artikel/Source-Reflection-3-Ueber-spekulierende-Softwareentwickler-1958570.html
+ 105. file://localhost/developer/artikel/Webanwendungen-mit-AngularJS-1955101.html
+ 106. file://localhost/developer/blog/
+ 107. file://localhost/developer/developer_redakteur_403101.html
+ 108. file://localhost/developer/developer_redakteur_403097.html
+ 109. file://localhost/developer/developer_redakteur_403109.html
+ 110. file://localhost/developer/developer_redakteur_1393045.html
+ 111. file://localhost/developer/developer_redakteur_964686.html
+ 112. file://localhost/developer/developer_redakteur_1789849.html
+ 113. file://localhost/developer/developer_redakteur_1789745.html
+ 114. file://localhost/developer/developer_redakteur_1919775.html
+ 115. file://localhost/developer/artikel/Dies-und-das-Neuigkeiten-fuer-Entwickler-1969259.html
+ 116. file://localhost/developer/artikel/Die-Situation-von-BlackBerry-als-Parabel-1968813.html
+ 117. file://localhost/developer/artikel/Vodoo-im-Handymarkt-1958724.html
+ 118. file://localhost/developer/artikel/Zeitversetzt-und-fehlerfrei-Wie-man-Callbacks-richtig-schreibt-1966423.html
+ 119. file://localhost/developer/podcast/
+ 120. file://localhost/developer/artikel/Episode-40-Mobile-Multiplattform-Anwendungen-am-Beispiel-von-jQuery-Mobile-1911985.html
+ 121. file://localhost/developer/podcast/
+ 122. http://shop.heise.de/katalog/ix-developer-bessere-software-3-2013
+ 123. file://localhost/developer/
+ 124. file://localhost/developer/news/
+ 125. file://localhost/developer/news/archiv/
+ 126. http://heise-online.mobi/developer/
+ 127. file://localhost/developer/rubriken/
+ 128. file://localhost/developer/sprachen-1037.html
+ 129. file://localhost/developer/architektur-methoden-1031.html
+ 130. file://localhost/developer/werkzeuge-1041.html
+ 131. file://localhost/developer/know-how-1033.html
+ 132. file://localhost/developer/standards-1039.html
+ 133. file://localhost/developer/literatur-1035.html
+ 134. file://localhost/developer/blog/
+ 135. file://localhost/developer/babel-bulletin-980714.html
+ 136. file://localhost/developer/der-dotnet-doktor-1292.html
+ 137. file://localhost/developer/the-world-of-it-1296.html
+ 138. file://localhost/developer/Embedded-Blogger-1392952.html
+ 139. file://localhost/developer/the-next-big-thing-1790061.html
+ 140. file://localhost/developer/Die-mobile-Denkfabrik-1790085.html
+ 141. file://localhost/developer/neuigkeiten-von-der-insel-1920360.html
+ 142. file://localhost/developer/podcast/
+ 143. file://localhost/developer/veranstaltungsberichte/
+ 144. file://localhost/developer/veranstaltungsberichte/
+ 145. file://localhost/developer/termine/
+ 146. file://localhost/developer/Newsgroups-und-Mailinglisten-fuer-Software-Entwickler-2464.html
+ 147. file://localhost/developer/software/
+ 148. file://localhost/developer/FAQ-Liste-2442.html
+ 149. file://localhost/Privacy-Policy-der-Heise-Zeitschriften-Verlag-GmbH-Co-KG-4860.html
+ 150. file://localhost/developer/Impressum-5196.html
+ 151. file://localhost/developer/Kontakt-zur-Redaktion-5198.html
+ 152. file://localhost/mediadaten/online/
+ 153. http://www.interred.de/
+ 154. http://www.heise-medien.de/zeitschriften/
+
+   Hidden links:
+ 156. http://ad-emea.doubleclick.net/N6514/jump/developer/dev-inhalt;sz=500x500;tile=1;ord=3041433744?
+ 157. http://ad-emea.doubleclick.net/N6514/jump/developer/dev-inhalt;sz=300x250,336x280;tile=2;ord=3041433744?
+ 158. file://localhost/developer/artikel/Die-wichtigsten-Fragen-und-Antworten-zur-PaaS-Einfuehrung-1969849.html
+ 159. file://localhost/developer/artikel/Federlesen-14-Mehr-Sicherheit-bei-und-mit-Apache-Produkten-1968647.html
+ 160. file://localhost/developer/artikel/Quicklisp-und-mehr-Neues-bei-Common-Lisp-1965566.html
+ 161. file://localhost/developer/artikel/Dependency-Management-unter-iOS-mit-CocoaPods-1960513.html
+ 162. file://localhost/developer/artikel/Source-Reflection-3-Ueber-spekulierende-Softwareentwickler-1958570.html
+ 163. file://localhost/developer/artikel/Webanwendungen-mit-AngularJS-1955101.html
+ 164. http://ad-emea.doubleclick.net/N6514/jump/developer/dev-inhalt;sz=728x90,468x60;tile=3;ord=3041433744?
+ 165. http://ad-emea.doubleclick.net/N6514/jump/developer/dev-inhalt;sz=120x600,120x800,160x600,160x800;tile=4;ord=3041433744?

@@ -1,0 +1,556 @@
+   #[1]CodeProject Latest articles - All Topics [2]CodeProject Latest
+   articles - MFC/C++ [3]CodeProject Latest articles - C# [4]CodeProject
+   Latest articles - VB.NET [5]CodeProject Latest articles - Mobile
+   [6]CodeProject Latest articles - ASP.NET [7]CodeProject Lounge Postings
+   [8]CodeProject
+
+   [9]Click here to Skip to main content
+
+   [10]Home
+            10,118,810 members (41,806 online)
+            [11]Visit CodeProject.TV
+            [12]Discuss CodeProject.TV
+            [13]Sign in
+            Email
+            ____________________
+            Password
+            ____________________
+            Sign in
+              [14]Forgot your password?
+              __________________________________________________________________
+
+            Sign in using [15][facebook.png] [16][google-plus.png]
+            [17][linkedin.png]
+
+
+
+   [18]Click here to Skip to main content
+     * [19]home
+     * [20]articles
+          + [21]Chapters and Sections>
+               o loading
+          + [22]Search
+          + [23]Latest Articles
+          + [24]Latest Tips/Tricks
+          + [25]Top Articles
+          + [26]Beginner Articles
+          + [27]Technical Blogs
+          + [28]Posting/Update Guidelines
+          + [29]Article Help Forum
+          + [30]Article Competition
+          + [31][write-gr.png] Submit an article or tip
+          + [32][write-or.png] Post your Blog
+          +
+     * [33]quick answers
+          + [34][write-or.png] Ask a Question
+          + [35]View Unanswered Questions
+          + [36]View All Questions...
+          + [37]C# questions
+          + [38]ASP.NET questions
+          + [39]VB.NET questions
+          + [40]C#4.0 questions
+          + [41]C++ questions
+          +
+     * [42]discussions
+          + [43]All Message Boards...
+          + [44]Application Lifecycle>
+               o [45]Running a Business
+               o [46]Sales / Marketing
+               o [47]Collaboration / Beta Testing
+               o [48]Work & Training Issues
+          + [49]Design and Architecture
+          + [50]ASP.NET
+          + [51]JavaScript
+          + [52]C / C++ / MFC>
+               o [53]ATL / WTL / STL
+               o [54]Managed C++/CLI
+          + [55]Adobe Technologies
+          + [56]C#
+          + [57]Free Tools
+          + [58]Objective-C
+          + [59]Ruby On Rails
+          + [60]Database
+          + [61]Hardware & Devices>
+               o [62]System Admin
+          + [63]Hosting and Servers
+          + [64]Java
+          + [65].NET Framework
+          + [66]Mobile
+          + [67]VS 2012/2013 & .NET 4.5.1
+          + [68]Sharepoint
+          + [69]Silverlight / WPF
+          + [70]Visual Basic
+          + [71]Web Development
+          + [72]Site Bugs / Suggestions
+          +
+     * [73]features
+          + [74]CP.TV CodeProject.TV
+          + [75]Component & Service Catalog
+          + [76]Competitions
+          + [77]News
+          + [78]The Insider Newsletter
+          + [79]Newsletter archive
+          + [80]Surveys
+          + [81]Product Showcase
+          + [82]Research Library
+          + [83]CodeProject Stuff
+          +
+     * [84]community
+          + [85]The Insider News
+          + [86]The Lounge
+          + [87]The Weird & The Wonderful
+          + [88]The Soapbox
+          + [89]Press Releases
+          + [90]Who's Who
+          + [91]Most Valuable Professionals
+          + [92]Company Listings
+          + [93]Non-English Language >
+               o [94]General Indian Topics
+               o [95]General Chinese Topics
+          +
+     * [96]help
+          + [97]What is 'CodeProject'?
+          + [98]General FAQ
+          + [99]Ask a Question
+          + [100]Bugs and Suggestions
+          + [101]Article Help Forum
+          + [102]Site Map
+          + [103]Advertise with us
+          + [104]Employment Opportunities
+          + [105]About Us
+          +
+
+
+   ____________________ [search.gif]-Submit
+   Search within:
+   (*) Articles
+   ( ) Videos
+   ( ) Quick Answers
+   ( ) Messages
+   ( ) Product Catalog
+   [106]Articles » [107]Platforms, Frameworks & Libraries » [108]Windows
+   Presentation Foundation » [109]Controls
+
+   [110]Next Next
+   Tip
+   [111]Browse Code
+   [112]Stats
+   [113]Revisions (4)
+   [114]Alternatives
+   [115]Comments & Discussions (1)
+
+ListBox and Panels in WPF
+
+   By [116]_Noctis_, 26 Sep 2013
+
+
+   [stars-fill-lg.png]
+   [stars-empty-lg.png]
+                          4.75 (3 votes)
+
+   1
+     2
+       3 1 vote, 33.3%
+         4            2 votes, 66.7%
+                      5
+   4.75/5 - 3 votes
+   μ 4.75, σ[a] 1.01 [[117]?]
+
+   loading...
+              [118]Sign Up to vote (*) ( ) ( ) ( ) ( ) Vote!
+   Add a reason or comment to your vote: [119]x
+
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   Votes of 3 or less require a comment
+   [120]Tweet
+     * [121]Download source code - 117 KB
+
+Introduction
+
+   This article shows the different results of using a ListBox in
+   different panels, and the effects on scrolling.
+
+Background
+
+   I've been designing an application and ran into an issue with a ListBox
+   that wasn't having a ScrollViewer. A quick search
+   on [122]stackoverflow gave me the answer, but in case anyone else wants
+   to have a look and see the differences and/or play around with this,
+   here's the code/demo I came up with.
+
+Using the code
+
+   I'm using WPF 4 under Visual Studio 2012, with the MVVM Light package.
+
+   The RandomHelper was taken from [123]here.
+
+   You can simply compile and run the code, or have a look for the .exe in
+   the /bin/debug folder.
+
+   The main view model holds a ContentControl that points to a second
+   ViewModel that holds the ListBox.
+<Window x:Class="TestListBox.MainWindow"
+       ...>
+
+    <Window.Resources>
+        ...
+    </Window.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock ...</TextBlock>
+        <Border  ...>
+            <ContentControl Content="{Binding Current_VM }"></ContentControl>
+        </Border>
+    </Grid>
+</Window>
+
+   The second view model hosts the three panels inside a grid, to show
+   different behavior:
+<UserControl x:Class="TestListBox.InnerControl"
+            ... >
+
+    <UserControl.Resources>
+        ...
+    </UserControl.Resources>
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid ...>
+            <ListBox Grid.Row="1" ItemsSource="{Binding MyCol}"></ListBox>
+        </Grid>
+
+        <StackPanel ...>
+            <ListBox Grid.Row="1" ItemsSource="{Binding MyCol}"></ListBox>
+        </StackPanel>
+
+        <DockPanel ...>
+            <ListBox Grid.Row="1" ItemsSource="{Binding MyCol}"></ListBox>
+        </DockPanel>
+    </Grid>
+</UserControl>
+
+   The results look like :
+
+   [listbox_screenshot.png]
+
+   As you can see, having a ListBox in a StackPanel causes the
+   ScrollViewer to disappear, since the StackPanel gives its children the
+   entire size they need, rendering the collection without the
+   ScrollViewer.
+
+Points of Interest
+
+   If you're using ContentControl in WPF, and you're planning to have
+   collections with scroll viewers, you might want to stick to Grids or
+   DockPanel and avoid StackPanels (unless you want to wrap them in
+   ScrollViewers, or want to give the controls specific height
+   dimensions).
+
+   If you're new to MVVM, you might want to look at the source code and
+   notice that Blendability happens with the use of the (IsInDesignMode)
+   statement in InnerControlViewModel.
+if (IsInDesignMode)
+{
+    Design code goes here ...
+}
+else
+{
+    Runtime code goes here...
+}
+
+   So you can get an idea of what runtime data will look like without
+   needing to actually run the code. (A good place to start looking at
+   MVVM is Lauren Bugnion's site [124]here.
+
+History
+
+     * V. 1 -> Original post.
+
+License
+
+   This article, along with any associated source code and files, is
+   licensed under [125]The Code Project Open License (CPOL)
+
+About the Author
+
+   [member_unknown.gif]
+   [126]_Noctis_
+   United States United States
+   No Biography provided
+   [127]Article Top
+
+Comments and Discussions
+
+
+   You must [128]Sign In to use this message board.
+
+   Search this forum ____________________  Go
+
+                                                               [X] Profile
+   popups    Spacing[Relaxed]  Noise[Very High]  Layout[Open All_____]  Pe
+                                                      r page[10]    Update
+
+
+   First Prev Next
+
+
+   Question [129]Had Same Issue [130]Pin member [131]cjb110 26-Sep-13
+                                                            21:53
+
+
+
+   I've had this, maybe not with the ListBox, but same issue, the
+   container control allowed for a larger control size than what was
+   visible, and this stopped any scrolls appearing.
+   [132]Sign In·[133]View Thread·[134]Permalink
+   Last Visit: 31-Dec-99 18:00     Last Update: 1-Oct-13 12:57
+                                                               [135]Refresh 1
+
+   General General    News News    Suggestion Suggestion    Question
+   Question    Bug Bug    Answer Answer    Joke Joke    Rant Rant    Admin
+   Admin
+
+   Use Ctrl+Left/Right to switch messages, Ctrl+Up/Down to switch threads,
+   Ctrl+Shift+Left/Right to switch pages.
+   About Article
+   This article shows the different results of using a ListBox in
+   different panels, and the effects on scrolling.
+   Type          [136]Tip/Trick
+   Licence       [137]CPOL
+   First Posted  26 Sep 2013
+   Views         1,792
+   Downloads     32
+   Bookmarked    3 times
+   [138]C#[139]Windows[140].NET[141]Dev[142]WPF
+   [143]Design[144]Beginner, +
+   [145][print.gif] [146][email.gif]
+   Top News
+
+   [147]Tim Cook slams Android, citing low usage
+   Get the [148]Insider News free each morning.
+   Related Videos
+   [149][cptv100x80ms.jpg]
+   [150][cptv100x80ms.jpg]
+   Related Articles
+   [151]Custom ListBox Layout in WPF
+   [152]WPF 3D: Part 2 of n
+   [153]The WPF Thought Process
+   [154]Virtualizing WrapPanel
+   [155]Rubberband Behavior for WPF ListBox
+   [156]WPF - A Constraining Stack Panel
+   [157]SlidingListBox – Animating ListBoxItems in WPF
+   [158]Scroll Synchronization
+   [159]Picasaweb Album Viewer using XMLDataProvider and WPF
+   [160]ListBox Styling (Part 3 - Additional Templates) in Expression
+   Blend and Silverlight
+   [161]WPF Color Palette
+   [162]WPF Tutorial : Layout-Panels-Containers & Layout Transformation
+   [163]Animating Interactive 2D Elements in a 3D Panel
+   [164]WPF Flickr Viewer Using XLINQ
+   [165]WPF Layout to Layout Transitions
+   [166]WPF: A Beginner's Guide - Part 1 of n
+   [167]Wrap Panel Virtualization
+   [168]WPF PolarPanel
+   [169]Binding TextBlock, ListBox, RadioButtons to Enums
+   [170]WPF Custom ListBox with Scrollbar on the Background
+   [171]Permalink | [172]Advertise | [173]Privacy | [174]Mobile
+   Web02 | 2.6.1309030.1 | Last Updated 26 Sep 2013
+   Article Copyright 2013 by _Noctis_
+   Everything else Copyright © [175]CodeProject, 1999-2013
+   [176]Terms of Use
+   Layout: [177]fixed | [178]fluid
+
+References
+
+   1. http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=1
+   2. http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=2
+   3. http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=3
+   4. http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=6
+   5. http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=18
+   6. http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=4
+   7. http://www.codeproject.com/webservices/LoungeRSS.aspx
+   8. http://www.codeproject.com/info/OpenSearch.xml
+   9. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml783.data#Main
+  10. file://localhost/
+  11. http://codeproject.TV/
+  12. file://localhost/Forums/1829610/CodeProject-TV.aspx
+  13. https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fTips%2f659066%2fListBox-and-Panels-in-WPF%3futm_source%3d54j33dh4%26utm_medium%3dtwitter
+  14. file://localhost/script/Membership/SendPassword.aspx?rp=%2fTips%2f659066%2fListBox-and-Panels-in-WPF%3futm_source%3d54j33dh4%26utm_medium%3dtwitter
+  15. file://localhost/script/Membership/OAuthLogOn.aspx?auth=Facebook
+  16. file://localhost/script/Membership/OAuthLogOn.aspx?auth=Google
+  17. file://localhost/script/Membership/OAuthLogOn.aspx?auth=LinkedIn
+  18. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml783.data#Main
+  19. http://www.codeproject.com/
+  20. file://localhost/script/Articles/Latest.aspx
+  21. file://localhost/script/Content/SiteMap.aspx
+  22. file://localhost/search.aspx
+  23. file://localhost/script/Articles/Latest.aspx?at=1,3,7
+  24. file://localhost/script/Articles/Latest.aspx?at=6
+  25. file://localhost/script/Articles/TopArticles.aspx?ta_so=5
+  26. file://localhost/search.aspx?aidlst=152&sa_us=True
+  27. file://localhost/script/Articles/BlogArticleList.aspx
+  28. file://localhost/info/Submit.aspx
+  29. file://localhost/Forums/1641/Article-Writing.aspx
+  30. file://localhost/script/Awards/CurrentCompetitions.aspx?cmpTpId=1
+  31. file://localhost/script/Articles/Submit.aspx
+  32. file://localhost/script/Articles/BlogFeed.aspx
+  33. file://localhost/script/Answers/List.aspx?tab=active
+  34. file://localhost/Questions/ask.aspx
+  35. file://localhost/script/Answers/List.aspx?tab=unanswered
+  36. file://localhost/script/Answers/List.aspx?tab=active
+  37. file://localhost/script/Answers/List.aspx?tab=active&alltags=true&tags=81
+  38. file://localhost/script/Answers/List.aspx?tab=active&alltags=true&tags=85
+  39. file://localhost/script/Answers/List.aspx?tab=active&alltags=true&tags=842
+  40. file://localhost/script/Answers/List.aspx?tab=active&alltags=true&tags=308
+  41. file://localhost/script/Answers/List.aspx?tab=active&alltags=true&tags=78
+  42. file://localhost/script/Forums/List.aspx
+  43. file://localhost/script/Forums/List.aspx
+  44. file://localhost/Forums/1580997/Application-Lifecycle.aspx
+  45. file://localhost/Forums/1533717/Running-a-Business.aspx
+  46. file://localhost/Forums/1533716/Sales-Marketing.aspx
+  47. file://localhost/Forums/1651/Collaboration-Beta-Testing.aspx
+  48. file://localhost/Forums/3304/Work-Training-Issues.aspx
+  49. file://localhost/Forums/369270/Design-and-Architecture.aspx
+  50. file://localhost/Forums/12076/ASP-NET.aspx
+  51. file://localhost/Forums/1580226/JavaScript.aspx
+  52. file://localhost/Forums/1647/C-Cplusplus-MFC.aspx
+  53. file://localhost/Forums/4486/ATL-WTL-STL.aspx
+  54. file://localhost/Forums/3785/Managed-Cplusplus-CLI.aspx
+  55. file://localhost/Forums/1827459/Adobe-Technologies.aspx
+  56. file://localhost/Forums/1649/Csharp.aspx
+  57. file://localhost/Forums/1627782/Free-Tools.aspx
+  58. file://localhost/Forums/1827460/Objective-C.aspx
+  59. file://localhost/Forums/1832431/Ruby-On-Rails.aspx
+  60. file://localhost/Forums/1725/Database.aspx
+  61. file://localhost/Forums/186301/Hardware-Devices.aspx
+  62. file://localhost/Forums/1644/System-Admin.aspx
+  63. file://localhost/Forums/1606152/Hosting-and-Servers.aspx
+  64. file://localhost/Forums/1643/Java.aspx
+  65. file://localhost/Forums/1650/NET-Framework.aspx
+  66. file://localhost/Forums/13695/Mobile.aspx
+  67. file://localhost/Forums/1653293/VS-2012-2013-NET-4-5-1.aspx
+  68. file://localhost/Forums/1540733/Sharepoint.aspx
+  69. file://localhost/Forums/1004257/Silverlight-WPF.aspx
+  70. file://localhost/Forums/1646/Visual-Basic.aspx
+  71. file://localhost/Forums/1640/Web-Development.aspx
+  72. file://localhost/Forums/1645/Site-Bugs-Suggestions.aspx
+  73. file://localhost/Feature/
+  74. http://CodeProject.TV/
+  75. file://localhost/script/Catalog/List.aspx
+  76. file://localhost/script/Awards/CurrentCompetitions.aspx?cmpTpId=1&awsac=true
+  77. file://localhost/script/News/List.aspx
+  78. file://localhost/Feature/Insider/
+  79. file://localhost/script/Mailouts/Archive.aspx?mtpid=1
+  80. file://localhost/script/Surveys/List.aspx
+  81. file://localhost/KB/showcase/
+  82. file://localhost/script/ResearchLibrary/Index.aspx
+  83. file://localhost/Info/Stuff.aspx
+  84. file://localhost/Lounge.aspx
+  85. file://localhost/Insider.aspx/trackback/
+  86. file://localhost/Lounge.aspx
+  87. file://localhost/Feature/WeirdAndWonderful.aspx
+  88. file://localhost/Forums/1536756/The-Soapbox.aspx
+  89. file://localhost/Forums/1738007/Press-Releases.aspx
+  90. file://localhost/script/Membership/Profiles.aspx
+  91. file://localhost/script/Awards/MVPWinners.aspx
+  92. file://localhost/script/Membership/Profiles.aspx?mgtid=1&mgm=True
+  93. file://localhost/Forums/1580229/Hindi.aspx
+  94. file://localhost/Forums/1580229/Hindi.aspx
+  95. file://localhost/Forums/1580230/Chinese.aspx
+  96. file://localhost/KB/FAQs/
+  97. file://localhost/info/guide.aspx
+  98. file://localhost/KB/FAQs/
+  99. file://localhost/Questions/ask.aspx
+ 100. file://localhost/Forums/1645/Site-Bugs-Suggestions.aspx
+ 101. file://localhost/Forums/1641/Article-Writing.aspx
+ 102. file://localhost/script/Content/SiteMap.aspx
+ 103. http://developermedia.com/
+ 104. file://localhost/info/Jobs/
+ 105. file://localhost/info/about.aspx
+ 106. file://localhost/script/Content/SiteMap.aspx
+ 107. file://localhost/Chapters/8/Platforms-Frameworks-Libraries.aspx
+ 108. file://localhost/KB/WPF/
+ 109. file://localhost/KB/WPF/#Controls
+ 110. file://localhost/script/Articles/PrevNextLookup.aspx?aid=659066&at=6&secId=104
+ 111. file://localhost/script/Articles/ViewDownloads.aspx?aid=659066
+ 112. file://localhost/script/Articles/Statistics.aspx?aid=659066
+ 113. file://localhost/script/Articles/ListVersions.aspx?aid=659066
+ 114. file://localhost/script/Articles/ListAlternatives.aspx?aid=659066
+ 115. file://localhost/home/stanley/code/cs595/assignment3/MasterPages/#_comments
+ 116. file://localhost/script/Membership/View.aspx?mid=9699670
+ 117. file://localhost/KB/FAQs/RatingReputationFAQ.aspx#noisefilter
+ 118. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml783.data#SignUp
+ 119. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml783.data
+ 120. https://twitter.com/share
+ 121. file://localhost/KB/WPF/659066/TestListBox.zip
+ 122. http://stackoverflow.com/questions/1267608/scrollbar-in-listbox-not-working
+ 123. http://shemesh.wordpress.com/2012/06/25/c-random-helper-class/
+ 124. http://www.galasoft.ch/mvvm/
+ 125. http://www.codeproject.com/info/cpol10.aspx
+ 126. file://localhost/Members/_Noctis_
+ 127. file://localhost/Tips/659066/ListBox-and-Panels-in-WPF?utm_source=54j33dh4&utm_medium=twitter#_articleTop
+ 128. https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fTips%2f659066%2fListBox-and-Panels-in-WPF%3futm_source%3d54j33dh4%26utm_medium%3dtwitter%26fid%3d1843325%26df%3d90%26mpp%3d10%26noise%3d1%26prof%3dTrue%26sort%3dPosition%26view%3dQuick%26spc%3dRelaxed
+ 129. file://localhost/Messages/4668657/Had-Same-Issue.aspx
+ 130. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml783.data
+ 131. file://localhost/script/Membership/View.aspx?mid=1625305
+ 132. http://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fTips%2f659066%2fListBox-and-Panels-in-WPF%3futm_source%3d54j33dh4%26utm_medium%3dtwitter
+ 133. file://localhost/Tips/659066/ListBox-and-Panels-in-WPF?utm_source=54j33dh4&utm_medium=twitter&fid=1843325&df=90&mpp=10&sort=Position&spc=Relaxed&tid=4668657
+ 134. file://localhost/Messages/4668657/Had-Same-Issue.aspx
+ 135. file://localhost/Tips/659066/ListBox-and-Panels-in-WPF?utm_source=54j33dh4&utm_medium=twitter&fid=1843325&df=90&mpp=10&noise=1&prof=True&sort=Position&view=Quick&spc=Relaxed
+ 136. file://localhost/script/Articles/Types.aspx?#Tip/Trick
+ 137. http://www.codeproject.com/info/cpol10.aspx
+ 138. file://localhost/Tags/C--hash--
+ 139. file://localhost/Tags/Windows
+ 140. file://localhost/Tags/.NET
+ 141. file://localhost/Tags/Dev
+ 142. file://localhost/Tags/WPF
+ 143. file://localhost/Tags/Design
+ 144. file://localhost/Tags/Beginner
+ 145. file://localhost/Tips/659066/ListBox-and-Panels-in-WPF?display=Print
+ 146. file://localhost/script/common/TellFriend.aspx?obtid=2&obid=659066
+ 147. http://mashable.com/2013/09/19/tim-cook-android-low-usage/
+ 148. file://localhost/Feature/Insider/
+ 149. http://codeproject.tv/video/4908957/javascript_chrome_developer_tools_script_panels_part_1
+ 150. http://codeproject.tv/video/5000855/javascript_chrome_developer_tools_network_panel
+ 151. file://localhost/Articles/18561/Custom-ListBox-Layout-in-WPF
+ 152. file://localhost/Articles/25227/WPF-3D-Part-2-of-n
+ 153. file://localhost/Articles/20864/The-WPF-Thought-Process
+ 154. file://localhost/Articles/75847/Virtualizing-WrapPanel
+ 155. file://localhost/Articles/404827/Rubberband-Behavior-for-WPF-ListBox
+ 156. file://localhost/Articles/37163/WPF-A-Constraining-Stack-Panel
+ 157. file://localhost/Articles/16045/SlidingListBox-Animating-ListBoxItems-in-WPF
+ 158. file://localhost/Articles/39244/Scroll-Synchronization
+ 159. file://localhost/Articles/19974/Picasaweb-Album-Viewer-using-XMLDataProvider-and-W
+ 160. file://localhost/Articles/79291/ListBox-Styling-Part-3-Additional-Templates-in-Exp
+ 161. file://localhost/Articles/27677/WPF-Color-Palette
+ 162. file://localhost/Articles/140613/WPF-Tutorial-Layout-Panels-Containers-Layout-Trans
+ 163. file://localhost/Articles/25030/Animating-Interactive-2D-Elements-in-a-3D-Panel
+ 164. file://localhost/Articles/18774/WPF-Flickr-Viewer-Using-XLINQ
+ 165. file://localhost/Articles/466118/WPF-Layout-to-Layout-Transitions
+ 166. file://localhost/Articles/22980/WPF-A-Beginners-Guide-Part-1-of-n
+ 167. file://localhost/Articles/309151/Wrap-Panel-Virtualization
+ 168. file://localhost/Articles/23219/WPF-PolarPanel
+ 169. file://localhost/Articles/130137/Binding-TextBlock-ListBox-RadioButtons-to-Enums
+ 170. file://localhost/Articles/64129/WPF-Custom-ListBox-with-Scrollbar-on-the-Backgroun
+ 171. file://localhost/Tips/659066/ListBox-and-Panels-in-WPF
+ 172. http://developermedia.com/
+ 173. file://localhost/info/privacy.aspx
+ 174. file://localhost/Tips/659066/ListBox-and-Panels-in-WPF?utm_source=54j33dh4&utm_medium=twitter&display=Mobile
+ 175. mailto:webmaster@codeproject.com
+ 176. file://localhost/info/TermsOfUse.aspx
+ 177. file://localhost/Tips/659066/ListBox-and-Panels-in-WPF?utm_source=54j33dh4&utm_medium=twitter&PageFlow=FixedWidth
+ 178. file://localhost/Tips/659066/ListBox-and-Panels-in-WPF?utm_source=54j33dh4&utm_medium=twitter&PageFlow=Fluid

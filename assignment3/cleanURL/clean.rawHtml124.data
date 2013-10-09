@@ -1,0 +1,168 @@
+[1]DR3WH0.png DR3WH0
+
+Time Travel & Other Anomalies
+
+   [2]Thoughtsthe master list
+
+   [3]Radiofavorite tunes
+
+   [4]Tagsidea graffiti
+
+   [5]Categoriesdata herds
+
+   [6]DR3WH0about.me
+
+RadioBlog
+     __________________________________________________________________
+
+   Ruby script for loading the free Last.Fm web radio service from the
+       command line, tweeting recently listened tracks, and generating a
+       Markdown formatted radio station blog post for a Jekyll site.
+     __________________________________________________________________
+
+   Features
+     * Load & auto-resume free [7]Last.fm web radio from the command line
+     * Tweet tracks and free MP3 downloads to [8]Twitter timeline
+     * Generate a [9]Markdown formatted radio station blog post for
+       [10]Jekyll
+
+   Requirements
+     * Jekyll web site ([11]Github Pages)
+     * [12]_radioblog.rb
+     * [13]Ruby 1.9.2 or higher
+     * [14]selenium-webdriver gem
+     * [15]twurl gem
+     * [16]xml-simple gem
+     * [17]googl gem
+     * [18]Firefox and a [19]profile called 'lastfm'
+
+   Install Instructions
+    1. [20]Set up a 'lastfm' profile with the Firefox Profile Manager.
+    2. Create a [21]Last.fm API key and add it to the [22]_config.yml for
+       your Jekyll site along with your Last.fm username. (You may use my
+       key for testing purposes.)
+    3. [23]Authenticate Twurl with a Twitter API Key. You will need to set
+       up a [24]Twitter Dev Application for your account and enable it to
+       'Read & Write.' [25]Stack Overflow has a walk-through.
+    4. Place [26]_radioblog.rb in the root directory of your Jekyll site.
+    5. Run ruby _radioblog.rb.
+    6. Push the [27]radio [28]station [29]post to your site with [30]git
+       after the station has ended.
+
+   Possible Modifications
+
+   This software is tailored for my personal use and may require
+   modification beyond what is described here.
+
+   I've installed the [31]SCM Music Player on [32]DR3WH0.NET, and I added
+   some code to write free download tracks to _config.yml for automatic
+   playlist updates. You may want to [33]remove these lines in the
+   [34]free_download function if you have no use for that feature. If want
+   to use the SCM playlist feature on your site, see [35]SCM Music Player
+   for GitHub Pages for installation instructions.
+
+   The track tweets are not really necessary, although it takes a bit of
+   doing to remove them. I may create NoTweet branch if there's any
+   interest. To stop the tweets, skip step 3 of the Install Instructions
+   and remove the following functions: [36]format_hash & [37]get_tags.
+   Then remove the lines of code [38]here, [39]here, [40]here, [41]here,
+   [42]here, [43]here, [44]here, [45]here, [46]here, [47]here, and
+   [48]here. Whew! Almost done. Finally, remove the variables hashtags,
+   tweet, tcolen, [49]here and @hashtags, tweet, tcolen, [50]here and the
+   variable (#{textlen}) [51]here. Let me know if there's anything I
+   missed or if there's a way to rubify the code to make it more modular.
+
+   [52]COMMENTS >>>
+     __________________________________________________________________
+
+     * [53]lastfm
+     * [54]twitter
+     * [55]jekyll
+     * [56]github
+     * [57]ruby
+     * [58]webdriver
+     * [59]twurl
+     * [60]yaml
+     * [61]markdown
+     * [62]automation
+
+   Saturday, September 7, 2013 [63]Creative Commons License
+   This post is licensed under a [64]Creative Commons Attribution 3.0
+   Unported License.
+
+   [65]ABOUT | [66]SOURCE
+   [67]DR3WH0 Statistics
+   [68]website statistics
+    [69]RSS Feed
+
+References
+
+   1. file://localhost/index.html
+   2. file://localhost/archive.html
+   3. file://localhost/radio.html
+   4. file://localhost/tags.html
+   5. file://localhost/categories.html
+   6. http://about.me/DR3WH0
+   7. http://last.fm/
+   8. http://twitter.com/
+   9. http://daringfireball.net/projects/markdown/
+  10. http://jekyllrb.com/
+  11. http://pages.github.com/
+  12. https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb
+  13. http://www.ruby-lang.org/en/
+  14. http://rubygems.org/gems/selenium-webdriver
+  15. http://rubygems.org/gems/twurl
+  16. http://rubygems.org/gems/xml-simple
+  17. http://rubygems.org/gems/googl
+  18. http://www.mozilla.org/en-US/firefox/new/
+  19. https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data
+  20. http://dr3wh0.github.io/2013/08/17/lastfm-autoresume-part-2/
+  21. http://www.last.fm/api/account/create
+  22. https://github.com/DR3WH0/DR3WH0.github.io/blob/master/_config.yml#L90-92
+  23. http://rubydoc.info/gems/twurl/0.8.3/file/README
+  24. https://dev.twitter.com/
+  25. http://stackoverflow.com/questions/12916539/simplest-php-example-for-retrieving-user-timeline-with-twitter-api-version-1-1/15314662#15314662
+  26. https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb
+  27. http://dr3wh0.net/2013/09/06/kiln-radio
+  28. http://dr3wh0.net/2013/09/07/thelonious-monk-radio
+  29. http://dr3wh0.net/2013/09/08/chopin-radio
+  30. http://dr3wh0.net/2013/08/25/git-reference
+  31. http://scmplayer.net/
+  32. https://github.com/DR3WH0/DR3WH0.github.io/tree/master/musicplayer
+  33. https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L145-160
+  34. https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L109-169
+  35. http://dr3wh0.net/2013/08/25/scm-music-player-for-github-pages
+  36. https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L48-55
+  37. https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L57-112
+  38. https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L127-148
+  39. https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L203-204
+  40. https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L210
+  41. https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L216
+  42. https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L240
+  43. https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L285
+  44. https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L288-291
+  45. https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L297-299
+  46. https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L302-340
+  47. https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L343
+  48. https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L366
+  49. https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L114
+  50. https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L351
+  51. https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L344
+  52. file://localhost/guestbook.html
+  53. file://localhost/search.html?tags=lastfm
+  54. file://localhost/search.html?tags=twitter
+  55. file://localhost/search.html?tags=jekyll
+  56. file://localhost/search.html?tags=github
+  57. file://localhost/search.html?tags=ruby
+  58. file://localhost/search.html?tags=webdriver
+  59. file://localhost/search.html?tags=twurl
+  60. file://localhost/search.html?tags=yaml
+  61. file://localhost/search.html?tags=markdown
+  62. file://localhost/search.html?tags=automation
+  63. http://creativecommons.org/licenses/by/3.0/deed.en_US
+  64. http://creativecommons.org/licenses/by/3.0/deed.en_US
+  65. file://localhost/about.html
+  66. https://github.com/DR3WH0/DR3WH0.github.io
+  67. http://statcounter.com/p9114352/?guest=1
+  68. http://statcounter.com/
+  69. file://localhost/feed.xml

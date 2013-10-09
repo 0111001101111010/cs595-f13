@@ -1,0 +1,207 @@
+   #[1]alternate
+
+   [2]DISQUS
+     * [3]For Websites
+     * [4]Using Disqus
+
+   [5]Log in
+
+[6]Company Blog
+
+    1. mattrobenolt
+    [7]Scaling Django to 8 Billion Page Views
+       Posted on September 24, 2013 by mattrobenolt
+       As we’re approaching 8 billion page views per month and 45k
+       requests per second, we’ve learned a couple things about delivering
+       comments to a lot of different people. Disqus is very well known
+       for using [8]Django for almost all of our web traffic, and that
+       continues to be a thing today. As with any web framework, there are
+       inherent trade-offs: rapid development vs performance, familiarity
+       for new developers vs something custom, etc. Disqus likes to lean
+       towards rapid development and familiarity over performance, and
+       something fine tuned for our exact needs.
+       So, why is a web framework slow?
+       On the surface, the first impression is that a web framework is
+       slow because there is a lot of boiler plate and unnecessary code
+       that is not needed for your application, and that is a valid
+       impression. In practice, slowness is usually not a product of your
+       framework’s bloat or the language choice. Slowness is likely a
+       result of the fact that your request is communicating with other
+       services across your network. In our case, these other services are
+       [9]PostgreSQL, [10]Redis, [11]Cassandra, and [12]Memcached, just to
+       name a few. Slow database queries and network latency generally
+       outweigh the performance overhead of a robust framework such as
+       Django.
+       To get around these latencies, people use various forms of caching.
+       The most tangible approach would be to use the built-in [13]Django
+       cache library.
+       The common pattern for application level caching is such:
+data = cache.get('stuff')
+if data is None:
+    data = list(Stuff.objects.all())
+    cache.set('stuff', data)
+return data
+       If you are familiar with Django, this should be a pretty familiar
+       pattern. This form of caching is simple and straightforward, and
+       works really well for most things. Paired with Memcached, things
+       are fast enough, but there is still a lot of work still being done
+       to serve a request.
+       Dealing with 45k requests per second
+       We’ve cached our “slow” things. There is still a lot of unnecessary
+       work that needs to be done at rate of 45 thousand times per second.
+       We’re probably rendering some JSON, or rendering an HTML template,
+       or simply parsing HTML and executing our Django middleware. The
+       point is, we want to be able to short-circuit all of this work, and
+       leave Django to do what it does best: serve unique data only.
+       Out of 45k requests per second, how many are truly unique? How many
+       of those responses are actually different from one response to the
+       next? Do we really need to keep doing the same work over and over
+       again when the result is always the same? We really want to cache
+       whole responses and skip all of the other work.
+       Introducing Varnish
+       What even is [14]Varnish? Varnish is a piece of software that sits
+       between our load balancers and our Django backends and acts as an
+       HTTP caching layer. What this means is that it can cache the entire
+       HTTP response without even hitting a Django server, if we know that
+       request won’t be unique.
+       Previously, Varnish was a bit of a black box to us. We installed it
+       and configuration was very minimal, and honestly, this worked very
+       well. But I thought we could do more.
+       I spent some time learning more about Varnish and some tricks that
+       we could use. Over time, we were able to shave off several
+       thousands of requests per second from ever hitting our Django
+       servers. Today, out of the 45k inbound requests every second, only
+       about 15k or so actually hit our app servers. The rest are absorbed
+       by Varnish and served to the user very quickly and efficiently.
+       Since this has been very useful for us and a good learning
+       experience, this topic has been the subject of a few recent talks
+       of mine.
+       Most recently, I spoke at [15]DjangoCon US in Chicago. This talk
+       was aimed toward people who weren’t familiar with Varnish, with the
+       hopes of inspiring and motivating them to learn more. For me, I was
+       excited to give this talk because it’s a topic that isn’t explained
+       very often to application developers. It’s a talk that I’d really
+       liked to have heard a few years ago, and hopefully bridges the gap
+       in understanding how HTTP really works and how you can manipulate
+       it to interact with tools such as Varnish.
+       Prior to that, I presented at [16]VUG7 (Varnish User Group) in New
+       York, and went into details about some of the exact tricks that we
+       use to help overcome some of our problems. This talk goes into a
+       lot of detail about the specific [17]VCLs that we use for each
+       endpoint needed to deliver our embed.
+       tl;dr
+       Check out [18]Varnish. It won’t solve all of your problems, but
+       it’s something worth investing the time into learning about and
+       evaluating.
+       If this kind of stuff is interesting to you, and you’d like to yell
+       at computers with me at least 5 days a week, [19]we are hiring!
+       We welcome relevant, respectful comments. Please read our
+       [20]Community Guidelines.
+
+   Please enable JavaScript to view the [21]comments powered by Disqus.
+   [22]blog comments powered by Disqus
+     * What is Disqus?
+       Disqus ([23]dis·cuss • dï-sküs') is all about changing the way
+       people think about discussion on the web. We're big believers in
+       the conversations and communities that form on blogs and other
+       sites.
+       [24]Meet the Team
+     * Follow & Subscribe [25][icon-follow-twitter.png] [26]Facebook
+       [27]email [28]RSS
+     * Our Blogs
+          + [29]Company Blog
+          + [30]Community Blog
+     * Links
+          + [31]Blog Archive
+          + [32]Help
+
+   © 2007-2013 · [33]DISQUS
+     * [34]For Websites
+     * [35]Using Disqus
+     * [36]About
+     * [37]Help
+     * [38]Blog
+     * [39]API
+     * [40]Jobs
+     * [41]Terms and Policies
+
+   IFRAME:
+   [42]http://assets.tumblr.com/assets/html/iframe/o.html?_v=0f8339d83792f
+   50916ca29c1a64ddfa0#src=http%3A%2F%2Fblog.disqus.com%2Fpost%2F621878061
+   35%2Fscaling-django-to-8-billion-page-views&pid=62187806135&rk=HAGGmcaX
+   &lang=en_US&name=disqus&brag=false&avatar=http%3A%2F%2F25.media.tumblr.
+   com%2Favatar_7da8d8f28b8a_64.png&title=Disqus%3A+The+Official+Blog&url=
+   http%3A%2F%2Fblog.disqus.com%2F&page_slide=slide
+
+   IFRAME:
+   [43]http://www.tumblr.com/assets/html/iframe/teaser.html#src=http%3A%2F
+   %2Fblog.disqus.com%2Fpost%2F62187806135%2Fscaling-django-to-8-billion-p
+   age-views&pid=62187806135&rk=HAGGmcaX&lang=en_US&name=disqus&brag=false
+   &avatar=http%3A%2F%2F25.media.tumblr.com%2Favatar_7da8d8f28b8a_64.png&t
+   itle=Disqus%3A+The+Official+Blog&url=http%3A%2F%2Fblog.disqus.com%2F&pa
+   ge_slide=slide
+
+   IFRAME:
+   [44]http://assets.tumblr.com/analytics.html?63fae489732da54993e4a941e42
+   dcf5e
+
+   Quantcast
+
+   [impixu?T=1380681859&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvYmxvZy5k
+   aXNxdXMuY29tXC9wb3N0XC82MjE4NzgwNjEzNVwvc2NhbGluZy1kamFuZ28tdG8tOC1iaWx
+   saW9uLXBhZ2Utdmlld3MiLCJyZXF0eXBlIjowLCJyb3V0ZSI6IlwvcG9zdFwvOmlkXC86c3
+   VtbWFyeSIsIm5vc2NyaXB0IjoxfQ==&U=BIHCOFOLNL&K=ad623deee138fe88a8d7ff452
+   2b6d50ec4663e87b5998c7d52a690d13aec5121&R=]
+   [impixu?T=1380681859&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Jsb2cu
+   ZGlzcXVzLmNvbVwvcG9zdFwvNjIxODc4MDYxMzVcL3NjYWxpbmctZGphbmdvLXRvLTgtYml
+   sbGlvbi1wYWdlLXZpZXdzIiwicmVxdHlwZSI6MCwicm91dGUiOiJcL3Bvc3RcLzppZFwvOn
+   N1bW1hcnkiLCJwb3N0cyI6W3sicG9zdGlkIjoiNjIxODc4MDYxMzUiLCJibG9naWQiOiIxN
+   DcwNzUzIiwic291cmNlIjozM31dLCJub3NjcmlwdCI6MX0=&U=DKPCPIAEBI&K=a13cdc24
+   f9925a690b650049821b08b486299230bb74db43d189bfca39cbf206&R=]
+
+References
+
+   1. http://blog.disqus.com/rss
+   2. http://disqus.com/
+   3. http://disqus.com/websites
+   4. http://disqus.com/community
+   5. http://disqus.com/profile/login/?next=http://disqus.com/
+   6. file://localhost/
+   7. http://blog.disqus.com/post/62187806135/scaling-django-to-8-billion-page-views
+   8. https://www.djangoproject.com/
+   9. http://www.postgresql.org/
+  10. http://redis.io/
+  11. http://cassandra.apache.org/
+  12. http://memcached.org/
+  13. https://docs.djangoproject.com/en/dev/topics/cache/
+  14. https://www.varnish-cache.org/
+  15. http://www.djangocon.us/
+  16. https://www.varnish-cache.org/vug7/
+  17. https://www.varnish-cache.org/docs/3.0/reference/vcl.html
+  18. https://www.varnish-cache.org/
+  19. http://disqus.com/jobs/
+  20. http://help.disqus.com/customer/portal/articles/748668-community-guidelines
+  21. http://disqus.com/?ref_noscript=disqus
+  22. http://disqus.com/
+  23. https://vine.co/v/b50Wx0OmTIz
+  24. http://disqus.com/about/#our-team
+  25. https://twitter.com/disqus
+  26. http://www.facebook.com/disqus
+  27. http://feedburner.google.com/fb/a/mailverify?uri=BigHeadLabs&loc=en_US
+  28. http://feeds.feedburner.com/BigHeadLabs/
+  29. http://blog.disqus.com/
+  30. http://community.disqus.com/
+  31. http://blog.disqus.com/archive
+  32. http://disqus.com/help
+  33. file://localhost/
+  34. http://disqus.com/websites/
+  35. http://disqus.com/community/
+  36. http://disqus.com/about/
+  37. http://help.disqus.com/
+  38. http://blog.disqus.com/
+  39. http://disqus.com/api/
+  40. http://disqus.com/jobs/
+  41. http://docs.disqus.com/kb/terms-and-policies/
+  42. http://assets.tumblr.com/assets/html/iframe/o.html?_v=0f8339d83792f50916ca29c1a64ddfa0#src=http%3A%2F%2Fblog.disqus.com%2Fpost%2F62187806135%2Fscaling-django-to-8-billion-page-views&pid=62187806135&rk=HAGGmcaX&lang=en_US&name=disqus&brag=false&avatar=http%3A%2F%2F25.media.tumblr.com%2Favatar_7da8d8f28b8a_64.png&title=Disqus%3A+The+Official+Blog&url=http%3A%2F%2Fblog.disqus.com%2F&page_slide=slide
+  43. http://www.tumblr.com/assets/html/iframe/teaser.html#src=http%3A%2F%2Fblog.disqus.com%2Fpost%2F62187806135%2Fscaling-django-to-8-billion-page-views&pid=62187806135&rk=HAGGmcaX&lang=en_US&name=disqus&brag=false&avatar=http%3A%2F%2F25.media.tumblr.com%2Favatar_7da8d8f28b8a_64.png&title=Disqus%3A+The+Official+Blog&url=http%3A%2F%2Fblog.disqus.com%2F&page_slide=slide
+  44. http://assets.tumblr.com/analytics.html?63fae489732da54993e4a941e42dcf5e

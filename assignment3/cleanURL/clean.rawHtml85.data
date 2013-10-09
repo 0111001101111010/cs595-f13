@@ -1,0 +1,295 @@
+   #[1]alternate
+
+   [2]
+
+Shayon Mukherjee
+
+     * [3]Home
+     * [4]RSS
+     * [5]Archive
+
+     *
+     *
+     *
+     *
+
+   [6]
+
+Shayon Mukherjee
+
+   Rants and code !
+   [7]
+
+Part 2 of 3: Lessons learned from my GSoC project
+
+   This is the second of the three posts, where I tell you about my
+   project for this year’s Google Summer of Code (GSoC). GSoC is a global
+   program that offers student developers stipends to write code for open
+   source software projects during the summer. So flip bits, not burgers!
+   In the previous post I told you about the technical details of my
+   project. This post will concentrate on what I lessons I’ve learned
+   while working the Open Build Service (OBS). The next post will be about
+   my experiences with the GSoC program.
+
+   I believe I have learnt more about programming in the past 3 months of
+   GSoC than I have ever so far. Starting from writing good quality code
+   to learning how different sets of programs work harmoniously together,
+   to getting it integrated into an existing code base: the learning has
+   been great!
+
+Good Code
+
+   Probably the best thing I have learned from the entire GSoC experience
+   is how to hack inside the Ruby on Rails framework in a more readable
+   and object oriented way. It was especially useful to learn about the
+   DRY (“Don’t Repeat Yourself”) philosophy, one of the most important of
+   the ruby language, which is aimed at reducing code repetition.
+   The first pieces of code I wrote for the commenting system weren’t all
+   that great. There was a lot of repetition inside the controller, the
+   models and the views. Additionally there was pretty much nothing inside
+   the API models. After receiving feedback from my mentor and the other
+   OBS developers about my code I started to refactor it with less
+   repetition, fat models and skinny controllers which is another
+   philosophy of Ruby on Rails apps. Here is how:
+
+Single Table Inheritance
+
+   Since there are 3 object types, comments are being made to, we created
+   3 sub classes to the comment model in the API. Namely, comment_project,
+   comment_package and comment_request.  All the methods common between
+   these three models are initialized in the parent model and are
+   inherited by the sub classes. All the sub classes have to do now is to
+   extend the parent class with their object specific methods and data.
+
+Object Oriented Controllers
+
+   On the controller side (in the API), I created separate controller
+   methods for each of the object types rather than having all into one as
+   previously done and I split of all shared tasks to their own methods.
+
+Version control
+
+   The OBS is using git and github as version control system. I never knew
+   version control would be such a big deal in code management and
+   programming. Initially I took it very lightly and in the end learned a
+   lot.
+
+Only commit what makes sense
+
+   In the beginning I’ve added quite a bit of unnecessary commits. Now
+   when you are contributing code to a repo, which is maintained by a
+   group of developers and used on such a large scale, you would want to
+   make sure you only commit what matters and makes sense. For most of my
+   commits we ended up squashing them or using the “edit” option to phrase
+   them properly.
+
+   Now there is still a little more to the etiquettes. Since the
+   commenting system adds to it the API and WEBUI it was also very crucial
+   for me convey where exactly the changes are being made in the commit
+   message. So lets say if I am editing/adding code to the API, I would
+   add [api] as a prefix and same concept applies for WEBUI. Cool, isn’t
+   it? In just one look everybody knows where the changes are taking
+   place.
+
+Rebase, rebase, rebase
+
+   After developing the initial code for the commenting system, I was
+   ready to make a pull request on github to the upstream repo, but after
+   my initial fork I had never synced with it. This is when I learned
+   about how crucial it is that I keep rebasing. Basically after every
+   commit and before a push I had to rebase. Rebase means I would pull the
+   recent commits made on the upstream repo and then re-apply my commits
+   on top of them. So when I create a pull request all the code is
+   synchronized and is easier to understand for the developer that is
+   reviewing the request.
+
+Praise and Criticism
+
+   I also learned that having a pull request open doesn’t mean that my job
+   is done. The real work starts afterward. Because now the code, I have
+   worked on so many days, is finally reviewed by all the rockstar
+   developers of OBS. This not only means praise but, especially as
+   newbie, quite often criticism. Both are things which I am grateful and
+   fond of. It was really fascinating for me to see how much the other
+   developers care about the quality of code, the way the architecture is
+   set up, what data comes in, what data goes out, the testing of it all
+   and so on.
+
+   In the beginning I would get comments on each and every single line.
+   That shows how detail oriented the entire process was. After the
+   developers commented on my code I would go back and implement the
+   feedback received, rebase the code and open a pull-request again. If
+   all is good then the code is merged if not then the same process is to
+   be repeated until everyone’s happy.
+
+Looping to create threads.
+
+   One particular challenge of my project was the threading of the
+   comments. An OBS object can have a comment which can have a comment
+   reply which can have a comment reply… and so on and so on. Initially I
+   was worried about how to efficiently retrieve and display these
+   threads, but with the help of my mentor, we built it very well.
+
+   Like I mentioned before, all the separation and building of the data
+   structure happens inside the API, the WEBUI only displays the
+   ready-made thread.
+
+     * 1. Firstly, all the comments for the object are retrieved from the
+       database.
+     * 2. Then we call “render_thread” function inside the
+       comments_controller, which calls “sort_comments” and renders the
+       output as json to fed to the WEBUI.
+     * 3. “sort_comments”, as the name suggests sorts the comment into
+       parent and child comments (replies) inside a hash, depending on if
+       a comment has a parent_id or not in the database.
+     * 4. Once sorting is performed, “threaded_comments” function is
+       called which starts pushing the parents comments into an array with
+       keys holding information like id, title and body. It also has an
+       array called children which is the output of a method called
+       “find_children”
+     * 5. “find_children” pretty much does the same thing again as
+       “threaded_comments”, as it gets the hash key created for child
+       comments from “sort_comments” and starts putting the info as above
+       into separate keys inside an array.
+
+   After all this, an array with all the comments is passed into an
+   instance variable inside “render_thread” which is further passed to
+   WEBUI.def projects
+
+   /src/api/app/controllers/webui/comments_controller.rb
+ def sort_comments
+    @all_comments = Hash.new
+    @all_comments[:parents] = []
+    @all_comments[:children] = []
+
+    # separate parents from children. How cruel, I know.
+    @comments.each do |com|
+      # No valid parent
+      if com['parent_id'].present? && Comment.exists?(com['parent_id'])
+        @all_comments[:children] << [com['title'], com['body'],
+        com['user'], com['parent_id'], com['id'], com['created_at']]
+      else
+        @all_comments[:parents] << [com['title'], com['body'],
+        com['id'], com['user'], com['created_at']]
+      end
+    end
+
+    @all_comments[:parents].sort_by! { |c| c[4] } # sorting by created_at
+    @all_comments[:children].sort_by! { |c| c[4] } # sorting by created_at
+
+    thread_comments
+  end
+
+  def thread_comments
+    @comments_as_thread = []
+    # now pushing sorted and final list of
+    first/top/parent level comments into to a hash to
+    @all_comments[:parents].each do |first_level|
+      @comments_as_thread << {
+          created_at: first_level[4],
+          id: first_level[2],
+          title: first_level[0],
+          body: first_level[1],
+          parent_id: nil,
+          user: first_level[3],
+          children: find_children(first_level[2])
+      }
+    end
+  end
+
+   The WEBUI then renders the comment threaded as per the array.
+
+   image
+
+   These were some of the wonderful lessons learned during my GSoC
+   project. I believe they will help me alot when programming with groups
+   and individuals in the future!
+
+Next Post: My experiences participating in GSoC.
+
+   In my next and last post I will tell you about my experiences with the
+   GSoC program. Starting from the very first day, writing a proposal,
+   things I’ve accomplished, people responsible for helping me accomplish
+   it and a visit to Greece to meet up with my mentor.
+
+Important Links:
+
+     * 1. Github repo for OBS:
+       [8]https://github.com/openSUSE/open-build-service
+     * 2. Forked repo for OBS:
+       [9]https://github.com/shayonj/open-build-service
+     * 3. Commits made to parent repo:
+       [10]https://github.com/openSUSE/open-build-service/commits/master?a
+       uthor=shayonj
+
+     *
+     *
+     *
+     *
+
+   IFRAME:
+   [11]http://assets.tumblr.com/assets/html/iframe/o.html?_v=0f8339d83792f
+   50916ca29c1a64ddfa0#src=http%3A%2F%2Fblog.wrkb.in%2Fpost%2F62329077937%
+   2Fpart-2-of-3-lessons-learned-from-my-gsoc-project&pid=62329077937&rk=K
+   p81GWAW&lang=en_US&name=shayonj&avatar=http%3A%2F%2F31.media.tumblr.com
+   %2Favatar_debab3c4c0fb_64.png&title=Shayon+Mukherjee&url=http%3A%2F%2Fb
+   log.wrkb.in%2F&page_slide=slide
+
+   IFRAME:
+   [12]http://www.tumblr.com/assets/html/iframe/teaser.html#src=http%3A%2F
+   %2Fblog.wrkb.in%2Fpost%2F62329077937%2Fpart-2-of-3-lessons-learned-from
+   -my-gsoc-project&pid=62329077937&rk=Kp81GWAW&lang=en_US&name=shayonj&av
+   atar=http%3A%2F%2F31.media.tumblr.com%2Favatar_debab3c4c0fb_64.png&titl
+   e=Shayon+Mukherjee&url=http%3A%2F%2Fblog.wrkb.in%2F&page_slide=slide
+
+   IFRAME:
+   [13]http://assets.tumblr.com/analytics.html?63fae489732da54993e4a941e42
+   dcf5e
+
+   Quantcast
+
+   [impixu?T=1380681931&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvYmxvZy53
+   cmtiLmluXC9wb3N0XC82MjMyOTA3NzkzN1wvcGFydC0yLW9mLTMtbGVzc29ucy1sZWFybmV
+   kLWZyb20tbXktZ3NvYy1wcm9qZWN0IiwicmVxdHlwZSI6MCwicm91dGUiOiJcL3Bvc3RcLz
+   ppZFwvOnN1bW1hcnkiLCJub3NjcmlwdCI6MX0=&U=NDFCOLCJNO&K=c5a771631483b025f
+   9acba2da0eb4f8be4f82c9429a7fb01a854bca23fc336b6&R=]
+   [impixu?T=1380681931&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Jsb2cu
+   d3JrYi5pblwvcG9zdFwvNjIzMjkwNzc5MzdcL3BhcnQtMi1vZi0zLWxlc3NvbnMtbGVhcm5
+   lZC1mcm9tLW15LWdzb2MtcHJvamVjdCIsInJlcXR5cGUiOjAsInJvdXRlIjoiXC9wb3N0XC
+   86aWRcLzpzdW1tYXJ5IiwicG9zdHMiOlt7InBvc3RpZCI6IjYyMzI5MDc3OTM3IiwiYmxvZ
+   2lkIjoiODYxMjg4NTUiLCJzb3VyY2UiOjMzfV0sIm5vc2NyaXB0IjoxfQ==&U=OOHNOHPIL
+   A&K=5632843d80e9ca4d2fad6c29beb59421b858d4bfd27d3ef83d96c4ed6e6d0d71&R=
+   ]
+
+References
+
+   Visible links
+   1. http://blog.wrkb.in/rss
+   2. file://localhost/
+   3. file://localhost/
+   4. http://blog.wrkb.in/rss
+   5. file://localhost/archive
+   6. file://localhost/
+   7. http://blog.wrkb.in/post/62329077937/part-2-of-3-lessons-learned-from-my-gsoc-project
+   8. https://github.com/openSUSE/open-build-service
+   9. https://github.com/shayonj/open-build-service
+  10. https://github.com/openSUSE/open-build-service/commits/master?author=shayonj
+  11. http://assets.tumblr.com/assets/html/iframe/o.html?_v=0f8339d83792f50916ca29c1a64ddfa0#src=http%3A%2F%2Fblog.wrkb.in%2Fpost%2F62329077937%2Fpart-2-of-3-lessons-learned-from-my-gsoc-project&pid=62329077937&rk=Kp81GWAW&lang=en_US&name=shayonj&avatar=http%3A%2F%2F31.media.tumblr.com%2Favatar_debab3c4c0fb_64.png&title=Shayon+Mukherjee&url=http%3A%2F%2Fblog.wrkb.in%2F&page_slide=slide
+  12. http://www.tumblr.com/assets/html/iframe/teaser.html#src=http%3A%2F%2Fblog.wrkb.in%2Fpost%2F62329077937%2Fpart-2-of-3-lessons-learned-from-my-gsoc-project&pid=62329077937&rk=Kp81GWAW&lang=en_US&name=shayonj&avatar=http%3A%2F%2F31.media.tumblr.com%2Favatar_debab3c4c0fb_64.png&title=Shayon+Mukherjee&url=http%3A%2F%2Fblog.wrkb.in%2F&page_slide=slide
+  13. http://assets.tumblr.com/analytics.html?63fae489732da54993e4a941e42dcf5e
+
+   Hidden links:
+  15. file://localhost/
+  16. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml85.data#nav
+  17. file://localhost/
+  18. mailto:its@shayon.me
+  19. http://www.twitter.com/shayonj
+  20. http://www.facebook.com/shayonj
+  21. http://github.com/shayonj
+  22. https://github.com/openSUSE/open-build-service
+  23. https://github.com/shayonj/open-build-service
+  24. https://github.com/openSUSE/open-build-service/commits/master?author=shayonj
+  25. mailto:its@shayon.me
+  26. http://www.twitter.com/shayonj
+  27. http://www.facebook.com/shayonj
+  28. http://github.com/shayonj

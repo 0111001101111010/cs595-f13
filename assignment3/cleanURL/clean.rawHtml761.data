@@ -1,0 +1,560 @@
+   #[1]CodeProject Latest articles - All Topics [2]CodeProject Latest
+   articles - MFC/C++ [3]CodeProject Latest articles - C# [4]CodeProject
+   Latest articles - VB.NET [5]CodeProject Latest articles - Mobile
+   [6]CodeProject Latest articles - ASP.NET [7]CodeProject Lounge Postings
+   [8]CodeProject
+
+   [9]Click here to Skip to main content
+
+   [10]Home
+            10,118,810 members (40,628 online)
+            [11]Visit CodeProject.TV
+            [12]Discuss CodeProject.TV
+            [13]Sign in
+            Email
+            ____________________
+            Password
+            ____________________
+            Sign in
+              [14]Forgot your password?
+              __________________________________________________________________
+
+            Sign in using [15][facebook.png] [16][google-plus.png]
+            [17][linkedin.png]
+
+
+
+   [18]Click here to Skip to main content
+     * [19]home
+     * [20]articles
+          + [21]Chapters and Sections>
+               o loading
+          + [22]Search
+          + [23]Latest Articles
+          + [24]Latest Tips/Tricks
+          + [25]Top Articles
+          + [26]Beginner Articles
+          + [27]Technical Blogs
+          + [28]Posting/Update Guidelines
+          + [29]Article Help Forum
+          + [30]Article Competition
+          + [31][write-gr.png] Submit an article or tip
+          + [32][write-or.png] Post your Blog
+          +
+     * [33]quick answers
+          + [34][write-gr.png] Ask a Question about this article
+          + [35][write-or.png] Ask a Question
+          + [36]View Unanswered Questions
+          + [37]View All Questions...
+          + [38]C# questions
+          + [39]ASP.NET questions
+          + [40]VB.NET questions
+          + [41]C#4.0 questions
+          + [42]C++ questions
+          +
+     * [43]discussions
+          + [44]All Message Boards...
+          + [45]Application Lifecycle>
+               o [46]Running a Business
+               o [47]Sales / Marketing
+               o [48]Collaboration / Beta Testing
+               o [49]Work & Training Issues
+          + [50]Design and Architecture
+          + [51]ASP.NET
+          + [52]JavaScript
+          + [53]C / C++ / MFC>
+               o [54]ATL / WTL / STL
+               o [55]Managed C++/CLI
+          + [56]Adobe Technologies
+          + [57]C#
+          + [58]Free Tools
+          + [59]Objective-C
+          + [60]Ruby On Rails
+          + [61]Database
+          + [62]Hardware & Devices>
+               o [63]System Admin
+          + [64]Hosting and Servers
+          + [65]Java
+          + [66].NET Framework
+          + [67]Mobile
+          + [68]VS 2012/2013 & .NET 4.5.1
+          + [69]Sharepoint
+          + [70]Silverlight / WPF
+          + [71]Visual Basic
+          + [72]Web Development
+          + [73]Site Bugs / Suggestions
+          +
+     * [74]features
+          + [75]CP.TV CodeProject.TV
+          + [76]Component & Service Catalog
+          + [77]Competitions
+          + [78]News
+          + [79]The Insider Newsletter
+          + [80]Newsletter archive
+          + [81]Surveys
+          + [82]Product Showcase
+          + [83]Research Library
+          + [84]CodeProject Stuff
+          +
+     * [85]community
+          + [86]The Insider News
+          + [87]The Lounge
+          + [88]The Weird & The Wonderful
+          + [89]The Soapbox
+          + [90]Press Releases
+          + [91]Who's Who
+          + [92]Most Valuable Professionals
+          + [93]Company Listings
+          + [94]Non-English Language >
+               o [95]General Indian Topics
+               o [96]General Chinese Topics
+          +
+     * [97]help
+          + [98]What is 'CodeProject'?
+          + [99]General FAQ
+          + [100]Ask a Question
+          + [101]Bugs and Suggestions
+          + [102]Article Help Forum
+          + [103]Site Map
+          + [104]Advertise with us
+          + [105]Employment Opportunities
+          + [106]About Us
+          +
+
+
+   ____________________ [search.gif]-Submit
+   Search within:
+   (*) Articles
+   ( ) Videos
+   ( ) Quick Answers
+   ( ) Messages
+   ( ) Product Catalog
+   [107]Articles » [108]Platforms, Frameworks & Libraries » [109]Windows
+   Runtime » [110]General
+
+   [111]Next Next
+   Article
+   [112]Browse Code
+   [113]Stats
+   [114]Revisions (4)
+   [115]Alternatives
+   [116]Comments & Discussions
+
+Connecting the Dream Cheeky Thunder Missile Launcher to Windows 8.1
+
+   By [117]Lewis Benge, 26 Sep 2013
+
+
+   [stars-fill-lg.png]
+   [stars-empty-lg.png]
+                          4.00 (1 vote)
+
+   1
+     2
+       3 1 vote, 100.0%
+         4
+                       5
+   4.00/5 - 1 vote
+   μ 4.00, σ[a] 5.00 [[118]?]
+   loading...
+              [119]Sign Up to vote (*) ( ) ( ) ( ) ( ) Vote!
+   Add a reason or comment to your vote: [120]x
+
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   Votes of 3 or less require a comment
+   [121]Tweet
+
+   Ever since the 2013 BUILD conference, a huge amount of people have
+   attempted to integrate peripherals into their modern applications – and
+   of all the devices we can plug into our computers only one has stood
+   out as the prized device people want to connect?
+
+   The [122]Dream Cheeky Thunder Missile Launcher is a $35 novelty toy
+   available from various retailers around the world. The Thunder is
+   simple in its constructions – its a USB based air-powered missile
+   launcher that allows you to sight and fire foam darts at unsuspecting
+   people hovering in your immediate vicinity. The device has been so
+   popular with geeks globally that it has even featured in the Big Bang
+   theory.
+
+Modern apps –> HID Device
+
+   Aside from its creditability with those of us that frequent code, one
+   of the other exciting features of the Thunder is its driver stack.
+   Instead of using a proprietary driver in a similar fashion to the
+   [123]OWI-535 robotic arm the device itself actually leverages an
+   existing Windows standard as a HID (Human interface device) in much the
+   same way as a keyboard and mouse. So why would this be existing for us
+   a developers? Firstly because we don’t need to do anything with the OS
+   to install or configure the device, and also as it uses a standard
+   Windows driver which has been ported to the ARM stack the device will
+   also work on a Windows RT device such as a Surface too!
+
+   Plugging in the device and Windows recognizing it is only a small part
+   of our solution. As app developers we want to leverage this device from
+   our modern application, and allow our users to start shooting each
+   other. Luckily Windows 8.1 provides us with the support for such a
+   dilemma by introducing the Windows.Device.HumanInterfaceDevices
+   namespace. So lets spend a few minutes looking at the code required to
+   start firing our missiles.
+
+Windows.Device.HumanInterfaceDevice
+
+   As with any modern application that wants to go beyond some standard UI
+   prompts, we need to ask permission from our user to access the device.
+   This is a security feature that prevents apps from becoming malware.
+   In Windows 8.1, as per Windows 8 we do this via the
+   package.appxmanifest file, and we leverage the namespace extensions
+   that allows us to reference the new 8.1 capabilities. Currently Visual
+   Studio manifest editor doesn’t support these changes, so open up your
+   file in a text editor and add the following lines:
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest"
+        xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Capabilities>    ...
+    <m2:DeviceCapability Name="humaninterfacedevice">
+      <m2:Device Id="any">
+          <m2:Function Type="usage:0001 0010"/>
+      </m2:Device>
+    </m2:DeviceCapability></Capabilities>
+</Package>
+
+   In this example I’ve been a little bit broader in the request I am
+   making to the user. Specifically instead of defining a product, I am
+   asking for access to any HID device which match the usage page and
+   usage ID included. I’ve done this deliberately to show the difference
+   between specifying an app looking for one particular devices vs. a
+   range of devices. If you did want to be a little granular you could
+   specify the VID and PID as per my USB example in stead of the any
+   argument.
+
+   Once we have declared our intention to access, we need to wire up some
+   code to find if the device is attached to our machine. Again just to
+   show some contrast to my last post, I’m going to do this using a
+   DeviceWatcher. If I wanted a moment in-time view of if the device is
+   connected I can use the Windows.Devices.Enumeration technique I
+   demonstrated in my robot arm article. Instead I have opted to use a
+   watcher, using a method on the same object
+   Windows.Devices.Enumeration.DeviceInformation. A watcher however
+   monitors the device manager on the machine for devices to be added, and
+   will raise an event if it then finds a device. This provides you with
+   functionality within your app to deal with devices to be added or
+   removed at anytime in the life cycle.
+
+   The code we need to create a watcher is :
+const ushort vid = 8483;
+const ushort pid = 4112;
+const ushort uid = 16;
+const ushort uPage = 1;
+
+var deviceWatcher = DeviceInformation.CreateWatcher(
+   HidDevice.GetDeviceSelector(uPage, uid, vid, pid));
+deviceWatcher.Added += (s, a) => Dispatcher.RunAsync(
+   CoreDispatcherPriority.Normal, async () => { .. do something here.. });
+
+deviceWatcher.Start();
+
+   This is very similar to any device connectivity connection. We are
+   creating an AQS (query statement) string using a helper method on
+   Windows.Devices.HumanInterfaceDevice.HidDevice by passing in the Vendor
+   ID, Product Id, Usage ID, and Usage Page values. The AQS is then used
+   by the watcher to find any devices connected to the machine, which
+   causes the event to be fired. One important piece of code to note is
+   the dispatcher in the event handler. This is present because when the
+   device is added and you try to connect a Windows appears in the UI
+   asking for permission from the user.  Therefore any code used to
+   connect to the device needs to be on the UI thread.
+
+   To actually open up a connection to the device, it’s a matter of
+   calling one async method on the
+   Windows.Devices.HumanInterfaceDevice.HidDevice object.
+_hidDevice = await HidDevice.FromIdAsync(a.Id,FileAccessMode.ReadWrite);
+
+   The FromIdAsync method takes two arguments, which is the device ID
+   (returned as part of the DeviceInformation from the watcher event), and
+   also an enumerated FileAccessMode to specify the connection type –
+   which in our instance is ReadWrite due to our wanting to pass commands
+   to the device.
+
+   Now we have an active connection to the device, so we can start sending
+   data to it. HID devices have fairly small and easy payloads to transmit
+   – if you imagine a keyboard HID device it simply sends the
+   corresponding keypress data, which are all relatively small. Being of a
+   similar device type the Thunder expects simple small payloads
+   (especially in comparison to the USB robotic arm), which correspond to
+   up, down, left, right, fire.
+
+   To send such data, we simply use a byte[] and add it out an
+   OutputReport object. Luckily another helper class creates the object
+   for us, so we just need to append our payload and send the data using
+   code similar to this:
+private async Task SendOutputMessage(byte[] message) {
+if (_hidDevice != null) {
+ var report = _hidDevice.CreateOutputReport();
+ report.Data = message.AsBuffer();
+ await _hidDevice.SendOutputReportAsync(report);
+}
+}
+
+   And that is it! Using those few lines of code we have an active
+   connection to the USB Thunder missile launcher and can start sending
+   commands.
+
+   Here is how we would toggle the LED on:
+var LED_ON = new byte[] { 0, 3, 1, 0, 0, 0, 0, 0, 0 };
+await SendOutputMessage(LED_ON);
+
+   In the meantime have fun with your hardware hacking!
+
+License
+
+   This article, along with any associated source code and files, is
+   licensed under [124]The Code Project Open License (CPOL)
+
+About the Author
+
+   [member_unknown.gif]
+   [125]Lewis Benge
+   Software Developer (Senior)
+   Australia Australia
+   No Biography provided
+   Follow on   [126]Twitter [127]Twitter
+   [128]Article Top
+
+Comments and Discussions
+
+
+   You must [129]Sign In to use this message board.
+
+   Search this forum ____________________  Go
+
+                                                               [X] Profile
+   popups    Spacing[Relaxed]  Noise[Very High]  Layout[Open All_____]  Pe
+                                                      r page[10]    Update
+
+
+
+
+   -- There are no messages in this forum --
+   About Article
+   Leverage new device APIs in Win8.1.
+   Type          [130]Article
+   Licence       [131]CPOL
+   First Posted  26 Sep 2013
+   Views         2,341
+   Bookmarked    4 times
+   [132]C#[133]Windows[134]Dev
+   [135]Intermediate[136]Win8
+   [137][print.gif] [138][email.gif]
+   Top News
+
+   [139]Tim Cook slams Android, citing low usage
+   Get the [140]Insider News free each morning.
+   Related Videos
+   [141][cptv100x80ms.jpg]
+   [142][cptv100x80ms.jpg]
+   Related Articles
+   [143]Hitting a Moving Target: The Missile Guidance System
+   [144]Launch Application Windows in MultiScreen
+   [145]JVM Launcher
+   [146]Thunder Measurement Unit Conversion Framework
+   [147]Scholar - Education Tablet App
+   [148]Voice chat using a client-server architecture
+   [149]Agents and Multi-agent Systems
+   [150]YaAppLauncher - A Drawer Style Application Launcher Using WinForms
+   [151]Joshua Trupin of MSDN: What .NET means to developers
+   [152]Installer and Patching Program using Visual Studio 2010
+   [153]Understanding SQL Server Configuration Manager
+   [154]A C# Tiny Fireworks Simulator
+   [155]Managed Wrapper to Connection Manager and How to Bypass the
+   Connection Planner
+   [156]Mars Mission (1) : surface landing
+   [157]C# SocketAsyncEventArgs High Performance Socket Code
+   [158]Windows Phone 7 Launchers & Choosers: The absolute guide
+   [159]Wp7nl utilities Contribution
+   [160]Old Games Launcher
+   [161]Building Multiplayer Capability into Your Game in One Hour
+   [162]Showing Dial-up Connection Status Window
+   [163]Permalink | [164]Advertise | [165]Privacy | [166]Mobile
+   Web04 | 2.6.1309030.1 | Last Updated 26 Sep 2013
+   Article Copyright 2013 by Lewis Benge
+   Everything else Copyright © [167]CodeProject, 1999-2013
+   [168]Terms of Use
+   Layout: [169]fixed | [170]fluid
+
+References
+
+   1. http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=1
+   2. http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=2
+   3. http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=3
+   4. http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=6
+   5. http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=18
+   6. http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=4
+   7. http://www.codeproject.com/webservices/LoungeRSS.aspx
+   8. http://www.codeproject.com/info/OpenSearch.xml
+   9. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml761.data#Main
+  10. file://localhost/
+  11. http://codeproject.TV/
+  12. file://localhost/Forums/1829610/CodeProject-TV.aspx
+  13. https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fArticles%2f659380%2fConnecting-the-Dream-Cheeky-Thunder-Missile-Launch%3futm_source%3d54j33dh4%26utm_medium%3dtwitter
+  14. file://localhost/script/Membership/SendPassword.aspx?rp=%2fArticles%2f659380%2fConnecting-the-Dream-Cheeky-Thunder-Missile-Launch%3futm_source%3d54j33dh4%26utm_medium%3dtwitter
+  15. file://localhost/script/Membership/OAuthLogOn.aspx?auth=Facebook
+  16. file://localhost/script/Membership/OAuthLogOn.aspx?auth=Google
+  17. file://localhost/script/Membership/OAuthLogOn.aspx?auth=LinkedIn
+  18. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml761.data#Main
+  19. http://www.codeproject.com/
+  20. file://localhost/script/Articles/Latest.aspx
+  21. file://localhost/script/Content/SiteMap.aspx
+  22. file://localhost/search.aspx
+  23. file://localhost/script/Articles/Latest.aspx?at=1,3,7
+  24. file://localhost/script/Articles/Latest.aspx?at=6
+  25. file://localhost/script/Articles/TopArticles.aspx?ta_so=5
+  26. file://localhost/search.aspx?aidlst=152&sa_us=True
+  27. file://localhost/script/Articles/BlogArticleList.aspx
+  28. file://localhost/info/Submit.aspx
+  29. file://localhost/Forums/1641/Article-Writing.aspx
+  30. file://localhost/script/Awards/CurrentCompetitions.aspx?cmpTpId=1
+  31. file://localhost/script/Articles/Submit.aspx
+  32. file://localhost/script/Articles/BlogFeed.aspx
+  33. file://localhost/script/Answers/List.aspx?tab=active
+  34. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml761.data#_comments
+  35. file://localhost/Questions/ask.aspx
+  36. file://localhost/script/Answers/List.aspx?tab=unanswered
+  37. file://localhost/script/Answers/List.aspx?tab=active
+  38. file://localhost/script/Answers/List.aspx?tab=active&alltags=true&tags=81
+  39. file://localhost/script/Answers/List.aspx?tab=active&alltags=true&tags=85
+  40. file://localhost/script/Answers/List.aspx?tab=active&alltags=true&tags=842
+  41. file://localhost/script/Answers/List.aspx?tab=active&alltags=true&tags=308
+  42. file://localhost/script/Answers/List.aspx?tab=active&alltags=true&tags=78
+  43. file://localhost/script/Forums/List.aspx
+  44. file://localhost/script/Forums/List.aspx
+  45. file://localhost/Forums/1580997/Application-Lifecycle.aspx
+  46. file://localhost/Forums/1533717/Running-a-Business.aspx
+  47. file://localhost/Forums/1533716/Sales-Marketing.aspx
+  48. file://localhost/Forums/1651/Collaboration-Beta-Testing.aspx
+  49. file://localhost/Forums/3304/Work-Training-Issues.aspx
+  50. file://localhost/Forums/369270/Design-and-Architecture.aspx
+  51. file://localhost/Forums/12076/ASP-NET.aspx
+  52. file://localhost/Forums/1580226/JavaScript.aspx
+  53. file://localhost/Forums/1647/C-Cplusplus-MFC.aspx
+  54. file://localhost/Forums/4486/ATL-WTL-STL.aspx
+  55. file://localhost/Forums/3785/Managed-Cplusplus-CLI.aspx
+  56. file://localhost/Forums/1827459/Adobe-Technologies.aspx
+  57. file://localhost/Forums/1649/Csharp.aspx
+  58. file://localhost/Forums/1627782/Free-Tools.aspx
+  59. file://localhost/Forums/1827460/Objective-C.aspx
+  60. file://localhost/Forums/1832431/Ruby-On-Rails.aspx
+  61. file://localhost/Forums/1725/Database.aspx
+  62. file://localhost/Forums/186301/Hardware-Devices.aspx
+  63. file://localhost/Forums/1644/System-Admin.aspx
+  64. file://localhost/Forums/1606152/Hosting-and-Servers.aspx
+  65. file://localhost/Forums/1643/Java.aspx
+  66. file://localhost/Forums/1650/NET-Framework.aspx
+  67. file://localhost/Forums/13695/Mobile.aspx
+  68. file://localhost/Forums/1653293/VS-2012-2013-NET-4-5-1.aspx
+  69. file://localhost/Forums/1540733/Sharepoint.aspx
+  70. file://localhost/Forums/1004257/Silverlight-WPF.aspx
+  71. file://localhost/Forums/1646/Visual-Basic.aspx
+  72. file://localhost/Forums/1640/Web-Development.aspx
+  73. file://localhost/Forums/1645/Site-Bugs-Suggestions.aspx
+  74. file://localhost/Feature/
+  75. http://CodeProject.TV/
+  76. file://localhost/script/Catalog/List.aspx
+  77. file://localhost/script/Awards/CurrentCompetitions.aspx?cmpTpId=1&awsac=true
+  78. file://localhost/script/News/List.aspx
+  79. file://localhost/Feature/Insider/
+  80. file://localhost/script/Mailouts/Archive.aspx?mtpid=1
+  81. file://localhost/script/Surveys/List.aspx
+  82. file://localhost/KB/showcase/
+  83. file://localhost/script/ResearchLibrary/Index.aspx
+  84. file://localhost/Info/Stuff.aspx
+  85. file://localhost/Lounge.aspx
+  86. file://localhost/Insider.aspx
+  87. file://localhost/Lounge.aspx
+  88. file://localhost/Feature/WeirdAndWonderful.aspx
+  89. file://localhost/Forums/1536756/The-Soapbox.aspx
+  90. file://localhost/Forums/1738007/Press-Releases.aspx
+  91. file://localhost/script/Membership/Profiles.aspx
+  92. file://localhost/script/Awards/MVPWinners.aspx
+  93. file://localhost/script/Membership/Profiles.aspx?mgtid=1&mgm=True
+  94. file://localhost/Forums/1580229/Hindi.aspx
+  95. file://localhost/Forums/1580229/Hindi.aspx
+  96. file://localhost/Forums/1580230/Chinese.aspx
+  97. file://localhost/KB/FAQs/
+  98. file://localhost/info/guide.aspx
+  99. file://localhost/KB/FAQs/
+ 100. file://localhost/Questions/ask.aspx
+ 101. file://localhost/Forums/1645/Site-Bugs-Suggestions.aspx
+ 102. file://localhost/Forums/1641/Article-Writing.aspx
+ 103. file://localhost/script/Content/SiteMap.aspx
+ 104. http://developermedia.com/
+ 105. file://localhost/info/Jobs/
+ 106. file://localhost/info/about.aspx
+ 107. file://localhost/script/Content/SiteMap.aspx
+ 108. file://localhost/Chapters/8/Platforms-Frameworks-Libraries.aspx
+ 109. file://localhost/KB/WinRT/
+ 110. file://localhost/KB/WinRT/#General
+ 111. file://localhost/script/Articles/PrevNextLookup.aspx?aid=659380&at=1&secId=165
+ 112. file://localhost/script/Articles/ViewDownloads.aspx?aid=659380
+ 113. file://localhost/script/Articles/Statistics.aspx?aid=659380
+ 114. file://localhost/script/Articles/ListVersions.aspx?aid=659380
+ 115. file://localhost/script/Articles/ListAlternatives.aspx?aid=659380
+ 116. file://localhost/home/stanley/code/cs595/assignment3/MasterPages/#_comments
+ 117. file://localhost/script/Membership/View.aspx?mid=3358106
+ 118. file://localhost/KB/FAQs/RatingReputationFAQ.aspx#noisefilter
+ 119. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml761.data#SignUp
+ 120. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml761.data
+ 121. https://twitter.com/share
+ 122. http://www.dreamcheeky.com/thunder-missile-launcher
+ 123. http://lewisbenge.azurewebsites.net/2013/09/20/integrating-windows-8-1-with-owi-535-robotic-arm/
+ 124. http://www.codeproject.com/info/cpol10.aspx
+ 125. file://localhost/Members/Lewis-Benge
+ 126. http://www.twitter.com/LewisBenge
+ 127. http://www.twitter.com/LewisBenge?rel=author
+ 128. file://localhost/Articles/659380/Connecting-the-Dream-Cheeky-Thunder-Missile-Launch?utm_source=54j33dh4&utm_medium=twitter#_articleTop
+ 129. https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fArticles%2f659380%2fConnecting-the-Dream-Cheeky-Thunder-Missile-Launch%3futm_source%3d54j33dh4%26utm_medium%3dtwitter%26fid%3d1843332%26df%3d90%26mpp%3d10%26noise%3d1%26prof%3dTrue%26sort%3dPosition%26view%3dQuick%26spc%3dRelaxed
+ 130. file://localhost/script/Articles/Types.aspx?#Article
+ 131. http://www.codeproject.com/info/cpol10.aspx
+ 132. file://localhost/Tags/C--hash--
+ 133. file://localhost/Tags/Windows
+ 134. file://localhost/Tags/Dev
+ 135. file://localhost/Tags/Intermediate
+ 136. file://localhost/Tags/Win8
+ 137. file://localhost/Articles/659380/Connecting-the-Dream-Cheeky-Thunder-Missile-Launch?display=Print
+ 138. file://localhost/script/common/TellFriend.aspx?obtid=2&obid=659380
+ 139. http://mashable.com/2013/09/19/tim-cook-android-low-usage/
+ 140. file://localhost/Feature/Insider/
+ 141. http://codeproject.tv/video/5003975/windows_8_xaml_event_handling_and_property_binding_part_3
+ 142. http://codeproject.tv/video/5004089/windows_8_xaml_markup_extensions
+ 143. file://localhost/Articles/19310/Hitting-a-Moving-Target-The-Missile-Guidance-Syste
+ 144. file://localhost/Articles/109153/Launch-Application-Windows-in-MultiScreen
+ 145. file://localhost/Articles/17352/JVM-Launcher
+ 146. file://localhost/Articles/12520/Thunder-Measurement-Unit-Conversion-Framework
+ 147. file://localhost/Articles/648672/Scholar-Education-Tablet-App
+ 148. file://localhost/Articles/4682/Voice-chat-using-a-client-server-architecture
+ 149. file://localhost/Articles/13544/Agents-and-Multi-agent-Systems
+ 150. file://localhost/Articles/364537/YaAppLauncher-A-Drawer-Style-Application-Launcher-
+ 151. file://localhost/Articles/3548/Joshua-Trupin-of-MSDN-What-NET-means-to-developers
+ 152. file://localhost/Articles/125721/Installer-and-Patching-Program-using-Visual-Studio
+ 153. file://localhost/Articles/653571/Understanding-SQL-Server-Configuration-Manager
+ 154. file://localhost/Articles/33406/A-Csharp-Tiny-Fireworks-Simulator
+ 155. file://localhost/Articles/29623/Managed-Wrapper-to-Connection-Manager-and-How-to-B
+ 156. file://localhost/Articles/117313/Mars-Mission-1-surface-landing
+ 157. file://localhost/Articles/83102/Csharp-SocketAsyncEventArgs-High-Performance-Socke
+ 158. file://localhost/Articles/136166/Windows-Phone-7-Launchers-Choosers-The-absolute-gu
+ 159. file://localhost/Articles/616074/Wp7nl-utilities-Contribution
+ 160. file://localhost/Articles/395226/Old-Games-Launcher
+ 161. file://localhost/Articles/11908/Building-Multiplayer-Capability-into-Your-Game-in-
+ 162. file://localhost/Articles/1639/Showing-Dial-up-Connection-Status-Window
+ 163. file://localhost/Articles/659380/Connecting-the-Dream-Cheeky-Thunder-Missile-Launch
+ 164. http://developermedia.com/
+ 165. file://localhost/info/privacy.aspx
+ 166. file://localhost/Articles/659380/Connecting-the-Dream-Cheeky-Thunder-Missile-Launch?utm_source=54j33dh4&utm_medium=twitter&display=Mobile
+ 167. mailto:webmaster@codeproject.com
+ 168. file://localhost/info/TermsOfUse.aspx
+ 169. file://localhost/Articles/659380/Connecting-the-Dream-Cheeky-Thunder-Missile-Launch?utm_source=54j33dh4&utm_medium=twitter&PageFlow=FixedWidth
+ 170. file://localhost/Articles/659380/Connecting-the-Dream-Cheeky-Thunder-Missile-Launch?utm_source=54j33dh4&utm_medium=twitter&PageFlow=Fluid

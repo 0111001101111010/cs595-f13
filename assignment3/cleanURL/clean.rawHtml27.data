@@ -1,0 +1,573 @@
+[1]Django
+
+     * [2]Home
+     * [3]Download
+     * [4]Documentation
+     * [5]Weblog
+     * [6]Community
+     * [7]Code
+
+[8]Django documentation
+
+     * [9]1.6
+     * [10]dev
+     * Documentation version: 1.5
+
+Advanced testing topics[11]¶
+
+The request factory[12]¶
+
+   class RequestFactory[13]¶
+
+   The [14]RequestFactory shares the same API as the test client. However,
+   instead of behaving like a browser, the RequestFactory provides a way
+   to generate a request instance that can be used as the first argument
+   to any view. This means you can test a view function the same way as
+   you would test any other function – as a black box, with exactly known
+   inputs, testing for specific outputs.
+
+   The API for the [15]RequestFactory is a slightly restricted subset of
+   the test client API:
+     * It only has access to the HTTP methods [16]get(), [17]post(),
+       [18]put(), [19]delete(), [20]head() and [21]options().
+     * These methods accept all the same arguments except for follows.
+       Since this is just a factory for producing requests, it’s up to you
+       to handle the response.
+     * It does not support middleware. Session and authentication
+       attributes must be supplied by the test itself if required for the
+       view to function properly.
+
+Example[22]¶
+
+   The following is a simple unit test using the request factory:
+from django.contrib.auth.models import User
+from django.test import TestCase
+from django.test.client import RequestFactory
+
+class SimpleTest(TestCase):
+    def setUp(self):
+        # Every test needs access to the request factory.
+        self.factory = RequestFactory()
+        self.user = User.objects.create_user(
+            first_name='jacob', email='jacob@…', password='top_secret')
+
+    def test_details(self):
+        # Create an instance of a GET request.
+        request = self.factory.get('/customer/details')
+
+        # Recall that middleware are not suported. You can simulate a
+        # logged-in user by setting request.user manually.
+        request.user = self.user
+
+        # Test my_view() as if it were deployed at /customer/details
+        response = my_view(request)
+        self.assertEqual(response.status_code, 200)
+
+Tests and multiple databases[23]¶
+
+Testing master/slave configurations[24]¶
+
+   If you’re testing a multiple database configuration with master/slave
+   replication, this strategy of creating test databases poses a problem.
+   When the test databases are created, there won’t be any replication,
+   and as a result, data created on the master won’t be seen on the slave.
+
+   To compensate for this, Django allows you to define that a database is
+   a test mirror. Consider the following (simplified) example database
+   configuration:
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'myproject',
+        'HOST': 'dbmaster',
+         # ... plus some other settings
+    },
+    'slave': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'myproject',
+        'HOST': 'dbslave',
+        'TEST_MIRROR': 'default'
+        # ... plus some other settings
+    }
+}
+
+   In this setup, we have two database servers: dbmaster, described by the
+   database alias default, and dbslave described by the alias slave. As
+   you might expect, dbslave has been configured by the database
+   administrator as a read slave of dbmaster, so in normal activity, any
+   write to default will appear on slave.
+
+   If Django created two independent test databases, this would break any
+   tests that expected replication to occur. However, the slave database
+   has been configured as a test mirror (using the [25]TEST_MIRROR
+   setting), indicating that under testing, slave should be treated as a
+   mirror of default.
+
+   When the test environment is configured, a test version of slave will
+   not be created. Instead the connection to slave will be redirected to
+   point at default. As a result, writes to default will appear on slave –
+   but because they are actually the same database, not because there is
+   data replication between the two databases.
+
+Controlling creation order for test databases[26]¶
+
+   By default, Django will assume all databases depend on the default
+   database and therefore always create the default database first.
+   However, no guarantees are made on the creation order of any other
+   databases in your test setup.
+
+   If your database configuration requires a specific creation order, you
+   can specify the dependencies that exist using the [27]TEST_DEPENDENCIES
+   setting. Consider the following (simplified) example database
+   configuration:
+DATABASES = {
+    'default': {
+         # ... db settings
+         'TEST_DEPENDENCIES': ['diamonds']
+    },
+    'diamonds': {
+        # ... db settings
+         'TEST_DEPENDENCIES': []
+    },
+    'clubs': {
+        # ... db settings
+        'TEST_DEPENDENCIES': ['diamonds']
+    },
+    'spades': {
+        # ... db settings
+        'TEST_DEPENDENCIES': ['diamonds','hearts']
+    },
+    'hearts': {
+        # ... db settings
+        'TEST_DEPENDENCIES': ['diamonds','clubs']
+    }
+}
+
+   Under this configuration, the diamonds database will be created first,
+   as it is the only database alias without dependencies. The default and
+   clubs alias will be created next (although the order of creation of
+   this pair is not guaranteed); then hearts; and finally spades.
+
+   If there are any circular dependencies in the [28]TEST_DEPENDENCIES
+   definition, an ImproperlyConfigured exception will be raised.
+
+Running tests outside the test runner[29]¶
+
+   If you want to run tests outside of ./manage.py test – for example,
+   from a shell prompt – you will need to set up the test environment
+   first. Django provides a convenience method to do this:
+>>> from django.test.utils import setup_test_environment
+>>> setup_test_environment()
+
+   [30]setup_test_environment() puts several Django features into modes
+   that allow for repeatable testing, but does not create the test
+   databases;
+   [31]django.test.simple.DjangoTestSuiteRunner.setup_databases() takes
+   care of that.
+
+   The call to [32]setup_test_environment() is made automatically as part
+   of the setup of ./manage.py test. You only need to manually invoke this
+   method if you’re not using running your tests via Django’s test runner.
+
+Using different testing frameworks[33]¶
+
+   Clearly, [34]doctest and [35]unittest are not the only Python testing
+   frameworks. While Django doesn’t provide explicit support for
+   alternative frameworks, it does provide a way to invoke tests
+   constructed for an alternative framework as if they were normal Django
+   tests.
+
+   When you run ./manage.py test, Django looks at the [36]TEST_RUNNER
+   setting to determine what to do. By default, [37]TEST_RUNNER points to
+   'django.test.simple.DjangoTestSuiteRunner'. This class defines the
+   default Django testing behavior. This behavior involves:
+    1. Performing global pre-test setup.
+    2. Looking for unit tests and doctests in the models.py and tests.py
+       files in each installed application.
+    3. Creating the test databases.
+    4. Running syncdb to install models and initial data into the test
+       databases.
+    5. Running the unit tests and doctests that are found.
+    6. Destroying the test databases.
+    7. Performing global post-test teardown.
+
+   If you define your own test runner class and point [38]TEST_RUNNER at
+   that class, Django will execute your test runner whenever you run
+   ./manage.py test. In this way, it is possible to use any test framework
+   that can be executed from Python code, or to modify the Django test
+   execution process to satisfy whatever testing requirements you may
+   have.
+
+Defining a test runner[39]¶
+
+   A test runner is a class defining a run_tests() method. Django ships
+   with a DjangoTestSuiteRunner class that defines the default Django
+   testing behavior. This class defines the run_tests() entry point, plus
+   a selection of other methods that are used to by run_tests() to set up,
+   execute and tear down the test suite.
+
+   class DjangoTestSuiteRunner(verbosity=1, interactive=True,
+          failfast=True, **kwargs)[40]¶
+          verbosity determines the amount of notification and debug
+          information that will be printed to the console; 0 is no output,
+          1 is normal output, and 2 is verbose output.
+
+          If interactive is True, the test suite has permission to ask the
+          user for instructions when the test suite is executed. An
+          example of this behavior would be asking for permission to
+          delete an existing test database. If interactive is False, the
+          test suite must be able to run without any manual intervention.
+
+          If failfast is True, the test suite will stop running after the
+          first test failure is detected.
+
+          Django will, from time to time, extend the capabilities of the
+          test runner by adding new arguments. The **kwargs declaration
+          allows for this expansion. If you subclass DjangoTestSuiteRunner
+          or write your own test runner, ensure accept and handle the
+          **kwargs parameter.
+
+          New in Django 1.4.
+
+          Your test runner may also define additional command-line
+          options. If you add an option_list attribute to a subclassed
+          test runner, those options will be added to the list of
+          command-line options that the [41]test command can use.
+
+Attributes[42]¶
+
+   DjangoTestSuiteRunner.option_list[43]¶
+          New in Django 1.4.
+
+          This is the tuple of optparse options which will be fed into the
+          management command’s OptionParser for parsing arguments. See the
+          documentation for Python’s optparse module for more details.
+
+Methods[44]¶
+
+   DjangoTestSuiteRunner.run_tests(test_labels, extra_tests=None,
+          **kwargs)[45]¶
+          Run the test suite.
+
+          test_labels is a list of strings describing the tests to be run.
+          A test label can take one of three forms:
+
+          + app.TestCase.test_method – Run a single test method in a test
+            case.
+          + app.TestCase – Run all the test methods in a test case.
+          + app – Search for and run all tests in the named application.
+
+          If test_labels has a value of None, the test runner should run
+          search for tests in all the applications in [46]INSTALLED_APPS.
+
+          extra_tests is a list of extra TestCase instances to add to the
+          suite that is executed by the test runner. These extra tests are
+          run in addition to those discovered in the modules listed in
+          test_labels.
+
+          This method should return the number of tests that failed.
+
+   DjangoTestSuiteRunner.setup_test_environment(**kwargs)[47]¶
+          Sets up the test environment by calling
+          [48]setup_test_environment() and setting [49]DEBUG to False.
+
+   DjangoTestSuiteRunner.build_suite(test_labels, extra_tests=None,
+          **kwargs)[50]¶
+          Constructs a test suite that matches the test labels provided.
+
+          test_labels is a list of strings describing the tests to be run.
+          A test label can take one of three forms:
+
+          + app.TestCase.test_method – Run a single test method in a test
+            case.
+          + app.TestCase – Run all the test methods in a test case.
+          + app – Search for and run all tests in the named application.
+
+          If test_labels has a value of None, the test runner should run
+          search for tests in all the applications in [51]INSTALLED_APPS.
+
+          extra_tests is a list of extra TestCase instances to add to the
+          suite that is executed by the test runner. These extra tests are
+          run in addition to those discovered in the modules listed in
+          test_labels.
+
+          Returns a TestSuite instance ready to be run.
+
+   DjangoTestSuiteRunner.setup_databases(**kwargs)[52]¶
+          Creates the test databases.
+
+          Returns a data structure that provides enough detail to undo the
+          changes that have been made. This data will be provided to the
+          teardown_databases() function at the conclusion of testing.
+
+   DjangoTestSuiteRunner.run_suite(suite, **kwargs)[53]¶
+          Runs the test suite.
+
+          Returns the result produced by the running the test suite.
+
+   DjangoTestSuiteRunner.teardown_databases(old_config, **kwargs)[54]¶
+          Destroys the test databases, restoring pre-test conditions.
+
+          old_config is a data structure defining the changes in the
+          database configuration that need to be reversed. It is the
+          return value of the setup_databases() method.
+
+   DjangoTestSuiteRunner.teardown_test_environment(**kwargs)[55]¶
+          Restores the pre-test environment.
+
+   DjangoTestSuiteRunner.suite_result(suite, result, **kwargs)[56]¶
+          Computes and returns a return code based on a test suite, and
+          the result from that test suite.
+
+Testing utilities[57]¶
+
+django.test.utils[58]¶
+
+   To assist in the creation of your own test runner, Django provides a
+   number of utility methods in the django.test.utils module.
+
+   setup_test_environment()[59]¶
+          Performs any global pre-test setup, such as the installing the
+          instrumentation of the template rendering system and setting up
+          the dummy email outbox.
+
+   teardown_test_environment()[60]¶
+          Performs any global post-test teardown, such as removing the
+          black magic hooks into the template system and restoring normal
+          email services.
+
+django.db.connection.creation[61]¶
+
+   The creation module of the database backend also provides some
+   utilities that can be useful during testing.
+
+   create_test_db([verbosity=1, autoclobber=False])[62]¶
+          Creates a new test database and runs syncdb against it.
+
+          verbosity has the same behavior as in run_tests().
+
+          autoclobber describes the behavior that will occur if a database
+          with the same name as the test database is discovered:
+
+          + If autoclobber is False, the user will be asked to approve
+            destroying the existing database. sys.exit is called if the
+            user does not approve.
+          + If autoclobber is True, the database will be destroyed without
+            consulting the user.
+
+          Returns the name of the test database that it created.
+
+          create_test_db() has the side effect of modifying the value of
+          [63]NAME in [64]DATABASES to match the name of the test
+          database.
+
+   destroy_test_db(old_database_name[, verbosity=1])[65]¶
+          Destroys the database whose name is the value of [66]NAME in
+          [67]DATABASES, and sets [68]NAME to the value of
+          old_database_name.
+
+          The verbosity argument has the same behavior as for
+          [69]DjangoTestSuiteRunner.
+
+Integration with coverage.py[70]¶
+
+   Code coverage describes how much source code has been tested. It shows
+   which parts of your code are being exercised by tests and which are
+   not. It’s an important part of testing applications, so it’s strongly
+   recommended to check the coverage of your tests.
+
+   Django can be easily integrated with [71]coverage.py, a tool for
+   measuring code coverage of Python programs. First, [72]install
+   coverage.py. Next, run the following from your project folder
+   containing manage.py:
+coverage run --source='.' manage.py test myapp
+
+   This runs your tests and collects coverage data of the executed files
+   in your project. You can see a report of this data by typing following
+   command:
+coverage report
+
+   Note that some Django code was executed while running tests, but it is
+   not listed here because of the source flag passed to the previous
+   command.
+
+   For more options like annotated HTML listings detailing missed lines,
+   see the [73]coverage.py docs.
+   [74]« Django and doctests
+   [75]User authentication in Django »
+
+Questions/Feedback
+
+   Having trouble? We'd like to help!
+     * Try the [76]FAQ — it's got answers to many common questions.
+     * Search for information in the [77]archives of the django-users
+       mailing list, or [78]post a question.
+     * Ask a question in the [79]#django IRC channel, or search the
+       [80]IRC logs to see if it has been asked before.
+     * If you notice errors with this documentation, please [81]open a
+       ticket and let us know! Please only use the ticket tracker for
+       criticisms and improvements on the docs. For tech support, use the
+       resources above.
+
+Search
+
+   ____________________
+
+   Version: [Django 1.5_______]
+
+   Search
+
+Contents
+
+     * [82]Advanced testing topics
+          + [83]The request factory
+               o [84]Example
+          + [85]Tests and multiple databases
+               o [86]Testing master/slave configurations
+               o [87]Controlling creation order for test databases
+          + [88]Running tests outside the test runner
+          + [89]Using different testing frameworks
+               o [90]Defining a test runner
+                    # [91]Attributes
+                    # [92]Methods
+               o [93]Testing utilities
+                    # [94]django.test.utils
+                    # [95]django.db.connection.creation
+          + [96]Integration with coverage.py
+
+Browse
+
+     * Prev: [97]Django and doctests
+     * Next: [98]User authentication in Django
+     * [99]Table of contents
+     * [100]General Index
+     * [101]Python Module Index
+
+You are here:
+
+     * [102]Django 1.5 documentation
+          + [103]Using Django
+               o [104]Testing in Django
+                    # Advanced testing topics
+
+Download:
+
+   Offline (Django 1.5): [105]HTML | [106]PDF | [107]ePub
+   Provided by [108]Read the Docs.
+
+   © 2005-2013 [109]Django Software Foundation unless otherwise noted.
+   Django is a registered trademark of the Django Software Foundation.
+   [110]Linux Web hosting graciously provided by Media Temple.
+
+References
+
+   1. https://www.djangoproject.com/
+   2. https://www.djangoproject.com/
+   3. https://www.djangoproject.com/download/
+   4. https://docs.djangoproject.com/
+   5. https://www.djangoproject.com/weblog/
+   6. https://www.djangoproject.com/community/
+   7. https://code.djangoproject.com/
+   8. file://localhost/en/1.5/
+   9. file://localhost/en/1.6/topics/testing/advanced/
+  10. file://localhost/en/dev/topics/testing/advanced/
+  11. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#advanced-testing-topics
+  12. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#module-django.test.client
+  13. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.test.client.RequestFactory
+  14. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.test.client.RequestFactory
+  15. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.test.client.RequestFactory
+  16. file://localhost/home/stanley/code/cs595/assignment3/q1/overview/#django.test.client.Client.get
+  17. file://localhost/home/stanley/code/cs595/assignment3/q1/overview/#django.test.client.Client.post
+  18. file://localhost/home/stanley/code/cs595/assignment3/q1/overview/#django.test.client.Client.put
+  19. file://localhost/home/stanley/code/cs595/assignment3/q1/overview/#django.test.client.Client.delete
+  20. file://localhost/home/stanley/code/cs595/assignment3/q1/overview/#django.test.client.Client.head
+  21. file://localhost/home/stanley/code/cs595/assignment3/q1/overview/#django.test.client.Client.options
+  22. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#example
+  23. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#tests-and-multiple-databases
+  24. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#testing-master-slave-configurations
+  25. file://localhost/home/stanley/code/cs595/ref/settings/#std:setting-TEST_MIRROR
+  26. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#controlling-creation-order-for-test-databases
+  27. file://localhost/home/stanley/code/cs595/ref/settings/#std:setting-TEST_DEPENDENCIES
+  28. file://localhost/home/stanley/code/cs595/ref/settings/#std:setting-TEST_DEPENDENCIES
+  29. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#running-tests-outside-the-test-runner
+  30. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.test.utils.setup_test_environment
+  31. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.test.simple.DjangoTestSuiteRunner.setup_databases
+  32. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.test.utils.setup_test_environment
+  33. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#using-different-testing-frameworks
+  34. http://docs.python.org/2.7/library/doctest.html#module-doctest
+  35. http://docs.python.org/2.7/library/unittest.html#module-unittest
+  36. file://localhost/home/stanley/code/cs595/ref/settings/#std:setting-TEST_RUNNER
+  37. file://localhost/home/stanley/code/cs595/ref/settings/#std:setting-TEST_RUNNER
+  38. file://localhost/home/stanley/code/cs595/ref/settings/#std:setting-TEST_RUNNER
+  39. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#defining-a-test-runner
+  40. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.test.simple.DjangoTestSuiteRunner
+  41. file://localhost/home/stanley/code/cs595/ref/django-admin/#django-admin-test
+  42. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#attributes
+  43. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.test.simple.DjangoTestSuiteRunner.option_list
+  44. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#methods
+  45. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.test.simple.DjangoTestSuiteRunner.run_tests
+  46. file://localhost/home/stanley/code/cs595/ref/settings/#std:setting-INSTALLED_APPS
+  47. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.test.simple.DjangoTestSuiteRunner.setup_test_environment
+  48. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.test.utils.setup_test_environment
+  49. file://localhost/home/stanley/code/cs595/ref/settings/#std:setting-DEBUG
+  50. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.test.simple.DjangoTestSuiteRunner.build_suite
+  51. file://localhost/home/stanley/code/cs595/ref/settings/#std:setting-INSTALLED_APPS
+  52. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.test.simple.DjangoTestSuiteRunner.setup_databases
+  53. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.test.simple.DjangoTestSuiteRunner.run_suite
+  54. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.test.simple.DjangoTestSuiteRunner.teardown_databases
+  55. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.test.simple.DjangoTestSuiteRunner.teardown_test_environment
+  56. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.test.simple.DjangoTestSuiteRunner.suite_result
+  57. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#testing-utilities
+  58. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#module-django.test.utils
+  59. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.test.utils.setup_test_environment
+  60. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.test.utils.teardown_test_environment
+  61. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django-db-connection-creation
+  62. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.db.connection.creation.create_test_db
+  63. file://localhost/home/stanley/code/cs595/ref/settings/#std:setting-NAME
+  64. file://localhost/home/stanley/code/cs595/ref/settings/#std:setting-DATABASES
+  65. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.db.connection.creation.destroy_test_db
+  66. file://localhost/home/stanley/code/cs595/ref/settings/#std:setting-NAME
+  67. file://localhost/home/stanley/code/cs595/ref/settings/#std:setting-DATABASES
+  68. file://localhost/home/stanley/code/cs595/ref/settings/#std:setting-NAME
+  69. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django.test.simple.DjangoTestSuiteRunner
+  70. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#integration-with-coverage-py
+  71. http://nedbatchelder.com/code/coverage/
+  72. http://pypi.python.org/pypi/coverage
+  73. http://nedbatchelder.com/code/coverage/
+  74. file://localhost/home/stanley/code/cs595/assignment3/q1/doctests/
+  75. file://localhost/home/stanley/code/cs595/assignment3/auth/
+  76. file://localhost/en/1.5/faq/
+  77. http://groups.google.com/group/django-users/
+  78. http://groups.google.com/group/django-users/
+  79. irc://irc.freenode.net/
+  80. http://django-irc-logs.com/
+  81. https://code.djangoproject.com/newticket?component=Documentation
+  82. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data
+  83. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#module-django.test.client
+  84. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#example
+  85. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#tests-and-multiple-databases
+  86. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#testing-master-slave-configurations
+  87. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#controlling-creation-order-for-test-databases
+  88. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#running-tests-outside-the-test-runner
+  89. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#using-different-testing-frameworks
+  90. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#defining-a-test-runner
+  91. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#attributes
+  92. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#methods
+  93. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#testing-utilities
+  94. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#module-django.test.utils
+  95. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#django-db-connection-creation
+  96. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml27.data#integration-with-coverage-py
+  97. file://localhost/home/stanley/code/cs595/assignment3/q1/doctests/
+  98. file://localhost/home/stanley/code/cs595/assignment3/auth/
+  99. file://localhost/en/1.5/contents/
+ 100. file://localhost/en/1.5/genindex/
+ 101. file://localhost/en/1.5/py-modindex/
+ 102. file://localhost/en/1.5/
+ 103. file://localhost/home/stanley/code/cs595/assignment3/
+ 104. file://localhost/home/stanley/code/cs595/assignment3/q1/
+ 105. file://localhost/m/docs/django-docs-1.5-en.zip
+ 106. http://media.readthedocs.org/pdf/django/1.5.x/django.pdf
+ 107. http://media.readthedocs.org/epub/django/1.5.x/django.epub
+ 108. http://readthedocs.org/
+ 109. https://www.djangoproject.com/foundation/
+ 110. http://mediatemple.net/

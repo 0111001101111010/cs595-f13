@@ -1,0 +1,328 @@
+   [1]войти [2]зарегистрироваться
+   Submit ____________________
+   [3]посты[4]q&a[5]события[6]хабы[7]компании
+   [8]Wargaming.net
+   хабраиндекс
+   80,18
+   [9]Профиль [10]Блог [11]Вопросы [12]Вакансии (3) [13]События
+   [14]Подписчики +35
+   26 сентября в 16:15
+
+Python Meetup tutorial [15]recovery mode
+
+   [16]Блог компании Wargaming.net, [17]Программирование*, [18]Python*
+   image
+   Всем привет!
+   Август – это, как известно, «последний вагон» для тех, кто хочет успеть
+   отправиться «на юга». Не побоявшись сезона отпусков мы решили проводить
+   третий митап на около-python-овские темы. Тем более, что с темами
+   докладов повезло. Рассмотрели поведение некоторых опасных конструкций в
+   Python, опробовали функциональный стиль программирования и рассмотрели
+   словари в Python. Кроме того, среди докладчиков был Никита Лесников со
+   второй частью своей презентации о внутренностях интерпретатора Python.
+   Все видео этих докладов – прямо сейчас на youtube-экранах под катом.
+   1. «[19]Неочевидное поведение некоторых конструкций» – Максим
+   Николаенко [20]niko83, Wargaming
+
+   IFRAME: [21]//www.youtube.com/embed/VzENGChkKa4?wmode=opaque
+
+   Рассказ об опасных конструкциях в Python, не зная об особенностях
+   которых, можно потратить пару-тройку часов на отладку. По горячим
+   следам была написана подробная статья по докладу, которую можно
+   прочитать в блоге Максима [22]вот тут.
+   2. «[23]Python – пробуем функциональный стиль» – Андрей Жлобич
+   [24]anjensan, Wargaming
+
+   IFRAME: [25]//www.youtube.com/embed/DblOFqPE1Pk?wmode=opaque
+
+   Можно ли программировать на Python в функциональном стиле? В докладе
+   сделан краткий обзор библиотек и приемов, которые помогут использовать
+   ФП. Затронуты следующие темы: борьба с побочными эффектами, функции
+   высших порядков, замыкания, рекурсия, работа с ленивыми
+   последовательностями.
+   3. «[26]Dictionary в Python» – Кирилл Лашкевич [27]notorca, Viber
+
+   IFRAME: [28]//www.youtube.com/embed/JhixzgVpmdM?wmode=opaque
+
+   Доклад про то, почему в Python словарей больше, чем кажется, и о том,
+   как они работают.
+   4. «[29]Беглый обзор внутренностей интерпретатора Python (часть II)» –
+   Никита Лесников, Wargaming
+
+   IFRAME: [30]//www.youtube.com/embed/5U496-JPQ_c?wmode=opaque
+
+   В докладе описаны низкоуровневые особенности исполнения кода на Python.
+   Рассмотрены различные компромиссы между быстродействием и
+   защищенностью, которые продиктованы архитектурой интерпретатора. Также
+   показаны best practices по интеграции и оптимизации, которые могут быть
+   полезны пользователям языка из различных областей.
+   Совсем скоро (27 сентября) пройдет следующий Python Meetup. Все
+   подробности и «как попасть» можно узнать на нашей странице в [31]FB.
+   Ждем всех! До встречи!
+     * [32]Python
+     * , [33]meetup
+     * , [34]видео
+     * , [35]Минск
+
+   +31
+   5996
+   130
+   [36]Wargaming 11,4
+
+комментарии (9)
+
+   0
+   [37]sl4mmer, 26 сентября 2013 в 16:42 [38]#
+   А где python используется в Wargaming, если не секрет?
+   Спасибо за видео докладов- скорректировал планы на вечер
+   +8
+   [39]max_posedon, 26 сентября 2013 в 16:50 [40]#
+   ↵
+   [41]↑
+   На самом деле, практически везде, это основной язык разработки:
+   1. Сервера World of Tanks и других ещё не вышедших, игр компании
+   2. Клиента World of Tanks — установив игру, можно увидеть множество pyc
+   файликов
+   3. Web-обвязки над игрой
+   Для больших подробностей рекомендую:
+   РИТ 2013. World of Tanks: на пути к 1M CCU.
+   [42]www.slideshare.net/max_posedon/world-of-tanks-1m-ccu
+   [43]www.youtube.com/watch?v=_sMDs5_M_Xs
+   ITSHARE 2013. Wargaming Web
+   [44]www.slideshare.net/max_posedon/wargaming-web-26036765
+   [45]www.youtube.com/watch?v=T1dvHMx8beY
+   0
+   [46]Nicknnn, 27 сентября 2013 в 13:20 [47]#
+   ↵
+   [48]↑
+   А разве серверная часть танков не на джава?
+   Мне казалось, на питоне у них сайты, форумы и различная обвязка.
+   0
+   [49]max_posedon, 27 сентября 2013 в 13:58 [50]#
+   ↵
+   [51]↑
+   Нет, именно на Python
+   Используется BigWorld как движок, и собственно вот
+   [52]www.bigworldtech.com/faq
+   Q: Is development on both client and server handled with Python?
+   A: Yes, both client and server are handled by Python
+   Ещё можно глянуть на вакансии ( [53]wargaming.com/ru/careers/office/1/
+   ) — вакансии это как правило лучший инструмент анализа, на чём делается
+   продукт.
+   Интересно, откуда появляются мысли про Java…
+   0
+   [54]Nicknnn, 27 сентября 2013 в 15:12 [55]#
+   ↵
+   [56]↑
+   Мой знакомый из варгейминга рассказывал, что устанавливал сервера и
+   были проблемы с java. На тот момент я ещё не знал, что у них есть много
+   проектов кроме танков. С той поры у меня засела мысль, что серверная
+   часть у низ как раз на Java. Ну а вакансий у них хватает и на C++ и на
+   Java в том числе есть.
+   Минусующим:
+   Минусовать за Java — моё почтение господа.
+   0
+   [57]Alex222, 26 сентября 2013 в 17:36 (комментарий был изменён) [58]#
+   Первый ролик — с Максимом Николаенко- довольно полезный, только вот
+   Максим что-то то запинается, то говорит что-то ненужное.
+   Даже много ненужного.
+   А так спасибо
+   +6
+   [59]niko83, 26 сентября 2013 в 23:49 [60]#
+   ↵
+   [61]↑
+   спасибо, может как посмотрю своё выступление со стороны, проведу работу
+   над ошибками
+   0
+   [62]Alex222, 27 сентября 2013 в 00:15 (комментарий был изменён) [63]#
+   «Пробуем функц. стиль» — Есть ли такой сборничек, в виде текст-статьи?
+   Что именно является в Питоне стилем ФП? Видимо я знаю эти вещи, но не
+   знаю, что они являются частью ФП стиля.
+   «Словари» — полезный доклад. Но мне лично не приходится с БОЛЬШИМИ
+   словарями работать, так что не пригодится, пока. Вот если б я
+   spellchecker писал…
+   0
+   [64]iMarkus, 28 сентября 2013 в 14:02 [65]#
+   Спасибо топикстартеру, спасибо докладчикам, достаточно интересные
+   материалы.
+
+   Только зарегистрированные пользователи могут оставлять комментарии.
+   [66]Войдите, пожалуйста.
+   Пометьте топик понятными вам метками, если хотите ____________________
+   Метки лучше разделять запятой. Например: общение, социальные сети,
+   myspace.com, подростки, мердок
+   Сохранить или [67]закрыть
+   Информация о компании
+   [68]112 подписчиков
+   [69]4 поста
+   Мы хантим
+   [70]Python Programmer
+   [71]Senior C++ (Graphics) Programmer
+   [72]C++ (Mobile) Game Programmer
+   Блог
+   [73]Python Meetup
+   26 сентября 2013 в 16:15
+   [74]Вопрос ребром: регистрации аккаунтов на общедоступных
+   email-серверах
+   16 сентября 2013 в 18:33
+   [75]Второй Python meetup: чего ждать от PEP и стоит ли стрелять себе в
+   ногу?
+   6 сентября 2013 в 17:47
+   [76]Python Meetup: летние старты
+   6 сентября 2013 в 12:02
+
+          [77]Войти
+          [78]Регистрация
+
+   Разделы
+          [79]Q&A
+          [80]Хабы
+          [81]События
+          [82]Компании
+          [83]Пользователи
+
+   Посты
+          [84]Лучшие
+          [85]Тематические
+          [86]Корпоративные
+          [87]Песочница
+
+   Инфо
+          [88]О сайте
+          [89]Правила
+          [90]Помощь
+          [91]Соглашение
+          [92]Статистика
+
+   Услуги
+          [93]Реклама
+          [94]Корпоративные тарифы
+          [95]Семинары
+          [96]Спецпроекты
+
+   [97]Тематические Медиа © 2006–2013
+   [98]Служба поддержки
+   [99]Мобильная версия
+
+References
+
+   Visible links
+   1. https://auth.habrahabr.ru/login/
+   2. https://auth.habrahabr.ru/register/
+   3. http://habrahabr.ru/posts/top/
+   4. http://habrahabr.ru/qa/
+   5. http://habrahabr.ru/events/coming/
+   6. http://habrahabr.ru/hubs/
+   7. http://habrahabr.ru/companies/
+   8. http://habrahabr.ru/company/wargaming/
+   9. http://habrahabr.ru/company/wargaming/profile/
+  10. http://habrahabr.ru/company/wargaming/blog/
+  11. http://habrahabr.ru/company/wargaming/questions/
+  12. http://habrahabr.ru/company/wargaming/vacancies/
+  13. http://habrahabr.ru/company/wargaming/events/coming/
+  14. http://habrahabr.ru/company/wargaming/fans/
+  15. file://localhost/info/help/karma/#recovery
+  16. http://habrahabr.ru/company/wargaming/
+  17. http://habrahabr.ru/hub/programming/
+  18. http://habrahabr.ru/hub/python/
+  19. http://www.slideshare.net/MinskPythonMeetup/ss-26225326
+  20. http://habrahabr.ru/users/niko83/
+  21. file://www.youtube.com/embed/VzENGChkKa4?wmode=opaque
+  22. http://habrahabr.ru/post/192098/
+  23. http://www.slideshare.net/MinskPythonMeetup/pyton-26224681
+  24. http://habrahabr.ru/users/anjensan/
+  25. file://www.youtube.com/embed/DblOFqPE1Pk?wmode=opaque
+  26. http://www.slideshare.net/MinskPythonMeetup/ss-26224561
+  27. http://habrahabr.ru/users/notorca/
+  28. file://www.youtube.com/embed/JhixzgVpmdM?wmode=opaque
+  29. http://www.slideshare.net/MinskPythonMeetup/ss-26224370
+  30. file://www.youtube.com/embed/5U496-JPQ_c?wmode=opaque
+  31. https://www.facebook.com/MinskPythonMeetup
+  32. http://habrahabr.ru/search/?q=%5BPython%5D%E2%8C%96_type=posts
+  33. http://habrahabr.ru/search/?q=%5Bmeetup%5D%E2%8C%96_type=posts
+  34. http://habrahabr.ru/search/?q=%5B%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE%5D%E2%8C%96_type=posts
+  35. http://habrahabr.ru/search/?q=%5B%D0%9C%D0%B8%D0%BD%D1%81%D0%BA%5D%E2%8C%96_type=posts
+  36. http://habrahabr.ru/users/Wargaming/
+  37. http://habrahabr.ru/users/sl4mmer/
+  38. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml11.data#comment_6777950
+  39. http://habrahabr.ru/users/max_posedon/
+  40. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml11.data#comment_6778008
+  41. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml11.data#comment_6777950
+  42. http://www.slideshare.net/max_posedon/world-of-tanks-1m-ccu
+  43. http://www.youtube.com/watch?v=_sMDs5_M_Xs
+  44. http://www.slideshare.net/max_posedon/wargaming-web-26036765
+  45. http://www.youtube.com/watch?v=T1dvHMx8beY
+  46. http://habrahabr.ru/users/Nicknnn/
+  47. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml11.data#comment_6781298
+  48. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml11.data#comment_6778008
+  49. http://habrahabr.ru/users/max_posedon/
+  50. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml11.data#comment_6781494
+  51. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml11.data#comment_6781298
+  52. http://www.bigworldtech.com/faq
+  53. http://wargaming.com/ru/careers/office/1/
+  54. http://habrahabr.ru/users/Nicknnn/
+  55. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml11.data#comment_6781900
+  56. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml11.data#comment_6781494
+  57. http://habrahabr.ru/users/Alex222/
+  58. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml11.data#comment_6778274
+  59. http://habrahabr.ru/users/niko83/
+  60. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml11.data#comment_6779628
+  61. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml11.data#comment_6778274
+  62. http://habrahabr.ru/users/Alex222/
+  63. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml11.data#comment_6779696
+  64. http://habrahabr.ru/users/iMarkus/
+  65. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml11.data#comment_6785424
+  66. https://auth.habrahabr.ru/login/
+  67. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml11.data
+  68. file://localhost/company/wargaming/fans/
+  69. file://localhost/company/wargaming/blog/
+  70. http://hantim.ru/jobs/24260-python-programmer
+  71. http://hantim.ru/jobs/23564-senior-c-graphics-programmer
+  72. http://hantim.ru/jobs/23554-c-mobile-game-programmer
+  73. http://habrahabr.ru/company/wargaming/blog/195382/
+  74. http://habrahabr.ru/company/wargaming/blog/193974/
+  75. http://habrahabr.ru/company/wargaming/blog/192826/
+  76. http://habrahabr.ru/company/wargaming/blog/192768/
+  77. https://auth.habrahabr.ru/login/
+  78. https://auth.habrahabr.ru/register/
+  79. http://habrahabr.ru/qa/
+  80. http://habrahabr.ru/hubs/
+  81. http://habrahabr.ru/events/
+  82. http://habrahabr.ru/companies/
+  83. http://habrahabr.ru/users/
+  84. http://habrahabr.ru/posts/top/
+  85. http://habrahabr.ru/posts/collective/
+  86. http://habrahabr.ru/posts/corporative/
+  87. http://habrahabr.ru/sandbox/
+  88. http://habrahabr.ru/info/about/
+  89. http://habrahabr.ru/info/help/rules/
+  90. http://habrahabr.ru/info/help/
+  91. http://habrahabr.ru/info/agreement/
+  92. http://habrahabr.ru/info/stats/
+  93. http://habrahabr.ru/info/advertising/
+  94. http://habrahabr.ru/info/advertising/corporate/
+  95. http://habrahabr.ru/info/advertising/workshops/
+  96. http://habrahabr.ru/special/
+  97. http://thematicmedia.ru/
+  98. http://habrahabr.ru/feedback/
+  99. http://m.habrahabr.ru/
+
+   Hidden links:
+ 101. http://habrahabr.ru/
+ 102. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml11.data
+ 103. http://twitter.com/intent/tweet?text=Python+Meetup+%23habr+http://habr.ru/p/195382/
+ 104. http://vk.com/share.php?url=http://habrahabr.ru/company/wargaming/blog/195382/
+ 105. https://www.facebook.com/sharer/sharer.php?u=http://habrahabr.ru/company/wargaming/blog/195382/
+ 106. https://plus.google.com/share?url=http://habrahabr.ru/company/wargaming/blog/195382/
+ 107. http://habrahabr.ru/users/sl4mmer/
+ 108. http://habrahabr.ru/users/max_posedon/
+ 109. http://habrahabr.ru/users/Nicknnn/
+ 110. http://habrahabr.ru/users/max_posedon/
+ 111. http://habrahabr.ru/users/Nicknnn/
+ 112. http://habrahabr.ru/users/Alex222/
+ 113. http://habrahabr.ru/users/niko83/
+ 114. http://habrahabr.ru/users/Alex222/
+ 115. http://habrahabr.ru/users/iMarkus/
+ 116. https://twitter.com/habrahabr
+ 117. https://www.facebook.com/habrahabr.ru
+ 118. http://vk.com/habr

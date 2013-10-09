@@ -1,0 +1,942 @@
+     * [1]How To Guides |
+     * [2]Community
+
+   Where knowledge rules
+   ________________________________________ [3]Search Helium
+     * [4]Computers & Technology
+     * [5]Internet
+     * [6]Internet Security & Safety
+          + [7]Spam & Email Scams
+          + [8]Hacking
+          + [9]Malware & Identity Theft
+          + [10]Virus Protection & Maintenance
+          + [11]Internet Security & Safety (Other)
+
+   [12]Home > [13]Computers & Technology > [14]Internet > [15]Internet
+   Security & Safety > [16]Hacking
+
+The basics of vulnerability scans
+
+     * [17]Top Article
+     * [18]All 2 Articles
+
+   [19]Tweet
+   [20]1 of 2
+
+by [21]Eileen Eva
+
+     *
+
+   Created on: March 01, 2011   Last Updated: February 07, 2012
+
+   Reconnaissance is a term used in computer security. When you perform
+   reconnaissance, you are looking for vulnerabilities, loopholes or weak
+   spots that you can use to break into a computer, application or
+   network. Hackers are always scanning for vulnerabilities and if they
+   find, they exploit them which can sometime lead to identity theft or
+   financial loss. It’s best to learn how vulnerability scans work and how
+   to use tools that can identify weak spots in your computer, network or
+   website. This will enable you seal those vulnerabilities before a
+   hacker sneaks in.
+
+   Some tools used to defend your computer, network or website, are the
+   same tools used to attack. The most common and widely used
+   vulnerability scanners are: Nessus, GFI LAN guard, Cain and Abel, Blues
+   Port Scanner and WireShark.
+
+   Cain and Abel
+
+   It is available for free and being used by everybody, good or bad. It
+   combines all the tools together. Cain and Abel will scan for open
+   ports, sniff the network, crack or decrypt passwords, Poison ARP
+   (Address Resolution Protocol) or record VOIP calls. Cain and Abel has a
+   GUI and is based on Windows OS.
+
+   Nessus
+
+   Available both in retail and free versions with the free version
+   intended for home use. Nessus server simulates attacks targeting your
+   computer and also scans for vulnerabilities on your computer or home
+   network. You can scan for backdoors, possible denial of service
+   attacks, missing important system patches and password strength.
+
+   After Nessus is through scanning your computer or network. It will
+   display a detailed report on the findings and also give your severity
+   levels and possible solutions. When using Nessus, enable auto update
+   every 24 hrs. This will give you the most recent definitions.
+
+   GFI LANguard
+
+   With a 30 day trial and defaults to a free version limited to 5 IP
+   addresses if you don’t buy the commercial version. GFI LANguard works
+   just like Nessus but with an option of automatically fixing vulnerable
+   areas after a scan. If it finds that your operating system is missing
+   some important security updates, hot fixes or patches, it can connect,
+   download and install them from Microsoft. When installed together with
+   the GFI report pack, it can send you emails about your system security.
+
+   WireShark
+
+   WireShark runs on WinPcap. This product collects all the data
+   transmitted on a wired link (Ethernet) and if you want to sniff on
+   wireless networks, you add AirPcaP. WinPcap drivers extend the
+   operating system enabling low-level network access. It also has a
+   library used to access network layers at the low-level. This is a
+   perfect tool for network traffic analysis.
+
+   An effective way of using Cain and Able is by combining it with
+   WireShark. After WireShark sniffs a network link save the file and
+   analyze with Cain and Abel.
+
+   Sources:
+
+   Tenable Network Security - Nessus
+   [22]http://www.nessus.org/nessus/
+
+   Gfi.com - Gfi LanGuard
+   [23]http://www.gfi.com/lannetscan
+
+   Oxid.it - Cain & Abel
+   [24]http://www.oxid.it/cain.html
+
+   Wireshark.org – WireSHARK
+   [25]http://www.wireshark.org/
+
+   [26]286586_m Learn more about this author, [27]Eileen Eva.
+   Click here to send this author comments or questions.
+
+   Below are the top articles rated and ranked by Helium members on:
+
+   The basics of vulnerability scans
+     * [28]1 of 2
+       by [29]Eileen Eva
+       [30]Reconnaissance is a term used in computer security. When you
+       perform reconnaissance, you are looking for vulnerabilities,
+     * [31]2 of 2
+       by [32]Renars Silters
+       [33]Lately vulnerability scans are being used by both - IT security
+       auditing companies and attackers too. As there are many
+
+   HIDE
+     *
+     * [34]Tweet
+
+
+
+     [35]Email Article Email this article
+
+     [36]Print article Print article
+
+   Related Titles:
+     * [37]The basics of port-scanning
+     * [38]The power of vulnerability
+     * [39]At which ages are humans most vulnerable?
+     * [40]Why human beings are so fallible and vulnerable
+     * [41]About software vulnerabilities
+
+   Helium Debate
+
+   Cast your vote!
+
+   [42]Should computer virus writers go to jail?
+     * [43]No
+     * or
+     * [44]Yes
+
+   Click for your side.
+     * [45]On the home page
+     * [46]Most popular titles
+
+     * [47]'Cloudy with a Chance of Meatballs 2' is box office hit on
+       debut weekend
+     * [48]How to be thankful during hard times
+     * [49]Where to take a vacation in October
+     * [50]Poetry: Haiku about orchids
+     * [51]An overview of Catholic Saint's feast days for October
+     * [52]Visitor's guide to the Family Museum in Bettendorf, Iowa
+     * [53]Must haves for a well stocked purse
+     * [54]Movie reviews: Thanks For Sharing (2012)
+     * [55]One piece, three ways: Cardigan sweater
+     * [56]How to rejuvenate when feeling tired during the day
+     * [57]A look at Burger King's new 'healthier' French fries
+
+     * [58]Best websites for printable Thanksgiving placecards
+     * [59]Best websites for free Thanksgiving desktop wallpaper
+     * [60]Where to find free Thanksgiving screensavers for Windows
+     * [61]Best websites for free Thanksgiving desktop backgrounds
+     * [62]Website reviews: Weightlossbuddy.com
+     * [63]Where to find free winter pictures to use for your desktop
+       wallpaper to find free winter pictures to use for your desktop
+       wallpaper
+     * [64]The best mobile apps for weight tracking
+     * [65]10 gadgets for winter fun
+     * [66]The best iPhone and iPad apps for losing weight
+     * [67]Best websites for free Christmas desktop wallpaper
+     * [68]iPhone app reviews: Angry Birds Halloween
+     * [69]Photoshop tutorials: How to make leaf brushes
+     * [70]Can you see the moon using Google Earth
+     * [71]Why did Google change their logo to Topeka
+     * [72]Should cell phone use be banned while driving?
+     * [73]Why Mac is better than PC
+     * [74]Pros and cons of the Internet in today’s society
+     * [75]How to install Linux on an Intel Mac with Boot Camp
+     * [76]How to make a photo look old in Photoshop
+     * [77]The negative effects of Facebook
+     * [78]How to know if your computer has been hacked
+     * [79]Phone comparisons: Sprint HTC EVO 4G vs. Verizon Nexus One
+     * [80]How to use Paypal without a credit card
+     * [81]Tips for knowing when the CMOS battery is getting weak
+     * [82]Comparing MacBook Air with MacBook Pro
+     * [83]How to cancel an AOL account
+     * [84]What are the differences between LAN and WAN
+     * [85]iPod Touch not recognized in iTunes for Windows: How to fix it
+     * [86]How to transfer money between your bank account and PayPal
+     * [87]Great text-message jokes
+     * [88]Disadvantages of Facebook
+     * [89]Scan my computer online for viruses
+     * [90]How to connect your MP3 player to your car stereo
+     * [91]How to connect one computer to another
+     * [92]Effects of computers and the Internet on society
+     * [93]How to block private calls on your cell phone
+     * [94]Apple iPad vs Google ‘iPad killer’ tablet
+     * [95]How to convert iDoser DRG files to WAV and MP3
+     * [96]Negative effects of the Internet
+     * [97]How to compress files with WinRAR
+     * [98]Top free android apps for the myTouch 3G
+     * [99]What to do if your iPod freezes
+     * [100]What does the collate feature do on a printer or copy machine
+     * [101]How to determine what kind of Internet connection you have
+     * [102]How to clean up a computer’s hard drive
+     * [103]Guide to the cheapest cell phone service plans in the U.S.
+     * [104]The top free apps for the Droid
+     * [105]iPhone app reviews: Tap Fish
+     * [106]Is buying discounted cigarettes online legal in the U.S.?
+     * [107]How to erase songs from your iPod
+     * [108]How to get free videos for your iPod
+     * [109]Choosing between HD and SD camcorders
+     * [110]How to find out what’s running on your PC
+     * [111]How to delete cookies from your computer
+     * [112]How to remove a hard drive
+     * [113]How to download music on an iPod Touch
+     * [114]Best 2D animation programs
+     * [115]How to change bit rates in iTunes
+     * [116]Things that may slow down your computer
+     * [117]The negative effects of technology on kids
+     * [118]How to get the best deal on a Verizon Nexus One
+     * [119]Best laptops for high school students
+     * [120]Website reviews: Weebly.com
+     * [121]Best brand laptop to buy
+     * [122]Negative impact of technology growing too fast
+     * [123]Comparing integrated and dedicated graphics cards
+     * [124]How to connect two home computers to the same printer
+     * [125]Energizer vs. Duracell batteries
+     * [126]Common problems with Google’s Nexus One phone
+     * [127]How illegal music downloaders get caught
+     * [128]How to put videos on your iPod classic
+     * [129]The difference between object-oriented programming (OOP) and
+       procedure-oriented programming
+     * [130]The best way to play an IPod through your car stereo
+     * [131]Best online stores with ‘buy now pay later’ options
+     * [132]How to change your name on Facebook
+     * [133]How to get more space on your computer
+     * [134]Digital camera reviews: Panasonic Lumix DMC-TZ65
+     * [135]The negative side of Facebook
+     * [136]What to do if your computer gets hacked
+     * [137]The pros and cons of Wikipedia
+     * [138]How the computer has changed through the years
+     * [139]How to install downloaded fonts and Photoshop brushes
+     * [140]How to view system information in Windows XP
+     * [141]Pros and cons of using Microsoft PowerPoint presentations
+     * [142]Fastest of the three internet browsers
+     * [143]How to send SMS from the internet to a cell phone
+     * [144]How to sell your old computer
+     * [145]The pros and cons of open source software
+     * [146]What type of wood should you use to make a subwoofer box?
+     * [147]Internet connection by a USB modem
+     * [148]The pros and cons of advancing technology
+     * [149]Imagining a world without computers
+     * [150]How to transfer songs from iTunes to your iPod
+     * [151]How computers benefit society
+     * [152]Functions of a Database Management System
+     * [153]How to enable NVIDIA SLI
+     * [154]Google Earth V5: A review of new features
+     * [155]How to find old classmates in Facebook
+     * [156]Pros and cons of MySpace and Facebook
+     * [157]Microsoft Outlook tips: How to import your Hotmail messages
+     * [158]Why dual-core is faster than single-core processors
+     * [159]Comparing Matlab and Mathematica
+     * [160]The difference between Google and Yahoo search results
+     * [161]Censorship and the Internet
+     * [162]Internet service reviews: DISH Network
+     * [163]The differences between an Amazon Kindle and a Nook
+     * [164]How to take quality pictures on a cell phone camera
+     * [165]The pros and cons of cellphones
+     * [166]How to set up voice mail on a Droid phone
+     * [167]The advantages of the Internet
+     * [168]Transferring iTunes songs to another computer
+     * [169]AlertPay vs. PayPal
+     * [170]How to use Google Earth
+     * [171]Tips to diagnose and fix a slow running computer
+     * [172]How to change your home page in Firefox
+     * [173]How to create a hyperlink in an email
+     * [174]Social effects of Internet communication
+     * [175]The importance of computer technology in industry
+     * [176]Do headphones damage your hearing?
+     * [177]How to choose the best center channel for your home theater
+       system
+     * [178]How to send an event invitation on Facebook
+     * [179]Microsoft Word tips: How to check the readability of your
+       writing
+     * [180]How to fix a ‘network cable unplugged’ error
+     * [181]How to remove a forgotten Windows XP password
+     * [182]How to clear your Dropbox cache
+     * [183]Hottest programming language trends among developers
+     * [184]iPhone app reviews: Words with Friends Free
+     * [185]Facts about iPods
+     * [186]The future of modernization in the United States
+     * [187]Kindle’s biggest competitors
+     * [188]Essential software everyone should have on their laptop
+     * [189]How to change the display settings in Windows XP
+     * [190]How to fix IP address problems
+     * [191]How to use a micro sd card
+     * [192]What to do if your computer is running slow
+     * [193]Product reviews: Logitech M305 wireless mouse
+     * [194]At what age do you give a child a cell-phone?
+     * [195]Car audio: How to build a subwoofer enclosure
+     * [196]Best MP3 players for kids
+     * [197]How to create a transparent gradient in Adobe Illustrator
+     * [198]How to remove Bing toolbar
+     * [199]Buying a desktop or laptop: Pros and cons
+     * [200]How to remove scratches from your iPod
+     * [201]Improving your cell phone’s call quality
+     * [202]Top 10 reasons cell phones have become essential for modern
+       living
+     * [203]Advantages and disadvantages of mp3 technology
+     * [204]How the Internet changed the world
+     * [205]Technology is making us lazy
+     * [206]Using a LCD monitor as a TV
+     * [207]How to transfer pictures from your cell phone to your computer
+     * [208]How to tell how much free hard-drive space is left on a
+       computer
+     * [209]What is 2D animation?
+     * [210]iPhone app reviews: Google Earth
+     * [211]How to increase digital TV signal strength
+     * [212]How to change your WiFi channel number
+     * [213]How to make brochures in Microsoft Word
+     * [214]Effects of technology in today’s business world
+     * [215]How to install the Windows Vista sidebar and gadgets in
+       Windows XP
+     * [216]Why computer games are not a waste of time
+     * [217]The meaning of domain name extensions
+     * [218]How to airbrush a photo in Photoshop
+     * [219]Best computer for students: Mac or PC?
+     * [220]The top 10 apps to get you started on the Verizon Droid
+     * [221]Ways to get creative with your Facebook religious views
+     * [222]Best websites for free Easter desktop wallpaper
+     * [223]Tips for using Facebook block or limited profile check
+     * [224]Pros and cons of Skype
+     * [225]Tips on using the Droid Multimedia Station
+     * [226]The best pen pal sites
+     * [227]How to fix a cell phone after it gets wet
+     * [228]The positive effects of technology on kids
+     * [229]How to connect a DVD recorder to a satellite receiver
+     * [230]Photoshop CS4 tutorial: How to create a silhouette
+     * [231]Software reviews: Kindle for Mac
+     * [232]How to adjust the virtual memory paging file in Windows XP
+     * [233]The differences between the Panasonic and Samsung 3D TVs
+     * [234]Internet service reviews: Direct TV Internet
+     * [235]The best apps for customizing a Droid phone
+     * [236]Does technology help us save time or waste time?
+     * [237]The negative side of the Internet
+     * [238]How to factory reset a Samsung Galaxy S2
+     * [239]Names you can’t have on Facebook
+     * [240]Best websites to watch free streaming TV shows online
+     * [241]Do cell phones keep us more connected or more isolated?
+     * [242]Should social networking sites be regulated?
+     * [243]iPhone app reviews: Talking Tom Cat
+     * [244]Best cell phone providers in Alaska
+     * [245]iPhone app reviews: Me Want Bamboo
+     * [246]Will computers replace books in the future?
+     * [247]What is Google Wave?
+     * [248]Best websites for printable crossword and jumble word puzzles
+     * [249]How to remove a jammed Ethernet cable safely
+     * [250]Advantages of Facebook
+     * [251]Are computers necessary in today’s society?
+     * [252]How to make triangle shapes using GIMP software
+     * [253]Best digital cameras for teens
+     * [254]How to use cc and bcc effectively when sending emails
+     * [255]Best private channels for the Roku Digital video player
+     * [256]How to find the IP address of a Ricoh copier
+     * [257]Best crafts to sell on Etsy
+     * [258]Do cell phone signal boosters really work?
+     * [259]Explaining the diameter of a CD
+     * [260]How YouTube works: The technical aspects
+     * [261]How hackers can steal money from your bank account
+     * [262]How to hide computer files that you don’t want people to see
+     * [263]The downside of card-holder services
+     * [264]How technology has affected tourism
+     * [265]Evaluating the environmental impact of e-waste
+     * [266]How to make a spinning globe using GIMP software
+     * [267]How to fix Zune error 5
+     * [268]How to install a GPS navigation device in your car
+     * [269]Cardholder services scam: What consumers need to know
+     * [270]How to set up a Sapido wireless router
+     * [271]How has GPS changed our lives?
+     * [272]Japan vs. US: Who is better in the field of technology
+     * [273]How to use a BlackBerry Curve as a USB modem
+     * [274]How to create Dish Network favorites lists
+     * [275]How to sync your Google Calendar with the Droid phone
+     * [276]How technology has affected the food industry
+     * [277]Virgin MiFi offers low cost, unlimited Internet, 3G hot spot
+     * [278]Battery saving tips for the Samsung Galaxy S2
+     * [279]Best computer for writers: Mac or PC?
+     * [280]Zombie cookies: What zombie cookies are and how to delete them
+     * [281]How to factory reset your HTC EVO
+     * [282]How to check your Internet signal strength
+     * [283]Haypi Kingdom: City wall strategies
+     * [284]How to check reliability of information on the Internet
+     * [285]Why are cell phones so popular?
+     * [286]Most addicting games on Facebook
+     * [287]Best free apps for the Sony Dash
+     * [288]Why use VB.Net?
+     * [289]iPhone app reviews: Stickwars Lite
+     * [290]How to import browser settings in Safari
+     * [291]The facts about cell phone addiction
+     * [292]Product reviews: Jazz DV151 pocket camcorder
+     * [293]Best websites to download free eBooks online
+     * [294]Is text messaging causing the destruction of the English
+       language?
+     * [295]Top 10 cloud computing service providers
+     * [296]Changing the font size on a Nook
+     * [297]Negative sides of social networking
+     * [298]Headphone reviews: Philips SHC2000 wireless
+     * [299]How to factory reset a Sony Ericsson C902
+     * [300]Comparing link state algorithm with distance vector algorithm
+     * [301]How social networking has changed the nature of friends and
+       friendships
+     * [302]Nintendo executive says Nintendo 3DS is unfit for children
+     * [303]Why Livedrive is better than DropBox
+     * [304]Why text messaging is so popular, even though it’s impersonal
+     * [305]How to find the MAC address of a Ricoh Aficio MP series copier
+     * [306]iPhone 4 death grip: How to get better iPhone 4 reception
+     * [307]The role of information technology in our industries
+     * [308]How to normalize your database tables
+     * [309]Website reviews: Ikariam.org
+     * [310]How to become immortal: Upload your mind
+     * [311]The best free eBook reader apps for Android
+     * [312]Assessing the effect of new technologies on our lifestyle
+     * [313]The key differences between HTML and XHTML
+     * [314]Why IP addresses are important for computer networking
+     * [315]How to make ornament ball images using GIMP software
+     * [316]How to ink in GIMP without a tablet
+     * [317]Tips and tricks for using the Samsung Galaxy S2
+     * [318]Factors that influence website performance
+     * [319]How to convert a word document into PDF
+     * [320]The different modes of Doodle Jump for the iPhone
+     * [321]How Apple and the iPod have changed the music industry
+     * [322]How to create a LAN network in a cyber cafe
+     * [323]How to connect speakers to both a DVD player and a TV
+     * [324]How to use your iPhone abroad and avoid unwanted roaming
+       charges
+     * [325]Why HTML is important
+     * [326]USB vs. serial keyboards: Which is better?
+     * [327]How to make a cube shape using GIMP software
+     * [328]How to delete an album in IPhoto but not in Facebook
+     * [329]The best astrology apps for iPad
+     * [330]How to do a screen capture with a Samsung Galaxy S2
+     * [331]How to find out what is running during computer startup
+     * [332]The profile of a typical hacker
+     * [333]Why hackers hack
+     * [334]How to add songs to iPod without deleting old ones
+     * [335]How to create an image by tracing with GIMP
+     * [336]How to create a switchboard in Microsoft Access
+     * [337]Internet browsers: How to block keyword pop-up ads
+     * [338]The difference between TCP and UDP in trasferring data
+     * [339]iPhone app reviews: Angry Birds
+     * [340]Is technology making us lazy?
+     * [341]Advantages of the Internet
+     * [342]Which computer is best for the music-minded: Mac or PC?
+     * [343]How to use SD card with Macbook Pro
+     * [344]Do lithium batteries really last that much longer than
+       alkaline?
+     * [345]The basic concepts of VB.Net
+     * [346]Potential problems with robots
+     * [347]How to set up a live webcam
+     * [348]The birth of YouTube: How it started out
+     * [349]iPhone app reviews: Crime City
+     * [350]How to set reminders on an iPhone 4
+     * [351]Best iPad apps for teachers
+     * [352]Appropriate vs. inappropriate uses for text messaging
+     * [353]The differences between towers, mini-towers and desktop
+       computers
+     * [354]The history of the Internet in the Philippines
+     * [355]Cell phone accessory reviews: Plantronics Explorer 245
+       Bluetooth Headset
+     * [356]Pros and cons of technology for children
+     * [357]Android app reviews: Teeter
+     * [358]How to use Spotify.com to organise a music playlist
+     * [359]Geeky tech gadgets that make great stocking stuffers
+     * [360]How safe are webcam sites?
+     * [361]How to turn chat off on Facebook
+     * [362]How has social networking improved people’s relationships with
+       family and friends?
+     * [363]How technology has affected education
+     * [364]What is near field communication (NFC) technology?
+     * [365]Tips for buying a webcam
+     * [366]How to use the Android Froyo light sensor
+     * [367]Where to find eMachine replacement parts online
+     * [368]Where to get free PDF books
+     * [369]Google Android 2.2 release date and specs
+
+   [370]176597
+
+   Featured Partner
+
+   [371]New England Coalition for Sustainable Population (NECSP)
+
+   New England Coalition for Sustainable Population's (NECSP) mission is
+   to raise awareness in New England of regional, national and global
+   population and sustainability issues, and to strengthen regional action
+   on these issues.[372]more
+
+   IFRAME:
+   [373]http://pbid.pro-market.net/engine?site=118860;size=1x1;category=Ha
+   cking;kw=tools%20used%20for%20vulnerability%20scans%20by%20Eileen%20Eva
+     __________________________________________________________________
+
+   CONNECT WITH US
+   [374]Follow us
+   on Twitter [375]Like us on
+   Facebook [376]Read
+   our blog
+   [377]Helum for writers
+
+   Write and get published
+   Share with other writers
+   Polish your freelancing skills
+   [378]Join our active writing community
+   [379]Helium Content Source for Publishers
+
+   Quality articles from proven freelancers
+   Exclusive rights, fast turnaround
+   Brand engagement, business blogging -- our writers do it all
+   [380]Get custom content today!
+
+   INFORMATION
+     * [381]About Us
+     * [382]Team Helium
+     * [383]User Tools
+     * [384]User Agreement
+     * [385]Privacy Policy
+     * [386]DMCA
+     __________________________________________________________________
+
+   Copyright © 2002-2013 Helium, Inc. All rights reserved.
+   Helium.com: A Service of RR Donnelley
+
+   Helium, Inc.
+   200 Brickstone Square Andover, MA 01810 USA
+
+   #
+
+References
+
+   Visible links
+   1. http://howto.helium.com/
+   2. http://www.helium.com/content/helium-community
+   3. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1053.data
+   4. file://localhost/channels/11-Computers-Technology
+   5. file://localhost/channels/59-Internet
+   6. file://localhost/channels/232-Internet-Security-Safety
+   7. file://localhost/channels/525-Spam-Email-Scams
+   8. file://localhost/channels/526-Hacking
+   9. file://localhost/channels/527-Malware-Identity-Theft
+  10. file://localhost/channels/530-Virus-Protection-Maintenance
+  11. file://localhost/channels/531-Internet-Security-Safety-Other
+  12. http://www.helium.com/
+  13. http://www.helium.com/channels/11-Computers-Technology
+  14. http://www.helium.com/channels/59-Internet
+  15. http://www.helium.com/channels/232-Internet-Security-Safety
+  16. http://www.helium.com/channels/526-Hacking
+  17. http://www.helium.com/knowledge/top_item/91763-the-basics-of-vulnerability-scans
+  18. file://localhost/knowledge/91763-the-basics-of-vulnerability-scans
+  19. http://twitter.com/share
+  20. http://www.helium.com/items/2104718-tools-used-for-vulnerability-scans
+  21. http://www.helium.com/users/583146/show_articles
+  22. http://www.nessus.org/nessus/
+  23. http://www.gfi.com/lannetscan
+  24. http://www.oxid.it/cain.html
+  25. http://www.wireshark.org/
+  26. http://www.helium.com/users/583146
+  27. http://www.helium.com/users/583146
+  28. http://www.helium.com/items/2104718-tools-used-for-vulnerability-scans
+  29. http://www.helium.com/users/583146/show_articles
+  30. http://www.helium.com/items/2104718-tools-used-for-vulnerability-scans
+  31. http://www.helium.com/items/540600-the-basics-of-vulnerability-scans
+  32. http://www.helium.com/users/286073/show_articles
+  33. http://www.helium.com/items/540600-the-basics-of-vulnerability-scans
+  34. http://twitter.com/share
+  35. http://www.helium.com/article_email/new?id=2104718
+  36. http://www.helium.com/items/2104718-tools-used-for-vulnerability-scans/print
+  37. file://localhost/knowledge/91766-the-basics-of-port-scanning
+  38. file://localhost/knowledge/66810-the-power-of-vulnerability
+  39. file://localhost/knowledge/317455-when-is-a-person-most-vulnerable
+  40. file://localhost/knowledge/202456-understanding-the-human
+  41. file://localhost/knowledge/90336-about-software-vulnerabilities
+  42. http://www.helium.com/debates/91494-should-computer-virus-writers-go-to-jail?page=1
+  43. http://www.helium.com/debates/92654-no/cast_vote?url=http%3A%2F%2Fwww.helium.com%2Fdebates%2F91494-should-computer-virus-writers-go-to-jail%2Fside_by_side%3Fpage%3D1
+  44. http://www.helium.com/debates/92653-yes/cast_vote?url=http%3A%2F%2Fwww.helium.com%2Fdebates%2F91494-should-computer-virus-writers-go-to-jail%2Fside_by_side%3Fpage%3D1
+  45. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1053.data
+  46. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml1053.data
+  47. file://localhost/items/2487645-cloudy-with-a-chance-of-meatballs-2-gets-eaten-up-by-filmgoers
+  48. file://localhost/items/2487733-how-to-nurture-a-thankful-spirit-in-during-difficult-times
+  49. file://localhost/items/2411939-october-options
+  50. file://localhost/items/2487730-orchidaceae
+  51. file://localhost/items/2374405-an-overview-of-catholic-saints-feast-days-for-october
+  52. file://localhost/items/2487048-a-favorite-childrens-destination-in-the-quad-cities
+  53. file://localhost/items/2487226-essentials-for-a-well-stocked-purse
+  54. file://localhost/items/2487565-thanks-for-sharing-review
+  55. file://localhost/items/2409934-three-different-ways-to-wear-one-cardigan-sweater
+  56. file://localhost/items/2486923-how-to-beat-tiredness-during-the-day
+  57. file://localhost/items/2486915-bk-creates-a-lower-calorie-french-fry
+  58. file://localhost/knowledge/410517-best-websites-for-printable-thanksgiving-placecards
+  59. file://localhost/knowledge/290815-best-websites-for-free-thanksgiving-desktop-wallpaper
+  60. file://localhost/items/2021233-free-thanksgiving-screensavers-for-windows
+  61. file://localhost/knowledge/282419-best-websites-for-free-thanksgiving-desktop-backgrounds
+  62. file://localhost/knowledge/354765-find-a-buddy-to-lose-weight-with
+  63. file://localhost/Where
+  64. file://localhost/items/2082089-the-best-mobile-apps-for-weight-tracking
+  65. file://localhost/knowledge/427082-10-gadgets-for-winter-fun
+  66. file://localhost/knowledge/400647-the-best-iphone-and-ipad-apps-for-losing-weight
+  67. file://localhost/knowledge/299668-best-websites-for-free-christmas-desktop-wallpaper
+  68. file://localhost/items/1990047-angry-birds-halloween
+  69. file://localhost/items/1649186-photoshop-foliage-brushes-tutorial
+  70. file://localhost/items/1526451-Internet-Software-Utils
+  71. file://localhost/knowledge/346267-why-does-google-say-topeka
+  72. file://localhost/debates/66160-should-cell-phone-use-be-banned-while-driving
+  73. file://localhost/knowledge/9279-why-mac-is-better-than-pc
+  74. file://localhost/knowledge/3025-pros-and-cons-of-the-internet-in-todays-society
+  75. file://localhost/knowledge/75929-how-to-install-linux-on-an-intel-mac-with-boot-camp
+  76. file://localhost/knowledge/103188-how-to-make-a-photo-look-old-in-photoshop
+  77. file://localhost/knowledge/250873-the-negative-effects-of-facebook
+  78. file://localhost/knowledge/134482-how-to-know-if-your-computer-has-been-hacked
+  79. file://localhost/items/1788814-verizon-nexus-onenexus-one-verizonsprint-htc-evo-4ghtc-evohtc-evo-4g
+  80. file://localhost/knowledge/2511-how-to-use-paypal-without-a-credit-card
+  81. file://localhost/knowledge/130306-tips-for-knowing-when-the-cmos-battery-is-getting-weak
+  82. file://localhost/knowledge/140908-comparing-macbook-air-with-macbook-pro
+  83. file://localhost/knowledge/93787-how-to-cancel-an-aol-account
+  84. file://localhost/knowledge/98015-what-are-the-differences-between-lan-and-wan
+  85. file://localhost/knowledge/145031-ipod-touch-not-recognized-in-itunes-for-windows-how-to-fix-it
+  86. file://localhost/knowledge/13120-how-to-transfer-money-between-your-bank-account-and-paypal
+  87. file://localhost/knowledge/4862-great-text-message-jokes
+  88. file://localhost/knowledge/255127-disadvantages-of-facebook
+  89. file://localhost/knowledge/8913-scan-my-computer-online-for-viruses
+  90. file://localhost/knowledge/43823-how-to-connect-your-mp3-player-to-your-car-stereo
+  91. file://localhost/knowledge/53373-how-to-connect-one-computer-to-another
+  92. file://localhost/knowledge/111788-effects-of-computers-and-the-internet-on-society
+  93. file://localhost/items/21134-how-to-block-private-calls-on-your-cell-phone
+  94. file://localhost/knowledge/323400-apple-ipod-vs-google-ipad-killer-tablet
+  95. file://localhost/items/852768-Internet-Software-Utils
+  96. file://localhost/knowledge/110406-negative-effects-of-the-internet
+  97. file://localhost/knowledge/130785-how-to-compress-files-with-winrar
+  98. file://localhost/knowledge/278194-best-free-android-apps
+  99. file://localhost/knowledge/145041-what-to-do-if-your-ipod-freezes
+ 100. file://localhost/items/1350446-what-does-the-collatestackingsortingstapling-function-do-on-a-copier-or-printer
+ 101. file://localhost/knowledge/87398-how-to-determine-what-kind-of-internet-connection-you-have
+ 102. file://localhost/knowledge/161966-how-to-clean-up-a-computers-hard-drive
+ 103. file://localhost/knowledge/52664-guide-to-the-cheapest-cell-phone-service-plans-in-the-us
+ 104. file://localhost/knowledge/305987-the-top-free-apps-for-the-droid
+ 105. file://localhost/knowledge/336626-tap-fish-iphone-app-review
+ 106. file://localhost/knowledge/55521-is-buying-discounted-cigarettes-online-legal-in-the-us
+ 107. file://localhost/knowledge/145022-how-to-erase-songs-from-your-ipod
+ 108. file://localhost/knowledge/145018-how-to-get-free-videos-for-your-ipod
+ 109. file://localhost/knowledge/43806-choosing-between-hd-and-sd-camcorders
+ 110. file://localhost/knowledge/128516-how-to-find-out-whats-running-on-your-pc-and-why-this-is-important
+ 111. file://localhost/knowledge/23501-how-to-delete-cookies-from-your-computer
+ 112. file://localhost/knowledge/5653-how-to-remove-a-hard-drive
+ 113. file://localhost/knowledge/145021-how-to-download-music-on-an-ipod-touch
+ 114. file://localhost/knowledge/153465-best-2d-animation-programs
+ 115. file://localhost/items/763109-how-to-change-bit-rates-in-itunes
+ 116. file://localhost/knowledge/110422-things-that-may-slow-down-your-computer
+ 117. file://localhost/knowledge/256104-the-negative-effects-of-technology-on-kids
+ 118. file://localhost/items/1787744-nexus-oneverizongoogleskypeverizon-nexus-onenexus-one-verizonnexus-one-for-verizonsprint
+ 119. file://localhost/knowledge/134610-best-laptops-for-high-school-students
+ 120. file://localhost/items/1191856-is-the-free-personal-website-creation-service-weebly-any-good
+ 121. file://localhost/knowledge/3851-best-brand-laptop-to-buy
+ 122. file://localhost/knowledge/141743-negative-impact-of-technology-growing-too-fast
+ 123. file://localhost/knowledge/104103-comparing-integrated-and-dedicated-graphics-cards
+ 124. file://localhost/knowledge/161965-how-to-connect-two-home-computers-to-the-same-printer
+ 125. file://localhost/knowledge/134611-energizer-vs-duracell-batteries
+ 126. file://localhost/knowledge/314138-common-problems-with-googles-nexus-one-phone
+ 127. file://localhost/items/689604-how-illegal-music-downloaders-get-caught
+ 128. file://localhost/items/917505-MP3-Players-Radio-Audio-Devices
+ 129. file://localhost/knowledge/140078-the-difference-between-object-oriented-programming-oop-and-procedure-oriented
+ 130. file://localhost/knowledge/3301-the-best-way-to-play-an-ipod-through-your-car-stereo
+ 131. file://localhost/items/1372750-best-online-stores-with-buy-now-pay-later-options
+ 132. file://localhost/knowledge/293859-how-to-change-your-name-on-facebook
+ 133. file://localhost/knowledge/2204-how-to-get-more-space-on-your-computer
+ 134. file://localhost/items/1689683-review-panasonic-lumix-dmc-tz65
+ 135. file://localhost/knowledge/123643-the-negative-side-of-facebook
+ 136. file://localhost/knowledge/91786-what-to-do-if-your-computer-gets-hacked
+ 137. file://localhost/knowledge/23831-the-pros-and-cons-of-wikipedia
+ 138. file://localhost/knowledge/154437-how-the-computer-has-changed-through-the-years
+ 139. file://localhost/knowledge/88386-how-to-install-downloaded-fonts-and-photoshop-brushes
+ 140. file://localhost/knowledge/87892-how-to-view-system-information-in-windows-xp
+ 141. file://localhost/knowledge/153717-pros-and-cons-of-using-microsoft-powerpoint-presentations
+ 142. file://localhost/items/1039903-internet-software-utils
+ 143. file://localhost/items/571652-how-to-send-sms-from-the-internet-to-a-cell-phone
+ 144. file://localhost/knowledge/1581-how-to-sell-your-old-computer
+ 145. file://localhost/knowledge/1620-the-pros-and-cons-of-open-source-software
+ 146. file://localhost/items/1281034-what-type-of-wood-should-you-use-to-make-a-subwoofer-box
+ 147. file://localhost/knowledge/162881-internet-connection-by-a-usb-modem
+ 148. file://localhost/knowledge/52194-the-pros-and-cons-of-advancing-technology
+ 149. file://localhost/knowledge/5224-imagining-a-world-without-computers
+ 150. file://localhost/knowledge/145029-how-to-transfer-songs-from-itunes-to-your-ipod
+ 151. file://localhost/knowledge/105356-how-computers-benefit-society
+ 152. file://localhost/items/601971-functions-of-a-database-management-system
+ 153. file://localhost/items/589707-how-to-enable-nvidia-sli
+ 154. file://localhost/items/1740366-google-earth-v5-a-review-of-new-features
+ 155. file://localhost/knowledge/144496-how-to-find-old-classmates-in-facebook
+ 156. file://localhost/knowledge/91418-pros-and-cons-of-myspace-and-facebook
+ 157. file://localhost/items/376670-Internet-Software-Utils
+ 158. file://localhost/knowledge/137065-why-dual-core-is-faster-than-single-core-processors
+ 159. file://localhost/knowledge/5305-comparing-matlab-and-mathematica
+ 160. file://localhost/knowledge/87427-the-difference-between-google-and-yahoo-search-results
+ 161. file://localhost/knowledge/84052-should-the-internet-be-censored
+ 162. file://localhost/knowledge/136698-internet-service-reviews-dish-network
+ 163. file://localhost/knowledge/308389-the-differences-between-an-amazon-kindle-and-a-nook
+ 164. file://localhost/knowledge/188309-how-to-take-quality-pictures-on-a-cell-phone-camera
+ 165. file://localhost/knowledge/95235-the-pros-and-cons-of-cellphones
+ 166. file://localhost/knowledge/305982-how-to-set-up-voice-mail-on-a-droid-phone
+ 167. file://localhost/knowledge/147893-the-advantages-of-the-internet
+ 168. file://localhost/knowledge/145038-transferring-itunes-songs-to-another-computer
+ 169. file://localhost/knowledge/9417-alertpay-vs-paypal
+ 170. file://localhost/knowledge/253193-how-to-use-google-earth
+ 171. file://localhost/knowledge/158901-tips-to-diagnose-and-fix-a-slow-running-computer
+ 172. file://localhost/knowledge/88971-how-to-change-your-home-page-in-firefox
+ 173. file://localhost/items/153753-Internet-Software-Utils
+ 174. file://localhost/knowledge/106168-study-questions-social-effects-of-internet-communication
+ 175. file://localhost/knowledge/77313-the-importance-of-computer-technology-in-industry
+ 176. file://localhost/debates/193982-do-headphones-damage-your-ears
+ 177. file://localhost/items/1135675-how-to-choose-the-best-centre-channel-speaker-for-your-home-theatre-system
+ 178. file://localhost/knowledge/255124-how-to-send-an-event-invitation-on-facebook
+ 179. file://localhost/knowledge/111742-microsoft-word-tips-how-to-check-the-readability-of-your-writing
+ 180. file://localhost/knowledge/90782-how-to-fix-a-network-cable-unplugged-error
+ 181. file://localhost/knowledge/166929-how-to-remove-a-forgotten-windows-xp-password
+ 182. file://localhost/items/1438989-dropbox-cache
+ 183. file://localhost/knowledge/11436-hottest-programming-language-trends-among-developers
+ 184. file://localhost/knowledge/306108-iphone-app-review-words-with-friends-free
+ 185. file://localhost/knowledge/136640-facts-about-ipods
+ 186. file://localhost/knowledge/139810-the-future-of-modernization-in-the-united-states
+ 187. file://localhost/knowledge/308932-kindles-biggest-competitors
+ 188. file://localhost/knowledge/11429-essential-software-everyone-should-have-on-their-laptop
+ 189. file://localhost/knowledge/130280-how-to-change-the-display-settings-in-windows-xp
+ 190. file://localhost/items/948590-how-to-fix-ip-address-problems
+ 191. file://localhost/knowledge/186318-how-to-use-a-micro-sd-card
+ 192. file://localhost/knowledge/5153-what-to-do-if-your-computer-is-running-slow
+ 193. file://localhost/items/1651102-logitech-wireless-mouse-m305-wireless-mouselogitech-mouse-m305
+ 194. file://localhost/knowledge/5102-at-what-age-do-you-give-a-child-a-cell-phone
+ 195. file://localhost/knowledge/20890-how-to-build-your-subwoofer-enclosure
+ 196. file://localhost/knowledge/134604-best-mp3-players-for-kids
+ 197. file://localhost/items/855691-how-to-create-a-transparent-gradient-in-adobe-illustrator
+ 198. file://localhost/items/1687658-how-to-remove-bing-from-your-browser
+ 199. file://localhost/knowledge/51400-buying-a-desktop-or-laptop-pros-and-cons
+ 200. file://localhost/items/388221-MP3-Players-Radio-Audio-Devices
+ 201. file://localhost/knowledge/52668-improving-your-cell-phones-call-quality
+ 202. file://localhost/knowledge/11440-top-10-reasons-cell-phones-have-become-essential-for-modern-living
+ 203. file://localhost/knowledge/106382-advantages-and-disadvantages-of-mp3-technology
+ 204. file://localhost/knowledge/14138-how-the-internet-changed-the-world
+ 205. file://localhost/items/1370731-modern-technology-the-internet-demise-newspapers-the-rocky-mountain-news
+ 206. file://localhost/knowledge/43778-using-a-lcd-monitor-as-a-tv
+ 207. file://localhost/knowledge/188310-how-to-transfer-pictures-from-your-cell-phone-to-your-computer
+ 208. file://localhost/knowledge/130293-how-to-tell-how-much-free-hard-drive-space-is-left-on-a-computer
+ 209. file://localhost/knowledge/153485-what-is-2d-animation
+ 210. file://localhost/knowledge/228724-iphone-app-reviews-google-earth
+ 211. file://localhost/knowledge/239821-how-to-increase-digital-tv-signal-strength
+ 212. file://localhost/knowledge/101259-how-to-change-your-wifi-channel-number
+ 213. file://localhost/items/1346385-make-brochures-how-to-make-brochures-make-brochures-in-microsoft-word
+ 214. file://localhost/knowledge/223646-efffects-of-technology
+ 215. file://localhost/knowledge/66375-how-to-install-the-windows-vista-sidebar-and-gadgets-in-windows-xp
+ 216. file://localhost/knowledge/34751-why-computer-games-are-not-a-waste-of-time
+ 217. file://localhost/knowledge/87429-the-meaning-of-domain-name-extensions
+ 218. file://localhost/knowledge/88382-how-to-airbrush-a-photo-in-photoshop
+ 219. file://localhost/debates/137027-best-computer-for-students-mac-or-pc
+ 220. file://localhost/knowledge/305973-the-top-10-apps-to-get-you-started-on-the-verizon-droid
+ 221. file://localhost/knowledge/250871-ways-to-get-creative-with-your-facebook-religious-views
+ 222. file://localhost/knowledge/301729-best-websites-for-free-easter-desktop-wallpaper
+ 223. file://localhost/items/1158229-privacy-settings-in-facebook
+ 224. file://localhost/knowledge/4457-pros-and-cons-of-skype
+ 225. file://localhost/items/1693881-how-to-use-the-droid-multimedia-station-tips-on-using-the-droid-multimedia-station
+ 226. file://localhost/items/1990274-best-pen-pal-websites
+ 227. file://localhost/knowledge/45287-how-to-fix-a-cell-phone-after-it-gets-wet
+ 228. file://localhost/knowledge/256116-the-positive-effects-of-technology-on-kids
+ 229. file://localhost/knowledge/63347-how-to-connect-a-dvd-recorder-to-a-satellite-receiver
+ 230. file://localhost/items/1515280-photoshop-silhouette
+ 231. file://localhost/items/1779772-software-review-kindle-for-mac
+ 232. file://localhost/knowledge/98860-how-to-adjust-the-virtual-memory-paging-file-in-windows-xp
+ 233. file://localhost/knowledge/343196-the-differences-between-the-panasonic-and-samsung-3d-tvs
+ 234. file://localhost/items/1209828-direct-tv-internet-service
+ 235. file://localhost/items/1694258-what-are-the-best-apps-to-customize-your-motorola-droid-phone
+ 236. file://localhost/knowledge/174322-time-management-with-technology
+ 237. file://localhost/knowledge/123410-the-negative-side-of-the-internet
+ 238. file://localhost/items/2176051-how-to-factory-reset-a-samsung-galaxy-s2
+ 239. file://localhost/knowledge/112934-names-you-cant-have-on-facebook
+ 240. file://localhost/knowledge/372113-best-websites-to-watch-free-streaming-tv-shows-online
+ 241. file://localhost/debates/102340-do-cell-phones-keep-us-more-connected-or-more-isolated
+ 242. file://localhost/debates/356953-should-social-networking-sites-be-regulated
+ 243. file://localhost/knowledge/378919-talking-tom-cat-iphone-app-review
+ 244. file://localhost/items/1159402-cell-phone-providers-in-alaska
+ 245. file://localhost/knowledge/414706-iphone-app-reviews-me-want-bamboo
+ 246. file://localhost/knowledge/241815-will-computers-replace-books-in-the-future
+ 247. file://localhost/knowledge/295813-what-is-google-wave
+ 248. file://localhost/knowledge/237724-printable-crossword-puzzles-jumble-word-puzzles
+ 249. file://localhost/items/1363770-how-do-you-remove-a-jammed-ethernet-cable
+ 250. file://localhost/knowledge/255126-advantages-of-facebook
+ 251. file://localhost/knowledge/83565-are-computers-necessary-in-todays-society
+ 252. file://localhost/items/1683337-make-how-to-triangle-gimp-tutorial
+ 253. file://localhost/knowledge/92045-best-digital-cameras-for-teens
+ 254. file://localhost/knowledge/404721-how-to-use-cc-and-bcc
+ 255. file://localhost/items/2065763-best-private-channels-roku-digital-video-player
+ 256. file://localhost/items/1799916-how-to-find-ip-address-of-a-ricoh-copier
+ 257. file://localhost/knowledge/260673-best-crafts-to-sell-on-etsy
+ 258. file://localhost/items/1185609-cell-phones-cell-phone-signal-boosters-signal-boosters-call-quality-signal-strength-cell-phone
+ 259. file://localhost/knowledge/5993-explaining-the-diameter-of-a-cd
+ 260. file://localhost/knowledge/69675-how-youtube-works-the-technical-aspects
+ 261. file://localhost/knowledge/362855-how-hackers-can-steal-money-from-your-bank-account
+ 262. file://localhost/knowledge/23560-how-to-hide-computer-files-that-you-dont-want-people-to-see
+ 263. file://localhost/items/794357-the-downside-of-card-holder-services
+ 264. file://localhost/knowledge/269972-how-technology-has-affected-tourism
+ 265. file://localhost/knowledge/107532-evaluating-the-environmental-impact-of-e-waste
+ 266. file://localhost/items/1739938-how-to-make-a-spinning-globe-using-gimp-software
+ 267. file://localhost/items/2039477-MP3-Players-Radio-Audio-Devices
+ 268. file://localhost/knowledge/59688-how-to-install-a-gps-navigation-device-in-your-car
+ 269. file://localhost/items/2169205-cardholder-services-scam-what-consumers-need-to-know
+ 270. file://localhost/items/2097908-how-to-set-up-a-sapido-wireless-n-router-rb-1232
+ 271. file://localhost/knowledge/128178-how-has-gps-changed-our-lives
+ 272. file://localhost/knowledge/76223-japan-vs-us-who-is-better-in-the-field-of-technology
+ 273. file://localhost/items/1832214-how-to-use-blackberry-as-modem
+ 274. file://localhost/items/1865692-create-dish-network-favorites-lists
+ 275. file://localhost/knowledge/305977-how-to-sync-your-google-calendar-with-the-droid-phone
+ 276. file://localhost/items/1571015-how-technology-has-affected-the-food-industry
+ 277. file://localhost/items/1941173-virgin-mifi-offers-low-cost-unlimited-internet-3g-hot-spot
+ 278. file://localhost/items/2181419-tips-on-prolonging-the-battery-life-of-a-samsung-galaxy-s2
+ 279. file://localhost/debates/137039-best-computer-for-writers-mac-or-pc
+ 280. file://localhost/knowledge/386824-zombie-cookies-what-zombie-cookies-are-and-how-to-delete-them
+ 281. file://localhost/items/1903424-hard-reset-htc-evo
+ 282. file://localhost/items/1313116-ho-to-check-your-internet-signal-strength
+ 283. file://localhost/items/2072690-haypi-kingdom-city-wall-strategies
+ 284. file://localhost/knowledge/107938-how-to-check-reliability-of-information-on-the-internet
+ 285. file://localhost/knowledge/153874-why-are-cell-phones-so-popular
+ 286. file://localhost/knowledge/340820-most-addicting-games-on-facebook
+ 287. file://localhost/items/1975696-Tablets-Handheld-Devices
+ 288. file://localhost/knowledge/112107-why-use-vbnet
+ 289. file://localhost/knowledge/342094-iphone-app-review-stickwars-lite
+ 290. file://localhost/items/761460-Internet-Software-Utils
+ 291. file://localhost/items/590342-the-facts-about-cell-phone-addiction
+ 292. file://localhost/items/1462099-pocket-camcorders-reviews
+ 293. file://localhost/knowledge/398862-best-websites-to-download-free-ebooks-online
+ 294. file://localhost/knowledge/187960-is-text-messaging-causing-the-destruction-of-the-modern-american-english-language
+ 295. file://localhost/items/1951964-top-10-cloud-computing-service-providers
+ 296. file://localhost/items/2145046-how-to-change-font-size-on-a-nook
+ 297. file://localhost/knowledge/289108-negative-sides-of-social-networking
+ 298. file://localhost/items/1487112-philips-shc2000-wireless-hedphones
+ 299. file://localhost/items/2056492-c902-sony-phone-master-reset
+ 300. file://localhost/items/612704-comparing-link-state-algorithm-with-distance-vector-algorithm
+ 301. file://localhost/knowledge/392507-how-social-networking-has-changed-the-nature-of-friends-and-friendships
+ 302. file://localhost/items/1868439-nintendo-executive-says-nintendo-3ds-is-unfit-for-children
+ 303. file://localhost/items/1812689-livedrive-vs-dropbox
+ 304. file://localhost/knowledge/86841-why-text-messaging-is-so-popular-even-though-its-impersonal
+ 305. file://localhost/items/1934969-how-to-find-mac-address-of-ricoh-mp-copier
+ 306. file://localhost/items/1872160-iphone-4-death-grip-how-to-get-better-iphone-4-reception
+ 307. file://localhost/knowledge/84414-the-role-of-information-technology-in-our-industries
+ 308. file://localhost/items/794649-how-to-normalize-your-database-tables
+ 309. file://localhost/knowledge/149973-website-reviews-ikariamorg
+ 310. file://localhost/items/2029699-mind-uploading-immortality
+ 311. file://localhost/knowledge/408369-top-best-free-ebook-reader-apps-for-android-devices-smartphones-tablets
+ 312. file://localhost/knowledge/12879-assessing-the-effect-of-new-technologies-on-our-lifestyle
+ 313. file://localhost/knowledge/214738-understanding-how-xhtml-and-html-are-similar-yet-different
+ 314. file://localhost/knowledge/101424-why-ip-addresses-are-important-for-computer-networking
+ 315. file://localhost/items/1731351-how-to-make-sphere
+ 316. file://localhost/items/950575-how-to-ink-in-gimp-without-a-tablet
+ 317. file://localhost/items/2181826-samsung-galaxy-s2-secret-tricks
+ 318. file://localhost/knowledge/393079-factors-that-influence-website-performance
+ 319. file://localhost/knowledge/4933-how-to-convert-a-word-document-into-pdf
+ 320. file://localhost/items/1831361-the-levels-of-doodle-jump
+ 321. file://localhost/knowledge/319856-have-apple-and-the-ipod-changed-the-music-industry-for-better-or-for-worse
+ 322. file://localhost/items/577467-how-to-create-a-lan-network-in-a-cyber-cafe
+ 323. file://localhost/items/348474-how-to-connect-speakers-to-both-a-dvd-player-and-a-tv
+ 324. file://localhost/knowledge/536926-how-to-use-your-iphone-abroad-and-avoid-unwanted-roaming-charges
+ 325. file://localhost/knowledge/45058-why-html-is-important
+ 326. file://localhost/debates/137097-usb-vs-serial-keyboards-which-is-better
+ 327. file://localhost/items/1692158-make-how-to-cube-gimp-tutorial
+ 328. file://localhost/items/1680729-how-to-delete-an-album-in-iphoto-but-not-in-facebook
+ 329. file://localhost/items/2184587-the-best-astrology-apps-for-ipad
+ 330. file://localhost/items/2175983-the-secret-screen-capture-function-of-a-samsung-galaxy-s2
+ 331. file://localhost/knowledge/130309-how-to-find-out-what-is-running-during-computer-startup
+ 332. file://localhost/knowledge/134492-the-profile-of-a-typical-hacker
+ 333. file://localhost/knowledge/43996-why-hackers-hack
+ 334. file://localhost/items/1739175-how-do-i-add-new-songs-to-my-ipod-without-deleting-old-ones
+ 335. file://localhost/items/1656987-create-how-to-trace-image-tutorial
+ 336. file://localhost/items/393427-how-to-create-a-switchboard-in-microsoft-access
+ 337. file://localhost/items/1436588-how-to-block-keyword-ads
+ 338. file://localhost/items/919806-the-difference-between-tcp-and-udp-in-trasferring-data
+ 339. file://localhost/knowledge/354084-iphone-app-review-angry-birds
+ 340. file://localhost/debates/280510-is-technology-making-us-lazy
+ 341. file://localhost/knowledge/8813-advantages-of-the-internet
+ 342. file://localhost/debates/72916-which-computer-is-best-for-the-music-minded-mac-or-pc
+ 343. file://localhost/items/1580763-how-to-use-an-sd-card-with-macbook
+ 344. file://localhost/knowledge/236976-do-lithium-batteries-really-last-that-much-longer-than-alkaline
+ 345. file://localhost/knowledge/112095-the-basic-concepts-of-vbnet
+ 346. file://localhost/knowledge/225538-potential-problems-with-robots
+ 347. file://localhost/knowledge/140902-how-to-set-up-a-live-webcam
+ 348. file://localhost/knowledge/69677-the-birth-of-youtube-how-it-started-out
+ 349. file://localhost/items/2215211-crime-city-iphone-app-review-mafia-wars-style-game-ipad-ipod-touch-free-game-itunes-store-best-games
+ 350. file://localhost/items/2044539-how-to-set-reminders-on-an-iphone-4
+ 351. file://localhost/items/1979726-best-ipad-apps-for-teachers
+ 352. file://localhost/knowledge/11439-appropriate-vs-inappropriate-uses-for-text-messaging
+ 353. file://localhost/items/1283447-the-differences-between-towers-mini-towers-and-desktop-computers
+ 354. file://localhost/items/408716-the-history-of-the-internet-in-the-philippines
+ 355. file://localhost/items/1983172-plantronics-explorer-bluetooth-headset
+ 356. file://localhost/items/1749865-pros-and-cons-of-technology-for-children
+ 357. file://localhost/knowledge/390294-android-app-reviews-teeter
+ 358. file://localhost/items/1896009-spotify-playlist
+ 359. file://localhost/knowledge/121897-geeky-tech-gadgets-that-make-great-stocking-stuffers
+ 360. file://localhost/items/111591-how-safe-are-webcam-sites
+ 361. file://localhost/knowledge/511230-how-to-turn-chat-off-on-facebook
+ 362. file://localhost/knowledge/352411-how-has-social-networking-improved-peoples-relationships-with-family-and-friends
+ 363. file://localhost/knowledge/269968-how-technology-has-affected-education
+ 364. file://localhost/items/1830050-what-is-near-field-communication-nfc-technology
+ 365. file://localhost/knowledge/82109-tips-for-buying-a-webcam
+ 366. file://localhost/items/1946214-how-to-use-the-android-froyo-light-sensor
+ 367. file://localhost/items/1943673-emachine-replacement-parts
+ 368. file://localhost/items/1901425-pdf-books-free-pdf-books-adobe-reader-printable-document-format-free-ebooks
+ 369. file://localhost/knowledge/364403-google-android-22-release-date-and-specs
+ 370. http://www.helium.com/partners/necsp
+ 371. http://www.helium.com/partners/necsp
+ 372. http://www.helium.com/partners/necsp
+ 373. http://pbid.pro-market.net/engine?site=118860;size=1x1;category=Hacking;kw=tools%20used%20for%20vulnerability%20scans%20by%20Eileen%20Eva
+ 374. http://twitter.com/#!/HeliumWriter
+ 375. http://www.facebook.com/HeliumWriters
+ 376. http://heliumblog.wordpress.com/
+ 377. http://www.helium.com/registration/signup
+ 378. http://www.helium.com/registration/signup
+ 379. http://www.heliumcontentsource.com/
+ 380. http://www.heliumcontentsource.com/
+ 381. http://www.helium.com/content/about-us
+ 382. http://www.helium.com//management
+ 383. http://www.helium.com/flagging
+ 384. http://www.helium.com/content/tos
+ 385. http://www.helium.com/content/privacy
+ 386. http://www.helium.com/proprietary-rights-complaint-process-and-notification-form
+
+   Hidden links:
+ 388. http://www.helium.com/
+ 389. http://www.helium.com/knowledge/91763-the-basics-of-vulnerability-scans/show_rank/2
+ 390. http://www.heliumhelp.com/stars-and-badges
+ 391. http://www.helium.com/messages/new?id=583146&item=2104718-tools-used-for-vulnerability-scans
+ 392. http://twitter.com/intent/tweet?status=Currently%20reading%20http://www.helium.com/items/2104718-tools-used-for-vulnerability-scans
+ 393. http://del.icio.us/post?url=http://www.helium.com/items/2104718-tools-used-for-vulnerability-scans&title=The%20basics%20of%20vulnerability%20scans
+ 394. http://www.digg.com/submit?phase=2&url=http://www.helium.com/items/2104718-tools-used-for-vulnerability-scans&title=The%20basics%20of%20vulnerability%20scans
+ 395. http://www.facebook.com/share.php?u=http://www.helium.com/items/2104718-tools-used-for-vulnerability-scans
+ 396. http://www.reddit.com/submit?url=http://www.helium.com/items/2104718-tools-used-for-vulnerability-scans&title=The%20basics%20of%20vulnerability%20scans
+ 397. http://www.stumbleupon.com/submit?url=http://www.helium.com/items/2104718-tools-used-for-vulnerability-scans&title=The%20basics%20of%20vulnerability%20scans

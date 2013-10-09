@@ -1,0 +1,148 @@
+   [1]My favorites ▼ | [2]Sign in
+   [3]Logo
+
+   [4]pybotwar
+
+   [5]Robot battle simulation with robots coded in Python
+
+   ______________________________ Search projects
+
+   [6]Project Home [7]Downloads [8]Wiki [9]Issues [10]Source
+
+                          [11]Summary   [12]People
+
+   Project Information
+     * [13]Project feeds
+     *
+     * Code license
+     * [14]GNU GPL v3
+     *
+     * Labels
+       [15]python, [16]education, [17]pybox2d, [18]pygame, [19]pygsear,
+       [20]pyqt
+     *
+
+   Members
+   [21]miss...@hotmail.com
+     *
+
+   Featured
+   Downloads
+     * [22]pybotwar-0.8.tgz
+     * [23]pybotwar-0.8.zip
+     * [24]Show all »
+     *
+
+   Wiki pages
+     * [25]Programming
+     * [26]Screenshots
+     * [27]Show all »
+     *
+
+   pybotwar is a fun and educational game where players write computer
+   programs to control simulated robots.
+
+   [v0.7ss01.png]
+
+   (See the [28]Screenshots page for more pictures)
+
+INTRODUCTION
+
+   Your task is to create a computer program to control a robot for the
+   arena. The last robot alive is the winner.
+
+   Robot programs run in separate processes from the main simulation, and
+   communicate with the main program over standard input and standard
+   output channels. Theoretically, this means that the robots could be
+   limited in the amount of system access they have, and how much of the
+   system's resources they can consume.
+
+   CAUTION! Right now, that is not the case. Robot programs run as regular
+   Python programs, using the regular Python interpreter, and can do
+   anything any other program can do.
+
+   In the future, I intend to implement some kind of sandboxing for robot
+   programs, but that is not done.
+
+DEPENDENCIES
+
+   python:
+
+     [29]http://python.org/
+
+     (tested with python-2.7.3)
+
+   pybox2d:
+
+     [30]http://pybox2d.googlecode.com/
+
+     (tested with pybox2d-2.0.2b2)
+
+   pyqt4 (optional, but strongly recommended):
+
+     [31]http://www.riverbankcomputing.co.uk/software/pyqt/
+
+     (tested with pyqt-4.8.1)
+
+   pygame (optional):
+
+     [32]http://pygame.org/
+
+     (tested with pygame-1.9.1)
+
+   pygsear (optional -- required if using pygame):
+
+     [33]http://www.nongnu.org/pygsear/
+
+     (tested with pygsear-0.53.2)
+
+   [34]Terms - [35]Privacy - [36]Project Hosting Help
+
+   Powered by [37]Google Project Hosting
+
+References
+
+   Visible links
+   1. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml7.data
+   2. https://www.google.com/accounts/ServiceLogin?service=code&ltmpl=phosting&continue=https%3A%2F%2Fcode.google.com%2Fp%2Fpybotwar%2F%3Futm_content%3Dbuffercd930%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer&followup=https%3A%2F%2Fcode.google.com%2Fp%2Fpybotwar%2F%3Futm_content%3Dbuffercd930%26utm_source%3Dbuffer%26utm_medium%3Dtwitter%26utm_campaign%3DBuffer
+   3. file://localhost/p/pybotwar/
+   4. file://localhost/p/pybotwar/
+   5. file://localhost/p/pybotwar/
+   6. file://localhost/p/pybotwar/
+   7. file://localhost/p/pybotwar/downloads/list
+   8. file://localhost/p/pybotwar/w/list
+   9. file://localhost/p/pybotwar/issues/list
+  10. file://localhost/p/pybotwar/source/checkout
+  11. file://localhost/p/pybotwar/
+  12. file://localhost/p/pybotwar/people/list
+  13. file://localhost/p/pybotwar/feeds
+  14. http://www.gnu.org/licenses/gpl.html
+  15. file://localhost/hosting/search?q=label:python
+  16. file://localhost/hosting/search?q=label:education
+  17. file://localhost/hosting/search?q=label:pybox2d
+  18. file://localhost/hosting/search?q=label:pygame
+  19. file://localhost/hosting/search?q=label:pygsear
+  20. file://localhost/hosting/search?q=label:pyqt
+  21. file://localhost/u/112846409828153670364/
+  22. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/downloads/detail?name=pybotwar-0.8.tgz
+  23. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/downloads/detail?name=pybotwar-0.8.zip
+  24. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/downloads/list
+  25. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/wiki/Programming
+  26. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/wiki/Screenshots
+  27. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/w/list
+  28. file://localhost/p/pybotwar/wiki/Screenshots
+  29. http://python.org/
+  30. http://pybox2d.googlecode.com/
+  31. http://www.riverbankcomputing.co.uk/software/pyqt/
+  32. http://pygame.org/
+  33. http://www.nongnu.org/pygsear/
+  34. file://localhost/projecthosting/terms.html
+  35. http://www.google.com/privacy.html
+  36. file://localhost/p/support/
+  37. http://code.google.com/projecthosting/
+
+   Hidden links:
+  39. file://pybotwar.googlecode.com/files/pybotwar-0.8.tgz
+  40. file://pybotwar.googlecode.com/files/pybotwar-0.8.zip
+  41. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml7.data#INTRODUCTION
+  42. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml7.data#DEPENDENCIES

@@ -1,0 +1,245 @@
+   [1]Big-O Cheat Sheet
+     * [2]Searching
+     * [3]Sorting
+     * [4]Data Structures
+     * [5]Heaps
+     * [6]Graphs
+     * [7]Chart
+     * [8]Comments
+
+   [9]Tweet
+
+Know Thy Complexities!
+
+   Hi there!  This webpage covers the space and time Big-O complexities of
+   common algorithms used in Computer Science.  When preparing for
+   technical interviews in the past, I found myself spending hours
+   crawling the internet putting together the best, average, and worst
+   case complexities for search and sorting algorithms so that I wouldn't
+   be stumped when asked about them.  Over the last few years, I've
+   interviewed at several Silicon Valley startups, and also some bigger
+   companies, like Yahoo, eBay, LinkedIn, and Google, and each time that I
+   prepared for an interview, I thought to msyelf "Why oh why hasn't
+   someone created a nice Big-O cheat sheet?".  So, to save all of you
+   fine folks a ton of time, I went ahead and created one.  Enjoy!
+   Good Fair Poor
+
+Searching
+
+   Algorithm Data Structure Time Complexity Space Complexity
+   Average Worst Worst
+   [10]Depth First Search (DFS) Graph of |V| vertices and |E| edges -
+   O(|E| + |V|) O(|V|)
+   [11]Breadth First Search (BFS) Graph of |V| vertices and |E| edges -
+   O(|E| + |V|) O(|V|)
+   [12]Binary search Sorted array of n elements O(log(n)) O(log(n)) O(1)
+   [13]Linear (Brute Force) Array O(n) O(n) O(1)
+   [14]Shortest path by Dijkstra,
+   using a Min-heap as priority queue Graph with |V| vertices and |E|
+   edges O((|V| + |E|) log |V|) O((|V| + |E|) log |V|) O(|V|)
+   [15]Shortest path by Dijkstra,
+   using an unsorted array as priority queue Graph with |V| vertices and
+   |E| edges O(|V|^2) O(|V|^2) O(|V|)
+   [16]Shortest path by Bellman-Ford Graph with |V| vertices and |E| edges
+   O(|V||E|) O(|V||E|) O(|V|)
+
+Sorting
+
+   Algorithm Data Structure Time Complexity Worst Case Auxiliary Space
+   Complexity
+   Best Average Worst Worst
+   [17]Quicksort Array O(n log(n)) O(n log(n)) O(n^2) O(n)
+   [18]Mergesort Array O(n log(n)) O(n log(n)) O(n log(n)) O(n)
+   [19]Heapsort Array O(n log(n)) O(n log(n)) O(n log(n)) O(1)
+   [20]Bubble Sort Array O(n) O(n^2) O(n^2) O(1)
+   [21]Insertion Sort Array O(n) O(n^2) O(n^2) O(1)
+   [22]Select Sort Array O(n^2) O(n^2) O(n^2) O(1)
+   [23]Bucket Sort Array O(n+k) O(n+k) O(n^2) O(nk)
+   [24]Radix Sort Array O(nk) O(nk) O(nk) O(n+k)
+
+Data Structures
+
+   Data Structure Time Complexity Space Complexity
+   Average Worst Worst
+   Indexing Search Insertion Deletion Indexing Search Insertion Deletion
+   [25]Basic Array O(1) O(n) - - O(1) O(n) - - O(n)
+   [26]Dynamic Array O(1) O(n) O(n) O(n) O(1) O(n) O(n) O(n) O(n)
+   [27]Singly-Linked List O(n) O(n) O(1) O(1) O(n) O(n) O(1) O(1) O(n)
+   [28]Doubly-Linked List O(n) O(n) O(1) O(1) O(n) O(n) O(1) O(1) O(n)
+   [29]Skip List O(log(n)) O(log(n)) O(log(n)) O(log(n)) O(n) O(n) O(n)
+   O(n) O(n log(n))
+   [30]Hash Table - O(1) O(1) O(1) - O(n) O(n) O(n) O(n)
+   [31]Binary Search Tree O(log(n)) O(log(n)) O(log(n)) O(log(n)) O(n)
+   O(n) O(n) O(n) O(n)
+   [32]Cartresian Tree - O(log(n)) O(log(n)) O(log(n)) - O(n) O(n) O(n)
+   O(n)
+   [33]B-Tree O(log(n)) O(log(n)) O(log(n)) O(log(n)) O(log(n)) O(log(n))
+   O(log(n)) O(log(n)) O(n)
+   [34]Red-Black Tree O(log(n)) O(log(n)) O(log(n)) O(log(n)) O(log(n))
+   O(log(n)) O(log(n)) O(log(n)) O(n)
+   [35]Splay Tree - O(log(n)) O(log(n)) O(log(n)) - O(log(n)) O(log(n))
+   O(log(n)) O(n)
+   [36]AVL Tree O(log(n)) O(log(n)) O(log(n)) O(log(n)) O(log(n))
+   O(log(n)) O(log(n)) O(log(n)) O(n)
+
+Heaps
+
+   Heaps Time Complexity
+   Heapify Find Max Extract Max Increase Key Insert Delete Merge
+   [37]Linked List (sorted) - O(1) O(1) O(n) O(n) O(1) O(m+n)
+   [38]Linked List (unsorted) - O(n) O(n) O(1) O(1) O(1) O(1)
+   [39]Binary Heap O(n) O(1) O(log(n)) O(log(n)) O(log(n)) O(log(n))
+   O(m+n)
+   [40]Binomial Heap - O(log(n)) O(log(n)) O(log(n)) O(log(n)) O(log(n))
+   O(log(n))
+   [41]Fibonacci Heap - O(1) O(log(n))* O(1)* O(1) O(log(n))* O(1)
+
+Graphs
+
+   Node / Edge Management Storage Add Vertex Add Edge Remove Vertex Remove
+   Edge Query
+   [42]Adjacency list O(|V|+|E|) O(1) O(1) O(|V| + |E|) O(|E|) O(|V|)
+   [43]Incidence list O(|V|+|E|) O(1) O(1) O(|E|) O(|E|) O(|E|)
+   [44]Adjacency matrix O(|V|^2) O(|V|^2) O(1) O(|V|^2) O(1) O(1)
+   [45]Incidence matrix O(|V| ⋅ |E|) O(|V| ⋅ |E|) O(|V| ⋅ |E|) O(|V| ⋅
+   |E|) O(|V| ⋅ |E|) O(|E|)
+
+Notation for asymptotic growth
+
+       letter                  bound                        growth
+   (theta) Θ       upper and lower, tight[46]^[1] equal[47]^[2]
+   (big-oh) O      upper, tightness unknown       less than or equal[48]^[3]
+   (small-oh) o    upper, not tight               less than
+   (big omega) Ω   lower, tightness unknown       greater than or equal
+   (small omega) ω lower, not tight               greater than
+
+   [1] Big O is the upper bound, while Omega is the lower bound. Theta
+   requires both Big O and Omega, so that's why it's referred to as a
+   tight bound (it must be both the upper and lower bound). For example,
+   an algorithm taking Omega(n log n) takes at least n log n time but has
+   no upper limit. An algorithm taking Theta(n log n) is far preferential
+   since it takes AT LEAST n log n (Omega n log n) and NO MORE THAN n log
+   n (Big O n log n).^[49]SO
+
+   [2] f(x)=Θ(g(n)) means f (the running time of the algorithm) grows
+   exactly like g when n (input size) gets larger. In other words, the
+   growth rate of f(x) is asymptotically proportional to g(n).
+
+   [3] Same thing. Here the growth rate is no faster than g(n). big-oh is
+   the most useful because represents the worst-case behavior.
+   In short, if algorithm is __ then its performance is __
+   algorithm performance
+   o(n)      < n
+   O(n)      ≤ n
+   Θ(n)      = n
+   Ω(n)      ≥ n
+   ω(n)      > n
+
+Big-O Complexity Chart
+
+   Big O Complexity Graph
+
+Contribute
+
+   [50]Edit these tables!
+
+   Authors:
+    1. [51]Eric Rowell
+    2. [52]Quentin Pleple
+    3. [53]Nick Dizazzo
+    4. [54]Michael Abed
+    5. [55]Adam Forsyth
+    6. [56]Jay Engineer
+    7. [57]Josh Davis
+    8. [58]makosblade
+    9. [59]Alejandro Ramirez
+   10. [60]Joel Friedly
+   11. [61]Robert Burke
+   12. [62]David Dorfman
+   13. [63]Eric Lefevre-Ardant
+   14. [64]Thomas Dybdahl Ahle
+
+   Please enable JavaScript to view the [65]comments powered by Disqus.
+   [66]comments powered by Disqus
+
+   Page styling via [67]Bootstrap
+   Comments via [68]Disqus
+   Algorithm detail via [69]Wikipedia
+   Big-O complexity graph via [70]Recursive Design
+   Table source hosted on [71]Github
+   Mashup via [72]@ericdrowell
+
+References
+
+   1. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml756.data
+   2. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml756.data#searching
+   3. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml756.data#sorting
+   4. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml756.data#data-structures
+   5. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml756.data#heaps
+   6. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml756.data#graphs
+   7. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml756.data#chart
+   8. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml756.data#comments
+   9. https://twitter.com/share
+  10. http://en.wikipedia.org/wiki/Depth-first_search
+  11. http://en.wikipedia.org/wiki/Breadth-first_search
+  12. http://en.wikipedia.org/wiki/Binary_search_algorithm
+  13. http://en.wikipedia.org/wiki/Brute-force_search
+  14. http://en.wikipedia.org/wiki/Dijkstra's_algorithm
+  15. http://en.wikipedia.org/wiki/Dijkstra's_algorithm
+  16. http://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm
+  17. http://en.wikipedia.org/wiki/Quicksort
+  18. http://en.wikipedia.org/wiki/Merge_sort
+  19. http://en.wikipedia.org/wiki/Heapsort
+  20. http://en.wikipedia.org/wiki/Bubble_sort
+  21. http://en.wikipedia.org/wiki/Insertion_sort
+  22. http://en.wikipedia.org/wiki/Selection_sort
+  23. http://en.wikipedia.org/wiki/Bucket_sort
+  24. http://en.wikipedia.org/wiki/Radix_sort
+  25. http://en.wikipedia.org/wiki/Array_data_structure
+  26. http://en.wikipedia.org/wiki/Dynamic_array
+  27. http://en.wikipedia.org/wiki/Singly_linked_list#Singly_linked_lists
+  28. http://en.wikipedia.org/wiki/Doubly_linked_list
+  29. http://en.wikipedia.org/wiki/Skip_list
+  30. http://en.wikipedia.org/wiki/Hash_table
+  31. http://en.wikipedia.org/wiki/Binary_search_tree
+  32. https://en.wikipedia.org/wiki/Cartesian_tree
+  33. http://en.wikipedia.org/wiki/B_tree
+  34. http://en.wikipedia.org/wiki/Red-black_tree
+  35. https://en.wikipedia.org/wiki/Splay_tree
+  36. http://en.wikipedia.org/wiki/AVL_tree
+  37. http://en.wikipedia.org/wiki/Linked_list
+  38. http://en.wikipedia.org/wiki/Linked_list
+  39. http://en.wikipedia.org/wiki/Binary_heap
+  40. http://en.wikipedia.org/wiki/Binomial_heap
+  41. http://en.wikipedia.org/wiki/Fibonacci_heap
+  42. http://en.wikipedia.org/wiki/Adjacency_list
+  43. http://en.wikipedia.org/wiki/Incidence_list
+  44. http://en.wikipedia.org/wiki/Adjacency_matrix
+  45. http://en.wikipedia.org/wiki/Incidence_matrix
+  46. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml756.data#footnote-1
+  47. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml756.data#footnote-1
+  48. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml756.data#footnote-1
+  49. http://stackoverflow.com/a/464081/412916
+  50. https://github.com/ericdrowell/BigOCheatSheet/blob/master/Tables.html
+  51. https://github.com/ericdrowell
+  52. https://github.com/qpleple
+  53. https://github.com/ndizazzo
+  54. https://github.com/vault
+  55. https://github.com/agfor
+  56. https://github.com/jay754
+  57. https://github.com/jdavis
+  58. https://github.com/makosblade
+  59. https://github.com/j4n0
+  60. https://github.com/jfriedly
+  61. https://github.com/sharpobject
+  62. https://github.com/wiz3kid
+  63. https://github.com/elefevre
+  64. https://github.com/thomasahle
+  65. http://disqus.com/?ref_noscript
+  66. http://disqus.com/
+  67. http://twitter.github.com/bootstrap/
+  68. http://disqus.com/
+  69. http://www.wikipedia.com/
+  70. http://recursive-design.com/blog/2010/12/07/comp-sci-101-big-o-notation/
+  71. https://github.com/ericdrowell/BigOCheatSheet/blob/master/Tables.html
+  72. https://twitter.com/ericdrowell

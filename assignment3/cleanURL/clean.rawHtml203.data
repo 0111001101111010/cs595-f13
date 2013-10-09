@@ -1,0 +1,284 @@
+   #[1]RSS 2.0
+
+[2]DataTables logo DataTables
+
+     * [3]Usage
+     * [4]Examples
+     * [5]Styling
+     * [6]API
+     * [7]Development
+     * [8]Editor
+     * [9]Extras
+     * [10]Plug-ins
+     * [11]Blog
+     * [12]FAQs
+     * [13]Forums
+
+   Donate icon Donate
+   Download icon Download
+                 v1.9.4
+   Support icon Support
+                3h 11m avg response
+   Search icon _______________________________ Search
+   [14]via Ad Packs
+   Help DataTables Make a donation to help DataTables support and
+   development
+
+   DataTables is a plug-in for the [15]jQuery Javascript library. It is a
+   highly flexible tool, based upon the foundations of progressive
+   enhancement, which will add advanced interaction controls to any HTML
+   table. Key features:
+     * Variable length pagination
+     * On-the-fly filtering
+     * Multi-column sorting with data type detection
+     * Smart handling of column widths
+     * Display data from almost any data source
+          + [16]DOM, [17]Javascript array, [18]Ajax file and
+            [19]server-side processing (PHP, C#, Perl, Ruby, AIR, Gears
+            etc)
+     * [20]Scrolling options for table viewport
+     * Fully [21]internationalisable
+     * jQuery UI [22]ThemeRoller support
+     * Rock solid - backed by a suite of 2900 [23]unit tests
+     * Wide variety of [24]plug-ins inc. [25]Editor, [26]TableTools,
+       [27]FixedColumns and [28]more
+     * It's free!
+     * State saving
+     * Hidden columns
+     * Dynamic creation of tables
+     * Ajax auto loading of data
+     * Custom DOM positioning
+     * Single column filtering
+     * Alternative pagination types
+     * Non-destructive DOM interaction
+     * Sorting column(s) highlighting
+     * Advanced data source options
+     * [29]Commercial support available
+     * Fully accessible for screenreaders / keyboard access
+     * Sensible file size: 70K minified, 20K gzip'd
+     * Extensive plug-in support
+          + Sorting, type detection, API functions, pagination and
+            filtering
+     * Fully themeable by CSS
+     * [30]Solid documentation
+     * 130+ pre-built [31]examples
+
+   So how easy is it to use DataTables? Take a peek at the code below, a
+   single function call to initialise the table is all it takes:
+/*
+ * Example init
+ */
+$(document).ready(function(){
+        $('#example').dataTable();
+});
+
+   An example of DataTables in action is shown below with a table of CSS
+   browser grading as used by [32]Conditional-CSS.
+
+Example
+
+   Rendering engine Browser Platform(s) Engine version CSS grade
+   Trident Internet Explorer 4.0 Win 95+ 4 X
+   Trident Internet Explorer 5.0 Win 95+ 5 C
+   Trident Internet Explorer 5.5 Win 95+ 5.5 A
+   Trident Internet Explorer 6 Win 98+ 6 A
+   Trident Internet Explorer 7 Win XP SP2+ 7 A
+   Trident AOL browser (AOL desktop) Win XP 6 A
+   Gecko Firefox 1.0 Win 98+ / OSX.2+ 1.7 A
+   Gecko Firefox 1.5 Win 98+ / OSX.2+ 1.8 A
+   Gecko Firefox 2.0 Win 98+ / OSX.2+ 1.8 A
+   Gecko Firefox 3.0 Win 2k+ / OSX.3+ 1.9 A
+   Gecko Camino 1.0 OSX.2+ 1.8 A
+   Gecko Camino 1.5 OSX.3+ 1.8 A
+   Gecko Netscape 7.2 Win 95+ / Mac OS 8.6-9.2 1.7 A
+   Gecko Netscape Browser 8 Win 98SE+ 1.7 A
+   Gecko Netscape Navigator 9 Win 98+ / OSX.2+ 1.8 A
+   Gecko Mozilla 1.0 Win 95+ / OSX.1+ 1 A
+   Gecko Mozilla 1.1 Win 95+ / OSX.1+ 1.1 A
+   Gecko Mozilla 1.2 Win 95+ / OSX.1+ 1.2 A
+   Gecko Mozilla 1.3 Win 95+ / OSX.1+ 1.3 A
+   Gecko Mozilla 1.4 Win 95+ / OSX.1+ 1.4 A
+   Gecko Mozilla 1.5 Win 95+ / OSX.1+ 1.5 A
+   Gecko Mozilla 1.6 Win 95+ / OSX.1+ 1.6 A
+   Gecko Mozilla 1.7 Win 98+ / OSX.1+ 1.7 A
+   Gecko Mozilla 1.8 Win 98+ / OSX.1+ 1.8 A
+   Gecko Seamonkey 1.1 Win 98+ / OSX.2+ 1.8 A
+   Gecko Epiphany 2.20 Gnome 1.8 A
+   Webkit Safari 1.2 OSX.3 125.5 A
+   Webkit Safari 1.3 OSX.3 312.8 A
+   Webkit Safari 2.0 OSX.4+ 419.3 A
+   Webkit Safari 3.0 OSX.4+ 522.1 A
+   Webkit Google Chrome 1.0 Win XP+ 525 A
+   Webkit OmniWeb 5.5 OSX.4+ 420 A
+   Webkit iPod Touch / iPhone iPod 420.1 A
+   Webkit S60 S60 413 A
+   Presto Opera 7.0 Win 95+ / OSX.1+ - A
+   Presto Opera 7.5 Win 95+ / OSX.2+ - A
+   Presto Opera 8.0 Win 95+ / OSX.2+ - A
+   Presto Opera 8.5 Win 95+ / OSX.2+ - A
+   Presto Opera 9.0 Win 95+ / OSX.3+ - A
+   Presto Opera 9.2 Win 88+ / OSX.3+ - A
+   Presto Opera 9.5 Win 88+ / OSX.3+ - A
+   Presto Opera for Wii Wii - A
+   Presto Nokia N800 N800 - A
+   Presto Nintendo DS browser Nintendo DS 8.5 C/A
+   KHTML Konqureror 3.1 KDE 3.1 3.1 C
+   KHTML Konqureror 3.3 KDE 3.3 3.3 A
+   KHTML Konqureror 3.5 KDE 3.5 3.5 A
+   Tasman Internet Explorer 4.5 Mac OS 8-9 - X
+   Tasman Internet Explorer 5.1 Mac OS 7.6-9 1 C
+   Tasman Internet Explorer 5.2 Mac OS 8-X 1 C
+   Misc NetFront 3.1 Embedded devices - C
+   Misc NetFront 3.4 Embedded devices - A
+   Misc Dillo 0.8 Embedded devices - X
+   Misc Links Text only - X
+   Misc Lynx Text only - X
+   Misc IE Mobile Windows Mobile 6 - C
+   Misc PSP browser PSP - C
+   Other browsers All others - - U
+
+DataTables blog
+
+     * [33]Introducing Editor - editing for DataTables
+     * [34]Orthogonal data
+     * [35]DataTables debugger
+     * [36]Twitter Bootstrap 2
+     * [37]Microsoft CDN
+     * [38]localStorage for state saving
+     * [39]Twitter Bootstrap
+     * [40]Site updates - JS Bin and more
+     * [41]Getting started with DataTables: First steps
+     * [42]Creating feature plug-ins
+     * [43]DataTables support
+     * [44]Drill-down rows
+     * [45]Introducing Scroller - Virtual Scrolling for DataTables
+     * [46]DataTables 1.8
+     * [47]Inline editing
+     * [48]Creating beautiful and functional tables with DataTables
+     * [49]Extended data source options with DataTables
+
+DataTables around the web
+
+   [50]C# serialization
+   A C# serialisation package for DataTables' server-side processing from
+   Kelly Vernon, making use of DataTables SSP in C# much easier!
+   [51]Java backend for Editor
+   Tactical Enterprises have created a Java based backend for DataTables
+   Editor, making editable DataTables in a Java environment very fast and
+   very easy!
+   [52]ASP.NET MVC helpers
+   Harry McIntyre has created a package of helpers for ASP.NET MVC and
+   DataTables including server-side processing and individual column
+   filtering.
+   [53]Responsive DataTables
+   This script from Comanche adds responsive behaviour to DataTables -
+   allowing phone and tablet devices to show full size beautiful tables,
+   making maximum use of the screen available at all sizes.
+   [54]ThemeForest themes with DataTables
+   If you are looking for a quick way of creating stylish looking tables,
+   integrated with the rest of your site, then there are a number of
+   themes available on ThemeForest with DataTables support. They are
+   listed here.
+
+   [55]More...
+
+   Please [56]let me know if you have any DataTables related news, which I
+   can add here!
+
+   [57]RSS feed DataTables news feed
+   [58]RSS feed DataTables blog feed
+   [59]RSS feed DataTables releases feed
+
+Used by
+
+   Just some of the companies and organisations using DataTables.
+
+   Would you like your logo to appear here as well?
+   Please [60]get in touch!
+   [61]DataTables is used by St Andrews University
+   [62]DataTables is used by Travellers Point
+   [63]DataTables is used by Homer
+   [64]DataTables is used by Amazon
+   [65]DataTables is used by Venue Directory
+   [66]DataTables is used by doctape
+   DataTables designed and created by [67]SpryMedia © 2008-2013
+   DataTables is dual licensed under the [68]GPL v2 license or a [69]BSD
+   (3-point) license.
+
+References
+
+   Visible links
+   1. http://www.datatables.net/rss.xml
+   2. file://localhost/index
+   3. file://localhost/usage
+   4. file://localhost/examples
+   5. file://localhost/styling
+   6. file://localhost/api
+   7. file://localhost/development
+   8. http://editor.datatables.net/
+   9. file://localhost/extras
+  10. file://localhost/plug-ins
+  11. file://localhost/blog
+  12. file://localhost/faqs
+  13. file://localhost/forums
+  14. http://adpacks.com/
+  15. http://www.jquery.com/
+  16. file://localhost/examples/data_sources/dom.html
+  17. file://localhost/examples/data_sources/js_array.html
+  18. file://localhost/examples/data_sources/ajax.html
+  19. file://localhost/examples/data_sources/server_side.html
+  20. file://localhost/examples/basic_init/scroll_y.html
+  21. file://localhost/plug-ins/i18n
+  22. file://localhost/styling/themes
+  23. file://localhost/development/testing
+  24. file://localhost/plug-ins/
+  25. http://editor.datatables.net/
+  26. file://localhost/extras/tabletools/
+  27. file://localhost/extras/fixedcolumns/
+  28. file://localhost/extras/
+  29. file://localhost/support
+  30. file://localhost/docs/DataTables
+  31. file://localhost/examples
+  32. http://www.conditional-css.com/
+  33. file://localhost/blog/Introducing_Editor_-_editing_for_DataTables
+  34. file://localhost/blog/Orthogonal_data
+  35. file://localhost/blog/DataTables_debugger
+  36. file://localhost/blog/Twitter_Bootstrap_2
+  37. file://localhost/blog/Microsoft_CDN
+  38. file://localhost/blog/localStorage_for_state_saving
+  39. file://localhost/blog/Twitter_Bootstrap
+  40. file://localhost/blog/Site_updates_-_JS_Bin_and_more
+  41. file://localhost/blog/Getting_started_with_DataTables%3A_First_steps
+  42. file://localhost/blog/Creating_feature_plug-ins
+  43. file://localhost/blog/DataTables_support
+  44. file://localhost/blog/Drill-down_rows
+  45. file://localhost/blog/Introducing_Scroller_-_Virtual_Scrolling_for_DataTables
+  46. file://localhost/blog/DataTables_1.8
+  47. file://localhost/blog/Inline_editing
+  48. file://localhost/blog/Creating_beautiful_and_functional_tables_with_DataTables
+  49. file://localhost/blog/Extended_data_source_options_with_DataTables
+  50. https://github.com/kvernon/JQueryDataTableSerializer
+  51. http://jed-datatables.ca/jed/
+  52. https://github.com/mcintyre321/mvc.jquery.datatables
+  53. https://github.com/Comanche/datatables-responsive
+  54. file://localhost/styling/themeforest
+  55. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/news
+  56. file://localhost/contact
+  57. file://localhost/rss_news.xml
+  58. file://localhost/rss_blog.xml
+  59. file://localhost/rss.xml
+  60. file://localhost/contact
+  61. http://www.st-andrews.ac.uk/
+  62. http://www.travellerspoint.com/
+  63. http://www.sipcapture.org/
+  64. http://www.amazon.com/
+  65. http://www.venuedirectory.com/
+  66. http://www.doctape.com/
+  67. http://www.sprymedia.co.uk/
+  68. file://localhost/license_gpl2
+  69. file://localhost/license_bsd
+
+   Hidden links:
+  71. file://localhost/donate
+  72. file://localhost/download
+  73. file://localhost/support

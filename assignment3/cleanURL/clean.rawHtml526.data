@@ -1,0 +1,274 @@
+   #[1]GitHub [2]Recent Commits to play-sass:master
+
+   [3]Sign up [4]Sign in
+     * [5]Explore
+     * [6]Features
+     * [7]Enterprise
+     * [8]Blog
+
+   ____________________
+   This repository
+   (*)
+   This repository
+   ( )
+   All repositories
+     * [9]Star [10]48
+     * [11]Fork [12]24
+
+public [13]jlitola/[14]play-sass Octocat-spinner-32
+
+     * [15]Code Octocat-spinner-32
+     * [16]Issues 3 Octocat-spinner-32
+     * [17]Pull Requests 0 Octocat-spinner-32
+
+     * [18]Pulse Octocat-spinner-32
+     * [19]Graphs Octocat-spinner-32
+     * [20]Network Octocat-spinner-32
+
+HTTPS clone URL
+
+   https://github.com/j
+
+Subversion checkout URL
+
+   https://github.com/j
+
+   You can clone with [21]HTTPS, or [22]Subversion.
+   [23]Download ZIP
+
+   Sass asset handling for Play Framework 2.0
+     * [24]28 commits
+     * [25]3 branches
+     * [26]3 releases
+     * [27]Fetching contributors
+
+    1. [28]Scala 100%
+
+   [29]Scala
+   branch: master
+   Switch branches/tags
+   ____________________
+     * [30]Branches
+     * [31]Tags
+
+   [32]master
+   [33]play20
+   [34]play21
+   Nothing to show
+   [35]v0.3.0
+   [36]v0.2.0
+   [37]v0.1.3
+   Nothing to show
+   [38]play-sass /
+   [39]Show File Finder
+
+   [40]Add description how to add own Sass CLI arguments ([41]#10[42])
+   [43]latest commit e02b94b726
+   [e4ef0a73ae8ebe96720e9281d0849ae7?d=https%3A%2F%2Fidenticons.github.com
+   %2F2f12a2d47c0f5513ee6fb1ed26ee092c.png&amp;s=140] [44]jlitola authored
+   September 24, 2013
+   Octocat-spinner-32 [45]project [46]updated to play 2.2 September 24,
+   2013
+   Octocat-spinner-32 [47]src [48]updated to play 2.2 September 24, 2013
+   Octocat-spinner-32 [49].gitignore [50]Initial commit with working
+   implementation + couple of tests May 04, 2012
+   Octocat-spinner-32 [51]LICENSE [52]Added README and LICENSE May 04,
+   2012
+   Octocat-spinner-32 [53]README.md [54]Add description how to add own
+   Sass CLI arguments ([55]#10[56]) September 24, 2013
+   Octocat-spinner-32 [57]build.sbt [58]Added Play 2.2 instructions and
+   upped version number to 0.3.0 September 24, 2013
+   README.md
+
+play-sass
+
+   [59]Sass asset handling plugin for [60]Play 2.x. Implemented as [61]sbt
+   plugin.
+
+Prerequisites
+
+   [62]Sass compiler needs to be installed for plugin to work. This means
+   that sass executable needs to be found in path. Sass can be installed
+   by by installing sass gem.
+gem install sass
+
+   You can verify that sass has been installed by following command:
+% sass -v
+Sass 3.1.16 (Brainy Betty)
+
+Installation
+
+   Add following to your projects project/plugins.sbt
+resolvers += "Sonatype OSS Releases" at "https://oss.sonatype.org/content/reposi
+tories/releases"
+
+addSbtPlugin("net.litola" % "play-sass" % "0.3.0")
+
+   In addition you'll need to add settings to your project. On Play 2.2
+   this is done by modifying build.sbt and adding import for the
+   SassPlugin, and adding SassPlugin settings.
+import net.litola.SassPlugin
+
+play.Project.playScalaSettings ++ SassPlugin.sassSettings
+
+   On Play 2.1 and Play 2.0 you should do following changes to
+   project/Build.scala.
+import net.litola.SassPlugin
+
+val main = PlayProject(appName, appVersion, appDependencies, mainLang = SCALA).s
+ettings( SassPlugin.sassSettings:_* )
+
+   This adds Sass asset compiler to Play project. *.sass and *.scss files
+   in app/assets directories will then be automatically compiled to *.css
+   files. Files starting with _-character will be left out from
+   compilation as per Play convention.
+
+Customizing
+
+   If you would like to pass your own command line arguments to Sass call,
+   you can do it by overriding Sassplugin.sassOptions. For example to use
+   Compass you can use following:
+play.Project.playScalaSettings ++ SassPlugin.sassSettings ++ Seq(SassPlugin.sass
+Options := Seq("--compass", "-r", "compass"))
+
+Versions
+
+   The newest version only support Play 2.2. If you need support for older
+   versions, please use 0.2.x or 0.1.x series.
+     * 0.3.0 [2013-09-25] Supports Play 2.2 (Thanks to Nilanjan
+       Raychaudhuri and Zarkus13)
+     * 0.2.0 [2013-03-01] Supports Play 2.1
+     * 0.1.3 [2013-02-04] Sass command line options can be overridden. Do
+       not override settings in plugin (Thanks to Kenji Yoshida). Made
+       play-sass available via Sonatype.
+     * 0.1.2 [2012-11-16] Minimal windows support by Kalle Bertell.
+       Changed to use play 2.0.4.
+     * 0.1.1 [2012-08-10] Dependency tracking for imported files. Should
+       behave correctly with incrementalAssetsCompilation := true. Changed
+       to use play 2.0.3, sbt 0.11.3.
+     * 0.1.0 [2012-05-04] Initial release
+
+Acknowledgements
+
+   This plugin is based on Johannes Emerich's [63]play-stylus plugin for
+   handling Stylus assets.
+
+License
+
+   Copyright (c) 2012-2013 Juha Litola
+
+   MIT-style license, see details from LICENSE file.
+
+     * [64]Status
+     * [65]API
+     * [66]Training
+     * [67]Shop
+     * [68]Blog
+     * [69]About
+
+     * © 2013 GitHub, Inc.
+     * [70]Terms
+     * [71]Privacy
+     * [72]Security
+     * [73]Contact
+
+
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+
+   Something went wrong with that request. Please try again.
+
+References
+
+   Visible links
+   1. file://localhost/opensearch.xml
+   2. https://github.com/jlitola/play-sass/commits/master.atom
+   3. file://localhost/signup
+   4. file://localhost/login?return_to=%2Fjlitola%2Fplay-sass
+   5. file://localhost/explore
+   6. file://localhost/features
+   7. https://enterprise.github.com/
+   8. file://localhost/blog
+   9. file://localhost/login?return_to=%2Fjlitola%2Fplay-sass
+  10. file://localhost/jlitola/play-sass/stargazers
+  11. file://localhost/login?return_to=%2Fjlitola%2Fplay-sass
+  12. file://localhost/jlitola/play-sass/network
+  13. file://localhost/jlitola
+  14. file://localhost/jlitola/play-sass
+  15. file://localhost/jlitola/play-sass
+  16. file://localhost/jlitola/play-sass/issues
+  17. file://localhost/jlitola/play-sass/pulls
+  18. file://localhost/jlitola/play-sass/pulse
+  19. file://localhost/jlitola/play-sass/graphs
+  20. file://localhost/jlitola/play-sass/network
+  21. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml526.data
+  22. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml526.data
+  23. file://localhost/jlitola/play-sass/archive/master.zip
+  24. file://localhost/jlitola/play-sass/commits/master
+  25. file://localhost/jlitola/play-sass/branches
+  26. file://localhost/jlitola/play-sass/releases
+  27. file://localhost/jlitola/play-sass/contributors
+  28. file://localhost/jlitola/play-sass/search?l=scala
+  29. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml526.data
+  30. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml526.data
+  31. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml526.data
+  32. file://localhost/jlitola/play-sass/tree/master
+  33. file://localhost/jlitola/play-sass/tree/play20
+  34. file://localhost/jlitola/play-sass/tree/play21
+  35. file://localhost/jlitola/play-sass/tree/v0.3.0
+  36. file://localhost/jlitola/play-sass/tree/v0.2.0
+  37. file://localhost/jlitola/play-sass/tree/v0.1.3
+  38. file://localhost/jlitola/play-sass
+  39. file://localhost/jlitola/play-sass/find/master
+  40. file://localhost/jlitola/play-sass/commit/e02b94b72640ed93244c4d4208098fa48e6245a8
+  41. https://github.com/jlitola/play-sass/issues/10
+  42. file://localhost/jlitola/play-sass/commit/e02b94b72640ed93244c4d4208098fa48e6245a8
+  43. file://localhost/jlitola/play-sass/commit/e02b94b72640ed93244c4d4208098fa48e6245a8
+  44. file://localhost/jlitola
+  45. file://localhost/jlitola/play-sass/tree/master/project
+  46. file://localhost/jlitola/play-sass/commit/57f678ec8e08fb2d95354f26f0c733cb01c7bd22
+  47. file://localhost/jlitola/play-sass/tree/master/src
+  48. file://localhost/jlitola/play-sass/commit/57f678ec8e08fb2d95354f26f0c733cb01c7bd22
+  49. file://localhost/jlitola/play-sass/blob/master/.gitignore
+  50. file://localhost/jlitola/play-sass/commit/2585e3ce3a0cc7cf142e564abf6c88dfb9a9a862
+  51. file://localhost/jlitola/play-sass/blob/master/LICENSE
+  52. file://localhost/jlitola/play-sass/commit/9ae3f0dca388a95db5afd42865152218c59b0d5d
+  53. file://localhost/jlitola/play-sass/blob/master/README.md
+  54. file://localhost/jlitola/play-sass/commit/e02b94b72640ed93244c4d4208098fa48e6245a8
+  55. https://github.com/jlitola/play-sass/issues/10
+  56. file://localhost/jlitola/play-sass/commit/e02b94b72640ed93244c4d4208098fa48e6245a8
+  57. file://localhost/jlitola/play-sass/blob/master/build.sbt
+  58. file://localhost/jlitola/play-sass/commit/beb4e5715633ab81603c8f7716676bddec308c70
+  59. http://sass-lang.com/
+  60. http://www.playframework.org/
+  61. https://github.com/harrah/xsbt
+  62. http://sass-lang.com/
+  63. https://github.com/knuton/play-stylus
+  64. https://status.github.com/
+  65. http://developer.github.com/
+  66. http://training.github.com/
+  67. http://shop.github.com/
+  68. file://localhost/blog
+  69. file://localhost/about
+  70. file://localhost/site/terms
+  71. file://localhost/site/privacy
+  72. file://localhost/security
+  73. file://localhost/contact
+
+   Hidden links:
+  75. https://github.com/
+  76. https://help.github.com/articles/which-remote-url-should-i-use
+  77. file://localhost/jlitola/play-sass/compare
+  78. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml526.data#play-sass
+  79. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml526.data#prerequisites
+  80. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml526.data#installation
+  81. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml526.data#customizing
+  82. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml526.data#versions
+  83. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml526.data#acknowledgements
+  84. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml526.data#license
+  85. file://localhost/
+  86. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml526.data
+  87. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml526.data
+  88. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml526.data

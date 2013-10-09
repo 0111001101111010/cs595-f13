@@ -1,0 +1,67 @@
+   [1]Sign up for a GitHub Account [2]Sign in
+
+public
+
+   [218d70844f58e0fab4bd11aba063bed0?d=https%3A%2F%2Fidenticons.github.com
+   %2F00141f8aa60de0c1f1d350fd92710bdd.png&s=140] [3]ukstv / [4]coerce.rb
+   Created 2013-09-26
+     * [5]Gist Detail
+     * [6]Revisions 1
+
+     * [7]Download Gist
+     * Clone this gist https://gist.github.
+     * Embed this gist <script src="https:/
+     * Link to this gist https://gist.github.
+
+   coerce.rb
+   Ruby
+     *
+     *
+
+   File suppressed. Click to show.
+   1 2 3 4 5 6 7 8 9 10 11 12 13
+
+                                    class EnumType < DelegateClass(Symbol)
+                                    # ...
+                                    end
+
+                                    Symbol.instance_eval do
+                                    def ===(other)
+                                    if other.kind_of?(EnumType)
+                                    true
+                                    else
+                                    super(other)
+                                    end
+                                    end
+                                    end
+
+   Please [8]sign in to comment on this gist.
+
+   Something went wrong with that request. Please try again.
+
+   © 2013 GitHub Inc. All rights reserved.
+     * [9]The GitHub Blog
+     * [10]Support
+     * [11]Contact
+
+References
+
+   Visible links
+   1. https://github.com/signup?return_to=gist
+   2. https://gist.github.com/login?return_to=/ukstv/6712834
+   3. file://localhost/ukstv
+   4. file://localhost/ukstv/6712834
+   5. file://localhost/ukstv/6712834
+   6. file://localhost/ukstv/6712834/revisions
+   7. file://localhost/ukstv/6712834/download
+   8. file://localhost/login?return_to=/ukstv/6712834
+   9. https://github.com/blog
+  10. mailto:support@github.com
+  11. https://github.com/contact
+
+   Hidden links:
+  13. https://gist.github.com/
+  14. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml115.data#file-coerce-rb
+  15. file://localhost/ukstv/6712834/raw/f033d62aac1b40d6aa471628c2856232bad80333/coerce.rb
+  16. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml115.data
+  17. file://localhost/

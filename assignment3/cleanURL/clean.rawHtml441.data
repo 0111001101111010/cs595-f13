@@ -1,0 +1,2810 @@
+   #[1]app - feed
+
+The dynamic stylesheet language.
+
+LESS extends CSS with dynamic behavior such as variables, mixins, operations
+and functions.
+
+LESS runs on both the server-side (with Node.js and Rhino) or client-side
+(modern browsers only).
+
+   [2][download-button.png]
+   version 1.4.1
+   [3]changelog
+
+   Write some LESS:
+@base: #f938ab;
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  box-shadow:         @style @c;
+  -webkit-box-shadow: @style @c;
+  -moz-box-shadow:    @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.box {
+  color: saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0 0 5px, 30%) }
+}
+
+   Compile to CSS:
+npm install -g less
+lessc styles.less styles.css
+
+   [4]overview [5]usage [6]language [7]function reference [8]source
+   [9]about [10]try it now!
+     * [11]Variables
+     * [12]Mixins
+     * [13]Parametric Mixins
+     * [14]Pattern-matching
+     * [15]Nested Rules
+     * [16]Operations
+     * [17]Functions
+     * [18]Namespaces
+     * [19]Scope
+     * [20]Comments
+     * [21]Importing
+
+1.4.0
+
+   We have released 1.4.0. This includes new features such as extends, the
+   data-uri function and more maths functions. See the [22]changelog for a
+   full list of changes.
+
+   There are some known breaking changes.
+
+   @import-once is removed and is now default behaviour for @import.
+
+   (~".myclass_@{index}") { ... selector interpolation is deprecated, do
+   this instead .myclass_@{index} { .... This works in 1.3.1 onwards.
+
+   The browser version no longer bundles a version of es5-shim.js - the
+   version we previously used was inaccurate and the new version is
+   significantly larger. Please include your choice of es-5 shim or only
+   use on modern browsers.
+
+   We have introduced a optional strictMath mode, where math is required
+   to be in parenthesis, e.g.
+(1 + 1)  // 2
+1 + 1    // 1+1
+
+   In 1.4.0 this option is turned off, but we intend to turn this on by
+   default. We recommend you upgrade code and switch on the option
+   (–strict-math=on in the command line or strictMath: true in
+   JavaScript). Code written with brackets is backwards compatible with
+   older versions of the less compiler.
+
+   We also added a strict units option (strictUnits: true or
+   strict-units=on) and this causes lessc to validate the units used are
+   valid (e.g. 4px/2px = 2, not 2px and 4em/2px throws an error). There
+   are no longer any plans to switch this option on permanently, but some
+   users will find it useful for bug finding.
+
+   Unit maths is done, so (4px * 3em) / 4px used to equal 3px and it now
+   equals 3em. However we do not cancel units down to unitless numbers
+   unless strict units is on. The selector interpolation, maths and units
+   changes can be made to your less now and will compile fine with less
+   1.3.3.
+
+Variables
+
+   Variables allow you to specify widely used values in a single place,
+   and then re-use them throughout the style sheet, making global changes
+   as easy as changing one line of code.
+     // LESS
+
+   @color: #4D926F;
+
+   #header {
+     color: @color;
+   }
+   h2 {
+     color: @color;
+   }
+
+   /* Compiled CSS */
+
+   #header {
+     color: #4D926F;
+   }
+   h2 {
+     color: #4D926F;
+   }
+
+Mixins
+
+   Mixins allow you to embed all the properties of a class into another
+   class by simply including the class name as one of its properties. It’s
+   just like variables, but for whole classes. Mixins can also behave like
+   functions, and take arguments, as seen in the example below.
+   // LESS
+
+   .rounded-corners (@radius: 5px) {
+     -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+     -ms-border-radius: @radius;
+     -o-border-radius: @radius;
+     border-radius: @radius;
+   }
+
+   #header {
+     .rounded-corners;
+   }
+   #footer {
+     .rounded-corners(10px);
+   }
+
+   /* Compiled CSS */
+
+   #header {
+     -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+     -ms-border-radius: 5px;
+     -o-border-radius: 5px;
+     border-radius: 5px;
+   }
+   #footer {
+     -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+     -ms-border-radius: 10px;
+     -o-border-radius: 10px;
+     border-radius: 10px;
+   }
+
+Nested Rules
+
+   Rather than constructing long selector names to specify inheritance, in
+   Less you can simply nest selectors inside other selectors. This makes
+   inheritance clear and style sheets shorter.
+   // LESS
+
+   #header {
+     h1 {
+       font-size: 26px;
+       font-weight: bold;
+     }
+     p { font-size: 12px;
+       a { text-decoration: none;
+         &:hover { border-width: 1px }
+       }
+     }
+   }
+
+
+                                      /* Compiled CSS */
+
+                                      #header h1 {
+                                        font-size: 26px;
+                                        font-weight: bold;
+                                      }
+                                      #header p {
+                                        font-size: 12px;
+                                      }
+                                      #header p a {
+                                        text-decoration: none;
+                                      }
+                                      #header p a:hover {
+                                        border-width: 1px;
+                                      }
+
+
+Functions & Operations
+
+   Are some elements in your style sheet proportional to other elements?
+   Operations let you add, subtract, divide and multiply property values
+   and colors, giving you the power to create complex relationships
+   between properties. Operations should only be performed within
+   parentheses in order to ensure compatibility with CSS. Functions map
+   one-to-one with JavaScript code, allowing you to manipulate values
+   however you want.
+   // LESS
+
+   @the-border: 1px;
+   @base-color: #111;
+   @red:        #842210;
+
+   #header {
+     color: (@base-color * 3);
+     border-left: @the-border;
+     border-right: (@the-border * 2);
+   }
+   #footer {
+     color: (@base-color + #003300);
+     border-color: desaturate(@red, 10%);
+   }
+
+
+                                         /* Compiled CSS */
+
+                                         #header {
+                                           color: #333;
+                                           border-left: 1px;
+                                           border-right: 2px;
+                                         }
+                                         #footer {
+                                           color: #114411;
+                                           border-color: #7d2717;
+                                         }
+
+
+Client-side usage
+
+   Client-side is the easiest way to get started and good for developing
+   your LESS. For production and especially if performance is important,
+   we recommend pre-compiling using node or one of the many third party
+   tools.
+
+   Link your .less stylesheets with the rel set to “stylesheet/less”:
+<link rel="stylesheet/less" type="text/css" href="styles.less" />
+
+   Then download less.js from the top of the page, and include it in the
+   <head> element of your page, like so:
+<script src="less.js" type="text/javascript"></script>
+
+   Make sure you include your stylesheets before the script.
+
+   You can set options by setting things on a global LESS object before
+   the script. E.g.
+<script type="text/javascript">
+    less = {
+        env: "development", // or "production"
+        async: false,       // load imports async
+        fileAsync: false,   // load imports async when in a page under
+                            // a file protocol
+        poll: 1000,         // when in watch mode, time in ms between polls
+        functions: {},      // user functions, keyed by name
+        dumpLineNumbers: "comments", // or "mediaQuery" or "all"
+        relativeUrls: false,// whether to adjust url's to be relative
+                            // if false, url's are already relative to the
+                            // entry less file
+        rootpath: ":/a.com/"// a path to add on to the start of every url
+                            //resource
+    };
+</script>
+<script src="less.js" type="text/javascript"></script>
+
+Watch mode
+
+   Watch mode is a client-side feature which enables your styles to
+   refresh automatically as they are changed.
+
+   To enable it, append ‘#!watch’ to the browser URL, then refresh the
+   page. Alternatively, you can run less.watch() from the console.
+
+Modify variables
+
+   modifyVars enables modification of LESS variables in run-time. When
+   called with new values, the LESS file is recompiled without reloading.
+   Simple basic usage:
+less.modifyVars({
+    '@buttonFace': '#5B83AD',
+    '@buttonText': '#D9EEF2'
+});
+
+Debugging
+
+   It is possible to output rules in your CSS which allow tools to locate
+   the source of the rule.
+
+   Either specify the option dumpLineNumbers as above or add
+   !dumpLineNumbers:mediaQuery to the url.
+
+   You can use the “comments” option with [23]FireLESS and the
+   “mediaQuery” option with FireBug/Chrome dev tools (it is identical to
+   the SCSS media query debugging format).
+
+Server-side usage
+
+Installation
+
+   The easiest way to install LESS on the server, is via [24]npm, the node
+   package manager, as so:
+$ npm install -g less
+
+Command-line usage
+
+   Once installed, you can invoke the compiler from the command-line, as
+   such:
+$ lessc styles.less
+
+   This will output the compiled CSS to stdout, you may then redirect it
+   to a file of your choice:
+$ lessc styles.less > styles.css
+
+   To output minified CSS, simply pass the -x option. If you would like
+   more involved minification, the [25]YUI CSS Compressor is also
+   available with the --yui-compress option.
+
+   To see all the command line options run lessc without parameters.
+
+Usage in Code
+
+   You can invoke the compiler from node, as such:
+var less = require('less');
+
+less.render('.class { width: (1 + 1) }', function (e, css) {
+    console.log(css);
+});
+
+   which will output
+.class {
+  width: 2;
+}
+
+   you may also manually invoke the parser and compiler:
+var parser = new(less.Parser);
+
+parser.parse('.class { width: (1 + 1) }', function (err, tree) {
+    if (err) { return console.error(err) }
+    console.log(tree.toCSS());
+});
+
+Configuration
+
+   You may pass some options to the compiler:
+var parser = new(less.Parser)({
+    paths: ['.', './lib'], // Specify search paths for @import directives
+    filename: 'style.less' // Specify a filename, for better error messages
+});
+
+parser.parse('.class { width: (1 + 1) }', function (e, tree) {
+    tree.toCSS({ compress: true }); // Minify CSS output
+});
+
+Third Party Tools
+
+   There are a selection of tools available to run in your particular
+   environment and these are documented in the Github wiki.
+
+   [26]Command Line Tools
+
+   [27]GUI Tools
+
+                                  The Language
+
+   As an extension to CSS, LESS is not only backwards compatible with CSS,
+   but the extra features it adds use existing CSS syntax. This makes
+   learning LESS a breeze, and if in doubt, lets you fall back to CSS.
+
+Variables
+
+   These are pretty self-explanatory:
+@nice-blue: #5B83AD;
+@light-blue: (@nice-blue + #111);
+
+#header { color: @light-blue; }
+
+   Outputs:
+#header { color: #6c94be; }
+
+   It is also possible to define variables with a variable name:
+@fnord: "I am fnord.";
+@var: 'fnord';
+content: @@var;
+
+   Which compiles to:
+content: "I am fnord.";
+
+   When defining a variable twice, the last definition of the variable is
+   used, searching from the current scope upwards. This is similar to css
+   itself where the last property inside a definition is used to determine
+   the value.
+
+   For instance:
+@var: 0;
+.class1 {
+  @var: 1;
+  .class {
+    @var: 2;
+    three: @var;
+    @var: 3;
+  }
+  one: @var;
+}
+
+   Compiles to:
+.class1 .class {
+  three: 3;
+}
+.class {
+  one: 1;
+}
+
+   Variables are lazy loaded and do not have to be declared before being
+   used.
+
+   Valid less snippet:
+lazy-eval {
+  width: @var;
+}
+
+@var: @a;
+@a: 9%;
+
+   this is valid less too:
+.lazy-eval-scope {
+  width: @var;
+  @a: 9%;
+}
+
+@var: @a;
+@a: 100%;
+
+   both compile into:
+.lazy-eval-scope {
+  width: 9%;
+}
+
+Mixins
+
+   In LESS, it is possible to include a bunch of properties from one
+   ruleset into another ruleset. So say we have the following class:
+.bordered {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+
+   And we want to use these properties inside other rulesets. Well, we
+   just have to drop in the name of the class in any ruleset we want to
+   include its properties, like so:
+#menu a {
+  color: #111;
+  .bordered;
+}
+.post a {
+  color: red;
+  .bordered;
+}
+
+   The properties of the .bordered class will now appear in both #menu a
+   and .post a:
+#menu a {
+  color: #111;
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+.post a {
+  color: red;
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+
+   Any CSS class or id ruleset can be mixed-in that way.
+
+   Note: Variables are also mixed in, so variables from a mixin will be
+   placed into the current scope. This is contentious and may change in
+   the future.
+
+Parametric Mixins
+
+   LESS has a special type of ruleset which can be mixed in like classes,
+   but accepts parameters. Here’s the canonical example:
+.border-radius (@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+   And here’s how we can mix it into various rulesets:
+#header {
+  .border-radius(4px);
+}
+.button {
+  .border-radius(6px);
+}
+
+   Parametric mixins can also have default values for their parameters:
+.border-radius (@radius: 5px) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+   We can invoke it like this now:
+#header {
+  .border-radius;
+}
+
+   And it will include a 5px border-radius.
+
+   You can also use parametric mixins which don’t take parameters. This is
+   useful if you want to hide the ruleset from the CSS output, but want to
+   include its properties in other rulesets:
+.wrap () {
+  text-wrap: wrap;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word;
+}
+
+pre { .wrap }
+
+   Which would output:
+pre {
+  text-wrap: wrap;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word;
+}
+
+Mixins With Multiple Parameters
+
+   Parameters are either semicolon or comma separated. It is recommended
+   to use semicolon. The symbol comma has double meaning: it can be
+   interpreted either as a mixin parameters separator or css list
+   separator.
+
+   Using comma as mixin separator makes it impossible to create comma
+   separated lists as an argument. On the other hand, if the compiler sees
+   at least one semicolon inside mixin call or declaration, it assumes
+   that arguments are separated by semicolons and all commas belong to css
+   lists:
+     * two arguments and each contains comma separated list: .name(1, 2,
+       3; something, else),
+     * three arguments and each contains one number: .name(1, 2, 3),
+     * use dummy semicolon to create mixin call with one argument
+       containing comma separated css list: .name(1, 2, 3;),
+     * comma separated default value: .name(@param1: red, blue;).
+
+   It is legal to define multiple mixins with the same name and number of
+   parameters. Less will use properties of all that can apply. If you used
+   the mixin with one parameter e.g. .mixin(green);, then properties of
+   all mixins with exactly one mandatory parameter will be used:
+.mixin(@color) {
+  color-1: @color;
+}
+.mixin(@color; @padding:2) {
+  color-2: @color;
+  padding-2: @padding;
+}
+.mixin(@color; @padding; @margin: 2) {
+  color-3: @color;
+  padding-3: @padding;
+  margin: @margin @margin @margin @margin;
+}
+.some .selector div {
+  .mixin(#008000);
+}
+
+   compiles into:
+.some .selector div {
+  color-1: #008000;
+  color-2: #008000;
+  padding-2: 2;
+}
+
+The @arguments variable
+
+   @arguments has a special meaning inside mixins, it contains all the
+   arguments passed, when the mixin was called. This is useful if you
+   don’t want to deal with individual parameters:
+.box-shadow (@x: 0; @y: 0; @blur: 1px; @color: #000) {
+  box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+}
+.box-shadow(2px; 5px);
+
+   Which results in:
+  box-shadow: 2px 5px 1px #000;
+  -moz-box-shadow: 2px 5px 1px #000;
+  -webkit-box-shadow: 2px 5px 1px #000;
+
+Advanced arguments and the @rest variable
+
+   You can use ... if you want your mixin to take a variable number of
+   arguments. Using this after a variable name will assign those arguments
+   to the variable.
+.mixin (...) {        // matches 0-N arguments
+.mixin () {           // matches exactly 0 arguments
+.mixin (@a: 1) {      // matches 0-1 arguments
+.mixin (@a: 1; ...) { // matches 0-N arguments
+.mixin (@a; ...) {    // matches 1-N arguments
+
+   Furthermore:
+.mixin (@a; @rest...) {
+   // @rest is bound to arguments after @a
+   // @arguments is bound to all arguments
+}
+
+The Keyword !important
+
+   Use the !important keyword after mixin call to mark all properties
+   brought by it as !important:
+
+   Sample input:
+.mixin (@a: 0) {
+  border: @a;
+  boxer: @a;
+}
+.unimportant {
+  .mixin(1);
+}
+.important {
+  .mixin(2) !important;
+}
+
+   compiled into:
+.unimportant {
+  border: 1;
+  boxer: 1;
+}
+.important {
+  border: 2 !important;
+  boxer: 2 !important;
+}
+
+Pattern-matching and Guard expressions
+
+   Sometimes, you may want to change the behaviour of a mixin, based on
+   the parameters you pass to it. Let’s start with something basic:
+.mixin (@s; @color) { ... }
+
+.class {
+  .mixin(@switch; #888);
+}
+
+   Now let’s say we want .mixin to behave differently, based on the value
+   of @switch, we could define .mixin as such:
+.mixin (dark; @color) {
+  color: darken(@color, 10%);
+}
+.mixin (light; @color) {
+  color: lighten(@color, 10%);
+}
+.mixin (@_; @color) {
+  display: block;
+}
+
+   Now, if we run:
+@switch: light;
+
+.class {
+  .mixin(@switch; #888);
+}
+
+   We will get the following CSS:
+.class {
+  color: #a2a2a2;
+  display: block;
+}
+
+   Where the color passed to .mixin was lightened. If the value of @switch
+   was dark, the result would be a darker color.
+
+   Here’s what happened:
+     * The first mixin definition didn’t match because it expected dark as
+       the first argument.
+     * The second mixin definition matched, because it expected light.
+     * The third mixin definition matched because it expected any value.
+
+   Only mixin definitions which matched were used. Variables match and
+   bind to any value. Anything other than a variable matches only with a
+   value equal to itself.
+
+   We can also match on arity, here’s an example:
+.mixin (@a) {
+  color: @a;
+}
+.mixin (@a; @b) {
+  color: fade(@a; @b);
+}
+
+   Now if we call .mixin with a single argument, we will get the output of
+   the first definition, but if we call it with two arguments, we will get
+   the second definition, namely @a faded to @b.
+
+Guards
+
+   Guards are useful when you want to match on expressions, as opposed to
+   simple values or arity. If you are familiar with functional
+   programming, you have probably encountered them already.
+
+   In trying to stay as close as possible to the declarative nature of
+   CSS, LESS has opted to implement conditional execution via guarded
+   mixins instead of if/else statements, in the vein of @media query
+   feature specifications.
+
+   Let’s start with an example:
+.mixin (@a) when (lightness(@a) >= 50%) {
+  background-color: black;
+}
+.mixin (@a) when (lightness(@a) < 50%) {
+  background-color: white;
+}
+.mixin (@a) {
+  color: @a;
+}
+
+   The key is the when keyword, which introduces a guard sequence (here
+   with only one guard). Now if we run the following code:
+.class1 { .mixin(#ddd) }
+.class2 { .mixin(#555) }
+
+   Here’s what we’ll get:
+.class1 {
+  background-color: black;
+  color: #ddd;
+}
+.class2 {
+  background-color: white;
+  color: #555;
+}
+
+   The full list of comparison operators usable in guards are: > >= = =<
+   <. Additionally, the keyword true is the only truthy value, making
+   these two mixins equivalent:
+.truth (@a) when (@a) { ... }
+.truth (@a) when (@a = true) { ... }
+
+   Any value other than the keyword true is falsy:
+.class {
+  .truth(40); // Will not match any of the above definitions.
+}
+
+   Guards can be separated with a comma ‘,’–if any of the guards evaluates
+   to true, it’s considered as a match:
+.mixin (@a) when (@a > 10), (@a < -10) { ... }
+
+   Note that you can also compare arguments with each other, or with
+   non-arguments:
+@media: mobile;
+
+.mixin (@a) when (@media = mobile) { ... }
+.mixin (@a) when (@media = desktop) { ... }
+
+.max (@a; @b) when (@a > @b) { width: @a }
+.max (@a; @b) when (@a < @b) { width: @b }
+
+   Lastly, if you want to match mixins based on value type, you can use
+   the is* functions:
+.mixin (@a; @b: 0) when (isnumber(@b)) { ... }
+.mixin (@a; @b: black) when (iscolor(@b)) { ... }
+
+   Here are the basic type checking functions:
+     * iscolor
+     * isnumber
+     * isstring
+     * iskeyword
+     * isurl
+
+   If you want to check if a value, in addition to being a number, is in a
+   specific unit, you may use one of:
+     * ispixel
+     * ispercentage
+     * isem
+     * isunit
+
+   Last but not least, you may use the and keyword to provide additional
+   conditions inside a guard:
+.mixin (@a) when (isnumber(@a)) and (@a > 0) { ... }
+
+   And the not keyword to negate conditions:
+.mixin (@b) when not (@b > 0) { ... }
+
+Nested rules
+
+   LESS gives you the ability to use nesting instead of, or in combination
+   with cascading. Lets say we have the following CSS:
+#header { color: black; }
+#header .navigation {
+  font-size: 12px;
+}
+#header .logo {
+  width: 300px;
+}
+#header .logo:hover {
+  text-decoration: none;
+}
+
+   In LESS, we can also write it this way:
+#header {
+  color: black;
+
+  .navigation {
+    font-size: 12px;
+  }
+  .logo {
+    width: 300px;
+    &:hover { text-decoration: none }
+  }
+}
+
+   Or this way:
+#header        { color: black;
+  .navigation  { font-size: 12px }
+  .logo        { width: 300px;
+    &:hover    { text-decoration: none }
+  }
+}
+
+   The resulting code is more concise, and mimics the structure of your
+   DOM tree.
+
+   Notice the & combinator - it’s used when you want a nested selector to
+   be concatenated to its parent selector, instead of acting as a
+   descendant. This is especially important for pseudo-classes like :hover
+   and :focus.
+
+   For example:
+.bordered {
+  &.float {
+    float: left;
+  }
+  .top {
+    margin: 5px;
+  }
+}
+
+   Will output
+.bordered.float {
+  float: left;
+}
+.bordered .top {
+  margin: 5px;
+}
+
+Nested Media Queries
+
+   Media queries can be nested in the same way as selectors e.g.
+.one {
+    @media (width: 400px) {
+        font-size: 1.2em;
+        @media print and color {
+            color: blue;
+        }
+    }
+}
+
+   Will output
+@media (width: 400px) {
+  .one {
+    font-size: 1.2em;
+  }
+}
+@media (width: 400px) and print and color {
+  .one {
+    color: blue;
+  }
+}
+
+Advanced Usage of &
+
+   The & symbol can be used in selectors in order to reverse the ordering
+   of the nesting and to multiply classes.
+
+   For example:
+.child, .sibling {
+    .parent & {
+        color: black;
+    }
+    & + & {
+        color: red;
+    }
+}
+
+   Will output
+.parent .child,
+.parent .sibling {
+    color: black;
+}
+.child + .child,
+.child + .sibling,
+.sibling + .child,
+.sibling + .sibling {
+    color: red;
+}
+
+   You can also use & in mixins in order to reference nesting that is
+   outside of your mixin.
+
+Operations
+
+   Any number, color or variable can be operated on. Operations should be
+   performed within parentheses. Here are a couple of examples:
+@base: 5%;
+@filler: (@base * 2);
+@other: (@base + @filler);
+
+color: (#888 / 4);
+background-color: (@base-color + #111);
+height: (100% / 2 + @filler);
+
+   The output is pretty much what you expect—LESS understands the
+   difference between colors and units. If a unit is used in an operation,
+   like in:
+@var: (1px + 5);
+
+   LESS will use that unit for the final output—6px in this case.
+
+   Extra parentheses are also authorized in operations:
+width: ((@var + 5) * 2);
+
+Functions
+
+   LESS provides a variety of functions which transform colors, manipulate
+   strings and do maths. They are documented fully in the function
+   reference.
+
+   Using them is pretty straightforward. The following example uses
+   percentage to convert 0.5 to 50%, increases the saturation of a base
+   color by 5% and then sets the background color to one that is lightened
+   by 25% and spun by 8 degrees:
+@base: #f04615;
+@width: 0.5;
+
+.class {
+  width: percentage(0.5); // returns `50%`
+  color: saturate(@base, 5%);
+  background-color: spin(lighten(@base, 25%), 8);
+}
+
+Namespaces
+
+   Sometimes, you may want to group your variables or mixins, for
+   organizational purposes, or just to offer some encapsulation. You can
+   do this pretty intuitively in LESS—say you want to bundle some mixins
+   and variables under #bundle, for later re-use, or for distributing:
+#bundle {
+  .button () {
+    display: block;
+    border: 1px solid black;
+    background-color: grey;
+    &:hover { background-color: white }
+  }
+  .tab { ... }
+  .citation { ... }
+}
+
+   Now if we want to mixin the .button class in our #header a, we can do:
+#header a {
+  color: orange;
+  #bundle > .button;
+}
+
+Scope
+
+   Scope in LESS is very similar to that of programming languages.
+   Variables and mixins are first looked up locally, and if they aren’t
+   found, the compiler will look in the parent scope, and so on.
+@var: red;
+
+#page {
+  @var: white;
+  #header {
+    color: @var; // white
+  }
+}
+
+#footer {
+  color: @var; // red
+}
+
+Comments
+
+   CSS-style comments are preserved by LESS:
+/* Hello, I'm a CSS-style comment */
+.class { color: black }
+
+   Single-line comments are also valid in LESS, but they are ‘silent’,
+   they don’t show up in the compiled CSS output:
+// Hi, I'm a silent comment, I won't show up in your CSS
+.class { color: white }
+
+Importing
+
+   You can import both CSS and LESS files. Only LESS files import
+   statements are processed, CSS file import statements are kept as they
+   are. If you want to import a CSS file, and don’t want LESS to process
+   it, just use the .css extension:
+@import "lib.css";
+
+   Compilation makes only one change to CSS file imports: top level CSS
+   file imports are moved on top of the sheet, right after @charset
+   declarations.
+
+   Input file with import statement:
+h1 { color: green; }
+@import "import/official-branding.css?urlParameter=23";
+
+   import statement has been moved on top:
+@import "import/official-branding.css?urlParameter=23";
+h1 { color: green; }
+
+   Content of imported LESS file is copied into importing style sheet and
+   compiled together with it. Importing and imported files share all
+   mixins, namespaces, variables and other structures.
+
+   In addition, if the import statement has media queries specified in it,
+   imported content is enclosed in the @Media declaration.
+
+   Imported “library.less”:
+@imported-color: red;
+h1 { color: green; }
+
+   Main file imports the above library.less file:
+@import "library.less" screen and (max-width: 400px); // import with media queri
+es
+@import "library.less"; // import without media queries
+
+.class {
+  color: @importedColor; // use imported variable
+}
+
+   Compiled output:
+// Corresponds to import with media queries
+@media screen and (max-width: 400px) {
+  h1 { color: green; }
+}
+
+// Corresponds to import without media queries
+h1 { color: green; }
+.class {
+  // Use imported variable
+  color: #ff0000;
+}
+
+   LESS file import statement does not have to be located on top of the
+   style sheet. It can be placed also inside rulesets, mixins or other
+   LESS structures.
+
+   Import into ruleset:
+pre {
+  @import "library.less";
+  color: @importedColor;
+}
+
+   both variable and ruleset defined in “library.less” have been copied
+   into the pre ruleset:
+pre {
+  color: #ff0000; // variable defined in library.less was available
+}
+pre h1 { // ruleset defined in library.less was nested into 'pre' ruleset
+  color: green;
+}
+
+   In v1.3.0 - v1.3.3 @import imports a file multiple times and you can
+   override this behaviour with @import-once.
+
+   In v1.4.0 @import-once has been removed and @import imports once by
+   default. This means that with the following
+
+   @import “file.less”; @import “file.less”;
+
+   The second file is ignored.
+
+   Any file that does not end with .css is considered less file and
+   processed. In addition, if the file name has no extension or
+   parameters, the “.less” suffix is added on the end. Both of these are
+   equivalent:
+@import "lib.less";
+@import "lib";
+
+   In v1.4.0 you can force a file to be interpreted as a particular type
+   by specifying an option, e.g.
+@import (css) "lib";
+
+   Will output..
+@import "lib";
+
+   and
+@import (less) "lib.css";
+
+   Will import the lib.css file and treat it as less. If you specify a
+   file is less and do not include an extension, none will be added.
+
+String interpolation
+
+   Variables can be embedded inside strings in a similar way to Ruby or
+   PHP, with the @{name} construct:
+@base-url: "http://assets.fnord.com";
+background-image: url("@{base-url}/images/bg.png");
+
+Escaping
+
+   Sometimes you might need to output a CSS value which is either not
+   valid CSS syntax, or uses proprietary syntax which LESS doesn’t
+   recognize.
+
+   To output such value, we place it inside a string prefixed with ~, for
+   example:
+.class {
+  filter: ~"ms:alwaysHasItsOwnSyntax.For.Stuff()";
+}
+
+   This is called an “escaped value”, which will result in:
+.class {
+  filter: ms:alwaysHasItsOwnSyntax.For.Stuff();
+}
+
+   Escaped values can use the interpolation exactly the same way as
+   strings:
+.class {
+  @what: "Stuff";
+  filter: ~"ms:alwaysHasItsOwnSyntax.For.@{what}()";
+}
+
+Selector Interpolation
+
+   If you want to use LESS variables inside selectors, you can do this by
+   referencing the variable using @{selector} as in string interpolation.
+   For example:
+@name: blocked;
+.@{name} {
+    color: black;
+}
+
+   will output
+.blocked {
+    color: black;
+}
+
+   Note: prior to LESS 1.3.1 a (~"@{name}") type of selector was
+   supported. Support for this will be removed in 1.4.0.
+
+Media Queries as Variables
+
+   If you want to use less variables inside media, you can do this using
+   the usual variable variable referencing syntax @variable. For example:
+@singleQuery: ~"(max-width: 500px)";
+@media screen, @singleQuery {
+  set {
+    padding: 3 3 3 3;
+  }
+}
+
+   compiles into:
+@media screen, (max-width: 500px) {
+  set {
+    padding: 3 3 3 3;
+  }
+}
+
+   The variable must contain whole media query. This would cause an error:
+   @media screen and @partial {.
+
+   In 1.4.0, without strict maths off, you can also include variables in
+   media values, e.g. @media screen, (max-width: @width) {.
+
+JavaScript evaluation
+
+   JavaScript expressions can be evaluated as values inside .less files.
+   We recommend using caution with this feature as the LESS will not be
+   compilable by ports and it makes the LESS harder to maintain. If
+   possible, try to think of a function that can be added to achieve the
+   same purpose and ask for it on github. We have plans to allow expanding
+   the default functions available. However, if you still want to use
+   JavaScript in .less, this is done by wrapping the expression with
+   back-ticks:
+@var: `"hello".toUpperCase() + '!'`;
+
+   Becomes:
+@var: "HELLO!";
+
+   Note that you may also use interpolation and escaping as with strings:
+@str: "hello";
+@var: ~`"@{str}".toUpperCase() + '!'`;
+
+   Becomes:
+@var: HELLO!;
+
+   It is also possible to access the JavaScript environment:
+@height: `document.body.clientHeight`;
+
+   If you want to parse a JavaScript string as a hex color, you may use
+   the color function:
+@color: color(`window.colors.baseColor`);
+@darkcolor: darken(@color, 10%);
+
+                               Function Reference
+
+Index
+
+escape(@string);               // URL encodes a string
+e(@string);                    // escape string content
+%(@string, values...);         // formats a string
+
+unit(@dimension, [@unit: ""]); // remove or change the unit of a dimension
+color(@string);                // parses a string to a color
+data-uri([mimetype,] url);       // * inlines a resource and falls back to url()
+
+ceil(@number);                 // rounds up to an integer
+floor(@number);                // rounds down to an integer
+percentage(@number);           // converts to a %, e.g. 0.5 -> 50%
+round(number, [places: 0]);    // rounds a number to a number of places
+sqrt(number);                  // * calculates square root of a number
+abs(number);                   // * absolute value of a number
+sin(number);                   // * sine function
+asin(number);                  // * arcsine - inverse of sine function
+cos(number);                   // * cosine function
+acos(number);                  // * arccosine - inverse of cosine function
+tan(number);                   // * tangent function
+atan(number);                  // * arctangent - inverse of tangent function
+pi();                          // * returns pi
+pow(@base, @exponent);     // * first argument raised to the power of the second
+ argument
+mod(number, number);       // * first argument modulus second argument
+
+convert(number, units);    // * converts between number types
+unit(number, units);       // *changes number units without converting it
+color(string);             // converts string or escaped value into color
+
+rgb(@r, @g, @b);                             // converts to a color
+rgba(@r, @g, @b, @a);                        // converts to a color
+argb(@color);                                // creates a #AARRGGBB
+hsl(@hue, @saturation, @lightness);          // creates a color
+hsla(@hue, @saturation, @lightness, @alpha); // creates a color
+hsv(@hue, @saturation, @value);              // creates a color
+hsva(@hue, @saturation, @value, @alpha);     // creates a color
+
+hue(@color);           // returns the `hue` channel of @color in the HSL space
+saturation(@color);    // returns the `saturation` channel of @color in the HSL
+space
+lightness(@color);     // returns the 'lightness' channel of @color in the HSL s
+pace
+hsvhue(@color);        // * returns the `hue` channel of @color in the HSV space
+hsvsaturation(@color); // * returns the `saturation` channel of @color in the HS
+V space
+hsvvalue(@color);      // * returns the 'value' channel of @color in the HSV spa
+ce
+red(@color);           // returns the 'red' channel of @color
+green(@color);         // returns the 'green' channel of @color
+blue(@color);          // returns the 'blue' channel of @color
+alpha(@color);         // returns the 'alpha' channel of @color
+luma(@color);          // returns the 'luma' value (perceptual brightness) of @c
+olor
+
+saturate(@color, 10%);                  // return a color 10% points *more* satu
+rated
+desaturate(@color, 10%);                // return a color 10% points *less* satu
+rated
+lighten(@color, 10%);                   // return a color 10% points *lighter*
+darken(@color, 10%);                    // return a color 10% points *darker*
+fadein(@color, 10%);                    // return a color 10% points *less* tran
+sparent
+fadeout(@color, 10%);                   // return a color 10% points *more* tran
+sparent
+fade(@color, 50%);                      // return @color with 50% transparency
+spin(@color, 10);                       // return a color with a 10 degree large
+r in hue
+mix(@color1, @color2, [@weight: 50%]);  // return a mix of @color1 and @color2
+greyscale(@color);                      // returns a grey, 100% desaturated colo
+r
+contrast(@color1, [@darkcolor: black], [@lightcolor: white], [@threshold: 43%]);
+
+                                        // return @darkcolor if @color1 is > 43%
+ luma
+                                        // otherwise return @lightcolor, see not
+es
+
+multiply(@color1, @color2);
+screen(@color1, @color2);
+overlay(@color1, @color2);
+softlight(@color1, @color2);
+hardlight(@color1, @color2);
+difference(@color1, @color2);
+exclusion(@color1, @color2);
+average(@color1, @color2);
+negation(@color1, @color2);
+
+iscolor(@colorOrAnything);              // returns true if passed a color, inclu
+ding keyword colors
+isnumber(@numberOrAnything);            // returns true if a number of any unit
+isstring(@stringOrAnything);            // returns true if it is passed a string
+iskeyword(@keywordOrAnything);          // returns true if it is passed keyword
+isurl(@urlOrAnything);                  // returns true if it is a string and a
+url
+ispixel(@pixelOrAnything);              // returns true if it is a number and a
+px
+ispercentage(@percentageOrAnything);    // returns true if it is a number and a
+%
+isem(@emOrAnything);                    // returns true if it is a number and an
+ em
+isunit(@numberOrAnything, "rem");       // * returns if a parameter is a number
+and is in a particular unit
+
+// * These functions are only available in the 1.4.0 beta
+
+String functions
+
+escape
+
+   Applies [28]URL-encoding to special characters found in the input
+   string.
+     * Following characters are exceptions and not encoded: ,, /, ?, @, &,
+       +, ', ~, ! and $.
+     * Most common encoded characters are: <space>, #, ^, (, ), {, }, |,
+       :, >, <, ;, ], [ and =.
+
+   Parameters:
+     * string: A string to escape
+
+   Returns: escaped string content without quotes.
+
+   Example:
+escape('a=1')
+
+   Output:
+a%3D1
+
+   Note: Function behavior if a parameter is non-string parameters is not
+   defined. Current implementation returns undefined on color and
+   unchanged input on any other kind of argument. This behaviour should
+   not be relied on and can change in the future.
+
+e
+
+   CSS escaping similar to ~"value" syntax. It expects string as a
+   parameter and return its content as is, but without quotes. It can be
+   used to output CSS value which is either not valid CSS syntax, or uses
+   proprietary syntax which LESS doesnt recognize.
+
+   Parameters:
+     * string: A string to escape
+
+   Returns: string content without quotes.
+
+   Example:
+filter: ~"ms:alwaysHasItsOwnSyntax.For.Stuff()";
+
+   Output:
+filter: ms:alwaysHasItsOwnSyntax.For.Stuff();
+
+   Note: The function accepts also ~"" escaped values and numbers as
+   parameters. Anything else returns an error.
+
+% format
+
+   The function %("format", arguments ...) formats a string. The first
+   argument is string with placeholders. All placeholders start with
+   percentage symbol % followed by letter s,S,d,D,a, or A. Remaining
+   arguments contain expressions to replace placeholders. If you need to
+   print the percentage symbol, escape it by another percentage %%.
+
+   Use uppercase placeholders if you need to escape special characters
+   into their utf-8 escape codes. The function escapes all special
+   characters except ()'~!. Space is encoded as %20. Lowercase
+   placeholders leave special characters as they are.
+
+   Placeholders: * d, D, a, A - can be replaced by any kind of argument
+   (color, number, escaped value, expression, …). If you use them in
+   combination with string, the whole string will be used - including its
+   quotes. However, the quotes are placed into the string as they are,
+   they are not escaped by “/” nor anything similar. * s, S - can be
+   replaced by any kind of argument except color. If you use them in
+   combination with string, only the string value will be used - string
+   quotes are omitted.
+
+   Parameters:
+     * string: format string with placeholders,
+     * anything* : values to replace placeholders.
+
+   Returns: formatted string.
+
+   Example:
+format-a-d: %("repetitions: %a file: %d", 1 + 2, "directory/file.less");
+format-a-d-upper: %('repetitions: %A file: %D', 1 + 2, "directory/file.less");
+format-s: %("repetitions: %s file: %s", 1 + 2, "directory/file.less");
+format-s-upper: %('repetitions: %S file: %S', 1 + 2, "directory/file.less");
+
+   Output:
+format-a-d: "repetitions: 3 file: "directory/file.less"";
+format-a-d-upper: "repetitions: 3 file: %22directory%2Ffile.less%22";
+format-s: "repetitions: 3 file: directory/file.less";
+format-s-upper: "repetitions: 3 file: directory%2Ffile.less";
+
+Misc functions
+
+color
+
+   Parses a color, so a string representing a color becomes a color.
+
+   Parameters:
+     * string: A string of the color
+
+   Example:
+color("#aaa");
+
+   Output:
+#aaa
+
+unit
+
+   Remove or change the unit of a dimension
+
+   Parameters:
+     * dimension: A number, with or without a dimension
+     * unit: Optional: the unit to change to, or if omitted it will remove
+       the unit
+
+   Example:
+unit(5, px)
+
+   Output:
+5px
+
+   Example:
+unit(5em)
+
+   Output:
+5
+
+data-uri
+
+   Inlines a resource and falls back to url() if the ieCompat option is on
+   and the resource is too large, or if you use the function in the
+   browser. If the mime is not given then node uses the mime package to
+   determine the correct mime type.
+
+   Parameters:
+     * mimetype: A mime type string. Optional.
+     * url: The URL of the file to inline.
+
+   Example:
+data-uri('../data/image.jpg');
+
+   Output:
+url('data:image/jpeg;base64,bm90IGFjdHVhbGx5IGEganBlZyBmaWxlCg==');
+
+   Output in the browser:
+url('../data/image.jpg');
+
+   Example:
+data-uri('image/jpeg;base64', '../data/image.jpg');
+
+   Output:
+url('data:image/jpeg;base64,bm90IGFjdHVhbGx5IGEganBlZyBmaWxlCg==');
+
+Math functions
+
+ceil
+
+   Rounds up to the next highest integer.
+
+   Parameters:
+     * number: A floating point number.
+
+   Returns: integer
+
+   Example:
+ceil(2.4)
+
+   Output:
+3
+
+floor
+
+   Rounds down to the next lowest integer.
+
+   Parameters:
+     * number: A floating point number.
+
+   Returns: integer
+
+   Example:
+floor(2.6)
+
+   Output:
+2
+
+percentage
+
+   Converts a floating point number into a percentage string.
+
+   Parameters:
+     * number: A floating point number.
+
+   Returns: string
+
+   Example:
+percentage(0.5)
+
+   Output:
+50%
+
+round
+
+   Applies rounding.
+
+   Parameters:
+     * number: A floating point number.
+     * decimalPlaces: Optional: The number of decimal places to round to.
+       Defaults to 0.
+
+   Returns: number
+
+   Example:
+round(1.67)
+
+   Output:
+2
+
+   Example:
+round(1.67, 1)
+
+   Output:
+1.7
+
+sqrt
+
+   Calculates square root of a number. Keeps units as they are.
+
+   Parameters:
+     * number: A floating point number.
+
+   Returns: number
+
+   Example:
+sqrt(25cm)
+
+   Output:
+5cm
+
+   Example:
+sqrt(18.6%)
+
+   Output:
+4.312771730569565%;
+
+abs
+
+   Calculates absolute value of a number. Keeps units as they are.
+
+   Parameters:
+     * number: A floating point number.
+
+   Returns: number
+
+   Example:
+abs(25cm)
+
+   Output:
+25cm
+
+   Example:
+abs(-18.6%)
+
+   Output:
+18.6%;
+
+sin
+
+   Calculates sine function. Assumes radians on numbers without units.
+
+   Parameters:
+     * number: A floating point number.
+
+   Returns: number
+
+   Example:
+sin(1); // sine of 1 radian
+sin(1deg); // sine of 1 degree
+sin(1grad); // sine of 1 gradian
+
+   Output:
+0.8414709848078965; // sine of 1 radian
+0.01745240643728351; // sine of 1 degree
+0.015707317311820675; // sine of 1 gradian
+
+asin
+
+   Calculates arcsine (inverse of sine) function. Returns number in
+   radians e.g. a number between -π/2 and π/2.
+
+   Parameters:
+     * number: A floating point number from [-1, 1] interval.
+
+   Returns: number
+
+   Example:
+asin(-0.8414709848078965)
+asin(0)
+asin(2)
+
+   Output:
+-1rad
+0rad
+NaNrad
+
+cos
+
+   Calculates cosine function. Assumes radians on numbers without units.
+
+   Parameters:
+     * number: A floating point number.
+
+   Returns: number
+
+   Example:
+cos(1) // cosine of 1 radian
+cos(1deg) // cosine of 1 degree
+cos(1grad) // cosine of 1 gradian
+
+   Output:
+0.5403023058681398 // cosine of 1 radian
+0.9998476951563913 // cosine of 1 degree
+0.9998766324816606 // cosine of 1 gradian
+
+acos
+
+   Calculates arccosine (inverse of cosine) function. Returns number in
+   radians e.g. a number between 0 and π.
+
+   Parameters:
+     * number: A floating point number from [-1, 1] interval.
+
+   Returns: number
+
+   Example:
+acos(0.5403023058681398)
+acos(1)
+acos(2)
+
+   Output:
+1rad
+0rad
+NaNrad
+
+tan
+
+   Calculates tangent function. Assumes radians on numbers without units.
+
+   Parameters:
+     * number: A floating point number.
+
+   Returns: number
+
+   Example:
+tan(1) // tangent of 1 radian
+tan(1deg) // tangent of 1 degree
+tan(1grad) // tangent of 1 gradian
+
+   Output:
+1.5574077246549023 // tangent of 1 radian
+0.017455064928217585 // tangent of 1 degree
+0.015709255323664916 // tangent of 1 gradian
+
+atan
+
+   Calculates arctangent (inverse of tangent) function. Returns number in
+   radians e.g. a number between -π/2 and π/2.
+
+   Parameters:
+     * number: A floating point number.
+
+   Returns: number
+
+   Example:
+atan(-1.5574077246549023)
+atan(0)
+round(atan(22), 6) // arctangent of 22 rounded to 6 decimal places
+
+   Output:
+-1rad
+0rad
+1.525373rad;
+
+pi
+
+   Returns π (pi);
+
+   Parameters:
+     * none
+
+   Returns: number
+
+   Example:
+pi()
+
+   Output:
+3.141592653589793
+
+pow
+
+   Returns the value of the first argument raised to the power of the
+   second argument. Returned value has the same dimension as the first
+   parameter and the dimension of the second parameter is ignored.
+
+   Parameters:
+     * number: base -a floating point number.
+     * number: exponent - a floating point number.
+
+   Returns: number
+
+   Example:
+pow(0cm, 0px)
+pow(25, -2)
+pow(25, 0.5)
+pow(-25, 0.5)
+pow(-25%, -0.5)
+
+   Output:
+1cm
+0.0016
+5
+NaN
+NaN%
+
+mod
+
+   Returns the value of the first argument modulus second argument.
+   Returned value has the same dimension as the first parameter, the
+   dimension of the second parameter is ignored. The function is able to
+   handle also negative and floating point numbers.
+
+   Parameters:
+     * number: a floating point number.
+     * number: a floating point number.
+
+   Returns: number
+
+   Example:
+mod(0cm, 0px)
+mod(11cm, 6px);
+mod(-26%, -5);
+
+   Output:
+NaNcm;
+5cm
+-1%;
+
+convert
+
+   Converts numbers from one type into another. First argument contains
+   number with units and second argument contains units. If both units are
+   compatible, the number is converted. If they are not compatible,
+   function returns first argument without modifying it.
+
+   Compatible unit groups: * lengths: m, cm, mm, in, pt and pc, * time: s
+   and ms, * angle: rad, deg, grad and turn.
+
+   Parameters:
+     * number: a floating point number with units.
+     * identifier, string or escaped value: units
+
+   Returns: number
+
+   Example:
+convert(9s, "ms")
+convert(14cm, mm)
+convert(8, mm) // incompatible unit types
+
+   Output:
+9000ms
+140mm
+8
+
+Unit
+
+   Returns number with different units. Only units are changed, number
+   itself is not converted. The function assumes that second parameter
+   contains valid unit type.
+
+   Parameters:
+     * number: a floating point number with units.
+     * identifier or escaped value: units.
+
+   Returns: number
+
+   Example:
+unit(9s, ~"ms")
+unit(-9, m)
+
+   Output:
+9ms
+-9m
+
+Color
+
+   Converts a string or escaped value into a color. The input must contain
+   color in hexadecimal or shorthand representation.
+
+   Parameters:
+     * identifier or escaped value with valid color in hexadecimal or
+       shorthand representation.
+
+   Returns: color
+
+   Example:
+color("#445566")
+color(~"#123")
+
+   Output:
+#445566
+#112233
+
+Color functions
+
+Color definition
+
+rgb
+
+   Creates an opaque color object from decimal red, green and blue (RGB)
+   values. Literal color values in standard HTML/CSS formats may also be
+   used to define colors, for example #ff0000.
+
+   Parameters:
+     * red: An integer 0-255 or percentage 0-100%.
+     * green: An integer 0-255 or percentage 0-100%.
+     * blue: An integer 0-255 or percentage 0-100%.
+
+   Returns: color
+
+   Example:
+rgb(90, 129, 32)
+
+   Output:
+#5a8120
+
+rgba
+
+   Creates a transparent color object from decimal red, green, blue and
+   alpha (RGBA) values.
+
+   Parameters:
+     * red: An integer 0-255 or percentage 0-100%.
+     * green: An integer 0-255 or percentage 0-100%.
+     * blue: An integer 0-255 or percentage 0-100%.
+     * alpha: An number 0-1 or percentage 0-100%.
+
+   Returns: color
+
+   Example:
+rgba(90, 129, 32, 0.5)
+
+   Output:
+rgba(90, 129, 32, 0.5)
+
+argb
+
+   Creates a hex representation of a color in #AARRGGBB format (NOT
+   #RRGGBBAA!). This format is used in Internet Explorer, and .NET and
+   Android development.
+
+   Parameters:
+     * color: A color object.
+
+   Returns: string
+
+   Example:
+argb(rgba(90, 23, 148, 0.5));
+
+   Output:
+#805a1794
+
+hsl
+
+   Creates an opaque color object from hue, saturation and lightness (HSL)
+   values.
+
+   Parameters:
+     * hue: An integer 0-360 representing degrees.
+     * saturation: A percentage 0-100% or number 0-1.
+     * lightness: A percentage 0-100% or number 0-1.
+
+   Returns: color
+
+   Example:
+hsl(90, 100%, 50%)
+
+   Output:
+#80ff00
+
+   This is useful if you want to create a new color based on another
+   color’s channel, for example:
+@new: hsl(hue(@old), 45%, 90%);
+
+   @new will have @old’s hue, and its own saturation and lightness.
+
+hsla
+
+   Creates a transparent color object from hue, saturation, lightness and
+   alpha (HSLA) values.
+
+   Parameters:
+     * hue: An integer 0-360 representing degrees.
+     * saturation: A percentage 0-100% or number 0-1.
+     * lightness: A percentage 0-100% or number 0-1.
+     * alpha: A percentage 0-100% or number 0-1.
+
+   Returns: color
+
+   Example:
+hsl(90, 100%, 50%, 0.5)
+
+   Output:
+rgba(128, 255, 0, 0.5)
+
+hsv
+
+   Creates an opaque color object from hue, saturation and value (HSV)
+   values. Note that this is not the same as hsl, and is a color space
+   available in Photoshop.
+
+   Parameters:
+     * hue: An integer 0-360 representing degrees.
+     * saturation: A percentage 0-100% or number 0-1.
+     * value: A percentage 0-100% or number 0-1.
+
+   Returns: color
+
+   Example:
+hsv(90, 100%, 50%)
+
+   Output:
+#408000
+
+hsva
+
+   Creates a transparent color object from hue, saturation, value and
+   alpha (HSVA) values. Note that this is not the same as hsla, and is a
+   color space available in Photoshop.
+
+   Parameters:
+     * hue: An integer 0-360 representing degrees.
+     * saturation: A percentage 0-100% or number 0-1.
+     * value: A percentage 0-100% or number 0-1.
+     * alpha: A percentage 0-100% or number 0-1.
+
+   Returns: color
+
+   Example:
+hsva(90, 100%, 50%, 0.5)
+
+   Output:
+rgba(64, 128, 0, 0.5)
+
+Color channel information
+
+hue
+
+   Extracts the hue channel of a color object.
+
+   Parameters:
+     * color: A color object.
+
+   Returns: integer 0-360
+
+   Example:
+hue(hsl(90, 100%, 50%))
+
+   Output:
+90
+
+saturation
+
+   Extracts the saturation channel of a color object.
+
+   Parameters:
+     * color: A color object.
+
+   Returns: percentage 0-100
+
+   Example:
+saturation(hsl(90, 100%, 50%))
+
+   Output:
+100%
+
+lightness
+
+   Extracts the lightness channel of a color object.
+
+   Parameters:
+     * color: A color object.
+
+   Returns: percentage 0-100
+
+   Example:
+lightness(hsl(90, 100%, 50%))
+
+   Output:
+50%
+
+hsvhue
+
+   Extracts the hue channel of a color object in the HSV color space.
+
+   Parameters:
+     * color: A color object.
+
+   Returns: integer 0-360
+
+   Example:
+hsvhue(hsv(90, 100%, 50%))
+
+   Output:
+90
+
+hsvsaturation
+
+   Extracts the saturation channel of a color object in the HSV color
+   space.
+
+   Parameters:
+     * color: A color object.
+
+   Returns: percentage 0-100
+
+   Example:
+hsvsaturation(hsv(90, 100%, 50%))
+
+   Output:
+100%
+
+hsvvalue
+
+   Extracts the value channel of a color object in the HSV color space.
+
+   Parameters:
+     * color: A color object.
+
+   Returns: percentage 0-100
+
+   Example:
+hsvvalue(hsv(90, 100%, 50%))
+
+   Output:
+50%
+
+red
+
+   Extracts the red channel of a color object.
+
+   Parameters:
+     * color: A color object.
+
+   Returns: integer 0-255
+
+   Example:
+red(rgb(10, 20, 30))
+
+   Output:
+10
+
+green
+
+   Extracts the green channel of a color object.
+
+   Parameters:
+     * color: A color object.
+
+   Returns: integer 0-255
+
+   Example:
+green(rgb(10, 20, 30))
+
+   Output:
+20
+
+blue
+
+   Extracts the blue channel of a color object.
+
+   Parameters:
+     * color: A color object.
+
+   Returns: integer 0-255
+
+   Example:
+blue(rgb(10, 20, 30))
+
+   Output:
+30
+
+alpha
+
+   Extracts the alpha channel of a color object.
+
+   Parameters:
+     * color: A color object.
+
+   Returns: float 0-1
+
+   Example:
+alpha(rgba(10, 20, 30, 0.5))
+
+   Output:
+0.5
+
+luma
+
+   Calculates the [29]luma) (perceptual brightness) of a color object.
+   Uses SMPTE C / Rec. 709 coefficients, as recommended in [30]WCAG 2.0.
+   This calculation is also used in the contrast function.
+
+   Parameters:
+     * color: A color object.
+
+   Returns: percentage 0-100%
+
+   Example:
+luma(rgb(100, 200, 30))
+
+   Output:
+65%
+
+Color operations
+
+   Color operations generally take parameters in the same units as the
+   values they are changing, and percentage are handled as absolutes, so
+   increasing a 10% value by 10% results in 20%, not 11%, and values are
+   clamped to their allowed ranges; they do not wrap around. Where return
+   values are shown, we’ve also shown formats that make it clear what each
+   function has done, in addition to the hex versions that you will
+   usually be be working with.
+
+saturate
+
+   Increase the saturation of a color by an absolute amount.
+
+   Parameters:
+     * color: A color object.
+     * amount: A percentage 0-100%.
+
+   Returns: color
+
+   Example:
+saturate(hsl(90, 90%, 50%), 10%)
+
+   Output:
+#80ff00 // hsl(90, 100%, 50%)
+
+desaturate
+
+   Decrease the saturation of a color by an absolute amount.
+
+   Parameters:
+     * color: A color object.
+     * amount: A percentage 0-100%.
+
+   Returns: color
+
+   Example:
+desaturate(hsl(90, 90%, 50%), 10%)
+
+   Output:
+#80e51a // hsl(90, 80%, 50%)
+
+lighten
+
+   Increase the lightness of a color by an absolute amount.
+
+   Parameters:
+     * color: A color object.
+     * amount: A percentage 0-100%.
+
+   Returns: color
+
+   Example:
+lighten(hsl(90, 90%, 50%), 10%)
+
+   Output:
+#99f53d // hsl(90, 90%, 60%)
+
+darken
+
+   Decrease the lightness of a color by an absolute amount.
+
+   Parameters:
+     * color: A color object.
+     * amount: A percentage 0-100%.
+
+   Returns: color
+
+   Example:
+darken(hsl(90, 90%, 50%), 10%)
+
+   Output:
+#66c20a // hsl(90, 90%, 40%)
+
+fadein
+
+   Decrease the transparency (or increase the opacity) of a color, making
+   it more opaque. Has no effect on opaque colours. To fade in the other
+   direction use fadeout.
+
+   Parameters:
+     * color: A color object.
+     * amount: A percentage 0-100%.
+
+   Returns: color
+
+   Example:
+fadein(hsla(90, 90%, 50%, 0.5), 10%)
+
+   Output:
+rgba(128, 242, 13, 0.6) // hsla(90, 90%, 50%, 0.6)
+
+fadeout
+
+   Increase the transparency (or decrease the opacity) of a color, making
+   it less opaque. To fade in the other direction use fadein.
+
+   Parameters:
+     * color: A color object.
+     * amount: A percentage 0-100%.
+
+   Returns: color
+
+   Example:
+fadeout(hsla(90, 90%, 50%, 0.5), 10%)
+
+   Output:
+rgba(128, 242, 13, 0.4) // hsla(90, 90%, 50%, 0.6)
+
+fade
+
+   Set the absolute transparency of a color. Can be applied to colors
+   whether they already have an opacity value or not.
+
+   Parameters:
+     * color: A color object.
+     * amount: A percentage 0-100%.
+
+   Returns: color
+
+   Example:
+fade(hsl(90, 90%, 50%), 10%)
+
+   Output:
+rgba(128, 242, 13, 0.1) //hsla(90, 90%, 50%, 0.1)
+
+spin
+
+   Rotate the hue angle of a color in either direction. While the angle
+   range is 0-360, it applies a mod 360 operation, so you can pass in much
+   larger (or negative) values and they will wrap around e.g. angles of
+   360 and 720 will produce the same result. Note that colours are passed
+   through an RGB conversion, which doesn’t retain hue value for greys
+   (because hue has no meaning when there is no saturation), so make sure
+   you apply functions in a way that preserves hue, for example don’t do
+   this:
+@c: saturate(spin(#aaaaaa, 10), 10%);
+
+   Do this instead:
+@c: spin(saturate(#aaaaaa, 10%), 10);
+
+   Colors are always returned as RGB values, so applying spin to a grey
+   value will do nothing.
+
+   Parameters:
+     * color: A color object.
+     * angle: A number of degrees to rotate (+ or -).
+
+   Returns: color
+
+   Example:
+spin(hsl(10, 90%, 50%), 20)
+spin(hsl(10, 90%, 50%), -20)
+
+   Output:
+#f27f0d // hsl(30, 90%, 50%)
+#f20d33 // hsl(350, 90%, 50%)
+
+mix
+
+   Mix two colors together in variable proportion. Opacity is included in
+   the calculations.
+
+   Parameters:
+     * color1: A color object.
+     * color1: A color object.
+     * weight: Optional, a percentage balance point between the two
+       colors, defaults to 50%.
+
+   Returns: color
+
+   Example:
+mix(#ff0000, #0000ff, 50%)
+mix(rgba(100,0,0,1.0), rgba(0,100,0,0.5), 50%)
+
+   Output:
+#800080
+rgba(75, 25, 0, 0.75)
+
+greyscale
+
+   Remove all saturation from a color; the same as calling
+   desaturate(@color, 100%). Because the saturation is not affected by
+   hue, the resulting color mapping may be somewhat dull or muddy; luma
+   may provide a better result as it extracts perceptual rather than
+   linear brightness, for example greyscale('#0000ff') will return the
+   same value as greyscale('#00ff00'), though they appear quite different
+   in brightness to the human eye.
+
+   Parameters:
+     * color: A color object.
+
+   Returns: color
+
+   Example:
+greyscale(hsl(90, 90%, 50%))
+
+   Output:
+#808080 // hsl(90, 0%, 50%)
+
+contrast
+
+   Choose which of two colors provides the greatest contrast with another.
+   This is useful for ensuring that a color is readable against a
+   background, which is also useful for accessibility compliance. This
+   function works the same way as the [31]contrast function in Compass for
+   SASS. In accordance with [32]WCAG 2.0, colors are compared using their
+   luma value, not their lightness.
+
+   The light and dark parameters can be supplied in either order - the
+   function will calculate their luma values and assign light and dark
+   appropriately.
+
+   Parameters:
+     * color: A color object to compare against.
+     * dark: optional - A designated dark color (defaults to black).
+     * light: optional - A designated light color (defaults to white).
+     * threshold: optional - A percentage 0-100% specifying where the
+       transition from “dark” to “light” is (defaults to 43%). This is
+       used to bias the contrast one way or another, for example to allow
+       you to decide whether a 50% grey background should result in black
+       or white text. You would generally set this lower for ‘lighter’
+       palettes, higher for ‘darker’ ones. Defaults to 43%.
+
+   Returns: color
+
+   Example:
+contrast(#aaaaaa)
+contrast(#222222, #101010)
+contrast(#222222, #101010, #dddddd)
+contrast(hsl(90, 100%, 50%),#000000,#ffffff,40%);
+contrast(hsl(90, 100%, 50%),#000000,#ffffff,60%);
+
+   Output:
+#000000 // black
+#ffffff // white
+#dddddd
+#000000 // black
+#ffffff // white
+
+Color blending
+
+   These operations are similar as the blend modes found in image editors
+   like Photoshop, Firework or GIMP, so you can use them to make your CSS
+   colors match your images.
+
+multiply
+
+   Multiply two colors. For each two colors their RGB channel are
+   multiplied then divided by 255. The result is a darker color.
+
+   Parameters:
+     * color1: A color object to multiply against.
+     * color2: A color object to multiply against.
+
+   Returns: color
+
+   Examples:
+multiply(#ff6600, #000000);
+
+   Color 1 Color 2 Color 3
+multiply(#ff6600, #333333);
+
+   Color 1 Color 2 Color 3
+multiply(#ff6600, #666666);
+
+   Color 1 Color 2 Color 3
+multiply(#ff6600, #999999);
+
+   Color 1 Color 2 Color 3
+multiply(#ff6600, #cccccc);
+
+   Color 1 Color 2 Color 3
+multiply(#ff6600, #ffffff);
+
+   Color 1 Color 2 Color 3
+multiply(#ff6600, #ff0000);
+
+   Color 1 Color 2 Color 3
+multiply(#ff6600, #00ff00);
+
+   Color 1 Color 2 Color 3
+multiply(#ff6600, #0000ff);
+
+   Color 1 Color 2 Color 3
+
+screen
+
+   Do the opposite effect from multiply. The result is a brighter color.
+
+   Parameters:
+     * color1: A color object to screen against.
+     * color2: A color object to screen against.
+
+   Returns: color
+
+   Example:
+screen(#ff6600, #000000);
+
+   Color 1 Color 2 Color 3
+screen(#ff6600, #333333);
+
+   Color 1 Color 2 Color 3
+screen(#ff6600, #666666);
+
+   Color 1 Color 2 Color 3
+screen(#ff6600, #999999);
+
+   Color 1 Color 2 Color 3
+screen(#ff6600, #cccccc);
+
+   Color 1 Color 2 Color 3
+screen(#ff6600, #ffffff);
+
+   Color 1 Color 2 Color 3
+screen(#ff6600, #ff0000);
+
+   Color 1 Color 2 Color 3
+screen(#ff6600, #00ff00);
+
+   Color 1 Color 2 Color 3
+screen(#ff6600, #0000ff);
+
+   Color 1 Color 2 Color 3
+
+overlay
+
+   Combines the effect from both multiply and screen. Conditionally make
+   light channels lighter and dark channels darker. Note: The results of
+   the conditions are determined by the first color parameter.
+
+   Parameters:
+     * color1: A color object to overlay another. Also it is the
+       determinant color to make the result lighter or darker.
+     * color2: A color object to be overlayed.
+
+   Returns: color
+
+   Example:
+overlay(#ff6600, #000000);
+
+   Color 1 Color 2 Color 3
+overlay(#ff6600, #333333);
+
+   Color 1 Color 2 Color 3
+overlay(#ff6600, #666666);
+
+   Color 1 Color 2 Color 3
+overlay(#ff6600, #999999);
+
+   Color 1 Color 2 Color 3
+overlay(#ff6600, #cccccc);
+
+   Color 1 Color 2 Color 3
+overlay(#ff6600, #ffffff);
+
+   Color 1 Color 2 Color 3
+overlay(#ff6600, #ff0000);
+
+   Color 1 Color 2 Color 3
+overlay(#ff6600, #00ff00);
+
+   Color 1 Color 2 Color 3
+overlay(#ff6600, #0000ff);
+
+   Color 1 Color 2 Color 3
+
+softlight
+
+   Similar to overlay but avoid pure black resulting in pure black, and
+   pure white resulting in pure white.
+
+   Parameters:
+     * color1: A color object to soft light another.
+     * color2: A color object to be soft lighten.
+
+   Returns: color
+
+   Example:
+softlight(#ff6600, #000000);
+
+   Color 1 Color 2 Color 3
+softlight(#ff6600, #333333);
+
+   Color 1 Color 2 Color 3
+softlight(#ff6600, #666666);
+
+   Color 1 Color 2 Color 3
+softlight(#ff6600, #999999);
+
+   Color 1 Color 2 Color 3
+softlight(#ff6600, #cccccc);
+
+   Color 1 Color 2 Color 3
+softlight(#ff6600, #ffffff);
+
+   Color 1 Color 2 Color 3
+softlight(#ff6600, #ff0000);
+
+   Color 1 Color 2 Color 3
+softlight(#ff6600, #00ff00);
+
+   Color 1 Color 2 Color 3
+softlight(#ff6600, #0000ff);
+
+   Color 1 Color 2 Color 3
+
+hardlight
+
+   Similar to overlay but use the second color to detect light and dark
+   channels instead of using the first color.
+
+   Parameters:
+     * color1: A color object to overlay another.
+     * color2: A color object to be overlayed. Also it is the determinant
+       color to make the result lighter or darker.
+
+   Returns: color
+
+   Example:
+hardlight(#ff6600, #000000);
+
+   Color 1 Color 2 Color 3
+hardlight(#ff6600, #333333);
+
+   Color 1 Color 2 Color 3
+hardlight(#ff6600, #666666);
+
+   Color 1 Color 2 Color 3
+hardlight(#ff6600, #999999);
+
+   Color 1 Color 2 Color 3
+hardlight(#ff6600, #cccccc);
+
+   Color 1 Color 2 Color 3
+hardlight(#ff6600, #ffffff);
+
+   Color 1 Color 2 Color 3
+hardlight(#ff6600, #ff0000);
+
+   Color 1 Color 2 Color 3
+hardlight(#ff6600, #00ff00);
+
+   Color 1 Color 2 Color 3
+hardlight(#ff6600, #0000ff);
+
+   Color 1 Color 2 Color 3
+
+difference
+
+   Substracts the second color from the first color. The operation is made
+   per RGB channels. The result is a darker color.
+
+   Parameters:
+     * color1: A color object to act as the minuend.
+     * color2: A color object to act as the subtrahend.
+
+   Returns: color
+
+   Example:
+difference(#ff6600, #000000);
+
+   Color 1 Color 2 Color 3
+difference(#ff6600, #333333);
+
+   Color 1 Color 2 Color 3
+difference(#ff6600, #666666);
+
+   Color 1 Color 2 Color 3
+difference(#ff6600, #999999);
+
+   Color 1 Color 2 Color 3
+difference(#ff6600, #cccccc);
+
+   Color 1 Color 2 Color 3
+difference(#ff6600, #ffffff);
+
+   Color 1 Color 2 Color 3
+difference(#ff6600, #ff0000);
+
+   Color 1 Color 2 Color 3
+difference(#ff6600, #00ff00);
+
+   Color 1 Color 2 Color 3
+difference(#ff6600, #0000ff);
+
+   Color 1 Color 2 Color 3
+
+exclusion
+
+   Similar effect to difference with lower contrast.
+
+   Parameters:
+     * color1: A color object to act as the minuend.
+     * color2: A color object to act as the subtrahend.
+
+   Returns: color
+
+   Example:
+exclusion(#ff6600, #000000);
+
+   Color 1 Color 2 Color 3
+exclusion(#ff6600, #333333);
+
+   Color 1 Color 2 Color 3
+exclusion(#ff6600, #666666);
+
+   Color 1 Color 2 Color 3
+exclusion(#ff6600, #999999);
+
+   Color 1 Color 2 Color 3
+exclusion(#ff6600, #cccccc);
+
+   Color 1 Color 2 Color 3
+exclusion(#ff6600, #ffffff);
+
+   Color 1 Color 2 Color 3
+exclusion(#ff6600, #ff0000);
+
+   Color 1 Color 2 Color 3
+exclusion(#ff6600, #00ff00);
+
+   Color 1 Color 2 Color 3
+exclusion(#ff6600, #0000ff);
+
+   Color 1 Color 2 Color 3
+
+average
+
+   Compute the average of two colors. The operation is made per RGB
+   channels.
+
+   Parameters:
+     * color1: A color object.
+     * color2: A color object.
+
+   Returns: color
+
+   Example:
+average(#ff6600, #000000);
+
+   Color 1 Color 2 Color 3
+average(#ff6600, #333333);
+
+   Color 1 Color 2 Color 3
+average(#ff6600, #666666);
+
+   Color 1 Color 2 Color 3
+average(#ff6600, #999999);
+
+   Color 1 Color 2 Color 3
+average(#ff6600, #cccccc);
+
+   Color 1 Color 2 Color 3
+average(#ff6600, #ffffff);
+
+   Color 1 Color 2 Color 3
+average(#ff6600, #ff0000);
+
+   Color 1 Color 2 Color 3
+average(#ff6600, #00ff00);
+
+   Color 1 Color 2 Color 3
+average(#ff6600, #0000ff);
+
+   Color 1 Color 2 Color 3
+
+negation
+
+   Do the opposite effect from difference. The result is a brighter color.
+   Note: The opposite effect doesn’t mean the inverted effect as resulting
+   to an addition operation.
+
+   Parameters:
+     * color1: A color object to act as the minuend.
+     * color2: A color object to act as the subtrahend.
+
+   Returns: color
+
+   Example:
+negation(#ff6600, #000000);
+
+   Color 1 Color 2 Color 3
+negation(#ff6600, #333333);
+
+   Color 1 Color 2 Color 3
+negation(#ff6600, #666666);
+
+   Color 1 Color 2 Color 3
+negation(#ff6600, #999999);
+
+   Color 1 Color 2 Color 3
+negation(#ff6600, #cccccc);
+
+   Color 1 Color 2 Color 3
+negation(#ff6600, #ffffff);
+
+   Color 1 Color 2 Color 3
+negation(#ff6600, #ff0000);
+
+   Color 1 Color 2 Color 3
+negation(#ff6600, #00ff00);
+
+   Color 1 Color 2 Color 3
+negation(#ff6600, #0000ff);
+
+   Color 1 Color 2 Color 3
+
+In Other Languages
+
+     * Chinese: [33]http://lesscss.net
+     * Danish: [34]http://lesscss.dk
+     * German: [35]http://lesscss.de
+     * Indonesian:
+       [36]http://bertzzie.com/post/7/dokumentasi-less-bahasa-indonesia
+     * Japanese: [37]http://less-ja.studiomohawk.com/
+     * Polish: [38]http://ciembor.github.com/lesscss.org/
+     * Russian: [39]http://lesscss.ru
+     * Ukrainian: [40]http://komaval.github.com/lesscss.org/
+     * Belorussian: (Out of date)
+       [41]http://www.designcontest.com/show/lesscss-be
+     * Portugese: (Out of date) [42]http://lesscss.loopinfinito.com.br/
+
+About
+
+   LESS was developed by [43]Alexis Sellier, more commonly known as
+   [44]cloudhead. It is now mantained and extended by the LESS core team.
+
+   powered by [45]LESS
+
+   Copyright © Alexis Sellier 2010-2013
+
+   [46]Fork me on GitHub
+
+References
+
+   1. file://localhost/index.xml
+   2. https://raw.github.com/less/less.js/master/dist/less-1.4.1.min.js
+   3. https://github.com/less/less.js/blob/master/CHANGELOG.md
+   4. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml441.data#synopsis
+   5. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml441.data#usage
+   6. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml441.data#docs
+   7. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml441.data#reference
+   8. https://github.com/less/less.js
+   9. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml441.data#about
+  10. http://less2css.org/
+  11. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml441.data#-variables
+  12. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml441.data#-mixins
+  13. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml441.data#-parametric-mixins
+  14. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml441.data#-pattern-matching-and-guard-expressions
+  15. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml441.data#-nested-rules
+  16. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml441.data#-operations
+  17. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml441.data#-functions
+  18. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml441.data#-namespaces
+  19. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml441.data#-scope
+  20. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml441.data#-comments
+  21. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml441.data#-importing
+  22. https://github.com/cloudhead/less.js/blob/master/CHANGELOG.md
+  23. https://addons.mozilla.org/en-us/firefox/addon/fireless/
+  24. http://github.com/isaacs/npm
+  25. http://developer.yahoo.com/yui/compressor/css.html
+  26. https://github.com/cloudhead/less.js/wiki/Command-Line-use-of-LESS
+  27. https://github.com/cloudhead/less.js/wiki/GUI-compilers-that-use-LESS.js
+  28. http://en.wikipedia.org/wiki/Percent-encoding
+  29. http://en.wikipedia.org/wiki/Luma_(video
+  30. http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+  31. http://compass-style.org/reference/compass/utilities/color/contrast/
+  32. http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+  33. http://lesscss.net/
+  34. http://lesscss.dk/
+  35. http://lesscss.de/
+  36. http://bertzzie.com/post/7/dokumentasi-less-bahasa-indonesia
+  37. http://less-ja.studiomohawk.com/
+  38. http://ciembor.github.com/lesscss.org/
+  39. http://lesscss.ru/
+  40. http://komaval.github.com/lesscss.org/
+  41. http://www.designcontest.com/show/lesscss-be
+  42. http://lesscss.loopinfinito.com.br/
+  43. http://cloudhead.io/
+  44. http://cloudhead.io/
+  45. http://github.com/less/less.js
+  46. http://github.com/cloudhead/less.js

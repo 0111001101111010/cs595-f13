@@ -1,0 +1,1302 @@
+   #[1]RSS
+
+   [2]jump to content
+   my subreddits
+   [3]AdviceAnimals[4]announcements[5]AskReddit[6]askscience[7]aww[8]besto
+   f[9]blog[10]books[11]EarthPorn[12]explainlikeimfive[13]funny[14]gaming[
+   15]gifs[16]IAmA[17]movies[18]Music[19]news[20]pics[21]science[22]techno
+   logy[23]television[24]todayilearned[25]videos[26]worldnews[27]WTF[28]ed
+   it subscriptions
+     * [29]front
+     * -[30]all
+     * -[31]random
+
+    |
+     * [32]pics
+     * -[33]funny
+     * -[34]gaming
+     * -[35]AskReddit
+     * -[36]worldnews
+     * -[37]news
+     * -[38]videos
+     * -[39]IAmA
+     * -[40]todayilearned
+     * -[41]WTF
+     * -[42]aww
+     * -[43]technology
+     * -[44]AdviceAnimals
+     * -[45]science
+     * -[46]Music
+     * -[47]movies
+     * -[48]bestof
+     * -[49]books
+     * -[50]EarthPorn
+     * -[51]explainlikeimfive
+     * -[52]gifs
+     * -[53]television
+     * -[54]askscience
+     * -[55]leagueoflegends
+     * -[56]cringepics
+     * -[57]politics
+     * -[58]pokemon
+     * -[59]GrandTheftAutoV
+     * -[60]reactiongifs
+     * -[61]breakingbad
+     * -[62]4chan
+     * -[63]gentlemanboners
+     * -[64]MakeupAddiction
+     * -[65]Minecraft
+     * -[66]woahdude
+     * -[67]DotA2
+     * -[68]circlejerk
+     * -[69]cats
+     * -[70]fffffffuuuuuuuuuuuu
+     * -[71]soccer
+     * -[72]nfl
+     * -[73]atheism
+     * -[74]Android
+     * -[75]conspiracy
+     * -[76]mylittlepony
+     * -[77]Unexpected
+     * -[78]LadyBoners
+     * -[79]facepalm
+     * -[80]starcraft
+     * -[81]teenagers
+
+   [82]more »
+   [83]Python  [84]Python
+     * [85]comments
+     * [86]related
+
+   want to join? [87]login or register in seconds|
+     * [88]English
+
+   ____________________
+   [ ] limit my search to /r/Python
+
+   use the following search parameters to narrow your results:
+
+   subreddit:subreddit
+          find submissions in "subreddit"
+
+   author:username
+          find submissions by "username"
+
+   site:example.com
+          find submissions from "example.com"
+
+   url:text
+          search for "text" in url
+
+   selftext:text
+          search for "text" in self post contents
+
+   self:yes (or self:no)
+          include (or exclude) self posts
+
+   nsfw:yes (or nsfw:no)
+          include (or exclude) results marked as NSFW
+
+   e.g. subreddit:aww site:imgur.com dog
+
+   [89]see the search faq for details.
+
+   [90]advanced search: by author, subreddit...
+   this post was submitted on 26 Sep 2013
+   39 points (83% like it)
+   49 upvotes 10 downvotes
+   shortlink: http://redd.it/1n6b5
+   ____________________ ____________________
+   [ ] remember me[91]reset password
+   (BUTTON) login
+   [92]Submit a new link
+   [93]Submit a new text post
+
+[94]Python
+
+   [95]subscribe[96]unsubscribe55,629 readers
+
+   ~81 users here now
+
+   news about the dynamic, interpreted, interactive, object-oriented,
+   extensible programming language Python
+
+   If you are about to ask a question, please consider [97]r/learnpython
+
+   Please don't use URL shorteners
+
+   Posting code to this subreddit:
+
+   Add 4 extra spaces before each line of code
+def fibonacci():
+    a, b = 0, 1
+    while 1:
+        yield a
+        a, b = b, a + b
+
+   Online books
+     * [98]Learn Python the Hard Way (for Python 2)
+     * [99]Dive into Python 3 (for Python 3)
+     * [100]Invent Your Own Computer Games with Python
+     * [101]Beginner's Guide to Python
+     * [102]Non-programmers Tutorial for Python 3
+     * [103]Five life jackets to throw to the new coder (perfect for when
+       you're done with LPTHW)
+
+   Online exercices
+     * [104]codingbat
+     * [105]pyschools
+     * [106]codecademy
+     * [107]/r/dailyprogrammer
+
+   programming challenges
+     * [108]The Python Challenge (solve each level through programming)
+     * [109]CheckiO (game world)
+     * [110]Project Euler (math heavy)
+
+   Asking Questions
+     * [111]Should I use Python 2 or Python 3?
+     * [112]r/learnpython
+     * [113]r/learnprogramming
+
+   Try Python in your browser
+     * [114]learnpython.org
+     * [115]Skulpt (uses WebGL)
+     * [116]trypython.org (uses Silverlight)
+     * [117]ideone (online compiler and debugger)
+     * [118]PythonAnywhere (basic accounts are free)
+     * [119]Brython (Python 3 implementation for client-side web
+       programming)
+
+   Docs
+     * [120]Python 2 docs
+     * [121]Python 3 docs
+     * [122]Packaging docs (under development)
+     * [123]The Hitchhiker's Guide to Python
+
+   Libraries
+     * [124]Twisted, [125]0MQ (networking)
+     * [126]Django, [127]Pyramid, ... ([128]Web Frameworks)
+     * [129]Pygame (Game development)
+     * [130]NumPy & [131]SciPy (Scientific computing)
+
+   Related subreddits
+     * [132]/r/flask (web microframework)
+     * [133]/r/django (web framework for perfectionists with deadlines)
+     * [134]/r/pygame (a set of modules designed for writing games)
+     * [135]/r/IPython (interactive environment)
+     * [136]/r/inventwithpython (for the books written by
+       [137]/u/AlSweigart)
+
+   Python jobs
+     * [138]Python.org job board
+     * [139]pythonjobs.com
+     * [140]Python Jobs HQ
+
+   Newsletters
+     * [141]Pycoder's Weekly
+     * [142]Python Weekly
+
+   Screencasts
+     * [143]Neckbeard Republic
+     * [144]Bucky's Python Tutorials.
+
+   a community for 5 years
+
+   IFRAME: [145]ad_main
+
+   [146]message the moderators
+
+MODERATORS
+
+     * [147]BioGeekBioinformatics software developer
+     * [148]nevare
+     * [149]chromakode
+     * [150]mdipierro
+     * [151]kingkilrCPython/PyPy/Django developer
+     * [152]quasarj
+     * [153]jrupacimport this
+     * [154]...and 1 more »
+
+   1
+   38
+   39
+   40
+
+   [155]First look at Python's Enum in the upcoming Python 3.4
+   ([156]tech-thoughts-blog.com)
+
+   submitted 3 days ago by [157]rahmu
+     * [158]28 comments
+     * [159]share[160]cancel
+
+   loading...
+   all 28 comments
+   sorted by:
+   best
+   [161]best
+   [162]top
+   [163]new
+   [164]hot
+   [165]controversial
+   [166]old
+   [167]random
+
+   [168][+][169]wedgieedward 4 points5 points6 points 3 days ago  [170](1
+   child)
+
+   [171][–][172]wedgieedward 4 points5 points6 points 3 days ago
+
+   Is it me or is there an error in the spelling of the enum. In the
+   definition its WeekDays, but all later references in the code are for
+   Weekdays. Is this an error or how enumerations will work?
+     * [173]permalink
+     * [174]save
+
+   [175][+][176]rahmu[[177]S] 4 points5 points6 points 3 days ago  [178](0
+   children)
+
+   [179][–][180]rahmu[[181]S] 4 points5 points6 points 3 days ago
+
+   You are correct it's an error. Good catch!
+
+   I've fixed it now. Thanks.
+     * [182]permalink
+     * [183]save
+     * [184]parent
+
+   [185][+][186]Lucretiel 4 points5 points6 points 3 days ago  [187](0
+   children)
+
+   [188][–][189]Lucretiel 4 points5 points6 points 3 days ago
+
+   Huh. I've been using enum34 but I didn't know about that functional
+   API. That's cool as hell.
+     * [190]permalink
+     * [191]save
+
+   [192][+][193]not_a_famous_actor 3 points4 points5 points 2 days ago
+   [194](2 children)
+
+   [195][–][196]not_a_famous_actor 3 points4 points5 points 2 days ago
+
+   About enum values:
+
+     These values aren't really meant to mean or represent anything,
+     especially since enumeration members don't support comparison.
+
+   This sentence lead me to believe that the values are always arbitrary,
+   as long as they're unique, but later in the article you are actually
+   using the values in a meaningful way. I think you could be more clear
+   about the existence of values in enumerations, because I am still
+   confused about their purpose.
+     * [197]permalink
+     * [198]save
+
+   [199][+][200]rahmu[[201]S] 1 point2 points3 points 2 days ago  [202](0
+   children)
+
+   [203][–][204]rahmu[[205]S] 1 point2 points3 points 2 days ago
+
+   I'm not sure what you mean by "using the values in a meaningful way".
+
+   I only mention them in:
+    1. Aliasing. Two members sharing the same value are actually the same
+       member.
+    2. Retrieve by value. You know the value, you get the member.
+
+   What I meant to say is that the value doesn't have any relationship
+   with the name of the member. It could be any random number, a string, a
+   tuple, ... (although I really cannot imagine any reason not to use
+   integers).
+
+   Enums aren't key->value mappings, we have dictionaries and others for
+   that.
+     * [206]permalink
+     * [207]save
+     * [208]parent
+
+   [209][+][210]ShibeBot -3 points-2 points-1 points 2 days ago  [211](0
+   children)
+
+   [212][–][213]ShibeBot -3 points-2 points-1 points 2 days ago
+       wow
+                           so much meant
+                   master mean
+
+       master since
+                               wow
+                               quite using
+
+         quite values
+                                             wow about
+                           wow so values
+                                     quite because
+             much purpose
+
+     * [214]permalink
+     * [215]save
+     * [216]parent
+
+   [217][+][218]omginternetsScientific Computing 5 points6 points7 points
+   2 days ago  [219](19 children)
+
+   [220][–][221]omginternetsScientific Computing 5 points6 points7 points
+   2 days ago
+
+   Forgive me, but what problems do enums solve that can't be solved with,
+   say a list of tuples or a dictionary?
+
+   I'm certainly not against having enums in python 3, but could somebody
+   please explain what the point is?
+     * [222]permalink
+     * [223]save
+
+   [224][+][225]djimbob 11 points12 points13 points 2 days ago  [226](3
+   children)
+
+   [227][–][228]djimbob 11 points12 points13 points 2 days ago
+
+   It doesn't solve any problems that couldn't be solved with other
+   structures.
+
+   But its a common abstract data type that some people are used to. Enums
+   let you do type-checking which could loudly raise certain types of
+   errors early. E.g., if your program has two enums (say Months and
+   WeekDays), you can have the type system throw/catch an error if you
+   give Months.may to something expecting a WeekDays (even if Months.may
+   is internally a 5 which is valid number for a weekday). It also
+   restricts other types of mistakes; e.g., you could have a dict where
+   weekdays = dict(sunday=1, monday=1) or an tuple with reused labels
+   ('Sunday', 'Monday', ..., 'Saturday', 'Sunday') but you can't have an
+   Enum that reuses values.
+     * [229]permalink
+     * [230]save
+     * [231]parent
+
+   [232][+][233]twillis197337 pieces 0 points1 point2 points 2 days ago
+   [234](1 child)
+
+   [235][–][236]twillis197337 pieces 0 points1 point2 points 2 days ago
+
+   not being one to get all excited about enums in python 3.4 myself. I
+   find your explanation to be a decent take on why they might be useful.
+   So thanks. I still probably wont use them much though. :)
+     * [237]permalink
+     * [238]save
+     * [239]parent
+
+   [240][+][241]djimbob 2 points3 points4 points 2 days ago  [242](0
+   children)
+
+   [243][–][244]djimbob 2 points3 points4 points 2 days ago
+
+   Yeah, I'm not holding my breath over them and kind of think the two
+   syntaxes given in the above example are somewhat ugly (manually
+   specifying enumeration in first syntax, having a space separated string
+   in the second), though the PEP says any sequence of names or 2-tuples,
+   or dictionary would work, like Animals = Enum('Animals', ['ant', 'bee',
+   'cat', 'dog']).
+
+   IMO, Enums seem a better fit for a statically typed language like
+   Java/C++/haskell where you deal with a somewhat cumbersome/annoying
+   type system so it can catch many errors for you. With duck typing, you
+   don't really expect that type of error to be caught. Granted,
+   enumerating variables is still a common pattern and this is arguably
+   cleaner than the simplest way you can do it currently:
+In [1]: from collections import OrderedDict
+
+In [2]: weekday_tuple = ('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat')
+
+In [3]: weekday_dict = OrderedDict([(v,i) for (i,v) in enumerate(weekday_tuple)]
+)
+
+In [4]: weekday_dict['Mon']
+Out[4]: 1
+
+In [5]: weekday_tuple[1] #alternatively: weekday_dict.values()[1]
+Out[5]: 'Mon'
+
+     * [245]permalink
+     * [246]save
+     * [247]parent
+
+   [248][+][249]omginternetsScientific Computing -1 points0 points1 point
+   2 days ago  [250](0 children)
+
+   [251][–][252]omginternetsScientific Computing -1 points0 points1 point
+   2 days ago
+
+   Got it, so it's basically a convenience. I have nothing against
+   conveniences =)
+     * [253]permalink
+     * [254]save
+     * [255]parent
+
+   [256][+][257]bastibe 1 point2 points3 points 2 days ago  [258](14
+   children)
+
+   [259][–][260]bastibe 1 point2 points3 points 2 days ago
+
+   It is often good to have constants that refer back to a name. Say you
+   have several modes your app can be in. The modes are signified by a
+   numeric constant. This looks good in your code since you are using
+   appropriate variable names for your constants. Outside your code
+   however, a user only sees the numeric values, which are meaningless.
+
+   With enums, he would be able to say value.name, and see what the
+   constant meant.
+     * [261]permalink
+     * [262]save
+     * [263]parent
+
+   [264][+][265]omginternetsScientific Computing 2 points3 points4 points
+   2 days ago  [266](13 children)
+
+   [267][–][268]omginternetsScientific Computing 2 points3 points4 points
+   2 days ago
+
+   This sounds like the kind of thing I would use a namedtuple for...
+     * [269]permalink
+     * [270]save
+     * [271]parent
+
+   [272][+][273]darthmdh -4 points-3 points-2 points 2 days ago  [274](12
+   children)
+
+   [275][–][276]darthmdh -4 points-3 points-2 points 2 days ago
+
+   Exactly. 'enum' is a wasteful duplication of existing Python
+   functionality, created by lazy people who either didn't bother learning
+   stdlib or haven't figured out how to tell their editor to replace the
+   shorter text 'enum' with 'namedtuple'
+
+   Python remains single-threaded and slow, but hey, at least I can save 6
+   characters on typing 'namedtuple' with this "new" enum type!
+
+   :(
+     * [277]permalink
+     * [278]save
+     * [279]parent
+
+   [280][+][281]MonkeyNin 3 points4 points5 points 2 days ago  [282](8
+   children)
+
+   [283][–][284]MonkeyNin 3 points4 points5 points 2 days ago
+
+   What?
+
+   namedtuple and enum's serve different purposes.
+     * [285]permalink
+     * [286]save
+     * [287]parent
+
+   [288][+][289]kylotan 3 points4 points5 points 2 days ago  [290](2
+   children)
+
+   [291][–][292]kylotan 3 points4 points5 points 2 days ago
+
+   Me too... not seeing how enums relate to namedtuples in any logical
+   way.
+     * [293]permalink
+     * [294]save
+     * [295]parent
+
+   [296][+][297]njharman -1 points0 points1 point 1 day ago  [298](1
+   child)
+
+   [299][–][300]njharman -1 points0 points1 point 1 day ago
+
+   The are both collections of labeled, constant values. What's not to
+   get?
+     * [301]permalink
+     * [302]save
+     * [303]parent
+
+   [304][+][305]eliben 2 points3 points4 points 1 day ago  [306](0
+   children)
+
+   [307][–][308]eliben 2 points3 points4 points 1 day ago
+
+   Every instance of an enum is just a single value. Every instance of a
+   named tuple is a whole collection.
+     * [309]permalink
+     * [310]save
+     * [311]parent
+
+   [312][+][313]darthmdh -1 points0 points1 point 1 day ago  [314](4
+   children)
+
+   [315][–][316]darthmdh -1 points0 points1 point 1 day ago
+
+   No they don't. An enum maps a context-sensitive item to a sensible
+   name, so you can (using PEP 435's own example) says stuff like
+   color.red instead of using '0xff0000', making the code more
+   comprehensible. At no point will the enum be changed, therefore it is
+   immutable.
+
+   Python already has a type for immutable things, it's called tuple. You
+   can map sensible names to tuples using the namedtuple factory.
+
+   Therefore, namedtuple does exactly what enum does, except: a) it
+   already exists & is battle-tested, unlike this new implementation b) it
+   inherently advises the programmer the object is immutable, since tuples
+   are immutable. WTF is an enum? Have to go look it up. Repeat for every
+   other superfluous type similarly bloating Python in the future. c)
+   THERE SHOULD BE ONE, AND PREFERABLY ONLY ONE, OBVIOUS WAY TO DO IT
+
+   immutable object - tuple. existing labelling factory - namedtuple
+   Obvious way to create a labelled, immutable object? namedtuple.
+
+   QED.
+     * [317]permalink
+     * [318]save
+     * [319]parent
+
+   [320][+][321]burntsushi 0 points1 point2 points 1 day ago  [322](3
+   children)
+
+   [323][–][324]burntsushi 0 points1 point2 points 1 day ago
+
+   Enumerations are union types while namedtuple's are product types.
+
+   If you think enumerations are just for creating "labeled immutable
+   objects", then perhaps you should do a little more reading on what
+   exactly they are.
+
+   It can be difficult to see the distinction in Python. I would recommend
+   examining the differences between union types and product types in a
+   statically typed language. (In C, that would be union and struct,
+   respectively.) Then try to transfer your knowledge back to Python.
+
+   I mean really, sit down and think for a moment. Do you think that the
+   core Python developers would add a new feature that is exactly like
+   some other feature, but call it something else? Don't you think there
+   is a chance that you're wrong and they are actually two different
+   things serving two different purposes?
+     * [325]permalink
+     * [326]save
+     * [327]parent
+
+   [328][+][329]darthmdh -1 points0 points1 point 18 hours ago  [330](2
+   children)
+
+   [331][–][332]darthmdh -1 points0 points1 point 18 hours ago
+
+     If you think enumerations are just for creating "labeled immutable
+     objects", then perhaps you should do a little more reading on what
+     exactly they are.
+
+   Lets do that shall we?
+
+   [333]http://en.wikipedia.org/wiki/Enumerated_type
+
+   The opening sentence:
+
+   In computer programming, an enumerated type (also called enumeration or
+   enum, or factor in the R programming language, and a categorical
+   variable in statistics) is a data type consisting of a set of named
+   values called elements, members or enumerators of the type. The
+   enumerator names are usually identifiers that behave as constants in
+   the language.
+
+   A set of named values which are constants.
+
+   labelled = named constant = immutable
+
+   QED
+
+     Do you think that the core Python developers would add a new feature
+     that is exactly like some other feature, but call it something else?
+
+   Absolutely. List comprehensions are essentially an alternative
+   expression of nested for loops. str v. unicode. StringIO v. cStringIO.
+   pickle v. cPickle. anydbm v. dumbdbm v. gdbm v. dbm. argparse v
+   optparse. thread v. threading v. multiprocessing. HTMLParser v htmlib,
+   urllib v. urllib2, shall I go on? Also, note that I did not say enums
+   are exactly like namedtuple, only that the extra keyword and type are
+   unnecessary as it can already be expressed using namedtuple.
+     * [334]permalink
+     * [335]save
+     * [336]parent
+
+   [337][+][338]burntsushi 0 points1 point2 points 13 hours ago* [339](1
+   child)
+
+   [340][–][341]burntsushi 0 points1 point2 points 13 hours ago*
+
+   Do you seriously expect me to accept that as an honest assessment of
+   enumerated types? Literally, the next sentence:
+
+     A variable that has been declared as having an enumerated type can
+     be assigned any of the enumerators as a value.
+
+   ...
+
+     Also, note that I did not say enums are exactly like namedtuple,
+     only that the extra keyword and type are unnecessary as it can
+     already be expressed using namedtuple.
+
+   What the fucking fuck? Look at the comment I responded to!
+
+     namedtuple does exactly what enum does
+
+   I'll never understand why people have to be so fucking vociferous. I
+   can't believe I have to do this, but here's some code:
+>>> from enum import Enum
+>>> from collections import namedtuple
+>>> EColors = Enum('EColors', 'red blue green')
+>>> NColors = namedtuple('NColors', 'red blue green')
+>>> type(EColors.red)
+<enum 'EColors'>
+>>> obj = NColors(1, 2, 3)
+>>> type(obj.red)
+<type 'int'>
+
+     only that the extra keyword and type are unnecessary as it can
+     already be expressed using namedtuple.
+
+   That's very slippery of you! So now Enums are merely expressible as
+   namedtuples, and that's why they shouldn't exist? Well, by that logic,
+   anything more than the lambda calculus is unnecessary since anything
+   can be expressed with it.
+
+     Absolutely. List comprehensions are essentially an alternative
+     expression of nested for loops. str v. unicode. StringIO v.
+     cStringIO. pickle v. cPickle. anydbm v. dumbdbm v. gdbm v. dbm.
+     argparse v optparse. thread v. threading v. multiprocessing.
+     HTMLParser v htmlib, urllib v. urllib2, shall I go on?
+
+   None of those things are exactly like the other.
+
+   You can't have it both ways. Are enumerations exactly like namedtuples?
+   No? Then don't fucking say they are. Do enumerations have a purpose
+   other than "immutable named constant"? Yes!
+
+   Just so we're clear: I'm undecided about whether enumerations should
+   have been added. But that doesn't mean I go around spewing bullshit
+   about what they are.
+
+   QED. (Yeah, that's cute eh? Get off your damn high horse.)
+     * [342]permalink
+     * [343]save
+     * [344]parent
+
+   [345][+][346]darthmdh -1 points0 points1 point 12 hours ago  [347](0
+   children)
+
+   [348][–][349]darthmdh -1 points0 points1 point 12 hours ago
+
+     Get off your damn high horse
+
+   After you.
+     * [350]permalink
+     * [351]save
+     * [352]parent
+
+   [353][+][354]omginternetsScientific Computing 2 points3 points4 points
+   2 days ago  [355](2 children)
+
+   [356][–][357]omginternetsScientific Computing 2 points3 points4 points
+   2 days ago
+
+     Python remains single-threaded and slow, but hey, at least I can
+     save 6 characters on typing 'namedtuple' with this "new" enum type!
+
+   Wat. I don't think there was a choice made between "Hey, let's make
+   python ultra-concurrent and fast" and "let's add enums". I agree that
+   they seem like a duplication of existing functionality, but what you're
+   presenting there is called a false dichotomy.
+
+   But I think I mostly agree with the first part of your comment...
+     * [358]permalink
+     * [359]save
+     * [360]parent
+
+   [361][+][362]darthmdh -2 points-1 points0 points 2 days ago  [363](1
+   child)
+
+   [364][–][365]darthmdh -2 points-1 points0 points 2 days ago
+
+   I'm not implying causation here, just noting that there were IMO other
+   important things to work on for 3.4 than pandering to the whims of a
+   few lazy Pascal programmers.
+
+   The new enum type can provide, in some circumstances, neater syntax
+   than using namedtuple, but since its custom-built for exactly that
+   scenario while namedtuple is a generic solution, I'd like to hope so.
+
+   My issue is that it goes against PEP20 and bloats Python with an
+   unnecessary new type, setting a dangerous precedent where anyone with
+   some special niche requirement from some other language can demand we
+   bloat Python even more with their peculiar need which is equally
+   already covered in the stdlib by some other means.
+
+   A namedtuple is immutable, as tuples are the standard immutable
+   container. An enum is... let me go look up the documentation from some
+   place that has internet access. (repeat for every superfluous type)
+     * [366]permalink
+     * [367]save
+     * [368]parent
+
+   [369][+][370]omginternetsScientific Computing -1 points0 points1 point
+   2 days ago  [371](0 children)
+
+   [372][–][373]omginternetsScientific Computing -1 points0 points1 point
+   2 days ago
+
+   Again, I can't say I disagree with the general sentiment. I'm honestly
+   just hoping this is an exception, and not the start of a trend.
+
+   Better yet, I'm hoping I discover some very useful niche for enum that
+   I hadn't thought of before.
+     * [374]permalink
+     * [375]save
+     * [376]parent
+
+   [377][+][378]infinull 2 points3 points4 points 2 days ago  [379](1
+   child)
+
+   [380][–][381]infinull 2 points3 points4 points 2 days ago
+
+   First look? hasn't the PEP been pretty solid for a while?
+
+   (I suppose it's new to plenty of people though)
+     * [382]permalink
+     * [383]save
+
+   [384][+][385]eliben 7 points8 points9 points 2 days ago  [386](0
+   children)
+
+   [387][–][388]eliben 7 points8 points9 points 2 days ago
+
+   To be fair, Python 3.4 has not been released yet, and most folks are
+   not exposed to PEPs.
+     * [389]permalink
+     * [390]save
+     * [391]parent
+
+     * about
+     * [392]blog
+     * [393]about
+     * [394]team
+     * [395]source code
+     * [396]advertise
+
+     * help
+     * [397]wiki
+     * [398]FAQ
+     * [399]reddiquette
+     * [400]rules
+     * [401]contact us
+
+     * tools
+     * [402]mobile
+     * [403]firefox extension
+     * [404]chrome extension
+     * [405]buttons
+     * [406]widget
+
+     * <3
+     * [407]reddit gold
+     * [408]store
+     * [409]redditgifts
+     * [410]reddit.tv
+     * [411]radio reddit
+
+   Use of this site constitutes acceptance of our [412]User Agreement and
+   [413]Privacy Policy. © 2013 reddit inc. All rights reserved.
+
+   REDDIT and the ALIEN Logo are registered trademarks of reddit inc.
+
+   [414]close this window
+
+you'll need to login or register to do that
+
+create a new account
+
+   all it takes is a username and password
+
+privacy philosophy
+
+     * we limit data collected about you and your use of the platform,
+     * your personal information is never for sale,
+     * we use and disclose information to prevent people from abusing the
+       platform, but
+     * we never disclose it for any other reason unless required by law.
+
+   for more information, see our [415]privacy policy.
+     * username: ____________________try anotheravailable!
+     * account recovery email:  (optional) ____________________we only
+       send email at your request
+     * password: ____________________
+     * verify password: ____________________
+     *
+
+       visual CAPTCHA
+       ______________________________
+     * [ ] remember me
+
+   (BUTTON) create account
+
+   is it really that easy? only one way to find out...
+
+login
+
+   already have an account and just want to login?
+     * username: ____________________
+     * password: ____________________
+     * [ ] remember me
+     * [416]recover password
+
+   (BUTTON) login
+
+   [417]close this window
+   interface language [English [en]__________________________] (*)
+   incomplete [418]volunteer to translate
+   content language (*) all languages
+   ( ) some languages
+     __________________________________________________________________
+
+
+   [ ] العربية         [ ] עברית            [ ] polski
+   [ ] Беларуская мова [ ] मानक हिन्दी      [ ] português
+   [ ] български език  [ ] hrvatski         [ ] română
+   [ ] català          [ ] Magyar           [ ] русский
+   [ ] česky           [ ] Հայերեն լեզու    [ ] slovenčina
+   [ ] dansk           [ ] Bahasa Indonesia [ ] slovenščina
+   [ ] Deutsch         [ ] íslenska         [ ] српски језик
+   [ ] Ελληνικά        [ ] italiano (Italy) [ ] Svenska
+   [ ] English         [ ] 日本語              [ ] தமிழ்
+   [ ] Esperanto       [ ] 한국어              [ ] ภาษาไทย
+   [ ] español         [ ] Latin            [ ] Türkçe
+   [ ] eesti keel      [ ] lietuvių kalba   [ ] українська мова
+   [ ] Euskara         [ ] latviešu valoda  [ ] Tiếng Việt
+   [ ] فارسی           [ ] Nederlands       [ ] 中文
+   [ ] suomi           [ ] Nynorsk
+   [ ] français        [ ] Norsk
+   save options
+
+   π Rendered by PID 7147 on app-90 at 2013-09-29 17:02:51.266977+00:00
+   running 594f530.
+
+References
+
+   1. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/.rss
+   2. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#content
+   3. http://www.reddit.com/r/AdviceAnimals/
+   4. http://www.reddit.com/r/announcements/
+   5. http://www.reddit.com/r/AskReddit/
+   6. http://www.reddit.com/r/askscience/
+   7. http://www.reddit.com/r/aww/
+   8. http://www.reddit.com/r/bestof/
+   9. http://www.reddit.com/r/blog/
+  10. http://www.reddit.com/r/books/
+  11. http://www.reddit.com/r/EarthPorn/
+  12. http://www.reddit.com/r/explainlikeimfive/
+  13. http://www.reddit.com/r/funny/
+  14. http://www.reddit.com/r/gaming/
+  15. http://www.reddit.com/r/gifs/
+  16. http://www.reddit.com/r/IAmA/
+  17. http://www.reddit.com/r/movies/
+  18. http://www.reddit.com/r/Music/
+  19. http://www.reddit.com/r/news/
+  20. http://www.reddit.com/r/pics/
+  21. http://www.reddit.com/r/science/
+  22. http://www.reddit.com/r/technology/
+  23. http://www.reddit.com/r/television/
+  24. http://www.reddit.com/r/todayilearned/
+  25. http://www.reddit.com/r/videos/
+  26. http://www.reddit.com/r/worldnews/
+  27. http://www.reddit.com/r/WTF/
+  28. http://www.reddit.com/subreddits/
+  29. http://www.reddit.com/
+  30. http://www.reddit.com/r/all/
+  31. http://www.reddit.com/r/random/
+  32. http://www.reddit.com/r/pics/
+  33. http://www.reddit.com/r/funny/
+  34. http://www.reddit.com/r/gaming/
+  35. http://www.reddit.com/r/AskReddit/
+  36. http://www.reddit.com/r/worldnews/
+  37. http://www.reddit.com/r/news/
+  38. http://www.reddit.com/r/videos/
+  39. http://www.reddit.com/r/IAmA/
+  40. http://www.reddit.com/r/todayilearned/
+  41. http://www.reddit.com/r/WTF/
+  42. http://www.reddit.com/r/aww/
+  43. http://www.reddit.com/r/technology/
+  44. http://www.reddit.com/r/AdviceAnimals/
+  45. http://www.reddit.com/r/science/
+  46. http://www.reddit.com/r/Music/
+  47. http://www.reddit.com/r/movies/
+  48. http://www.reddit.com/r/bestof/
+  49. http://www.reddit.com/r/books/
+  50. http://www.reddit.com/r/EarthPorn/
+  51. http://www.reddit.com/r/explainlikeimfive/
+  52. http://www.reddit.com/r/gifs/
+  53. http://www.reddit.com/r/television/
+  54. http://www.reddit.com/r/askscience/
+  55. http://www.reddit.com/r/leagueoflegends/
+  56. http://www.reddit.com/r/cringepics/
+  57. http://www.reddit.com/r/politics/
+  58. http://www.reddit.com/r/pokemon/
+  59. http://www.reddit.com/r/GrandTheftAutoV/
+  60. http://www.reddit.com/r/reactiongifs/
+  61. http://www.reddit.com/r/breakingbad/
+  62. http://www.reddit.com/r/4chan/
+  63. http://www.reddit.com/r/gentlemanboners/
+  64. http://www.reddit.com/r/MakeupAddiction/
+  65. http://www.reddit.com/r/Minecraft/
+  66. http://www.reddit.com/r/woahdude/
+  67. http://www.reddit.com/r/DotA2/
+  68. http://www.reddit.com/r/circlejerk/
+  69. http://www.reddit.com/r/cats/
+  70. http://www.reddit.com/r/fffffffuuuuuuuuuuuu/
+  71. http://www.reddit.com/r/soccer/
+  72. http://www.reddit.com/r/nfl/
+  73. http://www.reddit.com/r/atheism/
+  74. http://www.reddit.com/r/Android/
+  75. http://www.reddit.com/r/conspiracy/
+  76. http://www.reddit.com/r/mylittlepony/
+  77. http://www.reddit.com/r/Unexpected/
+  78. http://www.reddit.com/r/LadyBoners/
+  79. http://www.reddit.com/r/facepalm/
+  80. http://www.reddit.com/r/starcraft/
+  81. http://www.reddit.com/r/teenagers/
+  82. http://www.reddit.com/subreddits/
+  83. http://www.reddit.com/
+  84. http://www.reddit.com/r/Python/
+  85. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/
+  86. http://www.reddit.com/r/Python/related/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/
+  87. https://ssl.reddit.com/login
+  88. javascript:void(0)
+  89. http://www.reddit.com/wiki/search
+  90. http://www.reddit.com/wiki/search
+  91. file://localhost/password
+  92. http://www.reddit.com/r/Python/submit
+  93. http://www.reddit.com/r/Python/submit?selftext=true
+  94. http://www.reddit.com/r/Python/
+  95. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+  96. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+  97. http://www.reddit.com/r/learnpython
+  98. http://learnpythonthehardway.org/
+  99. http://diveintopython3.net/
+ 100. http://inventwithpython.com/
+ 101. http://wiki.python.org/moin/BeginnersGuide
+ 102. http://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3
+ 103. http://newcoder.io/
+ 104. http://codingbat.com/
+ 105. http://www.pyschools.com/
+ 106. http://www.codecademy.com/tracks/python
+ 107. file://localhost/r/dailyprogrammer
+ 108. http://www.pythonchallenge.com/
+ 109. http://www.checkio.org/
+ 110. http://projecteuler.net/
+ 111. http://wiki.python.org/moin/Python2orPython3
+ 112. http://www.reddit.com/r/learnpython
+ 113. http://www.reddit.com/r/learnprogramming
+ 114. http://www.learnpython.org/
+ 115. http://www.skulpt.org/
+ 116. http://www.trypython.org/
+ 117. http://www.ideone.com/
+ 118. https://www.pythonanywhere.com/
+ 119. http://www.brython.info/tests/console.html
+ 120. http://docs.python.org/
+ 121. http://docs.python.org/py3k/
+ 122. http://guide.python-distribute.org/
+ 123. http://docs.python-guide.org/en/latest/index.html
+ 124. http://twistedmatrix.com/trac/
+ 125. http://www.zeromq.org/bindings:python
+ 126. https://www.djangoproject.com/
+ 127. https://www.pylonsproject.org/
+ 128. http://wiki.python.org/moin/WebFrameworks
+ 129. http://pygame.org/news.html
+ 130. http://numpy.scipy.org/
+ 131. http://www.scipy.org/
+ 132. file://localhost/r/flask
+ 133. file://localhost/r/django
+ 134. file://localhost/r/pygame
+ 135. file://localhost/r/IPython
+ 136. file://localhost/r/inventwithpython
+ 137. file://localhost/u/AlSweigart
+ 138. http://www.python.org/community/jobs/
+ 139. http://www.pythonjobs.com/
+ 140. http://www.pythonjobshq.com/
+ 141. http://pycoders.com/
+ 142. http://www.pythonweekly.com/
+ 143. https://www.neckbeardrepublic.com/
+ 144. http://www.youtube.com/playlist?list=PL0213E8DC3AA8E21B
+ 145. http://static.adzerk.net/reddit/ads.html?sr=python&bust2#http://www.reddit.com
+ 146. file://localhost/message/compose?to=%2Fr%2FPython
+ 147. http://www.reddit.com/user/BioGeek
+ 148. http://www.reddit.com/user/nevare
+ 149. http://www.reddit.com/user/chromakode
+ 150. http://www.reddit.com/user/mdipierro
+ 151. http://www.reddit.com/user/kingkilr
+ 152. http://www.reddit.com/user/quasarj
+ 153. http://www.reddit.com/user/jrupac
+ 154. http://www.reddit.com/r/Python/about/moderators
+ 155. http://www.tech-thoughts-blog.com/2013/09/first-look-at-python-enums-part-1.html
+ 156. file://localhost/domain/tech-thoughts-blog.com/
+ 157. http://www.reddit.com/user/rahmu
+ 158. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/
+ 159. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 160. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 161. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/?sort=confidence
+ 162. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/?sort=top
+ 163. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/?sort=new
+ 164. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/?sort=hot
+ 165. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/?sort=controversial
+ 166. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/?sort=old
+ 167. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/?sort=random
+ 168. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 169. http://www.reddit.com/user/wedgieedward
+ 170. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 171. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 172. http://www.reddit.com/user/wedgieedward
+ 173. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccfrlji
+ 174. javascript:void(0)
+ 175. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 176. http://www.reddit.com/user/rahmu
+ 177. file://localhost/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/
+ 178. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 179. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 180. http://www.reddit.com/user/rahmu
+ 181. file://localhost/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/
+ 182. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccfrw48
+ 183. javascript:void(0)
+ 184. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#ccfrlji
+ 185. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 186. http://www.reddit.com/user/Lucretiel
+ 187. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 188. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 189. http://www.reddit.com/user/Lucretiel
+ 190. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccfup6c
+ 191. javascript:void(0)
+ 192. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 193. http://www.reddit.com/user/not_a_famous_actor
+ 194. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 195. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 196. http://www.reddit.com/user/not_a_famous_actor
+ 197. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccfvx9x
+ 198. javascript:void(0)
+ 199. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 200. http://www.reddit.com/user/rahmu
+ 201. file://localhost/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/
+ 202. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 203. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 204. http://www.reddit.com/user/rahmu
+ 205. file://localhost/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/
+ 206. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccfyi0p
+ 207. javascript:void(0)
+ 208. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#ccfvx9x
+ 209. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 210. http://www.reddit.com/user/ShibeBot
+ 211. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 212. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 213. http://www.reddit.com/user/ShibeBot
+ 214. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccggio5
+ 215. javascript:void(0)
+ 216. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#ccfvx9x
+ 217. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 218. http://www.reddit.com/user/omginternets
+ 219. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 220. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 221. http://www.reddit.com/user/omginternets
+ 222. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccfxuw9
+ 223. javascript:void(0)
+ 224. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 225. http://www.reddit.com/user/djimbob
+ 226. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 227. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 228. http://www.reddit.com/user/djimbob
+ 229. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccfyneb
+ 230. javascript:void(0)
+ 231. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#ccfxuw9
+ 232. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 233. http://www.reddit.com/user/twillis1973
+ 234. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 235. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 236. http://www.reddit.com/user/twillis1973
+ 237. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccfysk4
+ 238. javascript:void(0)
+ 239. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#ccfyneb
+ 240. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 241. http://www.reddit.com/user/djimbob
+ 242. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 243. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 244. http://www.reddit.com/user/djimbob
+ 245. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccfzpod
+ 246. javascript:void(0)
+ 247. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#ccfysk4
+ 248. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 249. http://www.reddit.com/user/omginternets
+ 250. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 251. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 252. http://www.reddit.com/user/omginternets
+ 253. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccg09vb
+ 254. javascript:void(0)
+ 255. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#ccfyneb
+ 256. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 257. http://www.reddit.com/user/bastibe
+ 258. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 259. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 260. http://www.reddit.com/user/bastibe
+ 261. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccfyeln
+ 262. javascript:void(0)
+ 263. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#ccfxuw9
+ 264. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 265. http://www.reddit.com/user/omginternets
+ 266. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 267. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 268. http://www.reddit.com/user/omginternets
+ 269. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccg0ae3
+ 270. javascript:void(0)
+ 271. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#ccfyeln
+ 272. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 273. http://www.reddit.com/user/darthmdh
+ 274. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 275. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 276. http://www.reddit.com/user/darthmdh
+ 277. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccg2qm7
+ 278. javascript:void(0)
+ 279. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#ccg0ae3
+ 280. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 281. http://www.reddit.com/user/MonkeyNin
+ 282. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 283. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 284. http://www.reddit.com/user/MonkeyNin
+ 285. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccgarv1
+ 286. javascript:void(0)
+ 287. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#ccg2qm7
+ 288. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 289. http://www.reddit.com/user/kylotan
+ 290. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 291. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 292. http://www.reddit.com/user/kylotan
+ 293. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccgcynv
+ 294. javascript:void(0)
+ 295. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#ccgarv1
+ 296. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 297. http://www.reddit.com/user/njharman
+ 298. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 299. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 300. http://www.reddit.com/user/njharman
+ 301. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccgm02e
+ 302. javascript:void(0)
+ 303. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#ccgcynv
+ 304. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 305. http://www.reddit.com/user/eliben
+ 306. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 307. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 308. http://www.reddit.com/user/eliben
+ 309. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccgzfg4
+ 310. javascript:void(0)
+ 311. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#ccgm02e
+ 312. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 313. http://www.reddit.com/user/darthmdh
+ 314. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 315. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 316. http://www.reddit.com/user/darthmdh
+ 317. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccgtfc0
+ 318. javascript:void(0)
+ 319. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#ccgarv1
+ 320. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 321. http://www.reddit.com/user/burntsushi
+ 322. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 323. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 324. http://www.reddit.com/user/burntsushi
+ 325. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/cch0m6o
+ 326. javascript:void(0)
+ 327. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#ccgtfc0
+ 328. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 329. http://www.reddit.com/user/darthmdh
+ 330. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 331. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 332. http://www.reddit.com/user/darthmdh
+ 333. http://en.wikipedia.org/wiki/Enumerated_type
+ 334. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/cch8s6o
+ 335. javascript:void(0)
+ 336. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#cch0m6o
+ 337. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 338. http://www.reddit.com/user/burntsushi
+ 339. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 340. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 341. http://www.reddit.com/user/burntsushi
+ 342. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/cche3kb
+ 343. javascript:void(0)
+ 344. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#cch8s6o
+ 345. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 346. http://www.reddit.com/user/darthmdh
+ 347. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 348. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 349. http://www.reddit.com/user/darthmdh
+ 350. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/cchebvl
+ 351. javascript:void(0)
+ 352. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#cche3kb
+ 353. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 354. http://www.reddit.com/user/omginternets
+ 355. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 356. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 357. http://www.reddit.com/user/omginternets
+ 358. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccg3mcf
+ 359. javascript:void(0)
+ 360. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#ccg2qm7
+ 361. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 362. http://www.reddit.com/user/darthmdh
+ 363. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 364. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 365. http://www.reddit.com/user/darthmdh
+ 366. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccg8ukc
+ 367. javascript:void(0)
+ 368. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#ccg3mcf
+ 369. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 370. http://www.reddit.com/user/omginternets
+ 371. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 372. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 373. http://www.reddit.com/user/omginternets
+ 374. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccg8x8r
+ 375. javascript:void(0)
+ 376. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#ccg8ukc
+ 377. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 378. http://www.reddit.com/user/infinull
+ 379. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 380. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 381. http://www.reddit.com/user/infinull
+ 382. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccfvsd1
+ 383. javascript:void(0)
+ 384. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 385. http://www.reddit.com/user/eliben
+ 386. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 387. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 388. http://www.reddit.com/user/eliben
+ 389. http://www.reddit.com/r/Python/comments/1n6b5t/first_look_at_pythons_enum_in_the_upcoming_python/ccfywek
+ 390. javascript:void(0)
+ 391. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data#ccfvsd1
+ 392. http://www.reddit.com/blog/
+ 393. http://www.reddit.com/about/
+ 394. http://www.reddit.com/about/team/
+ 395. http://www.reddit.com/code/
+ 396. http://www.reddit.com/ad_inq/
+ 397. http://www.reddit.com/wiki/
+ 398. http://www.reddit.com/wiki/faq
+ 399. http://www.reddit.com/wiki/reddiquette
+ 400. http://www.reddit.com/rules/
+ 401. http://www.reddit.com/feedback/
+ 402. http://i.reddit.com/
+ 403. https://addons.mozilla.org/firefox/addon/socialite/
+ 404. https://chrome.google.com/webstore/detail/algjnflpgoopkdijmkalfcifomdhmcbe
+ 405. http://www.reddit.com/r/Python/buttons/
+ 406. http://www.reddit.com/r/Python/widget/
+ 407. http://www.reddit.com/gold/about/
+ 408. http://www.reddit.com/store/
+ 409. http://redditgifts.com/
+ 410. http://reddit.tv/
+ 411. http://radioreddit.com/
+ 412. http://www.reddit.com/help/useragreement
+ 413. http://www.reddit.com/help/privacypolicy
+ 414. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 415. file://localhost/help/privacypolicy
+ 416. file://localhost/password
+ 417. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml24.data
+ 418. http://www.reddit.com/r/i18n/wiki/getting_started

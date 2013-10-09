@@ -1,0 +1,555 @@
+   [1] PARADE PARADE PARADE PARADE
+     * [2]Entertainment
+     * [3]Food
+     * [4]Living
+     * [5]Health & Beauty
+     *
+
+       ____________________
+
+     * [6][svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgi
+       Pz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyB
+       FeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCj
+       whRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0d
+       HA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8
+       c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3Lnc
+       zLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OT
+       kveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMjZweCIgaGVpZ2h0PSIyN
+       nB4IiB2aWV3Qm94PSIwIDAgMjYgMjYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAw
+       IDI2IDI2IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkY
+       iIGQ9Ik0yNiw1LjY0OWMtMC45MTEsMC40MDUtMS44OTMsMC42NzktMi45MjIsMC44MD
+       FjMS4wNTEtMC42MjksMS44NTYtMS42MjcsMi4yMzctMi44MTQNCgljLTAuOTgyLDAuN
+       TgzLTIuMDcxLDEuMDA2LTMuMjMyLDEuMjM0Yy0wLjkyOC0wLjk4OS0yLjI0OC0xLjYw
+       Ni0zLjcxMi0xLjYwNmMtMi44MSwwLTUuMDg4LDIuMjc4LTUuMDg4LDUuMDg4DQoJYzA
+       sMC4zOTgsMC4wNDUsMC43ODcsMC4xMzMsMS4xNTlDOS4xODYsOS4yOTksNS40MzgsNy
+       4yNzMsMi45MjgsNC4xOTVDMi40OSw0Ljk0NiwyLjIzOSw1LjgyLDIuMjM5LDYuNzUyD
+       QoJYzAsMS43NjUsMC44OTgsMy4zMjIsMi4yNjQsNC4yMzVjLTAuODM0LTAuMDI3LTEu
+       NjE5LTAuMjU2LTIuMzA1LTAuNjM3YzAsMC4wMjEsMCwwLjA0MywwLDAuMDY1YzAsMi4
+       0NjQsMS43NTQsNC41Miw0LjA4MSw0Ljk4OA0KCWMtMC40MjcsMC4xMTctMC44NzYsMC
+       4xNzktMS4zNCwwLjE3OWMtMC4zMjgsMC0wLjY0Ny0wLjAzMS0wLjk1OC0wLjA5MWMwL
+       jY0NywyLjAyMSwyLjUyNiwzLjQ5Miw0Ljc1MiwzLjUzMw0KCWMtMS43NDEsMS4zNjQt
+       My45MzUsMi4xNzgtNi4zMTgsMi4xNzhjLTAuNDExLDAtMC44MTYtMC4wMjQtMS4yMTQ
+       tMC4wN2MyLjI1MiwxLjQ0Miw0LjkyNiwyLjI4NSw3Ljc5OSwyLjI4NQ0KCWM5LjM1OC
+       wwLDE0LjQ3Ny03Ljc1MiwxNC40NzctMTQuNDc2YzAtMC4yMjEtMC4wMDctMC40NC0wL
+       jAxNy0wLjY1OEMyNC40NTYsNy41NjUsMjUuMzE4LDYuNjY5LDI2LDUuNjQ5eiIvPg0K
+       PGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjw
+       vZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=]
+       [7][svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgi
+       Pz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyB
+       FeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCj
+       whRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0d
+       HA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8
+       c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3Lnc
+       zLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OT
+       kveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMjZweCIgaGVpZ2h0PSIyN
+       nB4IiB2aWV3Qm94PSIwIDAgMjYgMjYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAw
+       IDI2IDI2IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkY
+       iIGQ9Ik0xMC40MjgsMjQuMzgxVjEzLjQ2SDcuNTRWOS41MjhoMi44ODhjMCwwLDAtMS
+       42MTEsMC0zLjM1OWMwLTIuNjM5LDEuNzA2LTUuMDYyLDUuNjM3LTUuMDYyDQoJYzEuN
+       TkxLDAsMi43NjksMC4xNTIsMi43NjksMC4xNTJsLTAuMDk0LDMuNjcyYzAsMC0xLjE5
+       OS0wLjAxMS0yLjUxLTAuMDExYy0xLjQxNywwLTEuNjQ0LDAuNjUzLTEuNjQ0LDEuNzM
+       3DQoJYzAsMC44NTcsMC0xLjgyNywwLDIuODcxaDQuMjY3bC0wLjE4NiwzLjkzMmgtNC
+       4wODF2MTAuOTIxSDEwLjQyOHoiLz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NC
+       jwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K]
+
+   [8]Menu
+     * [9]Entertainment
+     * [10]Food
+     * [11]Living
+     * [12]Health & Beauty
+
+   ____________________
+
+Connect with your social account:
+
+   [13]Connect
+   [14]Google
+   Or join us via
+   Or, [15]Log In or [16]Sign Up with Parade.com
+
+[17]America Saves
+
+5 Secrets for Great College Visits
+
+   September 25, 2013 – 11:00 AM – 0 Comments
+   [18]Dr. Nancy Berk
+
+By [19]Dr. Nancy BerkContributor[20]@nancyberk
+
+More by Dr. Nancy
+
+     * [21]Itâs SAT Week! 5 Tips for Parents with Teens
+     * [22]Breaking Badâs Dad: Why Good Parents Got Hooked
+     * [23]Showbiz Analysis with Rich Little
+
+   UCLA's campus.(Getty Images)
+
+   Autumn is here, which means plenty of  high school juniors and seniors
+   and their parents are kicking into gear for a little college-bound
+   sightseeing. Unsuspecting parents believe this will be the perfect
+   opportunity to bond—which can happen. But it’s also the perfect
+   opportunity for a little conflict. Check out the tips below to help
+   enhance harmony on your family’s higher education tour.
+
+   1. Tour in your bathrobe.
+
+   Before you jump in the minivan, collect some data via virtual touring.
+   Most colleges have beautiful websites that can give you and your teen a
+   feel for school characteristics and strengths. Other sites like
+   [24]CollegeProwler.com and [25]Unigo.com allow you to examine and
+   compare multiple schools as well as examine independent video reviews
+   of the institutions.
+
+   2. Consider the weather.
+
+   While you might not have the option of quickly canceling a college
+   visit, know that rain is a curse for campus relations. A sunny day on
+   the quad does wonders for prospective student perception. Bring a few
+   umbrellas and remind your teen to keep an open mind—especially on
+   cloudy days.
+
+   3. Follow the dress code.
+
+   Teens are advised to follow the school dress code. No suit and ties on
+   a relaxed campus. No micro minis on a conservative one. Parents should
+   also be on fashion alert. We embarrass our teens without even trying,
+   but this is not the time to wear the fanny pack, belly shirt, or
+   sky-high stilettos. Tone it down and try to remain invisible in a good
+   way.
+
+   4. Let your teen do the talking.
+
+   You may be going on a college tour with your teen, but you’re not going
+   to college. Encourage him or her to be the one to ask questions on the
+   tour. You’re allowed to talk, just don’t dominate the process.
+
+   5. Expect different reactions.
+
+   We don’t always agree with our teens, but there’s nothing like college
+   visits to illustrate that fact. As you leave what seems like the most
+   beautiful school on the planet, your teen will undoubtedly declare that
+   he could never go there because it has (pick a reason)—too much brick,
+   students who look boring, bad restaurants … Fasten your seat belt and
+   expect a few surprises. No one ever said the road to college wasn’t a
+   little bumpy.
+
+   [26]Nancy Berk, Ph.D. is a clinical psychologist, author, humorist and
+   entertainment analyst. The host of the showbiz podcast [27]Whine At 9,
+   Nancy digs a little deeper as she chats with fascinating celebrities
+   and industry insiders. Her book [28]College Bound and Gagged: How to
+   Help Your Kid Get into a Great College Without Losing Your Savings,
+   Your Relationship, or Your Mind can be seen in the feature film
+   Admission starring Tina Fey and Paul Rudd.
+
+Be The First To Comment:
+
+Leave a Reply
+
+Log in
+
+Use your social account
+
+   [29]Connect
+   [30]Google
+
+Or, use your Parade.com account
+
+   Email ____________________
+   Please enter a valid email address.
+   Password ____________________
+   Incorrect email/password combination.
+   [31]Forgot Password?
+   Log in
+
+   Don't have an account? [32]Sign up.
+
+Sign up
+
+Use your social account
+
+   [33]Connect
+   [34]Google
+
+Or, create a Parade.com account
+
+   Your account was created. An email has been sent to you.
+   Email Address ____________________
+   Please enter a valid email address.
+   Password ____________________
+   Incorrect email/password combination.
+   [X] Get the Parade Daily: celebrity interviews, recipes and health tips
+   in your inbox.
+   Sign Up
+   By creating an account, you accept the terms and conditions of our
+   [35]User Agreement and [36]Privacy Policy.
+
+   Already have an account? [37]Log In.
+
+Reset Password
+
+Use your social account:
+
+   [38]Connect
+   [39]Google
+
+Reset your password:
+
+   Email Address: ____________________
+   Reset Password
+   [40]Back to Login
+
+   Don't have an account? [41]Sign up.
+
+video
+
+Cover Story
+
+[42]What's the One Question Mindy Kaling Finds 'Pretty Insulting'?
+
+   [43]Shawna MalcomContributor, Contributor
+
+[44]The Joys of Midwestern Fried Chicken and Gravy
+
+   [45]PARADEEditor, Editor
+
+[46]Itâs SAT Week! 5 Tips for Parents with Teens
+
+   [47]Dr. Nancy BerkContributor, Contributor
+
+[48]Amber Riley's Dancing With the Stars Blog: 'I'm Living Every Aspect of
+My Dream'
+
+   [49]Amber RileyContributor, Contributor
+
+[50]After Splitting With George Clooney, Stacy Keibler Dating New Man
+
+   [51]Vi-An NguyenEditor, Editor
+
+[52]Who Says You Need A Mentor? Be Your Own
+
+   [53]Ilya PozinContributor, Contributor
+
+[54]Carrie Ann Inaba: The DWTS Contestants With the Most Heart (So
+Far!) Are...
+
+   [55]Carrie Ann InabaContributor, Contributor
+
+[56]Fall for a Better-Than-Pie Apple Dessert
+
+   [57]Rosemary BlackContributor, Contributor
+
+[58]YA Author Kami Garcia Talks Unbreakable
+
+   [59]Sona CharaipotraContributor, Contributor
+
+[60]Nutty Butternut Squash Pancakes With Baked Apples
+
+   [61]Sanura WeathersContributor, Contributor
+
+[62]Orlando Bloom Returns in New The Hobbit: The Desolation of Smaug Trailer
+
+   [63]Vi-An NguyenEditor, Editor
+
+[64]Tiny Tacos!
+
+   [65]Devin AlexanderContributor, Contributor
+
+[66]Trying to Feed Picky Kids? Check Out The Picky Eaters Project
+
+   [67]Alice Knisley MatthiasContributor, Contributor
+
+[68]Fast Snacks for Your Purse, Pantry, Fridge & Freezer!
+
+   [69]Joy BauerContributor, Contributor
+
+[70]Start October Right With Pumpkin Ale Cheesecake Bars
+
+   [71]Jackie DoddContributor, Contributor
+
+[72]Resuscitate and Repair Your Summer-Parched Skin (Part 1)
+
+   [73]Rachel WeingartenContributor, Contributor
+
+[74]Happy Birthday! Julie Andrews Through the Years
+
+   [75]Vi-An NguyenEditor, Editor
+
+[76]The Daily Cute: 5 Dismayed Political Animals
+
+   [77]Jon HorowitzContributor, Contributor
+
+[78]Why Are People Outraged by This Diana Poster?
+
+   [79]Roisin KellyContributor, Contributor
+
+[80]How Does Bill Nye Really Feel About His DWTS Elimination?
+
+   [81]Lindsay LoweEditor, Editor
+
+most commented
+
+   1
+
+[82]Numbrix 9 - October 1
+
+   [83]Marilyn vos Savant, Contributor 2
+
+[84]Amber Riley's Dancing With the Stars Blog: 'I'm Living Every Aspect of
+My Dream'
+
+   [85]Amber Riley, Contributor 3
+
+[86]What Can Poker Teach Us About Women and Men?
+
+   [87]Ellen Leikind, Contributor 4
+
+[88]What Do the Spice Girls Think of Mel Bâs New Single?
+
+   [89]Lindsay Lowe, Editor
+
+Most Popular
+
+   1
+
+[90]How Would a Government Shutdown Affect You?
+
+   [91]Vi-An Nguyen, Editor 2
+
+[92]Which DWTS Pro Is Sports Illustrated Cover Girl Kate Upton Dating?
+
+   [93]Vi-An Nguyen, Editor 3
+
+[94]Numbrix 9 - September 30
+
+   [95]Marilyn vos Savant, Contributor 4
+
+[96]Numbrix 9 - October 1
+
+   [97]Marilyn vos Savant, Contributor
+
+Top Voices
+
+   [98]Joy Bauer
+
+[99]Joy BauerContributor
+
+     * [100]Fast Snacks for Your Purse, Pantry, Fridge & Freezer!
+
+   [101]Roisin Kelly
+
+[102]Roisin KellyContributor
+
+     * [103]Outrage at Diana Movie Poster at Location Where Princess Died
+
+   [104]Rosemary Black
+
+[105]Rosemary BlackContributor
+
+     * [106]Fall for a Better-Than-Pie Apple Dessert
+
+   [107]Jon Horowitz
+
+[108]Jon HorowitzContributor
+
+     * [109]The Daily Cute: 5 Dismayed Political Animals
+
+Categories
+
+     * [110]Entertainment
+     * [111]Food
+     * [112]Living
+     * [113]Health & Beauty
+
+Parade Digital
+
+     * [114]About Parade
+     * [115]Advertising Info
+     * [116]Contact Us
+     * [117]Management
+     * [118]Media Kit
+     * [119]Media Relations
+     * [120]Our Contributors
+
+More from CondÃ© Nast
+
+     * [Visit our sister sites_]
+     * [Subscribe______________]
+
+   Â© 2013 Parade Publications Inc. All rights reserved.
+
+   Use of this Site constitutes acceptance of our [121]User Agreement
+   (updated 3/14/2012) and [122]Privacy Policy (updated 3/14/2012)
+   [123]Your California Privacy Rights The material on this site may not
+   be reproduced, distributed, transmitted, cached or otherwise used,
+   except with the prior written permission of Parade Publications.
+   [124]Ad Choices
+
+References
+
+   Visible links
+   1. http://www.parade.com/
+   2. http://www.parade.com/entertainment/
+   3. http://www.parade.com/food/
+   4. http://www.parade.com/living/
+   5. http://www.parade.com/health/
+   6. https://www.twitter.com/ParadeMagazine
+   7. https://www.facebook.com/parademag
+   8. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml842.data#menu
+   9. http://www.parade.com/entertainment/
+  10. http://www.parade.com/food/
+  11. http://www.parade.com/living/
+  12. http://www.parade.com/health/
+  13. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml842.data#facebook
+  14. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml842.data#google
+  15. http://www.parade.com/login/?redirect_to=http://www.parade.com/167841/nancyberk/5-secrets-for-great-college-visits/
+  16. http://www.parade.com/register/?redirect_to=http://www.parade.com/167841/nancyberk/5-secrets-for-great-college-visits/
+  17. http://www.parade.com/america-saves/
+  18. http://www.parade.com/member/nancyberk/
+  19. http://www.parade.com/member/nancyberk/
+  20. https://twitter.com/nancyberk
+  21. http://www.parade.com/170310/nancyberk/its-sat-week-5-tips-for-parents-with-teens/
+  22. http://www.parade.com/169513/nancyberk/breaking-bads-dad-why-good-parents-got-hooked/
+  23. http://www.parade.com/169054/nancyberk/showbiz-analysis-with-rich-little/
+  24. http://collegeprowler.com/search/
+  25. http://www.unigo.com/Colleges
+  26. http://drnancyberk.com/
+  27. http://whineat9.com/
+  28. http://www.amazon.com/College-Bound-Gagged-Without-Relationship/dp/0615548830
+  29. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml842.data#facebook
+  30. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml842.data#google
+  31. http://www.parade.com/reset/
+  32. http://www.parade.com/register/
+  33. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml842.data#facebook
+  34. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml842.data#google
+  35. file://localhost/privacy-policy/
+  36. file://localhost/privacy-policy/#privacy-policy
+  37. http://www.parade.com/login/
+  38. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml842.data#facebook
+  39. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml842.data#google
+  40. http://www.parade.com/login/
+  41. http://www.parade.com/register/
+  42. http://www.parade.com/167806/shawnamalcom/thoroughly-modern-mindy-kalings-house-rules/
+  43. http://www.parade.com/member/shawnamalcom/
+  44. http://www.parade.com/170371/parade/the-joys-of-midwestern-fried-chicken-and-gravy/
+  45. http://www.parade.com/member/parade/
+  46. http://www.parade.com/170310/nancyberk/its-sat-week-5-tips-for-parents-with-teens/
+  47. http://www.parade.com/member/nancyberk/
+  48. http://www.parade.com/170238/amberriley/amber-rileys-dancing-with-the-stars-blog-im-living-every-aspect-of-my-dream/
+  49. http://www.parade.com/member/amberriley/
+  50. http://www.parade.com/170233/viannguyen/after-splitting-with-george-clooney-stacy-keibler-dating-new-man/
+  51. http://www.parade.com/member/viannguyen/
+  52. http://www.parade.com/169966/ilyapozin/who-says-you-need-a-mentor-be-your-own/
+  53. http://www.parade.com/member/ilyapozin/
+  54. http://www.parade.com/170318/carrieanninaba/carrie-ann-inabas-dancing-with-the-stars-blog-the-contestants-with-the-most-heart-so-far-are/
+  55. http://www.parade.com/member/carrieanninaba/
+  56. http://www.parade.com/156283/rosemaryblack/fall-for-a-better-than-pie-apple-dessert/
+  57. http://www.parade.com/member/rosemaryblack/
+  58. http://www.parade.com/169642/sonacharaipotra/ya-author-kami-garcia-talks-unbreakable/
+  59. http://www.parade.com/member/sonacharaipotra/
+  60. http://www.parade.com/169181/sanuraweathers/nutty-butternut-squash-pancakes-with-baked-apples/
+  61. http://www.parade.com/member/sanuraweathers/
+  62. http://www.parade.com/170163/viannguyen/orlando-bloom-returns-in-new-the-hobbit-the-desolation-of-smaug-trailer/
+  63. http://www.parade.com/member/viannguyen/
+  64. http://www.parade.com/156807/devinalexander/tiny-tacos/
+  65. http://www.parade.com/member/devinalexander/
+  66. http://www.parade.com/170060/aliceknisleymatthias-2/trying-to-feed-picky-kids-check-out-the-picky-eaters-project/
+  67. http://www.parade.com/member/aliceknisleymatthias-2/
+  68. http://www.parade.com/67053/joybauer/fast-snacks-for-your-purse-pantry-fridge-freezer/
+  69. http://www.parade.com/member/joybauer/
+  70. http://www.parade.com/169758/jackiedodd/pumpkin-ale-cheesecake-bars/
+  71. http://www.parade.com/member/jackiedodd/
+  72. http://www.parade.com/169861/rachelweingarten/resuscitate-and-repair-your-summer-parched-skin-part-1/
+  73. http://www.parade.com/member/rachelweingarten/
+  74. http://www.parade.com/170019/viannguyen/happy-birthday-julie-andrews-through-the-years/
+  75. http://www.parade.com/member/viannguyen/
+  76. http://www.parade.com/170002/jonathanhorowitz/the-daily-cute-5-dismayed-political-animals/
+  77. http://www.parade.com/member/jonathanhorowitz/
+  78. http://www.parade.com/169947/roisinkelly/outrage-at-diana-movie-poster-at-location-where-princess-died/
+  79. http://www.parade.com/member/roisinkelly/
+  80. http://www.parade.com/170065/linzlowe/dancing-with-the-stars-week-3-recap-how-does-bill-nye-really-feel-about-his-elimination/
+  81. http://www.parade.com/member/linzlowe/
+  82. http://www.parade.com/155535/marilynvossavant/numbrix-9-october-1-7/
+  83. http://www.parade.com/member/marilynvossavant/
+  84. http://www.parade.com/170238/amberriley/amber-rileys-dancing-with-the-stars-blog-im-living-every-aspect-of-my-dream/
+  85. http://www.parade.com/member/amberriley/
+  86. http://www.parade.com/169645/ellenleikind/youre-a-poker-player-even-if-youve-never-played-a-hand/
+  87. http://www.parade.com/member/ellenleikind/
+  88. http://www.parade.com/169708/linzlowe/what-do-the-spice-girls-think-of-mel-bs-new-single-for-once-in-my-life/
+  89. http://www.parade.com/member/linzlowe/
+  90. http://www.parade.com/169428/viannguyen/how-would-a-government-shutdown-affect-you/
+  91. http://www.parade.com/member/viannguyen/
+  92. http://www.parade.com/169319/viannguyen/which-dwts-pro-is-sports-illustrated-cover-girl-kate-upton-dating/
+  93. http://www.parade.com/member/viannguyen/
+  94. http://www.parade.com/155534/marilynvossavant/numbrix-9-september-30-6/
+  95. http://www.parade.com/member/marilynvossavant/
+  96. http://www.parade.com/155535/marilynvossavant/numbrix-9-october-1-7/
+  97. http://www.parade.com/member/marilynvossavant/
+  98. http://www.parade.com/member/joybauer/
+  99. http://www.parade.com/member/joybauer/
+ 100. http://www.parade.com/67053/joybauer/fast-snacks-for-your-purse-pantry-fridge-freezer/
+ 101. http://www.parade.com/member/roisinkelly/
+ 102. http://www.parade.com/member/roisinkelly/
+ 103. http://www.parade.com/169947/roisinkelly/outrage-at-diana-movie-poster-at-location-where-princess-died/
+ 104. http://www.parade.com/member/rosemaryblack/
+ 105. http://www.parade.com/member/rosemaryblack/
+ 106. http://www.parade.com/156283/rosemaryblack/fall-for-a-better-than-pie-apple-dessert/
+ 107. http://www.parade.com/member/jonathanhorowitz/
+ 108. http://www.parade.com/member/jonathanhorowitz/
+ 109. http://www.parade.com/170002/jonathanhorowitz/the-daily-cute-5-dismayed-political-animals/
+ 110. http://www.parade.com/entertainment/
+ 111. http://www.parade.com/food/
+ 112. http://www.parade.com/living/
+ 113. http://www.parade.com/health/
+ 114. http://www.parade.com/about-us/
+ 115. http://mediakit.parade.com/
+ 116. http://www.parade.com/contact-us/
+ 117. http://www.parade.com/parade-bios/
+ 118. http://www.parade.com/media-kit/
+ 119. http://www.parade.com/media-relations/
+ 120. http://www.parade.com/parade-contributors/
+ 121. file://localhost/privacy-policy/
+ 122. file://localhost/privacy-policy/#privacy-policy
+ 123. file://localhost/privacy-policy/#california-customers
+ 124. file://localhost/privacy-policy/#third-party-tracking
+
+   Hidden links:
+ 126. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml842.data
+ 127. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml842.data
+ 128. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml842.data
+ 129. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml842.data#search
+ 130. http://www.parade.com/login/?redirect_to=http%3A%2F%2Fwww.parade.com%2F167841%2Fnancyberk%2F5-secrets-for-great-college-visits%2F
+ 131. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml842.data
+ 132. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml842.data
+ 133. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml842.data
+ 134. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml842.data
+ 135. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml842.data
+ 136. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml842.data
+ 137. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml842.data
+ 138. http://www.parade.com/167806/shawnamalcom/thoroughly-modern-mindy-kalings-house-rules/
+ 139. http://www.parade.com/170371/parade/the-joys-of-midwestern-fried-chicken-and-gravy/
+ 140. http://www.parade.com/170310/nancyberk/its-sat-week-5-tips-for-parents-with-teens/
+ 141. http://www.parade.com/170238/amberriley/amber-rileys-dancing-with-the-stars-blog-im-living-every-aspect-of-my-dream/
+ 142. http://www.parade.com/170233/viannguyen/after-splitting-with-george-clooney-stacy-keibler-dating-new-man/
+ 143. http://www.parade.com/169966/ilyapozin/who-says-you-need-a-mentor-be-your-own/
+ 144. http://www.parade.com/170318/carrieanninaba/carrie-ann-inabas-dancing-with-the-stars-blog-the-contestants-with-the-most-heart-so-far-are/
+ 145. http://www.parade.com/156283/rosemaryblack/fall-for-a-better-than-pie-apple-dessert/
+ 146. http://www.parade.com/169642/sonacharaipotra/ya-author-kami-garcia-talks-unbreakable/
+ 147. http://www.parade.com/169181/sanuraweathers/nutty-butternut-squash-pancakes-with-baked-apples/
+ 148. http://www.parade.com/170163/viannguyen/orlando-bloom-returns-in-new-the-hobbit-the-desolation-of-smaug-trailer/
+ 149. http://www.parade.com/156807/devinalexander/tiny-tacos/
+ 150. http://www.parade.com/170060/aliceknisleymatthias-2/trying-to-feed-picky-kids-check-out-the-picky-eaters-project/
+ 151. http://www.parade.com/67053/joybauer/fast-snacks-for-your-purse-pantry-fridge-freezer/
+ 152. http://www.parade.com/169758/jackiedodd/pumpkin-ale-cheesecake-bars/
+ 153. http://www.parade.com/169861/rachelweingarten/resuscitate-and-repair-your-summer-parched-skin-part-1/
+ 154. http://www.parade.com/170019/viannguyen/happy-birthday-julie-andrews-through-the-years/
+ 155. http://www.parade.com/170002/jonathanhorowitz/the-daily-cute-5-dismayed-political-animals/
+ 156. http://www.parade.com/169947/roisinkelly/outrage-at-diana-movie-poster-at-location-where-princess-died/
+ 157. http://www.parade.com/170065/linzlowe/dancing-with-the-stars-week-3-recap-how-does-bill-nye-really-feel-about-his-elimination/
+ 158. http://www.parade.com/155535/marilynvossavant/numbrix-9-october-1-7/
+ 159. http://www.parade.com/170238/amberriley/amber-rileys-dancing-with-the-stars-blog-im-living-every-aspect-of-my-dream/
+ 160. http://www.parade.com/169645/ellenleikind/youre-a-poker-player-even-if-youve-never-played-a-hand/
+ 161. http://www.parade.com/169708/linzlowe/what-do-the-spice-girls-think-of-mel-bs-new-single-for-once-in-my-life/
+ 162. http://www.parade.com/169428/viannguyen/how-would-a-government-shutdown-affect-you/
+ 163. http://www.parade.com/169319/viannguyen/which-dwts-pro-is-sports-illustrated-cover-girl-kate-upton-dating/
+ 164. http://www.parade.com/155534/marilynvossavant/numbrix-9-september-30-6/
+ 165. http://www.parade.com/155535/marilynvossavant/numbrix-9-october-1-7/

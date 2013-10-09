@@ -1,0 +1,299 @@
+   #[1]Dev Blog of Martin Ivanov [2]Acid.JS Web UI Library
+
+   [3]HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device
+   Access, Graphics, 3D & Effects, Multimedia, Performance & Integration,
+   Semantics, and Offline & Storage
+     * [4]Blog
+     * [5]About
+     * [6]@wemakesitesnet
+     * [7]Contact
+     * [8]Donate
+
+[9]HTML5, CSS3 and JavaScript Insight
+
+     * [10]JavaScript
+          + [11]XML to JSON JavaScript Objectifier
+          + [12]URI to JSON Serializer
+          + [13]Coming Soon - HTML5, JavaScript and CSS3 Replacement Page
+          + [14]JavaScript iPhone Toggle Switch Button
+          + [15]HTML5 Resume Generator and Onepager Website
+          + [16]JavaScript and CSS3 Image Reflections
+          + [17]JavaScript Inheritance Without Constructors
+          + [18]IMDB Movie Data Fetcher
+          + [19]JavaScript Mapper for RESTFul Methods
+          + [20]TinyURL JavaScript API
+          + [21]Wrapper for the HTML5 WebWorkers API
+          + [22]JavaScript Class Augmenter
+          + [23]HTML5 Details Enabler YUI Class
+          + [24]JavaScript HTML Template Engine
+          + [25]JavaScript Localization Class
+          + [26]HTML5 Charts
+          + [27]HTML5 Placeholder Enabler YUI Class
+          + [28]All JavaScript Experiments and Insight
+     * [29]CSS3
+          + [30]Custom Checkboxes and Radio Buttons
+          + [31]CSS3 iPhone Toggle Buttons
+          + [32]Crossbrowser RGBA and Prevention of Opacity Propagation.
+            Starting with IE6
+          + [33]CSS3 Slides Viewer
+          + [34]Fancy CSS3 Tooltips
+          + [35]CSS3 Treeview. No JavaScript
+          + [36]CSS3 Metro Dropdown Styling
+          + [37]CSS3 Element Reflections
+          + [38]Dropdown Styling with CSS3
+          + [39]CSS3 Background Image Cropping
+          + [40]Inline Masked File Upload Form with CSS3 and HTML5
+          + [41]CSS3 Tabstrip
+          + [42]CSS3 Gaussian Blur
+          + [43]All CSS3 Experiments and Insight
+     * [44]Dev Tools
+          + [45]HTML Validation Bookmarklet
+          + [46]Builder.CSS
+          + [47]Image to Base-64 Encoder
+          + [48]HTML5 Sticky Notes App
+          + [49]JavaScript Minifier and Obfuscator
+          + [50]JSON to HTML Template Engine
+          + [51]HTML Template Engine
+          + [52]HTML5 Guitar Chords Player
+          + [53]IMDB Movie Data Fetcher
+          + [54]Message Digest Encrypter
+          + [55]RESTFul Builder and Tester
+     * [56]Web.UI
+          + [57]HTML5 Shopping Cart
+          + [58]Ribbon Bar Web UI
+          + [59]Auto Complete Widget
+          + [60]HTML5 Canvas Gauge
+          + [61]Table Painter Widget
+          + [62]CSS3 Metro Forms
+          + [63]Split Button Widget
+          + [64]HTML5 and CSS3 Progressbar
+          + [65]Tourdates and Events Scheduler
+          + [66]TabStrip Web UI
+          + [67]Hotel Booking Form
+     * [68]Tweet
+
+JavaScript API for TinyURL
+
+   You can read the original blogpost on this [69]link, or you can
+   [70]download the example.
+
+Demo
+
+   Open your browsers's console and reload the page to see the class in
+   action.
+
+Register the Class
+
+<script src="AcidJs.Shortener/js/jQuery.js"></script>
+<script src="AcidJs.Shortener/js/Shortener.js"></script>
+
+The Shortener.js Class
+
+/*
+ * Shortener
+ * JavaScript API for TinyURL
+ * developer's website: http://wemakesites.net/#!/web-dev
+ * developer's twitter: https://twitter.com/#!/wemakesitesnet
+ * developer's blog http://acidmartin.wordpress.com/
+ **/
+
+(function() {
+    "use strict";
+
+    /*
+     * @namespace window.AcidJs
+     **/
+    if(undefined === window.AcidJs) {
+        window.AcidJs = {};
+    }
+
+    /*
+     * @constructor
+     * @param urls (Object) set a predefined key-value pairs of urls/shorturls
+     * {
+     *  "url": "shorturl"
+     * }
+     **/
+    function Shortener(urls) {
+        this.urls = urls || {};
+    }
+
+    Shortener.prototype = {
+        /*
+         * @member APIS (Object)
+         * @public
+         **/
+        APIS: {
+            tinyurl: "http://tinyurl.com/api-create.php?url="
+        },
+
+        /*
+         * @method get
+         * @public
+         * @param longUrl (String) URL that should be shortened
+         * @param callback (Function) [optional] callback that will be executed
+after the URL has been processed
+         * @param apiToUse (String) [optional] which shortening service should b
+e used (default is "tinyurl")
+         **/
+        get: function(longUrl, callback, apiToUse) {
+            var
+                that = this,
+                service = apiToUse ? this.APIS[apiToUse] : this.APIS.tinyurl;
+
+            if(this.urls[longUrl]) {
+                if(callback) {
+                    callback.call(this, this.urls[longUrl]);
+                    return;
+                }
+            }
+
+            $.when($.ajax({
+                    url: "pages/javascript-api-for-tinyurl/example/AcidJs.Shorte
+ner/php/Shortener.php",
+                    data: "url=" + window.encodeURIComponent(longUrl) +
+                        "&service=" + window.encodeURIComponent(service),
+                    dataType: "json"
+                })).then(function(rsp){
+                    that.set(longUrl, rsp[longUrl], callback);
+                });
+        },
+
+        /*
+         * @method set cache the short url in the urls object and reuse it from
+the DOM storage if requested again
+         * @private
+         * @param key (String) original expanded URL
+         * @param value (String) shortened url
+         * @param callback (Function) [optional] execute the callback, if set in
+ the get() method
+         **/
+        set: function(key, value, callback) {
+            this.urls[key] = value;
+            if(callback) {
+                callback.call(this, this.urls[key]);
+            }
+        }
+    };
+
+    window.AcidJs.Shortener = Shortener;
+})();
+
+The Shortener.php Proxy
+
+<?php
+    header('Content-type: text/json');
+    ob_start('ob_gzhandler');
+
+    $url = $_REQUEST['url'];
+    $service = $_REQUEST['service'];
+
+    if($url && $service) {
+        $tinyurl = file_get_contents($service.$url);
+
+        echo '{"'.$url.'":"'.$tinyurl.'"}';
+    }
+?>
+
+Using the Class
+
+(function() {
+    var
+        config = {
+            "http://wemakesites.net": "http://tinyurl.com/2cv6wrm",
+            "http://acidjs.wemakesites.net/": "http://tinyurl.com/bonbupy",
+            "http://acidmartin.wordpress.com": "http://tinyurl.com/clvk2v8"
+        };
+
+    window.shortener = new AcidJs.Shortener(config);
+    window.shortener.get("http://stickeez.wemakesites.net", function(url) {
+        window.console.log(url);
+    });
+})();
+
+     * © 2001-2013 Martin Ivanov
+     * [71]Blog
+     * [72]About
+     * [73]@wemakesitesnet
+     * [74]Contact
+     * [75]Donate
+     * [76]Valid HTML5
+
+References
+
+   1. http://feeds.feedburner.com/acidmartin
+   2. http://feeds.feedburner.com/acidjs
+   3. http://www.w3.org/html/logo/
+   4. https://acidmartin.wordpress.com/
+   5. http://wemakesites.net/
+   6. https://twitter.com/wemakesitesnet
+   7. http://wemakesites.net/#!/contact
+   8. https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QFUHPWJB2JDBS
+   9. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/
+  10. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript.html
+  11. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/xml-to-json-javascript-objectifier.html
+  12. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/uri-to-json-serializer.html
+  13. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/coming-soon.html
+  14. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-iphone-toggle-buttons.html
+  15. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/html5-resume-builder.html
+  16. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/reflections.html
+  17. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-inheritance-without-constructors.html
+  18. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-api-for-imdb.html
+  19. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-mapper-for-restful-methods.html
+  20. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-api-for-tinyurl.html
+  21. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-wrapper-for-the-html5-webworkers-api.html
+  22. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-class-augmenter.html
+  23. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/html-5-details-element-enabler.html
+  24. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/javascript-html-template-engine.html
+  25. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/quick-and-dirty-localization-with-javascript.html
+  26. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/html5-charts.html
+  27. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/html5-placeholder-enabler.html
+  28. http://acidmartin.wordpress.com/category/javascript/
+  29. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css.html
+  30. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/custom-css3-checkboxes-and-radios.html
+  31. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-iphone-toggle-buttons.html
+  32. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/using-crossbrowser-rgba-to-prevent-the-css-opacity-inheritance-from-parent-to-child-elements.html
+  33. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-slides-viewer.html
+  34. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/fancy-css3-tooltips.html
+  35. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-treeview.html
+  36. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-metro-dropdown.html
+  37. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-element-reflections.html
+  38. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-selectbox.html
+  39. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-background-image-cropping.html
+  40. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-inline-file-input.html
+  41. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-tabstrip.html
+  42. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/css3-gaussian-blur.html
+  43. http://acidmartin.wordpress.com/category/css3/
+  44. http://acidjs.wemakesites.net/
+  45. http://acidjs.wemakesites.net/validator.html
+  46. http://buildercss.wemakesites.net/
+  47. http://image2base64.wemakesites.net/
+  48. http://stickeez.wemakesites.net/
+  49. http://acidjs.wemakesites.net/builder-js.html
+  50. http://acidjs.wemakesites.net/templatr.html
+  51. http://acidjs.wemakesites.net/pisi.html
+  52. http://acidjs.wemakesites.net/guitar-chords-js.html
+  53. http://acidjs.wemakesites.net/imdb-fetcher.html
+  54. http://hasher.wemakesites.net/
+  55. http://acidjs.wemakesites.net/rest-builder.html
+  56. http://acidjs.wemakesites.net/
+  57. http://html5-cart.com/
+  58. http://acidjs.wemakesites.net/ribbon-bar-xml.html
+  59. http://acidjs.wemakesites.net/auto-complete.html
+  60. http://acidjs.wemakesites.net/gauge.html
+  61. http://acidjs.wemakesites.net/table-painter.html
+  62. http://acidjs.wemakesites.net/forms-js.html
+  63. http://acidjs.wemakesites.net/split-button-xml.html
+  64. http://acidjs.wemakesites.net/progressbar-js.html
+  65. http://acidjs.wemakesites.net/tour-dates.html
+  66. http://acidjs.wemakesites.net/tabstrip-xml.html
+  67. http://acidjs.wemakesites.net/hotel-reservation-form-js.html
+  68. https://twitter.com/share
+  69. https://acidmartin.wordpress.com/2012/12/13/javascript-api-for-tinyurl-and-more/
+  70. http://acidmartin.wemakesites.net/DownloadAdmin/click.php?id=214
+  71. https://acidmartin.wordpress.com/
+  72. http://wemakesites.net/
+  73. https://twitter.com/wemakesitesnet
+  74. http://wemakesites.net/#!/contact
+  75. https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QFUHPWJB2JDBS
+  76. http://validator.w3.org/check?uri=referer

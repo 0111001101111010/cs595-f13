@@ -1,0 +1,264 @@
+   #[1]publisher
+
+   [2]edX
+     * [3]how it works
+     * [4]courses
+     * [5]schools
+     * [6]Register Now
+
+   [7]Login
+   [8]dashboard
+
+Course detail
+
+   BerkeleyX: CS169.1x - Software as a Service
+   Watch the Course Intro Video
+   BerkeleyX: CS169.1x - Software as a Service Video
+
+Software as a Service
+
+CS169.1x teaches the fundamentals for engineering long-lived software using
+Agile techniques to develop Software as a Service (SaaS) using Ruby on Rails.
+
+ABOUT THIS COURSE
+
+   CS169.1x teaches the fundamentals for engineering long-lasting software
+   using highly-productive Agile techniques to develop Software as a
+   Service (SaaS) using Ruby on Rails. Students will understand the new
+   challenges and opportunities of SaaS versus shrink-wrapped software.
+   They will understand and apply fundamental programming techniques to
+   the design, development, testing, and public cloud deployment of a
+   simple SaaS application. Students will use best-of-breed tools that
+   support modern development techniques including behavior-driven design,
+   user stories, test-driven development, velocity, and pair programming.
+   Students will learn how modern programming language features like
+   metaprogramming and reflection can improve productivity and code
+   maintainability. Students will work on weekly coding projects and
+   quizzes. Those who successfully complete the assignments and earn a
+   passing grade can get an honor code certificate or verified certificate
+   from BerkeleyX. This run of the class includes all new videos, two new
+   homeworks and all new exam questions.  The new class also includes
+   embedded live chat with Teaching Assistants and other students and
+   opportunities for remote pair programming with other students.  Group
+   tutorial Q&A sessions will also be held and broadcast live through
+   Google Hangouts and YouTube.
+
+Ways to take this edX course:
+
+Simply Audit this Course
+
+   Can't commit to all of the lectures, assignments, and tests? Audit this
+   course and have complete access to all of the course material, tests,
+   and the online discussion forum. You decide what and how much you want
+   to do.
+
+   Free to All
+
+   [9]More about Auditing a Course
+   or
+
+Pursue a Verified Certificate of Achievement
+
+   Plan to use your completed coursework for job applications, promotions
+   or school applications? Then you may prefer to work towards a verified
+   Certificate of Achievement to document your accomplishment.
+
+   Minimum fee required. [10]see details
+
+   [11]What is an ID verified Certificate of Achievement?
+
+COURSE STAFF
+
+   Armando Fox
+   Armando Fox
+
+   Armando Fox is an Adjunct Associate Professor at UC Berkeley and was
+   previously an Assistant Professor at Stanford, where he received
+   teaching and mentoring awards from the Associated Students of Stanford
+   University, the Society of Women Engineers, and Tau Beta Pi Engineering
+   Honor Society. In previous lives he helped design the Intel Pentium Pro
+   microprocessor and founded a successful startup to commercialize his UC
+   Berkeley dissertation research on mobile computing. His degrees in
+   electrical engineering and computer science are from MIT, the
+   University of Illinois, and UC Berkeley, and he is an ACM Distinguished
+   Member.
+   David Patterson
+   David Patterson
+
+   David Patterson is the Pardee Professor of Computer Science at UC
+   Berkeley and the recipient of the Distinguished Teaching Award (UC
+   Berkeley), the Karlstrom Outstanding Educator Award (ACM), the Mulligan
+   Education Medal (IEEE), and the Undergraduate Teaching Award (IEEE). He
+   has served as Chair of Berkeley's CS Division, Chair of the CRA, and
+   President of the ACM. His best-known research projects are Reduced
+   Instruction Set Computers (RISC), Redundant Arrays of Inexpensive Disks
+   (RAID), and Network of Workstations (NOW). Among other distinctions,
+   he's been elected to the National Academy of Engineering, the National
+   Academy of Sciences, and the Silicon Valley Engineering Hall of Fame,
+   and is a Fellow of the Computer History Museum. He received all his
+   degrees from UCLA.
+   Sam Joseph
+   Sam Joseph
+
+   Sam Joseph is an Associate Professor at Hawaii Pacific University and
+   was previously an Associate Researcher at University of Hawaii at Manoa
+   (UHM). He is a recipient of the Raymond-Hide prize for Astrophysics and
+   a Toshiba Fellowship. He teaches courses on game & mobile programming &
+   design, software engineering and scientific research methods
+   exclusively online from London, UK. He runs the funniest computer ever
+   competition as part of his research on creating humorous chatbots,
+   which dovetails nicely with his other research interests in software to
+   support online collaborative learning, in particular remote pair
+   programming. His degrees in Astrophysics, Cognitive Science and
+   Computer Science are from the University of Leicester, the University
+   of Edinburgh, and UHM, and he is an ACM Member.
+
+FAQs
+
+How will this course be different from previous offerings?
+
+   The presentation order and amount of time spent on some material is
+   being changed in response to feedback from both on-campus and online
+   students. This run of the class also includes all new videos, two new
+   homeworks and all new exam questions. The new class also includes
+   embedded live chat with Teaching Assistants and other students and
+   opportunities for remote pair programming with other students. Group
+   tutorial Q&A sessions will also be held and broadcast live through
+   Google Hangouts and YouTube.
+
+What is the format of the class?
+
+   The class will consist of lecture videos, which are broken into small
+   chunks, usually between eight and twelve minutes each. Some of these
+   may contain integrated "check-yourself" questions. There will also be
+   programming assignments and standalone exams/quizzes, which are not
+   part of the video lectures.
+
+How can I learn more about the course content?
+
+   Please watch the video on this page that we recorded especially for
+   this offering of the course.
+
+Will the text of the lectures be available?
+
+   Yes, transcripts of the course will be made available.
+
+Do I need to watch the lectures live?
+
+   No. You can watch the lectures at your leisure.
+
+How much does it cost to take the course?
+
+   Nothing: the course is free. The recommended textbook is not free
+   (US$10 for Kindle ebook, US$30 hardcopy, US$33 for both starting
+   October 10), but there are free online sources to follow if you do not
+   wish to purchase textbooks.
+
+What versions of Ruby and Rails will we use in the course?
+
+   We will make available at least 2 weeks before class a virtual machine
+   image with all required courseware. You can either download this image
+   and run it using the free VirtualBox (virtualbox.org) software on any
+   Intel x86-based computer, or you can deploy it on Amazon's Elastic
+   Compute Cloud using instructions we will provide. In general, we'll be
+   using Rails 3.2 and Ruby 1.9.3, but we will also be using many other
+   tools, gems, and libraries that will be preinstalled.
+
+Prerequisites:
+
+   Programming proficiency in an object-oriented programming language such
+   as Java, C#, C++, Python, or Ruby is required. We will teach the basics
+   of Ruby at a very accelerated pace that assumes thorough familiarity
+   with OOP inheritance, static/class vs. instance methods and attributes,
+   recursion, hash tables/hash maps, list comprehensions, higher-order
+   functions, lambda expressions. This course is NOT a good first course
+   in programming. Basic Unix command-line skills are helpful; we will
+   provide a cheat sheet.
+
+   IFRAME: [12]https://courses.edx.org/mktg/BerkeleyX/CS.CS169.1x/3T2013
+
+   School:
+   UC BerkeleyX
+   Course code:
+   CS169.1x
+   Classes start:
+   30 Sep 2013
+   Course length:
+   5 weeks
+   Prerequisites:
+
+   Programming proficiency in an object-oriented programming language such
+   as Java, C#, C++, Python, or Ruby is required. We will teach the basics
+   of Ruby at a very accelerated pace that assumes thorough familiarity
+   with OOP inheritance, static/class vs. instance methods and attributes,
+   recursion, hash tables/hash maps, list comprehensions, higher-order
+   functions, lambda expressions. This course is NOT a good first course
+   in programming. Basic Unix command-line skills are helpful; we will
+   provide a cheat sheet.
+   see more...
+
+   IFRAME: [13]https://courses.edx.org/mktg/BerkeleyX/CS.CS169.1x/3T2013
+
+     * [14]Twitter
+     * [ico-separator.png]
+     * [15]Facebook
+     * [ico-separator.png]
+     * [16]email share
+     * [ico-separator.png]
+     * [17]Meetup
+
+     * [18]About Us
+     * [19]Jobs
+     * [20]Press
+     * [21]FAQ
+     * [22]Contact
+
+   EdX is a non-profit created by founding partners Harvard and MIT. We're
+   bringing the best of higher education to students around the world. EdX
+   offers MOOCs and interactive online classes in subjects including law,
+   history, science, engineering, business, social sciences, computer
+   science, public health, and artificial intelligence (AI).
+   [23]Meetup
+   [24]Facebook
+   [25]LinkedIn
+   [26]Twitter
+   [27]Google+
+   © 2013 edX, except where noted, all rights reserved.
+     * [28]Terms of Service and Honor Code
+     * [29]Privacy Policy (Revised 9/17/2013)
+
+References
+
+   Visible links
+   1. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/www.edx.org
+   2. file://localhost/
+   3. file://localhost/how-it-works
+   4. file://localhost/course-list
+   5. file://localhost/schools
+   6. https://courses.edx.org/register
+   7. https://courses.edx.org/login
+   8. https://courses.edx.org/dashboard
+   9. file://localhost/student-faq#certificates
+  10. file://localhost/verified-certificate#pricing
+  11. file://localhost/verified-certificate
+  12. https://courses.edx.org/mktg/BerkeleyX/CS.CS169.1x/3T2013
+  13. https://courses.edx.org/mktg/BerkeleyX/CS.CS169.1x/3T2013
+  14. https://twitter.com/intent/tweet?text=I%20just%20registered%20for%20an%20#edX course %E2%80%90 join me at https://www.edx.org.
+  15. http://www.facebook.com/EdxOnline
+  16. mailto:?subject=Take%20a%20course%20with%20edX%20online&body=I%20just%20registered%20for%20an%20#edX course - join me at: http://www.edx.org/course/berkeley/cs169-1x/software-service/1136
+  17. http://www.meetup.com/edx-communities
+  18. file://localhost/about-us
+  19. file://localhost/jobs
+  20. file://localhost/in-the-news
+  21. file://localhost/student-faq
+  22. file://localhost/contact
+  23. http://www.meetup.com/edx-communities
+  24. https://www.facebook.com/EdxOnline
+  25. http://www.linkedin.com/company/edx
+  26. https://twitter.com/edXOnline
+  27. https://plus.google.com/108235383044095082735/posts
+  28. file://localhost/terms
+  29. file://localhost/privacypolicy
+
+   Hidden links:
+  31. http://youtube.com/watch?v=V36LpHqtcDY

@@ -1,0 +1,394 @@
+   #[1]Comment Feed - Kinect for Windows Human Interface Guidelines (HIG)
+
+   [2]Channel 9
+
+   Entries:
+
+   Comments:
+
+   Posts:
+
+   [ui-anim_basic_16x16.gif]
+
+   Loading User Information from Channel 9
+
+   Something went wrong getting user information from Channel 9
+   [3]MSDN
+
+   [4]Activity [5]Profile
+
+     *
+     *
+     *
+
+   Latest Achievement:
+
+   [ui-anim_basic_16x16.gif]
+
+   Loading User Information from MSDN
+
+   Something went wrong getting user information from MSDN
+   [6]Visual Studio Achievements
+   [7]Visual Studio Achievements
+
+   Latest Achievement: []
+   [ui-anim_basic_16x16.gif]
+
+   Loading Visual Studio Achievements
+
+   Something went wrong getting the Visual Studio Achievements
+
+     * [8]North Central US
+     * [9]Follow Us @Ch9
+     * [10]Subscribe to Channel 9
+     * [11]Sign In
+
+   [12]Channel 9
+   Search this site____ Submit
+     * [13]Browse
+          + [14]Windows Content
+          + [15]Windows Phone Content
+          + [16]Windows Azure Content
+          + [17]Tags
+          + [18]Shows
+          + [19]Series
+          + [20]Blogs
+          + [21]Authors
+          + [22]Events
+     * [23]Forums
+          + [24]Coffeehouse
+          + [25]Site Feedback
+          + [26]Tech Off
+          + [27]Build
+          + [28]TechEd Europe
+          + [29]TechEd North America
+     * [30]Coding4Fun
+          + [31]Blog
+          + [32]Projects
+          + [33]Kinect
+          + [34]Articles
+          + [35]Show
+          + [36]Project Detroit
+     * [37]Events
+          + [38]Imagine Cup
+          + [39]Build
+          + [40]TechEd
+          + [41]Windows 8 Camps
+          + [42]Speakers
+
+     * [43]Coding4Fun
+     * [44]Kinect
+
+Kinect for Windows Human Interface Guidelines (HIG)
+
+     * Posted: 5 days ago
+     * By: [45]Greg Duncan
+     *
+
+       ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( )
+       (*) ( ) ( )
+
+       Avg Rating: 4.5
+       (2)
+     * 5,413 Views
+     * [46]1 Comment
+     * [47]reddit
+       [48]Tweet
+
+   The last post in this week's Kinect for Windows SDK v1.8 theme week is
+   a document that everyone doing any Kinect development should (must?)
+   read and understand...
+
+   Developing Kinect application is very different than other kinds. It's
+   not keyboard, mouse or touch. It's something different. Don't reinvent
+   the wheel. Learn from the hard lessons of others. You don't have to
+   start your design from scratch.
+
+   This 142 page document will help you hit the ground running and avoid
+   costly mistakes...
+
+[49]Human Interface Guidelines (HIG)
+
+     Introduction
+     Welcome to the world of Microsoft Kinect for Windows–enabled
+     applications. This document is your roadmap to building exciting
+     human-computer interaction solutions you once thought were
+     impossible.
+
+     We want to help make your experience with Microsoft Kinect for
+     Windows, and your users’ experiences, the best. So, we’re going to
+     set you off on a path toward success by sharing our most effective
+     design tips, based on our long-term design, development, and
+     usability work. You’ll be able to focus on all those unique
+     challenges you want to tackle.
+
+     Keep this guide at hand – because, as we regularly update it to
+     reflect both our ongoing findings and the evolving capabilities of
+     Kinect for Windows, you’ll stay on the cutting edge.
+
+     Before we get into design tips, it will help to start with a couple
+     of basics: a quick introduction to the Kinect for Windows sensor,
+     software development kit (SDK), and Developer Toolkit, and some
+     environment and sensor setup considerations.
+
+     [50]image
+
+     [51]image
+
+     [52]image
+
+     [53]image
+
+     [54]image
+
+     [55]image
+
+     [56]image
+
+     [57]image
+
+     [58]image
+
+     Conclusion
+     Kinect for Windows is at the forefront of the revolution known as
+     NUI—Natural User Interface. The next generation of human-computer
+     interaction, NUI lets people interact with any device, anywhere,
+     using the movements and language they use every day in their lives.
+     Microsoft Kinect for Windows–enabled applications open a broad range
+     of new possibilities for people to interact with computers in ways
+     that feel natural. From business to the arts, from education to
+     gaming, and beyond, NUI expands the horizons of application
+     development.
+
+     In this document we’ve provided you with the tenets and best
+     practices for creating
+     NUI applications, and guidance on both the basic and more advanced
+     Kinect for Windows interactions for gesture and voice. We hope our
+     suggestions help you create “magical” experiences for your users.
+     Your development of touch-free, natural UI will shape the way people
+     experience and interact with software applications for years to
+     come.
+
+   Project Download URL: [59]http://go.microsoft.com/fwlink/?LinkID=247735
+
+Tags:
+
+     * [60]Coding4Fun,
+     * [61]Kinect,
+     * [62]Kinect SDK
+
+Follow the Discussion
+
+     * [63]Follow
+       Oops, something didn't work.
+       [64]Try again?
+       [65]Sign In to begin to follow these comments
+       [bg-help.gif]
+
+What does this mean?
+       Following an item on Channel 9 allows you to watch for new content
+       and comments that you are interested in. You need to be signed in
+       to Channel 9 to use this feature.
+       Getting "follow" information
+       [66]Stop following these comments
+       [67]Start following these comments
+       [bg-help.gif]
+
+What does this mean?
+       Following an item on Channel 9 allows you to watch for new content
+       and comments that you are interested in and view them all on
+       [68]your notifications page.
+       Removing your "follow"
+       Setting up your "follow"
+       Did you know you can
+       [69]sign up for email notifications?
+          + [70]Subscribe to this comments
+
+     * [71]Scott L. Boyle casusbubble
+       [72]2 days ago
+       super technology
+
+Remove this comment
+
+Remove this thread
+
+   (*)
+          Spam
+
+   ( )
+          Violates C9 guidelines
+
+   ( )
+          Foul language
+
+   ( )
+          Personal attacks
+
+   Remove Comment Remove Thread
+   [73]close
+
+Comment on the Post
+
+   Already have a Channel 9 account? Please [74]sign in
+     *
+
+    1. Are you human? If so, leave this field blank. ____________________
+    2. Name ____________________
+    3. Email ____________________
+    4. Comment
+       ___________________________________________________________________
+       ___________________________________________________________________
+       ___________________________________________________________________
+       ___________________________________________________________________
+       ___________________________________________________________________
+       ___________________________________________________________________
+       ___________________________________________________________________
+       ___________________________________________________________________
+       ___________________________________________________________________
+       ___________________________________________________________________
+
+   Comment
+
+More posts in this blog
+
+     * [75]Kinect for Windows Dev Center Kinect for Windows Dev Center
+     * Kinect for Windows Human Interface Guidelines (HIG) Kinect for
+       Windows Human Interface Guidelines (HIG)
+     * [76]MSDN Kinect For Windows Library (including Kinect Web
+       Applications) MSDN Kinect For Windows Library (including Kinect…
+
+   [77]See More
+
+Related posts
+
+     * [78]Windows 8 App for Channel 9 now available Windows 8 App for
+       Channel 9 now available
+     * [79]Tanagram Partners: Exploring Natural User Interfaces In the
+       Real World Tanagram Partners: Exploring Natural User…
+     * [80]Ping 68: Streetslide, Hohm, Student Partners, Kinect &
+       Farmaritaville Ping 68: Streetslide, Hohm, Student Partners,…
+     * [81]Ping 67: Visual Studio Power Tools, Facebook on Its Way to a
+       Billion, Kinect, and More Ping 67: Visual Studio Power Tools,
+       Facebook on…
+
+   [82]Creative Commons License
+
+   © 2013 Microsoft. [83]Except where designated as licensed by
+   [84]Creative Commons Attribution-Noncommercial-No Derivative Works 3.0
+   License,
+   Microsoft reserves all rights associated with the materials on this
+   site.
+     * [85]Subscribe to Channel 9
+     * [86]Follow Us @Ch9
+     * [87]Feedback
+     * [88]Privacy Statement
+     * [89]Terms Of Use
+     * [90]Code Of Conduct
+     * [91]Contact Us
+
+   DCSIMG
+
+References
+
+   Visible links
+   1. file://localhost/coding4fun/kinect/Kinect-for-Windows-Human-Interface-Guidelines-HIG/RSS
+   2. file://localhost/
+   3. http://www.msdn.com/
+   4. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml769.data
+   5. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml769.data
+   6. file://localhost/achievements
+   7. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml769.data
+   8. file://localhost/Blogs/C9Team/Channel-9-has-gone-global
+   9. http://twitter.com/ch9
+  10. file://localhost/Feeds/RSS
+  11. https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=11&ct=1380682653&rver=6.1.6195.0&wp=MBI&wreply=http:%2F%2Fchannel9.msdn.com%2Fcoding4fun%2Fkinect%2FKinect-for-Windows-Human-Interface-Guidelines-HIG&id=47159
+  12. file://localhost/
+  13. file://localhost/Browse
+  14. file://localhost/Windows
+  15. file://localhost/WindowsPhone
+  16. file://localhost/WindowsAzure
+  17. file://localhost/Browse/Tags
+  18. file://localhost/Browse/Shows
+  19. file://localhost/Browse/Series
+  20. file://localhost/Browse/Blogs
+  21. file://localhost/Browse/Authors
+  22. file://localhost/Browse/Events
+  23. file://localhost/Forums
+  24. file://localhost/Forums/Coffeehouse
+  25. file://localhost/Forums/Feedback
+  26. file://localhost/Forums/TechOff
+  27. file://localhost/Forums/Build
+  28. file://localhost/Forums/TechEdEU
+  29. file://localhost/Forums/TechEdNA
+  30. file://localhost/coding4fun
+  31. file://localhost/coding4fun/blog
+  32. file://localhost/coding4fun/projects
+  33. file://localhost/coding4fun/kinect
+  34. file://localhost/coding4fun/articles
+  35. file://localhost/coding4fun/tv
+  36. file://localhost/coding4fun/detroit
+  37. file://localhost/Events
+  38. file://localhost/Events/Imagine-Cup
+  39. file://localhost/Events/Build
+  40. file://localhost/Events/TechEd
+  41. file://localhost/Events/Windows-Camp
+  42. file://localhost/Events/Speakers
+  43. file://localhost/coding4fun
+  44. file://localhost/coding4fun/kinect
+  45. file://localhost/Niners/gduncan411
+  46. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml769.data#comments
+  47. http://www.reddit.com/r/programming/submit?url=http://channel9.msdn.com/coding4fun/kinect/Kinect-for-Windows-Human-Interface-Guidelines-HIG&title=Kinect%20for%20Windows%20Human%20Interface%20Guidelines%20(HIG)%20(Channel%209)
+  48. https://twitter.com/share
+  49. http://go.microsoft.com/fwlink/?LinkID=247735
+  50. http://files.channel9.msdn.com/wlwimages/f1dda9cc6de74512b7c19f0101402403/image%5B2%5D-283.png
+  51. http://files.channel9.msdn.com/wlwimages/f1dda9cc6de74512b7c19f0101402403/image%5B5%5D-164.png
+  52. http://files.channel9.msdn.com/wlwimages/f1dda9cc6de74512b7c19f0101402403/image%5B8%5D-83.png
+  53. http://files.channel9.msdn.com/wlwimages/f1dda9cc6de74512b7c19f0101402403/image%5B11%5D-52.png
+  54. http://files.channel9.msdn.com/wlwimages/f1dda9cc6de74512b7c19f0101402403/image%5B14%5D-24.png
+  55. http://files.channel9.msdn.com/wlwimages/f1dda9cc6de74512b7c19f0101402403/image%5B17%5D-9.png
+  56. http://files.channel9.msdn.com/wlwimages/f1dda9cc6de74512b7c19f0101402403/image%5B20%5D-6.png
+  57. http://files.channel9.msdn.com/wlwimages/f1dda9cc6de74512b7c19f0101402403/image%5B23%5D-4.png
+  58. http://files.channel9.msdn.com/wlwimages/f1dda9cc6de74512b7c19f0101402403/image%5B26%5D.png
+  59. http://go.microsoft.com/fwlink/?LinkID=247735
+  60. file://localhost/Tags/coding4fun
+  61. file://localhost/Tags/kinect
+  62. file://localhost/Tags/kinect+sdk
+  63. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml769.data
+  64. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml769.data
+  65. https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=11&ct=1380682653&rver=6.1.6195.0&wp=MBI&wreply=http:%2F%2Fchannel9.msdn.com%2Fcoding4fun%2Fkinect%2FKinect-for-Windows-Human-Interface-Guidelines-HIG&id=47159
+  66. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml769.data
+  67. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml769.data
+  68. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml769.data
+  69. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml769.data
+  70. file://localhost/coding4fun/kinect/Kinect-for-Windows-Human-Interface-Guidelines-HIG/RSS
+  71. file://localhost/Niners/casusbubble
+  72. file://localhost/coding4fun/kinect/Kinect-for-Windows-Human-Interface-Guidelines-HIG#c635160419603629361
+  73. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml769.data
+  74. https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=11&ct=1380682653&rver=6.1.6195.0&wp=MBI&wreply=http:%2F%2Fchannel9.msdn.com%2Fcoding4fun%2Fkinect%2FKinect-for-Windows-Human-Interface-Guidelines-HIG&id=47159
+  75. file://localhost/coding4fun/kinect/Kinect-for-Windows-Dev-Center
+  76. file://localhost/coding4fun/kinect/MSDN-Kinect-For-Windows-Library-including-Kinect-Web-Applications
+  77. file://localhost/coding4fun/kinect
+  78. file://localhost/Blogs/C9Team/Windows-8-App-for-Channel-9-now-available
+  79. file://localhost/Shows/Inside+Out/Tanagram-Partners-Exploring-Natural-User-Interfaces-In-the-Real-World
+  80. file://localhost/Shows/PingShow/Ping-68-Streetside-Hohm-Student-Partners-Kinect--Farmaritaville
+  81. file://localhost/Shows/PingShow/Ping-67-Visual-Studio-Power-Tools-Facebook-on-Its-Way-to-a-Billion-Kinect-and-More
+  82. http://creativecommons.org/licenses/by-nc-nd/3.0/us/
+  83. file://localhost/info
+  84. http://creativecommons.org/licenses/by-nc-nd/3.0/us/
+  85. file://localhost/Feeds/RSS
+  86. http://twitter.com/ch9
+  87. file://localhost/Forums/Feedback
+  88. http://go.microsoft.com/fwlink/?LinkId=248681
+  89. http://go.microsoft.com/?linkid=4412892
+  90. file://localhost/CodeOfConduct
+  91. file://localhost/ContactUs
+
+   Hidden links:
+  93. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml769.data
+  94. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml769.data
+  95. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml769.data
+  96. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml769.data
+  97. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml769.data
+  98. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml769.data
+  99. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml769.data
+ 100. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml769.data

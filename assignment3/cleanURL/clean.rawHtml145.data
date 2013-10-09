@@ -1,0 +1,1153 @@
+   #[1]The Flying Frog Blog - Atom [2]The Flying Frog Blog - RSS [3]The
+   Flying Frog Blog - Atom
+
+   [4]skip to main | [5]skip to sidebar
+
+[6]The Flying Frog Blog
+
+Saturday, 14 September 2013
+
+A look at the IronJS source code
+
+   The author of IronJS has made [7]some claims (e.g. F# can feel “like a
+   slightly crappier version of C#”) that I find surprising so I'm reading
+   his code. I find it to be quite odd for a variety of reasons:
+    1. Surprisingly OOP (dozens of interfaces and classes and hundreds of
+       augmentations, static members and overloads) given how well suited
+       ML is to writing compilers.
+    2. Lots of low-level bit-twiddling.
+    3. Uses List.empty instead of [].
+    4. Uses large tuples.
+    5. Uses arrays of closures, e.g. Stmt : (Lexer.Token -> State ->
+       Ast.Tree) array.
+    6. Doesn't use a symbol table.
+    7. Choice of data structures appears to incur lots of unnecessary
+       boxing.
+    8. Odd choice of data structures for memory representation,
+       e.g. null, left and stmt fields for a token are scattered.
+    9. Doesn't seem to use concurrency or parallelism.
+   10. Parser contains only 42 match expressions in 1,400 lines of code.
+   11. Massive amounts of code duplication.
+   12. Hand-rolled parser is unusual. Hand-rolled lexer without tables is
+       even more unusual.
+   13. Strange choice of syntax, e.g. lots of p |> csymbol instead of
+       just csymbol p.
+   14. Allegedly optimized but no structs.
+   15. Uses HashSet.Add repeatedly instead of the declarative constructor
+       from a seq.
+   16. Doesn't use HashIdentity.Structural.
+
+   Furthermore, I don't recall ever seeing that author ask anyone for help
+   with it and it looks like he could do with quite a bit of advice. So
+   I'd take the "rewrite in C#" with a pinch of salt...
+   Here's an example of some code from the hand-rolled lexer that is using
+   many comparisons of unicode characters when single table lookups could
+   suffice:
+   let inline isAlpha c = (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
+   let inline isDecimal c = c >= '0' && c <= '9'
+   let inline isOctal c = c >= '0' && c <= '7'
+   let inline isNonOctalDigit c = c = '8' && c = '9'
+   let inline isHex c = isDecimal c || (c >= 'A' && c <= 'F') || (c >= 'a'
+   && c <= 'f')
+   Here's an example of some odd code that uses OOP methods to give names
+   to the elements of a tuple when it should just use a record type
+   instead of a tuple:
+   member x.TokenName =
+     let s, _, _, _ = x.Token in s |> Lexer.Symbol.getName
+   member x.TokenValue =
+     let _, v, _, _ = x.Token in v
+   member x.TokenLine =
+     let _, _, l, _ = x.Token in l
+   member x.TokenColumn =
+     let _, _, _, c = x.Token in c
+   I believe this is the offending type definition:
+   type Token = int * string * int * int
+   Here's another example of some strange code from the lexer where the
+   programmer has manually assigned consecutive integers to symbols:
+   let [<Literal>] Break = 0
+   let [<Literal>] Case = 1
+   let [<Literal>] Catch = 2
+   let [<Literal>] Continue = 3
+   let [<Literal>] Default = 4
+   ...
+   Note the complete absence of any metaprogramming here, which is
+   surprising because it is written in a MetaLanguage (ML).
+   Here's another oddity, the use of new when constructing
+   non-IDisposable objects:
+   new Dictionary<string, int>(
+   Yet another oddity, pretending that all type definitions are mutually
+   recursive when they are actually completely independent:
+   and ScopeType
+     = GlobalScope
+     | FunctionScope
+   and EvalMode
+     = Clean
+     | Contains
+     | Effected
+   and LookupMode
+     = Static
+     | Dynamic
+   Very odd to say that a Dictionary being faster than a Map is "sad" when
+   it isn't even being mutated:
+   // Sadly a normal Dictionary is so
+   // much faster then a F# Map that
+   // it's worth using it
+   new Dictionary<string, int>(
+   In summary, although IronJS is written in F# it is not idiomatic F#
+   code and there is a lot of room for improvement. I see no reason to
+   believe that the problems with the IronJS code base have anything to do
+   with the F# programming language.
+   Posted by [8]Jon Harrop at [9]07:57
+   Labels: [10]idiomatic, [11]ironjs, [12]performance
+
+3 comments:
+
+   [13]Anton Tayanovskyy said...
+          Mostly agree, just two questions on parsing/lexing.
+          1. Lexing: I once toyed with lexing JS files with fslex, and
+          lexing a file the size of jQuery was visibly slow. I think I
+          might have used --unicode. This probably can be fixed in fslex,
+          a table driven approach certainly should be fast enough when
+          properly done but.. For the moment, there is at least some
+          motivation hand-written lexers.
+          Do you default to using FsLex, or are there other better tools?
+          2. Parsing: JS (EMCA-262) grammar is expressed in EBNF but has
+          the most annoying exceptions in margin notes, notably semicolon
+          insertion and some meta-rules on lookahead. In my attempts I
+          utterly failed to coerce this to a format ocamlyacc or fsyacc
+          (LALR(1)) would accept; it does not mean it is impossible -
+          probably just that I am not very experienced with these tools;
+          they have some "error recovery" feature that might do it, but I
+          was not sure how. So for my code I do this in a hand-rolled
+          parser or parsec-style combinators, where there is a lot of
+          manual control.
+          Do you routinely use fsyacc for parsing? FParsec? Something else
+          perhaps?
+          [14]25 September 2013 06:51 [15][icon_delete13.gif]
+
+   [16]Steve Gilham said...
+          Even granted that this picks on the more egregious highlights,
+          it sounds like a case of "The determined Real Programmer can
+          write FORTRAN programs in any language." (except that the state
+          of the art seems to have moved on from FORTRAN to Java).
+          Perhaps someone with the bandwidth to take it on should attempt
+          a rewrite in F# :)
+
+          [17]30 September 2013 00:05 [18][icon_delete13.gif]
+
+   [19]Jon Harrop said...
+          @Anton: In F# today I use active patterns for both lexing and
+          parsing. I would use fslex and fsyacc if they had tooling (i.e.
+          VS integration and preferably run-time compilation rather than
+          2-stage) but they don't so I steer clear of them.
+          @Steve: Exactly.
+          [20]1 October 2013 15:01 [21][icon_delete13.gif]
+
+   [22]Post a Comment
+   [23]Newer Post [24]Older Post [25]Home
+   Subscribe to: [26]Post Comments (Atom)
+
+Links
+
+     * [27]Visual F# 2010 for Technical Computing (book)
+     * [28]The F#.NET Journal (on-line magazine)
+     * [29]The OCaml Journal (on-line magazine)
+     * [30]F# for Numerics (library)
+     * [31]F# for Visualization (library)
+     * [32]OCaml for Scientists (book)
+     * [33]FFT .NET (library)
+     * [34]Time-Frequency Analysis (Mathematica library)
+     * [35]High-Level Virtual Machine (HLVM)
+     * [36]Smoke Vector Graphics (OCaml library)
+
+Popular Posts
+
+     * [37]Are functional languages inherently slow?
+       Functional languages require infrastructure that inevitably adds
+       overheads over what can theoretically be attained using assembler
+       by hand....
+     * [38]F# vs OCaml vs Haskell: hash table performance
+       I just stumbled upon an interesting benchmark. Put mappings i -> i
+       for i in 1..10M in a hash table, print the entry for 100. Don
+       Stewart&...
+     * [39]Boost's shared_ptr up to 10× slower than OCaml's garbage
+       collection
+       Our recent post about the merits of accurate garbage collection
+       over reference counting prompted Tezka to ask for measurements
+       demonstratin...
+     * [40]The "C++ renaissance"
+       According to Herb Sutter, C++ (and C and Fortran) are unmatched for
+       performance per dollar and, therefore, he believes C++ will once
+       again t...
+     * [41]Why is Haskell used so little in the industry?
+       Bugspy asked an interesting question on Stack Overflow recently: It
+       is a wonderful, very fast, mature and complete language. It exists
+       fo...
+     * [42]The rise and fall of OCaml
+       After over 3 years, The OCaml Journal is finally closing down. New
+       subscriptions offer access to the 75 existing articles and only a
+       few mo...
+     * [43]Are multicore-capable garbage collectors hard to write?
+       In this era of multicore computing, garbage collectors need to
+       allow user threads (aka mutators ) to run in parallel on separate
+       cores simul...
+     * [44]Mono 2.2 vs OCaml vs .NET vs LLVM vs JDK
+       Mono 2.2 was recently shipped and a new JIT code generator was the
+       main selling point promoted by the Mono project because it provides
+       the ...
+     * [45]Mono 2.4 still leaking like a sieve
+       How fast are hash tables in Mono 2.4 compared to .NET 4? An
+       excellent question but one which led us to another trivial program
+       that leaks me...
+     * [46]"Scala is foremost an industrial language"
+       In a recent interview about Scala and Clojure, Martin Odersky of
+       Scala gave some interesting answers including the following: Q:
+       Rich Hick...
+
+Follow by Email
+
+   ____________________ Submit
+
+Related Blogs
+
+     * [icon18_wrench_allbkg.png]
+       [47]F# News
+       [48]Downloading stock prices reloaded - We recently published a
+       blog post describing a 14-line solution for downloading stock
+       prices using F# 2.0. Type providers are a major new feature in F#
+       3...
+       3 hours ago
+
+Subscribe
+
+   [arrow_dropdown.gif] Posts
+   [49][subscribe-netvibes.png] [50][subscribe-yahoo.png]
+   [51][icon_feed12.png] Atom
+   [arrow_dropdown.gif] Posts
+   [arrow_dropdown.gif] Comments
+   [52][subscribe-netvibes.png] [53][subscribe-yahoo.png]
+   [54][icon_feed12.png] Atom
+   [arrow_dropdown.gif] Comments
+
+Blog Archive
+
+     * [55]▼  [56]2013 (7)
+          + [57]▼  [58]September (6)
+               o [59]How do reference counting and tracing garbage coll...
+               o [60]Why is garbage collection an important feature?
+               o [61]What's new in garbage collection?
+               o [62]A look at the IronJS source code
+               o [63]Efficient Parallel Stencil Convolution in Haskell
+               o [64]Hash table insertion performance: F# vs OCaml vs H...
+          + [65]►  [66]February (1)
+
+     * [67]►  [68]2012 (23)
+          + [69]►  [70]November (2)
+          + [71]►  [72]June (1)
+          + [73]►  [74]May (14)
+          + [75]►  [76]April (2)
+          + [77]►  [78]March (3)
+          + [79]►  [80]January (1)
+
+     * [81]►  [82]2011 (16)
+          + [83]►  [84]November (5)
+          + [85]►  [86]September (1)
+          + [87]►  [88]March (2)
+          + [89]►  [90]February (2)
+          + [91]►  [92]January (6)
+
+     * [93]►  [94]2010 (53)
+          + [95]►  [96]December (7)
+          + [97]►  [98]November (1)
+          + [99]►  [100]October (6)
+          + [101]►  [102]September (4)
+          + [103]►  [104]August (7)
+          + [105]►  [106]July (9)
+          + [107]►  [108]June (2)
+          + [109]►  [110]May (2)
+          + [111]►  [112]April (2)
+          + [113]►  [114]March (3)
+          + [115]►  [116]February (3)
+          + [117]►  [118]January (7)
+
+     * [119]►  [120]2009 (28)
+          + [121]►  [122]December (2)
+          + [123]►  [124]November (2)
+          + [125]►  [126]October (1)
+          + [127]►  [128]September (1)
+          + [129]►  [130]July (3)
+          + [131]►  [132]May (2)
+          + [133]►  [134]April (7)
+          + [135]►  [136]March (7)
+          + [137]►  [138]January (3)
+
+     * [139]►  [140]2008 (10)
+          + [141]►  [142]December (1)
+          + [143]►  [144]November (1)
+          + [145]►  [146]October (1)
+          + [147]►  [148]August (2)
+          + [149]►  [150]April (4)
+          + [151]►  [152]February (1)
+
+     * [153]►  [154]2007 (21)
+          + [155]►  [156]December (2)
+          + [157]►  [158]November (2)
+          + [159]►  [160]October (4)
+          + [161]►  [162]September (3)
+          + [163]►  [164]August (1)
+          + [165]►  [166]July (2)
+          + [167]►  [168]June (1)
+          + [169]►  [170]May (6)
+
+Labels
+
+     * [171].net (5)
+     * [172]academic (1)
+     * [173]accumulator generator (1)
+     * [174]advantages (1)
+     * [175]allocation (1)
+     * [176]amd (1)
+     * [177]amorphous (1)
+     * [178]analysis (1)
+     * [179]animation (1)
+     * [180]API (1)
+     * [181]apple (1)
+     * [182]arm (3)
+     * [183]array (1)
+     * [184]articles (1)
+     * [185]asynchronous (1)
+     * [186]asynchronous workflow (1)
+     * [187]beginner (1)
+     * [188]Beltway (1)
+     * [189]benchmark (5)
+     * [190]bfg (1)
+     * [191]bitvector (1)
+     * [192]bitwise (1)
+     * [193]block sorting (1)
+     * [194]bloxors (1)
+     * [195]boehm (4)
+     * [196]book (3)
+     * [197]book sales (1)
+     * [198]books (3)
+     * [199]boost (1)
+     * [200]boxing (1)
+     * [201]bubble sort (1)
+     * [202]bug (1)
+     * [203]bugs (2)
+     * [204]burrows wheeler (1)
+     * [205]burton smith (1)
+     * [206]business (1)
+     * [207]c# (1)
+     * [208]c++ (6)
+     * [209]cache (1)
+     * [210]channel (1)
+     * [211]clojure (1)
+     * [212]clos (1)
+     * [213]closures (1)
+     * [214]clr (1)
+     * [215]code base (1)
+     * [216]color (1)
+     * [217]color laser printer (1)
+     * [218]commercial (1)
+     * [219]common language runtime (1)
+     * [220]comparison (1)
+     * [221]compatibility (1)
+     * [222]compiler (4)
+     * [223]computer programming (1)
+     * [224]concurrency (2)
+     * [225]concurrent (4)
+     * [226]concurrent garbage collector (3)
+     * [227]concurrent gc (1)
+     * [228]conservative gc (2)
+     * [229]consultant (1)
+     * [230]convolution (1)
+     * [231]copying collection (1)
+     * [232]corruption (1)
+     * [233]cpu (2)
+     * [234]darcs (1)
+     * [235]data (1)
+     * [236]data compression (1)
+     * [237]data parallel haskell (3)
+     * [238]debian (1)
+     * [239]determinism (1)
+     * [240]diffraction (1)
+     * [241]directx (1)
+     * [242]disadvantages (1)
+     * [243]discount (1)
+     * [244]disruptor (1)
+     * [245]don stewart (1)
+     * [246]don syme (2)
+     * [247]easy (1)
+     * [248]eclipse (1)
+     * [249]erik meijer (1)
+     * [250]erlang (2)
+     * [251]evolutionary (1)
+     * [252]examples (2)
+     * [253]extensibility (1)
+     * [254]f# (29)
+     * [255]f# for numerics (1)
+     * [256]f# for scientists (1)
+     * [257]f# for technical computing (1)
+     * [258]f# for visualization (1)
+     * [259]f# meetup (1)
+     * [260]f#.net (4)
+     * [261]f#.net journal (1)
+     * [262]fft (1)
+     * [263]first-class functions (1)
+     * [264]fortran (1)
+     * [265]fourier (1)
+     * [266]free (1)
+     * [267]front end (1)
+     * [268]fsharp (4)
+     * [269]funarg problem (1)
+     * [270]functional programming (9)
+     * [271]funding (1)
+     * [272]g++ (1)
+     * [273]G1 (1)
+     * [274]gainward (1)
+     * [275]game (1)
+     * [276]ganesh sittampalam (1)
+     * [277]garbage collection (23)
+     * [278]gc (1)
+     * [279]gc pause (1)
+     * [280]generational garbage collection (1)
+     * [281]generics (1)
+     * [282]ghc (3)
+     * [283]google chrome (1)
+     * [284]google go (1)
+     * [285]goroutine (1)
+     * [286]gpu (1)
+     * [287]graphics (3)
+     * [288]graphics card (1)
+     * [289]guido van rossum (1)
+     * [290]hard drive (1)
+     * [291]hash table (6)
+     * [292]haskell (30)
+     * [293]heap (1)
+     * [294]heap sort (1)
+     * [295]herb sutter (1)
+     * [296]hewlett packard (1)
+     * [297]higher-order module (2)
+     * [298]hitachi (1)
+     * [299]hlvm (14)
+     * [300]householder reductions (1)
+     * [301]hp (2)
+     * [302]ide (1)
+     * [303]idiomatic (1)
+     * [304]Immix (1)
+     * [305]imperative (1)
+     * [306]industrial haskell group (1)
+     * [307]industry (4)
+     * [308]intel (3)
+     * [309]interview (2)
+     * [310]io (1)
+     * [311]ipad (1)
+     * [312]ironjs (1)
+     * [313]java (6)
+     * [314]jit (1)
+     * [315]job (1)
+     * [316]jobs (2)
+     * [317]joe marshall (1)
+     * [318]joe pamer (1)
+     * [319]jvm (2)
+     * [320]kde (1)
+     * [321]kde 4 (1)
+     * [322]language (3)
+     * [323]laser (1)
+     * [324]latency (4)
+     * [325]layout (1)
+     * [326]leak (2)
+     * [327]lecture (1)
+     * [328]lexer (1)
+     * [329]lexmark (1)
+     * [330]limitations (1)
+     * [331]lines of code (2)
+     * [332]linux (2)
+     * [333]lisp (3)
+     * [334]llvm (4)
+     * [335]LMAX (1)
+     * [336]loc (1)
+     * [337]local optimization (1)
+     * [338]london (1)
+     * [339]lwt (1)
+     * [340]macro (1)
+     * [341]mailing list (1)
+     * [342]managed code (1)
+     * [343]mark compact (2)
+     * [344]mark region (5)
+     * [345]mark sweep (4)
+     * [346]market (2)
+     * [347]martin odersky (1)
+     * [348]marvell (1)
+     * [349]mathematica (8)
+     * [350]maximization (1)
+     * [351]median (1)
+     * [352]memory (3)
+     * [353]memory safety (1)
+     * [354]message passing (1)
+     * [355]microsoft (2)
+     * [356]milestone (1)
+     * [357]MinCut (1)
+     * [358]ml (1)
+     * [359]mlton (1)
+     * [360]module system (1)
+     * [361]monad (1)
+     * [362]mono (8)
+     * [363]monte carlo (1)
+     * [364]multicore (1)
+     * [365]nacl (1)
+     * [366]native code (1)
+     * [367]netbook (2)
+     * [368]norman ramsey (1)
+     * [369]numeric tower (1)
+     * [370]numerical (2)
+     * [371]numerical methods (3)
+     * [372]numerical recipes (1)
+     * [373]numerics (1)
+     * [374]nvidia (2)
+     * [375]o'reilly (2)
+     * [376]object oriented programming (3)
+     * [377]ocaml (30)
+     * [378]ocaml for scientists (2)
+     * [379]ocaml journal (2)
+     * [380]OpenCV (1)
+     * [381]optimization (1)
+     * [382]pa_monad (1)
+     * [383]paper (1)
+     * [384]parallel (10)
+     * [385]parallel arrays (1)
+     * [386]parallel garbage collection (1)
+     * [387]parallel programming (1)
+     * [388]ParallelTable (1)
+     * [389]parser (1)
+     * [390]partial specialization (1)
+     * [391]pattern (1)
+     * [392]pattern matching (1)
+     * [393]paul graham (1)
+     * [394]pause (1)
+     * [395]performance (29)
+     * [396]phd (1)
+     * [397]plugin (1)
+     * [398]polymorphic variants (1)
+     * [399]polymorphism (1)
+     * [400]popularity (1)
+     * [401]printer (1)
+     * [402]product (1)
+     * [403]products (1)
+     * [404]profit (3)
+     * [405]profits (1)
+     * [406]programming language (1)
+     * [407]proper tail recursion (1)
+     * [408]public (1)
+     * [409]purely functional data structure (3)
+     * [410]pythagoras tree (1)
+     * [411]python (1)
+     * [412]qr decomposition (1)
+     * [413]quadcore (1)
+     * [414]quicksort (2)
+     * [415]raspberry pi (1)
+     * [416]ray tracer (4)
+     * [417]real-time (2)
+     * [418]reddit (1)
+     * [419]reference counting (5)
+     * [420]reference type (1)
+     * [421]regular expression (1)
+     * [422]reified generics (2)
+     * [423]release (1)
+     * [424]reliability (1)
+     * [425]representation (1)
+     * [426]research (1)
+     * [427]review (4)
+     * [428]rewrite (1)
+     * [429]rich hickey (1)
+     * [430]richard jones (1)
+     * [431]rule (1)
+     * [432]running cost (1)
+     * [433]sadek drobi (1)
+     * [434]sal mangano (1)
+     * [435]sales (4)
+     * [436]scala (10)
+     * [437]scheme (1)
+     * [438]scientific computing (1)
+     * [439]semi-space (1)
+     * [440]shadow stack (1)
+     * [441]share (2)
+     * [442]shared_ptr (1)
+     * [443]signal (1)
+     * [444]simon marlow (1)
+     * [445]simple (1)
+     * [446]size (1)
+     * [447]sml (2)
+     * [448]software (1)
+     * [449]source code (1)
+     * [450]special offer (2)
+     * [451]sse (1)
+     * [452]stack overflow (1)
+     * [453]standard ml (1)
+     * [454]stencil (1)
+     * [455]stop-the-world (1)
+     * [456]structural (1)
+     * [457]sun (1)
+     * [458]symbolic (1)
+     * [459]tail calls (3)
+     * [460]task parallelism (1)
+     * [461]tco (1)
+     * [462]technical computing (1)
+     * [463]template haskell (1)
+     * [464]term rewriting (1)
+     * [465]Texas Multicore Technologies (1)
+     * [466]thesis (1)
+     * [467]throughput (1)
+     * [468]time-frequency analysis (1)
+     * [469]tools (1)
+     * [470]tracing garbage collection (1)
+     * [471]trading (1)
+     * [472]treadmill (1)
+     * [473]trend (2)
+     * [474]trends (1)
+     * [475]tuples (1)
+     * [476]tutorial (2)
+     * [477]type class (1)
+     * [478]value (1)
+     * [479]value types (2)
+     * [480]variant type (1)
+     * [481]verbosity (2)
+     * [482]video (2)
+     * [483]virginity (1)
+     * [484]virtual machine (1)
+     * [485]vista (1)
+     * [486]visual studio integration (1)
+     * [487]visualization (2)
+     * [488]wavelet (1)
+     * [489]western digital (1)
+     * [490]windows (1)
+     * [491]write barrier (1)
+
+About Me
+
+   [492]Jon Harrop
+          Specialist in the use of functional programming for technical
+          computing in industry and academia.
+
+   [493]View my complete profile
+
+Total Pageviews
+
+   Sparkline
+
+References
+
+   Visible links
+   1. http://flyingfrogblog.blogspot.com/feeds/posts/default
+   2. http://flyingfrogblog.blogspot.com/feeds/posts/default?alt=rss
+   3. http://flyingfrogblog.blogspot.com/feeds/1088388806487509054/comments/default
+   4. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml145.data#main
+   5. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml145.data#sidebar
+   6. http://flyingfrogblog.blogspot.co.uk/
+   7. http://ironjs.wordpress.com/2012/04/19/why-not-f/
+   8. http://www.blogger.com/profile/11059316496121100950
+   9. http://flyingfrogblog.blogspot.co.uk/2013/09/ironjs.html
+  10. http://flyingfrogblog.blogspot.co.uk/search/label/idiomatic
+  11. http://flyingfrogblog.blogspot.co.uk/search/label/ironjs
+  12. http://flyingfrogblog.blogspot.co.uk/search/label/performance
+  13. http://www.blogger.com/profile/08313802559573057206
+  14. http://flyingfrogblog.blogspot.com/2013/09/ironjs.html?showComment=1380117068307#c7949458606235820132
+  15. http://www.blogger.com/delete-comment.g?blogID=1779668156488517434&postID=7949458606235820132
+  16. http://www.blogger.com/profile/03622573187942388226
+  17. http://flyingfrogblog.blogspot.com/2013/09/ironjs.html?showComment=1380524716934#c207941772691946840
+  18. http://www.blogger.com/delete-comment.g?blogID=1779668156488517434&postID=207941772691946840
+  19. http://www.blogger.com/profile/11059316496121100950
+  20. http://flyingfrogblog.blogspot.com/2013/09/ironjs.html?showComment=1380664918353#c4501974891727100297
+  21. http://www.blogger.com/delete-comment.g?blogID=1779668156488517434&postID=4501974891727100297
+  22. http://www.blogger.com/comment.g?blogID=1779668156488517434&postID=1088388806487509054
+  23. http://flyingfrogblog.blogspot.co.uk/2013/09/whats-new-in-garbage-collection.html
+  24. http://flyingfrogblog.blogspot.co.uk/2013/09/efficient-parallel-stencil-convolution.html
+  25. http://flyingfrogblog.blogspot.co.uk/
+  26. http://flyingfrogblog.blogspot.com/feeds/1088388806487509054/comments/default
+  27. http://www.ffconsultancy.com/products/fsharp_for_technical_computing/?ffb
+  28. http://www.ffconsultancy.com/products/fsharp_journal/?ffb
+  29. http://www.ffconsultancy.com/products/ocaml_journal/?ffb
+  30. http://www.ffconsultancy.com/products/fsharp_for_numerics/?ffb
+  31. http://www.ffconsultancy.com/products/fsharp_for_visualization/?ffb
+  32. http://www.ffconsultancy.com/products/ocaml_for_scientists/?ffb
+  33. http://www.ffconsultancy.com/products/signal_processing_net/?ffb
+  34. http://www.ffconsultancy.com/products/CWT/?ffb
+  35. http://www.ffconsultancy.com/ocaml/hlvm/?ffb
+  36. http://www.ffconsultancy.com/products/smoke_vector_graphics/?ffb
+  37. http://flyingfrogblog.blogspot.co.uk/2012/06/are-functional-languages-inherently.html
+  38. http://flyingfrogblog.blogspot.co.uk/2009/04/f-vs-ocaml-vs-haskell-hash-table.html
+  39. http://flyingfrogblog.blogspot.co.uk/2011/01/boosts-sharedptr-up-to-10-slower-than.html
+  40. http://flyingfrogblog.blogspot.co.uk/2012/01/c-renaissance.html
+  41. http://flyingfrogblog.blogspot.co.uk/2010/05/why-is-haskell-used-so-little-in.html
+  42. http://flyingfrogblog.blogspot.co.uk/2010/08/rise-and-fall-of-ocaml.html
+  43. http://flyingfrogblog.blogspot.co.uk/2010/09/are-multicore-capable-garbage.html
+  44. http://flyingfrogblog.blogspot.co.uk/2009/01/mono-22.html
+  45. http://flyingfrogblog.blogspot.co.uk/2010/07/mono-24-still-leaking-like-sieve.html
+  46. http://flyingfrogblog.blogspot.co.uk/2010/08/scala-is-foremost-industrial-language.html
+  47. http://fsharpnews.blogspot.com/
+  48. http://fsharpnews.blogspot.com/2013/10/downloading-stock-prices-reloaded.html
+  49. http://www.netvibes.com/subscribe.php?url=http%3A%2F%2Fflyingfrogblog.blogspot.com%2Ffeeds%2Fposts%2Fdefault
+  50. http://add.my.yahoo.com/content?url=http%3A%2F%2Fflyingfrogblog.blogspot.com%2Ffeeds%2Fposts%2Fdefault
+  51. http://flyingfrogblog.blogspot.com/feeds/posts/default
+  52. http://www.netvibes.com/subscribe.php?url=http%3A%2F%2Fflyingfrogblog.blogspot.com%2Ffeeds%2F1088388806487509054%2Fcomments%2Fdefault
+  53. http://add.my.yahoo.com/content?url=http%3A%2F%2Fflyingfrogblog.blogspot.com%2Ffeeds%2F1088388806487509054%2Fcomments%2Fdefault
+  54. http://flyingfrogblog.blogspot.com/feeds/1088388806487509054/comments/default
+  55. javascript:void(0)
+  56. http://flyingfrogblog.blogspot.co.uk/search?updated-min=2013-01-01T00:00:00-08:00&updated-max=2014-01-01T00:00:00-08:00&max-results=7
+  57. javascript:void(0)
+  58. http://flyingfrogblog.blogspot.co.uk/2013_09_01_archive.html
+  59. http://flyingfrogblog.blogspot.co.uk/2013/09/how-do-reference-counting-and-tracing.html
+  60. http://flyingfrogblog.blogspot.co.uk/2013/09/why-is-garbage-collection-important.html
+  61. http://flyingfrogblog.blogspot.co.uk/2013/09/whats-new-in-garbage-collection.html
+  62. http://flyingfrogblog.blogspot.co.uk/2013/09/ironjs.html
+  63. http://flyingfrogblog.blogspot.co.uk/2013/09/efficient-parallel-stencil-convolution.html
+  64. http://flyingfrogblog.blogspot.co.uk/2013/09/hash-table-insertion-performance-f-vs.html
+  65. javascript:void(0)
+  66. http://flyingfrogblog.blogspot.co.uk/2013_02_01_archive.html
+  67. javascript:void(0)
+  68. http://flyingfrogblog.blogspot.co.uk/search?updated-min=2012-01-01T00:00:00-08:00&updated-max=2013-01-01T00:00:00-08:00&max-results=23
+  69. javascript:void(0)
+  70. http://flyingfrogblog.blogspot.co.uk/2012_11_01_archive.html
+  71. javascript:void(0)
+  72. http://flyingfrogblog.blogspot.co.uk/2012_06_01_archive.html
+  73. javascript:void(0)
+  74. http://flyingfrogblog.blogspot.co.uk/2012_05_01_archive.html
+  75. javascript:void(0)
+  76. http://flyingfrogblog.blogspot.co.uk/2012_04_01_archive.html
+  77. javascript:void(0)
+  78. http://flyingfrogblog.blogspot.co.uk/2012_03_01_archive.html
+  79. javascript:void(0)
+  80. http://flyingfrogblog.blogspot.co.uk/2012_01_01_archive.html
+  81. javascript:void(0)
+  82. http://flyingfrogblog.blogspot.co.uk/search?updated-min=2011-01-01T00:00:00-08:00&updated-max=2012-01-01T00:00:00-08:00&max-results=16
+  83. javascript:void(0)
+  84. http://flyingfrogblog.blogspot.co.uk/2011_11_01_archive.html
+  85. javascript:void(0)
+  86. http://flyingfrogblog.blogspot.co.uk/2011_09_01_archive.html
+  87. javascript:void(0)
+  88. http://flyingfrogblog.blogspot.co.uk/2011_03_01_archive.html
+  89. javascript:void(0)
+  90. http://flyingfrogblog.blogspot.co.uk/2011_02_01_archive.html
+  91. javascript:void(0)
+  92. http://flyingfrogblog.blogspot.co.uk/2011_01_01_archive.html
+  93. javascript:void(0)
+  94. http://flyingfrogblog.blogspot.co.uk/search?updated-min=2010-01-01T00:00:00-08:00&updated-max=2011-01-01T00:00:00-08:00&max-results=50
+  95. javascript:void(0)
+  96. http://flyingfrogblog.blogspot.co.uk/2010_12_01_archive.html
+  97. javascript:void(0)
+  98. http://flyingfrogblog.blogspot.co.uk/2010_11_01_archive.html
+  99. javascript:void(0)
+ 100. http://flyingfrogblog.blogspot.co.uk/2010_10_01_archive.html
+ 101. javascript:void(0)
+ 102. http://flyingfrogblog.blogspot.co.uk/2010_09_01_archive.html
+ 103. javascript:void(0)
+ 104. http://flyingfrogblog.blogspot.co.uk/2010_08_01_archive.html
+ 105. javascript:void(0)
+ 106. http://flyingfrogblog.blogspot.co.uk/2010_07_01_archive.html
+ 107. javascript:void(0)
+ 108. http://flyingfrogblog.blogspot.co.uk/2010_06_01_archive.html
+ 109. javascript:void(0)
+ 110. http://flyingfrogblog.blogspot.co.uk/2010_05_01_archive.html
+ 111. javascript:void(0)
+ 112. http://flyingfrogblog.blogspot.co.uk/2010_04_01_archive.html
+ 113. javascript:void(0)
+ 114. http://flyingfrogblog.blogspot.co.uk/2010_03_01_archive.html
+ 115. javascript:void(0)
+ 116. http://flyingfrogblog.blogspot.co.uk/2010_02_01_archive.html
+ 117. javascript:void(0)
+ 118. http://flyingfrogblog.blogspot.co.uk/2010_01_01_archive.html
+ 119. javascript:void(0)
+ 120. http://flyingfrogblog.blogspot.co.uk/search?updated-min=2009-01-01T00:00:00-08:00&updated-max=2010-01-01T00:00:00-08:00&max-results=28
+ 121. javascript:void(0)
+ 122. http://flyingfrogblog.blogspot.co.uk/2009_12_01_archive.html
+ 123. javascript:void(0)
+ 124. http://flyingfrogblog.blogspot.co.uk/2009_11_01_archive.html
+ 125. javascript:void(0)
+ 126. http://flyingfrogblog.blogspot.co.uk/2009_10_01_archive.html
+ 127. javascript:void(0)
+ 128. http://flyingfrogblog.blogspot.co.uk/2009_09_01_archive.html
+ 129. javascript:void(0)
+ 130. http://flyingfrogblog.blogspot.co.uk/2009_07_01_archive.html
+ 131. javascript:void(0)
+ 132. http://flyingfrogblog.blogspot.co.uk/2009_05_01_archive.html
+ 133. javascript:void(0)
+ 134. http://flyingfrogblog.blogspot.co.uk/2009_04_01_archive.html
+ 135. javascript:void(0)
+ 136. http://flyingfrogblog.blogspot.co.uk/2009_03_01_archive.html
+ 137. javascript:void(0)
+ 138. http://flyingfrogblog.blogspot.co.uk/2009_01_01_archive.html
+ 139. javascript:void(0)
+ 140. http://flyingfrogblog.blogspot.co.uk/search?updated-min=2008-01-01T00:00:00-08:00&updated-max=2009-01-01T00:00:00-08:00&max-results=10
+ 141. javascript:void(0)
+ 142. http://flyingfrogblog.blogspot.co.uk/2008_12_01_archive.html
+ 143. javascript:void(0)
+ 144. http://flyingfrogblog.blogspot.co.uk/2008_11_01_archive.html
+ 145. javascript:void(0)
+ 146. http://flyingfrogblog.blogspot.co.uk/2008_10_01_archive.html
+ 147. javascript:void(0)
+ 148. http://flyingfrogblog.blogspot.co.uk/2008_08_01_archive.html
+ 149. javascript:void(0)
+ 150. http://flyingfrogblog.blogspot.co.uk/2008_04_01_archive.html
+ 151. javascript:void(0)
+ 152. http://flyingfrogblog.blogspot.co.uk/2008_02_01_archive.html
+ 153. javascript:void(0)
+ 154. http://flyingfrogblog.blogspot.co.uk/search?updated-min=2007-01-01T00:00:00-08:00&updated-max=2008-01-01T00:00:00-08:00&max-results=21
+ 155. javascript:void(0)
+ 156. http://flyingfrogblog.blogspot.co.uk/2007_12_01_archive.html
+ 157. javascript:void(0)
+ 158. http://flyingfrogblog.blogspot.co.uk/2007_11_01_archive.html
+ 159. javascript:void(0)
+ 160. http://flyingfrogblog.blogspot.co.uk/2007_10_01_archive.html
+ 161. javascript:void(0)
+ 162. http://flyingfrogblog.blogspot.co.uk/2007_09_01_archive.html
+ 163. javascript:void(0)
+ 164. http://flyingfrogblog.blogspot.co.uk/2007_08_01_archive.html
+ 165. javascript:void(0)
+ 166. http://flyingfrogblog.blogspot.co.uk/2007_07_01_archive.html
+ 167. javascript:void(0)
+ 168. http://flyingfrogblog.blogspot.co.uk/2007_06_01_archive.html
+ 169. javascript:void(0)
+ 170. http://flyingfrogblog.blogspot.co.uk/2007_05_01_archive.html
+ 171. http://flyingfrogblog.blogspot.co.uk/search/label/.net
+ 172. http://flyingfrogblog.blogspot.co.uk/search/label/academic
+ 173. http://flyingfrogblog.blogspot.co.uk/search/label/accumulator%20generator
+ 174. http://flyingfrogblog.blogspot.co.uk/search/label/advantages
+ 175. http://flyingfrogblog.blogspot.co.uk/search/label/allocation
+ 176. http://flyingfrogblog.blogspot.co.uk/search/label/amd
+ 177. http://flyingfrogblog.blogspot.co.uk/search/label/amorphous
+ 178. http://flyingfrogblog.blogspot.co.uk/search/label/analysis
+ 179. http://flyingfrogblog.blogspot.co.uk/search/label/animation
+ 180. http://flyingfrogblog.blogspot.co.uk/search/label/API
+ 181. http://flyingfrogblog.blogspot.co.uk/search/label/apple
+ 182. http://flyingfrogblog.blogspot.co.uk/search/label/arm
+ 183. http://flyingfrogblog.blogspot.co.uk/search/label/array
+ 184. http://flyingfrogblog.blogspot.co.uk/search/label/articles
+ 185. http://flyingfrogblog.blogspot.co.uk/search/label/asynchronous
+ 186. http://flyingfrogblog.blogspot.co.uk/search/label/asynchronous%20workflow
+ 187. http://flyingfrogblog.blogspot.co.uk/search/label/beginner
+ 188. http://flyingfrogblog.blogspot.co.uk/search/label/Beltway
+ 189. http://flyingfrogblog.blogspot.co.uk/search/label/benchmark
+ 190. http://flyingfrogblog.blogspot.co.uk/search/label/bfg
+ 191. http://flyingfrogblog.blogspot.co.uk/search/label/bitvector
+ 192. http://flyingfrogblog.blogspot.co.uk/search/label/bitwise
+ 193. http://flyingfrogblog.blogspot.co.uk/search/label/block%20sorting
+ 194. http://flyingfrogblog.blogspot.co.uk/search/label/bloxors
+ 195. http://flyingfrogblog.blogspot.co.uk/search/label/boehm
+ 196. http://flyingfrogblog.blogspot.co.uk/search/label/book
+ 197. http://flyingfrogblog.blogspot.co.uk/search/label/book%20sales
+ 198. http://flyingfrogblog.blogspot.co.uk/search/label/books
+ 199. http://flyingfrogblog.blogspot.co.uk/search/label/boost
+ 200. http://flyingfrogblog.blogspot.co.uk/search/label/boxing
+ 201. http://flyingfrogblog.blogspot.co.uk/search/label/bubble%20sort
+ 202. http://flyingfrogblog.blogspot.co.uk/search/label/bug
+ 203. http://flyingfrogblog.blogspot.co.uk/search/label/bugs
+ 204. http://flyingfrogblog.blogspot.co.uk/search/label/burrows%20wheeler
+ 205. http://flyingfrogblog.blogspot.co.uk/search/label/burton%20smith
+ 206. http://flyingfrogblog.blogspot.co.uk/search/label/business
+ 207. http://flyingfrogblog.blogspot.co.uk/search/label/c%23
+ 208. http://flyingfrogblog.blogspot.co.uk/search/label/c%2B%2B
+ 209. http://flyingfrogblog.blogspot.co.uk/search/label/cache
+ 210. http://flyingfrogblog.blogspot.co.uk/search/label/channel
+ 211. http://flyingfrogblog.blogspot.co.uk/search/label/clojure
+ 212. http://flyingfrogblog.blogspot.co.uk/search/label/clos
+ 213. http://flyingfrogblog.blogspot.co.uk/search/label/closures
+ 214. http://flyingfrogblog.blogspot.co.uk/search/label/clr
+ 215. http://flyingfrogblog.blogspot.co.uk/search/label/code%20base
+ 216. http://flyingfrogblog.blogspot.co.uk/search/label/color
+ 217. http://flyingfrogblog.blogspot.co.uk/search/label/color%20laser%20printer
+ 218. http://flyingfrogblog.blogspot.co.uk/search/label/commercial
+ 219. http://flyingfrogblog.blogspot.co.uk/search/label/common%20language%20runtime
+ 220. http://flyingfrogblog.blogspot.co.uk/search/label/comparison
+ 221. http://flyingfrogblog.blogspot.co.uk/search/label/compatibility
+ 222. http://flyingfrogblog.blogspot.co.uk/search/label/compiler
+ 223. http://flyingfrogblog.blogspot.co.uk/search/label/computer%20programming
+ 224. http://flyingfrogblog.blogspot.co.uk/search/label/concurrency
+ 225. http://flyingfrogblog.blogspot.co.uk/search/label/concurrent
+ 226. http://flyingfrogblog.blogspot.co.uk/search/label/concurrent%20garbage%20collector
+ 227. http://flyingfrogblog.blogspot.co.uk/search/label/concurrent%20gc
+ 228. http://flyingfrogblog.blogspot.co.uk/search/label/conservative%20gc
+ 229. http://flyingfrogblog.blogspot.co.uk/search/label/consultant
+ 230. http://flyingfrogblog.blogspot.co.uk/search/label/convolution
+ 231. http://flyingfrogblog.blogspot.co.uk/search/label/copying%20collection
+ 232. http://flyingfrogblog.blogspot.co.uk/search/label/corruption
+ 233. http://flyingfrogblog.blogspot.co.uk/search/label/cpu
+ 234. http://flyingfrogblog.blogspot.co.uk/search/label/darcs
+ 235. http://flyingfrogblog.blogspot.co.uk/search/label/data
+ 236. http://flyingfrogblog.blogspot.co.uk/search/label/data%20compression
+ 237. http://flyingfrogblog.blogspot.co.uk/search/label/data%20parallel%20haskell
+ 238. http://flyingfrogblog.blogspot.co.uk/search/label/debian
+ 239. http://flyingfrogblog.blogspot.co.uk/search/label/determinism
+ 240. http://flyingfrogblog.blogspot.co.uk/search/label/diffraction
+ 241. http://flyingfrogblog.blogspot.co.uk/search/label/directx
+ 242. http://flyingfrogblog.blogspot.co.uk/search/label/disadvantages
+ 243. http://flyingfrogblog.blogspot.co.uk/search/label/discount
+ 244. http://flyingfrogblog.blogspot.co.uk/search/label/disruptor
+ 245. http://flyingfrogblog.blogspot.co.uk/search/label/don%20stewart
+ 246. http://flyingfrogblog.blogspot.co.uk/search/label/don%20syme
+ 247. http://flyingfrogblog.blogspot.co.uk/search/label/easy
+ 248. http://flyingfrogblog.blogspot.co.uk/search/label/eclipse
+ 249. http://flyingfrogblog.blogspot.co.uk/search/label/erik%20meijer
+ 250. http://flyingfrogblog.blogspot.co.uk/search/label/erlang
+ 251. http://flyingfrogblog.blogspot.co.uk/search/label/evolutionary
+ 252. http://flyingfrogblog.blogspot.co.uk/search/label/examples
+ 253. http://flyingfrogblog.blogspot.co.uk/search/label/extensibility
+ 254. http://flyingfrogblog.blogspot.co.uk/search/label/f%23
+ 255. http://flyingfrogblog.blogspot.co.uk/search/label/f%23%20for%20numerics
+ 256. http://flyingfrogblog.blogspot.co.uk/search/label/f%23%20for%20scientists
+ 257. http://flyingfrogblog.blogspot.co.uk/search/label/f%23%20for%20technical%20computing
+ 258. http://flyingfrogblog.blogspot.co.uk/search/label/f%23%20for%20visualization
+ 259. http://flyingfrogblog.blogspot.co.uk/search/label/f%23%20meetup
+ 260. http://flyingfrogblog.blogspot.co.uk/search/label/f%23.net
+ 261. http://flyingfrogblog.blogspot.co.uk/search/label/f%23.net%20journal
+ 262. http://flyingfrogblog.blogspot.co.uk/search/label/fft
+ 263. http://flyingfrogblog.blogspot.co.uk/search/label/first-class%20functions
+ 264. http://flyingfrogblog.blogspot.co.uk/search/label/fortran
+ 265. http://flyingfrogblog.blogspot.co.uk/search/label/fourier
+ 266. http://flyingfrogblog.blogspot.co.uk/search/label/free
+ 267. http://flyingfrogblog.blogspot.co.uk/search/label/front%20end
+ 268. http://flyingfrogblog.blogspot.co.uk/search/label/fsharp
+ 269. http://flyingfrogblog.blogspot.co.uk/search/label/funarg%20problem
+ 270. http://flyingfrogblog.blogspot.co.uk/search/label/functional%20programming
+ 271. http://flyingfrogblog.blogspot.co.uk/search/label/funding
+ 272. http://flyingfrogblog.blogspot.co.uk/search/label/g%2B%2B
+ 273. http://flyingfrogblog.blogspot.co.uk/search/label/G1
+ 274. http://flyingfrogblog.blogspot.co.uk/search/label/gainward
+ 275. http://flyingfrogblog.blogspot.co.uk/search/label/game
+ 276. http://flyingfrogblog.blogspot.co.uk/search/label/ganesh%20sittampalam
+ 277. http://flyingfrogblog.blogspot.co.uk/search/label/garbage%20collection
+ 278. http://flyingfrogblog.blogspot.co.uk/search/label/gc
+ 279. http://flyingfrogblog.blogspot.co.uk/search/label/gc%20pause
+ 280. http://flyingfrogblog.blogspot.co.uk/search/label/generational%20garbage%20collection
+ 281. http://flyingfrogblog.blogspot.co.uk/search/label/generics
+ 282. http://flyingfrogblog.blogspot.co.uk/search/label/ghc
+ 283. http://flyingfrogblog.blogspot.co.uk/search/label/google%20chrome
+ 284. http://flyingfrogblog.blogspot.co.uk/search/label/google%20go
+ 285. http://flyingfrogblog.blogspot.co.uk/search/label/goroutine
+ 286. http://flyingfrogblog.blogspot.co.uk/search/label/gpu
+ 287. http://flyingfrogblog.blogspot.co.uk/search/label/graphics
+ 288. http://flyingfrogblog.blogspot.co.uk/search/label/graphics%20card
+ 289. http://flyingfrogblog.blogspot.co.uk/search/label/guido%20van%20rossum
+ 290. http://flyingfrogblog.blogspot.co.uk/search/label/hard%20drive
+ 291. http://flyingfrogblog.blogspot.co.uk/search/label/hash%20table
+ 292. http://flyingfrogblog.blogspot.co.uk/search/label/haskell
+ 293. http://flyingfrogblog.blogspot.co.uk/search/label/heap
+ 294. http://flyingfrogblog.blogspot.co.uk/search/label/heap%20sort
+ 295. http://flyingfrogblog.blogspot.co.uk/search/label/herb%20sutter
+ 296. http://flyingfrogblog.blogspot.co.uk/search/label/hewlett%20packard
+ 297. http://flyingfrogblog.blogspot.co.uk/search/label/higher-order%20module
+ 298. http://flyingfrogblog.blogspot.co.uk/search/label/hitachi
+ 299. http://flyingfrogblog.blogspot.co.uk/search/label/hlvm
+ 300. http://flyingfrogblog.blogspot.co.uk/search/label/householder%20reductions
+ 301. http://flyingfrogblog.blogspot.co.uk/search/label/hp
+ 302. http://flyingfrogblog.blogspot.co.uk/search/label/ide
+ 303. http://flyingfrogblog.blogspot.co.uk/search/label/idiomatic
+ 304. http://flyingfrogblog.blogspot.co.uk/search/label/Immix
+ 305. http://flyingfrogblog.blogspot.co.uk/search/label/imperative
+ 306. http://flyingfrogblog.blogspot.co.uk/search/label/industrial%20haskell%20group
+ 307. http://flyingfrogblog.blogspot.co.uk/search/label/industry
+ 308. http://flyingfrogblog.blogspot.co.uk/search/label/intel
+ 309. http://flyingfrogblog.blogspot.co.uk/search/label/interview
+ 310. http://flyingfrogblog.blogspot.co.uk/search/label/io
+ 311. http://flyingfrogblog.blogspot.co.uk/search/label/ipad
+ 312. http://flyingfrogblog.blogspot.co.uk/search/label/ironjs
+ 313. http://flyingfrogblog.blogspot.co.uk/search/label/java
+ 314. http://flyingfrogblog.blogspot.co.uk/search/label/jit
+ 315. http://flyingfrogblog.blogspot.co.uk/search/label/job
+ 316. http://flyingfrogblog.blogspot.co.uk/search/label/jobs
+ 317. http://flyingfrogblog.blogspot.co.uk/search/label/joe%20marshall
+ 318. http://flyingfrogblog.blogspot.co.uk/search/label/joe%20pamer
+ 319. http://flyingfrogblog.blogspot.co.uk/search/label/jvm
+ 320. http://flyingfrogblog.blogspot.co.uk/search/label/kde
+ 321. http://flyingfrogblog.blogspot.co.uk/search/label/kde%204
+ 322. http://flyingfrogblog.blogspot.co.uk/search/label/language
+ 323. http://flyingfrogblog.blogspot.co.uk/search/label/laser
+ 324. http://flyingfrogblog.blogspot.co.uk/search/label/latency
+ 325. http://flyingfrogblog.blogspot.co.uk/search/label/layout
+ 326. http://flyingfrogblog.blogspot.co.uk/search/label/leak
+ 327. http://flyingfrogblog.blogspot.co.uk/search/label/lecture
+ 328. http://flyingfrogblog.blogspot.co.uk/search/label/lexer
+ 329. http://flyingfrogblog.blogspot.co.uk/search/label/lexmark
+ 330. http://flyingfrogblog.blogspot.co.uk/search/label/limitations
+ 331. http://flyingfrogblog.blogspot.co.uk/search/label/lines%20of%20code
+ 332. http://flyingfrogblog.blogspot.co.uk/search/label/linux
+ 333. http://flyingfrogblog.blogspot.co.uk/search/label/lisp
+ 334. http://flyingfrogblog.blogspot.co.uk/search/label/llvm
+ 335. http://flyingfrogblog.blogspot.co.uk/search/label/LMAX
+ 336. http://flyingfrogblog.blogspot.co.uk/search/label/loc
+ 337. http://flyingfrogblog.blogspot.co.uk/search/label/local%20optimization
+ 338. http://flyingfrogblog.blogspot.co.uk/search/label/london
+ 339. http://flyingfrogblog.blogspot.co.uk/search/label/lwt
+ 340. http://flyingfrogblog.blogspot.co.uk/search/label/macro
+ 341. http://flyingfrogblog.blogspot.co.uk/search/label/mailing%20list
+ 342. http://flyingfrogblog.blogspot.co.uk/search/label/managed%20code
+ 343. http://flyingfrogblog.blogspot.co.uk/search/label/mark%20compact
+ 344. http://flyingfrogblog.blogspot.co.uk/search/label/mark%20region
+ 345. http://flyingfrogblog.blogspot.co.uk/search/label/mark%20sweep
+ 346. http://flyingfrogblog.blogspot.co.uk/search/label/market
+ 347. http://flyingfrogblog.blogspot.co.uk/search/label/martin%20odersky
+ 348. http://flyingfrogblog.blogspot.co.uk/search/label/marvell
+ 349. http://flyingfrogblog.blogspot.co.uk/search/label/mathematica
+ 350. http://flyingfrogblog.blogspot.co.uk/search/label/maximization
+ 351. http://flyingfrogblog.blogspot.co.uk/search/label/median
+ 352. http://flyingfrogblog.blogspot.co.uk/search/label/memory
+ 353. http://flyingfrogblog.blogspot.co.uk/search/label/memory%20safety
+ 354. http://flyingfrogblog.blogspot.co.uk/search/label/message%20passing
+ 355. http://flyingfrogblog.blogspot.co.uk/search/label/microsoft
+ 356. http://flyingfrogblog.blogspot.co.uk/search/label/milestone
+ 357. http://flyingfrogblog.blogspot.co.uk/search/label/MinCut
+ 358. http://flyingfrogblog.blogspot.co.uk/search/label/ml
+ 359. http://flyingfrogblog.blogspot.co.uk/search/label/mlton
+ 360. http://flyingfrogblog.blogspot.co.uk/search/label/module%20system
+ 361. http://flyingfrogblog.blogspot.co.uk/search/label/monad
+ 362. http://flyingfrogblog.blogspot.co.uk/search/label/mono
+ 363. http://flyingfrogblog.blogspot.co.uk/search/label/monte%20carlo
+ 364. http://flyingfrogblog.blogspot.co.uk/search/label/multicore
+ 365. http://flyingfrogblog.blogspot.co.uk/search/label/nacl
+ 366. http://flyingfrogblog.blogspot.co.uk/search/label/native%20code
+ 367. http://flyingfrogblog.blogspot.co.uk/search/label/netbook
+ 368. http://flyingfrogblog.blogspot.co.uk/search/label/norman%20ramsey
+ 369. http://flyingfrogblog.blogspot.co.uk/search/label/numeric%20tower
+ 370. http://flyingfrogblog.blogspot.co.uk/search/label/numerical
+ 371. http://flyingfrogblog.blogspot.co.uk/search/label/numerical%20methods
+ 372. http://flyingfrogblog.blogspot.co.uk/search/label/numerical%20recipes
+ 373. http://flyingfrogblog.blogspot.co.uk/search/label/numerics
+ 374. http://flyingfrogblog.blogspot.co.uk/search/label/nvidia
+ 375. http://flyingfrogblog.blogspot.co.uk/search/label/o%27reilly
+ 376. http://flyingfrogblog.blogspot.co.uk/search/label/object%20oriented%20programming
+ 377. http://flyingfrogblog.blogspot.co.uk/search/label/ocaml
+ 378. http://flyingfrogblog.blogspot.co.uk/search/label/ocaml%20for%20scientists
+ 379. http://flyingfrogblog.blogspot.co.uk/search/label/ocaml%20journal
+ 380. http://flyingfrogblog.blogspot.co.uk/search/label/OpenCV
+ 381. http://flyingfrogblog.blogspot.co.uk/search/label/optimization
+ 382. http://flyingfrogblog.blogspot.co.uk/search/label/pa_monad
+ 383. http://flyingfrogblog.blogspot.co.uk/search/label/paper
+ 384. http://flyingfrogblog.blogspot.co.uk/search/label/parallel
+ 385. http://flyingfrogblog.blogspot.co.uk/search/label/parallel%20arrays
+ 386. http://flyingfrogblog.blogspot.co.uk/search/label/parallel%20garbage%20collection
+ 387. http://flyingfrogblog.blogspot.co.uk/search/label/parallel%20programming
+ 388. http://flyingfrogblog.blogspot.co.uk/search/label/ParallelTable
+ 389. http://flyingfrogblog.blogspot.co.uk/search/label/parser
+ 390. http://flyingfrogblog.blogspot.co.uk/search/label/partial%20specialization
+ 391. http://flyingfrogblog.blogspot.co.uk/search/label/pattern
+ 392. http://flyingfrogblog.blogspot.co.uk/search/label/pattern%20matching
+ 393. http://flyingfrogblog.blogspot.co.uk/search/label/paul%20graham
+ 394. http://flyingfrogblog.blogspot.co.uk/search/label/pause
+ 395. http://flyingfrogblog.blogspot.co.uk/search/label/performance
+ 396. http://flyingfrogblog.blogspot.co.uk/search/label/phd
+ 397. http://flyingfrogblog.blogspot.co.uk/search/label/plugin
+ 398. http://flyingfrogblog.blogspot.co.uk/search/label/polymorphic%20variants
+ 399. http://flyingfrogblog.blogspot.co.uk/search/label/polymorphism
+ 400. http://flyingfrogblog.blogspot.co.uk/search/label/popularity
+ 401. http://flyingfrogblog.blogspot.co.uk/search/label/printer
+ 402. http://flyingfrogblog.blogspot.co.uk/search/label/product
+ 403. http://flyingfrogblog.blogspot.co.uk/search/label/products
+ 404. http://flyingfrogblog.blogspot.co.uk/search/label/profit
+ 405. http://flyingfrogblog.blogspot.co.uk/search/label/profits
+ 406. http://flyingfrogblog.blogspot.co.uk/search/label/programming%20language
+ 407. http://flyingfrogblog.blogspot.co.uk/search/label/proper%20tail%20recursion
+ 408. http://flyingfrogblog.blogspot.co.uk/search/label/public
+ 409. http://flyingfrogblog.blogspot.co.uk/search/label/purely%20functional%20data%20structure
+ 410. http://flyingfrogblog.blogspot.co.uk/search/label/pythagoras%20tree
+ 411. http://flyingfrogblog.blogspot.co.uk/search/label/python
+ 412. http://flyingfrogblog.blogspot.co.uk/search/label/qr%20decomposition
+ 413. http://flyingfrogblog.blogspot.co.uk/search/label/quadcore
+ 414. http://flyingfrogblog.blogspot.co.uk/search/label/quicksort
+ 415. http://flyingfrogblog.blogspot.co.uk/search/label/raspberry%20pi
+ 416. http://flyingfrogblog.blogspot.co.uk/search/label/ray%20tracer
+ 417. http://flyingfrogblog.blogspot.co.uk/search/label/real-time
+ 418. http://flyingfrogblog.blogspot.co.uk/search/label/reddit
+ 419. http://flyingfrogblog.blogspot.co.uk/search/label/reference%20counting
+ 420. http://flyingfrogblog.blogspot.co.uk/search/label/reference%20type
+ 421. http://flyingfrogblog.blogspot.co.uk/search/label/regular%20expression
+ 422. http://flyingfrogblog.blogspot.co.uk/search/label/reified%20generics
+ 423. http://flyingfrogblog.blogspot.co.uk/search/label/release
+ 424. http://flyingfrogblog.blogspot.co.uk/search/label/reliability
+ 425. http://flyingfrogblog.blogspot.co.uk/search/label/representation
+ 426. http://flyingfrogblog.blogspot.co.uk/search/label/research
+ 427. http://flyingfrogblog.blogspot.co.uk/search/label/review
+ 428. http://flyingfrogblog.blogspot.co.uk/search/label/rewrite
+ 429. http://flyingfrogblog.blogspot.co.uk/search/label/rich%20hickey
+ 430. http://flyingfrogblog.blogspot.co.uk/search/label/richard%20jones
+ 431. http://flyingfrogblog.blogspot.co.uk/search/label/rule
+ 432. http://flyingfrogblog.blogspot.co.uk/search/label/running%20cost
+ 433. http://flyingfrogblog.blogspot.co.uk/search/label/sadek%20drobi
+ 434. http://flyingfrogblog.blogspot.co.uk/search/label/sal%20mangano
+ 435. http://flyingfrogblog.blogspot.co.uk/search/label/sales
+ 436. http://flyingfrogblog.blogspot.co.uk/search/label/scala
+ 437. http://flyingfrogblog.blogspot.co.uk/search/label/scheme
+ 438. http://flyingfrogblog.blogspot.co.uk/search/label/scientific%20computing
+ 439. http://flyingfrogblog.blogspot.co.uk/search/label/semi-space
+ 440. http://flyingfrogblog.blogspot.co.uk/search/label/shadow%20stack
+ 441. http://flyingfrogblog.blogspot.co.uk/search/label/share
+ 442. http://flyingfrogblog.blogspot.co.uk/search/label/shared_ptr
+ 443. http://flyingfrogblog.blogspot.co.uk/search/label/signal
+ 444. http://flyingfrogblog.blogspot.co.uk/search/label/simon%20marlow
+ 445. http://flyingfrogblog.blogspot.co.uk/search/label/simple
+ 446. http://flyingfrogblog.blogspot.co.uk/search/label/size
+ 447. http://flyingfrogblog.blogspot.co.uk/search/label/sml
+ 448. http://flyingfrogblog.blogspot.co.uk/search/label/software
+ 449. http://flyingfrogblog.blogspot.co.uk/search/label/source%20code
+ 450. http://flyingfrogblog.blogspot.co.uk/search/label/special%20offer
+ 451. http://flyingfrogblog.blogspot.co.uk/search/label/sse
+ 452. http://flyingfrogblog.blogspot.co.uk/search/label/stack%20overflow
+ 453. http://flyingfrogblog.blogspot.co.uk/search/label/standard%20ml
+ 454. http://flyingfrogblog.blogspot.co.uk/search/label/stencil
+ 455. http://flyingfrogblog.blogspot.co.uk/search/label/stop-the-world
+ 456. http://flyingfrogblog.blogspot.co.uk/search/label/structural
+ 457. http://flyingfrogblog.blogspot.co.uk/search/label/sun
+ 458. http://flyingfrogblog.blogspot.co.uk/search/label/symbolic
+ 459. http://flyingfrogblog.blogspot.co.uk/search/label/tail%20calls
+ 460. http://flyingfrogblog.blogspot.co.uk/search/label/task%20parallelism
+ 461. http://flyingfrogblog.blogspot.co.uk/search/label/tco
+ 462. http://flyingfrogblog.blogspot.co.uk/search/label/technical%20computing
+ 463. http://flyingfrogblog.blogspot.co.uk/search/label/template%20haskell
+ 464. http://flyingfrogblog.blogspot.co.uk/search/label/term%20rewriting
+ 465. http://flyingfrogblog.blogspot.co.uk/search/label/Texas%20Multicore%20Technologies
+ 466. http://flyingfrogblog.blogspot.co.uk/search/label/thesis
+ 467. http://flyingfrogblog.blogspot.co.uk/search/label/throughput
+ 468. http://flyingfrogblog.blogspot.co.uk/search/label/time-frequency%20analysis
+ 469. http://flyingfrogblog.blogspot.co.uk/search/label/tools
+ 470. http://flyingfrogblog.blogspot.co.uk/search/label/tracing%20garbage%20collection
+ 471. http://flyingfrogblog.blogspot.co.uk/search/label/trading
+ 472. http://flyingfrogblog.blogspot.co.uk/search/label/treadmill
+ 473. http://flyingfrogblog.blogspot.co.uk/search/label/trend
+ 474. http://flyingfrogblog.blogspot.co.uk/search/label/trends
+ 475. http://flyingfrogblog.blogspot.co.uk/search/label/tuples
+ 476. http://flyingfrogblog.blogspot.co.uk/search/label/tutorial
+ 477. http://flyingfrogblog.blogspot.co.uk/search/label/type%20class
+ 478. http://flyingfrogblog.blogspot.co.uk/search/label/value
+ 479. http://flyingfrogblog.blogspot.co.uk/search/label/value%20types
+ 480. http://flyingfrogblog.blogspot.co.uk/search/label/variant%20type
+ 481. http://flyingfrogblog.blogspot.co.uk/search/label/verbosity
+ 482. http://flyingfrogblog.blogspot.co.uk/search/label/video
+ 483. http://flyingfrogblog.blogspot.co.uk/search/label/virginity
+ 484. http://flyingfrogblog.blogspot.co.uk/search/label/virtual%20machine
+ 485. http://flyingfrogblog.blogspot.co.uk/search/label/vista
+ 486. http://flyingfrogblog.blogspot.co.uk/search/label/visual%20studio%20integration
+ 487. http://flyingfrogblog.blogspot.co.uk/search/label/visualization
+ 488. http://flyingfrogblog.blogspot.co.uk/search/label/wavelet
+ 489. http://flyingfrogblog.blogspot.co.uk/search/label/western%20digital
+ 490. http://flyingfrogblog.blogspot.co.uk/search/label/windows
+ 491. http://flyingfrogblog.blogspot.co.uk/search/label/write%20barrier
+ 492. http://www.blogger.com/profile/11059316496121100950
+ 493. http://www.blogger.com/profile/11059316496121100950
+
+   Hidden links:
+ 495. http://www.blogger.com/post-edit.g?blogID=1779668156488517434&postID=1088388806487509054&from=pencil
+ 496. http://www.blogger.com/profile/08313802559573057206
+ 497. http://www.blogger.com/profile/03622573187942388226
+ 498. http://www.blogger.com/profile/11059316496121100950
+ 499. file://www.blogger.com/rearrange?blogID=1779668156488517434&widgetType=HTML&widgetId=HTML1&action=editWidget&sectionId=main
+ 500. file://www.blogger.com/rearrange?blogID=1779668156488517434&widgetType=LinkList&widgetId=LinkList1&action=editWidget&sectionId=sidebar
+ 501. http://flyingfrogblog.blogspot.co.uk/2011/01/boosts-sharedptr-up-to-10-slower-than.html
+ 502. http://flyingfrogblog.blogspot.co.uk/2012/01/c-renaissance.html
+ 503. http://flyingfrogblog.blogspot.co.uk/2010/08/rise-and-fall-of-ocaml.html
+ 504. http://flyingfrogblog.blogspot.co.uk/2009/01/mono-22.html
+ 505. file://www.blogger.com/rearrange?blogID=1779668156488517434&widgetType=PopularPosts&widgetId=PopularPosts1&action=editWidget&sectionId=sidebar
+ 506. file://www.blogger.com/rearrange?blogID=1779668156488517434&widgetType=FollowByEmail&widgetId=FollowByEmail1&action=editWidget&sectionId=sidebar
+ 507. file://www.blogger.com/rearrange?blogID=1779668156488517434&widgetType=BlogList&widgetId=BlogList1&action=editWidget&sectionId=sidebar
+ 508. file://www.blogger.com/rearrange?blogID=1779668156488517434&widgetType=Subscribe&widgetId=Subscribe1&action=editWidget&sectionId=sidebar
+ 509. file://www.blogger.com/rearrange?blogID=1779668156488517434&widgetType=BlogArchive&widgetId=BlogArchive1&action=editWidget&sectionId=sidebar
+ 510. file://www.blogger.com/rearrange?blogID=1779668156488517434&widgetType=Label&widgetId=Label1&action=editWidget&sectionId=sidebar
+ 511. file://www.blogger.com/rearrange?blogID=1779668156488517434&widgetType=Profile&widgetId=Profile1&action=editWidget&sectionId=sidebar
+ 512. file://www.blogger.com/rearrange?blogID=1779668156488517434&widgetType=Stats&widgetId=Stats1&action=editWidget&sectionId=sidebar

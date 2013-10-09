@@ -1,0 +1,156 @@
+   Close Menu [1]Download
+   Project
+   [2]Contributing [3]Development
+   [4]Introduction
+   [5]Definitions [6]Getting Started [7]Types [8]Variations
+   [9]Elements
+   [10]Button [11]Divider [12]Header [13]Icon [14]Image [15]Input
+   [16]Label [17]Loader [18]Progress [19]Segment [20]Step
+   [21]Collections
+   [22]Breadcrumb [23]Form [24]Grid [25]Menu [26]Message [27]Table
+   Views
+   [28]Comment [29]Feed [30]Item [31]List
+   Modules
+   [32]Accordion [33]Checkbox [34]Dimmer [35]Dropdown [36]Modal [37]Popup
+   [38]Rating [39]Reveal [40]Shape [41]Sidebar [42]Transition
+   Behavior
+   [43]Validate Form
+   Style Guide
+   [44]CSS [45]Javascript [46]Language
+
+   Content
+   UI Introduction: Getting Started
+   2 of 4
+   [47]1. Definitions
+   [48]2. Getting Started
+   [49]3. Types
+   [50]4. Variations
+
+   IFRAME:
+   [51]http://ghbtns.com/github-btn.html?user=jlukic&repo=semantic-ui&type
+   =watch&count=true
+
+   Menu
+
+Getting Started
+
+   An introduction to Semantic coding
+
+   Interfacing Carefully Semantic APIs
+
+Interfacing Carefully
+
+   UI definitions in Semantic are given the class name ui. This is to help
+   tell the difference between ui elements and parts of the definition of
+   an element. For example a menu may have menu items inside of it. These
+   items are contained as part of the menu definition but do not receive
+   the class name ui.
+
+   Class names in semantic always use single english words. If a class
+   name is an adjective it is either a [52]type of element or
+   [53]variation of an element. CSS definitions always define adjectives
+   in the context of a noun. In this way class names cannot pollute the
+   namespace.
+   Home Inbox
+
+Combining elements
+
+   All UI definitions in semantic are stand-alone, and do not require
+   other components to function. However, components can choose to have
+   optional couplings with other components.
+
+   For example you might want to include a badge inside a menu. A label
+   inside of a menu will automatically function as a badge.
+   Home Inbox
+   22
+
+Semantic APIs
+
+   Modules define a public API using verbs and simple phrases. When
+   methods are invoked internally those phrases are matched to internal
+   methods automatically.
+   First Second Third
+   First
+   Second
+   Third
+
+Opening a new tab with a behavior
+
+   Modules have simple behaviors for triggering common actions
+   $('.demo.menu .item') .tab('change tab', 'second') ;
+
+Opening a new tab with multiple behaviors
+
+   Any internal behavior is accessible as well
+   $('.demo.menu .item') .tab('deactivate all') .tab('activate tab',
+   'third') .tab('activate navigation', 'third') ;
+
+Turning on HTML5 State
+
+   Modules can be re-initialized at any time with different settings
+   $('.demo.menu .item') .tab({ history : true, path :
+   '/introduction/getting-started.html' }) ;
+   [54]Next: UI Definitions
+
+References
+
+   Visible links
+   1. file://localhost/build/semantic.zip
+   2. file://localhost/project/contributing.html
+   3. file://localhost/project/development.html
+   4. file://localhost/introduction.html
+   5. file://localhost/introduction/definitions.html
+   6. file://localhost/introduction/getting-started.html
+   7. file://localhost/introduction/types.html
+   8. file://localhost/introduction/variations.html
+   9. file://localhost/element.html
+  10. file://localhost/elements/button.html
+  11. file://localhost/elements/divider.html
+  12. file://localhost/elements/header.html
+  13. file://localhost/elements/icon.html
+  14. file://localhost/elements/image.html
+  15. file://localhost/elements/input.html
+  16. file://localhost/elements/label.html
+  17. file://localhost/elements/loader.html
+  18. file://localhost/elements/progress.html
+  19. file://localhost/elements/segment.html
+  20. file://localhost/elements/step.html
+  21. file://localhost/collection.html
+  22. file://localhost/collections/breadcrumb.html
+  23. file://localhost/collections/form.html
+  24. file://localhost/collections/grid.html
+  25. file://localhost/collections/menu.html
+  26. file://localhost/collections/message.html
+  27. file://localhost/collections/table.html
+  28. file://localhost/views/comment.html
+  29. file://localhost/views/feed.html
+  30. file://localhost/views/items.html
+  31. file://localhost/views/list.html
+  32. file://localhost/modules/accordion.html
+  33. file://localhost/modules/checkbox.html
+  34. file://localhost/modules/dimmer.html
+  35. file://localhost/modules/dropdown.html
+  36. file://localhost/modules/modal.html
+  37. file://localhost/modules/popup.html
+  38. file://localhost/modules/rating.html
+  39. file://localhost/modules/reveal.html
+  40. file://localhost/modules/shape.html
+  41. file://localhost/modules/sidebar.html
+  42. file://localhost/modules/transition.html
+  43. file://localhost/modules/form.html
+  44. file://localhost/guide/cssguide.html
+  45. file://localhost/guide/javascriptguide.html
+  46. file://localhost/guide/styleguide.html
+  47. file://localhost/introduction/definitions.html
+  48. file://localhost/introduction/getting-started.html
+  49. file://localhost/introduction/types.html
+  50. file://localhost/introduction/variations.html
+  51. http://ghbtns.com/github-btn.html?user=jlukic&repo=semantic-ui&type=watch&count=true
+  52. file://localhost/introduction/types.html
+  53. file://localhost/introduction/variation.html
+  54. file://localhost/introduction/definitions.html
+
+   Hidden links:
+  56. file://localhost/introduction/definitions.html
+  57. file://localhost/introduction/types.html
+  58. https://github.com/quirkyinc/semantic

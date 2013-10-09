@@ -1,0 +1,45 @@
+   [1]Fork me on GitHub
+
+     * [2]Home
+     * [3]Documentation
+
+Web Console
+
+   Web Console let's you run rails console directly in the browser, to
+   help you debug your Rails application.
+
+   [4]Fork me on GitHub
+
+Installation
+
+   Just put gem 'web-console' in your Rails application Gemfile.
+
+Terminal Emulator
+
+   Colors, auto completion and auto indentation work out of the box.
+
+Secure
+
+   It will never run outside of the development or test environments.
+
+Usage
+
+   Start your Rails application server and navigate your browser to
+   /console.
+
+Configuration
+
+   Works out of the box with no configuration needed.
+
+Style
+
+   Easily tweak color themes and terminal fonts to your likings.
+
+   © Genadi Samokovarov, Guillermo Iguaran 2013
+
+References
+
+   1. https://github.com/rails/web-console
+   2. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml695.data
+   3. https://github.com/rails/web-console
+   4. https://github.com/rails/web-console

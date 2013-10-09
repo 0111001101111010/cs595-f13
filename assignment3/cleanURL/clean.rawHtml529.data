@@ -1,0 +1,396 @@
+[1]Qiita [キータ] - プログラマの技術情報共有サービス
+
+   ____________________
+   [ ] ストックした投稿を検索 ストックした投稿を検索
+   検索
+   Qiita [キータ] - プログラマの技術情報共有サービス
+     * [2]新規登録
+     * [3]ログイン▾
+          + [4]GitHubログイン
+          + [5]Twitterログイン
+
+   x 閉じる
+
+   [6]Assets.github.com%2fimages%2fgravatars%2fgravatar 140
+
+sass-globbingでSassファイルをお手軽管理
+
+     * [7]Sass Sass(52)
+     * [8]CSS CSS(274)
+
+     * Assets.github.com%2fimages%2fgravatars%2fgravatar 140
+       [9]t32kが7日前に投稿
+     * [10]編集リクエストを作成する
+
+     * 16
+       ストック
+     * 0
+       コメント
+
+   [11]この投稿をストックする
+     * [12]purprin
+     * [13]sanata_o_o
+     * [14]fushimik
+     * [15]habu0104
+     * [16]mersy@github
+     * [17]hazy_moon
+     * [18]yshrsmz@github
+     * [19]kazu69
+     * [20]tanamako@github
+     * [21]roatnek [22](もっと見る)
+       (BUTTON)
+       ストックしているユーザー
+
+   皆さんは、1ヶ月間用コンタクトレンズを2週間用だと勘違いして使ってた経験ありませんか？ぼくは、あります(´Д⊂ヽ
+
+   さて、今日はSassのファイル構成について考えてみたいと思います。Sassを使えば@importを使ってお手軽にファイルをモジュール管理できま
+   すね。ということで、私が作ったCSSフレームワークMapleでも下記のようなファイル構成で管理しています。
+     * [23]t32k/maple
+
+├── css
+│   ├── maple.css
+│   └── sass
+│       ├── maple.scss
+│       ├── _core.scss
+│       ├── _modules.scss
+│       ├── core
+│       │   ├── _base.scss
+│       │   ├── _helper.scss
+│       │   ├── _layout.scss
+│       │   ├── _reset.scss
+│       │   └── _settings.scss
+│       ├── modules
+│       │   ├── _bars.scss
+│       │   ├── _boxes.scss
+│       │   ├── _buttons.scss
+│       │   ├── _forms.scss
+│       │   ├── _headlines.scss
+│       │   ├── _listviews.scss
+│       │   └── _misc.scss
+│       └── vendors
+│           └── _myfont.scss
+
+   大枠としては全体に共通する設定をcoreに、各コンポーネント部品はmodulesに分けていることです。あとは、vendiorsに外部CSSライ
+   ブラリとか必要であればぶち込んでおきましょう。
+
+   ディレクトリ分け自体はお好きな様にやってくれればよいのですが、問題はそれらを読み込む処理ですYO!
+   maple.scss
+//-------------------------------------//
+//  Final output CSS file
+//-------------------------------------//
+
+//  Compass settings
+//-------------------------------------
+$experimental-support-for-opera: false;
+$experimental-support-for-mozilla: false;
+$experimental-support-for-microsoft: false;
+@import "compass";
+
+
+//  @import files
+//-------------------------------------
+@import "core";
+@import "modules";
+
+   大元のmaple.scssでまず、_core.scssと_modules.scssファイルを読み込んでいます。
+   _core.scss
+//-------------------------------------//
+//  Core files
+//-------------------------------------//
+
+@import "core/settings";
+@import "core/reset";
+@import "core/base";
+@import "core/helper";
+@import "core/layout";
+
+   _modules.scss
+//-------------------------------------//
+//  Module files
+//-------------------------------------//
+
+@import "modules/headings";
+@import "modules/listviews";
+@import "modules/buttons";
+@import "modules/bars";
+@import "modules/boxes";
+@import "modules/forms";
+@import "modules/misc";
+
+   _core.scssと_modules.scssファイルでは各ディレクトリ配下のファイルをそれぞれ読み込んでいます。
+
+   これ、すっごく ('A')ﾏﾝﾄﾞｸｾ
+   くないですかね？例えばmodulesのファイルが増えるたびに追加の記述をしなければならないし、これが何十ファイルとかあるとだいぶしんどいです。
+   また、必要でなくなったmodulesファイルを削除するには、ファイルを削除して@importの記述も削除しなければなりません。じゃないと、『フ
+   ァイルが見つかりませんよー』ってコンパイルエラーになる ('A')ﾏﾝﾄﾞｸｾ
+
+   そもそも、なぜわざわざ読みこむだけのパーシャルファイル作んなきゃいけないのか、どうせなら、最初の段階で以下のように読み込ませたいですよね？
+   maple.scss
+//  @import files
+//-------------------------------------
+@import "core/*";
+@import "modules/*";
+
+   いわゆる[24]Globっていうの？Sassでも使ってみたいわけですよ。
+
+     Import all files from a folder
+     Same idea, pushing things further would be to be able to import all
+     files from a folder at once. This is also called "Sass globbing" and
+     currently exists as a Sass plugin by Chris Eppstein himself (I think
+     this will be merged with Sass in 4.0).
+
+     * [25]Looking Into the Future of Sass
+
+   どうやら、Sass v4.0で採用する予定みたいだけど、待てない。
+     * [26]chriseppstein/sass-globbing
+
+   ということで、sass-globbingを使ってみる。どうやらこれが4.0でマージされる予定みたい。
+
+   使い方は簡単。
+$ gem install sass-globbing
+
+   gemをインストールして、config.rbに下記のように記述すればSassでGlobが使えるようになるよ。
+   config.rb
+require 'sass-globbing'
+
+   そうゆうことでめでたくSassでGlobを使えたわけですけど、ファイルに依存関係のあるもの（例えばcoreの_setting.scssなどは設
+   定変数が記述されているため、このファイルが一番最初に読み込まなければならない）をGlobで読み込んじゃうとエラーになっちゃうので気をつけてくだ
+   さいまし。
+   [27]この投稿をストックする  [28]編集リクエストを作成する
+
+関連する投稿
+
+   6c7a05dfd8bcf752edf3ee67cdefe961 normal
+
+[29]手書きのベンダープレフィックスをある程度自動化したい
+
+   Icon stocked 1 |
+     * [30]Compass
+     * [31]Sass
+     * [32]scss
+
+   Zeruerubantyou normal
+
+[33]compassとscss(sass)でスタイルシートの軽量化と保守性アップ【半分失敗】
+
+   Icon stocked 2 |
+     * [34]mvc
+     * [35]CSS
+     * [36]Compass
+     * [37]Sass
+     * [38]scss
+
+   Assets.github.com%2fimages%2fgravatars%2fgravatar user 420
+
+[39]WindowsでSass環境を構築
+
+   Icon stocked 3 |
+     * [40]Sass
+     * [41]Ruby
+     * [42]nginx
+
+   15f045b232499584ee3f780083f85ced?d=https%3a%2f%2fidenticons.github.com%
+   2f8813a47b86dc1366c9ce4e709506c70f
+
+[43]git でよく使う "^"(サーカムフレックス) が zsh に解釈されて困る件
+
+   Icon stocked 10 |
+     * [44]git
+     * [45]Zsh
+
+   6f42f0c425feadff0fce22d12d251ce1 normal
+
+[46]Compassを使ってみる
+
+   Icon stocked 5 |
+     * [47]Ruby
+
+   PR [48]転職先、仕事先を探しているプログラマの方対象 - Qiita:Career
+     __________________________________________________________________
+
+   [49]ツイート
+   [50]このエントリーをはてなブックマークに追加
+     __________________________________________________________________
+
+バージョン情報
+
+     * タグ バージョン
+     * [51]Thumb Sass 3.2.10
+     __________________________________________________________________
+
+   [52]t32k
+   [53]t32k フォローする
+   194 Contribution
+
+最新の投稿
+
+     * [54]sass-globbingでSassファイルをお手軽管理
+     * [55]君は知っているか、あのCompassのstatsコマンドを！
+     * [56]Ellipsisスタイルと無効化
+
+Organization
+
+   [57]株式会社サイバーエージェント
+     __________________________________________________________________
+
+   [INS: :INS]
+     __________________________________________________________________
+
+   [58]Ad0054 increments career
+
+   新規登録/ログインして、会話に参加しましょう。
+   [59] GitHubで新規登録/ログイン [60] Twitterで新規登録/ログイン
+
+新着投稿
+
+     * [61]Assets.github.com%2fimages%2fgravatars%2fgravatar user 420
+       [62]Hive の ARRAY 型を Ruby の Custom MapReduce で扱う方法
+          + [63]hive
+          + [64]hadoop
+     * [65]Ca008ed5c4b4ad1188596efeb99fd7b1?d=https%3a%2f%2fidenticons.git
+       hub.com%2f8e7387acf626a04d39ef43dcb1faaeff
+       [66]ほげほげ
+          + [67]ほげほげ
+     * [68]Assets.github.com%2fimages%2fgravatars%2fgravatar user 420
+       [69]jQuery.fn.cssはChromeとFirefoxで微妙に挙動が異なる
+          + [70]jQuery
+     * [71]Assets.github.com%2fimages%2fgravatars%2fgravatar user 420
+       [72]jQuery.fn.cssで複数のプロパティに取得する場合1.9からは配列指定した方がいい
+          + [73]jQuery
+     * [74]Face normal
+       [75]devise: テスト用のユーザーを追加
+          + [76]Rails
+          + [77]devise
+
+     * [78]Qiitaとは
+     * [79]タグ一覧
+     * [80]Advent Calendar一覧
+     * [81]Organization一覧
+     * [82]ユーザー一覧
+     * [83]Developer API
+
+     * [84]公式ブログ
+     * [85]利用規約
+     * [86]プライバシーポリシー
+     * [87]特定商取引法に基づく表記
+     * [88]サポート
+     * [89]お問い合わせ
+     * [90]運営会社
+
+   Incrementsのサービス
+     * [91]Kobito - プログラミングのメモやスニペットの記録に最適なMacアプリケーション
+     * [92]Qiita:Team - シンプル、スマートかつクローズドな情報共有サービス
+     * [93]Qiita:Career - プログラマのためのキャリア構築支援サービス
+
+   Copyright ©2013 Increments Inc.
+   [94]Real Time Web Analytics
+   Qiitaについてご意見をお聞かせください
+
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________
+   送信
+
+References
+
+   Visible links
+   1. file://localhost/
+   2. file://localhost/signup
+   3. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml529.data
+   4. https://qiita.com/auth/github
+   5. https://qiita.com/auth/twitter
+   6. file://localhost/t32k
+   7. file://localhost/tags/sass
+   8. file://localhost/tags/css
+   9. file://localhost/t32k
+  10. file://localhost/items/229745617da41f308f20/edit
+  11. javascript:void(0)
+  12. file://localhost/purprin
+  13. file://localhost/sanata_o_o
+  14. file://localhost/fushimik
+  15. file://localhost/habu0104
+  16. file://localhost/mersy@github
+  17. file://localhost/hazy_moon
+  18. file://localhost/yshrsmz@github
+  19. file://localhost/kazu69
+  20. file://localhost/tanamako@github
+  21. file://localhost/roatnek
+  22. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml529.data#show-all-stockers
+  23. https://github.com/t32k/maple
+  24. http://en.wikipedia.org/wiki/Glob_(programming)
+  25. http://davidwalsh.name/future-sass
+  26. https://github.com/chriseppstein/sass-globbing
+  27. javascript:void(0)
+  28. file://localhost/items/229745617da41f308f20/edit
+  29. file://localhost/yukimis/items/a1b76ec9f48360a3247d
+  30. file://localhost/tags/Compass
+  31. file://localhost/tags/Sass
+  32. file://localhost/tags/scss
+  33. file://localhost/shikataka/items/0f07491815fa50f151a0
+  34. file://localhost/tags/mvc
+  35. file://localhost/tags/CSS
+  36. file://localhost/tags/Compass
+  37. file://localhost/tags/Sass
+  38. file://localhost/tags/scss
+  39. file://localhost/jnst@github/items/369e2e6204a99726d00f
+  40. file://localhost/tags/Sass
+  41. file://localhost/tags/Ruby
+  42. file://localhost/tags/nginx
+  43. file://localhost/yujiorama_at_github/items/88158b33ccb0a3be35fb
+  44. file://localhost/tags/git
+  45. file://localhost/tags/Zsh
+  46. file://localhost/momoayumi/items/a7815c6ec55a71524cec
+  47. file://localhost/tags/Ruby
+  48. https://career.qiita.com/?utm_source=qiita&utm_medium=text
+  49. https://twitter.com/share
+  50. http://b.hatena.ne.jp/entry/http://qiita.com/t32k/items/229745617da41f308f20
+  51. file://localhost/tags/sass
+  52. file://localhost/t32k
+  53. file://localhost/t32k
+  54. file://localhost/t32k/items/229745617da41f308f20
+  55. file://localhost/t32k/items/8609ffe0868da3e485a6
+  56. file://localhost/t32k/items/a6fb4e690c134854c22b
+  57. file://localhost/organizations/cyberagent
+  58. https://career.qiita.com/?utm_content=AD0054&utm_source=qiita&utm_medium=banner
+  59. file://localhost/auth/github
+  60. file://localhost/auth/twitter
+  61. file://localhost/hereticreader
+  62. file://localhost/hereticreader/items/031e83732ebd0f0407a9
+  63. file://localhost/tags/hive
+  64. file://localhost/tags/hadoop
+  65. file://localhost/tys
+  66. file://localhost/tys/items/f2109d586da77d265138
+  67. file://localhost/tags/%E3%81%BB%E3%81%92%E3%81%BB%E3%81%92
+  68. file://localhost/yuku_t
+  69. file://localhost/yuku_t/items/48caeb6d06bd6b4ac552
+  70. file://localhost/tags/jQuery
+  71. file://localhost/yuku_t
+  72. file://localhost/yuku_t/items/5aa7d91bc27096748f74
+  73. file://localhost/tags/jQuery
+  74. file://localhost/Nunocky
+  75. file://localhost/Nunocky/items/8f316c98fb69dce651b1
+  76. file://localhost/tags/Rails
+  77. file://localhost/tags/devise
+  78. https://qiita.com/about
+  79. https://qiita.com/tags
+  80. https://qiita.com/advent-calendar
+  81. https://qiita.com/organizations
+  82. https://qiita.com/users
+  83. https://qiita.com/docs
+  84. http://blog.qiita.com/
+  85. https://qiita.com/terms
+  86. https://qiita.com/privacy
+  87. https://qiita.com/asct
+  88. http://support.qiita.com/
+  89. https://increments.zendesk.com/anonymous_requests/new
+  90. http://increments.co.jp/
+  91. http://kobito.qiita.com/
+  92. http://teams.qiita.com/
+  93. https://career.qiita.com/
+  94. https://mixpanel.com/f/partner
+
+   Hidden links:
+  96. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml529.data#comments

@@ -1,0 +1,634 @@
+   #[1]RSS
+
+   [2]jump to content
+   my subreddits
+   [3]AdviceAnimals[4]announcements[5]AskReddit[6]askscience[7]aww[8]besto
+   f[9]blog[10]books[11]EarthPorn[12]explainlikeimfive[13]funny[14]gaming[
+   15]gifs[16]IAmA[17]movies[18]Music[19]news[20]pics[21]science[22]techno
+   logy[23]television[24]todayilearned[25]videos[26]worldnews[27]WTF[28]ed
+   it subscriptions
+     * [29]front
+     * -[30]all
+     * -[31]random
+
+    |
+     * [32]pics
+     * -[33]funny
+     * -[34]gaming
+     * -[35]AskReddit
+     * -[36]worldnews
+     * -[37]news
+     * -[38]videos
+     * -[39]IAmA
+     * -[40]todayilearned
+     * -[41]WTF
+     * -[42]aww
+     * -[43]technology
+     * -[44]AdviceAnimals
+     * -[45]science
+     * -[46]Music
+     * -[47]movies
+     * -[48]bestof
+     * -[49]books
+     * -[50]EarthPorn
+     * -[51]explainlikeimfive
+     * -[52]gifs
+     * -[53]television
+     * -[54]askscience
+     * -[55]leagueoflegends
+     * -[56]breakingbad
+     * -[57]cringepics
+     * -[58]politics
+     * -[59]pokemon
+     * -[60]GrandTheftAutoV
+     * -[61]4chan
+     * -[62]reactiongifs
+     * -[63]gentlemanboners
+     * -[64]MakeupAddiction
+     * -[65]Minecraft
+     * -[66]DotA2
+     * -[67]Dexter
+     * -[68]nfl
+     * -[69]atheism
+     * -[70]fffffffuuuuuuuuuuuu
+     * -[71]conspiracy
+     * -[72]cats
+     * -[73]woahdude
+     * -[74]soccer
+     * -[75]Android
+     * -[76]circlejerk
+     * -[77]TrollXChromosomes
+     * -[78]LadyBoners
+     * -[79]mylittlepony
+     * -[80]Unexpected
+     * -[81]dadjokes
+
+   [82]more »
+   [83]Python  [84]Python
+     * [85]comments
+     * [86]related
+
+   want to join? [87]login or register in seconds|
+     * [88]English
+
+   ____________________
+   [ ] limit my search to /r/Python
+
+   use the following search parameters to narrow your results:
+
+   subreddit:subreddit
+          find submissions in "subreddit"
+
+   author:username
+          find submissions by "username"
+
+   site:example.com
+          find submissions from "example.com"
+
+   url:text
+          search for "text" in url
+
+   selftext:text
+          search for "text" in self post contents
+
+   self:yes (or self:no)
+          include (or exclude) self posts
+
+   nsfw:yes (or nsfw:no)
+          include (or exclude) results marked as NSFW
+
+   e.g. subreddit:aww site:imgur.com dog
+
+   [89]see the search faq for details.
+
+   [90]advanced search: by author, subreddit...
+   this post was submitted on 26 Sep 2013
+   10 points (69% like it)
+   18 upvotes 8 downvotes
+   shortlink: http://redd.it/1n6et
+   ____________________ ____________________
+   [ ] remember me[91]reset password
+   (BUTTON) login
+   [92]Submit a new link
+   [93]Submit a new text post
+
+[94]Python
+
+   [95]subscribe[96]unsubscribe55,480 readers
+
+   ~66 users here now
+
+   news about the dynamic, interpreted, interactive, object-oriented,
+   extensible programming language Python
+
+   If you are about to ask a question, please consider [97]r/learnpython
+
+   Please don't use URL shorteners
+
+   Posting code to this subreddit:
+
+   Add 4 extra spaces before each line of code
+def fibonacci():
+    a, b = 0, 1
+    while 1:
+        yield a
+        a, b = b, a + b
+
+   Online books
+     * [98]Learn Python the Hard Way (for Python 2)
+     * [99]Dive into Python 3 (for Python 3)
+     * [100]Invent Your Own Computer Games with Python
+     * [101]Beginner's Guide to Python
+     * [102]Non-programmers Tutorial for Python 3
+     * [103]Five life jackets to throw to the new coder (perfect for when
+       you're done with LPTHW)
+
+   Online exercices
+     * [104]codingbat
+     * [105]pyschools
+     * [106]codecademy
+     * [107]/r/dailyprogrammer
+
+   programming challenges
+     * [108]The Python Challenge (solve each level through programming)
+     * [109]CheckiO (game world)
+     * [110]Project Euler (math heavy)
+
+   Asking Questions
+     * [111]Should I use Python 2 or Python 3?
+     * [112]r/learnpython
+     * [113]r/learnprogramming
+
+   Try Python in your browser
+     * [114]learnpython.org
+     * [115]Skulpt (uses WebGL)
+     * [116]trypython.org (uses Silverlight)
+     * [117]ideone (online compiler and debugger)
+     * [118]PythonAnywhere (basic accounts are free)
+     * [119]Brython (Python 3 implementation for client-side web
+       programming)
+
+   Docs
+     * [120]Python 2 docs
+     * [121]Python 3 docs
+     * [122]Packaging docs (under development)
+     * [123]The Hitchhiker's Guide to Python
+
+   Libraries
+     * [124]Twisted, [125]0MQ (networking)
+     * [126]Django, [127]Pyramid, ... ([128]Web Frameworks)
+     * [129]Pygame (Game development)
+     * [130]NumPy & [131]SciPy (Scientific computing)
+
+   Related subreddits
+     * [132]/r/flask (web microframework)
+     * [133]/r/django (web framework for perfectionists with deadlines)
+     * [134]/r/pygame (a set of modules designed for writing games)
+     * [135]/r/IPython (interactive environment)
+     * [136]/r/inventwithpython (for the books written by
+       [137]/u/AlSweigart)
+
+   Python jobs
+     * [138]Python.org job board
+     * [139]pythonjobs.com
+     * [140]Python Jobs HQ
+
+   Newsletters
+     * [141]Pycoder's Weekly
+     * [142]Python Weekly
+
+   Screencasts
+     * [143]Neckbeard Republic
+     * [144]Bucky's Python Tutorials.
+
+   a community for 5 years
+
+   IFRAME: [145]ad_main
+
+   [146]message the moderators
+
+MODERATORS
+
+     * [147]BioGeekBioinformatics software developer
+     * [148]nevare
+     * [149]chromakode
+     * [150]mdipierro
+     * [151]kingkilrCPython/PyPy/Django developer
+     * [152]quasarj
+     * [153]jrupacimport this
+     * [154]...and 1 more »
+
+   1
+   9
+   10
+   11
+
+   [155]Python Quick Reference for v2.7
+   ([156]freepythontips.wordpress.com)
+
+   submitted 4 hours ago by [157]yasoob_python
+     * [158]5 comments
+     * [159]share[160]cancel
+
+   loading...
+   all 5 comments
+   sorted by:
+   best
+   [161]best
+   [162]top
+   [163]new
+   [164]hot
+   [165]controversial
+   [166]old
+   [167]random
+
+   [168][+][169]Beerwithme -1 points0 points1 point 2 hours ago  [170](0
+   children)
+
+   [171][–][172]Beerwithme -1 points0 points1 point 2 hours ago
+
+   Source: [173]http://rgruet.free.fr/#QuickRef
+     * [174]permalink
+     * [175]save
+
+   [176][+][177]evilsnake -1 points0 points1 point 1 hour ago  [178](3
+   children)
+
+   [179][–][180]evilsnake -1 points0 points1 point 1 hour ago
+
+   I don't know about you guys, but for me, a quick reference is not 35+
+   pages.
+     * [181]permalink
+     * [182]save
+
+   [183][+][184]samsonizzle 1 point2 points3 points 5 minutes ago  [185](0
+   children)
+
+   [186][–][187]samsonizzle 1 point2 points3 points 5 minutes ago
+
+   Compared to my 1600 page Python bible, 35+ pages is a quick reference.
+     * [188]permalink
+     * [189]save
+     * [190]parent
+
+   [191][+][192]rfv101 0 points1 point2 points 25 minutes ago  [193](1
+   child)
+
+   [194][–][195]rfv101 0 points1 point2 points 25 minutes ago
+
+   It's actually pretty useful if you need a quick reminder. I like it.
+     * [196]permalink
+     * [197]save
+     * [198]parent
+
+   [199][+][200]evilsnake 0 points1 point2 points 20 minutes ago  [201](0
+   children)
+
+   [202][–][203]evilsnake 0 points1 point2 points 20 minutes ago
+
+   Maybe. But, in my experience, a quick cheat sheet can be printed and
+   looked at with a quick glance. For everything else, there's Google or
+   the official doc.
+     * [204]permalink
+     * [205]save
+     * [206]parent
+
+     * about
+     * [207]blog
+     * [208]about
+     * [209]team
+     * [210]source code
+     * [211]advertise
+
+     * help
+     * [212]wiki
+     * [213]FAQ
+     * [214]reddiquette
+     * [215]rules
+     * [216]contact us
+
+     * tools
+     * [217]mobile
+     * [218]firefox extension
+     * [219]chrome extension
+     * [220]buttons
+     * [221]widget
+
+     * <3
+     * [222]reddit gold
+     * [223]store
+     * [224]redditgifts
+     * [225]reddit.tv
+     * [226]radio reddit
+
+   Use of this site constitutes acceptance of our [227]User Agreement and
+   [228]Privacy Policy. © 2013 reddit inc. All rights reserved.
+
+   REDDIT and the ALIEN Logo are registered trademarks of reddit inc.
+
+   [229]close this window
+
+you'll need to login or register to do that
+
+create a new account
+
+   all it takes is a username and password
+
+privacy philosophy
+
+     * we limit data collected about you and your use of the platform,
+     * your personal information is never for sale,
+     * we use and disclose information to prevent people from abusing the
+       platform, but
+     * we never disclose it for any other reason unless required by law.
+
+   for more information, see our [230]privacy policy.
+     * username: ____________________try anotheravailable!
+     * account recovery email:  (optional) ____________________we only
+       send email at your request
+     * password: ____________________
+     * verify password: ____________________
+     *
+
+       visual CAPTCHA
+       ______________________________
+     * [ ] remember me
+
+   (BUTTON) create account
+
+   is it really that easy? only one way to find out...
+
+login
+
+   already have an account and just want to login?
+     * username: ____________________
+     * password: ____________________
+     * [ ] remember me
+     * [231]recover password
+
+   (BUTTON) login
+
+   [232]close this window
+   interface language [English [en]__________________________] (*)
+   incomplete [233]volunteer to translate
+   content language (*) all languages
+   ( ) some languages
+     __________________________________________________________________
+
+
+   [ ] العربية         [ ] עברית            [ ] polski
+   [ ] Беларуская мова [ ] मानक हिन्दी      [ ] português
+   [ ] български език  [ ] hrvatski         [ ] română
+   [ ] català          [ ] Magyar           [ ] русский
+   [ ] česky           [ ] Հայերեն լեզու    [ ] slovenčina
+   [ ] dansk           [ ] Bahasa Indonesia [ ] slovenščina
+   [ ] Deutsch         [ ] íslenska         [ ] српски језик
+   [ ] Ελληνικά        [ ] italiano (Italy) [ ] Svenska
+   [ ] English         [ ] 日本語              [ ] தமிழ்
+   [ ] Esperanto       [ ] 한국어              [ ] ภาษาไทย
+   [ ] español         [ ] Latin            [ ] Türkçe
+   [ ] eesti keel      [ ] lietuvių kalba   [ ] українська мова
+   [ ] Euskara         [ ] latviešu valoda  [ ] Tiếng Việt
+   [ ] فارسی           [ ] Nederlands       [ ] 中文
+   [ ] suomi           [ ] Nynorsk
+   [ ] français        [ ] Norsk
+   save options
+
+   π Rendered by PID 18671 on app-147 at 2013-09-26 18:43:34.804625+00:00
+   running ffa85dc.
+
+References
+
+   1. http://www.reddit.com/r/Python/comments/1n6etg/python_quick_reference_for_v27/.rss
+   2. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data#content
+   3. http://www.reddit.com/r/AdviceAnimals/
+   4. http://www.reddit.com/r/announcements/
+   5. http://www.reddit.com/r/AskReddit/
+   6. http://www.reddit.com/r/askscience/
+   7. http://www.reddit.com/r/aww/
+   8. http://www.reddit.com/r/bestof/
+   9. http://www.reddit.com/r/blog/
+  10. http://www.reddit.com/r/books/
+  11. http://www.reddit.com/r/EarthPorn/
+  12. http://www.reddit.com/r/explainlikeimfive/
+  13. http://www.reddit.com/r/funny/
+  14. http://www.reddit.com/r/gaming/
+  15. http://www.reddit.com/r/gifs/
+  16. http://www.reddit.com/r/IAmA/
+  17. http://www.reddit.com/r/movies/
+  18. http://www.reddit.com/r/Music/
+  19. http://www.reddit.com/r/news/
+  20. http://www.reddit.com/r/pics/
+  21. http://www.reddit.com/r/science/
+  22. http://www.reddit.com/r/technology/
+  23. http://www.reddit.com/r/television/
+  24. http://www.reddit.com/r/todayilearned/
+  25. http://www.reddit.com/r/videos/
+  26. http://www.reddit.com/r/worldnews/
+  27. http://www.reddit.com/r/WTF/
+  28. http://www.reddit.com/subreddits/
+  29. http://www.reddit.com/
+  30. http://www.reddit.com/r/all/
+  31. http://www.reddit.com/r/random/
+  32. http://www.reddit.com/r/pics/
+  33. http://www.reddit.com/r/funny/
+  34. http://www.reddit.com/r/gaming/
+  35. http://www.reddit.com/r/AskReddit/
+  36. http://www.reddit.com/r/worldnews/
+  37. http://www.reddit.com/r/news/
+  38. http://www.reddit.com/r/videos/
+  39. http://www.reddit.com/r/IAmA/
+  40. http://www.reddit.com/r/todayilearned/
+  41. http://www.reddit.com/r/WTF/
+  42. http://www.reddit.com/r/aww/
+  43. http://www.reddit.com/r/technology/
+  44. http://www.reddit.com/r/AdviceAnimals/
+  45. http://www.reddit.com/r/science/
+  46. http://www.reddit.com/r/Music/
+  47. http://www.reddit.com/r/movies/
+  48. http://www.reddit.com/r/bestof/
+  49. http://www.reddit.com/r/books/
+  50. http://www.reddit.com/r/EarthPorn/
+  51. http://www.reddit.com/r/explainlikeimfive/
+  52. http://www.reddit.com/r/gifs/
+  53. http://www.reddit.com/r/television/
+  54. http://www.reddit.com/r/askscience/
+  55. http://www.reddit.com/r/leagueoflegends/
+  56. http://www.reddit.com/r/breakingbad/
+  57. http://www.reddit.com/r/cringepics/
+  58. http://www.reddit.com/r/politics/
+  59. http://www.reddit.com/r/pokemon/
+  60. http://www.reddit.com/r/GrandTheftAutoV/
+  61. http://www.reddit.com/r/4chan/
+  62. http://www.reddit.com/r/reactiongifs/
+  63. http://www.reddit.com/r/gentlemanboners/
+  64. http://www.reddit.com/r/MakeupAddiction/
+  65. http://www.reddit.com/r/Minecraft/
+  66. http://www.reddit.com/r/DotA2/
+  67. http://www.reddit.com/r/Dexter/
+  68. http://www.reddit.com/r/nfl/
+  69. http://www.reddit.com/r/atheism/
+  70. http://www.reddit.com/r/fffffffuuuuuuuuuuuu/
+  71. http://www.reddit.com/r/conspiracy/
+  72. http://www.reddit.com/r/cats/
+  73. http://www.reddit.com/r/woahdude/
+  74. http://www.reddit.com/r/soccer/
+  75. http://www.reddit.com/r/Android/
+  76. http://www.reddit.com/r/circlejerk/
+  77. http://www.reddit.com/r/TrollXChromosomes/
+  78. http://www.reddit.com/r/LadyBoners/
+  79. http://www.reddit.com/r/mylittlepony/
+  80. http://www.reddit.com/r/Unexpected/
+  81. http://www.reddit.com/r/dadjokes/
+  82. http://www.reddit.com/subreddits/
+  83. http://www.reddit.com/
+  84. http://www.reddit.com/r/Python/
+  85. http://www.reddit.com/r/Python/comments/1n6etg/python_quick_reference_for_v27/
+  86. http://www.reddit.com/r/Python/related/1n6etg/python_quick_reference_for_v27/
+  87. https://ssl.reddit.com/login
+  88. javascript:void(0)
+  89. http://www.reddit.com/wiki/search
+  90. http://www.reddit.com/wiki/search
+  91. file://localhost/password
+  92. http://www.reddit.com/r/Python/submit
+  93. http://www.reddit.com/r/Python/submit?selftext=true
+  94. http://www.reddit.com/r/Python/
+  95. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+  96. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+  97. http://www.reddit.com/r/learnpython
+  98. http://learnpythonthehardway.org/
+  99. http://diveintopython3.net/
+ 100. http://inventwithpython.com/
+ 101. http://wiki.python.org/moin/BeginnersGuide
+ 102. http://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3
+ 103. http://newcoder.io/
+ 104. http://codingbat.com/
+ 105. http://www.pyschools.com/
+ 106. http://www.codecademy.com/tracks/python
+ 107. file://localhost/r/dailyprogrammer
+ 108. http://www.pythonchallenge.com/
+ 109. http://www.checkio.org/
+ 110. http://projecteuler.net/
+ 111. http://wiki.python.org/moin/Python2orPython3
+ 112. http://www.reddit.com/r/learnpython
+ 113. http://www.reddit.com/r/learnprogramming
+ 114. http://www.learnpython.org/
+ 115. http://www.skulpt.org/
+ 116. http://www.trypython.org/
+ 117. http://www.ideone.com/
+ 118. https://www.pythonanywhere.com/
+ 119. http://www.brython.info/tests/console.html
+ 120. http://docs.python.org/
+ 121. http://docs.python.org/py3k/
+ 122. http://guide.python-distribute.org/
+ 123. http://docs.python-guide.org/en/latest/index.html
+ 124. http://twistedmatrix.com/trac/
+ 125. http://www.zeromq.org/bindings:python
+ 126. https://www.djangoproject.com/
+ 127. https://www.pylonsproject.org/
+ 128. http://wiki.python.org/moin/WebFrameworks
+ 129. http://pygame.org/news.html
+ 130. http://numpy.scipy.org/
+ 131. http://www.scipy.org/
+ 132. file://localhost/r/flask
+ 133. file://localhost/r/django
+ 134. file://localhost/r/pygame
+ 135. file://localhost/r/IPython
+ 136. file://localhost/r/inventwithpython
+ 137. file://localhost/u/AlSweigart
+ 138. http://www.python.org/community/jobs/
+ 139. http://www.pythonjobs.com/
+ 140. http://www.pythonjobshq.com/
+ 141. http://pycoders.com/
+ 142. http://www.pythonweekly.com/
+ 143. https://www.neckbeardrepublic.com/
+ 144. http://www.youtube.com/playlist?list=PL0213E8DC3AA8E21B
+ 145. http://static.adzerk.net/reddit/ads.html?sr=python&bust2#http://www.reddit.com
+ 146. file://localhost/message/compose?to=%2Fr%2FPython
+ 147. http://www.reddit.com/user/BioGeek
+ 148. http://www.reddit.com/user/nevare
+ 149. http://www.reddit.com/user/chromakode
+ 150. http://www.reddit.com/user/mdipierro
+ 151. http://www.reddit.com/user/kingkilr
+ 152. http://www.reddit.com/user/quasarj
+ 153. http://www.reddit.com/user/jrupac
+ 154. http://www.reddit.com/r/Python/about/moderators
+ 155. http://freepythontips.wordpress.com/2013/09/26/python-quick-ref-v2-7/
+ 156. file://localhost/domain/freepythontips.wordpress.com/
+ 157. http://www.reddit.com/user/yasoob_python
+ 158. http://www.reddit.com/r/Python/comments/1n6etg/python_quick_reference_for_v27/
+ 159. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+ 160. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+ 161. http://www.reddit.com/r/Python/comments/1n6etg/python_quick_reference_for_v27/?sort=confidence
+ 162. http://www.reddit.com/r/Python/comments/1n6etg/python_quick_reference_for_v27/?sort=top
+ 163. http://www.reddit.com/r/Python/comments/1n6etg/python_quick_reference_for_v27/?sort=new
+ 164. http://www.reddit.com/r/Python/comments/1n6etg/python_quick_reference_for_v27/?sort=hot
+ 165. http://www.reddit.com/r/Python/comments/1n6etg/python_quick_reference_for_v27/?sort=controversial
+ 166. http://www.reddit.com/r/Python/comments/1n6etg/python_quick_reference_for_v27/?sort=old
+ 167. http://www.reddit.com/r/Python/comments/1n6etg/python_quick_reference_for_v27/?sort=random
+ 168. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+ 169. http://www.reddit.com/user/Beerwithme
+ 170. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+ 171. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+ 172. http://www.reddit.com/user/Beerwithme
+ 173. http://rgruet.free.fr/#QuickRef
+ 174. http://www.reddit.com/r/Python/comments/1n6etg/python_quick_reference_for_v27/ccfujgs
+ 175. javascript:void(0)
+ 176. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+ 177. http://www.reddit.com/user/evilsnake
+ 178. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+ 179. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+ 180. http://www.reddit.com/user/evilsnake
+ 181. http://www.reddit.com/r/Python/comments/1n6etg/python_quick_reference_for_v27/ccfvos3
+ 182. javascript:void(0)
+ 183. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+ 184. http://www.reddit.com/user/samsonizzle
+ 185. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+ 186. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+ 187. http://www.reddit.com/user/samsonizzle
+ 188. http://www.reddit.com/r/Python/comments/1n6etg/python_quick_reference_for_v27/ccfx27d
+ 189. javascript:void(0)
+ 190. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data#ccfvos3
+ 191. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+ 192. http://www.reddit.com/user/rfv101
+ 193. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+ 194. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+ 195. http://www.reddit.com/user/rfv101
+ 196. http://www.reddit.com/r/Python/comments/1n6etg/python_quick_reference_for_v27/ccfwn0r
+ 197. javascript:void(0)
+ 198. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data#ccfvos3
+ 199. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+ 200. http://www.reddit.com/user/evilsnake
+ 201. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+ 202. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+ 203. http://www.reddit.com/user/evilsnake
+ 204. http://www.reddit.com/r/Python/comments/1n6etg/python_quick_reference_for_v27/ccfwqrl
+ 205. javascript:void(0)
+ 206. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data#ccfwn0r
+ 207. http://www.reddit.com/blog/
+ 208. http://www.reddit.com/about/
+ 209. http://www.reddit.com/about/team/
+ 210. http://www.reddit.com/code/
+ 211. http://www.reddit.com/ad_inq/
+ 212. http://www.reddit.com/wiki/
+ 213. http://www.reddit.com/wiki/faq
+ 214. http://www.reddit.com/wiki/reddiquette
+ 215. http://www.reddit.com/rules/
+ 216. http://www.reddit.com/feedback/
+ 217. http://i.reddit.com/
+ 218. https://addons.mozilla.org/firefox/addon/socialite/
+ 219. https://chrome.google.com/webstore/detail/algjnflpgoopkdijmkalfcifomdhmcbe
+ 220. http://www.reddit.com/r/Python/buttons/
+ 221. http://www.reddit.com/r/Python/widget/
+ 222. http://www.reddit.com/gold/about/
+ 223. http://www.reddit.com/store/
+ 224. http://redditgifts.com/
+ 225. http://reddit.tv/
+ 226. http://radioreddit.com/
+ 227. http://www.reddit.com/help/useragreement
+ 228. http://www.reddit.com/help/privacypolicy
+ 229. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+ 230. file://localhost/help/privacypolicy
+ 231. file://localhost/password
+ 232. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml4.data
+ 233. http://www.reddit.com/r/i18n/wiki/getting_started

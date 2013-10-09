@@ -1,0 +1,2447 @@
+   #[1]Hack a Day » Feed [2]Hack a Day » Comments Feed [3]Hack a Day »
+   Guest Rant: Ham Radio — Hackers’ Paradise Comments Feed [4]alternate
+   [5]alternate [6]Hack a Day [7]WordPress.com
+
+   [8]Hack a Day
+
+   Fresh hacks every day
+     * [9]Home
+     * [10]Our Videos
+     * [11]Submit a Tip
+     * [12]Forums
+     * [13]Staff
+     * October 1, 2013
+
+Guest Rant: Ham Radio — Hackers’ Paradise
+
+   September 23, 2013 By [14]Mike Szczys [15]134 Comments
+
+   meara-bill-rant-wordbench
+
+   Editor’s Note: This is a guest post written by [Bill Meara]
+
+   The suits at Hack-a-Day reached out to [16]SolderSmoke HQ and asked me
+   to send in a few words about why their readers should take a fresh look
+   at ham radio. Here goes:
+
+   First, realize that today’s ham radio represents a tremendous
+   opportunity for technical exploration and adventure. How about building
+   a station (and software) that will allow you to communicate by
+   [17]bouncing digital signals off the moon? How about developing [18]a
+   new modulation scheme to send packets not down the fiber optic network,
+   but around the world via the ionosphere, or via ham radio’s [19]fleet
+   of satellites? How about bouncing your [20]packets off the trails left
+   by meteors? This is not your grandfather’s ham radio.
+
+   You can meet some amazing people in this hobby: [21]Using a very
+   hacked-together radio station (my antenna was made from scrap lumber
+   and copper refrigerator tubing) [22]I’ve spoken to astronaut hams on
+   space stations. Our “low power, slow signal” group includes a ham named
+   [23]Joe Taylor. Joe is a radio astronomer who won the Nobel Prize for
+   Physics. He’s now putting his software skills to use in the development
+   [24]of below-the-noise receiving systems for ham radio. Join me after
+   the break for more on the topic.
+
+   When you start looking into amateur radio, don’t be deterred if the
+   first hams you meet don’t seem to be as deeply into technology as you
+   are. You have to seek out ham radio’s hard-core technical subculture.
+   It is here that hackers will find kindred spirits. As in the hacker
+   world, there is a kind of informal hierarchy based on technical ability
+   and achievement. The FCC licenses have become so easy to get that they
+   no longer count for much. But if you’ve built from scratch an entire
+   shortwave radio station and use it to shoot the breeze with friends in
+   Australia, well, that will win you amateur radio street cred, as will
+   the computer skills that you’ll bring to the hobby from the hacker
+   world.
+
+   Hackers will probably be pleasantly surprised by ham radio’s very
+   strong tradition of mutual support and solidarity. Newcomers are
+   welcome and more experienced hams volunteer to serve as mentors.
+   Especially among people who build their own gear, we have a strong “my
+   junk-box is your junk-box” spirit.
+
+   There is also a wonderful social aspect to the hobby. I have in my
+   “shack” [25]a shortwave radio station that I hacked myself from
+   junk-box parts. I routinely fire it up and “calling CQ” look for
+   someone out there to talk to. The response could come from down the
+   street or from the other side of the world. What do we talk about?
+   Well, the conversation usually begins with me talking about my amazing
+   “homebrew rig” and goes on from there. At the risk of reinforcing a
+   stereotype, I’ll note that many of us got into ham radio as teenagers
+   in part because we were a bit socially awkward. I suspect that this is
+   something that many hackers can identify with. You can make a lot of
+   good friends in ham radio.
+
+   If you are passionate about electronic technology and are NOT a ham,
+   well, you are missing something important. The Hack-A-Day guys are
+   right: You should take a new look at ham radio.
+
+                                ************
+
+   About the author: Bill Meara’s diplomatic day job has nothing to do
+   with electronics, so his amateur status in this field cannot be
+   contested. A ham since age 14, he has pursued the hobby in numerous
+   foreign countries. He is the host of the [26]SolderSmoke podcast, and
+   the author of [27]“SolderSmoke: Global Adventures in Wireless
+   Electronics.”
+
+   meara-bill-rant-workshop
+     * [28]Retrotechtacular: Fundamentals of AM and FM Radio Communication
+     * [29]Arduino as an inexpensive ham radio frequency counter
+     * [30]Hammond Organ sends messages which can be decoded by
+       a Spectrogram
+     * [31]Turning an easter egg hunt into a fox hunt
+     * [32]Arduino using a straight key for Morse code assistance
+
+   Filed Under: [33]Featured, [34]radio hacks, [35]rants Tagged With:
+   [36]amateur radio, [37]bill meara, [38]ham radio
+
+Comments
+
+    1. fajko says:
+       [39]September 23, 2013 at 10:06 am
+       why do every ham operator uses those abysmal nicknames. can’t we
+       use normal nicknames, say from our youtube accouts?
+       [40]Reply [41]Report comment
+          + [42]Bill K5WL says:
+            [43]September 23, 2013 at 11:23 am
+            They are assigned to every radio operator by the fcc or the
+            other government authorities in other countries. It is legally
+            required to use the one assigned to you.
+            [44]Reply [45]Report comment
+               o Whatnot says:
+                 [46]September 23, 2013 at 11:42 am
+                 The official name thing only applies to certain
+                 frequencies and wattage, and requires an exam, but you
+                 also have your open frequencies where you are not bound
+                 to a name. And there too you can reach mad distances of
+                 course.
+                 [47]Reply [48]Report comment
+                    # vpoko says:
+                      [49]September 23, 2013 at 11:54 am
+                      As a licensed ham, I can positively say that this
+                      isn’t true at all. All ham bands, regardless of
+                      frequency or power used, require station
+                      identification using the assigned call sign at the
+                      conclusion of a conversation, and every 10 minutes
+                      otherwise (CFR Title 47 part 97.119). There *are*
+                      other (non-ham) radio services, like CB, GMRS, MURS,
+                      and FRS which don’t require station identification,
+                      but you don’t have nearly the same access to
+                      frequencies, nor can you design your own radio for
+                      those services (radios have to be FCC type
+                      accepted).
+                      [50]Reply [51]Report comment
+                         @ Richard - AG6QR says:
+                           [52]September 23, 2013 at 12:44 pm
+                           vpoko is correct. When operating as a ham, you
+                           must use your ham call sign, per 97.119. You
+                           can omit your ham call sign if you’re operating
+                           on an unlicensed service, but then you must
+                           obey the rules of that service, and your ham
+                           radio license doesn’t give you any privileges.
+                           I’ll further note that unlicensed radio
+                           generally can’t do long distance communication.
+                           GMRS, MURS, and FRS are all at frequencies that
+                           don’t offer long distance propagation. CB is at
+                           a frequency range that does offer “skip” for
+                           long distance propagation, but it is illegal to
+                           use CB radio to operate over a distance of more
+                           than 250km (approximately 155 miles), per CFR
+                           47 part 95.413(a)(9). Enforcement of this
+                           provision of the CB rules is admittedly scarce.
+                         @ 0x4368726973 says:
+                           [53]September 23, 2013 at 3:05 pm
+                           Note that there may be slight variations on the
+                           ID timing requirements from country to country,
+                           but the basics of at the end of the
+                           conversation and periodically durring the
+                           conversation always apply. Some countries
+                           require it at the beginning as well, but even
+                           if it’s not required, it’s good operating
+                           practice. For example, stations in Canada only
+                           need to ID every 30 minutes and at the
+                           beginning and end of the communication. (Per
+                           Industry Canada RBR-4 – Standards for the
+                           Operation of Radio Stations in the Amateur
+                           Service)
+                         @ Pun says:
+                           [54]September 23, 2013 at 4:29 pm
+                           This is exactly why ham has never been worth it
+                           for me. It’s not really mine if I have to ask
+                           someone’s permission to use it. I’ll stick to
+                           the internet, k thanx.
+                         @ vpoko says:
+                           [55]September 23, 2013 at 5:21 pm
+                           Do you refuse to get a driver’s license for the
+                           same reason?
+                           Anyway, ham is a great hobby for those
+                           interested in the radio art. We like the
+                           licensing requirement because it helps to
+                           ensure that only people with the requisite
+                           technical skills participate. Someone operating
+                           incorrectly or with improperly built equipment
+                           can quickly ruin the hobby for a lot of other
+                           people, so we see licensing as a plus and not a
+                           minus. If you want to see what happens without
+                           licensing, check out the CB bands in places
+                           where they’re still popular. The quality of
+                           discourse is on par with Youtube comments.
+                         @ Whatnot says:
+                           [56]September 24, 2013 at 4:49 pm
+                           I think our disagreement is a misunderstanding
+                           of what falls under the name ‘ham’, where I
+                           included your normal CB type of person.
+                           And incidentally, if you play around with
+                           things like signal transmission and slow scan
+                           TV and what not then you can’t send your ID in
+                           plenty of cases.
+                         @ vpoko says:
+                           [57]September 25, 2013 at 8:32 am
+                           You can send an ID with slow-scan TV, and
+                           you’re allowed to send it as an image. The only
+                           time you’re not required identify, per the
+                           rules, is when you’re using ham bands for
+                           remote “telecommand of a craft”.
+                         @ achra78 says:
+                           [58]September 26, 2013 at 10:57 am
+                           One correction is that GMRS is _not_ an
+                           unlicensed service. You are required to have a
+                           valid GMRS license from the FCC in order to
+                           operate in the GMRS radio service. Station
+                           identification rules are pretty much identical
+                           with GMRS as with the amateur radio bands, with
+                           the exception that the callsign is completely
+                           different. Source: I am an Extra class amateur
+                           radio operator and I hold a GMRS license as
+                           well.
+                         @ vpoko says:
+                           [59]September 26, 2013 at 11:34 am
+                           That’s interesting, achra78, I knew about the
+                           license requirement (though the FCC has issued
+                           a notice of proposed rulemaking to change GMRS
+                           licensing to by-rule like CB, FRS, and MURS)
+                           but didn’t know there were callsigns.
+                    # N0LKK says:
+                      [60]September 24, 2013 at 12:55 am
+                      That official name thing is the operator/station
+                      call sign issued by the regulating agency of each
+                      country. The class of license associated with call
+                      sign determine what bands & power levels the
+                      licensee can use. open frequencies do not exist
+                      where the FCC, regulates the spectrum, except for
+                      the unlicensed services. In the US we can use our
+                      given times or nicknames or what is known as
+                      tactical “call signs”, but we are required to ID
+                      using our call sign in a proscribed manner.
+                      [61]Reply [62]Report comment
+                         @ Peter says:
+                           [63]September 24, 2013 at 4:52 pm
+                           By “name,” I think he was referring to CB
+                           handles. Ham operators don’t do that. Hams use
+                           their real names together with their
+                           government-issued (license) callsigns.
+                         @ kaidenshi says:
+                           [64]September 29, 2013 at 5:29 pm
+                           Peter: Beyond that, I think the original post
+                           was an attempt at trolling by deliberately
+                           confusing Hams with stereotypical “Smokey and
+                           the Bandit” type CB operators, which (at least
+                           in these parts) is a fairly offensive thing to
+                           do to a Ham.
+                           Obviously, no one caught on so the joke is on
+                           the troll.
+                    # Me says:
+                      [65]September 25, 2013 at 8:43 am
+                      @WHATNOT
+                      “I think our disagreement is a misunderstanding of
+                      what falls under the name ‘ham’, where I included
+                      your normal CB type of person.”
+                      Most Hams would not include ‘your normal CB type of
+                      person’. There are a variety of reasons for that and
+                      one can chose to debate it all day long however I
+                      think for the purposes of this conversation CB
+                      cannot possibly be included.
+                      Here in the US and I’m pretty sure in most other
+                      countries a CB transmitter may not be legally
+                      operated unless it is type accepted. Getting type
+                      acceptance is far outside the financial capabilities
+                      of any home maker/hacker. Likewise to maintain it’s
+                      type acceptance it cannot be modified or repaired by
+                      anyone other than a technician authorized by the
+                      company that made the device.
+                      Also, with mode and power limitations and even a
+                      hard set distance limit beyond which it is ilegal to
+                      communicate even if your 4-watt legal limit signal
+                      manages to get some skip what kind of hacking would
+                      you do? With the exception of the antenna and maybe
+                      power supply there just isn’t any legal room for
+                      hacking in CB.
+                      Anyway, my point is that anything specific to CB
+                      doesn’t even belong in the conversation because CB
+                      isn’t really compatible with hacking anyway.
+                      More applicable to the oringinal post about funny
+                      names, Ham radio is different from CB in other ways
+                      too. Many hams will tell you that things like CB
+                      “trucker talk” (10-4 good buddy) and silly handles
+                      don’t happen on ham radio.
+                      This is mostly true. In the area where I live and in
+                      most that I have traveled to a quick listen to the
+                      local repeaters gets me real people, having actual
+                      natural sounding conversations. Tuning CB I mostly
+                      hear people screaming “audiiiioooo audiiioooo ooone
+                      twoooo threeeee fouuur… auuudioo audiooo” or else
+                      cussing at each other. To be fair, on rare occasion
+                      I do hear someone actually talk to somebody else.
+                      But… there are bad apples in ham radio too.
+                      Unfortunately, on the HF bands where one’s signal
+                      can reach worldwide it only takes one and everyone
+                      can hear them. So.. you will find some trucker talk,
+                      people preaching, going on about government
+                      conspiracies, aliens and etc… but… just turn the
+                      dial and you will find an actual sane “or at least
+                      seemingly sane :-) ” person.
+                      Ok, I guess I did get into the ‘you can debate it
+                      all day’ reasons why Ham radio is not like CB
+                      afterall.. oh well that was more pertinent anyway,
+                      let the flame war begin.
+                      [66]Reply [67]Report comment
+                    # Me says:
+                      [68]September 25, 2013 at 8:58 am
+                      @whatnot
+                      No, using different modes neither prevents nor
+                      excuses one from sending their id.
+                      You mentioned slow scan. That one is easy. You
+                      include your id as part of the picture you send.
+                      For various digital modes such as packet, APRS,
+                      DSTAR your call sign is part of the headers in the
+                      packets you send. It’s kind of nice because you
+                      don’t have to even think about sending it. It’s
+                      already there.
+                      the same kind of thing goes with any mode. Usually
+                      you just send your id the same way as you send your
+                      data although sometimes, such as when experimenting
+                      with a new digital mode you might id by switching to
+                      cw and sending it in morse to meet the requirement.
+                      When using an SSB transmitter that ability can be
+                      built right into software, you only need to send a
+                      steady tone.
+                      The one time were hams might legally not id is
+                      really low power modes like QRSS.* The only reason
+                      they get away with not iding then isn’t because
+                      there is any exception built into ham radio rules.
+                      It’s because at such low power they can fall under
+                      part 15(US) rules. That’s an entirely different
+                      radio service, not ham radio. It’s the same rules
+                      that allow for things like wifi and cordless phones
+                      without a license.
+                      Part 15 (unlike CB) is another way hackers/makers
+                      can experiment with radio as homemade equipment is
+                      allowed. It is extremely limited what one can do
+                      with part15 compared to ham radio though. Ham
+                      licenses are easy to get and allow for much much
+                      more.
+                      * Really slow cw (morse code) that takes several
+                      minutes to just send a word, people experiment with
+                      it because by keeping the bandwidth down you can
+                      sometimes reach over 1000 km with a tiny fraction of
+                      a watt.
+                      [69]Reply [70]Report comment
+          + Richard - AG6QR says:
+            [71]September 23, 2013 at 11:37 am
+            I assume you’re referring to the call sign? That’s assigned by
+            the government, and it’s what hams are required to use on the
+            air to identify their transmissions. It’s often used in other
+            contexts, as well. It’s relatively short, and guaranteed to be
+            unique worldwide. It immediately tells other hams your
+            country, and sometimes your approximate location within the
+            country. Hams can look up a call sign to find the name and
+            home location of the operator. Some hams put their call sign
+            on their license plate. More than one has it on his tombstone.
+            73 de AG6QR
+            [72]Reply [73]Report comment
+          + Ren says:
+            [74]September 23, 2013 at 11:37 am
+            Some “handles” (nicknames) are mnemonics to help others
+            remember their “call sign”.
+            Just as WNBC is an FCC required call sign for a
+            television/radio station, K5WL is the call sign of the poster
+            above. Transmissions need to include call signs. So, to help
+            other hams remember K5WL, the above poster may refer to
+            him(?)self as “Ken’s 5 Wild Ladies” or “Kentucky’s 5 Whiskey
+            Lovers”.
+            [75]Reply [76]Report comment
+          + Hirudinea says:
+            [77]September 23, 2013 at 12:12 pm
+            Its a station named assigned by the government when the ham
+            gets his licence, just like a regular radio station.
+            [78]Reply [79]Report comment
+          + atwas911 says:
+            [80]September 23, 2013 at 1:11 pm
+            I wonder who the first fool was to comply with this absurd
+            notion that a “government” should grant itself the rights to
+            control and oversee electronic frequencies. The FCC control
+            over electronic airways was the very first NSA tracking and
+            censorship program. The entire system was devised so they
+            would know exactly who was talking about what and with who.
+            This entire system should be derailed and overrun with
+            non-compliance.
+            [81]Reply [82]Report comment
+               o drall says:
+                 [83]September 23, 2013 at 1:35 pm
+                 We should just let the oil, mining, and logging company
+                 coming in a strip mountains bare, etc etc.
+                 RF is a natural resource, just like minerals, oil, and
+                 trees. They need to be regulated so that they are not
+                 abused and that all can enjoy them.
+                 [84]Reply [85]Report comment
+               o Me says:
+                 [86]September 23, 2013 at 1:54 pm
+                 RF spectrum is limited. That’s why we have rules about
+                 it. It is doubtful that much communication could be done
+                 over all the interference if we had anarchy in radio.
+                 That includes all those things some people seem to forget
+                 are radio btw, like tv, cellphone, etc… There would be
+                 too many people ‘shouting’ on the same frequencies.
+                 As for ‘tracking and censorship’, I guess you are talking
+                 about rules like not being able to use codes and cyphers
+                 to obscure the meaning of your communication in ham
+                 radio… Hams are actually some of the biggest supporters
+                 of keeping that rule. look at the demand for bandwidth
+                 these days for wireless internet. Without that rule we
+                 would have milions using ham frequencies for surfing the
+                 web overnight. Then the bands would be so full nobody
+                 could really use them for anything.
+                 “overrun with non-compliance.”… I think you are
+                 advocating protest through civil disobedience here… That
+                 may work for some things but I wouldn’t recommend it. You
+                 had better do your homework first, this isn’t just a
+                 night in jail. The fines involved can be huge!!!
+                 Despite disagreeing with your idea that all RF spectrum
+                 should be without rules I might vote for a single band
+                 designated that way given the chance. Of course.. there
+                 would be one rule. Your signal must not interfere with
+                 anything out of band! It would probably be too full of
+                 interference to be very useful but overcoming that
+                 interference could be a good technological challenge to
+                 spur further development. Then again.. that’s kind of
+                 what CB became and yet it didn’t have that result.
+                 [87]Reply [88]Report comment
+                    # [89]Andrew Dodd (@Entropy512) says:
+                      [90]September 24, 2013 at 6:59 am
+                      Other than power limits, that’s also what the
+                      cesspools known as the ISM bands are…
+                      [91]Reply [92]Report comment
+               o 0c says:
+                 [93]September 23, 2013 at 2:30 pm
+                 John Galt is a guy who never passed his ARRL exam,
+                 apparently.
+                 [94]Reply [95]Report comment
+                    # [96]Brian Benchoff says:
+                      [97]September 23, 2013 at 7:25 pm
+                      I’m stealing this line.
+                      [98]Reply [99]Report comment
+                    # N0LKK says:
+                      [100]September 24, 2013 at 5:14 am
+                      John Galt? ARRL exam? Oh; that poor delusional John
+                      Galt. ;) Still lost on the ARRL exam though. Their
+                      exam consists of send us the yearly dues. And we
+                      will send you the membership journal every month.
+                      Maintain the VEC, keep an eye on Washington D.C.
+                      [101]Reply [102]Report comment
+                         @ Bill McIninch says:
+                           [103]September 25, 2013 at 8:42 am
+                           The ARRL does not issue licenses. Only the FCC
+                           does that. The licensing system uses unpaid
+                           volunteers who are certified through any of
+                           several groups (in my case, 2 different ones,
+                           ARRL and W5YI) and are legally responsible to
+                           keep the exams honest. Since I can’t pay a
+                           $10,000 fine and don’t care to lose my license
+                           for a decade, I make sure to give applicants
+                           exactly the grade they merit.
+                           The ARRL is simply the largest of several ham
+                           radio groups around the world. The membership
+                           fee mainly gets you a magazine subscription and
+                           regular reminders to congress that there are
+                           over 700,000 Americans who care about who uses
+                           what frequencies.
+                    # draeath says:
+                      [104]September 24, 2013 at 8:13 am
+                      There is no such thing.
+                      [105]Reply [106]Report comment
+               o [107]drwho8 (@drwho8) says:
+                 [108]September 23, 2013 at 2:54 pm
+                 As soon as the Federal government realized that Marconi’s
+                 (or Telsa’s) silly idea of modulating hertz waves to
+                 deliver information, and most of them were spark gap
+                 devices, they felt that these individuals needed to keep
+                 to a specific region. Yes it is annoying and possibly
+                 violates both common sense and the founding beliefs
+                 behind our country, but this is years before the NSA was
+                 even considered. Especially since spark gap devices
+                 produce large quantities of waves with little or no
+                 information embedded in them. Study what happens when a
+                 lightning bolt gets delivered and you’ll see most of what
+                 I mean.
+                 [109]Reply [110]Report comment
+                    # Galane says:
+                      [111]September 23, 2013 at 5:42 pm
+                      Same reason why railroads came up with the concept
+                      of time zones. They prevented collisions between
+                      trains.
+                      The FCC and other radio spectrum governing agencies
+                      were created to make rules and guidelines to prevent
+                      collisions amongst different transmissions.
+                      Spark gap transmitters blasted out across wide
+                      swaths of the RF spectrum, within the transmitter’s
+                      effective range there could be only one. Mostly they
+                      were used just for transmitting Morse code because
+                      they were very difficult to modulate for voice.
+                      [112]Reply [113]Report comment
+                         @ N0LKK says:
+                           [114]September 24, 2013 at 5:21 am
+                           I always thought they implemented time zones so
+                           that didn’t have to deal with continent full of
+                           local times. We are the rail road 12 noon will
+                           be when we tell you it is.. Not that I could
+                           blame the rail roads.
+                         @ Greenaum says:
+                           [115]September 24, 2013 at 8:33 am
+                           Yep. It cut down the amount of timetables each
+                           rail company had to calculate and print, when
+                           every town took it’s time from the Town Hall
+                           clock, or perhaps a church. Which took it’s
+                           time from a sundial. Invented originally I
+                           think in Britain, and we’re not even an hour
+                           wide.
+                           Up until that point, nothing had ever moved
+                           quickly enough to need timing more accurately
+                           than morning / afternoon / night.
+                           There was an interesting documentary a while
+                           back, for a long while there was a woman in
+                           London who was paid to start her rounds at (I
+                           think) the Greenwhich observatory. She carried
+                           the most accurate portable clock she could
+                           reasonably use. Over the day she’d travel
+                           between subscribing businesses, telling them
+                           the time so they could synchronise their
+                           clocks.
+                           Ah, found her.
+                           [116]http://io9.com/5852886/the-woman-who-kept-
+                           time
+                         @ vpoko says:
+                           [117]September 24, 2013 at 9:06 am
+                           Very cool, Greenaum, I’d never heard of her.
+                           What’s interesting, though, is that the Rugby
+                           clock (a radio station) was broadcasting a time
+                           signal worldwide from 1926 on. I wonder why
+                           businesses either didn’t tap into this, or that
+                           businesses weren’t set up specifically for
+                           receiving this signal. Seems much more
+                           economical that a weekly train trip to
+                           Greenwich.
+                         @ Greenaum says:
+                           [118]September 24, 2013 at 1:34 pm
+                           The business was started in 1836 by Ruth’s
+                           father. After he died, his wife, then his
+                           daughter Ruth took over. Ruth herself ran it
+                           from 1892 – 1940, when she retired at 86! She
+                           lived til she was 90.
+                           There’s some interesting stuff about her on the
+                           web. A competitor (without revealing such) made
+                           a disparaging speech, later printed in The
+                           Times, laughing at how out of date it all was.
+                           Reporters besieged her after this, for her
+                           interesting story, and the possible rivalry.
+                           After it all died down she had more customers
+                           than ever.
+                           And the moral is… the British love an underdog!
+                           Well, when it’s presented in the right way we
+                           do. I think that might be responsible for her
+                           14 years of work after Rugby started up, who’s
+                           going to tell a 72 year old lady to stuff her
+                           watch up her arse? They must have guessed she’d
+                           retire soon enough, and after all the years of
+                           providing an important service. Stuff like that
+                           used to be worth something.
+                         @ Greenaum says:
+                           [119]September 24, 2013 at 1:41 pm
+                           Ah right, I’ve just seen what you mean… why
+                           didn’t Ruth herself buy a radio? I might guess
+                           cos they weren’t cheap back then, and possibly
+                           she thought it was more technical stuff than
+                           she could deal with. Clocks and old ladies are
+                           both well-known and trusted technology.
+                           I suppose she could’ve phoned Greenwich up
+                           herself. But there’s a nice story and a sense
+                           of ceremony in going to Greenwich to get the
+                           time in person. It also isn’t that far from the
+                           centre of London, it’s no trip, really, and the
+                           Underground and London’s other public transport
+                           was going well by that point.
+                           I think the sense of ceremony and authority,
+                           and kindness to Ruth, are what drove most of
+                           the market towards the end, and also the reason
+                           why nobody bothered taking the business up
+                           after she retired.
+               o Richard - AG6QR says:
+                 [120]September 23, 2013 at 3:31 pm
+                 It’s not a US thing. Since radio waves don’t respect
+                 national boundaries, there have been rules and licensing
+                 regulations in place by international treaties since at
+                 least 1906. It didn’t take long for radio users to
+                 realize that coordination was needed, or else a few bad
+                 operators would spoil the bands for everyone.
+                 [121]http://www.itu.int/ITU-R/index.asp?category=informat
+                 ion&rlink=promotion-100-years&lang=en
+                 [122]Reply [123]Report comment
+               o vpoko says:
+                 [124]September 23, 2013 at 4:05 pm
+                 Right on! I say the same thing about the man making us
+                 all drive on the right side of the road. If I want to
+                 drive on the left one, why shouldn’t I be able to? It’s
+                 called freedom! The spectrum should just be a free for
+                 all. Sure, no one could use it except maybe a few
+                 very-well heeled corporations with budgets for megawatt
+                 transmitters, but at least we’d be free. Am I right
+                 people?
+                 By the way, why did you put “government” in quotes?
+                 [125]Reply [126]Report comment
+                    # A2000 says:
+                      [127]September 24, 2013 at 5:12 am
+                      If all were allowed to use the spectrum as they
+                      like, you would soon have congestion & soon no one
+                      will be able to use anything.
+                      I find it a bit hypocritical that you are ready to
+                      use a mobile phone (limited to its own freq. bands)
+                      or internet (again limited/regulated IP addresses
+                      and such) but have issues with regulation on
+                      spectrum for HAM!
+                      [128]Reply [129]Report comment
+               o John says:
+                 [130]September 23, 2013 at 6:11 pm
+                 Who would you have regulate it or just have it a free for
+                 all, where Verizon, ClearChannel or ATT could broadcast
+                 their own high powered signal over a broad area, swamping
+                 all others?
+                 How about every citizen band together, and come to some
+                 common consensus as to what the rules should be, then we
+                 can choose a group of people to administer those rules?
+                 How about instead of some huge hundreds of millions of
+                 people conversation, we just group together and chose
+                 representatives? Then when we establish rules, we can
+                 give business a region of the RF and they can license
+                 from us specific frequencies and powers. Then we can open
+                 up other ranges of frequencies to the public! Hey, in
+                 case people (griefers) just start shouting nonsense over
+                 this limited resource, in order to drown out discussion,
+                 we make it so you have to get a license and prove that
+                 your intentions are honest.
+                 Hey, that’s the ‘Government’ and our current System!
+                 [131]Reply [132]Report comment
+               o N0LKK says:
+                 [133]September 24, 2013 at 1:35 am
+                 Those fools where the predecessors of today’s amateur
+                 radio operators. There was time when the military arm of
+                 the US government was poised to seize the right to use
+                 radio for it’s own use only. Chances are you benefit from
+                 how the FCC manages the RF spectrum. Thank those fools
+                 and the civilian government, rather than sounding like an
+                 anarchist/libertarian with out a clue. BTW those first
+                 fool, er”hams” operated in anarchical fashion for the
+                 simple reason it was new frontier, fortunately they where
+                 intelligent enough see there was going to be a need for a
+                 sanctioning body & referees to keep things from getting
+                 out of hand.
+                 [134]Reply [135]Report comment
+               o Syfr says:
+                 [136]September 24, 2013 at 3:31 am
+                 This has been done. Check out “CB”… it’s a sewer.
+                 [137]Reply [138]Report comment
+               o [139]Simon Halliday says:
+                 [140]September 24, 2013 at 5:24 am
+                 That’s a bit daft, I work using RF cameras in live TV
+                 broadcasting, and we have very tight regulations on
+                 bandwidth, frequency and power, for good reasons.
+                 During the Queens Jubilee, folks were nipping over the
+                 Channel to London with unlicenced RF equipment and firing
+                 it up and interfering with us, it was a bit of a free for
+                 all.
+                 It would be completely irresponsible for some idiot to
+                 fire up on any frequency just because they think they
+                 shouldn’t be restricted.
+                 We need the regulations to keep everything in order.
+                 Without them it would be completely abused.. Try using RF
+                 in other countries without the laws and see how far you
+                 get..
+                 [141]Reply [142]Report comment
+          + Mike Miller says:
+            [143]September 26, 2013 at 7:42 am
+            I love this post and it reminds me so much of how I started
+            with a 5 watt 2 tube transmitter built on a cake pan with a
+            heathkit shortwave receiver 73 from Mike N4VG
+            [144]Reply [145]Report comment
+    2. [146]Tom the Brat says:
+       [147]September 23, 2013 at 10:14 am
+       Where do we sign up? As a kid, I always wanted to be a ham, but as
+       a dyslexic kid, “CW” was just beyond me. I understand they don’t
+       require CW these days. Beware of barefooted brats who play with
+       trains :D
+       [148]Reply [149]Report comment
+          + Peter says:
+            [150]September 23, 2013 at 10:38 am
+            What a coincidence. I had been contemplating a ham radio
+            license for two decades and finally decided to take the test
+            last weekend. You can find information about testing, exams,
+            free practice exams, etc at
+            [151]http://www.arrl.org/licensing-education-training
+            Another good website is [152]http://www.qrz.com
+            It has web based practice exams and keeps track of your
+            progress and areas that need more attention.
+            [153]Reply [154]Report comment
+               o Sterling says:
+                 [155]September 23, 2013 at 12:17 pm
+                 An even better website for exam practice is hamstudy.org.
+                 [156]Reply [157]Report comment
+          + [158]Louis Charles Bruckner says:
+            [159]September 23, 2013 at 10:44 am
+            Go to the ARRL web site.
+            [160]http://www.arrl.org/getting-licensed
+            [161]Reply [162]Report comment
+               o [163]Louis Charles Bruckner says:
+                 [164]September 23, 2013 at 10:45 am
+                 73′s Dd KG4MXV
+                 [165]Reply [166]Report comment
+          + Dylan says:
+            [167]September 23, 2013 at 10:52 am
+            In the U.S., [168]http://www.arrl.org/ is a great resource,
+            and for study guides I would suggest
+            [169]http://www.kb6nu.com/tech-manual/ . The technician (1st
+            level ), and general (2nd level), are pretty much stupid
+            simple, it usually costs about $15 to get tested each time,
+            and doesn’t take much time at all. Though, the extra class
+            (3rd and final level) licence is effectively a course on
+            AC/DC/RF theory, though most everyone now is usually just a
+            general class operator because the extra spectrum most often
+            isn’t worth it.
+            [170]Reply [171]Report comment
+          + N0LKK says:
+            [172]September 24, 2013 at 1:49 am
+            Visit [173]http://www.arrl.org/find-a-club , search for a
+            nearby club that offers license classes. Because this only
+            list clubs that are affiliated with the ARRL it’s not a
+            comprehensive list. Inquire locally at schools or even the
+            emergency preparedness director,the NWS office that serves
+            your location, or any two way radio shops if they are around.
+            if they know of an amateur radio contact person who could tell
+            you more. Good luck…
+            [174]Reply [175]Report comment
+          + [176]Andrew Dodd (@Entropy512) says:
+            [177]September 24, 2013 at 7:02 am
+            They haven’t required CW for VHF and above for on the order of
+            two decades (Code-Free Technician, which I got in middle
+            school or high school in the mid-1990s), but you did need to
+            know CW for HF and below – that requirement’s removal is
+            relatively recent.
+            [178]Reply [179]Report comment
+          + Bill McIninch says:
+            [180]September 25, 2013 at 8:35 am
+            There’s no need to even think of Morse code for a US ham
+            license any more. That was dropped when the last of the
+            international treaties requiring it expired. It was finally
+            declared unnecessary when the last branch of the US military
+            dropped Morse code nearly 10 years ago. The Technician class
+            license test now pretty much proves you can read and write,
+            have read the FCC regulations, and can identify symbols on a
+            circuit diagram. There are kids as young as 4 passing this
+            exam. You’re limited (except for a couple of CW bands) to
+            frequencies above 50 MHz, so your range is limited to about
+            half a million miles (bouncing it off the moon), or 3,000
+            miles in certain conditions with a decent antenna. If you
+            settle for a handheld radio, you’re limited to about 20 miles
+            direct, 250 miles to the International Space Station, or about
+            500 miles using one of about 70 ham satellites. Those
+            distances assume your handheld radio puts out 5 watts, a bit
+            less than a night light. You can also design, build, and use
+            your own TV stations, with your FCC call sign included as a
+            caption in the picture.
+            [181]Reply [182]Report comment
+    3. doxin says:
+       [183]September 23, 2013 at 10:31 am
+       are there any getting started guides out there? I’d *love* to get
+       into HAM, but I know no one who does it, nor any website that
+       explains it very well. add to that the problem of not being located
+       in the US of A.
+       [184]Reply [185]Report comment
+          + [186]Erik says:
+            [187]September 23, 2013 at 10:41 am
+            Send email to [188]vex@arrl.org and ask them. Be sure to tell
+            them what country you’re in. They probably won’t actually have
+            the answer, but they’ll be able to tell you who to ask.
+            [189]Reply [190]Report comment
+               o doxin says:
+                 [191]September 23, 2013 at 2:16 pm
+                 sent them an email. let’s hope they can point me in the
+                 right direction.
+                 [192]Reply [193]Report comment
+               o doxin says:
+                 [194]September 23, 2013 at 2:18 pm
+                 emailing that address just bounces. you sure it doesn’t
+                 have a typo in it?
+                 [195]Reply [196]Report comment
+                    # Ben Sinclair says:
+                      [197]September 23, 2013 at 2:33 pm
+                      What country are you in? I’m sure someone here can
+                      point you in the right direction.
+                      [198]Reply [199]Report comment
+                    # [200]John KF5SAB says:
+                      [201]September 23, 2013 at 2:57 pm
+                      He meant [202]vec@arrl.org. But really you shouldnt
+                      have to resort to asking them; they don’t control
+                      licensing in your country anyway. You probably have
+                      a local or regional club that can help you. If you
+                      can tell me where you are (city,country) I might be
+                      able to point you in the right direction.
+                      73
+                      [203]Reply [204]Report comment
+                    # 0x4368726973 says:
+                      [205]September 23, 2013 at 3:11 pm
+                      I think Erik meant [206]vec@arrl.org. I’d recommend
+                      looking for your country’s national radio
+                      association via the IARU (International Amateur
+                      Radio Union) and they can get you pointed in the
+                      right direction for licensing in your country.
+                      [207]http://www.iaru.org/member-societies.html
+                      [208]Reply [209]Report comment
+                         @ [210]Erik says:
+                           [211]September 24, 2013 at 8:08 am
+                           Precisely. Sorry about the typo…
+          + [212]Bill K5WL says:
+            [213]September 23, 2013 at 11:29 am
+            The website linked in my name/callsign is somewhat
+            international in scope. There are guys from Argentina,
+            England, Canada, and the US on regularly, and other places
+            sometimes.
+            [214]Reply [215]Report comment
+          + vpoko says:
+            [216]September 23, 2013 at 12:17 pm
+            I highly recommend eham.net.
+            Also, radioreference.com is good, but it’s more broad than
+            just ham radio.
+            [217]Reply [218]Report comment
+          + [219]Addie (w0ttv) says:
+            [220]September 24, 2013 at 12:48 pm
+            I go through the ARRL guide pretty much page by page in my
+            blog. It’s actually how I started learning about electronics
+            from having 0 experience. I didn’t even know what a resistor
+            was when I first started reading the ham radio guide. It
+            starts:
+            [221]http://tymkrs.tumblr.com/post/2828011632/first-ham-lesson
+            s-o-de-day and you’ll see subsequent lessons in
+            [222]http://tymkrs.tumblr.com/archive/2011/2
+            [223]Reply [224]Report comment
+          + Bill McIninch says:
+            [225]September 25, 2013 at 8:57 am
+            There are study materials and practice tests at
+            [226]http://www.qrz.com that will get you ready for the exam,
+            and the FCC rules are publicly available as CFR 47 part 97.
+            The ARRL and W5YI-VEC web sites include lists of upcoming
+            exams listed by date and location. In many cases, these are
+            monthly sessions.
+            At a given exam session, there may be tests given for all 3
+            levels of license. Also, there is a processing fee (under $15)
+            charged. If you pass the lowest level exam, you get to try the
+            next level, and if you pass that, you can take the top level
+            exam, all for that one fee. If you fail an exam, you can pay
+            the fee again, retake the exam (the exact questions will be
+            different) and possibly pass. Most VE groups have 5 different
+            tests for each license level. You start using your license as
+            soon as you show up in the FCC database.
+            NOTE: If you don’t like the callsign they assign, you can pay
+            a fee to get a vanity call of any available one legal for your
+            level of license.
+            [227]Reply [228]Report comment
+    4. Justin says:
+       [229]September 23, 2013 at 10:39 am
+       Tom
+       CW is no longer required for achieving a ham radio license. If you
+       want more information about how to get involved, visit
+       [230]http://www.arrl.org/getting-licensed. There are three
+       different licenses available for Radio Amateurs. The Technician
+       class license, the first in the sequence, gives you access to the
+       VHF and UHF bands and a small portion of the 10m frequency band.
+       This is mostly used for local communications, as well as
+       satellites, moon-bounce, and remote control. The next level gives
+       you access to long distance communication in the 10m through 180m
+       bands. This allows round the world transmission.
+       [231]http://www.arrl.org/graphical-frequency-allocations
+       Most hams tend to be very friendly about their hobby and they
+       aren’t all older. I am part of a college ham radio group that
+       consists of engineers in their twenties.
+       [232]Reply [233]Report comment
+          + Justin says:
+            [234]September 23, 2013 at 10:47 am
+            In the United States there is a 35 question test that gives
+            you privileges on the bands. There is a published question
+            pool and you only need 75% correct to pass the test. It
+            constitutes mostly of the rules governing the use of the
+            radios and is relatively easy.
+            I highly recommend the Ham Radio License Manual which can be
+            found on amazon or at the local library.
+            [235]Reply [236]Report comment
+    5. [237]KR0SIV says:
+       [238]September 23, 2013 at 10:43 am
+       Becoming a ham is very easy these days.
+       To take your test you need to find a club, most clubs have VEs
+       (examiners) who can give you the test. The ARRL has a great search
+       tool to find local clubs, keep in mind there are clubs not working
+       with the ARRL so Google is another good place to look.
+       ARRL Club Search: [239]http://www.arrl.org/find-a-club
+       The test is about $14USD to take and if time is available if you
+       pass your technician class (the lowest class available) you can
+       take the next two class tests at no extra charge.
+       There are 3 classes.
+       Technician: UHF/VHF Bands- Local communications with a small 10m
+       band HF portion.
+       General: All the radio bands except for a few dedicated CW spaces
+       on HF.
+       Extra: You get those extra CW spaces, and you can become a VE
+       yourself.
+       I went to [240]http://hamtestonline.com to take my practice exams,
+       but QRZ has free practice tests if you don’t want to pay the
+       hamtestonline fees.
+       Any questions feel free to ask me! kr0siv at amateurcq.com
+       [241]Reply [242]Report comment
+          + draeath says:
+            [243]September 24, 2013 at 8:29 am
+            You don’t need AE to be a VE. You can be a VE for any class
+            below what you have. Eg, I have a General, and I could VE for
+            Tech exams.
+            [244]Reply [245]Report comment
+    6. Rusty Shackleford says:
+       [246]September 23, 2013 at 10:48 am
+       I’ve only recently gotten my Ham license. All I did was study the
+       tests on QRZ.com, then find the nearest testing session on
+       arrl.org. I walked in, paid my $15 and passed both the Technician
+       and the General class tests. I plan to take the Extra next month.
+       It’s something I’ve been wanting to so for some time. Now I’m
+       working on getting my shack set up. I’m up on 2 meters, hitting the
+       repeaters around town. Now I just need to get my antenna up and
+       running and I’ll be on HF!
+       [247]Reply [248]Report comment
+          + [249]KR0SIV says:
+            [250]September 23, 2013 at 10:51 am
+            The 1.25m band (220) is a blast btw!
+            It’s the only VHF band I’ve made cross state communications
+            with (ohio to new york) on about 25 watts.
+            I just picked up an FT-857d, planning on doing some SSB
+            satellite.
+            [251]Reply [252]Report comment
+               o [253]John KF5SAB says:
+                 [254]September 23, 2013 at 3:01 pm
+                 You can get tropospheric ducting on any VHF band. I hit a
+                 2m repeater at ~100mi a couple of weeks ago with my HT at
+                 5W and had a QSO with a guy who was getting into the same
+                 repeater from another ~130miles on the opposite side with
+                 25W. Path was Houston, TX to Beaumont, TX to Lafyette,
+                 LA.
+                 [255]Reply [256]Report comment
+    7. [257]Bill K5WL says:
+       [258]September 23, 2013 at 10:50 am
+       Check out /r/amateurradio for some hacker-friendly ham info. It has
+       a wiki and a number of active members. It’s reddit, of course.
+       [259]Reply [260]Report comment
+    8. Mike KF7VZZ says:
+       [261]September 23, 2013 at 10:54 am
+       Hey! The FCC license is easy to get, but it remains a barrier to
+       entry. When CB usage was deregulated CB licensees all over
+       complained, but for those who just want to talk on plug-and-play
+       equipment it’s a fabulous thing.
+       I enjoy having a license and the privileges it grants. One nice
+       thing is getting to put my own equipment together and not having to
+       rely on “bubble-pack FRS” any longer.
+       [262]Reply [263]Report comment
+    9. Frequency says:
+       [264]September 23, 2013 at 11:00 am
+       Here is one free ham radio study web resource and practice exams
+       too. [265]https://hamstudy.org/
+       [266]Reply [267]Report comment
+   10. Richard says:
+       [268]September 23, 2013 at 11:11 am
+       I’ll agree with Bill Meara’s points and add a few from my own
+       perspective. I’ve always been an electronics tinkerer, and I had a
+       shortwave radio since age 10 or so. As a kid, I never had the
+       perseverance to master Morse Code, so I never got a ham license. A
+       bit less than a year ago I found out that there was no more
+       requirement for code for any class of license. Within a week of
+       discovering that bit of info, I had passed the exam for my Extra
+       class license, which gives me full privileges to operate any mode
+       on any ham bands. Since then, I’ve built radios and antennas, and
+       had a blast. And I’m even learning the Morse Code, because it’s
+       still a very efficient way to send a signal for a long distance
+       with low power. I’ve “talked” over 6000 miles using just five watts
+       bouncing off the ionosphere.
+       The license is very easy, at least in the USA. Start at
+       [269]http://www.arrl.org and click the
+       “licensing/education/training” tab. If you’re the technical type
+       who reads Hack-a-Day, the electronics theory part will be easier
+       for you than most. You still need to learn the operating rules and
+       practices, but those aren’t hard. Most cities have ham clubs that
+       will teach classes, but you can self-study if you prefer.
+       There are many non-technical hams. There are some semi-technical
+       hams who have experience about what kinds of equipment works well,
+       without much understanding about why (there are many useful pearls
+       of wisdom to be learned from this type of ham). But there are some
+       who are extremely technical, and they can teach you a lot. There
+       are lots of opportunities both for learning and for advancing the
+       state of the art.
+       Speaking of the state of the art, there are so many little obscure
+       niches in the world of ham radio that it would take a few lifetimes
+       to explore them all. There’s no requirement to progress through a
+       certain sequence in order.
+       [270]Reply [271]Report comment
+   11. Eric Johannessen says:
+       [272]September 23, 2013 at 11:55 am
+       I was a CB brat back in the late 60′s. Big deal then was running a
+       ham rig that you converted to work on 11 meters(CB band). Thats
+       where I got bit by the bug. I bought & built a Heathkit station &
+       converted it. I still have that gear! Never could master Morse
+       code. Now I finally got my ‘ticket’ that code is no longer
+       required. It is a great, rewarding hobby. I highly recommend it.
+       W2RNJ
+       [273]Reply [274]Report comment
+   12. Dormant says:
+       [275]September 23, 2013 at 12:10 pm
+       Nice post, I have been a HAM for years, lost interest because local
+       clubs are more about talking and weather than data or electronics.
+       Maybe I will give them another try.
+       KF4EHF
+       [276]Reply [277]Report comment
+          + [278]KR0SIV says:
+            [279]September 23, 2013 at 12:51 pm
+            Assemble you’re own club!
+            I’m working on doing that myself, the local club is great
+            however there is more experimental things I’d like to do in
+            the club.
+            So I started my own… Just a thought.
+            [280]Reply [281]Report comment
+               o Me says:
+                 [282]September 23, 2013 at 1:43 pm
+                 If the existing local club is well established it would
+                 probably work out better to join them and then start
+                 leading some activities yourself. There are probably
+                 others there who would be interested in more hands on
+                 building and experimenting. Just come up with a few ideas
+                 for simple starter projects and offer to lead a build
+                 night after a regular meeting now and then. Others you
+                 didn’t expect will come out of the woodwork and do the
+                 same. That way you get one stronger club which is good
+                 for both kinds of activities, not two clubs that compete
+                 for members dividing the community.
+                 [283]Reply [284]Report comment
+                    # 0x4368726973 says:
+                      [285]September 23, 2013 at 3:15 pm
+                      I must agree. Especially if the club has a club
+                      station somewhere, or operates a repeater (or
+                      several), there’s usually a technical committee in
+                      place to maintain the equipment. These are the
+                      people you are looking for.
+                      [286]Reply [287]Report comment
+                         @ Bullmoose says:
+                           [288]September 23, 2013 at 6:57 pm
+                           I wish that was my experience. The current
+                           “Technical Director” has no technical
+                           background and is legally illiterate. The Tech
+                           Committee is a group of old fuddie-duddies who
+                           wish to tell those with knowledge, experience,
+                           and health how it should be done, then readily
+                           flow with negative commentary when you didn’t
+                           do it the way they “mandated” in their one-man
+                           autocracy.
+                         @ Me says:
+                           [289]September 24, 2013 at 6:34 am
+                           I gues you could talk to the tech comittee.
+                           They are probably most likely to be interested
+                           in the technical side.
+                           I was thinking more just putting on something
+                           at the end of the general meetings. I don’t
+                           know about every other club but the one I am in
+                           is always looking for content, presentations
+                           for the meetings. They want something for
+                           people to go for beyond just the regular new
+                           business/ old business parlimentary procedure.
+                           There’s no official, regularly scheduled
+                           building but if someone wants to have a build
+                           night they are up for it. You just have to come
+                           up with what you want to build, find a design
+                           for it somewhere, preferably not too expensive
+                           and small enough to build in an hour or two.
+                           Then, pick a month (oour meetings our monthly).
+                           Anounce it ahead of time and have people sign
+                           up / bring money for the parts. Have the parts
+                           sorted and ready to go the day of the build.
+                           Also, ask people that can bring extra soldering
+                           irons to do so to loan to those who don’t have
+                           any.
+                           i think you might do better in general meetings
+                           like that because likely the tech comittee
+                           people will all be there but also anyone else
+                           who might be interested but for one reason or
+                           another is not on the tech comittee might be
+                           there.
+                         @ 0x4368726973 says:
+                           [290]September 24, 2013 at 9:42 am
+                           @Me:
+                           That is an option as well. I’ve put on
+                           presentations a couple times, and even ran a
+                           build night once. (Tip: DO NOT do a build night
+                           with deadbug construction and expect the
+                           majority of the participants projects to work,
+                           even with instructions with pictures)
+          + Anthony says:
+            [291]September 23, 2013 at 2:28 pm
+            The club I belong to has what is called “Construction Project”
+            that meets twice a month from October through April (we stay
+            indoors during the colder months here!). The tag line goes
+            something like “Bring in your radio gear and we’ll get it
+            working!”
+            We have retired hardware guys, EE’s, technicians and many
+            others who have a wealth of knowledge and skill that make this
+            effort worth the time. People bring in their hamfest finds, or
+            their latest projects to show off. It’s great technical fun.
+            73
+            Anthony
+            AB9YC
+            [292]Reply [293]Report comment
+          + Frequency says:
+            [294]September 23, 2013 at 3:21 pm
+            here is a ham radio robotics project
+            [295]http://wc2fd.com/index.php?title=Emergency_Antenna_Platfo
+            rm_System
+            [296]Reply [297]Report comment
+   13. [298]truthspew says:
+       [299]September 23, 2013 at 1:16 pm
+       I’m a member of the local DefCon group. Almost the entire core of
+       us are hams as well as InfoSec, computer and hardware people.
+       [300]Reply [301]Report comment
+   14. S. Hennig says:
+       [302]September 23, 2013 at 1:42 pm
+       Oh, and not to forget: being a HAM ain’t that bad in job
+       interviews, either. I am working as a software engineer (embedded)
+       and all my employers either were HAMs themselves or did understand
+       the meaning. Being able to state my call-sign (DG9FAB,btw) always
+       gave me the credibility that I could touch a soldering iron w/o
+       hurting myself. Maybe that’s one day the thing that distinguishes
+       you from the other applicants…
+       [303]Reply [304]Report comment
+          + 0x4368726973 says:
+            [305]September 23, 2013 at 3:17 pm
+            Definitely. You might not be able to legally make money
+            directly for operating an amateur station, however you can end
+            up with contacts and even experience that get you jobs.
+            [306]Reply [307]Report comment
+          + Bullmoose says:
+            [308]September 23, 2013 at 6:53 pm
+            That’s not absolute and I would caution anyone who considered
+            it to not unless they know for certain it’s a leg up. Where I
+            work in the Federal Emergency Management Community, had I
+            broadcast in my resume I was a ham, I would never had been
+            hired. Hams have a very bad reputation here. Too many
+            self-proclaiming “experts” in my neck of the woods.
+            [309]Reply [310]Report comment
+               o N0LKK says:
+                 [311]September 24, 2013 at 2:46 am
+                 I’m mildly involved with emergency preparedness locally
+                 (County level ARES RO), I do my best not to overstated
+                 what the local ham community can do, while not
+                 understating our capabilities. I have to be curious as to
+                 what you mean your “neck of the woods” Are you speaking
+                 of your area of residence or at your workplace or both?
+                 Nearby a ham was a law enforcement dispatcher. He rubbed
+                 some in the PD the wrong way, but he also did a lot to
+                 get that counties ARES?RACES group obtain professionalism
+                 as well the group did earn letters of commendation from
+                 agencies in adjoining counties for mutual aid activities
+                 well done. Sometimes the doers can’t make everyone happy.
+                 [312]Reply [313]Report comment
+               o 0x4368726973 says:
+                 [314]September 24, 2013 at 5:26 am
+                 It depends on how you approach the subject, Bullmoose.
+                 I’ve actually received jobs in that community because I
+                 am a ham. I was recruited by FEMA for the response to
+                 Charley/Frances/Ivan/Jean via the ARES (Amateur Radio
+                 Emergency Service) group in my area, because we had a
+                 good working relationship with our local EMA. That same
+                 group is also how I became involved in the disaster
+                 response team I currently am on, which at the time I
+                 became involved was a part of FEMA, and ham equipment is
+                 specifically verbotten to use in that group. (something
+                 about us using NTIA spectrum instead of FCC spectrum, and
+                 HIPAA compliance…) Also, I received my current job
+                 because of my involvement in the ARPSC (Amateur Radio
+                 Public Service Corps, basically a hybrid of ARES and
+                 RACES), and this started with another local EMA, working
+                 under a grant in a nuclear county…
+                 [315]Reply [316]Report comment
+          + [317]truthspew says:
+            [318]September 23, 2013 at 8:04 pm
+            Yup – it does carry cred in technical jobs.
+            [319]Reply [320]Report comment
+   15. [321]Leigh Klotz / WA5ZNU says:
+       [322]September 23, 2013 at 2:49 pm
+       I’ve been working for a number of years to help bring together the
+       ham and DIY/Maker communities, and before that trying to get the
+       various online communities (like Slashdot back in the day) to
+       recognize that hams are the ones who preserved the DIY spirit
+       through the dark ages of the 1970′s – 2000 when closed-box consumer
+       electronics gizmos took over from things you could make and repair
+       yourself. I’ve been luck enough to have been part of ham activities
+       at the SF Maker Faire (organized by others) and to bring some of
+       those projects here to Hack-a-day (Marauder’s Map and Cascata).
+       Out of that effort came a book of ham radio and Arduino and Picaxe
+       projects, published by the ARRL, which is non-profit. I don’t get
+       any money when the ARRL sells a copy, but I edited the book and
+       collected my own and others’ projects together to try to bring
+       communities together, so please do take a look.
+       [323]Reply [324]Report comment
+          + Hans says:
+            [325]September 24, 2013 at 7:03 am
+            I am currently reading that book, I borrowed it from the local
+            ham club’s library (another advantage of being member of a
+            good ham club). I like it a lot, and I’m going to build the
+            sweeper project. I just bought a couple (5 actually) of 9850
+            DDS boards from China, so I’ll need to build an amplifier
+            myself, which will be a leaning experience in itself. Thank
+            you for writing the book, you did a great job.
+            [326]Reply [327]Report comment
+   16. madeofsolder says:
+       [328]September 23, 2013 at 3:03 pm
+       I have the same type of scope! Mine needs to be calibrated though…
+       badly.
+       [329]Reply [330]Report comment
+   17. [331]webkris says:
+       [332]September 23, 2013 at 3:33 pm
+       The three reasons I always give:
+       1. Legally communicate with the space station / satellites.
+       2. Allowed to take apart a microwave and transmit with it. :)
+       3. When all else fails – Ham radio. (Earthquake, Hurricane,
+       Zombies)
+       - Kris
+       [333]Reply [334]Report comment
+   18. HamsterDave says:
+       [335]September 23, 2013 at 3:42 pm
+       There’s a great Ham Radio subreddit,
+       [336]http://www.reddit.com/r/amateurradio We’ve got a ton of
+       experienced hams, including a number of examiners and hard core
+       home-brewers who would be happy to answer questions and give
+       assistance to folks who are interested in getting licensed, and
+       European countries are nearly as well represented as the US.
+       [337]Reply [338]Report comment
+   19. my .02 says:
+       [339]September 23, 2013 at 5:30 pm
+       I recently got my technicians license and its good to see an
+       article like this here – i agree wholeheartedly that radio is a
+       hackers paradise – one that is relatively untapped by the hackaday
+       style community — so, a lot of potential for interesting work. In
+       some ways hack a day planted the seed of my interest in radio
+       through the articles on sdr. I started experimenting with the usb
+       tv receivers as radios and the interest grew from there.
+       getting through the test is easy – get the arrl book at the library
+       and read it. I talked to a friend at work with an arrl calendar in
+       his cube one day and he gave me a copy of the book the next day —
+       elmer for the win.
+       after you study take the test for $15 at a local radio club. google
+       it. you will pass. study more and go for the general class (much
+       more hf privilege) if you want. when you pass on one test the next
+       one(s) are free in the same sitting.
+       with a tech license you have privileges in uhf, vhf and limited in
+       some hf bands. radios are cheap. check out the baofeng uv-5r
+       handheld — about $35. It will get you on local 2 meter (144mhz) and
+       70cm bands. you can also build antennas that will allow this radio
+       to make contacts via satellite (one one so-50 today for this radio,
+       but more are apparently coming via cubesats) or if youre lucky,
+       contact the ISS. Working on a three element tape measure yagi now.
+       I also picked up a 6 meter qrp (low power) mfj-9406. Pretty late to
+       the party this season, but it’ll be worth the wait. I put together
+       a telescoping dipole for this – check out youtube for a few good
+       examples.
+       Right now I wish I would have gotten on ten meters first though
+       since right now we’re at a high point (peaking at a 100 yr low btw)
+       in the 11 yr solar cycle – during this time very long distance
+       contacts (world scale) are possible with relatively low power. a
+       slice of the ssb (voice) section of this band is accessible to the
+       technician class and there are single band radios available for
+       around $100 made by realistic/radio shack.
+       i went to a local ham club meeting and the members were all nice –
+       seemed like a small community of members that was tightly knit.
+       there was a pretty large age gap between me and many of them
+       (generations) but it was interesting how the interest can span the
+       gap. it was not unlike meetings I have been to at a local
+       hackerspace.
+       there is so much potential for this hacker diy community to make
+       their mark on the hobby — i would suspect that it could even steer
+       the future of the hobby if adopted.
+       73
+       [340]Reply [341]Report comment
+          + my .02 says:
+            [342]September 23, 2013 at 5:53 pm
+            correction – the ham satellite is saudi-oscar 50 (so-50)
+            [343]Reply [344]Report comment
+   20. [345]Lior Elazary says:
+       [346]September 23, 2013 at 5:57 pm
+       I have recently got into ham by trying to understand how to get
+       long range communication between two Arduinos. I have always been a
+       programmer/hacker only building using known simple analog and MCUs
+       ICs. I started by taking apart a cheap $35 5W radio, and replacing
+       its cpu ( [347]http://hackaday.com/2013/02/28/hacking-a-ham-radio/
+       ). In the process I learned more about RF and Morse code (the
+       original binary protocol). Since then, I have built inexpensive SDR
+       radios and was able to send signals directly from California to
+       Georgia with only 0.5W (No repeaters, just bouncing RF off the
+       Ionosphere on 10m). Talk about long distance.
+       As a side note of learning Morse, I started placing a single LED
+       and a touch switch (made from a PCB trace) on all my PCBs for use
+       in debugging. The MCU sends me status during startup, or ongoing
+       messages in Morse on the LED and I can interact with the MCU using
+       the touch switch. No need for bulky LCD displays, or having the
+       thing hooked up to your computer.
+       Just my 10 bits.
+       Lior
+       KK6BWA
+       [348]Reply [349]Report comment
+          + punkerdood says:
+            [350]September 23, 2013 at 6:40 pm
+            Or by trying to make write a TI BASIC frequency counting
+            program, using a TI-85 and a stopwatch. To be young and have
+            free time again.
+            [351]Reply [352]Report comment
+   21. Chris C. says:
+       [353]September 23, 2013 at 6:00 pm
+       “At the risk of reinforcing a stereotype, I’ll note that many of us
+       got into ham radio as teenagers in part because we were a bit
+       socially awkward. I suspect that this is something that many
+       hackers can identify with.”
+       Since no one has backed you up on this – yep, I can identify.
+       But at that age for me, you needed Morse code proficiency to
+       qualify for a license that didn’t restrict your ability to access
+       the spectrum for voice communications. It seemed elitist and
+       archaic, and if the regulations were that way, perhaps the people
+       the hobby attracted were predominantly that way too. While in
+       retrospect I realize that was an unfair assumption, it was enough
+       to turn me off from the hobby. I set up a BBS instead, got a CB
+       radio (I miss games of Possum Hunt), and so on. By the time I
+       discovered the licensing requirements had been relaxed, I could no
+       longer muster my original enthusiasm, and my time and budget were
+       filled with other things.
+       Just relating a story, not knocking the hobby. Glad to see so much
+       interest in it. Even though I’ll probably never be a Ham, living
+       through events like Hurricane Katrina have given me additional
+       respect for it.
+       [354]Reply [355]Report comment
+   22. Hans says:
+       [356]September 23, 2013 at 7:12 pm
+       I’ve been a HAM since august. For me, the greatest thing about it
+       is that I can build my own transmitter and experiment as much as I
+       want. Using WSPR, I’ve been heard 17,000 km away with a peaberry
+       SDR kit I built, sending with 1W of power. Using gnuradio, I’ve
+       been getting my feet wet in DSP.
+       I can agree with the article: if you’re addicted to the smell of
+       soldering, get a HAM license. It’s fun! There’s a lot happening in
+       the field. Maybe just visit some local clubs, find the homebrewing
+       people and you’ll be amazed by their competence. And they’re eager
+       to pass on their knowledge.The HAM and hacker cultures have so much
+       to offer each other, yet until now, they haven’t really connected.
+       It’s very, very unfortunate, IMO.
+       PS: In order to train, I wrote a HAREC test program, available here
+       in case it can help someone: [357]http://hansvi.be/harec.php (only
+       for Dutch-speaking Belgians at the moment).
+       73,
+       Hans – ON8VQ
+       [358]Reply [359]Report comment
+   23. Bullmoose says:
+       [360]September 23, 2013 at 7:23 pm
+       My experience in Ham Radio is nowhere near what I’m reading here. I
+       wish it was. The major club in the area is a group of 300+ folks
+       that are waiting for the end of days, and ham radio is one way to
+       prepare. Aluminum foil hats, open-carry “patriots” who openly talk
+       about when the government collapses how they’ll be there. The
+       technical knowledge was chased out, and replaced with
+       self-righteous inbreds all looking for something that fulfills
+       their desire to feel important without any need to know something.
+       I joined and got my license with the idea I’d find a group of
+       like-minded tinkerers with an interest in the technical things that
+       make all their magic store-bought black voice machines work. I
+       thought I’d find bleeding edge. I found the definition of
+       “high-tech” being technology that’s already been a minimum 20+
+       years in the commercial world. I’ve looked around, and found
+       nothing else around here. The don’t regulate, they don’t follow
+       simplest of Amateur Radio requirements such as use no more power
+       than necessary. 50W into a 4-bay 9dBi gain folded dipole on an APRS
+       digipeater servicing a city from an 7600ft overlooking mountaintop
+       for example. I’ll get off my soapbox now. I guess I’m jealous you
+       all have had a decent experience. Here, don’t show up without a
+       light bar on your car. :-)
+       [361]Reply [362]Report comment
+          + 0x4368726973 says:
+            [363]September 24, 2013 at 5:34 am
+            I’m not certain what area you are in, but you might want to
+            try talking to your SEC about this. There are a few people
+            like that around here, but our SEC is really working to
+            improve the image, and people like that are generally turned
+            around when they try showing up for something because of the
+            image they present. Unless you have a need for a light bar,
+            such as if you are a volunteer firefighter, or drive a truck
+            that is equipped as a snow plow, you shouldn’t have a light
+            bar. (Those two require the light bar for other things)
+            [364]Reply [365]Report comment
+               o Bullmoose says:
+                 [366]September 24, 2013 at 5:42 am
+                 Unfortunately, the SEC is on board with it. We’ve had one
+                 too many Hams “self-deploy” to emergencies such as house
+                 fires, then act like they own the incident. It’s more
+                 than one loon in the bunch too. The running response from
+                 the local Ham community is “it’s a free country, and he’s
+                 a volunteer, there’s nothing we can do”, Suffice to say,
+                 the entire Ham community is banned, local ARES has zero
+                 serving organizations, and Ham is usually followed by
+                 giggles.
+                 [367]Reply [368]Report comment
+                    # 0x4368726973 says:
+                      [369]September 24, 2013 at 9:55 am
+                      That is rather unfortunate. Perhaps a discussion
+                      with your SM might help as well, though I find it
+                      hard to believe they wouldn’t be aware of this. Note
+                      that if people are using the ARES logo improperly,
+                      there are things that can be done, as that logo is
+                      copyrighted by the ARRL. This would be done by
+                      contacting the ARRL. If you are having dificulty
+                      with your section, try HQ. (Note for those
+                      unfamiliar – SM = Section Manager, an elected
+                      position within the ARRL. Generally, each section is
+                      a state, though some are less, others are more. SEC
+                      – Section Emergency Coordinator – a position
+                      appointed by the SM to handle the ARES (Amateur
+                      Radio Emergency Service) programs within the
+                      section. Below the SEC are the DECs, (District
+                      Emergency Coordinators), then the ECs. Most SECs,
+                      DECs, and even ECs will have one or more assistants
+                      (put an A before the title) to help handle their
+                      functions. One of the major functions of the ECs (at
+                      all levels) is to promote the image of amateur
+                      radio, and coordinate with various served agencies
+                      such as the local EMA, the Red Cross, Salvation
+                      Army, Fire Departments, and other similar
+                      organizations)
+                      [370]Reply [371]Report comment
+   24. austin quoad says:
+       [372]September 23, 2013 at 7:32 pm
+       As much as it would be awesome to see the hacker/maker/diy
+       community get interested in ham radio, it really seems like it
+       would be a collision of two utterly opposite worlds. I think this
+       is why there is so little overlap. If you listen to the
+       conversations people are having, it’s 99% what brand of radio, what
+       brand of antenna, etc.. and 1% people shouting horrifying racist or
+       inflammatory ultra-rightwing political stuff. It’s really
+       disappointing, because it could be so much more. And it’s not a
+       community that welcomes new people or embraces any kind of change.
+       About the only common ground is a sense of wonder at being able to
+       convey information over huge distances with no infrastructure in
+       between. I think there was a big boom in ham radio in the 1950s
+       when it was very cutting-edge and was often the only way of
+       communication between point A and point B – that community is
+       growing old and I think the culture will change greatly as that
+       side of it dies out. Both good and bad – it really was a sort of
+       cameraderie of a kind that I don’t think could ever arise again in
+       the modern age – but on the other hand, it is or has been very much
+       stuck in the past, bound by a culture that the world has passed by.
+       The reality is that in this age of the internet and satellite
+       communication, ham has very little concrete, practical utility –
+       you really have to stretch to contrive a situation where it’s the
+       only thing that will solve a given problem. It isn’t any less cool
+       or interesting for that — it just needs to be seen for what it is –
+       something really cool and interesting and endlessly complex that
+       you can do all sort of things with. It’s a pity that the standard
+       reaction is “wow, people still do that?”
+       (btw yes i’m licensed -extra- and know cw)
+       [373]Reply [374]Report comment
+          + HamsterDave says:
+            [375]September 23, 2013 at 8:13 pm
+            I agree that the majority of hams aren’t the sort to build
+            their own equipment, at least not on any substantial level or
+            scale. However, there are many thousands of us who do, you
+            just have to seek them out.
+            We’re widely scattered enough that you won’t often find a
+            local club with a strong hacker subculture, except in specific
+            environments like STEM schools or extremely tech-heavy areas.
+            The most active groups by far are online, but you *can* find
+            many of those folks by going to hamfests, especially the big
+            ones. If you go to Dayton or Orlando, you realize pretty
+            quickly that there are far more than you’d suppose just by
+            talking to folks on the air.
+            The biggest thing I’ve noticed is that many of the hackers in
+            the hobby are highly specialized. Some guys do transmitters,
+            some (like me) do antennas and other station hardware, some
+            toy with the digital end and write software or develop new
+            modes. Some just build kits. I think the hacker culture in ham
+            radio is a bit more nebulous because each of those groups
+            tends to keep to themselves in large part.
+            I do want to say thoug, If you want to find the sure fire
+            hardware hackers, find the satellite operators, and the
+            backpack QRP operators. Those are the guys who come up with
+            some wickedly innovative hardware out of necessity.
+            [376]Reply [377]Report comment
+          + vpoko says:
+            [378]September 23, 2013 at 8:14 pm
+            It’s true that if you listen to the amateur bands you find a
+            lot of mostly older, male hams talking about their day, what
+            they had for lunch, etc. They’re certainly the ones making
+            most use of bands if you go purely by air time. But there are
+            other kinds of hams, too, making use of their license without
+            chatting on the air for hours on end about nothing in
+            particular.
+            Me, personally, I’m interested in radio as an extension of my
+            interest in electronics. I like learning about receivers,
+            antennas, transmitters, etc, and trying out what I learn. For
+            me, getting on for a quick signal report is all the talking I
+            care to do on the radio. Having the license lets me use the
+            frequencies for what I want to use them for – experimenting on
+            radios. It’s not a communication medium for me. I feel like
+            it’s a very exciting time in radio. Software Defined Radio is
+            huge, it moves an amazing amount technology into the hands of
+            any enthusiast who’s interested. Plus with WiFi, cellular,
+            Bluetooth, and all the other heavily used radio technologies
+            around, it’s not like learning about the science of radio is a
+            waste of time.
+            [379]Reply [380]Report comment
+   25. [381]Tom the Brat says:
+       [382]September 23, 2013 at 7:58 pm
+       I even learned to design with vacuum tubes as that’s what the ARRL
+       books of the day described.
+       [383]Reply [384]Report comment
+          + Syfr says:
+            [385]September 24, 2013 at 3:33 am
+            Some of us still do. They’re simple to build and affordable
+            and rugged.
+            [386]Reply [387]Report comment
+               o austin quoad says:
+                 [388]September 24, 2013 at 2:15 pm
+                 Yes! Vacuum tubes are awesome. If only plate transformers
+                 weren’t so big and heavy. Hmmmmm… Switch-mode
+                 filament/plate power supply? sounds like a new project…
+                 :)
+                 [389]Reply [390]Report comment
+                    # Rob says:
+                      [391]September 26, 2013 at 11:34 am
+                      You’ll learn quite a bit doing it that way… gets
+                      tedious, but it’s very educational if you see it
+                      through.
+                      [392]Reply [393]Report comment
+   26. [394]afxzanac says:
+       [395]September 23, 2013 at 8:13 pm
+       We have a lot of good replies here (as well as the standard
+       naysayers, apparently) and I’ll put QRZ.com on the pile of great
+       sites. To get started, find your local ham club, and take the
+       practice test for the tech license about 50 times. By the time
+       you’ve done that, you’ll have a pretty good grasp on the rules and
+       should be able to pass the test no problem. Most of the tech level
+       test is common sense, such as how to handle emergency callers (the
+       answer is “shut up and ask if they need help”). Once you have your
+       tech license, hang out with your local club, operate, then see if
+       you want to continue. The real fun (for some) begins with the
+       general class and talking to people *thousands* of miles away. last
+       week I talked to someone in Zagreb, Croatia from my home in
+       Indiana. 4,800 miles with a wire antenna hanging on my house. It
+       feels awesome.
+       73! Reechard: K8DXB
+       [396]Reply [397]Report comment
+   27. N0LKK says:
+       [398]September 24, 2013 at 2:11 am
+       My number on reason why hackers should consider getting licensed.
+       People resources. Over the years I knew a former engineer with ATT,
+       another that worked at Bell labs as an engineer Radio/electronics
+       professionals, University physics professor machinists welders, on
+       and on. Not to mention a huge collective junk box or tool library.
+       Perhaps the hackaday “suits” should get some to volunteer to be
+       correspondent that specializes in Amateur radio/ bobby electronics
+       [399]Reply [400]Report comment
+          + Orion says:
+            [401]September 24, 2013 at 6:09 am
+            Tell us more about this “bobby electronics” please :D
+            [402]Reply [403]Report comment
+   28. [404]Louis Charles Bruckner says:
+       [405]September 24, 2013 at 4:14 am
+       I got my License for many reasons.
+       Look here for a few of the reasons.
+       (old page) I haven’t updated it in a long time.
+       [406]http://www.bruckner.ws/Electronics/Electronics.html
+       [407]Reply [408]Report comment
+   29. Orion says:
+       [409]September 24, 2013 at 6:31 am
+       Ham radio has always been an interest of mine right from childhood,
+       I remember when I used to dream about talking to far off contacts
+       while reading about it in the library, I sometimes think of it as
+       the first “internet” albeit for more technically oriented people
+       especially the home-brewers. 10+ years later and I’m still dreaming
+       of being a Ham, this post is a reminder to me that I have to get to
+       work on making that dream a reality!
+       [410]Reply [411]Report comment
+          + [412]Louis Charles Bruckner says:
+            [413]September 24, 2013 at 2:35 pm
+            Orion now it the best time to do so,
+            I really miss the fellowship and the community service, I will
+            have to wait until I retire to really get back into the hobby
+            but I will keep my license up until then.
+            [414]Reply [415]Report comment
+   30. Orion says:
+       [416]September 24, 2013 at 7:50 am
+       “At the risk of reinforcing a stereotype, I’ll
+       note that many of us got into ham radio as
+       teenagers in part because we were a bit socially
+       awkward”. Even though I’m no more a teen the risk with me is zero
+       because I TOTALLY fit that stereotype. You can’t get more
+       introverted than me (or so I think). That’s part of the reason why
+       I am more comfortable chatting online than meeting people face to
+       face because of that electronic barrier between me and the other
+       person, and I think ham will work for me in that regard. I don’t
+       know why but I am usually in my element when I’m all alone. My
+       mother is always encouraging me to change though, she says it is
+       important that i learn how to comfortably interact with others (or
+       maybe she is afraid I won’t bring her a daughter-in-law and
+       eventually some grandchildren *shudders*. I know she wants what’s
+       best for me). But then I am also learning for myself that you can’t
+       do without others and some level of social skills is necessary.
+       [417]Reply [418]Report comment
+          + Greenaum says:
+            [419]September 24, 2013 at 1:50 pm
+            FWIW I’ve noticed that through my 20s and 30s a lot of social
+            anxiety just goes away by itself. You just stop worrying about
+            stuff so much. Try to relax, and think “what’s the worst
+            that’s likely to happen?”.
+            [420]Reply [421]Report comment
+               o Orion says:
+                 [422]September 24, 2013 at 9:20 pm
+                 Wow, I have a new mantra now. Thanks for sharing Greenaum
+                 :)
+                 [423]Reply [424]Report comment
+   31. KleenexCommando says:
+       [425]September 24, 2013 at 9:00 am
+       I have a ham license, yet I don’t really use it beyond some of the
+       side benefits it offers. And I’d never use it on a resume due to
+       the fact its an over played hand by many people who want a tech
+       related job and blabbing on about ham radio gets annoying really
+       fast to a lot of people who see it as a glorified cell / telephone
+       anyway. Don’t get me wrong, It’s great when the hiring manager is a
+       fellow ham, but the reality is that most are not even technical
+       people to start with, let alone ham operators! Your milage may
+       vary. Also a lot of the hams I know think their license makes them
+       an authority on everything to do with electronics and beyond, yet I
+       have taken the tech and general exams and they really aren’t that
+       hard. The ARRL exam manual I had even said not to try and
+       understand questions, just “remeber the the answers”… and thats
+       really all you have to do. But again, there are certainly guys that
+       know their stuff.
+       One of the best comments to an over zealos ham operator I ever
+       heard was when I was preparing to a take a course on antennas
+       offered by Georgia Tech and I myself had just started in the
+       eletronics field. The ham operator assumed the professor was a ham
+       as well, due the the fact “he plays with antennas all day”. The
+       professor replied with a enthuastic “NO, If I were a dental
+       hygienist, do you think I would want to clean peoples teeth as a
+       hobby?” – Priceless…
+       I now understand what the professor was saying. Electronics used to
+       be my #1 passion as a hobby. It’s not as much fun to fire up that
+       soldering iron at home or pour over schematics when you do it for a
+       job all day. So hacking stuff for fun is one thing, doing it for a
+       living may just turn your off to it when it’s other peoples
+       projects you’re working on!
+       [426]Reply [427]Report comment
+          + Greenaum says:
+            [428]September 24, 2013 at 1:48 pm
+            Yup. Best way of killing off a hobby.
+            [429]Reply [430]Report comment
+          + Rider says:
+            [431]September 27, 2013 at 9:34 pm
+            Amen…
+            [432]Reply [433]Report comment
+   32. Orion says:
+       [434]September 24, 2013 at 9:09 am
+       Are those ham satellites still called OSCARS (Orbiting Satellites
+       Carrying Amateur Radio) or is that name dead?
+       [435]Reply [436]Report comment
+          + Orion says:
+            [437]September 24, 2013 at 9:11 am
+            *OSCARs
+            [438]Reply [439]Report comment
+   33. [440]Scott Harden says:
+       [441]September 25, 2013 at 2:10 pm
+       For those interested in taking the exam, the posted question pools
+       are literally HUNDREDS of pages long. I reformatted them to be a
+       study guide!
+       [442]http://swharden.com/garc/tech.pdf
+       (the parent directory also has some web-friendly files)
+       [443]Reply [444]Report comment
+   34. cuagn says:
+       [445]September 26, 2013 at 11:38 pm
+       Very interresting post and replies.
+       F6DNH
+       … more hack orientated than ham trafic
+       [446]Reply [447]Report comment
+   35. KF7PCL says:
+       [448]September 27, 2013 at 8:09 pm
+       “At the risk of reinforcing a stereotype, I’ll note that many of us
+       got into ham radio as teenagers in part because we were a bit
+       socially awkward. I suspect that this is something that many
+       hackers can identify with. You can make a lot of good friends in
+       ham radio.”
+       I can relate to this for sure. My age at the time of writing is 18
+       years old. I got my first license just a few days before my 16th
+       birthday.
+       I have had an interest in electronics since I was probably around 5
+       years old, and it is generally easy to make friends in amateur
+       radio.
+       —-
+       To the people that say that radio waves should be unregulated:
+       That makes absolutely no sense! Many rules are in place to prevent
+       chaos and make things run smoothly.
+       Having anarchy on the radio waves would make them virtually
+       unusable.
+       I don’t agree with many of the restricted freedoms in this country,
+       but that really has nothing to do with radio and is a topic for a
+       difference discussion alltogether
+       [449]Reply [450]Report comment
+   36. [451]kg7fdj says:
+       [452]September 28, 2013 at 2:29 am
+       After recently taking my Technicians test at age 47 I truly believe
+       if you can not pass that test you have no business owning a radio.
+       It really isn’t that hard and as previous people have said take the
+       practice tests enough you almost can memorize the answers. With all
+       of the technology available to Hams now on so many avenues it is
+       surely a fun time to have an operators license, it can really be a
+       ticket to modding and hacking.
+       [453]Reply [454]Report comment
+   37. echodelta says:
+       [455]September 28, 2013 at 2:35 am
+       I listen to much music and radio so I don’t have the ham radio on
+       much, but when it starts getting ugly outside nothing beats the
+       local repeater. Spotters are giving a (pun) blow by blow
+       description of whats coming down and when it’s all clear. Nothing
+       like narking on tornadoes.
+       Even if you don’t get a license, find when and where hamfests
+       occur. From Dayton to a local tailgate you will never fail to find
+       tech that is useable what ever turns on your light.
+       I have gotten many audio and music things even at our little
+       gathering at the end of summer. 73′s KC9ICS
+       [456]Reply [457]Report comment
+
+Leave a Reply [458]Cancel reply
+
+   Enter your comment here...
+
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+
+   Fill in your details below or click an icon to log in:
+     *
+     *
+     *
+     *
+     *
+
+       IFRAME: [459]googleplus-sign-in
+
+   [460]Gravatar
+   Email (required) (Address never made public)
+   ____________________
+   Name (required)
+   ____________________
+   Website
+   ____________________
+   WordPress.com Logo
+
+   You are commenting using your WordPress.com account.
+   ( [461]Log Out / [462]Change )
+   Twitter picture
+
+   You are commenting using your Twitter account.
+   ( [463]Log Out / [464]Change )
+   Facebook photo
+
+   You are commenting using your Facebook account.
+   ( [465]Log Out / [466]Change )
+   Google+ photo
+
+   You are commenting using your Google+ account.
+   ( [467]Log Out / [468]Change )
+   [469]Cancel
+
+   Connecting to %s
+
+   [ ] Notify me of follow-up comments via email.
+
+   [ ] Notify me of new posts via email.
+
+   Post Comment
+
+Never Miss a Hack
+
+   [470]Follow @twitter
+
+Search
+
+   Search this website  Search
+
+Categories
+
+   [Select Category________________]
+
+In case you missed it
+
+   [471]meara-bill-rant-wordbench
+
+[472]Guest Rant: Ham Radio — Hackers’ Paradise
+
+   [473]134 Comments
+   [474]had-staff-update-9-2013
+
+[475]Getting Your Feedback and a Staff Update
+
+   [476]36 Comments
+   [477]maker
+
+[478]Hackaday is going to the NYC Maker Faire!
+
+   [479]9 Comments
+   [480]Randy_Sargent-founder-of-findchips
+
+[481]How FindChips started as a NASA engineer’s hack
+
+   [482]52 Comments
+   [483]HaD_help_wanted
+
+[484]We’re Hiring
+
+   [485]50 Comments
+
+   [486]More Posts from this Category
+
+Our Columns
+
+   [487]retrotechtacular-building-BART
+
+[488]Retrotechtacular: Building BART
+
+   [489]15 Comments
+   [490]2013-08_Links_thumbnail
+
+[491]Hackaday Links: September 29, 2013
+
+   [492]8 Comments
+   [493]fotw-laser-measuring-tape
+
+[494]Fail of the Week: Capturing Data from a Laser Rangefinder
+
+   [495]41 Comments
+   [496]3D featured
+
+[497]3D Printering: Advances in 3D printing at Maker Faire
+
+   [498]29 Comments
+   [499]AM Transmitter
+
+[500]Retrotechtacular: Fundamentals of AM and FM Radio Communication
+
+   [501]20 Comments
+
+Recent comments
+
+     * [502]Jordan on [503]Turn a decommissioned robot into a CNC machine
+     * andarb on [504]LEDs turn the heat up on flameless pumpkin lights
+     * Tinkerer on [505]LEDs turn the heat up on flameless pumpkin lights
+     * Tinkerer on [506]LEDs turn the heat up on flameless pumpkin lights
+     * somun on [507]LEDs turn the heat up on flameless pumpkin lights
+     * lwatcdr on [508]Retrotechtacular: Building BART
+     * Johnson on [509]64 Rasberry Pis turned into a supercomputer
+     * Robot on [510]Retrotechtacular: Building BART
+     * Robot on [511]Retrotechtacular: Building BART
+     * Gecko on [512]Steam Controller: Open and Hackable?
+
+Find Hacks by Date
+
+   CAPTION: September 2013
+
+      S       M       T       W       T       F       S
+   [513]« Aug                      [514]Oct »
+   [515]1  [516]2  [517]3  [518]4  [519]5  [520]6  [521]7
+   [522]8  [523]9  [524]10 [525]11 [526]12 [527]13 [528]14
+   [529]15 [530]16 [531]17 [532]18 [533]19 [534]20 [535]21
+   [536]22 [537]23 [538]24 [539]25 [540]26 [541]27 [542]28
+   [543]29 [544]30
+   [impression?action=pageImpression&amp;zone=HDay_article&amp;extra=title
+   %3DGuest+Rant%3A+Ham+Radio+%26%238212%3B+Hackers%E2%80%99+Paradise]
+
+   [545]Return to top of page
+
+   Copyright © 2013 · [546]Genesis Framework · [547]WordPress · [548]Log
+   in
+   Quantcast
+
+References
+
+   Visible links
+   1. http://feeds2.feedburner.com/hackaday/LgoM
+   2. http://hackaday.com/comments/feed/
+   3. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/feed/
+   4. http://public-api.wordpress.com/oembed/1.0/?format=json&url=http%3A%2F%2Fhackaday.com%2F2013%2F09%2F23%2Fguest-rant-ham-radio-hackers-paradise%2F&for=wpcom-auto-discovery
+   5. http://public-api.wordpress.com/oembed/1.0/?format=xml&url=http%3A%2F%2Fhackaday.com%2F2013%2F09%2F23%2Fguest-rant-ham-radio-hackers-paradise%2F&for=wpcom-auto-discovery
+   6. http://hackaday.com/osd.xml
+   7. http://wordpress.com/opensearch.xml
+   8. http://hackaday.com/
+   9. http://www.hackaday.com/
+  10. http://www.youtube.com/subscription_center?add_user=hackaday
+  11. http://hackaday.com/contact-hack-a-day/
+  12. http://forums.hackaday.com/
+  13. http://hackaday.com/hackaday-staff/
+  14. http://hackaday.com/author/mikehackaday/
+  15. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/#comments
+  16. http://soldersmoke.blogspot.com/
+  17. http://en.wikipedia.org/wiki/EME_(communications)
+  18. http://wb8nut.com/digital/
+  19. http://www.n2yo.com/satellites/?c=18
+  20. http://www.k5kj.net/meteorscatter.htm
+  21. http://www.gadgeteer.us/ASTRO.HTM
+  22. http://www.gadgeteer.us/CLIPS.HTM
+  23. http://en.wikipedia.org/wiki/Joseph_Hooton_Taylor,_Jr.
+  24. http://physics.princeton.edu/pulsar/K1JT/
+  25. http://soldersmoke.blogspot.com/2012/01/putting-17-meter-ssb-station-on-air.html
+  26. http://soldersmoke.blogspot.com/
+  27. http://soldersmoke.com/book.htm
+  28. http://public-api.wordpress.com/bar/?stat=ES-Related-Post-Hit&bin=MLT-Query&redirect_to=http%3A%2F%2Fhackaday.com%2F2013%2F09%2F24%2Fretrotechtacular-fundamentals-of-am-and-fm-radio-communication%2F&sr=1&signature=5d555608f4a3e3c5348a967f3cb47411
+  29. http://public-api.wordpress.com/bar/?stat=ES-Related-Post-Hit&bin=MLT-Query&redirect_to=http%3A%2F%2Fhackaday.com%2F2013%2F02%2F09%2Farduino-as-an-inexpensive-ham-radio-frequency-counter%2F&sr=1&signature=479ed1271a115e3b882aa90e1dda25b1
+  30. http://public-api.wordpress.com/bar/?stat=ES-Related-Post-Hit&bin=MLT-Query&redirect_to=http%3A%2F%2Fhackaday.com%2F2013%2F03%2F28%2Fhammond-organ-sends-messages-which-can-be-decoded-by-a-spectrogram%2F&sr=1&signature=c488988ffc1132b62cb1f3067726ff9a
+  31. http://public-api.wordpress.com/bar/?stat=ES-Related-Post-Hit&bin=MLT-Query&redirect_to=http%3A%2F%2Fhackaday.com%2F2013%2F04%2F04%2Fturning-an-easter-egg-hunt-into-a-fox-hunt%2F&sr=1&signature=c20150911c8684f6838e8813ee46d900
+  32. http://public-api.wordpress.com/bar/?stat=ES-Related-Post-Hit&bin=MLT-Query&redirect_to=http%3A%2F%2Fhackaday.com%2F2013%2F01%2F03%2Farduino-using-a-straight-key-for-morse-code-assistance%2F&sr=1&signature=9ed4ec485762585f0537c9f379cf5605
+  33. http://hackaday.com/category/featured/
+  34. http://hackaday.com/category/radio-hacks/
+  35. http://hackaday.com/category/rants/
+  36. http://hackaday.com/tag/amateur-radio/
+  37. http://hackaday.com/tag/bill-meara/
+  38. http://hackaday.com/tag/ham-radio/
+  39. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063633
+  40. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063633#respond
+  41. javascript:void(0);
+  42. http://www.reddit.com/r/amateurradio
+  43. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063676
+  44. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063676#respond
+  45. javascript:void(0);
+  46. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063691
+  47. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063691#respond
+  48. javascript:void(0);
+  49. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063697
+  50. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063697#respond
+  51. javascript:void(0);
+  52. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063739
+  53. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063839
+  54. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063882
+  55. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063909
+  56. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064662
+  57. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1065146
+  58. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1065734
+  59. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1065754
+  60. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064141
+  61. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064141#respond
+  62. javascript:void(0);
+  63. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064666
+  64. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1067174
+  65. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1065156
+  66. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1065156#respond
+  67. javascript:void(0);
+  68. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1065167
+  69. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1065167#respond
+  70. javascript:void(0);
+  71. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063683
+  72. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063683#respond
+  73. javascript:void(0);
+  74. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063684
+  75. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063684#respond
+  76. javascript:void(0);
+  77. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063715
+  78. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063715#respond
+  79. javascript:void(0);
+  80. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063754
+  81. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063754#respond
+  82. javascript:void(0);
+  83. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063769
+  84. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063769#respond
+  85. javascript:void(0);
+  86. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063783
+  87. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063783#respond
+  88. javascript:void(0);
+  89. http://twitter.com/Entropy512
+  90. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064358
+  91. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064358#respond
+  92. javascript:void(0);
+  93. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063805
+  94. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063805#respond
+  95. javascript:void(0);
+  96. http://brianbenchoff.wordpress.com/
+  97. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063999
+  98. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063999#respond
+  99. javascript:void(0);
+ 100. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064245
+ 101. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064245#respond
+ 102. javascript:void(0);
+ 103. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1065155
+ 104. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064395
+ 105. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064395#respond
+ 106. javascript:void(0);
+ 107. http://twitter.com/drwho8
+ 108. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063827
+ 109. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063827#respond
+ 110. javascript:void(0);
+ 111. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063932
+ 112. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063932#respond
+ 113. javascript:void(0);
+ 114. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064250
+ 115. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064404
+ 116. http://io9.com/5852886/the-woman-who-kept-time
+ 117. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064425
+ 118. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064547
+ 119. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064553
+ 120. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063859
+ 121. http://www.itu.int/ITU-R/index.asp?category=information&rlink=promotion-100-years&lang=en
+ 122. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063859#respond
+ 123. javascript:void(0);
+ 124. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063873
+ 125. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063873#respond
+ 126. javascript:void(0);
+ 127. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064240
+ 128. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064240#respond
+ 129. javascript:void(0);
+ 130. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063953
+ 131. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063953#respond
+ 132. javascript:void(0);
+ 133. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064161
+ 134. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064161#respond
+ 135. javascript:void(0);
+ 136. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064201
+ 137. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064201#respond
+ 138. javascript:void(0);
+ 139. https://plus.google.com/109140799090095302433
+ 140. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064251
+ 141. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064251#respond
+ 142. javascript:void(0);
+ 143. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1065655
+ 144. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1065655#respond
+ 145. javascript:void(0);
+ 146. http://www.barefootelectronics.com/
+ 147. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063636
+ 148. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063636#respond
+ 149. javascript:void(0);
+ 150. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063646
+ 151. http://www.arrl.org/licensing-education-training
+ 152. http://www.qrz.com/
+ 153. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063646#respond
+ 154. javascript:void(0);
+ 155. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063721
+ 156. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063721#respond
+ 157. javascript:void(0);
+ 158. http://www.facebook.com/kg4mxv
+ 159. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063653
+ 160. http://www.arrl.org/getting-licensed
+ 161. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063653#respond
+ 162. javascript:void(0);
+ 163. http://www.facebook.com/kg4mxv
+ 164. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063654
+ 165. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063654#respond
+ 166. javascript:void(0);
+ 167. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063661
+ 168. http://www.arrl.org/
+ 169. http://www.kb6nu.com/tech-manual/
+ 170. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063661#respond
+ 171. javascript:void(0);
+ 172. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064167
+ 173. http://www.arrl.org/find-a-club
+ 174. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064167#respond
+ 175. javascript:void(0);
+ 176. http://twitter.com/Entropy512
+ 177. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064359
+ 178. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064359#respond
+ 179. javascript:void(0);
+ 180. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1065149
+ 181. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1065149#respond
+ 182. javascript:void(0);
+ 183. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063643
+ 184. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063643#respond
+ 185. javascript:void(0);
+ 186. http://www.renci.org/~escott
+ 187. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063650
+ 188. mailto:vex@arrl.org
+ 189. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063650#respond
+ 190. javascript:void(0);
+ 191. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063794
+ 192. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063794#respond
+ 193. javascript:void(0);
+ 194. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063797
+ 195. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063797#respond
+ 196. javascript:void(0);
+ 197. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063808
+ 198. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063808#respond
+ 199. javascript:void(0);
+ 200. http://www.blurbco.com/~gork/
+ 201. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063829
+ 202. mailto:vec@arrl.org
+ 203. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063829#respond
+ 204. javascript:void(0);
+ 205. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063842
+ 206. mailto:vec@arrl.org
+ 207. http://www.iaru.org/member-societies.html
+ 208. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063842#respond
+ 209. javascript:void(0);
+ 210. http://www.renci.org/~escott
+ 211. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064393
+ 212. http://www.reddit.com/r/amateurradio
+ 213. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063678
+ 214. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063678#respond
+ 215. javascript:void(0);
+ 216. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063720
+ 217. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063720#respond
+ 218. javascript:void(0);
+ 219. http://tymkrs.tumblr.com/
+ 220. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064531
+ 221. http://tymkrs.tumblr.com/post/2828011632/first-ham-lessons-o-de-day
+ 222. http://tymkrs.tumblr.com/archive/2011/2
+ 223. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064531#respond
+ 224. javascript:void(0);
+ 225. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1065166
+ 226. http://www.qrz.com/
+ 227. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1065166#respond
+ 228. javascript:void(0);
+ 229. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063647
+ 230. http://www.arrl.org/getting-licensed
+ 231. http://www.arrl.org/graphical-frequency-allocations
+ 232. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063647#respond
+ 233. javascript:void(0);
+ 234. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063655
+ 235. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063655#respond
+ 236. javascript:void(0);
+ 237. http://kr0siv.com/
+ 238. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063652
+ 239. http://www.arrl.org/find-a-club
+ 240. http://hamtestonline.com/
+ 241. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063652#respond
+ 242. javascript:void(0);
+ 243. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064402
+ 244. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064402#respond
+ 245. javascript:void(0);
+ 246. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063656
+ 247. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063656#respond
+ 248. javascript:void(0);
+ 249. http://kr0siv.com/
+ 250. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063660
+ 251. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063660#respond
+ 252. javascript:void(0);
+ 253. http://www.blurbco.com/~gork/
+ 254. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063834
+ 255. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063834#respond
+ 256. javascript:void(0);
+ 257. http://www.reddit.com/r/amateurradio
+ 258. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063659
+ 259. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063659#respond
+ 260. javascript:void(0);
+ 261. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063663
+ 262. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063663#respond
+ 263. javascript:void(0);
+ 264. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063667
+ 265. https://hamstudy.org/
+ 266. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063667#respond
+ 267. javascript:void(0);
+ 268. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063671
+ 269. http://www.arrl.org/
+ 270. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063671#respond
+ 271. javascript:void(0);
+ 272. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063698
+ 273. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063698#respond
+ 274. javascript:void(0);
+ 275. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063714
+ 276. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063714#respond
+ 277. javascript:void(0);
+ 278. http://kr0siv.com/
+ 279. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063742
+ 280. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063742#respond
+ 281. javascript:void(0);
+ 282. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063776
+ 283. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063776#respond
+ 284. javascript:void(0);
+ 285. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063846
+ 286. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063846#respond
+ 287. javascript:void(0);
+ 288. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063979
+ 289. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064322
+ 290. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064442
+ 291. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063802
+ 292. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063802#respond
+ 293. javascript:void(0);
+ 294. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063853
+ 295. http://wc2fd.com/index.php?title=Emergency_Antenna_Platform_System
+ 296. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063853#respond
+ 297. javascript:void(0);
+ 298. http://truthspew.wordpress.com/
+ 299. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063756
+ 300. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063756#respond
+ 301. javascript:void(0);
+ 302. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063774
+ 303. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063774#respond
+ 304. javascript:void(0);
+ 305. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063850
+ 306. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063850#respond
+ 307. javascript:void(0);
+ 308. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063976
+ 309. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063976#respond
+ 310. javascript:void(0);
+ 311. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064187
+ 312. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064187#respond
+ 313. javascript:void(0);
+ 314. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064252
+ 315. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064252#respond
+ 316. javascript:void(0);
+ 317. http://truthspew.wordpress.com/
+ 318. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064019
+ 319. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064019#respond
+ 320. javascript:void(0);
+ 321. http://hamradioprojects.com/
+ 322. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063819
+ 323. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063819#respond
+ 324. javascript:void(0);
+ 325. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064363
+ 326. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064363#respond
+ 327. javascript:void(0);
+ 328. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063837
+ 329. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063837#respond
+ 330. javascript:void(0);
+ 331. http://planetkris.com/
+ 332. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063861
+ 333. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063861#respond
+ 334. javascript:void(0);
+ 335. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063864
+ 336. http://www.reddit.com/r/amateurradio
+ 337. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063864#respond
+ 338. javascript:void(0);
+ 339. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063918
+ 340. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063918#respond
+ 341. javascript:void(0);
+ 342. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063938
+ 343. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063938#respond
+ 344. javascript:void(0);
+ 345. http://www.liorelazary.com/
+ 346. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063941
+ 347. http://hackaday.com/2013/02/28/hacking-a-ham-radio/
+ 348. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063941#respond
+ 349. javascript:void(0);
+ 350. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063972
+ 351. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063972#respond
+ 352. javascript:void(0);
+ 353. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063942
+ 354. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063942#respond
+ 355. javascript:void(0);
+ 356. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063989
+ 357. http://hansvi.be/harec.php
+ 358. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063989#respond
+ 359. javascript:void(0);
+ 360. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1063998
+ 361. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1063998#respond
+ 362. javascript:void(0);
+ 363. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064259
+ 364. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064259#respond
+ 365. javascript:void(0);
+ 366. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064280
+ 367. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064280#respond
+ 368. javascript:void(0);
+ 369. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064450
+ 370. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064450#respond
+ 371. javascript:void(0);
+ 372. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064001
+ 373. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064001#respond
+ 374. javascript:void(0);
+ 375. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064028
+ 376. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064028#respond
+ 377. javascript:void(0);
+ 378. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064029
+ 379. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064029#respond
+ 380. javascript:void(0);
+ 381. http://www.barefootelectronics.com/
+ 382. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064015
+ 383. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064015#respond
+ 384. javascript:void(0);
+ 385. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064203
+ 386. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064203#respond
+ 387. javascript:void(0);
+ 388. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064581
+ 389. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064581#respond
+ 390. javascript:void(0);
+ 391. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1065753
+ 392. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1065753#respond
+ 393. javascript:void(0);
+ 394. http://vaultf4.com/
+ 395. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064026
+ 396. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064026#respond
+ 397. javascript:void(0);
+ 398. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064176
+ 399. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064176#respond
+ 400. javascript:void(0);
+ 401. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064310
+ 402. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064310#respond
+ 403. javascript:void(0);
+ 404. http://www.facebook.com/kg4mxv
+ 405. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064216
+ 406. http://www.bruckner.ws/Electronics/Electronics.html
+ 407. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064216#respond
+ 408. javascript:void(0);
+ 409. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064321
+ 410. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064321#respond
+ 411. javascript:void(0);
+ 412. http://www.facebook.com/kg4mxv
+ 413. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064590
+ 414. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064590#respond
+ 415. javascript:void(0);
+ 416. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064379
+ 417. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064379#respond
+ 418. javascript:void(0);
+ 419. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064563
+ 420. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064563#respond
+ 421. javascript:void(0);
+ 422. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064814
+ 423. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064814#respond
+ 424. javascript:void(0);
+ 425. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064421
+ 426. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064421#respond
+ 427. javascript:void(0);
+ 428. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064560
+ 429. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064560#respond
+ 430. javascript:void(0);
+ 431. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1066419
+ 432. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1066419#respond
+ 433. javascript:void(0);
+ 434. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064427
+ 435. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064427#respond
+ 436. javascript:void(0);
+ 437. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1064430
+ 438. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1064430#respond
+ 439. javascript:void(0);
+ 440. http://www.SWHarden.com/
+ 441. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1065330
+ 442. http://swharden.com/garc/tech.pdf
+ 443. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1065330#respond
+ 444. javascript:void(0);
+ 445. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1065994
+ 446. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1065994#respond
+ 447. javascript:void(0);
+ 448. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1066398
+ 449. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1066398#respond
+ 450. javascript:void(0);
+ 451. http://kg7fdj.wordpress.com/
+ 452. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1066509
+ 453. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1066509#respond
+ 454. javascript:void(0);
+ 455. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/comment-page-1/#comment-1066515
+ 456. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/?replytocom=1066515#respond
+ 457. javascript:void(0);
+ 458. file://localhost/2013/09/23/guest-rant-ham-radio-hackers-paradise/#respond
+ 459. https://public-api.wordpress.com/connect/?googleplus-sign-in=1
+ 460. https://gravatar.com/site/signup/
+ 461. javascript:HighlanderComments.doExternalLogout( 'wordpress' );
+ 462. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml901.data
+ 463. javascript:HighlanderComments.doExternalLogout( 'twitter' );
+ 464. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml901.data
+ 465. javascript:HighlanderComments.doExternalLogout( 'facebook' );
+ 466. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml901.data
+ 467. javascript:HighlanderComments.doExternalLogout( 'googleplus' );
+ 468. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml901.data
+ 469. javascript:HighlanderComments.cancelExternalWindow();
+ 470. https://twitter.com/hackaday
+ 471. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/
+ 472. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/
+ 473. http://hackaday.com/2013/09/23/guest-rant-ham-radio-hackers-paradise/#comments
+ 474. http://hackaday.com/2013/09/20/getting-your-feedback-and-a-staff-update/
+ 475. http://hackaday.com/2013/09/20/getting-your-feedback-and-a-staff-update/
+ 476. http://hackaday.com/2013/09/20/getting-your-feedback-and-a-staff-update/#comments
+ 477. http://hackaday.com/2013/09/16/hackaday-is-going-to-the-nyc-maker-faire/
+ 478. http://hackaday.com/2013/09/16/hackaday-is-going-to-the-nyc-maker-faire/
+ 479. http://hackaday.com/2013/09/16/hackaday-is-going-to-the-nyc-maker-faire/#comments
+ 480. http://hackaday.com/2013/09/09/how-findchips-started-as-a-nasa-engineers-hack/
+ 481. http://hackaday.com/2013/09/09/how-findchips-started-as-a-nasa-engineers-hack/
+ 482. http://hackaday.com/2013/09/09/how-findchips-started-as-a-nasa-engineers-hack/#comments
+ 483. http://hackaday.com/2013/09/08/were-hiring/
+ 484. http://hackaday.com/2013/09/08/were-hiring/
+ 485. http://hackaday.com/2013/09/08/were-hiring/#comments
+ 486. http://hackaday.com/category/featured/
+ 487. http://hackaday.com/2013/10/01/retrotechtacular-building-bart/
+ 488. http://hackaday.com/2013/10/01/retrotechtacular-building-bart/
+ 489. http://hackaday.com/2013/10/01/retrotechtacular-building-bart/#comments
+ 490. http://hackaday.com/2013/09/29/hackaday-links-september-29-2013/
+ 491. http://hackaday.com/2013/09/29/hackaday-links-september-29-2013/
+ 492. http://hackaday.com/2013/09/29/hackaday-links-september-29-2013/#comments
+ 493. http://hackaday.com/2013/09/26/fail-of-the-week-capturing-data-from-a-laser-rangefinder/
+ 494. http://hackaday.com/2013/09/26/fail-of-the-week-capturing-data-from-a-laser-rangefinder/
+ 495. http://hackaday.com/2013/09/26/fail-of-the-week-capturing-data-from-a-laser-rangefinder/#comments
+ 496. http://hackaday.com/2013/09/25/3d-printering-advances-in-3d-printing-at-maker-faire/
+ 497. http://hackaday.com/2013/09/25/3d-printering-advances-in-3d-printing-at-maker-faire/
+ 498. http://hackaday.com/2013/09/25/3d-printering-advances-in-3d-printing-at-maker-faire/#comments
+ 499. http://hackaday.com/2013/09/24/retrotechtacular-fundamentals-of-am-and-fm-radio-communication/
+ 500. http://hackaday.com/2013/09/24/retrotechtacular-fundamentals-of-am-and-fm-radio-communication/
+ 501. http://hackaday.com/2013/09/24/retrotechtacular-fundamentals-of-am-and-fm-radio-communication/#comments
+ 502. http://www.hudsonrobotics.com/
+ 503. http://hackaday.com/2013/09/26/turn-a-decommissioned-robot-into-a-cnc-machine/comment-page-1/#comment-1068120
+ 504. http://hackaday.com/2013/10/01/leds-turn-the-heat-up-on-flameless-pumpkin-lights/comment-page-1/#comment-1068117
+ 505. http://hackaday.com/2013/10/01/leds-turn-the-heat-up-on-flameless-pumpkin-lights/comment-page-1/#comment-1068116
+ 506. http://hackaday.com/2013/10/01/leds-turn-the-heat-up-on-flameless-pumpkin-lights/comment-page-1/#comment-1068114
+ 507. http://hackaday.com/2013/10/01/leds-turn-the-heat-up-on-flameless-pumpkin-lights/comment-page-1/#comment-1068106
+ 508. http://hackaday.com/2013/10/01/retrotechtacular-building-bart/comment-page-1/#comment-1068105
+ 509. http://hackaday.com/2012/09/12/64-rasberry-pis-turned-into-a-supercomputer/comment-page-1/#comment-1068102
+ 510. http://hackaday.com/2013/10/01/retrotechtacular-building-bart/comment-page-1/#comment-1068099
+ 511. http://hackaday.com/2013/10/01/retrotechtacular-building-bart/comment-page-1/#comment-1068098
+ 512. http://hackaday.com/2013/10/01/steam-controller-open-and-hackable/comment-page-1/#comment-1068097
+ 513. http://hackaday.com/2013/08/
+ 514. http://hackaday.com/2013/10/
+ 515. http://hackaday.com/2013/09/01/
+ 516. http://hackaday.com/2013/09/02/
+ 517. http://hackaday.com/2013/09/03/
+ 518. http://hackaday.com/2013/09/04/
+ 519. http://hackaday.com/2013/09/05/
+ 520. http://hackaday.com/2013/09/06/
+ 521. http://hackaday.com/2013/09/07/
+ 522. http://hackaday.com/2013/09/08/
+ 523. http://hackaday.com/2013/09/09/
+ 524. http://hackaday.com/2013/09/10/
+ 525. http://hackaday.com/2013/09/11/
+ 526. http://hackaday.com/2013/09/12/
+ 527. http://hackaday.com/2013/09/13/
+ 528. http://hackaday.com/2013/09/14/
+ 529. http://hackaday.com/2013/09/15/
+ 530. http://hackaday.com/2013/09/16/
+ 531. http://hackaday.com/2013/09/17/
+ 532. http://hackaday.com/2013/09/18/
+ 533. http://hackaday.com/2013/09/19/
+ 534. http://hackaday.com/2013/09/20/
+ 535. http://hackaday.com/2013/09/21/
+ 536. http://hackaday.com/2013/09/22/
+ 537. http://hackaday.com/2013/09/23/
+ 538. http://hackaday.com/2013/09/24/
+ 539. http://hackaday.com/2013/09/25/
+ 540. http://hackaday.com/2013/09/26/
+ 541. http://hackaday.com/2013/09/27/
+ 542. http://hackaday.com/2013/09/28/
+ 543. http://hackaday.com/2013/09/29/
+ 544. http://hackaday.com/2013/09/30/
+ 545. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml901.data#wrap
+ 546. http://www.studiopress.com/
+ 547. http://wordpress.org/
+ 548. http://hackadaycom.wordpress.com/wp-login.php
+
+   Hidden links:
+ 550. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml901.data#comment-form-guest
+ 551. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml901.data#comment-form-load-service:WordPress.com
+ 552. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml901.data#comment-form-load-service:Twitter
+ 553. file://localhost/home/stanley/code/cs595/assignment3/q1/urldump/rawHtml901.data#comment-form-load-service:Facebook
