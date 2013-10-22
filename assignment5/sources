@@ -7,3 +7,11 @@ http://stackoverflow.com/questions/9971915/data-extraction-from-cdata-using-expa
 Beautiful soup parsing
 -----------------------
 http://stackoverflow.com/questions/4071696/python-beautifulsoup-xml-parsing
+
+
+Resources on R
+---------------
+Scotts stuff
+-Slides (PDF). http://www.cs.odu.edu/~sainswor/Teaching/R
+load.R: My typed data table loader.
+R Source Code to produce the spread chart (below). Again, this code produces many other charts and tables. The <em>scatter.plot</em> function performs the bulk of the work. T
