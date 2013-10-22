@@ -62,7 +62,7 @@ if __name__ == "__main__":
     else:
         oauth = get_oauth()
         urls = list()
-        f = open('followers.txt', 'w')
+        f = open('follower_followers.csv', 'w')
         r = requests.get(url="https://api.twitter.com/1.1/friends/list.json?cursor=-1&screen_name=stanzheng&skip_status=true&include_user_entities=false&count=350", auth=oauth)
         r = r.json()
         for following in r["users"]:

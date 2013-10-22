@@ -9,11 +9,11 @@ REQUEST_TOKEN_URL = "https://api.twitter.com/oauth/request_token"
 AUTHORIZE_URL = "https://api.twitter.com/oauth/authorize?oauth_token="
 ACCESS_TOKEN_URL = "https://api.twitter.com/oauth/access_token"
 
-CONSUMER_KEY = ""
-CONSUMER_SECRET = ""
+CONSUMER_KEY = "k9gkxQR2WFpxhrCyQ8pzpw"
+CONSUMER_SECRET = "HIIRWNeuIMTKkkgZObFb6DA97PD4zwXJOby51st69Bc"
 
-OAUTH_TOKEN = ""
-OAUTH_TOKEN_SECRET = ""
+OAUTH_TOKEN = "299932017-u8jkuCzc4pPlLHt4qzA0KnbbFnJdzANm4S3wfDf4"
+OAUTH_TOKEN_SECRET = "rSBprorXEmpHzQoqBjYxqDS7fIEP2HOMDr7L9ASo"
 
 
 def setup_oauth():
@@ -62,7 +62,7 @@ if __name__ == "__main__":
     else:
         oauth = get_oauth()
         urls = list()
-        f = open('followers.txt', 'w')
+        f = open('followers.csv', 'w')
         r = requests.get(url="https://api.twitter.com/1.1/followers/list.json?cursor=-1&screen_name=stanzheng&skip_status=true&include_user_entities=false&count=350", auth=oauth)
         r = r.json()
         for followers in r["users"]:
