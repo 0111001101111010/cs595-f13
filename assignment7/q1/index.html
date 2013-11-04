@@ -1,54 +1,57 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
-</head>
+<meta charset="utf-8">
 <body>
-    <div id="viz"></div>
-    <div id="pie"> </div>
-    
+<style>
 
+path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 3px;
+}
 
+</style>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
 
+var points = [
+  [480, 200],
+  [580, 400],
+  [680, 100],
+  [780, 300],
+  [180, 300],
+  [280, 100],
+  [380, 400]
+];
 
+var line = d3.svg.line()
+    .tension(0) // Catmull–Rom
+    .interpolate("cardinal-closed");
 
+var svg = d3.select("body").append("svg")
+    .datum(points)
+    .attr("width", 960)
+    .attr("height", 500);
 
-<script type ="text/javscript">
-var svg = d3.select('pie');
+svg.append("path")
+    .style("stroke", "#ddd")
+    .style("stroke-dasharray", "4,4")
+    .attr("d", line);
 
-var dataSet = [10, 20, 30, 40];
+svg.append("path")
+    .attr("d", line)
+    .call(transition);
 
-var circle = svg.selectAll('circle')
-    .data(dataSet)
-    .enter()
-    .append('circle')
-    .attr({
-    r: function (d) {
-        return d
-    },
-    cx: function (d, i) {
-        return i * 100 + 50
-    },
-    cy: 50,
-    fill: 'red'
-});
-</script> 
-    <script type="text/javascript">
+function transition(path) {
+  path.transition()
+      .duration(7500)
+      .attrTween("stroke-dasharray", tweenDash)
+      .each("end", function() { d3.select(this).call(transition); });
+}
 
-    var sampleSVG = d3.select("#viz")
-        .append("svg")
-        .attr("width", 100)
-        .attr("height", 100);    
+function tweenDash() {
+  var l = this.getTotalLength(),
+      i = d3.interpolateString("0," + l, l + "," + l);
+  return function(t) { return i(t); };
+}
 
-    sampleSVG.append("circle")
-        .style("stroke", "gray")
-        .style("fill", "white")
-        .attr("r", 40)
-        .attr("cx", 50)
-        .attr("cy", 50)
-        .on("mouseover", function(){d3.select(this).style("fill", "aliceblue");})
-        .on("mouseout", function(){d3.select(this).style("fill", "white");});
-    
-    </script>
-</body>
-</html>
+</script>
