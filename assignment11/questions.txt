@@ -1,0 +1,50 @@
+CS 495/595 Introduction to Web Science
+Fall 2013
+http://www.cs.odu.edu/~mln/teaching/cs595-f13/
+
+Assignment #11
+Due: 11:59pm Dec 12 2013
+
+NOTE: Assignment #11 is for extra credit only; you do not
+have to do this assignment if you do not want to.
+Each question is worth up to 5 points (for a total of 
+10 possible points).
+
+Support your answer: include all relevant discussion, assumptions,
+examples, etc.
+
+1.  Using the data from A9:
+
+- Consider each row in the blog-term matrix as a 500 dimension vector, 
+corresponding to a blog.  
+
+- From chapter 8, replace numpredict.euclidean() with cosine as the 
+distance metric.  In other words, you'll be computing the cosine between
+vectors of 500 dimensions.  
+
+- Use knnestimate() to compute the nearest neighbors for both:
+
+http://f-measure.blogspot.com/
+http://ws-dl.blogspot.com/
+
+for k={1,2,5,10,20}.
+
+2.  Rerun A10, Q2 but this time using LIBSVM.  If you have n categories,
+you'll have to run it n times.  For example, if you're classifying music
+and have the categories:
+
+metal, electronic, ambient, folk, hip-hop, pop
+
+you'll have to classify things as:
+
+metal / not-metal
+electronic / not-electronic
+ambient / not-ambient
+
+etc.
+
+Use the 500 term vectors describing each blog as the features, and
+your mannally assigned classifications as the true values.  Use
+10-fold cross-validation (as per slide 46, which shows 4-fold
+cross-validation) and report the percentage correct for 
+each of your categories.
