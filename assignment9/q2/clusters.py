@@ -1,4 +1,4 @@
-from PIL import Image,ImageDraw
+import Image,ImageDraw
 
 def readfile(filename):
   lines=[line for line in file(filename)]
