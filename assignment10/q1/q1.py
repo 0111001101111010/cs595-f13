@@ -2,78 +2,101 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-
+import feedparser
 import docclass
+import codecs
 
-class GetwordsTest(unittest.TestCase):
+cl=docclass.classifier(docclass.getwords)
 
-  def testStripDuplicates(self):
-    self.assertEquals(['mail', 'spam'],
-        sorted(list(docclass.getwords('spam mail spam'))))
+cl.setdb('testdb.db')
 
+f = open('title.txt')
+lines = f.readlines()
+f.close()
 
-class ClassifierTest(unittest.TestCase):
-
-  def testBasic(self):
-    cl = docclass.classifier(docclass.getwords)
-    cl.setdb('test.db')
-    cl.train('spam spam spam', 'bad')
-    #self.assertEquals(1.0, cl.fprob('spam', 'bad'))
+#for entry in lines:
+#    print entry
 
 
-class NaivebayesTest(unittest.TestCase):
-
-  def testProb(self):
-    cl = docclass.naivebayes(docclass.getwords)
-    cl.setdb('test.db')
-    docclass.sampletrain(cl)
-    #self.assertAlmostEquals(0.15624999, cl.prob('good', 'quick rabbit'))
-    #self.assertAlmostEquals(0.05, cl.prob('bad', 'quick rabbit'))
-
-  def testClassify(self):
-    cl = docclass.naivebayes(docclass.getwords)
-    cl.setdb('test.db')
-    docclass.sampletrain(cl)
-    self.assertEquals('good', cl.classify('quick rabbit', default='unknown'))
-    self.assertEquals('bad', cl.classify('quick money', default='unknown'))
-
-    cl.setthreshold('bad', 3.0)
-    #self.assertEquals('unknown', cl.classify('quick money', default='unknown'))
-
-    for i in range(10): docclass.sampletrain(cl)
-    self.assertEquals('bad', cl.classify('quick money', default='unknown'))
+#for post in d.entries:
+    #title.write((post.title+ "\n").encode(encoding='UTF-8',errors='strict'))
+    #links.write((post.link + "\n").encode(encoding='UTF-8',errors='strict'))
+    #print (post.title + ", " + post.link + "\n").encode(encoding='UTF-8',errors='strict')
+    # Do something with content
+'''
+Meme - any sort of captioned text with an iconic picture. 
+Gif - animated content, can be original or edited content
+Animal - anything related to animals - can span media categories
+original picture - undoctored pictures taken of content excluding animals 
+edited picture - doctored content by photo editing software excluding animals
+media picture - content from tv, magazine, media, movies 
+'''
 
 
-class FisherclassifierTest(unittest.TestCase):
 
-  def testProb(self):
-    cl = docclass.fisherclassifier(docclass.getwords)
-    cl.setdb('test.db')
-    docclass.sampletrain(cl)
-    #self.assertAlmostEquals(0.57142857, cl.cprob('quick', 'good'))
-    #self.assertAlmostEquals(0.78013987, cl.fisherprob('quick rabbit', 'good'))
-    #self.assertAlmostEquals(0.35633596, cl.fisherprob('quick rabbit', 'bad'))
+#cl.train(lines[0], 'original')
 
-  def testClassify(self):
-    cl = docclass.fisherclassifier(docclass.getwords)
-    cl.setdb('test.db')
-    docclass.sampletrain(cl)
+cl.train(lines[0], 'animal')
+cl.train(lines[1], 'media')
+cl.train(lines[2], 'gif')
+cl.train(lines[3], 'original')
+cl.train(lines[4], 'media')
+cl.train(lines[5], 'original')
+cl.train(lines[6], 'meme')
+cl.train(lines[7], 'original')
+cl.train(lines[8], 'original')
+cl.train(lines[9], 'animal')
+cl.train(lines[10], 'media')
+cl.train(lines[11], 'animal')
+cl.train(lines[12], 'animal')
+cl.train(lines[13], 'edited')
+cl.train(lines[14], 'original')
+cl.train(lines[15], 'animal')
+cl.train(lines[16], 'meme')
+cl.train(lines[17], 'meme')
+cl.train(lines[18], 'original')
+cl.train(lines[19], 'original')
+cl.train(lines[20], 'edited')
+cl.train(lines[21], 'original')
+cl.train(lines[22], 'original')
+cl.train(lines[23], 'animal')
+cl.train(lines[24], 'original')
+cl.train(lines[25], 'original')
+cl.train(lines[26], 'edited')
+cl.train(lines[27], 'original')
+cl.train(lines[28], 'original')
+cl.train(lines[29], 'meme')
+cl.train(lines[30], 'gif')
+cl.train(lines[31], 'animal')
+cl.train(lines[32], 'edited')
+cl.train(lines[33], 'meme')
+cl.train(lines[34], 'gif')
+cl.train(lines[35], 'meme')
+cl.train(lines[36], 'original')
+cl.train(lines[37], 'original')
+cl.train(lines[38], 'original')
+cl.train(lines[39], 'meme')
+cl.train(lines[40], 'meme')
+cl.train(lines[41], 'original')
+cl.train(lines[42], 'meme')
+cl.train(lines[43], 'gif')
+cl.train(lines[44], 'media')
+cl.train(lines[45], 'gif')
+cl.train(lines[46], 'comic')
+cl.train(lines[47], 'original')
+cl.train(lines[48], 'gif')
+cl.train(lines[49], 'gif')
 
-    self.assertEquals('good', cl.classify('quick rabbit', default='unknown'))
-    self.assertEquals('bad', cl.classify('quick money', default='unknown'))
 
-    cl.setminimum('bad', 0.8)
-    self.assertEquals('good', cl.classify('quick money', default='unknown'))
+cl = docclass.fisherclassifier(docclass.getwords)
 
-    cl.setminimum('bad', 0.4)
-    self.assertEquals('bad', cl.classify('quick money', default='unknown'))
-
-  def testOneCategory(self):
-    cl = docclass.fisherclassifier(docclass.getwords)
-    cl.setdb('test.db')
-    cl.train('hallo hallo', 'greeting')
-    self.assertEquals('greeting', cl.classify('hallo world'))
+for i in range(50, 100):
+   category = cl.classify(lines[i])
+   title = (lines[i][:30] + '..') if len(lines[i]) > 75 else lines[i]
+   #title = (lines[i]).encode('utf-8')
+   print (category).encode('utf-8') #lines[i] + ' : ' +  
+   #print cl.cprob(title, category)   
+    
 
 
-if __name__ == '__main__':
-  unittest.main()
+
